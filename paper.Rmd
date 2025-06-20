@@ -1,0 +1,79 @@
+---
+title: "As implicações metodológicas da Revolução da Credibilidade e Inferência Bayesiana para a pesquisa qualitativa causal"
+author: "Manoel Galino"
+date: '2024-06-30'
+output:
+  pdf_document:
+    number_sections: true
+header-includes:
+  - \usepackage{setspace}\doublespacing
+  - \setstretch{1.5}
+  - \usepackage{parskip}
+  - \setlength{\parskip}{6pt}
+  - \setlength{\parindent}{0pt}
+fontsize: 12pt
+abstract: \singlespacing Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren isponLoren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren isponLoren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren isponLoren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren isponLoren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren isponLoren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren isponLoren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon.
+
+geometry: margin=2.5cm
+spacing: double
+mainfont: "Times New Roman"
+csl: chicago-author-date-16th-edition.csl
+bibliography: Quali-credibilidade.bib
+link-citations: yes
+---
+\pagebreak
+
+# Introduction
+
+Histrionically, Brazilian foreing policy has tried to pursue a strategy of autonomy and independence, with some variations over the year and government. In xxxx, China became the first trade partner of Brazil replacing the US, the main time trade partner for a long time. Does it change to Brazilian foreign policy that this changed has occurred? 
+
+According to the groundbeark work by @amorim_neto2011, as Brazil became a more powerful country, it could distance itself from the US. Mourón and Udinez contend that this relationship is similar for other southamerican countries and that what matters is the power gap between countries. This literature, however, does not have a credible causal research design [@] nor does consider properly the effect of the effect of Brazil economic interest changing over time, in partticular in relation the the major rising power, China.
+
+There has been some debates aboput the role of china in Latin America. According to @flores-macias_kreps2013, the more states (including Brazil) trade with China, they are more likely to be aligned on issues of foreign policy.
+
+
+1. Introduction
+• Opening Puzzle & Motivation (1–2 paragraphs):
+ Introduce the broader research puzzle and explain its importance.
+Draw on debates to illustrate why the question matters.
+• Literature Overview (2 paragraphs):
+Briefly summarize the dominant views and key debates.
+Highlight existing theoretical ambiguities.
+• Research Gap & Contributions (2-3 paragraphs):
+Identify what prior studies have overlooked (e.g., differentiating protest tactics or disentangling party versus ideology).
+Clearly state your study’s objectives and its unique contributions to the literature.          – Describe your empirical strategy and data (if the data is new), and how they allow your study to support your findings.
+ Present your main findings.
+Linking Findings to Broader Contexts and Implications (2- paragraphs)
+• Roadmap (1 paragraph):
+Provide a brief outline of the paper’s structure.
+
+# Trade and Political Alignment
+
+@flores-macias_kreps2013 try to control for endogeneity by using fixed effect models with lagged variables and two-stage least squares. The first approach is just wrong from a causal point of view, since one key identification assumption in fixed effects models is no carry over effects. The instrument used in the latter approach is lagged energy production of a country. This variable, however, fail to meet the exclusion restriction assumption, since energy production is, for example, related to economic development, which may be causal pathway from the instrument to the outcome (political alignment). 
+
+# Empirical Strategy
+
+In order to avoid the identification problems present in the literature on the effect of trade relationships with China and a country, we employ the sinthetic control method. We explore a discontinuity in the change of China as the second versus first Brazil trade partner to estimate the (local) causal effect of increased importance of a trade of a Country with China vis-a-vis the US.
+
+One key threat to our empirical strategy is the fact that Brazil-China dyad probably are influenced by the treatment status of other countries. If other countries get aligned with China, it changes the incentive fo Brasil to do so. The way we deal with it is two fold. In the main specification model, we use in the donor pool only countries that did not experience China becoming the main trade partner. In the second specification, we accept such countries i nthe donor pool as a roubstness check. The results are similar, which lend credibility to the findings of the paper.
+
+
+## Data
+
+Our outcome variable, vote similarity, is based on the data from ...
+The treatment, trade partner relation with China is computed as xxx. the data comes from ...
+Additional covariates to approximate the donor pool to Brazil includes, beyong the lagged DV, power capaibility measure, from xxx, power gap between countries, ...
+
+
+
+
+# Results
+
+The graph below presents the evolution of political alignment between Brazil and China at UNGA and a donor pool of countries before and after China becoming the main trade partner of Brazil. The counterfactual estimate from the donor pool allows us to estimate the causal effect of the treatment on similarity of vote at UNGA. The estimate is xx percentage points, which means that becoming the main trade partner implied an estimated of xx increase in the similarity of vote at UNGA.
+
+# Discussion
+
+To assess xxxx, we conduct a placebo analysis.
+
+
+# Conclusion
