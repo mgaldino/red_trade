@@ -60,6 +60,19 @@ get_trade_data <- function(trade_file) {
     summarise(exports = sum(trade), .groups = "drop") 
 }
 
+rank_trade <- function(data) {
+  data %>%
+    group_by(year, exporter_iso3) %>%                         # wbcode1 = exporter / “i”
+    mutate(rank_from_i = dense_rank(desc(exports))) %>%  # 1 = largest partner
+    ungroup() %>% 
+    
+    ## rank each partner *i* in the portfolio of country *j*
+    group_by(year, importer_iso3) %>%                         # wbcode2 = importer / “j”
+    mutate(rank_from_j = dense_rank(desc(exports))) %>% 
+    ungroup() %>%
+    dplyr::filter(importer_iso3 == "CHN")
+}
+
 process_trade_data <- function(file) {
   file %>%
     rename(iso3c = exporter_iso3,
@@ -68,10 +81,25 @@ process_trade_data <- function(file) {
     summarise(
       trade_with_china = sum(trade[importer_iso3 == "CHN"], na.rm = TRUE),
       trade_with_us    = sum(trade[importer_iso3 == "USA"], na.rm = TRUE),
+      total_trade = sum(trade, na.rm=TRUE),
       .groups = "drop"
     )
   
 }
+
+rank_trade <- function(data) {
+  data %>%
+    group_by(year, exporter_iso3) %>%                         # wbcode1 = exporter / “i”
+    mutate(rank_from_i = dense_rank(desc(exports))) %>%  # 1 = largest partner
+    ungroup() %>% 
+    
+    ## rank each partner *i* in the portfolio of country *j*
+    group_by(year, importer_iso3) %>%                         # wbcode2 = importer / “j”
+    mutate(rank_from_j = dense_rank(desc(exports))) %>% 
+    ungroup() %>%
+    dplyr::filter(importer_iso3 == "CHN")
+}
+
 
 get_unga_data <- function(file, year_filter=1989) {
   fread(file) %>%
@@ -80,12 +108,13 @@ get_unga_data <- function(file, year_filter=1989) {
     dplyr::filter(year > year_filter) %>%
     group_by(session) %>%
     mutate(china_ideal = q50_percent_all[iso3c == "CHN"],
-           us_ideal = q50_percent_all[iso3c == "USA"]) %>%
+           us_ideal = q50_percent_all[iso3c == "USA"],
+           br_ideal = q50_percent_all[iso3c == "BRA"]) %>%
     ungroup() %>%
     mutate(abs_distance_china = abs(q50_percent_all - china_ideal),
            abs_distance_usa = abs(q50_percent_all - us_ideal)) %>%
-    dplyr::select(year, iso3c, ideal_point_all, us_agree, china_agree, china_ideal, us_ideal,abs_distance_china,
-                  abs_distance_usa)
+    dplyr::select(year, iso3c, ideal_point_all, us_agree, china_agree, china_ideal, us_ideal, br_ideal, 
+                  abs_distance_china, abs_distance_usa)
 }
 
 get_gpi_data <- function(file, year_filter=1989) { 
@@ -190,6 +219,46 @@ plot_serie <- function(data) {
   
 }
 
+plot_ideal_points <- function(data) {
+  
+  data %>%
+    filter(iso3c %in% c("USA", "CHN", "BRA")) %>%
+    dplyr::select(year, us_ideal, china_ideal, br_ideal) %>%
+    pivot_longer(cols = ends_with("ideal") , names_to = "country", values_to = "ideal") %>%
+    mutate(country = toupper(gsub("_ideal", "", country)),
+           country = ifelse(country=="US", "USA",
+                            ifelse(country == "BR", "BRA", "CHN"))) %>%
+    ggplot(aes(x=year, y=ideal, group = country,  colour = country)) + geom_point() +
+    geom_smooth(se=F) +
+    ylab("Ideal points at UNGA") +
+    scale_colour_manual(values = c(USA = "steelblue",
+                                   CHN = "firebrick",
+                                   BRA = "darkgreen")) +   # pick your colours (optional)
+    theme_minimal()
+}
+
+plot_distance_unga <- function(data) {
+  data %>%
+    filter(iso3c %in% c("USA", "CHN", "BRA")) %>%
+    dplyr::select(year, us_ideal, china_ideal, br_ideal) %>%
+    mutate(distance_br_ch = abs(china_ideal - br_ideal)) %>%
+    distinct(year, .keep_all = TRUE) %>%
+    ggplot(aes(x=year, y=distance_br_ch)) + geom_point() +
+    geom_smooth(se=F) +
+    ylab("Absolute distance of Brazil's UNGA ideal points to China") +
+    theme_minimal()
+}
+
+plot_trade <- function(data){
+  data %>%
+    dplyr::filter(iso3c == "BRA") %>%
+    mutate(perc_trade_with_china = trade_with_china/total_trade) %>%
+    ggplot(aes(x=year, y=perc_trade_with_china))  + geom_point() + geom_smooth(se=F) +
+    theme_bw() + ylab("Percent of brazilian exports to China") + 
+    scale_y_continuous(labels = scales::label_percent()) +
+    theme_minimal()
+}
+
 clean_synth_data <- function(data) {
   
   synth_data <- data %>%
@@ -197,72 +266,75 @@ clean_synth_data <- function(data) {
     arrange(iso3c, year) %>% 
     mutate(lag_dis_china = dplyr::lag(abs_distance_china)) %>%
     ungroup() %>%
+    mutate(latin_america = region_o %in% c("south_america", "central_america", "north_america") & 
+             !iso3c %in% c("USA", "CAN")) %>%
     dplyr::filter(year > 1990 & year < 2012) %>%
-    dplyr::select(iso3c, year, pop, abs_distance_china, gdp_cur, ideal_point_all, lag_dis_china, abs_distance_usa, gpi,
-                  us_power_gap, us_ideal, abs_distance_usa, gpi, trade_with_china, trade_with_us,
-                  distance_us, distance_china, region_us, region_china, same_region_us, same_region_china,
-                  pta_us, pta_china, colony_ever, contiguity_china, exachange_rate, region_o) %>%
+    dplyr::select(iso3c, year, pop, abs_distance_china, gdp_cur, ideal_point_all, abs_distance_usa, gpi,
+                  us_power_gap, us_ideal, abs_distance_usa, gpi, trade_with_china, trade_with_us, total_trade,
+                  distance_us, distance_china, exachange_rate, latin_america) %>%
     arrange(year) %>%
     mutate(pci_cur = gdp_cur/pop,
-           trade_with_china_pc = trade_with_china/gdp_cur,
-           trade_with_us_pc = trade_with_us/gdp_cur)
+           perc_trade_with_china = trade_with_china/total_trade,
+           perc_trade_with_us = trade_with_us/total_trade) %>%
+    tidyr::drop_na() 
   
-  
-  
-  exclude_countries <- teste_synth %>% 
-    dplyr::filter(is.na(lag_dis_china)) %>%
-    dplyr::filter(is.na(exachange_rate)) %>%
-    distinct(iso3c)
-  
-  teste_synth <- teste_synth %>%
-    dplyr::filter(!iso3c %in% exclude_countries$iso3c)
-  
-  teste_synth <- teste_synth %>%
-    dplyr::filter(iso3c %in% c("ARG", "AUT", "BEN", "BFA", "BGD", "BGR", "BHS", "BOL", "BRA", "BRB", "BRN",
-                                               "BTN", "CAN", "CHL", "CIV", "CMR", "COD", "COL", "CPV", "CRI", "CYP", "DEU",
-                                               "DJI", "DNK", "DZA", "ECU", "EGY", "ESP", "FIN", "FJI", "FRA", "GAB", "GBR",
-                                               "GHA", "GIN", "GMB", "GTM", "HTI", "HUN", "HND", "IND", "IRL", "IRN", "ISL", "ISR",
-                                               "ITA", "IDN", "JAM", "JOR", "JPN", "KEN", "KOR", "KWT", "LAO", "LBN", "LCA",
-                                               "LKA", "LSO", "MAR", "MDG", "MDV", "MEX", "MLI", "MLT", "MMR", "MNG", "MOZ",
-                                               "MUS", "MWI", "MYS", "NGA", "NIC", "NLD", "NOR",
-                                               "NPL", "NZL", "OMN", "PAK", "PAN", "PER", "PHL", "POL", "PRT", "PRY", "QAT",
-                                               "ROU", "RWA", "SAU", "SDN", "SEN", "SGP", "SLE", "SLV", "SUR", "SWE", "SWZ", "SYR",
-                                               "TGO", "TTO", "TUN", "TUR", "TZA", "UGA", "USA", "URY", "VEN", "YEM","VNM",
-                                               "ZWE"))
-    # dplyr::filter(region_o %in% c("south_america", "central_america", "north_america", "africa",
-    #                               "south_east_asia", "suth_east_asia"))
-  
-  
-  teste_synth <- teste_synth %>%
-    mutate(treatment = ifelse(iso3c == "BRA" & year > 2006, 1, 0))
-  
-  df <- teste_synth %>%
-    mutate(event_time = year - 2006,
-           id = as.integer(as.factor(iso3c))) %>%
+  exclude_countries <- synth_data %>%
     group_by(iso3c) %>%
-    mutate(g = ifelse(iso3c == "BRA", 1988, 0),
-           cohort = ifelse(iso3c == "BRA", 1, 0),
-           g1 = ifelse(iso3c == "BRA" & year >= 1980, 1980, 0)) %>%
-    dplyr::filter(!is.na(exachange_rate))  %>%
-    dplyr::filter(year < 2012) %>%
-    dplyr::filter(!iso3c %in% c("BFA", "BHR", "LKA", "HND", "ZWE")) %>%
-    ungroup()
+    summarise(num_obs = n()) %>%
+    dplyr::filter(num_obs < 21) %>%
+    pull(iso3c)
+  
+  synth_data <- synth_data %>%
+    dplyr::filter(!iso3c %in% exclude_countries)
+  
+  
+  synth_data <- synth_data %>%
+    mutate(treatment = ifelse(iso3c == "BRA" & year > 2004, 1, 0))
+  
+  df <- synth_data %>%
+    mutate(id = as.integer(as.factor(iso3c)))
+  
   return(df)
 }
 
-fit_reglin <- function(data) {
-  reg <- lm(abs_distance_china ~ gpi + us_power_gap + trade_with_us_pc + trade_with_china_pc + pci_cur + distance_us +
-              exachange_rate, data=data)
-  y_res <- residuals(reg)
+cov_matrix <- function(data) {
+  mat_X <- data %>%
+    mutate(gpi = arm::rescale(gpi),
+           perc_trade_with_us = arm::rescale(perc_trade_with_us),
+           perc_trade_with_china = arm::rescale(perc_trade_with_china),
+           pci_cur = arm::rescale(pci_cur),
+           distance_us = arm::rescale(distance_us),
+           exachange_rate = arm::rescale(exachange_rate)) %>%
+    dplyr::select(year, iso3c, gpi, perc_trade_with_us, perc_trade_with_china, pci_cur,
+                  exachange_rate, distance_us, us_power_gap)
   
+  cov_levels  <- colnames(mat_X)
+  
+  X_mat <- array(NA_real_,
+                 dim = c(length(unique(mat_X$iso3c)),
+                         length(unique(mat_X$year)),
+                         ncol(mat_X) - 2))
+  
+  for (k in 3:ncol(mat_X)) {
+    aux <- dplyr::select(mat_X, cov_levels[c(1,2, k)]) %>% pivot_wider(names_from = year, values_from=cov_levels[k]) %>%
+      dplyr::select(-iso3c) %>% as.matrix()
+    X_mat[ , , k-2] <- aux
+  }
+  return(X_mat)
 }
 
-fit_sdid <- function(data, placebos=TRUE) {
+fit_sdid <- function(data, placebos=TRUE, filter_latin_america) {
+  
+  if(filter_latin_america) {
+    data <- data %>%
+      dplyr::filter(latin_america)
+  }
+  
   data <- data %>%
     mutate(treatment = as.integer(treatment),
            year = as.integer(year),
            iso3c = as.factor(iso3c),
-           Y = y_res) %>%
+           Y = abs_distance_china) %>%
     dplyr::select(iso3c, year, Y, treatment) %>%
     as.data.frame() # aparentemente panel.matrices não funciona com tibble
   
@@ -278,15 +350,15 @@ se_sdid <- function(fitted_model) {
 }
 
 my_plot_trends <- function(fitted_model) {
-  plot(fitted_model, treated.name='Brazil', se.method='placebo') 
+  plot(fitted_model, treated.name='Brazil', se.method='none') 
 }
 
-my_plot_dif <- function(data) {
-  data %>% plot_differences()
+my_plot_dif <- function(fitted_model) {
+  plot(fitted_model, overlay=1,  se.method='none')
 }
 
-my_plot_weigths <- function(data) {
-  data %>% plot_weights()
+my_plot_weigths <- function(fitted_model) {
+  synthdid_units_plot(fitted_model, se.method='none')
 }
 
 my_balance_table <- function(data) {

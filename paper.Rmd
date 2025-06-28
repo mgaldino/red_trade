@@ -1,5 +1,5 @@
 ---
-title: "As implicações metodológicas da Revolução da Credibilidade e Inferência Bayesiana para a pesquisa qualitativa causal"
+title: "The effect of trade on Brazil's foreing policy political alignment with China"
 author: "Manoel Galino"
 date: '2024-06-30'
 output:
@@ -11,69 +11,176 @@ header-includes:
   - \usepackage{parskip}
   - \setlength{\parskip}{6pt}
   - \setlength{\parindent}{0pt}
+  - \newcommand{\argmin}{\mathop{\mathrm{argmin}}\limits}
 fontsize: 12pt
 abstract: \singlespacing Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren isponLoren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren isponLoren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren isponLoren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren isponLoren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren isponLoren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren isponLoren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon Loren ispon.
 
 geometry: margin=2.5cm
 spacing: double
 mainfont: "Times New Roman"
-csl: chicago-author-date-16th-edition.csl
-bibliography: Quali-credibilidade.bib
 link-citations: yes
 ---
 \pagebreak
 
 # Introduction
 
-Histrionically, Brazilian foreing policy has tried to pursue a strategy of autonomy and independence, with some variations over the year and government. In xxxx, China became the first trade partner of Brazil replacing the US, the main time trade partner for a long time. Does it change to Brazilian foreign policy that this changed has occurred? 
+In 2004, China overcome Argentina as the second most important trade partner of Brazil, behind only the US. At that same year, Brazil recognized China with economy market status, a major demand from China since 2001 [@urdinez_2014]. The present studies is trying to understand specifucally what is the effect of these two impactful change on Brazil's foreign policy analysis. Scholars, analysts and policymakers has long debated the inffluence of China on global affairs and in particular in the foreign policy of countries impacted by its emergence as a global power and this study is one contribution to this literature.
 
-According to the groundbeark work by @amorim_neto2011, as Brazil became a more powerful country, it could distance itself from the US. Mourón and Udinez contend that this relationship is similar for other southamerican countries and that what matters is the power gap between countries. This literature, however, does not have a credible causal research design [@] nor does consider properly the effect of the effect of Brazil economic interest changing over time, in partticular in relation the the major rising power, China.
+More or less at the same period China started emerging as a potential rival of the US in the international system, becoming an important player the foreign policy of almost every country in the world. It is thus difficult to disentangle the effect of China emerging as a Hegemon in the international system and the impact of becoming a major trading partner of a country. 
 
-There has been some debates aboput the role of china in Latin America. According to @flores-macias_kreps2013, the more states (including Brazil) trade with China, they are more likely to be aligned on issues of foreign policy.
+The literature has discussed both effects. According to @flores-macias_kreps2013, the more states (including Brazil) trade with China, they are more likely to be aligned on issues of foreign policy. @schenoni_leiva2021 argue that recent Brazilian foreign policy change is the result of the pull of China as a new great power, resulting in what they call a "dual hegemony".
 
+According to the ground break work by @amorim_neto2011 [see also @mouron_urdinez2014], as Brazil became a more powerful country, it could distance itself from the US. It is thus expected that as China emerged as an important country, it would attract some alignment of Brazilian foreign policy due to this effect of power. As a result, it is not clear what is the role of economic integration with China on the foreign policy of a country like Brazil.
 
-1. Introduction
-• Opening Puzzle & Motivation (1–2 paragraphs):
- Introduce the broader research puzzle and explain its importance.
-Draw on debates to illustrate why the question matters.
-• Literature Overview (2 paragraphs):
-Briefly summarize the dominant views and key debates.
-Highlight existing theoretical ambiguities.
-• Research Gap & Contributions (2-3 paragraphs):
-Identify what prior studies have overlooked (e.g., differentiating protest tactics or disentangling party versus ideology).
-Clearly state your study’s objectives and its unique contributions to the literature.          – Describe your empirical strategy and data (if the data is new), and how they allow your study to support your findings.
- Present your main findings.
-Linking Findings to Broader Contexts and Implications (2- paragraphs)
-• Roadmap (1 paragraph):
-Provide a brief outline of the paper’s structure.
+So far, most studies have employed qualitative approach to differentiate between Brazilian autonomy as its power growth from the effect of emergence of China as a new Hegemon with high economic impact in the country. Countries that have used a qqnatitative method, do not have a credible causal design. Our present study is the first to employ a quantitative causal design to isolate the effect of trade integration on Brazilian foreign policy.
+
+In order to do so, we employ a synthetic difference-in-differences model to estimate the causal effect of China becoming the second major trade partner of Brazil in 2006 with a panel of 106 countries over 21 years (1991-2011). This method combines the best of syntethic control method and difference-in-differences to avoid the problems of each one and estimate a more reliably causal effect of an intervention (China becoming the second largest market for Brazilian exports and the recognition of market ststus by Brazil) in a single unit -- Brazil. We use the difference between the ideal point of countries and China, estimated based on votes at the United Nations General Assembly (UNGA), to measure the political alignment with countries and China over time.
+
+The results show that becoming the second major trade partner decreased the distance in ideal point between Brazil and China in xx. standard deviations over the period considered (2007-2011). Thus, we present robust causal evidence of the mechanism of the gravitational effect of trade with China on Brazil's foreign policy, as hypothesized in part of the literature. It has important implications [which ones?] for reflections about how to build policy space in the context of an emerging dual hegemony.
+
+The rest of the paper is organized as follows.
+
 
 # Trade and Political Alignment
 
+[lit review and discussion of arguments, theories and mechanisms]
+
 @flores-macias_kreps2013 try to control for endogeneity by using fixed effect models with lagged variables and two-stage least squares. The first approach is just wrong from a causal point of view, since one key identification assumption in fixed effects models is no carry over effects. The instrument used in the latter approach is lagged energy production of a country. This variable, however, fail to meet the exclusion restriction assumption, since energy production is, for example, related to economic development, which may be causal pathway from the instrument to the outcome (political alignment). 
 
-# Empirical Strategy
+# Mehtodology
 
-In order to avoid the identification problems present in the literature on the effect of trade relationships with China and a country, we employ the sinthetic control method. We explore a discontinuity in the change of China as the second versus first Brazil trade partner to estimate the (local) causal effect of increased importance of a trade of a Country with China vis-a-vis the US.
+We explore a discontinuity in the change of China as the third versus second Brazil trade partner to estimate the (local) causal effect of increased importance of China becoming the second largest trade partner of Brazil. This allow us to approximate a difference-in-differences methodology (DiD). The problem with DiD is that it depends on the paralled trend assumption, which is not credible in the present case, leading to bias in the estimate of the causal effect.  In order to avoid this problems, we employ the synthetic difference in differences (SDiD) method,  developed by @arkhangelsky_etal2021. It combines the DiD estimator with the synthetic control method (SCM). It provides a more flexible approach than both methods separately. On one hand, DiD methods do not work well with a single treated unit and they also rely on the parallel trends assumption for identification fo the causal effect. On the ohter hand, SCM tries to match the pre-treatment trend in the outcome based on covariates to estimate the counterfactual outcome. However, it compares the whole time period before and after the intervention and does noy allow the inclusion of unit fixed effect, with can be a cause of bias, specially in the case of slow moving variables. SDID try to solves both problems (non-parallel trends for DiD, time period and absence of fixed effects for SCM) by combining both methods. The specific model is as follows:
 
-One key threat to our empirical strategy is the fact that Brazil-China dyad probably are influenced by the treatment status of other countries. If other countries get aligned with China, it changes the incentive fo Brasil to do so. The way we deal with it is two fold. In the main specification model, we use in the donor pool only countries that did not experience China becoming the main trade partner. In the second specification, we accept such countries i nthe donor pool as a roubstness check. The results are similar, which lend credibility to the findings of the paper.
+Consider a complete panel^[whas is called balanced panel. We prefer the term complete to avoid confusion with balancing of covariates, which is a standard analysis in causal studies]: $N$ countries measured over $T$ years, the outcome variable for country $i$ in time $t$ is $Y_{it}$ and the binairy treatment variable $D_{it} \in \{0,1\}$. Suppose also that the first $N_{\text{countries}}$ do not receive the treatment and the lasdt country $N_{\text{Brazil}}$ do receive the treatment at $t_0$. The job is, like in SCM, to find weights $\hat{w}^{\text{SDiD}}$ such that before $t_0$ treated and control countries match as closely as possible, that is, $\sum_{i=1}^{\text{countries}} \hat{w}^{\text{SDiD}}Y_{it} \approx \sum_{i=1}^{\text{Brazil}} Y_{it}$, for all $t = 1, ..., t_0$. Differently from SCM, we do not stop here. We then find $\hat{\lambda}^{\text{SDiD}}_t$ to balance the time trend before and after $t_0$. Lastly, the average causal effect on the treated $\tau_{ATT}$ is estimated by a two-way fixed effect regression model (as in standard DiD models):
+
+$$
+\bigl(\hat{\tau}_{ATT}^{\text{SCM}}, \hat{\mu}, \hat{\beta} \bigr)
+= 
+\operatorname*{arg\,min}_{\tau_{ATT},\mu,\beta, \alpha}
+\sum_{i=1}^{N}\sum_{t=1}^{T}
+\bigl(Y_{it}- \mu- \alpha_i - \beta_t-D_{it}\tau_{ATT}\bigr)^2\, 
+\hat{w}^{\text{SDiD}} \hat{\lambda}^{\text{SDiD}}_t
+$$
+Vale a pena contrastar esse modelo com o DiD clássico e o SCM. O modelo de DiD estima:
+$$
+\bigl(\hat{\tau}_{ATT}^{\text{SCM}}, \hat{\mu}, \hat{\lambda}, \hat{\beta}\bigr)
+= 
+\operatorname*{arg\,min}_{\tau_{ATT},\mu, \alpha, \beta}
+\sum_{i=1}^{N}\sum_{t=1}^{T}
+\bigl(Y_{it}-\mu-\alpha_i -\beta_t-D_{it}\tau_{ATT}\bigr)^2
+$$
+Como se vê, o SDiD coloca pesos em países dos grupos controle que são mais similares ao país do tratamento e mais peso em períodos pré-tratamento que são mais similares ao período pós-tratamento. Por outro lado, o SC estima um modelo como:
+
+$$
+\bigl(\hat{\tau}_{ATT}^{\text{SCM}}, \hat{\mu}, \hat{\beta}\bigr)
+= 
+\operatorname*{arg\,min}_{\tau_{ATT}, \mu, \beta}
+\sum_{i=1}^{N}\sum_{t=1}^{T}
+\bigl(Y_{it}-\mu-\beta_t-D_{it}\tau_{ATT}\bigr)^2\, 
+\hat{w}^{\text{SDiD}} \hat{\lambda}^{\text{SDiD}}_t
+$$
+As we can see, there is no unit fixed effect and not time weight. As a result, the SCM cannot use unit unobserved invariant characteristics to approximate the counter factual outcome and will consider the whole time period when estimating the causal effect. This is a problem for our data, because the relationship between China ans Brazil becomes more engangled as times gos by and years much further from the treatment period is proboably not a good comparison to periods longe before the treatment.
+
+Anotther key advantage of the SDID is that it reduces the variance of the estimator, allowing more precise estimation [@arkhangelsky_etal2021]. One problem with this model, however, is that it does not include time-varying covariates that are important to more closely match the pre-treatment time period. Thus, to account  for time-varying covaraites and better adjust the model, we first fitted a standard linear regression model and compute $\hat{\beta}$:
+
+$$Y_{it} = X_{it}\beta + e_it$$
+
+And then we use the Fritsch Wovell Lowell theorem to fit the SDID regression model on the residualized outcome, given by:
+
+$$
+Y_{it}^{\text{res}} = Y_{it} - X_{it}\hat{\beta}
+$$
+
+this way, we are trying to estimate the causal effect having controled for the effect of time-varying covariates [@hirshberg_klosin2024].
+
+## Data and Variables
+
+Since we need to fit a model to a complete panel, we constraint the sample to 105 countries over a period of 21 years, from 1991 to 2011.
+
+Our outcome variable, vote similarity between a country and China at UNGA, is based on the ideal point estimates based on UNGA vote data from @bailey_etal2017. Other variables include per capita GDP from Penn World Table, version 10.01 [@feenstra_etal2015]. Trade data are drawn from UN Comtrade Database, extracted via their API in current FOB dollars. To avoid double counting, I use the value reported by the importer country, since importers have more interested in correcting measuring this value for tax collection reasons. We use trade with China and US as share of the country GDP as our two measures of trade. As our measure of power, we used the Global Powr Index (GPI) from Diplometric -- Pardee Institute, University of Denver. GPI combines demographic, economic, military, technology and diplomatic dimensions and then we computed the power gap between Brazil and the US. We also include distance to US, as countries closer to US will hhave a bigger incentive to align its foreign policy with it and exachange rate, since one complain of China is its devalued currency. A country with a more devalued currency is expected to be more aligned with China than not. The definitions and measurements of key variables are provied in table 1. Table 2 presents the descriptive statistics.
 
 
-## Data
 
-Our outcome variable, vote similarity, is based on the data from ...
-The treatment, trade partner relation with China is computed as xxx. the data comes from ...
-Additional covariates to approximate the donor pool to Brazil includes, beyong the lagged DV, power capaibility measure, from xxx, power gap between countries, ...
+```{r table_summary, message=FALSE, warning=FALSE, echo=FALSE}
+library(targets)
+library(skimr)
+library(knitr)
+library(gtsummary)
+library(tidyverse)
+df <- tar_read(final_df)  %>%
+  dplyr::select(-c("us_agree", "china_agree", "year"))
+
+# my_skim <- skim_with(numeric = sfl(n_missing = NULL, complete_rate = NULL, iqr = IQR, p25 = NULL, p75 = NULL, hist=NULL), 
+#                      character= sfl(n_missing = NULL, complete_rate = NULL, empty=NULL, whitespace=NULL))
+# 
+# df %>%
+#   my_skim() 
+# df %>%
+#   my_skim(numeric = sfl(hist = NULL))
+
+df %>%
+  dplyr::select(where(is.numeric)) %>%
+  tbl_summary(label= list(pop = "Population, millions",
+                          gdp_const = "GDP in 2017 USD PPP, millions"),
+              type = all_continuous() ~ "continuous2",
+              statistic = all_continuous() ~ c("{mean} ({sd})", "{min}, {max}"),
+              digits = all_continuous() ~ 2) 
+
+
+```
 
 
 
 
-# Results
+```{r plot, message=FALSE, warning=FALSE, echo=FALSE, fig.cap= "caption", fig.pos="h"}
+# library(ggplot2)
+tar_read(plot)
+```
 
-The graph below presents the evolution of political alignment between Brazil and China at UNGA and a donor pool of countries before and after China becoming the main trade partner of Brazil. The counterfactual estimate from the donor pool allows us to estimate the causal effect of the treatment on similarity of vote at UNGA. The estimate is xx percentage points, which means that becoming the main trade partner implied an estimated of xx increase in the similarity of vote at UNGA.
+# Descriptive Analysis
 
-# Discussion
+In figure @plot_unga1 bellow, we plot the evolution of UNGA's ideal point of US, Brazil and China over time. As we can see, Brazil is closer to China than to the US since the beginning of the series of my data, in 1990 upt to 2022, during Bolsonaro's government. Even thoud there is a distancing of Brasil under Bolsonaro's term, it is still closer to the China than to the US. This is a testimonement of how much Brazil is structury closer to China at the UNGA.
 
-To assess xxxx, we conduct a placebo analysis.
+It also shows that Brazil is moving more over time than China, which is mostly stable over time. Thus, that is an indication that is Brazil who is moving closer to China than the opposite, as expected, given the differential of power and importance of both Countries and the dependence between them. 
+
+
+```{r plot_unga1, message=FALSE, warning=FALSE, echo=FALSE, fig.cap= "caption", fig.pos="h"}
+# library(ggplot2)
+tar_read(plot_ideal)
+```
+
+Having established that is mostly Brazil moving around than China, we can use as our main variable the absolute distance between Brazil and China's ideal point, with the understand that, a part from the beginning of the nineties, Brazil is almost always closer to the center than China and that Brazil is the one moving around.
+
+```{r plot_unga2, message=FALSE, warning=FALSE, echo=FALSE, fig.cap= "caption", fig.pos="h"}
+# library(ggplot2)
+tar_read(plot_ideal_distance)
+```
+
+The question one wonders after seeing the graphs is: why Brazil was getting closer over time? the main hypothesis discussed in the literature is the gravitation pull of the China economy, peharps as shown in the percentage of exports of Brazil that wen to China in the period considered. The @plot_trade shows that around year 2000, the percentage of exports destined to China increase at a roughly constant rate, in a very steep variation, which does not exactly fit the political alignment as measured by UNGA ideal points, although there is some positive correlation.
+
+```{r plot_trade, message=FALSE, warning=FALSE, echo=FALSE, fig.cap= "caption", fig.pos="h"}
+# library(ggplot2)
+tar_read(trade_plot)
+```
+
+# Empirical Results
+
+The graph below presents the evolution of political alignment between Brazil and China at UNGA and a donor pool of countries before and after China becoming the main trade partner of Brazil. The counterfactual estimate from the donor pool allows us to estimate the causal effect of the treatment on similarity of vote at UNGA. The estimate is -.27 points, which means that becoming the main trade partner implied a decrease of .27 points in the absolute distance between the ideal point of Brazil and China after 2006. The result is statistically significant at the 5% level, allowing us to reject the null hypothesis of no increase in the distance between the ideal points of both countries.
+
+```{r plot_sdis, message=FALSE, warning=FALSE, echo=FALSE, fig.cap= "caption", fig.pos="h"}
+tar_read(plot_trends)
+```
+
+```{r plot_parallel, message=FALSE, warning=FALSE, echo=FALSE, fig.cap= "caption", fig.pos="h"}
+tar_read(plot_dif)
+```
+
+```{r plot_weigths, message=FALSE, warning=FALSE, echo=FALSE, fig.cap= "caption", fig.pos="h"}
+tar_read(plot_weights)
+```
+# Robustness checks
+
+We already have reasons to not use the SCM method. However, since it is a more established methdoology, it is useful to compare both SCM and SDiD models. As table 3 bellow shows, the results are qualitatively similar. the result of the SCM is not significant, but this is expeced, since the variance is inflated and, with the low number of data point, it is hard to find a significant result. What is important is that the results are qualitatively similar in both methods.
 
 
 # Conclusion
