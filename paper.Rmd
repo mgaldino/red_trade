@@ -81,17 +81,18 @@ $$
 $$
 As we can see, there is no unit fixed effect and not time weight. As a result, the SCM cannot use unit unobserved invariant characteristics to approximate the counter factual outcome and will consider the whole time period when estimating the causal effect. This is a problem for our data, because the relationship between China ans Brazil becomes more engangled as times gos by and years much further from the treatment period is proboably not a good comparison to periods longe before the treatment.
 
-Anotther key advantage of the SDID is that it reduces the variance of the estimator, allowing more precise estimation [@arkhangelsky_etal2021]. One problem with this model, however, is that it does not include time-varying covariates that are important to more closely match the pre-treatment time period. Thus, to account  for time-varying covaraites and better adjust the model, we first fitted a standard linear regression model and compute $\hat{\beta}$:
-
-$$Y_{it} = X_{it}\beta + e_it$$
-
-And then we use the Fritsch Wovell Lowell theorem to fit the SDID regression model on the residualized outcome, given by:
+Anotther key advantage of the SDID is that it reduces the variance of the estimator, allowing more precise estimation [@arkhangelsky_etal2021]. One problem with this model, however, is that it does not include time-varying covariates that are important to more closely match the pre-treatment time period. Thus, to account  for time-varying covariates and better adjust the model, we include vector of time-varying controls as suggested by [@hirshberg_klosin2024], such that the estimated equation is now:
 
 $$
-Y_{it}^{\text{res}} = Y_{it} - X_{it}\hat{\beta}
+\bigl(\hat{\tau}_{ATT}^{\text{SCM}}, \hat{\mu}, \hat{\beta}, \hat{\gamma} \bigr)
+= 
+\operatorname*{arg\,min}_{\tau_{ATT},\mu,\beta, \alpha, \gamma}
+\sum_{i=1}^{N}\sum_{t=1}^{T}
+\bigl(Y_{it}- \mu- \alpha_i - \beta_t-D_{it}\tau_{ATT} -X_{it}\gamma \bigr)^2\, 
+\hat{w}^{\text{SDiD}} \hat{\lambda}^{\text{SDiD}}_t
 $$
 
-this way, we are trying to estimate the causal effect having controled for the effect of time-varying covariates [@hirshberg_klosin2024].
+.
 
 ## Data and Variables
 
