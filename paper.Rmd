@@ -1,10 +1,11 @@
 ---
-title: "The effect of trade on Brazil's foreing policy political alignment with China"
+title: "The rank effect of trade on Brazil's foreign policy political alignment with China"
 author: "Manoel Galino"
 date: '2024-06-30'
 output:
   pdf_document:
     number_sections: true
+    latex_engine: xelatex
 header-includes:
   - \usepackage{setspace}\doublespacing
   - \setstretch{1.5}
@@ -18,34 +19,61 @@ abstract: \singlespacing Loren ispon Loren ispon Loren ispon Loren ispon Loren i
 geometry: margin=2.5cm
 spacing: double
 mainfont: "Times New Roman"
+bibliography: synth-trade-china.bib
 link-citations: yes
 ---
 \pagebreak
 
 # Introduction
 
-In 2004, China overcome Argentina as the second most important trade partner of Brazil, behind only the US. At that same year, Brazil recognized China with economy market status, a major demand from China since 2001 [@urdinez_2014]. The present studies is trying to understand specifucally what is the effect of these two impactful change on Brazil's foreign policy analysis. Scholars, analysts and policymakers has long debated the inffluence of China on global affairs and in particular in the foreign policy of countries impacted by its emergence as a global power and this study is one contribution to this literature.
+In 2004, China overcome Argentina as the second biggest Brazil's trade partner, behind only the US. At that same year, Brazil recognized China with economy market status, a major demand from China since 2001 [@urdinez_2014]. The economic ties between both countries only grew over time. In 2004, Brazil was the 15th largest market for China exports and became the eighth in 2014. The foreign policy of both countries also showed some alignment. Both countries became members of forums such as G5 (Brazil, Mexico, India, China and South Africa), BASIC (Brazil, South Africa, India and China) and the BRIC summit.
 
-More or less at the same period China started emerging as a potential rival of the US in the international system, becoming an important player the foreign policy of almost every country in the world. It is thus difficult to disentangle the effect of China emerging as a Hegemon in the international system and the impact of becoming a major trading partner of a country. 
+A major strand of the literature argues that expanding trade ties with China have significant foreign policy consequences for Brazil and other Latin American countries. Many of such studies, however, fall short of providing credible causal evidence. In a pioneering quantitative study, @flores-macias_kreps2013 show that the more countries trade with China, the more likely they are to side with China on foreign policy, in which the main measure of political alignment is vote similarity at UNGA. In order to to control for endogeneity, the author used a fixed effect models with lagged variables and two-stage least squares. The first approach is just wrong from a causal point of view, since one key identification assumption in fixed effects models is no carry over effects, which precludes the use of lagged dependent variable in the regression [@blackwell_glynn2018; @imai_kim2019; @imai_kim2021]. The instrument used in the latter approach is lagged energy production of a country. This variable, however, fails to meet the exclusion restriction assumption, since energy production is, for example, related to economic development, which may be causal pathway from the instrument to the outcome (political alignment). In general is very hard to justify the exclusion restriction of instruments [@mellon_2021; @bastardoz_2023; @lal_etal2024], diminishing the credibility of the assumptions needed for causal identification.
 
-The literature has discussed both effects. According to @flores-macias_kreps2013, the more states (including Brazil) trade with China, they are more likely to be aligned on issues of foreign policy. @schenoni_leiva2021 argue that recent Brazilian foreign policy change is the result of the pull of China as a new great power, resulting in what they call a "dual hegemony".
+Qualitative studies have also pointed the linkage between trade and foreign policy. In a study about the prevalence of trade in Brazil's president Lula speech on China [@guilhon2014] shows that in fact that is the thematic emphasis of Brazil foreign policy during Lula's second term. From the other side, @vadell_2011 emphasizes how the diplomatic ties betwen China and South America countries followed the economic interest of the Asiatic power in the region.
 
-According to the ground break work by @amorim_neto2011 [see also @mouron_urdinez2014], as Brazil became a more powerful country, it could distance itself from the US. It is thus expected that as China emerged as an important country, it would attract some alignment of Brazilian foreign policy due to this effect of power. As a result, it is not clear what is the role of economic integration with China on the foreign policy of a country like Brazil.
+Other studies have emphasized the reverse causal order. They contend that complementarity of aligned national interests and shared identities with the emerging discourse [@haibin_2010] and a revisionist stance towards the international order promoted more trade links between countries [@coutinho_rodriguez2024]. Many studies have find evidence that political alignment with China can significantly impact trade flows [@fuchs_klann2013; @aiyar_etal2024; @yan_zhou2021].
 
-So far, most studies have employed qualitative approach to differentiate between Brazilian autonomy as its power growth from the effect of emergence of China as a new Hegemon with high economic impact in the country. Countries that have used a qqnatitative method, do not have a credible causal design. Our present study is the first to employ a quantitative causal design to isolate the effect of trade integration on Brazilian foreign policy.
+The opposite causal pathways make it hard to deal with the problem of reverse causality and omitted variables bias in observational studies. As a result, we still need to understand better the effect of trade on political alignment. Moreover, many of the existing studies do not differentiate exactly what is the effect working: is it its foreign direct investment in the region? The importance of its imports to the economic success of the latin american countries? Ore are other non-economic factors, such as China’s growing soft-power outreach or shared claims for reforming global governance institutions and resistance to Washington-centric norms that are important? In fact, more recently some studies have argued that it is a mixture of many of these forces working at the same time [@struver_2014; @schenoni_leiva2021].
 
-In order to do so, we employ a synthetic difference-in-differences model to estimate the causal effect of China becoming the second major trade partner of Brazil in 2006 with a panel of 106 countries over 21 years (1991-2011). This method combines the best of syntethic control method and difference-in-differences to avoid the problems of each one and estimate a more reliably causal effect of an intervention (China becoming the second largest market for Brazilian exports and the recognition of market ststus by Brazil) in a single unit -- Brazil. We use the difference between the ideal point of countries and China, estimated based on votes at the United Nations General Assembly (UNGA), to measure the political alignment with countries and China over time.
+Another limitation of the literature is that all quantitative studies that measured Brazil's foreign policy alignment with UNGA votes used some similarity measure based on percentage of votes at UNGA [@neto2011;  @flores-macias_kreps2013; @mouron_urdinez2014]. However, as @bailey_etal2017 shows, such vote cannot be used in a panel data set because such indicators do not separate changes in the UN's agenda from shifts in state preferences. As a result, many attribution of changes in the policy orientation are in fact change in the content of the votes.
 
-The results show that becoming the second major trade partner decreased the distance in ideal point between Brazil and China in xx. standard deviations over the period considered (2007-2011). Thus, we present robust causal evidence of the mechanism of the gravitational effect of trade with China on Brazil's foreign policy, as hypothesized in part of the literature. It has important implications [which ones?] for reflections about how to build policy space in the context of an emerging dual hegemony.
+The present study aims to deal with those three order of problems (causal credibility of findings, disentangle the effect of trade from other effects and separate agenda change from state preference reorientation). We do so leveraging a discontinuity in the rank of an otherwise continuous variable, values of exports to a country, couples with a synthethic difference in differences apporach to estimate the causal effecrt of China becoming the second, as opposed to third, major market for Brazilian exports to estimate its causal effect on foreign policy orientation, measured as the absolute distance in UNGA ideal point estimation [@bailey_etal2017] between Brazil and China over 1990-20014. We found that than change in the rank position decreased the distance by xx points.
 
-The rest of the paper is organized as follows.
+Our results show that when salient, the trade position of a country has a distinctive causal effect on the foreign policy of a country like Brazil. All the arguments and discussion about China as an emerging power overlooked the importance of becoming salient in a qualitative distinct way to impact the foreign policy of other countries. It is not only a matter of having more trade ties, for instance, but overcoming historical trade partners that matter. This result also point to the need to investigating similar salience, rank effects, in other economic variables (such as Foreign Direct Investment and Loans) and variables along other dimensions (such as diplomatic ties, frequency of bilateral meetings and deals and agreements signed).
 
+
+The rest of the paper is organized as follows. Next, we discuss the importance of salience effects in the realm of trade effects and political alignment. Then, we evaluate how to measure political alignment, our main outcome variable. In the fourth section of the paper, we present our methodology, data and variables. then, we present our empirical findings. The last section presents our concluding remarks.
+
+# Political effects of rank
+
+Decision makers live in a complex, noise world. In such situations, it is ecologically rational to use cues from the enviroment to chose to what pay attention and react accordingly [citation needed. Gingerezer]. Many studies in international relations on policmakers have emphasized the roles of cues and heuristics when making a foreign policy decision or reorientation.
+
+A recent literature in the intersection of cognitive and social sciences has emphasizing the role herustics in decision-making, like how redundant information nonetheless work by shifting one's attention [@conlon2023], that people neglect correlated structure of information and treat them as independent [@enke_zimermann2017] or the existence of behavioral attenuation, in the sense that, due to information-processing constraints, people failt to corrected update beliefs and make decisions in response to change in the fundamentals of a problem [@enke_etal2024].
+
+In the field of International Relations, the poliheuristics theory is a standard account on how decision makers also behave like regular people in this regard [@mintz2004; @mintz_2005]. On of the main arguments is that, due to information-processing constraints, poliheuristic decision-making process is based on a nonexhaustive search in the sense that “comparisons of policy options are made within a (very) restrictive alternative set and attribute set” (Mintz and Geva 1997, 84). As such, policy dimensions or issues that come to attention beggin to be considered from the perspective of decision makers as they weren't before.
+
+Na capa da edição de 16 de maio de 2004, a Folha de São Paulo, the main newspaper in Brazil, put in the first page of the paper "Lula leva à China número recorde de empresários" [@trevisan2004]. The news piece within the paper says "As vendas tiveram alta de 80% em 2003, o que levou o país ao terceiro lugar entre os principais parceiros comerciais brasileiros, atrás de EUA e Argentina" [@trevisan2004, p. B8].
+
+
+
+
+
+
+
+@anagol_fujiwara2016; @folke_etal2016
 
 # Trade and Political Alignment
 
-[lit review and discussion of arguments, theories and mechanisms]
+A major strand of the literature argues that expanding trade ties with China have significant foreign policy consequences for Brazil and other Latin American countries. Many of such studies, however, fall short of providing credible causal evidence. In a pioneering quantitative study, @flores-macias_kreps2013 shows that the more countries trade with China, the more likely they are to side with China on foreign policy, in which the main measure of political alignment is vote similarity at UNGA. In order to to control for endogeneity, the author used a fixed effect models with lagged variables and two-stage least squares. The first approach is just wrong from a causal point of view, since one key identification assumption in fixed effects models is no carry over effects, which precludes the use of lagged dependent variable in the regression [@blackwell_glynn2018; @imai_kim2019; @imai_kim2021]. The instrument used in the latter approach is lagged energy production of a country. This variable, however, fails to meet the exclusion restriction assumption, since energy production is, for example, related to economic development, which may be causal pathway from the instrument to the outcome (political alignment). In general is very hard to justify the exclusion restriction of instruments [@mellon_2021; @bastardoz_2023; @lal_etal2024], diminishing the credibility of the assumptions needed for causal identification.
 
-@flores-macias_kreps2013 try to control for endogeneity by using fixed effect models with lagged variables and two-stage least squares. The first approach is just wrong from a causal point of view, since one key identification assumption in fixed effects models is no carry over effects. The instrument used in the latter approach is lagged energy production of a country. This variable, however, fail to meet the exclusion restriction assumption, since energy production is, for example, related to economic development, which may be causal pathway from the instrument to the outcome (political alignment). 
+Qualitative studies have also pointed the linkage between trade and foreign policy. In a study about the prevalence of trade in Brazil's president Lula speech on China,  [@guilhon2014] shows that in fact that is the thematic emphasis of Brazil foreign policy during Lula's second term. From the other side, @vadell_2011 emphasizes how the diplomatic ties betwen China and South America countries followed the economic interest of the Asiatic power in the region.
+
+Other studies have emphasized the reverse causal order. They contend that complementarity of aligned national interests and shared identities with the emerging discourse [@haibin_2010] and a revisionist stance towards the international order promoted more trade links between countries [@coutinho_rodriguez2024]. Many studies have find evidence that political alignment (or its absence) can significantly impact trade flows. Countries that bucked China’s political preferences – by officially receiving the Dalai Lama – suffered subsequent trade declines [@fuchs_klann2013]. Countries that voted in support of the PRC (political alignment) in 1971 on the matters of Taiwan enjoyed a surge in bilateral trade with China in the immediately following year [@yan_zhou2021]. In a more general quantitative study, @chen_zhou2021 shows that a country tends to import more from partners with whom it has friendly relations, which is specially true for an authoritarian state (such as China). Studies have find a similar effect in other economic variables, such as Foreign Direct Investment [@aiyar_etal2024].
+
+Another strand of the literature has emphasized how the emergence of China as a major power and its diplomatic inroads into Latin America opened up the possibility of more autonomy from the US in the region [@struver_2014]. @schenoni_leiva2021 argue that recent Brazilian foreign policy change is the result of the pull of China as a new great power, resulting in what they call a "dual hegemony". According to the ground break work by @neto2011, as Brazil became a more powerful country, it could distance itself from the US. It is thus expected that as China emerged as an important country, it would attract some alignment of Brazilian foreign policy due to this effect of power. @mouron_urdinez2014 argued that the power gap was the most important factor, and that it was true for the  broader South American countries: the smaller the power gap between a country and the U.S., the less it aligned with the U.S. at the UN.
+
+@bailey_etal2017 developed an alternative measure, based on ideal point estimation, that disentangle the effect of agenda changing from the foreign policy preference change.
 
 # Mehtodology
 
@@ -55,16 +83,16 @@ Consider a complete panel^[whas is called balanced panel. We prefer the term com
 
 $$
 \bigl(\hat{\tau}_{ATT}^{\text{SCM}}, \hat{\mu}, \hat{\beta} \bigr)
-= 
+=
 \operatorname*{arg\,min}_{\tau_{ATT},\mu,\beta, \alpha}
 \sum_{i=1}^{N}\sum_{t=1}^{T}
-\bigl(Y_{it}- \mu- \alpha_i - \beta_t-D_{it}\tau_{ATT}\bigr)^2\, 
+\bigl(Y_{it}- \mu- \alpha_i - \beta_t-D_{it}\tau_{ATT}\bigr)^2\,
 \hat{w}^{\text{SDiD}} \hat{\lambda}^{\text{SDiD}}_t
 $$
 Vale a pena contrastar esse modelo com o DiD clássico e o SCM. O modelo de DiD estima:
 $$
 \bigl(\hat{\tau}_{ATT}^{\text{SCM}}, \hat{\mu}, \hat{\lambda}, \hat{\beta}\bigr)
-= 
+=
 \operatorname*{arg\,min}_{\tau_{ATT},\mu, \alpha, \beta}
 \sum_{i=1}^{N}\sum_{t=1}^{T}
 \bigl(Y_{it}-\mu-\alpha_i -\beta_t-D_{it}\tau_{ATT}\bigr)^2
@@ -73,10 +101,10 @@ Como se vê, o SDiD coloca pesos em países dos grupos controle que são mais si
 
 $$
 \bigl(\hat{\tau}_{ATT}^{\text{SCM}}, \hat{\mu}, \hat{\beta}\bigr)
-= 
+=
 \operatorname*{arg\,min}_{\tau_{ATT}, \mu, \beta}
 \sum_{i=1}^{N}\sum_{t=1}^{T}
-\bigl(Y_{it}-\mu-\beta_t-D_{it}\tau_{ATT}\bigr)^2\, 
+\bigl(Y_{it}-\mu-\beta_t-D_{it}\tau_{ATT}\bigr)^2\,
 \hat{w}^{\text{SDiD}} \hat{\lambda}^{\text{SDiD}}_t
 $$
 As we can see, there is no unit fixed effect and not time weight. As a result, the SCM cannot use unit unobserved invariant characteristics to approximate the counter factual outcome and will consider the whole time period when estimating the causal effect. This is a problem for our data, because the relationship between China ans Brazil becomes more engangled as times gos by and years much further from the treatment period is proboably not a good comparison to periods longe before the treatment.
@@ -85,14 +113,13 @@ Anotther key advantage of the SDID is that it reduces the variance of the estima
 
 $$
 \bigl(\hat{\tau}_{ATT}^{\text{SCM}}, \hat{\mu}, \hat{\beta}, \hat{\gamma} \bigr)
-= 
+=
 \operatorname*{arg\,min}_{\tau_{ATT},\mu,\beta, \alpha, \gamma}
 \sum_{i=1}^{N}\sum_{t=1}^{T}
-\bigl(Y_{it}- \mu- \alpha_i - \beta_t-D_{it}\tau_{ATT} -X_{it}\gamma \bigr)^2\, 
+\bigl(Y_{it}- \mu- \alpha_i - \beta_t-D_{it}\tau_{ATT} -X_{it}\gamma \bigr)^2\,
 \hat{w}^{\text{SDiD}} \hat{\lambda}^{\text{SDiD}}_t
 $$
 
-.
 
 ## Data and Variables
 
@@ -140,7 +167,7 @@ tar_read(plot)
 
 # Descriptive Analysis
 
-In figure @plot_unga1 bellow, we plot the evolution of UNGA's ideal point of US, Brazil and China over time. As we can see, Brazil is closer to China than to the US since the beginning of the series of my data, in 1990 upt to 2022, during Bolsonaro's government. Even thoud there is a distancing of Brasil under Bolsonaro's term, it is still closer to the China than to the US. This is a testimonement of how much Brazil is structury closer to China at the UNGA.
+In figure bellow, we plot the evolution of UNGA's ideal point of US, Brazil and China over time. As we can see, Brazil is closer to China than to the US since the beginning of the series of my data, in 1990 upt to 2022, during Bolsonaro's government. Even thoud there is a distancing of Brasil under Bolsonaro's term, it is still closer to the China than to the US. This is a testimonement of how much Brazil is structury closer to China at the UNGA.
 
 It also shows that Brazil is moving more over time than China, which is mostly stable over time. Thus, that is an indication that is Brazil who is moving closer to China than the opposite, as expected, given the differential of power and importance of both Countries and the dependence between them. 
 
@@ -157,7 +184,7 @@ Having established that is mostly Brazil moving around than China, we can use as
 tar_read(plot_ideal_distance)
 ```
 
-The question one wonders after seeing the graphs is: why Brazil was getting closer over time? the main hypothesis discussed in the literature is the gravitation pull of the China economy, peharps as shown in the percentage of exports of Brazil that wen to China in the period considered. The @plot_trade shows that around year 2000, the percentage of exports destined to China increase at a roughly constant rate, in a very steep variation, which does not exactly fit the political alignment as measured by UNGA ideal points, although there is some positive correlation.
+The question one wonders after seeing the graphs is: why Brazil was getting closer over time? the main hypothesis discussed in the literature is the gravitation pull of the China economy, peharps as shown in the percentage of exports of Brazil that wen to China in the period considered. The figure bellow shows that around year 2000, the percentage of exports destined to China increase at a roughly constant rate, in a very steep variation, which does not exactly fit the political alignment as measured by UNGA ideal points, although there is some positive correlation.
 
 ```{r plot_trade, message=FALSE, warning=FALSE, echo=FALSE, fig.cap= "caption", fig.pos="h"}
 # library(ggplot2)
