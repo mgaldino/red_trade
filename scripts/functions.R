@@ -54,7 +54,7 @@ bind_data <- function(file1, file2, ...) {
 get_trade_data <- function(trade_file) {
   fread(trade_file) %>%
     dplyr::select(year, exporter_iso3, importer_iso3, trade) %>%
-    filter( year > 1989 & year < 2016) %>%
+    filter( year > 1989) %>%
     group_by(year, exporter_iso3, importer_iso3) %>%
     dplyr::filter(exporter_iso3 != importer_iso3) %>%
     summarise(exports = sum(trade), .groups = "drop") 
@@ -71,6 +71,38 @@ rank_trade <- function(data) {
     mutate(rank_from_j = dense_rank(desc(exports))) %>% 
     ungroup() %>%
     dplyr::filter(importer_iso3 == "CHN")
+}
+
+get_folhasp_newspieces <- function(start, end) {
+  link <- "https://search.folha.uol.com.br/search?q=china&site=sitefolha&periodo=todos&sort=asc&sr="
+  seq_paginas <- seq(1, 100000, by=25)
+  lista_df <- list()
+  # 2) lê o HTML
+  for(i in start:end) {
+    url <- paste0(link, seq_paginas[i])
+    pg <- read_html(url)
+    titles <- html_elements(pg, ".c-headline__title") |> html_text2()
+    datas   <- html_elements(pg, "time")       |> html_attr("datetime")
+    
+    # 4) junta tudo em um data frame
+    result <- data.frame(title = titles,
+                         data   = datas)
+    lista_df[[i]] <- result
+    Sys.sleep(1)
+  }
+  
+  df_folha <- bind_rows(lista_df)
+  df_folha <- df_folha %>%
+    mutate(date_piece = str_extract(data, "[:alnum:]+\\.[:alnum:]+\\.[:alnum:]+"),
+           date_piece = gsub("out", "oct", date_piece),
+           date_piece = gsub("fev", "feb", date_piece),
+           date_piece = gsub("abr", "apr", date_piece),
+           date_piece = gsub("mai", "may", date_piece),
+           date_piece = gsub("ago", "aug", date_piece),
+           date_piece = gsub("set", "sep", date_piece),
+           date_piece = gsub("dez", "dec", date_piece),
+           date_piece = dmy(date_piece))
+  return(df_folha)
 }
 
 process_trade_data <- function(file) {
