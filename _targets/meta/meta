@@ -1,0 +1,138 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+trade_file1|stem|c8541a32c6268b10|44ad1607a546201a|2c530c1562a7fbd1|1032647921|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/raw data/release_2/release_2.1_2000_2004.csv|t18823.8757638889s|s150597627b|150597627|file|local|vector|||0.372||
+trade_data1|stem|40f9b55b7e125a6b|86f4d19a04e231ee|838e93aac85dfcb8|231204463||t20263.0050985913s|s1883656b|1883656|rds|local|vector|||0.521||
+trade_file2|stem|aa91e60c41cd5718|1513129fb2df6d0a|2c530c1562a7fbd1|2039069646|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/raw data/release_2/release_2.1_2005_2009.csv|t18823.876087963s|s153036451b|153036451|file|local|vector|||0.343||
+trade_file3|stem|6b9cf84e9475c727|2fa9964181180dc0|2c530c1562a7fbd1|1609340088|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/raw data/release_2/release_2.1_2010_2014.csv|t18823.876412037s|s154181798b|154181798|file|local|vector|||0||
+trade_file4|stem|ad6aaa3518f124ad|a6a09ab26b48ebf7|2c530c1562a7fbd1|-15107433|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/raw data/release_2/release_2.1_1990_1999.csv|t18823.8754398148s|s282589243b|282589243|file|local|vector|||0||
+trade_data2|stem|f584c0db1b7234b5|569be49622ec6b2d|b0dfb58c0a6293cb|-1339427280||t20263.0058675779s|s1878117b|1878117|rds|local|vector|||0.485||
+trade_data3|stem|1cb689476048c986|32224e2378906c58|18bf4fe6bd0c3ac1|370733413||t20263.0058880771s|s1941351b|1941351|rds|local|vector|||0.275||
+trade_data4|stem|d71e55dfb850ce91|ef04f8902f561bf6|356cca45c73f0d7f|1337079759||t20263.0059275605s|s6631081b|6631081|rds|local|vector|||0.587||
+unga_file|stem|dfa726f584c4c091|46e4803feabd9067|2c530c1562a7fbd1|-11725548|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/raw data/dataverse_files-2/IdealpointestimatesAll_Jun2024.csv|t20258.9308101852s|s1932704b|1932704|file|local|vector|||0.35||
+gpi_file|stem|7e5f1a28fccc145b|8e3c2e61a2b109cf|2c530c1562a7fbd1|-1542570937|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/raw data/GPI with sub-components_1816-2050_20241007.xlsx|t20258.9122475222s|s22396133b|22396133|file|local|vector|||0.382||
+country_file1|stem|c8541a32c6268b10|44ad1607a546201a|2c530c1562a7fbd1|542720516|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/raw data/release_2/release_2.1_2000_2004.csv|t18823.8757638889s|s150597627b|150597627|file|local|vector|||0.426||
+country_file2|stem|aa91e60c41cd5718|1513129fb2df6d0a|2c530c1562a7fbd1|-1959122156|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/raw data/release_2/release_2.1_2005_2009.csv|t18823.876087963s|s153036451b|153036451|file|local|vector|||0.001||
+country_file3|stem|6b9cf84e9475c727|2fa9964181180dc0|2c530c1562a7fbd1|1251912999|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/raw data/release_2/release_2.1_2010_2014.csv|t18823.876412037s|s154181798b|154181798|file|local|vector|||0.001||
+country_file4|stem|ad6aaa3518f124ad|a6a09ab26b48ebf7|2c530c1562a7fbd1|-2056255182|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/raw data/release_2/release_2.1_1990_1999.csv|t18823.8754398148s|s282589243b|282589243|file|local|vector|||0||
+trade_file|stem|2f5a37b85191329e|ca5751cdd227061a|2c530c1562a7fbd1|-1592259819|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/raw data/ITPDE_R03.csv|t20244.9009953704s|s8373541851b|8373541851|file|local|vector|||0.377||
+gpi_data|stem|78811ed7d370c13b|32502cc312c1d3c4|ad42d0b9a081e8d9|-913808985||t20263.6552692985s|s176049b|176049|rds|local|vector|||0.449||
+country_data1|stem|e14121e2071b6852|fb7efdb5a5038252|44484d198df34382|596652284||t20263.8153636438s|s14201b|14201|rds|local|vector|||0.542|There were 719 warnings in `summarise()`. The first warning was: ℹ In argument: `pop = max(pop_o, na.rm = T)`. ℹ In group 2: `year = 2000` `iso3_o = 'AFG'`. Caused by warning in `max()`: ! no non-missing arguments to max; returning -Inf ℹ Run `dplyr::last_dplyr_warnings()` to see the 718 remaining warnings.|
+country_data2|stem|88ceec906ff8b9bf|f2c079e985379fdd|36ff7114bceabab7|89958334||t20263.8153685698s|s14433b|14433|rds|local|vector|||0.403|There were 716 warnings in `summarise()`. The first warning was: ℹ In argument: `pop = max(pop_o, na.rm = T)`. ℹ In group 2: `year = 2005` `iso3_o = 'AFG'`. Caused by warning in `max()`: ! no non-missing arguments to max; returning -Inf ℹ Run `dplyr::last_dplyr_warnings()` to see the 715 remaining warnings.|
+country_data3|stem|13da92c468ddf252|c5b456fbcc39ad3c|1384e111a6d8efb6|477152403||t20263.8153729937s|s14602b|14602|rds|local|vector|||0.36|There were 730 warnings in `summarise()`. The first warning was: ℹ In argument: `pop = max(pop_o, na.rm = T)`. ℹ In group 2: `year = 2010` `iso3_o = 'AFG'`. Caused by warning in `max()`: ! no non-missing arguments to max; returning -Inf ℹ Run `dplyr::last_dplyr_warnings()` to see the 729 remaining warnings.|
+country_data4|stem|e09490a86a0f0653|f29a5497da58bfb3|e864a856033fbc4e|1959354854||t20263.8153799375s|s23607b|23607|rds|local|vector|||0.591|There were 1413 warnings in `summarise()`. The first warning was: ℹ In argument: `pop = max(pop_o, na.rm = T)`. ℹ In group 2: `year = 1990` `iso3_o = 'AFG'`. Caused by warning in `max()`: ! no non-missing arguments to max; returning -Inf ℹ Run `dplyr::last_dplyr_warnings()` to see the 1412 remaining warnings.|
+balance_table|stem|49dc9d21643e9dd1|be019a17b88e6bbf|312c89b7a2e6ae38|-1701077538||t20263.8193654594s|s633b|633|rds|local|vector|||0.019||
+generate_synth|function|b536fcdd0c37d189
+synth_gerado|stem|42d4c556486b4eef|70ea19e14b21d1c2|3672a36422722a0b|974523037||t20263.8193627911s||328628|rds|local|vector|||31.443||system is computationally singular: reciprocal condition number = 1.55206e-17
+y_residual|stem|5ac8e69544048fa8|daea06bf6574e103|1023928e1a17b1a5|-1396866876||t20266.0432674886s|s19662b|19662|rds|local|vector|||0.01||
+se_synth_latal|stem|f52edc927731d254|879b08e589442eaf|b2f8ab0990a0b219|474096812||t20266.0433830335s|s80b|80|rds|local|vector|||9.279||
+synth_fit_resid|stem|7c91fa00a95e4bb2|2378d6a19f2f549f|73ca1fead6783000|218341075||t20266.0592323697s|s159270b|159270|rds|local|vector|||0.337||
+fit_reglin|function|c4bb25b0d9d46ef5
+synth_fit_latam_resid|stem|efcb786a0a485039|7893ec33c945d018|da3c588a3b3460e9|607746156||t20266.0601517077s|s18077b|18077|rds|local|vector|||0.042||
+plot_trends_latam_resid|stem|1c7dda18bc8ee43f|fa2739615a2ab583|a73241899c1d61fd|277760192||t20266.0601578497s|s196650b|196650|rds|local|vector|||0.04||
+plot_dif_latam_resid|stem|a6c2fa6bbde628b5|35783bba1c85e655|08492381fff7a5e2|1843943590||t20266.0601591631s|s196157b|196157|rds|local|vector|||0.024||
+plot_weights_latam_resid|stem|6ab40e2bd37be528|ab80127bef07b5c0|16bf374945d3334b|-1055283090||t20266.0601598893s|s133550b|133550|rds|local|vector|||0.009||
+se_synth_latam_resid|stem|0b9a94875e59de65|08d623528f29b793|104a5864b3d8a5a3|-1174043846||t20266.0602506367s|s80b|80|rds|local|vector|||7.831||
+plot_trends_latam|stem|0d2a02daf98b1363|5254bcced4fea156|95a6b322d034528a|984794329||t20266.0602519733s|s301879b|301879|rds|local|vector|||0.023||
+plot_weights_latam|stem|f02033a3fb50cb40|6f52f75d63561513|89fdceab5da97e4c|326471175||t20266.0602528163s|s241293b|241293|rds|local|vector|||0.009||
+plot_dif_latam|stem|ba7efaaaf6dbde82|0b926acb615639bd|5f7e605decb023e2|166961021||t20266.0602543072s|s301477b|301477|rds|local|vector|||0.028||
+plot_weights_resid|stem|6d9fa376bda536a0|b49ecd2e98b7fda9|180823140c57a114|-48450953||t20266.0603109548s|s281854b|281854|rds|local|vector|||0.007||
+plot_dif_resid|stem|71f259e5f5b972dc|310ab32cc5395123|e59bbbe3709b8a51|-2079553273||t20266.0603123525s|s335946b|335946|rds|local|vector|||0.03||
+se_synth_resid|stem|854beb09a4b13e03|ff9fb18b52a4d912|c0a9a0c0439206b5|-824105093||t20266.0609197392s|s80b|80|rds|local|vector|||52.468||
+plot_trends_resid|stem|405a2be1d08fddde|2130140300f0a4c3|71d5ee9416f9310f|1224065164||t20266.0609214277s|s336566b|336566|rds|local|vector|||0.053||
+plot_trends|stem|bb35e4695e805c85|e3b463068b1997b6|7a487df7e71ac553|869192310||t20266.0609227307s|s340684b|340684|rds|local|vector|||0.023||
+plot_weights|stem|272ccfff60e1b2a9|a2e10ce50e844375|cf465174a05e36e0|2022521797||t20266.0609235846s|s285166b|285166|rds|local|vector|||0.006||
+plot_dif|stem|47d7f01131cf61cc|0c2f31e18c04af0f|56a0b2c2d35977b4|901647254||t20266.0609249632s|s340097b|340097|rds|local|vector|||0.029||
+y_residual_latam|stem|944a22c80db8c843|8b71c6b1fc504c45|344ce6d99f4ac789|1096539010||t20266.0533835554s||2981|rds|local|vector|||0.005||could not find function 'fit_reglin'
+unga_data|stem|05e418d10ebd2535|52ba1a20b7d602a4|9af14a49865ceb79|-1132963809||t20267.0603095799s|s183860b|183860|rds|local|vector|||0.072||
+plot_ideal_distance|stem|598c51d3f30c7457|16c09e4d4746f081|4d7ba1ec49c83f2f|1361005707||t20267.0793285217s|s325492b|325492|rds|local|vector|||0.02||
+plot_ideal|stem|665202233b7a4542|24391ef851d8bea2|0e9cb2714e58a69a|74823708||t20267.079329909s|s351148b|351148|rds|local|vector|||0.025||
+trade_data|stem|ef55681cd7c9a7ed|d23583ff7e02c87b|0c1456e14384059d|-549653319||t20267.9034492171s|s7072660b|7072660|rds|local|vector|||41.986||
+trade_data_cleaned|stem|e7cf70be27288f81|837f6f20c4fadb6d|cb4e1bc75439fc55|1539297756||t20267.9034535192s|s161286b|161286|rds|local|vector|||0.054||
+trade_data_ranked|stem|873b2aa575ac22aa|ac64b929b40c4b18|7fe44366a2ccafd1|1077794227||t20267.9034596402s|s70818b|70818|rds|local|vector|||0.218||
+trade_plot|stem|2a5650d14d7390b9|be8a5d8539219a56|112286906a3b291c|1374114840||t20267.9034605094s|s366234b|366234|rds|local|vector|||0.012||
+folha_df_p1|stem|8e05d85bdac02590|e4a101404072984a|fc2bf275c75007d5|1513349383||t20268.0912945136s|s275111b|275111|rds|local|vector|||679.683||
+folha_df_p0|stem|466d4d5598864396|fb0268ca5c79478f|fc2bf275c75007d5|1612056622||t20268.1011243448s|s271213b|271213|rds|local|vector|||674.015||
+folha_df_p2|stem|a94011939dd99e98|a06f4e52ad06cbf0|fc2bf275c75007d5|-522363287||t20268.1189874783s|s280056b|280056|rds|local|vector|||686.884||
+folha_df_p3|stem|158897c837dcde50|16cdcd1a0678d20a|fc2bf275c75007d5|1637533069||t20268.1356071373s|s283451b|283451|rds|local|vector|||683.669||
+folha_df_p4|stem|1ea945e49d5466c6|50768e0c9bd56e86|fc2bf275c75007d5|1574317330||t20268.5121230101s|s291717b|291717|rds|local|vector|||690.138||
+plot_trend1|stem|a3edb872e1dec7cf|e3b463068b1997b6|3f749aa14b9e1ad6|-2015188777||t20268.5493158124s|s335402b|335402|rds|local|vector|||0.042||
+plot_weights_coef1|stem|70f4ef7550a19186|a2e10ce50e844375|056f3412076e318b|1216616176||t20268.5493168216s|s280905b|280905|rds|local|vector|||0.009||
+plot_parallel1|stem|1c7e9f4bc599afa9|0c2f31e18c04af0f|52168a6290cefc7a|-1017882951||t20268.5493185802s|s334935b|334935|rds|local|vector|||0.027||
+my_balance_table|function|353f775996588905
+folha_df|stem|ab2efdc92249893a|8150abbf8e5a23a1|20378861547d22c4|1306096025||t20268.6860784911s|s1382490b|1382490|rds|local|vector|||0.002||
+plot_folha|stem|0802c5a198a763c0|20434402083a7f3e|7558f4fd222f68c5|963096838||t20268.7842862723s|s1586055b|1586055|rds|local|vector|||0.081||
+data_placebo_time|stem|b16a512e495a6527|b08fcf371970d941|33aba52d7bfcf369|1651598532||t20269.1271497108s|s290557b|290557|rds|local|vector|||0.006||
+placebo_teste_time|stem|b0af43c49bff5305|cf0a80b4d4e3556f|7fdab3fb94b4f36b|27739586||t20269.1271550998s|s133582b|133582|rds|local|vector|||0.414||
+list_plots|stem|b74f753260a85b4e|4cbd7a529e49a39b|2f1fcaf4a8b70ada|-114840105||t20269.6003908726s|s3095760b|3095760|rds|local|vector|||2.108|In `d`, `NA` elements were replaced with string 'NA'.. In `d`, `NA` elements were replaced with string 'NA'.|
+list_plots_08_09|stem|fc6069d7113c00e6|2606ddfb91b3c113|2f1fcaf4a8b70ada|668520980||t20269.6004125862s|s3092520b|3092520|rds|local|vector|||1.275|In `d`, `NA` elements were replaced with string 'NA'.. In `d`, `NA` elements were replaced with string 'NA'.|
+country_file5|stem|bc041e7cb3a93d72|8712d572bd9f1658|2c530c1562a7fbd1|-1966210858|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/raw data/release_2/release_2.1_2015_2019.csv|t18823.876712963s|s130651237b|130651237|file|local|vector|||1.478||
+country_data5|stem|e720816d359b38bf|6e98f9c600b357e7|73a19d4f0fccca8d|-2096841999||t20269.9466594152s|s10458b|10458|rds|local|vector|||1.698|There were 1458 warnings in `summarise()`. The first warning was: ℹ In argument: `pop = max(pop_o, na.rm = T)`. ℹ In group 2: `year = 2015` `iso3_o = 'AFG'`. Caused by warning in `max()`: ! no non-missing arguments to max; returning -Inf ℹ Run `dplyr::last_dplyr_warnings()` to see the 1457 remaining warnings.|
+dpi_file|stem|d8129d06f40e92b4|173da9180802bc9b|2c530c1562a7fbd1|-249243301|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/raw data/database-political-institutions-2015.csv|t20272.9133411355s|s2365772b|2365772|file|local|vector|||1.538||
+dpi|stem|e9febe0b34560cd7|5703833d93ec9835|89c3b835e07ff4e9|-915455721||t20272.9408155481s|s6213b|6213|rds|local|vector|||0.029||
+plot_weights_coef|stem|7bfd53555ecec24d|a2e10ce50e844375|85ec0e71cc1ea200|1027663587||t20273.5302703938s|s173967b|173967|rds|local|vector|||12.174||
+plot_weights_coef_latam|stem|1793d5c6e32babc6|6396f9b1ecbdbf2d|25783f0ea820e136|-1283731509||t20273.5304172596s|s180027b|180027|rds|local|vector|||0.317||
+placebo_teste_time2|stem|1dece209bb221273|ca9c951edcfb1b3d|360bfce056388fbc|1674722949||t20273.5382182382s|s44452b|44452|rds|local|vector|||0.039||
+placebo_teste_time3|stem|dfc385fd3cd7ad3c|1eef2899d2253b8b|ca05abfcf6f62d90|-369438625||t20273.5382189535s|s63338b|63338|rds|local|vector|||0.051||
+get_exchange_rate_data|function|c1d3d358634dce9d
+exchange_rate_data|stem|d1968de07967b2c8|4bdd435c128570d9|2c530c1562a7fbd1|-1887716885||t20269.5602458672s||31328|rds|local|vector|||1.54||could not find function 'get_exchange_rate_data'
+wb_data|stem|43bded99bc767814|4ed1a6034f195cc4|a720da10e27eb6df|964024317||t20274.0306446242s|s238369b|238369|rds|local|vector|||13.179||
+macro_data|stem|7efd79a2a12f583c|9332e7a00ee55bd0|d03acbf05d59898d|805793487||t20274.7818032815s|s129677b|129677|rds|local|vector|||5.557||
+dpi_data|stem|8c8a512ef4db7f68|5703833d93ec9835|02acd4ba23f589da|1553857186||t20274.7818039697s|s4717b|4717|rds|local|vector|||0.022||
+country_data|stem|08fd0f809fc31729|f0a47fd5dad8c957|0e8de7c427621903|1190291426||t20274.7831737522s|s8709b|8709|rds|local|vector|||2.114||
+data_placebo_time2|stem|faa99817b3d7ebd5|f56dfb2040fd733f|b10a819dbd9ec335|1459296199||t20274.7846305378s|s68750b|68750|rds|local|vector|||0.001||
+mat_covariates|stem|7dad69e6dd475b82|c351d5284755efca|f0e7c3ceaaf8df03|955883067||t20274.7846335479s|s58421b|58421|rds|local|vector|||0.249||
+synth_placebo_data|function|ed06926b9b232643
+fit_sdid|function|62746ab4433ff1ad
+data_placebo_time1|stem|dc62d2b8e1da0664|46595bdd6618e822|b10a819dbd9ec335|1259437360||t20274.7860463882s|s43697b|43697|rds|local|vector|||0.007||
+data_placebo_time3|stem|2a26cd76a8b504f9|79ffd417a4eeff72|b10a819dbd9ec335|-77447842||t20274.7860467717s|s43693b|43693|rds|local|vector|||0.012||
+placebo_teste_time1|stem|f858905331a7e308|4e6b2c26b975ae30|4d78d922c2a5193a|1587982554||t20273.5382176694s||72210|rds|local|vector|||0.012||dim(X)[1:2] == dim(Y) are not all TRUE
+ideology_file|stem|4d23a54f1b1ed10f|9f55bb3ae6fa45ef|2c530c1562a7fbd1|1542442468|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/raw data/global_leader_ideologies.csv|t19990.4584490741s|s4085918b|4085918|file|local|vector|||1.001||
+get_dpi|function|6342477113afc109
+ideology_data|stem|68a30e206d648cda|8b805dbfc7066e96|1555714367c2da8a|1420798038||t20276.9113728583s|s67040b|67040|rds|local|vector|||0.068||
+final_df|stem|c80fdfe68446d82f|ed5613b2726a69c7|a3acb2caae685fec|-564487796||t20276.9113739544s|s639674b|639674|rds|local|vector|||0.018||
+plot_data|stem|923dda16274744b8|ca2338a32ca86458|828fa81ab578fec1|961282072||t20276.9113761144s|s753b|753|rds|local|vector|||0.004||
+get_macro|function|29039831984eb804
+my_plot_weigths|function|e317eec36db6863a
+get_folhasp_newspieces|function|74c37ddc7fb57694
+rank_trade|function|844ff99ece9ced7b
+plot_ideal_points|function|277a968a729b5517
+get_gpi_data|function|336ba964a0604255
+plot_distance_unga|function|ac6af68205c435b0
+my_plot_trends|function|6b2958e3c45c74db
+folha_plot|function|ce1d92ed18e9c45d
+bind_folha|function|c077c147b86b3c5c
+clean_synth_data|function|8c89d28baff30348
+generate_plot_data|function|ae5a7b4ded3e89f4
+create_list_graphs|function|33131b14c5aaa123
+process_trade_data|function|afd94933e7b60ecd
+plot_serie|function|69e05cf7376f4a0f
+get_unga_data|function|0ee690fc5887b469
+se_sdid|function|5eb65ab9231a0b3d
+my_plot_dif|function|2692db1673364d94
+cov_matrix|function|7e5ed0a158c54ff0
+join_df|function|84326136c37184c6
+get_trade_data|function|82a9269a48e4b2ac
+bind_data|function|cb81982a1a53ce27
+get_ideology_data|function|4f8f202f6dc9878f
+get_country_data2|function|1053f0384d182aaa
+plot_controls|function|f12a62498853f0f3
+get_country_data|function|d28598a9924c321f
+get_wb_data|function|db57e3eb97152b49
+plot_trade|function|4d32e1cf00c45621
+simple_fit|function|829659149bb9ca61
+synth_data|stem|0b698a60431c5084|d80dc34e12d6d761|d4224273446d09ee|-2019694640||t20276.9308450214s|s229737b|229737|rds|local|vector|||0.133||
+placebo_teste_treatment02|stem|0ae132585a5ed321|09288c7c41837701|f0a41c28787ccae9|-671333365||t20276.9309261059s|s173044b|173044|rds|local|vector|||6.985||
+placebo_teste_treatment04|stem|9957ea3f758191f6|1cda1ee65f6d8277|f0a41c28787ccae9|421761190||t20276.9310110548s|s174784b|174784|rds|local|vector|||7.312||
+synth_fit|stem|b203bf892c6031b0|bfe32a18c458a9a1|f0a41c28787ccae9|1675857646||t20276.9311055788s|s235618b|235618|rds|local|vector|||8.147||
+placebo_teste_treatment11|stem|5fb6c32fae1507b2|3eb10048d07ef0b9|f0a41c28787ccae9|857570704||t20276.9312127679s|s263284b|263284|rds|local|vector|||9.242||
+synth_fit_latam|stem|be9102939c7f6083|8eb80ea8631db8d0|f0a41c28787ccae9|721652965||t20276.9312470144s|s93312b|93312|rds|local|vector|||2.946||
+plot|stem|3f0218cf6d06eaa3|a86a352da144006d|47c8629d174d8932|874984291||t20276.9312480381s|s244161b|244161|rds|local|vector|||0.022||
+se_synth_placebo2|stem|b142512007bd4e7f|0fdc7ac7e77e9181|72e51f1bc865f516|-649394773||t20276.9478709025s|s80b|80|rds|local|vector|||1436.208||
+se_synth_placebo3|stem|86ebfc9d3bc8738c|228a41838b57755a|a6b4cc855148e185|-1909349306||t20276.965788577s|s80b|80|rds|local|vector|||1548.077||
+plot_trend|stem|c9746f1f70cea5c2|e3b463068b1997b6|80ebfd51f977d518|-1001934391||t20276.9657895557s|s414043b|414043|rds|local|vector|||0.018||
+se_synth|stem|36678245ce217a9e|67e828a7659aca53|852d151f2ffc4260|-1857295872||t20276.9862058196s|s80b|80|rds|local|vector|||1763.958||
+spaghetti_plot|stem|9b17332f4f712664|af2c001d8e33dd70|b0e4eb4e67f261c1|1523197509||t20276.9862067628s|s421665b|421665|rds|local|vector|||0.018||
+plot_parallel|stem|56e65b4223ec6eb8|0c2f31e18c04af0f|815007d487feac55|374716333||t20277.0067656638s|s413613b|413613|rds|local|vector|||1776.227||
+se_synth_placebo1|stem|a6e6adc3ad81ed3e|c47c471d4cb6b405|173c7ecd963da0b8|2045944205||t20277.0291616496s|s80b|80|rds|local|vector|||1935.001||
+se_synth_latam|stem|13392c95c8e2b2b0|879b08e589442eaf|bdc5a2a9c73de278|303480878||t20277.0360374317s|s80b|80|rds|local|vector|||594.057||
+plot_parallel_latam|stem|f97ed37bcb765797|0b926acb615639bd|b7093756a938b7ea|-1275524603||t20277.0448964717s|s271439b|271439|rds|local|vector|||765.363||
+plot_trend_latam|stem|49a6ddeb276eae31|5254bcced4fea156|2f37dcc60b1ba00c|-942661876||t20277.0448973047s|s271923b|271923|rds|local|vector|||0.015||
