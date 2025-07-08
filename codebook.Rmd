@@ -1,0 +1,152 @@
+---
+title: "Codebook metadada"
+author: "Manoel"
+date: "2025-06-30"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(labelled)
+library(codebook)
+```
+
+
+```{r trade-data, include=FALSE}
+library(targets)
+library(codebookr)
+df <- tar_read(synth_data)
+
+df <- df %>%
+   cb_add_col_attributes(
+    iso3c,
+    description = "three-letter country codes defined in ISO 3166-1",
+    source = "Dynamic Gravity Dataset, United States International Trade Commision"
+  ) %>%
+  
+  cb_add_col_attributes(
+    year,
+    description = "Year",
+    source = "UNGA ideal-point estimates (Bailey, Strezhnev & Voeten dataset)"
+  ) %>%
+
+  cb_add_col_attributes(
+    pop,
+    description = "Population in millions",
+    source = "Dynamic Gravity Dataset, United States International Trade Commision"
+  ) %>%
+
+  cb_add_col_attributes(
+    abs_distance_china,
+    description = "Absolute distance of ideal points of a country to China",
+    source = "UNGA ideal-point estimates (Bailey, Strezhnev & Voeten dataset)"
+  ) %>%
+  
+  cb_add_col_attributes(
+    gdp_cur,
+    description = "GDP in current USD",
+    source = "Dynamic Gravity Dataset, United States International Trade Commision"
+  ) %>% 
+  
+  cb_add_col_attributes(
+    abs_distance_usa,
+    description = "Absolute distance of ideal points of a country to the US",
+    source = "UNGA ideal-point estimates (Bailey, Strezhnev & Voeten dataset)"
+  ) %>% 
+
+  cb_add_col_attributes(
+    gpi,
+    description = "Global Power Index",
+    source = "Diplometric -- Pardee Institute, University of Denver"
+  ) %>% 
+    
+
+  cb_add_col_attributes(
+    us_power_gap,
+    description = "Gap power index: U.S. Global Power Index minus the country's own GPI score",
+    source = "Computed from Global Power Index data (Diplometric — Pardee Institute, University of Denver)"
+  ) %>%
+
+  cb_add_col_attributes(
+    us_ideal,
+    description = "Ideal-point estimate of the United States in the UNGA voting space",
+    source = "UNGA ideal-point estimates (Bailey, Strezhnev & Voeten dataset)"
+  ) %>%
+
+  cb_add_col_attributes(
+    trade_with_china,
+    description = "Bilateral goods trade with China (imports + exports, current USD, annual)",
+    source = "Dynamic Gravity Dataset, United States International Trade Commission (original UN Comtrade flows)"
+  ) %>%
+
+  cb_add_col_attributes(
+    trade_with_us,
+    description = "Bilateral goods trade with the United States (imports + exports, current USD, annual)",
+    source = "Dynamic Gravity Dataset, United States International Trade Commission (original UN Comtrade flows)"
+  ) %>%
+
+  cb_add_col_attributes(
+    total_trade,
+    description = "Total goods trade with the world (imports + exports, current USD, annual)",
+    source = "Dynamic Gravity Dataset, United States International Trade Commission"
+  ) %>%
+
+  cb_add_col_attributes(
+    distance_us,
+    description = "Great-circle distance between the country's capital and Washington, DC (kilometres)",
+    source = "CEPII GeoDist database, accessed via Dynamic Gravity Dataset"
+  ) %>%
+
+  cb_add_col_attributes(
+    distance_china,
+    description = "Great-circle distance between the country's capital and Beijing (kilometres)",
+    source = "CEPII GeoDist database, accessed via Dynamic Gravity Dataset"
+  ) %>%
+
+  cb_add_col_attributes(
+    exachange_rate,
+    description = "Market exchange rate (local-currency units per USD, annual average)",
+    source = "World Bank, World Development Indicators, series PA.NUS.FCRF; retrieved via the wbstats R package (API call) on 2025-07-03."
+  ) %>%
+
+  cb_add_col_attributes(
+    latin_america,
+    description = "Dummy equal to 1 if the country is in Latin America & the Caribbean, 0 otherwise",
+    source = "Author’s coding based on UN geographic regions",
+    col_type = "Categorical"
+  ) %>%
+
+  cb_add_col_attributes(
+    pci_cur,
+    description = "GDP per capita, current USD",
+    source = "Dynamic Gravity Dataset, United States International Trade Commission"
+  ) %>%
+
+  cb_add_col_attributes(
+    perc_trade_with_china,
+    description = "Share of total trade conducted with China (trade_with_china ÷ total_trade)",
+    source = "Author’s calculation using Dynamic Gravity trade data"
+  ) %>%
+
+  cb_add_col_attributes(
+    perc_trade_with_us,
+    description = "Share of total trade conducted with the U.S. (trade_with_us ÷ total_trade)",
+    source = "Author’s calculation using Dynamic Gravity trade data"
+  )
+
+rank_effect_codebook <- codebook(df)
+
+rank_effect_codebook <- codebook(
+  df = df,
+
+  # ---------- HEADERS ----------
+  title = "Rank Reversal and Foreign-Policy Alignment: Brazil–China, 1990-2014",
+
+  subtitle = "Dataset for the paper 'The rank effect of trade on Brazil’s foreign policy political alignment with China'",
+
+  # ---------- OVERALL DESCRIPTION ----------
+  description = "This dataset supports the article 'The rank effect of trade on Brazil’s foreign policy political alignment with China'.  It combines annual bilateral-trade statistics, UN General Assembly (UNGA) ideal-point estimates, and auxiliary national indicators to test whether China’s rise to Brazil’s top trading-partner position in 2009 had a detectable causal effect on Brazilian voting behaviour.  The unit of observation is country–year.  Key variables include: (1) China’s share of each country’s total exports and imports; (2) a dummy marking the year a partner becomes a country’s largest trader (the 'rank-reversal' treatment); (3) absolute ideal-point distance between each country and China (Bailey, Strezhnev & Voeten 2017); (4) covariates for GDP, power measure, socioeconomic indicators and geographic variables. Data sources are the Gravity Dataset, Bailey–Strezhnev–Voeten UNGA data, Diplometric and the World Bank’s WDI.  All variable construction steps are documented in the replication pipeline (_targets_)."
+)
+
+print(x = rank_effect_codebook, target = "codebook_rank_effect_trade.docx")
+```

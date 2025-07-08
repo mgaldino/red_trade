@@ -1,0 +1,38 @@
+---
+title: "notas paper"
+author: "Manoel"
+date: "2025-06-04"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+It seems unlikely that the effect of a country being a main trade partner does not compound over time in some way. To fix ideas, let's use the following notation. Assume we have $i = 1, \dots, n$ countries and $j = 1, \dots, n$ possible partners. If on a given year $t$ a country $i$ has as main trade partner country $j$, the say the treatment for this country is $j$. Then, the potential outcome is $Y_{it}(j)$. If, over a period of 50 years of trade, $t = 1, \dots, 50$, a country $i$ has as main trade partner country $j$ over ten consecutive years and then never more, we indicate this treatment sequence by $D_{it} = (0, 0, \dots, 1, 1, ..., 1, 0, 0)$, and the potential outcome sequence at time $t^{\star}$ in which the treatment is on $Y_{it^{\star}}(0, 0, \dots, 1, \dots, 1)$  is different from the same country with a different sequence, say $Y_{it^{\star}}(0, 0, \dots, 0, 1)$. As a result, at first is not clear that is the proper counterfactual to define a causal effect of interest, if $Y_{it^{\star}}(0, 0, \dots, 1, \dots, 1) - Y_{it^{\star}}(0, 0, \dots, 1, \dots, 0, 1)$ or $Y_{it^{\star}}(0, 0, \dots, 1) - Y_{it^{\star}}(0, 0, \dots, 0)$.
+
+
+This means that it is in general impossible to disentangle the instaneus effect from the cumulative long-term effect. And while the long run effect is important in its own right in our context, the instantaneus effect is also important. If Trump reverses its trade policies and after some time the US is again the main trade partner of some countries, what is the speed that it will translate in alignment of political position in international foruns like UNGA? If most of the effect is instantaneus, then the recovey is fast. If, however, the effect conpounds over time, then the alignment will suffer a slow recovery.
+
+For this reason, we adopt an identifcation estrategy and the correspond estimator of a dynamic regression discontinuity, in order to identify both instantaneus and cumulative long term effect.
+
+We can write the effect of becoming the main (first) trade partner on the vote aligna at UNGA as:
+
+$$
+y_{it} = \sum_{t=0}^Tb_{j, t - \tau}\theta_\tau + \epsilon_{it}
+$$
+This model captures the idea of a dynamic effect of being a main trade partner. 
+
+## lit review
+
+According to @du_etal2017, the effect of (domestic) political schocks on trade with China are, in general, shor lived (less than two months)
+
+Manye studies argue that bilateral trade in impacted by political distputes. It includes military conflicts [citaton needed], disputes over territory [citation needed], dputes over political objectives [citation needed]
+For example, Long (2008), Hegre et al. (2010), and Morrow (1999) observe that bilateral trade is adversely affected in the presence of military conflicts. Simmons (2005) indicates that disputes over territories likewise tend to reduce trade. And Pollins, 1989a, Pollins, 1989b finds that the existence of conflicting political objectives lessens bilateral trade. More recently, Che et al. (2015) find that the 1937–1945 Japanese invasion of China had a significant and protracted impact on cross-border trade and investment.
+
+Diplomatic engagement is a key mechanism through which trade could influence UN voting alignment. More trade may foster state visits, bilateral summits, or participation in multilateral forums—factors that can affect UNGA voting.
+
+https://us.china-embassy.gov.cn/eng/
+
