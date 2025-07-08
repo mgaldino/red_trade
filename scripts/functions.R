@@ -171,20 +171,37 @@ get_gpi_data <- function(file, year_filter=1989) {
 
 # DPI
 
-get_dpi <- function(file) {
-  dpi <- fread(file) 
+# get_dpi <- function(file) {
+#   dpi <- fread(file) 
+#   
+#   dpi_final <- dpi %>%
+#     dplyr::filter(execrlc %in% 1:3) %>%
+#     mutate(parlamentary = ifelse(system == 2, 1, 0),
+#            left = ifelse(execrlc == 3, 1, 0)) %>%
+#     dplyr::select(ifs, year, parlamentary, left, execme) %>%
+#     dplyr::filter(ifs != "0") %>%
+#     rename(iso3c = ifs) %>%
+#     arrange(iso3c, year)
+#   
+# }
+
+get_ideology_data <- function(ideology_data){
   
-  dpi_final <- dpi %>%
-    dplyr::filter(execrlc %in% 1:3) %>%
-    mutate(parlamentary = ifelse(system == 2, 1, 0),
-           left = ifelse(execrlc == 3, 1, 0)) %>%
-    dplyr::select(ifs, year, parlamentary, left, execme) %>%
-    dplyr::filter(ifs != "0") %>%
-    rename(iso3c = ifs) %>%
-    arrange(iso3c, year)
+  ideology <- data.table::fread(ideology_data)
+  
+  cow_iso <- fread("https://raw.githubusercontent.com/leops95/cow2iso/refs/heads/master/cow2iso.csv") %>%
+    dplyr::select(cow_id, iso3) %>%
+    distinct(cow_id, .keep_all = TRUE) %>%
+    rename(iso3c = iso3)
+  
+  ideology <- ideology %>%
+    inner_join(cow_iso, by = join_by(country_code_cow == cow_id)) %>%
+    rename(region2 = region) %>%
+    dplyr::select(year, iso3c, hog, hog_ideology, hog_left, hog_right, hog_center,
+                  hog_party, hog_ideology_bls, leader_ideology_m, region2) %>%
+    dplyr::filter(!is.na(hog_left))
   
 }
-
 get_macro <- function() {
   df <- gmd(version = "2025_06", variables = c("rGDP","CA_GDP","govdef_GDP",
                                                "SovDebtCrisis"))
@@ -261,11 +278,10 @@ join_df <- function(file1, file2, file3, file4, file5, file6, file7) {
     inner_join(file5, by = join_by(iso3c, year)) %>%
     inner_join(file6, by = join_by(iso3c, year)) %>%
     inner_join(file7, by = join_by(iso3c, year))
-    
   
 }
 
-# bind Folha de São Paulo daya
+# bind Folha de São Paulo data
 bind_folha <- function(data1, data2, data3, data4, data5) {
   bind_rows(data1, data2, data3, data4, data5)
 }
@@ -482,18 +498,18 @@ clean_synth_data <- function(data) {
     group_by(iso3c) %>%
     arrange(iso3c, year) %>% 
     ungroup() %>%
-    mutate(latin_america = region %in% c("Latin America & Caribbean", "North America") & 
-             !iso3c %in% c("USA", "CAN")) %>%
+    mutate(latin_america = (region2 == "Latin America and Caribbean"| 
+             iso3c == "MEX")) %>%
     dplyr::filter(year > 1996 & year < 2020) %>%
     dplyr::select(iso3c, year, pop, abs_distance_china, gdp_cur, ideal_point_all, abs_distance_usa, gpi,
                   us_power_gap, us_ideal, abs_distance_usa, gpi, trade_with_china, trade_with_us, total_trade,
-                  distance_us, distance_china, exachange_rate, latin_america, left, CA_GDP,
-                  govdef_GDP, SovDebtCrisis, gdp_growth) %>%
+                  distance_us, distance_china, exachange_rate, latin_america, hog_left, CA_GDP,
+                  govdef_GDP, gdp_growth) %>%
     arrange(year) %>%
     mutate(pci_cur = gdp_cur/pop,
            perc_trade_with_china = trade_with_china/total_trade,
            perc_trade_with_us = trade_with_us/total_trade) %>%
-    tidyr::drop_na() 
+    drop_na()
   
   exclude_countries <- synth_data %>%
     group_by(iso3c) %>%
@@ -511,17 +527,6 @@ clean_synth_data <- function(data) {
   
   df <- synth_data %>%
     mutate(id = as.integer(as.factor(iso3c))) %>%
-    dplyr::select(year, iso3c, treatment, abs_distance_china, gpi, abs_distance_usa, perc_trade_with_us, perc_trade_with_china, pci_cur,
-                  exachange_rate, distance_us, us_power_gap, left, CA_GDP,
-                  govdef_GDP, SovDebtCrisis)
-  
-  return(df)
-}
-
-
-## Create preditcor matrix
-cov_matrix <- function(data) {
-  mat_X <- data %>%
     mutate(gpi = arm::rescale(gpi),
            us_power_gap = arm::rescale(us_power_gap),
            perc_trade_with_us = arm::rescale(perc_trade_with_us),
@@ -531,9 +536,20 @@ cov_matrix <- function(data) {
            exachange_rate = arm::rescale(exachange_rate),
            CA_GDP = arm::rescale(CA_GDP),
            govdef_GDP = arm::rescale(govdef_GDP)) %>%
+    dplyr::select(year, iso3c, treatment, abs_distance_china, gpi, abs_distance_usa, perc_trade_with_us, perc_trade_with_china, pci_cur,
+                  exachange_rate, distance_us, us_power_gap, hog_left, CA_GDP, latin_america,
+                  govdef_GDP)
+  
+  return(df)
+}
+
+
+## Create preditcor matrix
+cov_matrix <- function(data) {
+  mat_X <- data %>%
     dplyr::select(year, iso3c, gpi, perc_trade_with_us, perc_trade_with_china, pci_cur,
-                  exachange_rate, distance_us, us_power_gap, left, CA_GDP,
-                  govdef_GDP, SovDebtCrisis)
+                  exachange_rate, distance_us, us_power_gap, hog_left, CA_GDP,
+                  govdef_GDP)
   
   cov_levels  <- colnames(mat_X)
   
@@ -550,67 +566,37 @@ cov_matrix <- function(data) {
   return(X_mat)
 }
 
-## fit SDiD model
-fit_sdid <- function(data, placebos=TRUE, filter_latin_america, covariates, fit_placebo) {
-  if(fit_placebo) {
-    covariates
-  }
+# fit sdid
+simple_fit <- function(data, time_treatment=2008, time_end=2016, filter_latin_america=FALSE) {
   if(filter_latin_america) {
     data <- data %>%
       dplyr::filter(latin_america)
-    data <- data %>%
-      mutate(treatment = as.integer(treatment),
-             year = as.integer(year),
-             iso3c = as.factor(iso3c),
-             Y = abs_distance_china) %>%
-      dplyr::select(iso3c, year, Y, treatment) %>%
-      as.data.frame() # aparentemente panel.matrices não funciona com tibble
-    
-    
-    setup <- panel.matrices(data)
-    
-    tau.hat = synthdid::synthdid_estimate(Y=setup$Y, N0=setup$N0, T0=setup$T0)
-  } else {
-    data <- data %>%
-      mutate(treatment = as.integer(treatment),
-             year = as.integer(year),
-             iso3c = as.factor(iso3c),
-             Y = abs_distance_china) %>%
-      dplyr::select(iso3c, year, Y, treatment) %>%
-      as.data.frame() # aparentemente panel.matrices não funciona com tibble
-    
-    setup <- panel.matrices(data)
-    
-    tau.hat <- synthdid::synthdid_estimate(Y=setup$Y, N0=setup$N0, T0=setup$T0, X=covariates )
   }
   
-
+  data <- data %>%
+    dplyr::filter(year < time_end) %>%
+    mutate(treatment = ifelse(iso3c == "BRA" & year > time_treatment, 1, 0))
   
+  covariates <- cov_matrix(data)
+  
+  data <- data %>%
+    mutate(treatment = as.integer(treatment),
+           year = as.integer(year),
+           iso3c = as.factor(iso3c),
+           Y = abs_distance_china) %>%
+    dplyr::select(iso3c, year, Y, treatment) %>%
+    as.data.frame() # aparentemente panel.matrices não funciona com tibble
+  
+  
+  setup <- panel.matrices(data)
+  
+  tau.hat = synthdid::synthdid_estimate(Y=setup$Y, N0=setup$N0, T0=setup$T0, X=covariates)
 }
+
 
 ## compute standard error (plecebos method)
 se_sdid <- function(fitted_model) {
   se = sqrt(vcov(fitted_model, method = 'placebo'))
-}
-
-## Fit SDID placebo (robustness checks)
-synth_placebo_data <- function(data, time ) {
-  if(time ==1) {
-    data <- data %>%
-      dplyr::filter(year < 2009) %>%
-      mutate(treatment = ifelse(iso3c == "BRA" & year > 2002, 1, 0))
-  } else {
-    if(time==2) {
-      data <- data %>%
-        mutate(treatment = ifelse(iso3c == "BRA" & year > 2011, 1, 0))
-    } else {
-      data <- data %>%
-        dplyr::filter(year < 2009) %>%
-        mutate(treatment = ifelse(iso3c == "BRA" & year > 2004, 1, 0))
-    }
-
-  }
- 
 }
 
 ############################
