@@ -1,0 +1,115 @@
+---
+title: "Plano Acionável de Revisão — Submissão de paper_v3.Rmd"
+author: "Codex"
+date: "2026-02-12"
+output:
+  pdf_document:
+    toc: true
+    number_sections: true
+lang: pt-BR
+---
+
+# Q&A Inicial
+
+1. **Pergunta:** O objetivo desta rodada é preparar o artigo para submissão?
+   **Resposta:** Sim.
+2. **Pergunta:** O plano deve ser operacional, com prioridades e critérios de pronto?
+   **Resposta:** Sim.
+
+# Meta de Submissão
+
+Objetivo: converter `paper_v3.Rmd` em versão de submissão com contribuição teórica nítida, identificação causal mais defensável e mecanismo apresentado de forma transparente e reprodutível.
+
+# Sequência de Execução (ordem recomendada)
+
+1. Reframing teórico (sem novos resultados).
+2. Consolidação da estratégia empírica principal (com pré-regra de especificações).
+3. Bateria de robustez e sensibilidade prioritária.
+4. Reescrita do bloco de mecanismo e reprodutibilidade.
+5. Polimento final de narrativa, tabelas, figuras e apêndice.
+
+# Checklist Acionável
+
+## Bloco A — Contribuição e teoria (prioridade máxima)
+
+1. **Reescrever as 2 primeiras páginas da introdução.**  
+   Entregável: puzzle, lacuna, contribuição marginal e escopo em linguagem direta.  
+   Critério de pronto: um leitor identifica em até 2 minutos “o que é novo” e “o que o paper não afirma”.
+
+2. **Transformar o mecanismo em previsões falsificáveis.**  
+   Entregável: lista explícita de predições para `status shock` vs `trade deepening`.  
+   Critério de pronto: cada previsão tem contraposição empírica observável.
+
+3. **Recalibrar claims de originalidade.**  
+   Entregável: revisão de frases absolutas (“ninguém estudou...”).  
+   Critério de pronto: claims alinhadas com literatura de status/hierarchy.
+
+## Bloco B — Estratégia causal (prioridade máxima)
+
+1. **Definir ex ante a hierarquia de especificações cross-country.**  
+   Entregável: parágrafo metodológico declarando especificação principal e secundárias antes dos resultados.  
+   Critério de pronto: justificativa teórica antecede números.
+
+2. **Formalizar diagnóstico de pré-trends no cross-country.**  
+   Entregável: teste conjunto de leads + interpretação substantiva.  
+   Critério de pronto: seção reporta evidência além de inspeção visual.
+
+3. **Expandir sensibilidade no caso Brasil (SDiD).**  
+   Entregável: janelas alternativas, exclusão de anos críticos, influência de doadores.  
+   Critério de pronto: ATT principal permanece estável em sinal e ordem de grandeza.
+
+4. **Clarificar inferência com poucos tratados.**  
+   Entregável: texto curto sobre limitações assintóticas e por que bootstrap/permutação são usados.  
+   Critério de pronto: leitor entende claramente o regime de inferência adotado.
+
+## Bloco C — Mecanismo e mídia (prioridade alta)
+
+1. **Reduzir força causal do claim de mecanismo.**  
+   Entregável: linguagem padronizada como “evidência consistente com mecanismo”.  
+   Critério de pronto: não há afirmação de mediação causal sem desenho apropriado.
+
+2. **Tornar classificação LLM auditável/reprodutível.**  
+   Entregável: protocolo fixo (modelo, data, prompt, parâmetros), artefatos congelados e checagem humana em amostra.  
+   Critério de pronto: outro pesquisador consegue reproduzir o arquivo final usado nas figuras.
+
+## Bloco D — Apresentação para submissão (prioridade alta)
+
+1. **Padronizar notação e terminologia ao longo do texto.**  
+   Entregável: uso consistente de `SDiD`, `ATT`, `rank reversal`, `status shock`.  
+   Critério de pronto: nenhuma inconsistência terminológica remanescente.
+
+2. **Revisar notas de tabelas e figuras.**  
+   Entregável: notas com unidade, erro-padrão, cluster, janela temporal e definição de tratamento.  
+   Critério de pronto: figura/tabela é interpretável sem ler corpo do texto.
+
+3. **Consolidar limitações na conclusão sem enfraquecer contribuição.**  
+   Entregável: parágrafo final com “o que sabemos”, “o que ainda não sabemos”, “agenda imediata”.  
+   Critério de pronto: conclusão assertiva e intelectualmente honesta.
+
+# Riscos de Desk Reject e Mitigação
+
+1. **Risco:** contribuição percebida como incremental.  
+   **Mitigação:** abrir com contraste explícito entre mecanismo ordinal e explicações contínuas.
+
+2. **Risco:** dúvida sobre identificação em 2009.  
+   **Mitigação:** ampliar testes de sensibilidade temporal e documentar estabilidade.
+
+3. **Risco:** mecanismo visto como anedótico.  
+   **Mitigação:** elevar transparência do pipeline de mídia/LLM e reduzir overclaim.
+
+4. **Risco:** impressão de “especificação escolhida pelo resultado”.  
+   **Mitigação:** pré-ordenar especificações e manter consistência narrativa.
+
+# Definição de Pronto para Submissão
+
+1. Introdução revisada com contribuição inequívoca.
+2. Estratégia empírica principal declarada ex ante e justificada teoricamente.
+3. Robustez mínima concluída e reportada no texto principal/apêndice.
+4. Mecanismo descrito com claims compatíveis com evidência disponível.
+5. Documento compila em PDF sem erros e com narrativa coesa de ponta a ponta.
+
+# Próximas Perguntas (Q&A de acompanhamento)
+
+1. Você quer que eu converta este plano em tarefas operacionais por arquivo (`paper_v3.Rmd` + scripts em `scripts/`)?
+2. Você quer que eu já implemente a **Rodada 1** (reescrita da introdução + hierarquia de especificações) diretamente no manuscrito?
+

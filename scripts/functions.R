@@ -266,7 +266,11 @@ rank_trade <- function(data) {
     group_by(year, importer_iso3) %>%                         # wbcode2 = importer / “j”
     mutate(rank_from_j = dense_rank(desc(exports))) %>% 
     ungroup() %>%
-    dplyr::filter(importer_iso3 == "CHN")
+    dplyr::filter(importer_iso3 == "CHN") %>%
+    mutate(treatment_first = ifelse(rank_from_i == 1, 1, 0),
+           treatment_second = ifelse(rank_from_i == 2, 1, 0)) %>%
+    rename(iso3c = exporter_iso3)
+    
 }
 
 # join country data into a single data.frame
@@ -315,6 +319,7 @@ folha_plot <- function(data ) {
     mutate(year_month = dmy(paste("1", month(date_piece), year(date_piece), sep="-")),
            year_month = as.Date(year_month)) %>%
     filter(year(year_month) > 1998) %>%
+    filter(date_piece < "2014-01-01") %>%
     group_by(year_month) %>%
     summarise(num = n()) %>%
     ggplot(aes(x=year_month, y=num)) + geom_col() + theme_bw() +
@@ -485,6 +490,46 @@ plot_trade <- function(data){
     theme_minimal()
 }
 
+prepare_data_folha <- function(data) {
+  data %>%
+    mutate(subject = str_trim(subject),
+           subject = gsub("brasil", "brazil", subject),
+           year = year(date_piece)) %>%
+    group_by(year, subject) %>%
+    summarise(num = n()) %>%
+    arrange(year, num) %>%
+    ungroup() %>%
+    mutate(total = sum(num), .by=year) %>%
+    pivot_wider(names_from = subject, values_from = num) %>%
+    clean_names() 
+}
+
+growth_plot <- function(data) {
+  data %>%
+    mutate(subject = str_trim(subject),
+           subject = gsub("brasil", "brazil", subject),
+           year = year(date_piece)) %>%
+    group_by(year, subject) %>%
+    summarise(num = n()) %>%
+    arrange(subject, year) %>%
+    filter(grepl("trade|economy|health|accident" ,subject )) %>%
+    filter(year > 2005) %>%
+    ungroup() %>%
+    group_by(subject) %>%
+    mutate(log_num = log(num),
+           lag = lag(num),
+           log_lag = log(lag),
+           perc_diff = log_num - log_lag) %>%
+    filter(!is.na(log_lag)) %>%
+    ggplot(aes(x=year, y=perc_diff)) + geom_line() + geom_point() + 
+    facet_wrap(~ subject, ncol=1, scales = "free") + theme_bw() +
+    ylab("Year over Year Growth") + scale_y_continuous(labels = scales::label_percent())
+}
+
+descriptive_plot_folha <- function() {
+  
+}
+
 ##############
 # Modeling
 ##############
@@ -492,7 +537,7 @@ plot_trade <- function(data){
 # prep data for SDiD
 
 ## clean dataset
-clean_synth_data <- function(data) {
+clean_synth_data <- function(data, ranked_trade_data, year_end = 2017) {
   
   synth_data <- data %>%
     group_by(iso3c) %>%
@@ -511,6 +556,14 @@ clean_synth_data <- function(data) {
            perc_trade_with_us = trade_with_us/total_trade) %>%
     drop_na()
   
+  
+  synth_data <- synth_data %>%
+    inner_join(dplyr::select(ranked_trade_data, year, iso3c, treatment_first, treatment_second), by = join_by(year, iso3c)) %>%
+    mutate(treatment = ifelse(iso3c == "BRA" & treatment_first == 1, 1, 0),
+           condition = treatment_first == 1 & treatment == 0) %>%
+    filter( year < year_end) %>%
+    dplyr::filter(!condition)
+  
   exclude_countries <- synth_data %>%
     group_by(iso3c) %>%
     summarise(num_obs = n()) %>%
@@ -522,8 +575,7 @@ clean_synth_data <- function(data) {
     dplyr::filter(!iso3c %in% exclude_countries)
   
   
-  synth_data <- synth_data %>%
-    mutate(treatment = ifelse(iso3c == "BRA" & year > 2008, 1, 0))
+
   
   df <- synth_data %>%
     mutate(id = as.integer(as.factor(iso3c))) %>%
@@ -568,17 +620,25 @@ cov_matrix <- function(data) {
 
 # fit sdid
 simple_fit <- function(data, time_treatment=2008, time_end=2016, filter_latin_america=FALSE) {
+  set.seed(12345)
   if(filter_latin_america) {
     data <- data %>%
       dplyr::filter(latin_america)
   }
-  
+
   data <- data %>%
     dplyr::filter(year < time_end) %>%
     mutate(treatment = ifelse(iso3c == "BRA" & year > time_treatment, 1, 0))
-  
+
+  # Sort data: controls first (alphabetically), then treated unit (BRA) last.
+  # This ensures cov_matrix() and panel.matrices() see rows in the same order.
+  data <- data %>%
+    mutate(.unit_treated = as.integer(iso3c == "BRA")) %>%
+    arrange(.unit_treated, iso3c, year) %>%
+    select(-.unit_treated)
+
   covariates <- cov_matrix(data)
-  
+
   data <- data %>%
     mutate(treatment = as.integer(treatment),
            year = as.integer(year),
@@ -586,10 +646,10 @@ simple_fit <- function(data, time_treatment=2008, time_end=2016, filter_latin_am
            Y = abs_distance_china) %>%
     dplyr::select(iso3c, year, Y, treatment) %>%
     as.data.frame() # aparentemente panel.matrices não funciona com tibble
-  
-  
+
+
   setup <- panel.matrices(data)
-  
+
   tau.hat = synthdid::synthdid_estimate(Y=setup$Y, N0=setup$N0, T0=setup$T0, X=covariates)
 }
 
@@ -625,5 +685,764 @@ my_plot_weigths <- function(fitted_model, latam=F) {
 plot_controls <- function(fitted_model) {
   top.controls = synthdid_controls(fitted_model)[1:10, , drop=FALSE]
   plot(fitted_model, spaghetti.units=rownames(top.controls))
+}
+
+############################
+## Phase 1: SDiD Diagnostics
+############################
+
+# Phase 1.1: RMSPE Diagnostics
+compute_rmspe <- function(fit) {
+  setup <- attr(fit, 'setup')
+  Y <- setup$Y
+  N0 <- setup$N0
+  T0 <- setup$T0
+
+  weights <- attr(fit, 'weights')
+  omega <- weights$omega  # unit weights (N0 x 1)
+
+  # Synthetic control = weighted average of control units
+  Y_treated <- Y[N0 + 1, ]
+  Y_controls <- Y[1:N0, , drop = FALSE]
+  Y_synthetic <- as.numeric(t(omega) %*% Y_controls)
+
+  # Pre- and post-treatment residuals
+  residuals_pre  <- Y_treated[1:T0] - Y_synthetic[1:T0]
+  residuals_post <- Y_treated[(T0 + 1):ncol(Y)] - Y_synthetic[(T0 + 1):ncol(Y)]
+
+  rmspe_pre  <- sqrt(mean(residuals_pre^2))
+  rmspe_post <- sqrt(mean(residuals_post^2))
+  ratio <- rmspe_post / rmspe_pre
+
+  list(
+    rmspe_pre = rmspe_pre,
+    rmspe_post = rmspe_post,
+    ratio = ratio,
+    residuals_pre = residuals_pre,
+    residuals_post = residuals_post,
+    Y_treated = Y_treated,
+    Y_synthetic = Y_synthetic
+  )
+}
+
+# Phase 1.1: Permutation Inference (placebo-in-space)
+permutation_test <- function(data, time_treatment = 2008, time_end = 2016) {
+  set.seed(12345)
+
+  # Same filtering as simple_fit
+  base_data <- data %>%
+    dplyr::filter(year < time_end)
+
+  countries <- sort(unique(base_data$iso3c))
+
+  results <- list()
+
+  for (i in seq_along(countries)) {
+    country <- countries[i]
+
+    # Assign treatment to this country instead of BRA
+    perm_data <- base_data %>%
+      mutate(treatment = ifelse(iso3c == country & year > time_treatment, 1, 0))
+
+    # Sort: controls first, treated unit last
+    perm_data <- perm_data %>%
+      mutate(.unit_treated = as.integer(iso3c == country)) %>%
+      arrange(.unit_treated, iso3c, year) %>%
+      select(-.unit_treated)
+
+    tryCatch({
+      covariates <- cov_matrix(perm_data)
+
+      panel_data <- perm_data %>%
+        mutate(treatment = as.integer(treatment),
+               year = as.integer(year),
+               iso3c = as.factor(iso3c),
+               Y = abs_distance_china) %>%
+        dplyr::select(iso3c, year, Y, treatment) %>%
+        as.data.frame()
+
+      setup <- panel.matrices(panel_data)
+      fit <- synthdid::synthdid_estimate(Y = setup$Y, N0 = setup$N0,
+                                         T0 = setup$T0, X = covariates)
+
+      rmspe_result <- compute_rmspe(fit)
+
+      results[[i]] <- data.frame(
+        iso3c = country,
+        estimate = as.numeric(fit),
+        rmspe_pre = rmspe_result$rmspe_pre,
+        rmspe_post = rmspe_result$rmspe_post,
+        ratio = rmspe_result$ratio,
+        stringsAsFactors = FALSE
+      )
+    }, error = function(e) {
+      results[[i]] <<- data.frame(
+        iso3c = country,
+        estimate = NA_real_,
+        rmspe_pre = NA_real_,
+        rmspe_post = NA_real_,
+        ratio = NA_real_,
+        stringsAsFactors = FALSE
+      )
+    })
+  }
+
+  result_df <- bind_rows(results)
+
+  # p-value: fraction of units with RMSPE ratio >= Brazil's
+  brazil_ratio <- result_df$ratio[result_df$iso3c == "BRA"]
+  if (length(brazil_ratio) == 1 && !is.na(brazil_ratio)) {
+    result_df$p_value <- mean(result_df$ratio >= brazil_ratio, na.rm = TRUE)
+  } else {
+    result_df$p_value <- NA_real_
+  }
+
+  result_df
+}
+
+# Phase 1.2: Sensitivity Analysis (specification curve)
+# Note: SE computation skipped here (placebo vcov takes ~12 min per spec).
+# The main estimate + SE are computed in dedicated targets (synth_fit, se_synth, etc.).
+sensitivity_analysis <- function(synth_data, synth_data_extended) {
+  specs <- expand.grid(
+    time_end = c(2014, 2016, 2018, 2020),
+    time_treatment = c(2007, 2008, 2009),
+    filter_latin_america = c(FALSE, TRUE),
+    stringsAsFactors = FALSE
+  )
+
+  results <- list()
+
+  for (i in 1:nrow(specs)) {
+    s <- specs[i, ]
+
+    # Use base data for windows within original range, extended otherwise
+    data <- if (s$time_end <= 2016) synth_data else synth_data_extended
+
+    tryCatch({
+      fit <- simple_fit(data,
+                        time_treatment = s$time_treatment,
+                        time_end = s$time_end,
+                        filter_latin_america = s$filter_latin_america)
+
+      results[[i]] <- data.frame(
+        spec_id = i,
+        time_end = s$time_end,
+        time_treatment = s$time_treatment,
+        filter_latin_america = s$filter_latin_america,
+        estimate = as.numeric(fit),
+        stringsAsFactors = FALSE
+      )
+    }, error = function(e) {
+      results[[i]] <<- data.frame(
+        spec_id = i,
+        time_end = s$time_end,
+        time_treatment = s$time_treatment,
+        filter_latin_america = s$filter_latin_america,
+        estimate = NA_real_,
+        error_msg = conditionMessage(e),
+        stringsAsFactors = FALSE
+      )
+    })
+  }
+
+  bind_rows(results)
+}
+
+# Phase 1.4: Donor Pool Composition Table
+donor_pool_table <- function(fit, unga_data, trade_data_cleaned) {
+  # Extract omega weights
+  omega <- synthdid_controls(fit)
+
+  countries <- data.frame(
+    iso3c = rownames(omega),
+    omega_weight = as.numeric(omega),
+    stringsAsFactors = FALSE
+  )
+
+  countries$country_name <- countrycode(countries$iso3c, "iso3c", "country.name")
+  countries$region <- countrycode(countries$iso3c, "iso3c", "region")
+
+  # Trade share with China in last pre-treatment year
+  trade_pre <- trade_data_cleaned %>%
+    dplyr::filter(year == 2008) %>%
+    mutate(trade_share_china = trade_with_china / total_trade) %>%
+    dplyr::select(iso3c, trade_share_china)
+
+  # UNGA distance in last pre-treatment year
+  unga_pre <- unga_data %>%
+    dplyr::filter(year == 2008) %>%
+    dplyr::select(iso3c, abs_distance_china)
+
+  countries <- countries %>%
+    left_join(trade_pre, by = "iso3c") %>%
+    left_join(unga_pre, by = "iso3c") %>%
+    arrange(desc(omega_weight))
+
+  countries
+}
+
+############################
+## Phase 2: Cross-Country Event Study
+############################
+
+# Identify when China became #1 export destination for each country
+identify_treatment_events <- function(trade_data_ranked) {
+  trade_data_ranked %>%
+    dplyr::filter(treatment_first == 1) %>%
+    group_by(iso3c) %>%
+    summarise(first_treat_year = min(year), .groups = "drop") %>%
+    dplyr::filter(first_treat_year >= 1997)
+}
+
+# Identify countries where USA was ever the #1 export destination
+get_usa_top_countries <- function(trade_data) {
+  trade_data %>%
+    group_by(year, exporter_iso3) %>%
+    slice_max(exports, n = 1, with_ties = FALSE) %>%
+    ungroup() %>%
+    dplyr::filter(importer_iso3 == "USA") %>%
+    distinct(exporter_iso3) %>%
+    pull(exporter_iso3)
+}
+
+# Filter event study data to countries where USA was ever #1
+filter_usa_top_control <- function(event_data, classified_events, usa_top_countries) {
+  treated_usa <- classified_events %>%
+    dplyr::filter(displaced == "USA") %>%
+    pull(iso3c)
+
+  # Keep: treated (China displaced USA) + never-treated where USA was #1
+  event_data %>%
+    dplyr::filter(
+      iso3c %in% treated_usa |
+      (first_treat == 0 & iso3c %in% usa_top_countries)
+    ) %>%
+    mutate(id = as.integer(as.factor(iso3c)))
+}
+
+# Prepare panel data for did::att_gt()
+prepare_event_study_data <- function(treatment_events, unga_data, covariates_df = NULL) {
+  panel <- unga_data %>%
+    dplyr::select(iso3c, year, abs_distance_china) %>%
+    dplyr::filter(year >= 1990)
+
+  # If covariates provided, merge them in
+
+  if (!is.null(covariates_df)) {
+    panel <- panel %>%
+      inner_join(covariates_df, by = c("iso3c", "year"))
+  }
+
+  panel <- panel %>%
+    left_join(treatment_events, by = "iso3c") %>%
+    mutate(
+      # did package: 0 = never treated
+      # Column named "first_treat" (not "gname") to avoid data.table conflict in did 2.3.0
+      first_treat = ifelse(is.na(first_treat_year), 0, first_treat_year),
+      id = as.integer(as.factor(iso3c))
+    )
+
+  # Balance the panel: keep only units observed in all years
+  max_years <- max(table(panel$id))
+  balanced_ids <- panel %>%
+    group_by(id) %>%
+    summarise(n_years = n(), .groups = "drop") %>%
+    dplyr::filter(n_years == max_years) %>%
+    pull(id)
+
+  panel <- panel %>%
+    dplyr::filter(id %in% balanced_ids)
+
+  panel
+}
+
+# Run Callaway & Sant'Anna (2021) staggered DiD
+run_cross_country_did <- function(event_data, xformla = ~1) {
+  att_gt_result <- did::att_gt(
+    yname = "abs_distance_china",
+    tname = "year",
+    idname = "id",
+    gname = "first_treat",
+    xformla = xformla,
+    data = as.data.frame(event_data),
+    control_group = "nevertreated",
+    base_period = "universal"
+  )
+
+  # Event study aggregation (dynamic effects by relative time)
+  event_study <- did::aggte(att_gt_result, type = "dynamic")
+
+  # Group-level ATT (by cohort)
+  group_att <- did::aggte(att_gt_result, type = "group")
+
+  # Overall ATT
+  overall_att <- did::aggte(att_gt_result, type = "simple")
+
+  list(
+    att_gt = att_gt_result,
+    event_study = event_study,
+    group_att = group_att,
+    overall_att = overall_att
+  )
+}
+
+############################
+## Phase 2b: Restricted Cross-Country DiD
+############################
+
+# Classify treatment events: absorbing vs switching, and who China displaced
+classify_treatment_events <- function(trade_data_ranked, trade_data) {
+  # Step 1: identify first treatment year per country
+  first_treat <- trade_data_ranked %>%
+    dplyr::filter(treatment_first == 1) %>%
+    group_by(iso3c) %>%
+    summarise(first_treat_year = min(year), .groups = "drop") %>%
+    dplyr::filter(first_treat_year >= 1997)
+
+  # Step 2: classify absorbing vs switching
+  # Absorbing = China stays #1 for all remaining years in the data after first becoming #1
+  max_year <- max(trade_data_ranked$year)
+  absorbing_check <- first_treat %>%
+    left_join(trade_data_ranked %>% dplyr::select(iso3c, year, treatment_first), by = "iso3c") %>%
+    dplyr::filter(year >= first_treat_year) %>%
+    group_by(iso3c, first_treat_year) %>%
+    summarise(
+      all_treated = all(treatment_first == 1),
+      years_observed = n(),
+      .groups = "drop"
+    )
+
+  first_treat <- first_treat %>%
+    left_join(absorbing_check %>% dplyr::select(iso3c, all_treated), by = "iso3c") %>%
+    rename(absorbing = all_treated)
+
+  # Step 3: identify who China displaced (who was #1 the year before treatment)
+  prev_top <- trade_data %>%
+    group_by(year, exporter_iso3) %>%
+    slice_max(exports, n = 1, with_ties = FALSE) %>%
+    ungroup() %>%
+    dplyr::select(iso3c = exporter_iso3, year, displaced = importer_iso3)
+
+  first_treat <- first_treat %>%
+    mutate(year_before = first_treat_year - 1) %>%
+    left_join(prev_top, by = c("iso3c", "year_before" = "year")) %>%
+    dplyr::select(iso3c, first_treat_year, absorbing, displaced)
+
+  first_treat
+}
+
+# Event study plot for cross-country DiD results
+plot_event_study_did <- function(did_result) {
+  es <- did_result$event_study
+
+  df <- data.frame(
+    e     = es$egt,
+    att   = es$att.egt,
+    se    = es$se.egt
+  ) %>%
+    mutate(ci_lo = att - 1.96 * se,
+           ci_hi = att + 1.96 * se)
+
+  ggplot(df, aes(x = e, y = att)) +
+    geom_hline(yintercept = 0, colour = "grey50", linetype = "solid") +
+    geom_vline(xintercept = -0.5, colour = "grey50", linetype = "dashed") +
+    geom_ribbon(aes(ymin = ci_lo, ymax = ci_hi), alpha = 0.2, fill = "steelblue") +
+    geom_point(size = 1.8, colour = "steelblue") +
+    geom_line(colour = "steelblue") +
+    labs(x = "Periods relative to treatment",
+         y = "ATT estimate",
+         title = "Dynamic treatment effects: China displaces USA as #1 trade partner") +
+    theme_minimal(base_size = 12) +
+    theme(panel.grid.minor = element_blank())
+}
+
+# Run restricted DiD with filters for absorbing treatment and/or displaced partner
+run_restricted_did <- function(event_study_data, classified_events,
+                                restrict_absorbing = FALSE,
+                                restrict_displaced_usa = FALSE,
+                                xformla = ~1) {
+  data <- event_study_data
+
+  # Identify which treated countries to keep
+  keep_treated <- classified_events
+
+  if (restrict_absorbing) {
+    keep_treated <- keep_treated %>% dplyr::filter(absorbing == TRUE)
+  }
+
+  if (restrict_displaced_usa) {
+    keep_treated <- keep_treated %>% dplyr::filter(displaced == "USA")
+  }
+
+  # Filter data: keep qualifying treated countries + all never-treated
+  data <- data %>%
+    dplyr::filter(iso3c %in% keep_treated$iso3c | first_treat == 0)
+
+  # Re-create numeric IDs after filtering
+  data <- data %>%
+    mutate(id = as.integer(as.factor(iso3c)))
+
+  # Run DiD
+  run_cross_country_did(data, xformla = xformla)
+}
+
+############################
+## Phase 2c: Cross-Country DiD Enhancements
+############################
+
+# Prepare covariates for DiD (excludes trade shares — bad controls)
+prepare_did_covariates <- function(final_df) {
+  final_df %>%
+    mutate(log_gdp_pc = log(gdp_cur / pop)) %>%
+    dplyr::select(iso3c, year, log_gdp_pc, gpi, us_power_gap, distance_us, hog_left) %>%
+    drop_na()
+}
+
+# Pre-trends Wald test: H0 = all pre-treatment ATTs jointly equal zero
+pretrends_wald_test <- function(did_result, min_e = -Inf) {
+  es <- did_result$event_study
+
+  # Indices for pre-treatment periods (min_e <= e < 0), excluding reference period (se = NA)
+  pre_idx <- which(es$egt < 0 & es$egt >= min_e & !is.na(es$se.egt))
+
+  if (length(pre_idx) < 2) {
+    return(list(
+      wald_stat = NA_real_,
+      df = length(pre_idx),
+      p_value = NA_real_,
+      pre_periods = es$egt[pre_idx],
+      pre_atts = es$att.egt[pre_idx],
+      vcv = NULL,
+      message = "Not enough pre-treatment periods for Wald test"
+    ))
+  }
+
+  # Pre-treatment ATT estimates
+  beta_pre <- es$att.egt[pre_idx]
+
+  # Variance-covariance matrix via influence functions
+  # did::aggte stores influence functions; compute VCV from them
+  inf_func <- es$inf.function$dynamic.inf.func.e
+  # inf_func is n x length(egt) matrix
+  inf_pre <- inf_func[, pre_idx, drop = FALSE]
+  n <- nrow(inf_pre)
+  V_pre <- crossprod(inf_pre) / n^2
+
+  # Add small ridge for numerical stability (same trick as HonestDiD)
+  k <- length(beta_pre)
+  V_pre <- V_pre + diag(1e-8, k)
+
+  # Wald statistic: beta' * V^{-1} * beta ~ chi-squared(k)
+  V_inv <- tryCatch(solve(V_pre), error = function(e) MASS::ginv(V_pre))
+  wald_stat <- as.numeric(t(beta_pre) %*% V_inv %*% beta_pre)
+  p_value <- 1 - pchisq(wald_stat, df = k)
+
+  list(
+    wald_stat = wald_stat,
+    df = k,
+    p_value = p_value,
+    pre_periods = es$egt[pre_idx],
+    pre_atts = beta_pre,
+    vcv = V_pre
+  )
+}
+
+# Format group-level ATTs as a table
+format_group_att_table <- function(did_result) {
+  ga <- did_result$group_att
+
+  data.frame(
+    cohort_year = ga$egt,
+    att = ga$att.egt,
+    se = ga$se.egt,
+    ci_lo = ga$att.egt - 1.96 * ga$se.egt,
+    ci_hi = ga$att.egt + 1.96 * ga$se.egt,
+    p_value = 2 * (1 - pnorm(abs(ga$att.egt / ga$se.egt)))
+  )
+}
+
+# Build stacked DiD dataset (Cengiz et al. 2019)
+build_stacked_did_data <- function(event_data, classified_events,
+                                   restrict_displaced_usa = TRUE,
+                                   window = 10) {
+  # Get treated countries
+  keep_treated <- classified_events
+  if (restrict_displaced_usa) {
+    keep_treated <- keep_treated %>% dplyr::filter(displaced == "USA")
+  }
+
+  # Never-treated units
+  never_treated <- event_data %>%
+    dplyr::filter(first_treat == 0)
+
+  stacked_list <- list()
+  stack_id <- 0
+
+  for (i in seq_len(nrow(keep_treated))) {
+    g <- keep_treated$first_treat_year[i]
+    country_g <- keep_treated$iso3c[i]
+    stack_id <- stack_id + 1
+
+    # Time window for this sub-experiment
+    year_min <- g - window
+    year_max <- g + window
+
+    # Treated unit in window
+    treated_sub <- event_data %>%
+      dplyr::filter(iso3c == country_g, year >= year_min, year <= year_max)
+
+    # Never-treated units in window
+    control_sub <- never_treated %>%
+      dplyr::filter(year >= year_min, year <= year_max)
+
+    sub_exp <- bind_rows(treated_sub, control_sub) %>%
+      mutate(
+        stack_id = stack_id,
+        cohort_id = g,
+        treat_post = as.integer(iso3c == country_g & year >= g)
+      )
+
+    stacked_list[[stack_id]] <- sub_exp
+  }
+
+  bind_rows(stacked_list)
+}
+
+# Wild cluster bootstrap for stacked DiD
+run_wild_cluster_bootstrap <- function(event_data, classified_events,
+                                       restrict_displaced_usa = TRUE,
+                                       B = 9999) {
+  stacked_data <- build_stacked_did_data(event_data, classified_events,
+                                    restrict_displaced_usa = restrict_displaced_usa)
+
+  # Create explicit interactions for FE
+  stacked_data <- stacked_data %>%
+    mutate(stack_year = interaction(stack_id, year, drop = TRUE),
+           unit_id = as.integer(as.factor(iso3c)))
+
+  # Main estimate via fixest (efficient with many FEs)
+  fit_feols <- fixest::feols(
+    abs_distance_china ~ treat_post | unit_id + stack_year,
+    data = stacked_data,
+    cluster = ~iso3c
+  )
+
+  # For wild bootstrap: use lm with factor FEs (boottest has compatibility
+  # issues with fixest::coef in some versions)
+  assign("stacked_data", stacked_data, envir = .GlobalEnv)
+  on.exit(rm("stacked_data", envir = .GlobalEnv), add = TRUE)
+
+  fit_lm <- lm(abs_distance_china ~ treat_post + factor(unit_id) + factor(stack_year),
+                data = stacked_data)
+
+  boot_result <- fwildclusterboot::boottest(
+    fit_lm,
+    param = "treat_post",
+    B = B,
+    type = "webb",
+    clustid = c("iso3c")
+  )
+
+  list(
+    stacked_fit = fit_feols,
+    coef = coef(fit_feols)["treat_post"],
+    se_cluster = sqrt(fit_feols$cov.scaled["treat_post", "treat_post"]),
+    boot_result = boot_result,
+    boot_p_value = boot_result$p_val,
+    boot_ci = boot_result$conf_int,
+    n_clusters = length(unique(stacked_data$iso3c)),
+    n_obs = nrow(stacked_data)
+  )
+}
+
+# Fisher randomization test for cross-country DiD
+fisher_randomization_test <- function(event_data, classified_events,
+                                      n_perms = 1000) {
+  set.seed(42)
+
+  # Observed treated countries (displaced USA)
+  treated_info <- classified_events %>%
+    dplyr::filter(displaced == "USA")
+
+  n_treated <- nrow(treated_info)
+  observed_treat_years <- treated_info$first_treat_year
+
+  # Get observed ATT
+  obs_data <- event_data %>%
+    dplyr::filter(iso3c %in% treated_info$iso3c | first_treat == 0) %>%
+    mutate(id = as.integer(as.factor(iso3c)))
+
+  obs_result <- run_cross_country_did(obs_data)
+  obs_att <- obs_result$overall_att$overall.att
+
+  # All available countries in the panel (including never-treated)
+  all_countries <- unique(event_data$iso3c)
+
+  # Permutation loop
+  perm_atts <- numeric(n_perms)
+  for (p in seq_len(n_perms)) {
+    # Randomly assign treatment: pick n_treated countries, assign observed treatment years
+    perm_countries <- sample(all_countries, n_treated)
+    perm_assignments <- data.frame(
+      iso3c = perm_countries,
+      first_treat_perm = sample(observed_treat_years, n_treated, replace = FALSE)
+    )
+
+    # Build permuted panel
+    perm_panel <- event_data %>%
+      dplyr::select(iso3c, year, abs_distance_china) %>%
+      left_join(perm_assignments, by = "iso3c") %>%
+      mutate(
+        first_treat = ifelse(is.na(first_treat_perm), 0, first_treat_perm),
+        id = as.integer(as.factor(iso3c))
+      ) %>%
+      dplyr::select(-first_treat_perm)
+
+    # Balance panel
+    max_years <- max(table(perm_panel$id))
+    balanced_ids <- perm_panel %>%
+      group_by(id) %>%
+      summarise(n_years = n(), .groups = "drop") %>%
+      dplyr::filter(n_years == max_years) %>%
+      pull(id)
+    perm_panel <- perm_panel %>% dplyr::filter(id %in% balanced_ids)
+
+    perm_atts[p] <- tryCatch({
+      perm_result <- did::att_gt(
+        yname = "abs_distance_china",
+        tname = "year",
+        idname = "id",
+        gname = "first_treat",
+        data = as.data.frame(perm_panel),
+        control_group = "nevertreated",
+        base_period = "universal"
+      )
+      perm_overall <- did::aggte(perm_result, type = "simple")
+      perm_overall$overall.att
+    }, error = function(e) NA_real_)
+  }
+
+  # Two-sided p-value
+  valid_perms <- !is.na(perm_atts)
+  p_value <- mean(abs(perm_atts[valid_perms]) >= abs(obs_att))
+
+  list(
+    observed_att = obs_att,
+    perm_atts = perm_atts,
+    p_value = p_value,
+    n_perms = n_perms,
+    n_valid = sum(valid_perms)
+  )
+}
+
+# Plot Fisher randomization test results
+plot_fisher_test <- function(fisher_result) {
+  df <- data.frame(att = fisher_result$perm_atts) %>%
+    dplyr::filter(!is.na(att))
+
+  ggplot(df, aes(x = att)) +
+    geom_histogram(bins = 50, fill = "grey70", colour = "grey50") +
+    geom_vline(xintercept = fisher_result$observed_att,
+               colour = "red", linewidth = 1, linetype = "dashed") +
+    labs(
+      x = "Permuted ATT",
+      y = "Frequency",
+      title = "Fisher Randomization Test",
+      subtitle = sprintf("Observed ATT = %.4f | p-value = %.3f",
+                         fisher_result$observed_att, fisher_result$p_value)
+    ) +
+    theme_minimal(base_size = 12)
+}
+
+# HonestDiD sensitivity analysis
+# Follows approach from CS_RR repo (Pedro Sant'Anna)
+# Limits event window to [-max_pre, max_post] excluding reference period (e=-1)
+honest_did_sensitivity <- function(did_result, type = "smoothness",
+                                   max_pre = 20, max_post = 10) {
+  es <- did_result$event_study
+
+  # Identify event times to keep: [-max_pre, -2] for pre and [0, max_post] for post
+  # (e = -1 is the reference period, excluded)
+  all_egt <- es$egt
+  pre_mask <- all_egt >= -max_pre & all_egt <= -2
+  post_mask <- all_egt >= 0 & all_egt <= max_post
+
+  keep_mask <- pre_mask | post_mask
+  keep_idx <- which(keep_mask)
+
+  betahat <- es$att.egt[keep_idx]
+  event_times <- all_egt[keep_idx]
+
+  numPrePeriods <- sum(pre_mask)
+  numPostPeriods <- sum(post_mask)
+
+  # VCV via influence functions
+  inf_func <- es$inf.function$dynamic.inf.func.e
+  inf_keep <- inf_func[, keep_idx, drop = FALSE]
+  n <- nrow(inf_keep)
+  sigma <- crossprod(inf_keep) / n^2
+
+  # Ensure sigma is symmetric positive definite (small ridge for numerical stability)
+  sigma <- (sigma + t(sigma)) / 2
+  eig_min <- min(eigen(sigma, symmetric = TRUE, only.values = TRUE)$values)
+  if (eig_min < 1e-10) {
+    sigma <- sigma + diag(abs(eig_min) + 1e-8, nrow(sigma))
+  }
+
+  # Average across all post-treatment periods (comparable to overall ATT)
+  l_vec <- rep(1 / numPostPeriods, numPostPeriods)
+
+  if (type == "smoothness") {
+    sensitivity <- HonestDiD::createSensitivityResults(
+      betahat = betahat,
+      sigma = sigma,
+      numPrePeriods = numPrePeriods,
+      numPostPeriods = numPostPeriods,
+      l_vec = l_vec,
+      Mvec = seq(from = 0, to = 0.05, by = 0.01)
+    )
+
+    # Manual plot (createSensitivityPlot has a bug in some versions)
+    plot <- ggplot(sensitivity, aes(x = M, ymin = lb, ymax = ub)) +
+      geom_linerange(linewidth = 1, colour = "steelblue") +
+      geom_point(aes(y = (lb + ub) / 2), colour = "steelblue", size = 2) +
+      geom_hline(yintercept = 0, linetype = "dashed", colour = "grey50") +
+      labs(title = "HonestDiD Sensitivity: Smoothness (DeltaSD)",
+           x = "M (smoothness bound)", y = "95% Robust CI") +
+      theme_minimal(base_size = 12)
+
+  } else if (type == "relative_magnitude") {
+    sensitivity <- HonestDiD::createSensitivityResults_relativeMagnitudes(
+      betahat = betahat,
+      sigma = sigma,
+      numPrePeriods = numPrePeriods,
+      numPostPeriods = numPostPeriods,
+      l_vec = l_vec,
+      Mbarvec = seq(from = 0.5, to = 2, by = 0.5)
+    )
+
+    x_col <- if ("Mbar" %in% names(sensitivity)) "Mbar" else names(sensitivity)[5]
+    plot <- ggplot(sensitivity, aes(x = .data[[x_col]], ymin = lb, ymax = ub)) +
+      geom_linerange(linewidth = 1, colour = "firebrick") +
+      geom_point(aes(y = (lb + ub) / 2), colour = "firebrick", size = 2) +
+      geom_hline(yintercept = 0, linetype = "dashed", colour = "grey50") +
+      labs(title = "HonestDiD Sensitivity: Relative Magnitudes (DeltaRM)",
+           x = expression(bar(M)), y = "95% Robust CI") +
+      theme_minimal(base_size = 12)
+  } else {
+    stop("type must be 'smoothness' or 'relative_magnitude'")
+  }
+
+  list(
+    sensitivity = sensitivity,
+    plot = plot,
+    betahat = betahat,
+    sigma = sigma,
+    event_times = event_times,
+    numPrePeriods = numPrePeriods,
+    numPostPeriods = numPostPeriods,
+    type = type
+  )
 }
 
