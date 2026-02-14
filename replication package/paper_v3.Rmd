@@ -1,14 +1,6 @@
 ---
 title: "The Foreign Policy Impact of Trade-Based Status Gains: When China Overtakes the US as Top Trade Partner"
-author:
-  - Manoel Galdino:
-      institute:
-        - USP
-      correspondence: "yes"
-      email: mgaldino@usp.br
-institute:
-- id: USP
-  name: University of São Paulo
+author: "Manoel Galdino (University of São Paulo; mgaldino@usp.br)"
 date: "2024-06-30"
 output:
   pdf_document:
@@ -62,10 +54,16 @@ resolve_existing_file <- function(candidates) {
   }
   hits[[1]]
 }
+
+word_count_text <- function(input = knitr::current_input(), subtract_n = 20L) {
+  wc_raw <- system2("wc", c("-w", input), stdout = TRUE)
+  wc_n <- as.integer(strsplit(trimws(wc_raw), "\\s+")[[1]][1])
+  format(wc_n - subtract_n, scientific = FALSE, big.mark = ",", trim = TRUE)
+}
 ```
 
 
-Word count: `r as.integer(sub("(\\d+).+$", "\\1", system(sprintf("wc -w %s", knitr::current_input()), intern = TRUE))) - 20`
+Word count: `r word_count_text()`
 
 
 
