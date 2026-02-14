@@ -24,7 +24,7 @@ header-includes:
 - \usepackage{float}
 - \newcommand{\argmin}{\mathop{\mathrm{argmin}}\limits}
 fontsize: 12pt
-abstract: "\\singlespacing Becoming the major trade partner of a country implies not only increased trade ties but also a change in status. Yet while most research focuses on status anxiety or status-seeking behavior, International Relations scholarship has largely overlooked the consequences of an upward change in a state’s standing. This paper argues that status gains induced by rank reversals in trade-partner hierarchies (first vs. second) can generate disproportionate effects on the foreign policy alignment of another state that are distinct from the effect of gradual trade growth. Media attention amplifies the salience of being the number one trade partner, a coarse categorization, especially when displacing the hegemon. Using a Synthetic Difference-in-Differences design, we investigate China’s rise to become Brazil’s top trade partner in 2009. The SDiD point estimate corresponds to an estimated 36% reduction in the ideological distance between Brazil and China at the United Nations General Assembly. To probe mechanism implications, an NLP-based analysis of Brazil’s main newspaper (2005–2013) provides correlational evidence consistent with increased China-related salience after 2009. A cross-country difference-in-differences design suggests that a similar pattern extends beyond Brazil (ATT = -0.11, p = 0.004). Together, these findings challenge the view that status gains are mostly illusory and open a new research agenda on the effects of status gains and the importance of looking beyond continuous trade measures. "
+abstract: "\\singlespacing  How do trade-based status gains affect foreign policy alignment? Existing IR research emphasizes status anxiety and status seeking, but pays little attention to upward status shifts. We argue that rank reversals in trade hierarchies, especially when a rising power displaces the hegemon, create a salient status shock that can produce foreign policy realignment beyond gradual trade growth. We test this claim in Brazil, where China overtook the United States as top trade partner in 2009, using Synthetic Difference-in-Differences on UNGA ideal-point distance. The estimate implies a 36% reduction in Brazil’s ideological distance to China after the reversal. To probe mechanism implications, we analyze Brazil’s main newspaper with NLP and find evidence consistent with a post-2009 increase in China-related salience, particularly trade-focused coverage. We then examine cross-country cases in which China displaced the United States as top partner and find a similar pattern (ATT = -0.11, p = 0.004). These results suggest that discrete status milestones, not only continuous trade deepening, can reshape foreign policy behavior. The findings challenge claims that status gains are mostly illusory and motivate research on status effects in trade, investment, aid, and other economic ties."
 geometry: margin=2.5cm
 spacing: double
 mainfont: Times New Roman
@@ -54,6 +54,14 @@ caption_note <- function(unit = NULL, se = NULL, cluster = NULL, window = NULL, 
 
 treat_def_brazil <- "Treatment indicator equals 1 from 2009 onward, when China becomes Brazil's top export destination displacing the USA, and 0 before 2009"
 treat_def_panel <- "Treatment indicator equals 1 from the first year China becomes country i's top export destination displacing the USA, and 0 otherwise"
+
+resolve_existing_file <- function(candidates) {
+  hits <- candidates[file.exists(candidates)]
+  if (length(hits) == 0) {
+    stop("Missing file. Tried: ", paste(candidates, collapse = " | "))
+  }
+  hits[[1]]
+}
 ```
 
 
@@ -428,10 +436,11 @@ The evidence shows that, after 2009, Brazilian media attention to China not only
 
 
 ```{r plot_folha, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Number of Folha de Sao Paulo headlines mentioning China by year. ", caption_note("count of headlines", "not applicable", "not applicable", "2000-2014 annual series", treat_def_brazil)), fig.pos="H", fig.asp = 0.8, fig.width = 7}
-folha_file <- "chatgpt data/folha_classificado.rds"
-if (!file.exists(folha_file)) {
-  stop("Missing file: ", folha_file)
-}
+folha_file <- resolve_existing_file(c(
+  "chatgpt data/folha_classificado.rds",
+  "replication package/chatgpt data/folha_classificado.rds",
+  "folha_classificado.rds"
+))
 
 folha_class <- readRDS(folha_file) %>%
   dplyr::filter(year >= 2000, year <= 2014) %>%
@@ -449,10 +458,11 @@ However, it is possible that China's rise in the news is due to events unrelated
 This distinction is crucial because volume alone could reflect any China‑related event. What matters is the substance of what journalists discussed. To track this, Figure 8 plots the share of trade-economy pieces in all China headlines. The peak is in 2004, when there was less news about China in total and it was the year that both Brazil and China recognized China as a market economy at the WTO (14% of all trade-related stories that year), with mostly negative headlines. Manual reading of the trade news pieces at the time shows that a plurality of them are about soy import barriers put in place by China (38% of all trade-related stories that year). So, although it was a highly salient year, it was not the type of salience that would trigger pressure on foreign policy from the business community toward China.
 
 ```{r plot_folha2, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Share of trade-related items among all China headlines per year. ", caption_note("share of trade-related China headlines (percent)", "not applicable", "not applicable", "2000-2014 annual series", treat_def_brazil)), fig.pos="H", fig.asp = 0.8, fig.width = 7}
-folha_file <- "chatgpt data/folha_classificado.rds"
-if (!file.exists(folha_file)) {
-  stop("Missing file: ", folha_file)
-}
+folha_file <- resolve_existing_file(c(
+  "chatgpt data/folha_classificado.rds",
+  "replication package/chatgpt data/folha_classificado.rds",
+  "folha_classificado.rds"
+))
 
 prop_trade <- readRDS(folha_file) %>%
   dplyr::filter(year >= 2000, year <= 2014) %>%
