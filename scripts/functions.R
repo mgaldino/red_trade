@@ -169,21 +169,68 @@ get_gpi_data <- function(file, year_filter=1989) {
     mutate(us_power_gap = abs(us_power - gpi))
 }
 
-# DPI
+# DPI (Database of Political Institutions, Cruz et al. 2021)
+get_dpi_data <- function(file) {
+  dpi <- fread(file)
 
-# get_dpi <- function(file) {
-#   dpi <- fread(file) 
-#   
-#   dpi_final <- dpi %>%
-#     dplyr::filter(execrlc %in% 1:3) %>%
-#     mutate(parlamentary = ifelse(system == 2, 1, 0),
-#            left = ifelse(execrlc == 3, 1, 0)) %>%
-#     dplyr::select(ifs, year, parlamentary, left, execme) %>%
-#     dplyr::filter(ifs != "0") %>%
-#     rename(iso3c = ifs) %>%
-#     arrange(iso3c, year)
-#   
-# }
+  # Replace -999 with NA (DPI missing code)
+  dpi[dpi == -999] <- NA
+
+  dpi_final <- dpi %>%
+    dplyr::filter(ifs != "0") %>%
+    mutate(inst_parliamentary = ifelse(system == 2, 1, 0),
+           inst_military_exec = ifelse(military == 1, 1, 0)) %>%
+    dplyr::select(ifs, year, inst_parliamentary, inst_military_exec) %>%
+    rename(iso3c = ifs) %>%
+    # Fix legacy IFS codes to ISO 3166-1 alpha-3
+    mutate(iso3c = case_match(iso3c, "ROM" ~ "ROU", .default = iso3c)) %>%
+    arrange(iso3c, year)
+
+  # Forward-fill to 2020 (DPI covers up to 2015; institutional vars change slowly)
+  all_combos <- tidyr::expand_grid(
+    iso3c = unique(dpi_final$iso3c),
+    year = min(dpi_final$year):2020
+  )
+
+  dpi_final <- all_combos %>%
+    left_join(dpi_final, by = c("iso3c", "year")) %>%
+    group_by(iso3c) %>%
+    tidyr::fill(inst_parliamentary, inst_military_exec, .direction = "down") %>%
+    ungroup() %>%
+    drop_na(inst_parliamentary, inst_military_exec)
+
+  return(dpi_final)
+}
+
+# US Trade Agreement (from Dynamic Gravity Database release_2)
+get_us_trade_agreement <- function(file1, file2, file3, file4, file5) {
+  # Bind all release_2 files
+  all_data <- bind_rows(
+    fread(file1),
+    fread(file2),
+    fread(file3),
+    fread(file4),
+    fread(file5)
+  )
+
+  # Replace -999 with NA
+  all_data[all_data == -999] <- NA
+
+  # Filter to dyads with USA as destination, extract agreement indicators
+  us_agreements <- all_data %>%
+    dplyr::filter(iso3_d == "USA") %>%
+    mutate(us_trade_agreement = as.integer(
+      agree_pta_goods == 1 | agree_fta == 1 | agree_eia == 1 |
+      agree_cu == 1 | agree_fta_eia == 1 | agree_cu_eia == 1
+    )) %>%
+    # Replace NA with 0 (no agreement info = no agreement)
+    mutate(us_trade_agreement = tidyr::replace_na(us_trade_agreement, 0L)) %>%
+    dplyr::select(iso3c = iso3_o, year, us_trade_agreement) %>%
+    group_by(iso3c, year) %>%
+    summarise(us_trade_agreement = max(us_trade_agreement, na.rm = TRUE), .groups = "drop")
+
+  return(us_agreements)
+}
 
 get_ideology_data <- function(ideology_data){
   
@@ -537,19 +584,32 @@ descriptive_plot_folha <- function() {
 # prep data for SDiD
 
 ## clean dataset
-clean_synth_data <- function(data, ranked_trade_data, year_end = 2017) {
-  
+clean_synth_data <- function(data, ranked_trade_data, year_end = 2017,
+                             dpi_data = NULL, trade_agreement_data = NULL) {
+
   synth_data <- data %>%
     group_by(iso3c) %>%
-    arrange(iso3c, year) %>% 
+    arrange(iso3c, year) %>%
     ungroup() %>%
-    mutate(latin_america = (region2 == "Latin America and Caribbean"| 
+    mutate(latin_america = (region2 == "Latin America and Caribbean"|
              iso3c == "MEX")) %>%
     dplyr::filter(year > 1996 & year < 2020) %>%
     dplyr::select(iso3c, year, pop, abs_distance_china, gdp_cur, ideal_point_all, abs_distance_usa, gpi,
                   us_power_gap, us_ideal, abs_distance_usa, gpi, trade_with_china, trade_with_us, total_trade,
                   distance_us, distance_china, exachange_rate, latin_america, hog_left, CA_GDP,
-                  govdef_GDP, gdp_growth) %>%
+                  govdef_GDP, gdp_growth)
+
+  # Join institutional covariates if provided
+  if (!is.null(dpi_data)) {
+    synth_data <- synth_data %>%
+      left_join(dpi_data, by = c("iso3c", "year"))
+  }
+  if (!is.null(trade_agreement_data)) {
+    synth_data <- synth_data %>%
+      left_join(trade_agreement_data, by = c("iso3c", "year"))
+  }
+
+  synth_data <- synth_data %>%
     arrange(year) %>%
     mutate(pci_cur = gdp_cur/pop,
            perc_trade_with_china = trade_with_china/total_trade,
@@ -590,7 +650,8 @@ clean_synth_data <- function(data, ranked_trade_data, year_end = 2017) {
            govdef_GDP = arm::rescale(govdef_GDP)) %>%
     dplyr::select(year, iso3c, treatment, abs_distance_china, gpi, abs_distance_usa, perc_trade_with_us, perc_trade_with_china, pci_cur,
                   exachange_rate, distance_us, us_power_gap, hog_left, CA_GDP, latin_america,
-                  govdef_GDP)
+                  govdef_GDP,
+                  any_of(c("inst_parliamentary", "inst_military_exec", "us_trade_agreement")))
   
   return(df)
 }
@@ -601,7 +662,8 @@ cov_matrix <- function(data) {
   mat_X <- data %>%
     dplyr::select(year, iso3c, gpi, perc_trade_with_us, perc_trade_with_china, pci_cur,
                   exachange_rate, distance_us, us_power_gap, hog_left, CA_GDP,
-                  govdef_GDP)
+                  govdef_GDP,
+                  any_of(c("inst_parliamentary", "inst_military_exec", "us_trade_agreement")))
   
   cov_levels  <- colnames(mat_X)
   
@@ -635,7 +697,7 @@ simple_fit <- function(data, time_treatment=2008, time_end=2016, filter_latin_am
   data <- data %>%
     mutate(.unit_treated = as.integer(iso3c == "BRA")) %>%
     arrange(.unit_treated, iso3c, year) %>%
-    select(-.unit_treated)
+    dplyr::select(-.unit_treated)
 
   covariates <- cov_matrix(data)
 
@@ -748,7 +810,7 @@ permutation_test <- function(data, time_treatment = 2008, time_end = 2016) {
     perm_data <- perm_data %>%
       mutate(.unit_treated = as.integer(iso3c == country)) %>%
       arrange(.unit_treated, iso3c, year) %>%
-      select(-.unit_treated)
+      dplyr::select(-.unit_treated)
 
     tryCatch({
       covariates <- cov_matrix(perm_data)

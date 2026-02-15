@@ -31,6 +31,7 @@ list(
   tar_target(gpi_file, here("raw data", "GPI with sub-components_1816-2050_20241007.xlsx"), format = "file"),
   tar_target(trade_file, here("raw data", "ITPDE_R03.csv"), format = "file"),
   tar_target(ideology_file, here("raw data", "global_leader_ideologies.csv"), format = "file"),
+  tar_target(dpi_file, here("raw data", "database-political-institutions-2015.csv"), format = "file"),
   tar_target(country_data, get_country_data2()),
   tar_target(unga_data, get_unga_data(unga_file)),
   tar_target(gpi_data, get_gpi_data(gpi_file)),
@@ -39,7 +40,9 @@ list(
   tar_target(trade_data_cleaned, process_trade_data(trade_data)),
   tar_target(ideology_data, get_ideology_data(ideology_file)),
   tar_target(macro_data, get_macro()),
-  tar_target(final_df, join_df(country_data, unga_data, gpi_data, trade_data_cleaned, wb_data, macro_data, ideology_data)), # dpi_data
+  tar_target(dpi_data, get_dpi_data(dpi_file)),
+  tar_target(trade_agreement_data, get_us_trade_agreement(country_file1, country_file2, country_file3, country_file4, country_file5)),
+  tar_target(final_df, join_df(country_data, unga_data, gpi_data, trade_data_cleaned, wb_data, macro_data, ideology_data)),
   tar_target(folha_df_p0, get_folhasp_newspieces(start=1, end=400)),
   tar_target(folha_df_p1, get_folhasp_newspieces(start=401, end=800)),
   tar_target(folha_df_p2, get_folhasp_newspieces(start=801, end=1200)),
@@ -56,7 +59,8 @@ list(
   tar_target(list_plots, create_list_graphs(folha_df, start=1, num_by=3, n_filter=8)),
   tar_target(list_plots_08_09, create_list_graphs(folha_df, start=6, end=7, num_by=1, n_filter=5)),
   # SDiD
-  tar_target(synth_data, clean_synth_data(final_df, ranked_trade_data=trade_data_ranked)),
+  tar_target(synth_data, clean_synth_data(final_df, ranked_trade_data=trade_data_ranked,
+                                         dpi_data=dpi_data, trade_agreement_data=trade_agreement_data)),
   # residuals all countries
   tar_target(synth_fit, simple_fit(data=synth_data, filter_latin_america=FALSE)),
   tar_target(se_synth , se_sdid(synth_fit)),
@@ -77,11 +81,16 @@ list(
   tar_target(se_synth_placebo1, se_sdid(placebo_teste_treatment11)),
   tar_target(placebo_teste_treatment04, simple_fit(synth_data, time_treatment=2004, time_end=2009)),
   tar_target(se_synth_placebo3, se_sdid(placebo_teste_treatment04)),
+  # Robustness: baseline SDiD without institutional covariates
+  tar_target(synth_data_baseline, clean_synth_data(final_df, ranked_trade_data=trade_data_ranked)),
+  tar_target(synth_fit_baseline, simple_fit(data=synth_data_baseline, filter_latin_america=FALSE)),
+  tar_target(se_synth_baseline, se_sdid(synth_fit_baseline)),
   # Phase 1.1: RMSPE diagnostics & permutation inference
   tar_target(rmspe_diagnostics, compute_rmspe(synth_fit)),
   tar_target(permutation_results, permutation_test(synth_data)),
   # Phase 1.2: Sensitivity analysis
-  tar_target(synth_data_extended, clean_synth_data(final_df, trade_data_ranked, year_end = 2020)),
+  tar_target(synth_data_extended, clean_synth_data(final_df, trade_data_ranked, year_end = 2020,
+                                                  dpi_data=dpi_data, trade_agreement_data=trade_agreement_data)),
   tar_target(sensitivity_results, sensitivity_analysis(synth_data, synth_data_extended)),
   # Phase 1.3: Extended sample (2009-2019)
   tar_target(synth_fit_extended, simple_fit(synth_data_extended, time_end = 2020)),

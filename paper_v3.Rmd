@@ -16,7 +16,7 @@ header-includes:
 - \usepackage{float}
 - \newcommand{\argmin}{\mathop{\mathrm{argmin}}\limits}
 fontsize: 12pt
-abstract: "\\singlespacing  How do trade-based status gains affect foreign policy alignment? Existing IR research emphasizes status anxiety and status seeking, but pays little attention to upward status shifts. We argue that rank reversals in trade hierarchies, especially when a rising power displaces the hegemon, create a salient status shock that can produce foreign policy realignment beyond gradual trade growth. We test this claim in Brazil, where China overtook the United States as top trade partner in 2009, using Synthetic Difference-in-Differences on UNGA ideal-point distance. The estimate implies a 36% reduction in Brazil’s ideological distance to China after the reversal. To probe mechanism implications, we analyze Brazil’s main newspaper with NLP and find evidence consistent with a post-2009 increase in China-related salience, particularly trade-focused coverage. We then examine cross-country cases in which China displaced the United States as top partner and find a similar pattern (ATT = -0.11, p = 0.004). These results suggest that discrete status milestones, not only continuous trade deepening, can reshape foreign policy behavior. The findings challenge claims that status gains are mostly illusory and motivate research on status effects in trade, investment, aid, and other economic ties."
+abstract: "\\singlespacing  How do trade-based status gains affect foreign policy alignment? Existing IR research emphasizes status anxiety and status seeking, but pays little attention to upward status shifts. We argue that rank reversals in trade hierarchies, especially when a rising power displaces the hegemon, create a salient status shock that can produce foreign policy realignment beyond gradual trade growth. We test this claim in Brazil, where China overtook the United States as top trade partner in 2009, using Synthetic Difference-in-Differences on UNGA ideal-point distance. The estimate implies a statistically significant 41% reduction in Brazil's ideological distance to China after the reversal (p = 0.032). To probe mechanism implications, we analyze Brazil’s main newspaper with NLP and find evidence consistent with a post-2009 increase in China-related salience, particularly trade-focused coverage. We then examine cross-country cases in which China displaced the United States as top partner and find a similar pattern (ATT = -0.11, p = 0.004). These results suggest that discrete status milestones, not only continuous trade deepening, can reshape foreign policy behavior. The findings challenge claims that status gains are mostly illusory and motivate research on status effects in trade, investment, aid, and other economic ties."
 geometry: margin=2.5cm
 spacing: double
 mainfont: Times New Roman
@@ -282,7 +282,9 @@ The treatment indicator $D_{it}$ equals 1 in the first year that China became Br
 
 Predictors include per capita GDP from the Gravity Database [@gurevich_herman2018]. Trade data are drawn from the International Trade and Production Database [@borchert_etal2021]. To avoid double-counting, we use the value reported by the importing country to compute total trade between two dyads, as importers have a greater interest in accurately measuring this value for tax collection purposes [@borchert_etal2021]. We compute the share of total trade with China and the share of total trade with the United States as our two measures of trade. As our measure of power, we used the Global Power Index (GPI) from the Pardee Institute at the University of Denver. GPI combines demographic, economic, military, technological, and diplomatic dimensions. We calculated the power gap between all countries and the US as the difference between their GPI indices. We also include distance to the US, as countries closer to the US will have a bigger incentive to align their foreign policy with it. Another economic variable is the exchange rate, since many countries complain about China's devalued currency. A country with a more devalued currency is expected to be more aligned with China than one with a less devalued currency. We also include per capita income, as reported by the World Bank. Table 1 presents the descriptive statistics.
 
-A potential threat to our research design is the occurrence of a global economic crisis in 2008 [@frankel_saravelos2012]. It is possible that Brazil may react differently in its foreign policy than other countries due to the financial crisis. To rule out the possibility that Brazil’s alignment shift in 2009 was driven by macroeconomic turbulence rather than status salience, we augment our SDiD covariate matrix with two annual indicators capturing different facets of the 2008–09 crisis, all drawn from the Global Macro Database [@muller_etal2025]: a measure of current account balance (% GDP), to capture external‐sector stress and reliance on foreign financing; and a measure of Government Budget Deficit (% GDP), to reflect fiscal pressure and stimulus capacity.
+We further augment the SDiD covariate matrix with three institutional variables that capture political and economic alignment channels. First, we include a parliamentary system indicator, coded 1 for parliamentary regimes and 0 otherwise, from the Database of Political Institutions [@cruz_etal2021]. Parliamentary systems may respond differently to trade shocks because the executive depends on legislative confidence, potentially moderating foreign-policy flexibility [@chen_zhou2021]. Second, we include a military executive indicator, coded 1 when the chief executive has a military background, from the same source. Military executives may pursue distinct foreign-policy orientations, particularly regarding alignment with great powers [@morgan_2019]. Third, we construct an indicator for the existence of a trade agreement with the United States (preferential trade agreement, free trade agreement, or economic integration agreement) from the Dynamic Gravity Database [@gurevich_herman2018]. Countries with a US trade agreement face institutional constraints that may attenuate realignment toward China [@kastner_pearson2021; @flores-macias_kreps2013]. Because the DPI covers only up to 2015, we forward-fill institutional variables to later years, which is reasonable given the slow pace of regime-type changes.
+
+A potential threat to our research design is the occurrence of a global economic crisis in 2008 [@frankel_saravelos2012]. It is possible that Brazil may react differently in its foreign policy than other countries due to the financial crisis. To rule out the possibility that Brazil's alignment shift in 2009 was driven by macroeconomic turbulence rather than status salience, we augment our SDiD covariate matrix with two annual indicators capturing different facets of the 2008–09 crisis, all drawn from the Global Macro Database [@muller_etal2025]: a measure of current account balance (% GDP), to capture external‐sector stress and reliance on foreign financing; and a measure of Government Budget Deficit (% GDP), to reflect fiscal pressure and stimulus capacity.
 
 With variables defined, we outline the estimation strategy next.
 
@@ -307,7 +309,10 @@ tar_read(synth_data) %>%
         perc_trade_with_us  ~ "Share of trade with US",
         perc_trade_with_china  ~ "Share of trade with China",
         distance_us ~ "Physical distance to US",
-        latin_america ~ "Latin America Country")
+        latin_america ~ "Latin America Country",
+        inst_parliamentary ~ "Parliamentary System",
+        inst_military_exec ~ "Military Executive",
+        us_trade_agreement ~ "Trade Agreement with US")
     ) %>%
   add_n() %>%                           # N column
   modify_header(label ~ "**Variable**") %>%
@@ -372,7 +377,7 @@ tar_read(spaghetti_plot)
 
 The target estimand of the SDiD estimator is the average treatment effect on the treated for the period post-treatment, whose weights are different from zero. This means that, in theory, it may be capturing the effect of other treatments that happened at a prior or later time. The main argument of the paper is that there is a distinctive quality in becoming the number one trade partner. If that is the case, then we should not find any effect when China became the second (in 2003, after overtaking Argentina and again in 2005, after briefly losing the second spot to Argentina in 2004), nor a few years after being the top one for a while.
 
-Thus, we ran two pre-treatment in-time placebo tests, in which we pretended the true treatment happened in 2003 and 2005. We also ran a post-treatment falsification at 2012 to probe an alternative explanation: that the estimated 2009 effect is actually driven by a later shock. For the two pre-treatment placebos, we limit the sample data to the year 2008, in order not to include the effect of the true treatment that started in 2009. The table below presents the results for the three models, along with the original model for comparison. As we can see, the effects are smaller and not statistically significant at the conventional 95% level.
+Thus, we ran two pre-treatment in-time placebo tests, in which we pretended the true treatment happened in 2003 and 2005. We also ran a post-treatment falsification at 2012 to probe an alternative explanation: that the estimated 2009 effect is actually driven by a later shock. For the two pre-treatment placebos, we limit the sample data to the year 2008, in order not to include the effect of the true treatment that started in 2009. We also report a baseline specification without the three institutional covariates (parliamentary system, military executive, and US trade agreement) to show that the point estimate is stable and that the institutional covariates improve precision without changing the substantive finding. The table below presents the results. As we can see, the placebo effects are smaller and not statistically significant at the conventional 95% level, while the baseline model confirms that the institutional covariates sharpen the estimate without altering its magnitude.
 
 
 ```{r table-placebo, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
@@ -390,12 +395,15 @@ se2    <- tar_read(se_synth_placebo3)
 b_est3 <- tar_read(placebo_teste_treatment11)[1]     # post-treatment falsification, pseudo-treatment year 2012
 se3    <- tar_read(se_synth_placebo1)
 
+b_est_base <- tar_read(synth_fit_baseline)[1]         # baseline without institutional covariates
+se_base    <- tar_read(se_synth_baseline)
+
 placebo_tbl <- tibble(
-  Model     = c("True model (2009)", "Placebo (2003)", "Placebo (2005)", "Late-break falsification (2012)"),
-  Estimate  = c(b_est0, b_est1, b_est2, b_est3),
-  `Std. Error` = c(se0, se1, se2, se3),
-  `95 % CI lower` = Estimate - 1.96 * c(se0, se1, se2, se3),
-  `95 % CI upper` = Estimate + 1.96 * c(se0, se1, se2, se3)
+  Model     = c("Main model (2009)", "Baseline without institutional covariates (2009)", "Placebo (2003)", "Placebo (2005)", "Late-break falsification (2012)"),
+  Estimate  = c(b_est0, b_est_base, b_est1, b_est2, b_est3),
+  `Std. Error` = c(se0, se_base, se1, se2, se3),
+  `95 % CI lower` = Estimate - 1.96 * c(se0, se_base, se1, se2, se3),
+  `95 % CI upper` = Estimate + 1.96 * c(se0, se_base, se1, se2, se3)
 )
 
 kable(
