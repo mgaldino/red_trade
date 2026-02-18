@@ -1508,3 +1508,268 @@ honest_did_sensitivity <- function(did_result, type = "smoothness",
   )
 }
 
+############################
+## Phase 3: fect + PanelMatch (switching treatment)
+############################
+
+# Build panel with binary switching treatment indicator
+# china_top = 1 if China is currently the #1 export destination, 0 otherwise
+build_switching_panel <- function(trade_data, unga_data, classified_events, usa_top_countries) {
+  # Countries in the USA-displaced DiD sample
+  treated_usa <- classified_events %>%
+    dplyr::filter(displaced == "USA") %>%
+    pull(iso3c)
+
+  did_countries <- unique(c(treated_usa, usa_top_countries))
+
+  # Current rank of China vs USA for each exporter-year
+
+  rank_current <- trade_data %>%
+    group_by(year, exporter_iso3) %>%
+    arrange(desc(exports)) %>%
+    mutate(rank = row_number()) %>%
+    ungroup() %>%
+    dplyr::filter(exporter_iso3 %in% did_countries,
+                  importer_iso3 %in% c("CHN", "USA")) %>%
+    dplyr::select(iso3c = exporter_iso3, year, partner = importer_iso3, rank) %>%
+    tidyr::pivot_wider(names_from = partner, values_from = rank, names_prefix = "rank_")
+
+  panel <- unga_data %>%
+    dplyr::filter(iso3c %in% did_countries, year >= 1990) %>%
+    dplyr::select(iso3c, year, abs_distance_china) %>%
+    left_join(rank_current, by = c("iso3c", "year")) %>%
+    mutate(
+      china_top = as.integer(!is.na(rank_CHN) & (is.na(rank_USA) | rank_CHN < rank_USA)),
+      country_id = as.integer(as.factor(iso3c)),
+      country_name = countrycode::countrycode(iso3c, "iso3c", "country.name")
+    ) %>%
+    arrange(country_id, year)
+  panel$china_top[is.na(panel$china_top)] <- 0L
+
+  as.data.frame(panel)
+}
+
+# Run fect analysis (FE or IFE method)
+run_fect_analysis <- function(panel, method = "ife", nboots = 500) {
+  fect_data <- panel %>%
+    dplyr::select(country_id, year, abs_distance_china, china_top) %>%
+    as.data.frame()
+
+  if (method == "fe") {
+    fit <- fect::fect(
+      abs_distance_china ~ china_top,
+      data = fect_data,
+      index = c("country_id", "year"),
+      method = "fe", force = "two-way",
+      se = TRUE, nboots = nboots, parallel = FALSE,
+      placeboTest = TRUE, placebo.period = c(-5, -1)
+    )
+  } else if (method == "ife") {
+    fit <- fect::fect(
+      abs_distance_china ~ china_top,
+      data = fect_data,
+      index = c("country_id", "year"),
+      method = "ife", force = "two-way",
+      se = TRUE, nboots = nboots, parallel = FALSE,
+      CV = TRUE, r = c(0, 3)
+    )
+  } else {
+    stop("method must be 'fe' or 'ife'")
+  }
+
+  fit
+}
+
+# Run fect carryover test (separate run, FE only)
+run_fect_carryover <- function(panel, nboots = 500) {
+  fect_data <- panel %>%
+    dplyr::select(country_id, year, abs_distance_china, china_top) %>%
+    as.data.frame()
+
+  fect::fect(
+    abs_distance_china ~ china_top,
+    data = fect_data,
+    index = c("country_id", "year"),
+    method = "fe", force = "two-way",
+    se = TRUE, nboots = nboots, parallel = FALSE,
+    carryoverTest = TRUE, carryover.period = c(1, 5)
+  )
+}
+
+# Extract ATT summary from fect object
+fect_att_summary <- function(fit) {
+  se <- sd(fit$att.avg.boot)
+  p <- 2 * pnorm(-abs(fit$att.avg / se))
+  list(
+    att = fit$att.avg,
+    se = se,
+    ci_lo = fit$att.avg - 1.96 * se,
+    ci_hi = fit$att.avg + 1.96 * se,
+    p = p,
+    r_cv = if (!is.null(fit$r.cv)) fit$r.cv else NA
+  )
+}
+
+# Run PanelMatch analysis (ATT or ART)
+run_panelmatch_analysis <- function(panel, qoi = "att", lag = 1, lead = 0:8, n_iter = 1000) {
+  pm_df <- panel %>%
+    dplyr::select(country_id, year, abs_distance_china, china_top) %>%
+    as.data.frame()
+
+  pd <- PanelMatch::PanelData(
+    panel.data = pm_df,
+    unit.id = "country_id",
+    time.id = "year",
+    treatment = "china_top",
+    outcome = "abs_distance_china"
+  )
+
+  pm <- PanelMatch::PanelMatch(
+    panel.data = pd,
+    lag = lag,
+    refinement.method = "none",
+    qoi = qoi,
+    lead = lead,
+    match.missing = TRUE,
+    forbid.treatment.reversal = FALSE
+  )
+
+  est <- PanelMatch::PanelEstimate(sets = pm, panel.data = pd, number.iterations = n_iter)
+
+  s <- summary(est)
+  n_leads <- min(length(lead), nrow(s))
+  result_df <- data.frame(
+    lead = lead[1:n_leads],
+    estimate = s[1:n_leads, "estimate"],
+    se = s[1:n_leads, "std.error"],
+    ci_lo = s[1:n_leads, "2.5%"],
+    ci_hi = s[1:n_leads, "97.5%"]
+  )
+
+  list(
+    fit = est,
+    summary_df = result_df,
+    qoi = qoi
+  )
+}
+
+# Plot fect gap (entry-aligned)
+plot_fect_gap <- function(fit, title = "Entry-aligned gap plot") {
+  # Use fect's built-in plot for gap
+  p <- plot(fit, type = "gap",
+            main = title,
+            ylab = "Effect on abs. distance to China",
+            xlab = "Periods relative to treatment entry",
+            show.points = TRUE)
+  p
+}
+
+# Plot fect exit (exit-aligned)
+plot_fect_exit <- function(fit, title = "Exit-aligned gap plot") {
+  p <- plot(fit, type = "exit",
+            main = title,
+            ylab = "Effect on abs. distance to China",
+            xlab = "Periods relative to treatment exit",
+            show.points = TRUE)
+  p
+}
+
+# Consolidated diagnostic figure (Figure 8 style from Liu, Wang & Xu 2024)
+# Three panels: (a) IFE gap, (b) FE placebo test, (c) FE carryover test
+plot_fect_diagnostics <- function(fect_ife, fect_fe, fect_carryover) {
+  p_gap <- plot(fect_ife, type = "gap",
+                main = "(a) IFE: Dynamic Treatment Effects",
+                ylab = "Effect on UNGA distance to China",
+                xlab = "Periods since treatment entry")
+
+  p_placebo <- plot(fect_fe, type = "gap",
+                    main = "(b) FE: Placebo Test",
+                    ylab = "Effect on UNGA distance to China",
+                    xlab = "Periods since treatment entry")
+
+  p_carry <- plot(fect_carryover, type = "exit",
+                  main = "(c) FE: Carryover Test",
+                  ylab = "Effect on UNGA distance to China",
+                  xlab = "Periods since treatment exit")
+
+  combined <- p_gap | p_placebo | p_carry
+  combined + patchwork::plot_layout(widths = c(1, 1, 1))
+}
+
+# Appendix: equivalence test plots (FE and IFE pretrend tests)
+plot_fect_equiv_appendix <- function(fect_fe, fect_ife) {
+  p_fe <- plot(fect_fe, type = "equiv",
+               main = "(a) FE: No-Pretrend Equivalence Test",
+               ylab = "Avg. prediction error",
+               xlab = "Periods since treatment entry")
+
+  p_ife <- plot(fect_ife, type = "equiv",
+                main = "(b) IFE: No-Pretrend Equivalence Test",
+                ylab = "Avg. prediction error",
+                xlab = "Periods since treatment entry")
+
+  p_fe | p_ife
+}
+
+# Plot PanelMatch combined (ATT + ART)
+plot_panelmatch_combined <- function(est_att, est_art) {
+  att_df <- est_att$summary_df %>% mutate(Estimand = "ATT (switch on)")
+  art_df <- est_art$summary_df %>% mutate(Estimand = "ART (switch off)")
+
+  combined <- bind_rows(att_df, art_df)
+
+  colours <- c("ATT (switch on)" = "steelblue", "ART (switch off)" = "firebrick")
+
+  p <- ggplot(combined, aes(x = lead, y = estimate, colour = Estimand, fill = Estimand)) +
+    geom_hline(yintercept = 0, linetype = "dashed", colour = "grey50") +
+    geom_ribbon(aes(ymin = ci_lo, ymax = ci_hi), alpha = 0.15, colour = NA) +
+    geom_line(linewidth = 0.8) +
+    geom_point(size = 2) +
+    scale_colour_manual(values = colours) +
+    scale_fill_manual(values = colours) +
+    facet_wrap(~Estimand, ncol = 1, scales = "free_y") +
+    labs(
+      title = "PanelMatch: Entry vs. Exit Effects",
+      subtitle = "Imai, Kim & Wang (2023) -- lag = 1, no refinement",
+      x = "Periods after switch", y = "Estimate"
+    ) +
+    theme_minimal(base_size = 11) +
+    theme(panel.grid.minor = element_blank(), legend.position = "none")
+
+  p
+}
+
+# Raw UNGA distance plot for treated countries (China displaced USA)
+plot_treated_panel <- function(switching_panel, classified_events) {
+  usa_iso <- classified_events %>%
+    filter(displaced == "USA", !is.na(iso3c)) %>%
+    pull(iso3c)
+
+  panel <- switching_panel %>%
+    filter(iso3c %in% usa_iso)
+
+  treat_periods <- panel %>%
+    filter(china_top == 1) %>%
+    group_by(country_name) %>%
+    summarise(treat_start = min(year), treat_end = max(year), .groups = "drop")
+
+  plot_df <- panel %>%
+    left_join(treat_periods, by = "country_name")
+
+  ggplot(plot_df, aes(x = year, y = abs_distance_china)) +
+    geom_rect(aes(xmin = treat_start - 0.5, xmax = treat_end + 0.5,
+                  ymin = -Inf, ymax = Inf),
+              fill = "lightblue", alpha = 0.3) +
+    geom_line(colour = "grey40", linewidth = 0.4) +
+    geom_point(size = 0.8, colour = "grey30") +
+    geom_smooth(method = "loess", se = FALSE, colour = "steelblue",
+                linewidth = 0.8, span = 0.5) +
+    facet_wrap(~country_name, scales = "free_y", ncol = 3) +
+    labs(x = "Year", y = "UNGA distance to China") +
+    theme_minimal(base_size = 10) +
+    theme(
+      panel.grid.minor = element_blank(),
+      strip.text = element_text(face = "bold", size = 9)
+    )
+}
+

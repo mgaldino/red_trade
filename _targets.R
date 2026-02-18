@@ -13,7 +13,8 @@ tar_option_set(packages = c("tidyverse", "tidyr", "ggplot2", "janitor", "data.ta
                             "stringr", "lubridate", "tidytext", "topicmodels", "tm",
                             "ggraph", "igraph", "grid", "patchwork", "quanteda", "globalmacrodata",
                             "ellmer", "jsonlite", "stringr", "keyring", "did",
-                            "HonestDiD", "fwildclusterboot", "MASS"))
+                            "HonestDiD", "fwildclusterboot", "MASS",
+                            "fect", "PanelMatch"))
 
 # Run the R scripts in the R/ folder with your custom functions:
 tar_source("scripts/functions.R")
@@ -117,5 +118,20 @@ list(
   # Fisher randomization test (USA-was-#1 control)
   tar_target(fisher_test_result, fisher_randomization_test(event_study_data_usa, classified_events,
                                                             n_perms = 1000)),
-  tar_target(plot_fisher, plot_fisher_test(fisher_test_result))
+  tar_target(plot_fisher, plot_fisher_test(fisher_test_result)),
+  # Phase 3: fect + PanelMatch (switching treatment)
+  tar_target(switching_panel, build_switching_panel(trade_data, unga_data, classified_events, usa_top_countries)),
+  tar_target(fect_fe, run_fect_analysis(switching_panel, method = "fe")),
+  tar_target(fect_ife, run_fect_analysis(switching_panel, method = "ife")),
+  tar_target(fect_carryover, run_fect_carryover(switching_panel)),
+  tar_target(panelmatch_att, run_panelmatch_analysis(switching_panel, qoi = "att")),
+  tar_target(panelmatch_art, run_panelmatch_analysis(switching_panel, qoi = "art")),
+  tar_target(plot_fect_ife_gap, plot_fect_gap(fect_ife, "IFE: Entry-aligned gap plot")),
+  tar_target(plot_fect_ife_exit, plot_fect_exit(fect_ife, "IFE: Exit-aligned gap plot")),
+  tar_target(plot_pm_combined, plot_panelmatch_combined(panelmatch_att, panelmatch_art)),
+  # Diagnostic plots (Liu, Wang & Xu 2024 Figure 8 style)
+  tar_target(plot_diagnostics_main, plot_fect_diagnostics(fect_ife, fect_fe, fect_carryover)),
+  tar_target(plot_diagnostics_equiv, plot_fect_equiv_appendix(fect_fe, fect_ife)),
+  # Raw data panel for treated countries
+  tar_target(plot_treated_panel, plot_treated_panel(switching_panel, classified_events))
 )
