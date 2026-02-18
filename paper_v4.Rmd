@@ -106,15 +106,15 @@ p_cross <- fect_summary$p
 r_cv <- fect_summary$r_cv
 ```
 
-We argue that rank reversals deliver discrete status changes that, processed as coarse categories, trigger disproportionate media salience and foreign policy realignment, beyond what gradual trade accumulation predicts. We argue this is more likely when other cues increase salience, such as the former trade partner being the hegemon or the reversal overcomes a long-run historic pattern.
+We argue that rank reversals deliver discrete status changes that, processed as coarse categories, trigger disproportionate media salience and foreign policy realignment, beyond what gradual trade accumulation predicts. This effect is more likely when other cues increase salience, such as the former trade partner being the hegemon or the reversal overcomes a long-run historic pattern.
 
-To develop and initially probe our theory, we focus on the most likely case: Brazil. The US was Brazil's top trade partner for approximately 80 years, making the displacement maximally salient. Brazil has a free press (media channel can operate); Brazil is a regional power, not a small state, which makes coercion unlikely. Most-likely cases are well-suited for theory generation with confirmatory value: if the effect doesn't appear here, it's unlikely to appear anywhere. We follow a structured hybrid approach: the reduced-form prediction (rank reversal → alignment) is tested in Brazil (SDiD) and cross-country (DiD), while the salience mechanism is proposed and probed using the Brazilian case and NLP media evidence.
+To develop and initially probe our theory, we focus on the most likely case: Brazil. The US was Brazil's top trade partner for approximately 80 years, making the displacement maximally salient. Brazil has a free press (media channels can operate freely); Brazil is a regional power, not a small state, which makes coercion unlikely. Most-likely cases are well-suited for theory generation with confirmatory value: if the effect doesn't appear here, it's unlikely to appear anywhere. We follow a structured hybrid approach: the reduced-form prediction (rank reversal → alignment) is tested in Brazil (SDiD) and cross-country (DiD), while the salience mechanism is proposed and probed using the Brazilian case and NLP media evidence.
 
 To credibly show that the overtaking of the US by China as Brazil's top trade partner has a causal effect on Brazil's foreign policy orientation, we use a synthetic difference-in-differences approach. We measured the outcome as the absolute distance in UNGA ideal point estimation [@bailey_etal2017] between Brazil and China over 1997-2015. The SDiD point estimate corresponds to an estimated `r sprintf('%.1f', perc_change)`% reduction in Brazil’s ideological distance from China in UNGA votes.
 
 As Brazil is a single case, we test the theory that status change impacts foreign policy using a cross-country design on all countries where the United States was the top trade partner. We compare those where China eventually displaced the US (the treatment) with those where it did not (control group), using a counterfactual estimator with interactive fixed effects [@liu2024practical] that accommodates treatment switching -- four of the eight treated countries see the USA regain the top position. The results are consistent with the case study, and exit-aligned analysis shows the effect dissipates when treatment turns off.
 
-To illuminate the mechanisms behind the effect of status change, we perform a deep analysis of the Brazilian case, showing a plausible channel through which rank appears as a cue that may trigger change in policy making: the media’s role in publicizing, and thus legitimizing this newfound status.  
+To illuminate the mechanisms behind the effect of status change, we perform a deep analysis of the Brazilian case, showing a plausible channel through which rank appears as a cue that may trigger change in policy making: the media's role in publicizing and thus legitimizing this newfound status.
 
 This study provides the first causal evidence that trade rank reversals produce foreign policy realignment, with suggestive evidence that a media-salience mechanism contributes to this effect. It questions the idea in the literature that status gains are mostly illusory [@mercer_2017]. It also has broad implications for the study of economic ties with an emerging power and the foreign policy of countries. Similar status change effects may also shape how other economic variables (such as Foreign Direct Investment, aid, and loans) impact the foreign policy of countries.
 
@@ -137,7 +137,7 @@ The effect of rank on political decisions is well documented in domestic politic
 
 ## Two Claims: Attention and Policy Response
 
-Our theory rests on two distinct claims. *Claim 1 (Attention)*: A rank reversal produces a disproportionate increase in media salience. The micro-foundation is coarse categorization: the reclassification from "second partner" to "first partner" triggers a categorical reframing in news coverage. The amplification occurs through agenda-setting [@edwards_wood1999] -- the media transforms the categorical reclassification into a focal event for national attention. Since this a bounded rounality reaction, it is plausible that it would be temporary: as the new status becomes the cognitive default, salience fades. We provie evidence for this claim directly using NLP analysis of Brazilian newspaper coverage.
+Our theory rests on two distinct claims. *Claim 1 (Attention)*: A rank reversal produces a disproportionate increase in media salience. The micro-foundation is coarse categorization: the reclassification from "second partner" to "first partner" triggers a categorical reframing in news coverage. The amplification occurs through agenda-setting [@edwards_wood1999] -- the media transforms the categorical reclassification into a focal event for national attention. Since this is a bounded rationality reaction, it is plausible that it would be temporary: as the new status becomes the cognitive default, salience fades. We provide evidence for this claim directly using NLP analysis of Brazilian newspaper coverage.
 
 *Claim 2 (Policy Response)*: The salience shock translates into foreign policy realignment through complementary channels. First, a cognitive channel: poliheuristic theory [@mintz2004; @mintz_geva1997; @mintz_2005] predicts that decision-makers use non-exhaustive search heuristics, and the salience spike causes the new trade status to enter their consideration sets, even if the underlying economic relationship was previously discounted. The role of cues and heuristics in foreign policy decisions has been discussed in international relations [@jabarian_sartori2024]. Second, an audience cost channel: once the media publicizes the new status, leaders face reputational incentives to align discourse and action with the newly salient relationship [@fearon1994; @tomz2007]. Third, a coordination channel: the rank reversal creates a focal point in the Schelling sense around which business lobbies, diplomats, and public opinion coordinate their demands for policy adjustment. These channels are complementary, and our design does not distinguish among them. The SDiD identifies their combined reduced-form effect.
 
@@ -151,7 +151,7 @@ The first hypothesis is the main effect of interest and is related to the reduce
 
 Hypothesis 1 (Main Effect): Rank reversals -- where China displaces the incumbent top trade partner -- produce a discrete reduction in UNGA voting distance from China, beyond what gradual trade growth predicts. This follows from coarse categorization (the rank reversal is a category disruption) that opens a window for policy change.
 
-Our theorization also makes predictions about mechanisms, which we specify here the one we can test or provide evidence concistent with in the paper. 
+Our theorization also makes predictions about mechanisms, of which we specify here the ones we can test or provide evidence consistent with in the paper.
 
 Hypothesis 2 (Hegemon Moderation): The effect is larger when an emerging power displaces the hegemon, compared to when the displaced partner is any other country. Coarse categorization theory predicts that disrupting a more entrenched cognitive category, and "US = top partner" is among the most deeply entrenched, produces a larger attention shock [@graeber_etal2025].
 
@@ -192,48 +192,9 @@ arrows(0.76, 0.68, 0.58, 0.36, length = 0.08, lwd = 1.2)
 
 ## Brazilian Case
 
-We now explain how we will explore a discontinuity in Brazil's trade partner shift—from the US to China—to estimate the (local) causal effect of China's increased importance as Brazil's top trade partner. While we have a discontinuity, it might seem feasible to use a Regression Discontinuity Design. However, our data are a time series around a discontinuity, making this design inadequate.
+For the Brazilian case we employ the synthetic difference-in-differences (SDiD) method [@arkhangelsky_etal2021], which combines the strengths of standard DiD and the synthetic control method (SCM). SDiD assigns unit weights so that the synthetic control matches the treated unit's pre-treatment trajectory, and time weights so that the comparison focuses on periods closest to treatment onset. Unlike SCM, it retains unit fixed effects, accounting for time-invariant unobservables. Unlike standard DiD, it does not require that all control units follow the same trend as the treated unit -- an assumption that is implausible here given the 2008 economic crisis and other concurrent shocks. A formal comparison of the DiD, SCM, and SDiD estimating equations is provided in the Appendix.
 
-A better alternative is the difference-in-differences (DiD) methodology. The key identification assumption in DiD is the so-called parallel trends assumption. This states that, absent the intervention, the treated unit (Brazil) would behave just as the average of the control group of countries. This assumption is not credible here. Many things happened during this period—such as the 2008 economic crisis and its subsequent effects—which undermine the credibility that countries would respond in the same way to this shock. This leads to bias in estimating the causal effect.
-
-To avoid these problems, we employ the recently developed synthetic difference-in-differences (SDiD) method [@arkhangelsky_etal2021]. This method combines the DiD estimator with the synthetic control method (SCM), offering more flexibility than either method alone. DiD methods are not well-suited for a single treated unit because they inflate the standard error. SCM tries to match the pre-treatment trend in the outcome using covariates to estimate the counterfactual outcome. However, it compares the whole period before and after the intervention and does not allow for unit fixed effects. This can cause bias, especially if relevant time-invariant or slowly changing variables are omitted. SDiD attempts to address both problems: improving the adjustment for non-parallel trends in DiD and addressing the lack of time weights and fixed effects in SCM. By combining the two methods, SDiD enhances the ability to estimate causal effects. Similar to the SCM model, we estimate the causal effect by comparing the post-treatment behavior of the synthetic control and the treated unit, but with additional robustness. The specific model is as follows:
-
-Consider a complete panel^[sometimes called a balanced panel. We prefer the term "complete" to avoid confusion with balancing of covariates, which is a standard analysis in causal studies]: $N$ countries measured over $T$ years, the outcome variable for country $i$ in time $t$ is $Y_{it}$ and the binary treatment variable $D_{it} \in \{0,1\}$. Suppose also that the first $N_{\text{countries}}$ do not receive the treatment and the last country $N_{\text{Brazil}}$ does receive the treatment at $t_0$. The job is, like in SCM, to find weights $\hat{w}^{\text{SDiD}}$ such that before $t_0$ treated and control countries match as closely as possible, that is, $\sum_{i=1}^{\text{countries}} \hat{w}^{\text{SDiD}}Y_{it} \approx \sum_{i=1}^{\text{Brazil}} Y_{it}$, for all $t = 1, ..., t_0$. Unlike SCM, we do not stop here. We then find $\hat{\lambda}^{\text{SDiD}}_t$ to balance the time trend before and after $t_0$. Lastly, the average causal effect on the treated $\tau_{ATT}$ is estimated by a two-way fixed effect regression model (as in standard DiD models):
-
-$$
-\bigl(\hat{\tau}_{ATT}^{\text{SDiD}}, \hat{\mu}, \hat{\alpha}, \hat{\beta} \bigr)
-=
-\operatorname*{arg\,min}_{\tau_{ATT},\mu,\beta, \alpha}
-\sum_{i=1}^{N}\sum_{t=1}^{T}
-\bigl(Y_{it}- \mu- \alpha_i - \beta_t-D_{it}\tau_{ATT}\bigr)^2\,
-\hat{w}^{\text{SDiD}} \hat{\lambda}^{\text{SDiD}}_t
-$$
-
-In order to gain intuition, it is worthwhile to contrast it with both DiD and SCM. A DiD model estimates:
-
-$$
-\bigl(\hat{\tau}_{ATT}^{\text{DiD}}, \hat{\mu}, \hat{\alpha}, \hat{\beta}\bigr)
-=
-\operatorname*{arg\,min}_{\tau_{ATT},\mu, \alpha, \beta}
-\sum_{i=1}^{N}\sum_{t=1}^{T}
-\bigl(Y_{it}-\mu-\alpha_i -\beta_t-D_{it}\tau_{ATT}\bigr)^2
-$$
-As we can see, while SDiD assigns weights to the control group that are more similar to those of the treated unit and in time periods comparable to the pre-treatment period, classic DiD does not use any weights at all.
-
-The SCM model can be written as follows:
-
-$$
-\bigl(\hat{\tau}_{ATT}^{\text{SCM}}, \hat{\mu}, \hat{\beta}\bigr)
-=
-\operatorname*{arg\,min}_{\tau_{ATT}, \mu, \beta}
-\sum_{i=1}^{N}\sum_{t=1}^{T}
-\bigl(Y_{it}-\mu-\beta_t-D_{it}\tau_{ATT}\bigr)^2\,
-\hat{w}^{\text{SCM}}
-$$
-
-The equations show there is no unit fixed effect and no time weight. As a result, the SCM cannot use unit-specific unobserved invariant characteristics to approximate the counterfactual outcome. It must also consider the entire period when estimating the causal effect. This creates a problem for our data. The China-Brazil relationship becomes increasingly entangled over time. Years far removed from the treatment may not be suitable comparisons to periods long before the treatment.
-
-Another key advantage of the SDiD is that it reduces the variance of the estimator, allowing for more precise estimation [@arkhangelsky_etal2021]. However, a problem with the original application developed by @arkhangelsky_etal2021 is that it does not include time-varying covariates. These covariates are important for a more accurate match to the pre-treatment period. To address this, we include a vector of time-varying controls as suggested by @hirshberg_klosin2024. We now have the best of all worlds, without many of the problems of SCM and DiD in isolation. The estimated equation is now:
+Following @hirshberg_klosin2024, we augment the model with time-varying covariates $X_{it}$ for more accurate pre-treatment matching. The estimating equation is:
 
 $$
 \bigl(\hat{\tau}_{ATT}^{\text{SDiD}}, \hat{\mu}, \hat{\alpha}, \hat{\beta}, \hat{\gamma} \bigr)
@@ -244,7 +205,7 @@ $$
 \hat{w}^{\text{SDiD}} \hat{\lambda}^{\text{SDiD}}_t
 $$
 
-Another advantage relative to SCM is that standard errors can be computed using the placebo variance estimator proposed by @arkhangelsky_etal2021. It estimates the variance of the treatment effect by computing pseudo-treatment effects on each control unit and using their dispersion as a measure of uncertainty. That is what we use in the reported results.
+where $\hat{w}^{\text{SDiD}}$ are unit weights and $\hat{\lambda}^{\text{SDiD}}_t$ are time weights, both estimated from pre-treatment data. Standard errors are computed using the placebo variance estimator proposed by @arkhangelsky_etal2021, which estimates the variance of the treatment effect by computing pseudo-treatment effects on each control unit.
 
 ## Cross-Country Design
 
@@ -254,7 +215,7 @@ To address such challenges, we examine all countries in our sample that had the 
 
 We therefore adopt the counterfactual estimator with interactive fixed effects (IFE) proposed by @liu2024practical as our main cross-country specification. The `fect` framework estimates counterfactual outcomes for treated observations using untreated observations and pre-treatment data from treated units. The IFE model relaxes strict parallel trends by allowing for latent common factors with heterogeneous loadings, and cross-validation selects the optimal number of factors $r^*$. Crucially, `fect` natively handles treatment switching: it estimates entry effects (what happens when treatment turns on) and exit effects (what happens when treatment turns off), providing a direct test of whether the alignment shift persists or dissipates after the status shock fades.
 
-To further investigate entry and exit dynamics, we complement `fect` with PanelMatch [@imai_kim_wang2023], a matching-based estimator for time-series cross-sectional data that estimates both the Average Treatment effect on the Treated (ATT, effect of switching on) and the Average treatment Reversal effect on the Treated (ART, effect of switching off). As a robustness check, we also report results from the @callaway_santanna2021 estimator restricted to absorbing-only countries (Appendix).
+To further investigate entry and exit dynamics, we complement `fect` with PanelMatch [@imai_kim_wang2023], a matching-based estimator for time-series cross-sectional data that estimates both the Average Treatment Effect on the Treated (ATT, effect of switching on) and the Average Treatment Reversal Effect on the Treated (ART, effect of switching off). As a robustness check, we also report results from the @callaway_santanna2021 estimator restricted to absorbing-only countries (Appendix).
 
 ## Identification Assumptions and Diagnostics
 
@@ -350,7 +311,7 @@ tbl
 
 # Descriptive Analysis
 
-In the figure below, we plot the evolution of the UNGA's ideal points for the US, Brazil, and China over time. As we can see, Brazil has been closer to China than to the US since the beginning of the data series, in 1990, up to 2022, during Bolsonaro's government. Although there is a distance between Brazil and China under Bolsonaro, it is still closer to China than to the US. This is a testament to how much Brazil is structurally aligned with China at the UNGA.
+In the figure below, we plot the evolution of the UNGA's ideal points for the US, Brazil, and China over time. As we can see, Brazil has been closer to China than to the US since the beginning of the data series, in 1990, up to 2022, during Bolsonaro's government. Although Brazil moved away from China under Bolsonaro, Brazil was still closer to China than to the US. This is a testament to how much Brazil is structurally aligned with China at the UNGA.
 
 It also shows that Brazil is moving more over time than China, which is mostly stable over time. Thus, this indicates that Brazil is moving closer to China than the opposite, as expected, given the power asymmetry between the two countries.
 
@@ -376,7 +337,7 @@ tar_read(trade_plot)
 
 # Empirical Results
 
-The graph below presents the evolution of political alignment between Brazil and China at the UNGA and among a donor pool of countries before and after China became Brazil's main trade partner. The counterfactual estimate from the donor pool allows us to estimate the causal effect of the treatment on the similarity of votes at UNGA. The estimate is `r sprintf('%1.2f', estimate)` points, which means that becoming the main trade partner implied a decrease of `r sprintf('%1.2f', abs(estimate))` points in the absolute distance between the ideal points of Brazil and China after 2009. Relative to Brazil's pre-treatment mean distance (`r sprintf('%.3f', mean_br)`), this corresponds to a `r sprintf('%.1f', perc_change)`% reduction. The point estimate is `r sprintf('%1.2f', estimate)` with a 95% CI of (`r sprintf('%1.2f, %1.2f', ci_low, ci_high)`) and p-value `r sprintf('%.3f', p_estimate)` under placebo-based inference.
+The graph below presents the evolution of political alignment between Brazil and China at the UNGA and among a donor pool of countries before and after China became Brazil's main trade partner. The counterfactual estimate from the donor pool allows us to estimate the causal effect of the treatment on the similarity of votes at UNGA. The estimate is `r sprintf('%1.2f', estimate)` points, which means that becoming the main trade partner implied a decrease of `r sprintf('%1.2f', abs(estimate))` points in the absolute distance between the ideal points of Brazil and China after 2009. Relative to Brazil's pre-treatment mean distance (`r sprintf('%.3f', mean_br)`), this corresponds to a `r sprintf('%.1f', perc_change)`% reduction. The point estimate is `r sprintf('%1.2f', estimate)` with a 95% CI of (`r sprintf('%1.2f, %1.2f', ci_low, ci_high)`) and p-value `r sprintf('%.3f', p_estimate)` under placebo-based inference. To put the magnitude in perspective, the estimated reduction of `r sprintf('%.2f', abs(estimate))` ideal-point units can be compared with other known drivers of UNGA alignment. @he_zheng_chen2025 find that Chinese arms exports shift recipients' ideal points toward China by approximately 0.08 points (2SLS), while @wheeler2021 reports a comparable shift of 0.08 points from non-Western arms imports. @lektzian_biglaiser2023 estimate that the combination of US foreign aid and economic sanctions shifts bilateral voting similarity by 0.09--0.20 points. Our estimate of `r sprintf('%.2f', abs(estimate))` points from a single trade rank reversal is thus comparable in magnitude to the effect of arms transfers and roughly half the effect of sustained US coercive diplomacy. This suggests that discrete status milestones can produce alignment shifts on par with material policy instruments that the literature has identified as consequential.
 
 
 
@@ -525,7 +486,7 @@ ggplot(folha_class, aes(x = year, y = n)) +
 
 However, it is possible that China's rise in the news is due to events unrelated to trade, such as increased tensions with the US or the Beijing Olympics. To clarify whether trade-related news became more salient after 2009, we utilized the OpenAI API for ChatGPT, model gpt-4.1-mini, created on April 10, 2025, to categorize the news—see the appendix for details—into 9 categories. This step allows us to assess precisely how trade-focused news evolved over time.
 
-This distinction is crucial because volume alone could reflect any China‑related event. What matters is the substance of what journalists discussed. To track this, Figure 8 plots the share of trade-economy pieces in all China headlines. The peak is in 2004, when there was less news about China in total and it was the year that both Brazil and China recognized China as a market economy at the WTO (14% of all trade-related stories that year), with mostly negative headlines. Manual reading of the trade news pieces at the time shows that a plurality of them are about soy import barriers put in place by China (38% of all trade-related stories that year). So, although it was a highly salient year, it was not the type of salience that would trigger pressure on foreign policy from the business community toward China.
+This distinction is crucial because volume alone could reflect any China‑related event. What matters is the substance of what journalists discussed. To track this, Figure 8 plots the share of trade-economy pieces in all China headlines. The peak is in 2004, when there was less news about China in total and it was the year that Brazil recognized China as a market economy at the WTO (14% of all trade-related stories that year), with mostly negative headlines. Manual reading of the trade news pieces at the time shows that a plurality of them are about soy import barriers put in place by China (38% of all trade-related stories that year). So, although it was a highly salient year, it was not the type of salience that would trigger pressure on foreign policy from the business community toward China.
 
 ```{r plot-folha2, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Share of trade-related items among all China headlines per year. ", caption_note("share of trade-related China headlines (percent)", "not applicable", "not applicable", "2000-2014 annual series", treat_def_brazil)), fig.pos="H", fig.asp = 0.8, fig.width = 7}
 folha_file <- resolve_existing_file(c(
@@ -634,7 +595,7 @@ carryover_equiv_p <- if (!is.null(fect_carry_fit$test.out$carryover.equiv.p)) ro
 
 We construct a panel of `r n_countries` countries where the United States was the top export destination at some point in the sample period. Among these, `r n_treated_sw` countries experienced China displacing the US as the top partner at least once (treated observations), while the remaining `r n_control_sw` never experienced such a displacement (control group). The treatment indicator $D_{it}$ equals 1 in any year China is currently the top export destination and switches off when the USA regains that position. This design accommodates the switching pattern and uses all available variation.
 
-We estimate the ATT using the counterfactual estimator with interactive fixed effects (IFE) of @liu2024practical. The IFE model relaxes the strict parallel trends assumption by allowing for latent common factors with heterogeneous loadings, and cross-validation selects $r^* = `r ife_s$r_cv`$ factors. The overall ATT is `r sprintf('%.3f', ife_s$att)` (bootstrap SE = `r sprintf('%.3f', ife_s$se)`, 95% CI [`r sprintf('%.3f', ife_s$ci_lo)`, `r sprintf('%.3f', ife_s$ci_hi)`], p = `r sprintf('%.3f', ife_s$p)`), indicating that when China holds the top trade partner position, countries move significantly closer to China in UNGA voting. Substantively, this corresponds to about `r sprintf('%.1f', att_rel_pct)`% of the pre-treatment mean distance to China.
+We estimate the ATT using the counterfactual estimator with interactive fixed effects (IFE) of @liu2024practical. The IFE model relaxes the strict parallel trends assumption by allowing for latent common factors with heterogeneous loadings, and cross-validation selects $r^* = `r ife_s$r_cv`$ factors. The overall ATT is `r sprintf('%.3f', ife_s$att)` (bootstrap SE = `r sprintf('%.3f', ife_s$se)`, 95% CI [`r sprintf('%.3f', ife_s$ci_lo)`, `r sprintf('%.3f', ife_s$ci_hi)`], p = `r sprintf('%.3f', ife_s$p)`), indicating that when China holds the top trade partner position, countries move significantly closer to China in UNGA voting. Substantively, this corresponds to about `r sprintf('%.1f', att_rel_pct)`% of the pre-treatment mean distance to China. For comparison, the cross-sectional standard deviation of UNGA distance to China across all countries in the panel is approximately 0.79 points, so the IFE estimate represents roughly one-tenth of a standard deviation -- a modest but meaningful shift when considering that it is produced by a single symbolic milestone rather than a structural change in economic ties.
 
 The table below compares results across estimators. The fect FE model (two-way fixed effects without latent factors) yields a similar estimate. The @callaway_santanna2021 absorbing-treatment estimator, which can only use the `r n_absorbing` countries where China never lost the top position, also produces a directionally consistent result, confirming robustness.
 
@@ -727,7 +688,7 @@ We systematically consider the most plausible alternative explanations and their
 | Structural bandwagoning | Persistent alignment shift | Entry-aligned attenuation + exit effects show dissipation (H4) |
 | Chinese coercion | Effect for any displaced partner | Only hegemon displacement produces effect (H2) |
 | Gradual trade growth | Monotonically increasing effect | Discrete effect; @carmody_etal2020 show continuous trade growth produces hedging, not alignment |
-| Ideologically aligned leader | Step-change at leader inauguration | DPI controls; @dreher_jensen2013 find leader change pushes votes toward the US, the opposite direction |
+| Ideologically aligned leader | Step-change at leader inauguration | DPI controls; @dreher_jensen2013 find leader change pushes votes toward the US, which is the opposite direction |
 | 2008 financial crisis | Temporal confound in 2008--2009 | Staggered treatment: rank reversals in other years also produce effect; fect absorbs common shocks via IFE |
 
 The exit effects provide our most powerful discriminating evidence. Nearly all alternative mechanisms predict persistent effects: if structural bandwagoning, coercion, or accumulated economic interests drive alignment, the effect should not reverse when the USA regains the top position. The fect exit plot and PanelMatch ART show precisely this reversal -- a pattern uniquely consistent with a salience mechanism, where the effect is tied to the cognitive category "China = top partner" and dissipates when that category is disrupted.
@@ -736,15 +697,17 @@ We do not claim to have ruled out all alternatives. The effect of ideologically 
 
 # Conclusion
 
-We have proposed a theory that status change induced by trade rank reversal, when China surpassed the US as the main trade partner of a country, can produce foreign policy realignment. We found initial support for this effect when China overtook the US as the leading trade partner of a country like Brazil. The evidence is consistent with the idea that the symbolic significance of overtaking a historic trade partner prompted a substantive shift in diplomatic posture, beyond changes in trade volume. The cross-country regressions confirm the original finding, although with a smaller magnitude, which is expected, since Brazil is the most likely case. At the same time, evidence on the underlying salience mechanism is correlational and suggestive rather than causally identified.
+We have proposed a theory that status change induced by trade rank reversal, when China surpassed the US as the main trade partner of a country, can produce foreign policy realignment. We found initial support for this effect when China overtook the US as Brazil's leading trade partner. The evidence is consistent with the idea that the symbolic significance of overtaking a historic trade partner prompted a substantive shift in diplomatic posture, beyond changes in trade volume. The cross-country regressions confirm the original finding, although with a smaller magnitude, which is expected, since Brazil is the most likely case. At the same time, evidence on the underlying salience mechanism is correlational and suggestive rather than causally identified.
 
-Overall, the results suggest that we should look beyond the increasing trade ties between countries, as the literature has done so far [@yan_zhou2021; @flores-macias_kreps2013; @reilly2013], and also focus on qualitative shifts in the public perception of a trade partner's status. 
+Overall, the results suggest that we should look beyond the increasing trade ties between countries, as has been done in the literature so far [@yan_zhou2021; @flores-macias_kreps2013; @reilly2013], and also focus on qualitative shifts in the public perception of a trade partner's status. 
 
 The results have broad implications for the literature on status. While it has focused on explaining how the search for status may trigger conflicts, it has overlooked robust empirical evidence that an increase in status changes the behavior of another country. Thus, contrary to @mercer_2017, who argued that prestige is illusory, we have shown that it matters in a realm important for a country like China, namely, voting in the UNGA.
 
 Our study has some limitations that future research could investigate further. The cross-country analysis confirms that the status effect generalizes among countries where China displaced the United States, but we cannot yet test whether similar effects arise when China overtakes other partners (e.g., former colonial powers or regional trade leaders), as the number of such cases remains small and heterogeneous. Furthermore, we lack cross-country media data to verify whether the salience mechanism operates in the same way outside Brazil.
 
 Secondly, the proposed mechanism has only indirect evidence. We have shown that newspaper coverage of trade ties with China shifted when it surpassed the US as the primary trade partner. However, we lack evidence on how business lobbies responded to it, and we do not have systematic data on the public or political elites. Qualitative studies with political and economic elites could attempt to recover their thinking at the time, for instance. Laboratory experiments could be conducted to provide evidence on the psychological and cognitive mechanisms underlying status based on a change in the rank of a partner.
+
+Our findings also carry practical implications. From the perspective of US policymakers, the results suggest that symbolic milestones in trade hierarchies deserve attention alongside aggregate trade volumes. If losing the top trade partner position triggers a discrete shift in diplomatic alignment, then monitoring and responding to these threshold crossings -- rather than focusing solely on trade balances -- may be a more effective strategy for maintaining influence. More broadly, the finding that alignment effects dissipate when the USA regains the top position implies that trade-status losses are not irreversible, and that targeted trade engagement could mitigate diplomatic realignment.
 
 Despite these limitations, our study is the first to provide evidence for such trade-status effects in international relations. By highlighting trade-status salience, this study also opens up new avenues for understanding how discrete milestones in economic ties can reshape international alignments and invites extensions to other domains (e.g., FDI, foreign aid, loans) and regions.
 
@@ -759,6 +722,46 @@ Despite these limitations, our study is the first to provide evidence for such t
 We present more details about the performance and checks on the fitted model and how we used ChatGPT to perform the NLP analysis.
 
 ## SDiD
+
+### Comparison of DiD, SCM, and SDiD estimating equations
+
+To gain intuition for the SDiD estimator, it is useful to compare it with standard DiD and SCM. A DiD model estimates:
+
+$$
+\bigl(\hat{\tau}_{ATT}^{\text{DiD}}, \hat{\mu}, \hat{\alpha}, \hat{\beta}\bigr)
+=
+\operatorname*{arg\,min}_{\tau_{ATT},\mu, \alpha, \beta}
+\sum_{i=1}^{N}\sum_{t=1}^{T}
+\bigl(Y_{it}-\mu-\alpha_i -\beta_t-D_{it}\tau_{ATT}\bigr)^2
+$$
+
+While SDiD assigns weights to the control group that are more similar to those of the treated unit and in time periods comparable to the pre-treatment period, classic DiD does not use any weights at all.
+
+The SCM model can be written as follows:
+
+$$
+\bigl(\hat{\tau}_{ATT}^{\text{SCM}}, \hat{\mu}, \hat{\beta}\bigr)
+=
+\operatorname*{arg\,min}_{\tau_{ATT}, \mu, \beta}
+\sum_{i=1}^{N}\sum_{t=1}^{T}
+\bigl(Y_{it}-\mu-\beta_t-D_{it}\tau_{ATT}\bigr)^2\,
+\hat{w}^{\text{SCM}}
+$$
+
+The equations show there is no unit fixed effect and no time weight in SCM. As a result, SCM cannot use unit-specific unobserved invariant characteristics to approximate the counterfactual outcome, and must consider the entire period when estimating the causal effect. SDiD combines unit weights (like SCM) with unit fixed effects and time weights (like DiD), addressing the limitations of both. The basic SDiD estimating equation is:
+
+$$
+\bigl(\hat{\tau}_{ATT}^{\text{SDiD}}, \hat{\mu}, \hat{\alpha}, \hat{\beta} \bigr)
+=
+\operatorname*{arg\,min}_{\tau_{ATT},\mu,\beta, \alpha}
+\sum_{i=1}^{N}\sum_{t=1}^{T}
+\bigl(Y_{it}- \mu- \alpha_i - \beta_t-D_{it}\tau_{ATT}\bigr)^2\,
+\hat{w}^{\text{SDiD}} \hat{\lambda}^{\text{SDiD}}_t
+$$
+
+Note that SDiD retains unit fixed effects $\alpha_i$ (like DiD) while also assigning unit weights $\hat{w}^{\text{SDiD}}$ (like SCM) and time weights $\hat{\lambda}^{\text{SDiD}}_t$ (unique to SDiD).
+
+### SDiD weights and donor pool
 
 Below we present the weights for the top 10 controls used in the main model.
 
