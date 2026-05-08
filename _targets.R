@@ -14,7 +14,7 @@ tar_option_set(packages = c("tidyverse", "tidyr", "ggplot2", "janitor", "data.ta
                             "ggraph", "igraph", "grid", "patchwork", "quanteda", "globalmacrodata",
                             "ellmer", "jsonlite", "stringr", "keyring", "did",
                             "HonestDiD", "fwildclusterboot", "MASS",
-                            "fect", "PanelMatch"))
+                            "fect", "PanelMatch", "vdemdata"))
 
 # Run the R scripts in the R/ folder with your custom functions:
 tar_source("scripts/functions.R")
@@ -121,17 +121,45 @@ list(
   tar_target(plot_fisher, plot_fisher_test(fisher_test_result)),
   # Phase 3: fect + PanelMatch (switching treatment)
   tar_target(switching_panel, build_switching_panel(trade_data, unga_data, classified_events, usa_top_countries)),
+  tar_target(covariates_panel, build_covariates(final_df)),
+  tar_target(switching_panel_cov, dplyr::left_join(switching_panel, covariates_panel, by = c("iso3c", "year"))),
   tar_target(fect_fe, run_fect_analysis(switching_panel, method = "fe")),
   tar_target(fect_ife, run_fect_analysis(switching_panel, method = "ife")),
+  tar_target(fect_ife_cov, run_fect_analysis(switching_panel_cov, method = "ife",
+             fml = abs_distance_china ~ china_top + log_gdp_pc + free_press)),
   tar_target(fect_carryover, run_fect_carryover(switching_panel)),
   tar_target(panelmatch_att, run_panelmatch_analysis(switching_panel, qoi = "att")),
   tar_target(panelmatch_art, run_panelmatch_analysis(switching_panel, qoi = "art")),
   tar_target(plot_fect_ife_gap, plot_fect_gap(fect_ife, "IFE: Entry-aligned gap plot")),
   tar_target(plot_fect_ife_exit, plot_fect_exit(fect_ife, "IFE: Exit-aligned gap plot")),
   tar_target(plot_pm_combined, plot_panelmatch_combined(panelmatch_att, panelmatch_art)),
+  # C&S with covariates (absorbing-only, balanced panel)
+  tar_target(event_study_data_usa_cov, {
+    cov_merged <- dplyr::left_join(event_study_data_usa, covariates_panel, by = c("iso3c", "year"))
+    complete <- cov_merged[complete.cases(cov_merged[, c("log_gdp_pc", "free_press")]), ]
+    max_yr <- max(table(complete$id))
+    bal_ids <- complete %>% dplyr::group_by(id) %>%
+      dplyr::summarise(n = dplyr::n(), .groups = "drop") %>%
+      dplyr::filter(n == max_yr) %>% dplyr::pull(id)
+    complete[complete$id %in% bal_ids, ]
+  }),
+  tar_target(did_displaced_usa_cov, run_cross_country_did(event_study_data_usa_cov,
+             xformla = ~ log_gdp_pc + free_press)),
   # Diagnostic plots (Liu, Wang & Xu 2024 Figure 8 style)
   tar_target(plot_diagnostics_main, plot_fect_diagnostics(fect_ife, fect_fe, fect_carryover)),
   tar_target(plot_diagnostics_equiv, plot_fect_equiv_appendix(fect_fe, fect_ife)),
   # Raw data panel for treated countries
-  tar_target(plot_treated_panel, plot_treated_panel(switching_panel, classified_events))
+  tar_target(plot_treated_panel, plot_treated_panel(switching_panel, classified_events)),
+  # Phase 4: Devil's Advocate responses
+  # Leave-one-out fect IFE (drop each treated country)
+  tar_target(fect_ife_loo, run_fect_leave_one_out(switching_panel)),
+  # Non-US displacement: all countries where China displaced any partner
+  tar_target(switching_panel_any, build_any_displacement_panel(trade_data, unga_data, classified_events)),
+  tar_target(fect_ife_any, run_fect_analysis(switching_panel_any, method = "ife")),
+  # Media counterfactual
+  tar_target(folha_classified_file, here("folha_classificado.rds"), format = "file"),
+  tar_target(media_counterfactual, build_media_counterfactual(folha_classified_file)),
+  # Cohen's kappa for ChatGPT validation
+  tar_target(validation_file, here("data", "folha_validation_sample_annotated.csv"), format = "file"),
+  tar_target(cohens_kappa, compute_cohens_kappa(validation_file))
 )

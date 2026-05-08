@@ -1,7 +1,7 @@
 # RDD Trade — Foreign Policy Impact of Trade Status Gains
 
 ## Projeto
-Paper: "The Foreign Policy Impact of Trade-Based Status Gains: When China Overtakes the US as Top Trade Partner". Em Revise & Resubmit.
+Paper: "The Foreign Policy Impact of Trade-Based Status Gains: When China Overtakes the US as Top Trade Partner". Em Revise & Resubmit. Tambem submetido ao Simposio FGV-USP em 2026-04-10 (versao anonimizada: `paper_v4_anonymous.Rmd` / `output/paper_v4_anonymous.pdf`, folha de rosto apenas com titulo e abstract de 139 palavras).
 
 SDiD principal: -0.2339 (SE: 0.1328), permutation p=0.0105. DiD restrito (China deslocou EUA): ATT=-0.116, SE=0.044, p=0.008. Pipeline completo (~3h30min rebuild).
 

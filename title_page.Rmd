@@ -1,0 +1,30 @@
+---
+title: "Title Page"
+output: 
+  pdf_document:
+    latex_engine: xelatex
+    keep_tex: true
+fontsize: 12pt
+mainfont: Times New Roman
+geometry: margin=2.5cm
+header-includes:
+  - \usepackage{setspace}\doublespacing
+  - \setstretch{1.5}
+---
+
+**Title:**  
+*The Foreign Policy Impact of Trade-Based Status Gains: Evidence from Brazil*
+
+**Author:**  
+Manoel Galdino  
+Department of Political Science  
+Universidade of São Paulo (USP)  
+Email: mgaldino@usp.br
+
+ORCID: [https://orcid.org/0000-0002-8384-1491](https://orcid.org/0000-0002-8384-1491)
+
+
+
+**Acknowledgments:**  
+This research was supported by the University of São Paulo through the Programa de Apoio a Novos Docentes (Support Program for Research by New Hired Professors), under process number 22.1.09345.01.2. I thank the comments of Natália Paiva on earlier versions of this paper.
+

@@ -1275,6 +1275,7 @@ build_stacked_did_data <- function(event_data, classified_events,
 run_wild_cluster_bootstrap <- function(event_data, classified_events,
                                        restrict_displaced_usa = TRUE,
                                        B = 9999) {
+  set.seed(42)
   stacked_data <- build_stacked_did_data(event_data, classified_events,
                                     restrict_displaced_usa = restrict_displaced_usa)
 
@@ -1512,6 +1513,37 @@ honest_did_sensitivity <- function(did_result, type = "smoothness",
 ## Phase 3: fect + PanelMatch (switching treatment)
 ############################
 
+# Build covariate panel: log GDP per capita + V-Dem free press
+build_covariates <- function(final_df) {
+  # GDP per capita
+  gdp_cov <- final_df %>%
+    dplyr::mutate(log_gdp_pc = log(gdp_cur / pop)) %>%
+    dplyr::select(iso3c, year, log_gdp_pc) %>%
+    dplyr::filter(!is.na(log_gdp_pc))
+
+  # V-Dem Freedom of Expression (v2x_freexp_altinf)
+  # V-Dem country_text_id is mostly ISO3C but has some divergences
+  vdem_cov <- vdemdata::vdem %>%
+    dplyr::select(country_text_id, year, v2x_freexp_altinf) %>%
+    dplyr::filter(year >= 1990, !is.na(v2x_freexp_altinf)) %>%
+    dplyr::rename(iso3c = country_text_id, free_press = v2x_freexp_altinf) %>%
+    dplyr::mutate(iso3c = dplyr::case_match(iso3c,
+      "BUR" ~ "MMR",  # Burma → Myanmar
+      .default = iso3c
+    ))
+
+  result <- gdp_cov %>%
+    dplyr::left_join(vdem_cov, by = c("iso3c", "year"))
+
+  # Warn if many GDP rows lost free_press after merge
+  n_lost <- sum(!is.na(result$log_gdp_pc) & is.na(result$free_press))
+  if (n_lost > nrow(result) * 0.1) {
+    warning(sprintf("build_covariates: %d rows (%.0f%%) have GDP but missing V-Dem free_press after merge",
+                    n_lost, n_lost / nrow(result) * 100))
+  }
+  result
+}
+
 # Build panel with binary switching treatment indicator
 # china_top = 1 if China is currently the #1 export destination, 0 otherwise
 build_switching_panel <- function(trade_data, unga_data, classified_events, usa_top_countries) {
@@ -1550,14 +1582,22 @@ build_switching_panel <- function(trade_data, unga_data, classified_events, usa_
 }
 
 # Run fect analysis (FE or IFE method)
-run_fect_analysis <- function(panel, method = "ife", nboots = 500) {
+run_fect_analysis <- function(panel, method = "ife", nboots = 500,
+                              fml = abs_distance_china ~ china_top) {
+  set.seed(42)
+  # Determine which columns the formula needs
+  fml_vars <- all.vars(fml)
+  keep_cols <- unique(c("country_id", "year", fml_vars))
   fect_data <- panel %>%
-    dplyr::select(country_id, year, abs_distance_china, china_top) %>%
+    dplyr::select(dplyr::all_of(keep_cols)) %>%
+    dplyr::filter(complete.cases(.)) %>%
+    # Re-index country_id to close gaps after dropping incomplete cases
+    dplyr::mutate(country_id = as.integer(as.factor(country_id))) %>%
     as.data.frame()
 
   if (method == "fe") {
     fit <- fect::fect(
-      abs_distance_china ~ china_top,
+      fml,
       data = fect_data,
       index = c("country_id", "year"),
       method = "fe", force = "two-way",
@@ -1566,7 +1606,7 @@ run_fect_analysis <- function(panel, method = "ife", nboots = 500) {
     )
   } else if (method == "ife") {
     fit <- fect::fect(
-      abs_distance_china ~ china_top,
+      fml,
       data = fect_data,
       index = c("country_id", "year"),
       method = "ife", force = "two-way",
@@ -1582,6 +1622,7 @@ run_fect_analysis <- function(panel, method = "ife", nboots = 500) {
 
 # Run fect carryover test (separate run, FE only)
 run_fect_carryover <- function(panel, nboots = 500) {
+  set.seed(42)
   fect_data <- panel %>%
     dplyr::select(country_id, year, abs_distance_china, china_top) %>%
     as.data.frame()
@@ -1612,6 +1653,7 @@ fect_att_summary <- function(fit) {
 
 # Run PanelMatch analysis (ATT or ART)
 run_panelmatch_analysis <- function(panel, qoi = "att", lag = 1, lead = 0:8, n_iter = 1000) {
+  set.seed(42)
   pm_df <- panel %>%
     dplyr::select(country_id, year, abs_distance_china, china_top) %>%
     as.data.frame()
@@ -1737,6 +1779,130 @@ plot_panelmatch_combined <- function(est_att, est_art) {
     theme(panel.grid.minor = element_blank(), legend.position = "none")
 
   p
+}
+
+############################
+## Phase 4: Devil's Advocate Responses
+############################
+
+# Leave-one-out fect IFE: drop each treated country one at a time
+run_fect_leave_one_out <- function(panel, method = "ife", nboots = 500,
+                                    fml = abs_distance_china ~ china_top) {
+  set.seed(42)
+  treated_ids <- unique(panel$iso3c[panel$china_top == 1])
+
+  results <- list()
+  for (i in seq_along(treated_ids)) {
+    drop_id <- treated_ids[i]
+    sub_panel <- panel[panel$iso3c != drop_id, ]
+
+    tryCatch({
+      fit <- run_fect_analysis(sub_panel, method = method, nboots = nboots, fml = fml)
+      s <- fect_att_summary(fit)
+      country_name <- unique(panel$country_name[panel$iso3c == drop_id])
+      results[[i]] <- data.frame(
+        dropped = country_name[1], iso3c = drop_id,
+        att = s$att, se = s$se, p = s$p, r_cv = s$r_cv,
+        stringsAsFactors = FALSE
+      )
+    }, error = function(e) {
+      results[[i]] <<- data.frame(
+        dropped = drop_id, iso3c = drop_id,
+        att = NA_real_, se = NA_real_, p = NA_real_, r_cv = NA_integer_,
+        stringsAsFactors = FALSE
+      )
+    })
+  }
+
+  do.call(rbind, results)
+}
+
+# Build panel with ALL displacement events (not just USA-displaced)
+build_any_displacement_panel <- function(trade_data, unga_data, classified_events) {
+  # Current rank: is China #1 for each exporter-year?
+  rank_current <- trade_data %>%
+    group_by(year, exporter_iso3) %>%
+    arrange(desc(exports)) %>%
+    mutate(rank = row_number()) %>%
+    ungroup() %>%
+    dplyr::filter(importer_iso3 == "CHN") %>%
+    dplyr::select(iso3c = exporter_iso3, year, rank_CHN = rank)
+
+  panel <- unga_data %>%
+    dplyr::filter(year >= 1990) %>%
+    dplyr::select(iso3c, year, abs_distance_china) %>%
+    left_join(rank_current, by = c("iso3c", "year")) %>%
+    mutate(
+      china_top = as.integer(!is.na(rank_CHN) & rank_CHN == 1),
+      country_id = as.integer(as.factor(iso3c)),
+      country_name = countrycode::countrycode(iso3c, "iso3c", "country.name")
+    ) %>%
+    arrange(country_id, year)
+  panel$china_top[is.na(panel$china_top)] <- 0L
+
+  # Balance panel: keep only units observed in all years
+  max_years <- max(table(panel$country_id))
+  balanced_ids <- panel %>%
+    group_by(country_id) %>%
+    summarise(n_years = n(), .groups = "drop") %>%
+    dplyr::filter(n_years == max_years) %>%
+    pull(country_id)
+
+  panel <- panel %>%
+    dplyr::filter(country_id %in% balanced_ids) %>%
+    mutate(country_id = as.integer(as.factor(iso3c)))
+
+  as.data.frame(panel)
+}
+
+# Media counterfactual: compare trade-China headlines vs other categories
+build_media_counterfactual <- function(folha_file) {
+  folha <- readRDS(folha_file)
+
+  folha %>%
+    dplyr::filter(year >= 2000, year <= 2014) %>%
+    dplyr::mutate(
+      broad_category = dplyr::case_when(
+        subject == "china-brazil trade" ~ "China-Brazil Trade",
+        subject == "chinese economy" ~ "Chinese Economy",
+        subject %in% c("china-brazil relations", "diplomacy") ~ "Diplomacy & Relations",
+        TRUE ~ "Non-economic (sports, health, disasters, etc.)"
+      )
+    ) %>%
+    dplyr::group_by(year, broad_category) %>%
+    dplyr::summarise(n = dplyr::n(), .groups = "drop") %>%
+    dplyr::group_by(year) %>%
+    dplyr::mutate(
+      total = sum(n),
+      share = n / total * 100
+    ) %>%
+    dplyr::ungroup()
+}
+
+# Cohen's kappa for ChatGPT classification validation
+compute_cohens_kappa <- function(validation_file) {
+  val <- read.csv(validation_file, sep = ";")
+  val$chatgpt <- trimws(tolower(val$chatgpt_label))
+  val$manual <- trimws(tolower(val$manual_label))
+
+  n <- nrow(val)
+  p_o <- mean(val$chatgpt == val$manual)
+
+  # Expected agreement by chance
+  cats <- union(val$chatgpt, val$manual)
+  p_e <- sum(sapply(cats, function(c) {
+    (sum(val$chatgpt == c) / n) * (sum(val$manual == c) / n)
+  }))
+
+  kappa <- (p_o - p_e) / (1 - p_e)
+
+  list(
+    kappa = round(kappa, 3),
+    p_observed = round(p_o, 3),
+    p_expected = round(p_e, 3),
+    n = n,
+    accuracy_pct = round(p_o * 100, 1)
+  )
 }
 
 # Raw UNGA distance plot for treated countries (China displaced USA)

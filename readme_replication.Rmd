@@ -1,0 +1,154 @@
+---
+title: "Replication Package for: The Rank Effect of Trade on Brazil’s Foreign-Policy Alignment with China"
+author: "Manoel Galdino"
+date: "2025-07-08"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+# Citation
+
+> **Galdino, M.** (2025). “The rank effect of trade on Brazil’s foreign policy political alignment with China.” *SocArXiv* pre‑print. <https://doi.org/10.31235/osf.io/25zgv_v1>
+
+# Authors
+
+* **Manoel Galdino**  <https://orcid.org/0000-0002-8384-1491>
+
+# Data availability & provenance
+
+| Dataset | Public? | Location / licence | File in archive |
+|---------|---------|--------------------|-----------------|
+| *[fill later]* | yes | DOI / URL | `...` |
+| … (add rows) | | | |
+| **Folha de S.Paulo news scrape** | see note | Public web, © Folha S.Paulo | produced by code |
+
+
+> **Note.** Folha articles are scraped on‑the‑fly; raw HTML is **not redistributed**. Derived variables are included under fair‑use.
+
+A single bundle of raw inputs is archived on Dataverse:
+
+* DOI<https://doi.org/10.7910/DVN/M97OCJ>  
+* File`raw_data_20250708.zip` (~1gb)  
+* SHA‑256`ADD‑HASH‑HERE`
+
+# Computational requirements
+
+## Software
+
+* **R 4.4.2** (2024‑10‑31) or later
+* All R packages pinned in `renv.lock` – restore with:
+
+```r
+install.packages("renv")
+renv::restore()
+```
+
+* External tools: `git`, `zip`/`unzip`, C/C++ build tools.
+
+## Hardware & runtime
+
+Pipeline tested on a MacBook Pro (M1,36GB RAM); `targets::tar_make()` completes in **<3h**, peak RAM <16GB.
+
+# 3 Quick‑start
+
+```r
+# clone repository -----------------------------------------------------------
+# git clone https://github.com/<user>/red_trade.git
+# cd red_trade
+
+install.packages("renv")   # once
+renv::restore()             # recreate package environment
+
+library(targets)
+tar_make()                  # run full pipeline
+```
+
+Outputs (tables, figures) will be written to `output/`.
+
+## 3.1 Pre‑computed heterogeneity data (outside the pipeline)
+
+The cross-country DiD heterogeneity analysis (Phase 2d) uses two moderating
+variables — USA streak as #1 trade partner and V-Dem press freedom — that
+require reading the full trade data from 1986 and installing the `vdemdata`
+package (~200 MB). To avoid invalidating the entire pipeline (which takes
+several hours), these variables are pre-computed by a **standalone script**
+and saved to `data/heterogeneity_vars.rds`. The pipeline then imports this
+file as a tracked dependency.
+
+**To reproduce from scratch:**
+
+```r
+# Step 1: Run the standalone script (takes ~2 min; installs vdemdata if needed)
+source("scripts/compute_heterogeneity_data.R")
+# This reads from the {targets} store (classified_events, event_study_data_usa),
+# computes usa_streak and press_free for all countries, and saves to:
+#   data/heterogeneity_vars.rds
+
+# Step 2: Run the pipeline (only new Phase 2d targets will build; ~10 sec)
+library(targets)
+tar_make()
+```
+
+**What the standalone script does:**
+
+1. Reads `raw data/ITPDE_R03.csv` starting from 1986 (the pipeline uses 1990+)
+2. For each treated country where China displaced the USA: counts consecutive
+   years the USA was the #1 export destination, looking backwards from the year
+   before treatment (`usa_streak`)
+3. For never-treated countries: counts the USA streak backwards from the last
+   year of data (2022)
+4. Downloads V-Dem data (`v2x_freexp_altinf`) via the `vdemdata` package;
+   computes a pre-treatment 5-year mean for treated countries and a 1995–2005
+   mean for never-treated countries (`press_free`)
+5. Saves the country-level data frame to `data/heterogeneity_vars.rds`
+
+**Why outside the pipeline?** Changing the trade data filter from `year > 1989`
+to `year >= 1986` inside `get_trade_data()` would invalidate `trade_data` and
+all downstream targets, triggering a full rebuild (~6 hours). The standalone
+approach avoids this entirely.
+
+# Folder overview *(draft)*
+
+```
+_project/
+|-- _targets.R           # pipeline
+|-- R/                   # functions
+|-- raw_data_20250708.zip
+|-- renv.lock            # package versions
+|-- README.Rmd           # this file
+```
+
+# Variable definitoions (codebook)
+
+| Variable | Description | Source |
+|----------|-------------|--------|
+| `iso3c` | Three‑letter country code (ISO‑3166‑1) | Dynamic Gravity Dataset, USITC |
+| `year` | Calendar year | UNGA ideal‑point dataset |
+| `pop` | Population (millions) | Dynamic Gravity Dataset, USITC |
+| `abs_distance_china` | Absolute distance to China in UNGA ideal‑point space | UNGA ideal‑point dataset |
+| `gdp_cur` | GDP, current USD | Dynamic Gravity Dataset, USITC |
+| `abs_distance_usa` | Absolute distance to the U.S. in UNGA ideal‑point space | UNGA ideal‑point dataset |
+| `gpi` | Global Power Index | Diplometric — Pardee Institute |
+| `us_power_gap` | U.S. GPI minus country GPI | Computed from GPI |
+| `us_ideal` | U.S. ideal‑point estimate | UNGA ideal‑point dataset |
+| `trade_with_china` | Goods trade with China (USD) | Dynamic Gravity Dataset, USITC |
+| `trade_with_us` | Goods trade with United States (USD) | Dynamic Gravity Dataset, USITC |
+| `total_trade` | Total goods trade (USD) | Dynamic Gravity Dataset, USITC |
+| `distance_us` | Distance capital → Washington DC (km) | CEPII GeoDist via DG |
+| `distance_china` | Distance capital → Beijing (km) | CEPII GeoDist via DG |
+| `exchange_rate` | Market exchange rate (LCU per USD, annual avg.) | World Bank WDI (PA.NUS.FCRF) |
+| `latin_america` | 1 = Latin America & Caribbean, 0 otherwise | Author coding (UN regions) |
+| `pci_cur` | GDP per capita, current USD | Dynamic Gravity Dataset, USITC |
+| `perc_trade_with_china` | Trade with China ÷ total trade | Author calculation |
+| `perc_trade_with_us` | Trade with U.S. ÷ total trade | Author calculation |
+
+
+# Licensing
+
+* **Code**: MIT Licence (see `LICENSE`).  
+* **Data**: subject to original provider licences; derived data CC‑BY 4.0 where permissible.
+
+> *Last updated: 2025‑07‑08.* Replace placeholders before final release.

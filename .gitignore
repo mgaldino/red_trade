@@ -50,3 +50,9 @@ rsconnect/
 raw data/
 raw_data_20250708.zip
 .DS_Store
+
+# Local-only directories (not for repo)
+references/
+replication package/
+quality_reports/
+presentations/

@@ -31,7 +31,7 @@ fontsize: 12pt
 abstract: "\\singlespacing This paper investigates the causal effect of China's rise as Brazil's leading trade partner on Brazil's foreign policy alignment with China.
   Using a synthetic difference-in-differences (SDiD) approach, the study leverages
   a \"rank effect\" — the change in salience when China became Brazil's largest trade
-  partner in 2009 — as a natural experiment. We measure foreign policy alignment using ideal point estimates derived from UNGA voting data (Bailey et al., 2017) for the period 1997–2015. The findings suggest that surpassing historical trade partners triggers a qualitative shift in political alignment, decreasing the ideological distance between Brazil and China at the UNGA by 40%."
+  partner in 2009 — as a natural experiment. We measure foreign policy alignment using ideal point estimates derived from United Nations General Assembly voting data (Bailey et al., 2017) for the period 1997–2015. The findings suggest that surpassing historical trade partners triggers a qualitative shift in political alignment, decreasing the ideological distance between Brazil and China at the UNGA by 40%."
 geometry: margin=2.5cm
 spacing: double
 mainfont: Times New Roman
@@ -102,6 +102,8 @@ The rank effect is not new in the political science literature and has been docu
 
 Drawing on the notion of coarse categorization — the tendency to rely on broad, easily processed bins rather than fine-grained metrics when confronting complexity [@graeber_etal2025] —, we argue that China becoming Brazil's first trade partner or overtaking the US are coarse categories that are often easier to process or require less mental effort than granular information. If trade between Brazil and China was USD 10 billion around 2009, was it big or small? By comparing it with the US, we know it is large. Even though decision-makers specialized in trade may know the meaning of specific numbers and how to put them in context, their job is easier when talking with parliamentary representatives, asking for funding for an initiative, or even selling it from a marketing point of view. As a result, we hypothesise that either directly or indirectly, such coarse news is important in driving momentum to produce changes in the foreign policy of a country like Brazil.
 
+To establish that a rank effect occurred around the time we are discussing, we collected all headlines, stories, op-eds, and editorials including the term "China" published in the newspaper Folha de São Paulo, the paper with the widest circulation in Brazil [@folha2016], from 1990 to the end of 2013. In total we got 48029 pieces. The results include some false positives (such as a piece involving a football player nicknamed "China"), but these are rare. In a random sample of 100 stories we found no instance of a false positive^[see appendix]. Additionally, the stories encompass a wide range of themes, including sports, natural disasters, politics, economics, science, and more. Nonetheless, they are a measure of interest in everything related to China. Over time, news pieces about China reached a peak in 2008, the year of the Summer Olympics in China and the year when China overtook the US as Brazil's first trade partner.
+
 
 ```{r plot_folha, message=FALSE, warning=FALSE, echo=FALSE, fig.cap= "Number of pieces published with term 'China' at newspaper Folha de São Paulo.", fig.pos="H"}
 tar_read(plot_folha)
@@ -117,10 +119,6 @@ wrap_plots(lista_plot, ncol = 4)
 ```
 
 
-
-
-To establish that a rank effect occurred around the time we are discussing, we collected all headlines, stories, op-eds, and editorials including the term "China" published in the newspaper Folha de São Paulo, the paper with the widest circulation in Brazil [@folha2016]. The results include some false positives (such as a piece involving a football player nicknamed "China"), but these are rare. In a random sample of 100 stories we found no instance of a false positive^[see appendix]. Additionally, the stories encompass a wide range of themes, including sports, natural disasters, politics, economics, science, and more. Nonetheless, they are a measure of interest in everything related to China. Over time, news pieces about China reached a peak in 2008, the year of the Summer Olympics in China and the year when China overtook the US as Brazil's first trade partner.
-
 Here are some headlines with "bate" (meaning "reach")^[I have used chatgpt 4o to assist in the headlines translation from Portuguese into English. See https://chatgpt.com/share/6862b919-4630-800e-ab9c-df9dee5ae56c]: On January 9th, 2009, "Exportações do agronegócio batem recorde, com destaque para China" (Agribusiness exports reach record high, with China as the main highlight). On April, "China bate recorde de importações de minério de ferro em abril" (China hits record iron ore imports in April). In August: "Vendas de minério do Brasil para China batem recorde em julho" (Ore sales from Brazil to China reach record high in July) and so on. A key formulation using the word "bate" (reaching or hitting a record high) in an economic context appeared many times in 2009, but only once in 2008, in the context of agribusiness.
 
 
@@ -134,6 +132,8 @@ wrap_plots(lista_plot_08_09, ncol = 2)
 What about the content over time? If our hypothesis is correct, not only should we expect more pieces about China, but also a growing number of pieces about economics and trade in particular. To assess this, we computed the trigrams of each headline for four years (2003, 2006, 2009, and 2012) to examine their evolution over time. Trigrams are strings of three tokens that are used to divide a sentence into parts of words [@violos_etal2018]. By looking at the most frequent trigrams, we can have a sense of what kind of content was present in each year.
 
 If, as we argued, symbolic milestones like surpassing historical trade partners attract disproportionate attention from policymakers, then the moment China became Brazil's largest trade partner constitutes a plausible, exogenous 'shock' to the salience of the bilateral relationship. This logic motivates our empirical strategy, which leverages this rank change as a quasi-experimental treatment using a Synthetic Difference-in-Differences approach, as detailed in the next section.
+
+We can also look at headlines that included explictly the term "China"(or variations, like "chinese"), not only that China was mentioned some how in the body of the text. When filtered headlines for "China"and its variations, we have a total of 14,586 pieces. Figure 2 below plots the evolution of those news titles over time. We see that the years with over 100 pieces by month is rare before 2008. One exeption is in April 2001, when we had over 200 pieces published in that month. A closer look at the headlines explain what is happening. More than 50% of the pieces were about a spy US jet that collided with a Chinese plane, causing a crisis between the nations over the whole month. Another major percentage of pieces was about a state visit of Chinese leader to Latin America, including Brazil. A few other are about Taiwan and some other random news not relevant for us. Another peak happend in may 2008. At least 63% of the pieces were about an earthquake with dozens of thousands of deads in China, almost nothing about trade. In August 2008 the theme is obviously the summer Olympics games.
 
 
 # Methodology
@@ -192,15 +192,45 @@ We have now the best of all words, without many of the problems of SCM and DiD i
 
 ## Data and Variables
 
-Since we need to fit a model to a complete panel, we constraint the sample to 105 countries over a period of 21 years, from 1997 to 2011.
+```{r basic data, message=FALSE, warning=FALSE, echo=FALSE}
+library(targets)
+library(tidyverse)
+df <- tar_read(synth_data)
+num_countries <- df %>%
+  summarise(num_countries = n_distinct(iso3c)) %>%
+  pull(num_countries)
 
-Our outcome variable, vote similarity between a country and China at UNGA, is based on the ideal point estimates based on UNGA vote data from @bailey_etal2017. It measures state preferences apart from the agenda, which is important whenever there is a comparison over time, which is exactly the case here.
+num_years <- df %>%
+  filter(iso3c == "BRA") %>%
+  filter( year < 2016) %>%
+  summarise(num_years = n()) %>%
+  pull(num_years)
+
+min_year <- df %>%
+  summarise(min_year = min(year)) %>%
+  pull(min_year)
+
+max_year <- df %>%
+  filter( year < 2016) %>%
+  summarise(max_year = max(year)) %>%
+  pull(max_year)
+```
+ 
+To fit the model, current implementations of SDiD require a complete panel. Thus, I assemlbe a country-year panel that merges several datasets, covering  `r num_countries` countries over  `r num_years` years (`r min_year` - `r max_year`).  
+
+Our outcome variable, vote similarity between a country and China at UNGA, is based on the ideal point estimates based on UNGA vote data from @bailey_etal2017. We use the median estimate of the ideal points of each country per year and compute the absolute distance between China on a given year an each other country-year in the database and the lower the score, the closer the foreign policy between two countries. It measures state preferences apart from the agenda, which is important whenever there is a comparison over time, which is exactly the case here. In this sense, it is a better measure over time than raw similarity index like percentage of similar vote in a year [@neto_malamud2015] or any other measures such as S-score [@signorino_ritter1999]. UNGA vote affinity has been used as a measure of shared state preference in the literature due to its membership coverage and availability of data on a regular basis [@potrafke2009; @struver2016]. The topics covered by UNGA resolutions concentrate on political dimensions, specially humanitarian and social issues, with only a small fractions of economic and financial resolutions [@struver2016].
+
+The treatment indicator $D_{it}$ equals 1 in the first year that China became Brazil's leading trade partner in 2009 and all subsequent years. Otherwise is zero for all country-years. Because the shock is plausibly exogenous to pre-trend voting behavior, it satisfies the parallel-trends (or exclusion-restriction) assumption. The figure with the estimated model includes a pre-trend fit, that resembles pretty close the treated behavior of vote similarity, suggesting the assumption is valid.
+
+the outcome variable, foreign-policy alignment is derived from @bailey_ertal2017. The measure captures latent preferences rather than agenda composition by relying on ideal-point estimation [@bailey_ertal2017]. I take the absolute distance between country $i$ and China as the dependent variable (larger values = greater divergence).
 
 Predictors include per capita GDP from the Gravity Dabatase [@gurevich_herman2018]. Trade data are drawn from the International Trade and Production Database [@borchert_etal2021]. To avoid double counting, I use the value reported by the importer country to compute total trade between two dyads, since importers have more interest in measuring this value accurately for tax collection reasons [@borchert_etal2021]. We copmpute the share of total trade with China and the share of total trade with the United States as our two measures of trade. As our measure of power, we used the Global Power Index (GPI) from Diplometric -- Pardee Institute, University of Denver. GPI combines demographic, economic, military, technology and diplomatic dimensions and then we computed the power gap between Brazil and the US. We also include distance to the US, as countries closer to the US will have a bigger incentive to align its foreign policy with it. Another economic variable is the exchange rate, since a complaint of China is its devalued currency. A country with a more devalued currency is expected to be more aligned with China than not. The definitions and measurements of key variables are provided in table 1. Table 2 presents the descriptive statistics.
 
 Another possible threat to our research design is the fact that in 2008 there was the global economic crisis [@frankel_saravelos2012]. It is possible, thus, that Brazil would be reacting differently in its foreign policy than other countries due to the financial crisis. To rule out the possibility that Brazil’s alignment shift in 2009 was driven by macroeconomic turbulence rather than rank salience, we augment our SDiD covariate matrix with four annual indicators capturing different facets of the 2008–09 crisis, all drawn from the Global Macro Database [@muller_etal2025]:
 
 Current Account Balance (% GDP), to capture external‐sector stress and reliance on foreign financing; Government Budget Deficit (% GDP), to reflect fiscal pressure and stimulus capacity; Government Tax Revenue (% GDP). to gauge revenue‐side capacity to respond to shocks, Central Bank Policy Rate (annual average, %), a measure of monetary‐policy stance and financial‐market conditions. 
+
+With variables defined, I next outline the estimation strategy.
 
 
 ```{r table_summary, message=FALSE, warning=FALSE, echo=FALSE}

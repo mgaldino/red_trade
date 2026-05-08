@@ -1,7 +1,7 @@
 ---
 title: "The Foreign Policy Impact of Trade-Based Status Gains: When China Overtakes the US as Top Trade Partner"
-author: "Manoel Galdino (University of São Paulo; mgaldino@usp.br)"
-date: "`r Sys.Date()`"
+author: ""
+date: ""
 output:
   bookdown::pdf_document2:
     number_sections: TRUE
@@ -17,7 +17,7 @@ header-includes:
 - \usepackage{float}
 - \newcommand{\argmin}{\mathop{\mathrm{argmin}}\limits}
 fontsize: 12pt
-abstract: "\\singlespacing  How do trade-based status gains affect foreign policy alignment? Existing IR research emphasizes status anxiety and status seeking, but pays little attention to upward status shifts. We argue that rank reversals in trade hierarchies, especially when a rising power displaces the hegemon, create a salient status shock that can produce foreign policy realignment beyond gradual trade growth. We test this claim in Brazil, where China overtook the United States as top trade partner in 2009, using Synthetic Difference-in-Differences on UNGA ideal-point distance. The estimate implies a statistically significant 41% reduction (approximately 0.10 standard deviations) in Brazil's ideological distance to China after the reversal (p = 0.032). To probe mechanism implications, we analyze Brazil's main newspaper with NLP and find evidence consistent with a post-2009 increase in China-related salience, particularly trade-focused coverage. We then examine cross-country cases in which China displaced the United States as top partner. Because four of the eight treated countries experience treatment reversals (the USA regains the top position), we employ the counterfactual estimator of Liu, Wang, and Xu (2024) with interactive fixed effects, which accommodates non-absorbing (switching) treatment. The cross-country estimate confirms a similar pattern. Exit-aligned analysis further shows that the alignment effect dissipates when the USA regains the top position, providing evidence consistent with a salience-driven mechanism. These results suggest that discrete status milestones, not only continuous trade deepening, can reshape foreign policy behavior. The findings challenge claims that status gains are mostly illusory and motivate research on status effects in trade, investment, aid, and other economic ties."
+abstract: "\\singlespacing  How do trade-based status gains affect foreign policy alignment? IR research emphasizes status anxiety and status seeking but has paid little attention to upward status shifts. We argue that rank reversals in trade hierarchies -- especially when a rising power displaces the hegemon -- create a salient status shock that can realign foreign policy beyond gradual trade growth. Using Synthetic Difference-in-Differences on UNGA ideal-point distance, we find that after China overtook the United States as Brazil's top trade partner in 2009, Brazil's ideological distance to China fell by roughly 41\\% (approximately 0.10 standard deviations, p = 0.032). NLP analysis of Brazilian newspaper coverage shows a parallel rise in China-related salience. A cross-country interactive-fixed-effects estimator accommodating switching treatment confirms the pattern, and exit-aligned estimates show the effect dissipates when the US regains the top position, consistent with a salience-driven mechanism."
 geometry: margin=2.5cm
 spacing: double
 mainfont: Times New Roman
