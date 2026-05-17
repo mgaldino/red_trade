@@ -18,6 +18,7 @@ tar_option_set(packages = c("tidyverse", "tidyr", "ggplot2", "janitor", "data.ta
 
 # Run the R scripts in the R/ folder with your custom functions:
 tar_source("scripts/functions.R")
+tar_source("scripts/functions_unvotes.R")
 # tar_source("other_functions.R") # Source other scripts as needed.
 
 # Replace the target list below with your own:
@@ -33,6 +34,7 @@ list(
   tar_target(trade_file, here("raw data", "ITPDE_R03.csv"), format = "file"),
   tar_target(ideology_file, here("raw data", "global_leader_ideologies.csv"), format = "file"),
   tar_target(dpi_file, here("raw data", "database-political-institutions-2015.csv"), format = "file"),
+  tar_target(unvotes_tarball, here("data", "raw", "unvotes", "unvotes_0.3.0.tar.gz"), format = "file"),
   tar_target(country_data, get_country_data2()),
   tar_target(unga_data, get_unga_data(unga_file)),
   tar_target(gpi_data, get_gpi_data(gpi_file)),
@@ -59,6 +61,21 @@ list(
   tar_target(plot_folha, folha_plot(folha_df)),
   tar_target(list_plots, create_list_graphs(folha_df, start=1, num_by=3, n_filter=8)),
   tar_target(list_plots_08_09, create_list_graphs(folha_df, start=6, end=7, num_by=1, n_filter=5)),
+  # Resolution-level Brazil-China UNGA vote diagnostics
+  tar_target(brazil_china_unvotes_resolution_2005_2012,
+             build_brazil_china_unvotes_resolution_data(unvotes_tarball)),
+  tar_target(brazil_china_unvotes_similarity_by_year_2005_2012,
+             summarise_brazil_china_unvotes_similarity_by_year(
+               brazil_china_unvotes_resolution_2005_2012
+             )),
+  tar_target(brazil_china_unvotes_similarity_by_issue_year_2005_2012,
+             summarise_brazil_china_unvotes_similarity_by_issue_year(
+               brazil_china_unvotes_resolution_2005_2012
+             )),
+  tar_target(plot_brazil_china_unvotes_similarity_by_issue_year_2005_2012,
+             plot_brazil_china_unvotes_similarity_by_issue_year(
+               brazil_china_unvotes_similarity_by_issue_year_2005_2012
+             )),
   # SDiD
   tar_target(synth_data, clean_synth_data(final_df, ranked_trade_data=trade_data_ranked,
                                          dpi_data=dpi_data, trade_agreement_data=trade_agreement_data)),
@@ -122,6 +139,66 @@ list(
   # Phase 3: fect + PanelMatch (switching treatment)
   tar_target(switching_panel, build_switching_panel(trade_data, unga_data, classified_events, usa_top_countries)),
   tar_target(covariates_panel, build_covariates(final_df)),
+  # Phase 3a: main pooled China top-partner treatment
+  # Treatment = 1 when China is the country's largest export destination.
+  tar_target(china_top_panel, build_china_top_partner_panel(
+    trade_data,
+    unga_data,
+    classified_events,
+    usa_top_countries
+  )),
+  tar_target(china_top_panel_summary, summarize_china_top_panel(china_top_panel)),
+  tar_target(china_top_panel_cov, dplyr::left_join(china_top_panel, covariates_panel, by = c("iso3c", "year"))),
+  tar_target(china_top_fect_data, prepare_fect_data(china_top_panel)),
+  tar_target(china_top_fect_cov_data, prepare_fect_data(
+    china_top_panel_cov,
+    fml = abs_distance_china ~ china_top + log_gdp_pc + free_press
+  )),
+  tar_target(fect_fe_china_top, run_fect_analysis(china_top_fect_data, method = "fe")),
+  tar_target(fect_ife_china_top, run_fect_analysis(china_top_fect_data, method = "ife")),
+  tar_target(fect_ife_china_top_summary, summarize_fect_model(fect_ife_china_top, china_top_fect_data)),
+  tar_target(fect_ife_china_top_cov, run_fect_analysis(china_top_fect_cov_data, method = "ife",
+             fml = abs_distance_china ~ china_top + log_gdp_pc + free_press)),
+  tar_target(fect_ife_china_top_cov_summary, summarize_fect_model(
+    fect_ife_china_top_cov,
+    china_top_fect_cov_data,
+    fml = abs_distance_china ~ china_top + log_gdp_pc + free_press
+  )),
+  tar_target(fect_carryover_china_top, run_fect_carryover(china_top_fect_data)),
+  tar_target(panelmatch_att_china_top, run_panelmatch_analysis(china_top_fect_data, qoi = "att")),
+  tar_target(panelmatch_art_china_top, run_panelmatch_analysis(china_top_fect_data, qoi = "art")),
+  tar_target(plot_fect_ife_gap_china_top, plot_fect_gap(fect_ife_china_top, "IFE: Entry-aligned gap plot")),
+  tar_target(plot_fect_ife_exit_china_top, plot_fect_exit(fect_ife_china_top, "IFE: Exit-aligned gap plot")),
+  tar_target(plot_pm_combined_china_top, plot_panelmatch_combined(panelmatch_att_china_top, panelmatch_art_china_top)),
+  tar_target(plot_diagnostics_main_china_top,
+             plot_fect_diagnostics(fect_ife_china_top, fect_fe_china_top, fect_carryover_china_top)),
+  tar_target(plot_diagnostics_equiv_china_top,
+             plot_fect_equiv_appendix(fect_fe_china_top, fect_ife_china_top)),
+  tar_target(plot_treated_panel_china_top, plot_china_top_country_panel(china_top_fect_data)),
+  tar_target(fect_ife_china_top_loo, run_fect_leave_one_out(china_top_fect_data)),
+  tar_target(china_top_absorbing_cs_data, prepare_absorbing_china_top_did_data(china_top_panel)),
+  tar_target(did_china_top_absorbing, run_cross_country_did(
+    china_top_absorbing_cs_data,
+    aggte_na_rm = TRUE
+  )),
+  tar_target(did_china_top_absorbing_summary, summarize_cross_country_did(
+    did_china_top_absorbing,
+    china_top_absorbing_cs_data
+  )),
+  tar_target(china_top_absorbing_cs_cov_data, prepare_absorbing_china_top_did_data(
+    china_top_panel_cov,
+    covariate_cols = c("log_gdp_pc", "free_press")
+  )),
+  tar_target(did_china_top_absorbing_cov, run_cross_country_did(
+    china_top_absorbing_cs_cov_data,
+    xformla = ~ log_gdp_pc + free_press,
+    aggte_na_rm = TRUE
+  )),
+  tar_target(did_china_top_absorbing_cov_summary, summarize_cross_country_did(
+    did_china_top_absorbing_cov,
+    china_top_absorbing_cs_cov_data
+  )),
+  tar_target(plot_es_china_top_absorbing, plot_event_study_did(did_china_top_absorbing)),
   tar_target(switching_panel_cov, dplyr::left_join(switching_panel, covariates_panel, by = c("iso3c", "year"))),
   tar_target(fect_fe, run_fect_analysis(switching_panel, method = "fe")),
   tar_target(fect_ife, run_fect_analysis(switching_panel, method = "ife")),
@@ -144,20 +221,21 @@ list(
     complete[complete$id %in% bal_ids, ]
   }),
   tar_target(did_displaced_usa_cov, run_cross_country_did(event_study_data_usa_cov,
-             xformla = ~ log_gdp_pc + free_press)),
+             xformla = ~ log_gdp_pc + free_press,
+             aggte_na_rm = TRUE)),
   # Diagnostic plots (Liu, Wang & Xu 2024 Figure 8 style)
   tar_target(plot_diagnostics_main, plot_fect_diagnostics(fect_ife, fect_fe, fect_carryover)),
   tar_target(plot_diagnostics_equiv, plot_fect_equiv_appendix(fect_fe, fect_ife)),
   # Raw data panel for treated countries
-  tar_target(plot_treated_panel, plot_treated_panel(switching_panel, classified_events)),
+  tar_target(plot_treated_panel, plot_treated_country_panel(switching_panel, classified_events)),
   # Phase 4: Devil's Advocate responses
   # Leave-one-out fect IFE (drop each treated country)
   tar_target(fect_ife_loo, run_fect_leave_one_out(switching_panel)),
-  # Non-US displacement: all countries where China displaced any partner
+  # Exploratory scope specification using the same China top-partner rule.
   tar_target(switching_panel_any, build_any_displacement_panel(trade_data, unga_data, classified_events)),
   tar_target(fect_ife_any, run_fect_analysis(switching_panel_any, method = "ife")),
   # Media counterfactual
-  tar_target(folha_classified_file, here("folha_classificado.rds"), format = "file"),
+  tar_target(folha_classified_file, here("data", "folha_classificado.rds"), format = "file"),
   tar_target(media_counterfactual, build_media_counterfactual(folha_classified_file)),
   # Cohen's kappa for ChatGPT validation
   tar_target(validation_file, here("data", "folha_validation_sample_annotated.csv"), format = "file"),

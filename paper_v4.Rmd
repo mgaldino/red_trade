@@ -17,7 +17,7 @@ header-includes:
 - \usepackage{float}
 - \newcommand{\argmin}{\mathop{\mathrm{argmin}}\limits}
 fontsize: 12pt
-abstract: "\\singlespacing  How do trade-based status gains affect foreign policy alignment? Existing IR research emphasizes status anxiety and status seeking, but pays little attention to upward status shifts. We argue that rank reversals in trade hierarchies, especially when a rising power displaces the hegemon, create a salient status shock that can produce foreign policy realignment beyond gradual trade growth. We test this claim in Brazil, where China overtook the United States as top trade partner in 2009, using Synthetic Difference-in-Differences on UNGA ideal-point distance. The estimate implies a statistically significant 41% reduction (approximately 0.10 standard deviations) in Brazil's ideological distance to China after the reversal (p = 0.032). To probe mechanism implications, we analyze Brazil's main newspaper with NLP and find evidence consistent with a post-2009 increase in China-related salience, particularly trade-focused coverage. We then examine cross-country cases in which China displaced the United States as top partner. Because four of the eight treated countries experience treatment reversals (the USA regains the top position), we employ the counterfactual estimator of Liu, Wang, and Xu (2024) with interactive fixed effects, which accommodates non-absorbing (switching) treatment. The cross-country estimate confirms a similar pattern. Exit-aligned analysis further shows that the alignment effect dissipates when the USA regains the top position, providing evidence consistent with a salience-driven mechanism. These results suggest that discrete status milestones, not only continuous trade deepening, can reshape foreign policy behavior. The findings challenge claims that status gains are mostly illusory and motivate research on status effects in trade, investment, aid, and other economic ties."
+abstract: "\\singlespacing  How do trade-based status gains affect foreign policy alignment? Existing IR research emphasizes status anxiety and status seeking, but pays little attention to upward status shifts. We argue that rank reversals in trade hierarchies, especially when a rising power displaces the hegemon, create a salient status shock that can produce foreign policy realignment beyond gradual trade growth. The salience shock can be immediate, but the diplomatic response may accumulate gradually as policymakers revise positions under institutional inertia and reputational constraints. We test this claim in Brazil, where China overtook the United States as top trade partner in 2009, using Synthetic Difference-in-Differences on UNGA ideal-point distance. The estimate implies a statistically significant 41% average post-2009 reduction (approximately 0.10 standard deviations) in Brazil's ideological distance to China relative to the synthetic counterfactual (p = 0.032). To probe mechanism implications, we analyze Brazil's main newspaper with NLP and find evidence consistent with a post-2009 increase in China-related salience, particularly trade-focused coverage. We then examine cross-country cases in which China becomes the top export destination. Because some treated countries experience treatment reversals, we employ the counterfactual estimator of Liu, Wang, and Xu (2024) with interactive fixed effects, which accommodates non-absorbing (switching) treatment. The cross-country estimate supports a similar pattern. Exit-aligned diagnostics show no evidence of large persistent carryover after China loses the top position, though exit estimates are imprecise. These results suggest that discrete status milestones, not only continuous trade deepening, can reshape foreign policy behavior over the post-reversal period. The findings challenge claims that status gains are mostly illusory and motivate research on status effects in trade, investment, aid, and other economic ties."
 geometry: margin=2.5cm
 spacing: double
 mainfont: Times New Roman
@@ -47,7 +47,7 @@ caption_note <- function(unit = NULL, se = NULL, cluster = NULL, window = NULL, 
 }
 
 treat_def_brazil <- "Treatment indicator equals 1 from 2009 onward, when China becomes Brazil's top export destination displacing the USA, and 0 before 2009"
-treat_def_panel <- "Treatment indicator equals 1 in any year China is currently the top export destination; turns off if USA regains the position (switching treatment)"
+treat_def_panel <- "Treatment indicator equals 1 in any year China is currently the top export destination; turns off if China loses the top position (switching treatment)"
 
 resolve_existing_file <- function(candidates) {
   hits <- candidates[file.exists(candidates)]
@@ -73,7 +73,7 @@ Word count: `r word_count_text()`
 
 "China overtakes US as Brazil's top trade partner". That was a headline in many Brazilian newspapers in 2009 [@rodrigues2009]. The BBC ran a similar headline in 2021, when China surpassed the United States as the EU's biggest trading partner [@bbc2021]. Sensing the symbolic weight of the milestone in Brazil, President Lula da Silva promptly announced a high-profile trip to Beijing, flanked by an unusually large business delegation. 
 
-Do discrete rank reversals in trade hierarchies — particularly when a rising power displaces the hegemon — produce foreign policy realignment beyond what continuous trade growth predicts?
+When a rising major power becomes a country's top trade partner, does that status change induce foreign-policy realignment beyond what continuous trade exposure predicts? And is the effect stronger when the displaced number-one partner is the hegemon and strategic rival of the rising power?
 
 The status literature [@renshon_2016; @wardLostTranslationSocial2017; @dafoe_etal2014] focuses almost exclusively on status deficits and conflict. It offers limited theoretical guidance predicting that a state gaining trade-based status would receive diplomatic concessions. The literature on status effects of rank changes exists in domestic politics [@anagol_fujiwara2016; @fujiwara_sanz2020] but has never been extended to international politics.
 
@@ -101,17 +101,17 @@ sample_size_countries <- tar_read(synth_data) %>%
 
 ```
 
-We argue that rank reversals deliver discrete status changes that, processed as coarse categories, trigger disproportionate media salience and foreign policy realignment, beyond what gradual trade accumulation predicts. This effect is more likely when other cues increase salience, such as the former trade partner being the hegemon or the reversal overcomes a long-run historic pattern.
+We argue that discrete status change in trade hierarchy should induce foreign-policy realignment, specially when a rising major power becomes a country's top trade partner. The cue can arrive abruptly, but the policy response need not be a one-year jump: diplomatic positions are embedded in prior votes, bureaucratic routines, coalition commitments, and reputational costs, so governments may adjust gradually as the new status category becomes politically usable.
 
-To develop and initially probe our theory, we focus on the most likely case: Brazil. The US was Brazil's top trade partner for approximately 80 years, making the displacement maximally salient. Brazil has a free press (media channels can operate freely); Brazil is a regional power, not a small state, which makes coercion unlikely. Most-likely cases are well-suited for theory generation with confirmatory value: if the effect doesn't appear here, it's unlikely to appear anywhere. We follow a structured hybrid approach: the reduced-form prediction (rank reversal → alignment) is tested in Brazil (SDiD) and cross-country (DiD), while the salience mechanism is proposed and probed using the Brazilian case and NLP media evidence.
+To assess the causal claim, the paper empirically document when China, the emerging power in the international system in the two thousands, becomes a country's top trade partner (largest export destination). Firstly I consider Brazil's case, since it is the most-likely and theoretically strongest case of this treatment. The United States had been Brazil's leading trade partner for roughly eight decades before China displaced it in 2009. Brazil also has an active press, which allows us to observe the salience channel, and is a regional power, making a purely coercive explanation less plausible. The Brazilian design therefore estimates the same top-partner transition as the panel, but under the scope condition where the theory predicts the largest effect.
 
-To credibly show that the overtaking of the US by China as Brazil's top trade partner has a causal effect on Brazil's foreign policy orientation, we use a synthetic difference-in-differences approach. We measure the outcome as the absolute distance in UNGA ideal point estimation [@bailey_etal2017] between Brazil and China over 1997-2015. The SDiD point estimate corresponds to an estimated `r sprintf('%.1f', perc_change)`% reduction in Brazil’s ideological distance from China in UNGA votes.
+To credibly show that the overtaking of the US by China as Brazil's top trade partner has a causal effect on Brazil's foreign policy orientation, we use a synthetic difference-in-differences approach. We measure the outcome as the absolute distance in UNGA ideal point estimation [@bailey_etal2017] between Brazil and China over 1997-2015. The SDiD point estimate corresponds to an estimated `r sprintf('%.1f', perc_change)`% average reduction in Brazil's ideological distance from China over the post-2009 period relative to the synthetic counterfactual. It is not an estimate of a visual discontinuity or of the one-year change in 2009.
 
-As Brazil is a single case, we test the theory that status change impacts foreign policy using a cross-country design on all countries where the United States was the top trade partner. We compare those where China eventually displaced the US (the treatment) with those where it did not (control group), using a counterfactual estimator with interactive fixed effects [@liu2024practical] that accommodates treatment switching -- four of the eight treated countries see the USA regain the top position. The results are consistent with the case study, and exit-aligned analysis shows the effect dissipates when treatment turns off.
+Second, we estimate the same treatment in a cross-country panel. Treatment begins when China becomes a country's largest export destination and remains on while China holds that position. The pooled panel ATT is therefore an average effect of China entering and holding the top trade position across cases with different levels of geopolitical salience. It should not be expected to equal the Brazilian estimate: Brazil is a high-salience hegemonic-rival replacement case, while the panel also includes lower-salience cases where the displaced incumbent is not the United States or was less entrenched.
 
-To illuminate the mechanisms behind the effect of status change, we perform a deep analysis of the Brazilian case, showing a plausible channel through which rank appears as a cue that may trigger change in policy making: the media's role in publicizing and thus legitimizing this newfound status.
+To probe mechanism implications, we analyze Brazilian newspaper coverage and show that China and China-Brazil trade became more salient after the 2009 rank reversal. This media evidence speaks directly to the Brazilian case. In the cross-country panel, the mechanism is interpreted more cautiously: the evidence is consistent with a status mechanism, but does not directly measure salience in each country.
 
-This study provides the first systematic evidence that trade rank reversals produce foreign policy realignment, with patterns consistent with a media-salience mechanism. Residual endogeneity from shared structural features of commodity-exporting economies cannot be entirely ruled out, though the IFE latent factors and leave-one-out robustness checks mitigate this concern. The study questions the idea in the literature that status gains are mostly illusory [@mercer_2017]. It also has broad implications for the study of economic ties with an emerging power and the foreign policy of countries. Similar status change effects may also shape how other economic variables (such as Foreign Direct Investment, aid, and loans) impact the foreign policy of countries.
+This study provides systematic evidence that a rising major power's move to the top of a trade hierarchy can produce foreign-policy realignment, with the strongest mechanism evidence coming from Brazil and broader evidence coming from the cross-country panel. The study questions the idea in the literature that status gains are mostly illusory [@mercer_2017]. It also has broad implications for the study of economic ties with an emerging power. Similar status-change effects may also shape how other economic variables, such as foreign direct investment, aid, and loans, affect foreign-policy behavior.
 
 # Trade, Status, and Political Alignment
 
@@ -124,37 +124,37 @@ Yet the empirical record shows reality is messier. Reverse causality remains a c
 
 Status has been extensively studied in international relations [@dafoe_etal2014; @miller_etal2015; @renshon_2016; @renshon_etal2018; @duque_2018; @parlar_2019; @gotz_2021; @roren_2024]. A standard definition is the ranking or relative standing of a state [@macdonald_parent2021]. This definition, however, conflates a continuous measure (relative standing) with an ordinal one (rank position). Being first is qualitatively different from being second, and that distinction matters for how actors process information and allocate attention. We distinguish between *trade status* -- the ordinal position of a trade partner in a country's hierarchy of commercial relationships -- and *status shock* -- the discrete event of a rank reversal. In an experimental setup, status is the treatment; rank reversal is the manipulation. Our argument concerns the downstream consequences of status shocks, not status seeking, status anxiety, or military conflict -- the phenomena that dominate the existing IR status literature.
 
-The micro-foundation for why rank matters comes from coarse categorization -- the tendency to rely on broad, easily processed bins rather than fine-grained metrics when confronting complexity [@graeber_etal2025; @enke2024]. Actors -- media editors, policymakers, business leaders -- attend to categories like "top trade partner" as well as tracking continuous trade shares. The relevant categories here are "US = top partner" (a cognitive default entrenched by decades of commercial primacy) versus "China = top partner" (a disruptive reclassification). The rank reversal does not bring new information about trade volumes -- those data are continuously available. What it brings is a *categorical reclassification* that captures attention precisely because it disrupts an entrenched bin. Even redundant information shifts attention when it alters salient categories [@conlon2023; @bordalo_etal2022], and people tend to neglect the correlated structure of information and treat novel framings as independent signals [@enke_zimermann2017].
+The micro-foundation for why rank matters comes from coarse categorization -- the tendency to rely on broad, easily processed bins rather than fine-grained metrics when confronting complexity [@graeber_etal2025; @enke2024]. Actors can track continuous trade shares, but they also attend to categories such as "largest export market" or "top trade partner." Even redundant information shifts attention when it alters salient categories [@conlon2023; @bordalo_etal2022], and people tend to neglect the correlated structure of information and treat novel framings as independent signals [@enke_zimermann2017].
+
+The relevant cognitive shift is from an incumbent number-one partner category to a new "China = top trade partner" category. This reclassification does not necessarily provide new information about trade volumes; those data accumulate continuously. What it provides is a categorical cue that can organize attention, public interpretation, and elite coordination. The cue should be most salient when the new top partner is a rising major power and the displaced incumbent is politically prominent, long-entrenched, hegemonic, or strategically opposed to the rising power. The Brazilian case, where China displaced the United States after roughly eight decades, is therefore the strongest scope condition for the same top-partner treatment.
 
 The effect of rank on political decisions is well documented in domestic politics. Rank reversals produce bandwagon effects in elections [@anagol_fujiwara2016; @granzier_etal2023], regression discontinuities at the boundary of winning versus losing affect subsequent political careers [@folke_etal2016; @fujiwara_sanz2020], and similar rank-based thresholds coordinate behavior across diverse actors. The rank reversal functions as a focusing event by breaking an entrenched cognitive category. Yet no study has examined whether rank effects operate in international politics, despite the plausibility that they do. Status is widely acknowledged to matter in world politics, but there is no quantitative study estimating how a positive status shock translates into concrete policy changes or political alignment.
 
 ## Two Claims: Attention and Policy Response
 
-Our theory rests on two distinct claims. *Claim 1 (Attention)*: A rank reversal produces a disproportionate increase in media salience. The micro-foundation is coarse categorization: the reclassification from "second partner" to "first partner" triggers a categorical reframing in news coverage. The amplification occurs through agenda-setting [@edwards_wood1999] -- the media transforms the categorical reclassification into a focal event for national attention. Since this is a bounded rationality reaction, it is plausible that it would be temporary: as the new status becomes the cognitive default, salience fades. We provide evidence for this claim directly using NLP analysis of Brazilian newspaper coverage.
+Our theory rests on two distinct claims. Claim 1 (Attention): A rank reversal produces a disproportionate increase in media salience. The micro-foundation is coarse categorization: the reclassification from "second partner" to "first partner" triggers a categorical reframing in news coverage. The amplification occurs through agenda-setting [@edwards_wood1999] -- the media transforms the categorical reclassification into a focal event for national attention. Since this is a bounded rationality reaction, it is plausible that it would be temporary: as the new status becomes the cognitive default, salience fades. We provide evidence for this claim directly using NLP analysis of Brazilian newspaper coverage.
 
-*Claim 2 (Policy Response)*: The salience shock translates into foreign policy realignment through complementary channels. First, a cognitive channel: poliheuristic theory [@mintz2004; @mintz_geva1997; @mintz_2005] predicts that decision-makers use non-exhaustive search heuristics, and the salience spike causes the new trade status to enter their consideration sets, even if the underlying economic relationship was previously discounted. The role of cues and heuristics in foreign policy decisions has been discussed in international relations [@jabarian_sartori2024]. Second, an audience cost channel: once the media publicizes the new status, leaders face reputational incentives to align discourse and action with the newly salient relationship [@fearon1994; @tomz2007]. Third, a coordination channel: the rank reversal creates a focal point in the Schelling sense around which business lobbies, diplomats, and public opinion coordinate their demands for policy adjustment. These channels are complementary, and our design does not distinguish among them. The SDiD identifies their combined reduced-form effect.
+Claim 2 (Policy Response): The salience shock translates into foreign policy realignment through complementary channels, but the response can be gradual. First, a cognitive channel: poliheuristic theory [@mintz2004; @mintz_geva1997; @mintz_2005] predicts that decision-makers use non-exhaustive search heuristics, and the salience spike causes the new trade status to enter their consideration sets, even if the underlying economic relationship was previously discounted. The role of cues and heuristics in foreign policy decisions has been discussed in international relations [@jabarian_sartori2024]. Second, an audience cost channel: once the media publicizes the new status, leaders face reputational incentives to align discourse and action with the newly salient relationship [@fearon1994; @tomz2007]. Third, a coordination channel: the rank reversal creates a focal point in the Schelling sense around which business lobbies, diplomats, and public opinion coordinate their demands for policy adjustment. These channels work through institutions that carry memory: diplomatic services preserve prior positions, coalition commitments constrain abrupt reversals, and leaders may prefer incremental movement to avoid appearing opportunistic. The SDiD therefore identifies their combined reduced-form effect over the post-treatment period, not a separate instantaneous mechanism.
 
-We are explicit about the limits of our design. The SDiD estimates the combined reduced-form effect of the rank reversal on alignment through all channels. The NLP media analysis provides suggestive evidence for Claim 1 (attention). Claim 2 -- how salience translates into votes -- is theorized but not causally identified. We provide convergent evidence consistent with an attention channel, while acknowledging that the policy response channel remains theorized rather than directly identified.
+We are explicit about the limits of our design. Both the SDiD and the cross-country panel regression estimate the combined reduced-form effect of the trade status change on alignment through all channels. The NLP media analysis provides suggestive evidence for Claim 1 (attention). Claim 2 -- how salience translates into votes -- is theorized but not causally identified. We provide convergent evidence consistent with an attention channel, while acknowledging that the policy response channel remains theorized rather than directly identified.
 
 ## Hypotheses
 
-From the theoretical building blocks above, we derive four testable hypotheses.
+From the theoretical building blocks above, we derive four expectations.
 
-The first hypothesis is the main effect of interest and is related to the reduced-form specification.
+Hypothesis 1 (Top-partner status): When China becomes a country's top trade partner, operationalized as its largest export destination, that country's UNGA ideal-point distance to China decreases relative to its counterfactual path. This is the main treatment in both the Brazilian SDiD and the cross-country panel.
 
-Hypothesis 1 (Main Effect): Rank reversals -- where China displaces the incumbent top trade partner -- produce a discrete reduction in UNGA voting distance from China, beyond what gradual trade growth predicts. This follows from coarse categorization (the rank reversal is a category disruption) that opens a window for policy change.
+Hypothesis 2 (Hegemonic-rival replacement): The top-partner effect should be stronger when China replaces the United States as the number-one partner. Displacing the hegemon and strategic rival of the rising power makes the status change more visible, more politically meaningful, and more likely to alter the domestic and diplomatic interpretation of the trade relationship.
 
-Our theorization also makes predictions about mechanisms, of which we specify here the ones we can test or provide evidence consistent with in the paper.
+Hypothesis 3 (Media salience): In cases where the rank reversal becomes publicly visible, media coverage of China and of the bilateral trade relationship should increase around the reversal. We test this implication directly in the Brazilian case.
 
-Hypothesis 2 (Hegemon Moderation): The effect is larger when an emerging power displaces the hegemon, compared to when the displaced partner is any other country. Coarse categorization theory predicts that disrupting a more entrenched cognitive category, and "US = top partner" is among the most deeply entrenched, produces a larger attention shock [@graeber_etal2025].
-
-Hypothesis 3 (Media Salience): Media coverage of the trade relationship increases disproportionately at the moment of the rank reversal, rather than tracking gradual trade growth. This is the direct observable implication of Claim 1 and is testable with the NLP analysis.
-
-Hypothesis 4 (Temporal Attenuation): The alignment effect attenuates over time as the new status becomes the cognitive default. Salience is by nature temporary -- the new rank normalizes and media attention shifts to other topics. This hypothesis is discriminating against structural bandwagoning and coercion, which predict *persistent* effects. However, interest-based and trade-dependence theories may also predict transient effects if the underlying interests themselves reverse.
+Hypothesis 4 (Temporal dynamics): The alignment response may build gradually after China enters the top rank and should attenuate when China loses that position. Salience is temporary, while foreign-policy adjustment is constrained by diplomatic inertia and prior commitments.
 
 ## Scope Conditions
 
-The status-salience mechanism operates under conditions that follow from the theoretical building blocks above. First, the displaced partner must be geopolitically significant, ideally the hegemon. Coarse categorization theory predicts that disrupting a more prominent cognitive category produces a larger attention shock. Second, the media amplification channel requires a free or active press; in countries with restricted press freedom, the rank reversal may go unreported, muting the salience mechanism. This follows directly from the agenda-setting literature [@edwards_wood1999]. Third, the duration of the prior relationship matters: the longer the displaced partner held the top position, the more entrenched the existing category and the more disruptive the reversal [@mintz_geva1997]. Fourth, democratic accountability moderates the effect, as media salience is more consequential where public opinion constrains foreign policy choices. Fifth, the rank reversal should be exogenous to deliberate trade diversification policy -- if a government actively pursued the rank reversal as part of a broader realignment strategy, the effect captures policy intent rather than the salience mechanism. In the cross-country analysis, we test scope condition 1 directly by comparing specifications where China displaced the United States versus any partner, and scope conditions 2 and 3 enter as covariates (press freedom and US streak).
+The treatment is the same across designs: China becomes and holds the top trade-partner position. What changes is the scope condition under which the treatment occurs. The status-salience mechanism should be strongest when the displaced partner is the United States, when the prior top-partner relationship was long-entrenched, and when media institutions can amplify the rank reversal. The Brazilian case satisfies these conditions unusually well: the displaced partner was the United States, the prior relationship was historically long, and the press environment allows the attention channel to be observed. The cross-country panel estimates the same top-partner treatment across a broader set of cases, so its pooled ATT averages over both high- and lower-salience settings.
+
+
 
 ## Causal Framework
 
@@ -200,27 +200,27 @@ $$
 
 where $\hat{w}^{\text{SDiD}}$ are unit weights and $\hat{\lambda}^{\text{SDiD}}_t$ are time weights, both estimated from pre-treatment data. Standard errors are computed using the placebo variance estimator proposed by @arkhangelsky_etal2021, which estimates the variance of the treatment effect by computing pseudo-treatment effects on each control unit.
 
+In this setup, $\tau_{ATT}^{\text{SDiD}}$ is an average treatment effect for Brazil over the weighted post-treatment period. Because $D_{it}$ equals 1 from 2009 onward, the estimate summarizes Brazil's average post-2009 gap relative to the synthetic counterfactual. It should therefore be interpreted as an accumulated post-treatment effect, not as evidence that UNGA alignment changed discontinuously in 2009 itself.
+
 ## Cross-Country Design
 
-Although the Brazilian case is a credible strategy to study the causal effect of status change, it is still $n=1$, and does not allow generalization beyond its specific features. Furthermore, we cannot rule out that the explanation resides in something specific to Lula da Silva's or the Workers' Party's presidency in the period considered, or rule out alternative explanations of potential confounders that happened at a similar time, such as the global economic crisis in the aftermath of Lehman Brothers' fallout and how the 2008 Beijing Summer Olympics changed China's status.
+Although the Brazilian case is a credible strategy to study the causal effect of status change, it is still $n=1$, and does not allow generalization beyond its specific features. Furthermore, we cannot rule out that the explanation resides in something specific to Lula da Silva's or the Workers' Party's presidency in the period considered, or rule out alternative explanations of potential confounders that happened at a similar time, such as the global economic crisis in the aftermath of Lehman Brothers' fallout.
 
-To address such challenges, we examine all countries in our sample that had the US as their top trade partner and consider the effect of China overtaking the US. An important empirical feature is that this treatment is not absorbing: four of the eight treated countries experience treatment reversals -- the USA regains the top position after China held it temporarily. Standard staggered DiD estimators such as @callaway_santanna2021 assume absorbing treatment and cannot accommodate this switching pattern. For Brazil, treatment is absorbing since China has remained the top partner since 2009. For the cross-country design, we use a switching indicator ($D_{it} = 1$ only while China currently holds the top rank) because this reflects the empirical reality. The SDiD ATT for Brazil is therefore an average across all post-treatment years, which includes both the initial salience shock and any subsequent attenuation predicted by H4.
+To address such challenges, we examine all countries in our sample that had China becoming the country's largest export destination and remains on only while China holds that position. If another partner later becomes the largest export destination, treatment returns to 0. As a result, this treatment is not absorbing and standard staggered DiD estimators such as @callaway_santanna2021 cannot accommodate this switching pattern. I restrict treatment onsets from 2000 onward, toe reflect the fact that it is after that period that China starts to be seen as an emerging rising power and when it enters the Wolrd Trade Organization.
 
 We therefore adopt the counterfactual estimator with interactive fixed effects (IFE) proposed by @liu2024practical as our main cross-country specification. The `fect` framework estimates counterfactual outcomes for treated observations using untreated observations and pre-treatment data from treated units. The IFE model relaxes strict parallel trends by allowing for latent common factors with heterogeneous loadings, and cross-validation selects the optimal number of factors $r^*$. Crucially, `fect` natively handles treatment switching: it estimates entry effects (what happens when treatment turns on) and exit effects (what happens when treatment turns off), providing a direct test of whether the alignment shift persists or dissipates after the status shock fades. We estimate both a baseline specification (without covariates) and a specification controlling for log GDP per capita and press freedom (the V-Dem Freedom of Expression and Alternative Sources of Information index; @vdem_v14; @pemstein_etal2024), two time-varying confounders that could simultaneously affect trade patterns and UNGA voting alignment.
 
-To further investigate entry and exit dynamics, we complement `fect` with PanelMatch [@imai_kim_wang2023], a matching-based estimator for time-series cross-sectional data that estimates both the Average Treatment Effect on the Treated (ATT, effect of switching on) and the Average Treatment Reversal Effect on the Treated (ART, effect of switching off). As a robustness check, we also report results from the @callaway_santanna2021 estimator restricted to absorbing-only countries, with and without the same covariates.
+To further investigate entry and exit dynamics, we complement `fect` with PanelMatch [@imai_kim_wang2023], a matching-based estimator for time-series cross-sectional data that estimates both the Average Treatment Effect on the Treated (ATT, effect of switching on) and the Average Treatment Reversal Effect on the Treated (ART, effect of switching off).
 
 ## Identification Assumptions and Diagnostics
 
 For the Brazilian SDiD design, identification requires that no unobserved shocks differentially affecting Brazil occur at treatment timing after weighting. This assumption is not fully testable. We therefore treat pre-treatment fit and in-time placebo exercises as partial diagnostics that are consistent with identification, rather than definitive tests.
 
-For the cross-country IFE design, identification requires strict exogeneity, which corresponds to baseline quasi-randomization conditional on covariates and unobserved latent factors. When the latent factors are a linear combination of period and unit effect (as in a DiD), it implies parallel trends [@liu2024practical; @bai2009panel], so we can see the DiD as a special case. This is more flexible than parallel trends because it allows for heterogeneous trends via latent factors, as long as we can extract the factors. The IFEct estimator (used in the paper) corrects for unobserved time-varying confounders [@liu2024practical], which is important if the relationships of each country with China and the US are subject to differential shocks, which we cannot observe. We assess model adequacy via two diagnostic tests recommended by @liu2024practical. First, a placebo test on pre-treatment periods: under correct specification, estimated effects in pre-treatment periods should be negligibly small. Because statistical power is limited with few treated units, we employ the equivalence approach rather than the conventional test -- the equivalence test provides positive evidence *for* the absence of pre-trends, whereas the conventional test can only fail to reject their presence [@liu2024practical; @chiu_etal2025]. Second, a carryover test assesses whether treatment effects linger after exit, using the same equivalence framework.
+For the cross-country IFE design, identification requires strict exogeneity, which corresponds to baseline quasi-randomization conditional on covariates and unobserved latent factors. When the latent factors are a linear combination of period and unit effect (as in a DiD), it implies parallel trends [@liu2024practical; @bai2009panel], so we can see the DiD as a special case. This is more flexible than parallel trends because it allows for heterogeneous trends via latent factors, as long as we can extract the factors. The IFEct estimator (used in the paper) corrects for unobserved time-varying confounders [@liu2024practical], which is important if the relationships of each country with China is subject to differential shocks, which we cannot observe. We assess model adequacy via two diagnostic tests recommended by @liu2024practical. First, a placebo test on pre-treatment periods: under correct specification, estimated effects in pre-treatment periods should be negligibly small. Because statistical power is limited with few treated units, we employ the equivalence approach rather than the conventional test -- the equivalence test provides positive evidence for the absence of pre-trends, whereas the conventional test can only fail to reject their presence [@liu2024practical; @chiu_etal2025]. Second, a carryover test assesses whether treatment effects linger after exit, using the same equivalence framework.
 
-A reader might notice an asymmetry in the covariate sets between the two designs: the Brazilian SDiD includes 13 covariates (trade shares, power index, exchange rate, distance, institutional variables, crisis indicators), while the cross-country fect model includes only two (log GDP per capita, press freedom). This asymmetry reflects the different roles covariates play in each estimator, not a difference in ambition. In SDiD, covariates enter the construction of synthetic control weights and only need to be observed over the pre-treatment window, which permits variables with narrower temporal or cross-sectional coverage. In fect IFE, by contrast, covariates enter a regression adjustment that requires observations in every country-year of the switching panel; importing the full SDiD covariate set into fect drops 43 of the 99 countries in the estimation sample, because several variables (institutional indicators, macro controls, the power index) come from sources with incomplete cross-country coverage. The two fect covariates retained -- log GDP per capita and press freedom -- are those with near-complete coverage in the full panel. Substantively, the latent factors with heterogeneous loadings ($r^* = 1$) already absorb common time-varying confounders in the cross-country design, reducing reliance on observed covariates. Other potential confounders -- such as US foreign aid and BRI membership -- are either post-treatment (BRI was announced in 2013, after most treatment events) or unavailable with consistent coverage for the full panel.
+A reader might notice an asymmetry in the covariate sets between the two designs: the Brazilian SDiD includes a richer set of covariates, while the cross-country fect model includes log GDP per capita and press freedom. This asymmetry reflects the different roles covariates play in each estimator, not a difference in ambition. In SDiD, covariates enter the construction of synthetic-control weights and only need to be observed over the pre-treatment window. In fect IFE, covariates enter a regression adjustment that requires observations in every country-year of the switching panel; importing the full SDiD covariate set sharply reduces the sample. The retained covariates are those with near-complete coverage and clear theoretical relevance.
 
-A natural concern is whether commodity export dependence confounds the cross-country results, since commodity exporters are both more likely to see China rise as a trade partner and potentially more inclined to align with China. We deliberately exclude time-varying commodity dependence from the covariate set because it is a post-treatment variable: the treatment itself (China becoming the top partner) plausibly intensifies commodity trade, so controlling for it would absorb part of the causal effect and bias the ATT toward zero [@angrist_pischke2009]. The IFE specification already addresses this concern through two channels: unit fixed effects absorb time-invariant structural features such as export composition, and the cross-validated latent factor ($r^* = 1$) captures common shocks -- including the global commodity supercycle -- that affect all commodity exporters simultaneously.
-
-It is important to note that mechanism analyses are interpreted as suggestive evidence, not as causally identified mechanisms.
+A natural concern is whether commodity export dependence confounds the cross-country results, since commodity exporters are both more likely to see China rise as a trade partner and potentially more inclined to align with China. We deliberately exclude time-varying commodity dependence from the covariate set because it is a post-treatment variable: the treatment itself (China becoming the top partner) plausibly intensifies commodity trade, so controlling for it would absorb part of the causal effect and bias the ATT toward zero [@angrist_pischke2009]. The IFE specification already addresses this concern through two channels: unit fixed effects absorb time-invariant structural features such as export composition, and the cross-validated latent factor captures common shocks -- including the global commodity supercycle -- that affect all commodity exporters simultaneously.
 
 ## Data and Variables
 
@@ -254,9 +254,9 @@ Our outcome variable, vote similarity between a country and China at the United 
 
 UNGA vote affinity has been used as a measure of shared state preference in the literature due to its comprehensive membership coverage and the regular availability of data [@potrafke2009; @struver2016]. The topics covered by UNGA resolutions primarily focus on political dimensions, particularly humanitarian and social issues, with a small fraction of resolutions addressing economic and financial matters [@struver2016].
 
-For the Brazilian SDiD, the treatment indicator $D_{it}$ equals 1 in the first year that China became Brazil's leading trade partner, in 2009, and in all subsequent years. Because the shock is plausibly exogenous to pre-trend voting behavior at UNGA, it is credible that it satisfies the identification assumptions. The figure with the estimated model includes a pre-trend fit, which resembles the treated behavior of vote similarity, providing evidence consistent with the key assumption of SDiD.
+For the Brazilian SDiD, the treatment indicator $D_{it}$ equals 1 in the first year that China became Brazil's leading trade partner, in 2009, and in all subsequent years. Because the shock is plausibly exogenous to pre-trend voting behavior at UNGA, it is credible as a treatment onset conditional on the synthetic-control fit. The figure with the estimated model includes a pre-trend fit, which resembles the treated behavior of vote similarity, providing evidence consistent with the key assumption of SDiD. Since the treatment remains on after 2009, the estimand is the average post-treatment gap, not a one-period 2009 effect.
 
-For the cross-country analysis, $D_{it}$ equals 1 in any year China is currently the top export destination for country $i$, and turns off if the USA regains the top position. This switching definition reflects the empirical reality: four of the eight treated countries see the USA re-overtake China at some point during the sample period. The key identification assumption is strict exogeneity conditional on covariates and latent factors, which generalizes the parallel trends assumption (see Section 3.3).
+For the cross-country analysis, $D_{it}$ equals 1 in country-years in which China is the country's largest export destination, and 0 otherwise.
 
 Predictors include per capita GDP from the Gravity Database [@gurevich_herman2018]. Trade data are drawn from the International Trade and Production Database [@borchert_etal2021]. To avoid double-counting, we use the value reported by the importing country to compute total trade between two dyads, as importers have a greater interest in accurately measuring this value for tax collection purposes [@borchert_etal2021]. We compute the share of total trade with China and the share of total trade with the United States as our two measures of trade. As our measure of power, we use the Global Power Index (GPI) from the Pardee Institute at the University of Denver. GPI combines demographic, economic, military, technological, and diplomatic dimensions. We calculate the power gap between all countries and the US as the difference between their GPI indices. We also include distance to the US, as countries closer to the US will have a bigger incentive to align their foreign policy with it. Another economic variable is the exchange rate, since many countries complain about China's devalued currency. A country with a more devalued currency is expected to be more aligned with China than one with a less devalued currency. We also include per capita income, as reported by the World Bank. Table \@ref(tab:table-summary) presents the descriptive statistics.
 
@@ -320,14 +320,15 @@ It also shows that Brazil is moving more over time than China, which is mostly s
 tar_read(plot_ideal)
 ```
 
-Having established that it is mostly Brazil moving around rather than China, we can use as our main variable the absolute distance between Brazil's and China's ideal points, with the understanding that, apart from the beginning of the nineties, Brazil is almost always closer to the center than China and that Brazil is the one moving around.
+Having established that it is mostly Brazil moving around rather than China, we can use as our main variable the absolute distance between Brazil's and China's ideal points, with the understanding that, apart from the beginning of the nineties, Brazil is almost always closer to the center than China and that Brazil is the one moving around. Figure \@ref(fig:plot-brazil-linear) reports this distance for the Brazilian series used in the SDiD specification and overlays separate linear fits before and after 2009. The raw points show a lower post-2009 trajectory, but not a clean one-year break. This is exactly why the causal interpretation below relies on the SDiD counterfactual and on a post-treatment average, rather than on visual inspection of an abrupt discontinuity.
 
-```{r plot-unga2, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Absolute distance between Brazil and China in UNGA ideal points over time. ", caption_note(unit = "absolute UNGA ideal-point distance to China (points)", window = "1990-2022 annual series", treatment = treat_def_brazil)), fig.pos="H"}
-# library(ggplot2)
-tar_read(plot_ideal_distance)
+Ideal-point distances summarize movement in the latent space of UNGA preferences. To provide more clarity about what changed in Brazilian foreign policy at the UNGA, we complement the ideal-point analysis with a resolution-level diagnostic of Brazil-China roll-call votes from 2005 to 2012.
+
+```{r plot-brazil-linear, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Brazil-China distance in UNGA ideal points. Points show raw annual absolute distances from the paper's analytic dataset. The blue and orange lines are separate OLS fits estimated for the pre-2009 and post-2009 periods. The vertical dashed line marks 2009, when China became Brazil's top trade partner. This figure is descriptive and should not be read as a causal estimate. ", caption_note(unit = "absolute UNGA ideal-point distance to China (points)", window = "1997-2016 annual Brazil series from the synth data object", treatment = treat_def_brazil)), fig.pos="H", out.width="90%"}
+knitr::include_graphics("images/brazil_china_distance_linear.pdf")
 ```
 
-The question one wonders after seeing the graphs is: why was Brazil getting closer over time? The main hypothesis discussed in the literature is the gravitational pull of the Chinese economy, as indicated by the percentage of Brazil's exports that went to China during the considered period. Figure \@ref(fig:plot-trade) shows that around the year 2000, the percentage of exports destined for China increased at a roughly constant rate, exhibiting a steep variation that does not exactly align with the evolution of political alignment presented earlier, although there is some positive correlation with the evolution of political alignment shown in Figure \@ref(fig:plot-unga2).
+The question one wonders after seeing the graph is: why was Brazil getting closer over time? The main hypothesis discussed in the literature is the gravitational pull of the Chinese economy, as indicated by the percentage of Brazil's exports that went to China during the considered period. Figure \@ref(fig:plot-trade) shows that around the year 2000, the percentage of exports destined for China increased at a roughly constant rate, exhibiting a steep variation that does not exactly align with the evolution of political alignment presented earlier, although there is some positive correlation with the evolution of political alignment shown in Figure \@ref(fig:plot-brazil-linear).
 
 ```{r plot-trade, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Share of Brazil's exports destined for China over time. ", caption_note(unit = "share of Brazil's exports to China (percent)", window = "1990-2022 annual series", treatment = treat_def_brazil)), fig.pos="H"}
 # library(ggplot2)
@@ -336,13 +337,15 @@ tar_read(trade_plot)
 
 # Empirical Results
 
-Figure \@ref(fig:plot-sdid) presents the evolution of political alignment between Brazil and China at the UNGA and among a donor pool of countries before and after China became Brazil's main trade partner. The counterfactual estimate from the donor pool allows us to estimate the causal effect of the treatment on the similarity of votes at UNGA. The estimate is `r sprintf('%1.2f', estimate)` points, which means that becoming the main trade partner implied a decrease of `r sprintf('%1.2f', abs(estimate))` points in the absolute distance between the ideal points of Brazil and China after 2009. Relative to Brazil's pre-treatment mean distance (`r sprintf('%.3f', mean_br)`), this corresponds to a `r sprintf('%.1f', perc_change)`% reduction. The point estimate is `r sprintf('%1.2f', estimate)` with a 95% CI of (`r sprintf('%1.2f, %1.2f', ci_low, ci_high)`) and p-value `r sprintf('%.3f', p_estimate)` under placebo-based inference. To put the magnitude in perspective, the estimated reduction of `r sprintf('%.2f', abs(estimate))` ideal-point units can be compared with other known drivers of UNGA alignment. @he_zheng_chen2025 find that Chinese arms exports shift recipients' voting alignment toward China (2SLS), and @lektzian_biglaiser2023 estimate that the combination of US foreign aid and economic sanctions shifts bilateral voting patterns at the UNGA. Our estimate of `r sprintf('%.2f', abs(estimate))` points from a single trade rank reversal suggests that discrete status milestones can produce alignment shifts on par with material policy instruments that the literature has identified as consequential.
+Figure \@ref(fig:plot-sdid) presents the evolution of political alignment between Brazil and China at the UNGA and among a donor pool of countries before and after China became Brazil's main trade partner. The counterfactual estimate from the donor pool allows us to estimate the average causal effect of the treatment on the similarity of votes at UNGA over the post-2009 period. The estimate is `r sprintf('%1.2f', estimate)` points, which means that becoming the main trade partner is associated with an average decrease of `r sprintf('%1.2f', abs(estimate))` points in the absolute distance between the ideal points of Brazil and China after 2009, relative to the synthetic counterfactual. Relative to Brazil's pre-treatment mean distance (`r sprintf('%.3f', mean_br)`), this corresponds to a `r sprintf('%.1f', perc_change)`% reduction. The point estimate is `r sprintf('%1.2f', estimate)` with a 95% CI of (`r sprintf('%1.2f, %1.2f', ci_low, ci_high)`) and p-value `r sprintf('%.3f', p_estimate)` under placebo-based inference. The estimate should not be interpreted as saying that Brazil's ideal-point distance fell by `r sprintf('%.2f', abs(estimate))` points in 2009 itself. It summarizes the post-treatment gap, consistent with a mechanism in which a salient rank reversal opens a window for gradual diplomatic adjustment. To put the magnitude in perspective, the estimated reduction of `r sprintf('%.2f', abs(estimate))` ideal-point units can be compared with other known drivers of UNGA alignment. @he_zheng_chen2025 find that Chinese arms exports shift recipients' voting alignment toward China (2SLS), and @lektzian_biglaiser2023 estimate that the combination of US foreign aid and economic sanctions shifts bilateral voting patterns at the UNGA. Our estimate of `r sprintf('%.2f', abs(estimate))` points from a single trade rank reversal suggests that discrete status milestones can produce alignment shifts on par with material policy instruments that the literature has identified as consequential.
 
 
 
 ```{r plot-sdid, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("SDiD fit for Brazil and synthetic control with time weights. ", caption_note(unit = "absolute UNGA ideal-point distance to China (points)", se = "placebo-based (reported in SDiD tables, not plotted here)", window = "pre-treatment and post-treatment years shown in the plot (treatment in 2009)", treatment = treat_def_brazil)), fig.pos="H"}
 tar_read(plot_trend)
 ```
+
+A resolution-level diagnostic helps make the aggregate ideal-point result substantively concrete. Because Brazil and China already voted together at high rates in several UNGA issue areas before 2009, there was limited room for additional convergence across much of the agenda. The relevant question is therefore not whether Brazil shifted uniformly toward China, but where residual disagreement could plausibly close after the rank reversal. The clearest movement appears in human rights, an issue area in which Brazil's post-democratization diplomacy carried stronger reputational commitments than China's [@milani2015humanrights] and where convergence is therefore substantively informative rather than mechanically expected. In two recurrent human-rights resolution families after 2009, Brazil moved from abstention to yes while China remained at yes. These cases give concrete content to the policy-response mechanism: the aggregate reduction in ideal-point distance reflects selective movement in politically meaningful domains, not an across-the-board diplomatic bandwagon.
 
 In Figure \@ref(fig:plot-parallel), we plot the results for Brazil, along with the top 10 controls, filtered by weight size. As we can see from the graph, no other country displays behavior similar to Brazil's, which lends credibility to the estimation of the causal effect^[A figure with the weights for top controls is in the appendix].
 
@@ -467,6 +470,7 @@ The evidence shows that, after 2009, Brazilian media attention to China not only
 
 ```{r plot-folha, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Number of Folha de Sao Paulo headlines mentioning China by year. ", caption_note("count of headlines", "not applicable", "not applicable", "2000-2014 annual series", treat_def_brazil)), fig.pos="H", fig.asp = 0.8, fig.width = 7}
 folha_file <- resolve_existing_file(c(
+  "data/folha_classificado.rds",
   "chatgpt data/folha_classificado.rds",
   "replication package/chatgpt data/folha_classificado.rds",
   "folha_classificado.rds"
@@ -489,6 +493,7 @@ This distinction is crucial because volume alone could reflect any China‑relat
 
 ```{r plot-folha2, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Share of trade-related items among all China headlines per year. ", caption_note("share of trade-related China headlines (percent)", "not applicable", "not applicable", "2000-2014 annual series", treat_def_brazil)), fig.pos="H", fig.asp = 0.8, fig.width = 7}
 folha_file <- resolve_existing_file(c(
+  "data/folha_classificado.rds",
   "chatgpt data/folha_classificado.rds",
   "replication package/chatgpt data/folha_classificado.rds",
   "folha_classificado.rds"
@@ -554,24 +559,22 @@ Taken together, media salience shifted in both volume and content precisely when
 
 The Brazilian case generated the theory and provided internally valid causal evidence via SDiD. However, it remains a single case, and we cannot rule out idiosyncratic confounders. We now test the generalizability of the status-salience theory using a cross-country design, which constitutes an independent out-of-sample test.
 
-A natural question is whether the same effect occurs when China displaces the United States as the top trade partner in other countries. Our theory predicts effects specifically when an emerging power displaces the hegemon -- not when China overtakes Belgium or Singapore. This distinction is theoretically motivated: the status shock is most salient when the displaced partner is the incumbent great power, whose position in a country's trade hierarchy carries symbolic and geopolitical weight.
-
-An important empirical feature of the cross-country sample is that the treatment is not absorbing: four of the eight treated countries experience treatment reversals -- the USA regains the top position after China held it temporarily. This switching pattern makes standard absorbing-treatment estimators inappropriate and motivates our use of the `fect` IFE estimator [@liu2024practical], which natively accommodates treatment switching. Consistent with this pattern, the dynamic gap plot (Figure \@ref(fig:plot-diagnostics), panel a) shows that the confidence intervals cross zero after several periods, indicating that the alignment effect attenuates as countries experience treatment reversal -- a pattern predicted by hypothesis H4.
+A natural question is whether the same effect occurs when China becomes the top trade partner in other countries. The theory predicts the strongest effects when an emerging power displaces the hegemon, as in Brazil, but the cross-country estimand is broader: it asks whether the top-partner transition matters on average whenever China becomes the number-one export destination. This specification therefore tests the general top-status claim, while the hegemonic-rival moderation hypothesis remains a separate heterogeneity question. Consistent with H4, exit-aligned analyses ask whether the alignment effect attenuates when China no longer holds the top trade-partner position.
 
 ```{r fect-results, include=FALSE}
 library(dplyr)
 
-# Load fect results
-fect_ife_fit <- tar_read(fect_ife)
-fect_fe_fit <- tar_read(fect_fe)
-fect_carry_fit <- tar_read(fect_carryover)
-sw_panel <- tar_read(switching_panel)
+# Load fect results for the China top-partner specification
+fect_ife_fit <- tar_read(fect_ife_china_top)
+fect_fe_fit <- tar_read(fect_fe_china_top)
+fect_carry_fit <- tar_read(fect_carryover_china_top)
+sw_panel <- tar_read(china_top_fect_data)
 
 ife_s <- fect_att_summary(fect_ife_fit)
 fe_s <- fect_att_summary(fect_fe_fit)
 
 # fect IFE with covariates
-fect_ife_cov_fit <- tar_read(fect_ife_cov)
+fect_ife_cov_fit <- tar_read(fect_ife_china_top_cov)
 ife_cov_s <- fect_att_summary(fect_ife_cov_fit)
 
 # Cross-country summary variables used in introduction
@@ -599,12 +602,16 @@ treat_summary <- sw_panel %>%
 n_absorbing <- sum(treat_summary$absorbing == "Yes", na.rm = TRUE)
 n_switching <- sum(treat_summary$absorbing == "No", na.rm = TRUE)
 
-# C&S absorbing-only for comparison
-did_usa <- tar_read(did_displaced_usa)
-att_usa <- did_usa$overall_att
-cs_att <- round(att_usa$overall.att, 3)
-cs_se <- round(att_usa$overall.se, 3)
-cs_p <- round(2 * pnorm(-abs(att_usa$overall.att / att_usa$overall.se)), 3)
+exit_summary <- sw_panel %>%
+  arrange(iso3c, year) %>%
+  group_by(iso3c) %>%
+  mutate(
+    china_top_lag = dplyr::lag(china_top),
+    exit = china_top == 0L & !is.na(china_top_lag) & china_top_lag == 1L
+  ) %>%
+  summarise(exits = sum(exit, na.rm = TRUE), .groups = "drop")
+n_exit_events <- sum(exit_summary$exits, na.rm = TRUE)
+n_exit_countries <- sum(exit_summary$exits > 0, na.rm = TRUE)
 
 # Pre-treatment mean
 pre_treated_mean <- sw_panel %>%
@@ -623,39 +630,42 @@ carryover_equiv_p <- if (!is.null(fect_carry_fit$test.out$carryover.equiv.p)) ro
 
 ## Main result (fect IFE)
 
-We construct a panel of `r n_countries` countries where the United States was the top export destination at some point in the sample period. Among these, `r n_treated_sw` countries experienced China displacing the US as the top partner at least once (treated observations), while the remaining `r n_control_sw` never experienced such a displacement (control group). The treatment indicator $D_{it}$ equals 1 in any year China is currently the top export destination and switches off when the USA regains that position. This design accommodates the switching pattern and uses all available variation.
 
-We estimate the ATT using the counterfactual estimator with interactive fixed effects (IFE) of @liu2024practical. The IFE model relaxes the strict parallel trends assumption by allowing for latent common factors with heterogeneous loadings, and cross-validation selects $r^* = `r ife_s$r_cv`$ factors. The overall ATT is `r sprintf('%.3f', ife_s$att)` (bootstrap SE = `r sprintf('%.3f', ife_s$se)`, 95% CI [`r sprintf('%.3f', ife_s$ci_lo)`, `r sprintf('%.3f', ife_s$ci_hi)`], p = `r sprintf('%.3f', ife_s$p)`), indicating that when China holds the top trade partner position, countries move significantly closer to China in UNGA voting. Substantively, this corresponds to about `r sprintf('%.1f', att_rel_pct)`% of the pre-treatment mean distance to China. For comparison, the cross-sectional standard deviation of UNGA distance to China across all countries in the panel is approximately 0.79 points, so the IFE estimate represents roughly one-tenth of a standard deviation -- a modest but meaningful shift when considering that it is produced by a single symbolic milestone rather than a structural change in economic ties.
+```{r fect-china-top-result-summaries, include=FALSE}
+china_top_s <- tar_read(fect_ife_china_top_summary)
+china_top_cov_s <- tar_read(fect_ife_china_top_cov_summary)
+cs_abs_s <- tar_read(did_china_top_absorbing_summary)
+cs_abs_cov_s <- tar_read(did_china_top_absorbing_cov_summary)
+fmt3 <- function(x) sprintf("%.3f", unname(x))
+fmt1 <- function(x) sprintf("%.1f", unname(x))
+sig_sentence <- function(att, p) {
+  direction <- ifelse(att < 0, "in the theoretically expected negative direction", "positive")
+  if (is.na(p)) {
+    "The statistical precision of this estimate is not available in the current target output."
+  } else if (p < 0.05) {
+    paste0("The estimate is ", direction, " and statistically distinguishable from zero at the 5% level.")
+  } else {
+    paste0("The estimate is ", direction, ", but the confidence interval includes zero; under the cross-validated pooled IFE specification, the average cross-country effect is not statistically distinguishable from zero.")
+  }
+}
+china_top_window <- sprintf("%d--%d", china_top_s$panel_min, china_top_s$panel_max)
+china_top_cov_window <- sprintf("%d--%d", china_top_cov_s$panel_min, china_top_cov_s$panel_max)
+```
 
-Table \@ref(tab:table-fect-specs) compares results across estimators and covariate specifications. Column (2) adds log GDP per capita and the V-Dem Freedom of Expression index [@vdem_v14; @pemstein_etal2024] to the fect IFE, controlling for economic development and press freedom -- two plausible confounders that could simultaneously affect trade patterns and UNGA voting. The ATT remains negative and statistically significant (ATT = `r sprintf('%.3f', ife_cov_s$att)`, p = `r sprintf('%.3f', ife_cov_s$p)`), with little attenuation relative to the baseline. The @callaway_santanna2021 absorbing-treatment estimator, which can only use the `r n_absorbing` countries where China never lost the top position, produces directionally consistent and somewhat larger estimates in both the baseline (column 3) and covariate-adjusted (column 4) specifications.
+
+As mentioned, the IFE model relaxes the strict parallel trends assumption by allowing for latent common factors with heterogeneous loadings, and cross-validation selects $r^* = `r china_top_s$r_cv`$ factors. The overall ATT is `r fmt3(china_top_s$att)` (bootstrap SE = `r fmt3(china_top_s$se)`, 95% CI [`r fmt3(china_top_s$ci_lo)`, `r fmt3(china_top_s$ci_hi)`], p = `r fmt3(china_top_s$p)`), indicating that when China holds the top trade partner position, countries move closer to China in UNGA voting. Substantively, this corresponds to about `r fmt1(china_top_s$att_rel_pct)`% of the pre-treatment mean distance to China, or `r fmt3(china_top_s$att_sd_units)` standard deviations of the outcome. `r sig_sentence(china_top_s$att, china_top_s$p)`
+
+Table \@ref(tab:table-fect-specs) compares the switching-treatment fect IFE estimates with an absorbing-treatment analogue estimated using @callaway_santanna2021. Column (2) adds log GDP per capita and the V-Dem Freedom of Expression index [@vdem_v14; @pemstein_etal2024] to the fect IFE, controlling for economic development and press freedom -- two plausible confounders that could simultaneously affect trade patterns and UNGA voting. Columns (3) and (4) rebuild the C\&S estimator from the same China-top-partner rule: treatment is the first observed year in or after 2000 in which China becomes the country's number-one export destination after not being number one, but only countries where China never later loses the top position are kept as treated units. Countries with switching treatment are excluded from the C\&S comparison rather than recoded as controls. Because C\&S requires absorbing treatment, these columns estimate the persistent-treatment subset rather than the same switching ATT as fect.
+
 
 ```{r table-fect-specs, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 fmt <- function(x) formatC(round(x, 3), format = "f", digits = 3)
 fmt_se <- function(x) paste0("(", fmt(x), ")")
 
-# Compute N for each model
-n_obs_fect <- nrow(sw_panel)
-cs_data <- as.data.frame(tar_read(event_study_data_usa))
-n_obs_cs <- nrow(cs_data)
-n_units_cs <- dplyr::n_distinct(cs_data$id)
-n_control_cs <- n_units_cs - n_absorbing
-
-cs_p_val <- 2 * pnorm(-abs(att_usa$overall.att / att_usa$overall.se))
-
-# fect IFE with covariates: extract N from fit object directly
-ife_cov_n  <- length(fect_ife_cov_fit$obs.missing)  # total obs used
-ife_cov_nt <- fect_ife_cov_fit$Ntr
-ife_cov_nc <- fect_ife_cov_fit$Nco
-
-# C&S with covariates (from targets)
-did_cov <- tar_read(did_displaced_usa_cov)
-att_cov <- did_cov$overall_att
-cs_cov_p_val <- 2 * pnorm(-abs(att_cov$overall.att / att_cov$overall.se))
-cs_data_cov <- as.data.frame(tar_read(event_study_data_usa_cov))
-cs_cov_n <- nrow(cs_data_cov)
-cs_cov_units <- dplyr::n_distinct(cs_data_cov$id)
-cs_cov_n_treat <- dplyr::n_distinct(cs_data_cov$id[cs_data_cov$first_treat > 0])
-cs_cov_n_ctrl  <- cs_cov_units - cs_cov_n_treat
+china_top_s <- tar_read(fect_ife_china_top_summary)
+china_top_cov_s <- tar_read(fect_ife_china_top_cov_summary)
+cs_abs_s <- tar_read(did_china_top_absorbing_summary)
+cs_abs_cov_s <- tar_read(did_china_top_absorbing_cov_summary)
 
 tbl_rows <- data.frame(
   ` ` = c(
@@ -666,57 +676,62 @@ tbl_rows <- data.frame(
     "N (treated units)",
     "N (control units)",
     "Covariates",
-    "Latent factors"
+    "Latent factors",
+    "Panel window"
   ),
   `(1) fect IFE` = c(
-    fmt(ife_s$att), fmt_se(ife_s$se),
-    fmt(ife_s$p),
+    fmt(china_top_s$att), fmt_se(china_top_s$se),
+    fmt(china_top_s$p),
     "Switching",
-    as.character(n_obs_fect),
-    as.character(n_treated_sw),
-    as.character(n_control_sw),
+    as.character(china_top_s$n_obs),
+    as.character(china_top_s$n_treated),
+    as.character(china_top_s$n_control),
     "None",
-    paste0("$r^* = ", ife_s$r_cv, "$ (CV)")
+    paste0("$r^* = ", china_top_s$r_cv, "$ (CV)"),
+    paste0(china_top_s$panel_min, "--", china_top_s$panel_max)
   ),
   `(2) fect IFE` = c(
-    fmt(ife_cov_s$att), fmt_se(ife_cov_s$se),
-    fmt(ife_cov_s$p),
+    fmt(china_top_cov_s$att), fmt_se(china_top_cov_s$se),
+    fmt(china_top_cov_s$p),
     "Switching",
-    as.character(ife_cov_n),
-    as.character(ife_cov_nt),
-    as.character(ife_cov_nc),
+    as.character(china_top_cov_s$n_obs),
+    as.character(china_top_cov_s$n_treated),
+    as.character(china_top_cov_s$n_control),
     "log GDP pc, Free press",
-    paste0("$r^* = ", ife_cov_s$r_cv, "$ (CV)")
+    paste0("$r^* = ", china_top_cov_s$r_cv, "$ (CV)"),
+    paste0(china_top_cov_s$panel_min, "--", china_top_cov_s$panel_max)
   ),
   `(3) C\\&S` = c(
-    fmt(att_usa$overall.att), fmt_se(att_usa$overall.se),
-    fmt(cs_p_val),
-    "Absorbing only",
-    as.character(n_obs_cs),
-    as.character(n_absorbing),
-    as.character(n_control_cs),
+    fmt(cs_abs_s$att), fmt_se(cs_abs_s$se),
+    fmt(cs_abs_s$p),
+    "Absorbing subset",
+    as.character(cs_abs_s$n_obs),
+    as.character(cs_abs_s$n_treated),
+    as.character(cs_abs_s$n_control),
     "None",
-    "---"
+    "---",
+    paste0(cs_abs_s$panel_min, "--", cs_abs_s$panel_max)
   ),
   `(4) C\\&S` = c(
-    fmt(att_cov$overall.att), fmt_se(att_cov$overall.se),
-    fmt(cs_cov_p_val),
-    "Absorbing only",
-    as.character(cs_cov_n),
-    as.character(cs_cov_n_treat),
-    as.character(cs_cov_n_ctrl),
+    fmt(cs_abs_cov_s$att), fmt_se(cs_abs_cov_s$se),
+    fmt(cs_abs_cov_s$p),
+    "Absorbing subset",
+    as.character(cs_abs_cov_s$n_obs),
+    as.character(cs_abs_cov_s$n_treated),
+    as.character(cs_abs_cov_s$n_control),
     "log GDP pc, Free press",
-    "---"
+    "---",
+    paste0(cs_abs_cov_s$panel_min, "--", cs_abs_cov_s$panel_max)
   ),
   check.names = FALSE,
   stringsAsFactors = FALSE
 )
 
-kable(
+knitr::kable(
   tbl_rows,
   format   = "latex",
   escape   = FALSE,
-  caption  = "Cross-country ATT estimates: fect IFE (switching treatment) vs.\\ C\\&S (absorbing-only), with and without covariates.",
+  caption  = "Cross-country ATT estimates for China top trade-partner status.",
   align    = c("l", "c", "c", "c", "c"),
   booktabs = TRUE,
   linesep  = ""
@@ -726,83 +741,79 @@ cat(
   "\n\n",
   caption_note(
     unit = "ATT in absolute UNGA ideal-point distance to China (points)",
-    se = "bootstrap (fect) / analytical (C\\&S)",
+    se = "bootstrap with 500 replications",
     cluster = "country level",
-    window = sprintf("panel covers %d-%d", panel_min, panel_max),
-    treatment = treat_def_panel
+    window = sprintf("baseline panel covers %d--%d; covariate complete-case panel covers %d--%d",
+                     china_top_s$panel_min, china_top_s$panel_max,
+                     china_top_cov_s$panel_min, china_top_cov_s$panel_max),
+    treatment = paste0(
+      treat_def_panel,
+      ". C\\&S columns restrict treated units to countries where this treatment is absorbing"
+    )
   ),
   "\n\n",
   sep = ""
 )
 ```
 
-Figure \@ref(fig:plot-diagnostics) presents the consolidated diagnostic tests following @liu2024practical. Panel (a) shows the IFE dynamic treatment effects: pre-treatment estimates fluctuate around zero, and the effect turns negative upon treatment entry, peaking in the first few years. Panel (b) displays the FE placebo test, which assesses whether the model correctly predicts pre-treatment outcomes. The conventional test does not reject the null of zero placebo effects (p = `r placebo_p`), though with only `r n_treated_sw` treated countries, statistical power is limited. More informatively, the equivalence test -- which reverses the burden of proof by testing the null that pre-treatment effects *are* meaningfully large -- rejects at the 5% level (p = `r placebo_equiv_p`), providing positive evidence that pre-treatment effects are negligibly small relative to the ATT [@chiu_etal2025]. Panel (c) shows the carryover test: the conventional test does not reject the null of zero carryover effects (p = `r carryover_p`), and the equivalence test rejects the null that carryover effects are meaningfully large (p = `r carryover_equiv_p`), confirming that the alignment effect dissipates after exit. The equivalence test plots are presented in the Appendix.
+Figure \@ref(fig:plot-diagnostics) presents the consolidated diagnostic tests following @liu2024practical. Panel (a) shows the IFE dynamic treatment effects: pre-treatment estimates fluctuate around zero, the effect turns negative after treatment entry, and the largest negative estimates appear in the early post-treatment years rather than as a purely instantaneous jump at entry. Panel (b) displays the FE placebo test, which assesses whether the model correctly predicts pre-treatment outcomes. The conventional test does not reject the null of zero placebo effects (p = `r placebo_p`), though with only `r n_treated_sw` treated countries, statistical power is limited. More informatively, the equivalence test -- which reverses the burden of proof by testing the null that pre-treatment effects *are* meaningfully large -- rejects at the 5% level (p = `r placebo_equiv_p`), providing positive evidence that pre-treatment effects are negligibly small relative to the ATT [@chiu_etal2025]. Panel (c) shows the carryover test: the conventional test does not reject the null of zero carryover effects (p = `r carryover_p`), and the equivalence test rejects the null that carryover effects are meaningfully large (p = `r carryover_equiv_p`), suggesting that there is no large persistent carryover after exit. The equivalence test plots are presented in the Appendix.
 
 ```{r plot-diagnostics, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Diagnostic tests for the cross-country fect analysis (Liu, Wang \\& Xu 2024). (a) IFE dynamic treatment effects; (b) FE placebo test with placebo periods in blue; (c) FE carryover test with carryover periods in red. ", caption_note(unit = "ATT in absolute UNGA ideal-point distance to China (points)", se = "bootstrap (500 replications)", window = sprintf("%d-%d panel", panel_min, panel_max), treatment = treat_def_panel)), fig.pos="H", fig.width=14, fig.height=5}
-tar_read(plot_diagnostics_main)
+tar_read(plot_diagnostics_main_china_top)
 ```
 
 ## Exit effects and treatment reversals
 
-A distinctive advantage of the switching-treatment framework is the ability to estimate exit effects -- what happens to UNGA alignment when the USA regains the top trade partner position and the treatment turns off. This provides a direct test of the salience mechanism: if the alignment shift is driven by the ongoing salience of China's status as top partner, the effect should dissipate when that status is lost.
+A distinctive advantage of the switching-treatment framework is the ability to estimate exit effects -- what happens to UNGA alignment when China loses the top trade partner position and the treatment turns off. This provides a diagnostic implication of the salience mechanism: if the alignment shift is driven by the ongoing salience of China's status as top partner, the effect should attenuate when that status is lost.
 
-```{r plot-fect-exit, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("fect IFE: Exit-aligned gap plot showing what happens when the USA regains the top trade partner position. ", caption_note(unit = "ATT in absolute UNGA ideal-point distance to China (points)", se = "bootstrap (500 replications)", window = sprintf("%d-%d panel", panel_min, panel_max), treatment = treat_def_panel)), fig.pos="H", fig.width=7, fig.asp=0.65}
-tar_read(plot_fect_ife_exit)
+```{r plot-fect-exit, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("fect IFE: Exit-aligned gap plot showing what happens when China loses the top trade partner position. ", caption_note(unit = "ATT in absolute UNGA ideal-point distance to China (points)", se = "bootstrap (500 replications)", window = sprintf("%d-%d panel", panel_min, panel_max), treatment = treat_def_panel)), fig.pos="H", fig.width=7, fig.asp=0.65}
+tar_read(plot_fect_ife_exit_china_top)
 ```
 
-The exit-aligned gap plot shows that the treatment effect dissipates after the USA regains the top position -- consistent with the carryover test results reported in Figure \@ref(fig:plot-diagnostics)(c). This pattern is consistent with the salience mechanism (H4): unlike structural bandwagoning and coercion, which predict persistent effects regardless of current trade status, the salience channel predicts that the effect is tied to the cognitive category "China = top partner" and should fade when that category is disrupted. We note that interest-based and trade-dependence theories also predict reversible effects, so exit effects alone do not uniquely identify salience (see Section 7.4).
+The exit-aligned gap plot is based on `r n_exit_events` observed treatment exits across `r n_exit_countries` countries, so the evidence is necessarily noisier than the entry-aligned ATT. The estimates move close to zero around the exit year and the carryover tests in Figure \@ref(fig:plot-diagnostics)(c) reject large persistent carryover effects, but the post-exit lead estimates are imprecise. The pattern is therefore consistent with the salience mechanism (H4), but it should be read as suggestive rather than decisive evidence. Interest-based and trade-dependence theories also predict reversible effects, so exit effects alone do not uniquely identify salience (see Section 7.4).
 
 We complement the fect analysis with PanelMatch [@imai_kim_wang2023], which separately estimates the Average Treatment Effect on the Treated (ATT, switch-on) and the Average Treatment Reversal Effect on the Treated (ART, switch-off).
 
 ```{r panelmatch-results, include=FALSE}
-pm_att <- tar_read(panelmatch_att)
-pm_art <- tar_read(panelmatch_art)
+pm_att <- tar_read(panelmatch_att_china_top)
+pm_art <- tar_read(panelmatch_art_china_top)
 pm_att_0 <- pm_att$summary_df[1, ]
+pm_att_1 <- pm_att$summary_df[pm_att$summary_df$lead == 1, ]
 pm_art_0 <- pm_art$summary_df[1, ]
 ```
 
 ```{r plot-panelmatch, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("PanelMatch: Entry (ATT) and exit (ART) effects of China's status as top trade partner. ", caption_note(unit = "ATT/ART in absolute UNGA ideal-point distance to China (points)", se = "bootstrap (1000 iterations)", window = sprintf("%d-%d panel", panel_min, panel_max), treatment = treat_def_panel)), fig.pos="H", fig.width=7, fig.asp=0.8}
-tar_read(plot_pm_combined)
+tar_read(plot_pm_combined_china_top)
 ```
 
-The PanelMatch results are noisier than fect, as expected with matching-based inference on a small panel. The ATT estimates are small at lead 0 (`r sprintf('%.3f', pm_att_0$estimate)`) but become progressively negative at longer leads, consistent with a gradual alignment effect. The ART at lead 0 is `r sprintf('%.3f', pm_art_0$estimate)` (95% CI [`r sprintf('%.3f', pm_art_0$ci_lo)`, `r sprintf('%.3f', pm_art_0$ci_hi)`]), directionally consistent with countries moving away from China when the USA regains the top position. While the individual lead-level estimates are imprecise due to the small number of switching events, the overall pattern -- negative entry effects that build over time and positive initial exit effects -- is consistent with the fect results and supports a mechanism tied to current trade status.
+The PanelMatch results are noisier than fect, as expected with matching-based inference on a small panel. The ATT estimate is small at lead 0 (`r sprintf('%.3f', pm_att_0$estimate)`) and more negative at lead 1 (`r sprintf('%.3f', pm_att_1$estimate)`, 95% CI [`r sprintf('%.3f', pm_att_1$ci_lo)`, `r sprintf('%.3f', pm_att_1$ci_hi)`]); later leads are mostly negative but imprecise. The ART at lead 0 is `r sprintf('%.3f', pm_art_0$estimate)` (95% CI [`r sprintf('%.3f', pm_art_0$ci_lo)`, `r sprintf('%.3f', pm_art_0$ci_hi)`]), so PanelMatch does not provide independent evidence of an immediate move away from China after exit. We therefore read PanelMatch as supportive of the entry effect and inconclusive on exit dynamics.
 
 ## Raw data
 
 To provide transparency on the treated countries driving the cross-country result, we plot the raw UNGA voting distance to China for each treated country. Each panel shows the annual absolute distance to China in UNGA ideal points, with a LOESS smoother and a vertical dashed line marking treatment periods.
 
-```{r plot-treated-panel, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("UNGA voting distance to China for treated countries where China displaced the USA. ", caption_note(unit = "absolute UNGA ideal-point distance to China (points)", window = "treated-country yearly series within 1990-2022; treatment year varies by country", treatment = treat_def_panel)), fig.pos="H", fig.width=8, fig.height=8.5}
-tar_read(plot_treated_panel)
+```{r plot-treated-panel, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("UNGA voting distance to China for treated countries where China becomes the top export destination. ", caption_note(unit = "absolute UNGA ideal-point distance to China (points)", window = "treated-country yearly series within 1990-2022; treatment year varies by country", treatment = treat_def_panel)), fig.pos="H", fig.width=8, fig.height=8.5}
+tar_read(plot_treated_panel_china_top)
 ```
 
-The raw data reveal that most treated countries experienced a decline in ideological distance to China around the time of the rank reversal, consistent with the estimated ATT. The raw trajectories also confirm the switching pattern: countries where the USA regains the top position show a partial rebound, consistent with the exit effects estimated in Figure \@ref(fig:plot-fect-exit).
+The raw data reveal that most treated countries experienced a lower ideological distance to China after treatment entry, consistent with the estimated ATT, but the trajectories are not uniform one-year breaks. The raw trajectories also confirm that treatment switching is empirically present, although country-level paths after exit are heterogeneous and should not be interpreted as a clean one-year rebound.
 
 ## Dynamic treatment effects and the temporality of the status effect
 
-Figure \@ref(fig:plot-diagnostics) already displays the dynamic treatment effects relative to treatment entry. The effect emerges sharply at the time of rank reversal, peaks in the first few years post-treatment, and then gradually attenuates. This temporal pattern is substantively important.
+Figure \@ref(fig:plot-diagnostics) already displays the dynamic treatment effects relative to treatment entry. The effect turns negative after the rank reversal, reaches its largest negative values in the first few years post-treatment, and then gradually attenuates. This temporal pattern is substantively important because it is more consistent with accumulated diplomatic adjustment than with an instantaneous and permanent step change.
 
-A status-salience mechanism, by definition, operates through a cue -- the rank reversal -- that is most prominent when it first occurs. Over time, the novelty fades: the new status quo becomes normalized, media attention moves to other stories, and policymakers' consideration sets shift. The gradual attenuation is therefore theoretically predicted: unlike mechanisms that depend on durable structural changes (such as trade volume or economic dependence), the salience channel should produce a temporary effect that dissipates as the cue loses its informational novelty. This is what the estimates suggest.
+A status-salience mechanism, by definition, operates through a cue -- the rank reversal -- that is most prominent when it first occurs. However, foreign-policy positions are sticky: diplomats inherit previous votes, governments avoid abrupt reversals on high-profile issues, and reputational costs make immediate across-the-board switching unlikely. The theory therefore predicts an immediate attention shock but a policy response that can build over several years. Over time, the novelty fades: the new status quo becomes normalized, media attention moves to other stories, and policymakers' consideration sets shift. The gradual attenuation is therefore theoretically predicted: unlike mechanisms that depend on durable structural changes (such as trade volume or economic dependence), the salience channel should produce a temporary effect that weakens as the cue loses its informational novelty. This is the pattern suggested by the fect diagnostics, though the exit estimates remain noisy.
 
-The exit-aligned analysis provides a more direct test of temporality than the entry-aligned event study alone. The Brazilian case already hinted at the attenuation pattern, as the raw UNGA distance data showed a rebound after 2015, but the single-case design could not distinguish the rebound from idiosyncratic noise (e.g., the transition from Rousseff to Temer after an impeachment). The cross-country exit effects confirm that the rebound is systematic across treated countries, not a Brazil-specific artifact^[We thank an anonymous reviewer for raising the possibility that the effect might dissipate over time.].
+The exit-aligned analysis provides a more direct test of temporality than the entry-aligned event study alone. The Brazilian case already hinted at the attenuation pattern, as the raw UNGA distance data showed a rebound after 2015, but the single-case design could not distinguish the rebound from idiosyncratic noise (e.g., the transition from Rousseff to Temer after an impeachment). The cross-country exit diagnostics are consistent with attenuation, but they are not strong enough to claim a systematic Brazil-like rebound across all treated countries^[We thank an anonymous reviewer for raising the possibility that the effect might dissipate over time.].
 
-## Non-US Displacement Comparison
+## Displaced-Partner Heterogeneity
 
-```{r fect-any-results, include=FALSE}
-fect_any_fit <- tryCatch(tar_read(fect_ife_any), error = function(e) NULL)
-if (!is.null(fect_any_fit)) {
-  any_s <- fect_att_summary(fect_any_fit)
-  any_panel <- tar_read(switching_panel_any)
-  n_treated_any <- length(unique(any_panel$iso3c[any_panel$china_top == 1]))
-  n_countries_any <- length(unique(any_panel$iso3c))
-}
-```
-
-Our theory predicts that the effect should be strongest when the displaced partner is the hegemon (H2). To probe this, we expand the cross-country analysis to include all countries where China displaced *any* trade partner as the top destination -- not only the United States. This broader sample includes countries where China overtook Japan, the UK, or other regional partners. `r if (!is.null(fect_any_fit)) sprintf("The expanded panel contains %d countries (%d ever treated). The fect IFE estimate on this broader sample yields ATT = %.3f (SE = %.3f, p = %.3f) -- substantively near zero and statistically non-significant. Compared to the US-only specification (ATT = %.3f, p = %.3f), the contrast is stark: when China displaces the hegemon, the alignment effect is large and significant; when China displaces any partner, the effect vanishes. This provides direct evidence for H2: the status shock operates specifically when the displaced partner carries geopolitical and symbolic weight.", n_countries_any, n_treated_any, any_s$att, any_s$se, any_s$p, ife_s$att, ife_s$p)`
+The main cross-country specification defines treatment as China becoming the number-one export destination, regardless of which partner it displaces. This choice aligns the panel estimand with the theory's basic top-status claim and avoids conditioning treatment on the United States. It also means that the current cross-country estimate is not a direct test of H2, which predicts stronger effects when the displaced partner is the hegemon. Testing that moderation requires a separate heterogeneity design that classifies the displaced partner while preserving the same China-top treatment rule.
 
 ## Leave-One-Out Sensitivity
 
 ```{r loo-results, include=FALSE}
-loo_df <- tryCatch(tar_read(fect_ife_loo), error = function(e) NULL)
+loo_df <- tryCatch(tar_read(fect_ife_china_top_loo), error = function(e) NULL)
 if (is.null(loo_df)) {
   # Fall back to the existing CSV from the prior exploration
   loo_csv <- read.csv(here::here("quality_reports", "leave_one_out_fect_ife.csv"))
@@ -824,30 +835,30 @@ We systematically consider the most plausible alternative explanations and their
 
 | Alternative | Key prediction | Exit effects predicted? | Discriminating evidence |
 |---|---|---|---|
-| Structural bandwagoning | Persistent alignment shift | No -- predicts persistence | Entry-aligned attenuation + exit effects show dissipation (H4) |
-| Chinese coercion | Effect for any displaced partner | No -- leverage persists | Only hegemon displacement produces effect (H2) |
+| Structural bandwagoning | Persistent alignment shift | No -- predicts persistence | Carryover diagnostics show no large persistent post-exit effect |
+| Chinese coercion | Effect tracks durable leverage | No -- leverage should persist | Not directly ruled out by the pooled panel; reversibility diagnostics and covariates make a simple coercion account less plausible |
 | Interest-based (trade dependence) | Effect tracks current trade dependence | Yes -- if trade reverses | Discrete effect beyond trade-share covariates; but cannot fully rule out |
 | Gradual trade growth | Monotonically increasing effect | Yes -- if trade declines | @carmody_etal2020 show continuous trade growth produces hedging, not alignment |
 | Ideologically aligned leader | Step-change at leader inauguration | Possible | DPI controls; @dreher_jensen2013 find leader change pushes votes toward the US |
 | 2008 financial crisis | Temporal confound in 2008--2009 | No | Staggered treatment: rank reversals in other years also produce effect; IFE absorbs common shocks |
 
-The exit effects rule out structural bandwagoning and coercion, both of which predict persistent effects. However, interest-based and trade-dependence theories also predict reversible effects: if the interests themselves reverse when the USA regains the top position, alignment should revert. The exit effects therefore narrow the set of plausible mechanisms to those consistent with reversibility (salience, interest-based, trade-dependence) but do not uniquely identify salience. The additional evidence for salience comes from the media analysis (Section 5): the rank reversal triggers a categorical reclassification in media coverage that is not reducible to gradual trade growth.
+The exit diagnostics weigh against explanations that require a large permanent alignment shift, but they do not by themselves rule out all structural or interest-based accounts. Interest-based and trade-dependence theories can also predict reversible effects: if the interests themselves reverse when China loses the top position, alignment should revert. The exit effects therefore narrow the set of plausible mechanisms to those consistent with reversibility (salience, interest-based, trade-dependence) but do not uniquely identify salience. The additional evidence for salience comes from the media analysis (Section 5): the rank reversal triggers a categorical reclassification in media coverage that is not reducible to gradual trade growth.
 
-We do not claim to have ruled out all alternatives. What we show is that the empirical signature -- a discrete, hegemon-specific effect that dissipates upon exit, accompanied by a media-coverage shift -- is most consistent with the status-salience mechanism and least consistent with the leading alternatives. Interest-based theories remain a plausible complementary explanation.
+We do not claim to have ruled out all alternatives. What we show is that the empirical signature -- a discrete top-status effect in the cross-country panel, a high-salience hegemonic replacement case in Brazil, limited evidence of large post-exit carryover, and a media-coverage shift in Brazil -- is most consistent with the status-salience mechanism. Interest-based theories remain a plausible complementary explanation.
 
 # Conclusion
 
-We have proposed a theory that status change induced by trade rank reversal, when China surpassed the US as the main trade partner of a country, can produce foreign policy realignment. We found initial support for this effect when China overtook the US as Brazil's leading trade partner. The evidence is consistent with the idea that the symbolic significance of overtaking a historic trade partner prompted a substantive shift in diplomatic posture, beyond changes in trade volume. The cross-country regressions confirm the original finding, although with a smaller magnitude, which is expected, since Brazil is the most likely case. At the same time, evidence on the underlying salience mechanism is correlational and suggestive rather than causally identified.
+We have proposed a theory that status change induced by trade rank reversal, especially when China surpasses a politically salient incumbent trade partner, can produce foreign policy realignment. We found initial support for this effect when China overtook the US as Brazil's leading trade partner. The evidence is consistent with the idea that the symbolic significance of overtaking a historic trade partner opened a window for gradual diplomatic adjustment, beyond changes in trade volume. The cross-country fect estimates support a broader top-partner pattern, although with a smaller magnitude, which is expected because Brazil is the most likely case. At the same time, evidence on the underlying salience mechanism is correlational and suggestive rather than causally identified.
 
 Overall, the results suggest that we should look beyond the increasing trade ties between countries, as has been done in the literature so far [@yan_zhou2021; @flores-macias_kreps2013; @reilly2013], and also focus on qualitative shifts in the public perception of a trade partner's status. 
 
 The results have broad implications for the literature on status. While it has focused on explaining how the search for status may trigger conflicts, it has overlooked robust empirical evidence that an increase in status changes the behavior of another country. Thus, contrary to @mercer_2017, who argued that prestige is illusory, we have shown that it matters in a realm important for a country like China, namely, voting in the UNGA.
 
-Our study has some limitations that future research could investigate further. The cross-country analysis confirms that the status effect generalizes among countries where China displaced the United States, and our preliminary comparison with non-US displacement events (Section 7.2) provides an initial probe of the hegemon moderation hypothesis. However, the number of non-US cases remains small and heterogeneous, limiting the power of this comparison. Furthermore, we lack cross-country media data to verify whether the salience mechanism operates in the same way outside Brazil.
+Our study has some limitations that future research could investigate further. The cross-country analysis supports the claim that the status effect generalizes beyond Brazil among countries where China becomes the top export destination. However, the cross-country evidence remains too coarse to fully adjudicate the hegemon-moderation hypothesis, because cases differ in the identity and political salience of the displaced partner. Furthermore, we lack cross-country media data to verify whether the salience mechanism operates in the same way outside Brazil.
 
 Secondly, the proposed mechanism has only indirect evidence. We have shown that newspaper coverage of trade ties with China shifted when it surpassed the US as the primary trade partner. However, we lack evidence on how business lobbies responded to it, and we do not have systematic data on the public or political elites. Qualitative studies with political and economic elites could attempt to recover their thinking at the time, for instance. Laboratory experiments could be conducted to provide evidence on the psychological and cognitive mechanisms underlying status based on a change in the rank of a partner.
 
-Our findings also carry practical implications. From the perspective of US policymakers, the results suggest that symbolic milestones in trade hierarchies deserve attention alongside aggregate trade volumes. If losing the top trade partner position triggers a discrete shift in diplomatic alignment, then monitoring and responding to these threshold crossings -- rather than focusing solely on trade balances -- may be a more effective strategy for maintaining influence. More broadly, the finding that alignment effects dissipate when the USA regains the top position implies that trade-status losses are not irreversible, and that targeted trade engagement could mitigate diplomatic realignment.
+Our findings also carry practical implications. From the perspective of US policymakers, the results suggest that symbolic milestones in trade hierarchies deserve attention alongside aggregate trade volumes. If losing the top trade partner position initiates a post-reversal process of diplomatic realignment, then monitoring and responding to these threshold crossings -- rather than focusing solely on trade balances -- may be a more effective strategy for maintaining influence. More broadly, the limited evidence of large post-exit carryover suggests that trade-status losses may not be irreversible, and that targeted trade engagement could mitigate diplomatic realignment.
 
 Despite these limitations, our study is the first to provide systematic evidence for trade-status effects in international relations. By highlighting trade-status salience, this study opens up new avenues for understanding how discrete milestones in economic ties can reshape international alignments and invites extensions to other domains (e.g., FDI, foreign aid, loans) and regions.
 
@@ -860,6 +871,57 @@ Despite these limitations, our study is the first to provide systematic evidence
 # Appendix
 
 We present more details about the performance and checks on the fitted model and how we used ChatGPT to perform the NLP analysis.
+
+## Resolution-Level UNGA Vote Diagnostics
+
+To make the Brazil-China movement in UNGA ideal points more concrete, Table \@ref(tab:table-brazil-china-unvotes-year) reports the annual share of resolutions in which Brazil and China cast identical votes from 2005 to 2012. The diagnostic uses roll-call votes from `unvotes` 0.3.0, based on Erik Voeten's UNGA voting data, and excludes missing or absent votes by either Brazil or China.
+
+```{r table-brazil-china-unvotes-year, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
+bc_year_table <- tar_read(brazil_china_unvotes_similarity_by_year_2005_2012) %>%
+  dplyr::mutate(
+    identical_votes_percent = sprintf("%.1f", identical_votes_percent),
+    mean_similarity_score = sprintf("%.3f", mean_similarity_score)
+  ) %>%
+  dplyr::select(
+    year,
+    n_resolutions,
+    identical_votes_n,
+    identical_votes_percent,
+    mean_similarity_score
+  )
+
+knitr::kable(
+  bc_year_table,
+  format = "latex",
+  booktabs = TRUE,
+  caption = "Brazil-China identical UNGA votes by year, 2005-2012.",
+  col.names = c(
+    "Year",
+    "Resolutions",
+    "Identical votes",
+    "Identical votes (\\%)",
+    "Mean similarity score"
+  ),
+  align = "ccccc"
+)
+
+cat(
+  "\n\n",
+  caption_note(
+    unit = "roll-call resolutions with valid Brazil and China votes; mean similarity score equals 1 for identical votes, 0.5 for yes/abstain or no/abstain, and 0 for yes/no disagreement",
+    window = "2005-2012 annual series",
+    treatment = treat_def_brazil
+  ),
+  "\n\n",
+  sep = ""
+)
+```
+
+Figure \@ref(fig:plot-brazil-china-unvotes-issue-year) disaggregates the same diagnostic by substantive issue family. Because several areas already had high Brazil-China vote similarity before 2009, the figure should be read as descriptive evidence about where additional convergence was possible, not as a separate causal estimate.
+
+```{r plot-brazil-china-unvotes-issue-year, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Brazil-China identical UNGA votes by substantive issue area, 2005-2012. Points report annual percentages of roll-call resolutions in which Brazil and China cast the same vote; red lines are local linear fits estimated separately for 2005-2008 and 2009-2012. ", caption_note(unit = "percentage of roll-call resolutions with identical Brazil-China votes", window = "2005-2012 annual series; resolutions with multiple issue codes enter each corresponding substantive issue family", treatment = treat_def_brazil)), fig.pos="H", fig.width=11, fig.height=8}
+tar_read(plot_brazil_china_unvotes_similarity_by_issue_year_2005_2012)
+```
 
 ## SDiD
 
@@ -926,24 +988,12 @@ tar_read(plot_weights_coef_latam)
 
 ## Cross-Country Robustness: Absorbing-Treatment Estimator (C&S)
 
-As a robustness check, we also report results from the @callaway_santanna2021 absorbing-treatment estimator, restricted to countries where China's displacement of the USA was never reversed (`r n_absorbing` countries). This estimator assumes that treatment is permanent once assigned -- an assumption violated for `r n_switching` of the `r n_treated_sw` treated countries but appropriate for the absorbing subset. The absorbing-only C&S ATT (`r cs_att`, SE = `r cs_se`, p = `r cs_p`) is directionally consistent with the fect IFE result, confirming that the finding is not an artifact of the switching-treatment framework.
+As a robustness check, we also report an absorbing-treatment estimator using @callaway_santanna2021. This specification is rebuilt from the same China-top-partner panel used by the main fect analysis. Treated units are countries for which China first becomes the number-one export destination in or after 2000 after an observed untreated year and then never loses the top position through the end of the panel. Countries with treatment reversals are excluded from this C\&S robustness check, not treated as controls. The baseline absorbing C\&S estimate uses `r cs_abs_s$n_treated` treated units and `r cs_abs_s$n_control` never-treated controls; the covariate-adjusted specification uses `r cs_abs_cov_s$n_treated` treated units and `r cs_abs_cov_s$n_control` controls.
 
-With only `r n_absorbing` treated countries in the absorbing subset, asymptotic cluster-robust inference may be liberal. We address this concern with two finite-sample procedures applied to the full C&S sample.
+This check should be read as an absorbing-subset analogue, not as the same estimand as the switching-treatment fect model. The fect estimator uses entry and exit variation from the full switching panel, whereas C\&S estimates the effect among persistent China-top cases only.
 
-```{r wild-bootstrap, include=FALSE}
-wb <- tar_read(wild_bootstrap_result)
-```
-
-**Wild cluster bootstrap.** We stack the staggered treatments into a single DiD specification and apply the wild cluster bootstrap with Webb weights [@mackinnon_webb2018], using `r formatC(9999, big.mark = ",")` replications. The stacked DiD coefficient is `r sprintf('%.3f', wb$coef)` (cluster SE = `r sprintf('%.3f', wb$se_cluster)`) with a bootstrap p-value of `r sprintf('%.3f', wb$boot_p_value)` and 95% bootstrap CI [`r sprintf('%.3f', wb$boot_ci[1])`, `r sprintf('%.3f', wb$boot_ci[2])`], based on `r wb$n_clusters` clusters. The result remains statistically significant under this more conservative inference procedure.
-
-```{r fisher-test, include=FALSE}
-ft <- tar_read(fisher_test_result)
-```
-
-**Fisher randomization test.** To provide exact inference that does not rely on large-sample asymptotics, we randomly reassign treatment status across countries and re-estimate the overall ATT under each permutation. The observed ATT (`r sprintf('%.3f', ft$observed_att)`) is more extreme than `r sprintf('%.1f', (1 - ft$p_value) * 100)`% of the `r ft$n_valid` valid permutation estimates (Fisher p = `r sprintf('%.3f', ft$p_value)`).
-
-```{r plot-fisher, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Fisher randomization distribution with the observed ATT marked by the dashed red line. ", caption_note(unit = "ATT in absolute UNGA ideal-point distance to China (points)", se = "permutation-based exact inference", window = "1990-2022 balanced panel used for permutations", treatment = treat_def_panel)), fig.pos="H", fig.width=7, fig.asp=0.65}
-tar_read(plot_fisher)
+```{r plot-es-china-top-absorbing, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Dynamic treatment effects from the absorbing-treatment C\\&S specification. ", caption_note(unit = "ATT in absolute UNGA ideal-point distance to China (points)", se = "analytical (95 percent confidence intervals shown)", cluster = "country level", window = sprintf("%d-%d balanced panel", cs_abs_s$panel_min, cs_abs_s$panel_max), treatment = "absorbing treatment: first observed year in or after 2000 in which China becomes the number-one export destination and never later loses that position")), fig.pos="H", fig.width=7, fig.asp=0.65}
+tar_read(plot_es_china_top_absorbing)
 ```
 
 ## Cross-Country Diagnostic: No-Pretrend Equivalence Tests
@@ -951,7 +1001,7 @@ tar_read(plot_fisher)
 Following @liu2024practical and @chiu_etal2025, we report equivalence tests for the no-pretrend assumption. Unlike the conventional placebo test (which tests $H_0$: no pre-trend), the equivalence test reverses the null to $H_0$: pre-trends are meaningfully large, providing positive evidence for the absence of pre-trends when rejected. The red dashed lines mark the equivalence range ($0.36\hat{\delta}_s$ or the user-specified threshold), while the grey dashed lines mark the minimum range.
 
 ```{r plot-equiv-appendix, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Equivalence tests for the no-pretrend assumption. (a) FE model: placebo equivalence test rejects the null of large pre-trends (TOST p = 0.040). (b) IFE model: the F-test rejects the null of zero pre-trends (p = 0.001), though the equivalence test does not reject (TOST p = 0.484), reflecting the limited power of the small cross-country sample. ", caption_note(se = "bootstrap (500 replications)", window = sprintf("%d-%d panel", panel_min, panel_max), treatment = treat_def_panel)), fig.pos="H", fig.width=10, fig.height=5}
-tar_read(plot_diagnostics_equiv)
+tar_read(plot_diagnostics_equiv_china_top)
 ```
 
 ## ChatGPT Classification
@@ -1048,7 +1098,7 @@ The overall accuracy is `r overall_acc`%. The lowest agreement is in the "chines
 
 ## Cross-Country: Treated Countries and Treatment-Switching Diagnostic
 
-Table \@ref(tab:table-treated-appendix) describes the `r n_treated_sw` treated countries where China displaced the United States as the top trade partner. For each country, we report the treatment year, whether the treatment is absorbing (China remains #1) or switching (the USA regains the top position), the number of consecutive years the US held the top position before treatment (USA streak), and the mean UNGA voting distance to China before and after treatment.
+Table \@ref(tab:table-treated-appendix) describes the `r n_treated_sw` treated countries where China becomes the top export destination. For each country, we report the treatment year, whether the treatment is absorbing (China remains #1) or switching (China later loses the top position), and the mean UNGA voting distance to China before and after treatment.
 
 ```{r table-treated-appendix, message=FALSE, warning=FALSE, echo=FALSE}
 library(kableExtra)
@@ -1070,7 +1120,7 @@ kable(treated_tbl,
       format = "latex",
       booktabs = TRUE,
       digits = 3,
-      caption = "Descriptive statistics of treated countries where China displaced the USA as top trade partner.",
+      caption = "Descriptive statistics of treated countries where China becomes the top export destination.",
       col.names = c("Country", "ISO3c", "Treatment year", "Absorbing",
                      "Switches", "USA streak", "Press free.",
                      "Mean dist. (pre)", "Mean dist. (post)", "Diff"),
@@ -1078,20 +1128,14 @@ kable(treated_tbl,
   kable_styling(latex_options = c("hold_position", "scale_down"),
                 font_size = 9) %>%
   footnote(general = paste0("Absorbing = China remains the top trade partner through the end of the sample. ",
-                            "Switching = USA regains the top position. ",
-                            "USA streak = consecutive years the US held \\\\#1 export-destination position before treatment. ",
+                            "Switching = China later loses the top position. ",
+                            "USA streak = consecutive years the US held \\\\#1 export-destination position before treatment, where applicable. ",
                             "Press free. = V-Dem Freedom of Expression index (pre-treatment 5-year mean). ",
                             "Mean dist. = absolute distance to China in UNGA ideal points. ",
                             "Diff = post minus pre."),
            general_title = "Note: ",
            escape = FALSE,
            threeparttable = TRUE)
-```
-
-The dynamic event study below displays the estimated ATT at each period relative to treatment across C&S specifications (absorbing-only). These are provided for comparison with the main fect IFE results reported in the body of the paper.
-
-```{r plot-es-facet-appendix, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Dynamic treatment effects across C\\&S specifications (absorbing treatment). ", caption_note(unit = "ATT in absolute UNGA ideal-point distance to China (points)", se = "analytical (95 percent confidence intervals shown)", cluster = "country level", window = "1990-2022 baseline panel and 1995-2022 restricted panel, depending on specification", treatment = "absorbing treatment: equals 1 from first year China becomes top partner, assumes no reversal")), fig.pos="H", fig.width=8, fig.height=8.5}
-tar_read(plot_es_displaced_usa)
 ```
 
 ## Leave-One-Out Sensitivity Analysis
@@ -1102,11 +1146,12 @@ Table \@ref(tab:table-loo-appendix) reports the fect IFE ATT when each treated c
 library(knitr)
 
 # Use target if available, otherwise fall back to existing CSV
-loo_raw <- tryCatch(tar_read(fect_ife_loo), error = function(e) NULL)
-treated_iso <- tar_read(classified_events) %>%
-  dplyr::filter(displaced == "USA") %>%
+loo_raw <- tryCatch(tar_read(fect_ife_china_top_loo), error = function(e) NULL)
+treated_iso <- tar_read(china_top_fect_data) %>%
+  dplyr::filter(china_top == 1L) %>%
+  dplyr::distinct(iso3c) %>%
   dplyr::pull(iso3c)
-full_s <- fect_att_summary(tar_read(fect_ife))
+full_s <- fect_att_summary(tar_read(fect_ife_china_top))
 if (is.null(loo_raw)) {
   loo_csv <- read.csv(here::here("quality_reports", "leave_one_out_fect_ife.csv"))
   loo_treated <- loo_csv[loo_csv$iso3c %in% treated_iso, c("dropped", "iso3c", "att", "se", "p", "r_cv")]

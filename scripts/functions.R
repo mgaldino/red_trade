@@ -1020,7 +1020,7 @@ prepare_event_study_data <- function(treatment_events, unga_data, covariates_df 
 }
 
 # Run Callaway & Sant'Anna (2021) staggered DiD
-run_cross_country_did <- function(event_data, xformla = ~1) {
+run_cross_country_did <- function(event_data, xformla = ~1, aggte_na_rm = FALSE) {
   att_gt_result <- did::att_gt(
     yname = "abs_distance_china",
     tname = "year",
@@ -1033,19 +1033,151 @@ run_cross_country_did <- function(event_data, xformla = ~1) {
   )
 
   # Event study aggregation (dynamic effects by relative time)
-  event_study <- did::aggte(att_gt_result, type = "dynamic")
+  event_study <- did::aggte(att_gt_result, type = "dynamic", na.rm = aggte_na_rm)
 
   # Group-level ATT (by cohort)
-  group_att <- did::aggte(att_gt_result, type = "group")
+  group_att <- did::aggte(att_gt_result, type = "group", na.rm = aggte_na_rm)
 
   # Overall ATT
-  overall_att <- did::aggte(att_gt_result, type = "simple")
+  overall_att <- did::aggte(att_gt_result, type = "simple", na.rm = aggte_na_rm)
 
   list(
     att_gt = att_gt_result,
     event_study = event_study,
     group_att = group_att,
     overall_att = overall_att
+  )
+}
+
+prepare_absorbing_china_top_did_data <- function(panel, covariate_cols = NULL,
+                                                 min_entry_year = 2000) {
+  required_cols <- c("iso3c", "year", "abs_distance_china", "china_top")
+  missing_cols <- setdiff(required_cols, names(panel))
+  if (length(missing_cols) > 0) {
+    stop("prepare_absorbing_china_top_did_data: missing columns: ",
+         paste(missing_cols, collapse = ", "))
+  }
+
+  if (is.null(covariate_cols)) {
+    covariate_cols <- character(0)
+  }
+  missing_covariates <- setdiff(covariate_cols, names(panel))
+  if (length(missing_covariates) > 0) {
+    stop("prepare_absorbing_china_top_did_data: missing covariates: ",
+         paste(missing_covariates, collapse = ", "))
+  }
+
+  rank_observed_col <- intersect("top_partner", names(panel))
+  keep_cols <- c(required_cols, rank_observed_col, covariate_cols)
+
+  base_panel <- panel %>%
+    dplyr::select(dplyr::all_of(keep_cols)) %>%
+    dplyr::filter(stats::complete.cases(dplyr::select(
+      .,
+      dplyr::all_of(required_cols)
+    ))) %>%
+    dplyr::arrange(iso3c, year)
+
+  if ("top_partner" %in% names(base_panel)) {
+    base_panel <- base_panel %>%
+      dplyr::filter(!is.na(top_partner))
+  }
+
+  unit_summary <- base_panel %>%
+    dplyr::group_by(iso3c) %>%
+    dplyr::arrange(year, .by_group = TRUE) %>%
+    dplyr::mutate(
+      china_top_lag = dplyr::lag(china_top),
+      entry = china_top == 1L & !is.na(china_top_lag) & china_top_lag == 0L
+    ) %>%
+    dplyr::summarise(
+      ever_treated = any(china_top == 1L, na.rm = TRUE),
+      left_censored = dplyr::first(china_top) == 1L,
+      first_treat_year = ifelse(
+        any(entry, na.rm = TRUE),
+        min(year[entry], na.rm = TRUE),
+        NA_integer_
+      ),
+      absorbing = ifelse(
+        any(entry, na.rm = TRUE),
+        all(china_top[year >= first_treat_year] == 1L, na.rm = TRUE),
+        FALSE
+      ),
+      .groups = "drop"
+    ) %>%
+    dplyr::mutate(
+      cs_role = dplyr::case_when(
+        ever_treated & !left_censored & absorbing &
+          first_treat_year >= min_entry_year ~ "treated_absorbing",
+        !ever_treated ~ "never_treated",
+        TRUE ~ "excluded"
+      ),
+      first_treat = dplyr::if_else(
+        cs_role == "treated_absorbing",
+        as.numeric(first_treat_year),
+        0
+      )
+    )
+
+  did_panel <- base_panel %>%
+    dplyr::left_join(
+      unit_summary %>%
+        dplyr::select(iso3c, cs_role, first_treat, first_treat_year, absorbing),
+      by = "iso3c"
+    ) %>%
+    dplyr::filter(cs_role %in% c("treated_absorbing", "never_treated"))
+
+  if (length(covariate_cols) > 0) {
+    did_panel <- did_panel %>%
+      dplyr::filter(stats::complete.cases(dplyr::select(
+        .,
+        dplyr::all_of(covariate_cols)
+      )))
+  }
+
+  max_years <- max(table(did_panel$iso3c))
+  balanced_iso <- did_panel %>%
+    dplyr::group_by(iso3c) %>%
+    dplyr::summarise(n_years = dplyr::n(), .groups = "drop") %>%
+    dplyr::filter(n_years == max_years) %>%
+    dplyr::pull(iso3c)
+
+  did_panel <- did_panel %>%
+    dplyr::filter(iso3c %in% balanced_iso)
+
+  panel_max <- max(did_panel$year, na.rm = TRUE)
+  estimable_treated <- did_panel %>%
+    dplyr::filter(first_treat > 0, first_treat < panel_max) %>%
+    dplyr::distinct(iso3c) %>%
+    dplyr::pull(iso3c)
+
+  did_panel %>%
+    dplyr::filter(first_treat == 0 | iso3c %in% estimable_treated) %>%
+    dplyr::mutate(id = as.integer(as.factor(iso3c))) %>%
+    dplyr::arrange(id, year) %>%
+    as.data.frame()
+}
+
+summarize_cross_country_did <- function(did_result, event_data) {
+  overall <- did_result$overall_att
+  att <- unname(overall$overall.att)
+  se <- unname(overall$overall.se)
+  p <- 2 * stats::pnorm(-abs(att / se))
+
+  data.frame(
+    att = att,
+    se = se,
+    ci_lo = att - 1.96 * se,
+    ci_hi = att + 1.96 * se,
+    p = p,
+    n_obs = nrow(event_data),
+    n_countries = dplyr::n_distinct(event_data$iso3c),
+    n_treated = dplyr::n_distinct(event_data$iso3c[event_data$first_treat > 0]),
+    n_control = dplyr::n_distinct(event_data$iso3c[event_data$first_treat == 0]),
+    panel_min = min(event_data$year, na.rm = TRUE),
+    panel_max = max(event_data$year, na.rm = TRUE),
+    first_treat_min = min(event_data$first_treat[event_data$first_treat > 0], na.rm = TRUE),
+    first_treat_max = max(event_data$first_treat[event_data$first_treat > 0], na.rm = TRUE)
   )
 }
 
@@ -1095,7 +1227,8 @@ classify_treatment_events <- function(trade_data_ranked, trade_data) {
 }
 
 # Event study plot for cross-country DiD results
-plot_event_study_did <- function(did_result) {
+plot_event_study_did <- function(did_result,
+                                 title = "Dynamic treatment effects: China becomes #1 trade partner") {
   es <- did_result$event_study
 
   df <- data.frame(
@@ -1114,7 +1247,7 @@ plot_event_study_did <- function(did_result) {
     geom_line(colour = "steelblue") +
     labs(x = "Periods relative to treatment",
          y = "ATT estimate",
-         title = "Dynamic treatment effects: China displaces USA as #1 trade partner") +
+         title = title) +
     theme_minimal(base_size = 12) +
     theme(panel.grid.minor = element_blank())
 }
@@ -1581,19 +1714,114 @@ build_switching_panel <- function(trade_data, unga_data, classified_events, usa_
   as.data.frame(panel)
 }
 
+prepare_fect_data <- function(panel, fml = abs_distance_china ~ china_top,
+                              exclude_iso3c = "CHN",
+                              min_untreated_periods = NULL,
+                              min_pre_treatment_periods = NULL,
+                              drop_left_censored = FALSE,
+                              require_common_year_grid = FALSE) {
+  fml_vars <- all.vars(fml)
+  missing_vars <- setdiff(fml_vars, names(panel))
+  if (length(missing_vars) > 0) {
+    stop("prepare_fect_data: missing variables in panel: ",
+         paste(missing_vars, collapse = ", "))
+  }
+
+  id_cols <- intersect(c("iso3c", "country_name"), names(panel))
+  keep_cols <- unique(c(id_cols, "country_id", "year", fml_vars))
+  if (!all(c("country_id", "year") %in% names(panel))) {
+    stop("prepare_fect_data: panel must contain country_id and year")
+  }
+
+  data <- panel
+  if ("iso3c" %in% names(data) && length(exclude_iso3c) > 0) {
+    data <- data %>% dplyr::filter(!iso3c %in% exclude_iso3c)
+  }
+
+  estimation_cols <- unique(c("country_id", "year", fml_vars))
+  data <- data %>%
+    dplyr::select(dplyr::all_of(keep_cols)) %>%
+    dplyr::filter(stats::complete.cases(dplyr::select(., dplyr::all_of(estimation_cols))))
+
+  unit_var <- if ("iso3c" %in% names(data)) "iso3c" else "country_id"
+
+  if (nrow(data) == 0L) {
+    stop("prepare_fect_data: no complete cases remain after filtering")
+  }
+
+  if (require_common_year_grid) {
+    common_years <- seq(min(data$year, na.rm = TRUE), max(data$year, na.rm = TRUE))
+    balanced_units <- data %>%
+      dplyr::group_by(.data[[unit_var]]) %>%
+      dplyr::summarise(
+        has_common_year_grid = setequal(year, common_years) &&
+          dplyr::n_distinct(year) == length(common_years),
+        .groups = "drop"
+      ) %>%
+      dplyr::filter(has_common_year_grid) %>%
+      dplyr::pull(.data[[unit_var]])
+
+    data <- data %>% dplyr::filter(.data[[unit_var]] %in% balanced_units)
+
+    if (nrow(data) == 0L) {
+      stop("prepare_fect_data: no units remain on the common year grid")
+    }
+  }
+
+  if ("china_top" %in% names(data) &&
+      (!is.null(min_pre_treatment_periods) || !is.null(min_untreated_periods))) {
+    keep_units <- data %>%
+      dplyr::arrange(.data[[unit_var]], year) %>%
+      dplyr::group_by(.data[[unit_var]]) %>%
+      dplyr::mutate(
+        china_top_lag = dplyr::lag(china_top),
+        entry = china_top == 1L & !is.na(china_top_lag) & china_top_lag == 0L
+      ) %>%
+      dplyr::summarise(
+        ever_treated = any(china_top == 1L, na.rm = TRUE),
+        left_censored = dplyr::first(china_top) == 1L,
+        first_entry_year = ifelse(
+          any(entry, na.rm = TRUE),
+          min(year[entry], na.rm = TRUE),
+          NA_integer_
+        ),
+        pre_treatment_periods = ifelse(
+          any(entry, na.rm = TRUE),
+          sum(china_top == 0L & year < first_entry_year, na.rm = TRUE),
+          sum(china_top == 0L, na.rm = TRUE)
+        ),
+        untreated_periods = sum(china_top == 0L, na.rm = TRUE),
+        .groups = "drop"
+      ) %>%
+      dplyr::filter(!ever_treated |
+                      (!drop_left_censored & left_censored) |
+                      (!left_censored & pre_treatment_periods >= min_pre_treatment_periods))
+
+    if (!is.null(min_untreated_periods)) {
+      keep_units <- keep_units %>%
+        dplyr::filter(untreated_periods >= min_untreated_periods)
+    }
+
+    keep_units <- keep_units %>% dplyr::pull(.data[[unit_var]])
+    data <- data %>% dplyr::filter(.data[[unit_var]] %in% keep_units)
+  }
+
+  if ("iso3c" %in% names(data)) {
+    data <- data %>% dplyr::mutate(country_id = as.integer(as.factor(iso3c)))
+  } else {
+    data <- data %>% dplyr::mutate(country_id = as.integer(as.factor(country_id)))
+  }
+
+  data %>%
+    dplyr::arrange(country_id, year) %>%
+    as.data.frame()
+}
+
 # Run fect analysis (FE or IFE method)
 run_fect_analysis <- function(panel, method = "ife", nboots = 500,
                               fml = abs_distance_china ~ china_top) {
   set.seed(42)
-  # Determine which columns the formula needs
-  fml_vars <- all.vars(fml)
-  keep_cols <- unique(c("country_id", "year", fml_vars))
-  fect_data <- panel %>%
-    dplyr::select(dplyr::all_of(keep_cols)) %>%
-    dplyr::filter(complete.cases(.)) %>%
-    # Re-index country_id to close gaps after dropping incomplete cases
-    dplyr::mutate(country_id = as.integer(as.factor(country_id))) %>%
-    as.data.frame()
+  fect_data <- prepare_fect_data(panel, fml = fml)
 
   if (method == "fe") {
     fit <- fect::fect(
@@ -1623,9 +1851,7 @@ run_fect_analysis <- function(panel, method = "ife", nboots = 500,
 # Run fect carryover test (separate run, FE only)
 run_fect_carryover <- function(panel, nboots = 500) {
   set.seed(42)
-  fect_data <- panel %>%
-    dplyr::select(country_id, year, abs_distance_china, china_top) %>%
-    as.data.frame()
+  fect_data <- prepare_fect_data(panel, fml = abs_distance_china ~ china_top)
 
   fect::fect(
     abs_distance_china ~ china_top,
@@ -1654,14 +1880,17 @@ fect_att_summary <- function(fit) {
 # Run PanelMatch analysis (ATT or ART)
 run_panelmatch_analysis <- function(panel, qoi = "att", lag = 1, lead = 0:8, n_iter = 1000) {
   set.seed(42)
-  pm_df <- panel %>%
-    dplyr::select(country_id, year, abs_distance_china, china_top) %>%
-    as.data.frame()
+  pm_df <- prepare_fect_data(
+    panel,
+    fml = abs_distance_china ~ china_top,
+    require_common_year_grid = TRUE
+  ) %>%
+    dplyr::mutate(time_id = match(year, sort(unique(year))))
 
   pd <- PanelMatch::PanelData(
     panel.data = pm_df,
     unit.id = "country_id",
-    time.id = "year",
+    time.id = "time_id",
     treatment = "china_top",
     outcome = "abs_distance_china"
   )
@@ -1817,42 +2046,235 @@ run_fect_leave_one_out <- function(panel, method = "ife", nboots = 500,
   do.call(rbind, results)
 }
 
-# Build panel with ALL displacement events (not just USA-displaced)
-build_any_displacement_panel <- function(trade_data, unga_data, classified_events) {
-  # Current rank: is China #1 for each exporter-year?
-  rank_current <- trade_data %>%
-    group_by(year, exporter_iso3) %>%
-    arrange(desc(exports)) %>%
-    mutate(rank = row_number()) %>%
-    ungroup() %>%
-    dplyr::filter(importer_iso3 == "CHN") %>%
-    dplyr::select(iso3c = exporter_iso3, year, rank_CHN = rank)
+# Cross-country panel from the diagnostic specification:
+# treatment turns on only when China becomes the #1 export destination after an
+# observed prior year in which China was not #1, with onset in/after 2000.
+build_china_top_partner_panel <- function(trade_data, unga_data, classified_events,
+                                          usa_top_countries, min_year = 1990,
+                                          min_entry_year = 2000) {
+  treated_usa <- classified_events %>%
+    dplyr::filter(displaced == "USA") %>%
+    dplyr::pull(iso3c)
+
+  did_countries <- unique(c(treated_usa, usa_top_countries))
+
+  ranked_partners <- trade_data %>%
+    dplyr::group_by(year, exporter_iso3) %>%
+    dplyr::arrange(dplyr::desc(exports), .by_group = TRUE) %>%
+    dplyr::mutate(rank = dplyr::row_number()) %>%
+    dplyr::ungroup() %>%
+    dplyr::filter(exporter_iso3 %in% did_countries)
+
+  top_partner <- ranked_partners %>%
+    dplyr::filter(rank == 1L) %>%
+    dplyr::select(iso3c = exporter_iso3, year, top_partner = importer_iso3)
+
+  rank_china_usa <- ranked_partners %>%
+    dplyr::filter(importer_iso3 %in% c("CHN", "USA")) %>%
+    dplyr::select(
+      iso3c = exporter_iso3,
+      year,
+      partner = importer_iso3,
+      rank
+    ) %>%
+    tidyr::pivot_wider(
+      names_from = partner,
+      values_from = rank,
+      names_prefix = "rank_"
+    )
 
   panel <- unga_data %>%
-    dplyr::filter(year >= 1990) %>%
+    dplyr::filter(iso3c %in% did_countries, year >= min_year) %>%
     dplyr::select(iso3c, year, abs_distance_china) %>%
-    left_join(rank_current, by = c("iso3c", "year")) %>%
-    mutate(
-      china_top = as.integer(!is.na(rank_CHN) & rank_CHN == 1),
+    dplyr::left_join(rank_china_usa, by = c("iso3c", "year")) %>%
+    dplyr::left_join(top_partner, by = c("iso3c", "year")) %>%
+    dplyr::mutate(
+      china_is_top = dplyr::case_when(
+        is.na(top_partner) ~ NA,
+        !is.na(rank_CHN) & rank_CHN == 1L ~ TRUE,
+        TRUE ~ FALSE
+      ),
       country_id = as.integer(as.factor(iso3c)),
-      country_name = countrycode::countrycode(iso3c, "iso3c", "country.name")
+      country_name = countrycode::countrycode(
+        iso3c,
+        "iso3c",
+        "country.name",
+        warn = FALSE
+      )
     ) %>%
-    arrange(country_id, year)
-  panel$china_top[is.na(panel$china_top)] <- 0L
+    dplyr::group_by(iso3c) %>%
+    dplyr::arrange(year, .by_group = TRUE) %>%
+    dplyr::mutate(
+      previous_observed_year = dplyr::lag(year),
+      previous_china_is_top = dplyr::lag(china_is_top),
+      previous_top_partner = dplyr::lag(top_partner),
+      previous_trade_observed = !is.na(previous_top_partner),
+      china_top_period_start = dplyr::coalesce(china_is_top, FALSE) &
+        !dplyr::coalesce(dplyr::lag(china_is_top), FALSE),
+      china_top_period_id = cumsum(china_top_period_start)
+    ) %>%
+    dplyr::ungroup()
 
-  # Balance panel: keep only units observed in all years
-  max_years <- max(table(panel$country_id))
-  balanced_ids <- panel %>%
-    group_by(country_id) %>%
-    summarise(n_years = n(), .groups = "drop") %>%
-    dplyr::filter(n_years == max_years) %>%
-    pull(country_id)
+  period_onsets <- panel %>%
+    dplyr::filter(china_top_period_start) %>%
+    dplyr::select(
+      iso3c,
+      china_top_period_id,
+      entry_year = year,
+      previous_observed_year_at_entry = previous_observed_year,
+      previous_china_is_top_at_entry = previous_china_is_top,
+      previous_top_partner_at_entry = previous_top_partner,
+      previous_trade_observed_at_entry = previous_trade_observed
+    )
 
   panel <- panel %>%
-    dplyr::filter(country_id %in% balanced_ids) %>%
-    mutate(country_id = as.integer(as.factor(iso3c)))
+    dplyr::left_join(period_onsets, by = c("iso3c", "china_top_period_id")) %>%
+    dplyr::mutate(
+      china_top = dplyr::case_when(
+        is.na(top_partner) ~ NA_integer_,
+        china_is_top &
+          !is.na(entry_year) &
+          entry_year >= min_entry_year &
+          !is.na(previous_observed_year_at_entry) &
+          previous_trade_observed_at_entry == TRUE &
+          !is.na(previous_china_is_top_at_entry) &
+          previous_china_is_top_at_entry == FALSE ~ 1L,
+        TRUE ~ 0L
+      )
+    )
 
-  as.data.frame(panel)
+  panel %>%
+    dplyr::arrange(country_id, year) %>%
+    as.data.frame()
+}
+
+# Backward-compatible helper for exploratory "any displacement" code.
+build_any_displacement_panel <- function(trade_data, unga_data, classified_events = NULL) {
+  treated_usa <- classified_events %>%
+    dplyr::filter(displaced == "USA") %>%
+    dplyr::pull(iso3c)
+
+  build_china_top_partner_panel(trade_data, unga_data, classified_events, treated_usa)
+}
+
+summarize_china_top_panel <- function(panel) {
+  unit_summary <- panel %>%
+    dplyr::arrange(iso3c, year) %>%
+    dplyr::group_by(iso3c, country_name) %>%
+    dplyr::mutate(
+      china_top_lag = dplyr::lag(china_top),
+      left_censored = dplyr::first(china_top) == 1L,
+      entry = china_top == 1L & !is.na(china_top_lag) & china_top_lag == 0L,
+      exit = china_top == 0L & !is.na(china_top_lag) & china_top_lag == 1L
+    ) %>%
+    dplyr::summarise(
+      treated_years = sum(china_top == 1L, na.rm = TRUE),
+      entries = sum(entry, na.rm = TRUE),
+      exits = sum(exit, na.rm = TRUE),
+      ever_treated = any(china_top == 1L, na.rm = TRUE),
+      left_censored = any(left_censored, na.rm = TRUE),
+      first_entry_year = ifelse(any(entry, na.rm = TRUE), min(year[entry], na.rm = TRUE), NA_integer_),
+      .groups = "drop"
+    )
+
+  treated_iso <- unit_summary %>%
+    dplyr::filter(ever_treated) %>%
+    dplyr::pull(iso3c)
+
+  pre_treated_mean <- panel %>%
+    dplyr::left_join(
+      unit_summary %>%
+        dplyr::select(iso3c, first_entry_year) %>%
+        dplyr::filter(!is.na(first_entry_year)),
+      by = "iso3c"
+    ) %>%
+    dplyr::filter(iso3c %in% treated_iso,
+                  !is.na(first_entry_year),
+                  year < first_entry_year) %>%
+    dplyr::summarise(m = mean(abs_distance_china, na.rm = TRUE)) %>%
+    dplyr::pull(m)
+
+  data.frame(
+    n_obs = nrow(panel),
+    n_countries = dplyr::n_distinct(panel$iso3c),
+    n_treated = sum(unit_summary$ever_treated),
+    n_control = sum(!unit_summary$ever_treated),
+    n_treated_country_years = sum(panel$china_top == 1L, na.rm = TRUE),
+    n_entries = sum(unit_summary$entries, na.rm = TRUE),
+    n_exits = sum(unit_summary$exits, na.rm = TRUE),
+    n_left_censored = sum(unit_summary$left_censored, na.rm = TRUE),
+    panel_min = min(panel$year, na.rm = TRUE),
+    panel_max = max(panel$year, na.rm = TRUE),
+    pre_treated_mean = pre_treated_mean,
+    outcome_sd = sd(panel$abs_distance_china, na.rm = TRUE)
+  )
+}
+
+summarize_fect_model <- function(fit, panel, fml = abs_distance_china ~ china_top) {
+  estimation_panel <- prepare_fect_data(panel, fml = fml)
+  s <- fect_att_summary(fit)
+  p <- summarize_china_top_panel(estimation_panel)
+  data.frame(
+    att = s$att,
+    se = s$se,
+    ci_lo = s$ci_lo,
+    ci_hi = s$ci_hi,
+    p = s$p,
+    r_cv = s$r_cv,
+    att_rel_pct = abs(s$att) / p$pre_treated_mean * 100,
+    att_sd_units = abs(s$att) / p$outcome_sd,
+    p
+  )
+}
+
+plot_china_top_country_panel <- function(panel) {
+  plot_panel <- panel %>%
+    dplyr::filter(iso3c != "CHN")
+
+  treated_iso <- plot_panel %>%
+    dplyr::group_by(iso3c) %>%
+    dplyr::summarise(ever_treated = any(china_top == 1L), .groups = "drop") %>%
+    dplyr::filter(ever_treated) %>%
+    dplyr::pull(iso3c)
+
+  plot_df <- plot_panel %>%
+    dplyr::filter(iso3c %in% treated_iso) %>%
+    dplyr::arrange(country_name, year)
+
+  treat_periods <- plot_df %>%
+    dplyr::group_by(country_name) %>%
+    dplyr::arrange(year, .by_group = TRUE) %>%
+    dplyr::mutate(
+      treatment_period_start = china_top == 1L & dplyr::lag(china_top, default = 0L) == 0L,
+      treatment_period_id = cumsum(treatment_period_start)
+    ) %>%
+    dplyr::filter(china_top == 1L) %>%
+    dplyr::group_by(country_name, treatment_period_id) %>%
+    dplyr::summarise(
+      treat_start = min(year),
+      treat_end = max(year),
+      .groups = "drop"
+    )
+
+  ggplot(plot_df, aes(x = year, y = abs_distance_china)) +
+    geom_rect(
+      data = treat_periods,
+      aes(xmin = treat_start - 0.5, xmax = treat_end + 0.5,
+          ymin = -Inf, ymax = Inf),
+      inherit.aes = FALSE,
+      fill = "lightblue", alpha = 0.3
+    ) +
+    geom_line(colour = "grey40", linewidth = 0.4) +
+    geom_point(size = 0.8, colour = "grey30") +
+    geom_smooth(method = "loess", se = FALSE, colour = "steelblue",
+                linewidth = 0.8, span = 0.5) +
+    facet_wrap(~country_name, scales = "free_y", ncol = 3) +
+    labs(x = "Year", y = "UNGA distance to China") +
+    theme_minimal(base_size = 10) +
+    theme(
+      panel.grid.minor = element_blank(),
+      strip.text = element_text(face = "bold", size = 9)
+    )
 }
 
 # Media counterfactual: compare trade-China headlines vs other categories
@@ -1906,7 +2328,7 @@ compute_cohens_kappa <- function(validation_file) {
 }
 
 # Raw UNGA distance plot for treated countries (China displaced USA)
-plot_treated_panel <- function(switching_panel, classified_events) {
+plot_treated_country_panel <- function(switching_panel, classified_events) {
   usa_iso <- classified_events %>%
     filter(displaced == "USA", !is.na(iso3c)) %>%
     pull(iso3c)
@@ -1938,4 +2360,3 @@ plot_treated_panel <- function(switching_panel, classified_events) {
       strip.text = element_text(face = "bold", size = 9)
     )
 }
-
