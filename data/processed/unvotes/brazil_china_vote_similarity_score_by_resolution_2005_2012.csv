@@ -1,0 +1,749 @@
+rcid,doc_symbol,year,issue_family,vote_brazil,vote_china,similarity_score,similarity_label
+4521,A/RES/59/307,2005,Palestina/Oriente Médio,yes,yes,1,igual
+4522,A/RES/59/280,2005,Outros / sem codificação,no,no,1,igual
+4594,A/RES/60/231,2005,Direitos humanos,yes,yes,1,igual
+4595,A/RES/60/230,2005,Outros / sem codificação,yes,yes,1,igual
+4596,A/RES/60/229,2005,Outros / sem codificação,yes,yes,1,igual
+4597,A/RES/60/226,2005,Outros / sem codificação,yes,abstain,0.5,parcial
+4598,A/RES/60/200,2005,Outros / sem codificação,yes,yes,1,igual
+4599,A/RES/60/185,2005,Desenvolvimento econômico,yes,yes,1,igual
+4600,A/RES/60/184,2005,Desenvolvimento econômico,yes,yes,1,igual
+4601,A/RES/60/183,2005,Palestina/Oriente Médio,yes,yes,1,igual
+4602,A/RES/60/170,2005,Direitos humanos,abstain,abstain,1,igual
+4603,A/RES/60/174,2005,Direitos humanos,yes,no,0,oposto
+4604,A/RES/60/173,2005,Direitos humanos,yes,no,0,oposto
+4605,A/RES/60/172,2005,Direitos humanos,yes,no,0,oposto
+4606,A/RES/60/171,2005,Direitos humanos,abstain,no,0.5,parcial
+4607,A/RES/60/165,2005,Direitos humanos,yes,yes,1,igual
+4608,A/RES/60/164,2005,Direitos humanos,yes,yes,1,igual
+4609,A/RES/60/163,2005,Direitos humanos,yes,yes,1,igual
+4610,A/RES/60/162,2005,Outros / sem codificação,yes,yes,1,igual
+4611,A/RES/60/157,2005,Desenvolvimento econômico; Direitos humanos,yes,yes,1,igual
+4612,A/RES/60/155,2005,Direitos humanos,yes,yes,1,igual
+4613,A/RES/60/152,2005,Direitos humanos,abstain,yes,0.5,parcial
+4614,A/RES/60/150,2005,Outros / sem codificação,yes,yes,1,igual
+4615,A/RES/60/146,2005,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4616,A/RES/60/144,2005,Direitos humanos,yes,yes,1,igual
+4617,A/RES/60/143,2005,Direitos humanos,yes,yes,1,igual
+4618,A/RES/60/45,2005,Desenvolvimento econômico,yes,yes,1,igual
+4619,A/RES/60/46,2005,Armas/desarmamento/nuclear; Desenvolvimento econômico,yes,yes,1,igual
+4620,A/RES/60/48,2005,Outros / sem codificação,yes,yes,1,igual
+4621,A/RES/60/51,2005,Armas/desarmamento/nuclear,abstain,yes,0.5,parcial
+4622,A/RES/60/53,2005,Armas/desarmamento/nuclear,abstain,yes,0.5,parcial
+4623,A/RES/60/54,2005,Armas/desarmamento/nuclear,yes,yes,1,igual
+4625,A/RES/60/58,2005,Armas/desarmamento/nuclear,yes,yes,1,igual
+4626,A/RES/60/59,2005,Armas/desarmamento/nuclear,yes,yes,1,igual
+4627,A/RES/60/60,2005,Armas/desarmamento/nuclear,yes,yes,1,igual
+4628,A/RES/60/61,2005,Armas/desarmamento/nuclear; Desenvolvimento econômico,yes,yes,1,igual
+4629,A/RES/60/62,2005,Armas/desarmamento/nuclear,yes,yes,1,igual
+4630,A/RES/60/65,2005,Armas/desarmamento/nuclear; Descolonização,yes,abstain,0.5,parcial
+4631,A/RES/60/66,2005,Outros / sem codificação,yes,yes,1,igual
+4632,A/RES/60/68,2005,Armas/desarmamento/nuclear; Desenvolvimento econômico,yes,yes,1,igual
+4633,A/RES/60/70,2005,Armas/desarmamento/nuclear,yes,yes,1,igual
+4634,A/RES/60/72,2005,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+4635,A/RES/60/75,2005,Armas/desarmamento/nuclear,yes,yes,1,igual
+4636,A/RES/60/76,2005,Armas/desarmamento/nuclear,yes,yes,1,igual
+4637,A/RES/60/56,2005,Armas/desarmamento/nuclear,yes,yes,1,igual
+4638,A/RES/60/80,2005,Armas/desarmamento/nuclear,yes,yes,1,igual
+4639,A/RES/60/88,2005,Armas/desarmamento/nuclear,yes,yes,1,igual
+4640,A/RES/60/92,2005,Armas/desarmamento/nuclear,yes,yes,1,igual
+4641,A/RES/60/95,2005,Armas/desarmamento/nuclear,yes,yes,1,igual
+4642,A/RES/60/100,2005,Palestina/Oriente Médio,yes,yes,1,igual
+4643,A/RES/60/101,2005,Outros / sem codificação,yes,yes,1,igual
+4644,A/RES/60/103,2005,Palestina/Oriente Médio,yes,yes,1,igual
+4645,A/RES/60/104,2005,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4646,A/RES/60/105,2005,Descolonização; Palestina/Oriente Médio,yes,yes,1,igual
+4647,A/RES/60/106,2005,Palestina/Oriente Médio,yes,yes,1,igual
+4648,A/RES/60/107,2005,Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4649,A/RES/60/108,2005,Outros / sem codificação,yes,yes,1,igual
+4650,A/RES/60/110,2005,Descolonização,yes,yes,1,igual
+4651,A/RES/60/111,2005,Descolonização; Desenvolvimento econômico,yes,yes,1,igual
+4652,A/RES/60/112,2005,Descolonização,yes,yes,1,igual
+4653,A/RES/60/118,2005,Descolonização,yes,yes,1,igual
+4654,A/RES/60/119,2005,Descolonização,yes,yes,1,igual
+4655,A/RES/60/120,2005,Descolonização,yes,yes,1,igual
+4656,A/RES/60/79,2005,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+4657,A/RES/60/102,2005,Palestina/Oriente Médio,yes,yes,1,igual
+4658,A/RES/60/41,2005,Palestina/Oriente Médio,yes,yes,1,igual
+4659,A/RES/60/39,2005,Palestina/Oriente Médio,yes,yes,1,igual
+4660,A/RES/60/38,2005,Palestina/Oriente Médio,yes,yes,1,igual
+4661,A/RES/60/37,2005,Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4662,A/RES/60/36,2005,Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4663,A/RES/60/30,2005,Outros / sem codificação,yes,yes,1,igual
+4664,A/RES/60/12,2005,Desenvolvimento econômico,yes,yes,1,igual
+4665,A/RES/60/6,2005,Outros / sem codificação,yes,yes,1,igual
+5757,A/RES/60/56,2005,Armas/desarmamento/nuclear,yes,yes,1,igual
+5758,A/RES/60/58,2005,Armas/desarmamento/nuclear,yes,yes,1,igual
+5759,A/RES/60/58,2005,Outros / sem codificação,yes,yes,1,igual
+5761,A/RES/60/76,2005,Armas/desarmamento/nuclear,yes,yes,1,igual
+5762,A/RES/60/92,2005,Armas/desarmamento/nuclear,yes,yes,1,igual
+5763,A/RES/60/112,2005,Outros / sem codificação,yes,yes,1,igual
+5764,A/RES/60/162,2005,Direitos humanos,yes,yes,1,igual
+5765,A/RES/60/170,2005,Direitos humanos,abstain,abstain,1,igual
+5766,A/RES/60/170,2005,Outros / sem codificação,abstain,abstain,1,igual
+5767,A/RES/60/197,2005,Outros / sem codificação,yes,yes,1,igual
+5768,A/RES/60/200,2005,Outros / sem codificação,yes,yes,1,igual
+5769,A/RES/60/200,2005,Outros / sem codificação,yes,abstain,0.5,parcial
+5770,A/RES/60/201,2005,Outros / sem codificação,yes,yes,1,igual
+5771,A/RES/60/226,2005,Outros / sem codificação,yes,yes,1,igual
+5772,A/RES/60/226,2005,Outros / sem codificação,yes,abstain,0.5,parcial
+5773,A/RES/60/226,2005,Outros / sem codificação,yes,yes,1,igual
+5774,A/RES/60/226,2005,Outros / sem codificação,yes,abstain,0.5,parcial
+5775,A/RES/60/228,2005,Outros / sem codificação,yes,yes,1,igual
+5776,A/RES/60/230,2005,Outros / sem codificação,yes,yes,1,igual
+5777,A/RES/60/230,2005,Outros / sem codificação,yes,abstain,0.5,parcial
+5778,A/RES/60/231,2005,Outros / sem codificação,yes,yes,1,igual
+5779,A/RES/60/231,2005,Outros / sem codificação,yes,no,0,oposto
+5780,A/RES/60/231,2005,Outros / sem codificação,yes,abstain,0.5,parcial
+5781,A/RES/60/231,2005,Outros / sem codificação,yes,yes,1,igual
+4592,A/RES/60/260,2006,Outros / sem codificação,yes,yes,1,igual
+4593,A/RES/60/251,2006,Direitos humanos,yes,yes,1,igual
+4666,A/RES/60/278,2006,Palestina/Oriente Médio,yes,yes,1,igual
+4667,A/RES/61/8,2006,Outros / sem codificação,yes,yes,1,igual
+4668,A/RES/61/11,2006,Desenvolvimento econômico,yes,yes,1,igual
+4669,A/RES/61/27,2006,Outros / sem codificação,yes,yes,1,igual
+4670,A/RES/61/25,2006,Palestina/Oriente Médio,yes,yes,1,igual
+4671,A/RES/61/26,2006,Palestina/Oriente Médio,yes,yes,1,igual
+4672,A/RES/61/24,2006,Palestina/Oriente Médio,yes,yes,1,igual
+4673,A/RES/61/23,2006,Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4674,A/RES/61/22,2006,Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4675,A/RES/61/47,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+4676,A/RES/61/89,2006,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+4677,A/RES/61/97,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+4678,A/RES/61/77,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+4679,A/RES/61/78,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+4680,A/RES/61/88,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+4681,A/RES/61/85,2006,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+4682,A/RES/61/84,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+4683,A/RES/61/82,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+4684,A/RES/61/83,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+4685,A/RES/61/75,2006,Outros / sem codificação,yes,yes,1,igual
+4686,A/RES/61/72,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+4687,A/RES/61/74,2006,Armas/desarmamento/nuclear; Descolonização,yes,abstain,0.5,parcial
+4688,A/RES/61/67,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+4689,A/RES/61/66,2006,Armas/desarmamento/nuclear; Desenvolvimento econômico,yes,yes,1,igual
+4690,A/RES/61/70,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+4691,A/RES/61/65,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+4692,A/RES/61/64,2006,Armas/desarmamento/nuclear; Desenvolvimento econômico,yes,yes,1,igual
+4693,A/RES/61/63,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+4694,A/RES/61/62,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+4695,A/RES/61/60,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+4696,A/RES/61/59,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+4697,A/RES/61/58,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+4698,A/RES/61/57,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+4699,A/RES/61/55,2006,Armas/desarmamento/nuclear,abstain,yes,0.5,parcial
+4700,A/RES/61/54,2006,Desenvolvimento econômico,yes,yes,1,igual
+4701,A/RES/61/69,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+4702,A/RES/61/76,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+4703,A/RES/61/104,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+4704,A/RES/61/103,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+4705,A/RES/61/116,2006,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4706,A/RES/61/128B,2006,Descolonização,yes,yes,1,igual
+4707,A/RES/61/128A,2006,Descolonização,yes,yes,1,igual
+4708,A/RES/61/114,2006,Palestina/Oriente Médio,yes,yes,1,igual
+4709,A/RES/61/115,2006,Palestina/Oriente Médio,yes,yes,1,igual
+4710,A/RES/61/135,2006,Palestina/Oriente Médio,yes,yes,1,igual
+4711,A/RES/61/130,2006,Descolonização,yes,yes,1,igual
+4712,A/RES/61/129,2006,Descolonização,yes,yes,1,igual
+4713,A/RES/61/128AB,2006,Descolonização,yes,yes,1,igual
+4715,A/RES/61/112,2006,Palestina/Oriente Médio,yes,yes,1,igual
+4716,A/RES/61/113,2006,Outros / sem codificação,yes,yes,1,igual
+4717,A/RES/61/117,2006,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4718,A/RES/61/118,2006,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4719,A/RES/61/119,2006,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4720,A/RES/61/120,2006,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4721,A/RES/61/122,2006,Descolonização,yes,yes,1,igual
+4722,A/RES/61/123,2006,Descolonização; Desenvolvimento econômico,yes,yes,1,igual
+4723,A/RES/61/176,2006,Direitos humanos,abstain,no,0.5,parcial
+4724,A/RES/61/175,2006,Direitos humanos,abstain,no,0.5,parcial
+4725,A/RES/61/174,2006,Direitos humanos,yes,no,0,oposto
+4726,A/RES/61/173,2006,Outros / sem codificação,yes,abstain,0.5,parcial
+4727,A/RES/61/170,2006,Direitos humanos,yes,yes,1,igual
+4728,A/RES/61/169,2006,Desenvolvimento econômico; Direitos humanos,yes,yes,1,igual
+4729,A/RES/61/166,2006,Direitos humanos,abstain,yes,0.5,parcial
+4730,A/RES/61/164,2006,Outros / sem codificação,yes,yes,1,igual
+4731,A/RES/61/163,2006,Direitos humanos,yes,yes,1,igual
+4732,A/RES/61/162,2006,Direitos humanos,yes,yes,1,igual
+4733,A/RES/61/160,2006,Outros / sem codificação,yes,yes,1,igual
+4734,A/RES/61/159,2006,Direitos humanos,abstain,yes,0.5,parcial
+4735,A/RES/61/156,2006,Direitos humanos,abstain,yes,0.5,parcial
+4736,A/RES/61/154,2006,Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4737,A/RES/61/152,2006,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4738,A/RES/61/151,2006,Descolonização; Direitos humanos,yes,yes,1,igual
+4739,A/RES/61/149,2006,Direitos humanos,yes,yes,1,igual
+4740,A/RES/61/147,2006,Direitos humanos,yes,yes,1,igual
+4741,A/RES/61/146,2006,Direitos humanos,yes,yes,1,igual
+4742,A/RES/61/222,2006,Outros / sem codificação,yes,yes,1,igual
+4743,A/RES/61/201,2006,Outros / sem codificação,yes,yes,1,igual
+4744,A/RES/61/194,2006,Outros / sem codificação,yes,yes,1,igual
+4745,A/RES/61/186,2006,Desenvolvimento econômico,yes,yes,1,igual
+4746,A/RES/61/184,2006,Palestina/Oriente Médio,yes,yes,1,igual
+4747,A/RES/61/178,2006,Direitos humanos,abstain,abstain,1,igual
+4748,A/RES/61/250A,2006,Outros / sem codificação,yes,yes,1,igual
+4749,A/RES/61/232,2006,Direitos humanos,yes,no,0,oposto
+5782,A/RES/60/278,2006,Palestina/Oriente Médio,yes,yes,1,igual
+5783,A/RES/61/11,2006,Outros / sem codificação,yes,yes,1,igual
+5784,A/RES/61/69,2006,Armas/desarmamento/nuclear; Desenvolvimento econômico,yes,yes,1,igual
+5785,A/RES/61/69,2006,Outros / sem codificação,yes,yes,1,igual
+5786,A/RES/61/72,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+5787,A/RES/61/77,2006,Outros / sem codificação,yes,yes,1,igual
+5788,A/RES/61/77,2006,Outros / sem codificação,yes,yes,1,igual
+5789,A/RES/61/77,2006,Outros / sem codificação,yes,yes,1,igual
+5790,A/RES/61/77,2006,Outros / sem codificação,yes,yes,1,igual
+5791,A/RES/61/77,2006,Outros / sem codificação,yes,yes,1,igual
+5792,A/RES/61/77,2006,Outros / sem codificação,yes,yes,1,igual
+5793,A/RES/61/77,2006,Outros / sem codificação,yes,yes,1,igual
+5794,A/RES/61/83,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+5795,A/RES/61/89,2006,Armas/desarmamento/nuclear; Desenvolvimento econômico,yes,abstain,0.5,parcial
+5796,A/RES/61/89,2006,Outros / sem codificação,yes,abstain,0.5,parcial
+5797,A/RES/61/103,2006,Armas/desarmamento/nuclear,yes,yes,1,igual
+5798,A/RES/61/156,2006,Direitos humanos,abstain,yes,0.5,parcial
+5799,A/RES/61/173,2006,Direitos humanos,yes,no,0,oposto
+5800,A/RES/61/173,2006,Outros / sem codificação,yes,no,0,oposto
+5801,A/RES/61/175,2006,Outros / sem codificação,abstain,yes,0.5,parcial
+5802,A/RES/61/176,2006,Outros / sem codificação,abstain,yes,0.5,parcial
+5804,A/RES/61/232,2006,Outros / sem codificação,yes,no,0,oposto
+5805,A/RES/61/250,2006,Palestina/Oriente Médio,yes,yes,1,igual
+4751,A/RES/61/250B,2007,Palestina/Oriente Médio,yes,yes,1,igual
+4752,A/RES/61/250C,2007,Palestina/Oriente Médio,yes,yes,1,igual
+4753,A/RES/61/295,2007,Direitos humanos,yes,yes,1,igual
+4754,A/RES/62/3,2007,Desenvolvimento econômico,yes,yes,1,igual
+4755,A/RES/62/19,2007,Armas/desarmamento/nuclear,yes,yes,1,igual
+4756,A/RES/62/32,2007,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+4757,A/RES/62/20,2007,Armas/desarmamento/nuclear,yes,yes,1,igual
+4758,A/RES/62/41,2007,Armas/desarmamento/nuclear,yes,yes,1,igual
+4759,A/RES/62/39,2007,Armas/desarmamento/nuclear,yes,yes,1,igual
+4760,A/RES/62/44,2007,Armas/desarmamento/nuclear,yes,yes,1,igual
+4761,A/RES/62/42,2007,Armas/desarmamento/nuclear,yes,yes,1,igual
+4762,A/RES/62/47,2007,Armas/desarmamento/nuclear; Desenvolvimento econômico,yes,yes,1,igual
+4763,A/RES/62/28,2007,Armas/desarmamento/nuclear,yes,yes,1,igual
+4764,A/RES/62/43,2007,Outros / sem codificação,yes,yes,1,igual
+4765,A/RES/62/24,2007,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+4766,A/RES/62/25,2007,Armas/desarmamento/nuclear,yes,yes,1,igual
+4767,A/RES/62/14,2007,Outros / sem codificação,yes,yes,1,igual
+4768,A/RES/62/35,2007,Armas/desarmamento/nuclear,yes,yes,1,igual
+4769,A/RES/62/27,2007,Armas/desarmamento/nuclear,yes,yes,1,igual
+4770,A/RES/62/17,2007,Desenvolvimento econômico,yes,yes,1,igual
+4772,A/RES/62/31,2007,Armas/desarmamento/nuclear,yes,yes,1,igual
+4773,A/RES/62/36,2007,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+4774,A/RES/62/48,2007,Armas/desarmamento/nuclear; Desenvolvimento econômico,yes,yes,1,igual
+4775,A/RES/62/29,2007,Armas/desarmamento/nuclear,yes,yes,1,igual
+4776,A/RES/62/59,2007,Armas/desarmamento/nuclear,yes,yes,1,igual
+4777,A/RES/62/51,2007,Armas/desarmamento/nuclear,yes,yes,1,igual
+4778,A/RES/62/56,2007,Armas/desarmamento/nuclear,yes,yes,1,igual
+4779,A/RES/62/84,2007,Palestina/Oriente Médio,yes,yes,1,igual
+4780,A/RES/62/80,2007,Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4781,A/RES/62/81,2007,Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4782,A/RES/62/83,2007,Palestina/Oriente Médio,yes,yes,1,igual
+4783,A/RES/62/85,2007,Outros / sem codificação,yes,yes,1,igual
+4784,A/RES/62/82,2007,Palestina/Oriente Médio,yes,yes,1,igual
+4785,A/RES/62/119,2007,Descolonização,yes,yes,1,igual
+4786,A/RES/62/120,2007,Descolonização,yes,yes,1,igual
+4787,A/RES/62/113,2007,Descolonização; Desenvolvimento econômico,yes,yes,1,igual
+4788,A/RES/62/112,2007,Descolonização,yes,yes,1,igual
+4789,A/RES/62/106,2007,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4790,A/RES/62/107,2007,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4791,A/RES/62/103,2007,Palestina/Oriente Médio,yes,yes,1,igual
+4792,A/RES/62/105,2007,Palestina/Oriente Médio,yes,yes,1,igual
+4793,A/RES/62/114,2007,Descolonização,yes,yes,1,igual
+4794,A/RES/62/102,2007,Palestina/Oriente Médio,yes,yes,1,igual
+4795,A/RES/62/108,2007,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4796,A/RES/62/110,2007,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4797,A/RES/62/104,2007,Palestina/Oriente Médio,yes,yes,1,igual
+4798,A/RES/62/142,2007,Direitos humanos,yes,yes,1,igual
+4799,A/RES/62/143,2007,Direitos humanos,yes,yes,1,igual
+4800,A/RES/62/162,2007,Direitos humanos,yes,yes,1,igual
+4801,A/RES/62/149,2007,Direitos humanos,yes,no,0,oposto
+4802,A/RES/62/163,2007,Direitos humanos,yes,yes,1,igual
+4803,A/RES/62/154,2007,Direitos humanos,abstain,yes,0.5,parcial
+4804,A/RES/62/164,2007,Direitos humanos,yes,yes,1,igual
+4805,A/RES/62/151,2007,Direitos humanos,abstain,yes,0.5,parcial
+4806,A/RES/62/150,2007,Direitos humanos,yes,yes,1,igual
+4807,A/RES/62/169,2007,Direitos humanos,abstain,no,0.5,parcial
+4808,A/RES/62/146,2007,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4809,A/RES/62/145,2007,Descolonização; Direitos humanos,yes,yes,1,igual
+4810,A/RES/62/161,2007,Desenvolvimento econômico; Direitos humanos,yes,yes,1,igual
+4811,A/RES/62/166,2007,Direitos humanos,abstain,yes,0.5,parcial
+4812,A/RES/62/141,2007,Direitos humanos,yes,yes,1,igual
+4813,A/RES/62/167,2007,Direitos humanos,yes,no,0,oposto
+4814,A/RES/62/168,2007,Direitos humanos,abstain,no,0.5,parcial
+4815,A/RES/62/184,2007,Desenvolvimento econômico,yes,yes,1,igual
+4816,A/RES/62/183,2007,Desenvolvimento econômico,yes,yes,1,igual
+4817,A/RES/62/181,2007,Palestina/Oriente Médio,yes,yes,1,igual
+4818,A/RES/62/190,2007,Desenvolvimento econômico,yes,yes,1,igual
+4819,A/RES/62/188,2007,Desenvolvimento econômico,yes,yes,1,igual
+4820,A/RES/62/222,2007,Direitos humanos,yes,no,0,oposto
+4821,A/RES/62/241,2007,Desenvolvimento econômico,yes,yes,1,igual
+4822,A/RES/62/236,2007,Desenvolvimento econômico,yes,yes,1,igual
+4823,A/RES/62/218,2007,Outros / sem codificação,yes,yes,1,igual
+4824,A/RES/62/215,2007,Outros / sem codificação,yes,yes,1,igual
+4825,A/RES/62/220,2007,Direitos humanos,yes,yes,1,igual
+4826,A/RES/62/216,2007,Armas/desarmamento/nuclear,yes,yes,1,igual
+4827,A/RES/62/219,2007,Direitos humanos,yes,yes,1,igual
+5806,A/RES/61/250B,2007,Palestina/Oriente Médio,yes,yes,1,igual
+5807,A/RES/61/250C,2007,Palestina/Oriente Médio,yes,yes,1,igual
+5808,A/RES/62/25,2007,Armas/desarmamento/nuclear,yes,yes,1,igual
+5809,A/RES/62/35,2007,Armas/desarmamento/nuclear,yes,yes,1,igual
+5810,A/RES/62/35,2007,Outros / sem codificação,yes,yes,1,igual
+5811,A/RES/62/56,2007,Armas/desarmamento/nuclear,yes,yes,1,igual
+5812,A/RES/62/86,2007,Outros / sem codificação,yes,yes,1,igual
+5813,A/RES/62/120,2007,Outros / sem codificação,yes,yes,1,igual
+5814,A/RES/62/150,2007,Outros / sem codificação,yes,yes,1,igual
+5815,NA,2007,Outros / sem codificação,abstain,yes,0.5,parcial
+5816,NA,2007,Outros / sem codificação,abstain,yes,0.5,parcial
+5817,A/RES/62/168,2007,Outros / sem codificação,abstain,no,0.5,parcial
+5818,A/RES/62/193,2007,Outros / sem codificação,yes,yes,1,igual
+5819,A/RES/62/217,2007,Outros / sem codificação,yes,yes,1,igual
+5820,A/RES/62/218,2007,Outros / sem codificação,yes,abstain,0.5,parcial
+5821,A/RES/62/218,2007,Outros / sem codificação,yes,yes,1,igual
+5822,A/RES/62/238,2007,Outros / sem codificação,yes,yes,1,igual
+4828,A/RES/62/243,2008,Descolonização,abstain,abstain,1,igual
+4830,A/RES/62/270,2008,Desenvolvimento econômico,yes,yes,1,igual
+4831,A/RES/63/3,2008,Outros / sem codificação,yes,yes,1,igual
+4833,A/RES/63/7,2008,Desenvolvimento econômico,yes,yes,1,igual
+4834,A/RES/63/13,2008,Armas/desarmamento/nuclear,yes,yes,1,igual
+4835,A/RES/63/31,2008,Outros / sem codificação,yes,yes,1,igual
+4836,A/RES/63/30,2008,Palestina/Oriente Médio,yes,yes,1,igual
+4837,A/RES/63/29,2008,Palestina/Oriente Médio,yes,yes,1,igual
+4838,A/RES/63/28,2008,Palestina/Oriente Médio,yes,yes,1,igual
+4839,A/RES/63/27,2008,Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4840,A/RES/63/26,2008,Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4841,A/RES/63/69,2008,Armas/desarmamento/nuclear,yes,yes,1,igual
+4842,A/RES/63/72,2008,Armas/desarmamento/nuclear; Desenvolvimento econômico,yes,yes,1,igual
+4843,A/RES/63/73,2008,Armas/desarmamento/nuclear; Descolonização,yes,abstain,0.5,parcial
+4844,A/RES/63/53,2008,Armas/desarmamento/nuclear,yes,yes,1,igual
+4845,A/RES/63/84,2008,Armas/desarmamento/nuclear,yes,yes,1,igual
+4846,A/RES/63/87,2008,Armas/desarmamento/nuclear,yes,yes,1,igual
+4847,A/RES/63/68,2008,Outros / sem codificação,yes,yes,1,igual
+4848,A/RES/63/65,2008,Armas/desarmamento/nuclear,yes,yes,1,igual
+4849,A/RES/63/64,2008,Armas/desarmamento/nuclear,yes,yes,1,igual
+4850,A/RES/63/50,2008,Armas/desarmamento/nuclear,yes,yes,1,igual
+4851,A/RES/63/63,2008,Armas/desarmamento/nuclear,yes,yes,1,igual
+4852,A/RES/63/62,2008,Armas/desarmamento/nuclear,yes,yes,1,igual
+4854,A/RES/63/58,2008,Armas/desarmamento/nuclear,yes,yes,1,igual
+4856,A/RES/63/49,2008,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+4857,A/RES/63/46,2008,Armas/desarmamento/nuclear,yes,yes,1,igual
+4858,A/RES/63/47,2008,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+4859,A/RES/63/44,2008,Armas/desarmamento/nuclear,yes,yes,1,igual
+4860,A/RES/63/42,2008,Armas/desarmamento/nuclear,yes,yes,1,igual
+4861,A/RES/63/41,2008,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+4862,A/RES/63/40,2008,Armas/desarmamento/nuclear,yes,yes,1,igual
+4863,A/RES/63/39,2008,Armas/desarmamento/nuclear,yes,yes,1,igual
+4864,A/RES/63/37,2008,Desenvolvimento econômico,yes,yes,1,igual
+4865,A/RES/63/36,2008,Armas/desarmamento/nuclear; Desenvolvimento econômico,yes,yes,1,igual
+4866,A/RES/63/75,2008,Armas/desarmamento/nuclear,yes,yes,1,igual
+4867,A/RES/63/91,2008,Palestina/Oriente Médio,yes,yes,1,igual
+4868,A/RES/63/101,2008,Descolonização,yes,yes,1,igual
+4869,A/RES/63/110,2008,Descolonização,yes,yes,1,igual
+4870,A/RES/63/109,2008,Descolonização,yes,yes,1,igual
+4871,A/RES/63/103,2008,Descolonização,yes,yes,1,igual
+4872,A/RES/63/102,2008,Descolonização; Desenvolvimento econômico,yes,yes,1,igual
+4873,A/RES/63/111,2008,Outros / sem codificação,yes,yes,1,igual
+4874,A/RES/63/99,2008,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4875,A/RES/63/98,2008,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4876,A/RES/63/92,2008,Palestina/Oriente Médio,yes,yes,1,igual
+4877,A/RES/63/94,2008,Palestina/Oriente Médio,yes,yes,1,igual
+4878,A/RES/63/95,2008,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4879,A/RES/63/93,2008,Palestina/Oriente Médio,yes,yes,1,igual
+4880,A/RES/63/96,2008,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4881,A/RES/63/97,2008,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4882,A/RES/63/190,2008,Direitos humanos,abstain,no,0.5,parcial
+4883,A/RES/63/189,2008,Direitos humanos,yes,yes,1,igual
+4884,A/RES/63/188,2008,Direitos humanos,yes,yes,1,igual
+4885,A/RES/63/187,2008,Direitos humanos,yes,yes,1,igual
+4886,A/RES/63/182,2008,Direitos humanos,yes,abstain,0.5,parcial
+4887,A/RES/63/179,2008,Direitos humanos,yes,yes,1,igual
+4888,A/RES/63/178,2008,Desenvolvimento econômico; Direitos humanos,yes,yes,1,igual
+4889,A/RES/63/191,2008,Direitos humanos,abstain,no,0.5,parcial
+4890,A/RES/63/168,2008,Direitos humanos,yes,no,0,oposto
+4891,A/RES/63/167,2008,Direitos humanos,abstain,yes,0.5,parcial
+4892,A/RES/63/165,2008,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4893,A/RES/63/164,2008,Descolonização; Direitos humanos,yes,yes,1,igual
+4894,A/RES/63/162,2008,Direitos humanos,yes,yes,1,igual
+4895,A/RES/63/160,2008,Direitos humanos,abstain,yes,0.5,parcial
+4896,A/RES/63/176,2008,Direitos humanos,abstain,yes,0.5,parcial
+4897,A/RES/63/171,2008,Direitos humanos,abstain,yes,0.5,parcial
+4898,A/RES/63/201,2008,Descolonização; Palestina/Oriente Médio,yes,yes,1,igual
+4899,A/RES/63/211,2008,Desenvolvimento econômico,yes,yes,1,igual
+4900,A/RES/63/224,2008,Desenvolvimento econômico,yes,yes,1,igual
+4901,A/RES/63/240,2008,Armas/desarmamento/nuclear; Desenvolvimento econômico,yes,abstain,0.5,parcial
+4902,A/RES/63/245,2008,Direitos humanos,yes,no,0,oposto
+4903,A/RES/63/242,2008,Direitos humanos,yes,yes,1,igual
+4904,A/RES/63/241,2008,Direitos humanos,yes,yes,1,igual
+5823,A/RES/62/265,2008,Palestina/Oriente Médio,yes,yes,1,igual
+5824,A/RES/63/58,2008,Armas/desarmamento/nuclear,yes,yes,1,igual
+5825,A/RES/63/62,2008,Armas/desarmamento/nuclear,yes,yes,1,igual
+5826,A/RES/63/65,2008,Armas/desarmamento/nuclear,yes,yes,1,igual
+5827,A/RES/63/69,2008,Outros / sem codificação,yes,yes,1,igual
+5828,A/RES/63/69,2008,Outros / sem codificação,yes,yes,1,igual
+5829,A/RES/63/69,2008,Outros / sem codificação,yes,yes,1,igual
+5830,A/RES/63/69,2008,Outros / sem codificação,yes,yes,1,igual
+5831,A/RES/63/69,2008,Outros / sem codificação,yes,yes,1,igual
+5832,A/RES/63/69,2008,Outros / sem codificação,yes,yes,1,igual
+5833,A/RES/63/72,2008,Armas/desarmamento/nuclear; Desenvolvimento econômico,yes,yes,1,igual
+5834,A/RES/63/72,2008,Outros / sem codificação,yes,yes,1,igual
+5835,A/RES/63/84,2008,Armas/desarmamento/nuclear,yes,yes,1,igual
+5836,A/RES/63/182,2008,Outros / sem codificação,no,yes,0,oposto
+5837,A/RES/63/182,2008,Outros / sem codificação,no,yes,0,oposto
+5838,A/RES/63/191,2008,Outros / sem codificação,abstain,yes,0.5,parcial
+5839,A/RES/63/191,2008,Outros / sem codificação,abstain,yes,0.5,parcial
+5840,A/RES/63/191,2008,Outros / sem codificação,abstain,yes,0.5,parcial
+5841,A/RES/63/191,2008,Outros / sem codificação,abstain,no,0.5,parcial
+5842,A/RES/63/240,2008,Armas/desarmamento/nuclear; Desenvolvimento econômico,yes,abstain,0.5,parcial
+5843,A/RES/63/240,2008,Outros / sem codificação,yes,abstain,0.5,parcial
+5844,A/RES/63/240,2008,Outros / sem codificação,yes,abstain,0.5,parcial
+5845,A/RES/63/263,2008,Outros / sem codificação,no,no,1,igual
+4979,A/RES/64/6,2009,Desenvolvimento econômico,yes,yes,1,igual
+4980,A/RES/64/10,2009,Direitos humanos,yes,yes,1,igual
+4981,A/RES/64/16,2009,Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4982,A/RES/64/17,2009,Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+4983,A/RES/64/18,2009,Palestina/Oriente Médio,yes,yes,1,igual
+4984,A/RES/64/19,2009,Palestina/Oriente Médio,yes,yes,1,igual
+4985,A/RES/64/20,2009,Palestina/Oriente Médio,yes,yes,1,igual
+4986,A/RES/64/21,2009,Outros / sem codificação,yes,yes,1,igual
+4987,A/RES/64/23,2009,Outros / sem codificação,yes,yes,1,igual
+4988,A/RES/64/28,2009,Armas/desarmamento/nuclear,yes,yes,1,igual
+4989,A/RES/64/31,2009,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+4990,A/RES/64/34,2009,Armas/desarmamento/nuclear,yes,yes,1,igual
+4991,A/RES/64/37,2009,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+4992,A/RES/64/39,2009,Armas/desarmamento/nuclear,yes,yes,1,igual
+4993,A/RES/64/42,2009,Armas/desarmamento/nuclear,yes,yes,1,igual
+4994,A/RES/64/44,2009,Armas/desarmamento/nuclear,yes,yes,1,igual
+4995,A/RES/64/47,2009,Armas/desarmamento/nuclear; Descolonização,yes,abstain,0.5,parcial
+4996,A/RES/64/48,2009,Armas/desarmamento/nuclear; Desenvolvimento econômico,yes,abstain,0.5,parcial
+4997,A/RES/64/50,2009,Armas/desarmamento/nuclear; Desenvolvimento econômico,yes,yes,1,igual
+4998,A/RES/64/52,2009,Armas/desarmamento/nuclear,yes,yes,1,igual
+4999,A/RES/64/53,2009,Armas/desarmamento/nuclear,yes,yes,1,igual
+5000,A/RES/64/54,2009,Armas/desarmamento/nuclear,yes,yes,1,igual
+5001,A/RES/64/55,2009,Armas/desarmamento/nuclear,yes,yes,1,igual
+5002,A/RES/64/56,2009,Armas/desarmamento/nuclear,yes,yes,1,igual
+5003,A/RES/64/57,2009,Armas/desarmamento/nuclear,yes,yes,1,igual
+5004,A/RES/64/59,2009,Armas/desarmamento/nuclear,yes,yes,1,igual
+5005,A/RES/64/66,2009,Armas/desarmamento/nuclear,yes,yes,1,igual
+5006,A/RES/64/69,2009,Armas/desarmamento/nuclear,yes,yes,1,igual
+5007,A/RES/64/27,2009,Armas/desarmamento/nuclear,yes,yes,1,igual
+5008,A/RES/64/71,2009,Outros / sem codificação,yes,yes,1,igual
+5009,A/RES/64/89,2009,Palestina/Oriente Médio,yes,yes,1,igual
+5010,A/RES/64/90,2009,Palestina/Oriente Médio,yes,yes,1,igual
+5011,A/RES/64/91,2009,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5012,A/RES/64/93,2009,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5013,A/RES/64/94,2009,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5014,A/RES/64/98,2009,Descolonização; Desenvolvimento econômico,yes,yes,1,igual
+5015,A/RES/64/99,2009,Descolonização,yes,yes,1,igual
+5016,A/RES/64/105,2009,Descolonização,yes,yes,1,igual
+5017,A/RES/64/88,2009,Outros / sem codificação,yes,yes,1,igual
+5018,A/RES/64/106,2009,Descolonização,yes,yes,1,igual
+5019,A/RES/64/87,2009,Palestina/Oriente Médio,yes,yes,1,igual
+5020,A/RES/64/92,2009,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5021,A/RES/64/95,2009,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5022,A/RES/64/97,2009,Descolonização,yes,yes,1,igual
+5023,A/RES/64/147,2009,Direitos humanos,yes,yes,1,igual
+5024,A/RES/64/160,2009,Direitos humanos,abstain,yes,0.5,parcial
+5025,A/RES/64/170,2009,Direitos humanos,yes,yes,1,igual
+5026,A/RES/64/172,2009,Desenvolvimento econômico; Direitos humanos,yes,yes,1,igual
+5027,A/RES/64/173,2009,Direitos humanos,yes,yes,1,igual
+5028,A/RES/64/174,2009,Direitos humanos,yes,yes,1,igual
+5029,A/RES/64/175,2009,Direitos humanos,abstain,no,0.5,parcial
+5030,A/RES/64/176,2009,Direitos humanos,abstain,no,0.5,parcial
+5031,A/RES/64/148,2009,Direitos humanos,yes,yes,1,igual
+5032,A/RES/64/150,2009,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5033,A/RES/64/151,2009,Descolonização; Direitos humanos,yes,yes,1,igual
+5034,A/RES/64/152,2009,Direitos humanos,yes,yes,1,igual
+5035,A/RES/64/156,2009,Direitos humanos,abstain,yes,0.5,parcial
+5036,A/RES/64/157,2009,Direitos humanos,yes,yes,1,igual
+5037,A/RES/64/195,2009,Desenvolvimento econômico,yes,yes,1,igual
+5038,A/RES/64/185,2009,Descolonização; Palestina/Oriente Médio,yes,yes,1,igual
+5039,A/RES/64/188,2009,Desenvolvimento econômico,yes,yes,1,igual
+5040,A/RES/64/209,2009,Desenvolvimento econômico,yes,yes,1,igual
+5041,A/RES/64/197,2009,Desenvolvimento econômico,yes,yes,1,igual
+5042,A/RES/64/189,2009,Desenvolvimento econômico,yes,yes,1,igual
+5043,A/RES/64/238,2009,Direitos humanos,abstain,no,0.5,parcial
+5846,A/RES/63/298,2009,Palestina/Oriente Médio,yes,yes,1,igual
+5847,A/RES/63/307,2009,Outros / sem codificação,abstain,yes,0.5,parcial
+5848,A/RES/64/246,2009,Armas/desarmamento/nuclear; Desenvolvimento econômico,yes,yes,1,igual
+5850,A/RES/64/44,2009,Armas/desarmamento/nuclear,yes,yes,1,igual
+5851,A/RES/64/50,2009,Armas/desarmamento/nuclear; Desenvolvimento econômico,yes,yes,1,igual
+5852,A/RES/64/50,2009,Outros / sem codificação,yes,yes,1,igual
+5853,A/RES/64/54,2009,Outros / sem codificação,yes,yes,1,igual
+5854,A/RES/64/54,2009,Outros / sem codificação,yes,yes,1,igual
+5855,A/RES/64/54,2009,Outros / sem codificação,yes,yes,1,igual
+5856,A/RES/64/54,2009,Outros / sem codificação,yes,yes,1,igual
+5857,A/RES/64/54,2009,Outros / sem codificação,yes,yes,1,igual
+5858,A/RES/64/54,2009,Outros / sem codificação,yes,yes,1,igual
+5859,A/RES/64/57,2009,Armas/desarmamento/nuclear,yes,yes,1,igual
+5860,A/RES/64/66,2009,Armas/desarmamento/nuclear,yes,yes,1,igual
+5861,A/RES/64/69,2009,Armas/desarmamento/nuclear,yes,yes,1,igual
+5862,A/RES/64/109,2009,Palestina/Oriente Médio,yes,yes,1,igual
+5863,A/RES/64/152,2009,Outros / sem codificação,abstain,yes,0.5,parcial
+5864,A/RES/64/245,2009,Outros / sem codificação,yes,yes,1,igual
+5044,A/RES/64/254,2010,Direitos humanos,yes,yes,1,igual
+5046,A/RES/64/292,2010,Direitos humanos,yes,yes,1,igual
+5047,A/RES/64/296,2010,Desenvolvimento econômico,abstain,abstain,1,igual
+5049,A/RES/65/6,2010,Desenvolvimento econômico,yes,yes,1,igual
+5050,A/RES/65/16,2010,Palestina/Oriente Médio,yes,yes,1,igual
+5051,A/RES/65/15,2010,Palestina/Oriente Médio,yes,yes,1,igual
+5052,A/RES/65/13,2010,Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5053,A/RES/65/14,2010,Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5054,A/RES/65/18,2010,Outros / sem codificação,yes,yes,1,igual
+5055,A/RES/65/17,2010,Palestina/Oriente Médio,yes,yes,1,igual
+5056,A/RES/65/37,2010,Outros / sem codificação,yes,yes,1,igual
+5057,A/RES/65/43,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5058,A/RES/65/44,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5059,A/RES/65/46,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5060,A/RES/65/48,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5061,A/RES/65/49,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5062,A/RES/65/51,2010,Outros / sem codificação,yes,yes,1,igual
+5063,A/RES/65/66,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5064,A/RES/65/68,2010,Outros / sem codificação,yes,yes,1,igual
+5065,A/RES/65/71,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5066,A/RES/65/73,2010,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+5067,A/RES/65/75,2010,Outros / sem codificação,yes,yes,1,igual
+5068,A/RES/65/76,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5069,A/RES/65/88,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5070,A/RES/65/91,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5071,A/RES/65/54,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5073,A/RES/65/56,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5074,A/RES/65/58,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5075,A/RES/65/59,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5076,A/RES/65/60,2010,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+5077,A/RES/65/65,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5078,A/RES/65/80,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5079,A/RES/65/72,2010,Armas/desarmamento/nuclear,abstain,abstain,1,igual
+5080,A/RES/65/100,2010,Palestina/Oriente Médio,yes,yes,1,igual
+5081,A/RES/65/101,2010,Palestina/Oriente Médio,yes,yes,1,igual
+5082,A/RES/65/102,2010,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5083,A/RES/65/103,2010,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5084,A/RES/65/104,2010,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5085,A/RES/65/105,2010,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5086,A/RES/65/106,2010,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5087,A/RES/65/109,2010,Descolonização; Desenvolvimento econômico,yes,yes,1,igual
+5088,A/RES/65/110,2010,Descolonização,yes,yes,1,igual
+5089,A/RES/65/116,2010,Descolonização,yes,yes,1,igual
+5090,A/RES/65/117,2010,Descolonização,yes,yes,1,igual
+5091,A/RES/65/118,2010,Descolonização,yes,yes,1,igual
+5092,A/RES/65/119,2010,Descolonização,yes,yes,1,igual
+5093,A/RES/65/99,2010,Outros / sem codificação,yes,yes,1,igual
+5094,A/RES/65/98,2010,Palestina/Oriente Médio,yes,yes,1,igual
+5095,A/RES/65/147,2010,Desenvolvimento econômico,yes,yes,1,igual
+5096,A/RES/65/142,2010,Desenvolvimento econômico,yes,yes,1,igual
+5097,A/RES/65/202,2010,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5098,A/RES/65/203,2010,Descolonização; Direitos humanos,yes,yes,1,igual
+5099,A/RES/65/199,2010,Direitos humanos,yes,yes,1,igual
+5100,A/RES/65/206,2010,Direitos humanos,yes,no,0,oposto
+5101,A/RES/65/208,2010,Direitos humanos,yes,abstain,0.5,parcial
+5102,A/RES/65/216,2010,Direitos humanos,yes,yes,1,igual
+5103,A/RES/65/217,2010,Direitos humanos,yes,yes,1,igual
+5104,A/RES/65/219,2010,Desenvolvimento econômico; Direitos humanos,yes,yes,1,igual
+5105,A/RES/65/222,2010,Direitos humanos,yes,yes,1,igual
+5106,A/RES/65/223,2010,Direitos humanos,yes,yes,1,igual
+5107,A/RES/65/224,2010,Direitos humanos,abstain,yes,0.5,parcial
+5108,A/RES/65/225,2010,Direitos humanos,yes,no,0,oposto
+5109,A/RES/65/195,2010,Direitos humanos,yes,yes,1,igual
+5110,A/RES/65/226,2010,Direitos humanos,abstain,no,0.5,parcial
+5866,A/RES/64/296,2010,Outros / sem codificação,abstain,yes,0.5,parcial
+5867,A/RES/65/46,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5868,A/RES/65/56,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5869,A/RES/65/58,2010,Armas/desarmamento/nuclear; Desenvolvimento econômico,yes,yes,1,igual
+5870,A/RES/65/59,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5871,A/RES/65/61,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5872,A/RES/65/66,2010,Outros / sem codificação,yes,yes,1,igual
+5873,A/RES/65/67,2010,Outros / sem codificação,yes,yes,1,igual
+5874,A/RES/65/71,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5875,A/RES/65/72,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5876,A/RES/65/72,2010,Outros / sem codificação,yes,yes,1,igual
+5877,A/RES/65/72,2010,Outros / sem codificação,yes,no,0,oposto
+5878,A/RES/65/75,2010,Outros / sem codificação,yes,yes,1,igual
+5879,A/RES/65/85,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5880,A/RES/65/85,2010,Outros / sem codificação,yes,yes,1,igual
+5881,A/RES/65/88,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5882,A/RES/65/88,2010,Outros / sem codificação,yes,yes,1,igual
+5883,A/RES/65/91,2010,Armas/desarmamento/nuclear,yes,yes,1,igual
+5884,A/RES/65/206,2010,Direitos humanos,yes,no,0,oposto
+5885,A/RES/65/208,2010,Direitos humanos,yes,no,0,oposto
+5886,A/RES/65/259,2010,Outros / sem codificação,yes,yes,1,igual
+5111,A/RES/65/272,2011,Palestina/Oriente Médio,yes,yes,1,igual
+5112,A/RES/65/276,2011,Outros / sem codificação,yes,yes,1,igual
+5113,A/RES/65/281,2011,Direitos humanos,yes,yes,1,igual
+5114,A/RES/65/287,2011,Desenvolvimento econômico,abstain,abstain,1,igual
+5115,A/RES/65/303,2011,Palestina/Oriente Médio,yes,yes,1,igual
+5116,A/RES/66/11,2011,Direitos humanos,yes,yes,1,igual
+5117,A/RES/66/12,2011,Outros / sem codificação,abstain,abstain,1,igual
+5118,A/RES/66/136,2011,Direitos humanos,yes,yes,1,igual
+5119,A/RES/66/14,2011,Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5120,A/RES/66/143,2011,Direitos humanos,yes,yes,1,igual
+5121,A/RES/66/144,2011,Direitos humanos,yes,yes,1,igual
+5122,A/RES/66/146,2011,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5123,A/RES/66/147,2011,Descolonização; Direitos humanos,yes,yes,1,igual
+5124,A/RES/66/15,2011,Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5125,A/RES/66/153,2011,Direitos humanos,yes,yes,1,igual
+5126,A/RES/66/154,2011,Direitos humanos,yes,yes,1,igual
+5127,A/RES/66/155,2011,Desenvolvimento econômico; Direitos humanos,yes,yes,1,igual
+5128,A/RES/66/156,2011,Direitos humanos,yes,yes,1,igual
+5129,A/RES/66/159,2011,Direitos humanos,yes,yes,1,igual
+5130,A/RES/66/16,2011,Palestina/Oriente Médio,yes,yes,1,igual
+5131,A/RES/66/161,2011,Direitos humanos,yes,yes,1,igual
+5132,A/RES/66/17,2011,Palestina/Oriente Médio,yes,yes,1,igual
+5133,A/RES/66/174,2011,Direitos humanos,yes,no,0,oposto
+5134,A/RES/66/175,2011,Direitos humanos,abstain,no,0.5,parcial
+5135,A/RES/66/176,2011,Direitos humanos,yes,abstain,0.5,parcial
+5136,A/RES/66/18,2011,Palestina/Oriente Médio,yes,yes,1,igual
+5137,A/RES/66/186,2011,Desenvolvimento econômico,yes,yes,1,igual
+5138,A/RES/66/19,2011,Outros / sem codificação,yes,yes,1,igual
+5139,A/RES/66/192,2011,Desenvolvimento econômico,yes,yes,1,igual
+5140,A/RES/66/195,2011,Desenvolvimento econômico,yes,yes,1,igual
+5141,A/RES/66/1A,2011,Outros / sem codificação,yes,yes,1,igual
+5142,A/RES/66/21,2011,Armas/desarmamento/nuclear; Desenvolvimento econômico,yes,yes,1,igual
+5143,A/RES/66/22,2011,Outros / sem codificação,yes,yes,1,igual
+5144,A/RES/66/225,2011,Descolonização; Palestina/Oriente Médio,yes,yes,1,igual
+5145,A/RES/66/230,2011,Direitos humanos,abstain,no,0.5,parcial
+5146,A/RES/66/231,2011,Outros / sem codificação,yes,yes,1,igual
+5147,A/RES/66/26,2011,Armas/desarmamento/nuclear,yes,yes,1,igual
+5148,A/RES/66/27,2011,Armas/desarmamento/nuclear,yes,yes,1,igual
+5149,A/RES/66/28,2011,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+5150,A/RES/66/29,2011,Armas/desarmamento/nuclear,yes,yes,1,igual
+5151,A/RES/66/32,2011,Armas/desarmamento/nuclear,yes,yes,1,igual
+5152,A/RES/66/33,2011,Armas/desarmamento/nuclear,yes,yes,1,igual
+5153,A/RES/66/37,2011,Armas/desarmamento/nuclear,yes,yes,1,igual
+5154,A/RES/66/39,2011,Armas/desarmamento/nuclear,yes,yes,1,igual
+5155,A/RES/66/40,2011,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+5156,A/RES/66/44,2011,Armas/desarmamento/nuclear,yes,yes,1,igual
+5157,A/RES/66/45,2011,Armas/desarmamento/nuclear,abstain,abstain,1,igual
+5158,A/RES/66/46,2011,Armas/desarmamento/nuclear,yes,yes,1,igual
+5159,A/RES/66/48,2011,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+5160,A/RES/66/49,2011,Armas/desarmamento/nuclear,yes,yes,1,igual
+5161,A/RES/66/51,2011,Armas/desarmamento/nuclear,yes,yes,1,igual
+5162,A/RES/66/57,2011,Armas/desarmamento/nuclear,yes,yes,1,igual
+5163,A/RES/66/6,2011,Desenvolvimento econômico,yes,yes,1,igual
+5164,A/RES/66/61,2011,Armas/desarmamento/nuclear,yes,yes,1,igual
+5165,A/RES/66/64,2011,Armas/desarmamento/nuclear,yes,yes,1,igual
+5166,A/RES/66/72,2011,Palestina/Oriente Médio,yes,yes,1,igual
+5167,A/RES/66/73,2011,Outros / sem codificação,yes,yes,1,igual
+5168,A/RES/66/74,2011,Palestina/Oriente Médio,yes,yes,1,igual
+5169,A/RES/66/75,2011,Palestina/Oriente Médio,yes,yes,1,igual
+5170,A/RES/66/76,2011,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5171,A/RES/66/77,2011,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5172,A/RES/66/78,2011,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5173,A/RES/66/79,2011,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5174,A/RES/66/80,2011,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5175,A/RES/66/82,2011,Descolonização,yes,yes,1,igual
+5176,A/RES/66/83,2011,Descolonização; Desenvolvimento econômico,yes,yes,1,igual
+5177,A/RES/66/84,2011,Descolonização,yes,yes,1,igual
+5178,A/RES/66/90,2011,Descolonização,yes,yes,1,igual
+5887,A/RES/65/276,2011,Outros / sem codificação,no,no,1,igual
+5888,A/RES/66/1,2011,Outros / sem codificação,no,no,1,igual
+5889,NA,2011,Outros / sem codificação,abstain,abstain,1,igual
+5890,NA,2011,Outros / sem codificação,abstain,abstain,1,igual
+5892,A/RES/66/28,2011,Outros / sem codificação,yes,yes,1,igual
+5894,A/RES/66/37,2011,Armas/desarmamento/nuclear; Desenvolvimento econômico,yes,yes,1,igual
+5895,A/RES/66/39,2011,Outros / sem codificação,yes,yes,1,igual
+5896,A/RES/66/39,2011,Outros / sem codificação,yes,yes,1,igual
+5897,A/RES/66/39,2011,Outros / sem codificação,yes,yes,1,igual
+5898,A/RES/66/39,2011,Outros / sem codificação,yes,yes,1,igual
+5899,A/RES/66/39,2011,Outros / sem codificação,yes,yes,1,igual
+5900,A/RES/66/39,2011,Outros / sem codificação,yes,yes,1,igual
+5901,A/RES/66/40,2011,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+5902,A/RES/66/40,2011,Outros / sem codificação,yes,yes,1,igual
+5903,A/RES/66/44,2011,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+5904,A/RES/66/44,2011,Outros / sem codificação,yes,abstain,0.5,parcial
+5906,A/RES/66/45,2011,Outros / sem codificação,yes,yes,1,igual
+5907,A/RES/66/45,2011,Outros / sem codificação,yes,yes,1,igual
+5908,A/RES/66/45,2011,Outros / sem codificação,abstain,no,0.5,parcial
+5909,A/RES/66/45,2011,Outros / sem codificação,abstain,yes,0.5,parcial
+5910,A/RES/66/51,2011,Armas/desarmamento/nuclear,yes,yes,1,igual
+5911,A/RES/66/51,2011,Outros / sem codificação,yes,yes,1,igual
+5912,A/RES/66/61,2011,Armas/desarmamento/nuclear,yes,yes,1,igual
+5913,A/RES/66/61,2011,Outros / sem codificação,yes,yes,1,igual
+5914,A/RES/66/61,2011,Outros / sem codificação,yes,yes,1,igual
+5915,A/RES/66/64,2011,Armas/desarmamento/nuclear,yes,yes,1,igual
+5916,A/RES/66/175,2011,Direitos humanos,abstain,yes,0.5,parcial
+5917,A/RES/66/247,2011,Outros / sem codificação,yes,yes,1,igual
+5179,A/RES/66/257,2012,Outros / sem codificação,yes,yes,1,igual
+5180,A/RES/66/253,2012,Outros / sem codificação,yes,no,0,oposto
+5181,A/RES/67/4,2012,Desenvolvimento econômico,yes,yes,1,igual
+5182,A/RES/67/19,2012,Palestina/Oriente Médio,yes,yes,1,igual
+5183,A/RES/67/20,2012,Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5184,A/RES/67/21,2012,Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5185,A/RES/67/22,2012,Palestina/Oriente Médio,yes,yes,1,igual
+5186,A/RES/67/23,2012,Palestina/Oriente Médio,yes,yes,1,igual
+5187,A/RES/67/24,2012,Palestina/Oriente Médio,yes,yes,1,igual
+5188,A/RES/67/25,2012,Outros / sem codificação,yes,yes,1,igual
+5190,A/RES/67/30,2012,Armas/desarmamento/nuclear,yes,yes,1,igual
+5191,A/RES/67/31,2012,Armas/desarmamento/nuclear,yes,yes,1,igual
+5192,A/RES/67/32,2012,Armas/desarmamento/nuclear,yes,yes,1,igual
+5193,A/RES/67/33,2012,Armas/desarmamento/nuclear,yes,yes,1,igual
+5194,A/RES/67/34,2012,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+5195,A/RES/67/35,2012,Outros / sem codificação,yes,yes,1,igual
+5197,A/RES/67/38,2012,Armas/desarmamento/nuclear,yes,yes,1,igual
+5198,A/RES/67/39,2012,Armas/desarmamento/nuclear,yes,yes,1,igual
+5199,A/RES/67/42,2012,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+5200,A/RES/67/43,2012,Outros / sem codificação,yes,yes,1,igual
+5201,A/RES/67/45,2012,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+5202,A/RES/67/46,2012,Armas/desarmamento/nuclear,yes,yes,1,igual
+5203,A/RES/67/53,2012,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+5204,A/RES/67/55,2012,Armas/desarmamento/nuclear,yes,yes,1,igual
+5205,A/RES/67/56,2012,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+5206,A/RES/67/59,2012,Armas/desarmamento/nuclear,abstain,abstain,1,igual
+5207,A/RES/67/60,2012,Armas/desarmamento/nuclear,yes,yes,1,igual
+5208,A/RES/67/62,2012,Armas/desarmamento/nuclear,yes,yes,1,igual
+5209,A/RES/67/64,2012,Armas/desarmamento/nuclear,yes,yes,1,igual
+5210,A/RES/67/73,2012,Armas/desarmamento/nuclear,yes,yes,1,igual
+5211,A/RES/67/76,2012,Armas/desarmamento/nuclear,yes,yes,1,igual
+5212,A/RES/67/78,2012,Outros / sem codificação,yes,yes,1,igual
+5213,A/RES/67/114,2012,Palestina/Oriente Médio,yes,yes,1,igual
+5214,A/RES/67/115,2012,Outros / sem codificação,yes,yes,1,igual
+5215,A/RES/67/116,2012,Palestina/Oriente Médio,yes,yes,1,igual
+5216,A/RES/67/117,2012,Palestina/Oriente Médio,yes,yes,1,igual
+5217,A/RES/67/118,2012,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5218,A/RES/67/119,2012,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5219,A/RES/67/120,2012,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5220,A/RES/67/121,2012,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5221,A/RES/67/122,2012,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5222,A/RES/67/125,2012,Descolonização,yes,yes,1,igual
+5223,A/RES/67/126,2012,Descolonização; Desenvolvimento econômico,yes,yes,1,igual
+5224,A/RES/67/127,2012,Descolonização,yes,yes,1,igual
+5225,A/RES/67/133,2012,Descolonização,yes,yes,1,igual
+5226,A/RES/67/134,2012,Descolonização,yes,yes,1,igual
+5227,A/RES/67/139,2012,Desenvolvimento econômico; Direitos humanos,yes,abstain,0.5,parcial
+5228,A/RES/67/154,2012,Direitos humanos,yes,yes,1,igual
+5229,A/RES/67/155,2012,Direitos humanos,yes,yes,1,igual
+5230,A/RES/67/158,2012,Descolonização; Direitos humanos; Palestina/Oriente Médio,yes,yes,1,igual
+5231,A/RES/67/159,2012,Descolonização; Direitos humanos,yes,yes,1,igual
+5232,A/RES/67/162,2012,Direitos humanos,yes,yes,1,igual
+5233,A/RES/67/165,2012,Direitos humanos,yes,yes,1,igual
+5234,A/RES/67/168,2012,Direitos humanos,yes,abstain,0.5,parcial
+5235,A/RES/67/170,2012,Direitos humanos,yes,yes,1,igual
+5236,A/RES/67/171,2012,Desenvolvimento econômico; Direitos humanos,yes,yes,1,igual
+5237,A/RES/67/173,2012,Direitos humanos,yes,yes,1,igual
+5238,A/RES/67/175,2012,Direitos humanos,yes,yes,1,igual
+5239,A/RES/67/176,2012,Direitos humanos,yes,no,0,oposto
+5240,A/RES/67/182,2012,Direitos humanos,abstain,no,0.5,parcial
+5241,A/RES/67/183,2012,Direitos humanos,yes,no,0,oposto
+5242,A/RES/67/201,2012,Desenvolvimento econômico,yes,yes,1,igual
+5243,A/RES/67/202,2012,Desenvolvimento econômico,yes,abstain,0.5,parcial
+5244,A/RES/67/217,2012,Desenvolvimento econômico,yes,yes,1,igual
+5245,A/RES/67/219,2012,Desenvolvimento econômico,yes,yes,1,igual
+5246,A/RES/67/229,2012,Descolonização; Palestina/Oriente Médio,yes,yes,1,igual
+5247,A/RES/67/234,2012,Armas/desarmamento/nuclear; Desenvolvimento econômico,yes,yes,1,igual
+5248,A/RES/67/243,2012,Outros / sem codificação,yes,abstain,0.5,parcial
+5918,A/RES/66/257,2012,Outros / sem codificação,no,no,1,igual
+5919,A/RES/66/257,2012,Outros / sem codificação,yes,yes,1,igual
+5920,A/RES/66/277,2012,Palestina/Oriente Médio,yes,yes,1,igual
+5921,A/RES/67/34,2012,Armas/desarmamento/nuclear,yes,yes,1,igual
+5922,A/RES/67/43,2012,Outros / sem codificação,yes,yes,1,igual
+5923,A/RES/67/43,2012,Outros / sem codificação,yes,yes,1,igual
+5924,A/RES/677/46,2012,Armas/desarmamento/nuclear,yes,yes,1,igual
+5925,A/RES/67/53,2012,Armas/desarmamento/nuclear,yes,abstain,0.5,parcial
+5926,A/RES/67/59,2012,Armas/desarmamento/nuclear; Desenvolvimento econômico,yes,yes,1,igual
+5927,A/RES/67/59,2012,Outros / sem codificação,yes,yes,1,igual
+5928,A/RES/67/59,2012,Outros / sem codificação,yes,no,0,oposto
+5929,A/RES/67/59,2012,Outros / sem codificação,abstain,yes,0.5,parcial
+5930,A/RES/67/60,2012,Armas/desarmamento/nuclear,yes,yes,1,igual
+5931,A/RES/67/62,2012,Armas/desarmamento/nuclear,yes,yes,1,igual
+5932,A/RES/67/73,2012,Outros / sem codificação,yes,yes,1,igual
+5933,A/RES/67/73,2012,Outros / sem codificação,yes,yes,1,igual
+5934,A/RES/67/76,2012,Armas/desarmamento/nuclear,yes,yes,1,igual
+5935,A/RES/67/234,2012,Armas/desarmamento/nuclear; Desenvolvimento econômico; Direitos humanos,yes,yes,1,igual
+5936,A/RES/67/234,2012,Outros / sem codificação,yes,yes,1,igual
+5937,A/RES/67/243,2012,Outros / sem codificação,abstain,yes,0.5,parcial
+5938,A/RES/67/243,2012,Outros / sem codificação,yes,abstain,0.5,parcial
+5939,A/RES/67/246,2012,Desenvolvimento econômico,yes,abstain,0.5,parcial

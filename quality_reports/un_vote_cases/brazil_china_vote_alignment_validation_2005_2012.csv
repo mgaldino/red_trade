@@ -1,0 +1,12 @@
+check,passed,value
+Brasil e China têm votos válidos nas resoluções analisadas,TRUE,748 resoluções com BR/CN válidos
+Período restrito a 2005-2012,TRUE,2005-2012
+Sem duplicatas por rcid no CSV por resolução,TRUE,0 duplicatas
+Sem duplicatas país-votação no universo analisado,TRUE,0 duplicatas país-votação
+Categorias de voto restritas ao esperado,TRUE,"yes, no, abstain, absent"
+Percentuais entre 0 e 100 ou NA,TRUE,percentuais auditados
+Denominador de comparação positivo,TRUE,mínimo = 62
+Ausentes excluídos dos denominadores de percentuais,TRUE,denominador: demais países com voto diferente de absent
+Eleitorado válido total consistente com denominador de comparação,TRUE,valid_electorate_n = comparison_electorate_n + 2
+Colunas essenciais preservadas,TRUE,"rcid, símbolo, ano, tema, votos e links preservados"
+Classificação de mecanismos restrita a A-E,TRUE,"A, B, C, E"

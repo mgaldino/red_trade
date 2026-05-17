@@ -63,3 +63,9 @@ DOI: <https://doi.org/10.7910/DVN/M97OCJ>
   `/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/replication package/raw data/wb_data_cache.rds`
 - Full package documentation is maintained in:
   `/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/replication package/README.Rmd`
+
+## Diagnostic Addendum: UN Votes, Brazil-China
+
+On 2026-05-17, a separate diagnostic analysis was added under `scripts/diagnostics/` to examine Brazil-China vote similarity in the UN General Assembly from 2005 to 2012. This analysis is independent of the `targets` pipeline and should not be run through `targets::tar_make()`.
+
+Main outputs are stored in `data/processed/unvotes/` and `quality_reports/un_vote_cases/`. The central takeaway is that the post-2009 Brazil-China rapprochement appears most clearly in human-rights votes and is better described as direct Brazilian movement toward China's position than as broad relational realignment across all issue areas. Outside human rights, the evidence is more mixed, and some apparent convergence reflects China moving toward Brazil.
