@@ -1,0 +1,58 @@
+# Goal 9 implementation review
+
+Date: 2026-05-18
+
+Reviewer role: separate manuscript reviewer. The reviewer did not edit files.
+
+## Round 1
+
+Verdict: blockers.
+
+Render technically succeeded: `paper_v4.pdf` existed, was created on 2026-05-18, had 29 pages, and the reviewer found no unresolved `??`, `@ref`, `fig:`, or `tab:` references in the PDF text. The reviewer nevertheless found blockers for Goal 9 acceptance:
+
+1. Main tables were not render-safe in the PDF. Tables 1 and 2 overflowed horizontally and key columns appeared cut off.
+2. Cross-country Table 3 floated into the Brazilian media section, before the "Cross-country scope probe" heading.
+3. The H2 text claimed that exploratory U.S.-displacement heterogeneity estimates were reported in the appendix, but the appendix did not include the corresponding Goal 4 subgroup estimates or U.S.-minus-non-U.S. contrast.
+
+Required fixes:
+
+1. Make Tables 1, 2, and 3 render visibly in PDF.
+2. Force Table 3 to remain inside the cross-country section.
+3. Either add an appendix H2 heterogeneity table from Goal 4 or revise the main-text sentence so it does not claim appendix reporting.
+4. Re-render and re-check the PDF for table overflow, misplaced floats, and unresolved references.
+
+Implementation response:
+
+1. Tables 1, 2, and 3 were rebuilt with `kableExtra` width control, stronger hold-position options, and table notes embedded in the table objects rather than printed as separate paragraphs.
+2. The Brazilian media figure was forced to render before the next section using `\clearpage`, preventing media material from floating into the cross-country section.
+3. The H2 paragraph was revised to treat U.S.-displacement heterogeneity as exploratory without claiming appendix reporting.
+4. The PDF was rendered again successfully after these fixes.
+
+## Round 2
+
+Verdict: no blockers.
+
+The separate reviewer found that the Round 1 blockers were fixed:
+
+- Tables 1, 2, and 3 rendered visibly in `paper_v4.pdf`, with captions and notes intact.
+- Table 3 appeared inside the cross-country section rather than floating into the media section.
+- The H2 paragraph no longer claimed absent appendix reporting and correctly treated U.S.-displacement heterogeneity as exploratory.
+- Native LaTeX `\clearpage` was acceptable for this manuscript because it solved the section-boundary problem without adding a new dependency; introducing `placeins` was not worth doing before commit because the local package was unavailable.
+
+Nonblocking notes from the reviewer:
+
+- Remove the remaining phrase saying PanelMatch diagnostics were reported in the appendix.
+- Reconcile Table 2's non-human-rights diagnostic with the Goal 6 report.
+- Appendix media materials still include non-target documentation, but this does not affect the main claim ladder.
+
+Implementation response:
+
+- Removed the PanelMatch appendix-reporting phrase.
+- Corrected the target-backed human-rights versus non-human-rights diagnostic by deduplicating by `rcid`; Table 2 now reports non-human-rights identical-vote change as +2.7 p.p., consistent with the Goal 6 report.
+- Re-rendered `paper_v4.pdf` successfully.
+
+## Final confirmation
+
+Verdict: no blockers.
+
+The reviewer confirmed that the current `paper_v4.Rmd` and rendered `paper_v4.pdf` remain acceptable for Goal 9. Tables 1--3 render visibly with notes/captions intact; section architecture is fixed; PanelMatch wording is gone; Table 2 reports non-human-rights as +2.7 p.p.; terminology and causal caveats are aligned; no unresolved cross-references were found; and `\clearpage` is an acceptable dependency-free solution here.

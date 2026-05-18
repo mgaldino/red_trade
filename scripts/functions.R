@@ -2363,3 +2363,415 @@ plot_treated_country_panel <- function(switching_panel, classified_events) {
       strip.text = element_text(face = "bold", size = 9)
     )
 }
+
+goal9_country_name <- function(iso3c) {
+  countrycode::countrycode(iso3c, "iso3c", "country.name", warn = FALSE)
+}
+
+goal9_export_rank_panel <- function(trade_data) {
+  ranked <- trade_data |>
+    dplyr::filter(!is.na(year), !is.na(exporter_iso3), !is.na(importer_iso3)) |>
+    dplyr::filter(exporter_iso3 != importer_iso3) |>
+    dplyr::mutate(exports = dplyr::coalesce(as.numeric(exports), 0)) |>
+    dplyr::group_by(year, exporter_iso3) |>
+    dplyr::arrange(dplyr::desc(exports), importer_iso3, .by_group = TRUE) |>
+    dplyr::mutate(
+      partner_rank = dplyr::dense_rank(dplyr::desc(exports)),
+      export_total = sum(exports, na.rm = TRUE),
+      top_partner = dplyr::first(importer_iso3),
+      top_exports = dplyr::first(exports),
+      second_partner = dplyr::nth(importer_iso3, 2, default = NA_character_),
+      second_exports = dplyr::nth(exports, 2, default = NA_real_)
+    ) |>
+    dplyr::ungroup()
+
+  ranked |>
+    dplyr::filter(importer_iso3 == "CHN") |>
+    dplyr::transmute(
+      iso3c = exporter_iso3,
+      country_name = goal9_country_name(exporter_iso3),
+      year,
+      china_rank = partner_rank,
+      china_exports = exports,
+      export_total,
+      china_share = dplyr::if_else(export_total > 0, china_exports / export_total, NA_real_),
+      top_partner,
+      top_partner_name = goal9_country_name(top_partner),
+      top_exports,
+      second_partner,
+      second_partner_name = goal9_country_name(second_partner),
+      second_exports,
+      china_top = as.integer(china_rank == 1L & china_exports > 0),
+      competitor_partner = dplyr::if_else(china_rank == 1L, second_partner, top_partner),
+      competitor_partner_name = goal9_country_name(competitor_partner),
+      competitor_exports = dplyr::if_else(china_rank == 1L, second_exports, top_exports),
+      china_margin_vs_competitor = china_exports - competitor_exports,
+      china_margin_over_second = dplyr::if_else(
+        china_rank == 1L,
+        china_exports - second_exports,
+        NA_real_
+      ),
+      china_gap_to_top = dplyr::if_else(china_rank == 1L, 0, top_exports - china_exports)
+    ) |>
+    dplyr::arrange(iso3c, year)
+}
+
+goal9_brazil_rank_volume_data <- function(trade_data, start_year = 2000L, end_year = 2012L) {
+  out <- goal9_export_rank_panel(trade_data) |>
+    dplyr::filter(iso3c == "BRA", year >= start_year, year <= end_year) |>
+    dplyr::mutate(
+      china_share_pct = 100 * china_share,
+      # USITC's ITPD-E variable guide defines `trade` as trade flows in
+      # millions of current US dollars. Aggregate exports inherit that unit,
+      # so dividing by 1000 reports current US$ billions.
+      china_exports_usd_billion = china_exports / 1000,
+      competitor_exports_usd_billion = competitor_exports / 1000,
+      china_margin_vs_competitor_usd_billion = china_margin_vs_competitor / 1000
+    ) |>
+    dplyr::select(
+      iso3c,
+      country_name,
+      year,
+      china_rank,
+      china_top,
+      china_exports,
+      export_total,
+      china_share,
+      china_share_pct,
+      top_partner,
+      top_partner_name,
+      top_exports,
+      second_partner,
+      second_partner_name,
+      second_exports,
+      competitor_partner,
+      competitor_partner_name,
+      competitor_exports,
+      china_exports_usd_billion,
+      competitor_exports_usd_billion,
+      china_margin_vs_competitor,
+      china_margin_vs_competitor_usd_billion,
+      china_margin_over_second,
+      china_gap_to_top
+    )
+
+  stopifnot(nrow(out) == length(start_year:end_year))
+  stopifnot(!anyDuplicated(out$year))
+  stopifnot(!anyNA(out$china_rank))
+  stopifnot(!anyNA(out$china_share))
+  stopifnot(!anyNA(out$china_margin_vs_competitor))
+  out
+}
+
+goal9_plot_brazil_rank_volume <- function(brazil_rank_volume_data) {
+  panel_theme <- ggplot2::theme_minimal(base_size = 9.5) +
+    ggplot2::theme(
+      panel.grid.minor = ggplot2::element_blank(),
+      panel.grid.major = ggplot2::element_line(colour = "grey91", linewidth = 0.25),
+      plot.title = ggplot2::element_text(face = "bold", size = 9.3),
+      axis.title = ggplot2::element_text(size = 9.3),
+      axis.text = ggplot2::element_text(size = 8.8),
+      plot.margin = ggplot2::margin(4.5, 5.5, 4.5, 5.5)
+    )
+
+  share_plot <- ggplot2::ggplot(
+    brazil_rank_volume_data,
+    ggplot2::aes(x = year, y = china_share_pct)
+  ) +
+    ggplot2::geom_vline(xintercept = 2009, linetype = "dashed", colour = "grey35", linewidth = 0.45) +
+    ggplot2::geom_line(colour = "#1B7837", linewidth = 0.85) +
+    ggplot2::geom_point(colour = "#1B7837", size = 1.7) +
+    ggplot2::scale_x_continuous(breaks = seq(2000, 2012, by = 2)) +
+    ggplot2::labs(title = "A. Export share", x = NULL, y = "Export share (%)") +
+    panel_theme
+
+  rank_plot <- ggplot2::ggplot(
+    brazil_rank_volume_data,
+    ggplot2::aes(x = year, y = china_rank)
+  ) +
+    ggplot2::geom_vline(xintercept = 2009, linetype = "dashed", colour = "grey35", linewidth = 0.45) +
+    ggplot2::geom_step(colour = "#2166AC", linewidth = 0.85, direction = "mid") +
+    ggplot2::geom_point(colour = "#2166AC", size = 1.7) +
+    ggplot2::scale_x_continuous(breaks = seq(2000, 2012, by = 2)) +
+    ggplot2::scale_y_reverse(breaks = sort(unique(brazil_rank_volume_data$china_rank))) +
+    ggplot2::labs(title = "B. Rank", x = NULL, y = "Rank (1 = top)") +
+    panel_theme
+
+  margin_plot <- ggplot2::ggplot(
+    brazil_rank_volume_data,
+    ggplot2::aes(x = year, y = china_margin_vs_competitor_usd_billion)
+  ) +
+    ggplot2::geom_hline(yintercept = 0, colour = "grey40", linewidth = 0.45) +
+    ggplot2::geom_vline(xintercept = 2009, linetype = "dashed", colour = "grey35", linewidth = 0.45) +
+    ggplot2::geom_col(
+      ggplot2::aes(fill = china_margin_vs_competitor_usd_billion >= 0),
+      width = 0.72,
+      show.legend = FALSE
+    ) +
+    ggplot2::scale_fill_manual(values = c("TRUE" = "#D55E00", "FALSE" = "#999999")) +
+    ggplot2::scale_x_continuous(breaks = seq(2000, 2012, by = 2)) +
+    ggplot2::scale_y_continuous(labels = scales::label_number(accuracy = 1)) +
+    ggplot2::labs(
+      title = "C. Margin",
+      x = "Year",
+      y = "Margin over competitor\n(US$ billions)"
+    ) +
+    panel_theme
+
+  patchwork::wrap_plots(
+    share_plot,
+    rank_plot,
+    margin_plot,
+    ncol = 1,
+    heights = c(1, 1, 1.05)
+  )
+}
+
+goal9_brazil_rank_volume_placebos <- function(brazil_rank_volume_data,
+                                               synth_fit,
+                                               se_synth,
+                                               placebo_2003_fit,
+                                               se_2003,
+                                               placebo_2005_fit,
+                                               se_2005,
+                                               placebo_2012_fit,
+                                               se_2012) {
+  estimates <- tibble::tibble(
+    nominal_treatment_year = c(2003L, 2005L, 2009L, 2012L),
+    timing_test = c(
+      "placebo_2003_growth_rank2",
+      "placebo_2005_growth_no_rank1",
+      "actual_2009_rank_reversal",
+      "post_placebo_2012_later_shock"
+    ),
+    rank_volume_test_role = c(
+      "Growth/promotion placebo: China is not #1.",
+      "Growth placebo: China is not #1.",
+      "Actual rank-1 reversal.",
+      "Later-shock placebo after rank reversal."
+    ),
+    estimate = as.numeric(c(placebo_2003_fit, placebo_2005_fit, synth_fit, placebo_2012_fit)),
+    se_placebo = as.numeric(c(se_2003, se_2005, se_synth, se_2012))
+  ) |>
+    dplyr::mutate(
+      z = estimate / se_placebo,
+      p_value = 2 * stats::pnorm(-abs(z)),
+      ci_95_low = estimate - stats::qnorm(0.975) * se_placebo,
+      ci_95_high = estimate + stats::qnorm(0.975) * se_placebo,
+      inference_status = "Normal approximation using placebo-based SE; timing falsification, not equivalence test."
+    )
+
+  estimates |>
+    dplyr::left_join(
+      brazil_rank_volume_data |>
+        dplyr::select(
+          nominal_treatment_year = year,
+          china_rank,
+          china_top,
+          china_share,
+          china_share_pct,
+          china_margin_vs_competitor,
+          china_margin_vs_competitor_usd_billion,
+          top_partner,
+          second_partner,
+          competitor_partner
+        ),
+      by = "nominal_treatment_year"
+    ) |>
+    dplyr::mutate(
+      rank1_reversal = china_rank == 1L & nominal_treatment_year == 2009L
+    ) |>
+    dplyr::select(
+      nominal_treatment_year,
+      timing_test,
+      rank_volume_test_role,
+      china_rank,
+      rank1_reversal,
+      china_share,
+      china_share_pct,
+      china_margin_vs_competitor,
+      china_margin_vs_competitor_usd_billion,
+      top_partner,
+      second_partner,
+      competitor_partner,
+      estimate,
+      se_placebo,
+      p_value,
+      ci_95_low,
+      ci_95_high,
+      inference_status
+    ) |>
+    dplyr::arrange(nominal_treatment_year)
+}
+
+goal9_make_covariate_array <- function(data, covariate_cols) {
+  unit_levels <- unique(data$iso3c)
+  time_levels <- sort(unique(data$year))
+  x_array <- array(
+    NA_real_,
+    dim = c(length(unit_levels), length(time_levels), length(covariate_cols)),
+    dimnames = list(unit_levels, as.character(time_levels), covariate_cols)
+  )
+
+  for (k in seq_along(covariate_cols)) {
+    covariate <- covariate_cols[[k]]
+    wide <- data |>
+      dplyr::select(iso3c, year, value = dplyr::all_of(covariate)) |>
+      dplyr::mutate(
+        iso3c = factor(iso3c, levels = unit_levels),
+        year = factor(year, levels = time_levels)
+      ) |>
+      dplyr::arrange(iso3c, year) |>
+      tidyr::pivot_wider(id_cols = iso3c, names_from = year, values_from = value) |>
+      dplyr::arrange(iso3c)
+
+    x_array[, , k] <- wide |>
+      dplyr::select(dplyr::all_of(as.character(time_levels))) |>
+      as.matrix()
+  }
+
+  x_array
+}
+
+goal9_fit_sdid_outcome <- function(data, outcome_col, covariate_cols,
+                                   time_treatment = 2008L, time_end = 2016L) {
+  set.seed(12345)
+  required <- c("iso3c", "year", outcome_col, covariate_cols)
+  fit_data <- data |>
+    dplyr::filter(year < time_end) |>
+    dplyr::select(dplyr::all_of(required)) |>
+    dplyr::mutate(
+      outcome_value = as.numeric(.data[[outcome_col]]),
+      treatment = ifelse(iso3c == "BRA" & year > time_treatment, 1L, 0L),
+      .unit_treated = as.integer(iso3c == "BRA")
+    ) |>
+    dplyr::arrange(.unit_treated, iso3c, year) |>
+    dplyr::select(-.unit_treated)
+
+  if (anyNA(fit_data |> dplyr::select(outcome_value, dplyr::all_of(covariate_cols)))) {
+    stop("goal9_fit_sdid_outcome: missing values in outcome or covariates.")
+  }
+
+  x_array <- goal9_make_covariate_array(fit_data, covariate_cols)
+  panel_data <- fit_data |>
+    dplyr::mutate(
+      treatment = as.integer(treatment),
+      year = as.integer(year),
+      iso3c = as.factor(iso3c),
+      Y = outcome_value
+    ) |>
+    dplyr::select(iso3c, year, Y, treatment) |>
+    as.data.frame()
+
+  setup <- synthdid::panel.matrices(panel_data)
+  synthdid::synthdid_estimate(Y = setup$Y, N0 = setup$N0, T0 = setup$T0, X = x_array)
+}
+
+goal9_sdid_outcome_results <- function(synth_data, unga_data, synth_fit, se_synth) {
+  sdid_data <- synth_data |>
+    dplyr::left_join(
+      unga_data |>
+        dplyr::select(iso3c, year, china_agree, us_agree) |>
+        dplyr::mutate(china_minus_us_agree = china_agree - us_agree),
+      by = c("iso3c", "year")
+    ) |>
+    dplyr::mutate(relative_distance_china_minus_usa = abs_distance_china - abs_distance_usa)
+
+  covariates <- c(
+    "gpi",
+    "perc_trade_with_us",
+    "perc_trade_with_china",
+    "pci_cur",
+    "exachange_rate",
+    "distance_us",
+    "us_power_gap",
+    "hog_left",
+    "CA_GDP",
+    "govdef_GDP",
+    intersect(
+      c("inst_parliamentary", "inst_military_exec", "us_trade_agreement"),
+      names(sdid_data)
+    )
+  )
+
+  outcome_info <- tibble::tribble(
+    ~outcome, ~label, ~causal_status, ~expected_direction,
+    "abs_distance_china", "Absolute Brazil-China ideal-point distance", "Brazil SDiD reduced-form estimate with placebo SE", "negative",
+    "relative_distance_china_minus_usa", "China-minus-US ideal-point distance", "alternative country-year SDiD robustness; point estimate only", "negative",
+    "abs_distance_usa", "Absolute ideal-point distance to the United States", "secondary country-year SDiD diagnostic; point estimate only", "positive",
+    "china_agree", "Annual vote agreement with China", "agenda-sensitive country-year diagnostic; point estimate only", "positive",
+    "china_minus_us_agree", "Annual agreement with China minus agreement with the United States", "agenda-sensitive country-year diagnostic; point estimate only", "positive"
+  )
+
+  dplyr::bind_rows(lapply(seq_len(nrow(outcome_info)), function(i) {
+    row <- outcome_info[i, ]
+    if (row$outcome == "abs_distance_china") {
+      estimate <- as.numeric(synth_fit)
+      se <- as.numeric(se_synth)
+      inference_status <- "Placebo SE from existing target se_synth."
+    } else {
+      estimate <- as.numeric(goal9_fit_sdid_outcome(sdid_data, row$outcome, covariates))
+      se <- NA_real_
+      inference_status <- "Point estimate only; placebo SE not recomputed for exploratory outcome robustness."
+    }
+
+    tibble::tibble(
+      outcome = row$outcome,
+      label = row$label,
+      causal_status = row$causal_status,
+      estimate = estimate,
+      se_placebo = se,
+      p_value = ifelse(is.na(se), NA_real_, 2 * stats::pnorm(-abs(estimate / se))),
+      ci_95_low = ifelse(is.na(se), NA_real_, estimate - stats::qnorm(0.975) * se),
+      ci_95_high = ifelse(is.na(se), NA_real_, estimate + stats::qnorm(0.975) * se),
+      inference_status = inference_status,
+      expected_direction = row$expected_direction,
+      direction_matches_expected_sign = dplyr::case_when(
+        row$expected_direction == "negative" ~ estimate < 0,
+        row$expected_direction == "positive" ~ estimate > 0,
+        TRUE ~ NA
+      )
+    )
+  }))
+}
+
+goal9_human_rights_vs_non_human_rights <- function(resolution_data, treatment_year = 2009L) {
+  resolution_data |>
+    dplyr::mutate(
+      period = dplyr::if_else(year < treatment_year, "pre_2009", "post_2009"),
+      human_rights_issue = stringr::str_detect(issue_family, "Human rights")
+    ) |>
+    dplyr::group_by(rcid, period) |>
+    dplyr::summarise(
+      identical_vote = dplyr::first(identical_vote),
+      similarity_score = dplyr::first(similarity_score),
+      hr_group = dplyr::if_else(any(human_rights_issue, na.rm = TRUE), "Human rights", "Non-human-rights"),
+      .groups = "drop"
+    ) |>
+    dplyr::group_by(hr_group, period) |>
+    dplyr::summarise(
+      n_resolutions = dplyr::n_distinct(rcid),
+      identical_vote_share = 100 * mean(identical_vote, na.rm = TRUE),
+      mean_similarity_score = mean(similarity_score, na.rm = TRUE),
+      .groups = "drop"
+    ) |>
+    tidyr::pivot_wider(
+      names_from = period,
+      values_from = c(n_resolutions, identical_vote_share, mean_similarity_score)
+    ) |>
+    dplyr::mutate(
+      delta_identical_vote_share = identical_vote_share_post_2009 - identical_vote_share_pre_2009,
+      delta_mean_similarity_score = mean_similarity_score_post_2009 - mean_similarity_score_pre_2009
+    ) |>
+    dplyr::select(
+      hr_group,
+      n_resolutions_pre_2009,
+      n_resolutions_post_2009,
+      identical_vote_share_pre_2009,
+      identical_vote_share_post_2009,
+      mean_similarity_score_pre_2009,
+      mean_similarity_score_post_2009,
+      delta_identical_vote_share,
+      delta_mean_similarity_score
+    )
+}

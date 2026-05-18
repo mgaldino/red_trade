@@ -40,6 +40,10 @@ list(
   tar_target(gpi_data, get_gpi_data(gpi_file)),
   tar_target(trade_data, get_trade_data(trade_file)),
   tar_target(trade_data_ranked, rank_trade(trade_data)),
+  tar_target(goal3_brazil_rank_volume_data,
+             goal9_brazil_rank_volume_data(trade_data)),
+  tar_target(goal3_brazil_rank_volume_plot,
+             goal9_plot_brazil_rank_volume(goal3_brazil_rank_volume_data)),
   tar_target(trade_data_cleaned, process_trade_data(trade_data)),
   tar_target(ideology_data, get_ideology_data(ideology_file)),
   tar_target(macro_data, get_macro()),
@@ -76,12 +80,18 @@ list(
              plot_brazil_china_unvotes_similarity_by_issue_year(
                brazil_china_unvotes_similarity_by_issue_year_2005_2012
              )),
+  tar_target(goal6_human_rights_vs_non_human_rights,
+             goal9_human_rights_vs_non_human_rights(
+               brazil_china_unvotes_resolution_2005_2012
+             )),
   # SDiD
   tar_target(synth_data, clean_synth_data(final_df, ranked_trade_data=trade_data_ranked,
                                          dpi_data=dpi_data, trade_agreement_data=trade_agreement_data)),
   # residuals all countries
   tar_target(synth_fit, simple_fit(data=synth_data, filter_latin_america=FALSE)),
   tar_target(se_synth , se_sdid(synth_fit)),
+  tar_target(goal6_sdid_outcome_results,
+             goal9_sdid_outcome_results(synth_data, unga_data, synth_fit, se_synth)),
   tar_target(plot_trend, my_plot_trends(synth_fit)),
   tar_target(plot_parallel, my_plot_dif(synth_fit)),
   tar_target(plot_weights_coef, my_plot_weigths(synth_fit)),
@@ -99,6 +109,18 @@ list(
   tar_target(se_synth_placebo1, se_sdid(placebo_teste_treatment11)),
   tar_target(placebo_teste_treatment04, simple_fit(synth_data, time_treatment=2004, time_end=2009)),
   tar_target(se_synth_placebo3, se_sdid(placebo_teste_treatment04)),
+  tar_target(goal3_brazil_placebo_rank_volume_tests,
+             goal9_brazil_rank_volume_placebos(
+               goal3_brazil_rank_volume_data,
+               synth_fit,
+               se_synth,
+               placebo_teste_treatment02,
+               se_synth_placebo2,
+               placebo_teste_treatment04,
+               se_synth_placebo3,
+               placebo_teste_treatment11,
+               se_synth_placebo1
+             )),
   # Robustness: baseline SDiD without institutional covariates
   tar_target(synth_data_baseline, clean_synth_data(final_df, ranked_trade_data=trade_data_ranked)),
   tar_target(synth_fit_baseline, simple_fit(data=synth_data_baseline, filter_latin_america=FALSE)),
@@ -165,6 +187,8 @@ list(
     china_top_fect_cov_data,
     fml = abs_distance_china ~ china_top + log_gdp_pc + free_press
   )),
+  tar_target(plot_fect_ife_gap_china_top_cov,
+             plot_fect_gap(fect_ife_china_top_cov, "IFE with covariates: Entry-aligned gap plot")),
   tar_target(fect_carryover_china_top, run_fect_carryover(china_top_fect_data, nboots = 10000L)),
   tar_target(panelmatch_att_china_top, run_panelmatch_analysis(china_top_fect_data, qoi = "att", n_iter = 10000L)),
   tar_target(panelmatch_art_china_top, run_panelmatch_analysis(china_top_fect_data, qoi = "art", n_iter = 10000L)),
