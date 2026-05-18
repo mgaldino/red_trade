@@ -138,7 +138,9 @@ The primary outcome is absolute UNGA ideal-point distance to China, based on the
 
 For Brazil, the treatment indicator equals one from 2009 onward, the first year China became Brazil's largest export destination. SDiD estimates Brazil's average post-2009 gap relative to a weighted synthetic counterfactual, using pre-treatment information to construct unit and time weights [@arkhangelsky_etal2021]. The design is reduced-form. Its credibility rests on pre-treatment fit, rank-versus-volume timing tests, donor-pool sensitivity, and outcome robustness.
 
-The SDiD panel combines UNGA ideal points with trade, macroeconomic, power, distance, political-institution, and trade-agreement covariates. The complete panel covers `r num_countries` countries and `r num_years` Brazil years for the main SDiD window (`r min_year`-`r max_year`). Trade data come from the International Trade and Production Database for Estimation [@borchert_etal2021]. The ITPD-E `trade` variable is measured in millions of current US dollars, and export-destination ranks are computed from exporter-importer flows. Table \@ref(tab:table-summary-main) reports the main variables in the Brazil SDiD panel.
+The SDiD panel combines UNGA ideal points with trade, macroeconomic, power, distance, political-institution, and trade-agreement covariates. The complete panel covers `r num_countries` countries and `r num_years` Brazil years for the main SDiD window (`r min_year`-`r max_year`). Trade data come from the International Trade and Production Database for Estimation [@borchert_etal2021]. The ITPD-E `trade` variable is measured in millions of current US dollars, and export-destination ranks are computed from exporter-importer flows.
+
+The Brazil variables enter the design in three groups. The outcome is Brazil's annual absolute UNGA ideal-point distance to China; the treatment is an indicator for years after China becomes Brazil's largest export destination. The covariates measure trade exposure to China and the United States, relative power, distance to the United States, leader ideology, macroeconomic stress, regime institutions, and U.S. trade-agreement ties. The cross-country scope probe uses the same outcome and treatment logic, with log GDP per capita and V-Dem freedom of expression as the covariate-adjusted `fect` controls. Table \@ref(tab:table-summary-main) reports the main variables in the Brazil SDiD panel.
 
 ```{r table-summary-main, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 summary_vars <- tar_read(synth_data) %>%
@@ -152,6 +154,7 @@ summary_vars <- tar_read(synth_data) %>%
     `Power gap to US` = us_power_gap,
     `GDP per capita` = pci_cur,
     `Exchange rate` = exachange_rate,
+    `HoG left ideology` = hog_left,
     `Current account` = CA_GDP,
     `Government deficit` = govdef_GDP,
     `Parliamentary system` = dplyr::any_of("inst_parliamentary"),
@@ -220,6 +223,8 @@ tar_read(plot_trend)
 ```
 
 The rank interpretation requires more than showing that trade with China was increasing. Brazil's exports to China grew before 2009, including years in which China rose in the export hierarchy but did not become number one. The timing tests in Table \@ref(tab:table-placebo) therefore ask whether rapid trade growth and lower-rank promotions generate the same estimated UNGA convergence as the top-rank reversal. They do not. The 2003 and 2005 rows are timing falsifications for the continuous-growth alternative. The 2012 row probes whether the result is driven by a later break after China had already become the top destination.
+
+The same timing logic addresses the main Brazilian political confounder. President Lula da Silva took office in 2003 and pursued a more explicit South-South foreign-policy agenda. If that ideological shift were sufficient to explain Brazil-China UNGA convergence, the pseudo-treatment years in 2003 or 2005 should already show comparable movement. They do not. The cross-country scope probe also estimates the rank-threshold pattern across countries with different political systems and leadership profiles, which reduces the concern that the Brazil estimate is only a Lula-period artifact.
 
 ```{r table-placebo, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 rank_tests <- tar_read(goal3_brazil_placebo_rank_volume_tests) %>%
@@ -353,54 +358,67 @@ latam_spec <- sdid_spec(
 )
 
 spec_table <- tibble::tibble(
-  Quantity = c(
+  ` ` = c(
     "ATT",
-    "Placebo SE",
-    "p-value",
+    "",
+    "\\textit{Covariates:}",
+    "Trade share China",
+    "Trade share US",
+    "Power index (GPI)",
+    "Power gap to US",
+    "Per-capita income",
+    "Exchange rate",
+    "Distance to US",
+    "HoG left ideology",
+    "Current account (\\% GDP)",
+    "Gov. deficit (\\% GDP)",
+    "Parliamentary system",
+    "Military executive",
+    "US trade agreement",
     "Country-years",
     "Donor countries",
     "Donor pool",
-    "Covariates",
-    "Panel window"
+    "Time window"
   ),
   `(1) Main` = c(
-    main_spec$estimate,
-    main_spec$se,
-    main_spec$p,
+    sprintf("%.2f", as.numeric(main_spec$estimate)),
+    paste0("(", sprintf("%.2f", as.numeric(main_spec$se)), ")"),
+    "",
+    rep("$\\checkmark$", 13),
     main_spec$n_obs,
     main_spec$n_donors,
-    main_spec$donor_pool,
-    main_spec$covariates,
+    "Global",
     main_spec$window
   ),
   `(2) No institutional covariates` = c(
-    baseline_spec$estimate,
-    baseline_spec$se,
-    baseline_spec$p,
+    sprintf("%.2f", as.numeric(baseline_spec$estimate)),
+    paste0("(", sprintf("%.2f", as.numeric(baseline_spec$se)), ")"),
+    "",
+    rep("$\\checkmark$", 10),
+    "", "", "",
     baseline_spec$n_obs,
     baseline_spec$n_donors,
-    baseline_spec$donor_pool,
-    baseline_spec$covariates,
+    "Global",
     baseline_spec$window
   ),
   `(3) Extended panel` = c(
-    extended_spec$estimate,
-    extended_spec$se,
-    extended_spec$p,
+    sprintf("%.2f", as.numeric(extended_spec$estimate)),
+    paste0("(", sprintf("%.2f", as.numeric(extended_spec$se)), ")"),
+    "",
+    rep("$\\checkmark$", 13),
     extended_spec$n_obs,
     extended_spec$n_donors,
-    extended_spec$donor_pool,
-    extended_spec$covariates,
+    "Global",
     extended_spec$window
   ),
   `(4) Latin America donors` = c(
-    latam_spec$estimate,
-    latam_spec$se,
-    latam_spec$p,
+    sprintf("%.2f", as.numeric(latam_spec$estimate)),
+    paste0("(", sprintf("%.2f", as.numeric(latam_spec$se)), ")"),
+    "",
+    rep("$\\checkmark$", 13),
     latam_spec$n_obs,
     latam_spec$n_donors,
-    latam_spec$donor_pool,
-    latam_spec$covariates,
+    "Latin America",
     latam_spec$window
   )
 )
@@ -411,12 +429,12 @@ outcome_note <- paste0(
     "",
     caption_note(
       unit = "ATT in absolute UNGA ideal-point distance to China; lower values indicate convergence toward China",
-      se = "placebo-based standard errors; p-values use a normal approximation",
+      se = "placebo-based standard errors shown in parentheses below ATT",
       window = "annual country-year SDiD panels shown in the table",
       treatment = treat_def_brazil
     )
   ),
-  " The rank margin is used as a timing diagnostic rather than a covariate because it is mechanically tied to the rank-threshold event."
+  " Checkmarks indicate covariates included in each specification. Donor country counts exclude Brazil. The rank margin is used as a timing diagnostic rather than a covariate because it is mechanically tied to the rank-threshold event."
 )
 
 knitr::kable(
@@ -431,11 +449,6 @@ knitr::kable(
     latex_options = c("HOLD_position", "scale_down"),
     font_size = 8
   ) %>%
-  kableExtra::column_spec(1, width = "1.2in") %>%
-  kableExtra::column_spec(2, width = "1.15in") %>%
-  kableExtra::column_spec(3, width = "1.3in") %>%
-  kableExtra::column_spec(4, width = "1.15in") %>%
-  kableExtra::column_spec(5, width = "1.2in") %>%
   kableExtra::footnote(
     general = outcome_note,
     general_title = "Note: ",

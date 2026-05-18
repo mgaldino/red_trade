@@ -75,3 +75,13 @@ Checked items:
 - No scripts were edited and `targets::tar_make()` was not run.
 
 Render status: `paper_v4.pdf` rendered successfully after the follow-up edits on 2026-05-18.
+
+## Follow-up on Table 3 and Data variables
+
+Verdict: no blockers.
+
+The author requested two additional changes: restore the Brazil SDiD Table 3 to the visual grammar of the older Table 2, and add a short paragraph in the Data section describing variables. The implementation kept the current four specification columns but reformatted Table 3 with an ATT row, standard errors in parentheses, a covariate checkmark block, and final rows for country-years, donor countries, donor pool, and time window. The Data section now describes the outcome, treatment, Brazil SDiD covariates, and cross-country `fect` controls before the descriptive-statistics table. The Lula/South-South ideology confounder argument was also restored near the timing/placebo tests.
+
+Separate reviewer result: PASS. The reviewer confirmed that the variable paragraph appears before the descriptive-statistics table; Table 3 is readable in the rendered PDF and preserves the requested columns and sample/window rows; the Lula/South-South paragraph is restored without overclaiming; the PDF rendered successfully; and no `spell`/`treatment spell` or previously removed defensive phrases appear in the manuscript or rendered PDF.
+
+Render status: `paper_v4.pdf` rendered successfully after these edits on 2026-05-18.
