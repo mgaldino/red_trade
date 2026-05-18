@@ -2046,7 +2046,10 @@ run_fect_leave_one_out <- function(panel, method = "ife", nboots = 500,
   do.call(rbind, results)
 }
 
-# Cross-country panel from the diagnostic specification:
+# Scope-conditioned cross-country panel from the diagnostic specification:
+# the sample keeps countries where the United States is the prior top partner
+# or a relevant benchmark; treatment turns on when China becomes #1 within
+# that sample.
 # treatment turns on only when China becomes the #1 export destination after an
 # observed prior year in which China was not #1, with onset in/after 2000.
 build_china_top_partner_panel <- function(trade_data, unga_data, classified_events,

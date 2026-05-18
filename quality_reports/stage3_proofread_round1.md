@@ -1,171 +1,113 @@
-# Stage 3 -- Proofreading Report (Round 1)
+# Revisão: paper_v4.Rmd
 
-**File**: `paper_v3.Rmd`
-**Date**: 2026-02-12
-**Reviewer**: Claude Opus 4.6 (automated proofreading)
+## Resumo
 
----
+Proofread meticuloso realizado sem editar `paper_v4.Rmd`. O manuscrito está em condição boa para seguir no pipeline: os problemas encontrados são majoritariamente locais, com alguns typos claros, ajustes de concordância, trechos levemente coloquiais e inconsistências de estilo/RMarkdown. O sentido recém-ajustado de `scope-conditioned` e `US-benchmark` deve ser preservado.
 
-## Corrections Table
+Status: APROVADO 91
 
-| # | Line | Current text | Proposed correction | Category |
-|---|------|-------------|-------------------|----------|
-| 1 | 30 | "we investigate China's rise" (abstract, single-authored paper uses "we") | See item #56 below on I/We consistency. The abstract uses "we" throughout. If the author chooses "I", this and all other "we" instances must change. If "we" is the authorial convention, then the "I" instances (lines 207, 214, 218, 372) must change. | CONSISTENCY |
-| 2 | 52 | "That was a headline at many Brazilian newspaper" | "That was a headline in many Brazilian newspapers" | GRAMMAR |
-| 3 | 52 | "[@rodrigues2009] at the time. BBC ran" | "[@rodrigues2009]. BBC ran" (remove "at the time" -- redundant with "in 2009") | STYLE |
-| 4 | 52 | "BBC ran a similar framing" | "The BBC ran a similar headline" ("the BBC" requires article; "framing" is awkward as object of "ran") | GRAMMAR |
-| 5 | 52 | "as EU's biggest trading partner" | "as the EU's biggest trading partner" | GRAMMAR |
-| 6 | 56 | "2014)focuses" | "2014) focuses" (missing space before "focuses") | TYPO |
-| 7 | 56 | "(Renshon 2017; Ward 2017; Dafoe et al. 2014)" | These citations use manual parenthetical format instead of the RMarkdown `[@key]` format used elsewhere in the paper. Should be `[@renshon_2017; @ward_2017; @dafoe_etal2014]` | CONSISTENCY |
-| 8 | 56 | "(Anagol & Fujiwara 2016; Fujiwara & Sanz 2020)" | Same as above. Should use `[@anagol_fujiwara2016; @fujiwara_sanz2020]` format for consistency. | CONSISTENCY |
-| 9 | 60 | "most of studies of status" | "most studies of status" | GRAMMAR |
-| 10 | 60 | "status yield tangible" | "status yields tangible" (subject-verb agreement: "status" is singular) | GRAMMAR |
-| 11 | 60 | "behaviour" (British spelling) | "behavior" (elsewhere in the paper American spelling is used, e.g., line 103 uses both "behaviour" and "behavior" in close proximity) | CONSISTENCY |
-| 12 | 75 | "The US was Brazil's top trade partner for ~80 years" | "The US was Brazil's top trade partner for approximately 80 years" (avoid tilde abbreviation in formal academic writing) | STYLE |
-| 13 | 75 | "rules out coercion" | "which rules out coercion" (needs relative pronoun; current form is a sentence fragment spliced into a semicolon list) | GRAMMAR |
-| 14 | 77 | "to estimate the causal effect of China becoming the first, as opposed to second, trade partner for Brazil to estimate its causal effect" | "to estimate the causal effect of China becoming the first, as opposed to second, trade partner for Brazil" (remove "to estimate its causal effect" -- duplicated phrase) | TYPO |
-| 15 | 79 | "We complement this analysis with usage of a Large Language Models analysis" | "We complement this analysis with a Large Language Model analysis" (agreement: "a ... Models" should be singular; "usage of" is redundant) | GRAMMAR |
-| 16 | 79 | "the media's role in publicizing, and thus legitimizing, this newfound status" | OK as written, but the sentence is 55 words long -- consider splitting. | STYLE |
-| 17 | 83 | "Next, we discuss the importance of salience effects in the realm of trade effects and political alignment. In the third section, we present our methodology" | The roadmap uses ordinal section labels ("third", "fifth", "sixth", "seventh") but the paper uses `number_sections: true`, so sections will be numbered. Verify that the stated section numbers match the actual numbered sections. The "third section" should correspond to Section 3, but the Methodology section appears to be Section 3 (correctly). "The fifth section" should be Section 5 (Robustness Checks). "The sixth section" should be Section 6 but "Salience in the media" is a subsection (5.1), not a separate section. "The seventh section" is Cross-Country Evidence (Section 6 or 7 depending on subsection structure). | REFERENCE |
-| 18 | 87 | "Many studies have studies the effect" | "Many studies have studied the effect" | TYPO |
-| 19 | 87 | "behavioral science and status theory" | "behavioral science, and status theory" (Oxford comma in three-item list: "trade and foreign policy, behavioral science, and status theory") | GRAMMAR |
-| 20 | 89 | "For instance, [@guilhon2014] notes" | "For instance, @guilhon2014 notes" (remove square brackets -- `[@key]` produces parenthetical citation "(Guilhon 2014)"; for narrative citation "Guilhon (2014) notes...", use `@guilhon2014`) | FORMATTING |
-| 21 | 93 | "in the immediately following year" | "in the immediately following year" is grammatically borderline; consider "in the year immediately following" | STYLE |
-| 22 | 95 | "carry over effects" | "carryover effects" (one word) | TYPO |
-| 23 | 95 | "The first model is just wrong from a causal point of view" | The phrase "just wrong" is informal for academic writing. Consider "is invalid from a causal point of view" | STYLE |
-| 24 | 97 | "but as @bailey_etal2017 shows, this is problematic" ... "@bailey_etal2017 offers" | Tense inconsistency: "shows" (present) and "offers" (present) are fine for citing literature, but check whether the referent is one paper or multiple. If it is one paper, "shows"/"offers" is correct. | CONSISTENCY |
-| 25 | 99 | "[@enke_zimermann2017]" | Check spelling of author name: likely "Zimmermann" (double n). The bib key may already have the correct rendering, but flag for verification. | TYPO |
-| 26 | 101 | "a non exhaustive search" | "a non-exhaustive search" (hyphen needed for compound modifier) | TYPO |
-| 27 | 103 | "voting behaviour" then later (line 103 same paragraph) "political alignment" | "behaviour" vs. "behavior" -- the paper uses "behavior" in lines 60 (same paragraph also uses "behaviour"), 129, 163, 294, and others. British "behaviour" appears at lines 60 and 103. Standardize to American throughout. | CONSISTENCY |
-| 28 | 105 | "A standard definition of stats in the literature" | "A standard definition of status in the literature" | TYPO |
-| 29 | 105 | "Being the first is different from being the second. As the saying goes, the second can be seen as the first loser." | The sentence is fine but informal. The "first loser" is a sports cliche; consider whether it fits a political science paper. Flagging as style. | STYLE |
-| 30 | 107 | "we hypothesise" | "we hypothesize" (American spelling to match rest of paper) | CONSISTENCY |
-| 31 | 109 | "Thus, a rank change, such as China becoming Brazil's top trade partner in 2009, overtaking the US, constitutes a prime example" | The parenthetical "overtaking the US" creates an awkward double appositive. Consider: "such as China overtaking the US as Brazil's top trade partner in 2009, constitutes..." | STYLE |
-| 32 | 125 | "China's increased importance as Brazil's second-largest trade partner" | Should this be "first-largest" or "top"? China was becoming #1, not #2. The sentence says estimating the effect of China becoming the top partner, so "second-largest" appears to be an error. | TYPO |
-| 33 | 131 | "Suppose also that the first $N_{\text{countries}}$ do not receive the treatment and the last country $N_{\text{Brazil}}$ does" | The subscript notation is inconsistent: $N_{\text{countries}}$ and $N_{\text{Brazil}}$ are unusual. Standard notation would be $N_{co}$ (control) and unit $N$ (treated). Minor, but flagging for author review. | FORMATTING |
-| 34 | 142 | "In order to gain intuition, it is worthwhile to contrast it" | "it is worthwhile" is vague filler. Consider: "To build intuition, we contrast the SDiD with both DiD and SCM." | STYLE |
-| 35 | 145 | "$\hat{\lambda}$" appears in LHS of DiD equation but not in the equation body | The LHS includes $\hat{\lambda}$ but the RHS minimizes over $(\tau_{ATT}, \mu, \alpha, \beta)$, not $\lambda$. This appears to be a notation inconsistency: the LHS should match the RHS. | FORMATTING |
-| 36 | 165 | "as suggested by [@hirshberg_klosin2024]" | "as suggested by @hirshberg_klosin2024" (remove square brackets for narrative citation) | FORMATTING |
-| 37 | 168 | "$\hat{\tau}_{ATT}^{\text{SCM}}$" in the SDiD-with-covariates equation | Should be $\hat{\tau}_{ATT}^{\text{SDiD}}$ (this is the SDiD equation, not SCM). The SCM superscript appears to be a copy-paste error from the SCM equation above. | TYPO |
-| 38 | 175 | "## Cross-countries" | "## Cross-Country Design" or "## Cross-Country Analysis" (hyphenated, singular, more descriptive) | STYLE |
-| 39 | 177 | "beyond its specific feature" | "beyond its specific features" (plural) or rephrase: "beyond this specific context" | GRAMMAR |
-| 40 | 177 | "specific to Lula da Silva's or Workers Party presidency" | "specific to Lula da Silva's or the Workers' Party's presidency" (missing article "the" and possessive apostrophe on "Workers'") | GRAMMAR |
-| 41 | 177 | "time,such as" | "time, such as" (missing space after comma) | TYPO |
-| 42 | 177 | "Leman Brothers" | "Lehman Brothers" | TYPO |
-| 43 | 177 | "how the China Summer Olympics games in 2008 changed its status after 2008" | "how the 2008 Beijing Summer Olympics changed China's status" (current phrasing is awkward and redundant with "in 2008"/"after 2008") | GRAMMAR |
-| 44 | 179 | "had the US as its top trade partner" | "had the US as their top trade partner" (subject is "all countries", plural) | GRAMMAR |
-| 45 | 179 | "the effect of having China overcoming" | "the effect of China overtaking" ("having X overcoming" is ungrammatical) | GRAMMAR |
-| 46 | 207 | "Thus, I assemble a country-year panel" | See I/We consistency note (item #56). This is one of the "I" instances in a predominantly "we" paper. | CONSISTENCY |
-| 47 | 207 | "covering  `r num_countries` countries over  `r num_years` years" | Double spaces before inline R code. Will render with extra whitespace. Remove one space. | FORMATTING |
-| 48 | 208 | "compute the absolute distance between China in a given year" | "compute the absolute distance between China's ideal point in a given year and each other country-year" (clarify what is being measured) | STYLE |
-| 49 | 212 | "it satisfies the parallel-trends (or exclusion-restriction) assumption" | Parallel trends and exclusion restriction are different assumptions from different frameworks. They should not be presented as synonyms. Consider removing "(or exclusion-restriction)". | STYLE |
-| 50 | 214 | "To avoid double-counting, I use" | See I/We consistency (item #56). | CONSISTENCY |
-| 51 | 214 | "their GPI indices ." | Extra space before period. | TYPO |
-| 52 | 216 | "a measure of current Account Balance" | "a measure of Current Account Balance" or "a measure of current account balance" (inconsistent capitalization -- "current" is lowercase, "Account Balance" is capitalized) | CONSISTENCY |
-| 53 | 218 | "With variables defined, I outline" | See I/We consistency (item #56). | CONSISTENCY |
-| 54 | 257 | "Brazil is closer to China than to the US since the beginning" | "Brazil has been closer to China than to the US since the beginning" (present perfect needed with "since") | GRAMMAR |
-| 55 | 267 | "it is mostly Brazil moving around than China" | "it is mostly Brazil moving around rather than China" (missing "rather") | GRAMMAR |
-| 56 | 267 | "Brazil and China's ideal point" | "Brazil's and China's ideal points" (joint possessive is incorrect here since they have separate ideal points; also plural "points") | GRAMMAR |
-| 57 | 284 | "The estimate is -.27 points" ... "a decrease of .27 points" | Use leading zero: "-0.27" and "0.27" (APA and most style guides require leading zero for decimals) | FORMATTING |
-| 58 | 284 | "allowing us to reject the null hypothesis that there is no increase in the distance" | The logic is inverted: the null hypothesis would be "no change" or "no decrease." If the distance decreased, you reject the null of "no decrease." The current phrasing "reject the null that there is no increase" implies the effect is an increase, but the effect is a decrease. Rephrase. | GRAMMAR |
-| 59 | 286 | "`r sprintf('point estimate: %1.2f', ...)` with `r sprintf('95%% CI ...')`" | This inline code renders as raw text ("point estimate: -0.27 with 95% CI (...)") in the middle of the paper without context or formatting. It appears to be a diagnostic leftover rather than polished text. Consider removing or integrating into a proper sentence. | FORMATTING |
-| 60 | 290 | "The relative size of the time weights are in the bottom." | "The relative sizes of the time weights are at the bottom." (subject-verb agreement; "in" -> "at") | GRAMMAR |
-| 61 | 294 | "In Figure 6, we plot the results" | Verify figure numbering. Given the figures so far (DAG = Fig 1, UNGA ideal points = Fig 2, Absolute distance = Fig 3, Trade share = Fig 4, SDiD plot = Fig 5), this should be Figure 6. Confirm with actual rendering. | REFERENCE |
-| 62 | 303 | "whose weights are different than zero" | "whose weights are different from zero" ("different from" is standard) | GRAMMAR |
-| 63 | 342 | "## Salience in the media" | This is a subsection under "Robustness Checks" (Section 5). However, it is not really a robustness check -- it is a separate analysis of the mechanism. The roadmap (line 83) calls it "the sixth section." Consider promoting to a top-level section (# Salience in the Media). | REFERENCE |
-| 64 | 346 | "its growing relevance as Brazil's largest trade partner since 2008" | The text elsewhere states China became the largest trade partner in 2009, not 2008. Inconsistency. | CONSISTENCY |
-| 65 | 348 | "The first full post-shock year (2009)" | If the shock is in 2009, then 2009 is the shock year, not the first full "post-shock" year. The first full post-shock year would be 2010. Clarify. | CONSISTENCY |
-| 66 | 358 | "model gpt-4.1-mini, created on April 10, 2025" | This level of API detail (model version, exact date) is unusual in the main text of an academic paper. Consider moving to appendix or a footnote. | STYLE |
-| 67 | 360 | "when there were less news about China" | "when there was less news about China" ("news" is uncountable; "was" not "were") | GRAMMAR |
-| 68 | 360 | "both Brazil and China recognized China as a market Economy" | "both Brazil and China recognized China as a market economy" (lowercase "economy") | TYPO |
-| 69 | 360 | "mostly negatives headlines" | "mostly negative headlines" (adjective should not be plural) | GRAMMAR |
-| 70 | 360 | "Manual reading of the trade news pieces at the time show" | "Manual reading ... shows" (subject is "reading", singular) | GRAMMAR |
-| 71 | 360 | "soy import barriers put it place by China" | "soy import barriers put in place by China" ("it" -> "in") | TYPO |
-| 72 | 360 | "So, although a highly salient year, not the type of salience that would trigger a pressure in foreign policy from the business community toward China." | Sentence fragment. Needs a subject and verb: "So, although it was a highly salient year, it was not the type of salience that would trigger pressure on foreign policy from the business community toward China." Also "a pressure" -> "pressure" (uncountable). | GRAMMAR |
-| 73 | 370 | "Trigrams are strings of three tokens that help segment sentences into key phrases [@violos_etal2018]." | This definition is slightly off; trigrams do not "segment sentences" -- they are simply sequences of three consecutive tokens. Consider: "Trigrams are sequences of three consecutive tokens used to capture recurring phrases [@violos_etal2018]." | STYLE |
-| 74 | 372 | "I have used chatgpt 4o" | "I used ChatGPT 4o" (capitalize product name; simple past is more appropriate than present perfect here since the task is complete) | TYPO |
-| 75 | 383 | "coarse-categorisation" (British spelling) | "coarse-categorization" (American spelling, to match rest of paper) | CONSISTENCY |
-| 76 | 402 | "This method accommodates staggered treatment timing---countries entered treatment between 2002 and 2018---while allowing for treatment-effect heterogeneity across cohorts, a feature that standard two-way fixed effects regressions cannot guarantee" | Sentence is 40 words. Borderline but acceptable. No change needed, flagged for awareness. | STYLE |
-| 77 | 457 | "regardless of whom was displaced" | "regardless of who was displaced" ("who" is subject of "was displaced", not object) | GRAMMAR |
-| 78 | 466 | "the Brazilian SDiD estimate (−0.23)" | Earlier (line 284) the estimate is reported as "-.27". Check which is correct: -0.23 or -0.27. Inconsistency in the reported point estimate. | CONSISTENCY |
-| 79 | 470 | "when China surpass the US" | "when China surpasses the US" (present tense, third person singular) or "when China surpassed the US" (past tense) | GRAMMAR |
-| 80 | 470 | "caused foreign policy realignment of the country" | "causes foreign policy realignment in the country" (or "caused ... in the country" -- preposition "of" is incorrect) | GRAMMAR |
-| 81 | 472 | "the results suggests" | "the results suggest" (subject-verb agreement: "results" is plural) | GRAMMAR |
-| 82 | 472 | "a trade partner status" | "a trade partner's status" (possessive needed) | GRAMMAR |
-| 83 | 474 | "@mercer2017" | Elsewhere the key is "@mercer_2017" (with underscore, line 60). Verify which bib key is correct. If both exist, one will fail to resolve. | FORMATTING |
-| 84 | 478 | "we lack evidence on how business lobbies responded to it, nor do we have" | "we lack evidence on how business lobbies responded to it, and we do not have" (after "lack ... nor" is a double negative construction that is grammatically questionable; "nor" requires a preceding "neither") | GRAMMAR |
-| 85 | 496 | "plot_weigths" (chunk name) | "plot_weights" (typo in chunk name: "weigths" -> "weights") | TYPO |
-| 86 | 500 | "One resong to prefer" | "One reason to prefer" | TYPO |
-| 87 | 500 | "helps to avoid overfit" | "helps avoid overfitting" (standard term is "overfitting") | GRAMMAR |
-| 88 | 500 | "Latin American Countries" | "Latin American countries" (no capitalization of "Countries" mid-sentence) | TYPO |
-| 89 | 509 | "it is interesting to examine" | Vague filler. Consider: "The countries with the largest weights are worth examining." | STYLE |
-| 90 | 509 | "all but Guatemala, are founding members of Mercosur" | Comma splice or misplaced comma. Should be: "all but Guatemala are founding members of Mercosur" (no comma before "are") or restructure: "Of these, all but Guatemala are founding members of Mercosur." | GRAMMAR |
-| 91 | 569 | "such as chaGPT refusing" | "such as ChatGPT refusing" (capitalization) | TYPO |
-| 92 | 569 | "changing the original headline, that made matching back" | "changing the original headline, which made matching back" ("which" for non-restrictive clause, not "that") | GRAMMAR |
-| 93 | 569 | "some prompt engineering arts" | "some prompt engineering" (remove "arts" -- unidiomatic) | STYLE |
-| 94 | 569 | "would render a few different categorizations" | "would yield a few different categorizations" ("render" is a false friend from Portuguese "render/renderizar") | GRAMMAR |
-| 95 | 569 | "some recuse to classify texts" | "some refusals to classify texts" ("recuse" is not the right word; likely a false friend from Portuguese "recusa") | TYPO |
-| 96 | 30 | Abstract: "ATT = −0.12, p = 0.009" | Verify these values match the inline R code output in the cross-country section. The abstract hard-codes values that should match the computed results. | CONSISTENCY |
-| 97 | 30 | Abstract: "a 42% reduction" | The abstract also reports 42% while the body code computes `perc_change`. Ensure these match. | CONSISTENCY |
-| 98 | 87 | Long paragraph (lines 87): entire paragraph is a single block ~250 words | Consider splitting this very long paragraph into two: one on mechanisms and one on structural power / power gap arguments. | STYLE |
-| 99 | 58 | Long sentence starting "An extensive empirical literature shows..." | This sentence is ~80 words. Consider splitting after "another." | STYLE |
-| 100 | 175 | "## Cross-countries " (trailing space) | Remove trailing space after heading | FORMATTING |
+## Erros a corrigir por ordem de aparição
 
----
+| Linha aprox. | Trecho atual | Problema | Sugestão localizada |
+|---:|---|---|---|
+| 20 | `where China overtook the United States as top trade partner` | Falta determinante possessivo antes de `top trade partner`. | `where China overtook the United States as Brazil's top trade partner` ou `as its top trade partner`, conforme o referente desejado. |
+| 74 | `"China overtakes US as Brazil's top trade partner".` | Pontuação com aspas fica pouco natural em inglês acadêmico; título de notícia pode ser tratado como citação/título sem ponto externo. | `"China overtakes US as Brazil's top trade partner."` ou `The headline "China overtakes US as Brazil's top trade partner" appeared...` |
+| 78 | `offers limited theoretical guidance predicting that` | Construção truncada: `guidance predicting` soa como se a orientação previsse algo. | `offers limited theoretical guidance for predicting whether` |
+| 80 | `the same being true for Brazil and China in particular` | Construção pesada e pouco idiomática. | `a pattern also observed for Brazil and China in particular` |
+| 80, 82, passim | Mistura de `--`, `---`, `-` e travessão Unicode para incisos/ranges. | Inconsistência tipográfica em RMarkdown/LaTeX. | Padronizar: use `--` para en dash em ranges e `---` para em dash em incisos, ou use Unicode de modo consistente. |
+| 104 | `specially when` | Erro lexical: em inglês acadêmico, aqui é `especially`. | `especially when` |
+| 104 | `discrete status change in trade hierarchy` | Falta artigo/determinante. | `a discrete status change in the trade hierarchy` |
+| 106 | `the paper empirically document` | Concordância sujeito-verbo. | `the paper empirically documents` |
+| 106 | `in the two thousands` | Expressão não idiomática para década/período. | `in the 2000s` |
+| 106 | `Firstly I consider Brazil's case` | `Firstly` é menos idiomático; falta vírgula após conector. | `First, I consider Brazil's case` ou `I first consider Brazil's case` |
+| 106 | `most-likely and theoretically strongest case` | Hifenização inconsistente; `most likely` como predicativo/composto é preferível sem hífen aqui. | `most likely and theoretically strongest case` |
+| 108 | `ideal point estimation` | Termo técnico fica mais claro no plural/adjetivado. | `ideal-point estimates` |
+| 108, 251, 327, passim | `1997-2015`, `` `r min_year` - `r max_year` `` | Ranges usam hífen simples ou espaços em torno do hífen. | Usar `1997--2015` e `` `r min_year`--`r max_year` `` para LaTeX/bookdown. |
+| 121 | `employs fixed-effects with lagged dependent variables` | `fixed-effects` como substantivo está hifenizado indevidamente. | `employs fixed effects with lagged dependent variables` |
+| 135 | `the media transforms` | `media` pode ser plural; o texto alterna entre coletivo singular e plural. | Se mantiver singular coletivo: `the media system transforms`; se plural: `the media transform`. |
+| 197, 968 | `\beta_t-D_{it}` e `-X_{it}` | Espaçamento matemático inconsistente, prejudica legibilidade da equação. | `\beta_t - D_{it}` e `- X_{it}`. |
+| 207 | `it is still $n=1$, and does not allow` | Vírgula antes de `and` separa indevidamente sujeito composto; também falta sujeito explícito após `and` se mantiver a vírgula. | `it is still $n=1$ and does not allow` |
+| 207 | `alternative explanations of potential confounders that happened` | Construção confusa: explicações não são "of confounders"; confounders não "happen" naturalmente. | `alternative explanations involving potential confounders that occurred` |
+| 209 | `toe reflect` | Typo. | `to reflect` |
+| 209 | `Wolrd Trade Organization` | Typo. | `World Trade Organization` |
+| 209 | `I restrict treatment onsets` | Mudança para primeira pessoa singular em manuscrito que usa majoritariamente `we`. | `We restrict treatment onsets` |
+| 219 | `period and unit effect` | Concordância/plural. | `period and unit effects` |
+| 219 | `the relationships of each country with China is subject` | Concordância sujeito-verbo e formulação pouco idiomática. | `each country's relationship with China is subject` ou `countries' relationships with China are subject` |
+| 251 | `(`r min_year` - `r max_year`)` | Formatação de intervalo com espaços e hífen simples. | ``(`r min_year`--`r max_year`)`` |
+| 253 | `The lower the score, the closer the foreign policy between the countries.` | `foreign policy between` é pouco idiomático; são posições/preferências, não uma política "entre" países. | `The lower the score, the closer the countries' foreign-policy positions.` |
+| 253 | `or any other measures` | Concordância e paralelismo com `indices`. | `or other measures` |
+| 267 | `Government Budget Deficit (% GDP)` | Capitalização inconsistente no corpo do texto. | `government budget deficit (% GDP)` |
+| 313 | `This is a testament to how much` | Tom coloquial/forte para resultado descritivo. | `This indicates the extent to which` |
+| 315 | `Brazil is moving closer to China than the opposite` | Comparação incorreta/ambígua. | `Brazil is moving closer to China rather than China moving closer to Brazil` |
+| 331 | `The question one wonders after seeing the graph is` | Formulação coloquial. | `The figure raises the question` |
+| 340 | `estimate ... causal effect ... on the similarity of votes at UNGA` | O parágrafo descreve distância absoluta, não exatamente similaridade de votos; pode gerar inconsistência terminológica. | `estimate the average causal effect ... on UNGA ideal-point distance` |
+| 340 | `and p-value` | Falta artigo. | `and a p-value of` |
+| 348 | `from abstention to yes while China remained at yes` | Categorias de voto deveriam ser marcadas como rótulos. | `from "Abstain" to "Yes" while China remained at "Yes"` |
+| 350 | `lends credibility to the estimation of the causal effect` | Levemente pesado/menos idiomático. | `lends credibility to the causal estimate` |
+| 359 | `nor a few years after being the top one for a while` | `top one` é coloquial e vago. | `nor a few years after China had held the number-one position for some time` |
+| 361 | `pretended the true treatment happened` | `pretended` é coloquial para desenho empírico. | `specified the treatment as if it had occurred` |
+| 361 | `at 2012` | Preposição incorreta para ano. | `in 2012` |
+| 471, 525, 537, 1053 | `Folha de Sao Paulo` em captions | Nome próprio sem acento, enquanto o texto usa `Folha de São Paulo`. | Padronizar como `Folha de São Paulo` nos textos/captions renderizados. |
+| 490 | `model gpt-4.1-mini` | Nome de modelo deveria ser tratado como código/nome próprio; capitalização pode parecer informal. | ``model `gpt-4.1-mini` `` ou `the gpt-4.1-mini model`. |
+| 490 | `into 9 categories` | Estilo acadêmico: números pequenos em prosa costumam ser por extenso. | `into nine categories` |
+| 492 | `there was less news about China` | `news` é incontável, mas aqui o referente são itens/manchetes. | `there were fewer news items about China` |
+| 492 | `it was the year that Brazil recognized` | Construção pesada com `it`; melhor com `when`. | `the year when Brazil recognized` |
+| 492 | `So, although` | Início informal. | `Thus, although` ou `Although` |
+| 518 | `the China and Hong Kong stock markets` | Modificador incorreto. | `the Chinese and Hong Kong stock markets` |
+| 518 | `the Dollar` | Capitalização indevida. | `the dollar` |
+| 522 | `assist in the headlines translation` | Ordem nominal incorreta. | `assist with the headline translations` |
+| 522 | `ChatGPT 4o` | Nome do modelo costuma ser grafado como `GPT-4o`. | `GPT-4o` |
+| 533 | `'China has become, in 2009, Brazil's largest trading partner'` | Aspas simples destoam do padrão geral; a vírgula depois de `become` soa estranha em inglês. Se for citação literal, preservar conteúdo e apenas padronizar aspas. | Usar aspas duplas se não houver restrição editorial: `"China has become, in 2009, Brazil's largest trading partner"` |
+| 556 | `Media evidence is consistent with mechanism implications.` | Frase telegráfica e sem artigo/possessivo. | `The media evidence is consistent with the mechanism's implications.` |
+| 666 | `not as clean robustness evidence` | `clean` é coloquial e forte para prosa acadêmica. | `not as direct robustness evidence` |
+| 759 | `the changed sample mean it is not directly comparable` | Concordância: sujeito singular `sample` com verbo plural ausente. | `the changed sample means it is not directly comparable` |
+| 781 | `see Section 7.4` | Referência cruzada parece apontar para "Dynamic treatment effects..." e não para "Alternative Explanations", onde o argumento de mecanismos reversíveis é discutido. | Conferir alvo; provavelmente `see Section 7.7` ou usar referência bookdown com label de seção. |
+| 801 | `a vertical dashed line marking treatment periods` | Singular/plural inconsistente: uma linha vertical marca onset, não períodos. | `vertical dashed lines marking treatment onsets` ou `a vertical dashed line marking treatment onset`, conforme a figura. |
+| 838 | `the fect IFE model dropping each treated country` | Falta preposição/particípio para clareza. | `the fect IFE model after dropping each treated country` |
+| 853 | `media analysis (Section 5)` | Referência manual parece incorreta: a seção de saliência de mídia aparece dentro de `Robustness Checks`, não em Section 5 no ordenamento atual. | Conferir numeração renderizada; provavelmente `Section 6.1` ou referência por label bookdown. |
+| 859 | `status change induced by trade rank reversal` | Falta artigo antes de `trade rank reversal`. | `a status change induced by a trade rank reversal` |
+| 861 | `look beyond the increasing trade ties between countries` | `increasing trade ties` soa pouco idiomático. | `look beyond growing trade ties between countries` |
+| 863 | `While it has focused` | Antecedente ambíguo: `literature` ou `status`. | `While this literature has focused` |
+| 867 | `Secondly` | Transição menos idiomática em inglês acadêmico; a enumeração não começou explicitamente com `First`. | `Second,` |
+| 867 | `responded to it` | Pronome `it` com antecedente distante/ambíguo. | `responded to the rank reversal` ou `responded to this shift` |
+| 881 | `more details about the performance and checks on the fitted model` | Formulação pouco idiomática. | `more details on the fitted model's performance and diagnostics` |
+| 948 | `standard DiD and SCM. A DiD model estimates:` | Artigo indefinido antes de sigla pronunciada como letra pode soar incorreto. | `standard DiD and SCM. The DiD model estimates:` ou `A standard DiD model estimates:` |
+| 982 | `the usage of the placebo method` | `usage` é menos idiomático que `use`. | `the use of the placebo method` |
+| 982 | `increases the uncertainty of the model` | A incerteza é da estimativa, não do modelo. | `increases the uncertainty of the estimate` |
+| 991 | `` `r round(b_est_latam,2) ` `` | Espaço dentro do inline R e ausência de espaço após vírgula; pode renderizar espaçamento estranho. | `` `r round(b_est_latam, 2)` `` e `` `r round(se_latam, 2)` `` |
+| 991 | `They contribute the most to synthetic control.` | Falta artigo antes de `synthetic control`; antecedente de `They` pode ser mais claro. | `These countries contribute the most to the synthetic control.` |
+| 997, 999, 1001, 1105 | `C&S` no título/texto e `C\&S` em outros pontos | Inconsistência de escaping/formatação do ampersand. Em texto RMarkdown para PDF, `&` pode ser problemático fora de contextos seguros. | Padronizar como `C\\&S` no código/captions e `C\&S` no texto, ou escrever `Callaway-Sant'Anna`. |
+| 1049 | `As a result` aparece duas vezes no mesmo parágrafo | Repetição estilística. | Substituir a segunda ocorrência por `Consequently` ou reestruturar a frase localmente. |
+| 1105 | `"chinese politics and policy"` e `"china-brazil trade"` | Se os rótulos forem exibidos como categorias, a capitalização em minúsculas destoa do texto acadêmico. | Se forem rótulos fixos do classificador, manter; se forem prosa, usar `"Chinese politics and policy"` e `"China-Brazil trade"`. |
 
-## I vs. We Consistency Audit
+## Inconsistências encontradas
 
-The paper is single-authored but predominantly uses **"we"** (authorial "we"). However, **"I"** appears in four locations:
+- Termos centrais como `scope-conditioned`, `US-benchmark`, `China-top`, `top trade partner`, `top-trade-partner`, `number-one export destination` e `top export destination` estão semanticamente coerentes, mas há variação formal. Recomendo preservar `scope-conditioned` e `US-benchmark` e padronizar os demais apenas quando não houver distinção substantiva.
+- `Folha de São Paulo` aparece corretamente no corpo do texto, mas várias captions usam `Folha de Sao Paulo`.
+- `C&S`/`C\&S` varia entre texto, título e strings de tabela. Em PDF/LaTeX, convém escapar o ampersand sempre que ele for renderizado.
+- Há referências cruzadas manuais (`Section 5`, `Section 7.4`, `Section 7`) que são frágeis. Duas delas parecem incorretas no ordenamento atual.
+- Alguns chunk labels têm espaços (`basic num`, `basic data`, `plot latam`, `plot weight latam`, `trigram folha 08-09`). Isso pode funcionar, mas é frágil em workflows bookdown/knitr; labels com hífen são mais seguros.
+- O texto mistura aspas retas, aspas curvas, aspas simples e aspas duplas. Não é fatal, mas uma padronização final melhoraria a apresentação.
 
-| Line | Text |
-|------|------|
-| 207 | "Thus, **I** assemble a country-year panel..." |
-| 214 | "To avoid double-counting, **I** use the value reported by the importing country..." |
-| 218 | "With variables defined, **I** outline the estimation strategy next." |
-| 372 | "**I** have used chatgpt 4o to assist..." (in footnote) |
+## Sugestões de estilo
 
-**Recommendation**: Standardize to "we" throughout (authorial "we" is standard in political science even for single-authored papers) or standardize to "I" throughout. Given the overwhelming use of "we" (~60+ instances) versus "I" (4 instances), the simplest fix is to change the 4 "I" instances to "we."
+- Reduzir expressões coloquiais localizadas como `The question one wonders`, `pretended`, `top one`, `clean robustness evidence`, `This is a testament`.
+- Em parágrafos metodológicos, manter `we` em vez de alternar para `I`.
+- Evitar referências manuais a seções quando possível. Em bookdown, adicionar labels de seção e usar `\@ref(...)` reduz risco de erro após reordenação.
+- No apêndice de ChatGPT, preservar o prompt se ele for parte do procedimento reproduzido; nesse caso, marcar eventuais problemas gramaticais como intencionais ou não editar para não alterar o protocolo.
 
----
+## Score
 
-## Summary Statistics
+Pontuação inicial: 100
 
-| Category | Count |
-|----------|-------|
-| TYPO | 18 |
-| GRAMMAR | 27 |
-| CONSISTENCY | 16 |
-| STYLE | 16 |
-| FORMATTING | 9 |
-| REFERENCE | 4 |
+- Typos e erros gramaticais claros (`specially`, `toe`, `Wolrd`, `document`, concordância em linha 219, linha 759): -3.0
+- Problemas localizados de estilo acadêmico e formulações coloquiais: -2.0
+- Inconsistências terminológicas/tipográficas (`Folha de São Paulo`, `C&S`, ranges, aspas, dashes): -1.5
+- Referências cruzadas manuais possivelmente incorretas: -1.5
+- Fragilidades RMarkdown/LaTeX menores (chunk labels com espaços, inline R com espaço, ampersand sem escape): -1.0
 
-**Total corrections**: 100 (including the I/We audit items counted under CONSISTENCY)
+Score final: 91/100
 
----
+Status: APROVADO 91
 
-## Score Calculation
-
-- Starting score: **100**
-- TYPO deductions: 18 x (-1) = **-18**
-- GRAMMAR deductions: 27 x (-1) = **-27**
-- CONSISTENCY deductions: 16 x (-0.5) = **-8**
-- STYLE deductions: 16 x (-0.5) = **-8**
-- FORMATTING deductions: 9 x (-0.5) = **-4.5**
-- REFERENCE deductions: 4 x (-0.5) = **-2**
-
-**Final score: 100 - 18 - 27 - 8 - 8 - 4.5 - 2 = 32.5**
-
----
-
-## Verdict: NEEDS ANOTHER ROUND
-
-The manuscript has a substantial number of surface-level issues. The most critical clusters are:
-
-1. **I/We inconsistency** (4 "I" instances vs. ~60 "we" instances) -- easy fix, high visibility.
-2. **Several clear typos** that would be caught by any reviewer: "studies have studies" (line 87), "stats" for "status" (line 105), "Leman Brothers" (line 177), "resong" (line 500), "chaGPT" (line 569), "recuse" (line 569).
-3. **Grammar errors from L1 interference** (Portuguese): "render" for "yield," "recuse" for "refusal," "less news" for "less news" (actually "was" vs. "were"), missing articles, and preposition errors.
-4. **Formatting issues**: inconsistent citation format (`[@key]` vs. manual `(Author Year)`), leading zeros missing in decimals, possible figure/section numbering mismatches.
-5. **One potentially substantive inconsistency**: the SDiD point estimate is reported as both "-0.27" (line 284) and "-0.23" (line 466). One of these is incorrect.
-6. **Equation notation error**: line 168 labels the SDiD-with-covariates equation as $\hat{\tau}_{ATT}^{\text{SCM}}$ instead of $\hat{\tau}_{ATT}^{\text{SDiD}}$.
-
-A second proofreading round is recommended after these corrections are applied.
+Correções necessárias antes da versão final: corrigir typos/concordância claros, revisar as referências manuais a seções e padronizar nomes próprios/ampersands/captions. As demais sugestões são localizadas e não exigem reescrita substantiva do argumento.

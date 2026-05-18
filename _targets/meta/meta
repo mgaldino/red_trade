@@ -20,12 +20,12 @@ country_data2|stem|88ceec906ff8b9bf|f2c079e985379fdd|36ff7114bceabab7|89958334||
 country_data3|stem|13da92c468ddf252|c5b456fbcc39ad3c|1384e111a6d8efb6|477152403||t20263.8153729937s|s14602b|14602|rds|local|vector|||0.36|There were 730 warnings in `summarise()`. The first warning was: ℹ In argument: `pop = max(pop_o, na.rm = T)`. ℹ In group 2: `year = 2010` `iso3_o = 'AFG'`. Caused by warning in `max()`: ! no non-missing arguments to max; returning -Inf ℹ Run `dplyr::last_dplyr_warnings()` to see the 729 remaining warnings.|
 country_data4|stem|e09490a86a0f0653|f29a5497da58bfb3|e864a856033fbc4e|1959354854||t20263.8153799375s|s23607b|23607|rds|local|vector|||0.591|There were 1413 warnings in `summarise()`. The first warning was: ℹ In argument: `pop = max(pop_o, na.rm = T)`. ℹ In group 2: `year = 1990` `iso3_o = 'AFG'`. Caused by warning in `max()`: ! no non-missing arguments to max; returning -Inf ℹ Run `dplyr::last_dplyr_warnings()` to see the 1412 remaining warnings.|
 balance_table|stem|49dc9d21643e9dd1|be019a17b88e6bbf|312c89b7a2e6ae38|-1701077538||t20263.8193654594s|s633b|633|rds|local|vector|||0.019||
-generate_synth|function|b536fcdd0c37d189
+generate_synth|function|b536fcdd0c37d189|||||||||||||||
 synth_gerado|stem|42d4c556486b4eef|70ea19e14b21d1c2|3672a36422722a0b|974523037||t20263.8193627911s||328628|rds|local|vector|||31.443||system is computationally singular: reciprocal condition number = 1.55206e-17
 y_residual|stem|5ac8e69544048fa8|daea06bf6574e103|1023928e1a17b1a5|-1396866876||t20266.0432674886s|s19662b|19662|rds|local|vector|||0.01||
 se_synth_latal|stem|f52edc927731d254|879b08e589442eaf|b2f8ab0990a0b219|474096812||t20266.0433830335s|s80b|80|rds|local|vector|||9.279||
 synth_fit_resid|stem|7c91fa00a95e4bb2|2378d6a19f2f549f|73ca1fead6783000|218341075||t20266.0592323697s|s159270b|159270|rds|local|vector|||0.337||
-fit_reglin|function|c4bb25b0d9d46ef5
+fit_reglin|function|c4bb25b0d9d46ef5|||||||||||||||
 synth_fit_latam_resid|stem|efcb786a0a485039|7893ec33c945d018|da3c588a3b3460e9|607746156||t20266.0601517077s|s18077b|18077|rds|local|vector|||0.042||
 plot_trends_latam_resid|stem|1c7dda18bc8ee43f|fa2739615a2ab583|a73241899c1d61fd|277760192||t20266.0601578497s|s196650b|196650|rds|local|vector|||0.04||
 plot_dif_latam_resid|stem|a6c2fa6bbde628b5|35783bba1c85e655|08492381fff7a5e2|1843943590||t20266.0601591631s|s196157b|196157|rds|local|vector|||0.024||
@@ -43,23 +43,16 @@ plot_weights|stem|272ccfff60e1b2a9|a2e10ce50e844375|cf465174a05e36e0|2022521797|
 plot_dif|stem|47d7f01131cf61cc|0c2f31e18c04af0f|56a0b2c2d35977b4|901647254||t20266.0609249632s|s340097b|340097|rds|local|vector|||0.029||
 y_residual_latam|stem|944a22c80db8c843|8b71c6b1fc504c45|344ce6d99f4ac789|1096539010||t20266.0533835554s||2981|rds|local|vector|||0.005||could not find function 'fit_reglin'
 unga_data|stem|05e418d10ebd2535|52ba1a20b7d602a4|9af14a49865ceb79|-1132963809||t20267.0603095799s|s183860b|183860|rds|local|vector|||0.072||
-plot_ideal_distance|stem|598c51d3f30c7457|16c09e4d4746f081|4d7ba1ec49c83f2f|1361005707||t20267.0793285217s|s325492b|325492|rds|local|vector|||0.02||
-plot_ideal|stem|665202233b7a4542|24391ef851d8bea2|0e9cb2714e58a69a|74823708||t20267.079329909s|s351148b|351148|rds|local|vector|||0.025||
 trade_data|stem|ef55681cd7c9a7ed|d23583ff7e02c87b|0c1456e14384059d|-549653319||t20267.9034492171s|s7072660b|7072660|rds|local|vector|||41.986||
 trade_data_cleaned|stem|e7cf70be27288f81|837f6f20c4fadb6d|cb4e1bc75439fc55|1539297756||t20267.9034535192s|s161286b|161286|rds|local|vector|||0.054||
-trade_data_ranked|stem|873b2aa575ac22aa|ac64b929b40c4b18|7fe44366a2ccafd1|1077794227||t20267.9034596402s|s70818b|70818|rds|local|vector|||0.218||
-trade_plot|stem|2a5650d14d7390b9|be8a5d8539219a56|112286906a3b291c|1374114840||t20267.9034605094s|s366234b|366234|rds|local|vector|||0.012||
 folha_df_p1|stem|8e05d85bdac02590|e4a101404072984a|fc2bf275c75007d5|1513349383||t20268.0912945136s|s275111b|275111|rds|local|vector|||679.683||
-folha_df_p0|stem|466d4d5598864396|fb0268ca5c79478f|fc2bf275c75007d5|1612056622||t20268.1011243448s|s271213b|271213|rds|local|vector|||674.015||
 folha_df_p2|stem|a94011939dd99e98|a06f4e52ad06cbf0|fc2bf275c75007d5|-522363287||t20268.1189874783s|s280056b|280056|rds|local|vector|||686.884||
 folha_df_p3|stem|158897c837dcde50|16cdcd1a0678d20a|fc2bf275c75007d5|1637533069||t20268.1356071373s|s283451b|283451|rds|local|vector|||683.669||
 folha_df_p4|stem|1ea945e49d5466c6|50768e0c9bd56e86|fc2bf275c75007d5|1574317330||t20268.5121230101s|s291717b|291717|rds|local|vector|||690.138||
-plot_trend1|stem|a3edb872e1dec7cf|e3b463068b1997b6|3f749aa14b9e1ad6|-2015188777||t20268.5493158124s|s335402b|335402|rds|local|vector|||0.042||
 plot_weights_coef1|stem|70f4ef7550a19186|a2e10ce50e844375|056f3412076e318b|1216616176||t20268.5493168216s|s280905b|280905|rds|local|vector|||0.009||
 plot_parallel1|stem|1c7e9f4bc599afa9|0c2f31e18c04af0f|52168a6290cefc7a|-1017882951||t20268.5493185802s|s334935b|334935|rds|local|vector|||0.027||
-my_balance_table|function|353f775996588905
+my_balance_table|function|353f775996588905|||||||||||||||
 folha_df|stem|ab2efdc92249893a|8150abbf8e5a23a1|20378861547d22c4|1306096025||t20268.6860784911s|s1382490b|1382490|rds|local|vector|||0.002||
-plot_folha|stem|0802c5a198a763c0|20434402083a7f3e|7558f4fd222f68c5|963096838||t20268.7842862723s|s1586055b|1586055|rds|local|vector|||0.081||
 data_placebo_time|stem|b16a512e495a6527|b08fcf371970d941|33aba52d7bfcf369|1651598532||t20269.1271497108s|s290557b|290557|rds|local|vector|||0.006||
 placebo_teste_time|stem|b0af43c49bff5305|cf0a80b4d4e3556f|7fdab3fb94b4f36b|27739586||t20269.1271550998s|s133582b|133582|rds|local|vector|||0.414||
 list_plots|stem|b74f753260a85b4e|4cbd7a529e49a39b|2f1fcaf4a8b70ada|-114840105||t20269.6003908726s|s3095760b|3095760|rds|local|vector|||2.108|In `d`, `NA` elements were replaced with string 'NA'.. In `d`, `NA` elements were replaced with string 'NA'.|
@@ -68,71 +61,275 @@ country_file5|stem|bc041e7cb3a93d72|8712d572bd9f1658|2c530c1562a7fbd1|-196621085
 country_data5|stem|e720816d359b38bf|6e98f9c600b357e7|73a19d4f0fccca8d|-2096841999||t20269.9466594152s|s10458b|10458|rds|local|vector|||1.698|There were 1458 warnings in `summarise()`. The first warning was: ℹ In argument: `pop = max(pop_o, na.rm = T)`. ℹ In group 2: `year = 2015` `iso3_o = 'AFG'`. Caused by warning in `max()`: ! no non-missing arguments to max; returning -Inf ℹ Run `dplyr::last_dplyr_warnings()` to see the 1457 remaining warnings.|
 dpi_file|stem|d8129d06f40e92b4|173da9180802bc9b|2c530c1562a7fbd1|-249243301|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/raw data/database-political-institutions-2015.csv|t20272.9133411355s|s2365772b|2365772|file|local|vector|||1.538||
 dpi|stem|e9febe0b34560cd7|5703833d93ec9835|89c3b835e07ff4e9|-915455721||t20272.9408155481s|s6213b|6213|rds|local|vector|||0.029||
-plot_weights_coef|stem|7bfd53555ecec24d|a2e10ce50e844375|85ec0e71cc1ea200|1027663587||t20273.5302703938s|s173967b|173967|rds|local|vector|||12.174||
-plot_weights_coef_latam|stem|1793d5c6e32babc6|6396f9b1ecbdbf2d|25783f0ea820e136|-1283731509||t20273.5304172596s|s180027b|180027|rds|local|vector|||0.317||
 placebo_teste_time2|stem|1dece209bb221273|ca9c951edcfb1b3d|360bfce056388fbc|1674722949||t20273.5382182382s|s44452b|44452|rds|local|vector|||0.039||
 placebo_teste_time3|stem|dfc385fd3cd7ad3c|1eef2899d2253b8b|ca05abfcf6f62d90|-369438625||t20273.5382189535s|s63338b|63338|rds|local|vector|||0.051||
-get_exchange_rate_data|function|c1d3d358634dce9d
+get_exchange_rate_data|function|c1d3d358634dce9d|||||||||||||||
 exchange_rate_data|stem|d1968de07967b2c8|4bdd435c128570d9|2c530c1562a7fbd1|-1887716885||t20269.5602458672s||31328|rds|local|vector|||1.54||could not find function 'get_exchange_rate_data'
-wb_data|stem|43bded99bc767814|4ed1a6034f195cc4|a720da10e27eb6df|964024317||t20274.0306446242s|s238369b|238369|rds|local|vector|||13.179||
 macro_data|stem|7efd79a2a12f583c|9332e7a00ee55bd0|d03acbf05d59898d|805793487||t20274.7818032815s|s129677b|129677|rds|local|vector|||5.557||
-dpi_data|stem|8c8a512ef4db7f68|5703833d93ec9835|02acd4ba23f589da|1553857186||t20274.7818039697s|s4717b|4717|rds|local|vector|||0.022||
 country_data|stem|08fd0f809fc31729|f0a47fd5dad8c957|0e8de7c427621903|1190291426||t20274.7831737522s|s8709b|8709|rds|local|vector|||2.114||
 data_placebo_time2|stem|faa99817b3d7ebd5|f56dfb2040fd733f|b10a819dbd9ec335|1459296199||t20274.7846305378s|s68750b|68750|rds|local|vector|||0.001||
 mat_covariates|stem|7dad69e6dd475b82|c351d5284755efca|f0e7c3ceaaf8df03|955883067||t20274.7846335479s|s58421b|58421|rds|local|vector|||0.249||
-synth_placebo_data|function|ed06926b9b232643
-fit_sdid|function|62746ab4433ff1ad
+synth_placebo_data|function|ed06926b9b232643|||||||||||||||
+fit_sdid|function|62746ab4433ff1ad|||||||||||||||
 data_placebo_time1|stem|dc62d2b8e1da0664|46595bdd6618e822|b10a819dbd9ec335|1259437360||t20274.7860463882s|s43697b|43697|rds|local|vector|||0.007||
 data_placebo_time3|stem|2a26cd76a8b504f9|79ffd417a4eeff72|b10a819dbd9ec335|-77447842||t20274.7860467717s|s43693b|43693|rds|local|vector|||0.012||
 placebo_teste_time1|stem|f858905331a7e308|4e6b2c26b975ae30|4d78d922c2a5193a|1587982554||t20273.5382176694s||72210|rds|local|vector|||0.012||dim(X)[1:2] == dim(Y) are not all TRUE
 ideology_file|stem|4d23a54f1b1ed10f|9f55bb3ae6fa45ef|2c530c1562a7fbd1|1542442468|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/raw data/global_leader_ideologies.csv|t19990.4584490741s|s4085918b|4085918|file|local|vector|||1.001||
-get_dpi|function|6342477113afc109
+get_dpi|function|6342477113afc109|||||||||||||||
 ideology_data|stem|68a30e206d648cda|8b805dbfc7066e96|1555714367c2da8a|1420798038||t20276.9113728583s|s67040b|67040|rds|local|vector|||0.068||
-final_df|stem|c80fdfe68446d82f|ed5613b2726a69c7|a3acb2caae685fec|-564487796||t20276.9113739544s|s639674b|639674|rds|local|vector|||0.018||
-plot_data|stem|923dda16274744b8|ca2338a32ca86458|828fa81ab578fec1|961282072||t20276.9113761144s|s753b|753|rds|local|vector|||0.004||
-get_macro|function|29039831984eb804
-my_plot_weigths|function|e317eec36db6863a
-get_folhasp_newspieces|function|74c37ddc7fb57694
-rank_trade|function|844ff99ece9ced7b
-plot_ideal_points|function|277a968a729b5517
-get_gpi_data|function|336ba964a0604255
-plot_distance_unga|function|ac6af68205c435b0
-my_plot_trends|function|6b2958e3c45c74db
-folha_plot|function|ce1d92ed18e9c45d
-bind_folha|function|c077c147b86b3c5c
-clean_synth_data|function|8c89d28baff30348
-generate_plot_data|function|ae5a7b4ded3e89f4
-create_list_graphs|function|33131b14c5aaa123
-process_trade_data|function|afd94933e7b60ecd
+classify_chatgpt|function|6dce55fe6be569c5|||||||||||||||
+classification_list|stem|550bac8a636fbb3d|d80cc5652e01200f|d0f8727f45ddd38c|1457227087||t20280.0690952816s|s327b|327|rds|local|vector|||10.593||
+prompts|stem|9ff19d49a940c0ae|3e9ee2cd20fb6142|1fe819e59aa2bff0|-2095300805||t20280.6437778078s|s277b|277|rds|local|vector|||0.043||
+build_chat|function|140230bd473a1022|||||||||||||||
+batch_state|stem|d72c69fbb6d0d2b9|d295518a6fde4715|5c8fb3f427777212|171792411|china_batch.json|t20280.6509331088s|s908b|908|file|local|vector|||2.172||
+make_chat|function|fc09728b1004ab2b|||||||||||||||
+submit_batch|function|16a2159294397b01|||||||||||||||
+batch_labels|stem||1aa0c9af24b6593a|27b6a0eab94c4269|1073914309||t20280.6509334509s||0|rds|local|vector|||0.004||object 'chat' not found
+fetch_results|function|f90f2a7a67c9ef1d|||||||||||||||
+make_prompts|function|1f312881c29743ee|||||||||||||||
+create_chat|function|fc09728b1004ab2b|||||||||||||||
+run_batch|function|5a10a8ce1286376e|||||||||||||||
+batch_chats|stem||c55369e9acce6726|e0caa706001ce1f5|-1945678495||t20280.7754973146s||0|file|local|vector|||0.079||`token` must be a single string, not `NULL`.
+system_block|object|ae9e244e2544d6c1|||||||||||||||
+state_file|object|c58958c9844fcac8|||||||||||||||
+model|object|b28eb9060f256a50|||||||||||||||
+chat|stem|18701e011d29588e|26610c747be92f49|2c530c1562a7fbd1|-874988908||t20280.7743514548s||15264|rds|local|vector|||2.239||could not find function 'create_chat'
+trade_data_ranked|stem|96bb83309ea694f1|ac64b929b40c4b18|5ae82d14bd36c41e|1077794227||t20286.8858100342s|s73241b|73241|rds|local|vector|||0.423||
+treatment_events|stem|d62f45737efbdb96|ec1840f2c37ca215|ff4c3d24fc87c934|-2091746606||t20494.7046679972s|s439b|439|rds|local|vector|||0.008||
+classified_events|stem|03ac1b55d5127729|e044ff55c3cf7bbe|a0b8d1914579024f|1152423359||t20494.9660804946s|s626b|626|rds|local|vector|||0.657||
+event_study_data|stem|71cd64b29a9fffc9|62e55f55b8ef4684|757d3b15d223a0c5|-1166081259||t20496.662930564s|s37675b|37675|rds|local|vector|||0.022||
+did_covariates|stem|4b71a59adf4bf69a|3c2cd88da6e64b96|fc13d72360cac545|-348973027||t20496.662930944s|s115742b|115742|rds|local|vector|||0.002||
+event_study_data_cov|stem|8a50cfc060e0b443|fab13ea74192d9a4|ae867a0eb4f1df0f|1011117372||t20496.7080148901s|s114969b|114969|rds|local|vector|||0.014||
+pretrends_test_cov|stem|b029015a00ac7815|0714f5b6e87b5a20|67c8525542e26eb0|1051856875||t20496.7402649343s|s261b|261|rds|local|vector|||0.007||
+group_att_table_cov|stem|25710a538214a846|a3171a092a680027|302363ca35efe612|940897423||t20496.740265156s|s208b|208|rds|local|vector|||0||
+honest_did_smooth_cov|stem|61d4ed1bf6e46081|cf5008e1d9ceca56|37374428f34260d5|1831292624||t20496.7404137412s|s1253992b|1253992|rds|local|vector|||12.756|Reciclar uma array de comprimento 1 na aritmética de vetor-array foi descontinuado.   Em vez disso, use c() ou as.vector().|
+honest_did_relmag_cov|stem|4b0c1f05c280c16f|ad760f93ea287756|37374428f34260d5|263711768||t20496.7406140183s|s1254003b|1254003|rds|local|vector|||17.216||
+plot_es_displaced_usa_cov|stem|4f3841f82074d84a|76dd94401a075272|198fab85d4eea80b|-589488289||t20496.740615223s|s1257787b|1257787|rds|local|vector|||0.014||
+pretrends_test|stem|b29ec01cb10e4f0c|dc755f4d0345d338|c79e12143749af55|-1809368517||t20496.7428573766s|s974b|974|rds|local|vector|||0.012||
+honest_did_smooth|stem|aa650d0263deff3b|1c38fe0896ae5464|b4a56e56f72a08f9|-1985144937||t20496.7870873395s|s1331348b|1331348|rds|local|vector|||24.942||
+honest_did_relmag|stem|f6d9e68c22f9a3b1|b4c5754ebb97766f|b4a56e56f72a08f9|1372866410||t20496.7884154894s|s1331115b|1331115|rds|local|vector|||114.651|CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI length may not be accurate. CI is open at one of the endpoints; CI|
+usa_top_countries|stem|abd40e0c7e40bee4|6943edc636719126|aadfda7bb86c2841|1703481095||t20496.8155529053s|s424b|424|rds|local|vector|||0.519||
+event_study_data_usa|stem|506ee2f308ac3a75|8dfb297cac314a9b|f03f7ba730162723|-1358543262||t20496.8155531056s|s18429b|18429|rds|local|vector|||0.001||
+run_split_did|function|3f62face939f2df9|||||||||||||||
+did_long_streak|stem|1ee0ade103fa2531|d2bc465177e8c079|a48e1c3e048a3bd3|-1501694283||t20497.7024292597s|s476475b|476475|rds|local|vector|||0.503|Be aware that there are some small groups in your dataset.   Check groups: c(2012, 2009, 2007, 2010, 2018).. Not returning pre-test Wald statistic due to singular covariance matrix|
+did_low_press|stem|d40bc16a4782b8ec|a672383dfc6b3fa7|a48e1c3e048a3bd3|941554163||t20497.7024342902s|s380980b|380980|rds|local|vector|||0.414|Be aware that there are some small groups in your dataset.   Check groups: c(2007, 2015, 2009, 2018).. Not returning pre-test Wald statistic due to singular covariance matrix|
+did_high_press|stem|78368e62e4e465b1|df7e588f7d6f9b4e|a48e1c3e048a3bd3|-1722936983||t20497.7024392088s|s378047b|378047|rds|local|vector|||0.407|Be aware that there are some small groups in your dataset.   Check groups: c(2012, 2009, 2008, 2010).. Not returning pre-test Wald statistic due to singular covariance matrix|
+did_short_streak|stem|54e0b8c244237e0f|5c0a033bf2f95662|a48e1c3e048a3bd3|-1722377144||t20497.7024423401s|s250467b|250467|rds|local|vector|||0.252|Be aware that there are some small groups in your dataset.   Check groups: c(2008, 2015).. Not returning pre-test Wald statistic due to singular covariance matrix|
+did_cov_both|stem|d73bf19f4085ae71|b0701c1674a882f9|976d84bb96a4516e|-257402516||t20497.7264577339s|s686971b|686971|rds|local|vector|||0.706|Be aware that there are some small groups in your dataset.   Check groups: c(2012, 2009, 2008, 2007, 2015, 2010, 2018).. Not returning pre-test Wald statistic due to singular covariance matrix|
+did_cov_press|stem|a08be2c3bd566337|5f1371bf4d9ca132|976d84bb96a4516e|-898830868||t20497.726466699s|s684686b|684686|rds|local|vector|||0.747|Be aware that there are some small groups in your dataset.   Check groups: c(2012, 2009, 2008, 2007, 2015, 2010, 2018).. Not returning pre-test Wald statistic due to singular covariance matrix|
+did_cov_streak|stem|1f8479e4a34f8420|f430c45d4a8dd8a2|976d84bb96a4516e|-1914264184||t20497.7264743962s|s710083b|710083|rds|local|vector|||0.633|Be aware that there are some small groups in your dataset.   Check groups: c(2012, 2009, 2008, 2007, 2015, 2010, 2018).. Not returning pre-test Wald statistic due to singular covariance matrix|
+het_data_file|stem|f18027b4b2441105|e281cc9ba26bebb5|2c530c1562a7fbd1|-1866343833|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/heterogeneity_vars.rds|t20497.7309641996s|s1021b|1021|file|local|vector|||1.492|pacote ‘did’ foi compilado no R versão 4.4.3|
+het_data|stem|f18027b4b2441105|9c69cd3f78c115ce|75d94d66766e2f0c|-149689754||t20497.7547890192s|s1021b|1021|rds|local|vector|||0||
+panel_1995|stem|1b910f80dc873a35|575df93dfaee8b7c|d181e4f32ae7c77e|-1025520474||t20497.7547902242s|s18365b|18365|rds|local|vector|||0.021||
+panel_1991|stem|6ab1f0625a9f5574|a707a303f82b479c|d181e4f32ae7c77e|607170328||t20497.7547903847s|s19853b|19853|rds|local|vector|||0.006||
+did_1995_both|stem|66771be799dd90f0|ef65f8412598d43b|260dd231a0528c8a|35547816||t20497.7548007651s|s758651b|758651|rds|local|vector|||0.865|Be aware that there are some small groups in your dataset.   Check groups: c(2012, 2009, 2008, 2006, 2007, 2015, 2003, 2010, 2018).. Not returning pre-test Wald statistic due to singular covariance matrix|
+did_1995_baseline|stem|3664a16603ec632f|32aac446c1cf38a7|a7f6e8dfa56c38db|-2086765178||t20497.7548095645s|s1484643b|1484643|rds|local|vector|||0.709|Be aware that there are some small groups in your dataset.   Check groups: c(2012, 2009, 2008, 2006, 2007, 2015, 2003, 2010, 2018).. Not returning pre-test Wald statistic due to singular covariance matrix|
+did_1991_both|stem|344cf0330a4750a9|b1a62ef4e05a19bf|7ca78f0d644ccd45|-202551294||t20497.7548197448s|s792642b|792642|rds|local|vector|||0.845|Be aware that there are some small groups in your dataset.   Check groups: c(2012, 2009, 2008, 2007, 2015, 2003, 2010, 2018).. Not returning pre-test Wald statistic due to singular covariance matrix|
+did_1991_baseline|stem|66312bf1b214cb24|62c96c21461b72a5|4d5dcf3a12913417|-1894277935||t20497.754828469s|s1558692b|1558692|rds|local|vector|||0.701|Be aware that there are some small groups in your dataset.   Check groups: c(2012, 2009, 2008, 2007, 2015, 2003, 2010, 2018).. Not returning pre-test Wald statistic due to singular covariance matrix. Simultaneous critical value is arguably `too large' to be realible. This usually happens when number of observations per group is small and/or there is no much variation in outcomes.|
+event_study_data_usa_het|stem|9aaef1d52356bc0a|d7fe3de5e1d66399|0f4914509ef511c0|-1414096377||t20497.754828602s|s19310b|19310|rds|local|vector|||0.001||
+es_1995_both|stem|31a64b2a1df441f4|218c0c8536b0da74|9a4c274acaacaed9|1965403312||t20497.7548298341s|s1727b|1727|rds|local|vector|||0.001||
+es_1995_baseline|stem|164e23e467219425|6f66e0ff7b9023f7|25873ceff72af733|-145270817||t20497.754829996s|s1725b|1725|rds|local|vector|||0.003||
+es_baseline|stem|b736058c8e837288|c8f2b12f0d00b9d1|77c63f2e9e12ea39|-794001977||t20497.7548302543s|s1757b|1757|rds|local|vector|||0.001||
+es_cov_both|stem|35caa980deaa6268|8e383b1a55c2f2d5|6646b6565c061609|868445972||t20497.7548303703s|s1754b|1754|rds|local|vector|||0.001||
+plot_es_overlay|stem|e238fde827b37cfc|7f3d6c364f1d67bb|0ff8e1f71440052c|-182246060||t20497.7548325268s|s307520b|307520|rds|local|vector|||0.02||
+table_treated|stem|7c8afe3b350c2435|11afff10d8d86993|0fd33c80b6e06a2b|-962702822||t20497.7860465798s|s762b|762|rds|local|vector|||0.056||
+did_no_crisis|stem|35afb63a46515477|24f517e509385a10|9e3ddda82e228619|2052989659||t20497.7860550667s|s448884b|448884|rds|local|vector|||0.699|dropped 204 rows from original data due to missing data. Be aware that there are some small groups in your dataset.   Check groups: c(2012, 2007, 2015, 2010, 2018).. Not returning pre-test Wald statistic due to singular covariance matrix|
+es_no_crisis|stem|4e54431e096488ea|e82cbc2dcb96573a|fca12ec9768732dd|-1165928390||t20497.7860553014s|s1761b|1761|rds|local|vector|||0.001||
+add_heterogeneity_vars|function|2b01236ff4818394|||||||||||||||
+table_treated_descriptive|function|d31883af5edb1b76|||||||||||||||
+extract_event_study_df|function|da39c21e87aa7ac5|||||||||||||||
+plot_event_study_facet|function|1125f35e965fe47c|||||||||||||||
+load_heterogeneity_data|function|465adedabc2f71b6|||||||||||||||
+build_alternative_panel|function|f9e8b4df22cf216e|||||||||||||||
+plot_event_study_overlay|function|f298f74b90699942|||||||||||||||
+run_exclude_crisis_did|function|956ecf12a2408b24|||||||||||||||
+run_did_with_covariates|function|00bf3e6f41e2c703|||||||||||||||
+wb_data|stem|ce26c9f8867639ef|4ed1a6034f195cc4|a720da10e27eb6df|964024317||t20498.8590589349s|s238678b|238678|rds|local|vector|||11.943|pacote ‘did’ foi compilado no R versão 4.4.3|
+folha_df_p0|stem|466d4d5598864396|fb0268ca5c79478f|fc2bf275c75007d5|1612056622||t20498.866133434s|s271213b|271213|rds|local|vector|||611.189||
+trade_agreement_data|stem|83b9d045abef3d15|6165864066c164a7|ca3763e26c5d7ab0|16030674||t20498.8661890918s|s1655b|1655|rds|local|vector|||4.724||
+final_df|stem|b0c13970533ed2b2|ed5613b2726a69c7|0c1ce4b98b47d121|-564487796||t20498.8661900884s|s640099b|640099|rds|local|vector|||0.008||
+synth_data_baseline|stem|fd63e5f0bcbcf475|b372cbc872ebb828|3cd0e432e2fde3d5|330527278||t20498.8661938707s|s146199b|146199|rds|local|vector|||0.015||
+synth_fit_baseline|stem|4b0a06595e5af453|34d27ffabf887fc4|57d6684ed23911ea|359981396||t20498.8807651102s|s190474b|190474|rds|local|vector|||7.815||
+se_synth_baseline|stem|2554178248a77d95|98cea6aed092e7c9|43610cc36237c0a7|-1301463424||t20499.4987994742s|s80b|80|rds|local|vector|||1460.22||
+dpi_data|stem|e41b852cb593f67e|ed1626ad1901a068|ac9304d2cce686a0|1553857186||t20499.5694241288s|s2276b|2276|rds|local|vector|||0.06||
+synth_data_extended|stem|07f10f161986f990|7eccbd9600646297|1e0dca97d05bfcd4|1376510851||t20499.5694282846s|s158258b|158258|rds|local|vector|||0.295||
+synth_data|stem|d4cf434bd9215177|49d74a0bcdae013a|1e0dca97d05bfcd4|-2019694640||t20499.5694288637s|s147115b|147115|rds|local|vector|||0.016||
+synth_fit_extended|stem|047c1141a5d8bcd1|4ccadad831bca9cf|f0d1ecf4603a3420|1066361118||t20499.569523546s|s208446b|208446|rds|local|vector|||8.166||
+synth_fit|stem|575cc29cb657404a|bfe32a18c458a9a1|e29b007ebb617c1a|1675857646||t20499.5696203274s|s191667b|191667|rds|local|vector|||8.343||
+synth_fit_latam|stem|7b85fbe72f0fa402|8eb80ea8631db8d0|e29b007ebb617c1a|721652965||t20499.5696606892s|s92635b|92635|rds|local|vector|||3.471||
+placebo_teste_treatment11|stem|377cfe783f05603b|3eb10048d07ef0b9|e29b007ebb617c1a|857570704||t20499.5697663924s|s199174b|199174|rds|local|vector|||9.115||
+placebo_teste_treatment02|stem|0532febc4a17f704|09288c7c41837701|e29b007ebb617c1a|-671333365||t20499.5698427556s|s147496b|147496|rds|local|vector|||6.582||
+placebo_teste_treatment04|stem|77300a8c3cb37cbc|1cda1ee65f6d8277|e29b007ebb617c1a|421761190||t20499.5699241922s|s145810b|145810|rds|local|vector|||7.021||
+sensitivity_results|stem|38cd6cd08f7e2c69|8afb32216f980fcc|3a892a2ea3cc3f0f|954951987||t20499.5715610518s|s486b|486|rds|local|vector|||141.414||
+permutation_results|stem|8797046b80a488a0|4bfd65f11b66a440|861a2665a8248f46|1916855523||t20499.5810143412s|s3537b|3537|rds|local|vector|||816.753||
+se_synth_extended|stem|603bb517e54cab95|6ddc95516506b0b1|51ab6cf6c80c222a|-1058648223||t20499.5992389914s|s80b|80|rds|local|vector|||1574.598||
+rmspe_diagnostics|stem|9cca9e58aaf7b8c8|6aef927a981cf3ea|914b61b1b2392620|1275697434||t20499.5992391187s|s801b|801|rds|local|vector|||0||
+donor_table|stem|9a806bbcc4bb4484|7d4136bb2285ee6e|62b3094d0cb20184|2029101730||t20499.6179087772s|s2547b|2547|rds|local|vector|||0.033||
+se_synth|stem|19d74c8729114918|67e828a7659aca53|b8e7cb7f492a3b05|-1857295872||t20499.6366816191s|s80b|80|rds|local|vector|||1621.966||
+se_synth_latam|stem|44a074c11e1db6d1|879b08e589442eaf|f7c809c600e79e56|303480878||t20499.6776962683s|s80b|80|rds|local|vector|||645.693||
+se_synth_placebo1|stem|b5edd07a281dee5b|c47c471d4cb6b405|3226e6927701c73e|2045944205||t20499.6980179038s|s80b|80|rds|local|vector|||1755.694||
+se_synth_placebo2|stem|c44bc8d534468304|0fdc7ac7e77e9181|a63962027606a39c|-649394773||t20499.7127531361s|s80b|80|rds|local|vector|||1273.112||
+se_synth_placebo3|stem|e942294b353fc0f3|228a41838b57755a|12389d24b33b1189|-1909349306||t20499.7286927478s|s80b|80|rds|local|vector|||1377.17||
+switching_panel|stem|1e9d13c64ff16610|fab9bc6319ef6964|f1d0c86e0210a02c|569163390||t20501.7072914243s|s34226b|34226|rds|local|vector|||0.577||
+plot_ideal|stem|e09b333f1d7a5f14|24391ef851d8bea2|0e9cb2714e58a69a|74823708||t20501.9438252322s|s623569b|623569|rds|local|vector|||0.044||
+plot_ideal_distance|stem|cdf303e683b9b249|16c09e4d4746f081|4d7ba1ec49c83f2f|1361005707||t20501.9438264627s|s427020b|427020|rds|local|vector|||0.018||
+plot_data|stem|923dda16274744b8|ca2338a32ca86458|93311ab330302a46|961282072||t20501.9438268538s|s753b|753|rds|local|vector|||0.004||
+plot_trend_latam|stem|a07c44c7134f9efb|5254bcced4fea156|6ced4e77a26ea262|-942661876||t20501.9438291895s|s479860b|479860|rds|local|vector|||0.071|Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0. ℹ Please use `linewidth` instead. ℹ The deprecated feature was likely used in the synthdid package.   Please report the issue at   <https://github.com/synth-inference/synthdid/issues>.|
+plot_weights_coef_latam|stem|fb215a81d7e809ca|6396f9b1ecbdbf2d|d3c1419da86459d9|-1283731509||t20501.9515936419s|s401523b|401523|rds|local|vector|||670.741||
+plot_parallel|stem|72005c4e35d2075d|0c2f31e18c04af0f|026913ccf17605d6|374716333||t20501.9707369215s|s578446b|578446|rds|local|vector|||1653.841||
+plot_trend|stem|d297f707f1290999|e3b463068b1997b6|74439c5d9dd9b51e|-1001934391||t20501.9707390038s|s578956b|578956|rds|local|vector|||0.035||
+spaghetti_plot|stem|1bb16c356fcdb56c|af2c001d8e33dd70|a8dc20700e4b321e|1523197509||t20501.9707409526s|s592064b|592064|rds|local|vector|||0.033||
+plot_weights_coef|stem|0bcfc101b742aa0b|a2e10ce50e844375|351babcfd3360d64|1027663587||t20501.9895689766s|s666661b|666661|rds|local|vector|||1626.604||
+plot_folha|stem|bfc54c9fac1a86c9|20434402083a7f3e|5afd58194ed4a0fd|963096838||t20501.9926492121s|s1852421b|1852421|rds|local|vector|||0.074||
+trade_plot|stem|4f1d3b0fc7c8a402|be8a5d8539219a56|112286906a3b291c|1374114840||t20501.9926511731s|s639363b|639363|rds|local|vector|||0.027||
+plot|stem|d1144b561e25818c|a86a352da144006d|47c8629d174d8932|874984291||t20501.9926532338s|s497045b|497045|rds|local|vector|||0.029||
+plot_parallel_latam|stem|22650166c5fe94be|0b926acb615639bd|1d66a88ae2954938|-1275524603||t20502.0003868122s|s479355b|479355|rds|local|vector|||668.048|Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0. ℹ Please use `linewidth` instead. ℹ The deprecated feature was likely used in the synthdid package.   Please report the issue at   <https://github.com/synth-inference/synthdid/issues>.|
+switching_panel_cov|stem|b0f4f150112fdddc|b3f6aec4de7b6e98|9d1b4b681e947cca|-156884868||t20502.8328121532s|s60467b|60467|rds|local|vector|||0.001||
+event_study_data_usa_cov|stem|a2b1cc5adb35fe22|2d4d4396325bd76e|e75c10bee2077df4|1069010870||t20502.8331548927s|s32970b|32970|rds|local|vector|||0.004||
+covariates_panel|stem|6b6c91fb40c9b3ec|77ece2ef6a7e3044|cdd0b32e28919d15|-339562864||t20502.8460525228s|s47911b|47911|rds|local|vector|||2.051||
+wild_bootstrap_result|stem|8c9c30278bd1bfc0|8233ba7f60fe831a|45ab31a616024745|1592013628||t20502.8468877958s|s18638811b|18638811|rds|local|vector|||2.282|Please note that the seeding behavior for random number generation for `boottest()` has changed with `fwildclusterboot` version 0.13.  It will no longer be possible to exactly reproduce results produced by versions lower than 0.13.  If your prior results were produced under sufficiently many bootstrap iterations, none of your conclusions will change. For more details about this change, please read the notes in [news.md](https://cran.r-project.org/web/packages/fwildclusterboot/news/news.html). This warning is displayed once per session.|
+validation_file|stem|3d744785d2b58996|d1ba7970e0096db3|2c530c1562a7fbd1|1184337951|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/folha_validation_sample_annotated.csv|t20497.8199634848s|s10364b|10364|file|local|vector|||0||
+media_counterfactual|stem|87211744fe31bbe8|d971f79575342b76|e8303b400fb2648c|-1093233479||t20502.879525427s|s1036b|1036|rds|local|vector|||0.036||
+cohens_kappa|stem|103d25016d2ec47f|9d37253b25c253ca|b0296610cad3b38c|-518087163||t20502.8795256257s|s161b|161|rds|local|vector|||0.011||
+unvotes_tarball|stem|b124a96155022373|a3655c12be9876ad|2c530c1562a7fbd1|-1372503317|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/raw/unvotes/unvotes_0.3.0.tar.gz|t20589.5209351609s|s790265b|790265|file|local|vector|||2.796|package 'ggplot2' was built under R version 4.4.3. package 'tibble' was built under R version 4.4.3. package 'purrr' was built under R version 4.4.3. package 'dplyr' was built under R version 4.4.3. package 'httr' was built under R version 4.4.3. package 'fect' was built under R version 4.4.3|
+brazil_china_unvotes_resolution_2005_2012|stem|59e9bce2de704cea|391a7f947d7304e0|e7a7abcfe57bd700|-1872944160||t20590.5724040089s|s4967b|4967|rds|local|vector|||0.949||
+brazil_china_unvotes_similarity_by_issue_year_2005_2012|stem|2a822f6633b8810c|efc7c21e551c8941|9a6f6ff9a7c7769a|336399822||t20590.5724042361s|s933b|933|rds|local|vector|||0.008||
+brazil_china_unvotes_similarity_by_year_2005_2012|stem|ce699b42ba0f58e5|8b117fde48e73a64|41dac8f72d9d1bf3|-1146018100||t20590.5724044925s|s401b|401|rds|local|vector|||0.007||
+plot_brazil_china_unvotes_similarity_by_issue_year_2005_2012|stem|746219d08990656b|2990c56ce6a99ab0|9c6bf35b61b56c56|290866396||t20590.5724061027s|s363162b|363162|rds|local|vector|||0.045||
+folha_classified_file|stem|6bbe4a78d7ea07c2|27ccebecef25813b|2c530c1562a7fbd1|1662409563|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/folha_classificado.rds|t20281.1955565002s|s427197b|427197|file|local|vector|||1.482|package 'ggplot2' was built under R version 4.4.3. package 'tibble' was built under R version 4.4.3. package 'purrr' was built under R version 4.4.3. package 'dplyr' was built under R version 4.4.3. package 'httr' was built under R version 4.4.3. package 'fect' was built under R version 4.4.3|
+plot_treated_panel|stem|520f3e2542be6aaa|afb0c22b2ea85a3b|5398e926f1eb4360|-206153146||t20590.576525694s|s500742b|500742|rds|local|vector|||0.167||
+china_top_panel|stem|272c8d6fe468b260|36defd4fc63f8201|d596be6b001d6587|534993925||t20590.7862627685s|s42272b|42272|rds|local|vector|||0.573||
+switching_panel_any|stem|332fb5cb5142aef5|c64273914638780e|0f8f296b82062283|-1467094126||t20590.7862705633s|s5093b|5093|rds|local|vector|||0.379||
+did_absorbing_usa|stem|c05b391412782250|8f0637f0b53cf5b6|3bf2884db38214ba|-1880107336||t20590.7862759441s|s488183b|488183|rds|local|vector|||0.425|Be aware that there are some small groups in your dataset.   Check groups: 2007,2008,2009,2015.. Not returning pre-test Wald statistic due to singular covariance matrix|
+did_absorbing|stem|1eb4e7a990e5b776|f3584e6ea91f6373|3bf2884db38214ba|-1612976568||t20590.7862872327s|s1716162b|1716162|rds|local|vector|||0.908|Be aware that there are some small groups in your dataset.   Check groups: 2003,2005,2007,2008,2009,2010,2012,2013,2015,2017,2018,2021.. Not returning pre-test Wald statistic due to singular covariance matrix|
+did_results|stem|af28f515fd44b7d8|f03cd9bffd74f61b|d3ff43d9426eda3b|-1706622568||t20590.7863060171s|s5789353b|5789353|rds|local|vector|||1.429|Be aware that there are some small groups in your dataset.   Check groups: 2000,2003,2004,2005,2007,2008,2009,2010,2011,2012,2013,2014,2015,2017,2018,2019,2021.. Not returning pre-test Wald statistic due to singular covariance matrix|
+china_top_absorbing_cs_data|stem|54f272ae4c5a8648|e669fb6f54e3a741|257d732fe4c0ae82|-455141458||t20590.7863068115s|s20667b|20667|rds|local|vector|||0.043||
+china_top_fect_data|stem|c6eb87ebaec1558b|0da4947938a50fa2|4239dbac514baf5a|315377507||t20590.7863074011s|s27028b|27028|rds|local|vector|||0.042||
+china_top_panel_summary|stem|5460f2358ec2d9f6|4fb8fecd9971ea61|61aacd1b82819334|1952316156||t20590.7863077883s|s292b|292|rds|local|vector|||0.026||
+fect_carryover|stem|3d768c9e0aea14b9|7e5c9c5197f834ce|327b8b448270f814|2047634819||t20590.7863685382s|s954094b|954094|rds|local|vector|||5.208||
+fect_ife|stem|7a380a5465499687|c0ed1e962082e7c3|3591f4d0384ab412|1450217687||t20590.7866685824s|s1888678b|1888678|rds|local|vector|||25.846||
+fect_fe|stem|425e14230d7aeab7|8268857c5122dd9c|3591f4d0384ab412|-1194913387||t20590.786725982s|s1853649b|1853649|rds|local|vector|||4.882||
+panelmatch_att|stem|1389afc59b88a875|aa0779d41ffc4616|f4a97935840463cc|2038719921||t20590.7867356582s|s73200b|73200|rds|local|vector|||0.824||
+fect_ife_loo|stem|4c079c6dde64e5ce|abf0f5430bb9476d|7ca66358e7e50eb9|801331341||t20590.8055727937s|s2494b|2494|rds|local|vector|||1627.521||
+panelmatch_art|stem|53c4b19e41fcd623|53575aac390f9219|f4a97935840463cc|-1818824468||t20590.8055820492s|s70411b|70411|rds|local|vector|||0.776||
+fect_ife_any|stem|f0e68493dbbf3778|b602fc11cc4d1079|0d18dee641efb435|-108506839||t20590.8059326586s|s636787b|636787|rds|local|vector|||30.265||
+china_top_panel_cov|stem|103ce4516b7cc065|b92744df10997ccb|1e2ba10c68a7efe8|-1639312961||t20590.8059329001s|s68864b|68864|rds|local|vector|||0.001||
+did_displaced_usa|stem|8ee33fa9fd283826|34400bacca46a3de|8605b44f056edc75|-806719736||t20590.8059396747s|s1250111b|1250111|rds|local|vector|||0.537|Be aware that there are some small groups in your dataset.   Check groups: 2007,2008,2009,2010,2012,2015,2018.. Not returning pre-test Wald statistic due to singular covariance matrix|
+fisher_test_result|stem|c94d4373586ed9ec|2cdc30b2fba97eae|d0e51bef9fc90d77|11268073||t20590.8131957405s|s7861b|7861|rds|local|vector|||626.915|Be aware that there are some small groups in your dataset.   Check groups: 2007,2008,2009,2010,2012,2015,2018.. Not returning pre-test Wald statistic due to singular covariance matrix. Be aware that there are some small groups in your dataset.   Check groups: 2002,2003,2006,2007,2008,2009,2010,2012,2015,2018.. Not returning pre-test Wald statistic due to singular covariance matrix. Be aware that there are some small groups in your dataset.   Check groups: 2002,2003,2006,2007,2008,2009,2010,2012,2015,2018.. Not returning pre-test Wald statistic due to singular covariance matrix. Be aware that there are some small groups in your dataset.   Check groups: 2002,2003,2006,2007,2008,2009,2010,2012,2015,2018.. Not returning pre-test Wald statistic due to singular covariance matrix. Be aware that there are some small groups in your dataset.   Check groups: 2002,2003,2006,2007,2008,2009,2010,2012,2015,2018.. Not returning pre-test Wald statistic due to singular covariance matrix. Be aware that there are some small groups in your dataset.   Check groups: 2002,2003,2006,2007,2008,2009,2010,2012,2015,2018.. Not returning pre-test Wald statistic due to singular covariance matrix. Be aware that there are some small groups in your dataset.   Check groups: 2002,2003,2006,2007,2008,2009,2010,2012,2015,2018.. Not returning pre-test Wald statistic due to singular covariance matrix. Be aware that there are some small groups in your dataset.   Check groups: 2002,2003,2006,2007,2008,2009,2010,2012,2015,2018.. Not returning pre-test Wald statistic due to singular covariance matrix. Be aware that there are some small groups in your dataset.   Check groups: 2002,2003,2006,2007,2008,2009,2010,2012,2015,2018.. Not returning pre-test Wald statistic due to singular covariance matrix. Be aware that there are some small groups in your dataset.   Check groups: 2002,2003,2006,2007,2008,2009,2010,2012,2015,2018.. Not returning pre-test Wald statistic due to singular covariance matrix. Be aware that there are some small groups in your dataset.   Ch|
+did_china_top_absorbing|stem|fec3c0e3a02e482e|04d1d2100c597ffc|3ce03e882031393b|1039849778||t20590.813205161s|s1962007b|1962007|rds|local|vector|||0.743|Be aware that there are some small groups in your dataset.   Check groups: 2005,2007,2008,2009,2012,2013,2014,2015,2017,2018.. Not returning pre-test Wald statistic due to singular covariance matrix|
+plot_treated_panel_china_top|stem|383ac7e055b08d39|9c050768c8b4acd6|26a46fccf642c283|1277976855||t20590.8134802319s|s585793b|585793|rds|local|vector|||0.058||
+plot_fect_ife_exit|stem|15f1aa591214d5c5|4da0efcbf445e56d|b6218efeb3b60b66|472797192||t20590.8192578901s|s3548794b|3548794|rds|local|vector|||0.05||
+plot_fect_ife_gap|stem|c9b3cd31c530a1dc|f9435fc3f67f5e60|afe659f19776a3c0|-1063778961||t20590.819262128s|s3551662b|3551662|rds|local|vector|||0.03||
+plot_diagnostics_equiv|stem|b754696448092b20|8c3cd2e1337ab10c|13961db6ca90a718|-1982537788||t20590.8192765721s|s8475004b|8475004|rds|local|vector|||0.117|Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0. i Please use `linewidth` instead. i The deprecated feature was likely used in the fect package.   Please report the issue at <https://github.com/xuyiqing/fect/issues>.|
+plot_diagnostics_main|stem|ddf841b2a7030cca|231ead3e07e6fc28|903829ffb0d830f5|-680291985||t20590.819289191s|s9683288b|9683288|rds|local|vector|||0.109||
+plot_pm_combined|stem|602b18a795d64757|9c3580079d3cf725|e5438bb79546c3b8|1886744527||t20590.8192915854s|s801759b|801759|rds|local|vector|||0.031||
+fect_ife_cov|stem|96e8285ad81879c5|491faf506373326e|53d27a7a7c7839c6|-510989215||t20590.8195824937s|s889785b|889785|rds|local|vector|||25.091||
+china_top_absorbing_cs_cov_data|stem|632d719ddefc814f|b9b9d33de3980971|da9f1c73d5917904|-1806929433||t20590.8195828172s|s36777b|36777|rds|local|vector|||0.015||
+china_top_fect_cov_data|stem|5de3dd9d9866e7c3|ca96abdb2d3b7aa0|628bec5fa6ccfeac|625058933||t20590.8195829482s|s48056b|48056|rds|local|vector|||0.003||
+plot_es_displaced_usa|stem|01a3e0514cf78c03|38e72e95f7af319d|be2a104e7d64e703|-355583399||t20590.8195851217s|s1781385b|1781385|rds|local|vector|||0.027||
+did_displaced_usa_cov|stem|f834904e19716564|c0e36e7d130767ad|9afcfb6fb68c2a02|25772357||t20590.8207853511s|s414662b|414662|rds|local|vector|||0.605|Be aware that there are some small groups in your dataset.   Check groups: 2007,2008,2009,2010,2012,2015.. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: algorithm did not converge. glm.fit: fitted probabilities numerically 0 or 1 occurred. overlap condition violated for 2010 in time period 1992. glm.fit: algorithm did not converge. glm.fit: fitted probabilities numerically 0 or 1 occurred. overlap condition violated for 2010 in time period 1993. glm.fit: algorithm did not converge. glm.fit: fitted probabilities numerically 0 or 1 occurred. overlap condition violated for 2010 in time period 1994. glm.fit: algorithm did not converge. glm.fit: fitted probabilities numerically 0 or 1 occurred. overlap condition violated fo|
+plot_fisher|stem|8dbc1b40e9211412|d751d056d3eb7d45|e1d79c1015706609|1277143378||t20590.8207865257s|s266765b|266765|rds|local|vector|||0.025||
+plot_es_china_top_absorbing|stem|56804e144df58e8a|b42845130693dd56|8615dd4e010e595a|-903512433||t20590.820789002s|s2488678b|2488678|rds|local|vector|||0.028||
+did_china_top_absorbing_summary|stem|ef757c4bf93f535c|8e34dc35512c4de8|5027086b62882625|491921060||t20590.82078925s|s292b|292|rds|local|vector|||0.008||
+did_china_top_absorbing_cov|stem|2553d79855617b02|bd561544d213c15a|750018eb4a0d7d2d|-1338907415||t20590.8208333411s|s665301b|665301|rds|local|vector|||0.636|Be aware that there are some small groups in your dataset.   Check groups: 2005,2007,2008,2009,2012,2013,2014,2015,2017,2018.. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: algorithm did not converge. glm.fit: fitted probabilities numerically 0 or 1 occurred. overlap condition violated for 2012 in time period 1990. glm.fit: algorithm did not converge. glm.fit: fitted probabilities numerically 0 or 1 occurred. overlap condition violated for 2012 in time period 1991. glm.fit: algorithm did not converge. glm.fit: fitted probabilities numerically 0 or 1 occurred. overlap condition violated for 2012 in time period 1992. glm.fit: algorithm did not converge. glm.fit: fitted probabilities numerically 0 or 1 occurred. overlap condition violated for 2012 in time period 1993. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: algorithm did not converge. glm.fit: fitted probabilities numerically 0 or 1 occurred. overlap condition violated for 2012 in time period 1997. glm.fit: algorithm did not converge. glm.fit: fitted probabilities numerically 0 or 1 occurred. overlap condition violated for 2012 in time period 1998. glm.fit: algorithm did not converge. glm.fit: fitted probabilities numerically 0 or 1 occurred. overlap condition violated for 2012 in time period 1999. glm.fit: algorithm did not converge. glm.fit: fitted probabilities numerically 0 or 1 occurred. overlap condition violated for 2012 in time period 2000. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: algorithm did not converge. glm.fit: fitted probabilities numerically 0 or 1 occurred. overlap condition violated for 2013 in time period 2005. glm.fit: algo|
+did_china_top_absorbing_cov_summary|stem|188ef9012ad3a8e7|b40094ac6fe69a9b|d5e00ed83efa394b|-1242574943||t20590.8208334533s|s293b|293|rds|local|vector|||0.001||
+plot_fect_exit|function|8c951282a202556d
+prepare_event_study_data|function|e1bd2198399f33cc
+fect_att_summary|function|ef9a1fa407cd448e
+compute_rmspe|function|c8c32405793618de
 plot_serie|function|69e05cf7376f4a0f
-get_unga_data|function|0ee690fc5887b469
-se_sdid|function|5eb65ab9231a0b3d
-my_plot_dif|function|2692db1673364d94
-cov_matrix|function|7e5ed0a158c54ff0
-join_df|function|84326136c37184c6
-get_trade_data|function|82a9269a48e4b2ac
-bind_data|function|cb81982a1a53ce27
-get_ideology_data|function|4f8f202f6dc9878f
-get_country_data2|function|1053f0384d182aaa
-plot_controls|function|f12a62498853f0f3
-get_country_data|function|d28598a9924c321f
-get_wb_data|function|db57e3eb97152b49
 plot_trade|function|4d32e1cf00c45621
-simple_fit|function|829659149bb9ca61
-synth_data|stem|0b698a60431c5084|d80dc34e12d6d761|d4224273446d09ee|-2019694640||t20276.9308450214s|s229737b|229737|rds|local|vector|||0.133||
-placebo_teste_treatment02|stem|0ae132585a5ed321|09288c7c41837701|f0a41c28787ccae9|-671333365||t20276.9309261059s|s173044b|173044|rds|local|vector|||6.985||
-placebo_teste_treatment04|stem|9957ea3f758191f6|1cda1ee65f6d8277|f0a41c28787ccae9|421761190||t20276.9310110548s|s174784b|174784|rds|local|vector|||7.312||
-synth_fit|stem|b203bf892c6031b0|bfe32a18c458a9a1|f0a41c28787ccae9|1675857646||t20276.9311055788s|s235618b|235618|rds|local|vector|||8.147||
-placebo_teste_treatment11|stem|5fb6c32fae1507b2|3eb10048d07ef0b9|f0a41c28787ccae9|857570704||t20276.9312127679s|s263284b|263284|rds|local|vector|||9.242||
-synth_fit_latam|stem|be9102939c7f6083|8eb80ea8631db8d0|f0a41c28787ccae9|721652965||t20276.9312470144s|s93312b|93312|rds|local|vector|||2.946||
-plot|stem|3f0218cf6d06eaa3|a86a352da144006d|47c8629d174d8932|874984291||t20276.9312480381s|s244161b|244161|rds|local|vector|||0.022||
-se_synth_placebo2|stem|b142512007bd4e7f|0fdc7ac7e77e9181|72e51f1bc865f516|-649394773||t20276.9478709025s|s80b|80|rds|local|vector|||1436.208||
-se_synth_placebo3|stem|86ebfc9d3bc8738c|228a41838b57755a|a6b4cc855148e185|-1909349306||t20276.965788577s|s80b|80|rds|local|vector|||1548.077||
-plot_trend|stem|c9746f1f70cea5c2|e3b463068b1997b6|80ebfd51f977d518|-1001934391||t20276.9657895557s|s414043b|414043|rds|local|vector|||0.018||
-se_synth|stem|36678245ce217a9e|67e828a7659aca53|852d151f2ffc4260|-1857295872||t20276.9862058196s|s80b|80|rds|local|vector|||1763.958||
-spaghetti_plot|stem|9b17332f4f712664|af2c001d8e33dd70|b0e4eb4e67f261c1|1523197509||t20276.9862067628s|s421665b|421665|rds|local|vector|||0.018||
-plot_parallel|stem|56e65b4223ec6eb8|0c2f31e18c04af0f|815007d487feac55|374716333||t20277.0067656638s|s413613b|413613|rds|local|vector|||1776.227||
-se_synth_placebo1|stem|a6e6adc3ad81ed3e|c47c471d4cb6b405|173c7ecd963da0b8|2045944205||t20277.0291616496s|s80b|80|rds|local|vector|||1935.001||
-se_synth_latam|stem|13392c95c8e2b2b0|879b08e589442eaf|bdc5a2a9c73de278|303480878||t20277.0360374317s|s80b|80|rds|local|vector|||594.057||
-plot_parallel_latam|stem|f97ed37bcb765797|0b926acb615639bd|b7093756a938b7ea|-1275524603||t20277.0448964717s|s271439b|271439|rds|local|vector|||765.363||
-plot_trend_latam|stem|49a6ddeb276eae31|5254bcced4fea156|2f37dcc60b1ba00c|-942661876||t20277.0448973047s|s271923b|271923|rds|local|vector|||0.015||
+prepare_fect_data|function|bd521d3a8d6c3ea5
+cov_matrix|function|2e663423a91aa6a7
+plot_china_top_country_panel|function|4c8f71047df9025b
+get_dpi_data|function|1f4970c3ffc8873c
+plot_ideal_points|function|277a968a729b5517
+build_china_top_partner_panel|function|1480aef365a7df97
+bc_unvotes_similarity_score|function|9699db04df7e331a
+get_ideology_data|function|4f8f202f6dc9878f
+my_plot_dif|function|2692db1673364d94
+summarize_china_top_panel|function|cee2f8885bfa4d68
+donor_pool_table|function|afe31372de66a65c
+get_trade_data|function|82a9269a48e4b2ac
+prepare_data_folha|function|2045449c6b3fa001
+get_macro|function|29039831984eb804
+pretrends_wald_test|function|a7a4e47d20b820ae
+plot_event_study_did|function|bc68e839066a505e
+get_wb_data|function|db57e3eb97152b49
+process_trade_data|function|afd94933e7b60ecd
+get_unga_data|function|0ee690fc5887b469
+get_country_data2|function|1053f0384d182aaa
+build_stacked_did_data|function|83db9d73a169c44a
+build_media_counterfactual|function|301dfb3b887557a5
+plot_panelmatch_combined|function|4dc456f2f2909180
+summarize_cross_country_did|function|d9858ec75a9d8a0e
+get_country_data|function|d28598a9924c321f
+plot_treated_country_panel|function|a6259a3966d9de3c
+.Random.seed|object|88ff48594b86bad3
+run_cross_country_did|function|9b1533afd6f01d5a
+join_df|function|84326136c37184c6
+build_covariates|function|d072ff9d2623698e
+build_switching_panel|function|00f561d3d138f467
+summarise_brazil_china_unvotes_similarity_by_issue_year|function|ed80fde39c044e94
+create_list_graphs|function|33131b14c5aaa123
+growth_plot|function|53fe0e59750fdc13
+se_sdid|function|5eb65ab9231a0b3d
+format_group_att_table|function|82d28d8a0e46acb3
+plot_controls|function|f12a62498853f0f3
+filter_usa_top_control|function|200551be423eb901
+plot_fect_equiv_appendix|function|280d3637a85ff823
+compute_cohens_kappa|function|0d85002526885e6a
+bc_unvotes_clean_text|function|ea1a86ab7ee9e732
+bc_unvotes_load_tables|function|3e27cd88a715dc5d
+bc_unvotes_map_issue_family|function|0d38cd1ccc5417e3
+prepare_did_covariates|function|fedf884ff35d4167
+plot_fect_gap|function|2384208a793646dc
+folha_plot|function|e95e519795deb69b
+generate_plot_data|function|ae5a7b4ded3e89f4
+bind_folha|function|c077c147b86b3c5c
+summarise_brazil_china_unvotes_similarity_by_year|function|780b371e3058244b
+plot_fisher_test|function|8a9338b33e90ff9a
+get_us_trade_agreement|function|2c5d273fef1d4dda
+bind_data|function|cb81982a1a53ce27
+get_gpi_data|function|336ba964a0604255
+rank_trade|function|b66bfe35bfb704c8
+plot_brazil_china_unvotes_similarity_by_issue_year|function|f28e2dad35e28878
+plot_fect_diagnostics|function|f2757590b8275d75
+get_folhasp_newspieces|function|74c37ddc7fb57694
+classify_treatment_events|function|7b493fba795e9ed6
+plot_distance_unga|function|ac6af68205c435b0
+identify_treatment_events|function|26aa402801cfa9f9
+clean_synth_data|function|9143d3a92e08ebb8
+honest_did_sensitivity|function|f77d7d56a84d5c3a
+my_plot_weigths|function|e317eec36db6863a
+descriptive_plot_folha|function|aa14bdc81a65f8cb
+prepare_absorbing_china_top_did_data|function|817535c186829895
+get_usa_top_countries|function|43985ba192fd8e46
+my_plot_trends|function|6b2958e3c45c74db
+run_fect_analysis|function|6de53a6e788454c1
+run_panelmatch_analysis|function|6cab038b351ec383
+run_fect_carryover|function|9da261c068c51538
+simple_fit|function|6724e7c702b95ae0
+permutation_test|function|77604c28bbd1a7f4
+build_any_displacement_panel|function|576696f712b84164
+summarize_fect_model|function|87707c52704cdca6
+run_wild_cluster_bootstrap|function|cadbd5f19a52baf2
+fisher_randomization_test|function|885b29c836da1f38
+run_restricted_did|function|bc7fe20ee640d523
+build_brazil_china_unvotes_resolution_data|function|772a905ef703ef3f
+run_fect_leave_one_out|function|833e600afa413bc2
+sensitivity_analysis|function|1abc5d2feed9c5d4
+fect_fe_china_top|stem|1c3414f9d4d0915d|21f0fe3dd50f687c|75af33d19af76fac|-1797237675||t20591.0391540341s|s20197119b|20197119|rds|local|vector|||91.026||
+fect_ife_china_top|stem|7e2678997d277dcb|5878eb779b31847f|75af33d19af76fac|1510883285||t20591.0417532577s|s20077450b|20077450|rds|local|vector|||223.835||
+fect_carryover_china_top|stem|ac10e7eab3a84b49|230f558e2457ff92|0cd1b0bfc532e6c4|-2026198699||t20591.0428082939s|s10124781b|10124781|rds|local|vector|||90.765||
+panelmatch_att_china_top|stem|b554dce89bd8cbd1|a7e1f7d985b5f7a9|db5974ac33dd4c84|-2105672302||t20591.0428945531s|s687236b|687236|rds|local|vector|||7.421||
+panelmatch_art_china_top|stem|923f07a2a1e307e0|8eefba4bceb70650|db5974ac33dd4c84|587566599||t20591.0429749803s|s686826b|686826|rds|local|vector|||6.922||
+fect_ife_china_top_loo|stem|788ca98df12772d7|d7edc35fb165734a|b7e4ab9806253681|-609333866||t20591.1476738863s|s1471b|1471|rds|local|vector|||9045.976||
+plot_fect_ife_gap_china_top|stem|b6b7cea4f3f04a25|9f65a84bc62377d7|01a3c8275314c38f|-1665528469||t20591.1476906778s|s30835006b|30835006|rds|local|vector|||0.069||
+plot_fect_ife_exit_china_top|stem|456838a55b89999b|a6fcb5a77ebcaae4|c21a0035fd622f69|-929475356||t20591.1477074157s|s30830484b|30830484|rds|local|vector|||0.034||
+plot_diagnostics_equiv_china_top|stem|cd0cdec87897babe|764c93213dfe4081|2293c7da8b0aa376|-1494035905||t20591.1477455605s|s63260641b|63260641|rds|local|vector|||0.139|Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0. i Please use `linewidth` instead. i The deprecated feature was likely used in the fect package.   Please report the issue at <https://github.com/xuyiqing/fect/issues>.|
+fect_ife_china_top_summary|stem|7f106baf11b334bc|2dbbe768052abe02|25374b9c9baf72aa|-1712083134||t20591.1477470848s|s415b|415|rds|local|vector|||0.035||
+plot_diagnostics_main_china_top|stem|d3ced7833bc3bcac|e4d10eeacb512aad|c781bbadc9a91ba8|1986752704||t20591.1477908027s|s82815568b|82815568|rds|local|vector|||0.11||
+plot_pm_combined_china_top|stem|5233c4ace94384e6|c2895e142809b5ad|0719251b78de8995|-1272161281||t20591.1477939798s|s2032103b|2032103|rds|local|vector|||0.035||
+fect_ife_china_top_cov|stem|4fe1e1922fae18a7|6da1da810a77982a|439010bb3e4943c2|-1072464752||t20591.1508186792s|s8813455b|8813455|rds|local|vector|||261.013||
+fect_ife_china_top_cov_summary|stem|50f2871761102e58|e9a78afb0296bc30|2b8a1bc94f4afab2|1933402945||t20591.1508194934s|s414b|414|rds|local|vector|||0.029||
