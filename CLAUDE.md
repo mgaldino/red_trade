@@ -43,6 +43,7 @@ red_trade/
 
 ### Autoria
 - **O autor escreve o paper.** NAO redigir secoes ou texto a menos que o autor peca explicitamente.
+- Em prosa de manuscrito e relatórios para o autor/leitor, evitar o jargão `spell`/`treatment spell`. Usar `treatment entry/onset`, `treated periods`, ou descrição substantiva do parceiro deslocado. `Spell` pode aparecer apenas como nome interno herdado de variável/arquivo quando tecnicamente necessário.
 
 ### Workflow
 - NAO rodar scripts sem aprovacao do usuario

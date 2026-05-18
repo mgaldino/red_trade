@@ -56,3 +56,22 @@ Implementation response:
 Verdict: no blockers.
 
 The reviewer confirmed that the current `paper_v4.Rmd` and rendered `paper_v4.pdf` remain acceptable for Goal 9. Tables 1--3 render visibly with notes/captions intact; section architecture is fixed; PanelMatch wording is gone; Table 2 reports non-human-rights as +2.7 p.p.; terminology and causal caveats are aligned; no unresolved cross-references were found; and `\clearpage` is an acceptable dependency-free solution here.
+
+## Follow-up after author feedback
+
+Verdict: no blockers.
+
+The separate reviewer checked the follow-up revision after the author's comments on defensive language, table contents, cross-country terminology, and appendix float placement. The reviewer first flagged dirty workspace items outside the intended commit scope (`_targets/meta/meta` and untracked diagnostic scripts). After clarification that those files pre-existed and would be excluded from the commit, the reviewer rechecked the scoped changes and found no paper/doc/PDF blockers.
+
+Checked items:
+
+- No manuscript prose uses `spell` or `treatment spell`; `AGENTS.md` and `CLAUDE.md` now instruct future agents to avoid that term in author-facing prose.
+- Tables 2 and 3 report standard errors where estimates appear.
+- The confusing main-text outcome table with China-minus-U.S. and U.S.-distance outcomes was removed.
+- The media section identifies Folha de S.Paulo as Brazil's widest-circulation newspaper and explains why salience matters.
+- The cross-country section no longer opens with "second Brazil" language; Table 4 reports estimator, ATT, SE, p-value/CI, N, treated/control units, covariates, latent factors, panel window, and treatment type.
+- The rendered PDF places Table 4 before References and Figures 9--10 before the ChatGPT appendix section.
+- The unadjusted leave-one-out appendix table was removed because it did not match the preferred covariate-adjusted cross-country specification.
+- No scripts were edited and `targets::tar_make()` was not run.
+
+Render status: `paper_v4.pdf` rendered successfully after the follow-up edits on 2026-05-18.

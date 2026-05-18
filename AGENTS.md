@@ -15,6 +15,7 @@ Instruções operacionais para agentes trabalhando neste repositório.
 - Documente fonte e data de acesso.
 - Quem implementa não revisa; quem revisa não edita.
 - Para scripts R substantivos, use revisão crítica com a skill `review-r` quando solicitado.
+- No manuscrito e em relatórios voltados ao autor/leitor, não use o jargão `spell` ou `treatment spell`. Prefira linguagem substantiva: `treatment entry/onset` para o ano em que a China se torna o maior destino de exportações, `treated periods` para os anos em que a China permanece nessa posição, e `cases where China displaced the United States/another partner` para heterogeneidade por incumbente deslocado. Nomes internos de variáveis podem manter `spell` quando já existirem em scripts ou CSVs, mas a prosa do paper deve evitar esse termo.
 
 ## Estado recente: votos Brasil-China na AGNU
 
