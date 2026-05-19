@@ -17,7 +17,7 @@ header-includes:
 - \usepackage{float}
 - \newcommand{\argmin}{\mathop{\mathrm{argmin}}\limits}
 fontsize: 12pt
-abstract: "\\singlespacing  How do trade-based status gains affect UNGA voting convergence toward China? Existing IR research emphasizes status anxiety and status seeking, but pays less attention to upward status shifts. I argue that rank reversals in trade hierarchies, especially when a rising power displaces the hegemon, create a salient status cue beyond gradual trade growth. The salience shock can be immediate, but diplomatic responses may accumulate gradually as policymakers revise positions under institutional inertia and reputational constraints. I test this claim in Brazil, where China overtook the United States as Brazil's largest export destination in 2009, using Synthetic Difference-in-Differences on UNGA ideal-point distance. The estimate implies a statistically significant 41% average post-2009 reduction in Brazil's distance to China relative to the synthetic counterfactual (p = 0.032). Brazilian newspaper evidence documents a post-2009 increase in China-related salience, particularly trade-focused coverage. I then examine a scope-conditioned cross-country sample of countries for which the United States was the relevant benchmark or prior top export partner. A switching-treatment fect IFE specification provides suggestive scope evidence consistent with a similar pattern within this sample. These results indicate that discrete status milestones can be associated with selective UNGA voting convergence toward China in hegemonic-benchmark settings."
+abstract: "\\singlespacing  How do trade-based status gains affect UNGA voting convergence toward China? I argue that rank reversals in trade hierarchies create politically usable status cues: when China becomes a country's top export destination and remains there, policymakers can more easily justify selective diplomatic adjustment toward Beijing. I test the argument in Brazil, where China overtook the United States as the largest export destination in 2009, using Synthetic Difference-in-Differences on UNGA ideal-point distance. Brazil's ideal-point distance to China fell by 0.26 units, about 41 percent of its pre-treatment mean, and identical Brazil-China voting on human-rights resolutions rose by 7.5 percentage points. Brazilian newspaper evidence shows increased China-related trade salience after the rank reversal. Cross-country estimates from an interactive fixed-effects panel model show the same directional pattern among countries where China persistently becomes the top export destination. The evidence suggests that discrete and durable trade-status milestones can shape observable multilateral alignment beyond smooth trade growth."
 geometry: margin=2.5cm
 spacing: double
 mainfont: Times New Roman
@@ -32,22 +32,18 @@ library(targets)
 knitr::opts_chunk$set(echo = FALSE)
 source(here::here("scripts", "functions.R"))
 
-caption_note <- function(unit = NULL, se = NULL, cluster = NULL, window = NULL, treatment = NULL) {
+caption_note <- function(unit = NULL, se = NULL, cluster = NULL, window = NULL) {
   fields <- c(
-    if (!is.null(unit) && nzchar(unit)) paste0("Unit = ", unit),
-    if (!is.null(se) && nzchar(se)) paste0("Standard error = ", se),
-    if (!is.null(cluster) && nzchar(cluster)) paste0("Cluster = ", cluster),
-    if (!is.null(window) && nzchar(window)) paste0("Time window = ", window),
-    if (!is.null(treatment) && nzchar(treatment)) paste0("Treatment definition = ", treatment)
+    if (!is.null(unit) && nzchar(unit)) unit,
+    if (!is.null(se) && nzchar(se)) paste0("SE: ", se),
+    if (!is.null(cluster) && nzchar(cluster)) paste0("Cluster: ", cluster),
+    if (!is.null(window) && nzchar(window)) paste0("Window: ", window)
   )
   if (length(fields) == 0) {
     return("")
   }
   paste0("Note: ", paste(fields, collapse = ". "), ".")
 }
-
-treat_def_brazil <- "Treatment indicator equals 1 from 2009 onward, when China becomes Brazil's top export destination displacing the USA, and 0 before 2009"
-treat_def_panel <- "Treatment indicator equals 1 in any year China is currently the top export destination within the scope-conditioned panel; turns off if China loses the top position (switching treatment)"
 
 resolve_existing_file <- function(candidates) {
   hits <- candidates[file.exists(candidates)]
@@ -78,6 +74,16 @@ mean_br <- tar_read(synth_data) %>%
   dplyr::summarise(mean_abs = mean(abs_distance_china, na.rm = TRUE)) %>%
   dplyr::pull(mean_abs)
 perc_change <- abs(estimate) / mean_br * 100
+human_rights_vote_change <- tar_read(brazil_china_unvotes_resolution_2005_2012) %>%
+  dplyr::filter(issue_family == "Human rights") %>%
+  dplyr::mutate(period = dplyr::if_else(year < 2009, "pre", "post")) %>%
+  dplyr::summarise(
+    identical_vote_share = 100 * mean(identical_vote, na.rm = TRUE),
+    .by = period
+  ) %>%
+  tidyr::pivot_wider(names_from = period, values_from = identical_vote_share) %>%
+  dplyr::mutate(change = post - pre) %>%
+  dplyr::pull(change)
 sample_size_countries <- tar_read(synth_data) %>%
   dplyr::summarise(num_countries = dplyr::n_distinct(iso3c)) %>%
   dplyr::pull(num_countries)
@@ -87,25 +93,44 @@ sample_size_countries <- tar_read(synth_data) %>%
 
 # Introduction
 
-"China overtakes US as Brazil's top trade partner." That headline captured how Brazilian newspapers framed a specific 2009 event: China had become Brazil's largest export destination [@rodrigues2009]. The phrase is useful because it records the public language of the moment. Empirically, however, the treatment in this paper is narrower and consistent across designs: China becomes the largest export destination.
+“China overtakes US as Brazil’s top trade partner”. That was a headline in many Brazilian newspapers in 2009 [@rodrigues2009]. The BBC ran a similar headline in 2021, when China surpassed the United States as the EU’s biggest trading partner [@bbc2021]. Sensing the symbolic weight of the milestone in Brazil, President Lula da Silva promptly announced a high-profile trip to Beijing, flanked by an unusually large business delegation, where he mentioned that China was Brazil's largest export destination [@lula2009].
 
-The paper asks whether this kind of rank threshold matters for one observable dimension of foreign-policy behavior: UNGA voting convergence toward China. Existing work usually treats trade exposure as continuous. As exports, imports, loans, or investment rise, foreign-policy alignment is expected to shift gradually through material leverage, changing interests, or domestic pressure [@kastner_pearson2021; @yan_zhou2021; @morgan_2019; @flores-macias_kreps2013]. That logic misses a separate possibility. A number-one rank can make an already growing relationship politically legible. When a rising power crosses the top-rank threshold, especially by displacing a prominent incumbent, the event can become a focal cue for media, elites, and policymakers.
+Why do media outlets and political leaders dwell on discrete commercial milestones when the underlying flows are measured continuously? Export statistics are updated monthly, and journalists, diplomats, firms, and policymakers follow them long before one partner crosses a formal threshold. The puzzle, then, is not whether actors possess information about trade volumes. It is why a categorical change—China becomes number one—can matter politically despite adding little new information about the economic trend itself.
 
-I separate three empirical claims. The main claim is a reduced-form Brazil claim: after China became Brazil's largest export destination in 2009, Brazil's UNGA ideal-point distance to China fell relative to a synthetic counterfactual. The second claim is a Brazilian media-salience claim: Folha de S.Paulo coverage shows that China and China-Brazil trade became more visible around the rank reversal. This evidence supports the attention step of the theory. The third claim is a cross-country scope claim: in a scope-conditioned panel, similar top-export-destination transitions are associated with smaller UNGA distance to China across a broader and more heterogeneous set of cases.
+Existing work on economic statecraft and foreign-policy alignment usually treats economic exposure as continuous. As trade, lending, investment, aid, or coercive capacity accumulate, alignment is expected to shift through material leverage, changing interests, soft power, or domestic pressure [@reilly2013; @kastner_pearson2021; @morgan_2019; @flores-macias_kreps2013; @urdinez_etal2016]. A related literature uses UNGA voting to study alignment with China and other powers, linking votes to bilateral ties, ideology, sanctions, aid, Belt and Road membership, arms transfers, or Chinese economic returns [@potrafke2009; @dreher_jensen2013; @struver2016; @yan_zhou2021; @garcia_herrero_etal2024; @steinert_weyrauch2024; @he_zheng_chen2025; @lektzian_biglaiser2023]. If alignment responds only to accumulated exposure or issue-by-issue bargains, however, no specific symbolic milestone such as becoming a top trade partner should matter.
 
-Brazil is the strongest case for the theory. China displaced the United States, a politically salient incumbent and hegemonic benchmark; the rank reversal was publicly visible; and the Brazilian press allows the attention implication to be measured. I estimate the Brazilian effect using synthetic difference-in-differences (SDiD) on annual UNGA ideal-point distance to China. The estimate is an average post-2009 gap. Relative to Brazil's pre-treatment mean distance, the estimated reduction is `r sprintf('%.1f', perc_change)` percent.
+I argue that such milestones matter because they mark trade-based status gains. The argument builds on research that treats status as socially recognized standing within international hierarchies, clubs, and local status orders [@paul_larson_wohlforth2014; @wolfRespectDisrespect2011; @duque_2018; @renshon2017; @gotz_2021; @macdonald_parent2021; @roren_2024; @roren2025_power_recognition; @wolfTakingInteractionSeriously2019]. By trade-based status, I mean the recognized standing of a foreign power within a country’s hierarchy of economically consequential relationships. Trade volume is continuous, but status is categorical: a partner can move from being important to being understood as central. Once that reclassification becomes public, the relationship is no longer merely larger than before. It becomes easier for political actors to invoke as a national priority, to defend as strategically consequential, and to use as a justification for diplomatic adjustment.
 
-The paper also narrows the substantive interpretation. The evidence shows selective UNGA voting convergence toward China after a salient trade-rank reversal. Outcome diagnostics indicate that the pattern extends beyond the primary absolute-distance metric, while resolution-level evidence is issue-sensitive and points especially to areas where Brazil and China had room to converge, including human rights. The contribution is about trade-rank thresholds as politically usable status cues for observable voting convergence.
+Much of the China and rising-powers branch of this literature asks how rising states seek recognition, major-power status, or institutional standing, and how misrecognition can produce contestation or revisionism [@deng2008_status; @larson_shevchenko2010_status_seekers; @ward2017_status_challenge; @murray2018_recognition; @mukherjee2022_ascending]. This argument relocates status from the ambitions of the rising power to the recognition practices of states. China’s trade-based status gain occurs when another country publicly recategorizes China within its own hierarchy of external economic relationships -- from an important partner to a central one. The mechanism is therefore status-theoretic, but the status recognition flows toward China; Brazil is the audience and status-conferring actor, not the status seeker.
+
+Brazil is the strongest case for the theory. China displaced the United States, a politically salient incumbent and hegemonic benchmark; the rank reversal was publicly visible; and the Brazilian press allows the attention implication to be measured. The case is also substantively important because Lula-era Brazilian foreign policy is often described through autonomy, South-South activism, multipolarity, and Brazil's triangular position between the United States and China [@neto2011; @neto_malamud2015; @rodrigues2019measuring; @schenoniMythsMultipolaritySources2022; @guilhon2014; @schenoni_leiva2021; @brun_covarrubias2024; @coutinho_rodriguez2024]. I estimate the Brazilian effect using synthetic difference-in-differences (SDiD) on annual UNGA ideal-point distance to China. The estimate is an average post-2009 gap. Relative to Brazil's pre-treatment mean distance, the estimated reduction is `r sprintf('%.1f', perc_change)` percent.
+
+To assess whether the pattern is specific to Brazil, I extend the analysis to a cross-country panel in which China enters and holds the top export-destination position to provide evidence that the rank-threshold pattern travels beyond the theory-generating case. The cross-country estimates are smaller, as expected in a more heterogeneous sample, but they point in the same direction as the Brazilian case. The panel evidence therefore strengthens the core claim that rank thresholds matter, while mechanism evidence remains Brazil-centered.
+
+The paper’s contribution is to recast economic influence as a status process. Existing work usually treats trade exposure as a continuous source of leverage, interests, or domestic pressure. I show that economic ties matter not only through accumulated exposure, but also when they turn a foreign power into a country’s leading trade partner. In Brazil, China’s rise to the top export-destination position made an already expanding commercial relationship politically usable as evidence of China’s new centrality. That status gain helps explain why convergence appears selectively in UNGA voting. More broadly, the paper shows that status gains need not arise only from military prestige, formal hierarchy, or interstate rivalry. They can also emerge from economic hierarchies and shape observable diplomatic behavior.
+
+
+The next section develops the status-threshold argument and derives observable implications. I then present the Brazil SDiD design and timing diagnostics, followed by issue-area and media evidence on the mechanism. The final empirical section evaluates whether persistent China-top export status is associated with similar movement in a broader cross-country panel.
 
 # Theory and hypotheses
 
-A rank reversal differs from smooth trade growth because it changes a category. Actors can observe trade shares, but they also use coarse labels such as largest export market, number-one partner, or top trade partner. These categories simplify complex economic relationships and help journalists, politicians, and organized interests coordinate attention [@bordalo_etal2022; @conlon2023; @enke2024; @graeber_etal2025]. Crossing the number-one threshold can create a politically salient cue beyond the information contained in continuous trade exposure.
+A trade-based status shift differs from smooth growth in economic interdependence because it changes the category through which a foreign power is understood. Actors can observe trade shares, but political attention rarely follows continuous movements one percentage point at a time. It also organizes around coarse public labels: largest export market, number-one partner, top-ranked export destination. These labels simplify complex economic relationships and help journalists, politicians, organized interests, and diplomats coordinate attention [@bordalo_etal2022; @conlon2023; @enke2024; @graeber_etal2025]. The number-one threshold is therefore not doing the theoretical work by itself. It matters because it can reclassify a rising power from one important commercial partner among several into the country's central economic partner. In this sense, export-destination rank is how I observe a trade-based status shift; it is not the theoretical object itself.
 
-The cue should matter most when the displaced incumbent is politically prominent. A Chinese rank reversal over a minor incumbent may be a commercial fact with little political resonance. A Chinese rank reversal over the United States is different. It can be read as a visible status loss for the hegemon and as a public marker of China's rise. Brazil falls squarely inside this high-salience scope condition: China displaced the United States in the export-destination hierarchy in 2009, and contemporary coverage frequently described the event in broader top-partner language.
+The cue should matter most when the new status also displaces a politically prominent incumbent. If a rising major power overtakes a minor partner, the event may remain a commercial fact with limited political resonance. If it overtakes the hegemonic incumbent, the same threshold takes on broader political meaning. It can be read as a visible loss of standing for the incumbent and as a public marker of the challenger's rise. Brazil falls squarely inside this high-salience condition: China became Brazil's largest export destination in 2009, displaced the United States, and contemporary coverage frequently described the event in broader top-partner language.
 
-The mechanism has two steps. First, the rank reversal should increase attention. Media coverage should make China and the bilateral trade relationship more visible after the threshold is crossed. Second, the salience cue may enter policy deliberation through diplomatic, reputational, and coordination channels. This second step can be gradual because UNGA positions are embedded in prior votes, bureaucratic routines, coalition commitments, and reputational constraints. The Brazilian SDiD design estimates the combined reduced-form effect of the rank reversal on UNGA distance to China.
+The mechanism has two steps. First, the status cue should increase attention. Media coverage should make the challenger and the bilateral trade relationship more visible after the threshold is crossed. Second, the cue should affect policy through justification rather than through automatic conversion of attention into votes. Once that power is publicly understood as a central economic partner, executives and diplomats can frame limited movement toward it as pragmatic recognition of the country's economic hierarchy rather than as ideological concession or opportunistic bandwagoning. This step can be gradual because UNGA positions are embedded in prior votes, bureaucratic routines, coalition commitments, and reputational constraints. The Brazilian SDiD design estimates the combined reduced-form effect of this status cue on UNGA distance to China.
 
-The main expectation is therefore: when China becomes a country's largest export destination, that country's UNGA ideal-point distance to China should decrease relative to its counterfactual path. This expectation is tested most directly in Brazil. A second expectation is a scope condition rather than a confirmed moderation result: the effect should be more politically salient when China displaces a long-entrenched U.S. incumbent. The Brazilian case satisfies this condition, while the cross-country panel treats U.S.-displacement heterogeneity as exploratory because incumbent identity is not randomly assigned and subgroup support is limited. A third expectation is that media coverage of China and China-Brazil trade should increase around the rank reversal. A fourth expectation is temporal: if the effect depends on the continuing salience of the top-rank cue, it should weaken when China loses that position, although exit diagnostics alone cannot distinguish salience from reversible interest-based mechanisms.
+## From Attention to Selective Diplomatic Alignment
+
+Trade-based status does not mechanically turn attention into foreign-policy change. It changes the terms on which selective accommodation can be justified. Some foreign-policy arenas are especially suitable for this kind of adjustment: they are visible to foreign governments and diplomatic audiences, but less costly domestically than treaties, military commitments, sanctions, or trade policy. In such arenas, governments can signal movement toward a newly central partner while preserving flexibility.
+
+When a foreign power becomes publicly recognized as the country’s leading trade partner, policymakers can frame limited convergence with that power as pragmatic recognition of economic importance rather than as ideological concession or opportunistic bandwagoning. The status gain can therefore lower the reputational cost of selected movement while increasing its diplomatic value.
+
+The domestic pathway is justificatory, not direct. Media coverage need not cause individual foreign-policy positions, and business groups need not lobby over specific diplomatic decisions. Rather, public recognition of the partner’s new standing changes what diplomats and executives can plausibly defend. Adjustment toward that partner becomes easier to present as alignment with national economic interests, especially in diplomatic settings where positions are visible internationally but relatively low-cost domestically.
+
+This logic implies selective rather than uniform convergence. The mechanism should be most informative in issue areas where the country and the newly elevated partner previously differed and where movement is not costless. In domains tied to prior reputational commitments, adjustment toward the newly central partner requires a stronger rationale than in areas where the two countries already agree. Trade-based status supplies such a rationale by making the partner’s economic centrality publicly available as a justification for diplomatic accommodation.
+
+The main theoretical expectation is therefore that when a rising major power becomes a country’s leading trade partner, the country's foreign policy should move closer to that power relative to its counterfactual path. The effect should be easiest to observe when the status gain displaces a politically prominent incumbent, especially a hegemonic benchmark such as the United States. The theory also implies an attention pattern: media coverage of the rising power and of the bilateral economic relationship should increase around the status shift.
 
 # Data and design
 
@@ -140,7 +165,7 @@ For Brazil, the treatment indicator equals one from 2009 onward, the first year 
 
 The SDiD panel combines UNGA ideal points with trade, macroeconomic, power, distance, political-institution, and trade-agreement covariates. The complete panel covers `r num_countries` countries and `r num_years` Brazil years for the main SDiD window (`r min_year`-`r max_year`). Trade data come from the International Trade and Production Database for Estimation [@borchert_etal2021]. The ITPD-E `trade` variable is measured in millions of current US dollars, and export-destination ranks are computed from exporter-importer flows.
 
-The Brazil variables enter the design in three groups. The outcome is Brazil's annual absolute UNGA ideal-point distance to China; the treatment is an indicator for years after China becomes Brazil's largest export destination. The covariates measure trade exposure to China and the United States, relative power, distance to the United States, leader ideology, macroeconomic stress, regime institutions, and U.S. trade-agreement ties. The cross-country scope probe uses the same outcome and treatment logic, with log GDP per capita and V-Dem freedom of expression as the covariate-adjusted `fect` controls. Table \@ref(tab:table-summary-main) reports the main variables in the Brazil SDiD panel.
+The Brazil variables enter the design in three groups. The outcome is Brazil's annual absolute UNGA ideal-point distance to China; the treatment is an indicator for years after China becomes Brazil's largest export destination. The covariates measure trade exposure to China and the United States, relative power, distance to the United States, leader ideology, macroeconomic stress, regime institutions, and U.S. trade-agreement ties. The cross-country panel uses the same outcome and treatment logic. Table \@ref(tab:table-summary-main) summarizes the country-year panel used to estimate Brazil's synthetic counterfactual. The large number of observations reflects the donor pool and pre/post-treatment country-year structure of the SDiD design.
 
 ```{r table-summary-main, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 summary_vars <- tar_read(synth_data) %>%
@@ -181,7 +206,7 @@ knitr::kable(
   summary_tbl,
   format = "latex",
   booktabs = TRUE,
-  caption = "Descriptive statistics for the Brazil SDiD panel.",
+  caption = "Descriptive statistics for the country-year panel used in the Brazil SDiD design.",
   align = "lccccc"
 ) %>%
   kableExtra::kable_styling(
@@ -189,14 +214,16 @@ knitr::kable(
     font_size = 8
   ) %>%
   kableExtra::footnote(
-    general = sub(
-      "^Note: ",
-      "",
-      caption_note(
-        unit = "rescaled country-year variables used by the SDiD specification unless otherwise noted; treatment is binary",
-        window = sprintf("%d-%d SDiD analytic panel", min_year, max_year),
-        treatment = treat_def_brazil
-      )
+    general = paste0(
+      sub(
+        "^Note: ",
+        "",
+        caption_note(
+          unit = "Rescaled country-year variables used by the SDiD specification unless otherwise noted; treatment is binary",
+          window = sprintf("%d-%d SDiD analytic panel", min_year, max_year)
+        )
+      ),
+      " Observations include Brazil and donor countries used to construct the synthetic counterfactual. The treatment mean is small because only Brazil is treated after 2009."
     ),
     general_title = "Note: ",
     escape = FALSE,
@@ -204,7 +231,7 @@ knitr::kable(
   )
 ```
 
-For the cross-country scope probe, treatment equals one in years when China is currently the country's largest export destination and returns to zero if China loses that position. This switching structure differs from absorbing-treatment staggered DiD. The main panel estimator is the counterfactual `fect` estimator with interactive fixed effects [@liu2024practical], using log GDP per capita and V-Dem freedom of expression as covariates. Absorbing-treatment estimates are reported in the appendix because they estimate a different, persistent-treatment diagnostic quantity.
+For the cross-country evidence beyond Brazil, the main sample is restricted to persistent China-top export-destination transitions. Treated countries are those where China first becomes the largest export destination in or after 2000, after an observed prior year in which China was not number one, and then remains in that position through the end of the observed panel. Countries where China never becomes the largest export destination remain controls. Countries where China enters the top position only temporarily are excluded from the main cross-country sample and reported as appendix robustness. This operationalization matches the salience logic more closely than a one-year entry definition: the theory expects political visibility, bureaucratic learning, and diplomatic adaptation to be clearer when the new trade hierarchy persists. For this panel, I use the `fect` counterfactual estimator with interactive fixed effects, which allows countries to load differently on common latent shocks [@liu2024practical]. I refer to this as the IFE specification below. I report the no-covariate IFE specification as the main cross-country estimate and use log GDP per capita plus V-Dem freedom of expression as a covariate-adjusted robustness check. Callaway-Sant'Anna (C\&S) absorbing-treatment estimates are reported as a convergent check on the same persistent-treatment sample.
 
 # Brazil SDiD evidence
 
@@ -212,19 +239,50 @@ The Brazilian analysis estimates the average post-2009 reduced-form effect of Ch
 
 Figure \@ref(fig:brazil-rank-volume) shows the timing of the rank threshold. China's export share rose before 2009, but China became the top-ranked export destination only in 2009. The signed margin over the relevant competitor also changes sign at that threshold. The SDiD covariate matrix includes trade shares with China and the United States to account for smooth trade exposure. The rank margin is part of the threshold event itself, so it is used as a timing diagnostic rather than as a separate control.
 
-```{r brazil-rank-volume, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Brazil rank-versus-volume diagnostic for China's export-destination status. Panel A shows China's share of Brazilian exports. Panel B shows China's ordinal export-destination rank, with 1 as the top rank. Panel C shows China's signed export-value margin over the relevant competitor: the destination China had to surpass before 2009 and the second-ranked destination after China became first. Orange bars indicate positive margins and gray bars indicate negative margins. The dashed line marks 2009, when China became Brazil's largest export destination. ", caption_note(unit = "export share in percent; ordinal rank; export-value margin in current USD billions based on ITPD-E trade values", window = "2000-2012 annual Brazil series", treatment = treat_def_brazil)), fig.pos="H", fig.width=7.2, fig.height=7.2}
+```{r brazil-rank-volume, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Brazil rank-versus-volume diagnostic for China's export-destination status. Panels show China's export share, ordinal rank, and signed margin over the relevant competitor. The dashed line marks the 2009 rank reversal. ", caption_note(unit = "Export share in percent; ordinal rank; export-value margin in current USD billions", window = "2000-2012 annual Brazil series")), fig.pos="H", fig.width=7.2, fig.height=7.2}
 tar_read(goal3_brazil_rank_volume_plot)
 ```
 
-Figure \@ref(fig:plot-sdid) presents the main SDiD fit. The pre-treatment fit is close enough to make the post-treatment comparison informative, and the post-2009 gap is negative, indicating convergence toward China. The point estimate is `r sprintf('%1.2f', estimate)` ideal-point units, with placebo-based SE `r sprintf('%1.2f', se_estimate)` and p-value `r sprintf('%.3f', p_estimate)`. Relative to Brazil's pre-treatment mean distance (`r sprintf('%.3f', mean_br)`), this corresponds to a `r sprintf('%.1f', perc_change)` percent reduction. The estimate summarizes the average post-treatment gap.
+Figure \@ref(fig:plot-sdid) presents the main SDiD fit. The pre-treatment fit is close enough to make the post-treatment comparison informative, and the post-2009 gap is negative, indicating convergence toward China. The point estimate is `r sprintf('%1.2f', estimate)` ideal-point units, with placebo-based SE `r sprintf('%1.2f', se_estimate)` and p-value `r sprintf('%.3f', p_estimate)`. Relative to Brazil's pre-treatment mean distance (`r sprintf('%.3f', mean_br)`), this corresponds to a `r sprintf('%.1f', perc_change)` percent reduction. The estimate summarizes the average post-treatment gap. Appendix Figure \@ref(fig:appendix-brazil-china-ideal-points) plots the underlying Brazil and China ideal-point series separately; China is comparatively stable, so the post-2009 reduction in absolute distance is driven mainly by movement in Brazil's position rather than by China moving toward Brazil.
 
-```{r plot-sdid, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("SDiD fit for Brazil and synthetic control with time weights. Lower values indicate convergence toward China. Table \\@ref(tab:table-placebo) reports uncertainty. The post-treatment gap is an average post-2009 reduced-form effect. ", caption_note(unit = "absolute UNGA ideal-point distance to China (points)", se = "placebo-based SE and p-values reported in the table", window = "Brazil annual SDiD series with treatment in 2009", treatment = treat_def_brazil)), fig.pos="H"}
+```{r plot-sdid, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("SDiD fit for Brazil and synthetic control with time weights. Lower values indicate convergence toward China; the post-treatment gap is an average post-2009 reduced-form effect. ", caption_note(unit = "Absolute UNGA ideal-point distance to China", se = "placebo-based SE and p-values reported in the table", window = "Brazil annual series")), fig.pos="H"}
 tar_read(plot_trend)
+```
+
+Table \@ref(tab:outcome-robustness-table) reports the preferred Brazil SDiD estimate alongside three specification checks. Each column estimates the average post-2009 gap in Brazil's UNGA ideal-point distance to China and reports a placebo-based standard error. The baseline without institutional covariates, the specification without time-varying covariates, and the Latin America donor pool preserve the negative sign. The preferred estimate remains the specification in column 1 because it keeps the theoretically relevant donor pool while adjusting for trade exposure, macroeconomic stress, U.S. distance, and institutional covariates.
+
+```{r outcome-robustness-table, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
+sdid_spec_table <- tar_read(brazil_sdid_spec_table)
+
+knitr::kable(
+  sdid_spec_table$table,
+  format = "latex",
+  booktabs = TRUE,
+  escape = FALSE,
+  caption = "Brazil SDiD estimates across main and robustness specifications.",
+  align = "lcccc"
+) %>%
+  kableExtra::kable_styling(
+    latex_options = c("HOLD_position", "scale_down"),
+    font_size = 8
+  ) %>%
+  kableExtra::footnote(
+    general = paste0(
+      "ATT is absolute UNGA ideal-point distance to China; negative values mean convergence. ",
+      "Placebo-based SEs are in parentheses. Checkmarks show included covariate groups. ",
+      "Donor counts exclude Brazil. Column (3) uses pre-treatment or time-invariant covariates held fixed across panel years."
+    ),
+    general_title = "Note: ",
+    escape = FALSE,
+    threeparttable = TRUE
+  )
 ```
 
 The rank interpretation requires more than showing that trade with China was increasing. Brazil's exports to China grew before 2009, including years in which China rose in the export hierarchy but did not become number one. The timing tests in Table \@ref(tab:table-placebo) therefore ask whether rapid trade growth and lower-rank promotions generate the same estimated UNGA convergence as the top-rank reversal. They do not. The 2003 and 2005 rows are timing falsifications for the continuous-growth alternative. The 2012 row probes whether the result is driven by a later break after China had already become the top destination.
 
-The same timing logic addresses the main Brazilian political confounder. President Lula da Silva took office in 2003 and pursued a more explicit South-South foreign-policy agenda. If that ideological shift were sufficient to explain Brazil-China UNGA convergence, the pseudo-treatment years in 2003 or 2005 should already show comparable movement. They do not. The cross-country scope probe also estimates the rank-threshold pattern across countries with different political systems and leadership profiles, which reduces the concern that the Brazil estimate is only a Lula-period artifact.
+The same timing logic addresses the main Brazilian political confounder. President Lula da Silva took office in 2003 and pursued a more explicit South-South foreign-policy agenda, a shift emphasized in work on Brazilian autonomy, presidential foreign policy, and international engagement [@neto2011; @mouron_urdinez2014; @neto_malamud2015; @rodrigues2019measuring; @schenoniMythsMultipolaritySources2022]. If that ideological shift were sufficient to explain Brazil-China UNGA convergence, the pseudo-treatment years in 2003 or 2005 should already show comparable movement. They do not. The cross-country panel also estimates the rank-threshold pattern across countries with different political systems and leadership profiles, which reduces the concern that the Brazil estimate is only a Lula-period artifact.
+
+A remaining concern is that 2009 bundled the Brazilian rank reversal with other contemporaneous shocks, including the global financial crisis, the BRICS/G20 moment, and the commodity cycle. The cross-country panel below probes this class of explanation. Brazil is included in the absorbing cross-country sample, but the panel aligns countries by their own persistent China-top entry years, which range from 2003 to 2021 in the main specification. A Brazil-specific 2009 confounder cannot mechanically generate an average event-time effect across countries treated in different calendar years. For such an explanation to account for both the Brazil estimate and the cross-country result, the omitted force would need to coincide with persistent China-top entry across countries, affect UNGA distance to China in the same direction, and remain outside the observed covariates and the latent factors captured by the interactive fixed-effects specification. In sensitivity-analysis terms, it would need enough residual association with both treatment timing and the outcome to overturn estimates that are stable across timing tests, donor-pool checks, estimators, and covariate choices [@cinelli_hazlett2020; @oster2019].
 
 ```{r table-placebo, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 rank_tests <- tar_read(goal3_brazil_placebo_rank_volume_tests) %>%
@@ -254,10 +312,9 @@ rank_tests_note <- paste0(
     "^Note: ",
     "",
     caption_note(
-      unit = "ATT in absolute UNGA ideal-point distance to China; lower values indicate convergence toward China; export margins are current USD billions based on ITPD-E trade values",
+      unit = "ATT is absolute UNGA ideal-point distance to China; negative values mean convergence; export margins are current USD billions",
       se = "normal approximation using placebo-based SE",
-      window = "main model uses treatment in 2009; 2003 and 2005 timing tests truncate the sample before 2009; 2012 is a later-break falsification",
-      treatment = "China becomes Brazil's largest export destination in 2009; placebo rows redefine treatment at the pseudo-treatment year"
+      window = "2003 and 2005 timing tests truncate the sample before 2009; 2012 is a later-break falsification"
     )
   ),
   " The 2003 and 2005 rows are timing falsifications for rapid export growth without rank-1 status."
@@ -283,189 +340,96 @@ knitr::kable(
   )
 ```
 
-Table \@ref(tab:outcome-robustness-table) reports the preferred Brazil SDiD estimate alongside three target-backed specification checks. Each column estimates the average post-2009 gap in Brazil's UNGA ideal-point distance to China and reports a placebo-based standard error. The baseline without institutional covariates, the longer panel, and the Latin America donor pool preserve the negative sign. The preferred estimate remains the specification in column 1 because it keeps the theoretically relevant donor pool while adjusting for trade exposure, macroeconomic stress, U.S. distance, and institutional covariates.
+## Issue-Area Evidence: Where Did Convergence Occur?
 
-```{r outcome-robustness-table, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
-sdid_panel_counts <- function(data, time_end = 2016L, latin_america_only = FALSE) {
-  panel <- data %>%
-    dplyr::filter(year < time_end)
-  if (latin_america_only) {
-    panel <- panel %>% dplyr::filter(latin_america)
-  }
-  panel %>%
-    dplyr::summarise(
-      n_obs = dplyr::n(),
-      n_countries = dplyr::n_distinct(iso3c),
-      n_donors = dplyr::n_distinct(iso3c[iso3c != "BRA"]),
-      min_year = min(year, na.rm = TRUE),
-      max_year = max(year, na.rm = TRUE),
-      .groups = "drop"
-    )
-}
+The aggregate ideal-point estimate raises a substantive question: in what kinds of votes did Brazil move closer to China? Resolution-level diagnostics suggest that the post-2009 convergence was selective rather than uniform. In several issue areas Brazil and China already voted together at high rates before treatment, leaving little room for additional convergence. The more informative domain is human rights, where pre-treatment agreement was lower and where movement toward China carried greater reputational costs for Brazil, given the domestic and international implications of Brazil's human-rights foreign policy [@milani2015humanrights]. In that domain, Brazil-China identical voting increased by `r sprintf("%.1f", human_rights_vote_change)` percentage points after 2009. This pattern is consistent with the proposed mechanism: the trade-rank cue made China's relationship politically usable, allowing policymakers to justify selective convergence in a visible multilateral arena where Brazil had previously maintained more distance.
 
-sdid_spec <- function(fit, se, data, time_end, latin_america_only, donor_pool, covariates) {
-  counts <- sdid_panel_counts(data, time_end = time_end, latin_america_only = latin_america_only)
-  estimate_value <- as.numeric(fit[1])
-  se_value <- as.numeric(se[1])
-  p_value <- 2 * stats::pnorm(abs(estimate_value / se_value), lower.tail = FALSE)
-  list(
-    estimate = sprintf("%.3f", estimate_value),
-    se = sprintf("%.3f", se_value),
-    p = sprintf("%.3f", p_value),
-    n_obs = scales::comma(counts$n_obs),
-    n_donors = counts$n_donors,
-    donor_pool = donor_pool,
-    covariates = covariates,
-    window = sprintf("%d-%d", counts$min_year, counts$max_year)
+```{r issue-area-prepost-table, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
+issue_order <- c(
+  "Human rights",
+  "Arms/disarmament/nuclear",
+  "Economic development",
+  "Decolonization",
+  "Palestine/Middle East",
+  "Other / uncoded"
+)
+
+issue_prepost_tbl <- tar_read(brazil_china_unvotes_resolution_2005_2012) %>%
+  dplyr::mutate(period = dplyr::if_else(year < 2009, "pre", "post")) %>%
+  dplyr::summarise(
+    n_resolutions = dplyr::n_distinct(rcid),
+    identical_vote_share = 100 * mean(identical_vote, na.rm = TRUE),
+    .by = c(issue_family, period)
+  ) %>%
+  tidyr::pivot_wider(
+    names_from = period,
+    values_from = c(n_resolutions, identical_vote_share)
+  ) %>%
+  dplyr::mutate(
+    change = identical_vote_share_post - identical_vote_share_pre,
+    interpretation = dplyr::case_when(
+      issue_family == "Human rights" ~ "Politically costly convergence; mechanism-informative",
+      issue_family == "Palestine/Middle East" ~ "High baseline agreement; limited room to move",
+      issue_family == "Economic development" ~ "Diagnostic evidence",
+      issue_family == "Arms/disarmament/nuclear" ~ "Diagnostic evidence",
+      issue_family == "Decolonization" ~ "Diagnostic evidence",
+      TRUE ~ "Heterogeneous residual category"
+    ),
+    issue_order_id = match(issue_family, issue_order)
+  ) %>%
+  dplyr::arrange(is.na(issue_order_id), issue_order_id, issue_family) %>%
+  dplyr::transmute(
+    `Issue area` = issue_family,
+    `Pre-2009 identical vote share` = sprintf("%.1f", identical_vote_share_pre),
+    `Post-2009 identical vote share` = sprintf("%.1f", identical_vote_share_post),
+    `Change` = sprintf("%.1f", change),
+    `Interpretation` = interpretation
   )
-}
-
-main_spec <- sdid_spec(
-  tar_read(synth_fit),
-  tar_read(se_synth),
-  tar_read(synth_data),
-  time_end = 2016L,
-  latin_america_only = FALSE,
-  donor_pool = "Global, treated country excluded",
-  covariates = "Trade shares, macro stress, U.S. distance, institutions"
-)
-baseline_spec <- sdid_spec(
-  tar_read(synth_fit_baseline),
-  tar_read(se_synth_baseline),
-  tar_read(synth_data_baseline),
-  time_end = 2016L,
-  latin_america_only = FALSE,
-  donor_pool = "Global, treated country excluded",
-  covariates = "Trade shares, macro stress, U.S. distance"
-)
-extended_spec <- sdid_spec(
-  tar_read(synth_fit_extended),
-  tar_read(se_synth_extended),
-  tar_read(synth_data_extended),
-  time_end = 2020L,
-  latin_america_only = FALSE,
-  donor_pool = "Global, treated country excluded",
-  covariates = "Trade shares, macro stress, U.S. distance, institutions"
-)
-latam_spec <- sdid_spec(
-  tar_read(synth_fit_latam),
-  tar_read(se_synth_latam),
-  tar_read(synth_data),
-  time_end = 2016L,
-  latin_america_only = TRUE,
-  donor_pool = "Latin America",
-  covariates = "Trade shares, macro stress, U.S. distance, institutions"
-)
-
-spec_table <- tibble::tibble(
-  ` ` = c(
-    "ATT",
-    "",
-    "\\textit{Covariates:}",
-    "Trade share China",
-    "Trade share US",
-    "Power index (GPI)",
-    "Power gap to US",
-    "Per-capita income",
-    "Exchange rate",
-    "Distance to US",
-    "HoG left ideology",
-    "Current account (\\% GDP)",
-    "Gov. deficit (\\% GDP)",
-    "Parliamentary system",
-    "Military executive",
-    "US trade agreement",
-    "Country-years",
-    "Donor countries",
-    "Donor pool",
-    "Time window"
-  ),
-  `(1) Main` = c(
-    sprintf("%.2f", as.numeric(main_spec$estimate)),
-    paste0("(", sprintf("%.2f", as.numeric(main_spec$se)), ")"),
-    "",
-    rep("$\\checkmark$", 13),
-    main_spec$n_obs,
-    main_spec$n_donors,
-    "Global",
-    main_spec$window
-  ),
-  `(2) No institutional covariates` = c(
-    sprintf("%.2f", as.numeric(baseline_spec$estimate)),
-    paste0("(", sprintf("%.2f", as.numeric(baseline_spec$se)), ")"),
-    "",
-    rep("$\\checkmark$", 10),
-    "", "", "",
-    baseline_spec$n_obs,
-    baseline_spec$n_donors,
-    "Global",
-    baseline_spec$window
-  ),
-  `(3) Extended panel` = c(
-    sprintf("%.2f", as.numeric(extended_spec$estimate)),
-    paste0("(", sprintf("%.2f", as.numeric(extended_spec$se)), ")"),
-    "",
-    rep("$\\checkmark$", 13),
-    extended_spec$n_obs,
-    extended_spec$n_donors,
-    "Global",
-    extended_spec$window
-  ),
-  `(4) Latin America donors` = c(
-    sprintf("%.2f", as.numeric(latam_spec$estimate)),
-    paste0("(", sprintf("%.2f", as.numeric(latam_spec$se)), ")"),
-    "",
-    rep("$\\checkmark$", 13),
-    latam_spec$n_obs,
-    latam_spec$n_donors,
-    "Latin America",
-    latam_spec$window
-  )
-)
-
-outcome_note <- paste0(
-  sub(
-    "^Note: ",
-    "",
-    caption_note(
-      unit = "ATT in absolute UNGA ideal-point distance to China; lower values indicate convergence toward China",
-      se = "placebo-based standard errors shown in parentheses below ATT",
-      window = "annual country-year SDiD panels shown in the table",
-      treatment = treat_def_brazil
-    )
-  ),
-  " Checkmarks indicate covariates included in each specification. Donor country counts exclude Brazil. The rank margin is used as a timing diagnostic rather than a covariate because it is mechanically tied to the rank-threshold event."
-)
 
 knitr::kable(
-  spec_table,
+  issue_prepost_tbl,
   format = "latex",
   booktabs = TRUE,
   escape = FALSE,
-  caption = "Brazil SDiD estimates across target-backed specifications.",
-  align = "lcccc"
+  caption = "Brazil-China identical UNGA votes by issue area, before and after 2009.",
+  align = "lrrrl"
 ) %>%
   kableExtra::kable_styling(
     latex_options = c("HOLD_position", "scale_down"),
     font_size = 8
   ) %>%
   kableExtra::footnote(
-    general = outcome_note,
+    general = sub(
+      "^Note: ",
+      "",
+      caption_note(
+        unit = "Percentage of roll-call resolutions with identical Brazil-China votes",
+        window = "2005-2008 versus 2009-2012; multi-coded resolutions enter each issue family"
+      )
+    ),
     general_title = "Note: ",
     escape = FALSE,
     threeparttable = TRUE
   )
 ```
 
-Resolution-level diagnostics in the appendix sharpen the substantive interpretation. The post-2009 increase in identical Brazil-China votes is larger in human-rights resolutions than outside human rights, where Brazil had less room to move toward China. The Brazil evidence therefore points to selective UNGA voting convergence toward China, supported by close pre-treatment fit, covariates for trade exposure and macroeconomic stress, rank-versus-volume timing tests, and donor-pool sensitivity checks.
+Figure \@ref(fig:plot-brazil-china-unvotes-issue-year) disaggregates the same diagnostic by year and substantive issue family. Because several areas already had high Brazil-China vote similarity before 2009, the figure describes where additional convergence was possible.
+
+```{r plot-brazil-china-unvotes-issue-year, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Brazil-China identical UNGA votes by issue area, 2005-2012. Points report annual shares; the vertical line marks 2009. The clearest pattern expected by the mechanism is selective convergence in human rights. ", caption_note(unit = "Percentage of roll-call resolutions with identical Brazil-China votes", window = "2005-2012 annual series; multi-coded resolutions enter each issue family")), fig.pos="H", fig.width=11, fig.height=8}
+tar_read(plot_brazil_china_unvotes_similarity_by_issue_year_2005_2012)
+```
+
+This issue-area evidence should not be read as a separate causal estimate. It is a diagnostic of substantive content. The SDiD estimate identifies the average post-2009 gap in Brazil's ideal-point distance to China; the resolution-level evidence shows that this gap is not merely an abstract movement in latent space but corresponds to selective convergence in politically meaningful areas. The Brazil evidence therefore points to selective UNGA voting convergence toward China, supported by close pre-treatment fit, covariates for trade exposure and macroeconomic stress, rank-versus-volume timing tests, donor-pool sensitivity checks, and issue-area diagnostics that match the proposed mechanism.
 
 # Brazilian media salience
 
-To assess whether the rank reversal became publicly salient, I examine coverage of China in Folha de S.Paulo, Brazil's widest-circulation newspaper [@folha2016], from 2000 to 2014. Salience matters because the rank-threshold argument requires the top-rank cue to become politically usable. A change in export hierarchy can shape elite and public attention when it enters public discourse as a simple signal of China's commercial importance.
+To assess whether the rank reversal became publicly salient, I examine coverage of China in Folha de S.Paulo, Brazil's widest-circulation newspaper [@folha2016], from 2000 to 2014. Salience matters because the rank-threshold argument requires the top-rank cue to become politically usable. A change in export hierarchy can shape elite and public attention when it enters public discourse as a simple signal of China's commercial importance, consistent with work on media, agenda setting, and foreign policy [@soroka2003; @baum_potter2008; @walgraveContingencyMassMedias2006].
 
-The corpus contains headlines and related news items mentioning China. I classify China-related coverage into broad categories and focus on whether bilateral trade coverage grows after 2009. Figure \@ref(fig:plot-media-counterfactual) shows that the post-2009 increase is concentrated in China-Brazil trade coverage rather than in all China-related topics equally. This pattern is consistent with a rank-salience interpretation: coverage concentrates on China's new commercial status in Brazil.
+Headlines are the appropriate unit for this diagnostic because the mechanism is public attention and categorical labeling, not article-level persuasion. This follows corpus-assisted media studies that use headlines because they are tractable in large archives and operate as attention-directing cues [@zhang_yu2024_chinese_dream]. The relevant question is whether Folha increasingly foregrounded China as a trade relationship after the rank reversal. Headlines are the most visible textual cue in the archive, they are the part of coverage most likely to be scanned by broad audiences, and they are where newspapers condense complex developments into short public labels such as "largest trade partner" or "record exports." Full article texts would be useful for a different exercise -- for example, measuring tone or detailed argumentation -- but the salience claim here is about which China-related themes were made visible at the headline level.
 
-```{r plot-media-counterfactual, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Brazilian media salience: disaggregated China headlines in Folha de S.Paulo by category. The sustained post-2009 increase is concentrated in trade-related coverage. The figure measures public attention around the 2009 rank reversal. ", caption_note(unit = "count of headlines per category per year", window = "2000-2014 annual series", treatment = treat_def_brazil)), fig.pos="H", fig.asp = 0.7, fig.width = 8}
+I therefore classify China-related headlines into substantive categories and then collapse them into four analytically relevant groups: China-Brazil trade, China's domestic economy, diplomacy and bilateral relations, and non-economic coverage. The classification uses a fixed label set with examples, and the appendix reports the exact prompt and validation procedure. Figure \@ref(fig:plot-media-counterfactual) shows that the post-2009 increase is concentrated in China-Brazil trade coverage rather than in all China-related topics equally. This pattern is consistent with a rank-salience interpretation: coverage concentrates on China's new commercial status in Brazil.
+
+```{r plot-media-counterfactual, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Brazilian media salience: disaggregated China headlines in Folha de S.Paulo by category. The sustained post-2009 increase is concentrated in trade-related coverage. ", caption_note(unit = "Headlines per category per year", window = "2000-2014 annual series")), fig.pos="H", fig.asp = 0.7, fig.width = 8}
 mc <- tar_read(media_counterfactual)
 ggplot(mc, aes(x = year, y = n, fill = broad_category)) +
   geom_area(alpha = 0.7) +
@@ -486,64 +450,47 @@ ggplot(mc, aes(x = year, y = n, fill = broad_category)) +
 
 \clearpage
 
-This evidence identifies the attention step in the proposed mechanism. The rank reversal became more visible in Brazilian public discourse, and the increase was concentrated in trade-related coverage. The policy-response channel remains a theoretically motivated interpretation of the Brazil SDiD estimate, supported by timing and content.
+This evidence identifies the attention step in the proposed mechanism. The rank reversal became more visible in Brazilian public discourse, and the increase was concentrated in trade-related coverage. Primary-source evidence from 2009--2011 also supports the justificatory step: the trade-rank shock was not merely an ex post statistical pattern; it became a recurrent cue in Brazilian diplomatic language. In a written interview before his May 2009 visit to Beijing, Lula presented China as Brazil's top trading partner while explaining that the trip would consolidate a partnership across commerce, technology, and global economic governance [@mre_funag_resenha104_2009, 323]. In speeches in Beijing three days later, he repeated the same rank claim in settings explicitly organized around the Brazil-China Strategic Partnership, trade diversification, investment, presidential diplomacy, and the decision to prepare the 2010--2014 Joint Action Plan [@mre_funag_resenha104_2009, 115, 121--122].
 
-# Cross-country scope probe
+The cue then appeared in MRE policy language and persisted under Dilma. MRE invoked China's 2009 rank when announcing Hu Jintao's 2010 state visit and the signature of the Brazil-China Joint Action Plan [@mre_funag_resenha106_2010, 356]. The 2011 Dilma-Hu joint communique stated that China had become Brazil's principal trading partner in 2009 and embedded that status in a broader agenda of intensified dialogue over trade and investment structures, diversification of bilateral trade, reciprocal investment, and implementation of the 2010--2014 Brazil-China Joint Action Plan [@mre_funag_resenha108_2011, 160--161]. In October 2011, Foreign Minister Antonio Patriota made the institutional link even more explicit: discussing China, he announced a dedicated Itamaraty task force to monitor economic-commercial relations with Brazil's principal trading partner and propose ways to expand the relationship beyond complementarity, toward diversification and higher-value trade content [@mre_funag_resenha109_2011, 47]. This evidence does not prove that the rank shock mechanically caused all subsequent adjustment, but it shows that the 2009 overtaking was translated into public, official language supporting diplomatic prioritization and institutional attention.
 
-The cross-country panel probes the scope of the rank-threshold pattern beyond Brazil. It estimates the average association between China entering and holding the top export-destination position across heterogeneous cases in a U.S.-benchmark sample. The design is broader and less targeted than the Brazil SDiD because treated periods differ in incumbent identity, duration, and public visibility. Its role is to assess whether the top-rank transition travels across cases.
+# Cross-Country Evidence Beyond Brazil
+
+The cross-country analysis serves two purposes. First, it tests whether persistent top-rank trade status has causal consequences beyond the Brazilian case. Second, it is an additional robustness check against explanations tied to Brazil's 2009 calendar year, such as the global financial crisis, the BRICS/G20 moment, or the commodity cycle. If persistent top-rank trade status matters, countries where China enters and holds the largest export-destination position should move closer to China in UNGA ideal-point space when aligned by their own treatment entry, not only in Brazil after 2009. I therefore estimate the same treatment logic in a cross-country absorbing sample: treated countries are those where China becomes the largest export destination after 2000, after an observed prior non-China-top year, and then does not lose that position. Never-treated countries remain controls. This analysis tests whether the rank-threshold pattern travels beyond the theory-generating case while matching the durable treatment observed in Brazil.
 
 ```{r fect-results, include=FALSE}
 library(dplyr)
 
 fect_ife_fit <- tar_read(fect_ife_china_top)
 fect_fe_fit <- tar_read(fect_fe_china_top)
-fect_carry_fit <- tar_read(fect_carryover_china_top)
 fect_ife_cov_fit <- tar_read(fect_ife_china_top_cov)
-sw_panel <- tar_read(china_top_fect_data)
+abs_panel <- tar_read(china_top_fect_data)
 
 ife_s <- fect_att_summary(fect_ife_fit)
 ife_cov_s <- fect_att_summary(fect_ife_cov_fit)
-fe_s <- fect_att_summary(fect_fe_fit)
 china_top_s <- tar_read(fect_ife_china_top_summary)
 china_top_cov_s <- tar_read(fect_ife_china_top_cov_summary)
 cs_abs_s <- tar_read(did_china_top_absorbing_summary)
 cs_abs_cov_s <- tar_read(did_china_top_absorbing_cov_summary)
+short_lived_cross_tbl <- tar_read(cross_country_short_lived_appendix_table)
+recent_pretrend_tbl <- tar_read(cross_country_recent_pretrend_f_test_table)
 
-att_cross <- china_top_cov_s$att
-se_cross <- china_top_cov_s$se
-p_cross <- china_top_cov_s$p
-r_cv <- china_top_cov_s$r_cv
+n_countries_abs <- dplyr::n_distinct(abs_panel$iso3c)
+n_treated_abs <- dplyr::n_distinct(abs_panel$iso3c[abs_panel$china_top == 1])
+n_control_abs <- n_countries_abs - n_treated_abs
+panel_min <- min(abs_panel$year)
+panel_max <- max(abs_panel$year)
 
-n_countries <- dplyr::n_distinct(sw_panel$iso3c)
-n_treated_sw <- dplyr::n_distinct(sw_panel$iso3c[sw_panel$china_top == 1])
-n_control_sw <- n_countries - n_treated_sw
-panel_min <- min(sw_panel$year)
-panel_max <- max(sw_panel$year)
-
-treat_summary <- sw_panel %>%
+treat_summary <- abs_panel %>%
   dplyr::group_by(iso3c, country_name) %>%
   dplyr::summarise(
     treated_years = sum(china_top),
-    switches = sum(abs(diff(china_top))),
-    absorbing = ifelse(switches <= 1 & treated_years > 0, "Yes", ifelse(treated_years > 0, "No", NA)),
+    entries = sum(china_top == 1L & dplyr::lag(china_top, default = 0L) == 0L),
+    exits = sum(china_top == 0L & dplyr::lag(china_top, default = 0L) == 1L),
     .groups = "drop"
   )
-
-exit_summary <- sw_panel %>%
-  dplyr::arrange(iso3c, year) %>%
-  dplyr::group_by(iso3c) %>%
-  dplyr::mutate(
-    china_top_lag = dplyr::lag(china_top),
-    exit = china_top == 0L & !is.na(china_top_lag) & china_top_lag == 1L
-  ) %>%
-  dplyr::summarise(exits = sum(exit, na.rm = TRUE), .groups = "drop")
-n_exit_events <- sum(exit_summary$exits, na.rm = TRUE)
-n_exit_countries <- sum(exit_summary$exits > 0, na.rm = TRUE)
-
 placebo_p <- if (!is.null(fect_fe_fit$test.out$placebo.p)) round(fect_fe_fit$test.out$placebo.p, 3) else NA
 placebo_equiv_p <- if (!is.null(fect_fe_fit$test.out$placebo.equiv.p)) round(fect_fe_fit$test.out$placebo.equiv.p, 3) else NA
-carryover_p <- if (!is.null(fect_carry_fit$test.out$carryover.p)) round(fect_carry_fit$test.out$carryover.p, 3) else NA
-carryover_equiv_p <- if (!is.null(fect_carry_fit$test.out$carryover.equiv.p)) round(fect_carry_fit$test.out$carryover.equiv.p, 3) else NA
 ife_placebo_f_p <- if (!is.null(fect_ife_fit$test.out$f.p)) round(fect_ife_fit$test.out$f.p, 3) else NA
 ife_placebo_tost_p <- if (!is.null(fect_ife_fit$test.out$tost.equiv.p)) round(fect_ife_fit$test.out$tost.equiv.p, 3) else NA
 format_p <- function(x) {
@@ -554,6 +501,9 @@ format_p <- function(x) {
 }
 fmt3 <- function(x) sprintf("%.3f", unname(x))
 fmt1 <- function(x) sprintf("%.1f", unname(x))
+fmt_num <- function(x, digits = 3L) {
+  ifelse(is.na(x), "NA", formatC(x, format = "f", digits = digits))
+}
 sig_sentence <- function(att, p) {
   direction <- ifelse(att < 0, "in the theoretically expected negative direction", "positive")
   if (is.na(p)) {
@@ -566,72 +516,56 @@ sig_sentence <- function(att, p) {
 }
 ```
 
-The preferred scope-probe specification is the switching-treatment `fect` IFE model with log GDP per capita and press freedom. The estimate is `r fmt3(china_top_cov_s$att)` (bootstrap SE = `r fmt3(china_top_cov_s$se)`, 95 percent CI [`r fmt3(china_top_cov_s$ci_lo)`, `r fmt3(china_top_cov_s$ci_hi)`], p = `r fmt3(china_top_cov_s$p)`). It corresponds to about `r fmt1(china_top_cov_s$att_rel_pct)` percent of the pre-treatment mean distance to China, or `r fmt3(china_top_cov_s$att_sd_units)` standard deviations of the outcome. `r sig_sentence(china_top_cov_s$att, china_top_cov_s$p)` Table \@ref(tab:cross-country-scope-table) compares the unadjusted and covariate-adjusted specifications.
+The preferred cross-country specification is the no-covariate IFE model on this absorbing sample. The estimate is `r fmt3(china_top_s$att)` ideal-point units (bootstrap SE = `r fmt3(china_top_s$se)`, 95 percent CI [`r fmt3(china_top_s$ci_lo)`, `r fmt3(china_top_s$ci_hi)`], p = `r fmt3(china_top_s$p)`). It corresponds to about `r fmt1(china_top_s$att_rel_pct)` percent of the pre-treatment mean distance to China, or `r fmt3(china_top_s$att_sd_units)` standard deviations of the outcome. `r sig_sentence(china_top_s$att, china_top_s$p)` The covariate-adjusted IFE estimate, with log GDP per capita and V-Dem freedom of expression, is `r fmt3(china_top_cov_s$att)` (p = `r fmt3(china_top_cov_s$p)`). The C\&S estimates in Table \@ref(tab:cross-country-table) use the same absorbing treatment logic as a convergent check. The staggered timing of persistent China-top entries, the absence of near-pre-treatment divergence, the interactive fixed-effects adjustment, and the convergence between IFE and C\&S estimates make a causal interpretation of the cross-country estimates credible. The cross-country evidence is smaller than the Brazil SDiD effect, as expected because Brazil is a most-likely case in which China displaced the United States and the rank reversal was publicly salient, but it points in the same direction: durable China-top export-destination status reduces UNGA distance to China beyond the Brazilian case.
 
-```{r cross-country-scope-table, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
-cross_tbl <- tibble::tibble(
-  Quantity = c(
-    "Estimator",
-    "Treatment type",
-    "ATT",
-    "Bootstrap SE",
-    "95\\% CI",
-    "p-value",
-    "N (country-years)",
-    "Treated units",
-    "Control units",
-    "Treatment entries",
-    "Treatment exits",
-    "Covariates",
-    "Latent factors",
-    "Panel window"
-  ),
-  `(1) fect IFE` = c(
-    "fect IFE",
-    "Switching",
-    fmt3(china_top_s$att),
-    fmt3(china_top_s$se),
-    paste0("[", fmt3(china_top_s$ci_lo), ", ", fmt3(china_top_s$ci_hi), "]"),
-    fmt3(china_top_s$p),
-    as.character(china_top_s$n_obs),
-    as.character(china_top_s$n_treated),
-    as.character(china_top_s$n_control),
-    as.character(china_top_s$n_entries),
-    as.character(china_top_s$n_exits),
-    "None",
-    paste0("r* = ", china_top_s$r_cv, " (cross-validation)"),
-    paste0(china_top_s$panel_min, "--", china_top_s$panel_max)
-  ),
-  `(2) fect IFE + covariates` = c(
-    "fect IFE",
-    "Switching",
-    fmt3(china_top_cov_s$att),
-    fmt3(china_top_cov_s$se),
-    paste0("[", fmt3(china_top_cov_s$ci_lo), ", ", fmt3(china_top_cov_s$ci_hi), "]"),
-    fmt3(china_top_cov_s$p),
-    as.character(china_top_cov_s$n_obs),
-    as.character(china_top_cov_s$n_treated),
-    as.character(china_top_cov_s$n_control),
-    as.character(china_top_cov_s$n_entries),
-    as.character(china_top_cov_s$n_exits),
-    "log GDP pc, V-Dem free expression",
-    paste0("r* = ", china_top_cov_s$r_cv, " (cross-validation)"),
-    paste0(china_top_cov_s$panel_min, "--", china_top_cov_s$panel_max)
+```{r cross-country-table, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
+cross_tbl <- tar_read(cross_country_absorbing_main_table) %>%
+  dplyr::mutate(
+    model = dplyr::case_when(
+      stringr::str_detect(model, "Main") ~ "Main IFE",
+      stringr::str_detect(model, "Robustness") ~ "IFE + covariates",
+      stringr::str_detect(model, "covariates") ~ "C\\&S + covariates",
+      TRUE ~ "C\\&S check"
+    ),
+    estimator = dplyr::case_when(
+      stringr::str_detect(estimator, "fect") ~ "Interactive FE",
+      TRUE ~ estimator
+    ),
+    `ATT` = fmt3(att),
+    `SE` = fmt3(se),
+    `95\\% CI` = paste0("[", fmt3(ci_lo), ", ", fmt3(ci_hi), "]"),
+    `p-value` = fmt3(p),
+    `Country-years` = as.character(n_obs),
+    `Treated units` = as.character(n_treated),
+    `Control units` = as.character(n_control),
+    `Treatment entries` = as.character(n_entries),
+    `Treatment exits` = ifelse(is.na(n_exits), "NA", as.character(n_exits)),
+    `Panel window` = paste0(panel_min, "--", panel_max)
+  ) %>%
+  dplyr::transmute(
+    Model = model,
+    Estimator = estimator,
+    Covariates = covariates,
+    ATT,
+    SE,
+    `95\\% CI`,
+    `p-value`,
+    `Treated units`,
+    `Control units`,
+    `Panel window`,
+    `Latent factors` = latent_factors
   )
-)
 cross_note <- paste0(
   sub(
     "^Note: ",
     "",
     caption_note(
       unit = "ATT in absolute UNGA ideal-point distance to China; lower values indicate convergence toward China",
-      se = "bootstrap with 10,000 replications",
-      cluster = "country level",
-      window = sprintf("%d--%d covariate complete-case switching panel", china_top_cov_s$panel_min, china_top_cov_s$panel_max),
-      treatment = treat_def_panel
+      se = "bootstrap for IFE rows; analytical country-clustered SEs for Callaway-Sant'Anna rows",
+      window = sprintf("%d--%d main panel; covariate rows use complete cases where noted", china_top_s$panel_min, china_top_s$panel_max)
     )
   ),
-  " This estimate is a scope probe. Callaway-Sant'Anna absorbing-treatment estimates are appendix sensitivity checks because they estimate a persistent-treatment subset rather than the same switching estimand."
+  " The no-covariate IFE row is the main cross-country estimate. The covariate-adjusted IFE row is a robustness check. The Callaway-Sant'Anna rows use the same absorbing-treatment logic."
 )
 
 knitr::kable(
@@ -639,39 +573,36 @@ knitr::kable(
   format = "latex",
   booktabs = TRUE,
   escape = FALSE,
-  caption = "Cross-country scope-probe estimates for China top export-destination status.",
-  align = "lcc"
+  caption = "Cross-country estimates for persistent China top export-destination status.",
+  align = "lllcccccccc"
 ) %>%
   kableExtra::kable_styling(
     latex_options = c("HOLD_position", "scale_down"),
-    font_size = 9
+    font_size = 7
   ) %>%
-  kableExtra::column_spec(1, width = "1.45in") %>%
-  kableExtra::column_spec(2, width = "2.2in") %>%
-  kableExtra::column_spec(3, width = "2.3in") %>%
   kableExtra::footnote(
     general = cross_note,
     general_title = "Note: ",
     escape = FALSE,
     threeparttable = TRUE
-  )
+)
 ```
 
-Figure \@ref(fig:cross-country-dynamic) shows the entry-aligned dynamic pattern for the covariate-adjusted `fect` IFE specification. The pre-entry estimates are diagnostics for model fit, and the post-entry path indicates whether the panel pattern is consistent with the Brazil result.
+Figure \@ref(fig:cross-country-dynamic) shows the entry-aligned dynamic pattern for the main absorbing-sample IFE specification. The pre-entry estimates are diagnostics for model fit, and the post-entry path indicates whether the panel pattern is consistent with the Brazil result.
 
-```{r cross-country-dynamic, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Cross-country dynamic scope-probe figure from the covariate-adjusted fect IFE model. Effects are aligned by treatment entry and probe whether the top-rank pattern travels beyond Brazil. ", caption_note(unit = "effect on absolute UNGA ideal-point distance to China (points)", se = "bootstrap confidence intervals from fect target", window = sprintf("%d--%d covariate complete-case switching panel", china_top_cov_s$panel_min, china_top_cov_s$panel_max), treatment = treat_def_panel)), fig.pos="H", fig.width=7, fig.asp=0.65}
-tar_read(plot_fect_ife_gap_china_top_cov)
+```{r cross-country-dynamic, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Entry-aligned dynamic effects from the main cross-country IFE model. Negative estimates indicate reduced UNGA distance to China after persistent top-rank entry. ", caption_note(unit = "Effect on absolute UNGA ideal-point distance to China", se = "bootstrap confidence intervals", window = sprintf("%d--%d absorbing panel", china_top_s$panel_min, china_top_s$panel_max))), fig.pos="H", fig.width=7, fig.asp=0.65}
+tar_read(plot_fect_ife_gap_china_top)
 ```
 
-The pooled panel averages across treated periods with different displaced incumbents and salience levels, so U.S.-displacement heterogeneity is exploratory evidence for H2. The subgroup comparison by displaced incumbent shows similar or smaller estimated effects when China displaced the United States than when China displaced another partner. H2 remains a scope condition for high-salience settings, with Brazil as the main reduced-form design.
+The pooled panel averages across treated countries with different displaced incumbents and salience levels. U.S. displacement is therefore best interpreted as a high-salience condition, not as a central moderation test that the panel must confirm. Brazil remains the strongest case for observing the attention mechanism because China displaced the United States and the rank reversal was publicly visible.
 
-The cross-country estimates have clear limits. The panel lacks country-level media salience measures, treated periods differ in incumbent identity and political visibility, and exit/carryover diagnostics leave multiple mechanisms observationally similar. The panel probes whether the top-rank pattern travels beyond Brazil.
+The cross-country estimates have clear limits. I do not have media-salience mechanism evidence in other countries beyond Brazil, and conditioning on persistent top-rank status changes the estimand: the estimate applies to durable China-top transitions, not to all one-year entries into the top position. This restriction is theoretically appropriate for a salience mechanism that requires visibility and persistence, but it also means the panel identifies the effect of persistent treatment rather than a universal effect of every short-lived rank reversal. The appendix reports the short-lived treatment entries separately; those estimates are smaller and not statistically distinguishable from zero.
 
 # Conclusion
 
-The evidence indicates that rank thresholds in trade hierarchies can matter for one observable dimension of foreign-policy behavior: UNGA voting convergence toward China. The strongest evidence comes from Brazil's 2009 rank-reversal episode, where SDiD estimates show a post-treatment reduction in distance to China and media evidence shows a contemporaneous rise in China-Brazil trade salience. Cross-country evidence is consistent with a broader top-rank pattern, but it remains a scope probe.
+The evidence supports a rank-threshold account of UNGA voting convergence toward China. In Brazil, China's 2009 move into the top export-destination position coincided with a publicly visible status cue, and SDiD estimates show that Brazil moved closer to China relative to a synthetic counterfactual. The issue-area evidence suggests that this convergence was selective rather than mechanical, appearing especially where Brazil and China had room to converge and where movement carried reputational costs, such as human rights. The media evidence shows why the rank cue was politically usable: China's new commercial status became visible in public discourse. Cross-country estimates from the IFE model then show that the rank-threshold pattern is not confined to Brazil. Although the mechanism is measured most directly in the Brazilian case, the panel evidence supports the narrower claim that durable top-rank trade milestones can matter for multilateral alignment.
 
-The findings speak to debates about whether status gains have observable behavioral consequences by showing that a specific economic status cue can be associated with measurable voting convergence. The outcome diagnostics point to selective convergence in UNGA voting, especially in issue areas where Brazil had room to move.
+The paper therefore shifts attention from trade volume alone to the political meaning of trade hierarchies. Continuous exposure matters, but actors also respond to categorical milestones: becoming first, displacing a hegemonic benchmark, and making an economic relationship publicly legible. These thresholds can create opportunities for selective diplomatic adjustment even when the underlying commercial relationship has been growing for years.
 
 Future research can extend the design in three directions. First, cross-country media data would allow the salience step to be tested beyond Brazil. Second, qualitative work on policymakers and business actors could identify how the rank cue entered diplomatic deliberation. Third, similar rank-threshold designs could be applied to investment, aid, lending, or other economic ties where categorical milestones may become politically usable.
 
@@ -687,6 +618,32 @@ Future research can extend the design in three directions. First, cross-country 
 # Appendix
 
 We present more details about the performance and checks on the fitted model and how we used ChatGPT to perform the NLP analysis.
+
+## Brazil and China Ideal-Point Series
+
+Figure \@ref(fig:appendix-brazil-china-ideal-points) plots the separate UNGA ideal-point series for Brazil and China. This diagnostic clarifies the interpretation of the absolute-distance outcome used in the main SDiD design: the post-2009 convergence is not mainly an artifact of China moving toward Brazil. China remains comparatively stable, while Brazil accounts for most of the movement in the Brazil-China distance.
+
+```{r appendix-brazil-china-ideal-points, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Brazil and China UNGA ideal-point series. The dashed line marks 2009. The figure separates the two series behind the absolute-distance outcome used in the main SDiD analysis. ", caption_note(unit = "UNGA ideal-point score (Bailey et al. scale)", window = "1990-2022 annual series")), fig.pos="H", fig.width=7, fig.asp=0.55}
+ideal_series_brazil_china <- tar_read(unga_data) %>%
+  dplyr::filter(iso3c %in% c("BRA", "CHN")) %>%
+  dplyr::mutate(
+    country = dplyr::case_when(
+      iso3c == "BRA" ~ "Brazil",
+      iso3c == "CHN" ~ "China",
+      TRUE ~ iso3c
+    )
+  ) %>%
+  dplyr::select(year, country, ideal_point_all)
+
+ggplot(ideal_series_brazil_china, aes(x = year, y = ideal_point_all, colour = country)) +
+  geom_line(linewidth = 0.6) +
+  geom_point(size = 1.6) +
+  geom_vline(xintercept = 2009, linetype = "dashed", colour = "grey35") +
+  scale_colour_manual(values = c("Brazil" = "darkgreen", "China" = "firebrick")) +
+  labs(x = "Year", y = "UNGA ideal point", colour = NULL) +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+```
 
 ## Resolution-Level UNGA Vote Diagnostics
 
@@ -729,21 +686,14 @@ knitr::kable(
       "^Note: ",
       "",
       caption_note(
-        unit = "roll-call resolutions with valid Brazil and China votes; mean similarity score equals 1 for identical votes, 0.5 for yes/abstain or no/abstain, and 0 for yes/no disagreement",
-        window = "2005-2012 annual series",
-        treatment = treat_def_brazil
+        unit = "Roll-call resolutions with valid Brazil and China votes; similarity score ranges from 0 to 1",
+        window = "2005-2012 annual series"
       )
     ),
     general_title = "Note: ",
     escape = FALSE,
     threeparttable = TRUE
   )
-```
-
-Figure \@ref(fig:plot-brazil-china-unvotes-issue-year) disaggregates the same diagnostic by substantive issue family. Because several areas already had high Brazil-China vote similarity before 2009, the figure describes where additional convergence was possible.
-
-```{r plot-brazil-china-unvotes-issue-year, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Brazil-China identical UNGA votes by substantive issue area, 2005-2012. Points report annual percentages of roll-call resolutions in which Brazil and China cast the same vote; red lines are local linear fits estimated separately for 2005-2008 and 2009-2012. ", caption_note(unit = "percentage of roll-call resolutions with identical Brazil-China votes", window = "2005-2012 annual series; resolutions with multiple issue codes enter each corresponding substantive issue family", treatment = treat_def_brazil)), fig.pos="H", fig.width=11, fig.height=8}
-tar_read(plot_brazil_china_unvotes_similarity_by_issue_year_2005_2012)
 ```
 
 ## SDiD
@@ -790,14 +740,14 @@ Note that SDiD retains unit fixed effects $\alpha_i$ (like DiD) while also assig
 
 Below we present the weights for the top 10 controls used in the main model.
 
-```{r plot-weights, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Weights of countries contributing to the synthetic control in the Brazilian SDiD model. ", caption_note(unit = "synthetic-control unit weights (unitless, sum to 1)", window = "weights are estimated from the pre-treatment period ending in 2008", treatment = treat_def_brazil)), fig.pos="H"}
+```{r plot-weights, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Weights of countries contributing to the synthetic control in the Brazilian SDiD model. ", caption_note(unit = "Synthetic-control unit weights, summing to 1", window = "pre-treatment period ending in 2008")), fig.pos="H"}
 tar_read(plot_weights_coef)
 ```
 
 We also fit a model for a donor pool of Latin American states (excluding Caribbean countries), which is more similar to Brazil than using countries worldwide. One reason to prefer a pool of Latin American countries is that a smaller donor pool helps avoid overfitting. When comparing results, the estimated causal effect is quite similar (a bit larger in absolute terms), which lends credibility to the main estimation. However, the small number of controls introduces noise and increases the uncertainty of the model. It is known that the usage of the placebo method to compute standard errors inflates the uncertainty of the estimation. For this reason, we prefer the model with the larger donor pool. Nonetheless, it is reassuring that with a donor pool composed of Latin American countries, which are arguably more similar to Brazil, the estimate is quite similar. Below is the plot of the model fitted for Latin America.
 
 
-```{r plot-latam, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("SDiD fit with a Latin American donor pool. ", caption_note(unit = "absolute UNGA ideal-point distance to China (points)", se = "placebo-based, reported in text", window = "pre-treatment and post-treatment years shown in the plot (treatment in 2009)", treatment = treat_def_brazil)), fig.pos="H"}
+```{r plot-latam, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("SDiD fit with a Latin American donor pool. ", caption_note(unit = "Absolute UNGA ideal-point distance to China", se = "placebo-based, reported in text", window = "years shown in the plot")), fig.pos="H"}
 tar_read(plot_trend_latam)
 b_est_latam <- tar_read(synth_fit_latam)[1]          # LATAM donor-pool estimate
 se_latam    <- tar_read(se_synth_latam)
@@ -805,25 +755,146 @@ se_latam    <- tar_read(se_synth_latam)
 
 The estimate is `r round(b_est_latam,2) ` with a standard error of `r round(se_latam,2) `. In any case, it is interesting to examine the countries with the largest weights. Argentina, Guatemala, Paraguay, and Uruguay -- all but Guatemala are founding members of Mercosur. They contribute the most to synthetic control.
 
-```{r plot-weight-latam, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Synthetic-control donor weights for the Latin American SDiD specification. ", caption_note(unit = "synthetic-control unit weights (unitless, sum to 1)", window = "weights are estimated from the pre-treatment period ending in 2008", treatment = treat_def_brazil)), fig.pos="H"}
+```{r plot-weight-latam, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Synthetic-control donor weights for the Latin American SDiD specification. ", caption_note(unit = "Synthetic-control unit weights, summing to 1", window = "pre-treatment period ending in 2008")), fig.pos="H"}
 tar_read(plot_weights_coef_latam)
 ```
 
-## Cross-Country Robustness: Absorbing-Treatment Estimator (C&S)
+## Cross-Country Convergent Check: Absorbing-Treatment Estimator (C&S)
 
-As a diagnostic check, we also report an absorbing-treatment estimator using @callaway_santanna2021. This specification is rebuilt from the same China-top-export-destination panel used by the main fect analysis. Treated units are countries for which China first becomes the number-one export destination in or after 2000 after an observed untreated year and then never loses the top position through the end of the panel. Countries with treatment reversals are excluded from this C\&S comparison, not treated as controls. The baseline absorbing C\&S estimate uses `r cs_abs_s$n_treated` treated units and `r cs_abs_s$n_control` never-treated controls over `r cs_abs_s$panel_min`--`r cs_abs_s$panel_max`; the covariate-adjusted specification uses `r cs_abs_cov_s$n_treated` treated units and `r cs_abs_cov_s$n_control` controls over the complete-case window `r cs_abs_cov_s$panel_min`--`r cs_abs_cov_s$panel_max`.
+As a convergent check, we also report an absorbing-treatment estimator using @callaway_santanna2021. This specification is built from the same persistent China-top-export-destination sample used by the main IFE analysis. Treated units are countries for which China first becomes the number-one export destination in or after 2000 after an observed untreated year and then never loses the top position through the end of the panel. Countries with short-lived treatment entries are excluded from this C\&S comparison, not treated as controls. The baseline absorbing C\&S estimate uses `r cs_abs_s$n_treated` treated units and `r cs_abs_s$n_control` never-treated controls over `r cs_abs_s$panel_min`--`r cs_abs_s$panel_max`; the covariate-adjusted specification uses `r cs_abs_cov_s$n_treated` treated units and `r cs_abs_cov_s$n_control` controls over the complete-case window `r cs_abs_cov_s$panel_min`--`r cs_abs_cov_s$panel_max`.
 
-This check is an absorbing-subset analogue. The fect estimator uses entry and exit variation from the full switching panel, whereas C\&S estimates the effect among persistent China-top cases only. The covariate-adjusted C\&S result is additionally a complete-case sensitivity diagnostic: small treated groups and covariate adjustment can create overlap/convergence issues, and the changed panel window and treated/control counts mean that comparison with the baseline C\&S column does not isolate covariate adjustment alone.
+This check estimates the same persistent-treatment logic with a different estimator. The covariate-adjusted C\&S result is additionally a complete-case sensitivity diagnostic: small treated groups and covariate adjustment can create overlap/convergence issues, and the changed panel window and treated/control counts mean that comparison with the baseline C\&S column does not isolate covariate adjustment alone.
 
-```{r plot-es-china-top-absorbing, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Dynamic treatment effects from the absorbing-treatment C\\&S specification. ", caption_note(unit = "ATT in absolute UNGA ideal-point distance to China (points)", se = "analytical (95 percent confidence intervals shown)", cluster = "country level", window = sprintf("%d-%d balanced panel", cs_abs_s$panel_min, cs_abs_s$panel_max), treatment = "absorbing treatment: first observed year in or after 2000 in which China becomes the number-one export destination and never later loses that position")), fig.pos="H", fig.width=7, fig.asp=0.65}
+```{r plot-es-china-top-absorbing, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Dynamic treatment effects from the absorbing-treatment C\\&S specification. ", caption_note(unit = "ATT in absolute UNGA ideal-point distance to China", se = "analytical 95 percent confidence intervals", cluster = "country level", window = sprintf("%d-%d balanced panel", cs_abs_s$panel_min, cs_abs_s$panel_max))), fig.pos="H", fig.width=7, fig.asp=0.65}
 tar_read(plot_es_china_top_absorbing)
+```
+
+## Cross-Country Robustness: Short-Lived Treatment Entries
+
+The theory expects clearer effects when the new trade hierarchy persists long enough to become politically visible, bureaucratically usable, and diplomatically consequential. I therefore treat short-lived treatment entries as a scope robustness check rather than as part of the main estimand. Table \@ref(tab:cross-country-short-lived-table) reports IFE estimates for countries where China becomes the largest export destination but later loses that position, with never-treated countries retained as controls. These estimates are smaller and not statistically distinguishable from zero, consistent with the claim that transient rank changes are weaker signals of trade-based status.
+
+```{r cross-country-short-lived-table, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
+short_lived_tbl <- short_lived_cross_tbl %>%
+  dplyr::mutate(
+    model = dplyr::case_when(
+      stringr::str_detect(model, "covariates") ~ "IFE + covariates",
+      TRUE ~ "IFE"
+    ),
+    estimator = dplyr::if_else(stringr::str_detect(estimator, "fect"), "Interactive FE", estimator),
+    `ATT` = fmt3(att),
+    `SE` = fmt3(se),
+    `95\\% CI` = paste0("[", fmt3(ci_lo), ", ", fmt3(ci_hi), "]"),
+    `p-value` = fmt3(p),
+    `Treated units` = as.character(n_treated),
+    `Control units` = as.character(n_control),
+    `Panel window` = paste0(panel_min, "--", panel_max)
+  ) %>%
+  dplyr::transmute(
+    Model = model,
+    Estimator = estimator,
+    Covariates = covariates,
+    ATT,
+    SE,
+    `95\\% CI`,
+    `p-value`,
+    `Treated units`,
+    `Control units`,
+    `Panel window`,
+    `Latent factors` = latent_factors
+  )
+
+knitr::kable(
+  short_lived_tbl,
+  format = "latex",
+  booktabs = TRUE,
+  escape = FALSE,
+  caption = "Short-lived China top export-destination treatment entries.",
+  align = "lllcccccccc"
+) %>%
+  kableExtra::kable_styling(
+    latex_options = c("HOLD_position", "scale_down"),
+    font_size = 7
+  ) %>%
+  kableExtra::footnote(
+    general = sub(
+      "^Note: ",
+      "",
+      caption_note(
+        unit = "ATT in absolute UNGA ideal-point distance to China; lower values indicate convergence toward China",
+        se = "bootstrap with 10,000 replications",
+        cluster = "country level"
+      )
+    ),
+    general_title = "Note: ",
+    escape = FALSE,
+    threeparttable = TRUE
+  )
 ```
 
 ## Cross-Country Diagnostic: No-Pretrend Equivalence Tests
 
-Following @liu2024practical and @chiu_etal2025, we report equivalence tests for the no-pretrend assumption. Unlike the conventional placebo test (which tests $H_0$: no pre-trend), the equivalence test reverses the null to $H_0$: pre-trends are meaningfully large, providing positive evidence for the absence of pre-trends when rejected. The red dashed lines mark the equivalence range ($0.36\hat{\delta}_s$ or the user-specified threshold), while the grey dashed lines mark the minimum range.
+Following @liu2024practical and @chiu_etal2025, I report equivalence diagnostics for the no-pretrend assumption. Unlike the conventional placebo test (which tests $H_0$: no pre-trend), the equivalence test reverses the null to $H_0$: pre-trends are meaningfully large, providing positive evidence for the absence of pre-trends when rejected. In the absorbing cross-country sample, the broad native IFE F-test over all selected nonpositive event times is not defined because that diagnostic tries to test more pre-entry periods than the treated-unit support can sustain. I therefore treat the native warning as a support limitation and report a supplementary recent-window diagnostic in Table \@ref(tab:recent-pretrend-f-test). The diagnostic uses the most recent nonpositive event times, capped at 12 and reduced only when required by degrees of freedom, bootstrap support, or covariance rank. The IFE estimates themselves are unchanged.
 
-```{r plot-equiv-appendix, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Equivalence tests for the no-pretrend assumption. (a) FE model: placebo equivalence test p = ", format_p(placebo_equiv_p), ". (b) IFE model: F-test p = ", format_p(ife_placebo_f_p), " and equivalence TOST p = ", format_p(ife_placebo_tost_p), ". ", caption_note(se = "bootstrap (10,000 replications)", window = sprintf("%d-%d panel", panel_min, panel_max), treatment = treat_def_panel)), fig.pos="H", fig.width=10, fig.height=5}
+```{r recent-pretrend-f-test, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
+recent_pretrend_display <- recent_pretrend_tbl %>%
+  dplyr::mutate(
+    model = dplyr::case_when(
+      stringr::str_detect(model, "covariates") ~ "IFE + covariates",
+      stringr::str_detect(model, "Main") ~ "Main IFE",
+      TRUE ~ model
+    ),
+    `F statistic` = fmt_num(f_stat),
+    `F p-value` = fmt_num(f_p),
+    `Equivalence p-value` = fmt_num(f_equiv_p),
+    `TOST p-value` = fmt_num(tost_equiv_p),
+    `Selected event times` = selected_periods,
+    `Bootstrap draws` = as.character(n_valid_boots),
+    `Covariance rank` = as.character(cov_rank)
+  ) %>%
+  dplyr::transmute(
+    Model = model,
+    Status = test_status,
+    `Selected event times`,
+    `q` = q,
+    `N-bar` = n_bar,
+    `df2` = df2,
+    `Bootstrap draws`,
+    `Covariance rank`,
+    `F statistic`,
+    `F p-value`,
+    `Equivalence p-value`,
+    `TOST p-value`
+  )
+
+knitr::kable(
+  recent_pretrend_display,
+  format = "latex",
+  booktabs = TRUE,
+  escape = FALSE,
+  caption = "Supplementary recent-window IFE pretrend F diagnostics.",
+  align = "lllrrrrrrrrr"
+) %>%
+  kableExtra::kable_styling(
+    latex_options = c("HOLD_position", "scale_down"),
+    font_size = 7
+  ) %>%
+  kableExtra::footnote(
+    general = paste0(
+      "The table reconstructs the IFE F diagnostic using the most recent ",
+      "nonpositive event times with enough treated-unit support for a joint test. ",
+      "q is the number of jointly tested periods; N-bar is the treated-unit support ",
+      "used in the F-test scaling; df2 = N-bar - q. Bootstrap draws are the ",
+      "10,000 bootstrap replications nonmissing for all selected event times. ",
+      "The broad native full-window F-test is not reported because its selected ",
+      "window has insufficient treated-unit support."
+    ),
+    general_title = "Note: ",
+    escape = FALSE,
+    threeparttable = TRUE
+  )
+```
+
+```{r plot-equiv-appendix, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("No-pretrend equivalence plots for the FE and IFE cross-country models. FE placebo equivalence p = ", format_p(placebo_equiv_p), "; IFE equivalence TOST p = ", format_p(ife_placebo_tost_p), ". Table \\@ref(tab:recent-pretrend-f-test) reports the IFE recent-window F diagnostic. ", caption_note(se = "bootstrap, 10,000 replications", window = sprintf("%d-%d panel", panel_min, panel_max))), fig.pos="H", fig.width=10, fig.height=5}
 tar_read(plot_diagnostics_equiv_china_top)
 ```
 
@@ -863,19 +934,12 @@ system_block <- paste(
 
 ```
 
-It is important to highlight that the process was not streamlined. We faced several problems, such as ChatGPT refusing to classify subjects (saying they were repetitive and too similar), changing the original headline, which made matching back to the original dataset difficult, and other similar problems. As a result, we had to rerun the instructions a few times on a sample and tweak it with some prompt engineering until arriving at that final version. As a result, this is the only part of the paper not fully reproducible, in the sense that another request for classification, with the same instructions, would yield a few different categorizations and a few different original headlines changed, along with some refusals to classify texts.
+The classified headline file is treated as an archived derived dataset rather than regenerated during manuscript rendering. This choice reflects the practical behavior of LLM-based coding: early runs sometimes returned incomplete classifications, altered original headlines, or used slightly inconsistent labels, which made exact matching back to the archive difficult. I therefore fixed the prompt, normalized labels, preserved the resulting classified file, and validate the coding below against an independently coded sample. The evidence in the main text should be read as a headline-level salience diagnostic, not as an article-level sentiment or persuasion measure.
 
 Below we provide a random sample of the headlines and the classification provided by ChatGPT.
 
 ```{r sample-chatgpt, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Random sample of China-related Folha de Sao Paulo headlines and ChatGPT classifications. ", caption_note(unit = "headline text and category labels", window = "sample drawn from the 2000-2014 corpus")), fig.pos="H", out.width="\\linewidth"}
-library(targets)
-library(tidyverse)
-library(gt)            # publication‑quality tables
-library(gtsummary)
-
-knitr::include_graphics("images/table1_headlines.png")
-
-
+knitr::include_graphics(tar_read(sample_headlines_image_file))
 ```
 
 ### Validation of ChatGPT Classification
@@ -886,29 +950,21 @@ To assess the reliability of the automated classification, one of the authors in
 library(knitr)
 library(dplyr)
 
-val_df <- read.csv(here::here("data", "folha_validation_sample_annotated.csv"), sep = ";")
-val_df$match <- trimws(tolower(val_df$chatgpt_label)) == trimws(tolower(val_df$manual_label))
-
-overall_acc <- round(mean(val_df$match) * 100, 1)
-
-val_tbl <- val_df %>%
-  group_by(chatgpt_label) %>%
-  summarise(N = n(), Correct = sum(match), `Accuracy (%)` = round(mean(match) * 100, 1),
-            .groups = "drop") %>%
-  rename(Category = chatgpt_label) %>%
-  arrange(desc(`Accuracy (%)`))
-
-# Add total row
-val_tbl <- bind_rows(val_tbl,
-                     tibble(Category = "Overall", N = nrow(val_df),
-                            Correct = sum(val_df$match),
-                            `Accuracy (%)` = overall_acc))
+validation_summary <- tar_read(chatgpt_validation_summary)
+val_tbl <- validation_summary$table
+overall_acc <- validation_summary$overall$accuracy_pct
+validation_n <- validation_summary$overall$N
+lowest_category <- validation_summary$lowest$category
+lowest_acc <- validation_summary$lowest$accuracy_pct
+category_acc <- validation_summary$category_accuracy
+trade_acc <- category_acc$accuracy_pct[category_acc$category == "china-brazil trade"]
+disaster_acc <- category_acc$accuracy_pct[category_acc$category == "disaster and accidents"]
 
 kable(
   val_tbl,
   format = "latex",
   booktabs = TRUE,
-  caption = paste0("Validation of ChatGPT classification against manual coding (N = ", nrow(val_df), "). Overall accuracy: ", sprintf("%.1f", overall_acc), " percent."),
+  caption = paste0("Validation of ChatGPT classification against manual coding (N = ", validation_n, "). Overall accuracy: ", sprintf("%.1f", overall_acc), " percent."),
   align = "lccc"
 ) %>%
   kableExtra::kable_styling(
@@ -930,11 +986,11 @@ kable(
   )
 ```
 
-The overall accuracy is `r overall_acc`%. The lowest agreement is in the "chinese politics and policy" category (50%), where several headlines were manually reclassified as "diplomacy". The categories most relevant to our analysis --- "china-brazil trade" and "disaster and accidents" --- achieved 100% agreement.
+The overall accuracy is `r sprintf("%.1f", overall_acc)` percent. The lowest agreement is in the "`r lowest_category`" category (`r sprintf("%.1f", lowest_acc)` percent), where several headlines were manually reclassified as "diplomacy". The categories most relevant to our analysis --- "china-brazil trade" and "disaster and accidents" --- achieved `r sprintf("%.1f", trade_acc)` and `r sprintf("%.1f", disaster_acc)` percent agreement, respectively.
 
-## Cross-Country: Treated Countries and Treatment-Switching Diagnostic
+## Cross-Country: Absorbing Treated Countries
 
-Table \@ref(tab:table-treated-appendix) describes the `r n_treated_sw` treated countries where China becomes the top export destination in the scope-conditioned panel. For each country, we report the treatment year, whether the treatment is absorbing (China remains #1) or switching (China later loses the top position), and the mean UNGA voting distance to China before and after treatment.
+Table \@ref(tab:table-treated-appendix) describes the `r n_treated_abs` absorbing treated countries where China becomes the top export destination in the main cross-country panel and remains in that position. For each country, we report the treatment year and the mean UNGA voting distance to China before and after treatment onset.
 
 ```{r table-treated-appendix, message=FALSE, warning=FALSE, echo=FALSE}
 library(kableExtra)
@@ -945,34 +1001,28 @@ treated_tbl <- tar_read(china_top_fect_data) %>%
   dplyr::summarise(
     treated_ever = any(china_top == 1L, na.rm = TRUE),
     first_treat_year = if (any(china_top == 1L, na.rm = TRUE)) min(year[china_top == 1L], na.rm = TRUE) else NA_real_,
-    absorbing = ifelse(
-      any(china_top == 1L, na.rm = TRUE) &&
-        all(china_top[year >= min(year[china_top == 1L], na.rm = TRUE)] == 1L, na.rm = TRUE),
-      "Yes",
-      "No"
-    ),
-    switches = sum(abs(diff(china_top)), na.rm = TRUE),
+    entries = sum(china_top == 1L & dplyr::lag(china_top, default = 0L) == 0L, na.rm = TRUE),
+    exits = sum(china_top == 0L & dplyr::lag(china_top, default = 0L) == 1L, na.rm = TRUE),
     mean_distance_pre = mean(abs_distance_china[year < first_treat_year], na.rm = TRUE),
     mean_distance_post = mean(abs_distance_china[year >= first_treat_year], na.rm = TRUE),
     .groups = "drop"
   ) %>%
   dplyr::filter(treated_ever) %>%
   dplyr::mutate(diff = mean_distance_post - mean_distance_pre) %>%
-  dplyr::select(country = country_name, iso3c, first_treat_year, absorbing, switches,
+  dplyr::select(country = country_name, iso3c, first_treat_year, entries, exits,
                 mean_distance_pre, mean_distance_post, diff)
 
 kable(treated_tbl,
       format = "latex",
       booktabs = TRUE,
       digits = 3,
-      caption = "Descriptive statistics of treated countries where China becomes the top export destination in the scope-conditioned cross-country panel.",
-      col.names = c("Country", "ISO3c", "Treatment year", "Absorbing",
-                     "Switches", "Mean dist. (pre)", "Mean dist. (post)", "Diff"),
+      caption = "Descriptive statistics of absorbing treated countries where China becomes the top export destination.",
+      col.names = c("Country", "ISO3c", "Treatment year", "Entries",
+                     "Exits", "Mean dist. (pre)", "Mean dist. (post)", "Diff"),
       align = "llcccccr") %>%
   kable_styling(latex_options = c("hold_position", "scale_down"),
                 font_size = 9) %>%
-  footnote(general = paste0("Absorbing = China remains the top export destination from first treatment entry through the end of the sample. ",
-                            "Switching = China later loses the top position. ",
+  footnote(general = paste0("The main sample keeps treated countries only if China remains the top export destination from first treatment entry through the end of the sample. ",
                             "Mean dist. = absolute distance to China in UNGA ideal points. ",
                             "Diff = post minus pre."),
            general_title = "Note: ",
