@@ -7,6 +7,12 @@ SDiD principal: -0.2339 (SE: 0.1328), permutation p=0.0105. DiD restrito (China 
 
 Autor: Manoel Galdino (DCP-USP).
 
+## Versionamento
+
+- Tag `v4.2` criada em 2026-05-18 como snapshot pré-revisão de teoria e painel cross-country (`paper_v4.Rmd` no commit `1b45624`).
+- Arquivo ativo do paper: `paper_v4.Rmd`.
+- Para consultar o snapshot: `git show v4.2:paper_v4.Rmd`.
+
 ## Pendência alta
 
 - **2026-05-12 — harmonizar contagens cross-country**: o abstract de `paper_v4.Rmd` afirma "4 de 8 tratados" com reversões, mas os resultados/targets atuais indicam 99 países no painel, 59 tratados, 52 switching e 7 absorbing. Antes de nova submissão ou apresentação acompanhada do manuscrito, revisar `paper_v4.Rmd`, `paper_v4_anonymous.Rmd` e materiais derivados. Documento versionável: `PENDING.md`. Nota local detalhada: `quality_reports/2026-05-12_high_priority_pending_cross_country_counts.md`.

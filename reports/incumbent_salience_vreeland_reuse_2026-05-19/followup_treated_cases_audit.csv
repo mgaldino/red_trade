@@ -1,0 +1,15 @@
+model,iso3c,country_name,first_treat_year,displaced_partner,displaced_partner_name,hub_entrepot_incumbent,displacement_salience_warning,regional_power_decomposition
+baseline,SLB,Solomon Islands,2003,JPN,Japan,FALSE,none,other_g7
+baseline,PHL,Philippines,2005,JPN,Japan,FALSE,narrow_export_share_margin,other_g7
+baseline,AGO,Angola,2007,USA,United States,FALSE,none,us
+baseline,CHL,Chile,2008,USA,United States,FALSE,narrow_export_share_margin,us
+baseline,BRA,Brazil,2009,USA,United States,FALSE,none,us
+baseline,MYS,Malaysia,2009,SGP,Singapore,TRUE,hub_or_entrepot_incumbent,other_incumbent
+baseline,AUS,Australia,2010,JPN,Japan,FALSE,narrow_export_share_margin,other_g7
+baseline,SLE,Sierra Leone,2012,BEL,Belgium,TRUE,hub_or_entrepot_incumbent,other_incumbent
+baseline,URY,Uruguay,2013,BRA,Brazil,FALSE,narrow_export_share_margin,same_region_regional_power
+baseline,MMR,Myanmar (Burma),2014,THA,Thailand,FALSE,none,other_incumbent
+baseline,SAU,Saudi Arabia,2015,USA,United States,FALSE,narrow_export_share_margin,us
+baseline,GAB,Gabon,2017,COG,Congo - Brazzaville,FALSE,weak_pre_entry_persistence,other_incumbent
+baseline,KWT,Kuwait,2018,KOR,South Korea,FALSE,narrow_export_share_margin,external_regional_or_global_power
+baseline,QAT,Qatar,2021,JPN,Japan,FALSE,narrow_export_share_margin,other_g7

@@ -1,0 +1,13 @@
+[2026-05-19 23:24:01 -03] Loading existing target: china_top_absorbing_sample. 
+[2026-05-19 23:24:01 -03] Loading diagnostic moderator CSVs. 
+[2026-05-19 23:24:01 -03] Estimating Baseline IFE, no moderator with nboots = 500 
+[2026-05-19 23:24:09 -03] Estimating IFE grouped by displaced_us with nboots = 500 
+[2026-05-19 23:24:17 -03] Estimating IFE grouped by displaced_g7 with nboots = 500 
+[2026-05-19 23:24:26 -03] Estimating IFE grouped by displaced_regional_power with nboots = 500 
+[2026-05-19 23:24:34 -03] Estimating IFE grouped by pre_entry_high_level_partner with nboots = 500 
+[2026-05-19 23:24:42 -03] Wrote reports/incumbent_salience_vreeland_reuse_2026-05-19/model_results_500_bootstrap_overall.csv 
+[2026-05-19 23:24:42 -03] Wrote reports/incumbent_salience_vreeland_reuse_2026-05-19/model_results_500_bootstrap_group_att.csv 
+[2026-05-19 23:24:42 -03] Wrote reports/incumbent_salience_vreeland_reuse_2026-05-19/model_results_500_bootstrap_cell_counts.csv 
+[2026-05-19 23:24:42 -03] Wrote reports/incumbent_salience_vreeland_reuse_2026-05-19/model_results_500_bootstrap_salience_diagnostics.csv 
+[2026-05-19 23:24:42 -03] Wrote reports/incumbent_salience_vreeland_reuse_2026-05-19/model_results_500_bootstrap.md 
+[2026-05-19 23:24:42 -03] Wrote reports/incumbent_salience_vreeland_reuse_2026-05-19/model_sessionInfo_500_bootstrap.txt 

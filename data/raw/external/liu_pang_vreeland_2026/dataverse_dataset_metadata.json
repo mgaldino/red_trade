@@ -1,0 +1,681 @@
+{
+  "status": "OK",
+  "data": {
+    "id": 11073335,
+    "identifier": "DVN/MWAPWV",
+    "persistentUrl": "https://doi.org/10.7910/DVN/MWAPWV",
+    "protocol": "doi",
+    "authority": "10.7910",
+    "separator": "/",
+    "publisher": "Harvard Dataverse",
+    "publicationDate": "2026-02-27",
+    "storageIdentifier": "s3://10.7910/DVN/MWAPWV",
+    "effectiveDatasetFileCountLimit": 1000,
+    "datasetFileUploadsAvailable": 981,
+    "datasetType": "dataset",
+    "locks": [],
+    "latestVersion": {
+      "id": 441872,
+      "datasetId": 11073335,
+      "datasetPersistentId": "doi:10.7910/DVN/MWAPWV",
+      "datasetType": "dataset",
+      "storageIdentifier": "s3://10.7910/DVN/MWAPWV",
+      "versionNumber": 1,
+      "internalVersionNumber": 30,
+      "versionMinorNumber": 0,
+      "versionState": "RELEASED",
+      "latestVersionPublishingState": "RELEASED",
+      "UNF": "UNF:6:qavc172iDJy6yG7hDE82dg==",
+      "lastUpdateTime": "2026-02-27T19:51:52Z",
+      "releaseTime": "2026-02-27T19:51:52Z",
+      "createTime": "2025-04-12T23:14:04Z",
+      "publicationDate": "2026-02-27",
+      "citationDate": "2026-02-27",
+      "effectiveDatasetFileCountLimit": 1000,
+      "datasetFileUploadsAvailable": 981,
+      "license": {
+        "name": "CC0 1.0",
+        "uri": "http://creativecommons.org/publicdomain/zero/1.0",
+        "iconUri": "https://licensebuttons.net/p/zero/1.0/88x31.png",
+        "rightsIdentifier": "CC0-1.0",
+        "rightsIdentifierScheme": "SPDX",
+        "schemeUri": "https://spdx.org/licenses/",
+        "languageCode": "en"
+      },
+      "termsOfAccess": "Available after publication.",
+      "fileAccessRequest": false,
+      "metadataBlocks": {
+        "citation": {
+          "displayName": "Citation Metadata",
+          "name": "citation",
+          "fields": [
+            {
+              "typeName": "title",
+              "multiple": false,
+              "typeClass": "primitive",
+              "value": "Replication Data for: China's Bilateral Swap Agreements and Foreign Policy"
+            },
+            {
+              "typeName": "author",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "authorName": {
+                    "typeName": "authorName",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Liu, Qi"
+                  },
+                  "authorAffiliation": {
+                    "typeName": "authorAffiliation",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Harvard University"
+                  }
+                },
+                {
+                  "authorName": {
+                    "typeName": "authorName",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Pang, Xun"
+                  },
+                  "authorAffiliation": {
+                    "typeName": "authorAffiliation",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Peking University"
+                  }
+                },
+                {
+                  "authorName": {
+                    "typeName": "authorName",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Vreeland, James Raymond"
+                  },
+                  "authorAffiliation": {
+                    "typeName": "authorAffiliation",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Princeton University"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "datasetContact",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "datasetContactName": {
+                    "typeName": "datasetContactName",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Liu, Qi"
+                  },
+                  "datasetContactAffiliation": {
+                    "typeName": "datasetContactAffiliation",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Harvard University"
+                  },
+                  "datasetContactEmail": {
+                    "typeName": "datasetContactEmail",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "qi_liu@g.harvard.edu"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "dsDescription",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "dsDescriptionValue": {
+                    "typeName": "dsDescriptionValue",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "We examine the foreign-policy implications of China's expanding network of bilateral swap agreements (BSAs). BSAs provide a line of credit that governments can draw on during times of crisis. We suspect that entering a BSA with China can bring countries that have few outside options and have been left behind by the US-led economic order into closer alignment with China. Applying a Bayesian generalized synthetic control approach, we estimate both aggregate- and individual-level treatment effects for different sets of countries. We find that, on average, a country's participation in BSAs with China increases its short-run foreign-policy alignment with China. Comparisons of country-level causal effects reveal that the short-run effect and a medium-run finding are driven by financially vulnerable countries and those supportive of China's global leadership. The results suggest that the introduction of Chinese BSAs as part of the global financial safety net has political implications for international affairs."
+                  },
+                  "dsDescriptionDate": {
+                    "typeName": "dsDescriptionDate",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "2026-01-18"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "subject",
+              "multiple": true,
+              "typeClass": "controlledVocabulary",
+              "value": [
+                "Social Sciences"
+              ]
+            },
+            {
+              "typeName": "depositor",
+              "multiple": false,
+              "typeClass": "primitive",
+              "value": "Liu, Qi"
+            },
+            {
+              "typeName": "dateOfDeposit",
+              "multiple": false,
+              "typeClass": "primitive",
+              "value": "2025-04-12"
+            }
+          ]
+        }
+      },
+      "files": [
+        {
+          "label": "alt_LoanasT.R",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 441872,
+          "dataFile": {
+            "id": 13402764,
+            "persistentId": "",
+            "filename": "alt_LoanasT.R",
+            "contentType": "type/x-r-syntax",
+            "friendlyType": "R Syntax",
+            "filesize": 8864,
+            "storageIdentifier": "s3://dvn-cloud:19bf3fb795d-dacc035896fc",
+            "rootDataFileId": -1,
+            "md5": "8a6a21ab2a69c8950ea9e935ed3047b9",
+            "checksum": {
+              "type": "MD5",
+              "value": "8a6a21ab2a69c8950ea9e935ed3047b9"
+            },
+            "tabularData": false,
+            "creationDate": "2026-01-25",
+            "publicationDate": "2026-02-27",
+            "lastUpdateTime": "2026-02-27T19:51:52Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "BRI_2020.tab",
+          "restricted": false,
+          "version": 3,
+          "datasetVersionId": 441872,
+          "dataFile": {
+            "id": 13393235,
+            "persistentId": "",
+            "filename": "BRI_2020.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 5205,
+            "storageIdentifier": "s3://dvn-cloud:19be1638436-9f7b50c4b7b5",
+            "originalFileFormat": "text/comma-separated-values",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 4236,
+            "originalFileName": "BRI_2020.csv",
+            "UNF": "UNF:6:qavc172iDJy6yG7hDE82dg==",
+            "rootDataFileId": -1,
+            "md5": "e358de977961535a52acf3abb8fc79aa",
+            "checksum": {
+              "type": "MD5",
+              "value": "e358de977961535a52acf3abb8fc79aa"
+            },
+            "tabularData": true,
+            "creationDate": "2026-01-21",
+            "publicationDate": "2026-02-27",
+            "lastUpdateTime": "2026-02-27T19:51:52Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "bsaNchina.csv",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 441872,
+          "dataFile": {
+            "id": 13378070,
+            "persistentId": "",
+            "filename": "bsaNchina.csv",
+            "contentType": "text/comma-separated-values",
+            "friendlyType": "Comma Separated Values",
+            "filesize": 12443,
+            "storageIdentifier": "s3://dvn-cloud:19bd00e76e5-d0c8646e85db",
+            "rootDataFileId": -1,
+            "md5": "c4230bbadb708b150785190a6b666391",
+            "checksum": {
+              "type": "MD5",
+              "value": "c4230bbadb708b150785190a6b666391"
+            },
+            "tabularData": false,
+            "creationDate": "2026-01-18",
+            "publicationDate": "2026-02-27",
+            "lastUpdateTime": "2026-02-27T19:51:52Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "BSAupdate.RData",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 441872,
+          "dataFile": {
+            "id": 13378058,
+            "persistentId": "",
+            "filename": "BSAupdate.RData",
+            "contentType": "application/x-rlang-transport",
+            "friendlyType": "R Data",
+            "filesize": 2463251,
+            "storageIdentifier": "s3://dvn-cloud:19bd00e808d-39ecf65ea75f",
+            "rootDataFileId": -1,
+            "md5": "596afd9ffe64d73d81ad1c8badabb3a2",
+            "checksum": {
+              "type": "MD5",
+              "value": "596afd9ffe64d73d81ad1c8badabb3a2"
+            },
+            "tabularData": false,
+            "creationDate": "2026-01-18",
+            "publicationDate": "2026-02-27",
+            "lastUpdateTime": "2026-02-27T19:51:52Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "case_selection.R",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 441872,
+          "dataFile": {
+            "id": 13378065,
+            "persistentId": "",
+            "filename": "case_selection.R",
+            "contentType": "type/x-r-syntax",
+            "friendlyType": "R Syntax",
+            "filesize": 6279,
+            "storageIdentifier": "s3://dvn-cloud:19bd00e847e-777aece79723",
+            "rootDataFileId": -1,
+            "md5": "1cdcd1cbfae67d466c97c66e9f42c316",
+            "checksum": {
+              "type": "MD5",
+              "value": "1cdcd1cbfae67d466c97c66e9f42c316"
+            },
+            "tabularData": false,
+            "creationDate": "2026-01-18",
+            "publicationDate": "2026-02-27",
+            "lastUpdateTime": "2026-02-27T19:51:52Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "cosponsorship_data.RData",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 441872,
+          "dataFile": {
+            "id": 13378068,
+            "persistentId": "",
+            "filename": "cosponsorship_data.RData",
+            "contentType": "application/x-rlang-transport",
+            "friendlyType": "R Data",
+            "filesize": 2639018,
+            "storageIdentifier": "s3://dvn-cloud:19bd00e8865-70d5054a332f",
+            "rootDataFileId": -1,
+            "md5": "d0682fa4fe607163d52669784a1a56da",
+            "checksum": {
+              "type": "MD5",
+              "value": "d0682fa4fe607163d52669784a1a56da"
+            },
+            "tabularData": false,
+            "creationDate": "2026-01-18",
+            "publicationDate": "2026-02-27",
+            "lastUpdateTime": "2026-02-27T19:51:52Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "co_sponsorship.R",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 441872,
+          "dataFile": {
+            "id": 13378069,
+            "persistentId": "",
+            "filename": "co_sponsorship.R",
+            "contentType": "type/x-r-syntax",
+            "friendlyType": "R Syntax",
+            "filesize": 6693,
+            "storageIdentifier": "s3://dvn-cloud:19bd00e8656-d05c8dbe2177",
+            "rootDataFileId": -1,
+            "md5": "fae680be161c3eac7eb8366b9a233fb2",
+            "checksum": {
+              "type": "MD5",
+              "value": "fae680be161c3eac7eb8366b9a233fb2"
+            },
+            "tabularData": false,
+            "creationDate": "2026-01-18",
+            "publicationDate": "2026-02-27",
+            "lastUpdateTime": "2026-02-27T19:51:52Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "currency_converted.RData",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 441872,
+          "dataFile": {
+            "id": 13378062,
+            "persistentId": "",
+            "filename": "currency_converted.RData",
+            "contentType": "application/x-rlang-transport",
+            "friendlyType": "R Data",
+            "filesize": 20024,
+            "storageIdentifier": "s3://dvn-cloud:19bd00e8e2f-d92537759d7c",
+            "rootDataFileId": -1,
+            "md5": "9d1e1d4e4bdd3b3dc803e8d1e4f960e3",
+            "checksum": {
+              "type": "MD5",
+              "value": "9d1e1d4e4bdd3b3dc803e8d1e4f960e3"
+            },
+            "tabularData": false,
+            "creationDate": "2026-01-18",
+            "publicationDate": "2026-02-27",
+            "lastUpdateTime": "2026-02-27T19:51:52Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Data_SWAPNet_panel_202207.xlsx",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 441872,
+          "dataFile": {
+            "id": 13378074,
+            "persistentId": "",
+            "filename": "Data_SWAPNet_panel_202207.xlsx",
+            "contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "friendlyType": "MS Excel Spreadsheet",
+            "filesize": 164648,
+            "storageIdentifier": "s3://dvn-cloud:19bd021f946-a5b7d7c99ad3",
+            "rootDataFileId": -1,
+            "md5": "c64d439b578f2b4fb6b301430767ef28",
+            "checksum": {
+              "type": "MD5",
+              "value": "c64d439b578f2b4fb6b301430767ef28"
+            },
+            "tabularData": false,
+            "creationDate": "2026-01-18",
+            "publicationDate": "2026-02-27",
+            "lastUpdateTime": "2026-02-27T19:51:52Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "IMF_program_data.csv",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 441872,
+          "dataFile": {
+            "id": 13378071,
+            "persistentId": "",
+            "filename": "IMF_program_data.csv",
+            "contentType": "text/comma-separated-values",
+            "friendlyType": "Comma Separated Values",
+            "filesize": 26214,
+            "storageIdentifier": "s3://dvn-cloud:19bd00e94dc-c0a8b8242d11",
+            "rootDataFileId": -1,
+            "md5": "a648837d76199a661494f83700d90ce1",
+            "checksum": {
+              "type": "MD5",
+              "value": "a648837d76199a661494f83700d90ce1"
+            },
+            "tabularData": false,
+            "creationDate": "2026-01-18",
+            "publicationDate": "2026-02-27",
+            "lastUpdateTime": "2026-02-27T19:51:52Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "ITT_confusion.csv",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 441872,
+          "dataFile": {
+            "id": 13378061,
+            "persistentId": "",
+            "filename": "ITT_confusion.csv",
+            "contentType": "text/comma-separated-values",
+            "friendlyType": "Comma Separated Values",
+            "filesize": 1624,
+            "storageIdentifier": "s3://dvn-cloud:19bd00e9a53-8fb157ec37bc",
+            "rootDataFileId": -1,
+            "md5": "1261ffbc70a6853458be6fccce93463c",
+            "checksum": {
+              "type": "MD5",
+              "value": "1261ffbc70a6853458be6fccce93463c"
+            },
+            "tabularData": false,
+            "creationDate": "2026-01-18",
+            "publicationDate": "2026-02-27",
+            "lastUpdateTime": "2026-02-27T19:51:52Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "loanasT_data.RData",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 441872,
+          "dataFile": {
+            "id": 13378073,
+            "persistentId": "",
+            "filename": "loanasT_data.RData",
+            "contentType": "application/x-rlang-transport",
+            "friendlyType": "R Data",
+            "filesize": 2244933,
+            "storageIdentifier": "s3://dvn-cloud:19bd00ea041-e7952bae273c",
+            "rootDataFileId": -1,
+            "md5": "7165290b015e4d7e2e015ff4cc4b2fe5",
+            "checksum": {
+              "type": "MD5",
+              "value": "7165290b015e4d7e2e015ff4cc4b2fe5"
+            },
+            "tabularData": false,
+            "creationDate": "2026-01-18",
+            "publicationDate": "2026-02-27",
+            "lastUpdateTime": "2026-02-27T19:51:52Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "MainCode.R",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 441872,
+          "dataFile": {
+            "id": 13402763,
+            "persistentId": "",
+            "filename": "MainCode.R",
+            "contentType": "type/x-r-syntax",
+            "friendlyType": "R Syntax",
+            "filesize": 21257,
+            "storageIdentifier": "s3://dvn-cloud:19bf3faccc1-7ef2486ca77c",
+            "rootDataFileId": -1,
+            "md5": "4b94ba9323085ac6709f7d4edf4571a3",
+            "checksum": {
+              "type": "MD5",
+              "value": "4b94ba9323085ac6709f7d4edf4571a3"
+            },
+            "tabularData": false,
+            "creationDate": "2026-01-25",
+            "publicationDate": "2026-02-27",
+            "lastUpdateTime": "2026-02-27T19:51:52Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "plot_function2.R",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 441872,
+          "dataFile": {
+            "id": 13378067,
+            "persistentId": "",
+            "filename": "plot_function2.R",
+            "contentType": "type/x-r-syntax",
+            "friendlyType": "R Syntax",
+            "filesize": 29943,
+            "storageIdentifier": "s3://dvn-cloud:19bd00eaae6-35cb61f242df",
+            "rootDataFileId": -1,
+            "md5": "fcd1d300be2f544088761dce045d391c",
+            "checksum": {
+              "type": "MD5",
+              "value": "fcd1d300be2f544088761dce045d391c"
+            },
+            "tabularData": false,
+            "creationDate": "2026-01-18",
+            "publicationDate": "2026-02-27",
+            "lastUpdateTime": "2026-02-27T19:51:52Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "readme.txt",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 441872,
+          "dataFile": {
+            "id": 13393237,
+            "persistentId": "",
+            "filename": "readme.txt",
+            "contentType": "text/plain",
+            "friendlyType": "Plain Text",
+            "filesize": 2900,
+            "storageIdentifier": "s3://dvn-cloud:19be1663731-1d8b7ff40c8b",
+            "rootDataFileId": -1,
+            "md5": "0a22802af56689a724a8e38813b86805",
+            "checksum": {
+              "type": "MD5",
+              "value": "0a22802af56689a724a8e38813b86805"
+            },
+            "tabularData": false,
+            "creationDate": "2026-01-21",
+            "publicationDate": "2026-02-27",
+            "lastUpdateTime": "2026-02-27T19:51:52Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "regression.R",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 441872,
+          "dataFile": {
+            "id": 13378059,
+            "persistentId": "",
+            "filename": "regression.R",
+            "contentType": "type/x-r-syntax",
+            "friendlyType": "R Syntax",
+            "filesize": 10142,
+            "storageIdentifier": "s3://dvn-cloud:19bd00eace5-173afdd3c9d5",
+            "rootDataFileId": -1,
+            "md5": "08f0002080679bfc10f8c2602641f6f7",
+            "checksum": {
+              "type": "MD5",
+              "value": "08f0002080679bfc10f8c2602641f6f7"
+            },
+            "tabularData": false,
+            "creationDate": "2026-01-18",
+            "publicationDate": "2026-02-27",
+            "lastUpdateTime": "2026-02-27T19:51:52Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "robustness_checks.R",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 441872,
+          "dataFile": {
+            "id": 13378064,
+            "persistentId": "",
+            "filename": "robustness_checks.R",
+            "contentType": "type/x-r-syntax",
+            "friendlyType": "R Syntax",
+            "filesize": 31383,
+            "storageIdentifier": "s3://dvn-cloud:19bd00eb4a9-275f29379b29",
+            "rootDataFileId": -1,
+            "md5": "a0c5005586eaa62f07f1c44391282051",
+            "checksum": {
+              "type": "MD5",
+              "value": "a0c5005586eaa62f07f1c44391282051"
+            },
+            "tabularData": false,
+            "creationDate": "2026-01-18",
+            "publicationDate": "2026-02-27",
+            "lastUpdateTime": "2026-02-27T19:51:52Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "summary_function.R",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 441872,
+          "dataFile": {
+            "id": 13378072,
+            "persistentId": "",
+            "filename": "summary_function.R",
+            "contentType": "type/x-r-syntax",
+            "friendlyType": "R Syntax",
+            "filesize": 9161,
+            "storageIdentifier": "s3://dvn-cloud:19bd00eb863-0dc456c22a3f",
+            "rootDataFileId": -1,
+            "md5": "f73d3c5e8a40aee3bc8af12e25710379",
+            "checksum": {
+              "type": "MD5",
+              "value": "f73d3c5e8a40aee3bc8af12e25710379"
+            },
+            "tabularData": false,
+            "creationDate": "2026-01-18",
+            "publicationDate": "2026-02-27",
+            "lastUpdateTime": "2026-02-27T19:51:52Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "visualization.R",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 441872,
+          "dataFile": {
+            "id": 13378066,
+            "persistentId": "",
+            "filename": "visualization.R",
+            "contentType": "type/x-r-syntax",
+            "friendlyType": "R Syntax",
+            "filesize": 3594,
+            "storageIdentifier": "s3://dvn-cloud:19bd00e6fd1-6c708bede98f",
+            "rootDataFileId": -1,
+            "md5": "8a708a3c5314dca8eefec70d87dc9032",
+            "checksum": {
+              "type": "MD5",
+              "value": "8a708a3c5314dca8eefec70d87dc9032"
+            },
+            "tabularData": false,
+            "creationDate": "2026-01-18",
+            "publicationDate": "2026-02-27",
+            "lastUpdateTime": "2026-02-27T19:51:52Z",
+            "fileAccessRequest": false
+          }
+        }
+      ]
+    }
+  }
+}

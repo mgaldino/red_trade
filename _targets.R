@@ -125,6 +125,21 @@ list(
   tar_target(synth_data_baseline, clean_synth_data(final_df, ranked_trade_data=trade_data_ranked)),
   tar_target(synth_fit_baseline, simple_fit(data=synth_data_baseline, filter_latin_america=FALSE)),
   tar_target(se_synth_baseline, se_sdid(synth_fit_baseline)),
+  tar_target(synth_fit_no_time_varying_covariates, simple_fit_no_time_varying_covariates(synth_data)),
+  tar_target(se_synth_no_time_varying_covariates, se_sdid(synth_fit_no_time_varying_covariates)),
+  tar_target(brazil_sdid_spec_table,
+             make_brazil_sdid_spec_table(
+               synth_fit,
+               se_synth,
+               synth_data,
+               synth_fit_baseline,
+               se_synth_baseline,
+               synth_data_baseline,
+               synth_fit_no_time_varying_covariates,
+               se_synth_no_time_varying_covariates,
+               synth_fit_latam,
+               se_synth_latam
+             )),
   # Phase 1.1: RMSPE diagnostics & permutation inference
   tar_target(rmspe_diagnostics, compute_rmspe(synth_fit)),
   tar_target(permutation_results, permutation_test(synth_data)),
@@ -161,20 +176,55 @@ list(
   # Phase 3: fect + PanelMatch (switching treatment)
   tar_target(switching_panel, build_switching_panel(trade_data, unga_data, classified_events, usa_top_countries)),
   tar_target(covariates_panel, build_covariates(final_df)),
-  # Phase 3a: scope-conditioned pooled China top-partner treatment
-  # Sample is conditioned on US-benchmark relevance; treatment = 1 when China
-  # is the country's largest export destination within that panel.
+  # Phase 3a: pooled China top-partner treatment
+  # Sample includes all countries observed in both the trade data and the UNGA
+  # ideal-point data. Treatment = 1 when China is the country's largest export
+  # destination within that panel.
   tar_target(china_top_panel, build_china_top_partner_panel(
     trade_data,
-    unga_data,
-    classified_events,
-    usa_top_countries
+    unga_data
   )),
   tar_target(china_top_panel_summary, summarize_china_top_panel(china_top_panel)),
+  tar_target(china_pre_china_distance_1996_2000,
+             build_pre_china_distance(china_top_panel, years = 1996:2000)),
+  tar_target(china_top_pre_distance_balance_table,
+             make_pre_china_distance_balance_table(
+               china_top_panel,
+               china_pre_china_distance_1996_2000
+             )),
+  tar_target(plot_china_top_pre_distance_balance,
+             plot_pre_china_distance_balance(
+               china_top_pre_distance_balance_table
+             )),
   tar_target(china_top_panel_cov, dplyr::left_join(china_top_panel, covariates_panel, by = c("iso3c", "year"))),
-  tar_target(china_top_fect_data, prepare_fect_data(china_top_panel)),
+  tar_target(china_top_panel_cov_pre_distance_trim,
+             filter_pre_china_distance_sample(
+               china_top_panel_cov,
+               china_pre_china_distance_1996_2000,
+               cutoff_prob = 0.75
+             )),
+  tar_target(china_top_pre_distance_trim_summary,
+             summarize_pre_china_distance_trim(
+               china_top_panel_cov,
+               china_top_panel_cov_pre_distance_trim,
+               china_pre_china_distance_1996_2000,
+               cutoff_prob = 0.75
+             )),
+  tar_target(china_top_absorbing_sample,
+             prepare_absorbing_china_top_sample(china_top_panel)),
+  tar_target(china_top_absorbing_sample_validation,
+             validate_absorbing_china_top_sample(china_top_absorbing_sample)),
+  tar_target(china_top_absorbing_cov_sample,
+             prepare_absorbing_china_top_covariate_sample(
+               china_top_absorbing_sample,
+               covariates_panel,
+               covariate_cols = c("log_gdp_pc", "free_press")
+             )),
+  tar_target(china_top_absorbing_cov_sample_validation,
+             validate_absorbing_china_top_sample(china_top_absorbing_cov_sample)),
+  tar_target(china_top_fect_data, prepare_fect_data(china_top_absorbing_sample)),
   tar_target(china_top_fect_cov_data, prepare_fect_data(
-    china_top_panel_cov,
+    china_top_absorbing_cov_sample,
     fml = abs_distance_china ~ china_top + log_gdp_pc + free_press
   )),
   tar_target(fect_fe_china_top, run_fect_analysis(china_top_fect_data, method = "fe", nboots = 10000L)),
@@ -187,21 +237,94 @@ list(
     china_top_fect_cov_data,
     fml = abs_distance_china ~ china_top + log_gdp_pc + free_press
   )),
+  tar_target(china_top_fect_cov_pre_distance_trim_data, prepare_fect_data(
+    prepare_absorbing_china_top_sample(
+      china_top_panel_cov_pre_distance_trim,
+      covariate_cols = c("log_gdp_pc", "free_press")
+    ),
+    fml = abs_distance_china ~ china_top + log_gdp_pc + free_press
+  )),
+  tar_target(fect_ife_china_top_cov_pre_distance_trim,
+             run_fect_analysis(
+               china_top_fect_cov_pre_distance_trim_data,
+               method = "ife",
+               nboots = 10000L,
+               fml = abs_distance_china ~ china_top + log_gdp_pc + free_press
+             )),
+  tar_target(fect_ife_china_top_cov_pre_distance_trim_summary,
+             summarize_fect_model(
+               fect_ife_china_top_cov_pre_distance_trim,
+               china_top_fect_cov_pre_distance_trim_data,
+               fml = abs_distance_china ~ china_top + log_gdp_pc + free_press
+             )),
   tar_target(plot_fect_ife_gap_china_top_cov,
-             plot_fect_gap(fect_ife_china_top_cov, "IFE with covariates: Entry-aligned gap plot")),
-  tar_target(fect_carryover_china_top, run_fect_carryover(china_top_fect_data, nboots = 10000L)),
-  tar_target(panelmatch_att_china_top, run_panelmatch_analysis(china_top_fect_data, qoi = "att", n_iter = 10000L)),
-  tar_target(panelmatch_art_china_top, run_panelmatch_analysis(china_top_fect_data, qoi = "art", n_iter = 10000L)),
-  tar_target(plot_fect_ife_gap_china_top, plot_fect_gap(fect_ife_china_top, "IFE: Entry-aligned gap plot")),
-  tar_target(plot_fect_ife_exit_china_top, plot_fect_exit(fect_ife_china_top, "IFE: Exit-aligned gap plot")),
-  tar_target(plot_pm_combined_china_top, plot_panelmatch_combined(panelmatch_att_china_top, panelmatch_art_china_top)),
-  tar_target(plot_diagnostics_main_china_top,
-             plot_fect_diagnostics(fect_ife_china_top, fect_fe_china_top, fect_carryover_china_top)),
+             plot_fect_gap(fect_ife_china_top_cov, "Absorbing IFE with covariates: entry-aligned gap plot")),
+  tar_target(plot_fect_ife_gap_china_top,
+             plot_fect_gap(fect_ife_china_top, "Absorbing IFE: entry-aligned gap plot")),
   tar_target(plot_diagnostics_equiv_china_top,
              plot_fect_equiv_appendix(fect_fe_china_top, fect_ife_china_top)),
+  tar_target(fect_ife_china_top_recent_pretrend_f_test,
+             reconstruct_fect_recent_pretrend_f_test(
+               fect_ife_china_top,
+               model = "Main: fect IFE",
+               max_recent_periods = 12L
+             )),
+  tar_target(fect_ife_china_top_cov_recent_pretrend_f_test,
+             reconstruct_fect_recent_pretrend_f_test(
+               fect_ife_china_top_cov,
+               model = "Robustness: fect IFE + covariates",
+               max_recent_periods = 12L
+             )),
+  tar_target(cross_country_recent_pretrend_f_test_table,
+             make_fect_recent_pretrend_table(
+               fect_ife_china_top_recent_pretrend_f_test,
+               fect_ife_china_top_cov_recent_pretrend_f_test
+             )),
   tar_target(plot_treated_panel_china_top, plot_china_top_country_panel(china_top_fect_data)),
   tar_target(fect_ife_china_top_loo, run_fect_leave_one_out(china_top_fect_data, nboots = 10000L)),
-  tar_target(china_top_absorbing_cs_data, prepare_absorbing_china_top_did_data(china_top_panel)),
+  tar_target(china_top_fect_no_hub_entrepot_data,
+             prepare_fect_data(
+               filter_absorbing_treated_cases(
+                 china_top_absorbing_sample,
+                 excluded_iso3c = c("MYS", "SLE")
+               )
+             )),
+  tar_target(fect_ife_china_top_no_hub_entrepot,
+             run_fect_analysis(
+               china_top_fect_no_hub_entrepot_data,
+               method = "ife",
+               nboots = 10000L
+             )),
+  tar_target(fect_ife_china_top_no_hub_entrepot_summary,
+             summarize_fect_model(
+               fect_ife_china_top_no_hub_entrepot,
+               china_top_fect_no_hub_entrepot_data
+             )),
+  tar_target(china_top_fect_drop_slb_data,
+             prepare_fect_data(
+               filter_absorbing_treated_cases(
+                 china_top_absorbing_sample,
+                 excluded_iso3c = "SLB"
+               )
+             )),
+  tar_target(fect_ife_china_top_drop_slb,
+             run_fect_analysis(
+               china_top_fect_drop_slb_data,
+               method = "ife",
+               nboots = 10000L
+             )),
+  tar_target(fect_ife_china_top_drop_slb_summary,
+             summarize_fect_model(
+               fect_ife_china_top_drop_slb,
+               china_top_fect_drop_slb_data
+             )),
+  tar_target(cross_country_incumbent_salience_appendix_table,
+             make_incumbent_salience_scope_table(
+               fect_ife_china_top_summary,
+               fect_ife_china_top_no_hub_entrepot_summary,
+               fect_ife_china_top_drop_slb_summary
+             )),
+  tar_target(china_top_absorbing_cs_data, china_top_absorbing_sample),
   tar_target(did_china_top_absorbing, run_cross_country_did(
     china_top_absorbing_cs_data,
     aggte_na_rm = TRUE
@@ -210,10 +333,7 @@ list(
     did_china_top_absorbing,
     china_top_absorbing_cs_data
   )),
-  tar_target(china_top_absorbing_cs_cov_data, prepare_absorbing_china_top_did_data(
-    china_top_panel_cov,
-    covariate_cols = c("log_gdp_pc", "free_press")
-  )),
+  tar_target(china_top_absorbing_cs_cov_data, china_top_absorbing_cov_sample),
   tar_target(did_china_top_absorbing_cov, run_cross_country_did(
     china_top_absorbing_cs_cov_data,
     xformla = ~ log_gdp_pc + free_press,
@@ -224,6 +344,45 @@ list(
     china_top_absorbing_cs_cov_data
   )),
   tar_target(plot_es_china_top_absorbing, plot_event_study_did(did_china_top_absorbing)),
+  tar_target(china_top_short_lived_fect_data,
+             prepare_fect_data(prepare_nonabsorbing_china_top_fect_data(china_top_panel))),
+  tar_target(fect_ife_china_top_short_lived,
+             run_fect_analysis(china_top_short_lived_fect_data, method = "ife", nboots = 10000L)),
+  tar_target(fect_ife_china_top_short_lived_summary,
+             summarize_fect_model(fect_ife_china_top_short_lived, china_top_short_lived_fect_data)),
+  tar_target(china_top_short_lived_fect_cov_data,
+             prepare_fect_data(
+               prepare_nonabsorbing_china_top_fect_data(
+                 china_top_panel_cov,
+                 covariate_cols = c("log_gdp_pc", "free_press")
+               ),
+               fml = abs_distance_china ~ china_top + log_gdp_pc + free_press
+             )),
+  tar_target(fect_ife_china_top_short_lived_cov,
+             run_fect_analysis(
+               china_top_short_lived_fect_cov_data,
+               method = "ife",
+               nboots = 10000L,
+               fml = abs_distance_china ~ china_top + log_gdp_pc + free_press
+             )),
+  tar_target(fect_ife_china_top_short_lived_cov_summary,
+             summarize_fect_model(
+               fect_ife_china_top_short_lived_cov,
+               china_top_short_lived_fect_cov_data,
+               fml = abs_distance_china ~ china_top + log_gdp_pc + free_press
+             )),
+  tar_target(cross_country_absorbing_main_table,
+             make_cross_country_absorbing_table(
+               fect_ife_china_top_summary,
+               fect_ife_china_top_cov_summary,
+               did_china_top_absorbing_summary,
+               did_china_top_absorbing_cov_summary
+             )),
+  tar_target(cross_country_short_lived_appendix_table,
+             make_cross_country_short_lived_table(
+               fect_ife_china_top_short_lived_summary,
+               fect_ife_china_top_short_lived_cov_summary
+             )),
   tar_target(switching_panel_cov, dplyr::left_join(switching_panel, covariates_panel, by = c("iso3c", "year"))),
   tar_target(fect_fe, run_fect_analysis(switching_panel, method = "fe")),
   tar_target(fect_ife, run_fect_analysis(switching_panel, method = "ife")),
@@ -262,7 +421,9 @@ list(
   # Media counterfactual
   tar_target(folha_classified_file, here("data", "folha_classificado.rds"), format = "file"),
   tar_target(media_counterfactual, build_media_counterfactual(folha_classified_file)),
+  tar_target(sample_headlines_image_file, here("images", "table1_headlines.png"), format = "file"),
   # Cohen's kappa for ChatGPT validation
   tar_target(validation_file, here("data", "folha_validation_sample_annotated.csv"), format = "file"),
+  tar_target(chatgpt_validation_summary, build_chatgpt_validation_summary(validation_file)),
   tar_target(cohens_kappa, compute_cohens_kappa(validation_file))
 )

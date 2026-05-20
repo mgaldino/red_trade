@@ -1,0 +1,71 @@
+Replication information for "China's Bilateral Swap Agreements and Foreign Policy"
+
+Qi Liu (qi_liu@g.harvard.edu)
+Xun Pang (xpang@pku.edu.cn)
+James Raymond Vreeland (jrv@princeton.edu)
+
+Review of International Political Economy
+
+January 2026
+
+This replication archive contains all code and data necessary for reproducing the analyses contained in the paper and supplementary material.
+
+
+-----------------------------
+
+To reproduce the results:
+1. Run visualization.R 
+2. Run MainCode.R
+3. Run co_sponsorship.R
+4. Run case_selection.R
+5. Run alt_LoanasT.R
+6. Run regression.R
+7. Run robustness_checks.R
+
+The above R files are independent of each other.
+-----------------------------
+
+
+List of archive contents:
+R files:
+
+1. visualization.R: R file that generates the visualization plots Figure 1 in the main text. 
+
+2. MainCode.R: R file that runs the main analysis with UNGA voting distance as the outcome and generates Figure 2, Figure 3(a), Figure 4, and Figure 5 in the main text. It also generates Figure B1, ,Figure B2(a), Figure B3, Figure B4, Figure B5, and Figure E2 in the Appendix.
+
+3. co_sponsorship.R: R file that runs the analysis using co-sponsorship at the UNGA as an alternative outcome and generates Figure 3(b) in the main text and Figure B2(b) in the Appendix. 
+
+4.  case_selection.R: R file that produces the confusion matrices. It generates Figure 6 in the main text and Figure E1 in the Appendix.
+
+5. alt_LoanasT.R: R file that runs the analysis using loans as alternative treatment. It generates Figure D1, Figure D2, Figure D3, and Figure D4 in the Appendix. 
+
+6. regression.R: R file that runs the main analysis using two-way fixed effects models. It generates Table B2 in the Appendix.
+
+7. robustness_checks.R: R file that runs robustness checks. It generates Figure C1, Figure C2, and Figure C3 in the Appendix.
+
+8. summary_function.R: R file that provides code used in other R files to summarize coefficients. It will be sourced when needed. 
+
+9. plot_function2.R: R file that provides code used in other R files to make plots. It will be sourced when needed. 
+
+
+Data Files:
+
+10. Data_SWAPNet_panel_202207. xlsx: data on BSAs.
+
+11. BRI_2020.tab: data on years that countries signed BRI MoUs.
+
+12. bsaNchina.csv: data on BSAs signed by countries other than China. 
+
+13. IMF_program_data.csv: IMF program data (Dreher 2006).
+
+14. ITT_confusion.csv: data that codes whether each country satisfy each classification conditions, used to produce confusion matrices.
+
+15. BSAupdate.RData: data used for the main analysis. 
+
+16. cosponsorship_data.Data: data used for the co-sponsorship analysis.
+
+17. loanasT_data.RData: data used for the loan as treatment analysis.
+
+18. currency_converted.RData: swap line sizes converted into USD for visualization purposes in visualization.R.
+
+19. readme.txt: this file.

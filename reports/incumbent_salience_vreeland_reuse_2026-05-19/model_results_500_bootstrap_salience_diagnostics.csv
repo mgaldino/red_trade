@@ -1,0 +1,15 @@
+iso3c,country_name,first_treat_year,displaced_us,displaced_g7,displaced_regional_power,displaced_regional_power_same_macroregion,hub_entrepot_incumbent,displacement_salience_warning,export_share_margin_over_china_t0_minus_1,displaced_partner_top_years_pre5,pre_entry_partner_level,pre_entry_high_level_partner,pre_entry_bri_mou
+SLB,Solomon Islands,2003,FALSE,TRUE,TRUE,TRUE,FALSE,none,0.02462047152384097,5,0,0,FALSE
+PHL,Philippines,2005,FALSE,TRUE,TRUE,TRUE,FALSE,narrow_export_share_margin,0.01627203468618845,1,1,0,FALSE
+AGO,Angola,2007,TRUE,TRUE,TRUE,FALSE,FALSE,none,0.03851343567510645,5,1,0,FALSE
+CHL,Chile,2008,TRUE,TRUE,TRUE,FALSE,FALSE,narrow_export_share_margin,0.00980230244603369,5,1,0,FALSE
+BRA,Brazil,2009,TRUE,TRUE,TRUE,FALSE,FALSE,none,0.02206096254633637,5,1,0,FALSE
+MYS,Malaysia,2009,FALSE,FALSE,FALSE,FALSE,TRUE,hub_or_entrepot_incumbent,0.0218406948991412,1,1,0,FALSE
+AUS,Australia,2010,FALSE,TRUE,TRUE,TRUE,FALSE,narrow_export_share_margin,0.00706852209063121,5,1,0,FALSE
+SLE,Sierra Leone,2012,FALSE,FALSE,FALSE,FALSE,TRUE,hub_or_entrepot_incumbent,0.19011039994396584,5,1,0,FALSE
+URY,Uruguay,2013,FALSE,FALSE,TRUE,TRUE,FALSE,narrow_export_share_margin,0.00284391622717855,5,1,0,FALSE
+MMR,Myanmar (Burma),2014,FALSE,FALSE,FALSE,FALSE,FALSE,none,0.10802358157725356,5,9,1,FALSE
+SAU,Saudi Arabia,2015,TRUE,TRUE,TRUE,FALSE,FALSE,narrow_export_share_margin,0.00196769873088581,3,8,1,FALSE
+GAB,Gabon,2017,FALSE,FALSE,FALSE,FALSE,FALSE,weak_pre_entry_persistence,0.08521217378127355,1,1,0,FALSE
+KWT,Kuwait,2018,FALSE,FALSE,TRUE,FALSE,FALSE,narrow_export_share_margin,0.01154781710800675,5,1,0,TRUE
+QAT,Qatar,2021,FALSE,TRUE,TRUE,FALSE,FALSE,narrow_export_share_margin,0.01565562449654037,3,6,1,TRUE

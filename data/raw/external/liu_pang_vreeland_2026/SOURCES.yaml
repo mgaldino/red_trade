@@ -1,0 +1,116 @@
+sources:
+  - id: liu_pang_vreeland_2026_replication
+    name: "Replication Data for: China’s bilateral swap agreements and foreign policy"
+    provider: "Harvard Dataverse"
+    url: "https://doi.org/10.7910/DVN/MWAPWV"
+    api_docs: "https://dataverse.harvard.edu/api/datasets/:persistentId"
+    access_method: api
+    requires_credentials: false
+    license: "{'name': 'CC0 1.0', 'uri': 'http://creativecommons.org/publicdomain/zero/1.0', 'iconUri': 'https://licensebuttons.net/p/zero/1.0/88x31.png', 'rightsIdentifier': 'CC0-1.0', 'rightsIdentifierScheme': 'SPDX', 'schemeUri': 'https://spdx.org/licenses/', 'languageCode': 'en'}"
+    citation: ""
+    temporal_coverage: "To be determined from downloaded files"
+    geographic_coverage: "To be determined from downloaded files"
+    unit_of_analysis: "To be determined from downloaded files"
+    download_script: "scripts/data_collection/download_liu_pang_vreeland_2026_dataverse.py"
+    date_accessed: "2026-05-19"
+    dataset_version:
+      version_number: "1"
+      version_minor_number: "0"
+      version_state: "RELEASED"
+      release_time: "2026-02-27T19:51:52Z"
+    files:
+      - file_id: 13402764
+        original_filename: "alt_LoanasT.R"
+        stored_filename: "13402764_alt_LoanasT.R"
+        content_type: "type/x-r-syntax"
+        sha256: "114fe071d63d513983a557aa2f5236680247d84bd03dca23cd3155415f4d1463"
+      - file_id: 13393235
+        original_filename: "BRI_2020.tab"
+        stored_filename: "13393235_BRI_2020.tab"
+        content_type: "text/tab-separated-values"
+        sha256: "7430de5abb789d42bfdb8d3aa9e007f5e4c376ae79e6845a4264f1b60a9161eb"
+      - file_id: 13378070
+        original_filename: "bsaNchina.csv"
+        stored_filename: "13378070_bsaNchina.csv"
+        content_type: "text/comma-separated-values"
+        sha256: "2fea5d60fffcf1b6b6d40680cf1f819ebacd538644c5966580ed7dc7f8783b1f"
+      - file_id: 13378058
+        original_filename: "BSAupdate.RData"
+        stored_filename: "13378058_BSAupdate.RData"
+        content_type: "application/x-rlang-transport"
+        sha256: "d27809197d2b7a1565ed2e3f8a3fb110aeeb931810f652258e9b7a6a2034dbdb"
+      - file_id: 13378065
+        original_filename: "case_selection.R"
+        stored_filename: "13378065_case_selection.R"
+        content_type: "type/x-r-syntax"
+        sha256: "d5d29ff86905dbfbf77be20a3acc5c5d6947b073d4630972e616f8343d62aeec"
+      - file_id: 13378069
+        original_filename: "co_sponsorship.R"
+        stored_filename: "13378069_co_sponsorship.R"
+        content_type: "type/x-r-syntax"
+        sha256: "ae0dfe8a3088b6d0a7c2210875c8317b4afb205f9ba5a3d71855654c72b2a782"
+      - file_id: 13378068
+        original_filename: "cosponsorship_data.RData"
+        stored_filename: "13378068_cosponsorship_data.RData"
+        content_type: "application/x-rlang-transport"
+        sha256: "58ecf7579a3644ba86de3c176de3a6ff0e45aefa398d83aefe392c8954bb1101"
+      - file_id: 13378062
+        original_filename: "currency_converted.RData"
+        stored_filename: "13378062_currency_converted.RData"
+        content_type: "application/x-rlang-transport"
+        sha256: "b6fc5dc4453110a0399d9288c21a04c04bab741be6642b140540c217af1d3c19"
+      - file_id: 13378074
+        original_filename: "Data_SWAPNet_panel_202207.xlsx"
+        stored_filename: "13378074_Data_SWAPNet_panel_202207.xlsx"
+        content_type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        sha256: "36cfa92686286d07a3478e23b970c456842ae68398bd2254e96d1520fffc139a"
+      - file_id: 13378071
+        original_filename: "IMF_program_data.csv"
+        stored_filename: "13378071_IMF_program_data.csv"
+        content_type: "text/comma-separated-values"
+        sha256: "872ae347dcc93cd3766d7cdbb52d1abc84e07bba70e8631092390458d8bdf63b"
+      - file_id: 13378061
+        original_filename: "ITT_confusion.csv"
+        stored_filename: "13378061_ITT_confusion.csv"
+        content_type: "text/comma-separated-values"
+        sha256: "a6475a9ca1a3af7fc0affc0553a6d542f932dee1b262c29b16fca0b707bed5a6"
+      - file_id: 13378073
+        original_filename: "loanasT_data.RData"
+        stored_filename: "13378073_loanasT_data.RData"
+        content_type: "application/x-rlang-transport"
+        sha256: "d8384a8cc2469f50e9d1cae9f980e4f6dcf1d394d4dc1c9e14fe546739db0621"
+      - file_id: 13402763
+        original_filename: "MainCode.R"
+        stored_filename: "13402763_MainCode.R"
+        content_type: "type/x-r-syntax"
+        sha256: "14daed38dd32b9ab83d19d7a631ca805055fede6155223caea60af1c9805a3b6"
+      - file_id: 13378067
+        original_filename: "plot_function2.R"
+        stored_filename: "13378067_plot_function2.R"
+        content_type: "type/x-r-syntax"
+        sha256: "f1a02aded0b62a00acc2715bc2d735f812598771477df6ff7c337c8d25e410d4"
+      - file_id: 13393237
+        original_filename: "readme.txt"
+        stored_filename: "13393237_readme.txt"
+        content_type: "text/plain"
+        sha256: "5ace4b14b65bca1296595726fa7eb4689f5ae586c0b2eda76f76edae2295692b"
+      - file_id: 13378059
+        original_filename: "regression.R"
+        stored_filename: "13378059_regression.R"
+        content_type: "type/x-r-syntax"
+        sha256: "1524933b9bbf376d270ecd5cb20e863a3b5b79f759664039bf4a18ffa8a7fa4e"
+      - file_id: 13378064
+        original_filename: "robustness_checks.R"
+        stored_filename: "13378064_robustness_checks.R"
+        content_type: "type/x-r-syntax"
+        sha256: "f5b89e7002d32281ff7d33af442ec8a4d0d19edca67236d097f8272a74422745"
+      - file_id: 13378072
+        original_filename: "summary_function.R"
+        stored_filename: "13378072_summary_function.R"
+        content_type: "type/x-r-syntax"
+        sha256: "b5e08f53c34794558974cb6a1bfc6b37d55fba487fb019250dea418df9c04122"
+      - file_id: 13378066
+        original_filename: "visualization.R"
+        stored_filename: "13378066_visualization.R"
+        content_type: "type/x-r-syntax"
+        sha256: "4085b85297ebf68b0943804391be6a27e9dfb2e78342e00a9b9e072922edc8aa"

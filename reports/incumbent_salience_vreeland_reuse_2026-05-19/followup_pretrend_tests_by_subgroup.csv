@@ -1,0 +1,18 @@
+model,subgroup,status,error_message,n_obs,n_countries,n_treated,n_control,pretest_wald_stat,pretest_p,near_pre_mean_att,near_pre_max_abs_att,near_pre_min_p,near_pre_n_p_below_005,all_pre_n_p_below_005,post_0_5_mean_att
+Baseline C&S,all,ok,NA,3465,105,14,91,NA,NA,0.01140450965835952,0.0306915145376766,0.5970339621847365,0,2,-0.10201348532326683
+Event study: displaced_us_no,displaced_us,ok,NA,3333,101,10,91,NA,NA,0.0037775419835164555,0.03544809448571426,0.6787275628899432,0,3,-0.10561873702758454
+Event study: displaced_us_yes,displaced_us,ok,NA,3135,95,4,91,NA,NA,0.03047192884546704,0.05373762586813202,0.5057112860246463,0,6,-0.09251095185714298
+Event study: displaced_g7_no,displaced_g7,ok,NA,3201,97,6,91,NA,NA,-0.033639617170787596,0.13961401923076922,0.2647840734515506,0,3,-0.1369323741734433
+Event study: displaced_g7_yes,displaced_g7,ok,NA,3267,99,8,91,NA,NA,0.04518760478021982,0.08496046589148364,0.18391719104030707,0,7,-0.07353160605360423
+Event study: regional_power_no,regional_power,ok,NA,3135,95,4,91,NA,NA,-0.08803061093543967,0.1495008281043958,0.44331589476126326,0,6,-0.11963886595970699
+Event study: regional_power_yes,regional_power,ok,NA,3333,101,10,91,NA,NA,0.051178557895879134,0.07785895092417577,0.10612471440214181,0,5,-0.09625265523635543
+Event study: same_region_power_no,same_region_power,ok,NA,3333,101,10,91,NA,NA,0.0054909854521978,0.05326017819010995,0.5806406297902497,0,3,-0.10764127260571837
+Event study: same_region_power_yes,same_region_power,ok,NA,3135,95,4,91,NA,NA,0.026188320173763727,0.09365034841208805,0.38965299937477804,0,4,-0.08745552143543972
+Event study: high_level_partner_no,lpv_high_level_partner,ok,NA,3366,102,11,91,NA,NA,0.027674837163086927,0.04079807489810206,0.33391316120173453,0,3,-0.10744929995704304
+Event study: high_level_partner_yes,lpv_high_level_partner,ok,NA,3102,94,3,91,NA,NA,-0.048253357858974305,0.20225973737728958,0.38618808569150603,0,6,-0.08512627903724043
+Hub-excluded C&S,hub_exclusion,ok,NA,3399,103,12,91,NA,NA,0.020745056351190477,0.06748995782142854,0.2123390328940906,0,3,-0.11007363132932638
+Regional-power decomposition: other_g7,regional_power_decomposition,ok,NA,3135,95,4,91,NA,NA,0.05990328071497259,0.1208007926318683,0.23540230778513285,0,11,-0.051777350925061146
+Regional-power decomposition: other_incumbent,regional_power_decomposition,ok,NA,3135,95,4,91,NA,NA,-0.08803061093543967,0.1495008281043958,0.44331589476126326,0,6,-0.11963886595970699
+Regional-power decomposition: us,regional_power_decomposition,ok,NA,3135,95,4,91,NA,NA,0.03047192884546704,0.05373762586813202,0.5057112860246463,0,6,-0.09251095185714298
+Regional-power decomposition: external_regional_or_global_power,regional_power_decomposition,skipped,"Insufficient support: treated = 1, controls = 91",3036,92,1,91,NA,NA,NA,NA,NA,0,0,NA
+Regional-power decomposition: same_region_regional_power,regional_power_decomposition,skipped,"Insufficient support: treated = 1, controls = 91",3036,92,1,91,NA,NA,NA,NA,NA,0,0,NA
