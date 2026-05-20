@@ -4069,3 +4069,565 @@ goal9_human_rights_vs_non_human_rights <- function(resolution_data, treatment_ye
       delta_mean_similarity_score
     )
 }
+selective_unga_clean_text <- function(x) {
+  x |>
+    iconv(from = "", to = "UTF-8", sub = "") |>
+    stringr::str_replace_all("\u00a0", " ") |>
+    stringr::str_replace_all("\u00c2", "") |>
+    stringr::str_squish()
+}
+
+selective_unga_map_issue_family <- function(issue) {
+  dplyr::case_when(
+    is.na(issue) | issue == "" ~ "Other / uncoded",
+    stringr::str_detect(issue, "Human rights") ~ "Human rights",
+    stringr::str_detect(issue, "Arms control|Nuclear weapons|disarmament") ~
+      "Arms/disarmament/nuclear",
+    stringr::str_detect(issue, "Palestinian conflict") ~
+      "Palestine/Middle East",
+    stringr::str_detect(issue, "Economic development") ~
+      "Economic development",
+    stringr::str_detect(issue, "Colonialism") ~ "Decolonization",
+    TRUE ~ "Other / uncoded"
+  )
+}
+
+selective_unga_vote_score <- function(vote) {
+  dplyr::case_when(
+    vote == "no" ~ -1,
+    vote == "abstain" ~ 0,
+    vote == "yes" ~ 1,
+    TRUE ~ NA_real_
+  )
+}
+
+selective_unga_load_unvotes_tables <- function(raw_tarball) {
+  if (!file.exists(raw_tarball)) {
+    stop("Missing raw unvotes tarball: ", raw_tarball)
+  }
+  if (file.info(raw_tarball)$size <= 0) {
+    stop("Raw unvotes tarball exists but is empty: ", raw_tarball)
+  }
+
+  tmp_dir <- tempfile("unvotes_")
+  dir.create(tmp_dir)
+  on.exit(unlink(tmp_dir, recursive = TRUE), add = TRUE)
+  utils::untar(raw_tarball, exdir = tmp_dir, tar = "internal")
+
+  load_unvotes_data <- function(name) {
+    env <- new.env(parent = emptyenv())
+    load(file.path(tmp_dir, "unvotes", "data", paste0(name, ".rda")), envir = env)
+    env[[name]]
+  }
+
+  list(
+    un_votes = load_unvotes_data("un_votes"),
+    un_roll_calls = load_unvotes_data("un_roll_calls"),
+    un_roll_call_issues = load_unvotes_data("un_roll_call_issues")
+  )
+}
+
+selective_unga_build_vote_panel <- function(raw_tarball, donor_iso3c, years = 2005:2012) {
+  unvotes_tables <- selective_unga_load_unvotes_tables(raw_tarball)
+
+  un_votes <- unvotes_tables$un_votes |>
+    dplyr::mutate(
+      vote = as.character(vote),
+      iso3c = countrycode::countrycode(
+        country_code,
+        origin = "iso2c",
+        destination = "iso3c",
+        warn = FALSE
+      )
+    )
+
+  un_roll_calls <- unvotes_tables$un_roll_calls |>
+    dplyr::mutate(
+      year = lubridate::year(date),
+      short = selective_unga_clean_text(short),
+      descr = selective_unga_clean_text(descr),
+      doc_symbol = stringr::str_replace(unres, "^R/", "A/RES/")
+    ) |>
+    dplyr::filter(year %in% years)
+
+  issue_by_rcid <- unvotes_tables$un_roll_call_issues |>
+    dplyr::mutate(
+      issue = selective_unga_clean_text(as.character(issue)),
+      issue_family_single = selective_unga_map_issue_family(issue)
+    ) |>
+    dplyr::summarise(
+      issue = paste(sort(unique(issue[!is.na(issue)])), collapse = "; "),
+      issue_family = paste(sort(unique(issue_family_single[!is.na(issue_family_single)])), collapse = "; "),
+      any_human_rights = any(issue_family_single == "Human rights", na.rm = TRUE),
+      .by = rcid
+    ) |>
+    dplyr::mutate(
+      issue = dplyr::na_if(issue, ""),
+      issue_family = dplyr::if_else(
+        is.na(issue_family) | issue_family == "",
+        "Other / uncoded",
+        issue_family
+      ),
+      issue_domain = dplyr::if_else(any_human_rights, "Human rights", "Non-human rights")
+    )
+
+  reference_votes <- un_votes |>
+    dplyr::filter(iso3c %in% c("CHN", "USA")) |>
+    dplyr::filter(vote %in% c("yes", "no", "abstain")) |>
+    dplyr::select(rcid, iso3c, vote) |>
+    tidyr::pivot_wider(names_from = iso3c, values_from = vote, names_prefix = "vote_") |>
+    dplyr::rename(vote_china = vote_CHN, vote_usa = vote_USA) |>
+    dplyr::mutate(
+      china_score = selective_unga_vote_score(vote_china),
+      usa_score = selective_unga_vote_score(vote_usa),
+      china_usa_divergent = !is.na(china_score) & !is.na(usa_score) & china_score != usa_score,
+      china_usa_strong_divergent = china_usa_divergent & abs(china_score - usa_score) == 2
+    ) |>
+    dplyr::filter(!is.na(china_score), !is.na(usa_score))
+
+  panel_countries <- unique(c("BRA", donor_iso3c))
+
+  un_votes |>
+    dplyr::filter(iso3c %in% panel_countries) |>
+    dplyr::filter(vote %in% c("yes", "no", "abstain")) |>
+    dplyr::select(rcid, country, country_code, iso3c, vote) |>
+    dplyr::inner_join(un_roll_calls, by = "rcid") |>
+    dplyr::inner_join(reference_votes, by = "rcid") |>
+    dplyr::left_join(issue_by_rcid, by = "rcid") |>
+    dplyr::mutate(
+      issue = dplyr::coalesce(issue, "Uncoded"),
+      issue_family = dplyr::coalesce(issue_family, "Other / uncoded"),
+      issue_domain = dplyr::coalesce(issue_domain, "Non-human rights"),
+      vote_ordinal = selective_unga_vote_score(vote),
+      post_2009 = as.integer(year >= 2009),
+      brazil = as.integer(iso3c == "BRA"),
+      brazil_post_2009 = brazil * post_2009,
+      distance_to_china_vote = abs(vote_ordinal - china_score),
+      distance_to_usa_vote = abs(vote_ordinal - usa_score),
+      distance_china_minus_usa = distance_to_china_vote - distance_to_usa_vote,
+      closer_to_china_than_usa = as.integer(distance_to_china_vote < distance_to_usa_vote),
+      closer_to_china_score = distance_to_usa_vote - distance_to_china_vote,
+      agree_china = as.integer(vote_ordinal == china_score),
+      agree_usa = as.integer(vote_ordinal == usa_score),
+      agreement_china_minus_usa = agree_china - agree_usa
+    ) |>
+    dplyr::filter(!is.na(vote_ordinal)) |>
+    dplyr::arrange(year, rcid, iso3c)
+}
+
+selective_unga_fit_vote_model <- function(data, outcome,
+                                          treatment_var = "brazil_post_2009",
+                                          model_label,
+                                          sample_label,
+                                          expected_direction,
+                                          vcov_formula = ~iso3c,
+                                          inference_note = "Model-based country-clustered SE; fixed effects for country and resolution. With one treated country, country-placebo inference is primary.") {
+  if (!outcome %in% names(data)) {
+    return(tibble::tibble(
+      model = model_label,
+      sample = sample_label,
+      outcome = outcome,
+      expected_direction = expected_direction,
+      estimate = NA_real_,
+      se = NA_real_,
+      p_value = NA_real_,
+      ci_95_low = NA_real_,
+      ci_95_high = NA_real_,
+      n_obs = nrow(data),
+      n_countries = dplyr::n_distinct(data$iso3c),
+      n_resolutions = dplyr::n_distinct(data$rcid),
+      inference_status = "Outcome missing.",
+      error = "missing outcome"
+    ))
+  }
+
+  if (nrow(data) == 0L || length(unique(data[[treatment_var]])) < 2L) {
+    return(tibble::tibble(
+      model = model_label,
+      sample = sample_label,
+      outcome = outcome,
+      expected_direction = expected_direction,
+      estimate = NA_real_,
+      se = NA_real_,
+      p_value = NA_real_,
+      ci_95_low = NA_real_,
+      ci_95_high = NA_real_,
+      n_obs = nrow(data),
+      n_countries = dplyr::n_distinct(data$iso3c),
+      n_resolutions = dplyr::n_distinct(data$rcid),
+      inference_status = "Not estimated: no treatment variation.",
+      error = "no treatment variation"
+    ))
+  }
+
+  fml <- stats::as.formula(paste0(outcome, " ~ ", treatment_var, " | iso3c + rcid"))
+  fit <- tryCatch(
+    fixest::feols(fml, data = data, vcov = vcov_formula, notes = FALSE),
+    error = function(e) e
+  )
+
+  if (inherits(fit, "error")) {
+    return(tibble::tibble(
+      model = model_label,
+      sample = sample_label,
+      outcome = outcome,
+      expected_direction = expected_direction,
+      estimate = NA_real_,
+      se = NA_real_,
+      p_value = NA_real_,
+      ci_95_low = NA_real_,
+      ci_95_high = NA_real_,
+      n_obs = nrow(data),
+      n_countries = dplyr::n_distinct(data$iso3c),
+      n_resolutions = dplyr::n_distinct(data$rcid),
+      inference_status = "Model failed.",
+      error = conditionMessage(fit)
+    ))
+  }
+
+  coef_name <- treatment_var
+  estimate <- unname(stats::coef(fit)[coef_name])
+  se <- tryCatch(unname(fixest::se(fit)[coef_name]), error = function(e) NA_real_)
+  ci <- tryCatch(stats::confint(fit, parm = coef_name), error = function(e) {
+    matrix(c(NA_real_, NA_real_), nrow = 1)
+  })
+  p_value <- tryCatch(unname(fixest::pvalue(fit)[coef_name]), error = function(e) NA_real_)
+
+  tibble::tibble(
+    model = model_label,
+    sample = sample_label,
+    outcome = outcome,
+    expected_direction = expected_direction,
+    estimate = estimate,
+    se = se,
+    p_value = p_value,
+    ci_95_low = as.numeric(ci[1, 1]),
+    ci_95_high = as.numeric(ci[1, 2]),
+    n_obs = stats::nobs(fit),
+    n_countries = dplyr::n_distinct(data$iso3c),
+    n_resolutions = dplyr::n_distinct(data$rcid),
+    inference_status = inference_note,
+    error = ""
+  )
+}
+
+selective_unga_fit_vote_model_set <- function(data, model_label, sample_label,
+                                              vcov_formula = ~iso3c,
+                                              inference_note = "Model-based country-clustered SE; fixed effects for country and resolution. With one treated country, country-placebo inference is primary.") {
+  dplyr::bind_rows(
+    selective_unga_fit_vote_model(
+      data,
+      outcome = "distance_to_china_vote",
+      model_label = model_label,
+      sample_label = sample_label,
+      expected_direction = "negative",
+      vcov_formula = vcov_formula,
+      inference_note = inference_note
+    ),
+    selective_unga_fit_vote_model(
+      data,
+      outcome = "distance_to_usa_vote",
+      model_label = model_label,
+      sample_label = sample_label,
+      expected_direction = "positive",
+      vcov_formula = vcov_formula,
+      inference_note = inference_note
+    ),
+    selective_unga_fit_vote_model(
+      data,
+      outcome = "distance_china_minus_usa",
+      model_label = model_label,
+      sample_label = sample_label,
+      expected_direction = "negative",
+      vcov_formula = vcov_formula,
+      inference_note = inference_note
+    ),
+    selective_unga_fit_vote_model(
+      data,
+      outcome = "closer_to_china_than_usa",
+      model_label = model_label,
+      sample_label = sample_label,
+      expected_direction = "positive",
+      vcov_formula = vcov_formula,
+      inference_note = inference_note
+    ),
+    selective_unga_fit_vote_model(
+      data,
+      outcome = "closer_to_china_score",
+      model_label = model_label,
+      sample_label = sample_label,
+      expected_direction = "positive",
+      vcov_formula = vcov_formula,
+      inference_note = inference_note
+    ),
+    selective_unga_fit_vote_model(
+      data,
+      outcome = "agreement_china_minus_usa",
+      model_label = model_label,
+      sample_label = sample_label,
+      expected_direction = "positive",
+      vcov_formula = vcov_formula,
+      inference_note = inference_note
+    )
+  )
+}
+
+selective_unga_country_placebo <- function(data, outcome, expected_direction) {
+  units <- sort(unique(data$iso3c))
+  results <- dplyr::bind_rows(lapply(units, function(unit) {
+    placebo_data <- data |>
+      dplyr::mutate(placebo_post = as.integer(iso3c == unit & year >= 2009))
+    selective_unga_fit_vote_model(
+      placebo_data,
+      outcome = outcome,
+      treatment_var = "placebo_post",
+      model_label = paste0("Placebo treated unit: ", unit),
+      sample_label = "Human-rights China-US divergent votes",
+      expected_direction = expected_direction,
+      inference_note = "Country placebo estimate; same fixed effects and country-clustered SE."
+    ) |>
+      dplyr::mutate(placebo_unit = unit, .before = model)
+  }))
+
+  brazil_est <- results |>
+    dplyr::filter(placebo_unit == "BRA") |>
+    dplyr::pull(estimate)
+
+  if (expected_direction == "negative") {
+    results <- results |>
+      dplyr::mutate(
+        expected_rank = rank(estimate, ties.method = "min", na.last = "keep"),
+        more_extreme_than_brazil = estimate <= brazil_est,
+        strictly_more_extreme_than_brazil = estimate < brazil_est
+      )
+  } else {
+    results <- results |>
+      dplyr::mutate(
+        expected_rank = rank(-estimate, ties.method = "min", na.last = "keep"),
+        more_extreme_than_brazil = estimate >= brazil_est,
+        strictly_more_extreme_than_brazil = estimate > brazil_est
+      )
+  }
+
+  results |>
+    dplyr::mutate(
+      brazil_estimate = brazil_est,
+      randomization_p_two_sided = mean(abs(estimate) >= abs(brazil_est), na.rm = TRUE),
+      randomization_p_directional = mean(more_extreme_than_brazil, na.rm = TRUE),
+      randomization_p_two_sided_strict_donor = mean(
+        abs(estimate[placebo_unit != "BRA"]) > abs(brazil_est),
+        na.rm = TRUE
+      ),
+      randomization_p_directional_strict_donor = mean(
+        strictly_more_extreme_than_brazil[placebo_unit != "BRA"],
+        na.rm = TRUE
+      )
+    )
+}
+
+selective_unga_fit_ddd_model <- function(data, outcome, vcov_formula, vcov_label) {
+  model_label <- paste0("DDD HR vs non-HR among China-US divergent votes; ", vcov_label)
+  if (nrow(data) == 0L || !outcome %in% names(data)) {
+    return(tibble::tibble(
+      model = model_label,
+      outcome = outcome,
+      term = character(),
+      estimate = numeric(),
+      se = numeric(),
+      p_value = numeric(),
+      ci_95_low = numeric(),
+      ci_95_high = numeric(),
+      n_obs = integer(),
+      n_countries = integer(),
+      n_resolutions = integer(),
+      inference_status = character(),
+      error = character()
+    ))
+  }
+
+  fit_data <- data |>
+    dplyr::mutate(
+      human_rights_binary = as.integer(issue_domain == "Human rights"),
+      brazil_post_hr = brazil_post_2009 * human_rights_binary
+    )
+  fml <- stats::as.formula(paste0(outcome, " ~ brazil_post_2009 + brazil_post_hr | iso3c + rcid"))
+  fit <- tryCatch(
+    fixest::feols(fml, data = fit_data, vcov = vcov_formula, notes = FALSE),
+    error = function(e) e
+  )
+  if (inherits(fit, "error")) {
+    return(tibble::tibble(
+      model = model_label,
+      outcome = outcome,
+      term = c("brazil_post_2009", "brazil_post_hr"),
+      estimate = NA_real_,
+      se = NA_real_,
+      p_value = NA_real_,
+      ci_95_low = NA_real_,
+      ci_95_high = NA_real_,
+      n_obs = nrow(fit_data),
+      n_countries = dplyr::n_distinct(fit_data$iso3c),
+      n_resolutions = dplyr::n_distinct(fit_data$rcid),
+      inference_status = "Model failed.",
+      error = conditionMessage(fit)
+    ))
+  }
+
+  terms <- c("brazil_post_2009", "brazil_post_hr")
+  estimates <- stats::coef(fit)[terms]
+  ses <- tryCatch(fixest::se(fit)[terms], error = function(e) rep(NA_real_, length(terms)))
+  pvals <- tryCatch(fixest::pvalue(fit)[terms], error = function(e) rep(NA_real_, length(terms)))
+  cis <- tryCatch(stats::confint(fit, parm = terms), error = function(e) {
+    matrix(NA_real_, nrow = length(terms), ncol = 2, dimnames = list(terms, c("2.5 %", "97.5 %")))
+  })
+
+  tibble::tibble(
+    model = model_label,
+    outcome = outcome,
+    term = terms,
+    estimate = as.numeric(estimates),
+    se = as.numeric(ses),
+    p_value = as.numeric(pvals),
+    ci_95_low = as.numeric(cis[, 1]),
+    ci_95_high = as.numeric(cis[, 2]),
+    n_obs = stats::nobs(fit),
+    n_countries = dplyr::n_distinct(fit_data$iso3c),
+    n_resolutions = dplyr::n_distinct(fit_data$rcid),
+    inference_status = paste0(
+      "Model-based ",
+      vcov_label,
+      ". The interaction term tests whether the Brazil post-2009 shift is stronger in human-rights than non-human-rights divergent votes."
+    ),
+    error = ""
+  )
+}
+
+build_selective_china_alignment_unga_targets <- function(synth_data,
+                                                         unvotes_tarball,
+                                                         years = 2005:2012) {
+  donor_iso3c <- synth_data |>
+    dplyr::distinct(iso3c) |>
+    dplyr::filter(!iso3c %in% c("BRA", "USA")) |>
+    dplyr::pull(iso3c) |>
+    sort()
+
+  vote_panel <- selective_unga_build_vote_panel(
+    raw_tarball = unvotes_tarball,
+    donor_iso3c = donor_iso3c,
+    years = years
+  )
+
+  main_vote_panel <- vote_panel |>
+    dplyr::filter(iso3c %in% c("BRA", donor_iso3c))
+
+  hr_divergent <- main_vote_panel |>
+    dplyr::filter(issue_domain == "Human rights", china_usa_divergent)
+  hr_strong_divergent <- main_vote_panel |>
+    dplyr::filter(issue_domain == "Human rights", china_usa_strong_divergent)
+  nonhr_divergent <- main_vote_panel |>
+    dplyr::filter(issue_domain == "Non-human rights", china_usa_divergent)
+  nonhr_strong_divergent <- main_vote_panel |>
+    dplyr::filter(issue_domain == "Non-human rights", china_usa_strong_divergent)
+  hr_all <- main_vote_panel |>
+    dplyr::filter(issue_domain == "Human rights")
+  nonhr_all <- main_vote_panel |>
+    dplyr::filter(issue_domain == "Non-human rights")
+
+  vote_models <- dplyr::bind_rows(
+    selective_unga_fit_vote_model_set(hr_divergent, "Country + resolution FE", "Human-rights China-US divergent votes"),
+    selective_unga_fit_vote_model_set(hr_strong_divergent, "Country + resolution FE", "Human-rights strong yes/no China-US divergent votes"),
+    selective_unga_fit_vote_model_set(nonhr_divergent, "Country + resolution FE", "Non-human-rights China-US divergent votes"),
+    selective_unga_fit_vote_model_set(nonhr_strong_divergent, "Country + resolution FE", "Non-human-rights strong yes/no China-US divergent votes"),
+    selective_unga_fit_vote_model_set(hr_all, "Country + resolution FE", "All human-rights votes"),
+    selective_unga_fit_vote_model_set(nonhr_all, "Country + resolution FE", "All non-human-rights votes")
+  ) |>
+    dplyr::mutate(
+      direction_matches_expected = dplyr::case_when(
+        expected_direction == "negative" ~ estimate < 0,
+        expected_direction == "positive" ~ estimate > 0,
+        TRUE ~ NA
+      )
+    )
+
+  divergent_all <- main_vote_panel |>
+    dplyr::filter(china_usa_divergent) |>
+    dplyr::mutate(human_rights_binary = as.integer(issue_domain == "Human rights"))
+
+  ddd_models <- dplyr::bind_rows(
+    selective_unga_fit_ddd_model(
+      divergent_all,
+      "distance_china_minus_usa",
+      vcov_formula = ~iso3c,
+      vcov_label = "country-clustered SE"
+    ),
+    selective_unga_fit_ddd_model(
+      divergent_all,
+      "distance_china_minus_usa",
+      vcov_formula = ~iso3c + rcid,
+      vcov_label = "two-way clustered SE by country and resolution"
+    ),
+    selective_unga_fit_ddd_model(
+      divergent_all,
+      "agreement_china_minus_usa",
+      vcov_formula = ~iso3c,
+      vcov_label = "country-clustered SE"
+    ),
+    selective_unga_fit_ddd_model(
+      divergent_all,
+      "agreement_china_minus_usa",
+      vcov_formula = ~iso3c + rcid,
+      vcov_label = "two-way clustered SE by country and resolution"
+    )
+  ) |>
+    dplyr::mutate(
+      expected_direction = dplyr::case_when(
+        outcome == "distance_china_minus_usa" & term == "brazil_post_hr" ~ "negative incremental HR effect",
+        outcome == "agreement_china_minus_usa" & term == "brazil_post_hr" ~ "positive incremental HR effect",
+        term == "brazil_post_2009" ~ "non-HR Brazil post component",
+        TRUE ~ "diagnostic"
+      ),
+      direction_matches_expected = dplyr::case_when(
+        expected_direction == "negative incremental HR effect" ~ estimate < 0,
+        expected_direction == "positive incremental HR effect" ~ estimate > 0,
+        TRUE ~ NA
+      )
+    )
+
+  country_placebos <- dplyr::bind_rows(
+    selective_unga_country_placebo(hr_divergent, "distance_china_minus_usa", "negative"),
+    selective_unga_country_placebo(hr_divergent, "closer_to_china_score", "positive")
+  )
+
+  country_placebo_summary <- country_placebos |>
+    dplyr::group_by(outcome) |>
+    dplyr::summarise(
+      brazil_estimate = estimate[placebo_unit == "BRA"][1],
+      brazil_rank_expected_direction = expected_rank[placebo_unit == "BRA"][1],
+      n_placebo_units = sum(!is.na(estimate)),
+      p_directional = randomization_p_directional[placebo_unit == "BRA"][1],
+      p_two_sided = randomization_p_two_sided[placebo_unit == "BRA"][1],
+      p_directional_strict_donor = randomization_p_directional_strict_donor[placebo_unit == "BRA"][1],
+      p_two_sided_strict_donor = randomization_p_two_sided_strict_donor[placebo_unit == "BRA"][1],
+      .groups = "drop"
+    ) |>
+    dplyr::mutate(
+      randomization_p_directional = p_directional,
+      randomization_p_two_sided = p_two_sided,
+      randomization_p_directional_strict_donor = p_directional_strict_donor,
+      randomization_p_two_sided_strict_donor = p_two_sided_strict_donor,
+      interpretation = dplyr::case_when(
+        p_directional <= 0.10 ~ "Brazil is in the directional tail of the donor-placebo distribution.",
+        TRUE ~ "Brazil is not unusually extreme relative to donor-placebo estimates."
+      )
+    ) |>
+    dplyr::select(-p_directional, -p_two_sided, -p_directional_strict_donor, -p_two_sided_strict_donor) |>
+    dplyr::ungroup()
+
+  list(
+    vote_panel = vote_panel,
+    vote_models = vote_models,
+    ddd_models = ddd_models,
+    country_placebos = country_placebos,
+    country_placebo_summary = country_placebo_summary
+  )
+}

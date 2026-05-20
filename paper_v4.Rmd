@@ -455,19 +455,9 @@ knitr::kable(
 ## Issue-Area Evidence: Where Did Convergence Occur?
 
 ```{r selective-unga-diagnostic-numbers, include=FALSE}
-selective_unga_dir <- here::here("quality_reports", "selective_china_alignment_unga")
-selective_vote_models <- readr::read_csv(
-  file.path(selective_unga_dir, "selective_china_alignment_vote_level_models.csv"),
-  show_col_types = FALSE
-)
-selective_ddd_models <- readr::read_csv(
-  file.path(selective_unga_dir, "selective_china_alignment_ddd_hr_nonhr_models.csv"),
-  show_col_types = FALSE
-)
-selective_country_placebo <- readr::read_csv(
-  file.path(selective_unga_dir, "selective_china_alignment_country_placebo_summary.csv"),
-  show_col_types = FALSE
-)
+selective_vote_models <- tar_read(selective_china_alignment_vote_level_models)
+selective_ddd_models <- tar_read(selective_china_alignment_ddd_hr_nonhr_models)
+selective_country_placebo <- tar_read(selective_china_alignment_country_placebo_summary)
 
 hr_china_us_diff <- selective_vote_models %>%
   dplyr::filter(

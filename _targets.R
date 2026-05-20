@@ -87,6 +87,18 @@ list(
   # SDiD
   tar_target(synth_data, clean_synth_data(final_df, ranked_trade_data=trade_data_ranked,
                                          dpi_data=dpi_data, trade_agreement_data=trade_agreement_data)),
+  # Vote-level selective UNGA alignment diagnostics for the paper
+  tar_target(selective_china_alignment_unga_targets_bundle,
+             build_selective_china_alignment_unga_targets(
+               synth_data = synth_data,
+               unvotes_tarball = unvotes_tarball
+             )),
+  tar_target(selective_china_alignment_vote_level_models,
+             selective_china_alignment_unga_targets_bundle$vote_models),
+  tar_target(selective_china_alignment_ddd_hr_nonhr_models,
+             selective_china_alignment_unga_targets_bundle$ddd_models),
+  tar_target(selective_china_alignment_country_placebo_summary,
+             selective_china_alignment_unga_targets_bundle$country_placebo_summary),
   # residuals all countries
   tar_target(synth_fit, simple_fit(data=synth_data, filter_latin_america=FALSE)),
   tar_target(se_synth , se_sdid(synth_fit)),
