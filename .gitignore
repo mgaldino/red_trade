@@ -56,3 +56,6 @@ references/
 replication package/
 quality_reports/
 presentations/
+
+# Private editorial/reviewer correspondence
+reports/*decision_reviews*.md
