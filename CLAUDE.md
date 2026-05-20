@@ -13,6 +13,10 @@ Autor: Manoel Galdino (DCP-USP).
 - Arquivo ativo do paper: `paper_v4.Rmd`.
 - Para consultar o snapshot: `git show v4.2:paper_v4.Rmd`.
 
+## Estado recente
+
+- **2026-05-20 — coarse review, comentários menores**: o parecer local `coarse-review` gerou 26 comentários específicos. Após triagem do autor, C01-C16 e C18-C26 foram implementados ou resolvidos em `paper_v4.Rmd`; C17 ficou deliberadamente deferido. Plano e pendências filtradas estão em `quality_reports/coarse_review/plan_minor_comments_coarse_review_2026-05-20.md` e `quality_reports/coarse_review/pendencias_minor_comments_coarse_review_2026-05-20.md`.
+
 ## Pendência alta
 
 - **2026-05-12 — harmonizar contagens cross-country**: o abstract de `paper_v4.Rmd` afirma "4 de 8 tratados" com reversões, mas os resultados/targets atuais indicam 99 países no painel, 59 tratados, 52 switching e 7 absorbing. Antes de nova submissão ou apresentação acompanhada do manuscrito, revisar `paper_v4.Rmd`, `paper_v4_anonymous.Rmd` e materiais derivados. Documento versionável: `PENDING.md`. Nota local detalhada: `quality_reports/2026-05-12_high_priority_pending_cross_country_counts.md`.

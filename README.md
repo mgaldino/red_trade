@@ -13,6 +13,17 @@ Compiled PDF:
 **Q2. What is the current manuscript source in the replication package?**  
 `/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/replication package/paper_v3.Rmd`
 
+**Q2a. What is the active development manuscript?**
+`/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd`
+
+As of 2026-05-20, the detailed minor-comment pass from the local `coarse-review`
+has been triaged and mostly implemented. Comments C01-C16 and C18-C26 are
+implemented or resolved in `paper_v4.Rmd`; C17 was deliberately deferred. The
+tracking files are:
+
+- `quality_reports/coarse_review/plan_minor_comments_coarse_review_2026-05-20.md`
+- `quality_reports/coarse_review/pendencias_minor_comments_coarse_review_2026-05-20.md`
+
 **Q3. What should be run first for reproducibility?**  
 Restore `renv`, run `targets::tar_make()`, then render `paper_v3.Rmd`.
 

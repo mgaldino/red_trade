@@ -1,5 +1,33 @@
 # Pendências do Projeto
 
+## Estado recente
+
+### 2026-05-20 — Coarse review: comentários menores em `paper_v4.Rmd`
+
+**Status**: Em grande parte resolvida — C17 deferido
+**Escopo**: `paper_v4.Rmd` e relatórios em `quality_reports/coarse_review/`
+**Prioridade**: MÉDIA
+
+O parecer local `coarse-review` de 2026-05-20 gerou 26 comentários específicos
+menores. Após triagem do autor, foram implementados ou marcados como resolvidos
+os comentários C01-C16 e C18-C26. O comentário C17 foi explicitamente deixado
+para depois.
+
+Arquivos de rastreamento:
+
+- Plano completo: `quality_reports/coarse_review/plan_minor_comments_coarse_review_2026-05-20.md`
+- Pendências filtradas: `quality_reports/coarse_review/pendencias_minor_comments_coarse_review_2026-05-20.md`
+- HTMLs correspondentes na mesma pasta.
+
+**Ação necessária**:
+
+1. Decidir quando retomar o C17, relativo à apresentação visual/amostral dos
+   headlines.
+2. Depois de resolver C17, remover esta pendência ou marcá-la como fechada.
+
+**Critério de resolução**: C17 tratado no manuscrito/material visual, com tabela
+de pendências de comentários menores vazia ou marcada como concluída.
+
 ## Alta Prioridade
 
 ### 2026-05-12 — Harmonizar contagens cross-country no manuscrito
