@@ -1,0 +1,7 @@
+specification,treatment_onset,estimate,se_placebo,p_value,ci_95_low,ci_95_high,fit_status,inference,covariates_added
+manuscript_main,2009,-0.26394046182119363,0.12299900050401083,0.03188296479204858,-0.5050140729434788,-0.02286685069890851,existing target,placebo SE from target `se_synth`,none beyond manuscript Table 3 baseline
+plus_smooth_china_share,2009,-0.24715960586769792,NA,NA,NA,NA,ok,point estimate only; placebo SE not recomputed for expanded exploratory SDiD,logit/sqrt/delta transformations of China export share
+plus_destination_concentration,2009,-0.25490669751233724,NA,NA,NA,NA,ok,point estimate only; placebo SE not recomputed for expanded exploratory SDiD,destination HHI and top-partner export share
+plus_rank_margin_bad_control,2009,-0.2576395255194509,NA,NA,NA,NA,ok,point estimate only; placebo SE not recomputed for expanded exploratory SDiD,"destination HHI, top-partner share, and China margin over competitor"
+plus_commodity_gfc_exposure,2009,-0.30552253499730436,NA,NA,NA,NA,ok,point estimate only; placebo SE not recomputed for expanded exploratory SDiD,pre-2009 primary export composition and 2008-2009 exposure interactions
+full_diagnostic,2009,-0.2813685970239332,NA,NA,NA,NA,ok,point estimate only; placebo SE not recomputed for expanded exploratory SDiD,"smooth share, concentration, margin, commodity composition, and 2008-2009 interactions"

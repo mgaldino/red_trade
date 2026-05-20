@@ -17,7 +17,7 @@ header-includes:
 - \usepackage{float}
 - \newcommand{\argmin}{\mathop{\mathrm{argmin}}\limits}
 fontsize: 12pt
-abstract: "\\singlespacing  How do trade-based status gains affect UNGA voting convergence toward China? I argue that rank reversals in trade hierarchies create politically usable status cues: when China becomes a country's top export destination and remains there, policymakers can more easily justify selective diplomatic adjustment toward Beijing. I test the argument in Brazil, where China overtook the United States as the largest export destination in 2009, using Synthetic Difference-in-Differences on UNGA ideal-point distance. Brazil's ideal-point distance to China fell by 0.26 units, about 41 percent of its pre-treatment mean, and identical Brazil-China voting on human-rights resolutions rose by 7.5 percentage points. Brazilian newspaper evidence shows increased China-related trade salience after the rank reversal. Cross-country estimates from an interactive fixed-effects panel model show the same directional pattern among countries where China persistently becomes the top export destination. The evidence suggests that discrete and durable trade-status milestones can shape observable multilateral alignment beyond smooth trade growth."
+abstract: "\\singlespacing  How do trade-based status gains affect UNGA voting convergence toward China? I argue that rank reversals in trade hierarchies create politically usable status cues: when China becomes a country's top export destination and remains there, policymakers can more easily justify selective diplomatic adjustment toward Beijing. I test the argument in Brazil, where China overtook the United States as the largest export destination in 2009, using Synthetic Difference-in-Differences on UNGA ideal-point distance. Brazil's ideal-point distance to China fell by 0.26 units, about 41 percent of its pre-treatment mean, and vote-level diagnostics show that the post-2009 movement is clearest in human-rights resolutions where China and the United States diverged. Brazilian newspaper evidence shows increased China-related trade salience after the rank reversal. Cross-country estimates from an interactive fixed-effects panel model show the same directional pattern among countries where China persistently becomes the top export destination. The evidence suggests that discrete and durable trade-status milestones can shape observable multilateral alignment beyond smooth trade growth."
 geometry: margin=2.5cm
 spacing: double
 mainfont: Times New Roman
@@ -121,6 +121,8 @@ A trade-based status shift differs from smooth growth in economic interdependenc
 The cue should matter most when the new status also displaces a politically prominent incumbent. If a rising major power overtakes a minor partner, the event may remain a commercial fact with limited political resonance. If it overtakes the hegemonic incumbent, the same threshold takes on broader political meaning. It can be read as a visible loss of standing for the incumbent and as a public marker of the challenger's rise. Brazil falls squarely inside this high-salience condition: China became Brazil's largest export destination in 2009, displaced the United States, and contemporary coverage frequently described the event in broader top-partner language.
 
 The mechanism has two steps. First, the status cue should increase attention. Media coverage should make the challenger and the bilateral trade relationship more visible after the threshold is crossed. Second, the cue should affect policy through justification. Once that power is publicly understood as a central economic partner, executives and diplomats can frame limited movement toward it as pragmatic recognition of the country's economic hierarchy rather than as ideological concession or opportunistic bandwagoning. This step can be gradual because UNGA positions are embedded in prior votes, bureaucratic routines, coalition commitments, and reputational constraints. The Brazilian SDiD design estimates the combined reduced-form effect of this status cue on UNGA distance to China.
+
+The justification mechanism also implies a durability condition. The rank reversal is not expected to reshape foreign policy through a single decision at the moment China becomes number one. Rather, it creates a public category that officials can invoke repeatedly across a sequence of selective adjustments. When China remains the leading export destination, presidents, ministers, diplomats, and organized interests can treat its centrality as a stable fact of the national economic hierarchy and use it to justify incremental diplomatic movement. A one-year China-top episode may attract attention, but it is a weaker treatment regime: it does not provide a durable basis for repeated public justification, bureaucratic recalibration, or cumulative foreign-policy adaptation.
 
 ## From Attention to Selective Diplomatic Alignment
 
@@ -240,7 +242,7 @@ For the cross-country evidence beyond Brazil, the main sample is restricted to p
 
 The empirical problem is that China's rise in a country's trade hierarchy is not randomly assigned. Countries may move closer to China because trade exposure accumulates continuously, because domestic political coalitions or foreign-policy doctrines change, or because governments already inclined toward China deepen commercial ties before the rank reversal occurs. The design therefore asks the identifying question: whether foreign-policy alignment changes around the discrete status threshold after accounting for pre-treatment trajectories and observed sources of economic, geopolitical, and domestic-political orientation.
 
-In the Brazil design, SDiD constructs a weighted counterfactual from pre-treatment information. The covariates are not included simply to improve fit. They map directly onto the rival explanations. Trade shares with China and the United States absorb smooth changes in economic exposure; relative power, geographic distance to Washington, and U.S. trade-agreement ties capture structural exposure to the incumbent power; leader ideology, regime institutions, and macroeconomic stress account for domestic-political reorientation and contemporaneous shocks. The rank-versus-volume timing tests then ask whether earlier trade growth or lower-rank promotions generate the same estimated convergence as the top-rank reversal.
+In the Brazil design, SDiD constructs a weighted counterfactual from pre-treatment information. The covariates are not included simply to improve fit. They map directly onto the rival explanations. Trade shares with China and the United States absorb smooth changes in economic exposure; relative power, geographic distance to Washington, and U.S. trade-agreement ties capture structural exposure to the incumbent power; leader ideology, regime institutions, and macroeconomic stress account for domestic-political reorientation and contemporaneous shocks. The demand-shock diagnostics further add smooth China-share transformations, export-destination concentration, pre-2009 primary-goods export exposure, and 2008-2009 exposure interactions. The rank-versus-volume timing tests then ask whether earlier trade growth or lower-rank promotions generate the same estimated convergence as the top-rank reversal.
 
 The cross-country panel provides a second check against Brazil-specific timing explanations. Treated countries enter the persistent China-top condition in different years, so a Brazil-specific 2009 shock cannot mechanically generate the pooled result. Interactive fixed effects allow countries to load differently on common latent shocks, while covariate-adjusted specifications probe whether the estimated pattern survives adjustment for development and public-salience conditions.
 
@@ -256,7 +258,7 @@ tar_read(goal3_brazil_rank_volume_plot)
 
 Figure \@ref(fig:plot-sdid) presents the main SDiD fit. The pre-treatment fit is close enough to make the post-treatment comparison informative, and the post-2009 gap is negative, indicating convergence toward China. The point estimate is `r sprintf('%1.2f', estimate)` ideal-point units, with placebo-based SE `r sprintf('%1.2f', se_estimate)` and p-value `r sprintf('%.3f', p_estimate)`. Relative to Brazil's pre-treatment mean distance (`r sprintf('%.3f', mean_br)`), this corresponds to a `r sprintf('%.1f', perc_change)` percent reduction. The estimate summarizes the average post-treatment gap. Appendix Figure \@ref(fig:appendix-brazil-china-ideal-points) plots the underlying Brazil and China ideal-point series separately; China is comparatively stable, so the post-2009 reduction in absolute distance is driven mainly by movement in Brazil's position rather than by China moving toward Brazil.
 
-```{r plot-sdid, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("SDiD fit for Brazil and synthetic control with time weights. Lower values indicate convergence toward China; the post-treatment gap is an average post-2009 reduced-form effect. ", caption_note(unit = "Absolute UNGA ideal-point distance to China", se = "placebo-based SE and p-values reported in the table", window = "Brazil annual series")), fig.pos="H"}
+```{r plot-sdid, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("SDiD fit for Brazil and synthetic control with time weights. Lower values indicate convergence toward China; the post-treatment gap is an average post-2009 reduced-form effect. ", caption_note(unit = "Absolute UNGA ideal-point distance to China", se = "placebo-based SE with 1,000 replications; p-values reported in the table", window = "Brazil annual series")), fig.pos="H"}
 tar_read(plot_trend)
 ```
 
@@ -285,7 +287,7 @@ knitr::kable(
   kableExtra::footnote(
     general = paste0(
       "ATT is absolute UNGA ideal-point distance to China; negative values mean convergence. ",
-      "Placebo-based SEs are in parentheses. Checkmarks show included covariate groups. ",
+      "Placebo-based SEs with 1,000 replications are in parentheses. Checkmarks show included covariate groups. ",
       "Donor counts exclude Brazil. Column (3) uses pre-treatment or time-invariant covariates held fixed across panel years."
     ),
     general_title = "Note: ",
@@ -294,11 +296,50 @@ knitr::kable(
   )
 ```
 
-The rank interpretation requires more than showing that trade with China was increasing. Brazil's exports to China grew before 2009, including years in which China rose in the export hierarchy but did not become number one. The timing tests in Table \@ref(tab:table-placebo) therefore ask whether rapid trade growth and lower-rank promotions generate the same estimated UNGA convergence as the top-rank reversal. They do not. The 2003 and 2005 rows are timing falsifications for the continuous-growth alternative. The 2012 row probes whether the result is driven by a later break after China had already become the top destination.
+```{r china-demand-sdid-numbers, include=FALSE}
+china_demand_sdid_results <- tryCatch(
+  tar_read(china_demand_sdid_diagnostics_table),
+  error = function(e) {
+    readr::read_csv(
+      here::here(
+        "quality_reports",
+        "china_demand_shock_rank_threshold",
+        "table_3_brazil_sdid_expanded_controls.csv"
+      ),
+      show_col_types = FALSE
+    ) %>%
+      dplyr::mutate(
+        label = dplyr::case_when(
+          specification == "manuscript_main" ~ "Manuscript main",
+          specification == "plus_smooth_china_share" ~ "Smooth share",
+          specification == "plus_destination_concentration" ~ "Concentration",
+          specification == "plus_rank_margin_bad_control" ~ "Rank margin",
+          specification == "plus_commodity_gfc_exposure" ~ "Commodity/GFC exposure",
+          specification == "full_diagnostic" ~ "Full stress test",
+          TRUE ~ specification
+        ),
+        control_family = covariates_added
+      )
+  }
+)
+china_demand_main <- china_demand_sdid_results %>%
+  dplyr::filter(specification == "manuscript_main") %>%
+  dplyr::slice_head(n = 1)
+china_demand_commodity <- china_demand_sdid_results %>%
+  dplyr::filter(specification %in% c("commodity_gfc_exposure", "plus_commodity_gfc_exposure")) %>%
+  dplyr::slice_head(n = 1)
+china_demand_full <- china_demand_sdid_results %>%
+  dplyr::filter(specification %in% c("full_stress_test", "full_diagnostic")) %>%
+  dplyr::slice_head(n = 1)
+```
+
+The rank interpretation requires more than showing that trade with China was increasing. Brazil's exports to China grew before 2009, including years in which China rose in the export hierarchy but did not become number one. The timing tests in Table \@ref(tab:table-placebo) therefore ask whether rapid trade growth and lower-rank promotions generate the same estimated UNGA convergence as the top-rank reversal. They do not. The 2003, 2004, and 2005 rows are timing and lower-threshold falsifications for the continuous-growth alternative: 2004 is especially useful because China first reaches rank #2 but is still not Brazil's largest export destination. The 2012 row probes whether the result is driven by a later break after China had already become the top destination.
 
 The same timing logic addresses the main Brazilian political confounder. President Lula da Silva took office in 2003 and pursued a more explicit South-South foreign-policy agenda, a shift emphasized in work on Brazilian autonomy, presidential foreign policy, and international engagement [@neto2011; @mouron_urdinez2014; @neto_malamud2015; @rodrigues2019measuring; @schenoniMythsMultipolaritySources2022]. If that ideological shift were sufficient to explain Brazil-China UNGA convergence, the pseudo-treatment years in 2003 or 2005 should already show comparable movement. They do not. The cross-country panel also estimates the rank-threshold pattern across countries with different political systems and leadership profiles, which reduces the concern that the Brazil estimate is only a Lula-period artifact.
 
-A remaining concern is that 2009 bundled the Brazilian rank reversal with other contemporaneous shocks, including the global financial crisis, the BRICS/G20 moment, and the commodity cycle. The cross-country panel below probes this class of explanation. Brazil is included in the absorbing cross-country sample, but the panel aligns countries by their own persistent China-top entry years, which range from 2003 to 2021 in the main specification. A Brazil-specific 2009 confounder cannot mechanically generate an average event-time effect across countries treated in different calendar years. For such an explanation to account for both the Brazil estimate and the cross-country result, the omitted force would need to coincide with persistent China-top entry across countries, affect UNGA distance to China in the same direction, and remain outside the observed covariates and the latent factors captured by the interactive fixed-effects specification. In sensitivity-analysis terms, it would need enough residual association with both treatment timing and the outcome to overturn estimates that are stable across timing tests, donor-pool checks, estimators, and covariate choices [@cinelli_hazlett2020; @oster2019].
+A remaining concern is that 2009 bundled the Brazilian rank reversal with other contemporaneous shocks, including the global financial crisis, the BRICS/G20 moment, and the commodity cycle. Table \@ref(tab:china-demand-sdid-diagnostics) addresses this critique inside the same Brazil SDiD framework. The main estimate is `r sprintf("%.3f", china_demand_main$estimate)`; after adding pre-2009 primary-goods export exposure and 2008-2009 exposure interactions it is `r sprintf("%.3f", china_demand_commodity$estimate)`, and the full stress test returns `r sprintf("%.3f", china_demand_full$estimate)`. The sign and magnitude therefore do not collapse when the categorical China #1 onset is estimated alongside continuous China-share growth, export concentration, commodity exposure, rank-margin stress tests, and global-crisis interactions. This does not prove that the rank cue is experimentally isolated from every contemporaneous political shock. It does show that the result is not an artifact of omitting smooth China-demand exposure from the SDiD design.
+
+The cross-country panel below is a broader scope check, not the main answer to the Brazil-specific demand-shock critique. Brazil is included in the absorbing cross-country sample, but the panel aligns countries by their own persistent China-top entry years, which range from 2003 to 2021 in the main specification. A Brazil-specific 2009 confounder cannot mechanically generate an average event-time effect across countries treated in different calendar years. For such an explanation to account for both the Brazil estimate and the cross-country result, the omitted force would need to coincide with persistent China-top entry across countries, affect UNGA distance to China in the same direction, and remain outside the observed covariates and the latent factors captured by the interactive fixed-effects specification. In sensitivity-analysis terms, it would need enough residual association with both treatment timing and the outcome to overturn estimates that are stable across timing tests, donor-pool checks, estimators, and covariate choices [@cinelli_hazlett2020; @oster2019].
 
 ```{r table-placebo, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 rank_tests <- tar_read(goal3_brazil_placebo_rank_volume_tests) %>%
@@ -306,6 +347,7 @@ rank_tests <- tar_read(goal3_brazil_placebo_rank_volume_tests) %>%
     `Timing year` = nominal_treatment_year,
     `Test role` = dplyr::case_when(
       nominal_treatment_year == 2003L ~ "Growth / lower-rank promotion",
+      nominal_treatment_year == 2004L ~ "China #2 threshold",
       nominal_treatment_year == 2005L ~ "Rapid growth without rank 1",
       nominal_treatment_year == 2009L ~ "Actual rank-1 reversal",
       nominal_treatment_year == 2012L ~ "Later-break falsification",
@@ -329,11 +371,11 @@ rank_tests_note <- paste0(
     "",
     caption_note(
       unit = "ATT is absolute UNGA ideal-point distance to China; negative values mean convergence; export margins are current USD billions",
-      se = "normal approximation using placebo-based SE",
-      window = "2003 and 2005 timing tests truncate the sample before 2009; 2012 is a later-break falsification"
+      se = "normal approximation using placebo-based SE with 1,000 replications",
+      window = "2003-2005 timing tests truncate the sample before 2009; 2012 is a later-break falsification"
     )
   ),
-  " The 2003 and 2005 rows are timing falsifications for rapid export growth without rank-1 status."
+  " The 2003, 2004, and 2005 rows are timing and lower-threshold falsifications for rapid export growth without rank-1 status."
 )
 
 knitr::kable(
@@ -356,9 +398,114 @@ knitr::kable(
   )
 ```
 
+```{r china-demand-sdid-diagnostics, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
+china_demand_table <- china_demand_sdid_results %>%
+  dplyr::mutate(
+    Specification = label,
+    ATT = sprintf("%.3f", estimate),
+    `Placebo SE` = sprintf("%.3f", se_placebo),
+    `p-value` = sprintf("%.3f", p_value),
+    `95\\% CI` = paste0("[", sprintf("%.3f", ci_95_low), ", ", sprintf("%.3f", ci_95_high), "]"),
+    `Diagnostic added` = control_family
+  ) %>%
+  dplyr::select(
+    Specification,
+    `Diagnostic added`,
+    ATT,
+    `Placebo SE`,
+    `95\\% CI`,
+    `p-value`
+  )
+
+china_demand_note <- paste0(
+  sub(
+    "^Note: ",
+    "",
+    caption_note(
+      unit = "ATT is absolute UNGA ideal-point distance to China; negative values mean convergence",
+      se = "synthdid placebo SE with 1,000 replications",
+      window = "1997-2015 annual SDiD panel"
+    )
+  ),
+  " All rows keep the binary 2009 China number-one treatment onset. ",
+  "Commodity/GFC exposure uses pre-2009 primary-goods export composition from ITPD-E Agriculture plus Mining and Energy over goods exports, interacted with the 2008-2009 shock window. ",
+  "The full stress test includes the rank margin, which is mechanically related to the threshold and should be read as a conservative diagnostic rather than a preferred control."
+)
+
+knitr::kable(
+  china_demand_table,
+  format = "latex",
+  booktabs = TRUE,
+  escape = FALSE,
+  caption = "Brazil SDiD diagnostics for the China-demand-shock critique.",
+  align = "llcccc"
+) %>%
+  kableExtra::kable_styling(
+    latex_options = c("HOLD_position", "scale_down"),
+    font_size = 8
+  ) %>%
+  kableExtra::footnote(
+    general = china_demand_note,
+    general_title = "Note: ",
+    escape = FALSE,
+    threeparttable = TRUE
+  )
+```
+
 ## Issue-Area Evidence: Where Did Convergence Occur?
 
+```{r selective-unga-diagnostic-numbers, include=FALSE}
+selective_unga_dir <- here::here("quality_reports", "selective_china_alignment_unga")
+selective_vote_models <- readr::read_csv(
+  file.path(selective_unga_dir, "selective_china_alignment_vote_level_models.csv"),
+  show_col_types = FALSE
+)
+selective_ddd_models <- readr::read_csv(
+  file.path(selective_unga_dir, "selective_china_alignment_ddd_hr_nonhr_models.csv"),
+  show_col_types = FALSE
+)
+selective_country_placebo <- readr::read_csv(
+  file.path(selective_unga_dir, "selective_china_alignment_country_placebo_summary.csv"),
+  show_col_types = FALSE
+)
+
+hr_china_us_diff <- selective_vote_models %>%
+  dplyr::filter(
+    sample == "Human-rights China-US divergent votes",
+    outcome == "distance_china_minus_usa"
+  ) %>%
+  dplyr::slice_head(n = 1)
+
+hr_china_us_strong_diff <- selective_vote_models %>%
+  dplyr::filter(
+    sample == "Human-rights strong yes/no China-US divergent votes",
+    outcome == "distance_china_minus_usa"
+  ) %>%
+  dplyr::slice_head(n = 1)
+
+nonhr_china_us_diff <- selective_vote_models %>%
+  dplyr::filter(
+    sample == "Non-human-rights China-US divergent votes",
+    outcome == "distance_china_minus_usa"
+  ) %>%
+  dplyr::slice_head(n = 1)
+
+ddd_hr_increment <- selective_ddd_models %>%
+  dplyr::filter(
+    outcome == "distance_china_minus_usa",
+    term == "brazil_post_hr",
+    stringr::str_detect(model, "country-clustered")
+  ) %>%
+  dplyr::slice_head(n = 1)
+
+distance_placebo <- selective_country_placebo %>%
+  dplyr::filter(outcome == "distance_china_minus_usa") %>%
+  dplyr::slice_head(n = 1)
+```
+
 The aggregate ideal-point estimate raises a substantive question: in what kinds of votes did Brazil move closer to China? Resolution-level diagnostics suggest that the post-2009 convergence was selective rather than uniform. In several issue areas Brazil and China already voted together at high rates before treatment, leaving little room for additional convergence. The more informative domain is human rights, where pre-treatment agreement was lower and where movement toward China carried greater reputational costs for Brazil, given the domestic and international implications of Brazil's human-rights foreign policy [@milani2015humanrights]. In that domain, Brazil-China identical voting increased by `r sprintf("%.1f", human_rights_vote_change)` percentage points after 2009. This pattern is consistent with the proposed mechanism: the trade-rank cue made China's relationship politically usable, allowing policymakers to justify selective convergence in a visible multilateral arena where Brazil had previously maintained more distance.
+
+This descriptive increase does not by itself establish China-specific alignment, because annual issue-area shares can reflect agenda composition and do not compare Brazil with donor countries. I therefore add a more restrictive vote-level diagnostic. In country-resolution regressions with country and resolution fixed effects, restricted to human-rights votes where China and the United States cast different votes, Brazil moves closer to China after 2009 relative to the donor pool. The Brazil-by-post-2009 coefficient is `r sprintf("%.3f", hr_china_us_diff$estimate)` for distance to China minus distance to the United States (model-based SE = `r sprintf("%.3f", hr_china_us_diff$se)`), and `r sprintf("%.3f", hr_china_us_strong_diff$estimate)` when the sample is restricted to strong yes/no China-US disagreements (model-based SE = `r sprintf("%.3f", hr_china_us_strong_diff$se)`). The corresponding non-human-rights estimate is smaller (`r sprintf("%.3f", nonhr_china_us_diff$estimate)`, model-based SE = `r sprintf("%.3f", nonhr_china_us_diff$se)`), and a DDD specification estimates an additional human-rights increment of `r sprintf("%.3f", ddd_hr_increment$estimate)` (model-based SE = `r sprintf("%.3f", ddd_hr_increment$se)`). Because Brazil is the single treated country in this diagnostic, I use country placebos as the main inferential benchmark: Brazil ranks `r sprintf("%.0f", distance_placebo$brazil_rank_expected_direction)` out of `r sprintf("%.0f", distance_placebo$n_placebo_units)` units in the China-specific direction (directional p = `r sprintf("%.3f", distance_placebo$randomization_p_directional)`; strict donor-only p = `r sprintf("%.3f", distance_placebo$randomization_p_directional_strict_donor)`). These diagnostics support a narrower interpretation: the post-2009 movement is strongest in human-rights votes where China and the United States diverged, rather than uniformly across the UNGA agenda.
 
 ```{r issue-area-prepost-table, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 issue_order <- c(
@@ -435,7 +582,7 @@ Figure \@ref(fig:plot-brazil-china-unvotes-issue-year) disaggregates the same di
 tar_read(plot_brazil_china_unvotes_similarity_by_issue_year_2005_2012)
 ```
 
-This issue-area evidence is a diagnostic of substantive content. The SDiD estimate identifies the average post-2009 gap in Brazil's ideal-point distance to China; the resolution-level evidence shows that this gap is not merely an abstract movement in latent space but corresponds to selective convergence in politically meaningful areas. The Brazil evidence therefore points to selective UNGA voting convergence toward China, supported by close pre-treatment fit, covariates for trade exposure and macroeconomic stress, rank-versus-volume timing tests, donor-pool sensitivity checks, and issue-area diagnostics that match the proposed mechanism.
+This issue-area evidence is a diagnostic of substantive content, not a standalone causal test. The SDiD estimate identifies the average post-2009 gap in Brazil's ideal-point distance to China; the vote-level evidence clarifies where that movement is most visible. The strongest support comes from human-rights resolutions in which China and the United States diverged, where Brazil moves closer to China relative to comparable donor countries after 2009. A DDD comparison shows that the human-rights shift is larger than the analogous non-human-rights shift. Country placebos counsel against language implying that Brazil is unique. The Brazil evidence therefore supports a cautious claim of selective UNGA adjustment toward China in politically visible domains, rather than a claim that the issue-area table alone proves selective convergence.
 
 # Brazilian media salience
 
@@ -639,7 +786,7 @@ The cross-country estimand is persistent China-top export-destination status. Th
 
 # Conclusion
 
-The evidence supports a rank-threshold account of UNGA voting convergence toward China. In Brazil, China's 2009 move into the top export-destination position coincided with a publicly visible status cue, and SDiD estimates show that Brazil moved closer to China relative to a synthetic counterfactual. The issue-area evidence suggests that this convergence was selective rather than mechanical, appearing especially where Brazil and China had room to converge and where movement carried reputational costs, such as human rights. The media evidence shows why the rank cue was politically usable: China's new commercial status became visible in public discourse. Cross-country estimates from the IFE model then show that the rank-threshold pattern travels beyond Brazil. The mechanism is measured most directly in the Brazilian case, and the panel evidence extends the argument beyond the theory-generating case: durable top-rank trade milestones can matter for multilateral alignment.
+The evidence supports a rank-threshold account of UNGA voting convergence toward China. In Brazil, China's 2009 move into the top export-destination position coincided with a publicly visible status cue, and SDiD estimates show that Brazil moved closer to China relative to a synthetic counterfactual. The issue-area and vote-level evidence suggest that this convergence was selective rather than mechanical: the strongest additional support comes from human-rights resolutions where China and the United States diverged, and the human-rights shift is larger than the analogous non-human-rights shift. The media evidence shows why the rank cue was politically usable: China's new commercial status became visible in public discourse. Cross-country estimates from the IFE model then show that the rank-threshold pattern travels beyond Brazil. The mechanism is measured most directly in the Brazilian case, and the panel evidence extends the argument beyond the theory-generating case: durable top-rank trade milestones can matter for multilateral alignment.
 
 The paper therefore shifts attention from trade volume alone to the political meaning of trade hierarchies. Continuous exposure matters, but actors also respond to categorical milestones: becoming first, displacing a hegemonic benchmark, and making an economic relationship publicly legible. These thresholds can create opportunities for selective diplomatic adjustment even when the underlying commercial relationship has been growing for years.
 
