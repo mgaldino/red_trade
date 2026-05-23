@@ -973,7 +973,7 @@ make_brazil_sdid_spec_table <- function(synth_fit,
     table = spec_table,
     note = paste0(
       "Unit = ATT in absolute UNGA ideal-point distance to China; lower values indicate convergence toward China. ",
-      "Standard error = placebo-based standard errors shown in parentheses below ATT. ",
+      "Standard error = placebo-based standard errors with 1,000 replications shown in parentheses below ATT. ",
       "Time window = annual country-year SDiD panels shown in the table. ",
       "Treatment definition = Treatment indicator equals 1 from 2009 onward, when China becomes Brazil's top export destination displacing the USA, and 0 before 2009. ",
       "Checkmarks indicate covariates included in each specification. Donor country counts exclude Brazil. ",
@@ -984,8 +984,9 @@ make_brazil_sdid_spec_table <- function(synth_fit,
 
 
 ## compute standard error (plecebos method)
-se_sdid <- function(fitted_model) {
-  se = sqrt(vcov(fitted_model, method = 'placebo'))
+se_sdid <- function(fitted_model, replications = 1000L, seed = 20260520L) {
+  set.seed(seed)
+  se = sqrt(vcov(fitted_model, method = "placebo", replications = replications))
 }
 
 ############################
@@ -3826,33 +3827,37 @@ goal9_brazil_rank_volume_placebos <- function(brazil_rank_volume_data,
                                                se_synth,
                                                placebo_2003_fit,
                                                se_2003,
+                                               placebo_2004_fit,
+                                               se_2004,
                                                placebo_2005_fit,
                                                se_2005,
                                                placebo_2012_fit,
                                                se_2012) {
   estimates <- tibble::tibble(
-    nominal_treatment_year = c(2003L, 2005L, 2009L, 2012L),
+    nominal_treatment_year = c(2003L, 2004L, 2005L, 2009L, 2012L),
     timing_test = c(
       "placebo_2003_growth_rank2",
+      "placebo_2004_china_rank2_threshold",
       "placebo_2005_growth_no_rank1",
       "actual_2009_rank_reversal",
       "post_placebo_2012_later_shock"
     ),
     rank_volume_test_role = c(
       "Growth/promotion placebo: China is not #1.",
+      "Lower-threshold placebo: China reaches #2 but is not #1.",
       "Growth placebo: China is not #1.",
       "Actual rank-1 reversal.",
       "Later-shock placebo after rank reversal."
     ),
-    estimate = as.numeric(c(placebo_2003_fit, placebo_2005_fit, synth_fit, placebo_2012_fit)),
-    se_placebo = as.numeric(c(se_2003, se_2005, se_synth, se_2012))
+    estimate = as.numeric(c(placebo_2003_fit, placebo_2004_fit, placebo_2005_fit, synth_fit, placebo_2012_fit)),
+    se_placebo = as.numeric(c(se_2003, se_2004, se_2005, se_synth, se_2012))
   ) |>
     dplyr::mutate(
       z = estimate / se_placebo,
       p_value = 2 * stats::pnorm(-abs(z)),
       ci_95_low = estimate - stats::qnorm(0.975) * se_placebo,
       ci_95_high = estimate + stats::qnorm(0.975) * se_placebo,
-      inference_status = "Normal approximation using placebo-based SE; timing falsification, not equivalence test."
+      inference_status = "Normal approximation using placebo-based SE with 1,000 replications; timing falsification, not equivalence test."
     )
 
   estimates |>
@@ -3925,6 +3930,396 @@ goal9_make_covariate_array <- function(data, covariate_cols) {
   }
 
   x_array
+}
+
+goal9_scale_vec <- function(x) {
+  if (all(is.na(x))) {
+    return(rep(NA_real_, length(x)))
+  }
+  sdx <- stats::sd(x, na.rm = TRUE)
+  if (is.na(sdx) || sdx == 0) {
+    return(rep(0, length(x)))
+  }
+  as.numeric((x - mean(x, na.rm = TRUE)) / sdx)
+}
+
+goal9_bounded_logit <- function(x, eps = 0.000001) {
+  stats::qlogis(pmin(pmax(x, eps), 1 - eps))
+}
+
+goal9_pre2009_primary_goods_export_exposure <- function(trade_file,
+                                                         start_year = 2004L,
+                                                         end_year = 2008L) {
+  if (!file.exists(trade_file)) {
+    stop("Raw ITPD-E file not found: ", trade_file, call. = FALSE)
+  }
+
+  dt <- data.table::fread(
+    trade_file,
+    select = c("year", "exporter_iso3", "trade", "broad_sector"),
+    showProgress = FALSE
+  )
+  dt <- dt[year >= start_year & year <= end_year]
+  dt[, trade := data.table::fifelse(is.na(trade), 0, as.numeric(trade))]
+  dt[, primary_trade := data.table::fifelse(
+    broad_sector %in% c("Agriculture", "Mining and Energy"),
+    trade,
+    0
+  )]
+  dt[, agriculture_trade := data.table::fifelse(broad_sector == "Agriculture", trade, 0)]
+  dt[, mining_energy_trade := data.table::fifelse(broad_sector == "Mining and Energy", trade, 0)]
+  dt[, services_trade := data.table::fifelse(broad_sector == "Services", trade, 0)]
+
+  yearly <- dt[, .(
+    total_exports_all_sectors = sum(trade, na.rm = TRUE),
+    services_exports = sum(services_trade, na.rm = TRUE),
+    primary_exports = sum(primary_trade, na.rm = TRUE),
+    agriculture_exports = sum(agriculture_trade, na.rm = TRUE),
+    mining_energy_exports = sum(mining_energy_trade, na.rm = TRUE)
+  ), by = .(iso3c = exporter_iso3, year)]
+  yearly[, goods_exports := total_exports_all_sectors - services_exports]
+
+  exposure <- yearly[, .(
+    pre_window_start = start_year,
+    pre_window_end = end_year,
+    observed_years = data.table::uniqueN(year),
+    pre_total_exports_all_sectors = sum(total_exports_all_sectors, na.rm = TRUE),
+    pre_services_exports = sum(services_exports, na.rm = TRUE),
+    pre_goods_exports = sum(goods_exports, na.rm = TRUE),
+    pre_primary_exports = sum(primary_exports, na.rm = TRUE),
+    pre_agriculture_exports = sum(agriculture_exports, na.rm = TRUE),
+    pre_mining_energy_exports = sum(mining_energy_exports, na.rm = TRUE)
+  ), by = iso3c]
+  exposure[, pre_primary_share := data.table::fifelse(
+    pre_goods_exports > 0,
+    pre_primary_exports / pre_goods_exports,
+    NA_real_
+  )]
+  exposure[, pre_agriculture_share := data.table::fifelse(
+    pre_goods_exports > 0,
+    pre_agriculture_exports / pre_goods_exports,
+    NA_real_
+  )]
+  exposure[, pre_mining_energy_share := data.table::fifelse(
+    pre_goods_exports > 0,
+    pre_mining_energy_exports / pre_goods_exports,
+    NA_real_
+  )]
+  exposure[, country_name := goal9_country_name(iso3c)]
+
+  tibble::as_tibble(exposure) |>
+    dplyr::select(
+      iso3c,
+      country_name,
+      pre_window_start,
+      pre_window_end,
+      observed_years,
+      pre_total_exports_all_sectors,
+      pre_services_exports,
+      pre_goods_exports,
+      pre_primary_exports,
+      pre_primary_share,
+      pre_agriculture_share,
+      pre_mining_energy_share
+    ) |>
+    dplyr::arrange(iso3c)
+}
+
+goal9_china_demand_export_panel <- function(trade_data) {
+  ranked <- trade_data |>
+    dplyr::filter(!is.na(year), !is.na(exporter_iso3), !is.na(importer_iso3)) |>
+    dplyr::filter(exporter_iso3 != importer_iso3) |>
+    dplyr::mutate(exports = dplyr::coalesce(as.numeric(exports), 0)) |>
+    dplyr::group_by(year, exporter_iso3) |>
+    dplyr::arrange(dplyr::desc(exports), importer_iso3, .by_group = TRUE) |>
+    dplyr::mutate(
+      export_total = sum(exports, na.rm = TRUE),
+      partner_share = dplyr::if_else(export_total > 0, exports / export_total, NA_real_),
+      partner_rank = dplyr::dense_rank(dplyr::desc(exports)),
+      hhi_destination = sum(partner_share^2, na.rm = TRUE),
+      top_partner = dplyr::first(importer_iso3),
+      top_exports = dplyr::first(exports),
+      top_partner_share = dplyr::first(partner_share),
+      second_partner = dplyr::nth(importer_iso3, 2, default = NA_character_),
+      second_exports = dplyr::nth(exports, 2, default = NA_real_),
+      second_partner_share = dplyr::nth(partner_share, 2, default = NA_real_)
+    ) |>
+    dplyr::ungroup()
+
+  ranked |>
+    dplyr::filter(importer_iso3 == "CHN") |>
+    dplyr::transmute(
+      iso3c = exporter_iso3,
+      year,
+      china_rank = partner_rank,
+      china_top = as.integer(partner_rank == 1L & exports > 0),
+      china_exports = exports,
+      export_total,
+      china_share = dplyr::if_else(export_total > 0, exports / export_total, NA_real_),
+      hhi_destination,
+      top_partner,
+      top_partner_share,
+      second_partner,
+      second_partner_share,
+      competitor_partner = dplyr::if_else(partner_rank == 1L, second_partner, top_partner),
+      competitor_share = dplyr::if_else(partner_rank == 1L, second_partner_share, top_partner_share),
+      china_margin_vs_competitor_share = china_share - competitor_share
+    ) |>
+    dplyr::arrange(iso3c, year)
+}
+
+goal9_build_china_demand_sdid_panel <- function(synth_data,
+                                                trade_data,
+                                                pre_primary_exposure) {
+  export_panel <- goal9_china_demand_export_panel(trade_data)
+
+  out <- synth_data |>
+    dplyr::left_join(
+      export_panel |>
+        dplyr::select(
+          iso3c,
+          year,
+          china_rank,
+          china_top_export_rank = china_top,
+          china_share,
+          hhi_destination,
+          top_partner_share,
+          china_margin_vs_competitor_share
+        ),
+      by = c("iso3c", "year")
+    ) |>
+    dplyr::left_join(
+      pre_primary_exposure |>
+        dplyr::select(
+          iso3c,
+          pre_primary_share,
+          pre_agriculture_share,
+          pre_mining_energy_share
+        ),
+      by = "iso3c"
+    ) |>
+    dplyr::group_by(iso3c) |>
+    dplyr::arrange(year, .by_group = TRUE) |>
+    dplyr::mutate(
+      china_share_delta = china_share - dplyr::lag(china_share),
+      pre_china_share_2004_2008 = mean(china_share[year >= 2004L & year <= 2008L], na.rm = TRUE)
+    ) |>
+    dplyr::ungroup() |>
+    dplyr::mutate(
+      gfc_2008_2009 = as.integer(year %in% 2008:2009),
+      post_2009 = as.integer(year >= 2009L),
+      china_share_logit_z = goal9_scale_vec(goal9_bounded_logit(china_share)),
+      china_share_sqrt_z = goal9_scale_vec(sqrt(pmax(china_share, 0))),
+      china_share_delta_z = goal9_scale_vec(dplyr::coalesce(china_share_delta, 0)),
+      hhi_destination_z = goal9_scale_vec(hhi_destination),
+      top_partner_share_z = goal9_scale_vec(top_partner_share),
+      china_margin_share_z = goal9_scale_vec(china_margin_vs_competitor_share),
+      pre_primary_share_z = goal9_scale_vec(pre_primary_share),
+      pre_agriculture_share_z = goal9_scale_vec(pre_agriculture_share),
+      pre_mining_energy_share_z = goal9_scale_vec(pre_mining_energy_share),
+      china_share_x_gfc_z = goal9_scale_vec(china_share * gfc_2008_2009),
+      hhi_x_gfc_z = goal9_scale_vec(hhi_destination * gfc_2008_2009),
+      top_share_x_gfc_z = goal9_scale_vec(top_partner_share * gfc_2008_2009),
+      pre_primary_x_gfc_z = goal9_scale_vec(pre_primary_share * gfc_2008_2009),
+      pre_primary_x_post_z = goal9_scale_vec(pre_primary_share * post_2009),
+      pre_china_share_x_gfc_z = goal9_scale_vec(pre_china_share_2004_2008 * gfc_2008_2009)
+    )
+
+  required <- c(
+    "iso3c", "year", "abs_distance_china", "china_share",
+    "hhi_destination", "top_partner_share", "pre_primary_share"
+  )
+  if (anyNA(out |> dplyr::select(dplyr::all_of(required)))) {
+    missing_counts <- out |>
+      dplyr::summarise(dplyr::across(dplyr::all_of(required), ~sum(is.na(.x)))) |>
+      tidyr::pivot_longer(dplyr::everything(), names_to = "variable", values_to = "missing") |>
+      dplyr::filter(missing > 0)
+    stop(
+      "goal9_build_china_demand_sdid_panel: missing values in required diagnostics: ",
+      paste(missing_counts$variable, missing_counts$missing, sep = "=", collapse = ", "),
+      call. = FALSE
+    )
+  }
+
+  out
+}
+
+goal9_china_demand_sdid_covariate_sets <- function(data) {
+  baseline_covariates <- c(
+    "gpi",
+    "perc_trade_with_us",
+    "perc_trade_with_china",
+    "pci_cur",
+    "exachange_rate",
+    "distance_us",
+    "us_power_gap",
+    "hog_left",
+    "CA_GDP",
+    "govdef_GDP",
+    intersect(
+      c("inst_parliamentary", "inst_military_exec", "us_trade_agreement"),
+      names(data)
+    )
+  )
+
+  list(
+    manuscript_main = baseline_covariates,
+    smooth_china_share = unique(c(
+      baseline_covariates,
+      "china_share_logit_z",
+      "china_share_sqrt_z",
+      "china_share_delta_z"
+    )),
+    destination_concentration = unique(c(
+      baseline_covariates,
+      "hhi_destination_z",
+      "top_partner_share_z"
+    )),
+    commodity_gfc_exposure = unique(c(
+      baseline_covariates,
+      "pre_primary_share_z",
+      "pre_agriculture_share_z",
+      "pre_mining_energy_share_z",
+      "pre_primary_x_gfc_z",
+      "pre_china_share_x_gfc_z"
+    )),
+    full_stress_test = unique(c(
+      baseline_covariates,
+      "china_share_logit_z",
+      "china_share_sqrt_z",
+      "china_share_delta_z",
+      "hhi_destination_z",
+      "top_partner_share_z",
+      "china_margin_share_z",
+      "pre_primary_share_z",
+      "pre_agriculture_share_z",
+      "pre_mining_energy_share_z",
+      "china_share_x_gfc_z",
+      "hhi_x_gfc_z",
+      "top_share_x_gfc_z",
+      "pre_primary_x_gfc_z",
+      "pre_primary_x_post_z",
+      "pre_china_share_x_gfc_z"
+    ))
+  )
+}
+
+goal9_fit_china_demand_sdid <- function(data,
+                                        covariate_cols,
+                                        time_treatment = 2008L,
+                                        time_end = 2016L) {
+  set.seed(12345)
+  fit_data <- data |>
+    dplyr::filter(year < time_end) |>
+    dplyr::mutate(
+      treatment = ifelse(iso3c == "BRA" & year > time_treatment, 1L, 0L),
+      .unit_treated = as.integer(iso3c == "BRA")
+    ) |>
+    dplyr::arrange(.unit_treated, iso3c, year) |>
+    dplyr::select(-.unit_treated)
+
+  required <- c("iso3c", "year", "abs_distance_china", "treatment", covariate_cols)
+  if (anyNA(fit_data |> dplyr::select(dplyr::all_of(required)))) {
+    missing_counts <- fit_data |>
+      dplyr::summarise(dplyr::across(dplyr::all_of(required), ~sum(is.na(.x)))) |>
+      tidyr::pivot_longer(dplyr::everything(), names_to = "variable", values_to = "missing") |>
+      dplyr::filter(missing > 0)
+    stop(
+      "goal9_fit_china_demand_sdid: missing values in estimation data: ",
+      paste(missing_counts$variable, missing_counts$missing, sep = "=", collapse = ", "),
+      call. = FALSE
+    )
+  }
+
+  x_array <- goal9_make_covariate_array(fit_data, covariate_cols)
+  panel_data <- fit_data |>
+    dplyr::mutate(
+      treatment = as.integer(treatment),
+      year = as.integer(year),
+      iso3c = as.factor(iso3c),
+      Y = abs_distance_china
+    ) |>
+    dplyr::select(iso3c, year, Y, treatment) |>
+    as.data.frame()
+
+  setup <- synthdid::panel.matrices(panel_data)
+  synthdid::synthdid_estimate(Y = setup$Y, N0 = setup$N0, T0 = setup$T0, X = x_array)
+}
+
+goal9_summarise_sdid_estimate <- function(fit, se_replications = 1000L, seed = 20260520L) {
+  estimate <- as.numeric(fit)
+  set.seed(seed)
+  se <- as.numeric(sqrt(vcov(fit, method = "placebo", replications = se_replications)))
+  tibble::tibble(
+    estimate = estimate,
+    se_placebo = se,
+    p_value = 2 * stats::pnorm(-abs(estimate / se)),
+    ci_95_low = estimate - stats::qnorm(0.975) * se,
+    ci_95_high = estimate + stats::qnorm(0.975) * se
+  )
+}
+
+goal9_china_demand_sdid_diagnostics <- function(china_demand_sdid_panel,
+                                                synth_fit,
+                                                se_synth,
+                                                se_replications = 1000L) {
+  covariate_sets <- goal9_china_demand_sdid_covariate_sets(china_demand_sdid_panel)
+  spec_info <- tibble::tribble(
+    ~specification, ~label, ~control_family, ~interpretation,
+    "manuscript_main", "Main SDiD", "Original covariates", "Baseline Table 3 specification with continuous China and U.S. export shares.",
+    "smooth_china_share", "Smooth China share", "China-share transformations", "Adds logit, square-root, and annual-change transformations of China export share.",
+    "destination_concentration", "Destination concentration", "Concentration", "Adds destination HHI and top-partner export share.",
+    "commodity_gfc_exposure", "Commodity/GFC exposure", "Predetermined commodity exposure", "Adds pre-2009 primary-goods export composition and 2008-2009 exposure interactions.",
+    "full_stress_test", "Full stress test", "All diagnostics including rank margin", "Adds smooth share, concentration, rank-margin stress test, primary-goods exposure, and 2008-2009 interactions."
+  )
+
+  dplyr::bind_rows(lapply(seq_len(nrow(spec_info)), function(i) {
+    row <- spec_info[i, ]
+    if (identical(row$specification, "manuscript_main")) {
+      estimate <- as.numeric(synth_fit)
+      se <- as.numeric(se_synth)
+      out <- tibble::tibble(
+        estimate = estimate,
+        se_placebo = se,
+        p_value = 2 * stats::pnorm(-abs(estimate / se)),
+        ci_95_low = estimate - stats::qnorm(0.975) * se,
+        ci_95_high = estimate + stats::qnorm(0.975) * se
+      )
+    } else {
+      fit <- goal9_fit_china_demand_sdid(
+        china_demand_sdid_panel,
+        covariate_cols = covariate_sets[[row$specification]]
+      )
+      out <- goal9_summarise_sdid_estimate(fit, se_replications = se_replications)
+    }
+
+    out |>
+      dplyr::mutate(
+        specification = row$specification,
+        label = row$label,
+        treatment_onset = 2009L,
+        control_family = row$control_family,
+        interpretation = row$interpretation,
+        se_method = "synthdid placebo",
+        se_replications = se_replications,
+        rank_margin_stress_test = row$specification == "full_stress_test"
+      ) |>
+      dplyr::select(
+        specification,
+        label,
+        treatment_onset,
+        estimate,
+        se_placebo,
+        p_value,
+        ci_95_low,
+        ci_95_high,
+        control_family,
+        interpretation,
+        se_method,
+        se_replications,
+        rank_margin_stress_test
+      )
+  }))
 }
 
 goal9_fit_sdid_outcome <- function(data, outcome_col, covariate_cols,
@@ -4069,6 +4464,7 @@ goal9_human_rights_vs_non_human_rights <- function(resolution_data, treatment_ye
       delta_mean_similarity_score
     )
 }
+
 selective_unga_clean_text <- function(x) {
   x |>
     iconv(from = "", to = "UTF-8", sub = "") |>
