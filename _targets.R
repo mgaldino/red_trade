@@ -14,7 +14,7 @@ tar_option_set(packages = c("tidyverse", "tidyr", "ggplot2", "janitor", "data.ta
                             "ggraph", "igraph", "grid", "patchwork", "quanteda", "globalmacrodata",
                             "ellmer", "jsonlite", "stringr", "keyring", "did",
                             "HonestDiD", "fwildclusterboot", "MASS",
-                            "fect", "PanelMatch", "vdemdata"))
+                            "fect", "PanelMatch", "vdemdata", "DBI", "duckdb"))
 
 # Run the R scripts in the R/ folder with your custom functions:
 tar_source("scripts/functions.R")
@@ -174,6 +174,15 @@ list(
   # Phase 1.1: RMSPE diagnostics & permutation inference
   tar_target(rmspe_diagnostics, compute_rmspe(synth_fit)),
   tar_target(permutation_results, permutation_test(synth_data)),
+  tar_target(brazil_sdid_diagnostics_bundle,
+             build_brazil_sdid_diagnostics_bundle(
+               synth_data,
+               synth_fit,
+               se_synth,
+               permutation_results,
+               trade_data_ranked,
+               trade_data_cleaned
+             )),
   # Phase 1.2: Sensitivity analysis
   tar_target(synth_data_extended, clean_synth_data(final_df, trade_data_ranked, year_end = 2020,
                                                   dpi_data=dpi_data, trade_agreement_data=trade_agreement_data)),
@@ -216,6 +225,128 @@ list(
     unga_data
   )),
   tar_target(china_top_panel_summary, summarize_china_top_panel(china_top_panel)),
+  tar_target(china_top_m2_goods_panel_countries,
+             build_m2_goods_panel_countries(unga_data, min_year = 1990L)),
+  tar_target(china_top_m2_goods_trade_aggregation,
+             aggregate_itpde_goods_exports(
+               trade_file,
+               china_top_m2_goods_panel_countries,
+               start_year = 1990L,
+               end_year = 2023L,
+               goods_sector_values = c("Agriculture", "Mining and Energy",
+                                        "Manufacturing")
+             )),
+  tar_target(china_top_m2_goods_exports,
+             china_top_m2_goods_trade_aggregation$goods_exports),
+  tar_target(china_top_m2_goods_sector_audit,
+             china_top_m2_goods_trade_aggregation$sector_audit),
+  tar_target(china_top_m2_goods_panel,
+             build_china_top_partner_panel(
+               china_top_m2_goods_exports,
+               unga_data,
+               min_year = 1990L,
+               min_entry_year = 2000L
+             )),
+  tar_target(china_top_m2_goods_status_current_panel_bundle,
+             make_status_current_panel_bundle(
+               china_top_m2_goods_panel,
+               duration_thresholds = c(3L, 5L, 7L),
+               min_entry_year = 2000L
+             )),
+  tar_target(china_top_m2_goods_status_current_sample_counts,
+             china_top_m2_goods_status_current_panel_bundle$sample_counts),
+  tar_target(china_top_m2_goods_status_current_unit_summary,
+             china_top_m2_goods_status_current_panel_bundle$unit_summary),
+  tar_target(china_top_m2_goods_status_current_period_summary,
+             china_top_m2_goods_status_current_panel_bundle$period_summary),
+  tar_target(china_top_m2_goods_status_current_country_audit,
+             make_country_exclusion_audit(
+               china_top_m2_goods_panel,
+               duration_thresholds = c(3L, 5L, 7L),
+               min_entry_year = 2000L
+             ) |>
+               dplyr::left_join(
+                 china_top_m2_goods_status_current_unit_summary |>
+                   dplyr::select(
+                     min_duration_years, sample, iso3c, ever_treated,
+                     treated_years, untreated_years, first_treat
+                   ),
+                 by = c("min_duration_years", "iso3c")
+               ) |>
+               dplyr::arrange(min_duration_years, audit_role, sample, iso3c)),
+  tar_target(china_top_m2_goods_status_current_model_bundle,
+             fit_status_current_fect_models(
+               china_top_m2_goods_status_current_panel_bundle,
+               nboots = 10000L
+             )),
+  tar_target(china_top_m2_goods_status_current_model_results,
+             china_top_m2_goods_status_current_model_bundle$model_results),
+  tar_target(china_top_m2_goods_status_current_dynamic_results,
+             china_top_m2_goods_status_current_model_bundle$dynamic_results),
+  tar_target(fect_ife_china_top_m2_goods_status_current_min5_risk_set,
+             china_top_m2_goods_status_current_model_bundle$main_fit),
+  tar_target(fect_ife_china_top_m2_goods_status_current_min5_recent_pretrend_f_test,
+             reconstruct_fect_recent_pretrend_f_test(
+               fect_ife_china_top_m2_goods_status_current_min5_risk_set,
+               model = "M2 goods-only status-current risk set: fect IFE",
+               max_recent_periods = 12L,
+               max_event_time = -1L
+             )),
+  tar_target(china_top_m2_goods_status_current_pretrend_summary,
+             fect_ife_china_top_m2_goods_status_current_min5_recent_pretrend_f_test$summary),
+  tar_target(china_top_m2_goods_status_current_pretrend_periods,
+             fect_ife_china_top_m2_goods_status_current_min5_recent_pretrend_f_test$selected_periods),
+  tar_target(plot_china_top_m2_goods_status_current_dynamic,
+             plot_status_current_dynamic(
+               china_top_m2_goods_status_current_dynamic_results,
+               min_duration_years = 5L,
+               specification = "risk_set_restricted"
+             )),
+  tar_target(china_top_m2_goods_status_current_runtime_report,
+             write_status_current_runtime_report(
+               china_top_m2_goods_status_current_model_results,
+               china_top_m2_goods_status_current_sample_counts
+             ),
+             format = "file"),
+  tar_target(ex_top1_status_comparison_file,
+             here("data", "processed", "ex_top1_salience",
+                  "status_cue_vs_ex_top1_coverage.csv"),
+             format = "file"),
+  tar_target(ex_top1_country_codes_file,
+             here("data", "processed", "ex_top1_salience",
+                  "ex_top1_country_codes.csv"),
+             format = "file"),
+  tar_target(ex_top1_source_evidence_file,
+             here("data", "processed", "ex_top1_salience",
+                  "ex_top1_source_evidence.csv"),
+             format = "file"),
+  tar_target(status_cue_country_codes_file,
+             here("data", "processed", "status_cue_salience",
+                  "status_cue_country_codes.csv"),
+             format = "file"),
+  tar_target(status_cue_source_evidence_file,
+             here("data", "processed", "status_cue_salience",
+                  "status_cue_source_evidence.csv"),
+             format = "file"),
+  tar_target(ex_top1_salience_input_validation,
+             validate_ex_top1_salience_inputs(
+               ex_top1_status_comparison_file,
+               ex_top1_country_codes_file,
+               ex_top1_source_evidence_file,
+               status_cue_country_codes_file,
+               status_cue_source_evidence_file
+             )),
+  tar_target(ex_top1_salience_appendix_tables,
+             {
+               stopifnot(all(ex_top1_salience_input_validation$passed))
+               build_ex_top1_salience_appendix_tables(
+                 ex_top1_status_comparison_file,
+                 ex_top1_country_codes_file,
+                 ex_top1_source_evidence_file,
+                 status_cue_country_codes_file,
+                 status_cue_source_evidence_file
+               )
+             }),
   tar_target(china_pre_china_distance_1996_2000,
              build_pre_china_distance(china_top_panel, years = 1996:2000)),
   tar_target(china_top_pre_distance_balance_table,
