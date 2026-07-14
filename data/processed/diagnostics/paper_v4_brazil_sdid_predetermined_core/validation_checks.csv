@@ -1,0 +1,12 @@
+check,passed
+Preferred ATT matches audited predetermined_core,TRUE
+"Preferred SE matches audited 1,000-placebo SE",TRUE
+Directional rank is 3/96,TRUE
+Two-sided absolute rank is 7/96,TRUE
+Fixed covariate coefficients are numerically zero,TRUE
+No non-Brazil original-treatment assignment in 1997-2015,TRUE
+Goods-only donor exclusion leaves both ranks unchanged,TRUE
+All timing falsifications are point estimates without covariates,TRUE
+Donor-unit weights sum to one,TRUE
+Pre-treatment time weights sum to one,TRUE
+Targets metadata modification time is unchanged,TRUE

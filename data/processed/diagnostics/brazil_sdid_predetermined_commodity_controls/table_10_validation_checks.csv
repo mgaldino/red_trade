@@ -1,0 +1,18 @@
+check,passed,detail
+Current local baseline reproduces target ATT,TRUE,Local=-0.26394046; target=-0.26394046
+Predetermined core reproduces no-time-varying target ATT,TRUE,Local=-0.27230386; target=-0.27230386
+Existing commodity/GFC reconstruction reproduces target ATT,TRUE,Local=-0.30552253; target=-0.30552253
+Deterministic parallel placebo algorithm reproduces serial estimates,TRUE,Absolute SE difference: 0e+00
+Frozen/static covariates are inert for ATT and donor weights,TRUE,ATT difference=-8.326673e-16; max donor-weight difference=6.418477e-17
+Anticipation-window 2008 rows reproduce corresponding main robustness,TRUE,Primary difference=0e+00; prior-China difference=0e+00
+Domestic ITPD-E flows are excluded from export exposures,TRUE,Excluded 33262 domestic rows (trade=283452096); retained=0
+Inference manifest reproduces every checkpoint-based standard error,TRUE,Maximum SE discrepancy: 0e+00
+All declared outputs form a post-script snapshot,TRUE,All 14 upstream CSV outputs exist and are newer than the frozen analysis script
+Current covariate matrix contains post-2009 observations,TRUE,Main fit years: 1997-2015; source panel extends to 2016
+Brazil has five complete pre-exposure years,TRUE,Observed pre-exposure years: 5
+Brazil commodity shares are bounded,TRUE,Brazil primary share: 29.04%
+Brazil primary share equals agriculture plus mining/energy,TRUE,Agriculture=11.25%; mining/energy=17.79%
+"Pink Sheet contains 2007, 2008, and 2009",TRUE,Pink Sheet years: 1997-2016
+"All main specifications use 1,000 or more placebo replications",TRUE,Replications: 1000
+All main specifications retain one treated unit,TRUE,Brazil only
+No targets pipeline was run,TRUE,Script reads existing targets only and does not execute the targets pipeline

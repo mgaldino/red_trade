@@ -1,0 +1,5 @@
+year_end,estimate,se_placebo,ci_95_low,ci_95_high,p_value_two_sided,rank_p_one_sided_negative,rank_p_two_sided,n_countries,n_treated_units,n_donors,n_pre_years,n_post_years,rmspe_pre_intercept_adjusted,political_window_note
+2012,-0.28566307690913334,NA,NA,NA,NA,NA,NA,96,1,95,12,4,0.054785098519551184,Ends before the 2013 protests and before the impeachment crisis.
+2014,-0.32688869431484685,NA,NA,NA,NA,NA,NA,96,1,95,12,6,0.057360213130489335,Includes Dilma Rousseff's first term but ends before the 2015 impeachment crisis.
+2015,-0.2839206177098933,0.13620856371674878,-0.55088449698065,-0.016956738439136587,0.03711880206686967,0.03125,0.07291666666666667,96,1,95,12,7,0.05882677729773115,"Includes 2015, when the impeachment crisis began, but not the 2016 removal/change of government."
+2016,-0.29092224891926755,NA,NA,NA,NA,NA,NA,96,1,95,12,8,0.059797041160515534,Includes the 2015 impeachment crisis and the 2016 removal/change of government.

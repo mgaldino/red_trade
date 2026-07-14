@@ -59,3 +59,10 @@ presentations/
 
 # Private editorial/reviewer correspondence
 reports/*decision_reviews*.md
+
+# Large local datasets and generated diagnostics (preserved on disk, not versioned)
+data/raw/batis_bpm5/
+data/raw/batis_bpm6/
+data/raw/mechanism_evidence_china_2009_2011/falabr/Arquivos_csv_*.zip
+data/processed/diagnostics/china_top_goods_services/china_top_goods_services_country_year_partner_*.csv
+data/processed/diagnostics/china_top_goods_services/china_top_goods_services_rank_long_*.csv

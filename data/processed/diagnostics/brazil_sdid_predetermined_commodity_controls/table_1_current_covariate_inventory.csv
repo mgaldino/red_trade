@@ -1,0 +1,14 @@
+variable,description,timing_class,included_by_simple_fit,observed_years_in_main_matrix,uses_post_2009,post_treatment_risk,frozen_rule,kept_in_predetermined_core
+gpi,Global Power Index,time-varying plausibly exogenous/slow-moving,TRUE,1997-2015,TRUE,moderate: post-2009 power can respond to economic changes,2004-2008 mean,FALSE
+perc_trade_with_us,Export share to the United States,time-varying treatment-related exposure,TRUE,1997-2015,TRUE,high: trade composition can be affected by the treatment process,2004-2008 mean,TRUE
+perc_trade_with_china,Export share to China,time-varying treatment-defining/mediating exposure,TRUE,1997-2015,TRUE,high: mechanically related to China becoming rank 1,2004-2008 mean,TRUE
+pci_cur,Per-capita income,time-varying macroeconomic covariate,TRUE,1997-2015,TRUE,moderate: can respond to trade and commodity shocks,2004-2008 mean,TRUE
+exachange_rate,Exchange rate,time-varying macroeconomic covariate,TRUE,1997-2015,TRUE,high: contemporaneous macro outcome and possible mediator,2004-2008 mean,FALSE
+distance_us,Geographic distance to Washington,time-invariant,TRUE,1997-2015,FALSE,none,first observed value,TRUE
+us_power_gap,Power gap to the United States,time-varying structural covariate,TRUE,1997-2015,TRUE,moderate: observed after onset and partly Brazil-specific,2004-2008 mean,FALSE
+hog_left,Head of government is left,time-varying political covariate,TRUE,1997-2015,TRUE,moderate: post-onset government changes are not predetermined,2008 value,FALSE
+CA_GDP,Current-account balance as percent of GDP,time-varying macroeconomic outcome,TRUE,1997-2015,TRUE,high: directly affected by trade and commodity prices,2004-2008 mean,FALSE
+govdef_GDP,Government budget deficit as percent of GDP,time-varying policy/macro outcome,TRUE,1997-2015,TRUE,high: may respond to the same shock or mediate policy adjustment,2004-2008 mean,FALSE
+inst_parliamentary,Parliamentary-system indicator,slow-moving institutional covariate,TRUE,1997-2015,TRUE,low to moderate: post-2009 values are not required,2008 value,TRUE
+inst_military_exec,Military-executive indicator,time-varying institutional covariate,TRUE,1997-2015,TRUE,moderate: regime changes after onset are post-treatment,2008 value,FALSE
+us_trade_agreement,Trade agreement with the United States,time-varying policy covariate,TRUE,1997-2015,TRUE,high: agreements after onset can be policy responses/mediators,2008 value,TRUE

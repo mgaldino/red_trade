@@ -1,0 +1,10 @@
+specification,year_end,rank_p_one_sided_negative,rank_p_two_sided,rank_one_sided,rank_two_sided,rank_denominator,rank_inference_status
+current_baseline,2015,0.04166666666666666,0.08333333333333333,4,8,96,Reused audited baseline placebo-in-space ranks from table_a8.
+all_current_covariates_frozen,2015,NA,NA,NA,NA,NA,"Not recomputed: rank inference is reported for the audited baseline, the preferred main specification, and the pre-specified commodity robustness."
+predetermined_core,2015,0.03125,0.07291666666666667,3,7,96,Locally recomputed placebo-in-space ranks.
+predetermined_plus_primary_level,2015,NA,NA,NA,NA,NA,"Not recomputed: rank inference is reported for the audited baseline, the preferred main specification, and the pre-specified commodity robustness."
+predetermined_plus_primary_gfc_2008_2009,2015,0.03125,0.07291666666666667,3,7,96,Locally recomputed placebo-in-space ranks.
+predetermined_plus_agriculture_mining_gfc,2015,NA,NA,NA,NA,NA,"Not recomputed: rank inference is reported for the audited baseline, the preferred main specification, and the pre-specified commodity robustness."
+predetermined_plus_weighted_price_gfc,2015,NA,NA,NA,NA,NA,"Not recomputed: rank inference is reported for the audited baseline, the preferred main specification, and the pre-specified commodity robustness."
+predetermined_plus_pre_china_gfc,2015,NA,NA,NA,NA,NA,"Not recomputed: rank inference is reported for the audited baseline, the preferred main specification, and the pre-specified commodity robustness."
+existing_commodity_gfc_exposure,2015,NA,NA,NA,NA,NA,"Not recomputed: rank inference is reported for the audited baseline, the preferred main specification, and the pre-specified commodity robustness."

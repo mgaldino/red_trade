@@ -1,0 +1,7 @@
+exposure_type,exposure_window_start,exposure_window_end,brazil_exposure_value,observed_years,estimate,se_placebo,ci_95_low,ci_95_high,p_value_two_sided,inference_status
+primary_composition,2004,2006,0.25738103890789027,3,-0.2813965571741124,NA,NA,NA,NA,Point-estimate anticipation sensitivity; no new inference.
+prior_china_exposure,2004,2006,0.08120186715970229,3,-0.28411582235936966,NA,NA,NA,NA,Point-estimate anticipation sensitivity; no new inference.
+primary_composition,2004,2007,0.2688643564680346,4,-0.28205518903482757,NA,NA,NA,NA,Point-estimate anticipation sensitivity; no new inference.
+prior_china_exposure,2004,2007,0.08674352411085824,4,-0.2840152327817361,NA,NA,NA,NA,Point-estimate anticipation sensitivity; no new inference.
+primary_composition,2004,2008,0.2903853044069215,5,-0.2839206177098933,0.13620856371674878,-0.55088449698065,-0.016956738439136587,0.03711880206686967,"Reuses 1,000-placebo inference from the corresponding main robustness."
+prior_china_exposure,2004,2008,0.09587697264207823,5,-0.28432253113163014,0.127148375522968,-0.5335287678494216,-0.03511629441383873,0.025342106191114527,"Reuses 1,000-placebo inference from the corresponding main robustness."

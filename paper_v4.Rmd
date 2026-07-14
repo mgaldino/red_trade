@@ -18,7 +18,7 @@ header-includes:
 - \usepackage{longtable}
 - \newcommand{\argmin}{\mathop{\mathrm{argmin}}\limits}
 fontsize: 12pt
-abstract: "\\singlespacing  How do trade-based status gains affect UNGA voting convergence toward China? I argue that rank reversals in trade hierarchies create politically usable status cues: when China becomes a country's top export destination and remains there, policymakers can more easily justify selective diplomatic adjustment toward Beijing. I test the argument in Brazil, where China overtook the United States as the largest export destination in 2009, using Synthetic Difference-in-Differences on UNGA ideal-point distance. The estimated Brazil-minus-synthetic post-2009 gap is -0.26 ideal-point units, about 41 percent of Brazil's pre-treatment mean, and vote-level diagnostics show that the post-2009 movement is clearest in human-rights resolutions where China and the United States diverged. Brazilian newspaper evidence shows increased China-related trade salience after the rank reversal. Cross-country estimates from a goods-only interactive fixed-effects panel model show a compatible directional pattern among countries where China persistently becomes the top goods export destination. The evidence suggests that discrete and durable trade-status milestones can shape observable multilateral alignment beyond smooth trade growth."
+abstract: "\\singlespacing  How do trade-based status gains affect UNGA voting convergence toward China? I argue that rank reversals in trade hierarchies create politically usable status cues: when China becomes a country's top export destination and remains there, policymakers can more easily justify selective diplomatic adjustment toward Beijing. I test the argument in Brazil, where China overtook the United States as the largest export destination in 2009, using Synthetic Difference-in-Differences on UNGA ideal-point distance. The preferred specification has no effective covariate adjustment and therefore avoids conditioning on time-varying or post-treatment controls. It estimates a Brazil-minus-synthetic post-2009 gap of -0.27 ideal-point units, about 42 percent of Brazil's pre-treatment mean. The conventional two-sided normal p-value is 0.036; placebo-in-space ranks yield p = 0.031 in the predicted negative direction and p = 0.073 under a conservative bilateral comparison. Vote-level diagnostics show that the movement is clearest in human-rights resolutions where China and the United States diverged. Brazilian newspaper evidence shows increased China-related trade salience after the rank reversal. Cross-country estimates from a goods-only interactive fixed-effects panel model show a compatible directional pattern among countries where China persistently becomes the top goods export destination. The evidence suggests that discrete and durable trade-status milestones can shape observable multilateral alignment beyond smooth trade growth."
 geometry: margin=2.5cm
 spacing: double
 mainfont: Times New Roman
@@ -65,11 +65,30 @@ word_count_text <- function(input = knitr::current_input(), subtract_n = 20L) {
 Word count: `r word_count_text()`
 
 ```{r basic-num, include = FALSE}
-estimate <- as.numeric(tar_read(synth_fit)[1])
-se_estimate <- as.numeric(tar_read(se_synth))
-ci_low <- estimate - 1.96 * se_estimate
-ci_high <- estimate + 1.96 * se_estimate
-p_estimate <- 2 * pnorm(-abs(estimate / se_estimate))
+paper_sdid_dir <- file.path(
+  "data", "processed", "diagnostics",
+  "paper_v4_brazil_sdid_predetermined_core"
+)
+paper_sdid_audit_dir <- file.path(
+  "data", "processed", "diagnostics",
+  "brazil_sdid_predetermined_commodity_controls"
+)
+paper_sdid_figure_dir <- file.path(
+  "quality_reports", "china_demand_shock_rank_threshold"
+)
+sdid_main_summary <- readr::read_csv(
+  file.path(paper_sdid_dir, "main_summary.csv"), show_col_types = FALSE
+) %>%
+  dplyr::slice_head(n = 1)
+sdid_main_fit <- tar_read(synth_fit_no_time_varying_covariates)
+estimate <- sdid_main_summary$estimate
+se_estimate <- sdid_main_summary$se_placebo
+ci_low <- sdid_main_summary$ci_95_low
+ci_high <- sdid_main_summary$ci_95_high
+p_estimate <- sdid_main_summary$p_normal_two_sided
+p_rank_directional <- sdid_main_summary$p_rank_one_sided_negative
+p_rank_bilateral <- sdid_main_summary$p_rank_two_sided_absolute
+max_abs_fixed_beta <- sdid_main_summary$max_abs_fixed_covariate_coefficient
 mean_br <- tar_read(synth_data) %>%
   dplyr::filter(iso3c == "BRA", year < 2009) %>%
   dplyr::summarise(mean_abs = mean(abs_distance_china, na.rm = TRUE)) %>%
@@ -106,7 +125,7 @@ Much of the China and rising-powers branch of this literature asks how rising st
 
 Brazil is the strongest case for the theory. China displaced the United States, a politically salient incumbent and hegemonic benchmark; the rank reversal was publicly visible; and the Brazilian press allows the attention implication to be measured. The case is also substantively important because Lula-era Brazilian foreign policy is often described through autonomy, South-South activism, multipolarity, and Brazil's triangular position between the United States and China [@neto2011; @neto_malamud2015; @rodrigues2019measuring; @schenoniMythsMultipolaritySources2022; @guilhon2014; @schenoni_leiva2021; @brun_covarrubias2024; @coutinho_rodriguez2024]. 
 
-To estimate the Brazilian foreign-policy alignment pattern, I leverage the discreteness in China's status change to largest Brazilian export destination using synthetic difference-in-differences (SDiD) on annual UNGA ideal-point distance to China. The estimate is an average post-2009 gap. Relative to Brazil's pre-treatment mean distance, the estimated reduction is `r sprintf('%.1f', perc_change)` percent. UNGA voting is a standard measure to study alignment with China and other powers, linking votes to bilateral ties, ideology, sanctions, aid, Belt and Road membership, arms transfers, or Chinese economic returns [@potrafke2009; @dreher_jensen2013; @struver2016; @yan_zhou2021; @garcia_herrero_etal2024; @steinert_weyrauch2024; @he_zheng_chen2025; @lektzian_biglaiser2023].
+To estimate the Brazilian foreign-policy alignment pattern, I leverage the discreteness in China's status change to largest Brazilian export destination using synthetic difference-in-differences (SDiD) on annual UNGA ideal-point distance to China. The preferred specification has no effective covariate adjustment and estimates an average post-2009 gap of `r sprintf('%.3f', estimate)`. Relative to Brazil's pre-treatment mean distance, the estimated reduction is `r sprintf('%.1f', perc_change)` percent. The conventional two-sided normal p-value is `r sprintf('%.3f', p_estimate)`; placebo-in-space inference yields `r sprintf('%.3f', p_rank_directional)` in the predicted negative direction and `r sprintf('%.3f', p_rank_bilateral)` under a conservative bilateral comparison. UNGA voting is a standard measure to study alignment with China and other powers, linking votes to bilateral ties, ideology, sanctions, aid, Belt and Road membership, arms transfers, or Chinese economic returns [@potrafke2009; @dreher_jensen2013; @struver2016; @yan_zhou2021; @garcia_herrero_etal2024; @steinert_weyrauch2024; @he_zheng_chen2025; @lektzian_biglaiser2023].
 
 To assess whether the pattern is specific to Brazil, I extend the analysis to a cross-country panel in which China enters and holds the top goods export-destination position. The cross-country estimates are smaller in magnitude, consistent with a more heterogeneous sample, and point in the same direction as the Brazilian case. The panel evidence is compatible with the rank-threshold argument beyond the theory-generating case, while the Brazilian evidence documents the mechanism in detail.
 
@@ -170,9 +189,9 @@ The primary outcome is absolute UNGA ideal-point distance to China, based on the
 
 For Brazil, the treatment indicator equals one from 2009 onward, the first year China became Brazil's largest export destination. SDiD estimates Brazil's average post-2009 gap relative to a weighted synthetic counterfactual, using pre-treatment information to construct unit and time weights [@arkhangelsky_etal2021]. The design is reduced-form. Its credibility rests on pre-treatment fit, rank-versus-volume timing tests, donor-pool sensitivity, and outcome robustness.
 
-The SDiD panel combines UNGA ideal points with covariates for trade exposure, macroeconomic conditions, power, geographic distance, political institutions, and trade-agreement ties. The complete panel covers `r num_countries` countries and `r num_years` Brazil years for the main SDiD window (`r min_year`-`r max_year`). Trade data come from the International Trade and Production Database for Estimation [@borchert_etal2021]. The ITPD-E `trade` variable is measured in millions of current US dollars, and export-destination ranks are computed from exporter-importer flows.
+The SDiD panel combines UNGA ideal points with trade, macroeconomic, power, geographic, institutional, and trade-agreement variables. The complete panel covers `r num_countries` countries and `r num_years` Brazil years for the main SDiD window (`r min_year`-`r max_year`). The preferred estimator does not use contemporaneous covariate adjustment. Its implementation supplies 2004--2008 means for export shares and per-capita income, geographic distance, and 2008 institutional values as fixed unit-level arrays, but their estimated coefficients are numerically zero (maximum absolute coefficient `r format(max_abs_fixed_beta, scientific = TRUE, digits = 2)`). The preferred result is therefore effectively equivalent to SDiD without covariates. Time-varying variables enter only comparison specifications. Trade data come from the International Trade and Production Database for Estimation [@borchert_etal2021]. The ITPD-E `trade` variable is measured in millions of current US dollars, and export-destination ranks are computed from exporter-importer flows.
 
-The Brazil variables enter the design in three groups. The outcome is Brazil's annual absolute UNGA ideal-point distance to China; the treatment is an indicator for years after China becomes Brazil's largest export destination. The covariates measure trade exposure to China and the United States, relative power, geographic distance to Washington, leader ideology, macroeconomic stress, regime institutions, and U.S. trade-agreement ties. The cross-country panel uses the same outcome, but constructs treatment separately from goods-only export-destination ranks and a status-current risk set. Table \@ref(tab:table-summary-main) summarizes the country-year panel used to estimate Brazil's synthetic counterfactual. The large number of observations reflects the donor pool and pre/post-treatment country-year structure of the SDiD design.
+The Brazil variables enter the design in three groups. The outcome is Brazil's annual absolute UNGA ideal-point distance to China; the treatment is an indicator for years after China becomes Brazil's largest export destination; and observed country characteristics are used for diagnostics and comparison specifications. The preferred counterfactual is driven by pre-treatment outcomes and SDiD unit and time weights, not by effective covariate adjustment. Contemporaneous trade, macroeconomic, power, ideology, and institutional measures remain available for comparisons but are not preferred because their post-2009 values may be mediators or outcomes of the same shocks. The cross-country panel uses the same outcome but constructs treatment separately from goods-only export-destination ranks and a status-current risk set. Table \@ref(tab:table-summary-main) summarizes the full country-year panel from which the Brazil specifications are constructed.
 
 ```{r table-summary-main, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 summary_vars <- tar_read(synth_data) %>%
@@ -232,7 +251,7 @@ knitr::kable(
           window = sprintf("%d-%d SDiD analytic panel", min_year, max_year)
         )
       ),
-      " Observations include Brazil and donor countries used to construct the synthetic counterfactual. The treatment mean is small because only Brazil is treated after 2009."
+      " Observations include Brazil and donor countries used to construct the synthetic counterfactual. The treatment mean is small because only Brazil is treated after 2009. Covariate summaries describe the full analytic panel; the preferred estimate has no effective covariate adjustment."
     ),
     general_title = "Note: ",
     escape = FALSE,
@@ -246,7 +265,7 @@ For the cross-country evidence beyond Brazil, the main sample is restricted to d
 
 The empirical problem is that China's rise in a country's trade hierarchy is not randomly assigned. Countries may move closer to China because trade exposure accumulates continuously, because domestic political coalitions or foreign-policy doctrines change, or because governments already inclined toward China deepen commercial ties before the rank reversal occurs. The design therefore asks the identifying question: whether foreign-policy alignment changes around the discrete status threshold after accounting for pre-treatment trajectories and observed sources of economic, geopolitical, and domestic-political orientation.
 
-In the Brazil design, SDiD constructs a weighted counterfactual from pre-treatment information. The covariates are not included simply to improve fit. They proxy observable rival explanations and improve balance on measured trade, geopolitical, and domestic-political factors. Trade shares with China and the United States measure smooth changes in economic exposure; relative power, geographic distance to Washington, and U.S. trade-agreement ties proxy structural exposure to the incumbent power; leader ideology, regime institutions, and macroeconomic stress proxy domestic-political reorientation and contemporaneous shocks. These covariates do not eliminate unobserved domestic coalitions, doctrines, or shocks. The demand-shock diagnostics further add smooth China-share transformations, export-destination concentration, pre-2009 primary-goods export exposure, and 2008-2009 exposure interactions. The rank-versus-volume timing tests then ask whether earlier trade growth or lower-rank promotions generate the same estimated convergence as the top-rank reversal.
+In the Brazil design, SDiD constructs a weighted counterfactual from pre-treatment outcomes. The preferred specification excludes effective covariate adjustment because time-varying post-2009 values may be affected by the rank reversal, the commodity cycle, or contemporaneous domestic responses. Fixed pre-treatment summaries were supplied as an audit, but their coefficients are numerically zero in this parametrization and they do not drive the estimate. A comparison specification restores the contemporaneous matrix of trade, power, ideology, macroeconomic stress, and institutional variables. The similarity of the estimates is informative about sensitivity to post-treatment adjustment, but the contemporaneous specification is not the preferred total-effect estimand. Commodity composition and price interactions are also treated as robustness or mechanism diagnostics, especially because the 2008--2009 interaction includes the first treated year. None of these comparisons eliminates unobserved domestic coalitions, doctrines, or shocks.
 
 The cross-country panel provides a second check against Brazil-specific timing explanations. Treated countries enter durable China-top goods-export status in different years, so a Brazil-specific 2009 shock cannot mechanically generate the pooled result. Interactive fixed effects allow countries to load differently on common latent shocks, while the appendix reports duration-threshold and risk-set robustness checks.
 
@@ -254,30 +273,59 @@ The cross-country panel provides a second check against Brazil-specific timing e
 
 The Brazilian analysis estimates the average post-2009 reduced-form effect of China's entry into the top export-destination position on Brazil's UNGA ideal-point distance to China. It asks whether Brazil moved closer to China than a synthetic counterfactual after the 2009 rank reversal.
 
-Figure \@ref(fig:brazil-rank-volume) shows the timing of the rank threshold. China's export share rose before 2009, but China became the top-ranked export destination only in 2009. The signed margin over the relevant competitor also changes sign at that threshold. The SDiD covariate matrix includes trade shares with China and the United States to account for smooth trade exposure. The rank margin is part of the threshold event itself, so it is used as a timing diagnostic rather than as a separate control.
+Figure \@ref(fig:brazil-rank-volume) shows the timing of the rank threshold. China's export share rose before 2009, but China became the top-ranked export destination only in 2009. The signed margin over the relevant competitor also changes sign at that threshold. The preferred SDiD specification uses only pre-2009 averages of the China and U.S. export shares rather than their post-treatment paths. The rank margin is part of the threshold event itself, so it is used as a timing diagnostic rather than as a separate control.
 
 ```{r brazil-rank-volume, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Brazil rank-versus-volume diagnostic for China's export-destination status. Panels show China's export share, ordinal rank, and signed margin over the relevant competitor. The dashed line marks the 2009 rank reversal. ", caption_note(unit = "Export share in percent; ordinal rank; export-value margin in current USD billions", window = "2000-2012 annual Brazil series")), fig.pos="H", fig.width=7.2, fig.height=7.2}
 tar_read(goal3_brazil_rank_volume_plot)
 ```
 
-Figure \@ref(fig:plot-sdid) presents the main SDiD fit. As shown in the Appendix comparison between SCM and SDiD, SDiD is more flexible than SCM because it includes unit effects and therefore permits a stable pre-treatment level difference between Brazil and its synthetic comparison. I therefore report an intercept-adjusted RMSPE as the pre-treatment fit metric: the Brazil-minus-synthetic gap is centered by its pre-2009 mean before the RMSPE is computed, making the diagnostic comparable in spirit to the usual SCM RMSPE while matching the SDiD estimating equation. Balance on trade exposure to China remains incomplete, so I evaluate the estimate through adjusted fit, balance, placebo ranks, donor influence, donor exposure, and window sensitivity rather than through the visual comparison alone. The post-2009 gap is negative, indicating convergence toward China. The point estimate is `r sprintf('%1.2f', estimate)` ideal-point units, with placebo-based SE `r sprintf('%1.2f', se_estimate)` and a normal-approximation p-value of `r sprintf('%.3f', p_estimate)`; the single-treated-unit placebo ranks in Table \@ref(tab:brazil-sdid-diagnostic-summary) provide the more appropriate inferential benchmark. Relative to Brazil's pre-treatment mean distance (`r sprintf('%.3f', mean_br)`), this corresponds to a `r sprintf('%.1f', perc_change)` percent reduction. The estimate summarizes the average post-treatment gap. Appendix Figure \@ref(fig:appendix-brazil-china-ideal-points) plots the underlying Brazil and China ideal-point series separately; China is comparatively stable, so the post-2009 reduction in absolute distance is driven mainly by movement in Brazil's position rather than by China moving toward Brazil.
+Figure \@ref(fig:plot-sdid) presents the preferred SDiD fit with no effective covariate adjustment. As shown in the Appendix comparison between SCM and SDiD, SDiD includes unit effects and therefore permits a stable pre-treatment level difference between Brazil and its synthetic comparison. I report intercept-adjusted RMSPE by centering the pre-2009 Brazil-minus-synthetic gap before computing fit. The post-2009 gap is negative: the ATT is `r sprintf('%1.3f', estimate)` ideal-point units, the placebo-based SE is `r sprintf('%1.3f', se_estimate)`, and the conventional two-sided normal-approximation p-value is `r sprintf('%.3f', p_estimate)` with a 95 percent interval [`r sprintf('%.3f', ci_low)`, `r sprintf('%.3f', ci_high)`]. Because the theory predicts convergence, the directionally aligned placebo-in-space rank is 3/96 (p = `r sprintf('%.3f', p_rank_directional)`); the conservative two-sided absolute rank is 7/96 (p = `r sprintf('%.3f', p_rank_bilateral)`). I report both rather than treating either convention as the sole inferential benchmark. Interpreting these finite-sample ranks as p-values requires placebo assignments to be sufficiently comparable to Brazil; the appendix therefore discloses donor exposure and pre-fit sensitivity rather than assuming exchangeability mechanically. Relative to Brazil's pre-treatment mean distance (`r sprintf('%.3f', mean_br)`), the ATT corresponds to a `r sprintf('%.1f', perc_change)` percent reduction. Appendix Figure \@ref(fig:appendix-brazil-china-ideal-points) shows that China is comparatively stable, so most of the reduction in absolute distance comes from movement in Brazil's position.
 
-```{r plot-sdid, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("SDiD fit for Brazil and synthetic control with time weights. Lower values indicate convergence toward China; the post-treatment gap is an average post-2009 reduced-form effect. ", caption_note(unit = "Absolute UNGA ideal-point distance to China", se = "placebo-based SE with 1,000 replications; p-values reported in the table", window = "Brazil annual series")), fig.pos="H"}
-tar_read(plot_trend)
+```{r plot-sdid, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Preferred SDiD fit for Brazil and its synthetic comparison with no effective covariate adjustment. Lower values indicate convergence toward China; the post-treatment gap is the average post-2009 reduced-form estimate. ", caption_note(unit = "Absolute UNGA ideal-point distance to China", se = "placebo-based SE with 1,000 replications; p-values reported in the text and table", window = "1997-2015 annual Brazil series")), fig.pos="H", out.width="95%"}
+knitr::include_graphics(file.path(
+  "quality_reports", "china_demand_shock_rank_threshold",
+  "figure_brazil_sdid_predetermined_core_fit.png"
+))
 ```
 
 ```{r brazil-sdid-diagnostic-inputs, include=FALSE}
-sdid_diagnostics <- tar_read(brazil_sdid_diagnostics_bundle)
-sdid_unit_weights <- sdid_diagnostics$unit_weights
-sdid_time_weights <- sdid_diagnostics$time_weights
-sdid_fit_summary <- sdid_diagnostics$fit_summary
-sdid_balance <- sdid_diagnostics$balance
-sdid_placebo_rank <- sdid_diagnostics$placebo_rank
-sdid_donor_sensitivity <- sdid_diagnostics$donor_sensitivity
-sdid_window_sensitivity <- sdid_diagnostics$window_sensitivity
-sdid_donor_china_exposure <- sdid_diagnostics$donor_china_exposure
-sdid_high_weight_exposure_summary <- sdid_diagnostics$high_weight_exposure_summary
-china_demand_timing <- tar_read(goal3_brazil_placebo_rank_volume_tests)
+sdid_unit_weights <- readr::read_csv(
+  file.path(paper_sdid_dir, "unit_weights.csv"), show_col_types = FALSE
+)
+sdid_time_weights <- readr::read_csv(
+  file.path(paper_sdid_dir, "time_weights.csv"), show_col_types = FALSE
+)
+sdid_fit_summary <- sdid_main_summary
+sdid_balance <- readr::read_csv(
+  file.path(paper_sdid_dir, "balance.csv"), show_col_types = FALSE
+)
+sdid_rank_inference <- readr::read_csv(
+  file.path(paper_sdid_dir, "rank_inference.csv"), show_col_types = FALSE
+)
+sdid_placebo_distribution <- readr::read_csv(
+  file.path(paper_sdid_dir, "placebo_distribution.csv"), show_col_types = FALSE
+)
+sdid_donor_sensitivity <- readr::read_csv(
+  file.path(paper_sdid_dir, "donor_sensitivity.csv"), show_col_types = FALSE
+)
+sdid_window_sensitivity <- readr::read_csv(
+  file.path(paper_sdid_dir, "window_sensitivity.csv"), show_col_types = FALSE
+)
+sdid_donor_china_exposure <- readr::read_csv(
+  file.path(paper_sdid_dir, "donor_china_exposure.csv"), show_col_types = FALSE
+)
+sdid_high_weight_exposure_summary <- readr::read_csv(
+  file.path(paper_sdid_dir, "donor_china_exposure_summary.csv"),
+  show_col_types = FALSE
+) %>% dplyr::slice_head(n = 1)
+sdid_timing_placebos <- readr::read_csv(
+  file.path(paper_sdid_dir, "timing_placebos.csv"), show_col_types = FALSE
+)
+sdid_latam_core_summary <- readr::read_csv(
+  file.path(paper_sdid_dir, "latam_core_summary.csv"),
+  show_col_types = FALSE
+) %>%
+  dplyr::slice_head(n = 1)
 
 sdid_top_donors_text <- sdid_unit_weights %>%
   dplyr::slice_head(n = 5) %>%
@@ -292,14 +340,18 @@ sdid_high_time_weights_text <- sdid_time_weights %>%
   dplyr::pull(label) %>%
   paste(collapse = ", ")
 
-sdid_one_sided_placebo <- sdid_placebo_rank %>%
-  dplyr::filter(estimand == "One-sided negative effect") %>%
+sdid_all_rank <- sdid_rank_inference %>%
+  dplyr::filter(comparison_set == "All valid assignments") %>%
   dplyr::slice_head(n = 1)
-sdid_fit_filtered_placebo <- sdid_placebo_rank %>%
-  dplyr::filter(estimand == "One-sided negative effect, fit-filtered") %>%
+sdid_clean_rank <- sdid_rank_inference %>%
+  dplyr::filter(
+    comparison_set == "Exclude goods-only China-top donor assignments"
+  ) %>%
   dplyr::slice_head(n = 1)
-sdid_rmspe_ratio_rank <- sdid_placebo_rank %>%
-  dplyr::filter(estimand == "Intercept-adjusted RMSPE ratio rank") %>%
+sdid_fit_filtered_rank <- sdid_rank_inference %>%
+  dplyr::filter(
+    comparison_set == "Pre-fit RMSPE no larger than twice Brazil"
+  ) %>%
   dplyr::slice_head(n = 1)
 sdid_outcome_balance <- sdid_balance %>%
   dplyr::filter(variable == "abs_distance_china") %>%
@@ -309,80 +361,95 @@ sdid_china_share_balance <- sdid_balance %>%
   dplyr::slice_head(n = 1)
 sdid_max_single_donor_change <- sdid_donor_sensitivity %>%
   dplyr::filter(n_removed_donors == 1) %>%
-  dplyr::summarise(max_change = max(abs(percent_change_vs_baseline), na.rm = TRUE)) %>%
+  dplyr::summarise(max_change = max(abs(percent_change_vs_main), na.rm = TRUE)) %>%
   dplyr::pull(max_change)
 sdid_window_summary <- sdid_window_sensitivity %>%
   dplyr::summarise(
     n_windows = dplyr::n(),
     n_negative = sum(estimate < 0, na.rm = TRUE),
     min_estimate = min(estimate, na.rm = TRUE),
-    max_estimate = max(estimate, na.rm = TRUE),
-    max_one_sided_p = max(placebo_p_one_sided_negative, na.rm = TRUE)
+    max_estimate = max(estimate, na.rm = TRUE)
   )
-sdid_rank2_placebo <- china_demand_timing %>%
+sdid_rank2_placebo <- sdid_timing_placebos %>%
   dplyr::filter(nominal_treatment_year == 2004L) %>%
   dplyr::slice_head(n = 1)
-sdid_actual_timing <- china_demand_timing %>%
+sdid_actual_timing <- sdid_timing_placebos %>%
   dplyr::filter(nominal_treatment_year == 2009L) %>%
   dplyr::slice_head(n = 1)
 ```
 
-Table \@ref(tab:brazil-sdid-diagnostic-summary) summarizes the diagnostic package behind the Brazil SDiD estimate. The donor vector is diffuse rather than driven by one country: the top five donors are `r sdid_top_donors_text`, and the complete vector appears in Appendix Table \@ref(tab:sdid-unit-weights-complete). This donor pool is a statistical counterfactual supported by fit, placebo, and sensitivity diagnostics, not a claim that each high-weight donor is substantively similar to Brazil. The time weights concentrate most heavily on 2007-2008, but the appendix reports all pre-treatment weights. These diagnostics do not eliminate all possible 2009 confounding: the global financial crisis, the BRICS/G20 moment, and commodity-cycle politics remain contemporaneous with the Brazilian threshold. They do, however, weaken the narrower China-demand explanation because the point estimate remains stable after adding smooth trade-share, concentration, predetermined commodity-exposure, donor-influence, and window diagnostics, while the 2004 China number-two placebo is much smaller than the 2009 rank-one onset.
+Table \@ref(tab:brazil-sdid-diagnostic-summary) summarizes the diagnostic package behind the preferred Brazil SDiD estimate. The donor vector is diffuse rather than driven by one country: the top five donors are `r sdid_top_donors_text`, and the complete vector appears in Appendix Table \@ref(tab:sdid-unit-weights-complete). This donor pool is a statistical counterfactual supported by fit, placebo, and sensitivity diagnostics, not a claim that each high-weight donor is substantively similar to Brazil. The appendix reports all pre-treatment time weights and recalculates donor-deletion and window sensitivities under the same effectively unadjusted specification. These diagnostics do not eliminate all possible 2009 confounding: the global financial crisis, the BRICS/G20 moment, and commodity-cycle politics remain contemporaneous with the Brazilian threshold. They show, however, that the negative estimate is not generated by post-treatment adjustment, one influential donor, or one reasonable time window.
 
 ```{r brazil-sdid-diagnostic-summary, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 sdid_diag_summary <- tibble::tribble(
-  ~Diagnostic, ~Result, ~Interpretation,
-  "Complete donor and time weights",
+  ~Diagnostic, ~Result,
+  "Weights",
   paste0(
-    "N = ", nrow(sdid_unit_weights), " donors; top five: ",
-    sdid_top_donors_text, ". Highest time weights: ",
-    sdid_high_time_weights_text, "."
+    nrow(sdid_unit_weights), " donors; largest weight = ",
+    sprintf("%.1f%%", 100 * max(sdid_unit_weights$unit_weight)),
+    "; top five = ",
+    sprintf("%.1f%%", 100 * sum(sdid_unit_weights$unit_weight[1:5])),
+    " of total weight. Highest time weights: ", sdid_high_time_weights_text,
+    "."
   ),
-  "Synthetic comparison is not a single-donor result; late pre-treatment years receive most time weight.",
-  "Fit and balance",
+  "Fit",
   paste0(
-    "Intercept-adjusted pre-treatment RMSPE = ", sprintf("%.3f", sdid_fit_summary$rmspe_pre[1]),
-    "; post/pre adjusted RMSPE ratio = ", sprintf("%.3f", sdid_fit_summary$rmspe_ratio[1]),
-    ". Outcome pre-mean: Brazil ", sprintf("%.3f", sdid_outcome_balance$brazil_pre_mean),
-    ", synthetic ", sprintf("%.3f", sdid_outcome_balance$synthetic_pre_mean),
-    "; China-share standardized difference = ",
-    sprintf("%.3f", sdid_china_share_balance$standardized_difference), "."
+    "Intercept-adjusted pre-treatment RMSPE = ",
+    sprintf("%.3f", sdid_fit_summary$rmspe_pre[1]),
+    "; post/pre adjusted RMSPE ratio = ",
+    sprintf("%.3f", sdid_fit_summary$rmspe_ratio[1]),
+    "; Brazil pre-treatment outcome mean = ",
+    sprintf("%.3f", sdid_outcome_balance$brazil_pre_mean), "."
   ),
-  "The pre-period fit is useful but imperfect, so placebo and sensitivity checks are central to interpretation.",
-  "Placebo ranks",
+  "Placebo inference",
   paste0(
-    "One-sided negative rank = ", sprintf("%.0f", sdid_one_sided_placebo$rank),
-    "/", sprintf("%.0f", sdid_one_sided_placebo$denominator),
-    " (p = ", sprintf("%.3f", sdid_one_sided_placebo$rank_based_p_value),
-    "); fit-filtered p = ", sprintf("%.3f", sdid_fit_filtered_placebo$rank_based_p_value),
-    "; adjusted RMSPE-ratio rank = ", sprintf("%.0f", sdid_rmspe_ratio_rank$rank),
-    "/", sprintf("%.0f", sdid_rmspe_ratio_rank$denominator), "."
+    "Directional rank = ", sdid_all_rank$rank_one_sided_negative,
+    "/", sdid_all_rank$denominator,
+    " (p = ", sprintf("%.3f", sdid_all_rank$p_rank_one_sided_negative),
+    "); bilateral absolute rank = ", sdid_all_rank$rank_two_sided_absolute,
+    "/", sdid_all_rank$denominator,
+    " (p = ", sprintf("%.3f", sdid_all_rank$p_rank_two_sided_absolute), ")."
   ),
-  "The Brazil gap is large relative to placebo assignments, especially when scaled by intercept-adjusted pre-treatment fit.",
-  "Donor influence and donor exposure",
+  "Donor sensitivity",
   paste0(
     "Largest leave-one-donor change = ",
     sprintf("%.1f%%", sdid_max_single_donor_change),
     "; top-ten donor deletion estimate = ",
-    sprintf("%.3f", sdid_donor_sensitivity$estimate[sdid_donor_sensitivity$specification == "Drop top 10 donors by weight"]),
-    ". High-weight donors where China ranked in the top two after 2009: ",
-    sdid_high_weight_exposure_summary$n_high_weight_top_two_china_post,
-    " (", sprintf("%.1f%%", 100 * sdid_high_weight_exposure_summary$weighted_share_high_weight_top_two_china_post),
-    " of total weight)."
+    sprintf(
+      "%.3f",
+      sdid_donor_sensitivity$estimate[
+        sdid_donor_sensitivity$specification ==
+          "Drop top 10 donors by weight"
+      ]
+    ),
+    ". High-weight donors with China in the post-2009 top two carry ",
+    sprintf(
+      "%.1f%%",
+      100 * sdid_high_weight_exposure_summary$
+        weighted_share_high_weight_top_two_china_post
+    ),
+    " of total weight."
   ),
-  "The sign does not hinge on one high-weight donor; donor exposure to China is a remaining contamination risk, not evidence that the result is driven by one exposed donor.",
-  "Window and threshold sensitivity",
+  "Windows and timing",
   paste0(
     sdid_window_summary$n_negative, "/", sdid_window_summary$n_windows,
-    " window checks are negative; estimates range from ",
+    " window estimates are negative (range ",
     sprintf("%.3f", sdid_window_summary$min_estimate), " to ",
     sprintf("%.3f", sdid_window_summary$max_estimate),
-    ". China number-two placebo in 2004 = ",
+    "). China rank-2 timing estimate in 2004 = ",
     sprintf("%.3f", sdid_rank2_placebo$estimate),
-    " vs. actual 2009 = ",
+    "; actual 2009 timing estimate = ",
     sprintf("%.3f", sdid_actual_timing$estimate), "."
   ),
-  "The pattern is consistent with a rank-threshold component, while remaining cautious about Brazil-specific shocks in 2009."
+  "Exposure audit",
+  paste0(
+    "Excluding the goods-only China-top donor assignment leaves directional rank ",
+    sdid_clean_rank$rank_one_sided_negative, "/", sdid_clean_rank$denominator,
+    " (p = ", sprintf("%.3f", sdid_clean_rank$p_rank_one_sided_negative),
+    ") and bilateral rank ", sdid_clean_rank$rank_two_sided_absolute,
+    "/", sdid_clean_rank$denominator,
+    " (p = ", sprintf("%.3f", sdid_clean_rank$p_rank_two_sided_absolute), ")."
+  )
 )
 
 knitr::kable(
@@ -390,25 +457,28 @@ knitr::kable(
   format = "latex",
   booktabs = TRUE,
   caption = "Compact diagnostic summary for the Brazil SDiD estimate.",
-  align = "lll"
+  align = "ll"
 ) %>%
   kableExtra::kable_styling(
-    latex_options = c("HOLD_position", "scale_down"),
-    font_size = 8
+    latex_options = c("HOLD_position"),
+    font_size = 9
   ) %>%
+  kableExtra::column_spec(1, width = "3.3cm", bold = TRUE) %>%
+  kableExtra::column_spec(2, width = "11.0cm") %>%
+  kableExtra::row_spec(0, bold = TRUE) %>%
   kableExtra::footnote(
     general = paste0(
-      "All Brazil SDiD diagnostics and timing-placebo values in this table are produced by the targets pipeline. ",
-      "RMSPE diagnostics are intercept-adjusted: the Brazil-minus-synthetic gap is centered by its pre-treatment mean before the RMSPE is computed, because SDiD permits stable level differences whereas pure SCM does not. ",
-      "Negative estimates mean reduced absolute UNGA ideal-point distance to China. Donor-deletion and expanded-control rows are point-estimate diagnostics unless placebo inference is explicitly reported."
+      "The preferred fit and its 1,000-placebo SE are existing targets; a separate diagnostic script regenerates the tables without running the targets pipeline. ",
+      "RMSPE diagnostics are intercept-adjusted. Negative estimates mean reduced absolute UNGA ideal-point distance to China. Donor-deletion, timing, and alternative-window rows are point-estimate diagnostics unless inference is explicitly reported."
     ),
     general_title = "Note: ",
     escape = FALSE,
     threeparttable = TRUE
-  )
+  ) %>%
+  kableExtra::collapse_rows(columns = 1, valign = "top")
 ```
 
-Table \@ref(tab:outcome-robustness-table) reports the preferred Brazil SDiD estimate alongside three specification checks. Each column estimates the average post-2009 gap in Brazil's UNGA ideal-point distance to China and reports a placebo-based standard error. The baseline without institutional covariates, the specification without time-varying covariates, and the Latin America donor pool preserve the negative sign. Column (3) addresses post-treatment-adjustment concerns directly by holding only pre-treatment or time-invariant covariates fixed across panel years; the estimate remains nearly identical to the main specification. Column (1) remains the main specification because it keeps the theoretically relevant donor pool while adjusting for trade exposure, macroeconomic stress, geographic distance to Washington, and institutional covariates.
+Table \@ref(tab:outcome-robustness-table) reports the preferred Brazil SDiD estimate alongside three comparisons. Column (1) has no effective covariate adjustment and is preferred because it avoids conditioning the counterfactual on variables observed after 2009. Column (2) restores the full contemporaneous covariate matrix; column (3) removes institutional variables but retains the other contemporaneous measures; and column (4) changes the donor pool to Latin America using the contemporaneous matrix. All four estimates are negative, but columns (2)--(4) are sensitivity checks rather than alternative candidates for the main specification.
 
 ```{r outcome-robustness-table, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 sdid_spec_table <- tar_read(brazil_sdid_spec_table)
@@ -417,6 +487,25 @@ sdid_spec_table$table[[1]] <- ifelse(
   "Geographic distance to US",
   sdid_spec_table$table[[1]]
 )
+sdid_spec_table$table <- sdid_spec_table$table %>%
+  dplyr::select(
+    ` `,
+    `(3) No time-varying covariates`,
+    `(1) Main`,
+    `(2) No institutional covariates`,
+    `(4) Latin America donors`
+  )
+names(sdid_spec_table$table) <- c(
+  " ",
+  "(1) Preferred: no adjustment",
+  "(2) Current covariates",
+  "(3) No institutions",
+  "(4) Latin America"
+)
+preferred_col <- names(sdid_spec_table$table)[2]
+covariate_start <- match("\\textit{Covariates:}", sdid_spec_table$table[[1]])
+covariate_end <- match("Country-years", sdid_spec_table$table[[1]]) - 1L
+sdid_spec_table$table[covariate_start:covariate_end, preferred_col] <- ""
 
 table3_normal_p <- function(estimate_value, se_value) {
   if (is.na(estimate_value) || is.na(se_value) || se_value == 0) {
@@ -443,15 +532,15 @@ table3_format_se <- function(se_value) {
   paste0("(", sprintf("%.3f", se_value), ")")
 }
 table3_estimates <- c(
+  as.numeric(tar_read(synth_fit_no_time_varying_covariates)[1]),
   as.numeric(tar_read(synth_fit)[1]),
   as.numeric(tar_read(synth_fit_baseline)[1]),
-  as.numeric(tar_read(synth_fit_no_time_varying_covariates)[1]),
   as.numeric(tar_read(synth_fit_latam)[1])
 )
 table3_ses <- c(
+  as.numeric(tar_read(se_synth_no_time_varying_covariates)[1]),
   as.numeric(tar_read(se_synth)[1]),
   as.numeric(tar_read(se_synth_baseline)[1]),
-  as.numeric(tar_read(se_synth_no_time_varying_covariates)[1]),
   as.numeric(tar_read(se_synth_latam)[1])
 )
 table3_model_cols <- names(sdid_spec_table$table)[-1]
@@ -476,16 +565,17 @@ knitr::kable(
   align = "lcccc"
 ) %>%
   kableExtra::kable_styling(
-    latex_options = c("HOLD_position", "scale_down"),
-    font_size = 8
+    latex_options = c("HOLD_position"),
+    font_size = 9
   ) %>%
   kableExtra::footnote(
     general = paste0(
       "The outcome is absolute UNGA ideal-point distance to China; ATT is the average post-treatment Brazil-minus-synthetic gap, so negative values mean convergence. ",
       "ATTs are reported with three decimals. Placebo-based SEs with 1,000 replications are in parentheses. ",
       "Stars use two-sided normal-approximation p-values based on placebo SEs: * p < 0.10; ** p < 0.05; *** p < 0.01. ",
-      "Checkmarks show included covariate groups. ",
-      "Donor counts exclude Brazil. Column (3) uses pre-treatment or time-invariant covariates held fixed across panel years."
+      "Checkmarks show included covariate groups. Donor counts exclude Brazil. ",
+      "Column (1) is effectively unadjusted: fixed pre-treatment arrays are supplied in the implementation, but their coefficients are numerically zero, so the covariate cells are left blank. ",
+      "Columns (2)-(4) use contemporaneous covariates and are comparisons. For column (1), the directional rank is 3/96 (p = 0.031) and the bilateral absolute rank is 7/96 (p = 0.073)."
     ),
     general_title = "Note: ",
     escape = FALSE,
@@ -494,49 +584,45 @@ knitr::kable(
 ```
 
 ```{r china-demand-sdid-numbers, include=FALSE}
-china_demand_sdid_results <- tar_read(china_demand_sdid_diagnostics_table)
+china_demand_sdid_results <- readr::read_csv(
+  file.path(
+    paper_sdid_audit_dir,
+    "table_4_sdid_specification_results.csv"
+  ),
+  show_col_types = FALSE
+)
 china_demand_main <- china_demand_sdid_results %>%
-  dplyr::filter(specification == "manuscript_main") %>%
+  dplyr::filter(specification == "predetermined_core") %>%
   dplyr::slice_head(n = 1)
 china_demand_commodity <- china_demand_sdid_results %>%
-  dplyr::filter(specification %in% c("commodity_gfc_exposure", "plus_commodity_gfc_exposure")) %>%
-  dplyr::slice_head(n = 1)
-china_demand_full <- china_demand_sdid_results %>%
-  dplyr::filter(specification %in% c("full_stress_test", "full_diagnostic")) %>%
+  dplyr::filter(
+    specification == "predetermined_plus_primary_gfc_2008_2009"
+  ) %>%
   dplyr::slice_head(n = 1)
 ```
 
-The rank interpretation requires more than showing that trade with China was increasing. Brazil's exports to China grew before 2009, including years in which China rose in the export hierarchy but did not become number one. The timing tests in Table \@ref(tab:table-placebo) therefore ask whether rapid trade growth and lower-rank promotions generate the same estimated UNGA convergence as the top-rank reversal. They do not. The 2003, 2004, and 2005 rows are timing and lower-threshold falsifications for the continuous-growth alternative: 2004 is especially useful because China first reaches rank #2 but is still not Brazil's largest export destination. The 2012 row probes whether the result is driven by a later break after China had already become the top destination.
+The rank interpretation requires more than showing that trade with China was increasing. Brazil's exports to China grew before 2009, including years in which China rose in the export hierarchy but did not become number one. Table \@ref(tab:table-placebo) therefore reports outcome-path timing falsifications without covariates: using no covariates prevents variables measured after the early pseudo-onsets from entering those comparisons. The 2003, 2004, and 2005 estimates are smaller than the 2009 rank-one estimate; 2004 is especially useful because China first reaches rank #2 but is still not Brazil's largest export destination. The 2012 row probes a later break after China had already become the top destination. These are point-estimate diagnostics rather than additional tests with separately recomputed placebo inference.
 
 The same timing logic addresses the main Brazilian political confounder. President Lula da Silva took office in 2003 and pursued a more explicit South-South foreign-policy agenda, a shift emphasized in work on Brazilian autonomy, presidential foreign policy, and international engagement [@neto2011; @mouron_urdinez2014; @neto_malamud2015; @rodrigues2019measuring; @schenoniMythsMultipolaritySources2022]. If that ideological shift were sufficient to explain Brazil-China UNGA convergence, the pseudo-treatment years in 2003 or 2005 should already show comparable movement. They do not. The cross-country panel also estimates the rank-threshold pattern across countries with different political systems and leadership profiles, which reduces the concern that the Brazil estimate is only a Lula-period artifact.
 
-A remaining concern is that 2009 bundled the Brazilian rank reversal with other contemporaneous shocks, including the global financial crisis, the BRICS/G20 moment, and the commodity cycle. Table \@ref(tab:china-demand-sdid-diagnostics) addresses this critique inside the same Brazil SDiD framework. The main estimate is `r sprintf("%.3f", china_demand_main$estimate)`; after adding pre-2009 primary-goods export exposure and 2008-2009 exposure interactions it is `r sprintf("%.3f", china_demand_commodity$estimate)`. The point estimate also remains negative in the full stress test (`r sprintf("%.3f", china_demand_full$estimate)`), but that specification combines several highly collinear exposure diagnostics and produces unstable placebo inference. I therefore read the evidence conservatively: the point estimate for the categorical China number-one onset remains stable after adding destination concentration and predetermined commodity/GFC exposure controls, while the over-saturated stress test is useful mainly as a warning about limited support for simultaneously partialling out every continuous rank-related measure. This does not prove that the rank cue is experimentally isolated from every contemporaneous political shock. It does show that the result is not an artifact of omitting smooth China-demand exposure from the SDiD design.
+A remaining concern is that 2009 bundled the Brazilian rank reversal with other contemporaneous shocks, including the global financial crisis, the BRICS/G20 moment, and the commodity cycle. Table \@ref(tab:china-demand-sdid-diagnostics) uses an independently audited external-goods measure to address this critique. Brazil's 2004--2008 primary-goods share is 29.04 percent, composed of 11.25 percent Agriculture and 17.79 percent Mining and Energy. The preferred ATT is `r sprintf("%.3f", china_demand_main$estimate)`; adding primary composition and its 2008--2009 interaction yields `r sprintf("%.3f", china_demand_commodity$estimate)`. Valid composition, decomposition, global-price, and prior-China-exposure specifications remain in a narrow negative range. The 2008--2009 interactions are robustness or mechanism diagnostics, not alternative total-effect estimates, because 2009 is the first treated year and the interaction may absorb part of the mechanism. The old commodity reconstruction is excluded: its denominator included domestic exporter-importer flows and is not a valid robustness specification. Stability across the corrected measures does not isolate the rank cue experimentally from every 2009 political shock, but it reduces the narrower concern that the preferred estimate is an artifact of post-treatment controls or omitted pre-2009 commodity composition.
 
 The cross-country panel below is a broader scope check, not the main answer to the Brazil-specific demand-shock critique. Brazil is included in the goods-only cross-country sample, but the panel aligns countries by their own China-top goods-export entry years. A Brazil-specific 2009 confounder cannot mechanically generate an average event-time effect across countries treated in different calendar years. For such an explanation to account for both the Brazil estimate and the cross-country result, the omitted force would need to coincide with durable China-top entry across countries, affect UNGA distance to China in the same direction, and remain outside the latent factors captured by the interactive fixed-effects specification. In sensitivity-analysis terms, it would need enough residual association with both treatment timing and the outcome to overturn estimates that are stable across the Brazil timing tests, donor-pool checks, and the cross-country duration and risk-set checks [@cinelli_hazlett2020; @oster2019].
 
 ```{r table-placebo, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
-rank_tests <- tar_read(goal3_brazil_placebo_rank_volume_tests) %>%
+rank_tests <- sdid_timing_placebos %>%
   dplyr::mutate(
     `Timing year` = nominal_treatment_year,
-    `Test role` = dplyr::case_when(
-      nominal_treatment_year == 2003L ~ "Growth / lower-rank promotion",
-      nominal_treatment_year == 2004L ~ "China \\#2 threshold",
-      nominal_treatment_year == 2005L ~ "Rapid growth without rank 1",
-      nominal_treatment_year == 2009L ~ "Actual rank-1 reversal",
-      nominal_treatment_year == 2012L ~ "Later-break falsification",
-      TRUE ~ timing_test
-    ),
+    `Test role` = test_role,
     `China rank` = china_rank,
-    `Rank-1 reversal` = ifelse(rank1_reversal, "Yes", "No"),
     `Export share (\\%)` = sprintf("%.1f", china_share_pct),
     `Margin (USD bn)` = sprintf("%.1f", china_margin_vs_competitor_usd_billion),
     ATT = sprintf("%.3f", estimate),
-    `Placebo SE` = sprintf("%.3f", se_placebo),
-    `p-value` = sprintf("%.3f", p_value)
+    Inference = inference
   ) %>%
   dplyr::select(
-    `Timing year`, `Test role`, `China rank`, `Rank-1 reversal`,
-    `Export share (\\%)`, `Margin (USD bn)`, ATT, `Placebo SE`, `p-value`
+    `Timing year`, `Test role`, `China rank`,
+    `Export share (\\%)`, `Margin (USD bn)`, ATT, Inference
   )
 rank_tests_note <- paste0(
   sub(
@@ -544,11 +630,10 @@ rank_tests_note <- paste0(
     "",
       caption_note(
       unit = "Outcome is absolute UNGA ideal-point distance to China; ATT is the estimated post-onset Brazil-minus-synthetic gap, so negative values mean convergence; export margins are current USD billions",
-      se = "normal approximation using placebo-based SE with 1,000 replications",
-      window = "2003-2005 timing tests truncate the sample before 2009; 2012 is a later-break falsification"
+      window = "2003-2005 timing tests end in 2008; 2012 is a later-break falsification using data through 2016"
     )
   ),
-  " The 2003, 2004, and 2005 rows are timing and lower-threshold falsifications for rapid export growth without rank-1 status."
+  " All rows are no-covariate point-estimate diagnostics. The preferred 2009 estimate and its inference are reported separately in the main specification."
 )
 
 knitr::kable(
@@ -556,8 +641,8 @@ knitr::kable(
   format = "latex",
   booktabs = TRUE,
   escape = FALSE,
-  caption = "Brazil SDiD estimate and rank-versus-volume timing tests.",
-  align = "clccccccc"
+  caption = "Brazil SDiD rank-versus-volume timing diagnostics without covariates.",
+  align = "clccccl"
 ) %>%
   kableExtra::kable_styling(
     latex_options = c("HOLD_position", "scale_down"),
@@ -574,8 +659,8 @@ knitr::kable(
 ```{r china-demand-sdid-diagnostics, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 format_diag_p <- function(p_value, se_value) {
   dplyr::case_when(
-    is.na(p_value) ~ "NA",
-    is.na(se_value) ~ "NA",
+    is.na(p_value) ~ "Not computed",
+    is.na(se_value) ~ "Not computed",
     se_value > 10 ~ "unstable",
     p_value < 0.001 ~ "<0.001",
     TRUE ~ sprintf("%.3f", p_value)
@@ -584,7 +669,7 @@ format_diag_p <- function(p_value, se_value) {
 
 format_diag_se <- function(se_value) {
   dplyr::case_when(
-    is.na(se_value) ~ "NA",
+    is.na(se_value) ~ "Not computed",
     se_value > 10 ~ "unstable",
     TRUE ~ sprintf("%.3f", se_value)
   )
@@ -592,29 +677,59 @@ format_diag_se <- function(se_value) {
 
 format_diag_ci <- function(ci_low, ci_high, se_value) {
   dplyr::case_when(
-    is.na(ci_low) | is.na(ci_high) ~ "NA",
-    is.na(se_value) ~ "NA",
+    is.na(ci_low) | is.na(ci_high) ~ "Not computed",
+    is.na(se_value) ~ "Not computed",
     se_value > 10 ~ "not informative",
     TRUE ~ paste0("[", sprintf("%.3f", ci_low), ", ", sprintf("%.3f", ci_high), "]")
   )
 }
 
 china_demand_table <- china_demand_sdid_results %>%
+  dplyr::filter(specification %in% c(
+    "current_baseline",
+    "predetermined_core",
+    "predetermined_plus_primary_level",
+    "predetermined_plus_primary_gfc_2008_2009",
+    "predetermined_plus_agriculture_mining_gfc",
+    "predetermined_plus_weighted_price_gfc",
+    "predetermined_plus_pre_china_gfc"
+  )) %>%
   dplyr::mutate(
-    Specification = label,
+    Specification = dplyr::case_when(
+      specification == "current_baseline" ~ "Current covariates",
+      specification == "predetermined_core" ~
+        "Preferred: no effective adjustment",
+      specification == "predetermined_plus_primary_level" ~
+        "Add pre-2009 primary share",
+      specification == "predetermined_plus_primary_gfc_2008_2009" ~
+        "Primary share x 2008-2009",
+      specification == "predetermined_plus_agriculture_mining_gfc" ~
+        "Agriculture/mining x 2008-2009",
+      specification == "predetermined_plus_weighted_price_gfc" ~
+        "Price exposure x 2008-2009",
+      specification == "predetermined_plus_pre_china_gfc" ~
+        "Prior China share x 2008-2009",
+      TRUE ~ label
+    ),
     ATT = sprintf("%.3f", estimate),
     `Placebo SE` = format_diag_se(se_placebo),
-    `p-value` = format_diag_p(p_value, se_placebo),
-    `95\\% CI` = format_diag_ci(ci_95_low, ci_95_high, se_placebo),
-    `Diagnostic added` = control_family
+    `Normal p` = format_diag_p(p_value_two_sided, se_placebo),
+    `Rank p (dir./bilat.)` = dplyr::if_else(
+      is.na(rank_p_one_sided_negative) | is.na(rank_p_two_sided),
+      "Not computed",
+      paste0(
+        sprintf("%.3f", rank_p_one_sided_negative),
+        " / ",
+        sprintf("%.3f", rank_p_two_sided)
+      )
+    )
   ) %>%
   dplyr::select(
     Specification,
-    `Diagnostic added`,
     ATT,
     `Placebo SE`,
-    `95\\% CI`,
-    `p-value`
+    `Normal p`,
+    `Rank p (dir./bilat.)`
   )
 
 china_demand_note <- paste0(
@@ -627,9 +742,9 @@ china_demand_note <- paste0(
       window = "1997-2015 annual SDiD panel"
     )
   ),
-  " All rows keep the binary 2009 China number-one treatment onset. ",
-  "Commodity/GFC exposure uses pre-2009 primary-goods export composition from ITPD-E Agriculture plus Mining and Energy over goods exports, interacted with the 2008-2009 shock window. ",
-  "The full stress test includes the rank margin, which is mechanically related to the threshold, and several continuous exposure transformations; its placebo SE is numerically unstable, so that row is a conservative support diagnostic rather than a preferred inferential specification."
+  " All rows keep the binary 2009 China number-one treatment onset and use 1,000-replication placebo SEs. ",
+  "The preferred row has no effective covariate adjustment; the current-covariates row is a comparison. Primary-goods measures use external goods exports only. ",
+  "The 2008-2009 interactions include the first treated year and are mechanism robustness checks, not preferred total-effect specifications. Rank inference was computed for the preferred specification and the primary-share x 2008-2009 interaction; 'Not computed' does not denote a failed test."
 )
 
 knitr::kable(
@@ -637,12 +752,12 @@ knitr::kable(
   format = "latex",
   booktabs = TRUE,
   escape = FALSE,
-  caption = "Brazil SDiD diagnostics for the China-demand-shock critique.",
-  align = "llcccc"
+  caption = "Brazil SDiD estimates under corrected predetermined commodity and China-demand diagnostics.",
+  align = "lcccc"
 ) %>%
   kableExtra::kable_styling(
-    latex_options = c("HOLD_position", "scale_down"),
-    font_size = 8
+    latex_options = c("HOLD_position"),
+    font_size = 9
   ) %>%
   kableExtra::footnote(
     general = china_demand_note,
@@ -961,7 +1076,7 @@ The cross-country treatment is durable status-current China-top goods-export-des
 
 # Conclusion
 
-The evidence supports a rank-threshold account of UNGA voting convergence toward China. In Brazil, China's 2009 move into the top export-destination position coincided with a publicly visible status cue, and SDiD estimates show that Brazil moved closer to China relative to a synthetic counterfactual. The issue-area and vote-level evidence suggest that this convergence was selective rather than mechanical: the strongest additional support comes from human-rights resolutions where China and the United States diverged, and the human-rights shift is larger than the analogous non-human-rights shift. The media evidence shows that the rank cue was publicly available and politically usable: China's new commercial status became visible in Folha headlines and official discourse. Cross-country estimates from the goods-only IFE model then show a compatible directional pattern beyond Brazil. The mechanism is measured most directly in the Brazilian case, and the panel evidence extends the argument beyond the theory-generating case: durable top-rank goods-export milestones can matter for multilateral alignment.
+The evidence supports a rank-threshold account of UNGA voting convergence toward China. In Brazil, China's 2009 move into the top export-destination position coincided with a publicly visible status cue. The preferred SDiD specification has no effective covariate adjustment and estimates a post-2009 Brazil-minus-synthetic gap of -0.272 ideal-point units. The conventional normal approximation yields a two-sided p-value of 0.036, while placebo-in-space inference places Brazil third among 96 assignments in the predicted negative direction (p = 0.031) and seventh in absolute magnitude under a conservative bilateral comparison (p = 0.073). The result is therefore strong under the theory-aligned directional test but should not be described as unambiguously below 5 percent under every inferential convention; its rank interpretation also depends on the comparability of placebo assignments. The issue-area and vote-level evidence suggest that this convergence was selective rather than mechanical: the strongest additional support comes from human-rights resolutions where China and the United States diverged, and the human-rights shift is larger than the analogous non-human-rights shift. The media evidence shows that the rank cue was publicly available and politically usable: China's new commercial status became visible in Folha headlines and official discourse. Cross-country estimates from the goods-only IFE model then show a compatible directional pattern beyond Brazil. The mechanism is measured most directly in the Brazilian case, and the panel evidence extends the argument beyond the theory-generating case: durable top-rank goods-export milestones can matter for multilateral alignment.
 
 The paper therefore shifts attention from trade volume alone to the political meaning of trade hierarchies. Continuous exposure matters, but actors also respond to categorical milestones: becoming first, displacing a hegemonic benchmark, and making an economic relationship publicly legible. These thresholds can create opportunities for selective diplomatic adjustment even when the underlying commercial relationship has been growing for years.
 
@@ -1143,7 +1258,7 @@ knitr::kable(
   sdid_time_weights_table,
   format = "latex",
   booktabs = TRUE,
-  caption = "SDiD pre-treatment time weights for the Brazil baseline.",
+  caption = "SDiD pre-treatment time weights for the preferred Brazil specification.",
   align = "rrrr"
 ) %>%
   kableExtra::kable_styling(
@@ -1163,7 +1278,7 @@ sdid_prefit_table <- sdid_fit_summary %>%
   dplyr::transmute(
     Specification = specification,
     ATT = sprintf("%.3f", estimate),
-    `Placebo SE` = sprintf("%.3f", placebo_se),
+    `Placebo SE` = sprintf("%.3f", se_placebo),
     `Adj. pre RMSPE` = sprintf("%.3f", rmspe_pre),
     `Adj. post RMSPE` = sprintf("%.3f", rmspe_post),
     `Post/pre adj. RMSPE` = sprintf("%.3f", rmspe_ratio),
@@ -1175,7 +1290,7 @@ knitr::kable(
   sdid_prefit_table,
   format = "latex",
   booktabs = TRUE,
-  caption = "Intercept-adjusted pre-treatment fit summary for the Brazil SDiD baseline.",
+  caption = "Intercept-adjusted pre-treatment fit summary for the preferred Brazil SDiD specification.",
   align = "lrrrrrrr"
 ) %>%
   kableExtra::kable_styling(
@@ -1192,9 +1307,10 @@ knitr::kable(
 
 ```{r sdid-balance, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 sdid_balance_table <- sdid_balance %>%
+  dplyr::filter(included_in_preferred_specification) %>%
   dplyr::transmute(
     Variable = variable,
-    Role = role,
+    Definition = value_definition,
     `Brazil pre-mean` = sprintf("%.3f", brazil_pre_mean),
     `Synthetic pre-mean` = sprintf("%.3f", synthetic_pre_mean),
     Difference = sprintf("%.3f", brazil_minus_synthetic),
@@ -1206,14 +1322,14 @@ knitr::kable(
   format = "latex",
   booktabs = TRUE,
   longtable = TRUE,
-  caption = "Pre-treatment balance of the outcome and SDiD covariates.",
+  caption = "Pre-treatment outcome balance and fixed values supplied in the preferred SDiD audit.",
   align = "llrrrr"
 ) %>%
   kableExtra::kable_styling(
     font_size = 7
   ) %>%
   kableExtra::footnote(
-    general = "Continuous covariates use the scale of the estimation data. The table is a diagnostic, not a claim that all covariates are perfectly balanced.",
+    general = "Definitions match the fixed arrays supplied to the estimator. Their estimated coefficients are numerically zero, so they do not effectively adjust the preferred estimate. Synthetic values use the SDiD unit weights; these are descriptive values, not residualized synthdid balance statistics.",
     general_title = "Note: ",
     escape = FALSE,
     threeparttable = TRUE
@@ -1221,29 +1337,39 @@ knitr::kable(
 ```
 
 ```{r sdid-placebo-rank, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
-sdid_placebo_rank_table <- sdid_placebo_rank %>%
+sdid_placebo_rank_table <- sdid_rank_inference %>%
   dplyr::transmute(
-    Estimand = estimand,
-    `Brazil statistic` = sprintf("%.3f", brazil_statistic),
-    Rank = as.integer(rank),
+    `Comparison set` = comparison_set,
+    `Directional rank` = paste0(
+      as.integer(rank_one_sided_negative), "/", as.integer(denominator)
+    ),
+    `Directional p` = sprintf("%.3f", p_rank_one_sided_negative),
+    `Absolute rank` = paste0(
+      as.integer(rank_two_sided_absolute), "/", as.integer(denominator)
+    ),
+    `Bilateral p` = sprintf("%.3f", p_rank_two_sided_absolute),
     Denominator = as.integer(denominator),
-    `Rank p-value` = sprintf("%.3f", rank_based_p_value),
-    Note = inference_note
+    Note = dplyr::case_when(
+      comparison_set == "All valid assignments" ~ "Primary rank comparison",
+      comparison_set == "Exclude goods-only China-top donor assignments" ~
+        "Excludes Malta, China-top in goods in 2011-2012",
+      TRUE ~ "Fit-filter sensitivity; not used to select the main p-value"
+    )
   )
 
 knitr::kable(
   sdid_placebo_rank_table,
   format = "latex",
   booktabs = TRUE,
-  caption = "Rank-based placebo inference for the Brazil SDiD estimate.",
-  align = "lrrrrl"
+  caption = "Directional and bilateral placebo-in-space rank inference for the preferred Brazil SDiD estimate.",
+  align = "lcccccl"
 ) %>%
   kableExtra::kable_styling(
     latex_options = c("HOLD_position", "scale_down"),
     font_size = 7
   ) %>%
   kableExtra::footnote(
-    general = "The placebo distribution includes Brazil and valid placebo-in-space assignments.",
+    general = "The primary distribution includes Brazil and all valid placebo-in-space assignments. The directional rank tests the theory-aligned direction of convergence; the bilateral absolute rank is the conservative two-sided counterpart. Interpreting these ranks as p-values requires sufficiently comparable placebo assignments; the exposure exclusion and pre-fit filter probe, but cannot guarantee, that condition. The fit-filter row was not used to choose the main result.",
     general_title = "Note: ",
     escape = FALSE,
     threeparttable = TRUE
@@ -1258,8 +1384,8 @@ sdid_donor_sensitivity_table <- sdid_donor_sensitivity %>%
     `Adj. pre RMSPE` = sprintf("%.3f", rmspe_pre),
     `Post/pre adj. RMSPE` = sprintf("%.3f", rmspe_ratio),
     `Removed donors` = as.integer(n_removed_donors),
-    `% change` = sprintf("%.1f", percent_change_vs_baseline),
-    Stability = substantive_stability
+    `% change` = sprintf("%.1f", percent_change_vs_main),
+    Inference = inference
   )
 
 knitr::kable(
@@ -1288,25 +1414,23 @@ sdid_window_sensitivity_table <- sdid_window_sensitivity %>%
     ATT = sprintf("%.3f", estimate),
     `Adj. pre RMSPE` = sprintf("%.3f", rmspe_pre),
     `Post/pre adj. RMSPE` = sprintf("%.3f", rmspe_ratio),
-    `One-sided p` = sprintf("%.3f", placebo_p_one_sided_negative),
-    `Two-sided p` = sprintf("%.3f", placebo_p_two_sided_abs),
-    `% change` = sprintf("%.1f", percent_change_vs_baseline),
-    Stability = stability
+    `% change` = sprintf("%.1f", percent_change_vs_main),
+    Inference = inference
   )
 
 knitr::kable(
   sdid_window_sensitivity_table,
   format = "latex",
   booktabs = TRUE,
-  caption = "Sensitivity to plausible time windows around the 1997-2015 baseline.",
-  align = "lrrrrrrl"
+  caption = "Sensitivity to plausible time windows around the preferred 1997-2015 specification.",
+  align = "lrrrrl"
 ) %>%
   kableExtra::kable_styling(
     latex_options = c("HOLD_position", "scale_down"),
     font_size = 8
   ) %>%
   kableExtra::footnote(
-    general = "One-sided p-values are rank-based placebo p-values for negative effects when reported; non-baseline window rows are point-estimate and intercept-adjusted fit diagnostics.",
+    general = "The preferred 1997-2015 row uses the 1,000-placebo SE and rank inference reported in the main results. Other windows are point-estimate and intercept-adjusted fit diagnostics; their placebo distributions were not recomputed.",
     general_title = "Note: ",
     escape = FALSE,
     threeparttable = TRUE
@@ -1357,25 +1481,26 @@ knitr::kable(
 
 Below I also present the ten largest donor weights used in the main model as a visual summary.
 
-```{r plot-weights, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Ten largest donor weights contributing to the synthetic control in the Brazilian SDiD model. ", caption_note(unit = "Synthetic-control unit weights, normalized over the full donor pool rather than only over the displayed donors", window = "pre-treatment period ending in 2008")), fig.pos="H"}
-tar_read(plot_weights_coef)
+```{r plot-weights, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Ten largest donor weights contributing to the synthetic control in the Brazilian SDiD model. ", caption_note(unit = "Synthetic-control unit weights, normalized over the full donor pool rather than only over the displayed donors", window = "pre-treatment period ending in 2008")), fig.pos="H", out.width="90%"}
+knitr::include_graphics(file.path(
+  paper_sdid_figure_dir,
+  "figure_brazil_sdid_predetermined_core_weights.png"
+))
 ```
 
 We also fit a model for a donor pool of Latin American states (excluding Caribbean countries), which is substantively attractive because the donor countries are regionally closer to Brazil. This regional donor pool is a sensitivity check rather than the preferred specification: the main design seeks a pre-treatment synthetic counterfactual with adequate donor support and fit, while the Latin American pool is much smaller.
 
 
-```{r plot-latam, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("SDiD fit with a Latin American donor pool. ", caption_note(unit = "Absolute UNGA ideal-point distance to China", se = "placebo-based, reported in text", window = "years shown in the plot")), fig.pos="H"}
-tar_read(plot_trend_latam)
-b_est_main <- tar_read(synth_fit)[1]           # main donor-pool estimate
-b_est_latam <- tar_read(synth_fit_latam)[1]          # LATAM donor-pool estimate
-se_latam    <- tar_read(se_synth_latam)
+```{r plot-latam, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("SDiD fit with a Latin American donor pool and no effective covariate adjustment. ", caption_note(unit = "Absolute UNGA ideal-point distance to China", se = "not recomputed for this point-estimate sensitivity", window = "1997-2015 annual series")), fig.pos="H", out.width="95%"}
+knitr::include_graphics(file.path(
+  paper_sdid_figure_dir,
+  "figure_brazil_sdid_predetermined_core_latam_fit.png"
+))
+b_est_main <- sdid_fit_summary$estimate[[1]]
+b_est_latam <- sdid_latam_core_summary$estimate[[1]]
 ```
 
-The Latin America donor-pool estimate has the same sign as the main estimate, but it is less precise and substantially larger in magnitude: `r round(b_est_latam,2)` with a standard error of `r round(se_latam,2)`, compared with `r round(b_est_main,2)` in the main donor pool. I therefore treat it as evidence that the negative sign is not unique to the global donor pool, not as evidence that the two counterfactuals produce nearly identical magnitudes. The countries with the largest Latin American weights are Argentina, Guatemala, Paraguay, and Uruguay -- all but Guatemala are founding members of Mercosur.
-
-```{r plot-weight-latam, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Synthetic-control donor weights for the Latin American SDiD specification. ", caption_note(unit = "Synthetic-control unit weights, summing to 1", window = "pre-treatment period ending in 2008")), fig.pos="H"}
-tar_read(plot_weights_coef_latam)
-```
+With the same lack of effective covariate adjustment, the Latin America donor-pool estimate has the same sign and a somewhat larger magnitude: `r round(b_est_latam,2)`, compared with `r round(b_est_main,2)` in the global donor pool. The regional pool has only `r sdid_latam_core_summary$n_donors[[1]]` donors and a slightly higher intercept-adjusted pre-treatment RMSPE (`r sprintf("%.3f", sdid_latam_core_summary$rmspe_pre[[1]])` versus `r sprintf("%.3f", sdid_fit_summary$rmspe_pre[[1]])`). Because its placebo SE was not recomputed, this is a point-estimate sensitivity check. It supports stability of the negative direction but is not an independent inferential result.
 
 ## Cross-Country Robustness: Duration Thresholds
 

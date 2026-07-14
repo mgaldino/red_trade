@@ -1,0 +1,856 @@
+specification,weight_rank,iso3c,country_name,unit_weight
+current_baseline,1,MLT,Malta,0.030572090398788644
+current_baseline,2,GEO,Georgia,0.029091920501683716
+current_baseline,3,PRY,Paraguay,0.027248773297055738
+current_baseline,4,TCD,Chad,0.026759221250177045
+current_baseline,5,GTM,Guatemala,0.026217342003487576
+current_baseline,6,COL,Colombia,0.02500536728200791
+current_baseline,7,IND,India,0.021665520123917162
+current_baseline,8,DOM,Dominican Republic,0.021503546535691864
+current_baseline,9,BOL,Bolivia,0.021464315463903098
+current_baseline,10,TUR,Turkey,0.021439403693077043
+current_baseline,11,FJI,Fiji,0.021418186016485194
+current_baseline,12,PNG,Papua New Guinea,0.020733312349723976
+current_baseline,13,ALB,Albania,0.019738380782296665
+current_baseline,14,MWI,Malawi,0.01970959257535825
+current_baseline,15,AZE,Azerbaijan,0.01955284395594872
+current_baseline,16,DEU,Germany,0.018983682588274424
+current_baseline,17,HRV,Croatia,0.017633507776679887
+current_baseline,18,CYP,Cyprus,0.01758927898471979
+current_baseline,19,CRI,Costa Rica,0.01732500162752721
+current_baseline,20,KEN,Kenya,0.015867116854296023
+current_baseline,21,ARG,Argentina,0.015507269323146203
+current_baseline,22,HTI,Haiti,0.015313051923092949
+current_baseline,23,SUR,Suriname,0.014817233623292963
+current_baseline,24,ISL,Iceland,0.014565588420439913
+current_baseline,25,TTO,Trinidad & Tobago,0.013870652104948897
+current_baseline,26,NOR,Norway,0.013559089675372338
+current_baseline,27,BRB,Barbados,0.013415499854307287
+current_baseline,28,HUN,Hungary,0.013345665223296827
+current_baseline,29,SLV,El Salvador,0.013189093971965675
+current_baseline,30,NIC,Nicaragua,0.012954367320839148
+current_baseline,31,PAK,Pakistan,0.012783254135790801
+current_baseline,32,POL,Poland,0.012747132819867519
+current_baseline,33,DNK,Denmark,0.012745620177243058
+current_baseline,34,TUN,Tunisia,0.011825196750051063
+current_baseline,35,JAM,Jamaica,0.01177075444476801
+current_baseline,36,MDV,Maldives,0.011770430292228766
+current_baseline,37,LTU,Lithuania,0.011769800177088303
+current_baseline,38,MUS,Mauritius,0.0117365514240067
+current_baseline,39,BTN,Bhutan,0.011507605385656082
+current_baseline,40,EST,Estonia,0.011328245924226838
+current_baseline,41,CZE,Czechia,0.011255092481297512
+current_baseline,42,ROU,Romania,0.011158346594654901
+current_baseline,43,LVA,Latvia,0.011112173224000167
+current_baseline,44,NAM,Namibia,0.010872123572813995
+current_baseline,45,LBN,Lebanon,0.010644678286592811
+current_baseline,46,ISR,Israel,0.010613461434511607
+current_baseline,47,SVN,Slovenia,0.01051689290427033
+current_baseline,48,GUY,Guyana,0.010368562049712022
+current_baseline,49,DZA,Algeria,0.010327004154633264
+current_baseline,50,UGA,Uganda,0.010279040451098691
+current_baseline,51,BGR,Bulgaria,0.010244733095998514
+current_baseline,52,TGO,Togo,0.010195412420580854
+current_baseline,53,SVK,Slovakia,0.009908364421093255
+current_baseline,54,PAN,Panama,0.009868632390038394
+current_baseline,55,ESP,Spain,0.009438631120101723
+current_baseline,56,COM,Comoros,0.008718747834588966
+current_baseline,57,JOR,Jordan,0.008088751666262849
+current_baseline,58,GRC,Greece,0.0080410157654238
+current_baseline,59,MDA,Moldova,0.007935517381384368
+current_baseline,60,SWE,Sweden,0.007743097184668164
+current_baseline,61,AUT,Austria,0.007474776303075666
+current_baseline,62,SEN,Senegal,0.007410211367169325
+current_baseline,63,QAT,Qatar,0.007396063963444001
+current_baseline,64,MAR,Morocco,0.007152278280315116
+current_baseline,65,NLD,Netherlands,0.007144788892825374
+current_baseline,66,FIN,Finland,0.00704250592412738
+current_baseline,67,PRT,Portugal,0.0065622752286031245
+current_baseline,68,CAN,Canada,0.006435926586913832
+current_baseline,69,ITA,Italy,0.005176447178919658
+current_baseline,70,USA,United States,0.004939634708676528
+current_baseline,71,CPV,Cape Verde,0.004439504551401348
+current_baseline,72,GBR,United Kingdom,0.004428330168483348
+current_baseline,73,LKA,Sri Lanka,0.004185425501474855
+current_baseline,74,UKR,Ukraine,0.0037803075768135194
+current_baseline,75,MEX,Mexico,0.0031011787971673265
+current_baseline,76,EGY,Egypt,0.0023812084340951627
+current_baseline,77,IRL,Ireland,0.0018534756747422257
+current_baseline,78,GHA,Ghana,0.0017643274664732559
+current_baseline,79,GIN,Guinea,0.0010702754901089385
+current_baseline,80,CIV,Côte d’Ivoire,9.91500926285626e-4
+current_baseline,81,BWA,Botswana,7.968762681961246e-4
+current_baseline,82,LBY,Libya,6.557122426836097e-4
+current_baseline,83,ARE,United Arab Emirates,4.95860230888396e-4
+current_baseline,84,BGD,Bangladesh,4.95860230888396e-4
+current_baseline,85,BHR,Bahrain,4.95860230888396e-4
+current_baseline,86,BLR,Belarus,4.95860230888396e-4
+current_baseline,87,ECU,Ecuador,4.95860230888396e-4
+current_baseline,88,FRA,France,4.95860230888396e-4
+current_baseline,89,GAB,Gabon,4.95860230888396e-4
+current_baseline,90,KWT,Kuwait,4.95860230888396e-4
+current_baseline,91,MDG,Madagascar,4.95860230888396e-4
+current_baseline,92,NGA,Nigeria,4.95860230888396e-4
+current_baseline,93,RWA,Rwanda,4.95860230888396e-4
+current_baseline,94,SWZ,Eswatini,4.95860230888396e-4
+current_baseline,95,VEN,Venezuela,4.95860230888396e-4
+all_current_covariates_frozen,1,GEO,Georgia,0.030501308836623577
+all_current_covariates_frozen,2,MLT,Malta,0.030478276175817828
+all_current_covariates_frozen,3,TCD,Chad,0.027702557095151674
+all_current_covariates_frozen,4,GTM,Guatemala,0.027344567083984424
+all_current_covariates_frozen,5,PRY,Paraguay,0.026966262293782916
+all_current_covariates_frozen,6,BOL,Bolivia,0.022587016982689487
+all_current_covariates_frozen,7,ALB,Albania,0.022104894289254988
+all_current_covariates_frozen,8,COL,Colombia,0.02183999768841847
+all_current_covariates_frozen,9,IND,India,0.02180505634322871
+all_current_covariates_frozen,10,DOM,Dominican Republic,0.02178320600106761
+all_current_covariates_frozen,11,AZE,Azerbaijan,0.02102190654144858
+all_current_covariates_frozen,12,DEU,Germany,0.020838641754271203
+all_current_covariates_frozen,13,TUR,Turkey,0.02076332895506093
+all_current_covariates_frozen,14,CRI,Costa Rica,0.01789560877421431
+all_current_covariates_frozen,15,MWI,Malawi,0.017757961734512773
+all_current_covariates_frozen,16,FJI,Fiji,0.017343828576590847
+all_current_covariates_frozen,17,ARG,Argentina,0.016453859968024974
+all_current_covariates_frozen,18,PNG,Papua New Guinea,0.016240331435217577
+all_current_covariates_frozen,19,ISL,Iceland,0.016218761248501957
+all_current_covariates_frozen,20,CYP,Cyprus,0.016209331209934646
+all_current_covariates_frozen,21,BRB,Barbados,0.015769121904752898
+all_current_covariates_frozen,22,HTI,Haiti,0.015727300410263382
+all_current_covariates_frozen,23,HUN,Hungary,0.01548111583418569
+all_current_covariates_frozen,24,KEN,Kenya,0.01541313238047369
+all_current_covariates_frozen,25,NOR,Norway,0.015275418557308478
+all_current_covariates_frozen,26,SUR,Suriname,0.01504998039409417
+all_current_covariates_frozen,27,TTO,Trinidad & Tobago,0.014450102683794956
+all_current_covariates_frozen,28,DNK,Denmark,0.013803575388387375
+all_current_covariates_frozen,29,NIC,Nicaragua,0.013675606646570679
+all_current_covariates_frozen,30,LTU,Lithuania,0.013675588502957149
+all_current_covariates_frozen,31,TUN,Tunisia,0.013590272887198336
+all_current_covariates_frozen,32,HRV,Croatia,0.013538365126123143
+all_current_covariates_frozen,33,POL,Poland,0.013524255912185411
+all_current_covariates_frozen,34,PAK,Pakistan,0.013154964322860393
+all_current_covariates_frozen,35,EST,Estonia,0.01301371080391426
+all_current_covariates_frozen,36,SLV,El Salvador,0.012787820438840436
+all_current_covariates_frozen,37,JAM,Jamaica,0.01264542173615163
+all_current_covariates_frozen,38,TGO,Togo,0.011722351120224773
+all_current_covariates_frozen,39,MDV,Maldives,0.011608505141629933
+all_current_covariates_frozen,40,LBN,Lebanon,0.011548159335917203
+all_current_covariates_frozen,41,LVA,Latvia,0.011423971987132648
+all_current_covariates_frozen,42,ESP,Spain,0.011132678487376393
+all_current_covariates_frozen,43,SVN,Slovenia,0.010687692631309085
+all_current_covariates_frozen,44,BGR,Bulgaria,0.010511425884568418
+all_current_covariates_frozen,45,MUS,Mauritius,0.010493689549936607
+all_current_covariates_frozen,46,JOR,Jordan,0.01047164990857241
+all_current_covariates_frozen,47,ROU,Romania,0.010394121927618355
+all_current_covariates_frozen,48,AUT,Austria,0.01012382905512333
+all_current_covariates_frozen,49,GUY,Guyana,0.010054182003937989
+all_current_covariates_frozen,50,CZE,Czechia,0.009954709455066624
+all_current_covariates_frozen,51,DZA,Algeria,0.009877406220523452
+all_current_covariates_frozen,52,QAT,Qatar,0.009683982023398721
+all_current_covariates_frozen,53,NAM,Namibia,0.009248775090940664
+all_current_covariates_frozen,54,SWE,Sweden,0.00916976880300353
+all_current_covariates_frozen,55,FIN,Finland,0.008929208822869298
+all_current_covariates_frozen,56,NLD,Netherlands,0.008874836875830442
+all_current_covariates_frozen,57,COM,Comoros,0.008629499127300006
+all_current_covariates_frozen,58,UGA,Uganda,0.008465707144980215
+all_current_covariates_frozen,59,SEN,Senegal,0.008408002714513429
+all_current_covariates_frozen,60,GRC,Greece,0.00827000143806742
+all_current_covariates_frozen,61,PAN,Panama,0.008240499150702952
+all_current_covariates_frozen,62,ISR,Israel,0.008166943162722116
+all_current_covariates_frozen,63,PRT,Portugal,0.00806775821791214
+all_current_covariates_frozen,64,ITA,Italy,0.007853277011033851
+all_current_covariates_frozen,65,SVK,Slovakia,0.007777969031919135
+all_current_covariates_frozen,66,MAR,Morocco,0.007345126694438541
+all_current_covariates_frozen,67,MDA,Moldova,0.007314339668994027
+all_current_covariates_frozen,68,BTN,Bhutan,0.006180104059926094
+all_current_covariates_frozen,69,GBR,United Kingdom,0.005925567982923336
+all_current_covariates_frozen,70,USA,United States,0.00436271384304135
+all_current_covariates_frozen,71,LKA,Sri Lanka,0.0037994650857947117
+all_current_covariates_frozen,72,BWA,Botswana,0.0030995225426561704
+all_current_covariates_frozen,73,IRL,Ireland,0.003019631389015416
+all_current_covariates_frozen,74,CAN,Canada,0.0029700253282427883
+all_current_covariates_frozen,75,LBY,Libya,0.0023139846482236577
+all_current_covariates_frozen,76,ARE,United Arab Emirates,8.597830731803782e-4
+all_current_covariates_frozen,77,FRA,France,5.960347928886353e-4
+all_current_covariates_frozen,78,BGD,Bangladesh,5.052978493829094e-4
+all_current_covariates_frozen,79,BHR,Bahrain,4.403143999589192e-4
+all_current_covariates_frozen,80,BLR,Belarus,4.403143999589192e-4
+all_current_covariates_frozen,81,CIV,Côte d’Ivoire,4.403143999589192e-4
+all_current_covariates_frozen,82,CPV,Cape Verde,4.403143999589192e-4
+all_current_covariates_frozen,83,ECU,Ecuador,4.403143999589192e-4
+all_current_covariates_frozen,84,EGY,Egypt,4.403143999589192e-4
+all_current_covariates_frozen,85,GAB,Gabon,4.403143999589192e-4
+all_current_covariates_frozen,86,GHA,Ghana,4.403143999589192e-4
+all_current_covariates_frozen,87,GIN,Guinea,4.403143999589192e-4
+all_current_covariates_frozen,88,KWT,Kuwait,4.403143999589192e-4
+all_current_covariates_frozen,89,MDG,Madagascar,4.403143999589192e-4
+all_current_covariates_frozen,90,MEX,Mexico,4.403143999589192e-4
+all_current_covariates_frozen,91,NGA,Nigeria,4.403143999589192e-4
+all_current_covariates_frozen,92,RWA,Rwanda,4.403143999589192e-4
+all_current_covariates_frozen,93,SWZ,Eswatini,4.403143999589192e-4
+all_current_covariates_frozen,94,UKR,Ukraine,4.403143999589192e-4
+all_current_covariates_frozen,95,VEN,Venezuela,4.403143999589192e-4
+predetermined_core,1,GEO,Georgia,0.030501308836623577
+predetermined_core,2,MLT,Malta,0.03047827617581779
+predetermined_core,3,TCD,Chad,0.02770255709515166
+predetermined_core,4,GTM,Guatemala,0.027344567083984438
+predetermined_core,5,PRY,Paraguay,0.026966262293782912
+predetermined_core,6,BOL,Bolivia,0.02258701698268947
+predetermined_core,7,ALB,Albania,0.022104894289254988
+predetermined_core,8,COL,Colombia,0.021839997688418485
+predetermined_core,9,IND,India,0.021805056343228713
+predetermined_core,10,DOM,Dominican Republic,0.02178320600106761
+predetermined_core,11,AZE,Azerbaijan,0.021021906541448577
+predetermined_core,12,DEU,Germany,0.020838641754271182
+predetermined_core,13,TUR,Turkey,0.02076332895506092
+predetermined_core,14,CRI,Costa Rica,0.017895608774214297
+predetermined_core,15,MWI,Malawi,0.017757961734512766
+predetermined_core,16,FJI,Fiji,0.01734382857659083
+predetermined_core,17,ARG,Argentina,0.016453859968024946
+predetermined_core,18,PNG,Papua New Guinea,0.016240331435217564
+predetermined_core,19,ISL,Iceland,0.01621876124850198
+predetermined_core,20,CYP,Cyprus,0.01620933120993463
+predetermined_core,21,BRB,Barbados,0.015769121904752884
+predetermined_core,22,HTI,Haiti,0.015727300410263382
+predetermined_core,23,HUN,Hungary,0.015481115834185695
+predetermined_core,24,KEN,Kenya,0.015413132380473678
+predetermined_core,25,NOR,Norway,0.015275418557308493
+predetermined_core,26,SUR,Suriname,0.015049980394094161
+predetermined_core,27,TTO,Trinidad & Tobago,0.014450102683794958
+predetermined_core,28,DNK,Denmark,0.013803575388387373
+predetermined_core,29,NIC,Nicaragua,0.013675606646570684
+predetermined_core,30,LTU,Lithuania,0.013675588502957175
+predetermined_core,31,TUN,Tunisia,0.013590272887198341
+predetermined_core,32,HRV,Croatia,0.013538365126123138
+predetermined_core,33,POL,Poland,0.013524255912185418
+predetermined_core,34,PAK,Pakistan,0.013154964322860375
+predetermined_core,35,EST,Estonia,0.013013710803914263
+predetermined_core,36,SLV,El Salvador,0.012787820438840447
+predetermined_core,37,JAM,Jamaica,0.012645421736151618
+predetermined_core,38,TGO,Togo,0.011722351120224735
+predetermined_core,39,MDV,Maldives,0.011608505141629914
+predetermined_core,40,LBN,Lebanon,0.011548159335917138
+predetermined_core,41,LVA,Latvia,0.011423971987132667
+predetermined_core,42,ESP,Spain,0.011132678487376391
+predetermined_core,43,SVN,Slovenia,0.010687692631309089
+predetermined_core,44,BGR,Bulgaria,0.01051142588456842
+predetermined_core,45,MUS,Mauritius,0.010493689549936605
+predetermined_core,46,JOR,Jordan,0.01047164990857242
+predetermined_core,47,ROU,Romania,0.010394121927618334
+predetermined_core,48,AUT,Austria,0.010123829055123322
+predetermined_core,49,GUY,Guyana,0.01005418200393799
+predetermined_core,50,CZE,Czechia,0.009954709455066622
+predetermined_core,51,DZA,Algeria,0.009877406220523487
+predetermined_core,52,QAT,Qatar,0.009683982023398725
+predetermined_core,53,NAM,Namibia,0.009248775090940657
+predetermined_core,54,SWE,Sweden,0.009169768803003532
+predetermined_core,55,FIN,Finland,0.008929208822869293
+predetermined_core,56,NLD,Netherlands,0.008874836875830398
+predetermined_core,57,COM,Comoros,0.008629499127300008
+predetermined_core,58,UGA,Uganda,0.008465707144980204
+predetermined_core,59,SEN,Senegal,0.008408002714513408
+predetermined_core,60,GRC,Greece,0.008270001438067427
+predetermined_core,61,PAN,Panama,0.008240499150702922
+predetermined_core,62,ISR,Israel,0.008166943162722111
+predetermined_core,63,PRT,Portugal,0.008067758217912151
+predetermined_core,64,ITA,Italy,0.007853277011033853
+predetermined_core,65,SVK,Slovakia,0.007777969031919113
+predetermined_core,66,MAR,Morocco,0.007345126694438545
+predetermined_core,67,MDA,Moldova,0.007314339668994019
+predetermined_core,68,BTN,Bhutan,0.006180104059926089
+predetermined_core,69,GBR,United Kingdom,0.005925567982923353
+predetermined_core,70,USA,United States,0.0043627138430413406
+predetermined_core,71,LKA,Sri Lanka,0.0037994650857947304
+predetermined_core,72,BWA,Botswana,0.003099522542656156
+predetermined_core,73,IRL,Ireland,0.0030196313890154007
+predetermined_core,74,CAN,Canada,0.0029700253282427765
+predetermined_core,75,LBY,Libya,0.0023139846482236447
+predetermined_core,76,ARE,United Arab Emirates,8.597830731803788e-4
+predetermined_core,77,FRA,France,5.960347928886229e-4
+predetermined_core,78,BGD,Bangladesh,5.052978493828832e-4
+predetermined_core,79,BHR,Bahrain,4.4031439995893845e-4
+predetermined_core,80,BLR,Belarus,4.4031439995893845e-4
+predetermined_core,81,CIV,Côte d’Ivoire,4.4031439995893845e-4
+predetermined_core,82,CPV,Cape Verde,4.4031439995893845e-4
+predetermined_core,83,ECU,Ecuador,4.4031439995893845e-4
+predetermined_core,84,EGY,Egypt,4.4031439995893845e-4
+predetermined_core,85,GAB,Gabon,4.4031439995893845e-4
+predetermined_core,86,GHA,Ghana,4.4031439995893845e-4
+predetermined_core,87,GIN,Guinea,4.4031439995893845e-4
+predetermined_core,88,KWT,Kuwait,4.4031439995893845e-4
+predetermined_core,89,MDG,Madagascar,4.4031439995893845e-4
+predetermined_core,90,MEX,Mexico,4.4031439995893845e-4
+predetermined_core,91,NGA,Nigeria,4.4031439995893845e-4
+predetermined_core,92,RWA,Rwanda,4.4031439995893845e-4
+predetermined_core,93,SWZ,Eswatini,4.4031439995893845e-4
+predetermined_core,94,UKR,Ukraine,4.4031439995893845e-4
+predetermined_core,95,VEN,Venezuela,4.4031439995893845e-4
+predetermined_plus_primary_level,1,GEO,Georgia,0.030501308836623595
+predetermined_plus_primary_level,2,MLT,Malta,0.030478276175817793
+predetermined_plus_primary_level,3,TCD,Chad,0.02770255709515165
+predetermined_plus_primary_level,4,GTM,Guatemala,0.027344567083984427
+predetermined_plus_primary_level,5,PRY,Paraguay,0.02696626229378291
+predetermined_plus_primary_level,6,BOL,Bolivia,0.02258701698268947
+predetermined_plus_primary_level,7,ALB,Albania,0.02210489428925499
+predetermined_plus_primary_level,8,COL,Colombia,0.021839997688418492
+predetermined_plus_primary_level,9,IND,India,0.021805056343228706
+predetermined_plus_primary_level,10,DOM,Dominican Republic,0.021783206001067614
+predetermined_plus_primary_level,11,AZE,Azerbaijan,0.021021906541448573
+predetermined_plus_primary_level,12,DEU,Germany,0.020838641754271185
+predetermined_plus_primary_level,13,TUR,Turkey,0.020763328955060917
+predetermined_plus_primary_level,14,CRI,Costa Rica,0.01789560877421432
+predetermined_plus_primary_level,15,MWI,Malawi,0.01775796173451277
+predetermined_plus_primary_level,16,FJI,Fiji,0.017343828576590812
+predetermined_plus_primary_level,17,ARG,Argentina,0.016453859968024967
+predetermined_plus_primary_level,18,PNG,Papua New Guinea,0.016240331435217532
+predetermined_plus_primary_level,19,ISL,Iceland,0.01621876124850198
+predetermined_plus_primary_level,20,CYP,Cyprus,0.016209331209934626
+predetermined_plus_primary_level,21,BRB,Barbados,0.01576912190475288
+predetermined_plus_primary_level,22,HTI,Haiti,0.015727300410263392
+predetermined_plus_primary_level,23,HUN,Hungary,0.015481115834185684
+predetermined_plus_primary_level,24,KEN,Kenya,0.015413132380473676
+predetermined_plus_primary_level,25,NOR,Norway,0.015275418557308509
+predetermined_plus_primary_level,26,SUR,Suriname,0.015049980394094152
+predetermined_plus_primary_level,27,TTO,Trinidad & Tobago,0.01445010268379496
+predetermined_plus_primary_level,28,DNK,Denmark,0.013803575388387373
+predetermined_plus_primary_level,29,NIC,Nicaragua,0.013675606646570682
+predetermined_plus_primary_level,30,LTU,Lithuania,0.013675588502957177
+predetermined_plus_primary_level,31,TUN,Tunisia,0.013590272887198353
+predetermined_plus_primary_level,32,HRV,Croatia,0.01353836512612314
+predetermined_plus_primary_level,33,POL,Poland,0.01352425591218542
+predetermined_plus_primary_level,34,PAK,Pakistan,0.013154964322860391
+predetermined_plus_primary_level,35,EST,Estonia,0.013013710803914247
+predetermined_plus_primary_level,36,SLV,El Salvador,0.012787820438840433
+predetermined_plus_primary_level,37,JAM,Jamaica,0.01264542173615161
+predetermined_plus_primary_level,38,TGO,Togo,0.01172235112022476
+predetermined_plus_primary_level,39,MDV,Maldives,0.011608505141629916
+predetermined_plus_primary_level,40,LBN,Lebanon,0.01154815933591714
+predetermined_plus_primary_level,41,LVA,Latvia,0.011423971987132648
+predetermined_plus_primary_level,42,ESP,Spain,0.011132678487376379
+predetermined_plus_primary_level,43,SVN,Slovenia,0.010687692631309084
+predetermined_plus_primary_level,44,BGR,Bulgaria,0.010511425884568427
+predetermined_plus_primary_level,45,MUS,Mauritius,0.010493689549936609
+predetermined_plus_primary_level,46,JOR,Jordan,0.010471649908572415
+predetermined_plus_primary_level,47,ROU,Romania,0.010394121927618342
+predetermined_plus_primary_level,48,AUT,Austria,0.010123829055123325
+predetermined_plus_primary_level,49,GUY,Guyana,0.01005418200393799
+predetermined_plus_primary_level,50,CZE,Czechia,0.009954709455066619
+predetermined_plus_primary_level,51,DZA,Algeria,0.009877406220523438
+predetermined_plus_primary_level,52,QAT,Qatar,0.009683982023398716
+predetermined_plus_primary_level,53,NAM,Namibia,0.009248775090940641
+predetermined_plus_primary_level,54,SWE,Sweden,0.00916976880300353
+predetermined_plus_primary_level,55,FIN,Finland,0.008929208822869293
+predetermined_plus_primary_level,56,NLD,Netherlands,0.008874836875830431
+predetermined_plus_primary_level,57,COM,Comoros,0.0086294991273
+predetermined_plus_primary_level,58,UGA,Uganda,0.0084657071449802
+predetermined_plus_primary_level,59,SEN,Senegal,0.008408002714513417
+predetermined_plus_primary_level,60,GRC,Greece,0.00827000143806743
+predetermined_plus_primary_level,61,PAN,Panama,0.008240499150702936
+predetermined_plus_primary_level,62,ISR,Israel,0.008166943162722108
+predetermined_plus_primary_level,63,PRT,Portugal,0.008067758217912143
+predetermined_plus_primary_level,64,ITA,Italy,0.007853277011033855
+predetermined_plus_primary_level,65,SVK,Slovakia,0.0077779690319191115
+predetermined_plus_primary_level,66,MAR,Morocco,0.007345126694438545
+predetermined_plus_primary_level,67,MDA,Moldova,0.007314339668994032
+predetermined_plus_primary_level,68,BTN,Bhutan,0.006180104059926066
+predetermined_plus_primary_level,69,GBR,United Kingdom,0.005925567982923338
+predetermined_plus_primary_level,70,USA,United States,0.004362713843041326
+predetermined_plus_primary_level,71,LKA,Sri Lanka,0.0037994650857946987
+predetermined_plus_primary_level,72,BWA,Botswana,0.003099522542656143
+predetermined_plus_primary_level,73,IRL,Ireland,0.0030196313890154037
+predetermined_plus_primary_level,74,CAN,Canada,0.0029700253282427635
+predetermined_plus_primary_level,75,LBY,Libya,0.002313984648223628
+predetermined_plus_primary_level,76,ARE,United Arab Emirates,8.59783073180355e-4
+predetermined_plus_primary_level,77,FRA,France,5.960347928886219e-4
+predetermined_plus_primary_level,78,BGD,Bangladesh,5.052978493828714e-4
+predetermined_plus_primary_level,79,BHR,Bahrain,4.403143999589389e-4
+predetermined_plus_primary_level,80,BLR,Belarus,4.403143999589389e-4
+predetermined_plus_primary_level,81,CIV,Côte d’Ivoire,4.403143999589389e-4
+predetermined_plus_primary_level,82,CPV,Cape Verde,4.403143999589389e-4
+predetermined_plus_primary_level,83,ECU,Ecuador,4.403143999589389e-4
+predetermined_plus_primary_level,84,EGY,Egypt,4.403143999589389e-4
+predetermined_plus_primary_level,85,GAB,Gabon,4.403143999589389e-4
+predetermined_plus_primary_level,86,GHA,Ghana,4.403143999589389e-4
+predetermined_plus_primary_level,87,GIN,Guinea,4.403143999589389e-4
+predetermined_plus_primary_level,88,KWT,Kuwait,4.403143999589389e-4
+predetermined_plus_primary_level,89,MDG,Madagascar,4.403143999589389e-4
+predetermined_plus_primary_level,90,MEX,Mexico,4.403143999589389e-4
+predetermined_plus_primary_level,91,NGA,Nigeria,4.403143999589389e-4
+predetermined_plus_primary_level,92,RWA,Rwanda,4.403143999589389e-4
+predetermined_plus_primary_level,93,SWZ,Eswatini,4.403143999589389e-4
+predetermined_plus_primary_level,94,UKR,Ukraine,4.403143999589389e-4
+predetermined_plus_primary_level,95,VEN,Venezuela,4.403143999589389e-4
+predetermined_plus_primary_gfc_2008_2009,1,MLT,Malta,0.03145228253890104
+predetermined_plus_primary_gfc_2008_2009,2,GEO,Georgia,0.03063355193269626
+predetermined_plus_primary_gfc_2008_2009,3,GTM,Guatemala,0.026718944557280154
+predetermined_plus_primary_gfc_2008_2009,4,TCD,Chad,0.025982222525711446
+predetermined_plus_primary_gfc_2008_2009,5,PRY,Paraguay,0.02512603686788236
+predetermined_plus_primary_gfc_2008_2009,6,ALB,Albania,0.022037939145570666
+predetermined_plus_primary_gfc_2008_2009,7,COL,Colombia,0.02177614283764009
+predetermined_plus_primary_gfc_2008_2009,8,DOM,Dominican Republic,0.0216723544292384
+predetermined_plus_primary_gfc_2008_2009,9,IND,India,0.0215512612988546
+predetermined_plus_primary_gfc_2008_2009,10,TUR,Turkey,0.02077379092502374
+predetermined_plus_primary_gfc_2008_2009,11,DEU,Germany,0.020687578116641327
+predetermined_plus_primary_gfc_2008_2009,12,BOL,Bolivia,0.020574049755041405
+predetermined_plus_primary_gfc_2008_2009,13,FJI,Fiji,0.018952009436175806
+predetermined_plus_primary_gfc_2008_2009,14,AZE,Azerbaijan,0.018571330067878766
+predetermined_plus_primary_gfc_2008_2009,15,CRI,Costa Rica,0.01816631201311253
+predetermined_plus_primary_gfc_2008_2009,16,HTI,Haiti,0.01674194437790744
+predetermined_plus_primary_gfc_2008_2009,17,CYP,Cyprus,0.016361369744074983
+predetermined_plus_primary_gfc_2008_2009,18,ARG,Argentina,0.01588892730739068
+predetermined_plus_primary_gfc_2008_2009,19,SUR,Suriname,0.015881272569019503
+predetermined_plus_primary_gfc_2008_2009,20,BRB,Barbados,0.015815408525790237
+predetermined_plus_primary_gfc_2008_2009,21,ISL,Iceland,0.015765846146054432
+predetermined_plus_primary_gfc_2008_2009,22,HUN,Hungary,0.015649802680450402
+predetermined_plus_primary_gfc_2008_2009,23,MWI,Malawi,0.015404590085164387
+predetermined_plus_primary_gfc_2008_2009,24,PNG,Papua New Guinea,0.014941331534680267
+predetermined_plus_primary_gfc_2008_2009,25,TUN,Tunisia,0.014760972442941344
+predetermined_plus_primary_gfc_2008_2009,26,KEN,Kenya,0.014634739725327273
+predetermined_plus_primary_gfc_2008_2009,27,DNK,Denmark,0.014048250573330048
+predetermined_plus_primary_gfc_2008_2009,28,HRV,Croatia,0.013962499390160395
+predetermined_plus_primary_gfc_2008_2009,29,POL,Poland,0.013890265038756917
+predetermined_plus_primary_gfc_2008_2009,30,SLV,El Salvador,0.013854248750147392
+predetermined_plus_primary_gfc_2008_2009,31,TTO,Trinidad & Tobago,0.013796361697988353
+predetermined_plus_primary_gfc_2008_2009,32,PAK,Pakistan,0.013787573327762022
+predetermined_plus_primary_gfc_2008_2009,33,LTU,Lithuania,0.013715987100027197
+predetermined_plus_primary_gfc_2008_2009,34,NIC,Nicaragua,0.013521571448884809
+predetermined_plus_primary_gfc_2008_2009,35,EST,Estonia,0.013317938534467081
+predetermined_plus_primary_gfc_2008_2009,36,NOR,Norway,0.01323834160921969
+predetermined_plus_primary_gfc_2008_2009,37,JAM,Jamaica,0.012893149078705948
+predetermined_plus_primary_gfc_2008_2009,38,MDV,Maldives,0.012155469831121797
+predetermined_plus_primary_gfc_2008_2009,39,LBN,Lebanon,0.012120600952357632
+predetermined_plus_primary_gfc_2008_2009,40,LVA,Latvia,0.01138781219245501
+predetermined_plus_primary_gfc_2008_2009,41,TGO,Togo,0.011377740326383152
+predetermined_plus_primary_gfc_2008_2009,42,ESP,Spain,0.011127318760301744
+predetermined_plus_primary_gfc_2008_2009,43,MUS,Mauritius,0.011073670338427499
+predetermined_plus_primary_gfc_2008_2009,44,ROU,Romania,0.010992984629093741
+predetermined_plus_primary_gfc_2008_2009,45,SVN,Slovenia,0.0109482085092717
+predetermined_plus_primary_gfc_2008_2009,46,BGR,Bulgaria,0.010662724729845271
+predetermined_plus_primary_gfc_2008_2009,47,JOR,Jordan,0.010329403885018738
+predetermined_plus_primary_gfc_2008_2009,48,AUT,Austria,0.010318296958348468
+predetermined_plus_primary_gfc_2008_2009,49,CZE,Czechia,0.010220775503429588
+predetermined_plus_primary_gfc_2008_2009,50,DZA,Algeria,0.009756349740849771
+predetermined_plus_primary_gfc_2008_2009,51,GUY,Guyana,0.009732739530255158
+predetermined_plus_primary_gfc_2008_2009,52,PAN,Panama,0.009443595658809293
+predetermined_plus_primary_gfc_2008_2009,53,SWE,Sweden,0.009387925989848608
+predetermined_plus_primary_gfc_2008_2009,54,QAT,Qatar,0.00913069935636177
+predetermined_plus_primary_gfc_2008_2009,55,SEN,Senegal,0.00899698193597034
+predetermined_plus_primary_gfc_2008_2009,56,FIN,Finland,0.008964906175529109
+predetermined_plus_primary_gfc_2008_2009,57,NAM,Namibia,0.00886569393169203
+predetermined_plus_primary_gfc_2008_2009,58,COM,Comoros,0.008748382816542067
+predetermined_plus_primary_gfc_2008_2009,59,NLD,Netherlands,0.008656010515503302
+predetermined_plus_primary_gfc_2008_2009,60,ISR,Israel,0.0085121687826954
+predetermined_plus_primary_gfc_2008_2009,61,GRC,Greece,0.008253153924689552
+predetermined_plus_primary_gfc_2008_2009,62,PRT,Portugal,0.008156890179183916
+predetermined_plus_primary_gfc_2008_2009,63,SVK,Slovakia,0.0080263803722983
+predetermined_plus_primary_gfc_2008_2009,64,ITA,Italy,0.007850379585621995
+predetermined_plus_primary_gfc_2008_2009,65,MDA,Moldova,0.007579546471919412
+predetermined_plus_primary_gfc_2008_2009,66,UGA,Uganda,0.007316309491423115
+predetermined_plus_primary_gfc_2008_2009,67,MAR,Morocco,0.00715329089687118
+predetermined_plus_primary_gfc_2008_2009,68,BTN,Bhutan,0.006748281644894257
+predetermined_plus_primary_gfc_2008_2009,69,GBR,United Kingdom,0.005926827909351816
+predetermined_plus_primary_gfc_2008_2009,70,LKA,Sri Lanka,0.005243604835389852
+predetermined_plus_primary_gfc_2008_2009,71,USA,United States,0.004591229561966756
+predetermined_plus_primary_gfc_2008_2009,72,CAN,Canada,0.004185203558680861
+predetermined_plus_primary_gfc_2008_2009,73,IRL,Ireland,0.0034243485063779893
+predetermined_plus_primary_gfc_2008_2009,74,BWA,Botswana,0.0031940846152954403
+predetermined_plus_primary_gfc_2008_2009,75,LBY,Libya,0.001476559817318565
+predetermined_plus_primary_gfc_2008_2009,76,BGD,Bangladesh,0.001316764596719925
+predetermined_plus_primary_gfc_2008_2009,77,UKR,Ukraine,0.0012599728475547664
+predetermined_plus_primary_gfc_2008_2009,78,CPV,Cape Verde,0.001045939306874569
+predetermined_plus_primary_gfc_2008_2009,79,FRA,France,8.079460803782842e-4
+predetermined_plus_primary_gfc_2008_2009,80,EGY,Egypt,5.361961232285953e-4
+predetermined_plus_primary_gfc_2008_2009,81,ARE,United Arab Emirates,4.298953658633448e-4
+predetermined_plus_primary_gfc_2008_2009,82,BHR,Bahrain,4.298953658633448e-4
+predetermined_plus_primary_gfc_2008_2009,83,BLR,Belarus,4.298953658633448e-4
+predetermined_plus_primary_gfc_2008_2009,84,CIV,Côte d’Ivoire,4.298953658633448e-4
+predetermined_plus_primary_gfc_2008_2009,85,ECU,Ecuador,4.298953658633448e-4
+predetermined_plus_primary_gfc_2008_2009,86,GAB,Gabon,4.298953658633448e-4
+predetermined_plus_primary_gfc_2008_2009,87,GHA,Ghana,4.298953658633448e-4
+predetermined_plus_primary_gfc_2008_2009,88,GIN,Guinea,4.298953658633448e-4
+predetermined_plus_primary_gfc_2008_2009,89,KWT,Kuwait,4.298953658633448e-4
+predetermined_plus_primary_gfc_2008_2009,90,MDG,Madagascar,4.298953658633448e-4
+predetermined_plus_primary_gfc_2008_2009,91,MEX,Mexico,4.298953658633448e-4
+predetermined_plus_primary_gfc_2008_2009,92,NGA,Nigeria,4.298953658633448e-4
+predetermined_plus_primary_gfc_2008_2009,93,RWA,Rwanda,4.298953658633448e-4
+predetermined_plus_primary_gfc_2008_2009,94,SWZ,Eswatini,4.298953658633448e-4
+predetermined_plus_primary_gfc_2008_2009,95,VEN,Venezuela,4.298953658633448e-4
+predetermined_plus_agriculture_mining_gfc,1,MLT,Malta,0.03157980172287123
+predetermined_plus_agriculture_mining_gfc,2,GEO,Georgia,0.030774711482388695
+predetermined_plus_agriculture_mining_gfc,3,TCD,Chad,0.026548391843999517
+predetermined_plus_agriculture_mining_gfc,4,GTM,Guatemala,0.026302032463769047
+predetermined_plus_agriculture_mining_gfc,5,PRY,Paraguay,0.02481565143765472
+predetermined_plus_agriculture_mining_gfc,6,ALB,Albania,0.02209916861968174
+predetermined_plus_agriculture_mining_gfc,7,DOM,Dominican Republic,0.021806083916133687
+predetermined_plus_agriculture_mining_gfc,8,COL,Colombia,0.02177433537974314
+predetermined_plus_agriculture_mining_gfc,9,IND,India,0.021584122620273278
+predetermined_plus_agriculture_mining_gfc,10,BOL,Bolivia,0.021044742144785217
+predetermined_plus_agriculture_mining_gfc,11,TUR,Turkey,0.0207021227441731
+predetermined_plus_agriculture_mining_gfc,12,DEU,Germany,0.02070041896951328
+predetermined_plus_agriculture_mining_gfc,13,AZE,Azerbaijan,0.019077713377547954
+predetermined_plus_agriculture_mining_gfc,14,FJI,Fiji,0.018895222550040332
+predetermined_plus_agriculture_mining_gfc,15,CRI,Costa Rica,0.017841057755821958
+predetermined_plus_agriculture_mining_gfc,16,HTI,Haiti,0.01696300568751364
+predetermined_plus_agriculture_mining_gfc,17,CYP,Cyprus,0.01639431081098929
+predetermined_plus_agriculture_mining_gfc,18,BRB,Barbados,0.01593542538105725
+predetermined_plus_agriculture_mining_gfc,19,SUR,Suriname,0.01584548082861281
+predetermined_plus_agriculture_mining_gfc,20,ISL,Iceland,0.015643587891909182
+predetermined_plus_agriculture_mining_gfc,21,HUN,Hungary,0.015595329488949877
+predetermined_plus_agriculture_mining_gfc,22,ARG,Argentina,0.015583128819457549
+predetermined_plus_agriculture_mining_gfc,23,PNG,Papua New Guinea,0.01517393048282679
+predetermined_plus_agriculture_mining_gfc,24,TUN,Tunisia,0.014810481403298834
+predetermined_plus_agriculture_mining_gfc,25,MWI,Malawi,0.014142850589768677
+predetermined_plus_agriculture_mining_gfc,26,TTO,Trinidad & Tobago,0.014124512163692317
+predetermined_plus_agriculture_mining_gfc,27,HRV,Croatia,0.014086871097054757
+predetermined_plus_agriculture_mining_gfc,28,DNK,Denmark,0.014073090307328213
+predetermined_plus_agriculture_mining_gfc,29,KEN,Kenya,0.013931496847612116
+predetermined_plus_agriculture_mining_gfc,30,POL,Poland,0.013902155837377816
+predetermined_plus_agriculture_mining_gfc,31,SLV,El Salvador,0.013882763164763192
+predetermined_plus_agriculture_mining_gfc,32,LTU,Lithuania,0.013657449248161032
+predetermined_plus_agriculture_mining_gfc,33,PAK,Pakistan,0.013646538694355694
+predetermined_plus_agriculture_mining_gfc,34,NOR,Norway,0.013631012431280528
+predetermined_plus_agriculture_mining_gfc,35,EST,Estonia,0.013350094343495503
+predetermined_plus_agriculture_mining_gfc,36,NIC,Nicaragua,0.01330307178348521
+predetermined_plus_agriculture_mining_gfc,37,JAM,Jamaica,0.01290924278504862
+predetermined_plus_agriculture_mining_gfc,38,MDV,Maldives,0.01197915087601581
+predetermined_plus_agriculture_mining_gfc,39,LBN,Lebanon,0.011926808651692183
+predetermined_plus_agriculture_mining_gfc,40,LVA,Latvia,0.011391981051261314
+predetermined_plus_agriculture_mining_gfc,41,ESP,Spain,0.011051707839208542
+predetermined_plus_agriculture_mining_gfc,42,ROU,Romania,0.011040263496776007
+predetermined_plus_agriculture_mining_gfc,43,MUS,Mauritius,0.011036059359407406
+predetermined_plus_agriculture_mining_gfc,44,SVN,Slovenia,0.010990895664494302
+predetermined_plus_agriculture_mining_gfc,45,TGO,Togo,0.010896645105031402
+predetermined_plus_agriculture_mining_gfc,46,BGR,Bulgaria,0.010582912646154546
+predetermined_plus_agriculture_mining_gfc,47,AUT,Austria,0.010340366205980028
+predetermined_plus_agriculture_mining_gfc,48,CZE,Czechia,0.010296178082387555
+predetermined_plus_agriculture_mining_gfc,49,DZA,Algeria,0.010266917420604833
+predetermined_plus_agriculture_mining_gfc,50,JOR,Jordan,0.010134824389611441
+predetermined_plus_agriculture_mining_gfc,51,GUY,Guyana,0.009677299564612022
+predetermined_plus_agriculture_mining_gfc,52,QAT,Qatar,0.009619451760090202
+predetermined_plus_agriculture_mining_gfc,53,PAN,Panama,0.00946616132057518
+predetermined_plus_agriculture_mining_gfc,54,SWE,Sweden,0.009434833299680638
+predetermined_plus_agriculture_mining_gfc,55,NAM,Namibia,0.009083208497143724
+predetermined_plus_agriculture_mining_gfc,56,FIN,Finland,0.009057593771311784
+predetermined_plus_agriculture_mining_gfc,57,SEN,Senegal,0.008695770551906047
+predetermined_plus_agriculture_mining_gfc,58,ISR,Israel,0.008645303861395953
+predetermined_plus_agriculture_mining_gfc,59,NLD,Netherlands,0.008576011198878393
+predetermined_plus_agriculture_mining_gfc,60,PRT,Portugal,0.008215046979000355
+predetermined_plus_agriculture_mining_gfc,61,GRC,Greece,0.00811223359274093
+predetermined_plus_agriculture_mining_gfc,62,SVK,Slovakia,0.008099019184814071
+predetermined_plus_agriculture_mining_gfc,63,ITA,Italy,0.007845315877684274
+predetermined_plus_agriculture_mining_gfc,64,COM,Comoros,0.007844629874120324
+predetermined_plus_agriculture_mining_gfc,65,MDA,Moldova,0.007413439065588874
+predetermined_plus_agriculture_mining_gfc,66,MAR,Morocco,0.006987034690720027
+predetermined_plus_agriculture_mining_gfc,67,BTN,Bhutan,0.00688280263086911
+predetermined_plus_agriculture_mining_gfc,68,UGA,Uganda,0.006688427428375956
+predetermined_plus_agriculture_mining_gfc,69,GBR,United Kingdom,0.005972712563639581
+predetermined_plus_agriculture_mining_gfc,70,LKA,Sri Lanka,0.005016567603407561
+predetermined_plus_agriculture_mining_gfc,71,USA,United States,0.004692947758049231
+predetermined_plus_agriculture_mining_gfc,72,CAN,Canada,0.004451090866754098
+predetermined_plus_agriculture_mining_gfc,73,BWA,Botswana,0.003843233119086932
+predetermined_plus_agriculture_mining_gfc,74,IRL,Ireland,0.003550865865087947
+predetermined_plus_agriculture_mining_gfc,75,LBY,Libya,0.001971878790055842
+predetermined_plus_agriculture_mining_gfc,76,UKR,Ukraine,0.0013660444128882404
+predetermined_plus_agriculture_mining_gfc,77,BGD,Bangladesh,0.001233449473984484
+predetermined_plus_agriculture_mining_gfc,78,CPV,Cape Verde,0.0010791935322260115
+predetermined_plus_agriculture_mining_gfc,79,ARE,United Arab Emirates,7.854602928305586e-4
+predetermined_plus_agriculture_mining_gfc,80,FRA,France,7.445629581820766e-4
+predetermined_plus_agriculture_mining_gfc,81,MEX,Mexico,6.452071142439003e-4
+predetermined_plus_agriculture_mining_gfc,82,EGY,Egypt,5.496132579463174e-4
+predetermined_plus_agriculture_mining_gfc,83,BHR,Bahrain,4.374977951575171e-4
+predetermined_plus_agriculture_mining_gfc,84,BLR,Belarus,4.374977951575171e-4
+predetermined_plus_agriculture_mining_gfc,85,CIV,Côte d’Ivoire,4.374977951575171e-4
+predetermined_plus_agriculture_mining_gfc,86,ECU,Ecuador,4.374977951575171e-4
+predetermined_plus_agriculture_mining_gfc,87,GAB,Gabon,4.374977951575171e-4
+predetermined_plus_agriculture_mining_gfc,88,GHA,Ghana,4.374977951575171e-4
+predetermined_plus_agriculture_mining_gfc,89,GIN,Guinea,4.374977951575171e-4
+predetermined_plus_agriculture_mining_gfc,90,KWT,Kuwait,4.374977951575171e-4
+predetermined_plus_agriculture_mining_gfc,91,MDG,Madagascar,4.374977951575171e-4
+predetermined_plus_agriculture_mining_gfc,92,NGA,Nigeria,4.374977951575171e-4
+predetermined_plus_agriculture_mining_gfc,93,RWA,Rwanda,4.374977951575171e-4
+predetermined_plus_agriculture_mining_gfc,94,SWZ,Eswatini,4.374977951575171e-4
+predetermined_plus_agriculture_mining_gfc,95,VEN,Venezuela,4.374977951575171e-4
+predetermined_plus_weighted_price_gfc,1,MLT,Malta,0.030731337985231005
+predetermined_plus_weighted_price_gfc,2,GEO,Georgia,0.030455740256192392
+predetermined_plus_weighted_price_gfc,3,GTM,Guatemala,0.02723213453001426
+predetermined_plus_weighted_price_gfc,4,PRY,Paraguay,0.027035781764907726
+predetermined_plus_weighted_price_gfc,5,TCD,Chad,0.027011136939361267
+predetermined_plus_weighted_price_gfc,6,IND,India,0.022520835606882474
+predetermined_plus_weighted_price_gfc,7,ALB,Albania,0.022375741991962676
+predetermined_plus_weighted_price_gfc,8,BOL,Bolivia,0.02206121399780566
+predetermined_plus_weighted_price_gfc,9,DOM,Dominican Republic,0.021915651956614466
+predetermined_plus_weighted_price_gfc,10,DEU,Germany,0.02120688475907074
+predetermined_plus_weighted_price_gfc,11,COL,Colombia,0.02111364012402685
+predetermined_plus_weighted_price_gfc,12,TUR,Turkey,0.021100907788257406
+predetermined_plus_weighted_price_gfc,13,AZE,Azerbaijan,0.02017705937122735
+predetermined_plus_weighted_price_gfc,14,CRI,Costa Rica,0.017598297739346534
+predetermined_plus_weighted_price_gfc,15,MWI,Malawi,0.01746548640368105
+predetermined_plus_weighted_price_gfc,16,FJI,Fiji,0.017045550424078182
+predetermined_plus_weighted_price_gfc,17,ISL,Iceland,0.016676762041316906
+predetermined_plus_weighted_price_gfc,18,CYP,Cyprus,0.0163944044340564
+predetermined_plus_weighted_price_gfc,19,ARG,Argentina,0.016291132186437688
+predetermined_plus_weighted_price_gfc,20,PNG,Papua New Guinea,0.016152799751797463
+predetermined_plus_weighted_price_gfc,21,BRB,Barbados,0.015987907586126344
+predetermined_plus_weighted_price_gfc,22,HUN,Hungary,0.015808960362431627
+predetermined_plus_weighted_price_gfc,23,HTI,Haiti,0.01579616723049339
+predetermined_plus_weighted_price_gfc,24,SUR,Suriname,0.015330249305184356
+predetermined_plus_weighted_price_gfc,25,KEN,Kenya,0.015308567606471122
+predetermined_plus_weighted_price_gfc,26,NOR,Norway,0.014773340124241967
+predetermined_plus_weighted_price_gfc,27,TTO,Trinidad & Tobago,0.014007553178723056
+predetermined_plus_weighted_price_gfc,28,LTU,Lithuania,0.013786490199508688
+predetermined_plus_weighted_price_gfc,29,DNK,Denmark,0.013766827160582942
+predetermined_plus_weighted_price_gfc,30,NIC,Nicaragua,0.01375533473339926
+predetermined_plus_weighted_price_gfc,31,TUN,Tunisia,0.013725477566154937
+predetermined_plus_weighted_price_gfc,32,POL,Poland,0.013591635365836227
+predetermined_plus_weighted_price_gfc,33,HRV,Croatia,0.013492101544497802
+predetermined_plus_weighted_price_gfc,34,PAK,Pakistan,0.01331722603950107
+predetermined_plus_weighted_price_gfc,35,EST,Estonia,0.013169576639918133
+predetermined_plus_weighted_price_gfc,36,JAM,Jamaica,0.012785553736612812
+predetermined_plus_weighted_price_gfc,37,SLV,El Salvador,0.01252426796562379
+predetermined_plus_weighted_price_gfc,38,LBN,Lebanon,0.012338170051729701
+predetermined_plus_weighted_price_gfc,39,TGO,Togo,0.011999882348007453
+predetermined_plus_weighted_price_gfc,40,MDV,Maldives,0.011784083823588858
+predetermined_plus_weighted_price_gfc,41,LVA,Latvia,0.011561615045043565
+predetermined_plus_weighted_price_gfc,42,JOR,Jordan,0.011351215074424997
+predetermined_plus_weighted_price_gfc,43,ESP,Spain,0.011207446823816084
+predetermined_plus_weighted_price_gfc,44,SVN,Slovenia,0.010955501908346862
+predetermined_plus_weighted_price_gfc,45,MUS,Mauritius,0.010618088106401224
+predetermined_plus_weighted_price_gfc,46,ROU,Romania,0.010551846116011341
+predetermined_plus_weighted_price_gfc,47,BGR,Bulgaria,0.010493588067511096
+predetermined_plus_weighted_price_gfc,48,AUT,Austria,0.010378376650455507
+predetermined_plus_weighted_price_gfc,49,GUY,Guyana,0.010256444119544367
+predetermined_plus_weighted_price_gfc,50,CZE,Czechia,0.010051327318568486
+predetermined_plus_weighted_price_gfc,51,NAM,Namibia,0.009804763673955644
+predetermined_plus_weighted_price_gfc,52,SWE,Sweden,0.009313361976869461
+predetermined_plus_weighted_price_gfc,53,FIN,Finland,0.00917375572238569
+predetermined_plus_weighted_price_gfc,54,NLD,Netherlands,0.008910765257818157
+predetermined_plus_weighted_price_gfc,55,DZA,Algeria,0.008761991790827303
+predetermined_plus_weighted_price_gfc,56,QAT,Qatar,0.008565520964942714
+predetermined_plus_weighted_price_gfc,57,UGA,Uganda,0.008512105148030453
+predetermined_plus_weighted_price_gfc,58,COM,Comoros,0.008408126421730186
+predetermined_plus_weighted_price_gfc,59,SEN,Senegal,0.008376352809057927
+predetermined_plus_weighted_price_gfc,60,GRC,Greece,0.008360202725364703
+predetermined_plus_weighted_price_gfc,61,PRT,Portugal,0.008265199628100246
+predetermined_plus_weighted_price_gfc,62,ISR,Israel,0.008203698304251234
+predetermined_plus_weighted_price_gfc,63,MAR,Morocco,0.008132476035329366
+predetermined_plus_weighted_price_gfc,64,ITA,Italy,0.008114548145684566
+predetermined_plus_weighted_price_gfc,65,SVK,Slovakia,0.007984243064242787
+predetermined_plus_weighted_price_gfc,66,PAN,Panama,0.00791287270552322
+predetermined_plus_weighted_price_gfc,67,MDA,Moldova,0.007286226100008963
+predetermined_plus_weighted_price_gfc,68,BTN,Bhutan,0.006369305161141699
+predetermined_plus_weighted_price_gfc,69,GBR,United Kingdom,0.005906137854272013
+predetermined_plus_weighted_price_gfc,70,USA,United States,0.004235432208056002
+predetermined_plus_weighted_price_gfc,71,LKA,Sri Lanka,0.003438357982985605
+predetermined_plus_weighted_price_gfc,72,IRL,Ireland,0.003219198583658354
+predetermined_plus_weighted_price_gfc,73,BWA,Botswana,0.002920915806009588
+predetermined_plus_weighted_price_gfc,74,CAN,Canada,0.002356392500287785
+predetermined_plus_weighted_price_gfc,75,LBY,Libya,0.001174824652139542
+predetermined_plus_weighted_price_gfc,76,BGD,Bangladesh,0.0010614381800500552
+predetermined_plus_weighted_price_gfc,77,FRA,France,7.94611368631852e-4
+predetermined_plus_weighted_price_gfc,78,ARE,United Arab Emirates,4.1110296542330927e-4
+predetermined_plus_weighted_price_gfc,79,BHR,Bahrain,4.1110296542330927e-4
+predetermined_plus_weighted_price_gfc,80,BLR,Belarus,4.1110296542330927e-4
+predetermined_plus_weighted_price_gfc,81,CIV,Côte d’Ivoire,4.1110296542330927e-4
+predetermined_plus_weighted_price_gfc,82,CPV,Cape Verde,4.1110296542330927e-4
+predetermined_plus_weighted_price_gfc,83,ECU,Ecuador,4.1110296542330927e-4
+predetermined_plus_weighted_price_gfc,84,EGY,Egypt,4.1110296542330927e-4
+predetermined_plus_weighted_price_gfc,85,GAB,Gabon,4.1110296542330927e-4
+predetermined_plus_weighted_price_gfc,86,GHA,Ghana,4.1110296542330927e-4
+predetermined_plus_weighted_price_gfc,87,GIN,Guinea,4.1110296542330927e-4
+predetermined_plus_weighted_price_gfc,88,KWT,Kuwait,4.1110296542330927e-4
+predetermined_plus_weighted_price_gfc,89,MDG,Madagascar,4.1110296542330927e-4
+predetermined_plus_weighted_price_gfc,90,MEX,Mexico,4.1110296542330927e-4
+predetermined_plus_weighted_price_gfc,91,NGA,Nigeria,4.1110296542330927e-4
+predetermined_plus_weighted_price_gfc,92,RWA,Rwanda,4.1110296542330927e-4
+predetermined_plus_weighted_price_gfc,93,SWZ,Eswatini,4.1110296542330927e-4
+predetermined_plus_weighted_price_gfc,94,UKR,Ukraine,4.1110296542330927e-4
+predetermined_plus_weighted_price_gfc,95,VEN,Venezuela,4.1110296542330927e-4
+predetermined_plus_pre_china_gfc,1,MLT,Malta,0.03096875212237487
+predetermined_plus_pre_china_gfc,2,GEO,Georgia,0.030953839154187167
+predetermined_plus_pre_china_gfc,3,GTM,Guatemala,0.026485003372515487
+predetermined_plus_pre_china_gfc,4,TCD,Chad,0.026139403401466088
+predetermined_plus_pre_china_gfc,5,PRY,Paraguay,0.025454351891514397
+predetermined_plus_pre_china_gfc,6,COL,Colombia,0.023103890758420263
+predetermined_plus_pre_china_gfc,7,ALB,Albania,0.021309554819014094
+predetermined_plus_pre_china_gfc,8,BOL,Bolivia,0.020951770171190823
+predetermined_plus_pre_china_gfc,9,DOM,Dominican Republic,0.020802767574610876
+predetermined_plus_pre_china_gfc,10,FJI,Fiji,0.020326965854752823
+predetermined_plus_pre_china_gfc,11,DEU,Germany,0.019665746013153813
+predetermined_plus_pre_china_gfc,12,TUR,Turkey,0.019649492095418806
+predetermined_plus_pre_china_gfc,13,IND,India,0.01954122491731968
+predetermined_plus_pre_china_gfc,14,CRI,Costa Rica,0.01881699263080519
+predetermined_plus_pre_china_gfc,15,AZE,Azerbaijan,0.018774665020025214
+predetermined_plus_pre_china_gfc,16,HTI,Haiti,0.016698430171028306
+predetermined_plus_pre_china_gfc,17,ARG,Argentina,0.015962244845438185
+predetermined_plus_pre_china_gfc,18,CYP,Cyprus,0.01564998721411176
+predetermined_plus_pre_china_gfc,19,SUR,Suriname,0.015586054063952231
+predetermined_plus_pre_china_gfc,20,BRB,Barbados,0.015183254032530994
+predetermined_plus_pre_china_gfc,21,TUN,Tunisia,0.015005186159376219
+predetermined_plus_pre_china_gfc,22,MWI,Malawi,0.014930479406385649
+predetermined_plus_pre_china_gfc,23,SLV,El Salvador,0.014895796601815461
+predetermined_plus_pre_china_gfc,24,HUN,Hungary,0.014832161648847587
+predetermined_plus_pre_china_gfc,25,PNG,Papua New Guinea,0.014775611187991722
+predetermined_plus_pre_china_gfc,26,KEN,Kenya,0.014408164428765835
+predetermined_plus_pre_china_gfc,27,ISL,Iceland,0.01429709539094553
+predetermined_plus_pre_china_gfc,28,HRV,Croatia,0.014216733425086737
+predetermined_plus_pre_china_gfc,29,TTO,Trinidad & Tobago,0.014184458221953756
+predetermined_plus_pre_china_gfc,30,DNK,Denmark,0.014173026765769942
+predetermined_plus_pre_china_gfc,31,POL,Poland,0.013862540073187083
+predetermined_plus_pre_china_gfc,32,PAK,Pakistan,0.01348189790974372
+predetermined_plus_pre_china_gfc,33,LTU,Lithuania,0.013375764628690015
+predetermined_plus_pre_china_gfc,34,NOR,Norway,0.013078479805528396
+predetermined_plus_pre_china_gfc,35,NIC,Nicaragua,0.01305481237691074
+predetermined_plus_pre_china_gfc,36,EST,Estonia,0.013018097092203773
+predetermined_plus_pre_china_gfc,37,JAM,Jamaica,0.012560089584953936
+predetermined_plus_pre_china_gfc,38,MDV,Maldives,0.011922376934247155
+predetermined_plus_pre_china_gfc,39,DZA,Algeria,0.011675049534304335
+predetermined_plus_pre_china_gfc,40,LVA,Latvia,0.010988450582519158
+predetermined_plus_pre_china_gfc,41,ROU,Romania,0.010986612386418211
+predetermined_plus_pre_china_gfc,42,QAT,Qatar,0.01095993157399033
+predetermined_plus_pre_china_gfc,43,TGO,Togo,0.01093645189271907
+predetermined_plus_pre_china_gfc,44,MUS,Mauritius,0.0108318118225673
+predetermined_plus_pre_china_gfc,45,ESP,Spain,0.010761500872947482
+predetermined_plus_pre_china_gfc,46,BGR,Bulgaria,0.01065669967487104
+predetermined_plus_pre_china_gfc,47,PAN,Panama,0.010558071420256028
+predetermined_plus_pre_china_gfc,48,SVN,Slovenia,0.010384114977238859
+predetermined_plus_pre_china_gfc,49,LBN,Lebanon,0.010365421775578193
+predetermined_plus_pre_china_gfc,50,GUY,Guyana,0.01006217917760809
+predetermined_plus_pre_china_gfc,51,CZE,Czechia,0.009915433675954584
+predetermined_plus_pre_china_gfc,52,AUT,Austria,0.009768248299348938
+predetermined_plus_pre_china_gfc,53,SEN,Senegal,0.009486521503341954
+predetermined_plus_pre_china_gfc,54,COM,Comoros,0.009448362162505834
+predetermined_plus_pre_china_gfc,55,SWE,Sweden,0.008822507369889635
+predetermined_plus_pre_china_gfc,56,ISR,Israel,0.00848312392060843
+predetermined_plus_pre_china_gfc,57,NLD,Netherlands,0.008326530202754078
+predetermined_plus_pre_china_gfc,58,FIN,Finland,0.008255428843123323
+predetermined_plus_pre_china_gfc,59,JOR,Jordan,0.008203884944059192
+predetermined_plus_pre_china_gfc,60,NAM,Namibia,0.00802495980347788
+predetermined_plus_pre_china_gfc,61,GRC,Greece,0.00798792917955412
+predetermined_plus_pre_china_gfc,62,PRT,Portugal,0.0077299593071355486
+predetermined_plus_pre_china_gfc,63,SVK,Slovakia,0.007630385894704131
+predetermined_plus_pre_china_gfc,64,MDA,Moldova,0.007598220561256807
+predetermined_plus_pre_china_gfc,65,ITA,Italy,0.007253039573000245
+predetermined_plus_pre_china_gfc,66,LKA,Sri Lanka,0.006943211036147411
+predetermined_plus_pre_china_gfc,67,BWA,Botswana,0.006790299928495679
+predetermined_plus_pre_china_gfc,68,BTN,Bhutan,0.006401566766711682
+predetermined_plus_pre_china_gfc,69,UGA,Uganda,0.00621894473418351
+predetermined_plus_pre_china_gfc,70,CAN,Canada,0.006134087025270166
+predetermined_plus_pre_china_gfc,71,GBR,United Kingdom,0.005796356245997493
+predetermined_plus_pre_china_gfc,72,MAR,Morocco,0.005454459183584511
+predetermined_plus_pre_china_gfc,73,USA,United States,0.004665698068558895
+predetermined_plus_pre_china_gfc,74,LBY,Libya,0.0033560524520064115
+predetermined_plus_pre_china_gfc,75,UKR,Ukraine,0.003331002703466544
+predetermined_plus_pre_china_gfc,76,IRL,Ireland,0.0030707769183480893
+predetermined_plus_pre_china_gfc,77,CPV,Cape Verde,0.001843264981441861
+predetermined_plus_pre_china_gfc,78,ARE,United Arab Emirates,0.0015285766201662346
+predetermined_plus_pre_china_gfc,79,EGY,Egypt,0.0012980458024517507
+predetermined_plus_pre_china_gfc,80,MEX,Mexico,0.001138581916732813
+predetermined_plus_pre_china_gfc,81,GIN,Guinea,9.25897851191699e-4
+predetermined_plus_pre_china_gfc,82,BGD,Bangladesh,4.932275048055432e-4
+predetermined_plus_pre_china_gfc,83,BHR,Bahrain,4.932275048055432e-4
+predetermined_plus_pre_china_gfc,84,BLR,Belarus,4.932275048055432e-4
+predetermined_plus_pre_china_gfc,85,CIV,Côte d’Ivoire,4.932275048055432e-4
+predetermined_plus_pre_china_gfc,86,ECU,Ecuador,4.932275048055432e-4
+predetermined_plus_pre_china_gfc,87,FRA,France,4.932275048055432e-4
+predetermined_plus_pre_china_gfc,88,GAB,Gabon,4.932275048055432e-4
+predetermined_plus_pre_china_gfc,89,GHA,Ghana,4.932275048055432e-4
+predetermined_plus_pre_china_gfc,90,KWT,Kuwait,4.932275048055432e-4
+predetermined_plus_pre_china_gfc,91,MDG,Madagascar,4.932275048055432e-4
+predetermined_plus_pre_china_gfc,92,NGA,Nigeria,4.932275048055432e-4
+predetermined_plus_pre_china_gfc,93,RWA,Rwanda,4.932275048055432e-4
+predetermined_plus_pre_china_gfc,94,SWZ,Eswatini,4.932275048055432e-4
+predetermined_plus_pre_china_gfc,95,VEN,Venezuela,4.932275048055432e-4
+existing_commodity_gfc_exposure,1,MLT,Malta,0.030200918481880324
+existing_commodity_gfc_exposure,2,GEO,Georgia,0.02918290342776307
+existing_commodity_gfc_exposure,3,PRY,Paraguay,0.026276007958465304
+existing_commodity_gfc_exposure,4,TCD,Chad,0.02610183734624061
+existing_commodity_gfc_exposure,5,COL,Colombia,0.02599378304973146
+existing_commodity_gfc_exposure,6,GTM,Guatemala,0.025685761787913125
+existing_commodity_gfc_exposure,7,FJI,Fiji,0.02247255279185598
+existing_commodity_gfc_exposure,8,TUR,Turkey,0.02071412960536898
+existing_commodity_gfc_exposure,9,DOM,Dominican Republic,0.020335378326294368
+existing_commodity_gfc_exposure,10,BOL,Bolivia,0.020066522214221297
+existing_commodity_gfc_exposure,11,ALB,Albania,0.019630920487400408
+existing_commodity_gfc_exposure,12,IND,India,0.01897556853297554
+existing_commodity_gfc_exposure,13,DEU,Germany,0.018686679637833433
+existing_commodity_gfc_exposure,14,HRV,Croatia,0.01799042384829674
+existing_commodity_gfc_exposure,15,CRI,Costa Rica,0.017868790698207765
+existing_commodity_gfc_exposure,16,AZE,Azerbaijan,0.0173388039424631
+existing_commodity_gfc_exposure,17,PNG,Papua New Guinea,0.01705428976053517
+existing_commodity_gfc_exposure,18,MWI,Malawi,0.016556108311055924
+existing_commodity_gfc_exposure,19,CYP,Cyprus,0.016479856661603353
+existing_commodity_gfc_exposure,20,SUR,Suriname,0.015877478993872124
+existing_commodity_gfc_exposure,21,HTI,Haiti,0.015797573802305544
+existing_commodity_gfc_exposure,22,ARG,Argentina,0.01565455833788685
+existing_commodity_gfc_exposure,23,KEN,Kenya,0.014461463468569033
+existing_commodity_gfc_exposure,24,ISL,Iceland,0.014343600304087909
+existing_commodity_gfc_exposure,25,TUN,Tunisia,0.013953571778907579
+existing_commodity_gfc_exposure,26,TTO,Trinidad & Tobago,0.013836763926004964
+existing_commodity_gfc_exposure,27,SLV,El Salvador,0.013648688252899391
+existing_commodity_gfc_exposure,28,BRB,Barbados,0.013423592495541828
+existing_commodity_gfc_exposure,29,DNK,Denmark,0.01341684069559971
+existing_commodity_gfc_exposure,30,PAK,Pakistan,0.013286302014985752
+existing_commodity_gfc_exposure,31,NIC,Nicaragua,0.01327834299716347
+existing_commodity_gfc_exposure,32,HUN,Hungary,0.013002058180422443
+existing_commodity_gfc_exposure,33,POL,Poland,0.012885925231755727
+existing_commodity_gfc_exposure,34,MDV,Maldives,0.012310525076330956
+existing_commodity_gfc_exposure,35,ROU,Romania,0.0119617401924544
+existing_commodity_gfc_exposure,36,EST,Estonia,0.011910310557565274
+existing_commodity_gfc_exposure,37,JAM,Jamaica,0.01146391457787486
+existing_commodity_gfc_exposure,38,NOR,Norway,0.011405124497846914
+existing_commodity_gfc_exposure,39,MUS,Mauritius,0.011402747148099922
+existing_commodity_gfc_exposure,40,DZA,Algeria,0.011314508781845456
+existing_commodity_gfc_exposure,41,LTU,Lithuania,0.011281727416267607
+existing_commodity_gfc_exposure,42,CZE,Czechia,0.011184245928190286
+existing_commodity_gfc_exposure,43,BTN,Bhutan,0.011009260275851376
+existing_commodity_gfc_exposure,44,LVA,Latvia,0.010896359381477023
+existing_commodity_gfc_exposure,45,PAN,Panama,0.01088669243925777
+existing_commodity_gfc_exposure,46,SVN,Slovenia,0.010634531134271359
+existing_commodity_gfc_exposure,47,ISR,Israel,0.010587638464812569
+existing_commodity_gfc_exposure,48,BGR,Bulgaria,0.010496905606296384
+existing_commodity_gfc_exposure,49,LBN,Lebanon,0.010492552727048366
+existing_commodity_gfc_exposure,50,GUY,Guyana,0.010242987751268568
+existing_commodity_gfc_exposure,51,SVK,Slovakia,0.010003177972496625
+existing_commodity_gfc_exposure,52,NAM,Namibia,0.009971811960412627
+existing_commodity_gfc_exposure,53,ESP,Spain,0.009621098031321735
+existing_commodity_gfc_exposure,54,TGO,Togo,0.009513264397924548
+existing_commodity_gfc_exposure,55,COM,Comoros,0.009108795441777152
+existing_commodity_gfc_exposure,56,SEN,Senegal,0.008824582988263729
+existing_commodity_gfc_exposure,57,GRC,Greece,0.008325762633235513
+existing_commodity_gfc_exposure,58,CAN,Canada,0.007928192020878064
+existing_commodity_gfc_exposure,59,MDA,Moldova,0.007812943698460167
+existing_commodity_gfc_exposure,60,UGA,Uganda,0.007707196304856069
+existing_commodity_gfc_exposure,61,AUT,Austria,0.0076579533407276
+existing_commodity_gfc_exposure,62,QAT,Qatar,0.0075365712209263195
+existing_commodity_gfc_exposure,63,SWE,Sweden,0.00750297521214819
+existing_commodity_gfc_exposure,64,NLD,Netherlands,0.007157262680887586
+existing_commodity_gfc_exposure,65,LKA,Sri Lanka,0.007150544003550338
+existing_commodity_gfc_exposure,66,BWA,Botswana,0.006678633701646458
+existing_commodity_gfc_exposure,67,CPV,Cape Verde,0.006644001566788446
+existing_commodity_gfc_exposure,68,JOR,Jordan,0.006429154979813831
+existing_commodity_gfc_exposure,69,FIN,Finland,0.006381497082898453
+existing_commodity_gfc_exposure,70,PRT,Portugal,0.006334786277530513
+existing_commodity_gfc_exposure,71,MAR,Morocco,0.005716489773003565
+existing_commodity_gfc_exposure,72,UKR,Ukraine,0.004852070811271528
+existing_commodity_gfc_exposure,73,USA,United States,0.00477656829147407
+existing_commodity_gfc_exposure,74,ITA,Italy,0.004671973784965822
+existing_commodity_gfc_exposure,75,GBR,United Kingdom,0.004488574004192834
+existing_commodity_gfc_exposure,76,EGY,Egypt,0.003523936304442518
+existing_commodity_gfc_exposure,77,MEX,Mexico,0.002919324083364751
+existing_commodity_gfc_exposure,78,GIN,Guinea,0.0028804701371201932
+existing_commodity_gfc_exposure,79,LBY,Libya,0.0027592201609913823
+existing_commodity_gfc_exposure,80,IRL,Ireland,0.002399663794898165
+existing_commodity_gfc_exposure,81,GHA,Ghana,0.0012938715962300521
+existing_commodity_gfc_exposure,82,ARE,United Arab Emirates,7.654446481831955e-4
+existing_commodity_gfc_exposure,83,CIV,Côte d’Ivoire,7.640338903821454e-4
+existing_commodity_gfc_exposure,84,BGD,Bangladesh,4.948653246723702e-4
+existing_commodity_gfc_exposure,85,BHR,Bahrain,4.948653246723702e-4
+existing_commodity_gfc_exposure,86,BLR,Belarus,4.948653246723702e-4
+existing_commodity_gfc_exposure,87,ECU,Ecuador,4.948653246723702e-4
+existing_commodity_gfc_exposure,88,FRA,France,4.948653246723702e-4
+existing_commodity_gfc_exposure,89,GAB,Gabon,4.948653246723702e-4
+existing_commodity_gfc_exposure,90,KWT,Kuwait,4.948653246723702e-4
+existing_commodity_gfc_exposure,91,MDG,Madagascar,4.948653246723702e-4
+existing_commodity_gfc_exposure,92,NGA,Nigeria,4.948653246723702e-4
+existing_commodity_gfc_exposure,93,RWA,Rwanda,4.948653246723702e-4
+existing_commodity_gfc_exposure,94,SWZ,Eswatini,4.948653246723702e-4
+existing_commodity_gfc_exposure,95,VEN,Venezuela,4.948653246723702e-4
