@@ -1,0 +1,19 @@
+item,type,caption
+Table A1,table,Table A1. Design contract for the Brazil SDiD with a single treated unit.
+Table A2,table,Table A2. Complete SDiD donor-unit weights for the Brazil synthetic counterfactual.
+Table A3,table,Table A3. SDiD pre-treatment time weights for the Brazil baseline.
+Table A4,table,Table A4. Brazil observed and synthetic-control outcome series.
+Table A5,table,Table A5. Intercept-adjusted pre-treatment fit summary for the Brazil SDiD baseline.
+Table A6,table,Table A6. Pre-treatment balance of the outcome and SDiD covariates.
+Table A7,table,Table A7. Placebo-in-space distribution by country.
+Table A8,table,Table A8. Rank-based placebo inference for a single treated unit.
+Table A9,table,Table A9. Sensitivity to influential donors and high-weight donor blocks.
+Table A10,table,Table A10. Sensitivity to plausible time windows around the 1997-2015 baseline.
+Table A11,table,Table A11. Long placebo-in-space results for window sensitivity.
+Table A12,table,"Table A12. Donor exposure to China's export expansion, by SDiD weight."
+Table A13,table,Table A13. High-weight donor exposure to China's export expansion.
+Figure A1,figure,Figure A1. Observed Brazil versus synthetic-control pre-treatment fit and post-treatment gap.
+Figure A2,figure,"Figure A2. Placebo-in-space distribution of SDiD effects, with Brazil marked."
+Figure A3,figure,Figure A3. Sensitivity of the Brazil SDiD estimate to removing high-weight donors.
+Figure A4,figure,Figure A4. Sensitivity of the Brazil SDiD estimate to alternative time windows.
+Figure A5,figure,Figure A5. High-weight donor exposure to China's post-2009 export expansion.

@@ -1,0 +1,70 @@
+generated_on: '2026-05-20'
+sources:
+- id: wto_oecd_batis_bpm6
+  name: WTO-OECD Balanced Trade in Services Dataset (BaTiS), BPM6
+  provider: World Trade Organization and OECD
+  url: https://www.wto.org/english/res_e/statis_e/trade_datasets_e.htm
+  bulk_catalog_url: https://data.wto.org/en/dataset/bulkdownload
+  data_url: https://www.wto.org/english/res_e/statis_e/daily_update_e/OECD-WTO_BATIS_data_BPM6-1.zip
+  codes_url: https://www.wto.org/english/res_e/statis_e/daily_update_e/OECD-WTO_BATIS_codes_BPM6-1.zip
+  methodology_url: https://www.wto.org/english/res_e/statis_e/daily_update_e/OECD-WTO_Batis_methodology_BPM6.pdf
+  access_method: bulk_download
+  requires_credentials: no
+  license: WTO/OECD public statistical dataset; check provider terms for redistribution
+  variables_used:
+  - Reporter
+  - Partner
+  - Flow
+  - Item S total services
+  - Year
+  - Balanced_value
+  temporal_coverage: 2005-2024 in source; diagnostic overlap with ITPD-E is 2005-2022
+  geographic_coverage: Global, over 200 reporters and partners
+  unit_of_analysis: reporter-partner-year-flow-service item
+  download_script: scripts/diagnostics/diagnose_china_top_goods_services_batis_bpm6.R
+  date_accessed: '2026-05-20'
+  raw_files:
+    data: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/raw/batis_bpm6/OECD-WTO_BATIS_data_BPM6-1_2026-05-20.zip
+    codes: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/raw/batis_bpm6/OECD-WTO_BATIS_codes_BPM6-1_2026-05-20.zip
+    methodology: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/raw/batis_bpm6/OECD-WTO_Batis_methodology_BPM6_2026-05-20.pdf
+  notes: BPM6 only. BPM5 is not combined because WTO warns that BPM5 and BPM6 create
+    comparability issues across the time series. BaTIS economy codes are converted
+    to ISO-3 before joining to ITPD-E.
+- id: itpde_r03
+  name: International Trade and Production Database for Estimation, release 03
+  provider: USITC
+  url: https://www.usitc.gov/data/gravity/itpde.htm
+  access_method: local_raw_file_reuse
+  requires_credentials: no
+  variables_used:
+  - year
+  - exporter_iso3
+  - importer_iso3
+  - trade
+  - broad_sector
+  unit_of_analysis: exporter-importer-year-sector
+  raw_file: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/raw data/ITPDE_R03.csv
+  date_accessed: '2026-05-20'
+  notes: Goods metric filters broad_sector to Agriculture, Mining and Energy, and
+    Manufacturing; services in ITPD-E are not used for the robustness metrics. The
+    non-country Free Zones code (FRE) is excluded from partner rankings.
+- id: manual_public_partner_onsets
+  name: Manual public-source coding of China top-partner onset
+  provider: DFAT, Agencia Brasil/EBC, Brazilian Ministry of Foreign Affairs
+  access_method: manual_or_semiautomatic_source_coding
+  requires_credentials: no
+  date_accessed: '2026-05-20'
+  variables_used:
+  - publicly_reported_onset
+  - evidence_paraphrase
+  - apparent_metric
+  output_file: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/china_top_goods_services/manual_publicly_reported_onsets_2026-05-20.csv
+  raw_files:
+    aus_dfat_composition_trade_2007: /Users/manoelgaldino/Documents/DCP/Papers/RDD
+      Trade/red_trade/data/raw/public_partner_onsets/aus_dfat_composition_trade_2007.html
+    bra_agencia_brasil_2009: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/raw/public_partner_onsets/bra_agencia_brasil_china_maior_parceiro_2009.html
+    bra_mre_china_bilateral: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/raw/public_partner_onsets/bra_mre_china_bilateral_relations.html
+  local_preservation_status:
+    aus_dfat_composition_trade_2007: local_preservation_failed_url_documented
+    bra_agencia_brasil_2009: preserved_locally
+    bra_mre_china_bilateral: preserved_locally

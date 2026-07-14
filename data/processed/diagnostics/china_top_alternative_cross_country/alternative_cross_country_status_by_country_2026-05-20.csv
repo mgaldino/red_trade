@@ -1,0 +1,580 @@
+metric,metric_label,iso3c,country_name,censoring_status,first_observed_year,last_observed_year,observed_2005,china_top_2005,ever_china_top,first_china_top_year,first_entry_after_non_top,observed_entry_year,first_entry_after_gap,previous_observed_year_at_entry,absorbing_after_entry,n_observed_years,n_china_top_years,observed_all_2005_2010,china_top_any_2005_2010
+goods_exports_rank,Bens: exportações,BFA,Burkina Faso,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,3,TRUE,TRUE
+goods_exports_rank,Bens: exportações,COG,Congo - Brazzaville,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2011,,,2010,TRUE,18,13,TRUE,TRUE
+goods_exports_rank,Bens: exportações,CUB,Cuba,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2017,,,2016,TRUE,18,17,TRUE,TRUE
+goods_exports_rank,Bens: exportações,KOR,South Korea,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_exports_rank,Bens: exportações,MNG,Mongolia,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_exports_rank,Bens: exportações,OMN,Oman,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_exports_rank,Bens: exportações,PHL,Philippines,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_exports_rank,Bens: exportações,PRK,North Korea,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2008,,,2007,FALSE,18,14,TRUE,TRUE
+goods_exports_rank,Bens: exportações,SDN,Sudan,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2007,,,2006,FALSE,18,6,TRUE,TRUE
+goods_exports_rank,Bens: exportações,SLB,Solomon Islands,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_exports_rank,Bens: exportações,YEM,Yemen,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2017,,,2016,FALSE,18,16,TRUE,TRUE
+goods_exports_rank,Bens: exportações,CSK,,missing_rank_in_2005,,,FALSE,FALSE,FALSE,,,,,,,0,0,FALSE,FALSE
+goods_exports_rank,Bens: exportações,LIE,Liechtenstein,missing_rank_in_2005,,,FALSE,FALSE,FALSE,,,,,,,0,0,FALSE,FALSE
+goods_exports_rank,Bens: exportações,MCO,Monaco,missing_rank_in_2005,,,FALSE,FALSE,FALSE,,,,,,,0,0,FALSE,FALSE
+goods_exports_rank,Bens: exportações,MNE,Montenegro,missing_rank_in_2005,2006,2022,FALSE,FALSE,FALSE,,,,,,FALSE,17,0,FALSE,FALSE
+goods_exports_rank,Bens: exportações,SSD,South Sudan,missing_rank_in_2005,2012,2022,FALSE,FALSE,TRUE,2012,,,,,FALSE,11,11,FALSE,FALSE
+goods_exports_rank,Bens: exportações,YUG,,missing_rank_in_2005,,,FALSE,FALSE,FALSE,,,,,,,0,0,FALSE,FALSE
+goods_exports_rank,Bens: exportações,AFG,Afghanistan,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,ALB,Albania,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,AND,Andorra,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,ARE,United Arab Emirates,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,ARG,Argentina,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,ATG,Antigua & Barbuda,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,AUT,Austria,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,AZE,Azerbaijan,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,BDI,Burundi,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,BEL,Belgium,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,BGD,Bangladesh,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,BGR,Bulgaria,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,BHR,Bahrain,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,BHS,Bahamas,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,BIH,Bosnia & Herzegovina,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,BLR,Belarus,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,BLZ,Belize,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,BOL,Bolivia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,BRB,Barbados,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,BRN,Brunei,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,BTN,Bhutan,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,BWA,Botswana,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,CAN,Canada,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,CHE,Switzerland,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,CIV,Côte d’Ivoire,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,COL,Colombia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,COM,Comoros,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,CPV,Cape Verde,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,CRI,Costa Rica,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,CYP,Cyprus,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,CZE,Czechia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,DEU,Germany,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,DJI,Djibouti,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,DMA,Dominica,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,DNK,Denmark,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,DOM,Dominican Republic,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,DZA,Algeria,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,ECU,Ecuador,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,EGY,Egypt,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,ESP,Spain,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,EST,Estonia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,FIN,Finland,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,FJI,Fiji,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,FRA,France,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,FSM,Micronesia (Federated States of),never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,GBR,United Kingdom,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,GEO,Georgia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,GNB,Guinea-Bissau,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,GRC,Greece,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,GRD,Grenada,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,GTM,Guatemala,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,GUY,Guyana,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,HND,Honduras,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,HRV,Croatia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,HTI,Haiti,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,HUN,Hungary,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,IND,India,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,IRL,Ireland,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,ISL,Iceland,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,ISR,Israel,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,ITA,Italy,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,JAM,Jamaica,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,JOR,Jordan,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,KEN,Kenya,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,KGZ,Kyrgyzstan,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,KHM,Cambodia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,KIR,Kiribati,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,KNA,St. Kitts & Nevis,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,LBN,Lebanon,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,LBY,Libya,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,LCA,St. Lucia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,LKA,Sri Lanka,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,LSO,Lesotho,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,LTU,Lithuania,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,LUX,Luxembourg,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,LVA,Latvia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,MAR,Morocco,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,MDA,Moldova,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,MDG,Madagascar,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,MDV,Maldives,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,MEX,Mexico,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,MHL,Marshall Islands,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,MKD,North Macedonia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,MUS,Mauritius,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,MWI,Malawi,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,NAM,Namibia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,NER,Niger,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,NGA,Nigeria,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,NIC,Nicaragua,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,NLD,Netherlands,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,NOR,Norway,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,NPL,Nepal,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,NRU,Nauru,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,PAK,Pakistan,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,PLW,Palau,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,POL,Poland,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,PRT,Portugal,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,PRY,Paraguay,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,ROU,Romania,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,RWA,Rwanda,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,SEN,Senegal,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,SGP,Singapore,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,SLV,El Salvador,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,SMR,San Marino,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,SOM,Somalia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,STP,São Tomé & Príncipe,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,SUR,Suriname,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,SVK,Slovakia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,SVN,Slovenia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,SWE,Sweden,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,SWZ,Eswatini,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,SYC,Seychelles,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,SYR,Syria,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,TGO,Togo,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,TJK,Tajikistan,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,TON,Tonga,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,TTO,Trinidad & Tobago,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,TUN,Tunisia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,TUR,Turkey,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,TUV,Tuvalu,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,UGA,Uganda,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,USA,United States,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,VCT,St. Vincent & Grenadines,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,VUT,Vanuatu,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,WSM,Samoa,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_exports_rank,Bens: exportações,GNQ,Equatorial Guinea,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2006,2006,2006,,2005,FALSE,18,10,TRUE,TRUE
+goods_exports_rank,Bens: exportações,MLI,Mali,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2006,2006,2006,,2005,FALSE,18,2,TRUE,TRUE
+goods_exports_rank,Bens: exportações,MRT,Mauritania,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2006,2006,2006,,2005,TRUE,18,17,TRUE,TRUE
+goods_exports_rank,Bens: exportações,AGO,Angola,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2007,2007,2007,,2006,TRUE,18,16,TRUE,TRUE
+goods_exports_rank,Bens: exportações,CHL,Chile,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2007,2007,2007,,2006,TRUE,18,16,TRUE,TRUE
+goods_exports_rank,Bens: exportações,IRN,Iran,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2007,2007,2007,,2006,FALSE,18,14,TRUE,TRUE
+goods_exports_rank,Bens: exportações,KAZ,Kazakhstan,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2007,2007,2007,,2006,TRUE,18,16,TRUE,TRUE
+goods_exports_rank,Bens: exportações,BEN,Benin,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2008,2008,2008,,2007,FALSE,18,3,TRUE,TRUE
+goods_exports_rank,Bens: exportações,COD,Congo - Kinshasa,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2008,2008,2008,,2007,TRUE,18,15,TRUE,TRUE
+goods_exports_rank,Bens: exportações,JPN,Japan,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2008,2008,2008,,2007,TRUE,18,15,TRUE,TRUE
+goods_exports_rank,Bens: exportações,THA,Thailand,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2008,2008,2008,,2007,FALSE,18,14,TRUE,TRUE
+goods_exports_rank,Bens: exportações,AUS,Australia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2009,2009,2009,,2008,TRUE,18,14,TRUE,TRUE
+goods_exports_rank,Bens: exportações,BRA,Brazil,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2009,2009,2009,,2008,TRUE,18,14,TRUE,TRUE
+goods_exports_rank,Bens: exportações,ETH,Ethiopia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2009,2009,2009,,2008,FALSE,18,5,TRUE,TRUE
+goods_exports_rank,Bens: exportações,MYS,Malaysia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2009,2009,2009,,2008,TRUE,18,14,TRUE,TRUE
+goods_exports_rank,Bens: exportações,ZAF,South Africa,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2009,2009,2009,,2008,TRUE,18,14,TRUE,TRUE
+goods_exports_rank,Bens: exportações,PER,Peru,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2010,2010,2010,,2009,TRUE,18,13,TRUE,TRUE
+goods_exports_rank,Bens: exportações,TKM,Turkmenistan,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2010,2010,2010,,2009,TRUE,18,13,TRUE,TRUE
+goods_exports_rank,Bens: exportações,GMB,Gambia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2011,2011,2011,,2010,FALSE,18,7,TRUE,FALSE
+goods_exports_rank,Bens: exportações,MLT,Malta,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2011,2011,2011,,2010,FALSE,18,4,TRUE,FALSE
+goods_exports_rank,Bens: exportações,TZA,Tanzania,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2011,2011,2011,,2010,FALSE,18,1,TRUE,FALSE
+goods_exports_rank,Bens: exportações,ZWE,Zimbabwe,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2011,2011,2011,,2010,FALSE,18,8,TRUE,FALSE
+goods_exports_rank,Bens: exportações,CMR,Cameroon,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2012,2012,2012,,2011,FALSE,18,6,TRUE,FALSE
+goods_exports_rank,Bens: exportações,LBR,Liberia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2012,2012,2012,,2011,FALSE,18,2,TRUE,FALSE
+goods_exports_rank,Bens: exportações,RUS,Russia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2012,2012,2012,,2011,TRUE,18,11,TRUE,FALSE
+goods_exports_rank,Bens: exportações,SLE,Sierra Leone,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2012,2012,2012,,2011,TRUE,18,11,TRUE,FALSE
+goods_exports_rank,Bens: exportações,ZMB,Zambia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2012,2012,2012,,2011,FALSE,18,6,TRUE,FALSE
+goods_exports_rank,Bens: exportações,CAF,Central African Republic,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2013,2013,2013,,2012,FALSE,18,4,TRUE,FALSE
+goods_exports_rank,Bens: exportações,IDN,Indonesia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2013,2013,2013,,2012,FALSE,18,8,TRUE,FALSE
+goods_exports_rank,Bens: exportações,NZL,New Zealand,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2013,2013,2013,,2012,TRUE,18,10,TRUE,FALSE
+goods_exports_rank,Bens: exportações,SAU,Saudi Arabia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2013,2013,2013,,2012,TRUE,18,10,TRUE,FALSE
+goods_exports_rank,Bens: exportações,URY,Uruguay,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2013,2013,2013,,2012,TRUE,18,10,TRUE,FALSE
+goods_exports_rank,Bens: exportações,UZB,Uzbekistan,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2013,2013,2013,,2012,FALSE,18,2,TRUE,FALSE
+goods_exports_rank,Bens: exportações,ERI,Eritrea,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2014,2014,2014,,2013,TRUE,18,9,TRUE,FALSE
+goods_exports_rank,Bens: exportações,IRQ,Iraq,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2014,2014,2014,,2013,FALSE,18,7,TRUE,FALSE
+goods_exports_rank,Bens: exportações,LAO,Laos,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2014,2014,2014,,2013,FALSE,18,1,TRUE,FALSE
+goods_exports_rank,Bens: exportações,MMR,Myanmar (Burma),observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2014,2014,2014,,2013,TRUE,18,9,TRUE,FALSE
+goods_exports_rank,Bens: exportações,MOZ,Mozambique,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2014,2014,2014,,2013,FALSE,18,1,TRUE,FALSE
+goods_exports_rank,Bens: exportações,ARM,Armenia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2015,2015,2015,,2014,FALSE,18,3,TRUE,FALSE
+goods_exports_rank,Bens: exportações,GAB,Gabon,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2017,2017,2017,,2016,TRUE,18,6,TRUE,FALSE
+goods_exports_rank,Bens: exportações,KWT,Kuwait,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2018,2018,2018,,2017,TRUE,18,5,TRUE,FALSE
+goods_exports_rank,Bens: exportações,PNG,Papua New Guinea,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2018,2018,2018,,2017,FALSE,18,2,TRUE,FALSE
+goods_exports_rank,Bens: exportações,VNM,Vietnam,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2018,2018,2018,,2017,FALSE,18,1,TRUE,FALSE
+goods_exports_rank,Bens: exportações,GHA,Ghana,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2019,2019,2019,,2018,FALSE,18,1,TRUE,FALSE
+goods_exports_rank,Bens: exportações,GIN,Guinea,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2019,2019,2019,,2018,FALSE,18,2,TRUE,FALSE
+goods_exports_rank,Bens: exportações,TCD,Chad,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2019,2019,2019,,2018,FALSE,18,2,TRUE,FALSE
+goods_exports_rank,Bens: exportações,UKR,Ukraine,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2020,2020,2020,,2019,FALSE,18,2,TRUE,FALSE
+goods_exports_rank,Bens: exportações,PAN,Panama,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2021,2021,2021,,2020,TRUE,18,2,TRUE,FALSE
+goods_exports_rank,Bens: exportações,QAT,Qatar,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2021,2021,2021,,2020,TRUE,18,2,TRUE,FALSE
+goods_exports_rank,Bens: exportações,TLS,Timor-Leste,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2021,2021,2021,,2020,TRUE,18,2,TRUE,FALSE
+goods_exports_rank,Bens: exportações,VEN,Venezuela,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2021,2021,2021,,2020,TRUE,18,2,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,BEN,Benin,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2008,,,2007,FALSE,18,4,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,BFA,Burkina Faso,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,3,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,COG,Congo - Brazzaville,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2011,,,2010,TRUE,18,13,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,KOR,South Korea,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,MNG,Mongolia,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,OMN,Oman,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,PHL,Philippines,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,PRK,North Korea,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2008,,,2007,TRUE,18,17,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,SDN,Sudan,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2007,,,2006,FALSE,18,6,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,SGP,Singapore,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2013,,,2012,FALSE,18,7,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,SLB,Solomon Islands,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,YEM,Yemen,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2017,,,2016,FALSE,18,16,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,CSK,,missing_rank_in_2005,,,FALSE,FALSE,FALSE,,,,,,,0,0,FALSE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,LIE,Liechtenstein,missing_rank_in_2005,,,FALSE,FALSE,FALSE,,,,,,,0,0,FALSE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,MCO,Monaco,missing_rank_in_2005,,,FALSE,FALSE,FALSE,,,,,,,0,0,FALSE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,MNE,Montenegro,missing_rank_in_2005,2006,2022,FALSE,FALSE,FALSE,,,,,,FALSE,17,0,FALSE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,SSD,South Sudan,missing_rank_in_2005,2012,2022,FALSE,FALSE,TRUE,2012,,,,,FALSE,11,11,FALSE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,YUG,,missing_rank_in_2005,,,FALSE,FALSE,FALSE,,,,,,,0,0,FALSE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,AFG,Afghanistan,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,ALB,Albania,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,AND,Andorra,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,ARE,United Arab Emirates,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,ARG,Argentina,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,ATG,Antigua & Barbuda,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,AUT,Austria,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,AZE,Azerbaijan,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,BDI,Burundi,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,BEL,Belgium,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,BGD,Bangladesh,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,BGR,Bulgaria,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,BHR,Bahrain,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,BHS,Bahamas,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,BIH,Bosnia & Herzegovina,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,BLR,Belarus,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,BLZ,Belize,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,BOL,Bolivia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,BRB,Barbados,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,BRN,Brunei,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,BTN,Bhutan,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,BWA,Botswana,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,CAN,Canada,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,CHE,Switzerland,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,CIV,Côte d’Ivoire,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,COL,Colombia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,COM,Comoros,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,CPV,Cape Verde,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,CRI,Costa Rica,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,CYP,Cyprus,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,CZE,Czechia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,DEU,Germany,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,DJI,Djibouti,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,DMA,Dominica,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,DNK,Denmark,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,DOM,Dominican Republic,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,DZA,Algeria,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,ECU,Ecuador,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,EGY,Egypt,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,ESP,Spain,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,EST,Estonia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,FIN,Finland,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,FJI,Fiji,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,FRA,France,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,FSM,Micronesia (Federated States of),never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,GBR,United Kingdom,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,GEO,Georgia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,GNB,Guinea-Bissau,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,GRC,Greece,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,GRD,Grenada,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,GTM,Guatemala,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,GUY,Guyana,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,HND,Honduras,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,HRV,Croatia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,HTI,Haiti,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,HUN,Hungary,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,IND,India,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,IRL,Ireland,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,ISL,Iceland,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,ISR,Israel,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,ITA,Italy,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,JAM,Jamaica,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,JOR,Jordan,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,KEN,Kenya,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,KGZ,Kyrgyzstan,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,KHM,Cambodia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,KIR,Kiribati,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,KNA,St. Kitts & Nevis,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,LBN,Lebanon,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,LBR,Liberia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,LBY,Libya,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,LCA,St. Lucia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,LKA,Sri Lanka,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,LSO,Lesotho,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,LTU,Lithuania,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,LUX,Luxembourg,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,LVA,Latvia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,MAR,Morocco,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,MDA,Moldova,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,MDG,Madagascar,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,MDV,Maldives,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,MEX,Mexico,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,MHL,Marshall Islands,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,MKD,North Macedonia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,MLT,Malta,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,MUS,Mauritius,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,NAM,Namibia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,NER,Niger,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,NGA,Nigeria,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,NIC,Nicaragua,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,NLD,Netherlands,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,NOR,Norway,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,NPL,Nepal,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,NRU,Nauru,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,PAK,Pakistan,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,PLW,Palau,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,POL,Poland,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,PRT,Portugal,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,PRY,Paraguay,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,ROU,Romania,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,RWA,Rwanda,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,SEN,Senegal,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,SLV,El Salvador,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,SMR,San Marino,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,SOM,Somalia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,STP,São Tomé & Príncipe,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,SUR,Suriname,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,SVK,Slovakia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,SVN,Slovenia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,SWE,Sweden,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,SWZ,Eswatini,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,SYC,Seychelles,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,SYR,Syria,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,TGO,Togo,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,TJK,Tajikistan,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,TON,Tonga,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,TTO,Trinidad & Tobago,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,TUN,Tunisia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,TUR,Turkey,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,TUV,Tuvalu,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,UGA,Uganda,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,USA,United States,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,VCT,St. Vincent & Grenadines,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,VUT,Vanuatu,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,WSM,Samoa,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,CUB,Cuba,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2006,2006,2006,,2005,TRUE,18,17,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,GNQ,Equatorial Guinea,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2006,2006,2006,,2005,FALSE,18,10,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,MLI,Mali,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2006,2006,2006,,2005,FALSE,18,1,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,MRT,Mauritania,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2006,2006,2006,,2005,TRUE,18,17,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,AGO,Angola,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2007,2007,2007,,2006,TRUE,18,16,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,IRN,Iran,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2007,2007,2007,,2006,FALSE,18,14,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,KAZ,Kazakhstan,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2007,2007,2007,,2006,TRUE,18,16,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,CHL,Chile,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2008,2008,2008,,2007,TRUE,18,15,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,COD,Congo - Kinshasa,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2008,2008,2008,,2007,TRUE,18,15,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,THA,Thailand,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2008,2008,2008,,2007,FALSE,18,14,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,AUS,Australia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2009,2009,2009,,2008,TRUE,18,14,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,BRA,Brazil,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2009,2009,2009,,2008,TRUE,18,14,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,JPN,Japan,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2009,2009,2009,,2008,FALSE,18,12,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,MYS,Malaysia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2009,2009,2009,,2008,TRUE,18,14,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,ZAF,South Africa,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2009,2009,2009,,2008,TRUE,18,14,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,PER,Peru,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2010,2010,2010,,2009,FALSE,18,11,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,TKM,Turkmenistan,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2010,2010,2010,,2009,TRUE,18,13,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,TZA,Tanzania,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2011,2011,2011,,2010,FALSE,18,1,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,ZWE,Zimbabwe,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2011,2011,2011,,2010,FALSE,18,8,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,CMR,Cameroon,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2012,2012,2012,,2011,FALSE,18,6,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,GMB,Gambia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2012,2012,2012,,2011,FALSE,18,6,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,RUS,Russia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2012,2012,2012,,2011,FALSE,18,10,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,SLE,Sierra Leone,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2012,2012,2012,,2011,TRUE,18,11,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,ZMB,Zambia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2012,2012,2012,,2011,FALSE,18,8,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,CAF,Central African Republic,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2013,2013,2013,,2012,FALSE,18,6,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,IDN,Indonesia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2013,2013,2013,,2012,FALSE,18,8,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,SAU,Saudi Arabia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2013,2013,2013,,2012,TRUE,18,10,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,URY,Uruguay,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2013,2013,2013,,2012,TRUE,18,10,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,UZB,Uzbekistan,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2013,2013,2013,,2012,FALSE,18,4,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,ERI,Eritrea,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2014,2014,2014,,2013,TRUE,18,9,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,ETH,Ethiopia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2014,2014,2014,,2013,FALSE,18,1,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,IRQ,Iraq,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2014,2014,2014,,2013,FALSE,18,7,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,LAO,Laos,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2014,2014,2014,,2013,FALSE,18,1,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,MMR,Myanmar (Burma),observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2014,2014,2014,,2013,TRUE,18,9,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,MOZ,Mozambique,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2014,2014,2014,,2013,FALSE,18,1,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,MWI,Malawi,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2014,2014,2014,,2013,FALSE,18,1,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,NZL,New Zealand,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2014,2014,2014,,2013,FALSE,18,7,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,GAB,Gabon,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2015,2015,2015,,2014,FALSE,18,7,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,KWT,Kuwait,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2018,2018,2018,,2017,TRUE,18,5,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,PNG,Papua New Guinea,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2018,2018,2018,,2017,FALSE,18,2,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,VNM,Vietnam,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2018,2018,2018,,2017,FALSE,18,1,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,GHA,Ghana,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2019,2019,2019,,2018,FALSE,18,1,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,GIN,Guinea,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2019,2019,2019,,2018,FALSE,18,2,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,TCD,Chad,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2019,2019,2019,,2018,FALSE,18,2,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,ARM,Armenia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2020,2020,2020,,2019,FALSE,18,2,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,UKR,Ukraine,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2020,2020,2020,,2019,FALSE,18,2,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,PAN,Panama,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2021,2021,2021,,2020,FALSE,18,1,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,QAT,Qatar,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2021,2021,2021,,2020,TRUE,18,2,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,VEN,Venezuela,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2021,2021,2021,,2020,TRUE,18,2,TRUE,FALSE
+goods_services_exports_rank,Bens + serviços: exportações,TLS,Timor-Leste,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2022,2022,2022,,2021,TRUE,18,1,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,COG,Congo - Brazzaville,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2011,,,2010,FALSE,18,12,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,KOR,South Korea,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,MNG,Mongolia,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,OMN,Oman,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,PRK,North Korea,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,SDN,Sudan,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2007,,,2006,FALSE,18,11,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,SLB,Solomon Islands,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,YEM,Yemen,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2020,,,2019,TRUE,18,17,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,CSK,,missing_rank_in_2005,,,FALSE,FALSE,FALSE,,,,,,,0,0,FALSE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,LIE,Liechtenstein,missing_rank_in_2005,,,FALSE,FALSE,FALSE,,,,,,,0,0,FALSE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,MCO,Monaco,missing_rank_in_2005,,,FALSE,FALSE,FALSE,,,,,,,0,0,FALSE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,MNE,Montenegro,missing_rank_in_2005,2006,2022,FALSE,FALSE,FALSE,,,,,,FALSE,17,0,FALSE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,SSD,South Sudan,missing_rank_in_2005,2012,2022,FALSE,FALSE,TRUE,2012,,,,,FALSE,11,9,FALSE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,YUG,,missing_rank_in_2005,,,FALSE,FALSE,FALSE,,,,,,,0,0,FALSE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,AFG,Afghanistan,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,ALB,Albania,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,AND,Andorra,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,ARG,Argentina,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,ARM,Armenia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,ATG,Antigua & Barbuda,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,AUT,Austria,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,AZE,Azerbaijan,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,BEL,Belgium,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,BFA,Burkina Faso,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,BGR,Bulgaria,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,BHR,Bahrain,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,BHS,Bahamas,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,BIH,Bosnia & Herzegovina,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,BLZ,Belize,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,BOL,Bolivia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,BRB,Barbados,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,BTN,Bhutan,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,BWA,Botswana,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,CAN,Canada,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,CHE,Switzerland,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,COL,Colombia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,COM,Comoros,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,CPV,Cape Verde,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,CRI,Costa Rica,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,CYP,Cyprus,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,CZE,Czechia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,DMA,Dominica,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,DNK,Denmark,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,DOM,Dominican Republic,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,DZA,Algeria,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,ECU,Ecuador,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,ESP,Spain,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,EST,Estonia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,FIN,Finland,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,FJI,Fiji,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,FRA,France,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,FSM,Micronesia (Federated States of),never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,GBR,United Kingdom,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,GEO,Georgia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,GNB,Guinea-Bissau,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,GRC,Greece,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,GRD,Grenada,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,GTM,Guatemala,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,GUY,Guyana,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,HND,Honduras,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,HRV,Croatia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,HTI,Haiti,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,HUN,Hungary,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,IND,India,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,IRL,Ireland,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,ISL,Iceland,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,ISR,Israel,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,ITA,Italy,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,JAM,Jamaica,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,JOR,Jordan,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,KIR,Kiribati,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,KNA,St. Kitts & Nevis,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,LAO,Laos,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,LCA,St. Lucia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,LSO,Lesotho,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,LTU,Lithuania,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,LUX,Luxembourg,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,LVA,Latvia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,MAR,Morocco,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,MDA,Moldova,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,MEX,Mexico,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,MKD,North Macedonia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,MLI,Mali,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,MLT,Malta,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,MOZ,Mozambique,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,MUS,Mauritius,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,NAM,Namibia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,NIC,Nicaragua,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,NLD,Netherlands,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,NOR,Norway,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,NPL,Nepal,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,NRU,Nauru,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,PAN,Panama,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,POL,Poland,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,PRT,Portugal,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,PRY,Paraguay,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,ROU,Romania,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,SEN,Senegal,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,SLV,El Salvador,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,SMR,San Marino,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,SOM,Somalia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,STP,São Tomé & Príncipe,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,SUR,Suriname,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,SVK,Slovakia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,SVN,Slovenia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,SWE,Sweden,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,SWZ,Eswatini,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,SYC,Seychelles,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,TLS,Timor-Leste,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,TON,Tonga,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,TTO,Trinidad & Tobago,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,TUN,Tunisia,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,TUR,Turkey,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,UGA,Uganda,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,VCT,St. Vincent & Grenadines,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,WSM,Samoa,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,ZWE,Zimbabwe,never_china_rank1_observed,2005,2022,TRUE,FALSE,FALSE,,,,,,FALSE,18,0,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,CUB,Cuba,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2006,2006,2006,,2005,TRUE,18,17,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,GNQ,Equatorial Guinea,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2006,2006,2006,,2005,FALSE,18,10,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,IRN,Iran,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2006,2006,2006,,2005,TRUE,18,17,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,MRT,Mauritania,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2006,2006,2006,,2005,TRUE,18,17,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,TGO,Togo,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2006,2006,2006,,2005,FALSE,18,9,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,AUS,Australia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2007,2007,2007,,2006,TRUE,18,16,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,ETH,Ethiopia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2007,2007,2007,,2006,TRUE,18,16,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,PHL,Philippines,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2007,2007,2007,,2006,FALSE,18,15,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,VNM,Vietnam,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2007,2007,2007,,2006,TRUE,18,16,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,AGO,Angola,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2008,2008,2008,,2007,TRUE,18,15,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,COD,Congo - Kinshasa,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2008,2008,2008,,2007,TRUE,18,15,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,JPN,Japan,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2008,2008,2008,,2007,TRUE,18,15,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,TUV,Tuvalu,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2008,2008,2008,,2007,FALSE,18,3,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,CHL,Chile,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2009,2009,2009,,2008,TRUE,18,14,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,MYS,Malaysia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2009,2009,2009,,2008,TRUE,18,14,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,TJK,Tajikistan,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2009,2009,2009,,2008,FALSE,18,6,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,ZAF,South Africa,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2009,2009,2009,,2008,TRUE,18,14,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,BGD,Bangladesh,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2010,2010,2010,,2009,FALSE,18,12,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,DJI,Djibouti,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2010,2010,2010,,2009,TRUE,18,13,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,GIN,Guinea,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2010,2010,2010,,2009,FALSE,18,7,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,KAZ,Kazakhstan,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2010,2010,2010,,2009,FALSE,18,2,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,NER,Niger,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2010,2010,2010,,2009,FALSE,18,2,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,RUS,Russia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2010,2010,2010,,2009,TRUE,18,13,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,TKM,Turkmenistan,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2010,2010,2010,,2009,TRUE,18,13,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,TZA,Tanzania,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2010,2010,2010,,2009,FALSE,18,4,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,IDN,Indonesia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2011,2011,2011,,2010,TRUE,18,12,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,KEN,Kenya,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2011,2011,2011,,2010,FALSE,18,10,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,MMR,Myanmar (Burma),observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2011,2011,2011,,2010,FALSE,18,11,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,SLE,Sierra Leone,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2011,2011,2011,,2010,TRUE,18,12,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,THA,Thailand,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2011,2011,2011,,2010,FALSE,18,11,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,BEN,Benin,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2012,2012,2012,,2011,FALSE,18,3,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,CMR,Cameroon,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2012,2012,2012,,2011,FALSE,18,10,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,GMB,Gambia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2012,2012,2012,,2011,FALSE,18,7,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,SYR,Syria,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2012,2012,2012,,2011,FALSE,18,1,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,ZMB,Zambia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2012,2012,2012,,2011,FALSE,18,10,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,ERI,Eritrea,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2013,2013,2013,,2012,TRUE,18,10,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,GHA,Ghana,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2013,2013,2013,,2012,FALSE,18,9,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,IRQ,Iraq,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2013,2013,2013,,2012,TRUE,18,10,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,RWA,Rwanda,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2013,2013,2013,,2012,FALSE,18,6,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,SGP,Singapore,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2013,2013,2013,,2012,FALSE,18,6,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,URY,Uruguay,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2013,2013,2013,,2012,TRUE,18,10,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,VUT,Vanuatu,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2013,2013,2013,,2012,FALSE,18,4,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,KHM,Cambodia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2014,2014,2014,,2013,FALSE,18,8,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,PAK,Pakistan,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2014,2014,2014,,2013,TRUE,18,9,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,USA,United States,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2014,2014,2014,,2013,TRUE,18,9,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,EGY,Egypt,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2015,2015,2015,,2014,TRUE,18,8,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,SAU,Saudi Arabia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2015,2015,2015,,2014,FALSE,18,7,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,UZB,Uzbekistan,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2015,2015,2015,,2014,FALSE,18,5,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,KGZ,Kyrgyzstan,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2016,2016,2016,,2015,FALSE,18,2,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,PER,Peru,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2016,2016,2016,,2015,TRUE,18,7,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,ARE,United Arab Emirates,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2017,2017,2017,,2016,TRUE,18,6,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,BDI,Burundi,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2017,2017,2017,,2016,FALSE,18,3,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,BRA,Brazil,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2017,2017,2017,,2016,TRUE,18,6,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,GAB,Gabon,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2017,2017,2017,,2016,TRUE,18,6,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,KWT,Kuwait,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2017,2017,2017,,2016,TRUE,18,6,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,NZL,New Zealand,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2017,2017,2017,,2016,TRUE,18,6,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,MHL,Marshall Islands,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2018,2018,2018,,2017,FALSE,18,2,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,LBR,Liberia,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2019,2019,2019,,2018,TRUE,18,4,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,LBY,Libya,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2019,2019,2019,,2018,FALSE,18,1,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,MDV,Maldives,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2019,2019,2019,,2018,FALSE,18,1,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,MWI,Malawi,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2019,2019,2019,,2018,FALSE,18,2,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,TCD,Chad,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2019,2019,2019,,2018,FALSE,18,3,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,VEN,Venezuela,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2019,2019,2019,,2018,FALSE,18,1,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,BRN,Brunei,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2020,2020,2020,,2019,FALSE,18,2,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,CAF,Central African Republic,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2020,2020,2020,,2019,FALSE,18,1,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,LKA,Sri Lanka,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2020,2020,2020,,2019,FALSE,18,1,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,NGA,Nigeria,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2020,2020,2020,,2019,TRUE,18,3,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,PLW,Palau,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2020,2020,2020,,2019,TRUE,18,3,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,QAT,Qatar,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2020,2020,2020,,2019,TRUE,18,3,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,UKR,Ukraine,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2020,2020,2020,,2019,FALSE,18,2,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,DEU,Germany,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2021,2021,2021,,2020,FALSE,18,1,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,PNG,Papua New Guinea,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2021,2021,2021,,2020,TRUE,18,2,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,BLR,Belarus,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2022,2022,2022,,2021,TRUE,18,1,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,CIV,Côte d’Ivoire,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2022,2022,2022,,2021,TRUE,18,1,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,LBN,Lebanon,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2022,2022,2022,,2021,TRUE,18,1,TRUE,FALSE
+goods_services_two_way_rank,Bens + serviços: two-way,MDG,Madagascar,observed_entry_after_2005,2005,2022,TRUE,FALSE,TRUE,2022,2022,2022,,2021,TRUE,18,1,TRUE,FALSE

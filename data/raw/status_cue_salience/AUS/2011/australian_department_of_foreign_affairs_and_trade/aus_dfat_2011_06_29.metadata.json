@@ -1,0 +1,13 @@
+{
+  "source_id": "aus_dfat_2011_06_29",
+  "iso3c": "AUS",
+  "url": "https://www.dfat.gov.au/news/media/Pages/trade-with-china-hits-100-billion",
+  "fetch_status": "error",
+  "status_code": null,
+  "content_type": "",
+  "raw_file": "data/raw/status_cue_salience/AUS/2011/australian_department_of_foreign_affairs_and_trade/aus_dfat_2011_06_29.html.error.txt",
+  "size_bytes": 0,
+  "error": "TimeoutError('The read operation timed out')",
+  "accessed_at": "2026-05-20T14:58:23+00:00",
+  "count_for_salience": true
+}

@@ -1,0 +1,1275 @@
+min_duration_years,sample,iso3c,country_name,cs_role_min5,ever_treated,treated_years,untreated_years,first_treat,first_year_in_panel,last_year_in_panel
+3,clean_single_spell,AFG,Afghanistan,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,AGO,Angola,treated_min5,TRUE,16,17,2007,1990,2022
+3,clean_single_spell,ALB,Albania,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,AND,Andorra,never_treated,FALSE,0,30,,1993,2022
+3,clean_single_spell,ARE,United Arab Emirates,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,ARG,Argentina,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,ATG,Antigua & Barbuda,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,AUS,Australia,treated_min5,TRUE,14,19,2009,1990,2022
+3,clean_single_spell,AUT,Austria,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,AZE,Azerbaijan,never_treated,FALSE,0,31,,1992,2022
+3,clean_single_spell,BDI,Burundi,never_treated,FALSE,0,32,,1990,2022
+3,clean_single_spell,BEL,Belgium,never_treated,FALSE,0,24,,1999,2022
+3,clean_single_spell,BFA,Burkina Faso,treated_min5,TRUE,3,15,2005,1990,2007
+3,clean_single_spell,BGD,Bangladesh,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,BGR,Bulgaria,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,BHR,Bahrain,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,BHS,Bahamas,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,BIH,Bosnia & Herzegovina,never_treated,FALSE,0,29,,1992,2022
+3,clean_single_spell,BLR,Belarus,never_treated,FALSE,0,31,,1992,2022
+3,clean_single_spell,BLZ,Belize,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,BOL,Bolivia,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,BRA,Brazil,treated_min5,TRUE,14,19,2009,1990,2022
+3,clean_single_spell,BRB,Barbados,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,BRN,Brunei,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,BTN,Bhutan,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,BWA,Botswana,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,CAN,Canada,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,CHE,Switzerland,never_treated,FALSE,0,21,,2002,2022
+3,clean_single_spell,CHL,Chile,treated_min5,TRUE,16,17,2007,1990,2022
+3,clean_single_spell,CIV,Côte d’Ivoire,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,COD,Congo - Kinshasa,treated_min5,TRUE,14,18,2008,1990,2022
+3,clean_single_spell,COL,Colombia,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,COM,Comoros,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,CPV,Cape Verde,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,CRI,Costa Rica,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,CYP,Cyprus,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,CZE,Czechia,never_treated,FALSE,0,30,,1993,2022
+3,clean_single_spell,DEU,Germany,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,DJI,Djibouti,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,DMA,Dominica,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,DNK,Denmark,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,DOM,Dominican Republic,never_treated,FALSE,0,31,,1990,2022
+3,clean_single_spell,DZA,Algeria,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,ECU,Ecuador,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,EGY,Egypt,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,ERI,Eritrea,treated_min5,TRUE,9,21,2014,1993,2022
+3,clean_single_spell,ESP,Spain,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,EST,Estonia,never_treated,FALSE,0,31,,1992,2022
+3,clean_single_spell,FIN,Finland,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,FJI,Fiji,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,FRA,France,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,FSM,Micronesia (Federated States of),never_treated,FALSE,0,31,,1991,2022
+3,clean_single_spell,GAB,Gabon,treated_min5,TRUE,6,27,2017,1990,2022
+3,clean_single_spell,GBR,United Kingdom,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,GEO,Georgia,never_treated,FALSE,0,30,,1993,2022
+3,clean_single_spell,GNB,Guinea-Bissau,never_treated,FALSE,0,30,,1990,2022
+3,clean_single_spell,GRC,Greece,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,GRD,Grenada,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,GTM,Guatemala,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,GUY,Guyana,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,HND,Honduras,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,HRV,Croatia,never_treated,FALSE,0,31,,1992,2022
+3,clean_single_spell,HTI,Haiti,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,HUN,Hungary,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,IND,India,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,IRL,Ireland,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,ISL,Iceland,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,ISR,Israel,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,ITA,Italy,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,JAM,Jamaica,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,JOR,Jordan,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,JPN,Japan,treated_min5,TRUE,15,18,2008,1990,2022
+3,clean_single_spell,KAZ,Kazakhstan,treated_min5,TRUE,16,15,2007,1992,2022
+3,clean_single_spell,KEN,Kenya,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,KHM,Cambodia,never_treated,FALSE,0,30,,1991,2022
+3,clean_single_spell,KIR,Kiribati,never_treated,FALSE,0,23,,2000,2022
+3,clean_single_spell,KNA,St. Kitts & Nevis,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,KOR,South Korea,treated_min5,TRUE,20,12,2003,1991,2022
+3,clean_single_spell,KWT,Kuwait,treated_min5,TRUE,5,28,2018,1990,2022
+3,clean_single_spell,LBN,Lebanon,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,LBY,Libya,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,LCA,St. Lucia,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,LKA,Sri Lanka,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,LSO,Lesotho,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,LTU,Lithuania,never_treated,FALSE,0,31,,1992,2022
+3,clean_single_spell,LUX,Luxembourg,never_treated,FALSE,0,24,,1999,2022
+3,clean_single_spell,LVA,Latvia,never_treated,FALSE,0,31,,1992,2022
+3,clean_single_spell,MAR,Morocco,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,MCO,Monaco,never_treated,FALSE,0,10,,1993,2004
+3,clean_single_spell,MDA,Moldova,never_treated,FALSE,0,31,,1992,2022
+3,clean_single_spell,MDG,Madagascar,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,MDV,Maldives,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,MEX,Mexico,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,MHL,Marshall Islands,never_treated,FALSE,0,32,,1991,2022
+3,clean_single_spell,MKD,North Macedonia,never_treated,FALSE,0,30,,1993,2022
+3,clean_single_spell,MMR,Myanmar (Burma),treated_min5,TRUE,9,24,2014,1990,2022
+3,clean_single_spell,MNE,Montenegro,never_treated,FALSE,0,17,,2006,2022
+3,clean_single_spell,MRT,Mauritania,treated_min5,TRUE,17,15,2006,1990,2022
+3,clean_single_spell,MUS,Mauritius,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,MWI,Malawi,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,MYS,Malaysia,treated_min5,TRUE,14,19,2009,1990,2022
+3,clean_single_spell,NAM,Namibia,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,NER,Niger,never_treated,FALSE,0,30,,1990,2022
+3,clean_single_spell,NGA,Nigeria,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,NIC,Nicaragua,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,NLD,Netherlands,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,NOR,Norway,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,NPL,Nepal,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,NRU,Nauru,never_treated,FALSE,0,23,,2000,2022
+3,clean_single_spell,NZL,New Zealand,treated_min5,TRUE,10,23,2013,1990,2022
+3,clean_single_spell,PAK,Pakistan,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,PER,Peru,treated_min5,TRUE,13,20,2010,1990,2022
+3,clean_single_spell,PHL,Philippines,treated_min5,TRUE,18,15,2005,1990,2022
+3,clean_single_spell,PLW,Palau,never_treated,FALSE,0,25,,1995,2022
+3,clean_single_spell,POL,Poland,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,PRT,Portugal,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,PRY,Paraguay,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,ROU,Romania,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,RUS,Russia,treated_min5,TRUE,11,20,2012,1992,2022
+3,clean_single_spell,RWA,Rwanda,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,SAU,Saudi Arabia,treated_min5,TRUE,10,23,2013,1990,2022
+3,clean_single_spell,SEN,Senegal,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,SGP,Singapore,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,SLB,Solomon Islands,treated_min5,TRUE,20,13,2003,1990,2022
+3,clean_single_spell,SLE,Sierra Leone,treated_min5,TRUE,11,22,2012,1990,2022
+3,clean_single_spell,SLV,El Salvador,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,SMR,San Marino,never_treated,FALSE,0,23,,2000,2022
+3,clean_single_spell,SOM,Somalia,never_treated,FALSE,0,23,,1990,2022
+3,clean_single_spell,STP,São Tomé & Príncipe,never_treated,FALSE,0,24,,1991,2022
+3,clean_single_spell,SUR,Suriname,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,SVK,Slovakia,never_treated,FALSE,0,30,,1993,2022
+3,clean_single_spell,SVN,Slovenia,never_treated,FALSE,0,31,,1992,2022
+3,clean_single_spell,SWE,Sweden,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,SWZ,Eswatini,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,SYC,Seychelles,never_treated,FALSE,0,31,,1990,2022
+3,clean_single_spell,SYR,Syria,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,TGO,Togo,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,THA,Thailand,treated_min5,TRUE,14,18,2008,1990,2021
+3,clean_single_spell,TJK,Tajikistan,never_treated,FALSE,0,30,,1992,2022
+3,clean_single_spell,TKM,Turkmenistan,treated_min5,TRUE,13,18,2010,1992,2022
+3,clean_single_spell,TON,Tonga,never_treated,FALSE,0,24,,1999,2022
+3,clean_single_spell,TTO,Trinidad & Tobago,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,TUN,Tunisia,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,TUR,Turkey,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,TUV,Tuvalu,never_treated,FALSE,0,22,,2001,2022
+3,clean_single_spell,UGA,Uganda,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,URY,Uruguay,treated_min5,TRUE,10,23,2013,1990,2022
+3,clean_single_spell,USA,United States,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,VCT,St. Vincent & Grenadines,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,VUT,Vanuatu,never_treated,FALSE,0,32,,1990,2022
+3,clean_single_spell,WSM,Samoa,never_treated,FALSE,0,33,,1990,2022
+3,clean_single_spell,ZAF,South Africa,treated_min5,TRUE,14,15,2009,1994,2022
+3,risk_set_restricted,AFG,Afghanistan,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,AGO,Angola,treated_min5,TRUE,16,17,2007,1990,2022
+3,risk_set_restricted,ALB,Albania,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,AND,Andorra,never_treated,FALSE,0,30,,1993,2022
+3,risk_set_restricted,ARE,United Arab Emirates,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,ARG,Argentina,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,ATG,Antigua & Barbuda,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,AUS,Australia,treated_min5,TRUE,14,19,2009,1990,2022
+3,risk_set_restricted,AUT,Austria,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,AZE,Azerbaijan,never_treated,FALSE,0,31,,1992,2022
+3,risk_set_restricted,BDI,Burundi,never_treated,FALSE,0,32,,1990,2022
+3,risk_set_restricted,BEL,Belgium,never_treated,FALSE,0,24,,1999,2022
+3,risk_set_restricted,BFA,Burkina Faso,treated_min5,TRUE,3,15,2005,1990,2007
+3,risk_set_restricted,BGD,Bangladesh,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,BGR,Bulgaria,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,BHR,Bahrain,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,BHS,Bahamas,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,BIH,Bosnia & Herzegovina,never_treated,FALSE,0,29,,1992,2022
+3,risk_set_restricted,BLR,Belarus,never_treated,FALSE,0,31,,1992,2022
+3,risk_set_restricted,BLZ,Belize,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,BOL,Bolivia,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,BRA,Brazil,treated_min5,TRUE,14,19,2009,1990,2022
+3,risk_set_restricted,BRB,Barbados,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,BRN,Brunei,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,BTN,Bhutan,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,BWA,Botswana,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,CAN,Canada,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,CHE,Switzerland,never_treated,FALSE,0,21,,2002,2022
+3,risk_set_restricted,CHL,Chile,treated_min5,TRUE,16,17,2007,1990,2022
+3,risk_set_restricted,CIV,Côte d’Ivoire,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,CMR,Cameroon,treated_min5,TRUE,3,25,2017,1990,2019
+3,risk_set_restricted,COD,Congo - Kinshasa,treated_min5,TRUE,14,18,2008,1990,2022
+3,risk_set_restricted,COG,Congo - Brazzaville,treated_min5,TRUE,15,13,2003,1990,2022
+3,risk_set_restricted,COL,Colombia,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,COM,Comoros,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,CPV,Cape Verde,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,CRI,Costa Rica,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,CUB,Cuba,treated_min5,TRUE,18,14,2004,1990,2022
+3,risk_set_restricted,CYP,Cyprus,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,CZE,Czechia,never_treated,FALSE,0,30,,1993,2022
+3,risk_set_restricted,DEU,Germany,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,DJI,Djibouti,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,DMA,Dominica,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,DNK,Denmark,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,DOM,Dominican Republic,never_treated,FALSE,0,31,,1990,2022
+3,risk_set_restricted,DZA,Algeria,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,ECU,Ecuador,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,EGY,Egypt,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,ERI,Eritrea,treated_min5,TRUE,9,21,2014,1993,2022
+3,risk_set_restricted,ESP,Spain,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,EST,Estonia,never_treated,FALSE,0,31,,1992,2022
+3,risk_set_restricted,FIN,Finland,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,FJI,Fiji,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,FRA,France,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,FSM,Micronesia (Federated States of),never_treated,FALSE,0,31,,1991,2022
+3,risk_set_restricted,GAB,Gabon,treated_min5,TRUE,6,27,2017,1990,2022
+3,risk_set_restricted,GBR,United Kingdom,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,GEO,Georgia,never_treated,FALSE,0,30,,1993,2022
+3,risk_set_restricted,GMB,Gambia,treated_min5,TRUE,6,21,2011,1990,2017
+3,risk_set_restricted,GNB,Guinea-Bissau,never_treated,FALSE,0,30,,1990,2022
+3,risk_set_restricted,GNQ,Equatorial Guinea,treated_min5,TRUE,9,17,2013,1995,2022
+3,risk_set_restricted,GRC,Greece,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,GRD,Grenada,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,GTM,Guatemala,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,GUY,Guyana,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,HND,Honduras,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,HRV,Croatia,never_treated,FALSE,0,31,,1992,2022
+3,risk_set_restricted,HTI,Haiti,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,HUN,Hungary,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,IDN,Indonesia,treated_min5,TRUE,7,25,2016,1990,2022
+3,risk_set_restricted,IND,India,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,IRL,Ireland,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,IRN,Iran,treated_min5,TRUE,13,17,2007,1990,2019
+3,risk_set_restricted,IRQ,Iraq,treated_min5,TRUE,7,15,2014,1990,2022
+3,risk_set_restricted,ISL,Iceland,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,ISR,Israel,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,ITA,Italy,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,JAM,Jamaica,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,JOR,Jordan,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,JPN,Japan,treated_min5,TRUE,15,18,2008,1990,2022
+3,risk_set_restricted,KAZ,Kazakhstan,treated_min5,TRUE,16,15,2007,1992,2022
+3,risk_set_restricted,KEN,Kenya,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,KHM,Cambodia,never_treated,FALSE,0,30,,1991,2022
+3,risk_set_restricted,KIR,Kiribati,never_treated,FALSE,0,23,,2000,2022
+3,risk_set_restricted,KNA,St. Kitts & Nevis,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,KOR,South Korea,treated_min5,TRUE,20,12,2003,1991,2022
+3,risk_set_restricted,KWT,Kuwait,treated_min5,TRUE,5,28,2018,1990,2022
+3,risk_set_restricted,LBN,Lebanon,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,LBY,Libya,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,LCA,St. Lucia,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,LKA,Sri Lanka,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,LSO,Lesotho,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,LTU,Lithuania,never_treated,FALSE,0,31,,1992,2022
+3,risk_set_restricted,LUX,Luxembourg,never_treated,FALSE,0,24,,1999,2022
+3,risk_set_restricted,LVA,Latvia,never_treated,FALSE,0,31,,1992,2022
+3,risk_set_restricted,MAR,Morocco,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,MCO,Monaco,never_treated,FALSE,0,10,,1993,2004
+3,risk_set_restricted,MDA,Moldova,never_treated,FALSE,0,31,,1992,2022
+3,risk_set_restricted,MDG,Madagascar,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,MDV,Maldives,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,MEX,Mexico,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,MHL,Marshall Islands,never_treated,FALSE,0,32,,1991,2022
+3,risk_set_restricted,MKD,North Macedonia,never_treated,FALSE,0,30,,1993,2022
+3,risk_set_restricted,MMR,Myanmar (Burma),treated_min5,TRUE,9,24,2014,1990,2022
+3,risk_set_restricted,MNE,Montenegro,never_treated,FALSE,0,17,,2006,2022
+3,risk_set_restricted,MRT,Mauritania,treated_min5,TRUE,17,15,2006,1990,2022
+3,risk_set_restricted,MUS,Mauritius,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,MWI,Malawi,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,MYS,Malaysia,treated_min5,TRUE,14,19,2009,1990,2022
+3,risk_set_restricted,NAM,Namibia,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,NER,Niger,never_treated,FALSE,0,30,,1990,2022
+3,risk_set_restricted,NGA,Nigeria,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,NIC,Nicaragua,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,NLD,Netherlands,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,NOR,Norway,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,NPL,Nepal,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,NRU,Nauru,never_treated,FALSE,0,23,,2000,2022
+3,risk_set_restricted,NZL,New Zealand,treated_min5,TRUE,10,23,2013,1990,2022
+3,risk_set_restricted,OMN,Oman,treated_min5,TRUE,19,13,2004,1990,2022
+3,risk_set_restricted,PAK,Pakistan,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,PER,Peru,treated_min5,TRUE,13,20,2010,1990,2022
+3,risk_set_restricted,PHL,Philippines,treated_min5,TRUE,18,15,2005,1990,2022
+3,risk_set_restricted,PLW,Palau,never_treated,FALSE,0,25,,1995,2022
+3,risk_set_restricted,POL,Poland,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,PRK,North Korea,treated_min5,TRUE,16,11,2002,1991,2019
+3,risk_set_restricted,PRT,Portugal,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,PRY,Paraguay,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,ROU,Romania,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,RUS,Russia,treated_min5,TRUE,11,20,2012,1992,2022
+3,risk_set_restricted,RWA,Rwanda,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,SAU,Saudi Arabia,treated_min5,TRUE,10,23,2013,1990,2022
+3,risk_set_restricted,SDN,Sudan,treated_min5,TRUE,10,10,2000,1990,2010
+3,risk_set_restricted,SEN,Senegal,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,SGP,Singapore,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,SLB,Solomon Islands,treated_min5,TRUE,20,13,2003,1990,2022
+3,risk_set_restricted,SLE,Sierra Leone,treated_min5,TRUE,11,22,2012,1990,2022
+3,risk_set_restricted,SLV,El Salvador,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,SMR,San Marino,never_treated,FALSE,0,23,,2000,2022
+3,risk_set_restricted,SOM,Somalia,never_treated,FALSE,0,23,,1990,2022
+3,risk_set_restricted,STP,São Tomé & Príncipe,never_treated,FALSE,0,24,,1991,2022
+3,risk_set_restricted,SUR,Suriname,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,SVK,Slovakia,never_treated,FALSE,0,30,,1993,2022
+3,risk_set_restricted,SVN,Slovenia,never_treated,FALSE,0,31,,1992,2022
+3,risk_set_restricted,SWE,Sweden,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,SWZ,Eswatini,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,SYC,Seychelles,never_treated,FALSE,0,31,,1990,2022
+3,risk_set_restricted,SYR,Syria,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,TGO,Togo,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,THA,Thailand,treated_min5,TRUE,14,18,2008,1990,2021
+3,risk_set_restricted,TJK,Tajikistan,never_treated,FALSE,0,30,,1992,2022
+3,risk_set_restricted,TKM,Turkmenistan,treated_min5,TRUE,13,18,2010,1992,2022
+3,risk_set_restricted,TON,Tonga,never_treated,FALSE,0,24,,1999,2022
+3,risk_set_restricted,TTO,Trinidad & Tobago,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,TUN,Tunisia,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,TUR,Turkey,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,TUV,Tuvalu,never_treated,FALSE,0,22,,2001,2022
+3,risk_set_restricted,UGA,Uganda,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,URY,Uruguay,treated_min5,TRUE,10,23,2013,1990,2022
+3,risk_set_restricted,USA,United States,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,VCT,St. Vincent & Grenadines,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,VUT,Vanuatu,never_treated,FALSE,0,32,,1990,2022
+3,risk_set_restricted,WSM,Samoa,never_treated,FALSE,0,33,,1990,2022
+3,risk_set_restricted,YEM,Yemen,treated_min5,TRUE,15,13,2005,1991,2020
+3,risk_set_restricted,ZAF,South Africa,treated_min5,TRUE,14,15,2009,1994,2022
+3,risk_set_restricted,ZWE,Zimbabwe,treated_min5,TRUE,7,21,2011,1990,2017
+3,switching_allowed,AFG,Afghanistan,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,AGO,Angola,treated_min5,TRUE,16,17,2007,1990,2022
+3,switching_allowed,ALB,Albania,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,ARE,United Arab Emirates,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,ARG,Argentina,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,ATG,Antigua & Barbuda,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,AUS,Australia,treated_min5,TRUE,14,19,2009,1990,2022
+3,switching_allowed,AUT,Austria,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,BFA,Burkina Faso,treated_min5,TRUE,3,30,2005,1990,2022
+3,switching_allowed,BGD,Bangladesh,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,BGR,Bulgaria,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,BHR,Bahrain,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,BHS,Bahamas,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,BLZ,Belize,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,BOL,Bolivia,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,BRA,Brazil,treated_min5,TRUE,14,19,2009,1990,2022
+3,switching_allowed,BRB,Barbados,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,BRN,Brunei,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,BTN,Bhutan,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,BWA,Botswana,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,CAN,Canada,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,CHL,Chile,treated_min5,TRUE,16,17,2007,1990,2022
+3,switching_allowed,CIV,Côte d’Ivoire,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,CMR,Cameroon,treated_min5,TRUE,3,30,2017,1990,2022
+3,switching_allowed,COG,Congo - Brazzaville,treated_min5,TRUE,15,18,2003,1990,2022
+3,switching_allowed,COL,Colombia,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,COM,Comoros,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,CPV,Cape Verde,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,CRI,Costa Rica,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,CUB,Cuba,treated_min5,TRUE,18,15,2004,1990,2022
+3,switching_allowed,CYP,Cyprus,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,DEU,Germany,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,DJI,Djibouti,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,DMA,Dominica,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,DNK,Denmark,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,DZA,Algeria,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,ECU,Ecuador,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,EGY,Egypt,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,ESP,Spain,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,FIN,Finland,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,FJI,Fiji,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,FRA,France,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,GAB,Gabon,treated_min5,TRUE,6,27,2017,1990,2022
+3,switching_allowed,GBR,United Kingdom,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,GMB,Gambia,treated_min5,TRUE,6,27,2011,1990,2022
+3,switching_allowed,GRC,Greece,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,GRD,Grenada,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,GTM,Guatemala,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,GUY,Guyana,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,HND,Honduras,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,HTI,Haiti,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,HUN,Hungary,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,IDN,Indonesia,treated_min5,TRUE,7,26,2016,1990,2022
+3,switching_allowed,IND,India,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,IRL,Ireland,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,IRN,Iran,treated_min5,TRUE,13,20,2007,1990,2022
+3,switching_allowed,ISL,Iceland,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,ISR,Israel,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,ITA,Italy,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,JAM,Jamaica,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,JOR,Jordan,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,JPN,Japan,treated_min5,TRUE,15,18,2008,1990,2022
+3,switching_allowed,KEN,Kenya,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,KNA,St. Kitts & Nevis,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,KWT,Kuwait,treated_min5,TRUE,5,28,2018,1990,2022
+3,switching_allowed,LBN,Lebanon,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,LBY,Libya,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,LCA,St. Lucia,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,LKA,Sri Lanka,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,LSO,Lesotho,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,MAR,Morocco,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,MDG,Madagascar,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,MDV,Maldives,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,MEX,Mexico,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,MMR,Myanmar (Burma),treated_min5,TRUE,9,24,2014,1990,2022
+3,switching_allowed,MUS,Mauritius,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,MWI,Malawi,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,MYS,Malaysia,treated_min5,TRUE,14,19,2009,1990,2022
+3,switching_allowed,NAM,Namibia,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,NGA,Nigeria,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,NIC,Nicaragua,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,NLD,Netherlands,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,NOR,Norway,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,NPL,Nepal,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,NZL,New Zealand,treated_min5,TRUE,10,23,2013,1990,2022
+3,switching_allowed,OMN,Oman,treated_min5,TRUE,19,14,2004,1990,2022
+3,switching_allowed,PAK,Pakistan,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,PER,Peru,treated_min5,TRUE,13,20,2010,1990,2022
+3,switching_allowed,PHL,Philippines,treated_min5,TRUE,18,15,2005,1990,2022
+3,switching_allowed,POL,Poland,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,PRT,Portugal,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,PRY,Paraguay,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,ROU,Romania,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,RWA,Rwanda,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,SAU,Saudi Arabia,treated_min5,TRUE,10,23,2013,1990,2022
+3,switching_allowed,SDN,Sudan,treated_min5,TRUE,10,23,2000,1990,2022
+3,switching_allowed,SEN,Senegal,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,SGP,Singapore,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,SLB,Solomon Islands,treated_min5,TRUE,20,13,2003,1990,2022
+3,switching_allowed,SLE,Sierra Leone,treated_min5,TRUE,11,22,2012,1990,2022
+3,switching_allowed,SLV,El Salvador,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,SUR,Suriname,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,SWE,Sweden,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,SWZ,Eswatini,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,SYR,Syria,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,TGO,Togo,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,THA,Thailand,treated_min5,TRUE,14,19,2008,1990,2022
+3,switching_allowed,TTO,Trinidad & Tobago,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,TUN,Tunisia,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,TUR,Turkey,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,UGA,Uganda,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,URY,Uruguay,treated_min5,TRUE,10,23,2013,1990,2022
+3,switching_allowed,USA,United States,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,VCT,St. Vincent & Grenadines,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,WSM,Samoa,never_treated,FALSE,0,33,,1990,2022
+3,switching_allowed,ZWE,Zimbabwe,treated_min5,TRUE,7,26,2011,1990,2022
+5,clean_single_spell,AFG,Afghanistan,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,AGO,Angola,treated_min5,TRUE,16,17,2007,1990,2022
+5,clean_single_spell,ALB,Albania,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,AND,Andorra,never_treated,FALSE,0,30,,1993,2022
+5,clean_single_spell,ARE,United Arab Emirates,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,ARG,Argentina,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,ATG,Antigua & Barbuda,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,AUS,Australia,treated_min5,TRUE,14,19,2009,1990,2022
+5,clean_single_spell,AUT,Austria,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,AZE,Azerbaijan,never_treated,FALSE,0,31,,1992,2022
+5,clean_single_spell,BDI,Burundi,never_treated,FALSE,0,32,,1990,2022
+5,clean_single_spell,BEL,Belgium,never_treated,FALSE,0,24,,1999,2022
+5,clean_single_spell,BGD,Bangladesh,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,BGR,Bulgaria,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,BHR,Bahrain,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,BHS,Bahamas,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,BIH,Bosnia & Herzegovina,never_treated,FALSE,0,29,,1992,2022
+5,clean_single_spell,BLR,Belarus,never_treated,FALSE,0,31,,1992,2022
+5,clean_single_spell,BLZ,Belize,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,BOL,Bolivia,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,BRA,Brazil,treated_min5,TRUE,14,19,2009,1990,2022
+5,clean_single_spell,BRB,Barbados,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,BRN,Brunei,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,BTN,Bhutan,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,BWA,Botswana,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,CAN,Canada,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,CHE,Switzerland,never_treated,FALSE,0,21,,2002,2022
+5,clean_single_spell,CHL,Chile,treated_min5,TRUE,16,17,2007,1990,2022
+5,clean_single_spell,CIV,Côte d’Ivoire,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,COD,Congo - Kinshasa,treated_min5,TRUE,14,18,2008,1990,2022
+5,clean_single_spell,COL,Colombia,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,COM,Comoros,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,CPV,Cape Verde,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,CRI,Costa Rica,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,CYP,Cyprus,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,CZE,Czechia,never_treated,FALSE,0,30,,1993,2022
+5,clean_single_spell,DEU,Germany,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,DJI,Djibouti,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,DMA,Dominica,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,DNK,Denmark,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,DOM,Dominican Republic,never_treated,FALSE,0,31,,1990,2022
+5,clean_single_spell,DZA,Algeria,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,ECU,Ecuador,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,EGY,Egypt,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,ERI,Eritrea,treated_min5,TRUE,9,21,2014,1993,2022
+5,clean_single_spell,ESP,Spain,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,EST,Estonia,never_treated,FALSE,0,31,,1992,2022
+5,clean_single_spell,FIN,Finland,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,FJI,Fiji,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,FRA,France,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,FSM,Micronesia (Federated States of),never_treated,FALSE,0,31,,1991,2022
+5,clean_single_spell,GAB,Gabon,treated_min5,TRUE,6,27,2017,1990,2022
+5,clean_single_spell,GBR,United Kingdom,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,GEO,Georgia,never_treated,FALSE,0,30,,1993,2022
+5,clean_single_spell,GNB,Guinea-Bissau,never_treated,FALSE,0,30,,1990,2022
+5,clean_single_spell,GRC,Greece,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,GRD,Grenada,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,GTM,Guatemala,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,GUY,Guyana,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,HND,Honduras,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,HRV,Croatia,never_treated,FALSE,0,31,,1992,2022
+5,clean_single_spell,HTI,Haiti,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,HUN,Hungary,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,IND,India,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,IRL,Ireland,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,ISL,Iceland,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,ISR,Israel,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,ITA,Italy,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,JAM,Jamaica,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,JOR,Jordan,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,JPN,Japan,treated_min5,TRUE,15,18,2008,1990,2022
+5,clean_single_spell,KAZ,Kazakhstan,treated_min5,TRUE,16,15,2007,1992,2022
+5,clean_single_spell,KEN,Kenya,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,KHM,Cambodia,never_treated,FALSE,0,30,,1991,2022
+5,clean_single_spell,KIR,Kiribati,never_treated,FALSE,0,23,,2000,2022
+5,clean_single_spell,KNA,St. Kitts & Nevis,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,KOR,South Korea,treated_min5,TRUE,20,12,2003,1991,2022
+5,clean_single_spell,KWT,Kuwait,treated_min5,TRUE,5,28,2018,1990,2022
+5,clean_single_spell,LBN,Lebanon,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,LBY,Libya,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,LCA,St. Lucia,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,LKA,Sri Lanka,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,LSO,Lesotho,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,LTU,Lithuania,never_treated,FALSE,0,31,,1992,2022
+5,clean_single_spell,LUX,Luxembourg,never_treated,FALSE,0,24,,1999,2022
+5,clean_single_spell,LVA,Latvia,never_treated,FALSE,0,31,,1992,2022
+5,clean_single_spell,MAR,Morocco,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,MCO,Monaco,never_treated,FALSE,0,10,,1993,2004
+5,clean_single_spell,MDA,Moldova,never_treated,FALSE,0,31,,1992,2022
+5,clean_single_spell,MDG,Madagascar,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,MDV,Maldives,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,MEX,Mexico,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,MHL,Marshall Islands,never_treated,FALSE,0,32,,1991,2022
+5,clean_single_spell,MKD,North Macedonia,never_treated,FALSE,0,30,,1993,2022
+5,clean_single_spell,MMR,Myanmar (Burma),treated_min5,TRUE,9,24,2014,1990,2022
+5,clean_single_spell,MNE,Montenegro,never_treated,FALSE,0,17,,2006,2022
+5,clean_single_spell,MRT,Mauritania,treated_min5,TRUE,17,15,2006,1990,2022
+5,clean_single_spell,MUS,Mauritius,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,MWI,Malawi,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,MYS,Malaysia,treated_min5,TRUE,14,19,2009,1990,2022
+5,clean_single_spell,NAM,Namibia,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,NER,Niger,never_treated,FALSE,0,30,,1990,2022
+5,clean_single_spell,NGA,Nigeria,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,NIC,Nicaragua,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,NLD,Netherlands,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,NOR,Norway,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,NPL,Nepal,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,NRU,Nauru,never_treated,FALSE,0,23,,2000,2022
+5,clean_single_spell,NZL,New Zealand,treated_min5,TRUE,10,23,2013,1990,2022
+5,clean_single_spell,PAK,Pakistan,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,PER,Peru,treated_min5,TRUE,13,20,2010,1990,2022
+5,clean_single_spell,PHL,Philippines,treated_min5,TRUE,18,15,2005,1990,2022
+5,clean_single_spell,PLW,Palau,never_treated,FALSE,0,25,,1995,2022
+5,clean_single_spell,POL,Poland,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,PRT,Portugal,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,PRY,Paraguay,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,ROU,Romania,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,RUS,Russia,treated_min5,TRUE,11,20,2012,1992,2022
+5,clean_single_spell,RWA,Rwanda,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,SAU,Saudi Arabia,treated_min5,TRUE,10,23,2013,1990,2022
+5,clean_single_spell,SEN,Senegal,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,SGP,Singapore,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,SLB,Solomon Islands,treated_min5,TRUE,20,13,2003,1990,2022
+5,clean_single_spell,SLE,Sierra Leone,treated_min5,TRUE,11,22,2012,1990,2022
+5,clean_single_spell,SLV,El Salvador,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,SMR,San Marino,never_treated,FALSE,0,23,,2000,2022
+5,clean_single_spell,SOM,Somalia,never_treated,FALSE,0,23,,1990,2022
+5,clean_single_spell,STP,São Tomé & Príncipe,never_treated,FALSE,0,24,,1991,2022
+5,clean_single_spell,SUR,Suriname,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,SVK,Slovakia,never_treated,FALSE,0,30,,1993,2022
+5,clean_single_spell,SVN,Slovenia,never_treated,FALSE,0,31,,1992,2022
+5,clean_single_spell,SWE,Sweden,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,SWZ,Eswatini,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,SYC,Seychelles,never_treated,FALSE,0,31,,1990,2022
+5,clean_single_spell,SYR,Syria,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,TGO,Togo,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,THA,Thailand,treated_min5,TRUE,14,18,2008,1990,2021
+5,clean_single_spell,TJK,Tajikistan,never_treated,FALSE,0,30,,1992,2022
+5,clean_single_spell,TKM,Turkmenistan,treated_min5,TRUE,13,18,2010,1992,2022
+5,clean_single_spell,TON,Tonga,never_treated,FALSE,0,24,,1999,2022
+5,clean_single_spell,TTO,Trinidad & Tobago,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,TUN,Tunisia,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,TUR,Turkey,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,TUV,Tuvalu,never_treated,FALSE,0,22,,2001,2022
+5,clean_single_spell,UGA,Uganda,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,URY,Uruguay,treated_min5,TRUE,10,23,2013,1990,2022
+5,clean_single_spell,USA,United States,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,VCT,St. Vincent & Grenadines,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,VUT,Vanuatu,never_treated,FALSE,0,32,,1990,2022
+5,clean_single_spell,WSM,Samoa,never_treated,FALSE,0,33,,1990,2022
+5,clean_single_spell,ZAF,South Africa,treated_min5,TRUE,14,15,2009,1994,2022
+5,risk_set_restricted,AFG,Afghanistan,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,AGO,Angola,treated_min5,TRUE,16,17,2007,1990,2022
+5,risk_set_restricted,ALB,Albania,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,AND,Andorra,never_treated,FALSE,0,30,,1993,2022
+5,risk_set_restricted,ARE,United Arab Emirates,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,ARG,Argentina,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,ATG,Antigua & Barbuda,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,AUS,Australia,treated_min5,TRUE,14,19,2009,1990,2022
+5,risk_set_restricted,AUT,Austria,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,AZE,Azerbaijan,never_treated,FALSE,0,31,,1992,2022
+5,risk_set_restricted,BDI,Burundi,never_treated,FALSE,0,32,,1990,2022
+5,risk_set_restricted,BEL,Belgium,never_treated,FALSE,0,24,,1999,2022
+5,risk_set_restricted,BGD,Bangladesh,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,BGR,Bulgaria,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,BHR,Bahrain,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,BHS,Bahamas,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,BIH,Bosnia & Herzegovina,never_treated,FALSE,0,29,,1992,2022
+5,risk_set_restricted,BLR,Belarus,never_treated,FALSE,0,31,,1992,2022
+5,risk_set_restricted,BLZ,Belize,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,BOL,Bolivia,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,BRA,Brazil,treated_min5,TRUE,14,19,2009,1990,2022
+5,risk_set_restricted,BRB,Barbados,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,BRN,Brunei,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,BTN,Bhutan,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,BWA,Botswana,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,CAN,Canada,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,CHE,Switzerland,never_treated,FALSE,0,21,,2002,2022
+5,risk_set_restricted,CHL,Chile,treated_min5,TRUE,16,17,2007,1990,2022
+5,risk_set_restricted,CIV,Côte d’Ivoire,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,COD,Congo - Kinshasa,treated_min5,TRUE,14,18,2008,1990,2022
+5,risk_set_restricted,COG,Congo - Brazzaville,treated_min5,TRUE,12,18,2011,1990,2022
+5,risk_set_restricted,COL,Colombia,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,COM,Comoros,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,CPV,Cape Verde,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,CRI,Costa Rica,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,CUB,Cuba,treated_min5,TRUE,18,14,2004,1990,2022
+5,risk_set_restricted,CYP,Cyprus,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,CZE,Czechia,never_treated,FALSE,0,30,,1993,2022
+5,risk_set_restricted,DEU,Germany,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,DJI,Djibouti,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,DMA,Dominica,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,DNK,Denmark,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,DOM,Dominican Republic,never_treated,FALSE,0,31,,1990,2022
+5,risk_set_restricted,DZA,Algeria,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,ECU,Ecuador,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,EGY,Egypt,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,ERI,Eritrea,treated_min5,TRUE,9,21,2014,1993,2022
+5,risk_set_restricted,ESP,Spain,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,EST,Estonia,never_treated,FALSE,0,31,,1992,2022
+5,risk_set_restricted,FIN,Finland,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,FJI,Fiji,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,FRA,France,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,FSM,Micronesia (Federated States of),never_treated,FALSE,0,31,,1991,2022
+5,risk_set_restricted,GAB,Gabon,treated_min5,TRUE,6,27,2017,1990,2022
+5,risk_set_restricted,GBR,United Kingdom,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,GEO,Georgia,never_treated,FALSE,0,30,,1993,2022
+5,risk_set_restricted,GNB,Guinea-Bissau,never_treated,FALSE,0,30,,1990,2022
+5,risk_set_restricted,GNQ,Equatorial Guinea,treated_min5,TRUE,6,18,2017,1995,2022
+5,risk_set_restricted,GRC,Greece,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,GRD,Grenada,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,GTM,Guatemala,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,GUY,Guyana,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,HND,Honduras,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,HRV,Croatia,never_treated,FALSE,0,31,,1992,2022
+5,risk_set_restricted,HTI,Haiti,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,HUN,Hungary,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,IDN,Indonesia,treated_min5,TRUE,7,25,2016,1990,2022
+5,risk_set_restricted,IND,India,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,IRL,Ireland,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,IRN,Iran,treated_min5,TRUE,13,17,2007,1990,2019
+5,risk_set_restricted,ISL,Iceland,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,ISR,Israel,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,ITA,Italy,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,JAM,Jamaica,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,JOR,Jordan,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,JPN,Japan,treated_min5,TRUE,15,18,2008,1990,2022
+5,risk_set_restricted,KAZ,Kazakhstan,treated_min5,TRUE,16,15,2007,1992,2022
+5,risk_set_restricted,KEN,Kenya,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,KHM,Cambodia,never_treated,FALSE,0,30,,1991,2022
+5,risk_set_restricted,KIR,Kiribati,never_treated,FALSE,0,23,,2000,2022
+5,risk_set_restricted,KNA,St. Kitts & Nevis,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,KOR,South Korea,treated_min5,TRUE,20,12,2003,1991,2022
+5,risk_set_restricted,KWT,Kuwait,treated_min5,TRUE,5,28,2018,1990,2022
+5,risk_set_restricted,LBN,Lebanon,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,LBY,Libya,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,LCA,St. Lucia,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,LKA,Sri Lanka,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,LSO,Lesotho,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,LTU,Lithuania,never_treated,FALSE,0,31,,1992,2022
+5,risk_set_restricted,LUX,Luxembourg,never_treated,FALSE,0,24,,1999,2022
+5,risk_set_restricted,LVA,Latvia,never_treated,FALSE,0,31,,1992,2022
+5,risk_set_restricted,MAR,Morocco,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,MCO,Monaco,never_treated,FALSE,0,10,,1993,2004
+5,risk_set_restricted,MDA,Moldova,never_treated,FALSE,0,31,,1992,2022
+5,risk_set_restricted,MDG,Madagascar,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,MDV,Maldives,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,MEX,Mexico,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,MHL,Marshall Islands,never_treated,FALSE,0,32,,1991,2022
+5,risk_set_restricted,MKD,North Macedonia,never_treated,FALSE,0,30,,1993,2022
+5,risk_set_restricted,MMR,Myanmar (Burma),treated_min5,TRUE,9,24,2014,1990,2022
+5,risk_set_restricted,MNE,Montenegro,never_treated,FALSE,0,17,,2006,2022
+5,risk_set_restricted,MRT,Mauritania,treated_min5,TRUE,17,15,2006,1990,2022
+5,risk_set_restricted,MUS,Mauritius,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,MWI,Malawi,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,MYS,Malaysia,treated_min5,TRUE,14,19,2009,1990,2022
+5,risk_set_restricted,NAM,Namibia,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,NER,Niger,never_treated,FALSE,0,30,,1990,2022
+5,risk_set_restricted,NGA,Nigeria,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,NIC,Nicaragua,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,NLD,Netherlands,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,NOR,Norway,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,NPL,Nepal,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,NRU,Nauru,never_treated,FALSE,0,23,,2000,2022
+5,risk_set_restricted,NZL,New Zealand,treated_min5,TRUE,10,23,2013,1990,2022
+5,risk_set_restricted,OMN,Oman,treated_min5,TRUE,19,13,2004,1990,2022
+5,risk_set_restricted,PAK,Pakistan,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,PER,Peru,treated_min5,TRUE,13,20,2010,1990,2022
+5,risk_set_restricted,PHL,Philippines,treated_min5,TRUE,18,15,2005,1990,2022
+5,risk_set_restricted,PLW,Palau,never_treated,FALSE,0,25,,1995,2022
+5,risk_set_restricted,POL,Poland,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,PRK,North Korea,treated_min5,TRUE,12,13,2008,1991,2019
+5,risk_set_restricted,PRT,Portugal,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,PRY,Paraguay,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,ROU,Romania,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,RUS,Russia,treated_min5,TRUE,11,20,2012,1992,2022
+5,risk_set_restricted,RWA,Rwanda,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,SAU,Saudi Arabia,treated_min5,TRUE,10,23,2013,1990,2022
+5,risk_set_restricted,SDN,Sudan,treated_min5,TRUE,6,10,2000,1990,2005
+5,risk_set_restricted,SEN,Senegal,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,SGP,Singapore,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,SLB,Solomon Islands,treated_min5,TRUE,20,13,2003,1990,2022
+5,risk_set_restricted,SLE,Sierra Leone,treated_min5,TRUE,11,22,2012,1990,2022
+5,risk_set_restricted,SLV,El Salvador,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,SMR,San Marino,never_treated,FALSE,0,23,,2000,2022
+5,risk_set_restricted,SOM,Somalia,never_treated,FALSE,0,23,,1990,2022
+5,risk_set_restricted,STP,São Tomé & Príncipe,never_treated,FALSE,0,24,,1991,2022
+5,risk_set_restricted,SUR,Suriname,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,SVK,Slovakia,never_treated,FALSE,0,30,,1993,2022
+5,risk_set_restricted,SVN,Slovenia,never_treated,FALSE,0,31,,1992,2022
+5,risk_set_restricted,SWE,Sweden,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,SWZ,Eswatini,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,SYC,Seychelles,never_treated,FALSE,0,31,,1990,2022
+5,risk_set_restricted,SYR,Syria,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,TGO,Togo,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,THA,Thailand,treated_min5,TRUE,14,18,2008,1990,2021
+5,risk_set_restricted,TJK,Tajikistan,never_treated,FALSE,0,30,,1992,2022
+5,risk_set_restricted,TKM,Turkmenistan,treated_min5,TRUE,13,18,2010,1992,2022
+5,risk_set_restricted,TON,Tonga,never_treated,FALSE,0,24,,1999,2022
+5,risk_set_restricted,TTO,Trinidad & Tobago,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,TUN,Tunisia,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,TUR,Turkey,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,TUV,Tuvalu,never_treated,FALSE,0,22,,2001,2022
+5,risk_set_restricted,UGA,Uganda,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,URY,Uruguay,treated_min5,TRUE,10,23,2013,1990,2022
+5,risk_set_restricted,USA,United States,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,VCT,St. Vincent & Grenadines,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,VUT,Vanuatu,never_treated,FALSE,0,32,,1990,2022
+5,risk_set_restricted,WSM,Samoa,never_treated,FALSE,0,33,,1990,2022
+5,risk_set_restricted,YEM,Yemen,treated_min5,TRUE,11,13,2005,1991,2015
+5,risk_set_restricted,ZAF,South Africa,treated_min5,TRUE,14,15,2009,1994,2022
+5,risk_set_restricted,ZWE,Zimbabwe,treated_min5,TRUE,7,21,2011,1990,2017
+5,switching_allowed,AFG,Afghanistan,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,AGO,Angola,treated_min5,TRUE,16,17,2007,1990,2022
+5,switching_allowed,ALB,Albania,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,ARE,United Arab Emirates,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,ARG,Argentina,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,ATG,Antigua & Barbuda,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,AUS,Australia,treated_min5,TRUE,14,19,2009,1990,2022
+5,switching_allowed,AUT,Austria,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,BGD,Bangladesh,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,BGR,Bulgaria,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,BHR,Bahrain,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,BHS,Bahamas,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,BLZ,Belize,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,BOL,Bolivia,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,BRA,Brazil,treated_min5,TRUE,14,19,2009,1990,2022
+5,switching_allowed,BRB,Barbados,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,BRN,Brunei,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,BTN,Bhutan,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,BWA,Botswana,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,CAN,Canada,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,CHL,Chile,treated_min5,TRUE,16,17,2007,1990,2022
+5,switching_allowed,CIV,Côte d’Ivoire,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,COG,Congo - Brazzaville,treated_min5,TRUE,12,21,2011,1990,2022
+5,switching_allowed,COL,Colombia,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,COM,Comoros,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,CPV,Cape Verde,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,CRI,Costa Rica,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,CUB,Cuba,treated_min5,TRUE,18,15,2004,1990,2022
+5,switching_allowed,CYP,Cyprus,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,DEU,Germany,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,DJI,Djibouti,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,DMA,Dominica,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,DNK,Denmark,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,DZA,Algeria,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,ECU,Ecuador,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,EGY,Egypt,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,ESP,Spain,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,FIN,Finland,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,FJI,Fiji,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,FRA,France,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,GAB,Gabon,treated_min5,TRUE,6,27,2017,1990,2022
+5,switching_allowed,GBR,United Kingdom,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,GRC,Greece,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,GRD,Grenada,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,GTM,Guatemala,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,GUY,Guyana,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,HND,Honduras,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,HTI,Haiti,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,HUN,Hungary,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,IDN,Indonesia,treated_min5,TRUE,7,26,2016,1990,2022
+5,switching_allowed,IND,India,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,IRL,Ireland,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,IRN,Iran,treated_min5,TRUE,13,20,2007,1990,2022
+5,switching_allowed,ISL,Iceland,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,ISR,Israel,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,ITA,Italy,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,JAM,Jamaica,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,JOR,Jordan,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,JPN,Japan,treated_min5,TRUE,15,18,2008,1990,2022
+5,switching_allowed,KEN,Kenya,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,KNA,St. Kitts & Nevis,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,KWT,Kuwait,treated_min5,TRUE,5,28,2018,1990,2022
+5,switching_allowed,LBN,Lebanon,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,LBY,Libya,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,LCA,St. Lucia,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,LKA,Sri Lanka,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,LSO,Lesotho,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,MAR,Morocco,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,MDG,Madagascar,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,MDV,Maldives,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,MEX,Mexico,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,MMR,Myanmar (Burma),treated_min5,TRUE,9,24,2014,1990,2022
+5,switching_allowed,MUS,Mauritius,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,MWI,Malawi,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,MYS,Malaysia,treated_min5,TRUE,14,19,2009,1990,2022
+5,switching_allowed,NAM,Namibia,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,NGA,Nigeria,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,NIC,Nicaragua,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,NLD,Netherlands,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,NOR,Norway,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,NPL,Nepal,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,NZL,New Zealand,treated_min5,TRUE,10,23,2013,1990,2022
+5,switching_allowed,OMN,Oman,treated_min5,TRUE,19,14,2004,1990,2022
+5,switching_allowed,PAK,Pakistan,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,PER,Peru,treated_min5,TRUE,13,20,2010,1990,2022
+5,switching_allowed,PHL,Philippines,treated_min5,TRUE,18,15,2005,1990,2022
+5,switching_allowed,POL,Poland,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,PRT,Portugal,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,PRY,Paraguay,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,ROU,Romania,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,RWA,Rwanda,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,SAU,Saudi Arabia,treated_min5,TRUE,10,23,2013,1990,2022
+5,switching_allowed,SDN,Sudan,treated_min5,TRUE,6,27,2000,1990,2022
+5,switching_allowed,SEN,Senegal,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,SGP,Singapore,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,SLB,Solomon Islands,treated_min5,TRUE,20,13,2003,1990,2022
+5,switching_allowed,SLE,Sierra Leone,treated_min5,TRUE,11,22,2012,1990,2022
+5,switching_allowed,SLV,El Salvador,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,SUR,Suriname,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,SWE,Sweden,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,SWZ,Eswatini,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,SYR,Syria,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,TGO,Togo,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,THA,Thailand,treated_min5,TRUE,14,19,2008,1990,2022
+5,switching_allowed,TTO,Trinidad & Tobago,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,TUN,Tunisia,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,TUR,Turkey,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,UGA,Uganda,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,URY,Uruguay,treated_min5,TRUE,10,23,2013,1990,2022
+5,switching_allowed,USA,United States,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,VCT,St. Vincent & Grenadines,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,WSM,Samoa,never_treated,FALSE,0,33,,1990,2022
+5,switching_allowed,ZWE,Zimbabwe,treated_min5,TRUE,7,26,2011,1990,2022
+7,clean_single_spell,AFG,Afghanistan,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,AGO,Angola,treated_min5,TRUE,16,17,2007,1990,2022
+7,clean_single_spell,ALB,Albania,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,AND,Andorra,never_treated,FALSE,0,30,,1993,2022
+7,clean_single_spell,ARE,United Arab Emirates,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,ARG,Argentina,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,ATG,Antigua & Barbuda,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,AUS,Australia,treated_min5,TRUE,14,19,2009,1990,2022
+7,clean_single_spell,AUT,Austria,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,AZE,Azerbaijan,never_treated,FALSE,0,31,,1992,2022
+7,clean_single_spell,BDI,Burundi,never_treated,FALSE,0,32,,1990,2022
+7,clean_single_spell,BEL,Belgium,never_treated,FALSE,0,24,,1999,2022
+7,clean_single_spell,BGD,Bangladesh,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,BGR,Bulgaria,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,BHR,Bahrain,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,BHS,Bahamas,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,BIH,Bosnia & Herzegovina,never_treated,FALSE,0,29,,1992,2022
+7,clean_single_spell,BLR,Belarus,never_treated,FALSE,0,31,,1992,2022
+7,clean_single_spell,BLZ,Belize,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,BOL,Bolivia,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,BRA,Brazil,treated_min5,TRUE,14,19,2009,1990,2022
+7,clean_single_spell,BRB,Barbados,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,BRN,Brunei,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,BTN,Bhutan,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,BWA,Botswana,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,CAN,Canada,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,CHE,Switzerland,never_treated,FALSE,0,21,,2002,2022
+7,clean_single_spell,CHL,Chile,treated_min5,TRUE,16,17,2007,1990,2022
+7,clean_single_spell,CIV,Côte d’Ivoire,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,COD,Congo - Kinshasa,treated_min5,TRUE,14,18,2008,1990,2022
+7,clean_single_spell,COL,Colombia,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,COM,Comoros,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,CPV,Cape Verde,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,CRI,Costa Rica,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,CYP,Cyprus,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,CZE,Czechia,never_treated,FALSE,0,30,,1993,2022
+7,clean_single_spell,DEU,Germany,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,DJI,Djibouti,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,DMA,Dominica,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,DNK,Denmark,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,DOM,Dominican Republic,never_treated,FALSE,0,31,,1990,2022
+7,clean_single_spell,DZA,Algeria,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,ECU,Ecuador,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,EGY,Egypt,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,ERI,Eritrea,treated_min5,TRUE,9,21,2014,1993,2022
+7,clean_single_spell,ESP,Spain,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,EST,Estonia,never_treated,FALSE,0,31,,1992,2022
+7,clean_single_spell,FIN,Finland,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,FJI,Fiji,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,FRA,France,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,FSM,Micronesia (Federated States of),never_treated,FALSE,0,31,,1991,2022
+7,clean_single_spell,GBR,United Kingdom,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,GEO,Georgia,never_treated,FALSE,0,30,,1993,2022
+7,clean_single_spell,GNB,Guinea-Bissau,never_treated,FALSE,0,30,,1990,2022
+7,clean_single_spell,GRC,Greece,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,GRD,Grenada,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,GTM,Guatemala,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,GUY,Guyana,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,HND,Honduras,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,HRV,Croatia,never_treated,FALSE,0,31,,1992,2022
+7,clean_single_spell,HTI,Haiti,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,HUN,Hungary,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,IND,India,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,IRL,Ireland,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,ISL,Iceland,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,ISR,Israel,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,ITA,Italy,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,JAM,Jamaica,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,JOR,Jordan,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,JPN,Japan,treated_min5,TRUE,15,18,2008,1990,2022
+7,clean_single_spell,KAZ,Kazakhstan,treated_min5,TRUE,16,15,2007,1992,2022
+7,clean_single_spell,KEN,Kenya,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,KHM,Cambodia,never_treated,FALSE,0,30,,1991,2022
+7,clean_single_spell,KIR,Kiribati,never_treated,FALSE,0,23,,2000,2022
+7,clean_single_spell,KNA,St. Kitts & Nevis,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,KOR,South Korea,treated_min5,TRUE,20,12,2003,1991,2022
+7,clean_single_spell,LBN,Lebanon,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,LBY,Libya,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,LCA,St. Lucia,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,LKA,Sri Lanka,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,LSO,Lesotho,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,LTU,Lithuania,never_treated,FALSE,0,31,,1992,2022
+7,clean_single_spell,LUX,Luxembourg,never_treated,FALSE,0,24,,1999,2022
+7,clean_single_spell,LVA,Latvia,never_treated,FALSE,0,31,,1992,2022
+7,clean_single_spell,MAR,Morocco,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,MCO,Monaco,never_treated,FALSE,0,10,,1993,2004
+7,clean_single_spell,MDA,Moldova,never_treated,FALSE,0,31,,1992,2022
+7,clean_single_spell,MDG,Madagascar,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,MDV,Maldives,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,MEX,Mexico,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,MHL,Marshall Islands,never_treated,FALSE,0,32,,1991,2022
+7,clean_single_spell,MKD,North Macedonia,never_treated,FALSE,0,30,,1993,2022
+7,clean_single_spell,MMR,Myanmar (Burma),treated_min5,TRUE,9,24,2014,1990,2022
+7,clean_single_spell,MNE,Montenegro,never_treated,FALSE,0,17,,2006,2022
+7,clean_single_spell,MRT,Mauritania,treated_min5,TRUE,17,15,2006,1990,2022
+7,clean_single_spell,MUS,Mauritius,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,MWI,Malawi,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,MYS,Malaysia,treated_min5,TRUE,14,19,2009,1990,2022
+7,clean_single_spell,NAM,Namibia,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,NER,Niger,never_treated,FALSE,0,30,,1990,2022
+7,clean_single_spell,NGA,Nigeria,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,NIC,Nicaragua,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,NLD,Netherlands,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,NOR,Norway,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,NPL,Nepal,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,NRU,Nauru,never_treated,FALSE,0,23,,2000,2022
+7,clean_single_spell,NZL,New Zealand,treated_min5,TRUE,10,23,2013,1990,2022
+7,clean_single_spell,PAK,Pakistan,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,PER,Peru,treated_min5,TRUE,13,20,2010,1990,2022
+7,clean_single_spell,PHL,Philippines,treated_min5,TRUE,18,15,2005,1990,2022
+7,clean_single_spell,PLW,Palau,never_treated,FALSE,0,25,,1995,2022
+7,clean_single_spell,POL,Poland,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,PRT,Portugal,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,PRY,Paraguay,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,ROU,Romania,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,RUS,Russia,treated_min5,TRUE,11,20,2012,1992,2022
+7,clean_single_spell,RWA,Rwanda,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,SAU,Saudi Arabia,treated_min5,TRUE,10,23,2013,1990,2022
+7,clean_single_spell,SEN,Senegal,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,SGP,Singapore,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,SLB,Solomon Islands,treated_min5,TRUE,20,13,2003,1990,2022
+7,clean_single_spell,SLE,Sierra Leone,treated_min5,TRUE,11,22,2012,1990,2022
+7,clean_single_spell,SLV,El Salvador,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,SMR,San Marino,never_treated,FALSE,0,23,,2000,2022
+7,clean_single_spell,SOM,Somalia,never_treated,FALSE,0,23,,1990,2022
+7,clean_single_spell,STP,São Tomé & Príncipe,never_treated,FALSE,0,24,,1991,2022
+7,clean_single_spell,SUR,Suriname,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,SVK,Slovakia,never_treated,FALSE,0,30,,1993,2022
+7,clean_single_spell,SVN,Slovenia,never_treated,FALSE,0,31,,1992,2022
+7,clean_single_spell,SWE,Sweden,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,SWZ,Eswatini,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,SYC,Seychelles,never_treated,FALSE,0,31,,1990,2022
+7,clean_single_spell,SYR,Syria,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,TGO,Togo,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,THA,Thailand,treated_min5,TRUE,14,18,2008,1990,2021
+7,clean_single_spell,TJK,Tajikistan,never_treated,FALSE,0,30,,1992,2022
+7,clean_single_spell,TKM,Turkmenistan,treated_min5,TRUE,13,18,2010,1992,2022
+7,clean_single_spell,TON,Tonga,never_treated,FALSE,0,24,,1999,2022
+7,clean_single_spell,TTO,Trinidad & Tobago,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,TUN,Tunisia,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,TUR,Turkey,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,TUV,Tuvalu,never_treated,FALSE,0,22,,2001,2022
+7,clean_single_spell,UGA,Uganda,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,URY,Uruguay,treated_min5,TRUE,10,23,2013,1990,2022
+7,clean_single_spell,USA,United States,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,VCT,St. Vincent & Grenadines,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,VUT,Vanuatu,never_treated,FALSE,0,32,,1990,2022
+7,clean_single_spell,WSM,Samoa,never_treated,FALSE,0,33,,1990,2022
+7,clean_single_spell,ZAF,South Africa,treated_min5,TRUE,14,15,2009,1994,2022
+7,risk_set_restricted,AFG,Afghanistan,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,AGO,Angola,treated_min5,TRUE,16,17,2007,1990,2022
+7,risk_set_restricted,ALB,Albania,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,AND,Andorra,never_treated,FALSE,0,30,,1993,2022
+7,risk_set_restricted,ARE,United Arab Emirates,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,ARG,Argentina,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,ATG,Antigua & Barbuda,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,AUS,Australia,treated_min5,TRUE,14,19,2009,1990,2022
+7,risk_set_restricted,AUT,Austria,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,AZE,Azerbaijan,never_treated,FALSE,0,31,,1992,2022
+7,risk_set_restricted,BDI,Burundi,never_treated,FALSE,0,32,,1990,2022
+7,risk_set_restricted,BEL,Belgium,never_treated,FALSE,0,24,,1999,2022
+7,risk_set_restricted,BGD,Bangladesh,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,BGR,Bulgaria,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,BHR,Bahrain,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,BHS,Bahamas,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,BIH,Bosnia & Herzegovina,never_treated,FALSE,0,29,,1992,2022
+7,risk_set_restricted,BLR,Belarus,never_treated,FALSE,0,31,,1992,2022
+7,risk_set_restricted,BLZ,Belize,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,BOL,Bolivia,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,BRA,Brazil,treated_min5,TRUE,14,19,2009,1990,2022
+7,risk_set_restricted,BRB,Barbados,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,BRN,Brunei,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,BTN,Bhutan,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,BWA,Botswana,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,CAN,Canada,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,CHE,Switzerland,never_treated,FALSE,0,21,,2002,2022
+7,risk_set_restricted,CHL,Chile,treated_min5,TRUE,16,17,2007,1990,2022
+7,risk_set_restricted,CIV,Côte d’Ivoire,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,COD,Congo - Kinshasa,treated_min5,TRUE,14,18,2008,1990,2022
+7,risk_set_restricted,COG,Congo - Brazzaville,treated_min5,TRUE,12,18,2011,1990,2022
+7,risk_set_restricted,COL,Colombia,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,COM,Comoros,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,CPV,Cape Verde,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,CRI,Costa Rica,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,CUB,Cuba,treated_min5,TRUE,12,14,2004,1990,2015
+7,risk_set_restricted,CYP,Cyprus,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,CZE,Czechia,never_treated,FALSE,0,30,,1993,2022
+7,risk_set_restricted,DEU,Germany,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,DJI,Djibouti,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,DMA,Dominica,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,DNK,Denmark,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,DOM,Dominican Republic,never_treated,FALSE,0,31,,1990,2022
+7,risk_set_restricted,DZA,Algeria,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,ECU,Ecuador,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,EGY,Egypt,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,ERI,Eritrea,treated_min5,TRUE,9,21,2014,1993,2022
+7,risk_set_restricted,ESP,Spain,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,EST,Estonia,never_treated,FALSE,0,31,,1992,2022
+7,risk_set_restricted,FIN,Finland,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,FJI,Fiji,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,FRA,France,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,FSM,Micronesia (Federated States of),never_treated,FALSE,0,31,,1991,2022
+7,risk_set_restricted,GBR,United Kingdom,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,GEO,Georgia,never_treated,FALSE,0,30,,1993,2022
+7,risk_set_restricted,GNB,Guinea-Bissau,never_treated,FALSE,0,30,,1990,2022
+7,risk_set_restricted,GRC,Greece,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,GRD,Grenada,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,GTM,Guatemala,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,GUY,Guyana,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,HND,Honduras,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,HRV,Croatia,never_treated,FALSE,0,31,,1992,2022
+7,risk_set_restricted,HTI,Haiti,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,HUN,Hungary,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,IDN,Indonesia,treated_min5,TRUE,7,25,2016,1990,2022
+7,risk_set_restricted,IND,India,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,IRL,Ireland,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,IRN,Iran,treated_min5,TRUE,13,17,2007,1990,2019
+7,risk_set_restricted,ISL,Iceland,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,ISR,Israel,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,ITA,Italy,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,JAM,Jamaica,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,JOR,Jordan,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,JPN,Japan,treated_min5,TRUE,15,18,2008,1990,2022
+7,risk_set_restricted,KAZ,Kazakhstan,treated_min5,TRUE,16,15,2007,1992,2022
+7,risk_set_restricted,KEN,Kenya,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,KHM,Cambodia,never_treated,FALSE,0,30,,1991,2022
+7,risk_set_restricted,KIR,Kiribati,never_treated,FALSE,0,23,,2000,2022
+7,risk_set_restricted,KNA,St. Kitts & Nevis,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,KOR,South Korea,treated_min5,TRUE,20,12,2003,1991,2022
+7,risk_set_restricted,LBN,Lebanon,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,LBY,Libya,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,LCA,St. Lucia,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,LKA,Sri Lanka,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,LSO,Lesotho,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,LTU,Lithuania,never_treated,FALSE,0,31,,1992,2022
+7,risk_set_restricted,LUX,Luxembourg,never_treated,FALSE,0,24,,1999,2022
+7,risk_set_restricted,LVA,Latvia,never_treated,FALSE,0,31,,1992,2022
+7,risk_set_restricted,MAR,Morocco,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,MCO,Monaco,never_treated,FALSE,0,10,,1993,2004
+7,risk_set_restricted,MDA,Moldova,never_treated,FALSE,0,31,,1992,2022
+7,risk_set_restricted,MDG,Madagascar,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,MDV,Maldives,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,MEX,Mexico,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,MHL,Marshall Islands,never_treated,FALSE,0,32,,1991,2022
+7,risk_set_restricted,MKD,North Macedonia,never_treated,FALSE,0,30,,1993,2022
+7,risk_set_restricted,MMR,Myanmar (Burma),treated_min5,TRUE,9,24,2014,1990,2022
+7,risk_set_restricted,MNE,Montenegro,never_treated,FALSE,0,17,,2006,2022
+7,risk_set_restricted,MRT,Mauritania,treated_min5,TRUE,17,15,2006,1990,2022
+7,risk_set_restricted,MUS,Mauritius,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,MWI,Malawi,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,MYS,Malaysia,treated_min5,TRUE,14,19,2009,1990,2022
+7,risk_set_restricted,NAM,Namibia,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,NER,Niger,never_treated,FALSE,0,30,,1990,2022
+7,risk_set_restricted,NGA,Nigeria,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,NIC,Nicaragua,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,NLD,Netherlands,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,NOR,Norway,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,NPL,Nepal,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,NRU,Nauru,never_treated,FALSE,0,23,,2000,2022
+7,risk_set_restricted,NZL,New Zealand,treated_min5,TRUE,10,23,2013,1990,2022
+7,risk_set_restricted,OMN,Oman,treated_min5,TRUE,19,13,2004,1990,2022
+7,risk_set_restricted,PAK,Pakistan,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,PER,Peru,treated_min5,TRUE,13,20,2010,1990,2022
+7,risk_set_restricted,PHL,Philippines,treated_min5,TRUE,18,15,2005,1990,2022
+7,risk_set_restricted,PLW,Palau,never_treated,FALSE,0,25,,1995,2022
+7,risk_set_restricted,POL,Poland,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,PRK,North Korea,treated_min5,TRUE,12,13,2008,1991,2019
+7,risk_set_restricted,PRT,Portugal,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,PRY,Paraguay,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,ROU,Romania,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,RUS,Russia,treated_min5,TRUE,11,20,2012,1992,2022
+7,risk_set_restricted,RWA,Rwanda,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,SAU,Saudi Arabia,treated_min5,TRUE,10,23,2013,1990,2022
+7,risk_set_restricted,SEN,Senegal,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,SGP,Singapore,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,SLB,Solomon Islands,treated_min5,TRUE,20,13,2003,1990,2022
+7,risk_set_restricted,SLE,Sierra Leone,treated_min5,TRUE,11,22,2012,1990,2022
+7,risk_set_restricted,SLV,El Salvador,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,SMR,San Marino,never_treated,FALSE,0,23,,2000,2022
+7,risk_set_restricted,SOM,Somalia,never_treated,FALSE,0,23,,1990,2022
+7,risk_set_restricted,STP,São Tomé & Príncipe,never_treated,FALSE,0,24,,1991,2022
+7,risk_set_restricted,SUR,Suriname,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,SVK,Slovakia,never_treated,FALSE,0,30,,1993,2022
+7,risk_set_restricted,SVN,Slovenia,never_treated,FALSE,0,31,,1992,2022
+7,risk_set_restricted,SWE,Sweden,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,SWZ,Eswatini,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,SYC,Seychelles,never_treated,FALSE,0,31,,1990,2022
+7,risk_set_restricted,SYR,Syria,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,TGO,Togo,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,THA,Thailand,treated_min5,TRUE,14,18,2008,1990,2021
+7,risk_set_restricted,TJK,Tajikistan,never_treated,FALSE,0,30,,1992,2022
+7,risk_set_restricted,TKM,Turkmenistan,treated_min5,TRUE,13,18,2010,1992,2022
+7,risk_set_restricted,TON,Tonga,never_treated,FALSE,0,24,,1999,2022
+7,risk_set_restricted,TTO,Trinidad & Tobago,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,TUN,Tunisia,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,TUR,Turkey,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,TUV,Tuvalu,never_treated,FALSE,0,22,,2001,2022
+7,risk_set_restricted,UGA,Uganda,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,URY,Uruguay,treated_min5,TRUE,10,23,2013,1990,2022
+7,risk_set_restricted,USA,United States,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,VCT,St. Vincent & Grenadines,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,VUT,Vanuatu,never_treated,FALSE,0,32,,1990,2022
+7,risk_set_restricted,WSM,Samoa,never_treated,FALSE,0,33,,1990,2022
+7,risk_set_restricted,YEM,Yemen,treated_min5,TRUE,11,13,2005,1991,2015
+7,risk_set_restricted,ZAF,South Africa,treated_min5,TRUE,14,15,2009,1994,2022
+7,risk_set_restricted,ZWE,Zimbabwe,treated_min5,TRUE,7,21,2011,1990,2017
+7,switching_allowed,AFG,Afghanistan,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,AGO,Angola,treated_min5,TRUE,16,17,2007,1990,2022
+7,switching_allowed,ALB,Albania,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,ARE,United Arab Emirates,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,ARG,Argentina,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,ATG,Antigua & Barbuda,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,AUS,Australia,treated_min5,TRUE,14,19,2009,1990,2022
+7,switching_allowed,AUT,Austria,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,BGD,Bangladesh,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,BGR,Bulgaria,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,BHR,Bahrain,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,BHS,Bahamas,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,BLZ,Belize,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,BOL,Bolivia,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,BRA,Brazil,treated_min5,TRUE,14,19,2009,1990,2022
+7,switching_allowed,BRB,Barbados,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,BRN,Brunei,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,BTN,Bhutan,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,BWA,Botswana,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,CAN,Canada,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,CHL,Chile,treated_min5,TRUE,16,17,2007,1990,2022
+7,switching_allowed,CIV,Côte d’Ivoire,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,COG,Congo - Brazzaville,treated_min5,TRUE,12,21,2011,1990,2022
+7,switching_allowed,COL,Colombia,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,COM,Comoros,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,CPV,Cape Verde,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,CRI,Costa Rica,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,CUB,Cuba,treated_min5,TRUE,12,21,2004,1990,2022
+7,switching_allowed,CYP,Cyprus,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,DEU,Germany,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,DJI,Djibouti,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,DMA,Dominica,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,DNK,Denmark,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,DZA,Algeria,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,ECU,Ecuador,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,EGY,Egypt,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,ESP,Spain,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,FIN,Finland,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,FJI,Fiji,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,FRA,France,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,GBR,United Kingdom,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,GRC,Greece,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,GRD,Grenada,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,GTM,Guatemala,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,GUY,Guyana,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,HND,Honduras,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,HTI,Haiti,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,HUN,Hungary,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,IDN,Indonesia,treated_min5,TRUE,7,26,2016,1990,2022
+7,switching_allowed,IND,India,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,IRL,Ireland,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,IRN,Iran,treated_min5,TRUE,13,20,2007,1990,2022
+7,switching_allowed,ISL,Iceland,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,ISR,Israel,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,ITA,Italy,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,JAM,Jamaica,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,JOR,Jordan,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,JPN,Japan,treated_min5,TRUE,15,18,2008,1990,2022
+7,switching_allowed,KEN,Kenya,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,KNA,St. Kitts & Nevis,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,LBN,Lebanon,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,LBY,Libya,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,LCA,St. Lucia,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,LKA,Sri Lanka,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,LSO,Lesotho,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,MAR,Morocco,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,MDG,Madagascar,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,MDV,Maldives,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,MEX,Mexico,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,MMR,Myanmar (Burma),treated_min5,TRUE,9,24,2014,1990,2022
+7,switching_allowed,MUS,Mauritius,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,MWI,Malawi,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,MYS,Malaysia,treated_min5,TRUE,14,19,2009,1990,2022
+7,switching_allowed,NAM,Namibia,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,NGA,Nigeria,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,NIC,Nicaragua,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,NLD,Netherlands,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,NOR,Norway,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,NPL,Nepal,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,NZL,New Zealand,treated_min5,TRUE,10,23,2013,1990,2022
+7,switching_allowed,OMN,Oman,treated_min5,TRUE,19,14,2004,1990,2022
+7,switching_allowed,PAK,Pakistan,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,PER,Peru,treated_min5,TRUE,13,20,2010,1990,2022
+7,switching_allowed,PHL,Philippines,treated_min5,TRUE,18,15,2005,1990,2022
+7,switching_allowed,POL,Poland,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,PRT,Portugal,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,PRY,Paraguay,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,ROU,Romania,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,RWA,Rwanda,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,SAU,Saudi Arabia,treated_min5,TRUE,10,23,2013,1990,2022
+7,switching_allowed,SEN,Senegal,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,SGP,Singapore,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,SLB,Solomon Islands,treated_min5,TRUE,20,13,2003,1990,2022
+7,switching_allowed,SLE,Sierra Leone,treated_min5,TRUE,11,22,2012,1990,2022
+7,switching_allowed,SLV,El Salvador,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,SUR,Suriname,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,SWE,Sweden,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,SWZ,Eswatini,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,SYR,Syria,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,TGO,Togo,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,THA,Thailand,treated_min5,TRUE,14,19,2008,1990,2022
+7,switching_allowed,TTO,Trinidad & Tobago,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,TUN,Tunisia,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,TUR,Turkey,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,UGA,Uganda,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,URY,Uruguay,treated_min5,TRUE,10,23,2013,1990,2022
+7,switching_allowed,USA,United States,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,VCT,St. Vincent & Grenadines,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,WSM,Samoa,never_treated,FALSE,0,33,,1990,2022
+7,switching_allowed,ZWE,Zimbabwe,treated_min5,TRUE,7,26,2011,1990,2022

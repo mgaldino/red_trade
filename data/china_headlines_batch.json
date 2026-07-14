@@ -1,0 +1,238 @@
+{
+  "version": 1,
+  "stage": "done",
+  "batch": {
+    "id": "batch_68707be0dc408190b41483bd9ec0078d",
+    "object": "batch",
+    "endpoint": "/v1/chat/completions",
+    "errors": {},
+    "input_file_id": "file-HVgozo3rY99RvuPaxHf1Cd",
+    "completion_window": "24h",
+    "status": "completed",
+    "output_file_id": "file-7UcSC3e7dKA7WTNrM3maFC",
+    "error_file_id": {},
+    "created_at": 1752202208,
+    "in_progress_at": 1752202210,
+    "expires_at": 1752288608,
+    "finalizing_at": 1752202343,
+    "completed_at": 1752202368,
+    "failed_at": {},
+    "expired_at": {},
+    "cancelling_at": {},
+    "cancelled_at": {},
+    "request_counts": {
+      "total": 5,
+      "completed": 5,
+      "failed": 0
+    },
+    "metadata": {}
+  },
+  "results": [
+    {
+      "status_code": 200,
+      "request_id": "d39a6cedaf75b56d0b5c57dc887ce1c6",
+      "body": {
+        "id": "chatcmpl-Bry8f39DzTLOtPoxzynrUBceQjeOT",
+        "object": "chat.completion",
+        "created": 1752202257,
+        "model": "gpt-4o-mini-2024-07-18",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "chinese economy",
+              "refusal": {},
+              "annotations": []
+            },
+            "logprobs": {},
+            "finish_reason": "stop"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 387,
+          "completion_tokens": 3,
+          "total_tokens": 390,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "service_tier": "default",
+        "system_fingerprint": "fp_34a54ae93c"
+      }
+    },
+    {
+      "status_code": 200,
+      "request_id": "a4948db248555c8c8205d642f2a06c87",
+      "body": {
+        "id": "chatcmpl-Bry8v88eKWMgUPzg92aBlvDC6KCp0",
+        "object": "chat.completion",
+        "created": 1752202273,
+        "model": "gpt-4o-mini-2024-07-18",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "disaster and accidents",
+              "refusal": {},
+              "annotations": []
+            },
+            "logprobs": {},
+            "finish_reason": "stop"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 387,
+          "completion_tokens": 4,
+          "total_tokens": 391,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "service_tier": "default",
+        "system_fingerprint": "fp_34a54ae93c"
+      }
+    },
+    {
+      "status_code": 200,
+      "request_id": "193e07b6137cf7cab51caf73ac33574d",
+      "body": {
+        "id": "chatcmpl-Bry8s8Yqhr4TdIZD70E75raLomnNJ",
+        "object": "chat.completion",
+        "created": 1752202270,
+        "model": "gpt-4o-mini-2024-07-18",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "sports, science, culture, other",
+              "refusal": {},
+              "annotations": []
+            },
+            "logprobs": {},
+            "finish_reason": "stop"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 385,
+          "completion_tokens": 7,
+          "total_tokens": 392,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "service_tier": "default",
+        "system_fingerprint": "fp_34a54ae93c"
+      }
+    },
+    {
+      "status_code": 200,
+      "request_id": "920f12815d47c69d2bea19549404a4ef",
+      "body": {
+        "id": "chatcmpl-Bry93ozGmaiLXYOSR2EDpMeh9qKFu",
+        "object": "chat.completion",
+        "created": 1752202281,
+        "model": "gpt-4o-mini-2024-07-18",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "chinese economy",
+              "refusal": {},
+              "annotations": []
+            },
+            "logprobs": {},
+            "finish_reason": "stop"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 394,
+          "completion_tokens": 3,
+          "total_tokens": 397,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "service_tier": "default",
+        "system_fingerprint": "fp_34a54ae93c"
+      }
+    },
+    {
+      "status_code": 200,
+      "request_id": "de7b5cd0fcfcac913152d862be97f4f2",
+      "body": {
+        "id": "chatcmpl-Bry8Q1RpFOvQPNgjCJx1IlON5Bu3f",
+        "object": "chat.completion",
+        "created": 1752202242,
+        "model": "gpt-4o-mini-2024-07-18",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "disaster and accidents",
+              "refusal": {},
+              "annotations": []
+            },
+            "logprobs": {},
+            "finish_reason": "stop"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 386,
+          "completion_tokens": 4,
+          "total_tokens": 390,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "service_tier": "default",
+        "system_fingerprint": "fp_34a54ae93c"
+      }
+    }
+  ],
+  "started_at": 1752202207,
+  "hash": {
+    "provider": "4ef1617c1104d824b6b4041c5d0d146a",
+    "prompts": "d1d4a350d83f5b52d3b3ea7e7933ef3a",
+    "user_turns": "f964fbc16448bc4dc80f1a9a3f0d99ff"
+  }
+}

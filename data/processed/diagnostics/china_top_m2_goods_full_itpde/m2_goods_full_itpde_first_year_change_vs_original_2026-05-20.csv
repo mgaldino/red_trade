@@ -1,0 +1,194 @@
+iso3c,country_name,original_year,m2_full_year,original_ever,m2_full_ever,status_original,status_m2_full,change_type
+AUS,Australia,2010,2009,TRUE,TRUE,observed_entry,observed_entry,both_treated_year_changed
+CHL,Chile,2008,2007,TRUE,TRUE,observed_entry,observed_entry,both_treated_year_changed
+JPN,Japan,2010,2008,TRUE,TRUE,observed_entry,observed_entry,both_treated_year_changed
+NZL,New Zealand,2014,2013,TRUE,TRUE,observed_entry,observed_entry,both_treated_year_changed
+PER,Peru,2012,2010,TRUE,TRUE,observed_entry,observed_entry,both_treated_year_changed
+SAU,Saudi Arabia,2015,2013,TRUE,TRUE,observed_entry,observed_entry,both_treated_year_changed
+ZAF,South Africa,2010,2009,TRUE,TRUE,observed_entry,observed_entry,both_treated_year_changed
+THA,Thailand,2009,2008,TRUE,TRUE,observed_entry,observed_entry,both_treated_year_changed
+MLT,Malta,,2011,FALSE,TRUE,never_observed,observed_entry,m2_full_treated_original_never
+PAN,Panama,,2021,FALSE,TRUE,never_observed,observed_entry,m2_full_treated_original_never
+PNG,Papua New Guinea,,2018,FALSE,TRUE,never_observed,observed_entry,m2_full_treated_original_never
+AFG,Afghanistan,,,FALSE,FALSE,never_observed,never_observed,no_change
+ALB,Albania,,,FALSE,FALSE,never_observed,never_observed,no_change
+DZA,Algeria,,,FALSE,FALSE,never_observed,never_observed,no_change
+AND,Andorra,,,FALSE,FALSE,never_observed,never_observed,no_change
+AGO,Angola,2007,2007,TRUE,TRUE,observed_entry,observed_entry,no_change
+ATG,Antigua & Barbuda,,,FALSE,FALSE,never_observed,never_observed,no_change
+ARG,Argentina,,,FALSE,FALSE,never_observed,never_observed,no_change
+ARM,Armenia,1993,1993,TRUE,TRUE,observed_entry,observed_entry,no_change
+AUT,Austria,,,FALSE,FALSE,never_observed,never_observed,no_change
+AZE,Azerbaijan,,,FALSE,FALSE,never_observed,never_observed,no_change
+BHS,Bahamas,,,FALSE,FALSE,never_observed,never_observed,no_change
+BHR,Bahrain,,,FALSE,FALSE,never_observed,never_observed,no_change
+BGD,Bangladesh,,,FALSE,FALSE,never_observed,never_observed,no_change
+BRB,Barbados,,,FALSE,FALSE,never_observed,never_observed,no_change
+BLR,Belarus,,,FALSE,FALSE,never_observed,never_observed,no_change
+BEL,Belgium,,,FALSE,FALSE,never_observed,never_observed,no_change
+BLZ,Belize,,,FALSE,FALSE,never_observed,never_observed,no_change
+BEN,Benin,2004,2004,TRUE,TRUE,observed_entry,observed_entry,no_change
+BTN,Bhutan,,,FALSE,FALSE,never_observed,never_observed,no_change
+BOL,Bolivia,,,FALSE,FALSE,never_observed,never_observed,no_change
+BIH,Bosnia & Herzegovina,,,FALSE,FALSE,never_observed,never_observed,no_change
+BWA,Botswana,,,FALSE,FALSE,never_observed,never_observed,no_change
+BRA,Brazil,2009,2009,TRUE,TRUE,observed_entry,observed_entry,no_change
+BRN,Brunei,,,FALSE,FALSE,never_observed,never_observed,no_change
+BGR,Bulgaria,,,FALSE,FALSE,never_observed,never_observed,no_change
+BFA,Burkina Faso,1991,1991,TRUE,TRUE,observed_entry,observed_entry,no_change
+BDI,Burundi,,,FALSE,FALSE,never_observed,never_observed,no_change
+KHM,Cambodia,,,FALSE,FALSE,never_observed,never_observed,no_change
+CMR,Cameroon,2012,2012,TRUE,TRUE,observed_entry,observed_entry,no_change
+CAN,Canada,,,FALSE,FALSE,never_observed,never_observed,no_change
+CPV,Cape Verde,,,FALSE,FALSE,never_observed,never_observed,no_change
+CAF,Central African Republic,2013,2013,TRUE,TRUE,observed_entry,observed_entry,no_change
+TCD,Chad,2019,2019,TRUE,TRUE,observed_entry,observed_entry,no_change
+COL,Colombia,,,FALSE,FALSE,never_observed,never_observed,no_change
+COM,Comoros,,,FALSE,FALSE,never_observed,never_observed,no_change
+COG,Congo - Brazzaville,2003,2003,TRUE,TRUE,observed_entry,observed_entry,no_change
+COD,Congo - Kinshasa,2008,2008,TRUE,TRUE,observed_entry,observed_entry,no_change
+CRI,Costa Rica,,,FALSE,FALSE,never_observed,never_observed,no_change
+HRV,Croatia,,,FALSE,FALSE,never_observed,never_observed,no_change
+CUB,Cuba,2004,2004,TRUE,TRUE,observed_entry,observed_entry,no_change
+CYP,Cyprus,,,FALSE,FALSE,never_observed,never_observed,no_change
+CZE,Czechia,,,FALSE,FALSE,never_observed,never_observed,no_change
+CIV,Côte d’Ivoire,,,FALSE,FALSE,never_observed,never_observed,no_change
+DNK,Denmark,,,FALSE,FALSE,never_observed,never_observed,no_change
+DJI,Djibouti,,,FALSE,FALSE,never_observed,never_observed,no_change
+DMA,Dominica,,,FALSE,FALSE,never_observed,never_observed,no_change
+DOM,Dominican Republic,,,FALSE,FALSE,never_observed,never_observed,no_change
+ECU,Ecuador,,,FALSE,FALSE,never_observed,never_observed,no_change
+EGY,Egypt,,,FALSE,FALSE,never_observed,never_observed,no_change
+SLV,El Salvador,,,FALSE,FALSE,never_observed,never_observed,no_change
+GNQ,Equatorial Guinea,2006,2006,TRUE,TRUE,observed_entry,observed_entry,no_change
+ERI,Eritrea,2014,2014,TRUE,TRUE,observed_entry,observed_entry,no_change
+EST,Estonia,,,FALSE,FALSE,never_observed,never_observed,no_change
+SWZ,Eswatini,,,FALSE,FALSE,never_observed,never_observed,no_change
+ETH,Ethiopia,2009,2009,TRUE,TRUE,observed_entry,observed_entry,no_change
+FJI,Fiji,,,FALSE,FALSE,never_observed,never_observed,no_change
+FIN,Finland,,,FALSE,FALSE,never_observed,never_observed,no_change
+FRA,France,,,FALSE,FALSE,never_observed,never_observed,no_change
+GAB,Gabon,2017,2017,TRUE,TRUE,observed_entry,observed_entry,no_change
+GMB,Gambia,2011,2011,TRUE,TRUE,observed_entry,observed_entry,no_change
+GEO,Georgia,,,FALSE,FALSE,never_observed,never_observed,no_change
+DEU,Germany,,,FALSE,FALSE,never_observed,never_observed,no_change
+GHA,Ghana,2019,2019,TRUE,TRUE,observed_entry,observed_entry,no_change
+GRC,Greece,,,FALSE,FALSE,never_observed,never_observed,no_change
+GRD,Grenada,,,FALSE,FALSE,never_observed,never_observed,no_change
+GTM,Guatemala,,,FALSE,FALSE,never_observed,never_observed,no_change
+GIN,Guinea,2019,2019,TRUE,TRUE,observed_entry,observed_entry,no_change
+GNB,Guinea-Bissau,,,FALSE,FALSE,never_observed,never_observed,no_change
+GUY,Guyana,,,FALSE,FALSE,never_observed,never_observed,no_change
+HTI,Haiti,,,FALSE,FALSE,never_observed,never_observed,no_change
+HND,Honduras,,,FALSE,FALSE,never_observed,never_observed,no_change
+HUN,Hungary,,,FALSE,FALSE,never_observed,never_observed,no_change
+ISL,Iceland,,,FALSE,FALSE,never_observed,never_observed,no_change
+IND,India,,,FALSE,FALSE,never_observed,never_observed,no_change
+IDN,Indonesia,2013,2013,TRUE,TRUE,observed_entry,observed_entry,no_change
+IRN,Iran,2007,2007,TRUE,TRUE,observed_entry,observed_entry,no_change
+IRQ,Iraq,2014,2014,TRUE,TRUE,observed_entry,observed_entry,no_change
+IRL,Ireland,,,FALSE,FALSE,never_observed,never_observed,no_change
+ISR,Israel,,,FALSE,FALSE,never_observed,never_observed,no_change
+ITA,Italy,,,FALSE,FALSE,never_observed,never_observed,no_change
+JAM,Jamaica,,,FALSE,FALSE,never_observed,never_observed,no_change
+JOR,Jordan,,,FALSE,FALSE,never_observed,never_observed,no_change
+KAZ,Kazakhstan,1992,1992,TRUE,TRUE,left_censored_first_observed,left_censored_first_observed,no_change
+KEN,Kenya,,,FALSE,FALSE,never_observed,never_observed,no_change
+KIR,Kiribati,,,FALSE,FALSE,never_observed,never_observed,no_change
+KWT,Kuwait,2018,2018,TRUE,TRUE,observed_entry,observed_entry,no_change
+KGZ,Kyrgyzstan,1992,1992,TRUE,TRUE,left_censored_first_observed,left_censored_first_observed,no_change
+LAO,Laos,2003,2003,TRUE,TRUE,observed_entry,observed_entry,no_change
+LVA,Latvia,,,FALSE,FALSE,never_observed,never_observed,no_change
+LBN,Lebanon,,,FALSE,FALSE,never_observed,never_observed,no_change
+LSO,Lesotho,,,FALSE,FALSE,never_observed,never_observed,no_change
+LBR,Liberia,2012,2012,TRUE,TRUE,observed_entry,observed_entry,no_change
+LBY,Libya,,,FALSE,FALSE,never_observed,never_observed,no_change
+LIE,Liechtenstein,,,FALSE,,never_observed,,no_change
+LTU,Lithuania,,,FALSE,FALSE,never_observed,never_observed,no_change
+LUX,Luxembourg,,,FALSE,FALSE,never_observed,never_observed,no_change
+MDG,Madagascar,,,FALSE,FALSE,never_observed,never_observed,no_change
+MWI,Malawi,,,FALSE,FALSE,never_observed,never_observed,no_change
+MYS,Malaysia,2009,2009,TRUE,TRUE,observed_entry,observed_entry,no_change
+MDV,Maldives,,,FALSE,FALSE,never_observed,never_observed,no_change
+MLI,Mali,1991,1991,TRUE,TRUE,observed_entry,observed_entry,no_change
+MHL,Marshall Islands,,,FALSE,FALSE,never_observed,never_observed,no_change
+MRT,Mauritania,2006,2006,TRUE,TRUE,observed_entry,observed_entry,no_change
+MUS,Mauritius,,,FALSE,FALSE,never_observed,never_observed,no_change
+MEX,Mexico,,,FALSE,FALSE,never_observed,never_observed,no_change
+FSM,Micronesia (Federated States of),,,FALSE,FALSE,never_observed,never_observed,no_change
+MDA,Moldova,,,FALSE,FALSE,never_observed,never_observed,no_change
+MCO,Monaco,,,FALSE,FALSE,never_observed,never_observed,no_change
+MNG,Mongolia,1993,1993,TRUE,TRUE,observed_entry,observed_entry,no_change
+MNE,Montenegro,,,FALSE,FALSE,never_observed,never_observed,no_change
+MAR,Morocco,,,FALSE,FALSE,never_observed,never_observed,no_change
+MOZ,Mozambique,2014,2014,TRUE,TRUE,observed_entry,observed_entry,no_change
+MMR,Myanmar (Burma),1993,1993,TRUE,TRUE,observed_entry,observed_entry,no_change
+NAM,Namibia,,,FALSE,FALSE,never_observed,never_observed,no_change
+NRU,Nauru,,,FALSE,FALSE,never_observed,never_observed,no_change
+NPL,Nepal,,,FALSE,FALSE,never_observed,never_observed,no_change
+NLD,Netherlands,,,FALSE,FALSE,never_observed,never_observed,no_change
+NIC,Nicaragua,,,FALSE,FALSE,never_observed,never_observed,no_change
+NER,Niger,,,FALSE,FALSE,never_observed,never_observed,no_change
+NGA,Nigeria,,,FALSE,FALSE,never_observed,never_observed,no_change
+PRK,North Korea,1993,1993,TRUE,TRUE,observed_entry,observed_entry,no_change
+MKD,North Macedonia,,,FALSE,FALSE,never_observed,never_observed,no_change
+NOR,Norway,,,FALSE,FALSE,never_observed,never_observed,no_change
+OMN,Oman,2000,2000,TRUE,TRUE,observed_entry,observed_entry,no_change
+PAK,Pakistan,,,FALSE,FALSE,never_observed,never_observed,no_change
+PLW,Palau,,,FALSE,FALSE,never_observed,never_observed,no_change
+PRY,Paraguay,,,FALSE,FALSE,never_observed,never_observed,no_change
+PHL,Philippines,2005,2005,TRUE,TRUE,observed_entry,observed_entry,no_change
+POL,Poland,,,FALSE,FALSE,never_observed,never_observed,no_change
+PRT,Portugal,,,FALSE,FALSE,never_observed,never_observed,no_change
+QAT,Qatar,2021,2021,TRUE,TRUE,observed_entry,observed_entry,no_change
+ROU,Romania,,,FALSE,FALSE,never_observed,never_observed,no_change
+RUS,Russia,1993,1993,TRUE,TRUE,observed_entry,observed_entry,no_change
+RWA,Rwanda,,,FALSE,FALSE,never_observed,never_observed,no_change
+WSM,Samoa,,,FALSE,FALSE,never_observed,never_observed,no_change
+SMR,San Marino,,,FALSE,FALSE,never_observed,never_observed,no_change
+SEN,Senegal,,,FALSE,FALSE,never_observed,never_observed,no_change
+SYC,Seychelles,,,FALSE,FALSE,never_observed,never_observed,no_change
+SLE,Sierra Leone,2012,2012,TRUE,TRUE,observed_entry,observed_entry,no_change
+SVK,Slovakia,,,FALSE,FALSE,never_observed,never_observed,no_change
+SVN,Slovenia,,,FALSE,FALSE,never_observed,never_observed,no_change
+SLB,Solomon Islands,2003,2003,TRUE,TRUE,observed_entry,observed_entry,no_change
+SOM,Somalia,,,FALSE,FALSE,never_observed,never_observed,no_change
+KOR,South Korea,2003,2003,TRUE,TRUE,observed_entry,observed_entry,no_change
+SSD,South Sudan,2012,2012,TRUE,TRUE,left_censored_first_observed,left_censored_first_observed,no_change
+ESP,Spain,,,FALSE,FALSE,never_observed,never_observed,no_change
+LKA,Sri Lanka,,,FALSE,FALSE,never_observed,never_observed,no_change
+KNA,St. Kitts & Nevis,,,FALSE,FALSE,never_observed,never_observed,no_change
+LCA,St. Lucia,,,FALSE,FALSE,never_observed,never_observed,no_change
+VCT,St. Vincent & Grenadines,,,FALSE,FALSE,never_observed,never_observed,no_change
+SDN,Sudan,1990,1990,TRUE,TRUE,left_censored_first_observed,left_censored_first_observed,no_change
+SUR,Suriname,,,FALSE,FALSE,never_observed,never_observed,no_change
+SWE,Sweden,,,FALSE,FALSE,never_observed,never_observed,no_change
+CHE,Switzerland,,,FALSE,FALSE,never_observed,never_observed,no_change
+SYR,Syria,,,FALSE,FALSE,never_observed,never_observed,no_change
+STP,São Tomé & Príncipe,,,FALSE,FALSE,never_observed,never_observed,no_change
+TJK,Tajikistan,,,FALSE,FALSE,never_observed,never_observed,no_change
+TZA,Tanzania,2011,2011,TRUE,TRUE,observed_entry,observed_entry,no_change
+TLS,Timor-Leste,2021,2021,TRUE,TRUE,observed_entry,observed_entry,no_change
+TGO,Togo,,,FALSE,FALSE,never_observed,never_observed,no_change
+TON,Tonga,,,FALSE,FALSE,never_observed,never_observed,no_change
+TTO,Trinidad & Tobago,,,FALSE,FALSE,never_observed,never_observed,no_change
+TUN,Tunisia,,,FALSE,FALSE,never_observed,never_observed,no_change
+TUR,Turkey,,,FALSE,FALSE,never_observed,never_observed,no_change
+TKM,Turkmenistan,2010,2010,TRUE,TRUE,observed_entry,observed_entry,no_change
+TUV,Tuvalu,,,FALSE,FALSE,never_observed,never_observed,no_change
+UGA,Uganda,,,FALSE,FALSE,never_observed,never_observed,no_change
+UKR,Ukraine,1993,1993,TRUE,TRUE,observed_entry,observed_entry,no_change
+ARE,United Arab Emirates,,,FALSE,FALSE,never_observed,never_observed,no_change
+GBR,United Kingdom,,,FALSE,FALSE,never_observed,never_observed,no_change
+USA,United States,,,FALSE,FALSE,never_observed,never_observed,no_change
+URY,Uruguay,2013,2013,TRUE,TRUE,observed_entry,observed_entry,no_change
+UZB,Uzbekistan,2013,2013,TRUE,TRUE,observed_entry,observed_entry,no_change
+VUT,Vanuatu,,,FALSE,FALSE,never_observed,never_observed,no_change
+VEN,Venezuela,2021,2021,TRUE,TRUE,observed_entry,observed_entry,no_change
+VNM,Vietnam,2018,2018,TRUE,TRUE,observed_entry,observed_entry,no_change
+YEM,Yemen,1993,1993,TRUE,TRUE,observed_entry,observed_entry,no_change
+ZMB,Zambia,2012,2012,TRUE,TRUE,observed_entry,observed_entry,no_change
+ZWE,Zimbabwe,2011,2011,TRUE,TRUE,observed_entry,observed_entry,no_change
+CSK,,,,FALSE,FALSE,never_observed,never_observed,no_change
+YUG,,,,FALSE,FALSE,never_observed,never_observed,no_change
+SGP,Singapore,2013,,TRUE,FALSE,observed_entry,never_observed,original_treated_m2_full_never

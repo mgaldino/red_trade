@@ -1,0 +1,15 @@
+{
+  "source_id": "slb_imf_country_report_exports_destination_2004",
+  "iso3c": "SLB",
+  "url": "https://www.imf.org/external/pubs/ft/scr/2004/cr04255.pdf",
+  "fetch_url": "https://www.imf.org/external/pubs/ft/scr/2004/cr04255.pdf",
+  "fetch_status": "http_error",
+  "status_code": 403,
+  "content_type": "text/html",
+  "raw_file": "data/raw/ex_top1_salience/SLB/2004/international_monetary_fund/slb_imf_country_report_exports_destination_2004.pdf",
+  "size_bytes": 426,
+  "error": "HTTP Error 403: Forbidden",
+  "accessed_at": "2026-05-23T22:04:48+00:00",
+  "eligible_source": false,
+  "count_for_benchmark_after_fetch": false
+}

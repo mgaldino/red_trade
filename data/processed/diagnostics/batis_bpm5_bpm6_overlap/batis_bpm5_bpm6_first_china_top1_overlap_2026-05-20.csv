@@ -1,0 +1,743 @@
+metric,metric_label,iso3c,country_name,first_china_top1_year_overlap_BPM5,first_china_top1_year_overlap_BPM6,china_top1_any_overlap_BPM5,china_top1_any_overlap_BPM6,china_top1_status_same_overlap,first_year_same_if_observed
+goods_services_exports_combined,Bens + serviços: exportações,AFG,Afghanistan,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,AGO,Angola,2008,2007,TRUE,TRUE,TRUE,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,ALB,Albania,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,AND,Andorra,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,ARE,United Arab Emirates,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,ARG,Argentina,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,ARM,Armenia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,ATG,Antigua & Barbuda,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,AUS,Australia,2009,2009,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,AUT,Austria,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,AZE,Azerbaijan,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,BDI,Burundi,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,BEL,Belgium,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,BEN,Benin,2005,2005,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,BFA,Burkina Faso,2005,2005,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,BGD,Bangladesh,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,BGR,Bulgaria,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,BHR,Bahrain,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,BHS,Bahamas,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,BIH,Bosnia & Herzegovina,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,BLR,Belarus,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,BLZ,Belize,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,BOL,Bolivia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,BRA,Brazil,2009,2009,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,BRB,Barbados,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,BRN,Brunei,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,BTN,Bhutan,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,BWA,Botswana,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,CAF,Central African Republic,2012,NA,TRUE,FALSE,FALSE,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,CAN,Canada,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,CHE,Switzerland,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,CHL,Chile,2007,2008,TRUE,TRUE,TRUE,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,CIV,Côte d'Ivoire,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,CMR,Cameroon,2012,2012,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,COD,Congo - Kinshasa,2008,2008,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,COG,Congo - Brazzaville,2005,2005,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,COL,Colombia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,COM,Comoros,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,CPV,Cape Verde,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,CRI,Costa Rica,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,CUB,Cuba,2006,2006,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,CYP,Cyprus,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,CZE,Czechia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,DEU,Germany,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,DJI,Djibouti,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,DMA,Dominica,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,DNK,Denmark,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,DOM,Dominican Republic,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,DZA,Algeria,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,ECU,Ecuador,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,EGY,Egypt,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,ERI,Eritrea,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,ESP,Spain,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,EST,Estonia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,ETH,Ethiopia,2009,NA,TRUE,FALSE,FALSE,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,FIN,Finland,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,FJI,Fiji,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,FRA,France,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,FSM,Micronesia (Federated States of),NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,GAB,Gabon,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,GBR,United Kingdom,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,GEO,Georgia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,GHA,Ghana,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,GIN,Guinea,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,GMB,Gambia,2011,2012,TRUE,TRUE,TRUE,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,GNB,Guinea-Bissau,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,GNQ,Equatorial Guinea,2006,2006,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,GRC,Greece,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,GRD,Grenada,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,GTM,Guatemala,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,GUY,Guyana,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,HND,Honduras,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,HRV,Croatia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,HTI,Haiti,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,HUN,Hungary,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,IDN,Indonesia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,IND,India,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,IRL,Ireland,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,IRN,Iran,2007,2007,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,IRQ,Iraq,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,ISL,Iceland,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,ISR,Israel,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,ITA,Italy,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,JAM,Jamaica,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,JOR,Jordan,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,JPN,Japan,2009,2009,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,KAZ,Kazakhstan,2007,2007,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,KEN,Kenya,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,KGZ,Kyrgyzstan,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,KHM,Cambodia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,KIR,Kiribati,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,KNA,St. Kitts & Nevis,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,KOR,South Korea,2005,2005,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,KWT,Kuwait,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,LAO,Laos,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,LBN,Lebanon,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,LBR,Liberia,2012,NA,TRUE,FALSE,FALSE,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,LBY,Libya,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,LCA,St. Lucia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,LKA,Sri Lanka,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,LSO,Lesotho,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,LTU,Lithuania,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,LUX,Luxembourg,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,LVA,Latvia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,MAR,Morocco,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,MDA,Moldova,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,MDG,Madagascar,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,MDV,Maldives,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,MEX,Mexico,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,MHL,Marshall Islands,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,MKD,North Macedonia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,MLI,Mali,2006,2006,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,MLT,Malta,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,MMR,Myanmar (Burma),NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,MNE,Montenegro,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,MNG,Mongolia,2005,2005,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,MOZ,Mozambique,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,MRT,Mauritania,2006,2006,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,MUS,Mauritius,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,MWI,Malawi,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,MYS,Malaysia,2009,2009,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,NAM,Namibia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,NER,Niger,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,NGA,Nigeria,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,NIC,Nicaragua,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,NLD,Netherlands,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,NOR,Norway,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,NPL,Nepal,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,NRU,Nauru,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,NZL,New Zealand,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,OMN,Oman,2005,2005,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,PAK,Pakistan,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,PAN,Panama,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,PER,Peru,2012,2010,TRUE,TRUE,TRUE,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,PHL,Philippines,2005,2005,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,PLW,Palau,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,PNG,Papua New Guinea,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,POL,Poland,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,PRK,North Korea,2005,2005,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,PRT,Portugal,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,PRY,Paraguay,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,QAT,Qatar,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,ROU,Romania,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,RUS,Russia,2012,2012,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,RWA,Rwanda,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,SAU,Saudi Arabia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,SDN,Sudan,2005,2005,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,SEN,Senegal,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,SGP,Singapore,NA,2005,FALSE,TRUE,FALSE,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,SLB,Solomon Islands,2005,2005,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,SLE,Sierra Leone,2012,2012,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,SLV,El Salvador,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,SMR,San Marino,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,SOM,Somalia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,SSD,South Sudan,2012,2012,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,STP,São Tomé & Príncipe,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,SUR,Suriname,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,SVK,Slovakia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,SVN,Slovenia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,SWE,Sweden,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,SWZ,Eswatini,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,SYC,Seychelles,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,SYR,Syria,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,TCD,Chad,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,TGO,Togo,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,THA,Thailand,2008,2008,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,TJK,Tajikistan,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,TKM,Turkmenistan,2010,2010,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,TLS,Timor-Leste,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,TON,Tonga,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,TTO,Trinidad & Tobago,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,TUN,Tunisia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,TUR,Turkey,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,TUV,Tuvalu,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,TZA,Tanzania,2011,2011,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,UGA,Uganda,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,UKR,Ukraine,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,URY,Uruguay,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,USA,United States,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,UZB,Uzbekistan,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,VCT,St. Vincent & Grenadines,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,VEN,Venezuela,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,VNM,Vietnam,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,VUT,Vanuatu,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,WSM,Samoa,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,YEM,Yemen,2005,2005,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,ZAF,South Africa,2009,2009,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,ZMB,Zambia,2012,2012,TRUE,TRUE,TRUE,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,ZWE,Zimbabwe,2011,2011,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,AFG,Afghanistan,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,AGO,Angola,2008,2008,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ALB,Albania,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,AND,Andorra,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ARE,United Arab Emirates,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ARG,Argentina,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ARM,Armenia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ATG,Antigua & Barbuda,2008,NA,TRUE,FALSE,FALSE,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,AUS,Australia,2007,2007,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,AUT,Austria,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,AZE,Azerbaijan,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BDI,Burundi,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BEL,Belgium,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BEN,Benin,2005,2012,TRUE,TRUE,TRUE,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BFA,Burkina Faso,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BGD,Bangladesh,2012,2010,TRUE,TRUE,TRUE,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BGR,Bulgaria,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BHR,Bahrain,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BHS,Bahamas,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BIH,Bosnia & Herzegovina,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BLR,Belarus,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BLZ,Belize,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BOL,Bolivia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BRA,Brazil,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BRB,Barbados,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BRN,Brunei,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BTN,Bhutan,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BWA,Botswana,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,CAF,Central African Republic,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,CAN,Canada,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,CHE,Switzerland,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,CHL,Chile,2009,2009,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,CIV,Côte d'Ivoire,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,CMR,Cameroon,NA,2012,FALSE,TRUE,FALSE,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,COD,Congo - Kinshasa,2008,2008,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,COG,Congo - Brazzaville,2005,2005,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,COL,Colombia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,COM,Comoros,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,CPV,Cape Verde,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,CRI,Costa Rica,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,CUB,Cuba,2006,2006,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,CYP,Cyprus,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,CZE,Czechia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,DEU,Germany,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,DJI,Djibouti,2010,2010,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,DMA,Dominica,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,DNK,Denmark,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,DOM,Dominican Republic,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,DZA,Algeria,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ECU,Ecuador,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,EGY,Egypt,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ERI,Eritrea,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ESP,Spain,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,EST,Estonia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ETH,Ethiopia,2007,2007,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,FIN,Finland,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,FJI,Fiji,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,FRA,France,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,FSM,Micronesia (Federated States of),NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,GAB,Gabon,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,GBR,United Kingdom,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,GEO,Georgia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,GHA,Ghana,2012,NA,TRUE,FALSE,FALSE,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,GIN,Guinea,2012,2010,TRUE,TRUE,TRUE,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,GMB,Gambia,2011,2012,TRUE,TRUE,TRUE,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,GNB,Guinea-Bissau,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,GNQ,Equatorial Guinea,NA,2006,FALSE,TRUE,FALSE,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,GRC,Greece,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,GRD,Grenada,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,GTM,Guatemala,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,GUY,Guyana,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,HND,Honduras,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,HRV,Croatia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,HTI,Haiti,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,HUN,Hungary,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,IDN,Indonesia,2011,2011,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,IND,India,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,IRL,Ireland,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,IRN,Iran,2006,2006,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,IRQ,Iraq,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ISL,Iceland,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ISR,Israel,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ITA,Italy,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,JAM,Jamaica,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,JOR,Jordan,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,JPN,Japan,2008,2008,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,KAZ,Kazakhstan,2010,2010,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,KEN,Kenya,2011,2011,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,KGZ,Kyrgyzstan,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,KHM,Cambodia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,KIR,Kiribati,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,KNA,St. Kitts & Nevis,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,KOR,South Korea,2005,2005,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,KWT,Kuwait,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,LAO,Laos,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,LBN,Lebanon,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,LBR,Liberia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,LBY,Libya,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,LCA,St. Lucia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,LKA,Sri Lanka,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,LSO,Lesotho,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,LTU,Lithuania,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,LUX,Luxembourg,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,LVA,Latvia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MAR,Morocco,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MDA,Moldova,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MDG,Madagascar,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MDV,Maldives,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MEX,Mexico,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MHL,Marshall Islands,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MKD,North Macedonia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MLI,Mali,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MLT,Malta,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MMR,Myanmar (Burma),NA,2011,FALSE,TRUE,FALSE,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MNE,Montenegro,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MNG,Mongolia,2005,2005,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MOZ,Mozambique,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MRT,Mauritania,2006,2006,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MUS,Mauritius,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MWI,Malawi,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MYS,Malaysia,2009,2009,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,NAM,Namibia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,NER,Niger,2010,2010,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,NGA,Nigeria,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,NIC,Nicaragua,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,NLD,Netherlands,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,NOR,Norway,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,NPL,Nepal,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,NRU,Nauru,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,NZL,New Zealand,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,OMN,Oman,2005,2005,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,PAK,Pakistan,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,PAN,Panama,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,PER,Peru,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,PHL,Philippines,2007,2007,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,PLW,Palau,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,PNG,Papua New Guinea,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,POL,Poland,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,PRK,North Korea,2005,2005,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,PRT,Portugal,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,PRY,Paraguay,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,QAT,Qatar,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ROU,Romania,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,RUS,Russia,2010,2010,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,RWA,Rwanda,2010,NA,TRUE,FALSE,FALSE,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SAU,Saudi Arabia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SDN,Sudan,2005,2005,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SEN,Senegal,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SGP,Singapore,2012,NA,TRUE,FALSE,FALSE,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SLB,Solomon Islands,2006,2005,TRUE,TRUE,TRUE,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SLE,Sierra Leone,2011,2011,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SLV,El Salvador,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SMR,San Marino,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SOM,Somalia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SSD,South Sudan,2012,2012,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,STP,São Tomé & Príncipe,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SUR,Suriname,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SVK,Slovakia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SVN,Slovenia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SWE,Sweden,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SWZ,Eswatini,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SYC,Seychelles,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SYR,Syria,2012,2012,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,TCD,Chad,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,TGO,Togo,2006,2006,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,THA,Thailand,2011,2011,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,TJK,Tajikistan,2009,2009,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,TKM,Turkmenistan,2010,2010,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,TLS,Timor-Leste,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,TON,Tonga,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,TTO,Trinidad & Tobago,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,TUN,Tunisia,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,TUR,Turkey,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,TUV,Tuvalu,2008,2008,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,TZA,Tanzania,2010,2010,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,UGA,Uganda,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,UKR,Ukraine,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,URY,Uruguay,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,USA,United States,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,UZB,Uzbekistan,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,VCT,St. Vincent & Grenadines,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,VEN,Venezuela,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,VNM,Vietnam,2007,2007,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,VUT,Vanuatu,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,WSM,Samoa,NA,NA,FALSE,FALSE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,YEM,Yemen,2005,2005,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ZAF,South Africa,2009,2009,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ZMB,Zambia,2012,2012,TRUE,TRUE,TRUE,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ZWE,Zimbabwe,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,AFG,Afghanistan,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,AGO,Angola,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,ALB,Albania,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,ARE,United Arab Emirates,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,ARG,Argentina,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,ARM,Armenia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,ATG,Antigua & Barbuda,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,AUS,Australia,2008,2010,TRUE,TRUE,TRUE,FALSE
+services_exports_only,Serviços: exportações,AUT,Austria,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,AZE,Azerbaijan,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,BDI,Burundi,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,BEL,Belgium,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,BEN,Benin,2012,2012,TRUE,TRUE,TRUE,TRUE
+services_exports_only,Serviços: exportações,BFA,Burkina Faso,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,BGD,Bangladesh,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,BGR,Bulgaria,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,BHR,Bahrain,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,BHS,Bahamas,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,BIH,Bosnia & Herzegovina,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,BLR,Belarus,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,BLZ,Belize,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,BOL,Bolivia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,BRA,Brazil,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,BRB,Barbados,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,BRN,Brunei,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,BTN,Bhutan,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,BWA,Botswana,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,CAF,Central African Republic,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,CAN,Canada,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,CHE,Switzerland,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,CHL,Chile,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,CIV,Côte d'Ivoire,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,CMR,Cameroon,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,COD,Congo - Kinshasa,2008,NA,TRUE,FALSE,FALSE,FALSE
+services_exports_only,Serviços: exportações,COG,Congo - Brazzaville,NA,2012,FALSE,TRUE,FALSE,FALSE
+services_exports_only,Serviços: exportações,COL,Colombia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,COM,Comoros,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,CPV,Cape Verde,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,CRI,Costa Rica,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,CUB,Cuba,NA,2012,FALSE,TRUE,FALSE,FALSE
+services_exports_only,Serviços: exportações,CYP,Cyprus,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,CZE,Czechia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,DEU,Germany,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,DJI,Djibouti,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,DMA,Dominica,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,DNK,Denmark,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,DOM,Dominican Republic,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,DZA,Algeria,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,ECU,Ecuador,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,EGY,Egypt,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,ERI,Eritrea,NA,NA,NA,FALSE,FALSE,TRUE
+services_exports_only,Serviços: exportações,ESP,Spain,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,EST,Estonia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,ETH,Ethiopia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,FIN,Finland,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,FJI,Fiji,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,FRA,France,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,GAB,Gabon,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,GBR,United Kingdom,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,GEO,Georgia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,GHA,Ghana,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,GIN,Guinea,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,GMB,Gambia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,GNB,Guinea-Bissau,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,GNQ,Equatorial Guinea,NA,2008,FALSE,TRUE,FALSE,FALSE
+services_exports_only,Serviços: exportações,GRC,Greece,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,GRD,Grenada,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,GTM,Guatemala,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,GUY,Guyana,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,HND,Honduras,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,HRV,Croatia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,HTI,Haiti,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,HUN,Hungary,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,IDN,Indonesia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,IND,India,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,IRL,Ireland,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,IRN,Iran,2007,NA,TRUE,FALSE,FALSE,FALSE
+services_exports_only,Serviços: exportações,IRQ,Iraq,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,ISL,Iceland,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,ISR,Israel,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,ITA,Italy,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,JAM,Jamaica,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,JOR,Jordan,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,JPN,Japan,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,KAZ,Kazakhstan,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,KEN,Kenya,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,KGZ,Kyrgyzstan,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,KHM,Cambodia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,KIR,Kiribati,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,KNA,St. Kitts & Nevis,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,KOR,South Korea,2008,NA,TRUE,FALSE,FALSE,FALSE
+services_exports_only,Serviços: exportações,KWT,Kuwait,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,LAO,Laos,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,LBN,Lebanon,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,LBR,Liberia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,LBY,Libya,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,LCA,St. Lucia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,LKA,Sri Lanka,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,LSO,Lesotho,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,LTU,Lithuania,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,LUX,Luxembourg,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,LVA,Latvia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,MAR,Morocco,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,MDA,Moldova,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,MDG,Madagascar,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,MDV,Maldives,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,MEX,Mexico,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,MKD,North Macedonia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,MLI,Mali,NA,2012,FALSE,TRUE,FALSE,FALSE
+services_exports_only,Serviços: exportações,MLT,Malta,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,MMR,Myanmar (Burma),2011,2011,TRUE,TRUE,TRUE,TRUE
+services_exports_only,Serviços: exportações,MNE,Montenegro,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,MNG,Mongolia,2005,2005,TRUE,TRUE,TRUE,TRUE
+services_exports_only,Serviços: exportações,MOZ,Mozambique,2012,NA,TRUE,FALSE,FALSE,FALSE
+services_exports_only,Serviços: exportações,MRT,Mauritania,2010,2011,TRUE,TRUE,TRUE,FALSE
+services_exports_only,Serviços: exportações,MUS,Mauritius,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,MWI,Malawi,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,MYS,Malaysia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,NAM,Namibia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,NER,Niger,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,NGA,Nigeria,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,NIC,Nicaragua,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,NLD,Netherlands,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,NOR,Norway,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,NPL,Nepal,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,NZL,New Zealand,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,OMN,Oman,2010,NA,TRUE,FALSE,FALSE,FALSE
+services_exports_only,Serviços: exportações,PAK,Pakistan,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,PAN,Panama,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,PER,Peru,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,PHL,Philippines,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,PNG,Papua New Guinea,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,POL,Poland,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,PRK,North Korea,NA,NA,NA,FALSE,FALSE,TRUE
+services_exports_only,Serviços: exportações,PRT,Portugal,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,PRY,Paraguay,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,QAT,Qatar,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,ROU,Romania,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,RUS,Russia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,RWA,Rwanda,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,SAU,Saudi Arabia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,SDN,Sudan,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,SEN,Senegal,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,SGP,Singapore,2010,NA,TRUE,FALSE,FALSE,FALSE
+services_exports_only,Serviços: exportações,SLB,Solomon Islands,2010,2005,TRUE,TRUE,TRUE,FALSE
+services_exports_only,Serviços: exportações,SLE,Sierra Leone,NA,2012,FALSE,TRUE,FALSE,FALSE
+services_exports_only,Serviços: exportações,SLV,El Salvador,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,SOM,Somalia,NA,NA,NA,FALSE,FALSE,TRUE
+services_exports_only,Serviços: exportações,STP,São Tomé & Príncipe,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,SUR,Suriname,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,SVK,Slovakia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,SVN,Slovenia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,SWE,Sweden,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,SWZ,Eswatini,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,SYC,Seychelles,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,SYR,Syria,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,TCD,Chad,NA,2011,FALSE,TRUE,FALSE,FALSE
+services_exports_only,Serviços: exportações,TGO,Togo,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,THA,Thailand,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,TJK,Tajikistan,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,TKM,Turkmenistan,NA,2010,NA,TRUE,FALSE,FALSE
+services_exports_only,Serviços: exportações,TLS,Timor-Leste,NA,NA,NA,FALSE,FALSE,TRUE
+services_exports_only,Serviços: exportações,TON,Tonga,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,TTO,Trinidad & Tobago,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,TUN,Tunisia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,TUR,Turkey,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,TUV,Tuvalu,NA,NA,NA,FALSE,FALSE,TRUE
+services_exports_only,Serviços: exportações,TZA,Tanzania,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,UGA,Uganda,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,UKR,Ukraine,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,URY,Uruguay,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,USA,United States,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,UZB,Uzbekistan,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,VCT,St. Vincent & Grenadines,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,VEN,Venezuela,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,VNM,Vietnam,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,VUT,Vanuatu,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,WSM,Samoa,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,YEM,Yemen,2008,2010,TRUE,TRUE,TRUE,FALSE
+services_exports_only,Serviços: exportações,ZAF,South Africa,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_exports_only,Serviços: exportações,ZMB,Zambia,2010,2012,TRUE,TRUE,TRUE,FALSE
+services_exports_only,Serviços: exportações,ZWE,Zimbabwe,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,AFG,Afghanistan,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,AGO,Angola,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,ALB,Albania,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,ARE,United Arab Emirates,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,ARG,Argentina,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,ARM,Armenia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,ATG,Antigua & Barbuda,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,AUS,Australia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,AUT,Austria,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,AZE,Azerbaijan,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,BDI,Burundi,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,BEL,Belgium,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,BEN,Benin,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,BFA,Burkina Faso,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,BGD,Bangladesh,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,BGR,Bulgaria,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,BHR,Bahrain,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,BHS,Bahamas,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,BIH,Bosnia & Herzegovina,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,BLR,Belarus,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,BLZ,Belize,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,BOL,Bolivia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,BRA,Brazil,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,BRB,Barbados,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,BRN,Brunei,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,BTN,Bhutan,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,BWA,Botswana,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,CAF,Central African Republic,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,CAN,Canada,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,CHE,Switzerland,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,CHL,Chile,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,CIV,Côte d'Ivoire,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,CMR,Cameroon,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,COD,Congo - Kinshasa,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,COG,Congo - Brazzaville,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,COL,Colombia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,COM,Comoros,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,CPV,Cape Verde,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,CRI,Costa Rica,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,CUB,Cuba,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,CYP,Cyprus,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,CZE,Czechia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,DEU,Germany,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,DJI,Djibouti,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,DMA,Dominica,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,DNK,Denmark,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,DOM,Dominican Republic,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,DZA,Algeria,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,ECU,Ecuador,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,EGY,Egypt,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,ERI,Eritrea,NA,NA,NA,FALSE,FALSE,TRUE
+services_two_way_only,Serviços: exportações + importações,ESP,Spain,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,EST,Estonia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,ETH,Ethiopia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,FIN,Finland,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,FJI,Fiji,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,FRA,France,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,GAB,Gabon,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,GBR,United Kingdom,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,GEO,Georgia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,GHA,Ghana,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,GIN,Guinea,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,GMB,Gambia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,GNB,Guinea-Bissau,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,GNQ,Equatorial Guinea,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,GRC,Greece,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,GRD,Grenada,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,GTM,Guatemala,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,GUY,Guyana,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,HND,Honduras,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,HRV,Croatia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,HTI,Haiti,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,HUN,Hungary,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,IDN,Indonesia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,IND,India,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,IRL,Ireland,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,IRN,Iran,2010,NA,TRUE,FALSE,FALSE,FALSE
+services_two_way_only,Serviços: exportações + importações,IRQ,Iraq,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,ISL,Iceland,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,ISR,Israel,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,ITA,Italy,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,JAM,Jamaica,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,JOR,Jordan,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,JPN,Japan,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,KAZ,Kazakhstan,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,KEN,Kenya,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,KGZ,Kyrgyzstan,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,KHM,Cambodia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,KIR,Kiribati,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,KNA,St. Kitts & Nevis,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,KOR,South Korea,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,KWT,Kuwait,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,LAO,Laos,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,LBN,Lebanon,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,LBR,Liberia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,LBY,Libya,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,LCA,St. Lucia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,LKA,Sri Lanka,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,LSO,Lesotho,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,LTU,Lithuania,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,LUX,Luxembourg,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,LVA,Latvia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,MAR,Morocco,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,MDA,Moldova,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,MDG,Madagascar,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,MDV,Maldives,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,MEX,Mexico,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,MKD,North Macedonia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,MLI,Mali,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,MLT,Malta,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,MMR,Myanmar (Burma),NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,MNE,Montenegro,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,MNG,Mongolia,2005,2007,TRUE,TRUE,TRUE,FALSE
+services_two_way_only,Serviços: exportações + importações,MOZ,Mozambique,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,MRT,Mauritania,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,MUS,Mauritius,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,MWI,Malawi,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,MYS,Malaysia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,NAM,Namibia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,NER,Niger,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,NGA,Nigeria,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,NIC,Nicaragua,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,NLD,Netherlands,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,NOR,Norway,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,NPL,Nepal,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,NZL,New Zealand,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,OMN,Oman,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,PAK,Pakistan,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,PAN,Panama,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,PER,Peru,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,PHL,Philippines,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,PNG,Papua New Guinea,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,POL,Poland,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,PRK,North Korea,NA,NA,NA,FALSE,FALSE,TRUE
+services_two_way_only,Serviços: exportações + importações,PRT,Portugal,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,PRY,Paraguay,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,QAT,Qatar,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,ROU,Romania,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,RUS,Russia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,RWA,Rwanda,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,SAU,Saudi Arabia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,SDN,Sudan,NA,2011,FALSE,TRUE,FALSE,FALSE
+services_two_way_only,Serviços: exportações + importações,SEN,Senegal,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,SGP,Singapore,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,SLB,Solomon Islands,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,SLE,Sierra Leone,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,SLV,El Salvador,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,SOM,Somalia,NA,NA,NA,FALSE,FALSE,TRUE
+services_two_way_only,Serviços: exportações + importações,STP,São Tomé & Príncipe,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,SUR,Suriname,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,SVK,Slovakia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,SVN,Slovenia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,SWE,Sweden,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,SWZ,Eswatini,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,SYC,Seychelles,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,SYR,Syria,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,TCD,Chad,NA,2012,FALSE,TRUE,FALSE,FALSE
+services_two_way_only,Serviços: exportações + importações,TGO,Togo,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,THA,Thailand,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,TJK,Tajikistan,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,TKM,Turkmenistan,NA,NA,NA,FALSE,FALSE,TRUE
+services_two_way_only,Serviços: exportações + importações,TLS,Timor-Leste,NA,NA,NA,FALSE,FALSE,TRUE
+services_two_way_only,Serviços: exportações + importações,TON,Tonga,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,TTO,Trinidad & Tobago,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,TUN,Tunisia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,TUR,Turkey,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,TUV,Tuvalu,NA,NA,NA,FALSE,FALSE,TRUE
+services_two_way_only,Serviços: exportações + importações,TZA,Tanzania,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,UGA,Uganda,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,UKR,Ukraine,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,URY,Uruguay,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,USA,United States,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,UZB,Uzbekistan,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,VCT,St. Vincent & Grenadines,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,VEN,Venezuela,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,VNM,Vietnam,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,VUT,Vanuatu,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,WSM,Samoa,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,YEM,Yemen,2008,NA,TRUE,FALSE,FALSE,FALSE
+services_two_way_only,Serviços: exportações + importações,ZAF,South Africa,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,ZMB,Zambia,NA,NA,FALSE,FALSE,TRUE,TRUE
+services_two_way_only,Serviços: exportações + importações,ZWE,Zimbabwe,NA,NA,FALSE,FALSE,TRUE,TRUE

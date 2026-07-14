@@ -1,0 +1,10 @@
+generated_on,nboots,rank_window_start,rank_window_end,model_window_start,model_window_end,itpd_file,itpd_md5,pdf_status,pdf_error,output
+2026-05-20,500,1990,2023,1990,2020,raw data/ITPDE_R03.csv,9e246c3fd26206ea2a9249a1a6d0f390,ok,,data/processed/diagnostics/china_top_m2_goods_full_itpde/m2_goods_full_itpde_model_results_2026-05-20.csv
+2026-05-20,500,1990,2023,1990,2020,raw data/ITPDE_R03.csv,9e246c3fd26206ea2a9249a1a6d0f390,ok,,data/processed/diagnostics/china_top_m2_goods_full_itpde/m2_goods_full_itpde_model_panel_2026-05-20.csv
+2026-05-20,500,1990,2023,1990,2020,raw data/ITPDE_R03.csv,9e246c3fd26206ea2a9249a1a6d0f390,ok,,data/processed/diagnostics/china_top_m2_goods_full_itpde/m2_goods_full_itpde_first_year_change_vs_original_2026-05-20.csv
+2026-05-20,500,1990,2023,1990,2020,raw data/ITPDE_R03.csv,9e246c3fd26206ea2a9249a1a6d0f390,ok,,data/processed/diagnostics/china_top_m2_goods_full_itpde/m2_goods_full_itpde_regression_sample_change_vs_original_2026-05-20.csv
+2026-05-20,500,1990,2023,1990,2020,raw data/ITPDE_R03.csv,9e246c3fd26206ea2a9249a1a6d0f390,ok,,data/processed/diagnostics/china_top_m2_goods_full_itpde/m2_goods_full_itpde_target_inputs_manifest_2026-05-20.csv
+2026-05-20,500,1990,2023,1990,2020,raw data/ITPDE_R03.csv,9e246c3fd26206ea2a9249a1a6d0f390,ok,,data/processed/diagnostics/china_top_m2_goods_full_itpde/m2_goods_full_itpde_session_info_2026-05-20.txt
+2026-05-20,500,1990,2023,1990,2020,raw data/ITPDE_R03.csv,9e246c3fd26206ea2a9249a1a6d0f390,ok,,quality_reports/china_top_m2_goods_full_itpde/nota_m2_goods_full_itpde_2026-05-20.md
+2026-05-20,500,1990,2023,1990,2020,raw data/ITPDE_R03.csv,9e246c3fd26206ea2a9249a1a6d0f390,ok,,quality_reports/china_top_m2_goods_full_itpde/nota_m2_goods_full_itpde_2026-05-20.Rmd
+2026-05-20,500,1990,2023,1990,2020,raw data/ITPDE_R03.csv,9e246c3fd26206ea2a9249a1a6d0f390,ok,,quality_reports/china_top_m2_goods_full_itpde/nota_m2_goods_full_itpde_2026-05-20.pdf

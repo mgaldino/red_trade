@@ -1,0 +1,13 @@
+metric,metric_label,rule,rule_label,n_obs_rank,n_countries_rank,n_obs_model_complete,n_countries_model_complete,n_treated_countries,n_control_countries,n_treated_country_years,n_left_censored_2005,n_observed_entries_after_2005,n_entries_after_gap_in_rule,n_missing_rank_2005_in_rule,first_entry_min,first_entry_max,panel_min,panel_max
+goods_exports_rank,Bens: exportações,clean_risk_set,Clean risk set,3168,176,2471,155,45,110,311,0,51,0,0,2006,2021,2005,2020
+goods_exports_rank,Bens: exportações,left_censored_as_already_treated,Censurados à esquerda como já tratados (descritivo),3366,187,2629,165,55,110,439,11,51,0,0,2006,2021,2005,2020
+goods_exports_rank,Bens: exportações,restricted_post_2005_cohort,Coorte pós-2005 observada,3168,176,2471,155,45,110,311,0,51,0,0,2006,2021,2005,2020
+goods_exports_rank,Bens: exportações,cutoff_not_top_through_2010,Restrição: não China #1 até 2010,2844,158,2183,137,27,110,114,0,33,0,0,2011,2021,2005,2020
+goods_services_exports_rank,Bens + serviços: exportações,clean_risk_set,Clean risk set,3150,175,2455,154,44,110,307,0,50,0,0,2006,2022,2005,2020
+goods_services_exports_rank,Bens + serviços: exportações,left_censored_as_already_treated,Censurados à esquerda como já tratados (descritivo),3366,187,2629,165,55,110,431,12,50,0,0,2006,2022,2005,2020
+goods_services_exports_rank,Bens + serviços: exportações,restricted_post_2005_cohort,Coorte pós-2005 observada,3150,175,2455,154,44,110,307,0,50,0,0,2006,2022,2005,2020
+goods_services_exports_rank,Bens + serviços: exportações,cutoff_not_top_through_2010,Restrição: não China #1 até 2010,2844,158,2183,137,27,110,110,0,33,0,0,2011,2022,2005,2020
+goods_services_two_way_rank,Bens + serviços: two-way,clean_risk_set,Clean risk set,3222,179,2519,158,64,94,423,0,76,0,0,2006,2022,2005,2020
+goods_services_two_way_rank,Bens + serviços: two-way,left_censored_as_already_treated,Censurados à esquerda como já tratados (descritivo),3366,187,2629,165,71,94,522,8,76,0,0,2006,2022,2005,2020
+goods_services_two_way_rank,Bens + serviços: two-way,restricted_post_2005_cohort,Coorte pós-2005 observada,3222,179,2519,158,64,94,423,0,76,0,0,2006,2022,2005,2020
+goods_services_two_way_rank,Bens + serviços: two-way,cutoff_not_top_through_2010,Restrição: não China #1 até 2010,2772,154,2151,135,41,94,185,0,51,0,0,2011,2022,2005,2020

@@ -1,0 +1,8 @@
+code,country_name,countrycode_missing,in_batis_codes,batis_type,excluded_from_rank
+EU,,TRUE,TRUE,g,TRUE
+FRE,Free Zones,FALSE,FALSE,,TRUE
+GEU,,TRUE,TRUE,g,TRUE
+ROW,,TRUE,TRUE,c,TRUE
+WL,,TRUE,TRUE,g,TRUE
+WLD,,TRUE,FALSE,,TRUE
+WORLD,,TRUE,FALSE,,TRUE

@@ -1,0 +1,27 @@
+run_date: '2026-05-20'
+accessed_on: '2026-05-20'
+overlap_years: 2005-2012
+wto_bulk_download_page: https://www.wto.org/english/res_e/statis_e/trade_datasets_e.htm
+panel_country_source: _targets/objects/china_top_panel read via readRDS, read-only
+file_metadata_csv: data/processed/diagnostics/batis_bpm5_bpm6_overlap/batis_bpm5_bpm6_overlap_file_metadata_2026-05-20.csv
+input_audit_csv: data/processed/diagnostics/batis_bpm5_bpm6_overlap/batis_bpm5_bpm6_overlap_input_audit_2026-05-20.csv
+bpm5:
+  data_url: https://www.wto.org/english/res_e/statis_e/daily_update_e/OECD-WTO_BATIS_data.zip
+  codes_url: https://www.wto.org/english/res_e/statis_e/daily_update_e/OECD-WTO_BATIS_codes.zip
+  methodology_url: https://www.wto.org/english/res_e/statis_e/daily_update_e/OECD-WTO_Batis_methodology.pdf
+  local_data_zip: data/raw/batis_bpm5/OECD-WTO_BATIS_data_2026-05-20.zip
+  extracted_csv: data/raw/batis_bpm5/extracted_2026-05-20/OECD-WTO_BATIS_data.csv
+  local_codes_zip: data/raw/batis_bpm5/OECD-WTO_BATIS_codes_2026-05-20.zip
+  local_methodology_pdf: data/raw/batis_bpm5/OECD-WTO_Batis_methodology_2026-05-20.pdf
+  declared_coverage: 1995-2012
+  declared_standard: BPM5 / EBOPS 2002
+bpm6:
+  data_url: https://www.wto.org/english/res_e/statis_e/daily_update_e/OECD-WTO_BATIS_data_BPM6-1.zip
+  codes_url: https://www.wto.org/english/res_e/statis_e/daily_update_e/OECD-WTO_BATIS_codes_BPM6-1.zip
+  local_data_zip: data/raw/batis_bpm6/OECD-WTO_BATIS_data_BPM6-1_2026-05-20.zip
+  extracted_csv: data/raw/batis_bpm6/extracted_2026-05-20/OECD-WTO_BATIS_BPM6_December2025_bulk.csv
+  local_codes_zip: data/raw/batis_bpm6/OECD-WTO_BATIS_codes_BPM6-1_2026-05-20.zip
+  declared_coverage: 2005-2024
+  declared_standard: BPM6 / EBOPS 2010
+design_note: The diagnostic evaluates only top-1/top-2 rank stability in the overlap.
+  It does not assume full comparability of all service values or lower partner ranks.

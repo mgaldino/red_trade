@@ -1,0 +1,15 @@
+{
+  "source_id": "sle_statistics_2013_trade_bulletin",
+  "iso3c": "SLE",
+  "url": "https://www.statistics.sl/images/StatisticsSL/Documents/2013_foreign_trade_statistics_bulletin.pdf",
+  "fetch_url": "https://www.statistics.sl/images/StatisticsSL/Documents/2013_foreign_trade_statistics_bulletin.pdf",
+  "fetch_status": "ok",
+  "status_code": 200,
+  "content_type": "application/pdf",
+  "raw_file": "data/raw/ex_top1_salience/SLE/2013/statistics_sierra_leone/sle_statistics_2013_trade_bulletin.pdf",
+  "size_bytes": 1257655,
+  "error": "",
+  "accessed_at": "2026-05-23T22:04:48+00:00",
+  "eligible_source": true,
+  "count_for_benchmark_after_fetch": false
+}

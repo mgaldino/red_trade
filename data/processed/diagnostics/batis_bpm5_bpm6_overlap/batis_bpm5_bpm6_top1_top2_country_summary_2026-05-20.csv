@@ -1,0 +1,743 @@
+metric,metric_label,iso3c,country_name,years_any_source,years_compared,bpm5_only_years,bpm6_only_years,top1_agreement_rate,top2_unordered_agreement_rate,china_top1_status_disagreements_n,china_in_top2_status_disagreements_n,china_in_top2_any_year
+goods_services_exports_combined,Bens + serviços: exportações,ISL,Iceland,8,8,0,0,0,0,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,KIR,Kiribati,8,8,0,0,0,0,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,STP,São Tomé & Príncipe,8,8,0,0,0,0,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,TON,Tonga,8,8,0,0,0,0,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,DMA,Dominica,8,8,0,0,0,0.125,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,KEN,Kenya,8,8,0,0,0,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,DJI,Djibouti,8,8,0,0,0.125,0,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,GMB,Gambia,8,8,0,0,0.125,0,1,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,RWA,Rwanda,8,8,0,0,0.125,0,0,3,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,UGA,Uganda,8,8,0,0,0.125,0,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,TJK,Tajikistan,8,8,0,0,0.125,0.125,0,1,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,LBR,Liberia,8,8,0,0,0.25,0,1,1,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,CPV,Cape Verde,8,8,0,0,0.25,0.125,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,ETH,Ethiopia,8,8,0,0,0.25,0.25,3,1,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,BHR,Bahrain,8,8,0,0,0.375,0.625,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,MNE,Montenegro,7,7,0,0,0.42857142857142855,0.7142857142857143,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,MDV,Maldives,8,8,0,0,0.5,0.125,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,ERI,Eritrea,8,8,0,0,0.5,0.25,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,MLT,Malta,8,8,0,0,0.5,0.75,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,SOM,Somalia,8,8,0,0,0.625,0.125,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,GEO,Georgia,8,8,0,0,0.625,0.375,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,MWI,Malawi,8,8,0,0,0.625,0.375,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,TUV,Tuvalu,8,8,0,0,0.625,0.5,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,ATG,Antigua & Barbuda,8,8,0,0,0.625,0.625,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,CAF,Central African Republic,8,8,0,0,0.625,0.625,1,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,HRV,Croatia,8,8,0,0,0.625,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,AFG,Afghanistan,8,8,0,0,0.75,0.25,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,VCT,St. Vincent & Grenadines,8,8,0,0,0.75,0.25,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,GHA,Ghana,8,8,0,0,0.75,0.375,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,GRC,Greece,8,8,0,0,0.75,0.75,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,SLE,Sierra Leone,8,8,0,0,0.75,0.75,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,KGZ,Kyrgyzstan,8,8,0,0,0.75,0.875,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,PAN,Panama,8,8,0,0,0.75,0.875,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,GUY,Guyana,8,8,0,0,0.75,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,ROU,Romania,8,8,0,0,0.75,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,ZAF,South Africa,8,8,0,0,0.75,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,COM,Comoros,8,8,0,0,0.875,0.125,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,LBN,Lebanon,8,8,0,0,0.875,0.125,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,CUB,Cuba,8,8,0,0,0.875,0.25,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,PRK,North Korea,8,8,0,0,0.875,0.25,1,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,SYC,Seychelles,8,8,0,0,0.875,0.375,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,ALB,Albania,8,8,0,0,0.875,0.5,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,MDA,Moldova,8,8,0,0,0.875,0.5,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,PAK,Pakistan,8,8,0,0,0.875,0.625,0,1,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,TGO,Togo,8,8,0,0,0.875,0.625,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,LCA,St. Lucia,8,8,0,0,0.875,0.75,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,MLI,Mali,8,8,0,0,0.875,0.75,0,1,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,SGP,Singapore,8,8,0,0,0.875,0.75,1,2,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,KAZ,Kazakhstan,8,8,0,0,0.875,0.875,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,MKD,North Macedonia,8,8,0,0,0.875,0.875,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,MOZ,Mozambique,8,8,0,0,0.875,0.875,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,SEN,Senegal,8,8,0,0,0.875,0.875,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,AGO,Angola,8,8,0,0,0.875,1,1,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,CHL,Chile,8,8,0,0,0.875,1,1,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,CIV,Côte d'Ivoire,8,8,0,0,0.875,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,DEU,Germany,8,8,0,0,0.875,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,KWT,Kuwait,8,8,0,0,0.875,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,MRT,Mauritania,8,8,0,0,0.875,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,MUS,Mauritius,8,8,0,0,0.875,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,PER,Peru,8,8,0,0,0.875,1,1,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,WSM,Samoa,8,8,0,0,1,0,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,KNA,St. Kitts & Nevis,8,8,0,0,1,0.125,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,LUX,Luxembourg,8,8,0,0,1,0.125,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,BRB,Barbados,8,8,0,0,1,0.25,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,SLB,Solomon Islands,8,8,0,0,1,0.25,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,BIH,Bosnia & Herzegovina,8,8,0,0,1,0.375,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,BDI,Burundi,8,8,0,0,1,0.5,0,2,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,BFA,Burkina Faso,8,8,0,0,1,0.5,0,4,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,GNB,Guinea-Bissau,8,8,0,0,1,0.5,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,TZA,Tanzania,8,8,0,0,1,0.5,0,2,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,VUT,Vanuatu,8,8,0,0,1,0.5,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,ARG,Argentina,8,8,0,0,1,0.625,0,2,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,PRY,Paraguay,8,8,0,0,1,0.625,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,BEN,Benin,8,8,0,0,1,0.75,0,1,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,BGR,Bulgaria,8,8,0,0,1,0.75,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,CYP,Cyprus,8,8,0,0,1,0.75,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,EGY,Egypt,8,8,0,0,1,0.75,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,FRA,France,8,8,0,0,1,0.75,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,OMN,Oman,8,8,0,0,1,0.75,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,POL,Poland,8,8,0,0,1,0.75,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,SWE,Sweden,8,8,0,0,1,0.75,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,TLS,Timor-Leste,8,8,0,0,1,0.75,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,TUR,Turkey,8,8,0,0,1,0.75,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,UKR,Ukraine,8,8,0,0,1,0.75,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,ARE,United Arab Emirates,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,BHS,Bahamas,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,BTN,Bhutan,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,BWA,Botswana,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,CMR,Cameroon,8,8,0,0,1,0.875,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,CRI,Costa Rica,8,8,0,0,1,0.875,0,1,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,DOM,Dominican Republic,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,ESP,Spain,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,GAB,Gabon,8,8,0,0,1,0.875,0,1,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,GIN,Guinea,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,GTM,Guatemala,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,HUN,Hungary,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,IRN,Iran,8,8,0,0,1,0.875,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,ISR,Israel,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,JAM,Jamaica,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,MDG,Madagascar,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,MYS,Malaysia,8,8,0,0,1,0.875,0,1,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,NER,Niger,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,NOR,Norway,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,RUS,Russia,8,8,0,0,1,0.875,0,1,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,SAU,Saudi Arabia,8,8,0,0,1,0.875,0,1,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,SUR,Suriname,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,SWZ,Eswatini,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,URY,Uruguay,8,8,0,0,1,0.875,0,1,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,UZB,Uzbekistan,8,8,0,0,1,0.875,0,1,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,ZMB,Zambia,8,8,0,0,1,0.875,0,1,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,AND,Andorra,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,ARM,Armenia,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,AUS,Australia,8,8,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,AUT,Austria,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,AZE,Azerbaijan,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,BEL,Belgium,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,BGD,Bangladesh,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,BLR,Belarus,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,BLZ,Belize,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,BOL,Bolivia,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,BRA,Brazil,8,8,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,BRN,Brunei,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,CAN,Canada,8,8,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,CHE,Switzerland,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,COD,Congo - Kinshasa,8,8,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,COG,Congo - Brazzaville,8,8,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,COL,Colombia,8,8,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,CZE,Czechia,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,DNK,Denmark,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,DZA,Algeria,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,ECU,Ecuador,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,EST,Estonia,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,FIN,Finland,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,FJI,Fiji,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,FSM,Micronesia (Federated States of),8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,GBR,United Kingdom,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,GNQ,Equatorial Guinea,8,8,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,GRD,Grenada,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,HND,Honduras,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,HTI,Haiti,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,IDN,Indonesia,8,8,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,IND,India,8,8,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,IRL,Ireland,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,IRQ,Iraq,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,ITA,Italy,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,JOR,Jordan,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,JPN,Japan,8,8,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,KHM,Cambodia,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,KOR,South Korea,8,8,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,LAO,Laos,8,8,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,LBY,Libya,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,LKA,Sri Lanka,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,LSO,Lesotho,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,LTU,Lithuania,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,LVA,Latvia,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,MAR,Morocco,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,MEX,Mexico,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,MHL,Marshall Islands,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,MMR,Myanmar (Burma),8,8,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,MNG,Mongolia,8,8,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,NAM,Namibia,8,8,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,NGA,Nigeria,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,NIC,Nicaragua,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,NLD,Netherlands,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,NPL,Nepal,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,NRU,Nauru,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,NZL,New Zealand,8,8,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,PHL,Philippines,8,8,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,PLW,Palau,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,PNG,Papua New Guinea,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,PRT,Portugal,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,QAT,Qatar,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,SDN,Sudan,8,8,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,SLV,El Salvador,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,SMR,San Marino,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,SSD,South Sudan,1,1,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,SVK,Slovakia,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,SVN,Slovenia,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,SYR,Syria,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,TCD,Chad,8,8,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,THA,Thailand,8,8,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,TKM,Turkmenistan,8,8,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,TTO,Trinidad & Tobago,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,TUN,Tunisia,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,USA,United States,8,8,0,0,1,1,0,0,FALSE
+goods_services_exports_combined,Bens + serviços: exportações,VEN,Venezuela,8,8,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,VNM,Vietnam,8,8,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,YEM,Yemen,8,8,0,0,1,1,0,0,TRUE
+goods_services_exports_combined,Bens + serviços: exportações,ZWE,Zimbabwe,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,RWA,Rwanda,8,8,0,0,0,0,3,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,KIR,Kiribati,8,8,0,0,0.125,0,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BHR,Bahrain,8,8,0,0,0.125,0.75,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ISL,Iceland,8,8,0,0,0.25,0.375,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,GMB,Gambia,8,8,0,0,0.25,0.5,1,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,TON,Tonga,8,8,0,0,0.375,0,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,WSM,Samoa,8,8,0,0,0.375,0.625,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,UGA,Uganda,8,8,0,0,0.5,0.125,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MDV,Maldives,8,8,0,0,0.5,0.375,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MLT,Malta,8,8,0,0,0.5,0.625,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,AFG,Afghanistan,8,8,0,0,0.625,0.375,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,CAF,Central African Republic,8,8,0,0,0.625,0.5,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,LBN,Lebanon,8,8,0,0,0.625,0.5,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,PAK,Pakistan,8,8,0,0,0.625,0.5,0,3,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,GHA,Ghana,8,8,0,0,0.625,0.75,1,1,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,GNQ,Equatorial Guinea,8,8,0,0,0.625,0.875,1,1,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MUS,Mauritius,8,8,0,0,0.625,0.875,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,IRL,Ireland,8,8,0,0,0.625,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,KWT,Kuwait,8,8,0,0,0.75,0.25,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,GIN,Guinea,8,8,0,0,0.75,0.5,2,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BEN,Benin,8,8,0,0,0.75,0.625,1,1,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SUR,Suriname,8,8,0,0,0.75,0.625,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,URY,Uruguay,8,8,0,0,0.75,0.625,0,2,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,KEN,Kenya,8,8,0,0,0.75,0.75,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SLE,Sierra Leone,8,8,0,0,0.75,0.75,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,CYP,Cyprus,8,8,0,0,0.75,0.875,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ETH,Ethiopia,8,8,0,0,0.875,0.25,0,1,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,KNA,St. Kitts & Nevis,8,8,0,0,0.875,0.375,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MDA,Moldova,8,8,0,0,0.875,0.375,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SLB,Solomon Islands,8,8,0,0,0.875,0.375,1,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,VUT,Vanuatu,8,8,0,0,0.875,0.375,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BDI,Burundi,8,8,0,0,0.875,0.5,0,1,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,DJI,Djibouti,8,8,0,0,0.875,0.5,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MLI,Mali,8,8,0,0,0.875,0.5,0,2,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MWI,Malawi,8,8,0,0,0.875,0.5,0,1,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,TGO,Togo,8,8,0,0,0.875,0.75,1,1,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,TJK,Tajikistan,8,8,0,0,0.875,0.75,0,2,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,VNM,Vietnam,8,8,0,0,0.875,0.75,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ALB,Albania,8,8,0,0,0.875,0.875,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ATG,Antigua & Barbuda,8,8,0,0,0.875,0.875,1,1,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BEL,Belgium,8,8,0,0,0.875,0.875,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BRB,Barbados,8,8,0,0,0.875,0.875,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,CMR,Cameroon,8,8,0,0,0.875,0.875,1,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,FIN,Finland,8,8,0,0,0.875,0.875,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MRT,Mauritania,8,8,0,0,0.875,0.875,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SDN,Sudan,8,8,0,0,0.875,0.875,0,1,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SGP,Singapore,8,8,0,0,0.875,0.875,1,1,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,VCT,St. Vincent & Grenadines,8,8,0,0,0.875,0.875,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BGD,Bangladesh,8,8,0,0,0.875,1,1,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,DEU,Germany,8,8,0,0,0.875,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ESP,Spain,8,8,0,0,0.875,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,GAB,Gabon,8,8,0,0,0.875,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,HRV,Croatia,8,8,0,0,0.875,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MMR,Myanmar (Burma),8,8,0,0,0.875,1,1,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,NER,Niger,8,8,0,0,0.875,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ROU,Romania,8,8,0,0,0.875,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,THA,Thailand,8,8,0,0,0.875,1,1,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,CPV,Cape Verde,8,8,0,0,1,0.125,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,NPL,Nepal,8,8,0,0,1,0.125,0,7,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,GEO,Georgia,8,8,0,0,1,0.25,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,PRK,North Korea,8,8,0,0,1,0.25,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SOM,Somalia,8,8,0,0,1,0.25,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MOZ,Mozambique,8,8,0,0,1,0.375,0,1,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BLZ,Belize,8,8,0,0,1,0.625,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,CUB,Cuba,8,8,0,0,1,0.625,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,FRA,France,8,8,0,0,1,0.625,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SWZ,Eswatini,8,8,0,0,1,0.625,0,1,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,TKM,Turkmenistan,8,8,0,0,1,0.625,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,TZA,Tanzania,8,8,0,0,1,0.625,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,UKR,Ukraine,8,8,0,0,1,0.625,0,3,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BFA,Burkina Faso,8,8,0,0,1,0.75,0,2,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,COD,Congo - Kinshasa,8,8,0,0,1,0.75,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,DZA,Algeria,8,8,0,0,1,0.75,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ECU,Ecuador,8,8,0,0,1,0.75,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,GRD,Grenada,8,8,0,0,1,0.75,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ISR,Israel,8,8,0,0,1,0.75,0,2,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MDG,Madagascar,8,8,0,0,1,0.75,0,2,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,PRY,Paraguay,8,8,0,0,1,0.75,0,2,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,TCD,Chad,8,8,0,0,1,0.75,0,2,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ZWE,Zimbabwe,8,8,0,0,1,0.75,0,1,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ARE,United Arab Emirates,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ARM,Armenia,8,8,0,0,1,0.875,0,1,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,AZE,Azerbaijan,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BHS,Bahamas,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BRN,Brunei,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BTN,Bhutan,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,CIV,Côte d'Ivoire,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,COG,Congo - Brazzaville,8,8,0,0,1,0.875,0,1,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,DMA,Dominica,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,EGY,Egypt,8,8,0,0,1,0.875,0,1,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ERI,Eritrea,8,8,0,0,1,0.875,0,1,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,GNB,Guinea-Bissau,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,GRC,Greece,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,HND,Honduras,8,8,0,0,1,0.875,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,JAM,Jamaica,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,KGZ,Kyrgyzstan,8,8,0,0,1,0.875,0,1,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,LBY,Libya,8,8,0,0,1,0.875,0,1,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,LVA,Latvia,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MKD,North Macedonia,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,OMN,Oman,8,8,0,0,1,0.875,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,POL,Poland,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SEN,Senegal,8,8,0,0,1,0.875,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,STP,São Tomé & Príncipe,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SWE,Sweden,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SYR,Syria,8,8,0,0,1,0.875,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,TLS,Timor-Leste,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,TTO,Trinidad & Tobago,8,8,0,0,1,0.875,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ZAF,South Africa,8,8,0,0,1,0.875,0,1,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,AGO,Angola,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,AND,Andorra,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ARG,Argentina,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,AUS,Australia,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,AUT,Austria,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BGR,Bulgaria,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BIH,Bosnia & Herzegovina,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BLR,Belarus,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BOL,Bolivia,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BRA,Brazil,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,BWA,Botswana,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,CAN,Canada,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,CHE,Switzerland,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,CHL,Chile,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,COL,Colombia,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,COM,Comoros,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,CRI,Costa Rica,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,CZE,Czechia,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,DNK,Denmark,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,DOM,Dominican Republic,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,EST,Estonia,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,FJI,Fiji,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,FSM,Micronesia (Federated States of),8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,GBR,United Kingdom,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,GTM,Guatemala,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,GUY,Guyana,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,HTI,Haiti,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,HUN,Hungary,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,IDN,Indonesia,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,IND,India,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,IRN,Iran,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,IRQ,Iraq,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ITA,Italy,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,JOR,Jordan,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,JPN,Japan,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,KAZ,Kazakhstan,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,KHM,Cambodia,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,KOR,South Korea,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,LAO,Laos,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,LBR,Liberia,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,LCA,St. Lucia,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,LKA,Sri Lanka,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,LSO,Lesotho,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,LTU,Lithuania,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,LUX,Luxembourg,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MAR,Morocco,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MEX,Mexico,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MHL,Marshall Islands,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MNE,Montenegro,7,7,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MNG,Mongolia,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,MYS,Malaysia,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,NAM,Namibia,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,NGA,Nigeria,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,NIC,Nicaragua,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,NLD,Netherlands,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,NOR,Norway,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,NRU,Nauru,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,NZL,New Zealand,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,PAN,Panama,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,PER,Peru,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,PHL,Philippines,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,PLW,Palau,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,PNG,Papua New Guinea,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,PRT,Portugal,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,QAT,Qatar,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,RUS,Russia,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SAU,Saudi Arabia,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SLV,El Salvador,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SMR,San Marino,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SSD,South Sudan,1,1,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SVK,Slovakia,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SVN,Slovenia,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,SYC,Seychelles,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,TUN,Tunisia,8,8,0,0,1,1,0,0,FALSE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,TUR,Turkey,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,TUV,Tuvalu,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,USA,United States,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,UZB,Uzbekistan,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,VEN,Venezuela,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,YEM,Yemen,8,8,0,0,1,1,0,0,TRUE
+goods_services_two_way_combined,Bens + serviços: exportações + importações,ZMB,Zambia,8,8,0,0,1,1,0,0,TRUE
+services_exports_only,Serviços: exportações,AGO,Angola,8,8,0,0,0,0,0,4,TRUE
+services_exports_only,Serviços: exportações,ARE,United Arab Emirates,8,8,0,0,0,0,0,0,FALSE
+services_exports_only,Serviços: exportações,BRN,Brunei,8,8,0,0,0,0,0,2,TRUE
+services_exports_only,Serviços: exportações,COG,Congo - Brazzaville,8,8,0,0,0,0,1,7,TRUE
+services_exports_only,Serviços: exportações,CUB,Cuba,8,8,0,0,0,0,1,4,TRUE
+services_exports_only,Serviços: exportações,GMB,Gambia,8,8,0,0,0,0,0,2,TRUE
+services_exports_only,Serviços: exportações,GNQ,Equatorial Guinea,8,8,0,0,0,0,5,6,TRUE
+services_exports_only,Serviços: exportações,IRN,Iran,8,8,0,0,0,0,4,4,TRUE
+services_exports_only,Serviços: exportações,KIR,Kiribati,8,8,0,0,0,0,0,0,FALSE
+services_exports_only,Serviços: exportações,LBR,Liberia,8,8,0,0,0,0,0,0,FALSE
+services_exports_only,Serviços: exportações,MOZ,Mozambique,8,8,0,0,0,0,1,1,TRUE
+services_exports_only,Serviços: exportações,NOR,Norway,8,8,0,0,0,0,0,0,FALSE
+services_exports_only,Serviços: exportações,OMN,Oman,8,8,0,0,0,0,3,8,TRUE
+services_exports_only,Serviços: exportações,PRY,Paraguay,8,8,0,0,0,0,0,6,TRUE
+services_exports_only,Serviços: exportações,QAT,Qatar,8,8,0,0,0,0,0,0,FALSE
+services_exports_only,Serviços: exportações,SDN,Sudan,8,8,0,0,0,0,0,2,TRUE
+services_exports_only,Serviços: exportações,STP,São Tomé & Príncipe,8,8,0,0,0,0,0,0,FALSE
+services_exports_only,Serviços: exportações,TCD,Chad,8,8,0,0,0,0,2,2,TRUE
+services_exports_only,Serviços: exportações,TJK,Tajikistan,8,8,0,0,0,0,0,5,TRUE
+services_exports_only,Serviços: exportações,TON,Tonga,8,8,0,0,0,0,0,0,FALSE
+services_exports_only,Serviços: exportações,TZA,Tanzania,8,8,0,0,0,0,0,2,TRUE
+services_exports_only,Serviços: exportações,VUT,Vanuatu,8,8,0,0,0,0,0,0,FALSE
+services_exports_only,Serviços: exportações,CPV,Cape Verde,8,8,0,0,0,0.125,0,0,FALSE
+services_exports_only,Serviços: exportações,DJI,Djibouti,8,8,0,0,0,0.125,0,0,FALSE
+services_exports_only,Serviços: exportações,VNM,Vietnam,8,8,0,0,0,0.125,0,1,TRUE
+services_exports_only,Serviços: exportações,SWZ,Eswatini,8,8,0,0,0,0.25,0,1,TRUE
+services_exports_only,Serviços: exportações,NAM,Namibia,8,8,0,0,0,0.5,0,0,FALSE
+services_exports_only,Serviços: exportações,BHR,Bahrain,8,8,0,0,0,0.75,0,0,FALSE
+services_exports_only,Serviços: exportações,MMR,Myanmar (Burma),8,8,0,0,0.125,0,1,0,TRUE
+services_exports_only,Serviços: exportações,PAK,Pakistan,8,8,0,0,0.125,0,0,0,FALSE
+services_exports_only,Serviços: exportações,ZMB,Zambia,8,8,0,0,0.125,0,2,1,TRUE
+services_exports_only,Serviços: exportações,DMA,Dominica,8,8,0,0,0.125,0.125,0,0,FALSE
+services_exports_only,Serviços: exportações,BWA,Botswana,8,8,0,0,0.125,0.375,0,0,FALSE
+services_exports_only,Serviços: exportações,EGY,Egypt,8,8,0,0,0.125,0.375,0,0,FALSE
+services_exports_only,Serviços: exportações,UGA,Uganda,8,8,0,0,0.125,0.375,0,0,FALSE
+services_exports_only,Serviços: exportações,GAB,Gabon,8,8,0,0,0.125,0.625,0,3,TRUE
+services_exports_only,Serviços: exportações,GHA,Ghana,8,8,0,0,0.125,0.625,0,0,FALSE
+services_exports_only,Serviços: exportações,LBY,Libya,8,8,0,0,0.25,0,0,0,FALSE
+services_exports_only,Serviços: exportações,MWI,Malawi,8,8,0,0,0.25,0,0,0,FALSE
+services_exports_only,Serviços: exportações,WSM,Samoa,8,8,0,0,0.25,0,0,0,FALSE
+services_exports_only,Serviços: exportações,LVA,Latvia,8,8,0,0,0.25,0.125,0,0,FALSE
+services_exports_only,Serviços: exportações,RWA,Rwanda,8,8,0,0,0.25,0.125,0,0,FALSE
+services_exports_only,Serviços: exportações,VCT,St. Vincent & Grenadines,8,8,0,0,0.25,0.125,0,0,FALSE
+services_exports_only,Serviços: exportações,LAO,Laos,8,8,0,0,0.25,0.25,0,3,TRUE
+services_exports_only,Serviços: exportações,MDA,Moldova,8,8,0,0,0.25,0.5,0,0,FALSE
+services_exports_only,Serviços: exportações,ROU,Romania,8,8,0,0,0.25,0.5,0,0,FALSE
+services_exports_only,Serviços: exportações,SLE,Sierra Leone,8,8,0,0,0.25,0.625,1,0,TRUE
+services_exports_only,Serviços: exportações,NGA,Nigeria,8,8,0,0,0.25,1,0,0,FALSE
+services_exports_only,Serviços: exportações,BOL,Bolivia,8,8,0,0,0.375,0,0,0,FALSE
+services_exports_only,Serviços: exportações,DZA,Algeria,8,8,0,0,0.375,0,0,0,FALSE
+services_exports_only,Serviços: exportações,KGZ,Kyrgyzstan,8,8,0,0,0.375,0,0,0,FALSE
+services_exports_only,Serviços: exportações,LUX,Luxembourg,8,8,0,0,0.375,0,0,0,FALSE
+services_exports_only,Serviços: exportações,SYR,Syria,8,8,0,0,0.375,0.125,0,0,FALSE
+services_exports_only,Serviços: exportações,AZE,Azerbaijan,8,8,0,0,0.375,0.25,0,0,FALSE
+services_exports_only,Serviços: exportações,SLB,Solomon Islands,8,8,0,0,0.375,0.25,5,0,TRUE
+services_exports_only,Serviços: exportações,COD,Congo - Kinshasa,8,8,0,0,0.375,0.375,3,5,TRUE
+services_exports_only,Serviços: exportações,KOR,South Korea,8,8,0,0,0.375,0.875,5,1,TRUE
+services_exports_only,Serviços: exportações,SGP,Singapore,8,8,0,0,0.375,0.875,1,1,TRUE
+services_exports_only,Serviços: exportações,PRT,Portugal,8,8,0,0,0.375,1,0,0,FALSE
+services_exports_only,Serviços: exportações,TGO,Togo,8,8,0,0,0.5,0.125,0,0,FALSE
+services_exports_only,Serviços: exportações,ISL,Iceland,8,8,0,0,0.5,0.375,0,0,FALSE
+services_exports_only,Serviços: exportações,ATG,Antigua & Barbuda,8,8,0,0,0.5,0.625,0,0,FALSE
+services_exports_only,Serviços: exportações,CHE,Switzerland,8,8,0,0,0.5,1,0,0,FALSE
+services_exports_only,Serviços: exportações,KEN,Kenya,8,8,0,0,0.5,1,0,0,FALSE
+services_exports_only,Serviços: exportações,LTU,Lithuania,8,8,0,0,0.5,1,0,0,FALSE
+services_exports_only,Serviços: exportações,BFA,Burkina Faso,8,8,0,0,0.625,0.125,0,1,TRUE
+services_exports_only,Serviços: exportações,GEO,Georgia,8,8,0,0,0.625,0.125,0,0,FALSE
+services_exports_only,Serviços: exportações,LBN,Lebanon,8,8,0,0,0.625,0.125,0,0,FALSE
+services_exports_only,Serviços: exportações,MDV,Maldives,8,8,0,0,0.625,0.25,0,0,FALSE
+services_exports_only,Serviços: exportações,YEM,Yemen,8,8,0,0,0.625,0.25,2,3,TRUE
+services_exports_only,Serviços: exportações,URY,Uruguay,8,8,0,0,0.625,0.5,0,0,FALSE
+services_exports_only,Serviços: exportações,IRQ,Iraq,8,8,0,0,0.625,0.625,0,1,TRUE
+services_exports_only,Serviços: exportações,BEL,Belgium,8,8,0,0,0.625,0.75,0,0,FALSE
+services_exports_only,Serviços: exportações,ZWE,Zimbabwe,8,8,0,0,0.625,0.75,0,1,TRUE
+services_exports_only,Serviços: exportações,NPL,Nepal,8,8,0,0,0.625,1,0,0,FALSE
+services_exports_only,Serviços: exportações,ETH,Ethiopia,8,8,0,0,0.75,0,0,3,TRUE
+services_exports_only,Serviços: exportações,ALB,Albania,8,8,0,0,0.75,0.25,0,1,TRUE
+services_exports_only,Serviços: exportações,BEN,Benin,8,8,0,0,0.75,0.25,0,5,TRUE
+services_exports_only,Serviços: exportações,MKD,North Macedonia,8,8,0,0,0.75,0.25,0,0,FALSE
+services_exports_only,Serviços: exportações,MLI,Mali,8,8,0,0,0.75,0.375,1,2,TRUE
+services_exports_only,Serviços: exportações,MRT,Mauritania,8,8,0,0,0.75,0.375,1,2,TRUE
+services_exports_only,Serviços: exportações,RUS,Russia,8,8,0,0,0.75,0.375,0,0,FALSE
+services_exports_only,Serviços: exportações,FRA,France,8,8,0,0,0.75,0.5,0,0,FALSE
+services_exports_only,Serviços: exportações,KAZ,Kazakhstan,8,8,0,0,0.75,0.5,0,0,TRUE
+services_exports_only,Serviços: exportações,IDN,Indonesia,8,8,0,0,0.75,0.625,0,0,FALSE
+services_exports_only,Serviços: exportações,SUR,Suriname,8,8,0,0,0.75,0.75,0,0,FALSE
+services_exports_only,Serviços: exportações,AUS,Australia,8,8,0,0,0.75,0.875,2,1,TRUE
+services_exports_only,Serviços: exportações,BIH,Bosnia & Herzegovina,8,8,0,0,0.75,0.875,0,0,FALSE
+services_exports_only,Serviços: exportações,ZAF,South Africa,8,8,0,0,0.75,1,0,0,FALSE
+services_exports_only,Serviços: exportações,COM,Comoros,8,8,0,0,0.875,0,0,0,FALSE
+services_exports_only,Serviços: exportações,BDI,Burundi,8,8,0,0,0.875,0.125,0,3,TRUE
+services_exports_only,Serviços: exportações,UZB,Uzbekistan,8,8,0,0,0.875,0.25,0,4,TRUE
+services_exports_only,Serviços: exportações,AFG,Afghanistan,8,8,0,0,0.875,0.5,0,0,FALSE
+services_exports_only,Serviços: exportações,SYC,Seychelles,8,8,0,0,0.875,0.5,0,0,FALSE
+services_exports_only,Serviços: exportações,MLT,Malta,8,8,0,0,0.875,0.875,0,0,FALSE
+services_exports_only,Serviços: exportações,NLD,Netherlands,8,8,0,0,0.875,0.875,0,0,FALSE
+services_exports_only,Serviços: exportações,USA,United States,8,8,0,0,0.875,0.875,0,0,FALSE
+services_exports_only,Serviços: exportações,CYP,Cyprus,8,8,0,0,0.875,1,0,0,FALSE
+services_exports_only,Serviços: exportações,LKA,Sri Lanka,8,8,0,0,0.875,1,0,0,FALSE
+services_exports_only,Serviços: exportações,BHS,Bahamas,8,8,0,0,1,0,0,0,FALSE
+services_exports_only,Serviços: exportações,BTN,Bhutan,8,8,0,0,1,0,0,0,FALSE
+services_exports_only,Serviços: exportações,CHL,Chile,8,8,0,0,1,0,0,3,TRUE
+services_exports_only,Serviços: exportações,KNA,St. Kitts & Nevis,8,8,0,0,1,0,0,0,FALSE
+services_exports_only,Serviços: exportações,KWT,Kuwait,8,8,0,0,1,0,0,0,FALSE
+services_exports_only,Serviços: exportações,MAR,Morocco,8,8,0,0,1,0,0,0,FALSE
+services_exports_only,Serviços: exportações,MNE,Montenegro,7,7,0,0,1,0,0,0,FALSE
+services_exports_only,Serviços: exportações,NIC,Nicaragua,8,8,0,0,1,0,0,0,FALSE
+services_exports_only,Serviços: exportações,PER,Peru,8,8,0,0,1,0,0,3,TRUE
+services_exports_only,Serviços: exportações,SEN,Senegal,8,8,0,0,1,0,0,0,FALSE
+services_exports_only,Serviços: exportações,GIN,Guinea,8,8,0,0,1,0.125,0,0,FALSE
+services_exports_only,Serviços: exportações,GNB,Guinea-Bissau,8,8,0,0,1,0.125,0,0,FALSE
+services_exports_only,Serviços: exportações,GTM,Guatemala,8,8,0,0,1,0.125,0,0,FALSE
+services_exports_only,Serviços: exportações,HTI,Haiti,8,8,0,0,1,0.125,0,0,FALSE
+services_exports_only,Serviços: exportações,ARG,Argentina,8,8,0,0,1,0.25,0,0,FALSE
+services_exports_only,Serviços: exportações,DEU,Germany,8,8,0,0,1,0.25,0,0,FALSE
+services_exports_only,Serviços: exportações,HND,Honduras,8,8,0,0,1,0.25,0,2,TRUE
+services_exports_only,Serviços: exportações,MYS,Malaysia,8,8,0,0,1,0.25,0,4,TRUE
+services_exports_only,Serviços: exportações,VEN,Venezuela,8,8,0,0,1,0.25,0,2,TRUE
+services_exports_only,Serviços: exportações,AUT,Austria,8,8,0,0,1,0.375,0,0,FALSE
+services_exports_only,Serviços: exportações,BLR,Belarus,8,8,0,0,1,0.375,0,0,FALSE
+services_exports_only,Serviços: exportações,BLZ,Belize,8,8,0,0,1,0.375,0,0,FALSE
+services_exports_only,Serviços: exportações,BRB,Barbados,8,8,0,0,1,0.375,0,0,FALSE
+services_exports_only,Serviços: exportações,ITA,Italy,8,8,0,0,1,0.375,0,0,FALSE
+services_exports_only,Serviços: exportações,JOR,Jordan,8,8,0,0,1,0.375,0,0,FALSE
+services_exports_only,Serviços: exportações,LSO,Lesotho,8,8,0,0,1,0.375,0,0,FALSE
+services_exports_only,Serviços: exportações,CRI,Costa Rica,8,8,0,0,1,0.5,0,0,FALSE
+services_exports_only,Serviços: exportações,POL,Poland,8,8,0,0,1,0.5,0,0,FALSE
+services_exports_only,Serviços: exportações,UKR,Ukraine,8,8,0,0,1,0.5,0,0,FALSE
+services_exports_only,Serviços: exportações,CAF,Central African Republic,8,8,0,0,1,0.625,0,0,TRUE
+services_exports_only,Serviços: exportações,ECU,Ecuador,8,8,0,0,1,0.625,0,0,FALSE
+services_exports_only,Serviços: exportações,GRC,Greece,8,8,0,0,1,0.625,0,0,FALSE
+services_exports_only,Serviços: exportações,KHM,Cambodia,8,8,0,0,1,0.625,0,0,FALSE
+services_exports_only,Serviços: exportações,SAU,Saudi Arabia,8,8,0,0,1,0.625,0,1,TRUE
+services_exports_only,Serviços: exportações,EST,Estonia,8,8,0,0,1,0.75,0,0,FALSE
+services_exports_only,Serviços: exportações,GUY,Guyana,8,8,0,0,1,0.75,0,0,FALSE
+services_exports_only,Serviços: exportações,MUS,Mauritius,8,8,0,0,1,0.75,0,0,FALSE
+services_exports_only,Serviços: exportações,PNG,Papua New Guinea,8,8,0,0,1,0.75,0,1,TRUE
+services_exports_only,Serviços: exportações,SLV,El Salvador,8,8,0,0,1,0.75,0,0,FALSE
+services_exports_only,Serviços: exportações,SWE,Sweden,8,8,0,0,1,0.75,0,0,FALSE
+services_exports_only,Serviços: exportações,TTO,Trinidad & Tobago,8,8,0,0,1,0.75,0,0,FALSE
+services_exports_only,Serviços: exportações,ARM,Armenia,8,8,0,0,1,0.875,0,0,FALSE
+services_exports_only,Serviços: exportações,BGR,Bulgaria,8,8,0,0,1,0.875,0,0,FALSE
+services_exports_only,Serviços: exportações,CZE,Czechia,8,8,0,0,1,0.875,0,0,FALSE
+services_exports_only,Serviços: exportações,DNK,Denmark,8,8,0,0,1,0.875,0,0,FALSE
+services_exports_only,Serviços: exportações,DOM,Dominican Republic,8,8,0,0,1,0.875,0,1,TRUE
+services_exports_only,Serviços: exportações,ESP,Spain,8,8,0,0,1,0.875,0,0,FALSE
+services_exports_only,Serviços: exportações,HRV,Croatia,8,8,0,0,1,0.875,0,0,FALSE
+services_exports_only,Serviços: exportações,LCA,St. Lucia,8,8,0,0,1,0.875,0,0,FALSE
+services_exports_only,Serviços: exportações,MNG,Mongolia,8,8,0,0,1,0.875,0,0,TRUE
+services_exports_only,Serviços: exportações,NZL,New Zealand,8,8,0,0,1,0.875,0,0,FALSE
+services_exports_only,Serviços: exportações,THA,Thailand,8,8,0,0,1,0.875,0,1,TRUE
+services_exports_only,Serviços: exportações,TUN,Tunisia,8,8,0,0,1,0.875,0,0,FALSE
+services_exports_only,Serviços: exportações,BGD,Bangladesh,8,8,0,0,1,1,0,0,FALSE
+services_exports_only,Serviços: exportações,BRA,Brazil,8,8,0,0,1,1,0,0,FALSE
+services_exports_only,Serviços: exportações,CAN,Canada,8,8,0,0,1,1,0,0,FALSE
+services_exports_only,Serviços: exportações,CIV,Côte d'Ivoire,8,8,0,0,1,1,0,0,FALSE
+services_exports_only,Serviços: exportações,CMR,Cameroon,8,8,0,0,1,1,0,0,FALSE
+services_exports_only,Serviços: exportações,COL,Colombia,8,8,0,0,1,1,0,0,FALSE
+services_exports_only,Serviços: exportações,FIN,Finland,8,8,0,0,1,1,0,0,FALSE
+services_exports_only,Serviços: exportações,FJI,Fiji,8,8,0,0,1,1,0,0,FALSE
+services_exports_only,Serviços: exportações,GBR,United Kingdom,8,8,0,0,1,1,0,0,FALSE
+services_exports_only,Serviços: exportações,GRD,Grenada,8,8,0,0,1,1,0,0,FALSE
+services_exports_only,Serviços: exportações,HUN,Hungary,8,8,0,0,1,1,0,0,FALSE
+services_exports_only,Serviços: exportações,IND,India,8,8,0,0,1,1,0,0,FALSE
+services_exports_only,Serviços: exportações,IRL,Ireland,8,8,0,0,1,1,0,0,FALSE
+services_exports_only,Serviços: exportações,ISR,Israel,8,8,0,0,1,1,0,0,FALSE
+services_exports_only,Serviços: exportações,JAM,Jamaica,8,8,0,0,1,1,0,0,FALSE
+services_exports_only,Serviços: exportações,JPN,Japan,8,8,0,0,1,1,0,0,TRUE
+services_exports_only,Serviços: exportações,MDG,Madagascar,8,8,0,0,1,1,0,0,FALSE
+services_exports_only,Serviços: exportações,MEX,Mexico,8,8,0,0,1,1,0,0,FALSE
+services_exports_only,Serviços: exportações,NER,Niger,8,8,0,0,1,1,0,0,FALSE
+services_exports_only,Serviços: exportações,PAN,Panama,8,8,0,0,1,1,0,0,FALSE
+services_exports_only,Serviços: exportações,PHL,Philippines,8,8,0,0,1,1,0,0,FALSE
+services_exports_only,Serviços: exportações,SVK,Slovakia,8,8,0,0,1,1,0,0,FALSE
+services_exports_only,Serviços: exportações,SVN,Slovenia,8,8,0,0,1,1,0,0,FALSE
+services_exports_only,Serviços: exportações,TUR,Turkey,8,8,0,0,1,1,0,0,FALSE
+services_exports_only,Serviços: exportações,ERI,Eritrea,8,0,0,8,NA,NA,0,0,FALSE
+services_exports_only,Serviços: exportações,PRK,North Korea,8,0,0,8,NA,NA,0,0,TRUE
+services_exports_only,Serviços: exportações,SOM,Somalia,8,0,0,8,NA,NA,0,0,TRUE
+services_exports_only,Serviços: exportações,TKM,Turkmenistan,8,0,0,8,NA,NA,0,0,TRUE
+services_exports_only,Serviços: exportações,TLS,Timor-Leste,8,0,0,8,NA,NA,0,0,FALSE
+services_exports_only,Serviços: exportações,TUV,Tuvalu,8,0,0,8,NA,NA,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,BRN,Brunei,8,8,0,0,0,0,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,CUB,Cuba,8,8,0,0,0,0,0,4,TRUE
+services_two_way_only,Serviços: exportações + importações,IRN,Iran,8,8,0,0,0,0,3,3,TRUE
+services_two_way_only,Serviços: exportações + importações,LBR,Liberia,8,8,0,0,0,0,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,MMR,Myanmar (Burma),8,8,0,0,0,0,0,3,TRUE
+services_two_way_only,Serviços: exportações + importações,PRY,Paraguay,8,8,0,0,0,0,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,SDN,Sudan,8,8,0,0,0,0,2,2,TRUE
+services_two_way_only,Serviços: exportações + importações,SLB,Solomon Islands,8,8,0,0,0,0,0,7,TRUE
+services_two_way_only,Serviços: exportações + importações,TON,Tonga,8,8,0,0,0,0,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,VUT,Vanuatu,8,8,0,0,0,0,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,WSM,Samoa,8,8,0,0,0,0,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,PAK,Pakistan,8,8,0,0,0,0.125,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,SWZ,Eswatini,8,8,0,0,0,0.125,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,KAZ,Kazakhstan,8,8,0,0,0,0.375,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,AGO,Angola,8,8,0,0,0,0.5,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,DJI,Djibouti,8,8,0,0,0,0.625,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,TJK,Tajikistan,8,8,0,0,0,0.875,0,1,TRUE
+services_two_way_only,Serviços: exportações + importações,LBN,Lebanon,8,8,0,0,0.125,0.125,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,SLE,Sierra Leone,8,8,0,0,0.125,0.125,0,1,TRUE
+services_two_way_only,Serviços: exportações + importações,VNM,Vietnam,8,8,0,0,0.125,0.125,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,LBY,Libya,8,8,0,0,0.125,0.25,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,NPL,Nepal,8,8,0,0,0.125,0.375,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,MLI,Mali,8,8,0,0,0.125,0.875,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,GMB,Gambia,8,8,0,0,0.25,0.25,0,1,TRUE
+services_two_way_only,Serviços: exportações + importações,TZA,Tanzania,8,8,0,0,0.25,0.25,0,1,TRUE
+services_two_way_only,Serviços: exportações + importações,CHE,Switzerland,8,8,0,0,0.25,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,MNE,Montenegro,7,7,0,0,0.2857142857142857,0,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,KIR,Kiribati,8,8,0,0,0.375,0,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,MKD,North Macedonia,8,8,0,0,0.375,0.25,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,MUS,Mauritius,8,8,0,0,0.375,0.625,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,MOZ,Mozambique,8,8,0,0,0.375,0.75,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,NGA,Nigeria,8,8,0,0,0.375,0.75,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,COG,Congo - Brazzaville,8,8,0,0,0.5,0,0,2,TRUE
+services_two_way_only,Serviços: exportações + importações,MWI,Malawi,8,8,0,0,0.5,0,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,OMN,Oman,8,8,0,0,0.5,0.125,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,ZMB,Zambia,8,8,0,0,0.5,0.75,0,1,TRUE
+services_two_way_only,Serviços: exportações + importações,BWA,Botswana,8,8,0,0,0.5,0.875,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,DNK,Denmark,8,8,0,0,0.5,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,SUR,Suriname,8,8,0,0,0.5,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,QAT,Qatar,8,8,0,0,0.625,0,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,LVA,Latvia,8,8,0,0,0.625,0.125,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,STP,São Tomé & Príncipe,8,8,0,0,0.625,0.125,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,CAF,Central African Republic,8,8,0,0,0.625,0.25,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,GAB,Gabon,8,8,0,0,0.625,0.25,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,MDV,Maldives,8,8,0,0,0.625,0.25,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,SWE,Sweden,8,8,0,0,0.625,0.25,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,COD,Congo - Kinshasa,8,8,0,0,0.625,0.375,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,GNB,Guinea-Bissau,8,8,0,0,0.625,0.375,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,ROU,Romania,8,8,0,0,0.625,0.375,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,SVN,Slovenia,8,8,0,0,0.625,0.375,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,AZE,Azerbaijan,8,8,0,0,0.625,0.625,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,UGA,Uganda,8,8,0,0,0.625,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,CPV,Cape Verde,8,8,0,0,0.75,0.125,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,RUS,Russia,8,8,0,0,0.75,0.125,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,FRA,France,8,8,0,0,0.75,0.25,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,LAO,Laos,8,8,0,0,0.75,0.25,0,3,TRUE
+services_two_way_only,Serviços: exportações + importações,SYC,Seychelles,8,8,0,0,0.75,0.375,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,MNG,Mongolia,8,8,0,0,0.75,0.5,2,0,TRUE
+services_two_way_only,Serviços: exportações + importações,ATG,Antigua & Barbuda,8,8,0,0,0.75,0.625,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,BDI,Burundi,8,8,0,0,0.75,0.625,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,GEO,Georgia,8,8,0,0,0.75,0.625,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,YEM,Yemen,8,8,0,0,0.75,0.625,2,1,TRUE
+services_two_way_only,Serviços: exportações + importações,ALB,Albania,8,8,0,0,0.75,0.875,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,MDA,Moldova,8,8,0,0,0.75,0.875,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,SAU,Saudi Arabia,8,8,0,0,0.75,0.875,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,URY,Uruguay,8,8,0,0,0.875,0,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,KHM,Cambodia,8,8,0,0,0.875,0.125,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,ITA,Italy,8,8,0,0,0.875,0.25,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,SYR,Syria,8,8,0,0,0.875,0.25,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,GIN,Guinea,8,8,0,0,0.875,0.375,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,AFG,Afghanistan,8,8,0,0,0.875,0.5,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,DZA,Algeria,8,8,0,0,0.875,0.5,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,GNQ,Equatorial Guinea,8,8,0,0,0.875,0.625,0,1,TRUE
+services_two_way_only,Serviços: exportações + importações,TCD,Chad,8,8,0,0,0.875,0.625,1,3,TRUE
+services_two_way_only,Serviços: exportações + importações,LSO,Lesotho,8,8,0,0,0.875,0.75,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,LTU,Lithuania,8,8,0,0,0.875,0.75,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,TGO,Togo,8,8,0,0,0.875,0.875,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,ZWE,Zimbabwe,8,8,0,0,0.875,0.875,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,CYP,Cyprus,8,8,0,0,0.875,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,GHA,Ghana,8,8,0,0,0.875,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,GRC,Greece,8,8,0,0,0.875,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,ZAF,South Africa,8,8,0,0,0.875,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,BGD,Bangladesh,8,8,0,0,1,0,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,BHS,Bahamas,8,8,0,0,1,0,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,BOL,Bolivia,8,8,0,0,1,0,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,COM,Comoros,8,8,0,0,1,0,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,GTM,Guatemala,8,8,0,0,1,0,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,HND,Honduras,8,8,0,0,1,0,0,2,TRUE
+services_two_way_only,Serviços: exportações + importações,HTI,Haiti,8,8,0,0,1,0,0,1,TRUE
+services_two_way_only,Serviços: exportações + importações,LUX,Luxembourg,8,8,0,0,1,0,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,NIC,Nicaragua,8,8,0,0,1,0,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,RWA,Rwanda,8,8,0,0,1,0,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,ARG,Argentina,8,8,0,0,1,0.125,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,BFA,Burkina Faso,8,8,0,0,1,0.125,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,BHR,Bahrain,8,8,0,0,1,0.125,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,CHL,Chile,8,8,0,0,1,0.125,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,ECU,Ecuador,8,8,0,0,1,0.125,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,ESP,Spain,8,8,0,0,1,0.125,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,UKR,Ukraine,8,8,0,0,1,0.125,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,VCT,St. Vincent & Grenadines,8,8,0,0,1,0.125,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,BTN,Bhutan,8,8,0,0,1,0.25,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,CRI,Costa Rica,8,8,0,0,1,0.25,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,EST,Estonia,8,8,0,0,1,0.25,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,ETH,Ethiopia,8,8,0,0,1,0.25,0,1,TRUE
+services_two_way_only,Serviços: exportações + importações,GUY,Guyana,8,8,0,0,1,0.25,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,JOR,Jordan,8,8,0,0,1,0.25,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,MAR,Morocco,8,8,0,0,1,0.25,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,CMR,Cameroon,8,8,0,0,1,0.375,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,DMA,Dominica,8,8,0,0,1,0.375,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,KGZ,Kyrgyzstan,8,8,0,0,1,0.375,0,4,TRUE
+services_two_way_only,Serviços: exportações + importações,KWT,Kuwait,8,8,0,0,1,0.375,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,NAM,Namibia,8,8,0,0,1,0.375,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,SLV,El Salvador,8,8,0,0,1,0.375,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,ARE,United Arab Emirates,8,8,0,0,1,0.5,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,FIN,Finland,8,8,0,0,1,0.5,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,PER,Peru,8,8,0,0,1,0.5,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,PNG,Papua New Guinea,8,8,0,0,1,0.5,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,TTO,Trinidad & Tobago,8,8,0,0,1,0.5,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,VEN,Venezuela,8,8,0,0,1,0.5,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,BLR,Belarus,8,8,0,0,1,0.625,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,DEU,Germany,8,8,0,0,1,0.625,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,HUN,Hungary,8,8,0,0,1,0.625,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,KNA,St. Kitts & Nevis,8,8,0,0,1,0.625,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,LKA,Sri Lanka,8,8,0,0,1,0.625,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,MRT,Mauritania,8,8,0,0,1,0.625,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,TUR,Turkey,8,8,0,0,1,0.625,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,UZB,Uzbekistan,8,8,0,0,1,0.625,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,BEN,Benin,8,8,0,0,1,0.75,0,2,TRUE
+services_two_way_only,Serviços: exportações + importações,BGR,Bulgaria,8,8,0,0,1,0.75,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,DOM,Dominican Republic,8,8,0,0,1,0.75,0,0,TRUE
+services_two_way_only,Serviços: exportações + importações,JPN,Japan,8,8,0,0,1,0.75,0,2,TRUE
+services_two_way_only,Serviços: exportações + importações,NLD,Netherlands,8,8,0,0,1,0.75,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,USA,United States,8,8,0,0,1,0.75,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,AUS,Australia,8,8,0,0,1,0.875,0,1,TRUE
+services_two_way_only,Serviços: exportações + importações,BLZ,Belize,8,8,0,0,1,0.875,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,BRA,Brazil,8,8,0,0,1,0.875,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,CZE,Czechia,8,8,0,0,1,0.875,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,GRD,Grenada,8,8,0,0,1,0.875,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,HRV,Croatia,8,8,0,0,1,0.875,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,JAM,Jamaica,8,8,0,0,1,0.875,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,KEN,Kenya,8,8,0,0,1,0.875,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,LCA,St. Lucia,8,8,0,0,1,0.875,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,MLT,Malta,8,8,0,0,1,0.875,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,PHL,Philippines,8,8,0,0,1,0.875,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,SEN,Senegal,8,8,0,0,1,0.875,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,ARM,Armenia,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,AUT,Austria,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,BEL,Belgium,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,BIH,Bosnia & Herzegovina,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,BRB,Barbados,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,CAN,Canada,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,CIV,Côte d'Ivoire,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,COL,Colombia,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,EGY,Egypt,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,FJI,Fiji,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,GBR,United Kingdom,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,IDN,Indonesia,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,IND,India,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,IRL,Ireland,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,IRQ,Iraq,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,ISL,Iceland,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,ISR,Israel,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,KOR,South Korea,8,8,0,0,1,1,0,0,TRUE
+services_two_way_only,Serviços: exportações + importações,MDG,Madagascar,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,MEX,Mexico,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,MYS,Malaysia,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,NER,Niger,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,NOR,Norway,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,NZL,New Zealand,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,PAN,Panama,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,POL,Poland,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,PRT,Portugal,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,SGP,Singapore,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,SVK,Slovakia,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,THA,Thailand,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,TUN,Tunisia,8,8,0,0,1,1,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,ERI,Eritrea,8,0,0,8,NA,NA,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,PRK,North Korea,8,0,0,8,NA,NA,0,0,TRUE
+services_two_way_only,Serviços: exportações + importações,SOM,Somalia,8,0,0,8,NA,NA,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,TKM,Turkmenistan,8,0,0,8,NA,NA,0,0,TRUE
+services_two_way_only,Serviços: exportações + importações,TLS,Timor-Leste,8,0,0,8,NA,NA,0,0,FALSE
+services_two_way_only,Serviços: exportações + importações,TUV,Tuvalu,8,0,0,8,NA,NA,0,0,FALSE

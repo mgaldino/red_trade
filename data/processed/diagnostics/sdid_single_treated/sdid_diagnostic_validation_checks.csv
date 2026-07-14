@@ -1,0 +1,12 @@
+check,passed,details
+Required targets readable,TRUE,synth_data; synth_fit; se_synth; permutation_results; trade_data_ranked; trade_data_cleaned; unga_data
+Baseline target estimate extracted,TRUE,-0.263940
+Unit weights sum to one,TRUE,1.00000000
+Time weights sum to one,TRUE,1.00000000
+Brazil is last row in synthdid setup,TRUE,BRA
+Baseline series has both pre and post periods,TRUE,7; 12
+Placebo distribution includes Brazil,TRUE,n=96
+Donor sensitivity generated,TRUE,n=15
+Window sensitivity generated,TRUE,n=7
+China exposure diagnostic generated,TRUE,n=95
+No tar_make call in script,TRUE,Static check of script text

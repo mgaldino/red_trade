@@ -1,0 +1,15 @@
+{
+  "source_id": "kwt_kuna_korea_forum_2019",
+  "iso3c": "KWT",
+  "url": "https://www.kuna.net.kw/ArticleDetails.aspx?Language=en&id=2794430",
+  "fetch_url": "https://www.kuna.net.kw/ArticleDetails.aspx?Language=en&id=2794430",
+  "fetch_status": "error",
+  "status_code": null,
+  "content_type": "",
+  "raw_file": "data/raw/ex_top1_salience/KWT/2019/kuwait_news_agency/kwt_kuna_korea_forum_2019.html.error.txt",
+  "size_bytes": 0,
+  "error": "URLError(TimeoutError('timed out'))",
+  "accessed_at": "2026-05-23T22:04:48+00:00",
+  "eligible_source": true,
+  "count_for_benchmark_after_fetch": false
+}

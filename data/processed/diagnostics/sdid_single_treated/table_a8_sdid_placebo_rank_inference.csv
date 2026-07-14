@@ -1,0 +1,6 @@
+estimand,brazil_statistic,rank,denominator,rank_based_p_value,inference_note
+One-sided negative effect,-0.26394046182119363,4,96,0.041666666666666664,Includes Brazil and all valid placebo-in-space estimates; finite-sample rank p-value.
+Two-sided absolute effect,0.26394046182119363,8,96,0.08333333333333333,Includes Brazil and all valid placebo-in-space estimates; finite-sample rank p-value.
+"One-sided negative effect, fit-filtered",-0.26394046182119363,2,71,0.028169014084507043,Includes Brazil and placebos with intercept-adjusted pre-treatment RMSPE no larger than twice Brazil's intercept-adjusted pre-treatment RMSPE.
+"Two-sided absolute effect, fit-filtered",0.26394046182119363,5,71,0.07042253521126761,Includes Brazil and placebos with intercept-adjusted pre-treatment RMSPE no larger than twice Brazil's intercept-adjusted pre-treatment RMSPE.
+Intercept-adjusted RMSPE ratio rank,5.5740191605150855,5,96,0.052083333333333336,Ranks the post/pre intercept-adjusted RMSPE ratio; large ratios indicate a large post-treatment gap relative to adjusted pre-treatment fit.

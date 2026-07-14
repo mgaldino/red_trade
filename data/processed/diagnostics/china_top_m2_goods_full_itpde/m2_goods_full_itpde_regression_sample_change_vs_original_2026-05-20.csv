@@ -1,0 +1,98 @@
+iso3c,country_name,original_in_sample,m2_full_in_sample,original_treated,m2_full_treated,first_treat_original,first_treat_m2_full,change_type
+AUS,Australia,TRUE,TRUE,TRUE,TRUE,2010,2009,both_treated_first_treat_changed
+CHL,Chile,TRUE,TRUE,TRUE,TRUE,2008,2007,both_treated_first_treat_changed
+SAU,Saudi Arabia,TRUE,TRUE,TRUE,TRUE,2015,2013,both_treated_first_treat_changed
+MLT,Malta,TRUE,FALSE,FALSE,FALSE,0,,drops_out_of_m2_full_sample
+PAN,Panama,TRUE,FALSE,FALSE,FALSE,0,,drops_out_of_m2_full_sample
+PNG,Papua New Guinea,TRUE,FALSE,FALSE,FALSE,0,,drops_out_of_m2_full_sample
+JPN,Japan,FALSE,TRUE,FALSE,TRUE,,2008,enters_m2_full_sample
+NZL,New Zealand,FALSE,TRUE,FALSE,TRUE,,2013,enters_m2_full_sample
+PER,Peru,FALSE,TRUE,FALSE,TRUE,,2010,enters_m2_full_sample
+SGP,Singapore,FALSE,TRUE,FALSE,FALSE,,0,enters_m2_full_sample
+ALB,Albania,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+DZA,Algeria,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+AGO,Angola,TRUE,TRUE,TRUE,TRUE,2007,2007,no_change
+ARG,Argentina,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+AUT,Austria,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+BHR,Bahrain,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+BGD,Bangladesh,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+BRB,Barbados,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+BTN,Bhutan,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+BOL,Bolivia,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+BWA,Botswana,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+BRA,Brazil,TRUE,TRUE,TRUE,TRUE,2009,2009,no_change
+BGR,Bulgaria,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+CAN,Canada,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+CPV,Cape Verde,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+COL,Colombia,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+COM,Comoros,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+CRI,Costa Rica,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+CYP,Cyprus,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+CIV,Côte d’Ivoire,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+DNK,Denmark,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+DJI,Djibouti,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+ECU,Ecuador,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+EGY,Egypt,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+SLV,El Salvador,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+SWZ,Eswatini,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+FJI,Fiji,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+FIN,Finland,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+FRA,France,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+GAB,Gabon,TRUE,TRUE,TRUE,TRUE,2017,2017,no_change
+DEU,Germany,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+GRC,Greece,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+GTM,Guatemala,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+GUY,Guyana,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+HTI,Haiti,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+HND,Honduras,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+HUN,Hungary,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+ISL,Iceland,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+IND,India,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+IRL,Ireland,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+ISR,Israel,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+ITA,Italy,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+JAM,Jamaica,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+JOR,Jordan,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+KEN,Kenya,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+KWT,Kuwait,TRUE,TRUE,TRUE,TRUE,2018,2018,no_change
+LBN,Lebanon,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+LSO,Lesotho,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+LBY,Libya,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+MDG,Madagascar,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+MWI,Malawi,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+MYS,Malaysia,TRUE,TRUE,TRUE,TRUE,2009,2009,no_change
+MDV,Maldives,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+MUS,Mauritius,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+MEX,Mexico,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+MAR,Morocco,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+MMR,Myanmar (Burma),TRUE,TRUE,TRUE,TRUE,2014,2014,no_change
+NAM,Namibia,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+NPL,Nepal,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+NLD,Netherlands,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+NIC,Nicaragua,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+NGA,Nigeria,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+NOR,Norway,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+PAK,Pakistan,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+PRY,Paraguay,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+PHL,Philippines,TRUE,TRUE,TRUE,TRUE,2005,2005,no_change
+POL,Poland,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+PRT,Portugal,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+ROU,Romania,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+RWA,Rwanda,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+SEN,Senegal,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+SLE,Sierra Leone,TRUE,TRUE,TRUE,TRUE,2012,2012,no_change
+SLB,Solomon Islands,TRUE,TRUE,TRUE,TRUE,2003,2003,no_change
+ESP,Spain,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+LKA,Sri Lanka,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+SUR,Suriname,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+SWE,Sweden,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+SYR,Syria,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+TGO,Togo,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+TTO,Trinidad & Tobago,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+TUN,Tunisia,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+TUR,Turkey,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+UGA,Uganda,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+ARE,United Arab Emirates,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+GBR,United Kingdom,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+USA,United States,TRUE,TRUE,FALSE,FALSE,0,0,no_change
+URY,Uruguay,TRUE,TRUE,TRUE,TRUE,2013,2013,no_change

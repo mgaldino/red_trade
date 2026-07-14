@@ -1,0 +1,16 @@
+element,value
+Treated unit,Brazil (BRA)
+Treatment timing,Treatment turns on in 2009
+Treatment definition,"Indicator equals 1 from 2009 onward, when China became Brazil's largest export destination."
+Outcome,Absolute annual UNGA ideal-point distance to China
+Estimator,Synthetic difference-in-differences with covariate adjustment
+Estimand,Average post-2009 ATT for Brazil relative to a synthetic counterfactual
+Baseline window used by the fitted target,1997-2015
+Pre-treatment years,"1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008"
+Post-treatment years,"2009, 2010, 2011, 2012, 2013, 2014, 2015"
+Donor pool in fitted target,95 donor countries; Brazil excluded from donor pool
+Covariate adjustment,"gpi, perc_trade_with_us, perc_trade_with_china, pci_cur, exachange_rate, distance_us, us_power_gap, hog_left, CA_GDP, govdef_GDP, inst_parliamentary, inst_military_exec, us_trade_agreement"
+Baseline ATT,-0.2639
+Placebo SE from target,0.1450
+Brazil pre-treatment mean outcome,0.6468
+ATT as percent of Brazil pre-treatment mean,-40.8%

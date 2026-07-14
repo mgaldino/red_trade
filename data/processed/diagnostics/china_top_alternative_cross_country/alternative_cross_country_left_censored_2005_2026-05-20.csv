@@ -1,0 +1,32 @@
+metric,metric_label,iso3c,country_name,censoring_status,first_observed_year,last_observed_year,observed_2005,china_top_2005,ever_china_top,first_china_top_year,first_entry_after_non_top,observed_entry_year,first_entry_after_gap,previous_observed_year_at_entry,absorbing_after_entry,n_observed_years,n_china_top_years,observed_all_2005_2010,china_top_any_2005_2010
+goods_exports_rank,Bens: exportações,BFA,Burkina Faso,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,3,TRUE,TRUE
+goods_exports_rank,Bens: exportações,COG,Congo - Brazzaville,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2011,,,2010,TRUE,18,13,TRUE,TRUE
+goods_exports_rank,Bens: exportações,CUB,Cuba,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2017,,,2016,TRUE,18,17,TRUE,TRUE
+goods_exports_rank,Bens: exportações,KOR,South Korea,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_exports_rank,Bens: exportações,MNG,Mongolia,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_exports_rank,Bens: exportações,OMN,Oman,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_exports_rank,Bens: exportações,PHL,Philippines,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_exports_rank,Bens: exportações,PRK,North Korea,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2008,,,2007,FALSE,18,14,TRUE,TRUE
+goods_exports_rank,Bens: exportações,SDN,Sudan,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2007,,,2006,FALSE,18,6,TRUE,TRUE
+goods_exports_rank,Bens: exportações,SLB,Solomon Islands,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_exports_rank,Bens: exportações,YEM,Yemen,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2017,,,2016,FALSE,18,16,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,BEN,Benin,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2008,,,2007,FALSE,18,4,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,BFA,Burkina Faso,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,3,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,COG,Congo - Brazzaville,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2011,,,2010,TRUE,18,13,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,KOR,South Korea,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,MNG,Mongolia,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,OMN,Oman,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,PHL,Philippines,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,PRK,North Korea,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2008,,,2007,TRUE,18,17,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,SDN,Sudan,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2007,,,2006,FALSE,18,6,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,SGP,Singapore,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2013,,,2012,FALSE,18,7,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,SLB,Solomon Islands,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_services_exports_rank,Bens + serviços: exportações,YEM,Yemen,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2017,,,2016,FALSE,18,16,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,COG,Congo - Brazzaville,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2011,,,2010,FALSE,18,12,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,KOR,South Korea,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,MNG,Mongolia,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,OMN,Oman,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,PRK,North Korea,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,SDN,Sudan,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2007,,,2006,FALSE,18,11,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,SLB,Solomon Islands,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,,,,,FALSE,18,18,TRUE,TRUE
+goods_services_two_way_rank,Bens + serviços: two-way,YEM,Yemen,left_censored_china_rank1_in_2005,2005,2022,TRUE,TRUE,TRUE,2005,2020,,,2019,TRUE,18,17,TRUE,TRUE

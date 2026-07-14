@@ -1,0 +1,9 @@
+model,moderator,group_var,group,nboots,att,se,ci_lo,ci_hi,p,r_cv,n_treated_countries,treated_country_years,countries
+IFE grouped by displaced_us,displaced_us,displaced_us_group,displaced_us_no,5,-0.09054084512814382,0.026034665423788357,-0.13135972249387723,-0.07302326292702987,0,2,10,108,"AUS, GAB, KWT, MMR, MYS, PHL, QAT, SLB, SLE, URY"
+IFE grouped by displaced_us,displaced_us,displaced_us_group,displaced_us_yes,5,-0.11992763381123209,0.026106816529189062,-0.14216858486011166,-0.08243149250008289,0,2,4,53,"AGO, BRA, CHL, SAU"
+IFE grouped by displaced_g7,displaced_g7,displaced_g7_group,displaced_g7_no,5,-0.10302467768963763,0.040202934806816124,-0.15620775268958215,-0.06239569824512766,0,2,6,55,"GAB, KWT, MMR, MYS, SLE, URY"
+IFE grouped by displaced_g7,displaced_g7,displaced_g7_group,displaced_g7_yes,5,-0.09875677917834683,0.016417191762756137,-0.12145965713153525,-0.08264779585872378,0,2,8,106,"AGO, AUS, BRA, CHL, PHL, QAT, SAU, SLB"
+IFE grouped by displaced_regional_power,displaced_regional_power,displaced_regional_power_group,regional_power_no,5,-0.09188941768122365,0.040933894060344325,-0.1646387085111447,-0.0636072493145346,0,2,4,40,"GAB, MMR, MYS, SLE"
+IFE grouped by displaced_regional_power,displaced_regional_power,displaced_regional_power_group,regional_power_yes,5,-0.1029669351949247,0.016631977944865605,-0.11745687016838785,-0.08378941141443061,0,2,10,121,"AGO, AUS, BRA, CHL, KWT, PHL, QAT, SAU, SLB, URY"
+IFE grouped by pre_entry_high_level_partner,pre_entry_partner_level,pre_entry_high_level_partner_group,high_level_partner_no,5,-0.08863996815876853,0.018945136136348857,-0.11509111912508718,-0.07342087101203591,0,2,11,142,"AGO, AUS, BRA, CHL, GAB, KWT, MYS, PHL, SLB, SLE, URY"
+IFE grouped by pre_entry_high_level_partner,pre_entry_partner_level,pre_entry_high_level_partner_group,high_level_partner_yes,5,-0.18672107301524737,0.08826546422294224,-0.335529071258484,-0.11917910227631524,0,2,3,19,"MMR, QAT, SAU"

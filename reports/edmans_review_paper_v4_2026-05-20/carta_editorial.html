@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Parecer Edmans paper_v4 2026-05-20</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Parecer Edmans paper_v4 2026-05-20</h1>
+</header>
+<h1
+id="carta-editorial-framework-edmans-contribution-execution-exposition">Carta
+Editorial — Framework Edmans (Contribution, Execution, Exposition)</h1>
+<h2 id="decisão-reject-and-resubmit">Decisão: Reject-and-Resubmit</h2>
+<h2 id="scores-consolidados">Scores consolidados</h2>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr>
+<th>Dimensão</th>
+<th style="text-align: right;">Score</th>
+<th>Rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Contribution</td>
+<td style="text-align: right;">6/10</td>
+<td>Promissora, mas ainda não suficientemente diferenciada de
+saliência/dependência</td>
+</tr>
+<tr>
+<td>Execution</td>
+<td style="text-align: right;">7/10</td>
+<td>Forte no Brasil, mais limitada no painel cross-country</td>
+</tr>
+<tr>
+<td>Exposition</td>
+<td style="text-align: right;">7/10</td>
+<td>Clara, mas com excesso de diagnósticos e sinais de acabamento
+incompleto</td>
+</tr>
+<tr>
+<td><strong>Global</strong></td>
+<td style="text-align: right;"><strong>6.7/10</strong></td>
+<td><strong>Reject-and-Resubmit</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="síntese-editorial">Síntese editorial</h2>
+<p>O manuscrito tem uma ideia publicável: marcos discretos em
+hierarquias comerciais podem transformar crescimento econômico contínuo
+em um sinal politicamente utilizável de status. A principal força é a
+combinação entre caso brasileiro, SDiD, diagnósticos de timing,
+evidência por direitos humanos, saliência midiática/oficial e extensão
+cross-country. A principal fraqueza é que a contribuição ainda não
+separa com nitidez suficiente “status baseado em rank” de explicações
+próximas: saliência, dependência exportadora, choque de commodities,
+BRICS/G20, agenda-setting e acomodação pragmática à China. A execução
+sustenta bem a conclusão restrita de convergência seletiva Brasil-China
+após 2009; ainda não sustenta plenamente a versão mais ambiciosa de
+mecanismo causal geral.</p>
+<h2 id="hierarquia-edmans-aplicada">Hierarquia Edmans aplicada</h2>
+<p>Pela hierarquia Edmans, o gargalo é Contribution, não Execution nem
+Exposition. A execução é competente e a exposição comunica bem o
+argumento central, mas elas não resolvem sozinhas o problema principal:
+o leitor precisa sair convencido de que o paper ensina algo que a
+literatura de interdependência econômica e influência chinesa não
+preveria. A contribuição é forte o suficiente para justificar uma
+reescrita substantiva, mas ainda não está no ponto de R&amp;R major em
+um top journal: antes de nova submissão, o paper precisa transformar a
+ideia de “limiar econômico publicamente legível” em uma teoria mais
+geral, com predições exclusivas, condições de escopo e trade-offs
+substantivos.</p>
+<h2 id="prioridades-para-revisão">Prioridades para revisão</h2>
+<ol type="1">
+<li><p>Diferenciar teoricamente status, saliência, dependência
+exportadora e exposição comercial contínua. Cada explicação alternativa
+deve gerar uma predição observável própria.</p></li>
+<li><p>Formalizar hipóteses separadas para efeito principal, atenção
+midiática, durabilidade, deslocamento de incumbente e seletividade em
+issue areas politicamente custosas.</p></li>
+<li><p>Calibrar os três blocos de evidência: o Brasil identifica melhor
+o efeito reduzido e o mecanismo; o painel cross-country deve ser
+apresentado como evidência convergente e de escopo, não como
+identificação causal independente forte.</p></li>
+<li><p>Corrigir problemas técnicos visíveis: incluir ou remover o
+pseudo-teste de 2004, completar a inferência da Tabela 4 ou rebaixá-la a
+diagnóstico descritivo, quantificar o pré-fit do SDiD e testar
+sensibilidade a doadores influentes.</p></li>
+<li><p>Reorganizar a exposição: padronizar “largest export destination”,
+reduzir listas defensivas de citações, limpar o apêndice de ChatGPT,
+consertar outputs com “NA” e mover material pedagógico/metodológico
+secundário para online appendix.</p></li>
+</ol>
+<h2 id="recomendação-estratégica-ao-autor">Recomendação estratégica ao
+autor</h2>
+<p>Eu não recomendaria submeter a versão atual a APSR/AJPS/JOP/IO sem
+uma revisão conceitual forte. A execução empírica já está próxima do
+nível necessário para um bom journal de RI/IPE, mas a contribuição
+precisa subir um degrau: o paper deve ser vendido como teoria de como
+limiares econômicos publicamente legíveis produzem mudança política, com
+China-Brasil como caso forte, não como apenas mais um estudo de comércio
+chinês e votos na AGNU. A rota mais produtiva é uma revisão major focada
+no núcleo teórico e na calibragem causal, seguida de submissão a uma
+venue de RI/IPE exigente. Adicionar robustez sem resolver a fronteira
+conceitual terá baixo retorno.</p>
+<hr />
+<h2 id="parecer-completo-contribution">Parecer completo —
+Contribution</h2>
+<h1 id="parecer-de-contribution-framework-edmans">Parecer de
+Contribution (Framework Edmans)</h1>
+<h2 id="score-610">Score: 6/10</h2>
+<h2 id="resumo-da-contribuição-alegada">Resumo da contribuição
+alegada</h2>
+<p>O manuscrito argumenta que a ascensão da China ao posto de principal
+destino das exportações de um país cria um “ganho de status” comercial:
+um marco discreto, público e politicamente utilizável que pode
+justificar convergência diplomática seletiva. O caso central é o Brasil
+após 2009, com evidência de SDiD em distância ideal-point na AGNU,
+diagnósticos por tema, saliência na imprensa brasileira e uma extensão
+cross-country com países em que a China se torna persistentemente o
+principal destino exportador.</p>
+<h2 id="avaliação-por-dimensão">Avaliação por dimensão</h2>
+<h3 id="novidade-adequada">Novidade [Adequada]</h3>
+<p>A contribuição é mais original no enquadramento de “trade-based
+status gains” do que no resultado bruto de que exposição econômica à
+China se associa a maior alinhamento diplomático. A literatura citada já
+cobre comércio, dependência econômica, influência chinesa e votos na
+AGNU; portanto, a tese de que países economicamente mais ligados à China
+convergem diplomaticamente não é, por si só, surpreendente. O ganho novo
+está em tratar a ultrapassagem de ranking como limiar categórico, não
+como mero aumento contínuo de comércio, e em conectar isso a atenção
+pública e justificativa política.</p>
+<p>Ainda assim, o leitor atualiza suas crenças apenas moderadamente. A
+distinção entre “status”, “saliência”, “dependência comercial visível” e
+“heurística de atenção” ainda não está conceitualmente afiada o
+suficiente. Para um top journal, o paper precisa mostrar que o mecanismo
+de status gera predições que uma explicação padrão de interdependência,
+commodity boom, BRICS/Lula ou agenda-setting não geraria.</p>
+<h3 id="importância-adequada">Importância [Adequada]</h3>
+<p>O tema é substantivamente importante: influência chinesa,
+realinhamento diplomático, política externa brasileira e votos em
+direitos humanos na AGNU são questões centrais para IR/IPE e política
+externa comparada. O achado de que a convergência aparece sobretudo em
+votos de direitos humanos nos quais China e EUA divergem é mais
+relevante do que uma simples redução agregada de distância
+ideal-point.</p>
+<p>Mas a importância ainda fica aquém de “forte” porque o outcome
+principal é uma arena relativamente barata de sinalização diplomática. O
+manuscrito afirma que a AGNU é visível e politicamente relevante, mas
+precisa convencer melhor que esse tipo de convergência altera decisões
+reais, coalizões multilaterais, custos reputacionais ou estratégias de
+grandes potências. Do jeito atual, um survey sobre influência chinesa
+provavelmente mencionaria o paper, mas talvez como refinamento sobre
+limiares e saliência, não como resultado organizador da literatura.</p>
+<h3 id="adequação-ao-escopo-adequada">Adequação ao escopo
+[Adequada]</h3>
+<p>O paper está bem posicionado em Ciência Política, especialmente IR,
+IPE, política externa comparada e estudos sobre China/rising powers. A
+bibliografia conversa com status em RI, alinhamento na AGNU, influência
+econômica chinesa, política externa brasileira e métodos causais para
+painéis.</p>
+<p>Para APSR/AJPS/JOP, o desafio é tornar a contribuição menos
+“China-Brazil/UNGA-specific” e mais uma teoria geral sobre como marcos
+econômicos categóricos reorganizam comportamento político. Para IO, FPA,
+RIPE ou BJPS, o encaixe é mais natural.</p>
+<h3 id="generalizabilidade-limitada">Generalizabilidade [Limitada]</h3>
+<p>O manuscrito reconhece corretamente que o Brasil é um caso forte:
+China desloca os EUA, o marco é público, há imprensa disponível e o
+período coincide com debates sobre autonomia, Sul-Sul e multipolaridade.
+A extensão cross-country ajuda, mas ainda não elimina a sensação de que
+o mecanismo é demonstrado de forma convincente apenas no caso
+brasileiro.</p>
+<p>A amostra cross-country persistente tem poucos tratados e grande
+heterogeneidade. Além disso, a etapa de saliência/justificação não é
+medida fora do Brasil. A validade externa depende de condições que o
+paper ainda não teoriza suficientemente: liberdade de imprensa,
+autonomia diplomática, tipo de incumbente deslocado, dependência de
+commodities, proximidade com os EUA e capacidade do Executivo de
+traduzir comércio em alinhamento multilateral.</p>
+<h3 id="trade-offs-parcial">Trade-offs [Parcial]</h3>
+<p>O paper considera parcialmente trade-offs ao notar que direitos
+humanos envolvem custos reputacionais e que a AGNU é uma arena visível,
+mas menos custosa do que sanções, tratados ou compromissos militares.
+Isso é útil.</p>
+<p>O tratamento ainda é incompleto porque o manuscrito documenta
+principalmente um lado do trade-off: maior acomodação diplomática da
+China. Falta discutir mais explicitamente os custos potenciais: perda
+reputacional em direitos humanos, tensão com compromissos liberais,
+custos na relação com os EUA, ou trade-offs entre ganhos comerciais e
+autonomia diplomática. O paper não precisa estimar todos esses custos,
+mas deve reconhecê-los como parte da contribuição substantiva.</p>
+<h3 id="hipóteses-claras-e-direcionais">Hipóteses [Claras e
+direcionais]</h3>
+<p>A teoria tem mecanismo claro: limiar de ranking → aumento de atenção
+pública → justificativa política → convergência diplomática seletiva. As
+previsões são direcionais: quando a China se torna principal destino
+exportador e permanece nessa posição, a distância diplomática à China
+deve cair; a saliência midiática deve aumentar; o efeito deve ser mais
+claro quando há deslocamento de incumbente saliente e em áreas onde
+China e Brasil antes divergiam.</p>
+<p>A principal melhoria seria formalizar essas expectativas como
+hipóteses numeradas e separadas: efeito principal, saliência,
+durabilidade, deslocamento do incumbente e seletividade por issue area.
+Hoje elas aparecem como “observable implications”, mas a arquitetura
+teórica ficaria mais forte se cada implicação tivesse papel definido no
+teste da contribuição.</p>
+<h2 id="veredicto-geral-sobre-contribution">Veredicto geral sobre
+contribution</h2>
+<p>A contribuição é promissora, mas ainda não está no patamar de
+contribuição inequívoca para top journal. O paper tem uma ideia boa:
+transformar crescimento comercial contínuo em um mecanismo político de
+status baseado em limiares públicos. Essa ideia é potencialmente
+publicável e mais interessante do que apenas “trade with China affects
+UN votes”. O ponto fraco é que o manuscrito ainda corre o risco de
+parecer uma reinterpretação elegante de um padrão esperado pela
+literatura de interdependência econômica e influência chinesa. Para
+subir de “boa contribuição” para “contribuição forte”, precisa mostrar
+com mais nitidez que o limiar de status muda crenças, decisões e
+alinhamentos de modo que teorias contínuas de exposição comercial não
+preveriam.</p>
+<h2 id="sugestões-construtivas">Sugestões construtivas</h2>
+<ol type="1">
+<li><p>Defina mais agressivamente o que “status” explica que
+“saliência”, “dependência” e “exposição comercial” não
+explicam.</p></li>
+<li><p>Transforme as implicações teóricas em hipóteses formais: efeito
+principal, atenção midiática, durabilidade, deslocamento de incumbente e
+seletividade em issue areas politicamente custosas.</p></li>
+<li><p>Eleve a importância substantiva da AGNU mostrando por que votos
+em direitos humanos são politicamente consequentes, não apenas
+indicadores convenientes de alinhamento.</p></li>
+<li><p>Explicite condições de escopo: quando o mecanismo deve funcionar
+e quando não deve funcionar.</p></li>
+<li><p>Trate melhor os trade-offs políticos da acomodação à China,
+especialmente reputação em direitos humanos e relação com os
+EUA.</p></li>
+<li><p>Reenquadre a contribuição geral como uma teoria de “limiares
+econômicos publicamente legíveis” em política externa, com o caso
+China-Brasil como aplicação forte, não como o universo substantivo do
+paper.</p></li>
+</ol>
+<h2 id="parecer-completo-execution">Parecer completo — Execution</h2>
+<h1 id="parecer-de-execution-framework-edmans">Parecer de Execution
+(Framework Edmans)</h1>
+<h2 id="score-710">Score: 7/10</h2>
+<h2 id="tipo-de-paper-empírico">Tipo de paper: Empírico</h2>
+<h2 id="resumo-da-estratégia">Resumo da estratégia</h2>
+<p>O paper testa se a entrada da China como principal destino das
+exportações brasileiras em 2009 reduziu a distância do Brasil em relação
+à China em votações da AGNU. O desenho principal é um SDiD para o
+Brasil, complementado por diagnósticos de timing, votos por área
+temática, evidência de saliência midiática/oficial e um painel
+cross-country com efeitos fixos interativos para países em que a China
+se torna destino exportador dominante de forma persistente.</p>
+<h2 id="princípio-dados-vs.-evidência">Princípio “Dados
+vs. Evidência”</h2>
+<p>Os dados constituem evidência razoavelmente forte de uma convergência
+seletiva Brasil-China após 2009, especialmente em direitos humanos. Mas
+ainda não constituem evidência conclusiva de que o mecanismo seja
+especificamente “status baseado em rank”, separado de choques
+contemporâneos ligados à China, commodities, BRICS/G20 ou reorientação
+diplomática tardia do governo Lula. A execução sustenta uma conclusão
+cautelosa: o padrão é consistente com um efeito de marco
+categórico/status, não uma demonstração plenamente isolada desse
+mecanismo.</p>
+<h2 id="avaliação-por-dimensão-1">Avaliação por dimensão</h2>
+<h3 id="mensuração-adequada-com-reservas">Mensuração: Adequada, com
+reservas</h3>
+<p>A distância ideal-point da AGNU em relação à China é uma medida
+defensável de alinhamento multilateral e melhor que simples agreement
+share. O paper também faz bem ao mostrar que a queda na distância parece
+vir sobretudo do movimento brasileiro, não de uma China móvel.</p>
+<p>A medida de tratamento é mais delicada. “China torna-se principal
+destino das exportações” mede bem o marco público no caso brasileiro,
+mas mede apenas indiretamente o conceito de “status politicamente
+utilizável”. Fora do Brasil, a saliência pública desse rank não é
+observada; o tratamento pode capturar dependência exportadora, demanda
+chinesa, estrutura de commodities ou choques comerciais persistentes,
+não necessariamente status. A evidência de mídia e discurso oficial
+fortalece muito o Brasil, mas ainda não transporta automaticamente o
+mecanismo para o painel cross-country.</p>
+<h3
+id="robustez-adequada-a-forte-no-brasil-moderada-no-painel">Robustez:
+Adequada a forte no Brasil; moderada no painel</h3>
+<p>A execução do caso Brasil é boa: há SDiD, donor-pool check,
+especificações com e sem covariáveis, testes de timing, falsificações de
+rank versus volume, diagnóstico de choque de demanda chinesa, evidência
+por área temática e placebos por país nos votos de direitos humanos.
+Isso vai além de uma bateria mecânica de robustness checks.</p>
+<p>Há, porém, três fragilidades. Primeiro, a Tabela 4 reporta vários
+stress tests sem SE, IC ou p-value, o que reduz sua força inferencial.
+Segundo, o texto diz que 2004 é um teste especialmente útil porque a
+China chega ao rank #2, mas a tabela exibida não inclui 2004; essa
+inconsistência precisa ser corrigida. Terceiro, o pré-fit do SDiD é
+descrito como “close enough”, mas deveria ser quantificado com métricas
+de fit, distribuição de placebos e sensibilidade a doadores
+influentes.</p>
+<p>No cross-country, a convergência entre IFE e C&amp;S é útil, mas o
+número de tratados persistentes é pequeno e os diagnósticos de
+pré-tendência têm limitações de suporte. O painel deve ser tratado como
+evidência convergente, não como segunda identificação forte.</p>
+<h3 id="seleção-amostral-preocupações-menores-a-moderadas">Seleção
+amostral: Preocupações menores a moderadas</h3>
+<p>O Brasil é apresentado como caso forte, e isso é honesto: desloca os
+EUA, tem saliência pública e permite observar o mecanismo. Mas
+justamente por ser “most likely case”, ele não é representativo do
+conjunto de países em que a China se torna top export destination.</p>
+<p>No painel cross-country, a definição de tratamento persistente até o
+fim da janela é teoricamente coerente com a ideia de durabilidade, mas
+pode introduzir seleção pós-tratamento: países que mantêm a China como
+principal destino podem diferir sistematicamente dos que entram e saem,
+inclusive por razões ligadas ao próprio outcome diplomático ou a choques
+de commodities. Seria melhor definir persistência por uma janela
+pré-especificada, por exemplo <code>k</code> anos consecutivos após
+entrada, e reportar sensibilidade a <code>k</code>.</p>
+<h3 id="explicações-alternativas-parcialmente-endereçadas">Explicações
+alternativas: Parcialmente endereçadas</h3>
+<p>O paper faz um esforço sério para não ser “identification-police
+bait”: ele nomeia alternativas claras e testa algumas delas. A crítica
+de crescimento contínuo do comércio é bem enfrentada pelos testes de
+timing e controles de trade share. A crítica Lula/South-South é
+parcialmente enfrentada pelos pseudo-tratamentos em 2003/2005. A crítica
+de choque de commodities/GFC é enfrentada por diagnósticos
+adicionais.</p>
+<p>Ainda restam alternativas substantivas. Uma reorientação brasileira
+de política externa ligada ao momento BRICS/G20 e à crise financeira de
+2008-2009 poderia aumentar simultaneamente a centralidade discursiva da
+China e a disposição brasileira de votar com China em direitos humanos.
+Um choque de demanda chinesa por commodities poderia fortalecer
+coalizões domésticas pró-China sem que o canal principal fosse “status”.
+E a evidência de mídia/oficial mostra que o marco foi usado
+retoricamente, mas não prova que essa retórica causou a mudança de
+voto.</p>
+<h3 id="questões-técnicas-específicas">Questões técnicas
+específicas</h3>
+<p>IV: não aplicável.</p>
+<p>Log(1+Y): não aplicável ao outcome principal.</p>
+<p>Discretização: aplicável. O tratamento binário de um processo
+contínuo é justificado teoricamente, porque o argumento é sobre
+threshold/status. O paper faz bem em testar lower-rank promotions e
+crescimento contínuo. Ainda assim, deveria mostrar mais claramente que o
+resultado não depende de escolher exatamente rank #1 versus margem, rank
+ordinal, ou anos de persistência. A discretização é defensável, mas
+precisa de mais transparência.</p>
+<h2 id="veredicto-geral-sobre-execution">Veredicto geral sobre
+execution</h2>
+<p>A execução é claramente acima da média para um paper empírico em
+CP/IPE: o desenho principal é apropriado ao caso, os diagnósticos são
+substantivos, e a evidência por votos de direitos humanos dá conteúdo ao
+efeito agregado. O principal limite é que os dados são mais conclusivos
+sobre “convergência seletiva pós-2009” do que sobre “efeito causal
+isolado de status baseado em rank”. Para top journal, eu recomendaria
+moderar a linguagem causal e fortalecer a ponte entre tratamento,
+mecanismo e inferência cross-country.</p>
+<h2 id="sugestões-construtivas-1">Sugestões construtivas</h2>
+<ol type="1">
+<li><p>Corrigir a inconsistência do teste de 2004 e incluir
+explicitamente esse pseudo-tratamento na tabela.</p></li>
+<li><p>Reportar SE/IC/p-values para os stress tests da Tabela 4, ou
+rebaixá-los a diagnósticos puramente descritivos.</p></li>
+<li><p>Quantificar o pré-fit do SDiD e mostrar distribuição completa de
+placebos, RMSPE e sensibilidade a doadores influentes.</p></li>
+<li><p>Reformular o painel cross-country como evidência
+convergente/scope condition, não como identificação causal independente
+forte.</p></li>
+<li><p>Testar definições alternativas de persistência: 2, 3, 5 anos
+consecutivos como top export destination.</p></li>
+<li><p>Separar melhor três estimandos: efeito do rank #1 no Brasil,
+efeito de status persistente cross-country, e mecanismo de
+saliência/justificação.</p></li>
+<li><p>Moderar frases como “causal consequences beyond Brazil” para
+“consistent with a similar directional pattern beyond Brazil”, salvo se
+os diagnósticos forem reforçados.</p></li>
+</ol>
+<h2 id="parecer-completo-exposition">Parecer completo — Exposition</h2>
+<h1 id="parecer-de-exposition-framework-edmans">Parecer de Exposition
+(Framework Edmans)</h1>
+<h2 id="score-710-1">Score: 7/10</h2>
+<h2 id="avaliacao-por-dimensao">Avaliacao por dimensao</h2>
+<h3 id="clareza-boa">Clareza [Boa]</h3>
+<h4 id="qualidade-da-escrita">Qualidade da escrita</h4>
+<p>O manuscrito é claro, profissional e majoritariamente bem escrito. O
+abstract é forte: apresenta teoria, caso, desenho, resultado principal e
+mecanismo sem enrolação.</p>
+<p>Há, porém, sinais de polimento incompleto que um parecerista de top
+journal notaria:</p>
+<ul>
+<li>“To provide a causal credible estimate…” deve ser “To provide a
+credible causal estimate…”.</li>
+<li>“estimate its effect in the Brazilian foreign policy alignment” deve
+ser “estimate its effect on Brazilian foreign-policy alignment”.</li>
+<li>A voz autoral oscila: o texto principal usa “I”, mas o apêndice usa
+“We present”, “we used”, “one of the authors”. Para paper
+single-authored, escolha uma voz.</li>
+<li>A Tabela 4 tem várias células “NA” e “[NA, NA]”. Isso parece output
+inacabado, não diagnóstico deliberado.</li>
+<li>No apêndice, a listagem de código da seção “ChatGPT Classification”
+estoura a margem direita. A Figura 12 mostra uma tabela interna
+intitulada “TABLE 1”, mas a legenda a chama de “Figure 12”. Isso
+sinaliza descuido visual.</li>
+<li>Na Figura 12, “Folha de Sao Paulo” deveria ser “Folha de São
+Paulo”.</li>
+</ul>
+<p>Sugestão de reescrita local: &gt; “To provide a credible causal
+estimate, I leverage the discrete 2009 transition in which China became
+Brazil’s largest export destination and estimate its effect on Brazilian
+foreign-policy alignment using SDiD.”</p>
+<h4 id="significancia-economica">Significancia economica</h4>
+<p>Aqui o paper é acima da média. O abstract e a introdução dão números
+memoráveis: queda de 0.26 unidades na distância ideal-point, cerca de
+41% da média pré-tratamento; aumento de 7.5 p.p. em votos idênticos
+Brasil-China em direitos humanos; efeito cross-country de -0.100, cerca
+de 16.1% da média pré-tratamento.</p>
+<p>O ponto a melhorar é colocar esses números sempre antes da linguagem
+estatística. Por exemplo, em vez de: &gt; “The estimate is in the
+theoretically expected negative direction and statistically
+distinguishable from zero at the 5 percent level.”</p>
+<p>Prefira: &gt; “The estimated shift is substantively smaller than
+Brazil’s but still meaningful: countries entering persistent China-top
+status move about 0.10 ideal-point units closer to China, roughly 16% of
+their pre-treatment mean.”</p>
+<h4 id="precisao-da-linguagem">Precisao da linguagem</h4>
+<p>O maior problema de precisão é a terminologia do tratamento. O texto
+alterna “top trade partner”, “largest export destination”, “China-top
+export status”, “persistent China-top export-destination status”. Como
+“top trade partner” pode significar comércio total, e o tratamento é
+exportações, isso abre margem para confusão.</p>
+<p>Sugestão: &gt; “Throughout the empirical analysis, treatment means
+China becoming and remaining the country’s largest export destination. I
+use ‘top trade partner’ only when quoting contemporary public
+language.”</p>
+<p>Também há momentos de causalidade forte demais no cross-country.
+Exemplo: &gt; “tests whether persistent top-rank trade status has causal
+consequences beyond the Brazilian case.”</p>
+<p>Reescreva como: &gt; “tests whether the rank-threshold pattern
+appears beyond Brazil in a staggered cross-country panel.”</p>
+<h3 id="extensao-longo">Extensao [Longo]</h3>
+<h4 id="introducao">Introducao</h4>
+<p>A introdução é boa e está dentro do limite recomendado: cerca de 3
+páginas, com puzzle, teoria, identificação, resultados e contribuição.
+Ela não desperdiça muito espaço com generalidades do tipo “China
+matters” ou “trade matters”.</p>
+<p>Ainda assim, há gordura. A literatura entra cedo e em blocos longos.
+O parágrafo sobre continuous interdependence, o parágrafo sobre status e
+o parágrafo sobre Brasil poderiam ser mais seletivos. A estrutura ideal
+seria mais punchy:</p>
+<ol type="1">
+<li>Puzzle empírico: por que um rank discreto importa se volumes são
+contínuos?</li>
+<li>Mecanismo: status cue, atenção, justificação.</li>
+<li>Design e resultados.</li>
+<li>Contribuição, com literatura só depois.</li>
+</ol>
+<h4 id="notas-de-rodape">Notas de rodape</h4>
+<p>Não identifiquei excesso de notas de rodapé. Esse é um ponto
+positivo: o texto não força o leitor a alternar constantemente entre
+corpo e notas.</p>
+<h4 id="extensoes-desnecessarias">Extensoes desnecessarias</h4>
+<p>O problema principal não é a introdução, mas o acúmulo de
+diagnósticos, robustness checks e apêndices. Há 45 páginas totais,
+11.494 palavras, 12 figuras e 12 tabelas contando o apêndice. Isso cria
+uma impressão de “muita evidência” mas também de dispersão.</p>
+<p>Candidatos a mover, cortar ou condensar:</p>
+<ul>
+<li>Tabela 1 descritiva do painel SDiD: pouco essencial para o argumento
+principal.</li>
+<li>Tabela 4 com “NA”: ou complete as inferências ou transforme em texto
+curto.</li>
+<li>Seção 8.3.1 com equações DiD/SCM/SDiD: útil pedagogicamente, mas não
+necessária para a maioria dos leitores.</li>
+<li>Código completo do prompt ChatGPT no PDF: melhor como online
+appendix ou repositório.</li>
+<li>Figura 12: atualmente parece uma tabela mal rotulada; se mantida,
+deve virar tabela de apêndice com numeração consistente.</li>
+</ul>
+<h3 id="citacoes-algumas-problematicas">Citacoes [Algumas
+problematicas]</h3>
+<h4 id="extensao-da-bibliografia">Extensao da bibliografia</h4>
+<p>A bibliografia tem cerca de 60 entradas. Não é absurda para um paper
+de 11.5k palavras, mas há vários blocos de citações em lista que
+enfraquecem a prosa.</p>
+<p>Exemplos:</p>
+<ul>
+<li>Status: “Paul, Larson, and Wohlforth; Wolf; Duque; Renshon; Götz;
+MacDonald and Parent; Røren…”</li>
+<li>UNGA voting: lista longa para dizer que UNGA é medida padrão.</li>
+<li>Brasil-China/autonomia: muitos trabalhos citados no mesmo
+parágrafo.</li>
+<li>Media/headlines: a citação a Zhang and Yu 2024 parece fraca para
+sustentar uma decisão metodológica geral sobre headlines.</li>
+</ul>
+<h4 id="problemas-especificos-de-citacao">Problemas especificos de
+citacao</h4>
+<p>O problema não parece ser mis-citação sistemática, mas excesso
+estratégico. Em vários trechos, se o paper citado não existisse, a frase
+ainda poderia ser feita. Exemplo:</p>
+<blockquote>
+<p>“UNGA voting is a standard measure to study alignment with China and
+other powers…”</p>
+</blockquote>
+<p>Para essa frase, Bailey, Strezhnev, and Voeten basta para a medida,
+mais 2 ou 3 aplicações substantivas centrais. Oito citações viram sinal
+de defensive citing.</p>
+<p>Sugestão: &gt; “UNGA ideal-point distance is widely used to measure
+foreign-policy alignment (Bailey, Strezhnev, and Voeten 2017), including
+in studies of China-related alignment (Strüver 2016; Flores-Macías and
+Kreps 2013).”</p>
+<h2 id="veredicto-geral-sobre-exposition">Veredicto geral sobre
+exposition</h2>
+<p>A exposição ajuda a contribuição mais do que atrapalha. O paper tem
+um puzzle claro, um mecanismo inteligível e resultados substantivos
+memoráveis. O risco é que a versão atual parece um pouco
+“diagnostic-heavy”: robustez, apêndice, tabelas e citações competem com
+a linha central. Para top journal, a prioridade é aumentar a sensação de
+controle editorial: menos listas, menos outputs crus, menos claims
+causais além do que cada desenho sustenta, e mais foco no mecanismo
+Brasil + teste de escopo cross-country.</p>
+<h2 id="top-5-sugestoes-de-melhoria">Top 5 sugestoes de melhoria</h2>
+<ol type="1">
+<li><p>Padronize o tratamento como “largest export destination” e use
+“top trade partner” apenas para linguagem pública ou citações
+jornalísticas.</p></li>
+<li><p>Remova ou conserte outputs com aparência inacabada: Tabela 4 com
+“NA”, código que estoura margem, Figura 12 rotulada internamente como
+“TABLE 1”.</p></li>
+<li><p>Corte blocos de citações. Use 2-3 referências essenciais por
+afirmação, não listas defensivas.</p></li>
+<li><p>Calibre a linguagem causal no cross-country: “supports the
+broader rank-threshold pattern” é mais defensável que “tests causal
+consequences”.</p></li>
+<li><p>Condense robustez e apêndice. Mantenha no corpo apenas resultados
+que movem a tese; empurre pedagogia metodológica, prompts completos e
+diagnósticos secundários para online appendix.</p></li>
+</ol>
+</body>
+</html>

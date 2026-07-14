@@ -1,0 +1,9 @@
+model,moderator,group,n_treated_countries,treated_country_years,first_t0,last_t0,countries
+IFE grouped by displaced_us,displaced_us,displaced_us_no,10,108,2003,2021,"AUS, GAB, KWT, MMR, MYS, PHL, QAT, SLB, SLE, URY"
+IFE grouped by displaced_us,displaced_us,displaced_us_yes,4,53,2007,2015,"AGO, BRA, CHL, SAU"
+IFE grouped by displaced_g7,displaced_g7,displaced_g7_no,6,55,2009,2018,"GAB, KWT, MMR, MYS, SLE, URY"
+IFE grouped by displaced_g7,displaced_g7,displaced_g7_yes,8,106,2003,2021,"AGO, AUS, BRA, CHL, PHL, QAT, SAU, SLB"
+IFE grouped by displaced_regional_power,displaced_regional_power,regional_power_no,4,40,2009,2017,"GAB, MMR, MYS, SLE"
+IFE grouped by displaced_regional_power,displaced_regional_power,regional_power_yes,10,121,2003,2021,"AGO, AUS, BRA, CHL, KWT, PHL, QAT, SAU, SLB, URY"
+IFE grouped by pre_entry_high_level_partner,pre_entry_partner_level,high_level_partner_no,11,142,2003,2018,"AGO, AUS, BRA, CHL, GAB, KWT, MYS, PHL, SLB, SLE, URY"
+IFE grouped by pre_entry_high_level_partner,pre_entry_partner_level,high_level_partner_yes,3,19,2014,2021,"MMR, QAT, SAU"

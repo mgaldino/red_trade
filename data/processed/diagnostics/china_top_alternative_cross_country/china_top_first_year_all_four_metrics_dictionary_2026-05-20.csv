@@ -1,0 +1,13 @@
+metric_id,metric,formulation_label,metric_definition,source_window
+M1,original_itpde_exports_no_sector_filter,"M1. Original do pipeline:
+exportações ITPD-E
+sem filtro setorial",Métrica original do pipeline: soma ITPD-E trade por país-parceiro-ano sem filtrar broad_sector; portanto não é estritamente goods-only.,1990-2023 no painel bruto original
+M2,goods_exports_rank,"M2. Recalculado:
+bens, exportações
+ITPD-E goods-only","Reconstrução: exportações de bens no ITPD-E, filtrando broad_sector para Agriculture, Mining and Energy, and Manufacturing; janela 2005-2022.",2005-2022 na reconstrução ITPD-E com filtro de bens
+M3,goods_services_exports_rank,"M3. Recalculado:
+bens + serviços,
+exportações",Reconstrução: exportações de bens do ITPD-E mais exportações de serviços do BaTIS BPM6.,2005-2022 na reconstrução ITPD-E/BaTIS
+M4,goods_services_two_way_rank,"M4. Recalculado:
+bens + serviços,
+two-way","Reconstrução: exportações e importações de bens e serviços, ITPD-E mais BaTIS BPM6.",2005-2022 na reconstrução ITPD-E/BaTIS

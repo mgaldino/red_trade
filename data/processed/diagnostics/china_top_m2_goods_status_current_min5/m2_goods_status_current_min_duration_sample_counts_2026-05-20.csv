@@ -1,0 +1,10 @@
+min_duration_years,sample,n_obs,n_countries,n_treated,n_control,n_treated_country_years,n_untreated_country_years,n_entries,n_exits,panel_min,panel_max
+3,clean_single_spell,4782,152,26,126,332,4450,26,0,1990,2022
+3,risk_set_restricted,5142,165,39,126,477,4665,39,0,1990,2022
+3,switching_allowed,3828,116,27,89,316,3512,31,11,1990,2022
+5,clean_single_spell,4764,151,25,126,329,4435,25,0,1990,2022
+5,risk_set_restricted,5037,161,35,126,440,4597,35,0,1990,2022
+5,switching_allowed,3729,113,24,89,297,3432,25,5,1990,2022
+7,clean_single_spell,4698,149,23,126,318,4380,23,0,1990,2022
+7,risk_set_restricted,4925,157,31,126,411,4514,31,0,1990,2022
+7,switching_allowed,3630,110,21,89,274,3356,21,4,1990,2022

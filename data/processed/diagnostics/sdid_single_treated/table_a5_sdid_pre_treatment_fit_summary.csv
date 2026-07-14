@@ -1,0 +1,2 @@
+specification,estimate,rmspe_pre,rmspe_post,rmspe_ratio,n_units,n_donors,n_pre_years,n_post_years,status,error,placebo_se,brazil_pre_treatment_mean,estimate_as_percent_of_pre_mean,source
+Baseline: 1997-2015,-0.26394046182119363,0.060127465311269473,0.3351516437182222,5.5740191605150855,96,95,12,7,estimated,,0.14496980105886167,0.6467778905833333,-40.80851644188764,"synth_fit, se_synth, and direct extraction from synthdid object"

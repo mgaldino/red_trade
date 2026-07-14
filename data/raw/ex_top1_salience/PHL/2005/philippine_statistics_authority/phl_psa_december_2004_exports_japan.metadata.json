@@ -1,0 +1,15 @@
+{
+  "source_id": "phl_psa_december_2004_exports_japan",
+  "iso3c": "PHL",
+  "url": "https://psa.gov.ph/statistics/export-import/monthly/node/6917",
+  "fetch_url": "https://psa.gov.ph/statistics/export-import/monthly/node/6917",
+  "fetch_status": "http_error",
+  "status_code": 403,
+  "content_type": "text/html; charset=UTF-8",
+  "raw_file": "data/raw/ex_top1_salience/PHL/2005/philippine_statistics_authority/phl_psa_december_2004_exports_japan.html",
+  "size_bytes": 5740,
+  "error": "HTTP Error 403: Forbidden",
+  "accessed_at": "2026-05-23T22:04:48+00:00",
+  "eligible_source": true,
+  "count_for_benchmark_after_fetch": false
+}

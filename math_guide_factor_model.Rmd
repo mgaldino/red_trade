@@ -1,0 +1,809 @@
+---
+title: "Guia Matemático para o Factor Model do Paper"
+subtitle: "The Foreign Policy Impact of Trade-Based Status Gains: When China Overtakes the US as Top Trade Partner"
+author: "Documento auxiliar"
+date: "`r Sys.Date()`"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    toc: true
+    toc_depth: 3
+    number_sections: true
+header-includes:
+  - \usepackage{amsmath,amssymb,amsthm}
+  - \usepackage{booktabs}
+  - \usepackage{longtable}
+  - \usepackage{array}
+  - \usepackage{hyperref}
+  - \newtheorem{theorem}{Teorema}[section]
+  - \newtheorem{definition}[theorem]{Definição}
+  - \newtheorem{proposition}[theorem]{Proposição}
+  - \newtheorem{corollary}[theorem]{Corolário}
+  - \newtheorem{lemma}[theorem]{Lema}
+  - \newtheorem{example}[theorem]{Exemplo}
+  - \newtheorem{remark}[theorem]{Observação}
+  - \newcommand{\R}{\mathbb{R}}
+  - \newcommand{\N}{\mathbb{N}}
+  - \setlength{\parskip}{0.5em}
+---
+
+# Introdução
+
+Este guia explica a matemática necessária para acompanhar a parte cross-country do paper, isto é, o modelo de efeitos fixos interativos (interactive fixed effects, IFE) estimado via `fect` para casos em que a China desloca os Estados Unidos como principal destino de exportações. O guia não cobre o SDiD brasileiro, por instrução explícita.
+
+O objetivo não é reescrever o paper nem substituir Liu, Wang e Xu (2024), Xu (2017) ou Bai (2009). O objetivo é tornar transparente a lógica matemática por trás de quatro passos usados no paper:
+
+1. Representar choques não observados por fatores latentes comuns no tempo e cargas heterogêneas por país.
+2. Estimar resultados contrafactuais para observações tratadas usando observações não tratadas e períodos pré-tratamento.
+3. Calcular efeitos médios do tratamento quando o tratamento pode ligar e desligar.
+4. Usar validação cruzada, placebo pré-tratamento e teste de carryover como diagnósticos do modelo.
+
+## Pré-requisitos assumidos
+
+Assumo que o leitor conhece regressão linear, efeitos fixos de unidade e período, álgebra linear básica, projeções por mínimos quadrados, decomposição em posto baixo em nível intuitivo e noções elementares de inferência causal em painel. Onde necessário, o guia relembra os resultados formais.
+
+## Notação do paper
+
+O painel contém países $i = 1,\ldots,N$ e anos $t = 1,\ldots,T$. A variável de resultado é
+\[
+Y_{it},
+\]
+a distância absoluta entre o ideal point do país $i$ e o da China na Assembleia Geral da ONU. Valores menores indicam maior alinhamento com a China.
+
+O tratamento é
+\[
+D_{it} =
+\begin{cases}
+1, & \text{se a China é o principal destino de exportações do país } i \text{ no ano } t,\\
+0, & \text{caso contrário.}
+\end{cases}
+\]
+
+Na especificação cross-country, $D_{it}$ é um tratamento switching: pode passar de 0 para 1 quando a China ultrapassa os Estados Unidos e voltar para 0 se os Estados Unidos recuperam a primeira posição. O paper estima uma especificação sem covariáveis e outra com covariáveis temporais, principalmente $\log$ do PIB per capita e liberdade de imprensa. Escrevo essas covariáveis como $X_{it}$.
+
+# Mapa: resultado do paper e pré-requisito matemático
+
+\begin{longtable}{p{0.24\textwidth}p{0.33\textwidth}p{0.33\textwidth}}
+\caption{Mapa entre a parte IFE do paper e os pré-requisitos matemáticos do guia.}\\
+\toprule
+Parte do paper & Objeto matemático & Seções do guia \\
+\midrule
+\endfirsthead
+\caption[]{Mapa entre a parte IFE do paper e os pré-requisitos matemáticos do guia (continuação).}\\
+\toprule
+Parte do paper & Objeto matemático & Seções do guia \\
+\midrule
+\endhead
+Modelo cross-country com IFE & Modelo potencial com fatores latentes: $Y_{it}(0)=\alpha_i+\xi_t+X_{it}'\beta+\lambda_i'f_t+\varepsilon_{it}$ & Seções 3 e 4 \\
+Tratamento switching & Definição de ATT para observações tratadas e efeitos dinâmicos por tempo relativo & Seção 5 \\
+Contrafactual tratado & Predição de $Y_{it}(0)$ para células tratadas usando estimativas de efeitos fixos, covariáveis e fatores & Seção 6 \\
+Seleção de $r^*$ & Problema de escolha de posto: trade-off entre viés e variância, estimado por validação cruzada & Seção 7 \\
+DiD como caso especial & Efeitos fixos de unidade e tempo são um factor model de posto restrito & Seção 8 \\
+Placebo pré-tratamento & Erros de predição em períodos antes do tratamento devem ser próximos de zero & Seção 9 \\
+Carryover após saída & Efeitos estimados depois que $D_{it}$ volta a zero devem ser pequenos se não há persistência substantiva & Seção 10 \\
+Bootstrap no `fect` & Aproximação da distribuição amostral do ATT por reamostragem & Seção 11 \\
+\bottomrule
+\end{longtable}
+
+# Resultados Potenciais em Painel com Tratamento Switching
+
+## Definição básica
+
+\begin{definition}[Resultados potenciais em painel]
+Para cada país $i$ e ano $t$, denote por $Y_{it}(1)$ o resultado que seria observado se $D_{it}=1$ e por $Y_{it}(0)$ o resultado que seria observado se $D_{it}=0$. O resultado observado satisfaz
+\[
+Y_{it}=D_{it}Y_{it}(1)+(1-D_{it})Y_{it}(0).
+\]
+\end{definition}
+
+No paper, $Y_{it}(1)$ é a distância à China quando a China ocupa a posição de principal destino de exportações. $Y_{it}(0)$ é o resultado contrafactual no mesmo país-ano se a China não ocupasse essa posição. O problema causal é que, para uma célula tratada, observamos $Y_{it}(1)$, mas não observamos $Y_{it}(0)$.
+
+## Estimando o que não foi observado
+
+O IFE é uma forma estruturada de estimar $Y_{it}(0)$. A parte difícil é que países podem estar sujeitos a choques globais comuns, como o ciclo de commodities, mudanças na política externa dos Estados Unidos, crises financeiras ou mudanças na posição internacional da China. Esses choques não afetam todos os países da mesma forma. O modelo de fatores permite que cada país tenha uma sensibilidade própria a cada choque comum.
+
+\begin{definition}[ATT sobre células tratadas]
+Se $\mathcal{T}=\{(i,t):D_{it}=1\}$ é o conjunto de células tratadas, o efeito médio do tratamento sobre os tratados é
+\[
+\tau_{\mathrm{ATT}}
+=
+\frac{1}{|\mathcal{T}|}
+\sum_{(i,t)\in \mathcal{T}}
+\left\{Y_{it}(1)-Y_{it}(0)\right\}.
+\]
+O estimador substitui $Y_{it}(0)$ por uma predição contrafactual $\widehat{Y}_{it}(0)$:
+\[
+\widehat{\tau}_{\mathrm{ATT}}
+=
+\frac{1}{|\mathcal{T}|}
+\sum_{(i,t)\in \mathcal{T}}
+\left\{Y_{it}-\widehat{Y}_{it}(0)\right\}.
+\]
+\end{definition}
+
+## Conexão com o paper
+
+O paper reporta o ATT cross-country do modelo `fect` IFE. Como o tratamento é switching, o conjunto $\mathcal{T}$ não é simplesmente "todos os anos depois do primeiro tratamento". Ele contém os país-anos nos quais a China está efetivamente na primeira posição. Se os Estados Unidos voltam ao topo, aquela célula deixa de pertencer a $\mathcal{T}$.
+
+## Exercícios
+
+1. Considere um painel com 3 países e 4 anos. Se um país é tratado em dois anos e outro em um ano, quantas células entram em $\mathcal{T}$?
+2. Escreva o resultado observado $Y_{it}$ quando $D_{it}=0$ e quando $D_{it}=1$.
+3. Suponha que em três células tratadas os resultados observados são $(0.7,0.5,0.6)$ e os contrafactuais estimados são $(0.8,0.7,0.65)$. Calcule $\widehat{\tau}_{\mathrm{ATT}}$.
+4. Explique por que um tratamento switching exige definir o ATT por célula tratada, não apenas por país tratado.
+5. Mostre que, se o tratamento é absorbing e começa no ano $T_i^0$, então $\mathcal{T}=\{(i,t):t\geq T_i^0\}$ para países tratados.
+6. Dê um exemplo substantivo, no contexto do paper, em que $D_{it}$ volta de 1 para 0.
+
+Soluções na Seção 12.1.
+
+# O Modelo de Efeitos Fixos Interativos
+
+## Enunciado do modelo
+
+\begin{definition}[Modelo IFE para o resultado não tratado]
+O modelo de efeitos fixos interativos assume que o resultado não tratado pode ser escrito como
+\[
+Y_{it}(0)=\alpha_i+\xi_t+X_{it}'\beta+\lambda_i'f_t+\varepsilon_{it},
+\]
+onde $\alpha_i$ é um efeito fixo de país, $\xi_t$ é um efeito fixo de ano, $X_{it}$ é um vetor de covariáveis observadas, $\lambda_i\in\R^r$ é o vetor de cargas fatoriais do país $i$, $f_t\in\R^r$ é o vetor de fatores comuns no ano $t$ e $\varepsilon_{it}$ é um erro idiossincrático.
+\end{definition}
+
+Quando $r=0$, o termo $\lambda_i'f_t$ desaparece e o modelo volta a uma estrutura de efeitos fixos de duas vias:
+\[
+Y_{it}(0)=\alpha_i+\xi_t+X_{it}'\beta+\varepsilon_{it}.
+\]
+Quando $r>0$, há choques latentes que variam no tempo e afetam os países com intensidades diferentes.
+
+## Intuição
+
+O termo $\lambda_i'f_t$ é um produto interno. Se houver apenas um fator, ele vira
+\[
+\lambda_i f_t.
+\]
+Nesse caso, $f_t$ pode ser pensado como a intensidade anual de um choque comum e $\lambda_i$ como a exposição do país a esse choque. Por exemplo, se $f_t$ representa um ciclo global de demanda por commodities, países exportadores de commodities terão cargas $\lambda_i$ maiores. O paper usa essa estrutura para reduzir a preocupação de que a ascensão da China como parceira comercial esteja confundida com choques globais que afetam países de maneira desigual.
+
+## Exemplo numérico
+
+Suponha um único fator. No ano $t$, o fator global vale $f_t=2$. O país A tem carga $\lambda_A=0.1$ e o país B tem carga $\lambda_B=0.4$. O choque latente contribui
+\[
+\lambda_A f_t=0.2
+\quad\text{e}\quad
+\lambda_B f_t=0.8.
+\]
+O mesmo choque global move o resultado não tratado do país B quatro vezes mais do que o do país A.
+
+## Resultado formal: DiD como caso restrito
+
+\begin{proposition}[Efeitos fixos de duas vias como caso especial]
+O modelo de efeitos fixos de duas vias é um caso especial do modelo IFE quando $r=0$. Além disso, padrões aditivos de unidade e período podem ser representados como uma restrição de baixo posto sobre a matriz de médias não tratadas.
+\end{proposition}
+
+\begin{proof}
+Se $r=0$, os vetores $\lambda_i$ e $f_t$ não têm componentes, portanto o produto $\lambda_i'f_t$ é ausente. A equação IFE se reduz a
+\[
+Y_{it}(0)=\alpha_i+\xi_t+X_{it}'\beta+\varepsilon_{it},
+\]
+que é exatamente uma regressão com efeitos fixos de unidade e tempo. Em forma matricial, a parte sistemática sem covariáveis é
+\[
+M_{it}=\alpha_i+\xi_t.
+\]
+A matriz $M$ pode ser escrita como soma de duas matrizes: uma com colunas iguais ao vetor $\alpha$ e outra com linhas iguais ao vetor $\xi'$. Cada uma tem posto no máximo 1; logo, a soma tem posto no máximo 2. O modelo IFE permite uma classe mais ampla de matrizes de posto baixo porque inclui termos multiplicativos $\lambda_i'f_t$.
+\end{proof}
+
+## Conexão com o paper
+
+O paper afirma que o IFE generaliza tendências paralelas porque permite tendências heterogêneas geradas por fatores latentes. Essa é a razão matemática: em vez de exigir que, após remover efeitos fixos, todos os países tenham choques residuais comparáveis, o modelo permite que países tenham exposições diferentes a fatores comuns.
+
+## Exercícios
+
+1. Se $r=2$, qual é a dimensão de $\lambda_i$ e de $f_t$?
+2. Calcule $\lambda_i'f_t$ para $\lambda_i=(0.2,0.5)'$ e $f_t=(3,-1)'$.
+3. Explique, em palavras, a diferença entre $\xi_t$ e $f_t$.
+4. Mostre que o modelo de efeitos fixos de duas vias é obtido quando $r=0$.
+5. Considere $Y_{it}(0)=\alpha_i+\xi_t+\lambda_i f_t$. Mostre por que duas unidades podem ter tendências não paralelas mesmo sem tratamento.
+6. Dê um exemplo de choque global plausível no paper que poderia entrar em $f_t$.
+
+Soluções na Seção 12.2.
+
+# Álgebra Linear do Posto Baixo
+
+## Matrizes de resultado
+
+Empilhe os resultados não tratados em uma matriz $Y(0)$ de dimensão $N\times T$. A entrada da linha $i$ e coluna $t$ é $Y_{it}(0)$. Ignorando, por um momento, efeitos fixos, covariáveis e erro, o componente latente do IFE é
+\[
+L_{it}=\lambda_i'f_t.
+\]
+Se $\Lambda$ é a matriz $N\times r$ com linha $\lambda_i'$ e $F$ é a matriz $T\times r$ com linha $f_t'$, então
+\[
+L=\Lambda F'.
+\]
+
+\begin{theorem}[Posto do produto de fatores]
+Se $L=\Lambda F'$, com $\Lambda\in\R^{N\times r}$ e $F\in\R^{T\times r}$, então
+\[
+\operatorname{rank}(L)\leq r.
+\]
+\end{theorem}
+
+\begin{proof}
+As colunas de $L$ são combinações lineares das colunas de $\Lambda$. Portanto, o espaço coluna de $L$ está contido no espaço coluna de $\Lambda$. Como $\Lambda$ tem no máximo $r$ colunas linearmente independentes, o posto de $L$ não pode exceder $r$.
+\end{proof}
+
+## Intuição
+
+O termo "factor model" significa que muitos movimentos observados na matriz de resultados podem ser resumidos por poucos fatores comuns. Em vez de estimar um choque separado para cada país-ano, o modelo tenta explicar a estrutura temporal com uma matriz de posto baixo. Essa restrição é o que torna possível prever contrafactuais em células tratadas.
+
+## Exemplo numérico
+
+Suponha $N=3$, $T=4$ e $r=1$. Então $\Lambda$ é um vetor coluna com três cargas e $F$ é um vetor coluna com quatro fatores. A matriz $L=\Lambda F'$ tem a forma
+\[
+L=
+\begin{bmatrix}
+\lambda_1 f_1 & \lambda_1 f_2 & \lambda_1 f_3 & \lambda_1 f_4\\
+\lambda_2 f_1 & \lambda_2 f_2 & \lambda_2 f_3 & \lambda_2 f_4\\
+\lambda_3 f_1 & \lambda_3 f_2 & \lambda_3 f_3 & \lambda_3 f_4
+\end{bmatrix}.
+\]
+Todas as colunas são múltiplos do mesmo vetor $\lambda=(\lambda_1,\lambda_2,\lambda_3)'$. Logo, o posto é no máximo 1.
+
+## Conexão com o paper
+
+O paper reporta que a validação cruzada seleciona $r^*=1$ na especificação cross-country. Isso significa que, depois de efeitos fixos e covariáveis, um fator latente foi suficiente segundo o critério de predição adotado. Substantivamente, o paper interpreta esse fator como uma forma de absorver choques comuns, como o superciclo de commodities, com cargas heterogêneas entre países.
+
+## Exercícios
+
+1. Se $\Lambda$ tem dimensão $99\times 1$ e $F$ tem dimensão $34\times 1$, qual é a dimensão de $L=\Lambda F'$?
+2. Por que uma matriz de posto 1 não consegue representar padrões totalmente arbitrários?
+3. Mostre que, se $r=1$, duas colunas quaisquer de $L$ são proporcionais.
+4. Se $r=3$, qual é o posto máximo de $L$?
+5. Explique por que escolher um $r$ muito alto pode gerar overfitting.
+6. Explique por que escolher $r=0$ pode deixar confounders latentes sem ajuste.
+
+Soluções na Seção 12.3.
+
+# Identificação: Exogeneidade Estrita Condicional
+
+## O problema
+
+Para estimar o efeito causal, não basta ajustar bem os dados. É preciso que, condicionalmente aos efeitos fixos, covariáveis e fatores latentes, a atribuição do tratamento não esteja correlacionada com choques não observados que também afetariam $Y_{it}(0)$.
+
+\begin{definition}[Exogeneidade estrita condicional]
+No contexto do IFE, uma forma útil da condição de identificação é
+\[
+\mathbb{E}\left[\varepsilon_{it}\mid D, X, \alpha, \xi, \Lambda, F\right]=0
+\quad\text{para todo } i,t,
+\]
+onde $D$ denota todo o histórico de tratamento no painel.
+\end{definition}
+
+Essa condição é mais forte do que dizer que o erro contemporâneo é não correlacionado com o tratamento contemporâneo. Ela exige que o histórico de tratamento não seja sistematicamente relacionado a choques idiossincráticos não capturados pelo modelo.
+
+## Intuição
+
+O IFE ajuda quando o confounder não observado tem estrutura de fator comum. Por exemplo, se a demanda chinesa por commodities aumenta em determinados anos e países exportadores respondem mais fortemente, o termo $\lambda_i'f_t$ pode capturar essa heterogeneidade. O IFE não resolve o problema se houver uma decisão política específica de um país que simultaneamente cause a ascensão da China no ranking comercial e uma mudança autônoma na votação na ONU, e essa decisão não for capturada por covariáveis, efeitos fixos ou fatores.
+
+\begin{proposition}[Identificação do ATT sob contrafactual corretamente especificado]
+Se o modelo para $Y_{it}(0)$ é corretamente especificado e a exogeneidade estrita condicional vale, então, para células tratadas,
+\[
+\mathbb{E}\left[Y_{it}-\widehat{Y}_{it}(0)\mid D_{it}=1\right]
+\]
+identifica o efeito médio de tratamento sobre os tratados, até erro de estimação que desaparece assintoticamente sob condições regulares.
+\end{proposition}
+
+\begin{proof}
+Para uma célula tratada, $Y_{it}=Y_{it}(1)$. O efeito causal é $Y_{it}(1)-Y_{it}(0)$. Se o modelo contrafactual estima consistentemente $Y_{it}(0)$, então $\widehat{Y}_{it}(0)$ converge para $Y_{it}(0)$ em média condicional. Assim,
+\[
+Y_{it}-\widehat{Y}_{it}(0)
+\to
+Y_{it}(1)-Y_{it}(0).
+\]
+Tomar a média sobre células tratadas identifica o ATT.
+\end{proof}
+
+## Conexão com o paper
+
+Quando o paper afirma que a identificação requer exogeneidade estrita condicional a covariáveis e fatores latentes, esta é a ideia: depois de controlar por país, ano, covariáveis observadas e fatores comuns com cargas heterogêneas, a variação restante na entrada/saída do tratamento deve ser plausivelmente comparável a quase-randomização.
+
+## Exercícios
+
+1. Escreva a condição $\mathbb{E}[\varepsilon_{it}\mid D,X,\alpha,\xi,\Lambda,F]=0$ em palavras.
+2. Dê um exemplo de confounder que $\alpha_i$ captura.
+3. Dê um exemplo de confounder que $\xi_t$ captura.
+4. Dê um exemplo de confounder que $\lambda_i'f_t$ captura melhor do que $\xi_t$.
+5. Dê um exemplo de ameaça que o IFE pode não resolver.
+6. Explique por que diagnóstico de pre-trends é evidência útil, mas não prova a hipótese de identificação.
+
+Soluções na Seção 12.4.
+
+# ATT Dinâmico, Entrada e Saída do Tratamento
+
+## Tempos relativos
+
+Como o tratamento pode ligar e desligar, é útil indexar efeitos por tempo relativo. Para eventos de entrada, defina $k=t-T_i^{\mathrm{on}}$, onde $T_i^{\mathrm{on}}$ é um ano em que o tratamento passa de 0 para 1. Para eventos de saída, defina $k=t-T_i^{\mathrm{off}}$, onde $T_i^{\mathrm{off}}$ é um ano em que o tratamento passa de 1 para 0.
+
+\begin{definition}[Efeito dinâmico de entrada]
+Para um horizonte $k$, o efeito médio de entrada é
+\[
+\tau_k^{\mathrm{on}}
+=
+\mathbb{E}\left[
+Y_{i,T_i^{\mathrm{on}}+k}(1)
+-
+Y_{i,T_i^{\mathrm{on}}+k}(0)
+\mid i \text{ entra no tratamento}
+\right].
+\]
+\end{definition}
+
+\begin{definition}[Efeito após saída]
+Para um horizonte $k>0$, o efeito após saída mede se há persistência depois que o tratamento desliga:
+\[
+\tau_k^{\mathrm{off}}
+=
+\mathbb{E}\left[
+Y_{i,T_i^{\mathrm{off}}+k}
+-
+Y_{i,T_i^{\mathrm{off}}+k}(0)
+\mid i \text{ sai do tratamento}
+\right].
+\]
+\end{definition}
+
+## Intuição
+
+Se a teoria do paper é uma teoria de saliência temporária, faz sentido esperar que o efeito apareça quando a China assume a primeira posição e diminua quando a China perde essa posição. Um modelo que acomoda switching é necessário porque países podem experimentar tanto entrada quanto saída.
+
+## Conexão com o paper
+
+O paper usa `fect` para estimar efeitos de entrada e gráficos de saída. A interpretação substantiva é direta: se a distância à China cai quando a China vira principal parceira e volta a aumentar quando os Estados Unidos recuperam a primeira posição, o padrão é mais compatível com um mecanismo de saliência do status do que com uma mudança estrutural permanente.
+
+## Exercícios
+
+1. Se um país entra no tratamento em 2006, qual é o tempo relativo $k$ para 2008?
+2. Se o país sai do tratamento em 2011, qual é o tempo relativo $k$ para 2013 em uma análise de saída?
+3. Explique por que efeitos negativos em $Y$ indicam maior alinhamento com a China no paper.
+4. Por que um estimador que assume tratamento absorbing é inadequado quando $D_{it}$ volta a zero?
+5. Escreva uma fórmula para a média simples de $\widehat{\tau}_k^{\mathrm{on}}$ usando todos os eventos de entrada observados.
+6. Explique por que carryover substantivo pode dificultar a interpretação de observações pós-saída como controles.
+
+Soluções na Seção 12.5.
+
+# Estimação do Contrafactual
+
+## Problema de mínimos quadrados
+
+O estimador IFE escolhe parâmetros para aproximar os resultados observados não tratados. Denote por $\mathcal{O}_0=\{(i,t):D_{it}=0\}$ o conjunto de células usadas como não tratadas. Uma versão simplificada do problema é
+\[
+\min_{\alpha,\xi,\beta,\Lambda,F}
+\sum_{(i,t)\in\mathcal{O}_0}
+\left(
+Y_{it}-\alpha_i-\xi_t-X_{it}'\beta-\lambda_i'f_t
+\right)^2,
+\]
+com normalizações sobre $\Lambda$ e $F$ para lidar com a não identificação de rotações.
+
+## Não identificação de rotação
+
+\begin{lemma}[Invariância a rotações]
+Se $H$ é uma matriz $r\times r$ invertível, então
+\[
+\lambda_i'f_t
+=
+(H'\lambda_i)'(H^{-1}f_t).
+\]
+Logo, as cargas e fatores não são separadamente identificados sem normalizações; o produto $\lambda_i'f_t$ é o objeto relevante para predição.
+\end{lemma}
+
+\begin{proof}
+Temos
+\[
+(H'\lambda_i)'(H^{-1}f_t)
+=
+\lambda_i' H H^{-1} f_t
+=
+\lambda_i'f_t.
+\]
+Portanto, muitas parametrizações diferentes produzem o mesmo componente latente.
+\end{proof}
+
+## Predição contrafactual
+
+Depois de estimar os parâmetros, o resultado não tratado previsto é
+\[
+\widehat{Y}_{it}(0)
+=
+\widehat{\alpha}_i+\widehat{\xi}_t+X_{it}'\widehat{\beta}
++\widehat{\lambda}_i'\widehat{f}_t.
+\]
+Para células tratadas, o efeito estimado é
+\[
+\widehat{\delta}_{it}
+=
+Y_{it}-\widehat{Y}_{it}(0).
+\]
+
+## Conexão com o paper
+
+A tabela principal do paper reporta o ATT agregado; o gráfico de efeitos dinâmicos mostra médias de $\widehat{\delta}_{it}$ por tempo relativo. O detalhe crucial é que o contrafactual não é uma simples média dos controles. Ele é uma predição construída a partir de efeitos fixos, covariáveis e estrutura latente de baixo posto.
+
+## Exercícios
+
+1. Defina $\mathcal{O}_0$ em palavras.
+2. Por que o estimador não deve usar células tratadas como se fossem não tratadas ao ajustar $Y(0)$?
+3. Calcule $\widehat{Y}_{it}(0)$ para $\widehat{\alpha}_i=0.2$, $\widehat{\xi}_t=0.1$, $X_{it}'\widehat{\beta}=0.05$ e $\widehat{\lambda}_i'\widehat{f}_t=-0.03$.
+4. Se $Y_{it}=0.55$ e $\widehat{Y}_{it}(0)=0.70$, qual é o efeito estimado?
+5. Mostre por que $\lambda_i$ e $f_t$ não são separadamente identificados quando $r=1$.
+6. Explique por que isso não impede a estimação do contrafactual.
+
+Soluções na Seção 12.6.
+
+# Seleção do Número de Fatores por Validação Cruzada
+
+## O parâmetro $r$
+
+O número de fatores $r$ controla a complexidade do modelo. Se $r=0$, o modelo é de efeitos fixos de duas vias. Se $r$ cresce, o modelo consegue acomodar padrões mais complexos de heterogeneidade temporal, mas também pode ajustar ruído.
+
+\begin{definition}[Validação cruzada para escolha de $r$]
+A validação cruzada separa parte das observações não tratadas como validação, estima o modelo para diferentes valores de $r$ no restante dos dados e escolhe
+\[
+r^*=\operatorname*{arg\,min}_{r\in\mathcal{R}}
+\operatorname{CV}(r),
+\]
+onde $\operatorname{CV}(r)$ é o erro médio de predição fora da amostra para o modelo com $r$ fatores.
+\end{definition}
+
+No código do paper, a chamada usa `CV = TRUE, r = c(0, 3)`, isto é, o algoritmo procura o número de fatores em um intervalo que vai de 0 a 3. O paper reporta $r^*=1$ na especificação principal.
+
+## Intuição
+
+Validação cruzada é uma forma pragmática de escolher a complexidade que prediz melhor observações não usadas no ajuste. Ela não prova que existe exatamente um fator verdadeiro no mundo. Ela diz que, para a amostra e o critério usados, um fator foi o melhor compromisso entre flexibilidade e parcimônia.
+
+\begin{proposition}[Trade-off viés-variância]
+Em modelos de fatores, aumentar $r$ tende a reduzir viés de especificação quando há fatores omitidos, mas tende a aumentar variância e risco de overfitting quando fatores adicionais ajustam ruído.
+\end{proposition}
+
+\begin{proof}
+Ao aumentar $r$, o espaço de modelos possíveis se expande: todo modelo com $r$ fatores pode ser representado dentro de um modelo com $r+1$ fatores definindo o fator adicional como zero. Portanto, o erro dentro da amostra não aumenta. Porém, parâmetros adicionais precisam ser estimados; em amostras finitas, isso aumenta a variabilidade das predições. A validação cruzada avalia esse trade-off em erro fora da amostra.
+\end{proof}
+
+## Conexão com o paper
+
+A escolha de $r^*=1$ sustenta a frase do paper de que o modelo usa um fator latente cross-validated. Isso ajuda a responder à objeção de commodity dependence: se há um choque comum que afeta países exportadores de commodities de forma diferenciada, um fator latente com cargas heterogêneas pode absorver parte dessa estrutura.
+
+## Exercícios
+
+1. O que significa $r=0$ no modelo IFE?
+2. O que significa $r^*=1$ na especificação principal do paper?
+3. Por que minimizar erro dentro da amostra não é uma boa regra para escolher $r$?
+4. Explique o risco de underfitting quando $r$ é baixo demais.
+5. Explique o risco de overfitting quando $r$ é alto demais.
+6. Suponha que $\operatorname{CV}(0)=0.20$, $\operatorname{CV}(1)=0.15$, $\operatorname{CV}(2)=0.16$ e $\operatorname{CV}(3)=0.18$. Qual é $r^*$?
+
+Soluções na Seção 12.7.
+
+# Tendências Paralelas como Caso Especial
+
+## DiD e IFE
+
+Em um DiD de efeitos fixos de duas vias, uma forma comum de escrever o resultado não tratado é
+\[
+Y_{it}(0)=\alpha_i+\xi_t+\varepsilon_{it}.
+\]
+Isso implica que, depois de retirar diferenças fixas entre países e choques comuns de ano, a evolução não tratada residual não difere sistematicamente entre tratados e controles.
+
+O IFE relaxa essa restrição:
+\[
+Y_{it}(0)=\alpha_i+\xi_t+\lambda_i'f_t+\varepsilon_{it}.
+\]
+Agora dois países podem ter respostas diferentes ao mesmo choque temporal latente.
+
+\begin{theorem}[Paralelismo residual no caso sem fatores]
+Se $Y_{it}(0)=\alpha_i+\xi_t+\varepsilon_{it}$ e $\mathbb{E}[\varepsilon_{it}\mid D_i]=0$, então a mudança esperada no resultado não tratado entre $t$ e $s$ é a mesma para grupos tratados e controles:
+\[
+\mathbb{E}[Y_{it}(0)-Y_{is}(0)\mid D_i=1]
+=
+\mathbb{E}[Y_{it}(0)-Y_{is}(0)\mid D_i=0]
+=
+\xi_t-\xi_s.
+\]
+\end{theorem}
+
+\begin{proof}
+Subtraindo os dois períodos:
+\[
+Y_{it}(0)-Y_{is}(0)
+=
+(\xi_t-\xi_s)+(\varepsilon_{it}-\varepsilon_{is}),
+\]
+pois $\alpha_i$ cancela. Tomando expectativas condicionais ao grupo e usando média condicional zero dos erros, resta $\xi_t-\xi_s$ para tratados e controles.
+\end{proof}
+
+## Conexão com o paper
+
+O paper apresenta o IFE como mais flexível do que tendências paralelas porque permite heterogeneidade em tendências induzida por fatores latentes. A prova acima mostra o que o DiD exige quando não há fatores; a presença de $\lambda_i'f_t$ é exatamente a generalização.
+
+## Exercícios
+
+1. Em uma regressão two-way fixed effects, o que $\alpha_i$ remove?
+2. O que $\xi_t$ remove?
+3. Mostre que $\alpha_i$ cancela ao comparar dois anos do mesmo país.
+4. Se $\lambda_i'f_t$ está omitido e é correlacionado com tratamento, qual é o problema?
+5. Explique por que IFE pode ser visto como uma ponte entre DiD e synthetic control generalizado.
+6. Em que sentido $r=0$ é uma escolha mais restritiva que $r=1$?
+
+Soluções na Seção 12.8.
+
+# Placebo Pré-Tratamento
+
+## Ideia do teste
+
+Um diagnóstico central é perguntar se o modelo prediz bem períodos pré-tratamento quando fingimos que algumas observações eram tratadas antes de realmente serem. Se o modelo encontra "efeitos" grandes antes do tratamento, isso sugere que a estrutura contrafactual não está capturando diferenças relevantes.
+
+\begin{definition}[Efeito placebo pré-tratamento]
+Para um período relativo $k<0$, o efeito placebo estimado pode ser escrito como
+\[
+\widehat{\tau}_k^{\mathrm{placebo}}
+=
+\frac{1}{|\mathcal{P}_k|}
+\sum_{(i,t)\in\mathcal{P}_k}
+\left\{Y_{it}-\widehat{Y}_{it}^{(-)}(0)\right\},
+\]
+onde $\mathcal{P}_k$ é o conjunto de células pré-tratamento no horizonte $k$ e $\widehat{Y}_{it}^{(-)}(0)$ é uma predição que não usa aquela célula como alvo de ajuste perfeito.
+\end{definition}
+
+## Teste convencional e teste de equivalência
+
+O teste convencional pergunta se rejeitamos a hipótese nula de efeito placebo igual a zero. Com poucos tratados, esse teste pode ter baixa potência: não rejeitar zero não é evidência forte de ausência de pre-trends.
+
+O teste de equivalência inverte a pergunta. Ele define uma margem substantiva $\Delta>0$ e testa se os placebos são pequenos o bastante:
+\[
+H_0: |\tau^{\mathrm{placebo}}|\geq \Delta
+\quad\text{contra}\quad
+H_1: |\tau^{\mathrm{placebo}}|<\Delta.
+\]
+Rejeitar $H_0$ fornece evidência positiva de que os placebos são negligenciáveis em relação à margem escolhida.
+
+## Conexão com o paper
+
+O paper reporta tanto o teste convencional quanto o teste de equivalência, seguindo a recomendação recente de interpretar equivalência como evidência positiva de ausência de pre-trends substantivamente relevantes. Isso é importante porque há apenas poucos países tratados no desenho cross-country.
+
+## Exercícios
+
+1. Por que efeitos antes do tratamento deveriam estar próximos de zero?
+2. O que significa baixa potência em um teste convencional?
+3. Qual é a hipótese nula no teste de equivalência?
+4. Se $\Delta=0.10$ e o intervalo de confiança do placebo está inteiramente entre $-0.05$ e $0.05$, qual é a interpretação?
+5. Explique por que um placebo bem comportado não prova identificação.
+6. Explique por que um placebo grande é um sinal de alerta.
+
+Soluções na Seção 12.9.
+
+# Teste de Carryover Após Saída
+
+## O que é carryover?
+
+Carryover ocorre quando o efeito do tratamento persiste depois que o tratamento deixa de estar ativo. No paper, isso significaria que a distância à China continua afetada mesmo depois que os Estados Unidos recuperam a posição de principal destino de exportações.
+
+\begin{definition}[Carryover]
+Há carryover no horizonte $k>0$ após saída se
+\[
+\mathbb{E}\left[
+Y_{i,T_i^{\mathrm{off}}+k}
+-
+Y_{i,T_i^{\mathrm{off}}+k}(0)
+\mid i \text{ saiu do tratamento}
+\right]\neq 0.
+\]
+\end{definition}
+
+## Intuição
+
+Se a teoria enfatiza saliência temporária do status, efeitos persistentes fortes após a saída enfraquecem a interpretação. Eles poderiam indicar que o tratamento gerou uma mudança duradoura, que há inércia política, ou que a saída não removeu a exposição substantiva relevante.
+
+\begin{proposition}[Sem carryover e interpretação de saída]
+Se não há carryover após a saída e a condição de exogeneidade condicional continua válida, então observações pós-saída podem ser interpretadas como observações não tratadas para fins de estimação do contrafactual.
+\end{proposition}
+
+\begin{proof}
+Se não há carryover, então para períodos após a saída o resultado observado coincide, em média condicional, com $Y_{it}(0)$. Assim, quando $D_{it}=0$ após a saída, essas células pertencem ao regime não tratado relevante para estimar o contrafactual. A validade ainda depende de os erros remanescentes não estarem correlacionados com o histórico de tratamento, condicionalmente aos controles e fatores.
+\end{proof}
+
+## Conexão com o paper
+
+O paper usa teste de carryover para verificar se o efeito se dissipa depois que a China perde a primeira posição. A evidência de dissipação é substantivamente importante porque conversa diretamente com a hipótese de atenuação temporal.
+
+## Exercícios
+
+1. Defina carryover em palavras.
+2. Por que carryover é especialmente relevante quando o tratamento é switching?
+3. Se o efeito estimado pós-saída é zero, isso favorece qual interpretação substantiva no paper?
+4. Se o efeito persiste por muitos anos após saída, quais interpretações alternativas aparecem?
+5. Por que ausência de carryover ajuda a usar observações pós-saída como controles?
+6. Explique a diferença entre efeito de saída e placebo pré-tratamento.
+
+Soluções na Seção 12.10.
+
+# Inferência por Bootstrap
+
+## Por que bootstrap?
+
+O ATT do IFE é uma função complexa de várias etapas: estima efeitos fixos, covariáveis, fatores, cargas, contrafactuais e depois agrega efeitos. Fórmulas analíticas simples para erro padrão podem ser difíceis ou pouco robustas em amostras finitas. O `fect` usa bootstrap para aproximar a distribuição amostral do estimador.
+
+\begin{definition}[Bootstrap para o ATT]
+Se $\widehat{\tau}$ é o ATT estimado na amostra original, o bootstrap gera amostras reamostradas $b=1,\ldots,B$ e calcula $\widehat{\tau}^{(b)}$ em cada uma. O erro padrão bootstrap é
+\[
+\widehat{\operatorname{se}}_{\mathrm{boot}}
+=
+\sqrt{
+\frac{1}{B-1}
+\sum_{b=1}^B
+\left(
+\widehat{\tau}^{(b)}
+-
+\bar{\tau}^{\mathrm{boot}}
+\right)^2
+},
+\]
+onde
+\[
+\bar{\tau}^{\mathrm{boot}}
+=
+\frac{1}{B}\sum_{b=1}^B \widehat{\tau}^{(b)}.
+\]
+\end{definition}
+
+## Intuição
+
+O bootstrap simula repetidas amostras plausíveis a partir dos dados observados. A dispersão dos ATTs reestimados aproxima a incerteza do estimador. No paper, a especificação `fect` usa 500 repetições bootstrap.
+
+## Conexão com o paper
+
+A tabela principal reporta ATT, erro padrão bootstrap, intervalo de confiança e valor-p. O erro padrão reportado deve ser lido como incerteza incorporando a etapa de estimação do contrafactual, não apenas uma regressão final simples.
+
+## Exercícios
+
+1. O que é $B$ na fórmula do bootstrap?
+2. Por que o bootstrap precisa reestimar o modelo, não apenas reamostrar os efeitos finais?
+3. Se os ATTs bootstrap variam muito, o erro padrão será grande ou pequeno?
+4. Como calcular um intervalo aproximado de 95\% usando $\widehat{\tau}\pm1.96\,\widehat{\operatorname{se}}$?
+5. Por que poucos países tratados podem tornar a inferência mais frágil?
+6. Explique por que bootstrap não corrige uma hipótese de identificação falsa.
+
+Soluções na Seção 12.11.
+
+# Soluções dos Exercícios
+
+## Soluções: resultados potenciais
+
+1. Entram 3 células: duas do primeiro país e uma do segundo.
+2. Se $D_{it}=0$, então $Y_{it}=Y_{it}(0)$. Se $D_{it}=1$, então $Y_{it}=Y_{it}(1)$.
+3. Os efeitos são $-0.1$, $-0.2$ e $-0.05$. A média é $(-0.35)/3=-0.1167$.
+4. Porque o mesmo país pode contribuir com anos tratados e anos não tratados. Classificar apenas o país inteiro como tratado perderia a variação de entrada e saída.
+5. Se o tratamento nunca desliga após $T_i^0$, então todos os anos $t\geq T_i^0$ têm $D_{it}=1$, que é exatamente a definição do conjunto.
+6. Um país pode ter a China como principal destino de exportações por alguns anos e depois voltar a ter os Estados Unidos nessa posição; nesse caso, $D_{it}$ passa de 1 para 0.
+
+## Soluções: modelo IFE
+
+1. Ambos são vetores em $\R^2$.
+2. O produto é $0.2\cdot3+0.5\cdot(-1)=0.6-0.5=0.1$.
+3. $\xi_t$ é um choque comum que afeta todos os países igualmente no ano $t$. $f_t$ é um choque comum cuja intensidade observada no resultado depende da carga $\lambda_i$ de cada país.
+4. Defina $r=0$. O termo interativo desaparece e resta o modelo com $\alpha_i$, $\xi_t$ e covariáveis.
+5. A mudança entre dois anos inclui $\lambda_i(f_t-f_s)$. Como $\lambda_i$ varia entre unidades, a mudança esperada também varia.
+6. Um choque plausível é o ciclo global de commodities, que afeta exportadores de commodities mais fortemente do que outros países.
+
+## Soluções: posto baixo
+
+1. $L$ tem dimensão $99\times34$.
+2. Porque seus graus de liberdade são limitados: com posto 1, todas as colunas pertencem ao mesmo espaço unidimensional.
+3. Se $r=1$, a coluna $t$ é $f_t\lambda$. A coluna $s$ é $f_s\lambda$. Logo, se $f_s\neq0$, a coluna $t$ é $(f_t/f_s)$ vezes a coluna $s$.
+4. O posto máximo é 3.
+5. Um $r$ alto permite ajustar padrões idiossincráticos da amostra que não se repetem fora dela.
+6. $r=0$ impõe que efeitos fixos de país e ano bastam; qualquer choque comum com exposição heterogênea fica no erro.
+
+## Soluções: identificação
+
+1. Depois de condicionar em tratamento, covariáveis, efeitos fixos e fatores, os erros não devem conter informação sistemática sobre o tratamento.
+2. Geografia, história diplomática persistente, idioma ou características estruturais estáveis.
+3. Choques globais anuais que afetam todos os países, como uma crise financeira internacional.
+4. Um boom de commodities que afeta países exportadores mais que importadores.
+5. Uma política deliberada de realinhamento com a China que simultaneamente aumenta comércio e altera votos na ONU, se ela não for capturada pelo modelo.
+6. Porque pre-trends apenas verificam padrões observados antes do tratamento; choques futuros não observados ou confounders que começam exatamente no tratamento podem permanecer.
+
+## Soluções: ATT dinâmico
+
+1. $k=2008-2006=2$.
+2. $k=2013-2011=2$.
+3. O resultado é distância absoluta à China. Reduzir distância significa aproximar posições de política externa.
+4. Porque ele codifica todos os anos pós-entrada como tratados, mesmo quando a China já não ocupa a primeira posição.
+5. Uma fórmula é $\widehat{\tau}_k^{\mathrm{on}}=|\mathcal{E}_k|^{-1}\sum_{(i,t)\in\mathcal{E}_k}(Y_{it}-\widehat{Y}_{it}(0))$, onde $\mathcal{E}_k$ contém eventos observados no horizonte $k$.
+6. Se o efeito persiste após saída, então $D_{it}=0$ não significa retorno imediato ao estado não tratado potencial.
+
+## Soluções: contrafactual
+
+1. É o conjunto de país-anos observados sem tratamento.
+2. Porque células tratadas observam $Y(1)$, não $Y(0)$; usá-las como não tratadas contaminaria o ajuste do contrafactual.
+3. $\widehat{Y}_{it}(0)=0.2+0.1+0.05-0.03=0.32$.
+4. O efeito estimado é $0.55-0.70=-0.15$.
+5. Com $r=1$, para qualquer constante não nula $c$, $(c\lambda_i)(f_t/c)=\lambda_i f_t$. Logo, escala e sinal não são únicos.
+6. Porque a predição depende do produto $\lambda_i f_t$, que permanece o mesmo sob reescalonamentos compensatórios.
+
+## Soluções: validação cruzada
+
+1. Significa nenhum fator latente interativo; restam efeitos fixos de país e ano, mais covariáveis.
+2. Significa que o critério de validação cruzada selecionou um fator latente.
+3. Porque erro dentro da amostra sempre tende a cair com mais flexibilidade, mesmo quando a flexibilidade ajusta ruído.
+4. O modelo deixa de capturar estrutura latente real, gerando viés no contrafactual.
+5. O modelo passa a ajustar variações idiossincráticas que não generalizam.
+6. $r^*=1$, pois $0.15$ é o menor erro de validação.
+
+## Soluções: tendências paralelas
+
+1. Remove diferenças médias fixas entre países.
+2. Remove choques comuns de cada ano.
+3. $Y_{it}(0)-Y_{is}(0)=(\alpha_i+\xi_t)-(\alpha_i+\xi_s)+\varepsilon_{it}-\varepsilon_{is}$, então $\alpha_i$ cancela.
+4. O erro contém uma tendência diferencial não observada; o estimador pode atribuir ao tratamento o que vem do fator omitido.
+5. Ambos constroem contrafactuais em painel. O IFE faz isso por fatores latentes e baixo posto, aproximando a lógica de synthetic control generalizado.
+6. $r=0$ impede respostas heterogêneas a choques comuns; $r=1$ permite um eixo de heterogeneidade temporal.
+
+## Soluções: placebo
+
+1. Antes do tratamento, não deveria haver efeito causal do tratamento ainda inexistente.
+2. Significa que o teste pode falhar em detectar problemas reais por falta de informação.
+3. A nula é que os efeitos placebo são grandes demais, isto é, fora de uma margem substantivamente pequena.
+4. Como o intervalo está dentro de $[-0.10,0.10]$, há evidência de equivalência dentro da margem definida.
+5. Porque só avalia uma implicação observável da hipótese, não todos os confounders possíveis.
+6. Porque sugere que o modelo já estimava diferenças onde nenhum efeito deveria existir.
+
+## Soluções: carryover
+
+1. É persistência do efeito após o tratamento desligar.
+2. Porque, em tratamentos switching, observações pós-saída podem ser usadas como não tratadas apenas se o efeito não persiste.
+3. Favorece a interpretação de saliência temporária.
+4. Mudança estrutural duradoura, inércia diplomática, aprendizado político ou tratamento mal medido.
+5. Se não há persistência, o resultado pós-saída volta a representar $Y(0)$ em média condicional.
+6. Placebo olha antes da entrada; carryover olha depois da saída.
+
+## Soluções: bootstrap
+
+1. $B$ é o número de reamostragens bootstrap.
+2. Porque a incerteza vem de todas as etapas do estimador, inclusive fatores e contrafactuais.
+3. Grande.
+4. Substitua os valores estimados na expressão. Por exemplo, se $\widehat{\tau}=-0.10$ e o erro padrão é $0.04$, o intervalo é $[-0.1784,-0.0216]$.
+5. Poucos tratados reduzem informação sobre a distribuição dos efeitos e tornam diagnósticos menos potentes.
+6. Bootstrap aproxima incerteza amostral; ele não torna causal um desenho mal identificado.
+
+# Referências de Apoio
+
+\begin{longtable}{p{0.25\textwidth}p{0.34\textwidth}p{0.31\textwidth}}
+\caption{Referências recomendadas por tópico do factor model.}\\
+\toprule
+Tópico & Referência principal & Referência alternativa \\
+\midrule
+\endfirsthead
+\caption[]{Referências recomendadas por tópico do factor model (continuação).}\\
+\toprule
+Tópico & Referência principal & Referência alternativa \\
+\midrule
+\endhead
+Counterfactual estimators em TSCS & Liu, Wang e Xu (2024), \emph{American Journal of Political Science}, seções sobre FE, IFE, placebo e carryover & Xu (2017), \emph{Political Analysis}, generalized synthetic control \\
+Panel data com fatores interativos & Bai (2009), \emph{Econometrica}, modelo de painel com interactive fixed effects & Wooldridge, \emph{Econometric Analysis of Cross Section and Panel Data}, capítulos de painel \\
+Álgebra linear de baixo posto & Strang, \emph{Linear Algebra and Its Applications}, capítulos sobre posto, espaço coluna e decomposições matriciais & Meyer, \emph{Matrix Analysis and Applied Linear Algebra}, capítulos sobre posto e projeções \\
+Resultados potenciais e ATT & Imbens e Rubin, \emph{Causal Inference}, capítulos iniciais sobre potential outcomes & Angrist e Pischke, \emph{Mostly Harmless Econometrics}, capítulos sobre efeitos causais e DiD \\
+Validação cruzada e overfitting & Hastie, Tibshirani e Friedman, \emph{The Elements of Statistical Learning}, capítulo sobre model assessment & James et al., \emph{An Introduction to Statistical Learning}, capítulo sobre resampling \\
+Testes de equivalência & Chiu et al. (2025), \emph{American Political Science Review}, discussão de equivalence tests em painéis causais & Lakens, \emph{Equivalence Tests}, guias aplicados sobre TOST \\
+\bottomrule
+\end{longtable}
+
+# Checklist de leitura do factor model no paper
+
+Antes de apresentar ou defender a especificação IFE do paper, o leitor deve conseguir responder às seguintes perguntas:
+
+1. Qual é o resultado $Y_{it}$ e por que efeito negativo significa aproximação da China?
+2. Por que o tratamento é switching, e não absorbing, no desenho cross-country?
+3. Qual é a diferença entre efeitos fixos de ano e fatores latentes?
+4. O que significa $r^*=1$ e como esse valor é escolhido?
+5. Que tipo de confounder o termo $\lambda_i'f_t$ consegue absorver?
+6. Que tipo de confounder ele não consegue absorver?
+7. Por que placebos pré-tratamento e carryover pós-saída são diagnósticos, não provas?
+8. Por que a interpretação substantiva depende de o efeito se dissipar quando o status de top partner é perdido?
+

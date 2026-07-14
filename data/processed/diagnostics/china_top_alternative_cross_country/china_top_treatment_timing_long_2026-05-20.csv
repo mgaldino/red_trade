@@ -1,0 +1,1498 @@
+rule,rule_label,formulation,formulation_label,iso3c,country_name,onset_year,timing_status,sample_scope,source,country_label,onset_label
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",SLB,Solomon Islands,2003,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Solomon Islands (SLB),2003
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",PHL,Philippines,2005,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Philippines (PHL),2005
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",CUB,Cuba,2006,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Cuba (CUB),2006
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",CUB,Cuba,2006,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Cuba (CUB),2006
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",GNQ,Equatorial Guinea,2006,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Equatorial Guinea (GNQ),2006
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",GNQ,Equatorial Guinea,2006,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Equatorial Guinea (GNQ),2006
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",GNQ,Equatorial Guinea,2006,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Equatorial Guinea (GNQ),2006
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",IRN,Iran,2006,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Iran (IRN),2006
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",MLI,Mali,2006,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Mali (MLI),2006
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",MLI,Mali,2006,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Mali (MLI),2006
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",MRT,Mauritania,2006,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Mauritania (MRT),2006
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",MRT,Mauritania,2006,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Mauritania (MRT),2006
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",MRT,Mauritania,2006,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Mauritania (MRT),2006
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",TGO,Togo,2006,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Togo (TGO),2006
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",AGO,Angola,2007,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Angola (AGO),2007
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",AGO,Angola,2007,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Angola (AGO),2007
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",AGO,Angola,2007,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Angola (AGO),2007
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",AUS,Australia,2007,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Australia (AUS),2007
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",CHL,Chile,2007,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Chile (CHL),2007
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",ETH,Ethiopia,2007,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ethiopia (ETH),2007
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",IRN,Iran,2007,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Iran (IRN),2007
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",IRN,Iran,2007,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Iran (IRN),2007
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",KAZ,Kazakhstan,2007,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Kazakhstan (KAZ),2007
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",KAZ,Kazakhstan,2007,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Kazakhstan (KAZ),2007
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",PHL,Philippines,2007,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Philippines (PHL),2007
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",VNM,Vietnam,2007,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Vietnam (VNM),2007
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",AGO,Angola,2008,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Angola (AGO),2008
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",BEN,Benin,2008,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Benin (BEN),2008
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",CHL,Chile,2008,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Chile (CHL),2008
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",CHL,Chile,2008,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Chile (CHL),2008
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",COD,Congo - Kinshasa,2008,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Congo - Kinshasa (COD),2008
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",COD,Congo - Kinshasa,2008,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Congo - Kinshasa (COD),2008
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",COD,Congo - Kinshasa,2008,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Congo - Kinshasa (COD),2008
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",JPN,Japan,2008,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Japan (JPN),2008
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",JPN,Japan,2008,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Japan (JPN),2008
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",THA,Thailand,2008,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Thailand (THA),2008
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",THA,Thailand,2008,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Thailand (THA),2008
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",TUV,Tuvalu,2008,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Tuvalu (TUV),2008
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",AUS,Australia,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Australia (AUS),2009
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",AUS,Australia,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Australia (AUS),2009
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",BRA,Brazil,2009,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Brazil (BRA),2009
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",BRA,Brazil,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Brazil (BRA),2009
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",BRA,Brazil,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Brazil (BRA),2009
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",CHL,Chile,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Chile (CHL),2009
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",ETH,Ethiopia,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ethiopia (ETH),2009
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",JPN,Japan,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Japan (JPN),2009
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",MYS,Malaysia,2009,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Malaysia (MYS),2009
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",MYS,Malaysia,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Malaysia (MYS),2009
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",MYS,Malaysia,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Malaysia (MYS),2009
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",MYS,Malaysia,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Malaysia (MYS),2009
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",ZAF,South Africa,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,South Africa (ZAF),2009
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",ZAF,South Africa,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,South Africa (ZAF),2009
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",ZAF,South Africa,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,South Africa (ZAF),2009
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",TJK,Tajikistan,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Tajikistan (TJK),2009
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",AUS,Australia,2010,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Australia (AUS),2010
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",BGD,Bangladesh,2010,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Bangladesh (BGD),2010
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",DJI,Djibouti,2010,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Djibouti (DJI),2010
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",GIN,Guinea,2010,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Guinea (GIN),2010
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",KAZ,Kazakhstan,2010,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Kazakhstan (KAZ),2010
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",NER,Niger,2010,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Niger (NER),2010
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",PER,Peru,2010,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Peru (PER),2010
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",PER,Peru,2010,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Peru (PER),2010
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",RUS,Russia,2010,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Russia (RUS),2010
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",TZA,Tanzania,2010,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Tanzania (TZA),2010
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",TKM,Turkmenistan,2010,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Turkmenistan (TKM),2010
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",TKM,Turkmenistan,2010,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Turkmenistan (TKM),2010
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",TKM,Turkmenistan,2010,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Turkmenistan (TKM),2010
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",GMB,Gambia,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Gambia (GMB),2011
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",IDN,Indonesia,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Indonesia (IDN),2011
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",KEN,Kenya,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Kenya (KEN),2011
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",MLT,Malta,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Malta (MLT),2011
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",MMR,Myanmar (Burma),2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Myanmar (Burma) (MMR),2011
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",SLE,Sierra Leone,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Sierra Leone (SLE),2011
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",TZA,Tanzania,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Tanzania (TZA),2011
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",TZA,Tanzania,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Tanzania (TZA),2011
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",THA,Thailand,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Thailand (THA),2011
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",ZWE,Zimbabwe,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Zimbabwe (ZWE),2011
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",ZWE,Zimbabwe,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Zimbabwe (ZWE),2011
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",BEN,Benin,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Benin (BEN),2012
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",CMR,Cameroon,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Cameroon (CMR),2012
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",CMR,Cameroon,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Cameroon (CMR),2012
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",CMR,Cameroon,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Cameroon (CMR),2012
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",GMB,Gambia,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Gambia (GMB),2012
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",GMB,Gambia,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Gambia (GMB),2012
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",LBR,Liberia,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Liberia (LBR),2012
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",RUS,Russia,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Russia (RUS),2012
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",RUS,Russia,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Russia (RUS),2012
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",SLE,Sierra Leone,2012,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Sierra Leone (SLE),2012
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",SLE,Sierra Leone,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Sierra Leone (SLE),2012
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",SLE,Sierra Leone,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Sierra Leone (SLE),2012
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",SYR,Syria,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Syria (SYR),2012
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",ZMB,Zambia,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Zambia (ZMB),2012
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",ZMB,Zambia,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Zambia (ZMB),2012
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",ZMB,Zambia,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Zambia (ZMB),2012
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",CAF,Central African Republic,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Central African Republic (CAF),2013
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",CAF,Central African Republic,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Central African Republic (CAF),2013
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",ERI,Eritrea,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Eritrea (ERI),2013
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",GHA,Ghana,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ghana (GHA),2013
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",IDN,Indonesia,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Indonesia (IDN),2013
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",IDN,Indonesia,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Indonesia (IDN),2013
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",IRQ,Iraq,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Iraq (IRQ),2013
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",NZL,New Zealand,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,New Zealand (NZL),2013
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",RWA,Rwanda,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Rwanda (RWA),2013
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",SAU,Saudi Arabia,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Saudi Arabia (SAU),2013
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",SAU,Saudi Arabia,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Saudi Arabia (SAU),2013
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",SGP,Singapore,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Singapore (SGP),2013
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",URY,Uruguay,2013,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Uruguay (URY),2013
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",URY,Uruguay,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Uruguay (URY),2013
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",URY,Uruguay,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Uruguay (URY),2013
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",URY,Uruguay,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Uruguay (URY),2013
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",UZB,Uzbekistan,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Uzbekistan (UZB),2013
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",UZB,Uzbekistan,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Uzbekistan (UZB),2013
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",VUT,Vanuatu,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Vanuatu (VUT),2013
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",KHM,Cambodia,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Cambodia (KHM),2014
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",ERI,Eritrea,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Eritrea (ERI),2014
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",ERI,Eritrea,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Eritrea (ERI),2014
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",ETH,Ethiopia,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ethiopia (ETH),2014
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",IRQ,Iraq,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Iraq (IRQ),2014
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",IRQ,Iraq,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Iraq (IRQ),2014
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",LAO,Laos,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Laos (LAO),2014
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",LAO,Laos,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Laos (LAO),2014
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",MWI,Malawi,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Malawi (MWI),2014
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",MOZ,Mozambique,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Mozambique (MOZ),2014
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",MOZ,Mozambique,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Mozambique (MOZ),2014
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",MMR,Myanmar (Burma),2014,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Myanmar (Burma) (MMR),2014
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",MMR,Myanmar (Burma),2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Myanmar (Burma) (MMR),2014
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",MMR,Myanmar (Burma),2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Myanmar (Burma) (MMR),2014
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",NZL,New Zealand,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,New Zealand (NZL),2014
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",PAK,Pakistan,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Pakistan (PAK),2014
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",USA,United States,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,United States (USA),2014
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",ARM,Armenia,2015,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Armenia (ARM),2015
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",EGY,Egypt,2015,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Egypt (EGY),2015
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",GAB,Gabon,2015,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Gabon (GAB),2015
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",SAU,Saudi Arabia,2015,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Saudi Arabia (SAU),2015
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",SAU,Saudi Arabia,2015,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Saudi Arabia (SAU),2015
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",UZB,Uzbekistan,2015,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Uzbekistan (UZB),2015
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",KGZ,Kyrgyzstan,2016,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Kyrgyzstan (KGZ),2016
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",PER,Peru,2016,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Peru (PER),2016
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",BRA,Brazil,2017,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Brazil (BRA),2017
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",BDI,Burundi,2017,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Burundi (BDI),2017
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",GAB,Gabon,2017,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Gabon (GAB),2017
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",GAB,Gabon,2017,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Gabon (GAB),2017
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",GAB,Gabon,2017,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Gabon (GAB),2017
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",KWT,Kuwait,2017,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Kuwait (KWT),2017
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",NZL,New Zealand,2017,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,New Zealand (NZL),2017
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",ARE,United Arab Emirates,2017,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,United Arab Emirates (ARE),2017
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",KWT,Kuwait,2018,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Kuwait (KWT),2018
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",KWT,Kuwait,2018,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Kuwait (KWT),2018
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",KWT,Kuwait,2018,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Kuwait (KWT),2018
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",MHL,Marshall Islands,2018,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Marshall Islands (MHL),2018
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",PNG,Papua New Guinea,2018,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Papua New Guinea (PNG),2018
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",PNG,Papua New Guinea,2018,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Papua New Guinea (PNG),2018
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",VNM,Vietnam,2018,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Vietnam (VNM),2018
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",VNM,Vietnam,2018,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Vietnam (VNM),2018
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",TCD,Chad,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Chad (TCD),2019
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",TCD,Chad,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Chad (TCD),2019
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",TCD,Chad,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Chad (TCD),2019
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",GHA,Ghana,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ghana (GHA),2019
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",GHA,Ghana,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ghana (GHA),2019
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",GIN,Guinea,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Guinea (GIN),2019
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",GIN,Guinea,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Guinea (GIN),2019
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",LBR,Liberia,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Liberia (LBR),2019
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",LBY,Libya,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Libya (LBY),2019
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",MWI,Malawi,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Malawi (MWI),2019
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",MDV,Maldives,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Maldives (MDV),2019
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",VEN,Venezuela,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Venezuela (VEN),2019
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",ARM,Armenia,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Armenia (ARM),2020
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",BRN,Brunei,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Brunei (BRN),2020
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",CAF,Central African Republic,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Central African Republic (CAF),2020
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",NGA,Nigeria,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Nigeria (NGA),2020
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",PLW,Palau,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Palau (PLW),2020
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",QAT,Qatar,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Qatar (QAT),2020
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",LKA,Sri Lanka,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Sri Lanka (LKA),2020
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",UKR,Ukraine,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ukraine (UKR),2020
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",UKR,Ukraine,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ukraine (UKR),2020
+clean_risk_set,Clean risk set: exclui países já China #1 em 2005,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",UKR,Ukraine,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ukraine (UKR),2020
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",SLB,Solomon Islands,2003,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Solomon Islands (SLB),2003
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",PHL,Philippines,2005,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Philippines (PHL),2005
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",AGO,Angola,2007,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Angola (AGO),2007
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",CHL,Chile,2008,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Chile (CHL),2008
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",BRA,Brazil,2009,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Brazil (BRA),2009
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",MYS,Malaysia,2009,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Malaysia (MYS),2009
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",AUS,Australia,2010,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Australia (AUS),2010
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",GMB,Gambia,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Gambia (GMB),2011
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",IDN,Indonesia,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Indonesia (IDN),2011
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",KEN,Kenya,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Kenya (KEN),2011
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",MLT,Malta,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Malta (MLT),2011
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",MMR,Myanmar (Burma),2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Myanmar (Burma) (MMR),2011
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",SLE,Sierra Leone,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Sierra Leone (SLE),2011
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",TZA,Tanzania,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Tanzania (TZA),2011
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",TZA,Tanzania,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Tanzania (TZA),2011
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",THA,Thailand,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Thailand (THA),2011
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",ZWE,Zimbabwe,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Zimbabwe (ZWE),2011
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",ZWE,Zimbabwe,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Zimbabwe (ZWE),2011
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",BEN,Benin,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Benin (BEN),2012
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",CMR,Cameroon,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Cameroon (CMR),2012
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",CMR,Cameroon,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Cameroon (CMR),2012
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",CMR,Cameroon,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Cameroon (CMR),2012
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",GMB,Gambia,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Gambia (GMB),2012
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",GMB,Gambia,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Gambia (GMB),2012
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",LBR,Liberia,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Liberia (LBR),2012
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",RUS,Russia,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Russia (RUS),2012
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",RUS,Russia,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Russia (RUS),2012
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",SLE,Sierra Leone,2012,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Sierra Leone (SLE),2012
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",SLE,Sierra Leone,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Sierra Leone (SLE),2012
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",SLE,Sierra Leone,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Sierra Leone (SLE),2012
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",SYR,Syria,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Syria (SYR),2012
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",ZMB,Zambia,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Zambia (ZMB),2012
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",ZMB,Zambia,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Zambia (ZMB),2012
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",ZMB,Zambia,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Zambia (ZMB),2012
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",CAF,Central African Republic,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Central African Republic (CAF),2013
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",CAF,Central African Republic,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Central African Republic (CAF),2013
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",ERI,Eritrea,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Eritrea (ERI),2013
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",GHA,Ghana,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ghana (GHA),2013
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",IDN,Indonesia,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Indonesia (IDN),2013
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",IDN,Indonesia,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Indonesia (IDN),2013
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",IRQ,Iraq,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Iraq (IRQ),2013
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",NZL,New Zealand,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,New Zealand (NZL),2013
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",RWA,Rwanda,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Rwanda (RWA),2013
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",SAU,Saudi Arabia,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Saudi Arabia (SAU),2013
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",SAU,Saudi Arabia,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Saudi Arabia (SAU),2013
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",SGP,Singapore,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Singapore (SGP),2013
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",URY,Uruguay,2013,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Uruguay (URY),2013
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",URY,Uruguay,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Uruguay (URY),2013
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",URY,Uruguay,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Uruguay (URY),2013
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",URY,Uruguay,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Uruguay (URY),2013
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",UZB,Uzbekistan,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Uzbekistan (UZB),2013
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",UZB,Uzbekistan,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Uzbekistan (UZB),2013
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",VUT,Vanuatu,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Vanuatu (VUT),2013
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",KHM,Cambodia,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Cambodia (KHM),2014
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",ERI,Eritrea,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Eritrea (ERI),2014
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",ERI,Eritrea,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Eritrea (ERI),2014
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",ETH,Ethiopia,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ethiopia (ETH),2014
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",IRQ,Iraq,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Iraq (IRQ),2014
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",IRQ,Iraq,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Iraq (IRQ),2014
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",LAO,Laos,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Laos (LAO),2014
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",LAO,Laos,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Laos (LAO),2014
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",MWI,Malawi,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Malawi (MWI),2014
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",MOZ,Mozambique,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Mozambique (MOZ),2014
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",MOZ,Mozambique,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Mozambique (MOZ),2014
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",MMR,Myanmar (Burma),2014,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Myanmar (Burma) (MMR),2014
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",MMR,Myanmar (Burma),2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Myanmar (Burma) (MMR),2014
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",MMR,Myanmar (Burma),2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Myanmar (Burma) (MMR),2014
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",NZL,New Zealand,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,New Zealand (NZL),2014
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",PAK,Pakistan,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Pakistan (PAK),2014
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",USA,United States,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,United States (USA),2014
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",ARM,Armenia,2015,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Armenia (ARM),2015
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",EGY,Egypt,2015,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Egypt (EGY),2015
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",GAB,Gabon,2015,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Gabon (GAB),2015
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",SAU,Saudi Arabia,2015,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Saudi Arabia (SAU),2015
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",SAU,Saudi Arabia,2015,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Saudi Arabia (SAU),2015
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",UZB,Uzbekistan,2015,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Uzbekistan (UZB),2015
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",KGZ,Kyrgyzstan,2016,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Kyrgyzstan (KGZ),2016
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",PER,Peru,2016,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Peru (PER),2016
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",BRA,Brazil,2017,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Brazil (BRA),2017
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",BDI,Burundi,2017,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Burundi (BDI),2017
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",GAB,Gabon,2017,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Gabon (GAB),2017
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",GAB,Gabon,2017,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Gabon (GAB),2017
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",GAB,Gabon,2017,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Gabon (GAB),2017
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",KWT,Kuwait,2017,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Kuwait (KWT),2017
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",NZL,New Zealand,2017,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,New Zealand (NZL),2017
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",ARE,United Arab Emirates,2017,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,United Arab Emirates (ARE),2017
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",KWT,Kuwait,2018,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Kuwait (KWT),2018
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",KWT,Kuwait,2018,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Kuwait (KWT),2018
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",KWT,Kuwait,2018,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Kuwait (KWT),2018
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",MHL,Marshall Islands,2018,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Marshall Islands (MHL),2018
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",PNG,Papua New Guinea,2018,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Papua New Guinea (PNG),2018
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",PNG,Papua New Guinea,2018,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Papua New Guinea (PNG),2018
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",VNM,Vietnam,2018,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Vietnam (VNM),2018
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",VNM,Vietnam,2018,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Vietnam (VNM),2018
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",TCD,Chad,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Chad (TCD),2019
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",TCD,Chad,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Chad (TCD),2019
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",TCD,Chad,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Chad (TCD),2019
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",GHA,Ghana,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ghana (GHA),2019
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",GHA,Ghana,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ghana (GHA),2019
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",GIN,Guinea,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Guinea (GIN),2019
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",GIN,Guinea,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Guinea (GIN),2019
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",LBR,Liberia,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Liberia (LBR),2019
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",LBY,Libya,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Libya (LBY),2019
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",MWI,Malawi,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Malawi (MWI),2019
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",MDV,Maldives,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Maldives (MDV),2019
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",VEN,Venezuela,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Venezuela (VEN),2019
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",ARM,Armenia,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Armenia (ARM),2020
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",BRN,Brunei,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Brunei (BRN),2020
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",CAF,Central African Republic,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Central African Republic (CAF),2020
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",NGA,Nigeria,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Nigeria (NGA),2020
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",PLW,Palau,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Palau (PLW),2020
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",QAT,Qatar,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Qatar (QAT),2020
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",LKA,Sri Lanka,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Sri Lanka (LKA),2020
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",UKR,Ukraine,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ukraine (UKR),2020
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",UKR,Ukraine,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ukraine (UKR),2020
+cutoff_not_top_through_2010,Sensibilidade: países não China #1 em nenhum ano de 2005 a 2010,goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",UKR,Ukraine,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ukraine (UKR),2020
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",SLB,Solomon Islands,2003,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Solomon Islands (SLB),2003
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",BEN,Benin,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Benin (BEN),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",BFA,Burkina Faso,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Burkina Faso (BFA),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",BFA,Burkina Faso,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Burkina Faso (BFA),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",COG,Congo - Brazzaville,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Congo - Brazzaville (COG),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",COG,Congo - Brazzaville,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Congo - Brazzaville (COG),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",COG,Congo - Brazzaville,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Congo - Brazzaville (COG),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",CUB,Cuba,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Cuba (CUB),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",MNG,Mongolia,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Mongolia (MNG),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",MNG,Mongolia,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Mongolia (MNG),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",MNG,Mongolia,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Mongolia (MNG),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",PRK,North Korea,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,North Korea (PRK),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",PRK,North Korea,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,North Korea (PRK),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",PRK,North Korea,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,North Korea (PRK),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",OMN,Oman,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Oman (OMN),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",OMN,Oman,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Oman (OMN),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",OMN,Oman,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Oman (OMN),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",PHL,Philippines,2005,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Philippines (PHL),2005
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",PHL,Philippines,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Philippines (PHL),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",PHL,Philippines,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Philippines (PHL),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",SGP,Singapore,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Singapore (SGP),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",SLB,Solomon Islands,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Solomon Islands (SLB),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",SLB,Solomon Islands,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Solomon Islands (SLB),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",SLB,Solomon Islands,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Solomon Islands (SLB),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",KOR,South Korea,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,South Korea (KOR),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",KOR,South Korea,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,South Korea (KOR),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",KOR,South Korea,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,South Korea (KOR),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",SDN,Sudan,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Sudan (SDN),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",SDN,Sudan,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Sudan (SDN),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",SDN,Sudan,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Sudan (SDN),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",YEM,Yemen,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Yemen (YEM),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",YEM,Yemen,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Yemen (YEM),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",YEM,Yemen,2005,Censurado à esquerda em 2005,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Yemen (YEM),2005 (cens.)
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",CUB,Cuba,2006,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Cuba (CUB),2006
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",CUB,Cuba,2006,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Cuba (CUB),2006
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",GNQ,Equatorial Guinea,2006,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Equatorial Guinea (GNQ),2006
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",GNQ,Equatorial Guinea,2006,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Equatorial Guinea (GNQ),2006
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",GNQ,Equatorial Guinea,2006,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Equatorial Guinea (GNQ),2006
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",IRN,Iran,2006,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Iran (IRN),2006
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",MLI,Mali,2006,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Mali (MLI),2006
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",MLI,Mali,2006,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Mali (MLI),2006
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",MRT,Mauritania,2006,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Mauritania (MRT),2006
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",MRT,Mauritania,2006,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Mauritania (MRT),2006
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",MRT,Mauritania,2006,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Mauritania (MRT),2006
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",TGO,Togo,2006,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Togo (TGO),2006
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",AGO,Angola,2007,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Angola (AGO),2007
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",AGO,Angola,2007,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Angola (AGO),2007
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",AGO,Angola,2007,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Angola (AGO),2007
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",AUS,Australia,2007,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Australia (AUS),2007
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",CHL,Chile,2007,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Chile (CHL),2007
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",ETH,Ethiopia,2007,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ethiopia (ETH),2007
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",IRN,Iran,2007,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Iran (IRN),2007
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",IRN,Iran,2007,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Iran (IRN),2007
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",KAZ,Kazakhstan,2007,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Kazakhstan (KAZ),2007
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",KAZ,Kazakhstan,2007,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Kazakhstan (KAZ),2007
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",PHL,Philippines,2007,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Philippines (PHL),2007
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",VNM,Vietnam,2007,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Vietnam (VNM),2007
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",AGO,Angola,2008,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Angola (AGO),2008
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",BEN,Benin,2008,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Benin (BEN),2008
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",CHL,Chile,2008,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Chile (CHL),2008
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",CHL,Chile,2008,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Chile (CHL),2008
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",COD,Congo - Kinshasa,2008,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Congo - Kinshasa (COD),2008
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",COD,Congo - Kinshasa,2008,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Congo - Kinshasa (COD),2008
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",COD,Congo - Kinshasa,2008,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Congo - Kinshasa (COD),2008
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",JPN,Japan,2008,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Japan (JPN),2008
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",JPN,Japan,2008,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Japan (JPN),2008
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",THA,Thailand,2008,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Thailand (THA),2008
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",THA,Thailand,2008,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Thailand (THA),2008
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",TUV,Tuvalu,2008,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Tuvalu (TUV),2008
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",AUS,Australia,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Australia (AUS),2009
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",AUS,Australia,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Australia (AUS),2009
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",BRA,Brazil,2009,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Brazil (BRA),2009
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",BRA,Brazil,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Brazil (BRA),2009
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",BRA,Brazil,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Brazil (BRA),2009
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",CHL,Chile,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Chile (CHL),2009
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",ETH,Ethiopia,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ethiopia (ETH),2009
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",JPN,Japan,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Japan (JPN),2009
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",MYS,Malaysia,2009,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Malaysia (MYS),2009
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",MYS,Malaysia,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Malaysia (MYS),2009
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",MYS,Malaysia,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Malaysia (MYS),2009
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",MYS,Malaysia,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Malaysia (MYS),2009
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",ZAF,South Africa,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,South Africa (ZAF),2009
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",ZAF,South Africa,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,South Africa (ZAF),2009
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",ZAF,South Africa,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,South Africa (ZAF),2009
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",TJK,Tajikistan,2009,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Tajikistan (TJK),2009
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",AUS,Australia,2010,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Australia (AUS),2010
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",BGD,Bangladesh,2010,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Bangladesh (BGD),2010
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",DJI,Djibouti,2010,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Djibouti (DJI),2010
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",GIN,Guinea,2010,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Guinea (GIN),2010
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",KAZ,Kazakhstan,2010,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Kazakhstan (KAZ),2010
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",NER,Niger,2010,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Niger (NER),2010
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",PER,Peru,2010,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Peru (PER),2010
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",PER,Peru,2010,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Peru (PER),2010
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",RUS,Russia,2010,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Russia (RUS),2010
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",TZA,Tanzania,2010,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Tanzania (TZA),2010
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",TKM,Turkmenistan,2010,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Turkmenistan (TKM),2010
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",TKM,Turkmenistan,2010,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Turkmenistan (TKM),2010
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",TKM,Turkmenistan,2010,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Turkmenistan (TKM),2010
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",GMB,Gambia,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Gambia (GMB),2011
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",IDN,Indonesia,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Indonesia (IDN),2011
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",KEN,Kenya,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Kenya (KEN),2011
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",MLT,Malta,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Malta (MLT),2011
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",MMR,Myanmar (Burma),2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Myanmar (Burma) (MMR),2011
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",SLE,Sierra Leone,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Sierra Leone (SLE),2011
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",TZA,Tanzania,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Tanzania (TZA),2011
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",TZA,Tanzania,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Tanzania (TZA),2011
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",THA,Thailand,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Thailand (THA),2011
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",ZWE,Zimbabwe,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Zimbabwe (ZWE),2011
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",ZWE,Zimbabwe,2011,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Zimbabwe (ZWE),2011
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",BEN,Benin,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Benin (BEN),2012
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",CMR,Cameroon,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Cameroon (CMR),2012
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",CMR,Cameroon,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Cameroon (CMR),2012
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",CMR,Cameroon,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Cameroon (CMR),2012
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",GMB,Gambia,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Gambia (GMB),2012
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",GMB,Gambia,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Gambia (GMB),2012
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",LBR,Liberia,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Liberia (LBR),2012
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",RUS,Russia,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Russia (RUS),2012
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",RUS,Russia,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Russia (RUS),2012
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",SLE,Sierra Leone,2012,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Sierra Leone (SLE),2012
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",SLE,Sierra Leone,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Sierra Leone (SLE),2012
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",SLE,Sierra Leone,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Sierra Leone (SLE),2012
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",SYR,Syria,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Syria (SYR),2012
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",ZMB,Zambia,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Zambia (ZMB),2012
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",ZMB,Zambia,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Zambia (ZMB),2012
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",ZMB,Zambia,2012,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Zambia (ZMB),2012
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",CAF,Central African Republic,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Central African Republic (CAF),2013
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",CAF,Central African Republic,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Central African Republic (CAF),2013
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",ERI,Eritrea,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Eritrea (ERI),2013
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",GHA,Ghana,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ghana (GHA),2013
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",IDN,Indonesia,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Indonesia (IDN),2013
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",IDN,Indonesia,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Indonesia (IDN),2013
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",IRQ,Iraq,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Iraq (IRQ),2013
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",NZL,New Zealand,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,New Zealand (NZL),2013
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",RWA,Rwanda,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Rwanda (RWA),2013
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",SAU,Saudi Arabia,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Saudi Arabia (SAU),2013
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",SAU,Saudi Arabia,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Saudi Arabia (SAU),2013
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",SGP,Singapore,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Singapore (SGP),2013
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",URY,Uruguay,2013,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Uruguay (URY),2013
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",URY,Uruguay,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Uruguay (URY),2013
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",URY,Uruguay,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Uruguay (URY),2013
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",URY,Uruguay,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Uruguay (URY),2013
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",UZB,Uzbekistan,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Uzbekistan (UZB),2013
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",UZB,Uzbekistan,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Uzbekistan (UZB),2013
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",VUT,Vanuatu,2013,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Vanuatu (VUT),2013
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",KHM,Cambodia,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Cambodia (KHM),2014
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",ERI,Eritrea,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Eritrea (ERI),2014
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",ERI,Eritrea,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Eritrea (ERI),2014
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",ETH,Ethiopia,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ethiopia (ETH),2014
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",IRQ,Iraq,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Iraq (IRQ),2014
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",IRQ,Iraq,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Iraq (IRQ),2014
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",LAO,Laos,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Laos (LAO),2014
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",LAO,Laos,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Laos (LAO),2014
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",MWI,Malawi,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Malawi (MWI),2014
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",MOZ,Mozambique,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Mozambique (MOZ),2014
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",MOZ,Mozambique,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Mozambique (MOZ),2014
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",MMR,Myanmar (Burma),2014,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Myanmar (Burma) (MMR),2014
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",MMR,Myanmar (Burma),2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Myanmar (Burma) (MMR),2014
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",MMR,Myanmar (Burma),2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Myanmar (Burma) (MMR),2014
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",NZL,New Zealand,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,New Zealand (NZL),2014
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",PAK,Pakistan,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Pakistan (PAK),2014
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",USA,United States,2014,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,United States (USA),2014
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",ARM,Armenia,2015,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Armenia (ARM),2015
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",EGY,Egypt,2015,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Egypt (EGY),2015
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",GAB,Gabon,2015,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Gabon (GAB),2015
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",SAU,Saudi Arabia,2015,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Saudi Arabia (SAU),2015
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",SAU,Saudi Arabia,2015,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Saudi Arabia (SAU),2015
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",UZB,Uzbekistan,2015,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Uzbekistan (UZB),2015
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",KGZ,Kyrgyzstan,2016,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Kyrgyzstan (KGZ),2016
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",PER,Peru,2016,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Peru (PER),2016
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",BRA,Brazil,2017,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Brazil (BRA),2017
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",BDI,Burundi,2017,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Burundi (BDI),2017
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",GAB,Gabon,2017,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Gabon (GAB),2017
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",GAB,Gabon,2017,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Gabon (GAB),2017
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",GAB,Gabon,2017,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Gabon (GAB),2017
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",KWT,Kuwait,2017,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Kuwait (KWT),2017
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",NZL,New Zealand,2017,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,New Zealand (NZL),2017
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",ARE,United Arab Emirates,2017,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,United Arab Emirates (ARE),2017
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),original_main_covariate_model,"Paper: amostra estimada
+bens exportações
+absorvente",KWT,Kuwait,2018,Entrada observada,Amostra estimável original 1990-2020; tratamento absorvente do paper,Target object: china_top_fect_cov_data,Kuwait (KWT),2018
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",KWT,Kuwait,2018,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Kuwait (KWT),2018
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",KWT,Kuwait,2018,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Kuwait (KWT),2018
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",MHL,Marshall Islands,2018,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Marshall Islands (MHL),2018
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",PNG,Papua New Guinea,2018,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Papua New Guinea (PNG),2018
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",PNG,Papua New Guinea,2018,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Papua New Guinea (PNG),2018
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",VNM,Vietnam,2018,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Vietnam (VNM),2018
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",VNM,Vietnam,2018,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Vietnam (VNM),2018
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",TCD,Chad,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Chad (TCD),2019
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",TCD,Chad,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Chad (TCD),2019
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",TCD,Chad,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Chad (TCD),2019
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",GHA,Ghana,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ghana (GHA),2019
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",GHA,Ghana,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ghana (GHA),2019
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",GIN,Guinea,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Guinea (GIN),2019
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",GIN,Guinea,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Guinea (GIN),2019
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",LBR,Liberia,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Liberia (LBR),2019
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",LBY,Libya,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Libya (LBY),2019
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",MWI,Malawi,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Malawi (MWI),2019
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",MDV,Maldives,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Maldives (MDV),2019
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",VEN,Venezuela,2019,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Venezuela (VEN),2019
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",ARM,Armenia,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Armenia (ARM),2020
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",BRN,Brunei,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Brunei (BRN),2020
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",CAF,Central African Republic,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Central African Republic (CAF),2020
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",NGA,Nigeria,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Nigeria (NGA),2020
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",PLW,Palau,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Palau (PLW),2020
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",QAT,Qatar,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Qatar (QAT),2020
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",LKA,Sri Lanka,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Sri Lanka (LKA),2020
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_exports_rank,"Recalculado: bens
+exportações
+entrada observada",UKR,Ukraine,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ukraine (UKR),2020
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_exports_rank,"Recalculado: bens + serviços
+exportações
+entrada observada",UKR,Ukraine,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ukraine (UKR),2020
+left_censored_as_already_treated,Censurados à esquerda como já tratados desde 2005 (descritivo),goods_services_two_way_rank,"Recalculado: bens + serviços
+two-way
+entrada observada",UKR,Ukraine,2020,Entrada observada,Painel ITPD-E/BaTIS filtrado pela regra; entrada observada sem exigir absorção,CSV: alternative_cross_country_model_panel,Ukraine (UKR),2020

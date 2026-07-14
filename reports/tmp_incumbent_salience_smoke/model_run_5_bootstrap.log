@@ -1,0 +1,13 @@
+[2026-05-19 23:23:30 -03] Loading existing target: china_top_absorbing_sample. 
+[2026-05-19 23:23:30 -03] Loading diagnostic moderator CSVs. 
+[2026-05-19 23:23:30 -03] Estimating Baseline IFE, no moderator with nboots = 5 
+[2026-05-19 23:23:31 -03] Estimating IFE grouped by displaced_us with nboots = 5 
+[2026-05-19 23:23:32 -03] Estimating IFE grouped by displaced_g7 with nboots = 5 
+[2026-05-19 23:23:32 -03] Estimating IFE grouped by displaced_regional_power with nboots = 5 
+[2026-05-19 23:23:33 -03] Estimating IFE grouped by pre_entry_high_level_partner with nboots = 5 
+[2026-05-19 23:23:33 -03] Wrote reports/tmp_incumbent_salience_smoke/model_results_5_bootstrap_overall.csv 
+[2026-05-19 23:23:33 -03] Wrote reports/tmp_incumbent_salience_smoke/model_results_5_bootstrap_group_att.csv 
+[2026-05-19 23:23:33 -03] Wrote reports/tmp_incumbent_salience_smoke/model_results_5_bootstrap_cell_counts.csv 
+[2026-05-19 23:23:33 -03] Wrote reports/tmp_incumbent_salience_smoke/model_results_5_bootstrap_salience_diagnostics.csv 
+[2026-05-19 23:23:33 -03] Wrote reports/tmp_incumbent_salience_smoke/model_results_5_bootstrap.md 
+[2026-05-19 23:23:33 -03] Wrote reports/tmp_incumbent_salience_smoke/model_sessionInfo_5_bootstrap.txt 

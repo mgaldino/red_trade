@@ -1,0 +1,4 @@
+source,item_code,raw_rows_total_item_overlap,distinct_raw_reporters,distinct_raw_partners,raw_missing_value_rows,raw_parse_fail_nonmissing_rows,raw_negative_value_rows,raw_zero_value_rows,unmapped_reporter_rows,unmapped_partner_rows,excluded_reporter_rows,excluded_partner_rows,self_flow_rows,invalid_flow_rows,valid_rank_input_rows,valid_missing_value_rows,valid_parse_fail_nonmissing_rows,valid_negative_value_rows,valid_zero_value_rows,raw_goods_rows_overlap,raw_missing_trade_rows,raw_parse_fail_nonmissing_trade_rows,raw_negative_trade_rows,raw_zero_trade_rows
+BPM5,S200,589808,191,193,22788,0,0,220,0,6112,0,6112,3056,0,580640,19628,0,0,220,NA,NA,NA,NA,NA
+BPM6,S,635268,204,206,0,0,0,1228,48,6408,48,6408,0,0,628860,0,0,0,1194,NA,NA,NA,NA,NA
+ITPD-E goods,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,20739219,0,0,0,11934386

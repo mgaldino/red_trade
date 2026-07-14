@@ -1,0 +1,2572 @@
+# ChatGPT Pro Review-Guided Revision Packet
+
+## Task
+
+Produce a concise set of executable APSR revision goals as a downloadable UTF-8 Markdown file named `chatgpt_pro_revision_goals_paper_v4_20260517_1916.md`.
+
+If the interface cannot create a downloadable file, return the complete Markdown content in the final answer with no wrapper prose.
+
+Do not blindly follow the pareceres. First decide where they are right, partly right, or wrong. Then propose concrete manuscript wording, data-analysis improvements, and revision actions.
+
+Review language: English
+
+## Reviewer Role
+
+# ChatGPT Pro Peer-Review Prompts
+
+## System/Role Prompt
+
+You are an exceptionally demanding senior scholar writing a top-journal referee report. Your task is not to be encouraging; it is to identify the most consequential barriers to publication and the revisions most likely to improve the paper.
+
+Be rigorous, specific, and selective. Do not list every possible issue. Concentrate on the highest-impact concerns that would shape an APSR/AJPS-level editorial decision.
+
+## Review Standard
+
+## Review-Guided Revision Suggestions Prompt
+
+You are a demanding senior coauthor helping revise a political science manuscript after receiving a referee report, advisor comments, peer comments, or an editorial decision letter.
+
+Your task is not to obey the report mechanically. First adjudicate the report. Then propose the manuscript changes that would most improve the paper and best position it for a top-journal revision.
+
+Write a downloadable UTF-8 Markdown file with these sections:
+
+1. `Executive Triage`: In 1-2 pages, state what the parecer gets right, what it misunderstands, and the strategic revision logic.
+2. `Referee Claim-by-Claim Assessment`: For each major comment, classify it as `Implement`, `Partly implement/reframe`, `Resist politely`, or `Ignore unless editor insists`. Explain the classification.
+3. `Highest-Impact Revision Agenda`: Identify the 5-8 revisions that matter most. Prioritize changes that alter the paper's contribution, theory, identification, model design, evidence, or structure.
+4. `Suggested Manuscript Rewrites`: Provide concrete draft language for the most important changes. Include replacement paragraphs, revised framing sentences, improved contribution statements, proposed section transitions, and model/empirical caveats where useful.
+5. `Response-to-Referee Language`: Draft tactful response language for the hardest comments, including cases where the authors should partially disagree.
+6. `What Not to Do`: Identify revisions that would waste space, weaken the paper, concede too much, or follow the parecer too literally.
+7. `Implementation Checklist`: Provide a prioritized checklist of manuscript edits.
+
+Standards:
+
+- Be candid about where the parecer is right.
+- Be equally candid where the parecer is confused, overreaching, or asking for something strategically harmful.
+- Do not invent new analyses, theorems, data facts, citations, or results.
+- When proposing wording, make it publication-grade and specific enough to paste into a draft after author review.
+- Separate rhetorical fixes from substantive fixes.
+- Preserve the author's core argument unless the parecer reveals that the argument itself must change.
+
+For empirical papers targeting APSR, do not restrict the advice to prose. Explicitly evaluate whether the paper needs stronger data analysis, descriptive evidence, identification checks, measurement validation, robustness tests, diagnostics, heterogeneity analysis, placebo tests, falsification exercises, alternative specifications, or clearer data construction.
+
+## Revision Goals Output Mode
+
+When asked to produce goals, write a Markdown file whose main content is a small number of executable goals that the author can paste into Codex. Each goal must be self-contained and operational.
+
+Use this format:
+
+```markdown
+# APSR Revision Goals
+
+## Field-Specific Calibration
+
+Use the following top-journal standard to judge which requested revisions matter most:
+
+## Empirical APSR-Level Prompt
+
+Review the attached empirical political science paper at the level expected of an APSR referee.
+
+Write a critical Markdown referee report with these sections:
+
+1. `Editorial Recommendation`: Reject / Reject and Resubmit / Major Revision / Minor Revision / Accept, with a concise rationale.
+2. `Best Version of the Paper`: Reconstruct the strongest possible version of the paper's contribution in 2-4 paragraphs.
+3. `Main Contribution`: Assess theoretical contribution, novelty, scope conditions, and relevance to broad political science audiences.
+4. `Major Concerns`: Identify only the 4-7 most consequential problems. For each, explain why it matters for the paper's core claim and what would have to change.
+5. `Empirical Design and Identification`: Evaluate research design, estimand, identifying assumptions, threats to inference, measurement validity, data construction, missingness, model specification, robustness, and external validity.
+6. `Evidence Presentation`: Assess whether tables, figures, descriptive evidence, and robustness checks are sufficient and well organized.
+7. `Theory and Mechanisms`: Evaluate whether the theory generates clear observable implications and whether mechanisms are credibly tested.
+8. `Writing and Structure`: Diagnose organization, pacing, framing, and whether the introduction sells the contribution effectively.
+9. `Highest-Impact Revision Plan`: Give a prioritized list of 5-8 revisions that would most improve the paper. Each item must specify the exact manuscript change and why it matters.
+10. `Bottom Line`: State the core publication barrier in one paragraph.
+
+Standards:
+
+- Be frank and exacting.
+- Do not pad the report with minor comments.
+- Distinguish fatal design problems from fixable presentation or robustness problems.
+- Do not invent facts absent from the paper.
+- If a claim cannot be assessed from the paper, say what evidence is missing.
+
+## Additional Instructions
+
+- Focus on the highest-impact revisions.
+- Do not produce exhaustive line edits.
+- Do not invent citations, data facts, or theorem claims not present in the paper.
+- Separate fatal problems from fixable problems.
+- Make the final revision plan operational enough that the author can execute it.
+- For empirical APSR revision tasks, include improvements to data analysis and identification when warranted; do not limit the answer to prose.
+- If output mode is goals, each goal must be directly pasteable into Codex as a follow-up task.
+
+
+## Extracted Paper Text
+
+Source path supplied by Codex: `/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.pdf`
+
+Extracted text is included for searchability; use the attached original file as authoritative.
+
+```text
+The Foreign Policy Impact of Trade-Based Status Gains:
+When China Overtakes the US as Top Trade Partner
+Manoel Galdino (University of São Paulo; mgaldino@usp.br)
+2026-05-17
+Abstract
+How do trade-based status gains affect foreign policy alignment? Existing IR research
+emphasizes status anxiety and status seeking, but pays little attention to upward status shifts.
+We argue that rank reversals in trade hierarchies, especially when a rising power displaces
+the hegemon, create a salient status shock that can produce foreign policy realignment be-
+yond gradual trade growth. The salience shock can be immediate, but the diplomatic response
+may accumulate gradually as policymakers revise positions under institutional inertia and rep-
+utational constraints. We test this claim in Brazil, where China overtook the United States
+as top trade partner in 2009, using Synthetic Difference-in-Differences on UNGA ideal-point
+distance. The estimate implies a statistically significant 41% average post-2009 reduction (ap-
+proximately 0.10 standard deviations) in Brazil’s ideological distance to China relative to the
+synthetic counterfactual (p = 0.032). To probe mechanism implications, we analyze Brazil’s
+main newspaper with NLP and find evidence consistent with a post-2009 increase in China-
+related salience, particularly trade-focused coverage. We then examine cross-country cases
+in which China becomes the top export destination. Because some treated countries experi-
+ence treatment reversals, we employ the counterfactual estimator of Liu, Wang, and Xu (2024)
+with interactive fixed effects, which accommodates non-absorbing (switching) treatment. The
+cross-country estimate supports a similar pattern. Exit-aligned diagnostics show no evidence of
+large persistent carryover after China loses the top position, though exit estimates are imprecise.
+These results suggest that discrete status milestones, not only continuous trade deepening, can
+reshape foreign policy behavior over the post-reversal period. The findings challenge claims
+that status gains are mostly illusory and motivate research on status effects in trade, investment,
+aid, and other economic ties.
+1
+
+Word count: 14,562
+1 Introduction
+“China overtakes US as Brazil’s top trade partner”. That was a headline in many Brazilian newspa-
+pers in 2009 (Rodrigues 2009). The BBC ran a similar headline in 2021, when China surpassed the
+United States as the EU’s biggest trading partner ( BBC News 2021 ). Sensing the symbolic weight
+of the milestone in Brazil, President Lula da Silva promptly announced a high-profile trip to Beijing,
+flanked by an unusually large business delegation.
+When a rising major power becomes a country’s top trade partner, does that status change induce
+foreign-policy realignment beyond what continuous trade exposure predicts? And is the effect
+stronger when the displaced number-one partner is the hegemon and strategic rival of the rising
+power?
+The status literature ( Renshon 2016; Ward 2017; Dafoe, Renshon, and Huth 2014 ) focuses almost
+exclusively on status deficits and conflict. It offers limited theoretical guidance predicting that
+a state gaining trade-based status would receive diplomatic concessions. The literature on status
+effects of rank changes exists in domestic politics ( Anagol and Fujiwara 2016 ; Fujiwara and Sanz
+2020) but has never been extended to international politics.
+An extensive empirical literature shows that as a country’s trade dependence on China accumulates,
+its UN-voting distance from Beijing tends to fall ( Kastner and Pearson 2021 ; Y an and Zhou 2021;
+Morgan 2019; Flores-Macías and Kreps 2013), the same being true for Brazil and China in particular
+(Neto and Malamud 2015 ; Mourón and Urdinez 2014 ). Analysts interpret this association in three
+ways: coercive leverage, i.e., China rewards or punishes to shape votes ( Tanner 2007; Reilly 2013),
+interest redefinition (growing commerce makes cooperation intrinsically valuable), and societal
+pressure (business lobbies or public opinion pull leaders toward Beijing). What these perspectives
+share is the assumption that influence scales smoothly with commercial exposure: the more trade,
+the more alignment — no particular trade share or moment is distinguished from another.
+Research in cognitive psychology and political communication, by contrast, emphasizes that actors
+respond disproportionately to salient thresholds – events that break routine patterns and become
+2
+
+focal in media and politicians’ agendas ( Baekgaard et al. 2019 ; Sheffer et al. 2018 ; Edwards and
+Wood 1999; Mintz and Geva 1997 ; Mercer 2017).
+While most studies of status emphasized how lacking status drives risk-acceptant behavior and
+conflict, there is only anecdotal evidence that status yields tangible diplomatic dividends ( Götz
+2021). As a result, we know surprisingly little about the downstream effects when a state’s status
+actually rises.
+We argue that discrete status change in trade hierarchy should induce foreign-policy realignment,
+specially when a rising major power becomes a country’s top trade partner. The cue can arrive
+abruptly, but the policy response need not be a one-year jump: diplomatic positions are embedded
+in prior votes, bureaucratic routines, coalition commitments, and reputational costs, so governments
+may adjust gradually as the new status category becomes politically usable.
+To assess the causal claim, the paper empirically document when China, the emerging power in
+the international system in the two thousands, becomes a country’s top trade partner (largest export
+destination). Firstly I consider Brazil’s case, since it is the most-likely and theoretically strongest
+case of this treatment. The United States had been Brazil’s leading trade partner for roughly eight
+decades before China displaced it in 2009. Brazil also has an active press, which allows us to
+observe the salience channel, and is a regional power, making a purely coercive explanation less
+plausible. The Brazilian design therefore estimates the same top-partner transition as the panel, but
+under the scope condition where the theory predicts the largest effect.
+To credibly show that the overtaking of the US by China as Brazil’s top trade partner has a causal
+effect on Brazil’s foreign policy orientation, we use a synthetic difference-in-differences approach.
+We measure the outcome as the absolute distance in UNGA ideal point estimation ( Bailey, Strezh-
+nev, and V oeten 2017) between Brazil and China over 1997-2015. The SDiD point estimate corre-
+sponds to an estimated 40.8% average reduction in Brazil’s ideological distance from China over
+the post-2009 period relative to the synthetic counterfactual. It is not an estimate of a visual dis-
+continuity or of the one-year change in 2009.
+Second, we estimate the same treatment in a cross-country panel. Treatment begins when China
+becomes a country’s largest export destination and remains on while China holds that position.
+The pooled panel A TT is therefore an average effect of China entering and holding the top trade
+3
+
+position across cases with different levels of geopolitical salience. It should not be expected to equal
+the Brazilian estimate: Brazil is a high-salience hegemonic-rival replacement case, while the panel
+also includes lower-salience cases where the displaced incumbent is not the United States or was
+less entrenched.
+To probe mechanism implications, we analyze Brazilian newspaper coverage and show that China
+and China-Brazil trade became more salient after the 2009 rank reversal. This media evidence
+speaks directly to the Brazilian case. In the cross-country panel, the mechanism is interpreted
+more cautiously: the evidence is consistent with a status mechanism, but does not directly mea-
+sure salience in each country.
+This study provides systematic evidence that a rising major power’s move to the top of a trade
+hierarchy can produce foreign-policy realignment, with the strongest mechanism evidence coming
+from Brazil and broader evidence coming from the cross-country panel. The study questions the idea
+in the literature that status gains are mostly illusory (Mercer 2017). It also has broad implications for
+the study of economic ties with an emerging power. Similar status-change effects may also shape
+how other economic variables, such as foreign direct investment, aid, and loans, affect foreign-
+policy behavior.
+2 Trade, Status, and Political Alignment
+An extensive literature examines how trade with China affects foreign policy. The proposed mech-
+anisms vary – coercive leverage, where China rewards or punishes to shape votes ( Tanner 2007;
+Reilly 2013); interest redefinition, where deepening economic ties create vested interests that lobby
+on behalf of Beijing (Kastner and Pearson 2021); soft power and societal pressure, where economic
+integration transforms public and elite opinion ( Morgan 2019 ; Kastner and Pearson 2021 ); and
+structural power, where China’s rise as a great power pulls countries toward its orbit ( Struver 2014;
+Schenoni and Leiva 2021; Neto 2011; Mourón and Urdinez 2014). What these perspectives share is
+the assumption that influence scales smoothly with commercial exposure: the more trade, the more
+alignment – no particular trade share or moment is distinguished from any other.
+Y et the empirical record shows reality is messier. Reverse causality remains a concern: political
+4
+
+alignment may drive trade rather than the reverse ( Haibin 2010 ; Coutinho and Rodriguez 2024 ;
+Fuchs and Klann 2013 ; Y an and Zhou 2021; Chen and Zhou 2021 ; Aiyar, Malacrino, and Pres-
+bitero 2024 )1. More substantively, if gradual trade growth consistently produced alignment, we
+should observe a monotonic relationship. Instead, Carmody, Dasandi, and Mikhaylov ( 2020) find
+the opposite for Africa: countries that increased trade with China voted more with the United States,
+not less – consistent with hedging rather than bandwagoning. Garcia-Herrero, Storella, and Weil
+(2024) show that UNGA alignment with China has remained remarkably stable despite China’s
+dramatic economic rise, suggesting that continuous trade growth alone does not move the needle
+on foreign policy. If gradual trade growth does not consistently produce alignment, what does?
+2.1 Why Rank Reversals Matter
+Status has been extensively studied in international relations ( Dafoe, Renshon, and Huth 2014 ;
+Miller et al. 2015 ; Renshon 2016; Renshon, Dafoe, and Huth 2018 ; Duque 2018; Parlar Dal 2019 ;
+Götz 2021; Røren 2024). A standard definition is the ranking or relative standing of a state ( Mac-
+Donald and Parent 2021). This definition, however, conflates a continuous measure (relative stand-
+ing) with an ordinal one (rank position). Being first is qualitatively different from being second, and
+that distinction matters for how actors process information and allocate attention. We distinguish
+between trade status – the ordinal position of a trade partner in a country’s hierarchy of commer-
+cial relationships – and status shock – the discrete event of a rank reversal. In an experimental
+setup, status is the treatment; rank reversal is the manipulation. Our argument concerns the down-
+stream consequences of status shocks, not status seeking, status anxiety, or military conflict – the
+phenomena that dominate the existing IR status literature.
+The micro-foundation for why rank matters comes from coarse categorization – the tendency to
+rely on broad, easily processed bins rather than fine-grained metrics when confronting complexity
+(Graeber, Roth, and Sammon 2025; Enke 2024). Actors can track continuous trade shares, but they
+also attend to categories such as “largest export market” or “top trade partner.” Even redundant
+1The most ambitious causal study in this tradition, Flores-Macías and Kreps ( 2013), employs fixed-effects with
+lagged dependent variables and two-stage least squares. Both strategies face well-documented identification problems:
+the lagged dependent variable violates the no-carryover assumption required for FE consistency ( Blackwell and Glynn
+2018; Imai and Kim 2019 , 2021), and the instrument (lagged energy production) likely fails the exclusion restriction
+(Mellon 2021; Bastardoz et al. 2023 ; Lal et al. 2024 ).
+5
+
+information shifts attention when it alters salient categories ( Conlon 2025; Bordalo, Gennaioli, and
+Shleifer 2022 ), and people tend to neglect the correlated structure of information and treat novel
+framings as independent signals ( Enke and Zimmermann 2017 ).
+The relevant cognitive shift is from an incumbent number-one partner category to a new “China
+= top trade partner” category. This reclassification does not necessarily provide new information
+about trade volumes; those data accumulate continuously. What it provides is a categorical cue
+that can organize attention, public interpretation, and elite coordination. The cue should be most
+salient when the new top partner is a rising major power and the displaced incumbent is politically
+prominent, long-entrenched, hegemonic, or strategically opposed to the rising power. The Brazilian
+case, where China displaced the United States after roughly eight decades, is therefore the strongest
+scope condition for the same top-partner treatment.
+The effect of rank on political decisions is well documented in domestic politics. Rank reversals
+produce bandwagon effects in elections ( Anagol and Fujiwara 2016 ; Granzier, Pons, and Tricaud
+2023), regression discontinuities at the boundary of winning versus losing affect subsequent po-
+litical careers ( Folke, Persson, and Rickne 2016 ; Fujiwara and Sanz 2020 ), and similar rank-based
+thresholds coordinate behavior across diverse actors. The rank reversal functions as a focusing event
+by breaking an entrenched cognitive category. Y et no study has examined whether rank effects op-
+erate in international politics, despite the plausibility that they do. Status is widely acknowledged
+to matter in world politics, but there is no quantitative study estimating how a positive status shock
+translates into concrete policy changes or political alignment.
+2.2 Two Claims: Attention and Policy Response
+Our theory rests on two distinct claims. Claim 1 (Attention): A rank reversal produces a dispropor-
+tionate increase in media salience. The micro-foundation is coarse categorization: the reclassifica-
+tion from “second partner” to “first partner” triggers a categorical reframing in news coverage. The
+amplification occurs through agenda-setting ( Edwards and Wood 1999) – the media transforms the
+categorical reclassification into a focal event for national attention. Since this is a bounded ratio-
+nality reaction, it is plausible that it would be temporary: as the new status becomes the cognitive
+default, salience fades. We provide evidence for this claim directly using NLP analysis of Brazilian
+6
+
+newspaper coverage.
+Claim 2 (Policy Response): The salience shock translates into foreign policy realignment through
+complementary channels, but the response can be gradual. First, a cognitive channel: poliheuristic
+theory (Mintz 2004, 2005; Mintz and Geva 1997) predicts that decision-makers use non-exhaustive
+search heuristics, and the salience spike causes the new trade status to enter their consideration
+sets, even if the underlying economic relationship was previously discounted. The role of cues
+and heuristics in foreign policy decisions has been discussed in international relations ( Jabarian
+and Sartori 2024 ). Second, an audience cost channel: once the media publicizes the new status,
+leaders face reputational incentives to align discourse and action with the newly salient relationship
+(Fearon 1994; Tomz 2007). Third, a coordination channel: the rank reversal creates a focal point
+in the Schelling sense around which business lobbies, diplomats, and public opinion coordinate
+their demands for policy adjustment. These channels work through institutions that carry memory:
+diplomatic services preserve prior positions, coalition commitments constrain abrupt reversals, and
+leaders may prefer incremental movement to avoid appearing opportunistic. The SDiD therefore
+identifies their combined reduced-form effect over the post-treatment period, not a separate instan-
+taneous mechanism.
+We are explicit about the limits of our design. Both the SDiD and the cross-country panel regression
+estimate the combined reduced-form effect of the trade status change on alignment through all
+channels. The NLP media analysis provides suggestive evidence for Claim 1 (attention). Claim 2 –
+how salience translates into votes – is theorized but not causally identified. We provide convergent
+evidence consistent with an attention channel, while acknowledging that the policy response channel
+remains theorized rather than directly identified.
+2.3 Hypotheses
+From the theoretical building blocks above, we derive four expectations.
+Hypothesis 1 (Top-partner status): When China becomes a country’s top trade partner, operational-
+ized as its largest export destination, that country’s UNGA ideal-point distance to China decreases
+relative to its counterfactual path. This is the main treatment in both the Brazilian SDiD and the
+cross-country panel.
+7
+
+Hypothesis 2 (Hegemonic-rival replacement): The top-partner effect should be stronger when China
+replaces the United States as the number-one partner. Displacing the hegemon and strategic rival
+of the rising power makes the status change more visible, more politically meaningful, and more
+likely to alter the domestic and diplomatic interpretation of the trade relationship.
+Hypothesis 3 (Media salience): In cases where the rank reversal becomes publicly visible, media
+coverage of China and of the bilateral trade relationship should increase around the reversal. We
+test this implication directly in the Brazilian case.
+Hypothesis 4 (Temporal dynamics): The alignment response may build gradually after China enters
+the top rank and should attenuate when China loses that position. Salience is temporary, while
+foreign-policy adjustment is constrained by diplomatic inertia and prior commitments.
+2.4 Scope Conditions
+The treatment is the same across designs: China becomes and holds the top trade-partner position.
+What changes is the scope condition under which the treatment occurs. The status-salience mecha-
+nism should be strongest when the displaced partner is the United States, when the prior top-partner
+relationship was long-entrenched, and when media institutions can amplify the rank reversal. The
+Brazilian case satisfies these conditions unusually well: the displaced partner was the United States,
+the prior relationship was historically long, and the press environment allows the attention channel
+to be observed. The cross-country panel estimates the same top-partner treatment across a broader
+set of cases, so its pooled A TT averages over both high- and lower-salience settings.
+2.5 Causal Framework
+The causal claim of the present paper can be summarized by the simplified Directed Acyclic Graph
+(DAG) – a diagram that visually represents assumed causal relationships – below. We represent
+the main variables and proposed mechanisms, without any confounding variables, to clarify the
+argument. We discuss the identification strategy in the next section.
+8
+
+Rank reversal
+(China overtakes US) Media salience
+UNGA alignment
+(distance to China)
+Figure 1: Simplified DAG of the causal relationship between China’s status as top trade partner and
+foreign policy alignment. Note: Unit = conceptual diagram (no numeric scale). Standard error =
+not applicable. Cluster = not applicable. Time window = conceptual graph; treatment onset is 2009
+in Brazil and country-specific in panel analyses. Treatment definition = Treatment indicator equals
+1 in any year China is currently the top export destination; turns off if China loses the top position
+(switching treatment).
+3 Methodology
+3.1 Brazilian Case
+For the Brazilian case, we employ the synthetic difference-in-differences (SDiD) method
+(Arkhangelsky et al. 2021 ), which combines the strengths of standard DiD and the synthetic
+control method (SCM). SDiD assigns unit weights so that the synthetic control matches the
+treated unit’s pre-treatment trajectory, and time weights so that the comparison focuses on periods
+closest to treatment onset. Unlike SCM, it retains unit fixed effects, accounting for time-invariant
+unobservables. Unlike standard DiD, it does not require that all control units follow the same trend
+as the treated unit – an assumption that is implausible here given the 2008 economic crisis and
+other concurrent shocks. A formal comparison of the DiD, SCM, and SDiD estimating equations
+is provided in the Appendix.
+9
+
+Following Hirshberg and Klosin ( 2024), we augment the model with time-varying covariates 𝑋𝑖𝑡
+for more accurate pre-treatment matching. The estimating equation is:
+( ̂ 𝜏SDiD
+𝐴𝑇 𝑇 , ̂ 𝜇, ̂ 𝛼,̂𝛽, ̂ 𝛾) = arg min
+𝜏𝐴𝑇 𝑇 ,𝜇,𝛽,𝛼,𝛾
+𝑁
+∑
+𝑖=1
+𝑇
+∑
+𝑡=1
+(𝑌𝑖𝑡 − 𝜇 − 𝛼𝑖 − 𝛽𝑡 − 𝐷𝑖𝑡𝜏𝐴𝑇 𝑇 − 𝑋𝑖𝑡𝛾)
+2
+̂ 𝑤SDiD ̂𝜆SDiD
+𝑡
+where ̂ 𝑤SDiD are unit weights and ̂𝜆SDiD
+𝑡 are time weights, both estimated from pre-treatment data.
+Standard errors are computed using the placebo variance estimator proposed by Arkhangelsky et al.
+(2021), which estimates the variance of the treatment effect by computing pseudo-treatment effects
+on each control unit.
+In this setup, 𝜏SDiD
+𝐴𝑇 𝑇 is an average treatment effect for Brazil over the weighted post-treatment period.
+Because 𝐷𝑖𝑡 equals 1 from 2009 onward, the estimate summarizes Brazil’s average post-2009 gap
+relative to the synthetic counterfactual. It should therefore be interpreted as an accumulated post-
+treatment effect, not as evidence that UNGA alignment changed discontinuously in 2009 itself.
+3.2 Cross-Country Design
+Although the Brazilian case is a credible strategy to study the causal effect of status change, it is
+still 𝑛 = 1, and does not allow generalization beyond its specific features. Furthermore, we cannot
+rule out that the explanation resides in something specific to Lula da Silva’s or the Workers’ Party’s
+presidency in the period considered, or rule out alternative explanations of potential confounders
+that happened at a similar time, such as the global economic crisis in the aftermath of Lehman
+Brothers’ fallout.
+To address such challenges, we examine all countries in our sample that had China becoming the
+country’s largest export destination and remains on only while China holds that position. If another
+partner later becomes the largest export destination, treatment returns to 0. As a result, this treatment
+is not absorbing and standard staggered DiD estimators such as Callaway and Sant’Anna ( 2021)
+cannot accommodate this switching pattern. I restrict treatment onsets from 2000 onward, toe reflect
+the fact that it is after that period that China starts to be seen as an emerging rising power and when
+10
+
+it enters the Wolrd Trade Organization.
+We therefore adopt the counterfactual estimator with interactive fixed effects (IFE) proposed by
+Liu, Wang, and Xu (2024) as our main cross-country specification. The fect framework estimates
+counterfactual outcomes for treated observations using untreated observations and pre-treatment
+data from treated units. The IFE model relaxes strict parallel trends by allowing for latent common
+factors with heterogeneous loadings, and cross-validation selects the optimal number of factors 𝑟∗.
+Crucially, fect natively handles treatment switching: it estimates entry effects (what happens when
+treatment turns on) and exit effects (what happens when treatment turns off), providing a direct test
+of whether the alignment shift persists or dissipates after the status shock fades. We estimate both
+a baseline specification (without covariates) and a specification controlling for log GDP per capita
+and press freedom (the V-Dem Freedom of Expression and Alternative Sources of Information
+index; V-Dem Institute ( 2024); Pemstein et al. ( 2024)), two time-varying confounders that could
+simultaneously affect trade patterns and UNGA voting alignment.
+To further investigate entry and exit dynamics, we complement fect with PanelMatch (Imai, Kim,
+and Wang 2023 ), a matching-based estimator for time-series cross-sectional data that estimates
+both the Average Treatment Effect on the Treated (A TT, effect of switching on) and the Average
+Treatment Reversal Effect on the Treated (ART, effect of switching off).
+3.3 Identification Assumptions and Diagnostics
+For the Brazilian SDiD design, identification requires that no unobserved shocks differentially af-
+fecting Brazil occur at treatment timing after weighting. This assumption is not fully testable. We
+therefore treat pre-treatment fit and in-time placebo exercises as partial diagnostics that are consis-
+tent with identification, rather than definitive tests.
+For the cross-country IFE design, identification requires strict exogeneity, which corresponds to
+baseline quasi-randomization conditional on covariates and unobserved latent factors. When the
+latent factors are a linear combination of period and unit effect (as in a DiD), it implies parallel
+trends (Liu, Wang, and Xu 2024 ; Bai 2009), so we can see the DiD as a special case. This is more
+flexible than parallel trends because it allows for heterogeneous trends via latent factors, as long as
+we can extract the factors. The IFEct estimator (used in the paper) corrects for unobserved time-
+11
+
+varying confounders ( Liu, Wang, and Xu 2024 ), which is important if the relationships of each
+country with China is subject to differential shocks, which we cannot observe. We assess model
+adequacy via two diagnostic tests recommended by Liu, Wang, and Xu ( 2024). First, a placebo test
+on pre-treatment periods: under correct specification, estimated effects in pre-treatment periods
+should be negligibly small. Because statistical power is limited with few treated units, we employ
+the equivalence approach rather than the conventional test – the equivalence test provides positive
+evidence for the absence of pre-trends, whereas the conventional test can only fail to reject their
+presence (Liu, Wang, and Xu 2024 ; Chiu et al. 2025 ). Second, a carryover test assesses whether
+treatment effects linger after exit, using the same equivalence framework.
+A reader might notice an asymmetry in the covariate sets between the two designs: the Brazilian
+SDiD includes a richer set of covariates, while the cross-country fect model includes log GDP per
+capita and press freedom. This asymmetry reflects the different roles covariates play in each esti-
+mator, not a difference in ambition. In SDiD, covariates enter the construction of synthetic-control
+weights and only need to be observed over the pre-treatment window. In fect IFE, covariates en-
+ter a regression adjustment that requires observations in every country-year of the switching panel;
+importing the full SDiD covariate set sharply reduces the sample. The retained covariates are those
+with near-complete coverage and clear theoretical relevance.
+A natural concern is whether commodity export dependence confounds the cross-country results,
+since commodity exporters are both more likely to see China rise as a trade partner and potentially
+more inclined to align with China. We deliberately exclude time-varying commodity dependence
+from the covariate set because it is a post-treatment variable: the treatment itself (China becoming
+the top partner) plausibly intensifies commodity trade, so controlling for it would absorb part of
+the causal effect and bias the A TT toward zero ( Angrist and Pischke 2009 ). The IFE specifica-
+tion already addresses this concern through two channels: unit fixed effects absorb time-invariant
+structural features such as export composition, and the cross-validated latent factor captures com-
+mon shocks – including the global commodity supercycle – that affect all commodity exporters
+simultaneously.
+12
+
+3.4 Data and Variables
+To fit the model, current implementations of SDiD require a complete panel. Thus, we assemble a
+country-year panel that merges several datasets, covering 96 countries over 19 years (1997 - 2015).
+Our outcome variable, vote similarity between a country and China at the United Nations General
+Assembly (UNGA), is based on ideal point estimates derived from UNGA vote data from Bailey,
+Strezhnev, and V oeten (2017). We use the median estimate of the ideal points of each country per
+year and compute the absolute distance between China in a given year and each other country-year
+in the database. The lower the score, the closer the foreign policy between the countries. It measures
+state preferences apart from the agenda, which is important whenever a comparison is made over
+time, as is the case here. It is a better measure over time than raw similarity indices, such as the
+percentage of similar votes in a year ( Neto and Malamud 2015 ), or any other measures, such as the
+S-score (Signorino and Ritter 1999 ).
+UNGA vote affinity has been used as a measure of shared state preference in the literature due to its
+comprehensive membership coverage and the regular availability of data ( Potrafke 2009; Strüver
+2016). The topics covered by UNGA resolutions primarily focus on political dimensions, particu-
+larly humanitarian and social issues, with a small fraction of resolutions addressing economic and
+financial matters (Strüver 2016).
+For the Brazilian SDiD, the treatment indicator 𝐷𝑖𝑡 equals 1 in the first year that China became
+Brazil’s leading trade partner, in 2009, and in all subsequent years. Because the shock is plausibly
+exogenous to pre-trend voting behavior at UNGA, it is credible as a treatment onset conditional on
+the synthetic-control fit. The figure with the estimated model includes a pre-trend fit, which resem-
+bles the treated behavior of vote similarity, providing evidence consistent with the key assumption
+of SDiD. Since the treatment remains on after 2009, the estimand is the average post-treatment gap,
+not a one-period 2009 effect.
+For the cross-country analysis, 𝐷𝑖𝑡 equals 1 in country-years in which China is the country’s largest
+export destination, and 0 otherwise.
+Predictors include per capita GDP from the Gravity Database ( Gurevich and Herman 2018 ). Trade
+data are drawn from the International Trade and Production Database ( Borchert et al. 2021 ). To
+13
+
+avoid double-counting, we use the value reported by the importing country to compute total trade
+between two dyads, as importers have a greater interest in accurately measuring this value for tax
+collection purposes ( Borchert et al. 2021 ). We compute the share of total trade with China and
+the share of total trade with the United States as our two measures of trade. As our measure of
+power, we use the Global Power Index (GPI) from the Pardee Institute at the University of Denver.
+GPI combines demographic, economic, military, technological, and diplomatic dimensions. We
+calculate the power gap between all countries and the US as the difference between their GPI indices.
+We also include distance to the US, as countries closer to the US will have a bigger incentive to align
+their foreign policy with it. Another economic variable is the exchange rate, since many countries
+complain about China’s devalued currency. A country with a more devalued currency is expected
+to be more aligned with China than one with a less devalued currency. We also include per capita
+income, as reported by the World Bank. Table 1 presents the descriptive statistics.
+We further augment the SDiD covariate matrix with three institutional variables that capture polit-
+ical and economic alignment channels. First, we include a parliamentary system indicator, coded
+1 for parliamentary regimes and 0 otherwise, from the Database of Political Institutions ( Cruz,
+Keefer, and Scartascini 2021 ). Parliamentary systems may respond differently to trade shocks be-
+cause the executive depends on legislative confidence, potentially moderating foreign-policy flex-
+ibility ( Chen and Zhou 2021 ). Second, we include a military executive indicator, coded 1 when
+the chief executive has a military background, from the same source. Military executives may pur-
+sue distinct foreign-policy orientations, particularly regarding alignment with great powers (Morgan
+2019). Third, we construct an indicator for the existence of a trade agreement with the United States
+(preferential trade agreement, free trade agreement, or economic integration agreement) from the
+Dynamic Gravity Database ( Gurevich and Herman 2018 ). Countries with a US trade agreement
+face institutional constraints that may attenuate realignment toward China ( Kastner and Pearson
+2021; Flores-Macías and Kreps 2013). Because the DPI covers only up to 2015, we forward-fill in-
+stitutional variables to later years, which is reasonable given the slow pace of regime-type changes.
+For the cross-country fect and C&S specifications, we include two time-varying covariates: log
+GDP per capita (from Gurevich and Herman ( 2018)) and the V-Dem Freedom of Expression and
+Alternative Sources of Information index ( V-Dem Institute 2024; Pemstein et al. 2024 ). GDP per
+14
+
+capita controls for the possibility that economic development simultaneously drives trade patterns
+and UNGA voting behavior. Press freedom captures the extent to which media channels can freely
+operate – a theoretically relevant covariate because our salience mechanism requires media coverage
+to amplify the rank reversal signal.
+A potential threat to our research design is the occurrence of a global economic crisis in 2008
+(Frankel and Saravelos 2012 ). It is possible that Brazil may react differently in its foreign policy
+than other countries due to the financial crisis. To rule out the possibility that Brazil’s alignment shift
+in 2009 was driven by macroeconomic turbulence rather than status salience, we augment our SDiD
+covariate matrix with two annual indicators capturing different facets of the 2008–09 crisis, both
+drawn from the Global Macro Database ( Müller et al. 2025 ): a measure of current account balance
+(% GDP), to capture external￿sector stress and reliance on foreign financing; and a measure of
+Government Budget Deficit (% GDP), to reflect fiscal pressure and stimulus capacity.
+4 Descriptive Analysis
+In Figure 2, we plot the evolution of the UNGA ideal points for the US, Brazil, and China over
+time. As we can see, Brazil has been closer to China than to the US since the beginning of the data
+series, in 1990, up to 2022, during Bolsonaro’s government. Although Brazil moved away from
+China under Bolsonaro, Brazil was still closer to China than to the US. This is a testament to how
+much Brazil is structurally aligned with China at the UNGA.
+It also shows that Brazil is moving more over time than China, which is mostly stable over time.
+Thus, this indicates that Brazil is moving closer to China than the opposite, as expected, given the
+power asymmetry between the two countries.
+Having established that it is mostly Brazil moving around rather than China, we can use as our main
+variable the absolute distance between Brazil’s and China’s ideal points, with the understanding that,
+apart from the beginning of the nineties, Brazil is almost always closer to the center than China and
+that Brazil is the one moving around. Figure 3 reports this distance for the Brazilian series used
+in the SDiD specification and overlays separate linear fits before and after 2009. The raw points
+show a lower post-2009 trajectory, but not a clean one-year break. This is exactly why the causal
+15
+
+−1
+0
+1
+2
+3
+1990 2000 2010 2020
+year
+Ideal points at UNGA
+country
+BRA
+CHN
+USA
+Figure 2: Evolution of UNGA ideal points for the United States, Brazil, and China over time.
+Note: Unit = UNGA ideal-point score (Bailey et al. scale). Time window = 1990-2022 annual
+series. Treatment definition = Treatment indicator equals 1 from 2009 onward, when China becomes
+Brazil’s top export destination displacing the USA, and 0 before 2009.
+16
+
+Table 1: Descriptive statistics of panel variables.
+Descriptive statistics
+Variable N N = 1,920 1
+Treatment 1,920 8 (0.4%)
+Absolute ideal point distance to China 1,920 0.91 (0.79) [0.00, 4.22]
+Power Index 1,920 0.00 (0.50) [-0.12, 5.01]
+Absolute ideal point distance to US 1,920 2.64 (0.92) [0.00, 5.06]
+Share of trade with US 1,920 0.00 (0.50) [-0.41, 1.87]
+Share of trade with China 1,920 0.00 (0.50) [-0.36, 5.08]
+GDP (current US$) 1,920 0.00 (0.50) [-0.37, 2.86]
+Official exchange rate (LCU per US$, period average) 1,920 0.00 (0.50) [-0.15, 6.82]
+Physical distance to US 1,920 0.00 (0.50) [-1.16, 1.10]
+Power Gap to US 1,920 0.00 (0.50) [-3.90, 0.43]
+Current Account Balance as % of GDP 1,920 0.00 (0.50) [-3.32, 2.64]
+Latin America Country 1,920 400 (21%)
+Government Deficit as % of GDP 1,920 0.00 (0.50) [-6.68, 3.39]
+Parliamentary System 1,920 748 (39%)
+Military Executive 1,920 200 (10%)
+Trade Agreement with US 1,920 159 (8.3%)
+1n (%); Mean (SD) [Min, Max]
+Note: Unit = variable-specific (see row labels). Time window = 1990-2022 country-year panel
+used in the Brazilian SDiD setup. Treatment definition = Treatment indicator equals 1 from 2009
+onward, when China becomes Brazil’s top export destination displacing the USA, and 0 before
+2009.
+interpretation below relies on the SDiD counterfactual and on a post-treatment average, rather than
+on visual inspection of an abrupt discontinuity.
+Ideal-point distances summarize movement in the latent space of UNGA preferences. To provide
+more clarity about what changed in Brazilian foreign policy at the UNGA, we complement the
+ideal-point analysis with a resolution-level diagnostic of Brazil-China roll-call votes from 2005 to
+2012.
+17
+
+2009
+0.25
+0.50
+0.75
+1.00
+1997 1999 2001 2003 2005 2007 2009 2011 2013 2015
+Y ear
+Absolute distance to China
+Annual raw value Pre−2009 Post−2009
+Brazil−China Distance in UNGA Ideal Points
+Figure 1. Descriptive only. Lines are separate OLS fits before 2009 and from 2009 onward. The dashed
+line marks China's rank reversal in Brazil's trade hierarchy.
+Figure 3: Brazil-China distance in UNGA ideal points. Points show raw annual absolute distances
+from the paper’s analytic dataset. The blue and orange lines are separate OLS fits estimated for
+the pre-2009 and post-2009 periods. The vertical dashed line marks 2009, when China became
+Brazil’s top trade partner. This figure is descriptive and should not be read as a causal estimate.
+Note: Unit = absolute UNGA ideal-point distance to China (points). Time window = 1997-2016
+annual Brazil series from the synth data object. Treatment definition = Treatment indicator equals
+1 from 2009 onward, when China becomes Brazil’s top export destination displacing the USA, and
+0 before 2009.
+The question one wonders after seeing the graph is: why was Brazil getting closer over time? The
+main hypothesis discussed in the literature is the gravitational pull of the Chinese economy, as
+indicated by the percentage of Brazil’s exports that went to China during the considered period.
+Figure 4 shows that around the year 2000, the percentage of exports destined for China increased at
+a roughly constant rate, exhibiting a steep variation that does not exactly align with the evolution of
+political alignment presented earlier, although there is some positive correlation with the evolution
+of political alignment shown in Figure 3.
+18
+
+0%
+10%
+20%
+30%
+1990 2000 2010 2020
+year
+Percent of brazilian exports to China
+Figure 4: Share of Brazil’s exports destined for China over time. Note: Unit = share of Brazil’s
+exports to China (percent). Time window = 1990-2022 annual series. Treatment definition = Treat-
+ment indicator equals 1 from 2009 onward, when China becomes Brazil’s top export destination
+displacing the USA, and 0 before 2009.
+19
+
+5 Empirical Results
+Figure 5 presents the evolution of political alignment between Brazil and China at the UNGA and
+among a donor pool of countries before and after China became Brazil’s main trade partner. The
+counterfactual estimate from the donor pool allows us to estimate the average causal effect of the
+treatment on the similarity of votes at UNGA over the post-2009 period. The estimate is -0.26
+points, which means that becoming the main trade partner is associated with an average decrease
+of 0.26 points in the absolute distance between the ideal points of Brazil and China after 2009,
+relative to the synthetic counterfactual. Relative to Brazil’s pre-treatment mean distance (0.647),
+this corresponds to a 40.8% reduction. The point estimate is -0.26 with a 95% CI of (-0.51, -
+0.02) and p-value 0.032 under placebo-based inference. The estimate should not be interpreted as
+saying that Brazil’s ideal-point distance fell by 0.26 points in 2009 itself. It summarizes the post-
+treatment gap, consistent with a mechanism in which a salient rank reversal opens a window for
+gradual diplomatic adjustment. To put the magnitude in perspective, the estimated reduction of
+0.26 ideal-point units can be compared with other known drivers of UNGA alignment. He, Zheng,
+and Chen ( 2025) find that Chinese arms exports shift recipients’ voting alignment toward China
+(2SLS), and Lektzian and Biglaiser ( 2023) estimate that the combination of US foreign aid and
+economic sanctions shifts bilateral voting patterns at the UNGA. Our estimate of 0.26 points from
+a single trade rank reversal suggests that discrete status milestones can produce alignment shifts on
+par with material policy instruments that the literature has identified as consequential.
+A resolution-level diagnostic helps make the aggregate ideal-point result substantively concrete.
+Because Brazil and China already voted together at high rates in several UNGA issue areas before
+2009, there was limited room for additional convergence across much of the agenda. The relevant
+question is therefore not whether Brazil shifted uniformly toward China, but where residual dis-
+agreement could plausibly close after the rank reversal. The clearest movement appears in human
+rights, an issue area in which Brazil’s post-democratization diplomacy carried stronger reputational
+commitments than China’s ( Milani 2015) and where convergence is therefore substantively infor-
+mative rather than mechanically expected. In two recurrent human-rights resolution families after
+2009, Brazil moved from abstention to yes while China remained at yes. These cases give con-
+crete content to the policy-response mechanism: the aggregate reduction in ideal-point distance
+20
+
+0.0
+0.5
+1.0
+1.5
+2000 2005 2010 2015
+synthetic control Brazil
+Figure 5: SDiD fit for Brazil and synthetic control with time weights. Note: Unit = absolute UNGA
+ideal-point distance to China (points). Standard error = placebo-based (reported in SDiD tables, not
+plotted here). Time window = pre-treatment and post-treatment years shown in the plot (treatment
+in 2009). Treatment definition = Treatment indicator equals 1 from 2009 onward, when China
+becomes Brazil’s top export destination displacing the USA, and 0 before 2009.
+21
+
+reflects selective movement in politically meaningful domains, not an across-the-board diplomatic
+bandwagon.
+In Figure 6, we plot the results for Brazil, along with the top 10 controls, filtered by weight size.
+As we can see from the graph, no other country displays behavior similar to Brazil’s, which lends
+credibility to the estimation of the causal effect 2.
+BOL
+COL
+DOM
+GEO
+GTM
+IND
+MLT
+PRY
+TCD
+TUR
+0.0
+0.5
+1.0
+1.5
+2.0
+2000 2005 2010 2015
+synthetic control treated
+Figure 6: Top 10 donor controls by SDiD weight in the Brazilian specification. Note: Unit = country
+trajectories in absolute UNGA ideal-point distance; donor weights are unitless and sum to 1. Time
+window = pre-treatment and post-treatment years shown in the plot (treatment in 2009). Treatment
+definition = Treatment indicator equals 1 from 2009 onward, when China becomes Brazil’s top
+export destination displacing the USA, and 0 before 2009.
+2A figure with the weights for top controls is in the appendix
+22
+
+6 Robustness Checks
+The target estimand of the SDiD estimator is the average treatment effect on the treated for the
+period post-treatment, whose weights are different from zero. This means that, in theory, it may be
+capturing the effect of other treatments that happened at a prior or later time. The main argument of
+the paper is that there is a distinctive quality in becoming the number one trade partner. If that is the
+case, then we should not find any effect when China became the second (in 2003, after overtaking
+Argentina and again in 2005, after briefly losing the second spot to Argentina in 2004), nor a few
+years after being the top one for a while.
+Thus, we ran two pre-treatment in-time placebo tests, in which we pretended the true treatment
+happened in 2003 and 2005. We also ran a post-treatment falsification at 2012 to probe an alternative
+explanation: that the estimated 2009 effect is actually driven by a later shock. For the two pre-
+treatment placebos, we limit the sample data to the year 2008, in order not to include the effect of
+the true treatment that started in 2009. Table 2 presents the results, listing the full set of covariates
+included in each specification. As we can see, the placebo effects are smaller and not statistically
+significant at the conventional 95% level.
+Note: Unit = A TT in absolute UNGA ideal-point distance to China (points). Standard error =
+placebo-based (95 percent CI = estimate ± 1.96 × SE). Time window = main model uses treatment
+in 2009; pre-treatment placebos set pseudo-treatment at 2003 and 2005 with sample truncated at
+2008; late-break falsification sets pseudo-treatment at 2012. Treatment definition = main model
+applies the treatment definition at 2009; placebo models redefine treatment at the pseudo-treatment
+year.
+A potential confounder is the Lula da Silva presidency (2003–2010), which pursued an explicit
+“South-South” foreign policy reorientation. However, Lula took office in 2003—six years before
+the treatment. If his ideology were driving alignment with China, the pre-treatment placebos at
+2003 and 2005 should show significant effects; they do not. Moreover, the cross-country analysis
+(Section 7) shows that the effect is not specific to Brazil or to any single leader, as it appears across
+countries with different political systems and leadership ideologies. The staggered treatment timing
+across countries rules out any single-country political confounder.
+23
+
+Table 2: Synthetic DiD: main model, pre-treatment placebos, and late-break falsification.
+(1) Main 2009 (2) Placebo 2003 (3) Placebo 2005 (4) Late-break 2012
+A TT -0.26 -0.12 -0.12 0.04
+(0.12) (0.19) (0.13) (0.14)
+Covariates:
+Trade share China ✓ ✓ ✓ ✓
+Trade share US ✓ ✓ ✓ ✓
+Power index (GPI) ✓ ✓ ✓ ✓
+Power gap to US ✓ ✓ ✓ ✓
+Per-capita income ✓ ✓ ✓ ✓
+Exchange rate ✓ ✓ ✓ ✓
+Distance to US ✓ ✓ ✓ ✓
+HoG ideology ✓ ✓ ✓ ✓
+Current account (% GDP) ✓ ✓ ✓ ✓
+Gov. deficit (% GDP) ✓ ✓ ✓ ✓
+Parliamentary system ✓ ✓ ✓ ✓
+Military executive ✓ ✓ ✓ ✓
+US trade agreement ✓ ✓ ✓ ✓
+Sample truncated at — 2008 2008 —
+A potential concern is whether the estimated effect reflects the discrete change in status by the
+rank reversal or simply a non-linear function of trade growth. Three pieces of evidence address
+this concern. First, our SDiD specification includes the share of trade with China and the share
+of trade with the United States as time-varying covariates, absorbing the linear effect of trade ac-
+cumulation on alignment. Second, the placebo tests at 2003 and 2005 are directly informative: in
+both years, Brazil’s trade with China was growing rapidly – China overtook Argentina to become
+Brazil’s second-largest partner in 2003 – yet neither placebo produces a significant effect. If align-
+ment responded smoothly to trade growth, these years of steep increases should show comparable
+shifts; they do not. Third, the cross-country analysis exploits staggered treatment timing: different
+countries reached the rank reversal at different trade-share levels and in different years, providing
+variation that separates the rank effect from any single trade trajectory 3. Together, these results
+support the interpretation that the status change itself – not the underlying trade growth – drives the
+observed alignment shift.
+3Adding higher-order polynomial terms of trade shares (quadratic, cubic) is not advisable in this context, as Gel-
+man and Imbens ( 2019) show that polynomial specifications produce noisy estimates with poor confidence-interval
+coverage, a concern that applies a fortiori in an underpowered single-treated-unit design.
+24
+
+6.1 Salience in the media
+If the salience channel is relevant, there should be concrete evidence in Brazilian media cover-
+age. To test this, we collected all headlines, stories, op-eds, and editorials mentioning “China” in
+Folha de São Paulo, Brazil’s widest-circulation newspaper ( Folha de S.Paulo 2016 ), from 2000 to
+2014. Among 48,029 pieces, we identified 14,589 with “China” (or variants like “Chinese”) in the
+headline, quantifying the evolution of China’s salience in national discourse.
+The stories encompass a wide range of themes, including sports, natural disasters, politics, eco-
+nomics, science, and more. However, over time, news pieces about China have increasingly re-
+flected its growing relevance as Brazil’s largest trade partner since 2009.
+The evidence shows that, after 2009, Brazilian media attention to China not only increased but also
+shifted from general-interest stories to trade headlines. Figure 7 shows that news pieces about China
+peaked during the 2008 Beijing Olympics and remained high as China surpassed the US as Brazil’s
+largest trade partner. The shock year (2009) saw nearly twice the annual average of the pre-2008
+period.
+However, it is possible that China’s rise in the news is due to events unrelated to trade, such as
+increased tensions with the US or the Beijing Olympics. To clarify whether trade-related news
+became more salient after 2009, we utilized the OpenAI API for ChatGPT, model gpt-4.1-mini,
+created on April 10, 2025, to categorize the news—see the appendix for details—into 9 categories.
+This step allows us to assess precisely how trade-focused news evolved over time.
+This distinction is crucial because volume alone could reflect any China￿related event. What mat-
+ters is the substance of what journalists discussed. To track this, Figure 8 plots the share of trade-
+economy pieces in all China headlines. The peak is in 2004, when there was less news about China
+in total and it was the year that Brazil recognized China as a market economy at the WTO (14%
+of all trade-related stories that year), with mostly negative headlines. Manual reading of the trade
+news pieces at the time shows that a plurality of them are about soy import barriers put in place by
+China (38% of all trade-related stories that year). So, although it was a highly salient year, it was
+not the type of salience that would trigger pressure on foreign policy from the business community
+toward China.
+25
+
+0
+500
+1000
+1500
+2000 2002 2004 2006 2008 2010 2012 2014
+Y ear
+Number of headlines
+Figure 7: Number of Folha de Sao Paulo headlines mentioning China by year. Note: Unit = count
+of headlines. Standard error = not applicable. Cluster = not applicable. Time window = 2000-2014
+annual series. Treatment definition = Treatment indicator equals 1 from 2009 onward, when China
+becomes Brazil’s top export destination displacing the USA, and 0 before 2009.
+26
+
+5
+10
+2000 2002 2004 2006 2008 2010 2012 2014
+Y ear
+Trade−related share (%)
+Figure 8: Share of trade-related items among all China headlines per year. Note: Unit = share of
+trade-related China headlines (percent). Standard error = not applicable. Cluster = not applicable.
+Time window = 2000-2014 annual series. Treatment definition = Treatment indicator equals 1 from
+2009 onward, when China becomes Brazil’s top export destination displacing the USA, and 0 before
+2009.
+27
+
+A closer look at the evolving themes further illustrates this shift. Up to 2006, the main China-
+related coverage focused on health issues, North Korea and nuclear topics, as well as certain sports
+themes (“seleção brasileira”). By 2009, those subjects remained, but news about Asia, the China
+and Hong Kong stock markets, and, centrally, Brazilian company V ale do Rio Doce’s exports to
+China—closely linked with the Dollar and Brazilian trade—became prominent. This evidence is
+central to our proposed mechanism, as it illustrates the qualitative transformation in the economic
+relationship between Brazilian companies, the broader economy, and China. It is helpful to zoom
+in and compare 2008 with 2009 for further clarity.
+A lexical snapshot emphasizes the qualitative break between years. By examining the most frequent
+trigrams, we gain insight into the changing content from year to year. Trigrams are strings of three
+tokens that help segment sentences into key phrases (Violos et al. 2018). In 2008, the most common
+three￿word bundles included ‘earthquake’, ‘Olympic torch’, and ‘bird flu’. In 2009, they shifted
+decisively to ‘record iron￿ore exports’, ‘Bovespa rises’, and ‘Brazil￿China trade hits record’—
+precisely the salience cues our theory predicts.
+Headlines with “bate” (“reach”) illustrate the pattern: In 2009, headlines like “Agribusiness exports
+reach record high, with China as the main highlight” and “China hits record iron ore imports”
+repeatedly appeared, while in 2008, “bate” appeared only once in an agribusiness context 4.
+Political elite discourse mirrored the media. During his May 2009 visit to Beijing, President Lula
+opened a business seminar by noting that ‘China has become, in 2009, Brazil’s largest trading part-
+ner’ and immediately linked this milestone to a coincidence of positions in international forums
+(Presidência da República Federativa do Brasil 2009 ). Two years later, Deputy Aldo Rebelo re-
+minded the Foreign￿Affairs Committee that China’s elevation to first place justified deeper legal
+cooperation (Câmara dos Deputados 2011 ).
+A natural concern is whether the post-2009 increase in trade-related China coverage reflects the
+rank reversal specifically or is driven by confounding events – the 2008 global financial crisis, the
+post-Olympics China attention cycle, or general economic turbulence. To address this, Figure 9
+disaggregates all China headlines into broad categories: China-Brazil Trade, Chinese Economy,
+4We used ChatGPT 4o to assist in the headlines translation from Portuguese into English. See https://chatgpt.com/
+share/6862b919-4630-800e-ab9c-df9dee5ae56c
+28
+
+Diplomacy & Relations, and Non-economic (sports, health, disasters, etc.). If the media shift were
+driven by the financial crisis or post-Olympics attention, we would expect all economic categories
+– or non-economic categories – to show comparable increases. Instead, the data show that the sus-
+tained post-2009 growth is concentrated specifically in trade-related coverage: China-Brazil Trade
+headlines nearly tripled from 37 in 2008 to 113 in 2011, while non-economic coverage remained
+stable or declined after the 2008 Olympics spike. The Chinese Economy category also grew but
+tracked general global recovery rather than the bilateral trade milestone.
+Rank reversal
+0
+500
+1000
+1500
+2000 2002 2004 2006 2008 2010 2012 2014
+Y ear
+Number of headlines
+Category China−Brazil Trade Chinese Economy Diplomacy & Relations Non−economic (sports, health, disasters, etc.)
+Figure 9: Media counterfactual: disaggregated China headlines in Folha de Sao Paulo by category,
+2000-2014. The sustained post-2009 increase is concentrated in trade-related coverage. Note: Unit
+= count of headlines per category per year. Time window = 2000-2014 annual series. Treatment
+definition = Treatment indicator equals 1 from 2009 onward, when China becomes Brazil’s top
+export destination displacing the USA, and 0 before 2009.
+Taken together, media salience shifted in both volume and content precisely when China overtook
+the United States. Figure 7 documents a sustained increase in China-related headlines after 2009.
+Figure 8 shows that the share of trade-economy stories doubled immediately following the rank
+29
+
+change – a pattern absent in prior years – while the lexical comparison confirms the pivot from
+disaster and sports trigrams in 2008 to ‘record exports’, ‘iron ore’, and ‘Bovespa’ in 2009. The
+timing aligns with the SDiD breakpoint (2009), and pre-treatment placebo years with similar trade
+growth but no rank change show no comparable media pivot. The disaggregated analysis in Figure
+9 further shows that the post-2009 shift is specific to trade coverage rather than a general increase
+in China-related reporting, which helps rule out the financial crisis and Olympics as alternative ex-
+planations for the media pattern. These patterns are consistent with a media agenda shock centered
+on the economic relationship, as predicted by coarse-categorization theories: once China became
+Brazil’s largest partner, editors and readers re-sorted China stories into the ‘top-trade-partner’ cate-
+gory, amplifying their news value. This pattern is more consistent with a salience mechanism than
+with gradual interdependence. Media evidence is consistent with mechanism implications.
+7 Cross-Country Evidence
+The Brazilian case generated the theory and provided internally valid causal evidence via SDiD.
+However, it remains a single case, and we cannot rule out idiosyncratic confounders. We now test
+the generalizability of the status-salience theory using a cross-country design, which constitutes an
+independent out-of-sample test.
+A natural question is whether the same effect occurs when China becomes the top trade partner in
+other countries. The theory predicts the strongest effects when an emerging power displaces the
+hegemon, as in Brazil, but the cross-country estimand is broader: it asks whether the top-partner
+transition matters on average whenever China becomes the number-one export destination. This
+specification therefore tests the general top-status claim, while the hegemonic-rival moderation
+hypothesis remains a separate heterogeneity question. Consistent with H4, exit-aligned analyses ask
+whether the alignment effect attenuates when China no longer holds the top trade-partner position.
+7.1 Main result (fect IFE)
+As mentioned, the IFE model relaxes the strict parallel trends assumption by allowing for latent
+common factors with heterogeneous loadings, and cross-validation selects 𝑟∗ = 1 factors. The
+30
+
+Table 3: Cross-country A TT estimates for China top trade-partner status.
+(1) fect IFE (2) fect IFE (3) C&S (4) C&S
+A TT -0.060 -0.073 -0.076 -0.102
+(0.031) (0.033) (0.038) (0.058)
+p-value 0.058 0.027 0.049 0.077
+Treatment type Switching Switching Absorbing subset Absorbing subset
+N (country × year) 3159 2627 2277 1953
+N (treated units) 32 29 11 12
+N (control units) 66 58 58 51
+Covariates None log GDP pc, Free press None log GDP pc, Free press
+Latent factors 𝑟∗ = 1 (CV) 𝑟∗ = 1 (CV) — —
+Panel window 1990–2022 1990–2020 1990–2022 1990–2020
+overall A TT is -0.060 (bootstrap SE = 0.031, 95% CI [-0.121, 0.002], p = 0.058), indicating that
+when China holds the top trade partner position, countries move closer to China in UNGA voting.
+Substantively, this corresponds to about 10.2% of the pre-treatment mean distance to China, or 0.083
+standard deviations of the outcome. The estimate is in the theoretically expected negative direction,
+but the confidence interval includes zero; under the cross-validated pooled IFE specification, the
+average cross-country effect is not statistically distinguishable from zero.
+Table 3 compares the switching-treatment fect IFE estimates with an absorbing-treatment analogue
+estimated using Callaway and Sant’Anna ( 2021). Column (2) adds log GDP per capita and the
+V-Dem Freedom of Expression index ( V-Dem Institute 2024 ; Pemstein et al. 2024 ) to the fect
+IFE, controlling for economic development and press freedom – two plausible confounders that
+could simultaneously affect trade patterns and UNGA voting. Columns (3) and (4) rebuild the C&S
+estimator from the same China-top-partner rule: treatment is the first observed year in or after 2000
+in which China becomes the country’s number-one export destination after not being number one,
+but only countries where China never later loses the top position are kept as treated units. Countries
+with switching treatment are excluded from the C&S comparison rather than recoded as controls.
+Because C&S requires absorbing treatment, these columns estimate the persistent-treatment subset
+rather than the same switching A TT as fect.
+Note: Unit = A TT in absolute UNGA ideal-point distance to China (points). Standard error =
+bootstrap with 500 replications. Cluster = country level. Time window = baseline panel covers
+31
+
+1990–2022; covariate complete-case panel covers 1990–2020. Treatment definition = Treatment
+indicator equals 1 in any year China is currently the top export destination; turns off if China loses
+the top position (switching treatment). C&S columns restrict treated units to countries where this
+treatment is absorbing.
+Figure 10 presents the consolidated diagnostic tests following Liu, Wang, and Xu ( 2024). Panel (a)
+shows the IFE dynamic treatment effects: pre-treatment estimates fluctuate around zero, the effect
+turns negative after treatment entry, and the largest negative estimates appear in the early post-
+treatment years rather than as a purely instantaneous jump at entry. Panel (b) displays the FE placebo
+test, which assesses whether the model correctly predicts pre-treatment outcomes. The conventional
+test does not reject the null of zero placebo effects (p = 0.707), though with only 32 treated countries,
+statistical power is limited. More informatively, the equivalence test – which reverses the burden of
+proof by testing the null that pre-treatment effects are meaningfully large – rejects at the 5% level
+(p = 0.01), providing positive evidence that pre-treatment effects are negligibly small relative to the
+A TT (Chiu et al. 2025 ). Panel (c) shows the carryover test: the conventional test does not reject
+the null of zero carryover effects (p = 0.361), and the equivalence test rejects the null that carryover
+effects are meaningfully large (p = 0.048), suggesting that there is no large persistent carryover after
+exit. The equivalence test plots are presented in the Appendix.
+48
+−0.4
+−0.2
+0.0
+0.2
+−20 −15 −10 −5 0 5 10
+Periods since treatment entry
+Effect on UNGA distance to China
+(a) IFE: Dynamic Treatment Effects
+48
+Placebo test p−value: 0.707
+Placebo equivalence test p−value: 0.010
+−0.4
+−0.2
+0.0
+−20 −15 −10 −5 0 5 10
+Periods since treatment entry
+Effect on UNGA distance to China
+(b) FE: Placebo Test
+26
+Carryover effect test p−value: 0.361
+Carryover effect equivalence test p−value: 0.048
+−0.2
+−0.1
+0.0
+0.1
+−1 0 1 2 3
+Periods since treatment exit
+Effect on UNGA distance to China
+(c) FE: Carryover Test
+Figure 10: Diagnostic tests for the cross-country fect analysis (Liu, Wang & Xu 2024). (a) IFE
+dynamic treatment effects; (b) FE placebo test with placebo periods in blue; (c) FE carryover test
+with carryover periods in red. Note: Unit = A TT in absolute UNGA ideal-point distance to China
+(points). Standard error = bootstrap (500 replications). Time window = 1990-2022 panel. Treatment
+definition = Treatment indicator equals 1 in any year China is currently the top export destination;
+turns off if China loses the top position (switching treatment).
+32
+
+7.2 Exit effects and treatment reversals
+A distinctive advantage of the switching-treatment framework is the ability to estimate exit effects –
+what happens to UNGA alignment when China loses the top trade partner position and the treatment
+turns off. This provides a diagnostic implication of the salience mechanism: if the alignment shift
+is driven by the ongoing salience of China’s status as top partner, the effect should attenuate when
+that status is lost.
+26−0.3
+−0.2
+−0.1
+0.0
+0.1
+−1 0 1 2 3
+Periods relative to treatment exit
+Effect on abs. distance to China
+IFE: Exit−aligned gap plot
+Figure 11: fect IFE: Exit-aligned gap plot showing what happens when China loses the top trade
+partner position. Note: Unit = A TT in absolute UNGA ideal-point distance to China (points). Stan-
+dard error = bootstrap (500 replications). Time window = 1990-2022 panel. Treatment definition
+= Treatment indicator equals 1 in any year China is currently the top export destination; turns off if
+China loses the top position (switching treatment).
+The exit-aligned gap plot is based on 26 observed treatment exits across 17 countries, so the evidence
+is necessarily noisier than the entry-aligned A TT. The estimates move close to zero around the exit
+year and the carryover tests in Figure 10(c) reject large persistent carryover effects, but the post-
+exit lead estimates are imprecise. The pattern is therefore consistent with the salience mechanism
+(H4), but it should be read as suggestive rather than decisive evidence. Interest-based and trade-
+33
+
+dependence theories also predict reversible effects, so exit effects alone do not uniquely identify
+salience (see Section 7.4).
+We complement the fect analysis with PanelMatch ( Imai, Kim, and Wang 2023 ), which separately
+estimates the Average Treatment Effect on the Treated (A TT, switch-on) and the Average Treatment
+Reversal Effect on the Treated (ART, switch-off).
+ATT (switch on)
+ART (switch off)
+0 2 4 6 8
+−1.5
+−1.0
+−0.5
+0.0
+−0.2
+−0.1
+0.0
+0.1
+Periods after switch
+Estimate
+Imai, Kim & Wang (2023) −− lag = 1, no refinement
+PanelMatch: Entry vs. Exit Effects
+Figure 12: PanelMatch: Entry (A TT) and exit (ART) effects of China’s status as top trade partner.
+Note: Unit = A TT/ART in absolute UNGA ideal-point distance to China (points). Standard error
+= bootstrap (1000 iterations). Time window = 1990-2022 panel. Treatment definition = Treatment
+indicator equals 1 in any year China is currently the top export destination; turns off if China loses
+the top position (switching treatment).
+The PanelMatch results are noisier than fect, as expected with matching-based inference on a small
+panel. The A TT estimate is small at lead 0 (-0.047) and more negative at lead 1 (-0.093, 95% CI
+[-0.173, -0.008]); later leads are mostly negative but imprecise. The ART at lead 0 is -0.071 (95%
+34
+
+CI [-0.369, 0.032]), so PanelMatch does not provide independent evidence of an immediate move
+away from China after exit. We therefore read PanelMatch as supportive of the entry effect and
+inconclusive on exit dynamics.
+7.3 Raw data
+To provide transparency on the treated countries driving the cross-country result, we plot the raw
+UNGA voting distance to China for each treated country. Each panel shows the annual absolute
+distance to China in UNGA ideal points, with a LOESS smoother and a vertical dashed line marking
+treatment periods.
+The raw data reveal that most treated countries experienced a lower ideological distance to China
+after treatment entry, consistent with the estimated A TT, but the trajectories are not uniform one-year
+breaks. The raw trajectories also confirm that treatment switching is empirically present, although
+country-level paths after exit are heterogeneous and should not be interpreted as a clean one-year
+rebound.
+7.4 Dynamic treatment effects and the temporality of the status effect
+Figure 10 already displays the dynamic treatment effects relative to treatment entry. The effect
+turns negative after the rank reversal, reaches its largest negative values in the first few years post-
+treatment, and then gradually attenuates. This temporal pattern is substantively important because
+it is more consistent with accumulated diplomatic adjustment than with an instantaneous and per-
+manent step change.
+A status-salience mechanism, by definition, operates through a cue – the rank reversal – that is most
+prominent when it first occurs. However, foreign-policy positions are sticky: diplomats inherit pre-
+vious votes, governments avoid abrupt reversals on high-profile issues, and reputational costs make
+immediate across-the-board switching unlikely. The theory therefore predicts an immediate atten-
+tion shock but a policy response that can build over several years. Over time, the novelty fades:
+the new status quo becomes normalized, media attention moves to other stories, and policymakers’
+consideration sets shift. The gradual attenuation is therefore theoretically predicted: unlike mech-
+anisms that depend on durable structural changes (such as trade volume or economic dependence),
+35
+
+Venezuela Vietnam
+South Korea Thailand Uruguay
+Sierra Leone Singapore South Africa
+Peru Philippines Saudi Arabia
+Malaysia Myanmar (Burma) North Korea
+Japan Kuwait Liberia
+Guinea Indonesia Iraq
+Ethiopia Gabon Ghana
+Congo − Brazzaville Congo − Kinshasa Equatorial Guinea
+Brazil Chad Chile
+Angola Armenia Benin
+1990 2000 2010 2020 1990 2000 2010 2020
+1990 2000 2010 2020
+0.000.250.500.751.001.25
+0.0
+0.5
+1.0
+1.5
+0.0
+0.5
+1.0
+1.5
+0.00
+0.25
+0.50
+0.75
+1.00
+0.0
+0.5
+1.0
+0.0
+0.5
+1.0
+1.5
+2.0
+0.0
+0.5
+1.0
+1.5
+0.0
+0.3
+0.6
+0.9
+0.0
+0.5
+1.0
+1.5
+0.0
+0.5
+1.0
+1.5
+0.5
+1.0
+1.5
+2.0
+2.5
+0.0
+0.2
+0.4
+0.6
+0.0
+0.5
+1.0
+1.5
+0.0
+0.5
+1.0
+1.5
+0.00
+0.25
+0.50
+0.75
+0.0
+0.5
+1.0
+0.00
+0.25
+0.50
+0.75
+0.000.250.500.751.00
+0.0
+0.5
+1.0
+0.00
+0.25
+0.50
+0.75
+1.00
+0.00
+0.25
+0.50
+0.75
+0.0
+0.5
+1.0
+1.5
+0.0
+0.5
+1.0
+1.5
+0.0
+0.5
+1.0
+0.0
+0.5
+1.0
+1.5
+0.0
+0.3
+0.6
+0.9
+1.0
+1.5
+2.0
+2.5
+3.0
+0.00
+0.25
+0.50
+0.75
+1.00
+0.0
+0.5
+1.0
+1.5
+0.0
+0.3
+0.6
+0.9
+0.8
+1.2
+1.6
+2.0
+0.0
+0.5
+1.0
+1.5
+Y ear
+UNGA distance to China
+Figure 13: UNGA voting distance to China for treated countries where China becomes the top ex-
+port destination. Note: Unit = absolute UNGA ideal-point distance to China (points). Time window
+= treated-country yearly series within 1990-2022; treatment year varies by country. Treatment defi-
+nition = Treatment indicator equals 1 in any year China is currently the top export destination; turns
+off if China loses the top position (switching treatment).
+36
+
+the salience channel should produce a temporary effect that weakens as the cue loses its informa-
+tional novelty. This is the pattern suggested by the fect diagnostics, though the exit estimates remain
+noisy.
+The exit-aligned analysis provides a more direct test of temporality than the entry-aligned event
+study alone. The Brazilian case already hinted at the attenuation pattern, as the raw UNGA distance
+data showed a rebound after 2015, but the single-case design could not distinguish the rebound from
+idiosyncratic noise (e.g., the transition from Rousseff to Temer after an impeachment). The cross-
+country exit diagnostics are consistent with attenuation, but they are not strong enough to claim a
+systematic Brazil-like rebound across all treated countries 5.
+7.5 Displaced-Partner Heterogeneity
+The main cross-country specification defines treatment as China becoming the number-one export
+destination, regardless of which partner it displaces. This choice aligns the panel estimand with the
+theory’s basic top-status claim and avoids conditioning treatment on the United States. It also means
+that the current cross-country estimate is not a direct test of H2, which predicts stronger effects when
+the displaced partner is the hegemon. Testing that moderation requires a separate heterogeneity
+design that classifies the displaced partner while preserving the same China-top treatment rule.
+7.6 Leave-One-Out Sensitivity
+With only 32 treated countries, a natural concern is whether the cross-country A TT is driven by
+a single influential country – particularly Brazil, which generated the theory. We address this by
+reporting a leave-one-out sensitivity analysis: we re-estimate the fect IFE model dropping each
+treated country in turn. When Brazil is excluded, the A TT remains -0.059 (SE = 0.033, p = 0.076),
+confirming that the cross-country result does not depend on the theory-generating case. The full
+leave-one-out results are reported in Table 8 in the Appendix.
+5We thank an anonymous reviewer for raising the possibility that the effect might dissipate over time.
+37
+
+7.7 Alternative Explanations
+We systematically consider the most plausible alternative explanations and their empirically distin-
+guishable predictions:
+Alternative Key prediction Exit effects predicted?
+Discriminating
+evidence
+Structural
+bandwagoning
+Persistent alignment
+shift
+No – predicts
+persistence
+Carryover diagnostics
+show no large
+persistent post-exit
+effect
+Chinese coercion Effect tracks durable
+leverage
+No – leverage should
+persist
+Not directly ruled out
+by the pooled panel;
+reversibility
+diagnostics and
+covariates make a
+simple coercion
+account less plausible
+Interest-based (trade
+dependence)
+Effect tracks current
+trade dependence
+Y es – if trade reverses Discrete effect beyond
+trade-share covariates;
+but cannot fully rule
+out
+Gradual trade growth Monotonically
+increasing effect
+Y es – if trade declines Carmody, Dasandi,
+and Mikhaylov (2020)
+show continuous trade
+growth produces
+hedging, not
+alignment
+38
+
+Alternative Key prediction Exit effects predicted?
+Discriminating
+evidence
+Ideologically aligned
+leader
+Step-change at leader
+inauguration
+Possible DPI controls; Dreher
+and Jensen (2013) find
+leader change pushes
+votes toward the US
+2008 financial crisis Temporal confound in
+2008–2009
+No Staggered treatment:
+rank reversals in other
+years also produce
+effect; IFE absorbs
+common shocks
+The exit diagnostics weigh against explanations that require a large permanent alignment shift, but
+they do not by themselves rule out all structural or interest-based accounts. Interest-based and
+trade-dependence theories can also predict reversible effects: if the interests themselves reverse
+when China loses the top position, alignment should revert. The exit effects therefore narrow the
+set of plausible mechanisms to those consistent with reversibility (salience, interest-based, trade-
+dependence) but do not uniquely identify salience. The additional evidence for salience comes from
+the media analysis (Section 5): the rank reversal triggers a categorical reclassification in media
+coverage that is not reducible to gradual trade growth.
+We do not claim to have ruled out all alternatives. What we show is that the empirical signature
+– a discrete top-status effect in the cross-country panel, a high-salience hegemonic replacement
+case in Brazil, limited evidence of large post-exit carryover, and a media-coverage shift in Brazil
+– is most consistent with the status-salience mechanism. Interest-based theories remain a plausible
+complementary explanation.
+39
+
+8 Conclusion
+We have proposed a theory that status change induced by trade rank reversal, especially when China
+surpasses a politically salient incumbent trade partner, can produce foreign policy realignment. We
+found initial support for this effect when China overtook the US as Brazil’s leading trade partner.
+The evidence is consistent with the idea that the symbolic significance of overtaking a historic
+trade partner opened a window for gradual diplomatic adjustment, beyond changes in trade volume.
+The cross-country fect estimates support a broader top-partner pattern, although with a smaller
+magnitude, which is expected because Brazil is the most likely case. At the same time, evidence on
+the underlying salience mechanism is correlational and suggestive rather than causally identified.
+Overall, the results suggest that we should look beyond the increasing trade ties between countries,
+as has been done in the literature so far ( Y an and Zhou 2021; Flores-Macías and Kreps 2013; Reilly
+2013), and also focus on qualitative shifts in the public perception of a trade partner’s status.
+The results have broad implications for the literature on status. While it has focused on explaining
+how the search for status may trigger conflicts, it has overlooked robust empirical evidence that an
+increase in status changes the behavior of another country. Thus, contrary to Mercer ( 2017), who
+argued that prestige is illusory, we have shown that it matters in a realm important for a country like
+China, namely, voting in the UNGA.
+Our study has some limitations that future research could investigate further. The cross-country
+analysis supports the claim that the status effect generalizes beyond Brazil among countries where
+China becomes the top export destination. However, the cross-country evidence remains too coarse
+to fully adjudicate the hegemon-moderation hypothesis, because cases differ in the identity and
+political salience of the displaced partner. Furthermore, we lack cross-country media data to verify
+whether the salience mechanism operates in the same way outside Brazil.
+Secondly, the proposed mechanism has only indirect evidence. We have shown that newspaper
+coverage of trade ties with China shifted when it surpassed the US as the primary trade partner.
+However, we lack evidence on how business lobbies responded to it, and we do not have system-
+atic data on the public or political elites. Qualitative studies with political and economic elites could
+attempt to recover their thinking at the time, for instance. Laboratory experiments could be con-
+40
+
+ducted to provide evidence on the psychological and cognitive mechanisms underlying status based
+on a change in the rank of a partner.
+Our findings also carry practical implications. From the perspective of US policymakers, the re-
+sults suggest that symbolic milestones in trade hierarchies deserve attention alongside aggregate
+trade volumes. If losing the top trade partner position initiates a post-reversal process of diplo-
+matic realignment, then monitoring and responding to these threshold crossings – rather than fo-
+cusing solely on trade balances – may be a more effective strategy for maintaining influence. More
+broadly, the limited evidence of large post-exit carryover suggests that trade-status losses may not
+be irreversible, and that targeted trade engagement could mitigate diplomatic realignment.
+Despite these limitations, our study is the first to provide systematic evidence for trade-status effects
+in international relations. By highlighting trade-status salience, this study opens up new avenues
+for understanding how discrete milestones in economic ties can reshape international alignments
+and invites extensions to other domains (e.g., FDI, foreign aid, loans) and regions.
+References
+Aiyar, Shekhar, Davide Malacrino, and Andrea F. Presbitero. 2024. “Investing in Friends: The Role
+of Geopolitical Alignment in FDI Flows.” European Journal of Political Economy 83 (June):
+102508. https://doi.org/10.1016/j.ejpoleco.2024.102508.
+Anagol, Santosh, and Thomas Fujiwara. 2016. “The Runner-up Effect.” Journal of Political Econ-
+omy 124 (4): 927–91.
+Angrist, Joshua D., and Jörn-Steffen Pischke. 2009. Mostly Harmless Econometrics: An Empiri-
+cist’ s Companion. Princeton: Princeton University Press.
+Arkhangelsky, Dmitry, Susan Athey, David A. Hirshberg, Guido W. Imbens, and Stefan Wager.
+2021. “Synthetic Difference-in-Differences.” American Economic Review 111 (12): 4088–118.
+https://doi.org/10.1257/aer.20190159.
+Baekgaard, Martin, Julian Christensen, Casper Mondrup Dahlmann, Asbjørn Mathiasen, and Niels
+Bjørn Grund Petersen. 2019. “The Role of Evidence in Politics: Motivated Reasoning and
+Persuasion Among Politicians.” British Journal of Political Science 49 (3): 1117–40. https:
+//doi.org/10.1017/S0007123417000084.
+41
+
+Bai, Jushan. 2009. “Panel Data Models with Interactive Fixed Effects.” Econometrica 77 (4):
+1229–79. https://doi.org/10.3982/ECTA6135.
+Bailey, Michael A, Anton Strezhnev, and Erik V oeten. 2017. “Estimating Dynamic State Prefer-
+ences from United Nations V oting Data.” Journal of Conflict Resolution 61 (2): 430–56.
+Bastardoz, Nicolas, Michael J. Matthews, Gwendolin B. Sajons, Tyler Ransom, Thomas K. Kele-
+men, and Samuel H. Matthews. 2023. “Instrumental V ariables Estimation: Assumptions, Pit-
+falls, and Guidelines.” The Leadership Quarterly 34 (1): 101673. https://doi.org/10.1016/j.
+leaqua.2022.101673.
+BBC News. 2021. “China Overtakes US as EU’s Biggest Trading Partner.” https://www.bbc.com/news/business-
+56093378.
+Blackwell, Matthew, and Adam N Glynn. 2018. “How to Make Causal Inferences with Time-Series
+Cross-Sectional Data Under Selection on Observables.” American Political Science Review 112
+(4): 1067–82.
+Borchert, Ingo, Mario Larch, Serge Shikher, and Y oto V Y otov. 2021. “The International Trade and
+Production Database for Estimation (ITPD-E).” International Economics 166: 140–66.
+Bordalo, Pedro, Nicola Gennaioli, and Andrei Shleifer. 2022. “Salience.” Annual Review of Eco-
+nomics 14: 521–44. https://doi.org/10.1146/annurev-economics-051520-011616 .
+Callaway, Brantly, and Pedro H. C. Sant’Anna. 2021. “Difference-in-Differences with Multiple
+Time Periods.” Journal of Econometrics 225 (2): 200–230. https://doi.org/10.1016/j.jeconom.
+2020.12.001.
+Câmara dos Deputados. 2011. “Comissão Aprova Acordo de Direitos Civil e Comercial En-
+tre Brasil e China.” https://www.camara.leg.br/noticias/222695-comissao-aprova-acordo-de-
+direitos-civil-e-comercial-entre-brasil-e-china/.
+Carmody, Pádraig, Niheer Dasandi, and Slava Jankin Mikhaylov. 2020. “Power Plays and Balanc-
+ing Acts: A New Mapping of the African Geoeconomic Landscape in Response to the Rise of
+China.” Political Studies 68 (4): 852–70. https://doi.org/10.1177/0032321719882791.
+Chen, Qin, and Yi Zhou. 2021. “Whose Trade Follows the Flag? Institutional Constraints and
+Economic Responses to Bilateral Relations.” Journal of Peace Research 58 (6): 1207–23.
+https://doi.org/10.1177/0022343321992825.
+Chiu, Albert, Xingchen Lan, Ziyi Liu, and Yiqing Xu. 2025. “Causal Panel Analysis Under Parallel
+42
+
+Trends: Lessons from a Large Reanalysis Study.” American Political Science Review . https:
+//doi.org/10.1017/S0003055424001035.
+Conlon, John J. 2025. “Attention, Neglect, and Persuasion.” https://johnjconlon17.github.io/
+website/conlon_attention_persuasion.pdf.
+Coutinho, Y uri Bravo, and Júlio César Cossio Rodriguez. 2024. “Chinese Double Effect on Brazil-
+ian Foreign Policy (2003-2018).” Contexto Internacional 46 (2): e20230014. https://doi.org/
+10.1590/s0102-8529.20244602e20230014.
+Cruz, Cesi, Philip Keefer, and Carlos Scartascini. 2021. “Database of Political Institutions 2020.”
+Inter-American Development Bank Research Department . https://doi.org/10.18235/0003049.
+Dafoe, Allan, Jonathan Renshon, and Paul Huth. 2014. “Reputation and Status as Motives for
+War.” Annual Review of Political Science 17 (1): 371–93. https://doi.org/10.1146/annurev-
+polisci-071112-213421.
+Dreher, Axel, and Nathan M. Jensen. 2013. “Country or Leader? Political Change and UN General
+Assembly V oting.” European Journal of Political Economy 29: 183–96. https://doi.org/10.
+1016/j.ejpoleco.2012.10.001.
+Duque, Marina G. 2018. “Recognizing International Status: A Relational Approach.” International
+Studies Quarterly 62 (3): 577–92. https://doi.org/10.1093/isq/sqy001.
+Edwards, George C., and B. Dan Wood. 1999. “Who Influences Whom? The President, Congress,
+and the Media.” American Political Science Review 93 (2): 327–44. https://doi.org/10.2307/
+2585399.
+Enke, Benjamin. 2024. “The Cognitive Turn in Behavioral Economics.”
+Enke, Benjamin, and Florian Zimmermann. 2017. “Correlation Neglect in Belief Formation.” The
+Review of Economic Studies , December. https://doi.org/10.1093/restud/rdx081.
+Fearon, James D. 1994. “Domestic Political Audiences and the Escalation of International Dis-
+putes.” American Political Science Review 88 (3): 577–92. https://doi.org/10.2307/2944796.
+Flores-Macías, Gustavo A., and Sarah E. Kreps. 2013. “The Foreign Policy Consequences of Trade:
+China’s Commercial Relations with Africa and Latin America, 1992–2006.” The Journal of
+Politics 75 (2): 357–71. https://doi.org/10.1017/S0022381613000066.
+Folha de S.Paulo. 2016. “Alcance total dos jornais.” https://arte.folha.uol.com.br/graficos/QcVNh/.
+Folke, Olle, Torsten Persson, and Johanna Rickne. 2016. “The Primary Effect: Preference V otes
+43
+
+and Political Promotions.” American Political Science Review 110 (3): 559–78.
+Frankel, Jeffrey, and George Saravelos. 2012. “Can Leading Indicators Assess Country Vulnerabil-
+ity? Evidence from the 2008–09 Global Financial Crisis.” Journal of International Economics
+87 (2): 216–31.
+Fuchs, Andreas, and Nils-Hendrik Klann. 2013. “Paying a Visit: The Dalai Lama Effect on Inter-
+national Trade.” Journal of International Economics 91 (1): 164–77. https://doi.org/10.1016/j.
+jinteco.2013.04.007.
+Fujiwara, Thomas, and Carlos Sanz. 2020. “Rank Effects in Bargaining: Evidence from Govern-
+ment Formation.” Review of Economic Studies 87 (3): 1261–95. https://doi.org/10.1093/restud/
+rdz044.
+Garcia-Herrero, Alicia, Thibault Storella, and Pekka Weil. 2024. “China’s Influence at the United
+Nations: Words and Deeds.” Working Paper 19/2024. Bruegel.
+Gelman, Andrew, and Guido Imbens. 2019. “Why High-Order Polynomials Should Not Be Used in
+Regression Discontinuity Designs.” Journal of Business & Economic Statistics 37 (3): 447–56.
+https://doi.org/10.1080/07350015.2017.1366909.
+Götz, Elias. 2021. “Status Matters in World Politics.” International Studies Review 23 (1): 228–47.
+https://doi.org/10.1093/isr/viaa046.
+Graeber, Thomas, Christopher Roth, and Marco Sammon. 2025. “Coarse Categories in a Complex
+World.” University of Bonn and University of Cologne, Germany.
+Granzier, Riako, Vincent Pons, and Clemence Tricaud. 2023. “Coordination and Bandwagon Ef-
+fects: How Past Rankings Shape the Behavior of V oters and Candidates.” American Economic
+Journal: Applied Economics 15 (4): 177–217. https://doi.org/10.1257/app.20210840.
+Gurevich, Tamara, and Peter Herman. 2018. “The Dynamic Gravity Dataset: 1948–2016.” USITC
+Working Paper , 2018–02–A.
+Haibin, Niu. 2010. “Emerging Global Partnership: Brazil and China.” Revista Brasileira de
+Polı́tica Internacional 53: 183–92.
+He, Xiaoyu, Y awen Zheng, and Yiwen Chen. 2025. “Weapons and Influence: Unpacking the Im-
+pact of Chinese Arms Exports on the UNGA V oting Alignment.”European Journal of Political
+Economy 87: 102666. https://doi.org/10.1016/j.ejpoleco.2025.102666.
+Hirshberg, David, and Sylvia Klosin. 2024. “Synthetic Differences-in-Differences with Covari-
+44
+
+ates.” https://klosins.github.io/Hirshberg_Klosin_SDIDC.pdf.
+Imai, Kosuke, and In Song Kim. 2019. “When Should We Use Unit Fixed Effects Regression
+Models for Causal Inference with Longitudinal Data?” American Journal of Political Science
+63 (2): 467–90. https://doi.org/10.1111/ajps.12417.
+———. 2021. “On the Use of Two-Way Fixed Effects Regression Models for Causal Inference
+with Panel Data.” Political Analysis 29 (3): 405–15.
+Imai, Kosuke, In Song Kim, and Erik H. Wang. 2023. “Matching Methods for Causal Inference
+with Time-Series Cross-Sectional Data.” American Journal of Political Science 67 (3): 587–
+605. https://doi.org/10.1111/ajps.12685.
+Jabarian, Brian, and Elia Sartori. 2024. “Critical Thinking and Storytelling Contexts.” https://doi.
+org/10.2139/ssrn.4991780.
+Kastner, Scott L., and Margaret M. Pearson. 2021. “Exploring the Parameters of China’s Economic
+Influence.” Studies in Comparative International Development 56 (1): 18–44. https://doi.org/
+10.1007/s12116-021-09318-9 .
+Lal, Apoorva, Mackenzie Lockhart, Yiqing Xu, and Ziwen Zu. 2024. “How Much Should We Trust
+Instrumental V ariable Estimates in Political Science? Practical Advice Based on 67 Replicated
+Studies.” Political Analysis 32 (4): 521–40.
+Lektzian, David, and Glen Biglaiser. 2023. “Sanctions, Aid, and V oting Patterns in the United
+Nations General Assembly.” International Interactions 49 (1): 59–85. https://doi.org/10.1080/
+03050629.2023.2155151.
+Liu, Licheng, Y e Wang, and Yiqing Xu. 2024. “A Practical Guide to Counterfactual Estimators
+for Causal Inference with Time-Series Cross-Sectional Data.” American Journal of Political
+Science 68 (1): 160–76.
+MacDonald, Paul K., and Joseph M. Parent. 2021. “The Status of Status in World Politics.” World
+Politics 73 (2): 358–91. https://doi.org/10.1017/s0043887120000301.
+Mellon, Jonathan. 2021. “Rain, Rain, Go Away: 194 Potential Exclusion-Restriction Violations
+for Studies Using Weather as an Instrumental V ariable.”American Journal of Political Science.
+Mercer, Jonathan. 2017. “The Illusion of International Prestige.” International Security 41 (4):
+133–68. https://doi.org/10.1162/isec_a_00276.
+Milani, Carlos R. S. 2015. “Brazil’s Human Rights Foreign Policy: Domestic Politics and In-
+45
+
+ternational Implications.” Politikon 42 (1): 67–91. https://doi.org/10.1080/02589346.2015.
+1005793.
+Miller, Jennifer L., Jacob Cramer, Thomas J. V olgy, Paul Bezerra, Megan Hauser, and Christina
+Sciabarra. 2015. “Norms, Behavioral Compliance, and Status Attribution in International Pol-
+itics.” International Interactions 41 (5): 779–804. https://doi.org/10.1080/03050629.2015.
+1037709.
+Mintz, Alex. 2004. “How Do Leaders Make Decisions? A Poliheuristic Perspective.” Journal of
+Conflict Resolution 48 (1): 3–13.
+———. 2005. “Applied Decision Analysis: Utilizing Poliheuristic Theory to Explain and Predict
+Foreign Policy and National Security Decisions.” International Studies Perspectives 6 (1): 94–
+98. https://doi.org/10.1111/j.1528-3577.2005.00195.x.
+Mintz, Alex, and Nehemia Geva. 1997. “The Poliheuristic Theory of Foreign Policy Decision-
+making.” In Decisionmaking on War and Peace: The Cognitive–Rational Debate , edited by
+Nehemia Geva and Alex Mintz, 81–101. Boulder, CO: Lynne Rienner.
+Morgan, Pippa. 2019. “Can China’s Economic Statecraft Win Soft Power in Africa? Unpacking
+Trade, Investment and Aid.” Journal of Chinese Political Science 24 (3): 387–409. https:
+//doi.org/10.1007/s11366-018-09592-w .
+Mourón, Fernando, and Francisco Urdinez. 2014. “A Comparative Analysis of Brazil’s Foreign
+Policy Drivers Towards the USA: Comment on Amorim Neto (2011).” Brazilian Political Sci-
+ence Review 8 (2): 94–115. https://doi.org/10.1590/1981-38212014000100013.
+Müller, Karsten, Chenzi Xu, Mohamed Lehbib, and Ziliang Chen. 2025. “The Global Macro
+Database: A New International Macroeconomic Dataset.” Working {{Paper}} 33714. Working
+Paper Series. National Bureau of Economic Research. https://doi.org/10.3386/w33714.
+Neto, Octavio Amorim. 2011. De Dutra a Lula: A Condução e Os Determinantes Da Polı ́tica
+Externa Brasileira. Elsevier Brasil.
+Neto, Octavio Amorim, and Andrés Malamud. 2015. “What Determines Foreign Policy in Latin
+America? Systemic V ersus Domestic Factors in Argentina, Brazil, and Mexico, 1946–2008.”
+Latin American Politics and Society 57 (4): 1–27.
+Parlar Dal, Emel. 2019. “Status Competition and Rising Powers in Global Governance: An In-
+troduction.” Contemporary Politics 25 (5): 499–511. https://doi.org/10.1080/13569775.2019.
+46
+
+1627767.
+Pemstein, Daniel, Kyle L. Marquardt, Eitan Tzelgov, Yi-ting Wang, Juraj Medzihorsky, Joshua
+Krusell, Farhad Miri, and Johannes von Römer. 2024. “The V-Dem Measurement Model:
+Latent V ariable Analysis for Cross-National and Cross-Temporal Expert-Coded Data.” V-Dem
+Working Paper, no. 21.
+Potrafke, Niklas. 2009. “Does Government Ideology Influence Political Alignment with the US?
+An Empirical Analysis of V oting in the UN General Assembly.” The Review of International
+Organizations 4 (3): 245–68.
+Presidência da República Federativa do Brasil. 2009. “Discurso Do Presidente Da República Luiz
+Inácio Lula Da Silva Por Ocasião Do Seminário Brasil-China: Novas Oportunidades Para a
+Parceria Estratégica — Pequim, 19 de Maio de 2009.” https://www.gov.br/mre/pt-br/centrais-
+de-conteudo/publicacoes/discursos-artigos-e-entrevistas/presidente-da-republica/presidente-
+da-republica-federativa-do-brasil-discursos/luiz-inacio-lula-da-silva-2003-2007/discurso-
+do-presidente-da-republica-luiz-inacio-lula-da-silva-por-ocasiao-do-seminario-brasil-china-
+novas-oportunidades-para-a-parceria-estrategica-pequim-19-de-maio-de-2009.
+Reilly, James. 2013. “China’s Economic Statecraft: Turning Wealth into Power.” Analysis. Syd-
+ney: Lowy Institute for International Policy. https://www.lowyinstitute.org/sites/default/files/
+reilly_chinas_economic_statecraft_web.pdf.
+Renshon, Jonathan. 2016. “Status Deficits and War.” International Organization 70 (3): 513–50.
+https://doi.org/10.1017/s0020818316000163.
+Renshon, Jonathan, Allan Dafoe, and Paul Huth. 2018. “Leader Influence and Reputation For-
+mation in World Politics.” American Journal of Political Science 62 (2): 325–39. https:
+//doi.org/10.1111/ajps.12335.
+Rodrigues, Azelma. 2009. “China desbanca os EUA como maior parceiro comercial do Brasil.”
+https://oglobo.globo.com/economia/china-desbanca-os-eua-como-maior-parceiro-comercial-
+do-brasil-3170484; O Globo.
+Røren, Pål. 2024. “Status Orders: Toward a Local Understanding of Status Dynamics in World
+Politics.” International Studies Review 26 (4). https://doi.org/10.1093/isr/viae044.
+Schenoni, Luis L., and Diego Leiva. 2021. “Dual Hegemony: Brazil Between the United States and
+China.” In Hegemonic Transition, edited by Florian Böller and Welf Werner, 233–55. Cham:
+47
+
+Springer International Publishing. https://doi.org/10.1007/978-3-030-74505-9_12 .
+Sheffer, Lior, Peter John Loewen, Stuart Soroka, Stefaan Walgrave, and Tamir Sheafer. 2018.
+“Nonrepresentative Representatives: An Experimental Study of the Decision Making of Elected
+Politicians.” American Political Science Review 112 (2): 302–21. https://doi.org/10.1017/
+S0003055417000569.
+Signorino, Curtis S, and Jeffrey M Ritter. 1999. “Tau-b or Not Tau-b: Measuring the Similarity of
+Foreign Policy Positions.” International Studies Quarterly 43 (1): 115–44.
+Struver, G. 2014. “’Bereft of Friends’? China’s Rise and Search for Political Partners in South
+America.” The Chinese Journal of International Politics 7 (1): 117–51. https://doi.org/10.
+1093/cjip/pot018.
+Strüver, Georg. 2016. “What Friends Are Made of: Bilateral Linkages and Domestic Drivers of
+Foreign Policy Alignment with China.” Foreign Policy Analysis 12 (2): 170–91.
+Tanner, Murray Scot. 2007. Chinese Economic Coercion Against Taiwan: A Tricky Weapon to Use.
+Rand Corporation.
+Tomz, Michael. 2007. “Domestic Audience Costs in International Relations: An Experi-
+mental Approach.” International Organization 61 (4): 821–40. https://doi.org/10.1017/
+S0020818307070282.
+V-Dem Institute. 2024. “V-Dem Dataset V14.” https://www.v-dem.net/data/the-v-dem-dataset/ .
+Violos, John, Konstantinos Tserpes, Iraklis V arlamis, and Theodora V arvarigou. 2018. “Text Clas-
+sification Using the n-Gram Graph Representation Model over High Frequency Data Streams.”
+Frontiers in Applied Mathematics and Statistics 4: 41.
+Ward, Steven Michael. 2017. “Lost in Translation: Social Identity Theory and the Study of Status
+in World Politics.” International Studies Quarterly 61 (4): 821–34. https://doi.org/10.1093/isq/
+sqx042.
+Y an, Jiaqiang, and Y onghong Zhou. 2021. “Economic Return to Political Support: Evidence from
+V oting on the Representation of China in the United Nations.” Journal of Asian Economics 75
+(August): 101325. https://doi.org/10.1016/j.asieco.2021.101325.
+48
+
+Table 5: Brazil-China identical UNGA votes by year, 2005-2012.
+Y ear Resolutions Identical votes Identical votes (\%) Mean similarity score
+2005 97 80 82.5 0.892
+2006 108 88 81.5 0.884
+2007 93 78 83.9 0.903
+2008 96 73 76.0 0.859
+2009 83 72 86.7 0.934
+2010 85 74 87.1 0.906
+2011 96 83 86.5 0.927
+2012 90 71 78.9 0.872
+9 Appendix
+We present more details about the performance and checks on the fitted model and how we used
+ChatGPT to perform the NLP analysis.
+9.1 Resolution-Level UNGA Vote Diagnostics
+To make the Brazil-China movement in UNGA ideal points more concrete, Table 5 reports the
+annual share of resolutions in which Brazil and China cast identical votes from 2005 to 2012. The
+diagnostic uses roll-call votes from unvotes 0.3.0, based on Erik V oeten’s UNGA voting data, and
+excludes missing or absent votes by either Brazil or China.
+Note: Unit = roll-call resolutions with valid Brazil and China votes; mean similarity score equals 1
+for identical votes, 0.5 for yes/abstain or no/abstain, and 0 for yes/no disagreement. Time window
+= 2005-2012 annual series. Treatment definition = Treatment indicator equals 1 from 2009 onward,
+when China becomes Brazil’s top export destination displacing the USA, and 0 before 2009.
+Figure 14 disaggregates the same diagnostic by substantive issue family. Because several areas
+already had high Brazil-China vote similarity before 2009, the figure should be read as descriptive
+evidence about where additional convergence was possible, not as a separate causal estimate.
+49
+
+Palestine/Middle East Other / uncoded
+Economic development Decolonization
+Human rights Arms/disarmament/nuclear
+2005 2006 2007 2008 2009 2010 2011 2012 2005 2006 2007 2008 2009 2010 2011 2012
+50%
+60%
+70%
+80%
+90%
+100%
+50%
+60%
+70%
+80%
+90%
+100%
+50%
+60%
+70%
+80%
+90%
+100%
+Y ear
+Resolutions with identical Brazil−China votes (%)
+Figure 14: Brazil-China identical UNGA votes by substantive issue area, 2005-2012. Points report
+annual percentages of roll-call resolutions in which Brazil and China cast the same vote; red lines
+are local linear fits estimated separately for 2005-2008 and 2009-2012. Note: Unit = percentage
+of roll-call resolutions with identical Brazil-China votes. Time window = 2005-2012 annual series;
+resolutions with multiple issue codes enter each corresponding substantive issue family. Treatment
+definition = Treatment indicator equals 1 from 2009 onward, when China becomes Brazil’s top
+export destination displacing the USA, and 0 before 2009.
+50
+
+9.2 SDiD
+9.2.1 Comparison of DiD, SCM, and SDiD estimating equations
+To gain intuition for the SDiD estimator, it is useful to compare it with standard DiD and SCM. A
+DiD model estimates:
+( ̂ 𝜏DiD
+𝐴𝑇 𝑇 , ̂ 𝜇, ̂ 𝛼,̂𝛽) = arg min
+𝜏𝐴𝑇 𝑇 ,𝜇,𝛼,𝛽
+𝑁
+∑
+𝑖=1
+𝑇
+∑
+𝑡=1
+(𝑌𝑖𝑡 − 𝜇 − 𝛼𝑖 − 𝛽𝑡 − 𝐷𝑖𝑡𝜏𝐴𝑇 𝑇 )
+2
+While SDiD assigns weights to the control group that are more similar to those of the treated unit
+and in time periods comparable to the pre-treatment period, classic DiD does not use any weights
+at all.
+The SCM model can be written as follows:
+( ̂ 𝜏SCM
+𝐴𝑇 𝑇 , ̂ 𝜇, ̂𝛽) = arg min
+𝜏𝐴𝑇 𝑇 ,𝜇,𝛽
+𝑁
+∑
+𝑖=1
+𝑇
+∑
+𝑡=1
+(𝑌𝑖𝑡 − 𝜇 − 𝛽𝑡 − 𝐷𝑖𝑡𝜏𝐴𝑇 𝑇 )
+2
+̂ 𝑤SCM
+The equations show there is no unit fixed effect and no time weight in SCM. As a result, SCM cannot
+use unit-specific unobserved invariant characteristics to approximate the counterfactual outcome,
+and must consider the entire period when estimating the causal effect. SDiD combines unit weights
+(like SCM) with unit fixed effects and time weights (like DiD), addressing the limitations of both.
+The basic SDiD estimating equation is:
+( ̂ 𝜏SDiD
+𝐴𝑇 𝑇 , ̂ 𝜇, ̂ 𝛼,̂𝛽) = arg min
+𝜏𝐴𝑇 𝑇 ,𝜇,𝛽,𝛼
+𝑁
+∑
+𝑖=1
+𝑇
+∑
+𝑡=1
+(𝑌𝑖𝑡 − 𝜇 − 𝛼𝑖 − 𝛽𝑡 − 𝐷𝑖𝑡𝜏𝐴𝑇 𝑇 )
+2
+̂ 𝑤SDiD ̂𝜆SDiD
+𝑡
+Note that SDiD retains unit fixed effects 𝛼𝑖 (like DiD) while also assigning unit weights ̂ 𝑤SDiD (like
+SCM) and time weights ̂𝜆SDiD
+𝑡 (unique to SDiD).
+9.2.2 SDiD weights and donor pool
+Below we present the weights for the top 10 controls used in the main model.
+We also fit a model for a donor pool of Latin American states (excluding Caribbean countries),
+51
+
+estimate 1
+BOL
+COL
+DOM
+GEO
+GTM
+IND
+MLT
+PRY
+TCD
+TUR
+−0.6
+−0.4
+−0.2
+0.0
+weight
+0.022
+0.024
+0.026
+0.028
+0.030
+Figure 15: Weights of countries contributing to the synthetic control in the Brazilian SDiD model.
+Note: Unit = synthetic-control unit weights (unitless, sum to 1). Time window = weights are es-
+timated from the pre-treatment period ending in 2008. Treatment definition = Treatment indicator
+equals 1 from 2009 onward, when China becomes Brazil’s top export destination displacing the
+USA, and 0 before 2009.
+52
+
+which is more similar to Brazil than using countries worldwide. One reason to prefer a pool of Latin
+American countries is that a smaller donor pool helps avoid overfitting. When comparing results,
+the estimated causal effect is quite similar (a bit larger in absolute terms), which lends credibility
+to the main estimation. However, the small number of controls introduces noise and increases the
+uncertainty of the model. It is known that the usage of the placebo method to compute standard
+errors inflates the uncertainty of the estimation. For this reason, we prefer the model with the
+larger donor pool. Nonetheless, it is reassuring that with a donor pool composed of Latin American
+countries, which are arguably more similar to Brazil, the estimate is quite similar. Below is the plot
+of the model fitted for Latin America.
+0.0
+0.5
+1.0
+2000 2005 2010 2015
+synthetic control Brazil
+Figure 16: (#fig:plot latam)SDiD fit with a Latin American donor pool. Note: Unit = absolute
+UNGA ideal-point distance to China (points). Standard error = placebo-based (reported in text; not
+plotted here). Time window = pre-treatment and post-treatment years shown in the plot (treatment
+in 2009). Treatment definition = Treatment indicator equals 1 from 2009 onward, when China
+becomes Brazil’s top export destination displacing the USA, and 0 before 2009.
+The estimate is -0.41 with a standard error of 0.2. In any case, it is interesting to examine the coun-
+53
+
+tries with the largest weights. Argentina, Guatemala, Paraguay, and Uruguay – all but Guatemala
+are founding members of Mercosur. They contribute the most to synthetic control.
+estimate 1
+ARG
+BOL
+BRB
+COL
+CRI
+DOM
+ECU
+GTM
+GUY
+HTI
+JAM
+NIC
+PRY
+SLV
+SUR
+TTO
+−0.75
+−0.50
+−0.25
+0.00
+weight
+0.04
+0.05
+0.06
+0.07
+Figure 17: (#fig:plot weight latam)Synthetic-control donor weights for the Latin American SDiD
+specification. Note: Unit = synthetic-control unit weights (unitless, sum to 1). Time window =
+weights are estimated from the pre-treatment period ending in 2008. Treatment definition = Treat-
+ment indicator equals 1 from 2009 onward, when China becomes Brazil’s top export destination
+displacing the USA, and 0 before 2009.
+9.3 Cross-Country Robustness: Absorbing-Treatment Estimator (C&S)
+As a robustness check, we also report an absorbing-treatment estimator using Callaway and
+Sant’Anna ( 2021). This specification is rebuilt from the same China-top-partner panel used by
+the main fect analysis. Treated units are countries for which China first becomes the number-one
+export destination in or after 2000 after an observed untreated year and then never loses the top
+position through the end of the panel. Countries with treatment reversals are excluded from this
+C&S robustness check, not treated as controls. The baseline absorbing C&S estimate uses 11
+54
+
+treated units and 58 never-treated controls; the covariate-adjusted specification uses 12 treated
+units and 51 controls.
+This check should be read as an absorbing-subset analogue, not as the same estimand as the
+switching-treatment fect model. The fect estimator uses entry and exit variation from the full
+switching panel, whereas C&S estimates the effect among persistent China-top cases only.
+−0.8
+−0.4
+0.0
+0.4
+−30 −20 −10 0 10
+Periods relative to treatment
+ATT estimate
+Dynamic treatment effects: China becomes #1 trade partner
+Figure 18: Dynamic treatment effects from the absorbing-treatment C&S specification. Note: Unit
+= A TT in absolute UNGA ideal-point distance to China (points). Standard error = analytical (95
+percent confidence intervals shown). Cluster = country level. Time window = 1990-2022 balanced
+panel. Treatment definition = absorbing treatment: first observed year in or after 2000 in which
+China becomes the number-one export destination and never later loses that position.
+9.4 Cross-Country Diagnostic: No-Pretrend Equivalence Tests
+Following Liu, Wang, and Xu ( 2024) and Chiu et al. ( 2025), we report equivalence tests for the
+no-pretrend assumption. Unlike the conventional placebo test (which tests 𝐻0: no pre-trend), the
+equivalence test reverses the null to 𝐻0: pre-trends are meaningfully large, providing positive evi-
+dence for the absence of pre-trends when rejected. The red dashed lines mark the equivalence range
+55
+
+(0.36 ̂𝛿𝑠 or the user-specified threshold), while the grey dashed lines mark the minimum range.
+48
+Placebo equivalence test p−value: 0.010
+−0.50
+−0.25
+0.00
+0.25
+0.50
+−20 −15 −10 −5 0 5 10
+Periods since treatment entry
+Avg. prediction error
+Residual Average (w/ 90% CI) Min. Range Equiv. Range
+(a) FE: No−Pretrend Equivalence Test
+48
+F test p−value: 0.459
+Equivalence test p−value: 0.268
+−0.2
+−0.1
+0.0
+0.1
+0.2
+−20 −15 −10 −5 0
+Periods since treatment entry
+Avg. prediction error
+Residual Average (w/ 90% CI) Min. Range Equiv. Range
+(b) IFE: No−Pretrend Equivalence Test
+Figure 19: Equivalence tests for the no-pretrend assumption. (a) FE model: placebo equivalence
+test rejects the null of large pre-trends (TOST p = 0.040). (b) IFE model: the F-test rejects the
+null of zero pre-trends (p = 0.001), though the equivalence test does not reject (TOST p = 0.484),
+reflecting the limited power of the small cross-country sample. Note: Standard error = bootstrap
+(500 replications). Time window = 1990-2022 panel. Treatment definition = Treatment indicator
+equals 1 in any year China is currently the top export destination; turns off if China loses the top
+position (switching treatment).
+9.5 ChatGPT Classification
+Below is the coded instruction to the ChatGPT API to classify the subjects of the headlines.
+system_block <- paste(
+'You are a Brazilian expert in International Relations and the political' ,
+'economy of China–Brazil relations. Classify the subject of EACH headline' ,
+'when I say EACH, I mean all of them, even if repetitive or similar. Do classify **all** of them' ,
+'using **one** label from this list exactly as written:' ,
+'"diplomacy", "chinese economy", "china-brasil relations",' ,
+'"disaster and accidents", "chinese politics and policy",' ,
+'"sports, science, culture, other", "human rights",' ,
+56
+
+'"china-brazil trade", "health". \n\n',
+# 13 static few-shot examples — leave them unchanged!
+'Examples:\n',
+'1. Presidente chinês visita o Brasil e participa de reunião com FHC -> china-brasil relations \n',
+'2. Ministro chinês de Defesa faz visita oficial ao Brasil -> china-brasil relations \n',
+'3. Para governo, novo câmbio chinês só beneficia Brasil no médio prazo -> china-brazil trade \n',
+'4. China ultrapassa EUA como maior parceiro comercial do Brasil -> china-brazil trade \n',
+'5. China vai controlar preços de alimentos e combustíveis -> chinese economy \n',
+'6. Vendas de automóveis na China desaceleram em junho -> chinese economy \n',
+'7. China quer devolução das relíquias Yin, patrimônio da Unesco -> sports, science, culture, other \n',
+'8. Dinossauro encontrado na China esclarece origem das aves -> sports, science, culture, other \n',
+'9. OMS confirma mais de 4.600 casos de gripe suína; China registra 2º caso -> health \n',
+'10. Marinha chinesa busca "cansar" barcos japoneses em águas disputadas -> diplomacy \n',
+'11. Acidente após casamento deixa 16 mortos na China -> disaster and accidents \n',
+'12. Jornal chinês sai das bancas por foto da praça Tiananmen -> human rights \n',
+'13. China é parceira estratégica contra crise econômica, diz UE -> chinese economy' ,
+'return as in the examples, a string with the headline and the classification'
+)
+It is important to highlight that the process was not streamlined. We faced several problems, such
+as ChatGPT refusing to classify subjects (saying they were repetitive and too similar), changing
+the original headline, which made matching back to the original dataset difficult, and other sim-
+ilar problems. As a result, we had to rerun the instructions a few times on a sample and tweak
+it with some prompt engineering until arriving at that final version. As a result, this is the only
+part of the paper not fully reproducible, in the sense that another request for classification, with the
+same instructions, would yield a few different categorizations and a few different original headlines
+changed, along with some refusals to classify texts.
+Below we provide a random sample of the headlines and the classification provided by ChatGPT.
+57
+
+Figure 20: Random sample of China-related Folha de Sao Paulo headlines and ChatGPT classifi-
+cations. Note: Unit = headline text and category labels. Time window = sample drawn from the
+2000-2014 corpus.
+58
+
+Table 6: V alidation of ChatGPT classification against manual coding (N = 100). Overall accuracy:
+88.0 percent.
+Category N Correct Accuracy (%)
+china-brazil trade 6 6 100.0
+disaster and accidents 13 13 100.0
+health 6 6 100.0
+chinese economy 25 24 96.0
+human rights 8 7 87.5
+diplomacy 12 10 83.3
+sports, science, culture, other 17 14 82.4
+china-brazil relations 5 4 80.0
+chinese politics and policy 8 4 50.0
+Overall 100 88 88.0
+9.5.1 Validation of ChatGPT Classification
+To assess the reliability of the automated classification, one of the authors independently coded a
+stratified random sample of 100 headlines (with a minimum of 5 per category). Table 6 reports the
+agreement rate between the ChatGPT labels and the manual coding.
+Note: Unit = headline-level counts and accuracy (percent) by category. Time window = stratified
+validation sample from the 2000-2014 headline corpus.
+The overall accuracy is 88%. The lowest agreement is in the “chinese politics and policy” category
+(50%), where several headlines were manually reclassified as “diplomacy”. The categories most
+relevant to our analysis — “china-brazil trade” and “disaster and accidents” — achieved 100%
+agreement.
+9.6 Cross-Country: Treated Countries and Treatment-Switching Diagnostic
+Table 7 describes the 32 treated countries where China becomes the top export destination. For
+each country, we report the treatment year, whether the treatment is absorbing (China remains #1)
+or switching (China later loses the top position), and the mean UNGA voting distance to China
+before and after treatment.
+59
+
+Table 7: Descriptive statistics of treated countries where China becomes the top export destination.
+Country ISO3c Treatment year Absorbing Switches USA streak Press free. Mean dist. (pre) Mean dist. (post) Diff
+South Korea KOR 2003 Y es 1 15 0.952 1.536 1.438 -0.099
+Equatorial Guinea GNQ 2006 No 5 4 0.165 0.674 0.341 -0.333
+Angola AGO 2007 Y es 1 16 0.337 0.513 0.247 -0.266
+Chile CHL 2008 Y es 1 10 0.942 0.800 0.457 -0.343
+Brazil BRA 2009 Y es 1 20 0.930 0.733 0.408 -0.325
+Thailand THA 2009 No 2 20 0.609 0.461 0.258 -0.203
+Japan JPN 2010 No 6 22 0.925 1.736 1.326 -0.410
+Peru PER 2012 No 3 21 0.914 0.758 0.418 -0.340
+Saudi Arabia SAU 2015 Y es 1 3 0.120 0.386 0.220 -0.166
+Vietnam VNM 2018 No 2 16 0.150 0.548 0.332 -0.216
+Note:
+Absorbing = China remains the top trade partner through the end of the sample. Switching = China later loses the top position. USA streak = consecutive
+years the US held #1 export-destination position before treatment, where applicable. Press free. = V-Dem Freedom of Expression index (pre-treatment
+5-year mean). Mean dist. = absolute distance to China in UNGA ideal points. Diff = post minus pre.
+9.7 Leave-One-Out Sensitivity Analysis
+Table 8 reports the fect IFE A TT when each treated country is excluded from the sample. This check
+assesses whether the cross-country result is driven by any single influential observation.
+60
+
+Table 8: Leave-one-out sensitivity: fect IFE A TT when each treated country is excluded.
+Dropped country A TT SE p-value 𝑟∗
+r Full model -0.060 0.031 0.058 1
+r32 Angola -0.055 0.033 0.092 1
+r1 Armenia -0.061 0.030 0.042 1
+r2 Benin -0.060 0.031 0.051 1
+r3 Brazil -0.059 0.033 0.076 1
+r4 Chile -0.061 0.034 0.067 1
+r5 Congo - Kinshasa -0.054 0.044 0.225 2
+r6 Congo - Brazzaville -0.056 0.054 0.304 2
+r7 Ethiopia -0.056 0.052 0.276 2
+r8 Gabon -0.054 0.054 0.317 2
+r9 Ghana -0.058 0.051 0.261 2
+r10 Guinea -0.057 0.053 0.282 2
+r11 Equatorial Guinea -0.058 0.054 0.283 2
+r12 Indonesia -0.058 0.031 0.062 1
+r13 Iraq -0.051 0.054 0.339 2
+r14 Japan -0.060 0.031 0.054 1
+r15 South Korea -0.081 0.027 0.003 1
+r16 Kuwait -0.059 0.033 0.080 1
+r17 Liberia -0.052 0.052 0.321 2
+r18 Myanmar (Burma) -0.051 0.031 0.100 1
+r19 Malaysia -0.055 0.033 0.096 1
+r20 Peru -0.057 0.032 0.072 1
+r21 Philippines -0.060 0.034 0.075 1
+r22 North Korea -0.064 0.033 0.054 1
+r23 Saudi Arabia -0.058 0.033 0.077 1
+r24 Singapore -0.060 0.032 0.059 1
+r25 Sierra Leone -0.061 0.033 0.066 1
+r26 Chad -0.060 0.032 0.060 1
+r27 Thailand -0.058 0.032 0.072 1
+r28 Uruguay -0.055 0.033 0.098 1
+r29 V enezuela -0.051 0.030 0.086 1
+r30 Vietnam -0.068 0.033 0.040 1
+r31 South Africa -0.059 0.034 0.078 1
+61
+```
+
+
+## Extracted Parecer / Referee Report Text 1
+
+Source path supplied by Codex: `/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/edmans_review_paper_v4_2026-05-17/carta_editorial.md`
+
+Extracted text is included for searchability; use the attached original file as authoritative.
+
+```text
+# Carta Editorial — Framework Edmans (Contribution, Execution, Exposition)
+
+## Decisão: Reject-and-Resubmit
+
+## Scores consolidados
+
+| Dimensão | Score | Rating |
+|---|---:|---|
+| Contribution | 6/10 | Promissora, mas ainda moderada |
+| Execution | 6.5/10 | Boa no Brasil, sugestiva no painel |
+| Exposition | 6/10 | Clara, mas defensiva e com descuidos |
+| **Global** | **6.2/10** | **R&R forte / ainda não top-journal ready** |
+
+## Síntese editorial
+
+O paper tem uma ideia boa: mudanças discretas de rank em hierarquias comerciais podem afetar alinhamento diplomático de modo distinto do crescimento contínuo do comércio. O caso Brasil-China é o ponto mais convincente: a teoria é plausível, o SDiD é apropriado, e os placebos ajudam. A fraqueza central é que a contribuição ainda depende de uma distinção difícil de provar empiricamente: status/rank reversal versus interdependência, boom de commodities, diplomacia Sul-Sul, BRICS ou saliência geral da ascensão chinesa. O painel comparado ajuda, mas ainda é frágil; a evidência de mídia mostra saliência, mas não identifica a ponte saliência -> voto na AGNU.
+
+## Hierarquia Edmans aplicada
+
+A contribuição é suficiente para justificar investimento em revisão, mas não está forte o bastante para sustentar uma submissão top-tier na forma atual. A execução não derruba o paper; ela dá credibilidade ao caso brasileiro. Mas a execução ainda não entrega evidência conclusiva para a tese geral. A exposição é o gargalo mais fácil de corrigir: há overclaiming, excesso de diagnóstico no corpo principal, typos, labels quebrados e inconsistências visuais. Pela hierarquia Edmans, a prioridade é primeiro elevar a contribuição distintiva, depois consolidar mensuração/robustez, e só então limpar a exposição.
+
+## Prioridades para revisão
+
+1. Testar diretamente H2: o efeito é maior quando a China desloca os EUA do que quando desloca outro parceiro?
+2. Fortalecer a separação entre `trade rank` e `trade volume`: comércio total, exportações, importações, margem sobre segundo colocado e anos de crescimento sem mudança de ranking.
+3. Harmonizar e corrigir todos os diagnósticos do painel, especialmente `fect`, equivalence tests, p-valores e legendas.
+4. Rebaixar claims amplos de "foreign-policy realignment" para "UNGA voting convergence toward China", salvo quando houver evidência adicional.
+5. Melhorar o mecanismo: idealmente com evidência de elite, Itamaraty, discurso presidencial/legislativo, setor exportador ou documentos diplomáticos.
+
+## Recomendação estratégica ao autor
+
+Eu não submeteria ainda para APSR/AJPS/JOP/IO. O paper tem potencial para IO/ISQ/RIPE/Review of International Political Economy ou BJPS se a contribuição for reposicionada como teoria de "threshold salience in international political economy". A revisão deve ser substantiva, não apenas cosmética: o paper precisa provar que "rank matters" independentemente de "trade grows".
+
+---
+
+## Parecer completo — Contribution
+
+# Parecer de Contribution (Framework Edmans)
+
+## Score: 6/10
+
+## Resumo da contribuição alegada
+
+O manuscrito argumenta que quando a China passa a ser o principal parceiro comercial de um país, esse salto ordinal cria um "status shock" saliente que pode aproximar a política externa desse país da China, além do que seria previsto pelo crescimento contínuo do comércio. A evidência central vem do Brasil em 2009, via SDiD em distância ideal-point na AGNU, complementada por análise de saliência na mídia e por um painel cross-country de países em que a China se torna principal destino de exportações.
+
+## Avaliação por dimensão
+
+### Novidade [Adequada]
+
+A contribuição é real, mas ainda não totalmente transformadora. O melhor ponto do paper é deslocar a literatura de "mais comércio gera mais alinhamento" para "mudanças discretas de posição no ranking comercial têm efeitos próprios". Isso é uma boa ideia e a ponte entre status, rank effects, saliência e política externa é promissora. Contudo, parte do resultado ainda é previsível: se a China se torna o principal parceiro comercial de um país, muitos leitores já esperariam algum realinhamento pró-China. O paper precisa convencer mais fortemente que o efeito é do marco ordinal, não apenas uma forma não linear ou simbolicamente narrada de interdependência comercial crescente.
+
+### Importância [Adequada]
+
+O tema é importante: competição EUA-China, alinhamento diplomático, status internacional e voto na AGNU são assuntos de interesse para IR/IPE. Um survey sobre influência econômica chinesa provavelmente mencionaria o achado se o efeito fosse bem estabelecido. Ainda assim, a contribuição prática é moderada, não forte. O efeito cross-country principal é pequeno e marginal no modelo base (-0.060, p = 0.058), e o resultado brasileiro é substantivamente interessante, mas ainda muito ancorado em um caso "most-likely". A implicação para policymakers dos EUA é plausível, mas o paper ainda não mostra que decisões concretas deveriam mudar com base nesse mecanismo, além de "monitorar marcos simbólicos".
+
+### Adequação ao escopo [Adequada]
+
+O paper está bem posicionado para IR/IPE e política externa. A bibliografia conversa com China’s economic statecraft, votos na AGNU, status em RI, political psychology, saliência e métodos causais para painel. O escopo parece mais natural para IO, ISQ, JOP ou BJPS do que APSR/AJPS em sua forma atual, porque a contribuição é mais específica a política externa/economia política internacional do que a uma teoria geral de comportamento político.
+
+### Generalizabilidade [Limitada]
+
+O manuscrito reconhece corretamente que o Brasil é um caso teoricamente forte: China substitui os EUA após longa predominância americana, há imprensa ativa e o mecanismo de saliência é observável. O painel cross-country ajuda, mas ainda não resolve o problema: a evidência média é menor, estatisticamente frágil em parte das especificações, e o próprio paper admite que não testa diretamente a hipótese de substituição do hegemon. Além disso, a evidência de mecanismo fora do Brasil é ausente. Assim, a generalização mais defensável hoje é estreita: o mecanismo parece plausível em casos de alta saliência, mas não está demonstrado como regularidade geral.
+
+### Trade-offs [Parcial]
+
+O paper considera explicações alternativas e discute reversibilidade, coerção, dependência comercial, crise de 2008 e ideologia de líderes. Mas isso não é o mesmo que avaliar trade-offs. O manuscrito documenta um lado do fenômeno: status comercial pode gerar realinhamento diplomático. Ele não analisa sistematicamente custos e benefícios para o país tratado, para a China, para os EUA, nem para a qualidade da política externa. Se a conclusão tem implicações normativas ou estratégicas, falta explicitar o que se ganha e o que se perde com responder a marcos simbólicos de comércio.
+
+### Hipóteses [Claras e direcionais]
+
+As hipóteses são claras: top-partner status reduz distância à China; o efeito deve ser maior quando a China substitui os EUA; mídia deve aumentar saliência; o efeito deve acumular e atenuar após saída. O paper não é kitchen-sink. O problema é que a hipótese mais distintiva, H2, não é testada diretamente no painel, e o mecanismo de política pública combina canais cognitivos, audience costs e coordenação sem adjudicar entre eles. A formulação é boa, mas a evidência de mecanismo ainda fica aquém da ambição teórica.
+
+## Veredicto geral sobre contribution
+
+A contribuição é promissora, publicável em princípio, mas ainda não está no padrão de top journal. O paper tem uma ideia clara e interessante: marcos discretos de status em hierarquias comerciais podem importar para alinhamento internacional. O principal gargalo é que a contribuição ainda depende de uma distinção conceitual difícil de sustentar empiricamente: status/rank reversal versus crescimento comercial, interesses econômicos e saliência geopolítica da ascensão chinesa. Para top journal, o paper precisa mostrar que o leitor deve atualizar fortemente sua crença sobre como comércio afeta política externa. Hoje, a atualização é moderada: "rank matters" é plausível e bem motivado, mas ainda não suficientemente demonstrado como mecanismo geral e distinto.
+
+## Sugestões construtivas
+
+1. Fortalecer a diferença entre "trade volume" e "trade rank". O paper deve tornar a contribuição menos dependente da frase "não é crescimento contínuo, é o marco ordinal" e mais convincente empiricamente. Mostre casos em que o comércio cresce muito sem mudança de ranking e casos em que a mudança de ranking ocorre com níveis distintos de trade share.
+
+2. Testar diretamente H2. A hipótese de maior efeito quando a China substitui os EUA é talvez a parte mais importante da contribuição. Sem esse teste, o argumento mais novo do paper fica subexplorado.
+
+3. Reposicionar a contribuição como teoria de "threshold salience in international political economy", não apenas como paper sobre China-Brasil. Isso elevaria a ambição teórica e ajudaria o leitor a ver por que o achado importa além do caso.
+
+4. Separar melhor mecanismo de evidência. A mídia mostra atenção; ela não mostra que elites mudaram votos por causa dessa atenção. Um pequeno conjunto de evidências sobre elites, Itamaraty, discursos legislativos, setor exportador ou documentos diplomáticos aumentaria muito a força da contribuição.
+
+5. Reduzir overclaiming. A frase "first systematic evidence for trade-status effects in international relations" é defensável, mas "contrary to Mercer, prestige matters" está forte demais para a evidência atual. O paper mostra que um tipo específico de status econômico pode estar associado a alinhamento diplomático, não que a tese geral sobre prestígio foi refutada.
+
+---
+
+## Parecer completo — Execution
+
+# Parecer de Execution (Framework Edmans)
+
+## Score: 6.5/10
+
+## Tipo de paper: Empírico
+
+## Resumo da estratégia
+
+O paper estima o efeito de China tornar-se principal parceira comercial do Brasil em 2009 sobre a distância Brasil-China em ideal points da UNGA, usando Synthetic Difference-in-Differences. Em seguida, testa generalização com painel cross-country via `fect`/interactive fixed effects para países em que China se torna principal destino de exportações, e usa NLP em manchetes da Folha para avaliar saliência.
+
+## Princípio "Dados vs. Evidência"
+
+Os dados constituem evidência razoável de um efeito reduzido no caso brasileiro: após 2009, o Brasil fica mais próximo da China do que seu contrafactual sintético, e os placebos de 2003/2005 ajudam a separar rank reversal de crescimento comercial gradual. Mas os dados ainda não são evidência conclusiva de que o mecanismo seja status-saliência. A evidência de mídia mostra saliência, mas não identifica causalmente a ponte entre saliência e voto na UNGA. A evidência cross-country é sugestiva, não decisiva.
+
+## Avaliação por dimensão
+
+### Mensuração: Questionável, mas defensável
+
+O outcome, distância absoluta em ideal points da UNGA, é uma medida padrão e superior a simples similaridade bruta para comparação temporal. Ainda assim, ele mede alinhamento em uma arena institucional específica, não "foreign policy alignment" em sentido amplo. O paper reconhece isso parcialmente, mas a conclusão às vezes extrapola.
+
+A principal fragilidade está no tratamento. A teoria fala em "top trade partner" e status público, mas o painel operacionaliza isso como maior destino de exportações. Isso pode não coincidir com a categoria cognitivamente saliente de "maior parceiro comercial", que normalmente envolve comércio total. Essa diferença importa porque a teoria depende de saliência pública, não apenas de ranking técnico de exportações.
+
+A mensuração do mecanismo por Folha é útil, mas limitada: um jornal, classificação por ChatGPT reconhecidamente não totalmente reproduzível, validação manual por um autor e ausência de contrafactual de mídia mais forte.
+
+### Robustez: Adequada no Brasil; moderada/fraca no painel
+
+A execução brasileira é a parte mais forte: SDiD, covariáveis, placebos pré-2009, falsificação em 2012 e donor pool latino-americano. Isso melhora bastante a credibilidade.
+
+Mas faltam robustezes importantes: medidas alternativas de alinhamento na UNGA, tratamento por comércio total/importações/exportações, margem entre primeiro e segundo parceiro, janelas temporais alternativas, sensibilidade a doadores específicos e exclusão/controle de países do donor pool que também passam por rank reversals.
+
+No painel, o resultado principal é limítrofe sem covariáveis: ATT = -0.060, p = 0.058. O modelo com covariáveis fica significativo, mas a evidência depende de especificação. Além disso, há inconsistências preocupantes entre texto, figura e apêndice nos testes de pretrend/equivalence do `fect`/IFE. Isso precisa ser corrigido antes que o painel seja usado como evidência forte.
+
+### Seleção amostral: Preocupações moderadas
+
+O caso Brasil é teoricamente bem escolhido, mas é também o caso mais provável e gerador da teoria. O paper lida com isso ao incluir painel cross-country, mas o painel tem apenas 32 tratados e forte heterogeneidade substantiva. Vários tratados parecem commodity exporters ou países com trajetórias geopolíticas muito particulares.
+
+A mídia é ainda mais restrita: Folha de S.Paulo ajuda no Brasil, mas não permite inferência sobre o mecanismo fora do caso brasileiro.
+
+### Explicações alternativas: Parcialmente endereçadas
+
+O paper faz um bom trabalho evitando crítica vaga de endogeneidade. Ele considera Lula, crise de 2008, crescimento comercial gradual, trade shares, exit effects e alternativas como coercion, interest-based alignment e bandwagoning.
+
+Ainda assim, algumas alternativas permanecem vivas: boom de commodities, diplomacia BRICS/South-South no fim dos anos 2000, mudanças de agenda da UNGA em direitos humanos, e choques comuns de política externa que afetam simultaneamente comércio com China e votos. O próprio paper mostra que parte substantiva da mudança brasileira aparece em direitos humanos; isso é interessante, mas também exige mostrar que não se trata de mudança doméstica brasileira de posição nessa agenda por razões independentes da China.
+
+### Questões técnicas específicas
+
+IV: não aplicável. O paper não usa variável instrumental.
+
+Log(1+Y): não aplicável.
+
+Discretização: parcialmente aplicável. A transformação do contínuo comercial em tratamento binário é teoricamente justificada, pois o argumento é sobre rank/status. Mas exatamente por isso o paper precisa mostrar que o resultado não depende da regra "maior destino de exportações". Robustez com comércio total, importações, exportações, ranking ordinal e margem sobre o segundo colocado é essencial.
+
+NLP: a classificação por LLM é uma vulnerabilidade de execução. A validação de 100 manchetes com 88% de acurácia ajuda, mas a seção deve ser mais reprodutível e idealmente validada por dois codificadores humanos ou por um classificador determinístico replicável.
+
+## Veredicto geral sobre execution
+
+A execução é promissora e acima da média para um manuscrito em desenvolvimento, especialmente no caso brasileiro. O leitor pode tirar uma conclusão precisa e restrita: há evidência consistente com uma redução pós-2009 da distância Brasil-China na UNGA em relação a um contrafactual sintético, e essa mudança coincide com maior saliência comercial da China na mídia brasileira. Mas o leitor ainda não pode concluir com alta segurança que o mecanismo causal seja status-saliência, nem que o efeito geral cross-country esteja estabelecido. Para top journal, eu recomendaria reduzir a força das alegações ou fortalecer substancialmente mensuração, robustez e identificação do mecanismo.
+
+## Sugestões construtivas
+
+1. Separe explicitamente três níveis de claim: efeito reduzido no Brasil, evidência sugestiva de mecanismo no Brasil, e generalização cross-country.
+
+2. Refaça a definição de tratamento com alternativas: comércio total, importações, exportações, ranking ordinal e margem entre China e o segundo parceiro.
+
+3. Corrija e harmonize todos os diagnósticos cross-country, especialmente pretrend/equivalence tests no texto, figuras e apêndice.
+
+4. Adicione robustez com outcomes alternativos de alinhamento: S-score, voto idêntico por issue area, distância à China excluindo direitos humanos, e distância relativa China vs. EUA.
+
+5. Fortaleça o SDiD com sensibilidade a donor pool, exclusão de doadores potencialmente tratados e métricas claras de pre-treatment fit.
+
+6. Torne o NLP mais reproduzível: dupla codificação humana, matriz de confusão completa, prompt congelado, temperatura zero e comparação com categorias placebo.
+
+7. Teste diretamente H2: o efeito é maior quando China desloca os EUA do que quando desloca outro parceiro? Hoje o paper afirma essa moderação, mas ainda não a estima de forma convincente.
+
+---
+
+## Parecer completo — Exposition
+
+# Parecer de Exposition (Framework Edmans)
+
+## Score: 6/10
+
+## Avaliação por dimensão
+
+### Clareza [Adequada]
+
+#### Qualidade da escrita
+
+A ideia central é compreensível e o abstract é muito melhor que uma versão vaga: ele dá estimativa, porcentagem, p-valor, desenho e mecanismo. Mas o manuscrito ainda tem erros de superfície que, em top journal, sinalizam draft não final.
+
+Exemplos: "specially" deveria ser "especially"; "the paper empirically document" deveria ser "the paper empirically documents"; "Firstly I consider" mistura registro informal e primeira pessoa; "toe reflect" e "Wolrd Trade Organization" são typos graves. Há também problemas de renderização: "China-related", "external-sector", "three-word".
+
+Sugestão de reescrita:
+
+> "I first examine Brazil, the theoretically strongest case: in 2009, China displaced the United States after roughly eight decades as Brazil’s leading trade partner."
+
+Também há problemas visuais: a Figura 3 contém "Figure 1" dentro do gráfico; Figuras 16 e 17 têm labels não resolvidos como `(#fig:plot latam)`; a Tabela 4 parece ausente; a legenda da Figura 19 reporta p-valores diferentes dos que aparecem no painel. Esses problemas precisam ser corrigidos antes de qualquer submissão.
+
+#### Significância substantiva
+
+O abstract faz algo correto: reporta "41% average post-2009 reduction" e p = 0.032. Mas a frase "approximately 0.10 standard deviations" é pouco memorável e parece potencialmente inconsistente com o efeito de 0.26 ideal-point units descrito no texto. O leitor fica sem saber qual denominador foi usado.
+
+Melhor:
+
+> "Brazil’s UNGA ideal-point distance to China fell by 0.26 points relative to the synthetic counterfactual, about 41% of Brazil’s pre-treatment distance."
+
+Ainda melhor seria conectar esse número a conteúdo substantivo:
+
+> "The convergence is concentrated in human-rights votes, where Brazil moved from abstention to support in recurring resolution families while China remained supportive."
+
+#### Precisão da linguagem
+
+O manuscrito usa "foreign-policy realignment" com frequência, mas o outcome principal é mais estreito: distância de ideal points na UNGA em relação à China. "Realignment" é aceitável como interpretação, mas precisa ser disciplinado.
+
+Exemplo problemático:
+
+> "status change ... can produce foreign policy realignment"
+
+Sugestão:
+
+> "status change can reduce UNGA voting distance to China, one observable dimension of foreign-policy alignment."
+
+Outro exemplo:
+
+> "The question one wonders after seeing the graph is..."
+
+Reescreva:
+
+> "Figure 3 raises a descriptive question: whether convergence is driven by continuous export growth rather than by the 2009 rank reversal."
+
+### Extensão [Longo]
+
+#### Introdução
+
+A introdução tem tamanho aceitável, cerca de 3 páginas, e contém os elementos essenciais: pergunta, teoria, tratamento, caso brasileiro, outcome, SDiD, painel comparado e mecanismo. O problema não é extensão bruta, mas ordem e densidade.
+
+Ela intercala literatura antes de entregar completamente a contribuição. Para top journal, eu começaria com: contexto curto, puzzle, argumento, desenho, resultado, mecanismo, contribuição. A literatura detalhada sobre status, trade alignment e cognição pode vir depois.
+
+#### Notas de rodapé
+
+O uso é moderado, cerca de 5 notas em 61 páginas. Isso é bom. Mas algumas notas fazem trabalho errado. A nota metodológica longa sobre LDV, IV e exclusão poderia ir ao apêndice. A nota com link de ChatGPT para tradução de headlines é frágil como documentação acadêmica. A nota "We thank an anonymous reviewer..." não deve aparecer em versão de submissão anônima ou pré-submissão.
+
+#### Extensões desnecessárias
+
+O corpo principal está sobrecarregado por diagnósticos. A seção cross-country tem fect, C&S, exit effects, PanelMatch, raw treated-country plots, dynamic effects, heterogeneity, leave-one-out e alternative explanations. Nem tudo precisa estar no texto principal.
+
+Eu moveria para o apêndice: PanelMatch, Figura 13 com todos os países tratados, leave-one-out, C&S dynamic plot e detalhes extensos da classificação ChatGPT. No texto principal, deixe uma tabela de ATT, uma figura dinâmica e um parágrafo claro sobre limites.
+
+A seção de mídia também pode ser comprimida. Trigramas, exemplos de "bate" e detalhes do prompt são úteis, mas o leitor precisa de uma mensagem principal: cobertura China-Brasil comércio aumenta após 2009.
+
+### Citações [Algumas problemáticas]
+
+#### Problemas específicos
+
+A bibliografia é ampla, mas não excessiva para um paper de IR/IPE com teoria, método causal e NLP. O problema é mais estratégico: algumas citações parecem defensivas ou pouco integradas.
+
+Exemplo: a nota 1 acumula várias referências metodológicas para criticar Flores-Macías e Kreps. Isso distrai da contribuição. Use uma formulação mais limpa:
+
+> "Prior designs leave concerns about dynamic confounding and exclusion restrictions; I therefore use a design centered on the discrete 2009 rank reversal."
+
+Algumas citações de métodos são necessárias, como SDiD, fect, C&S e PanelMatch. Mas não cite métodos padrão ou críticas metodológicas em cascata quando uma referência principal bastar.
+
+Fatos institucionais devem ser documentados com fonte primária ou dado, não com literatura secundária. Exemplo: "US had been Brazil’s leading trade partner for roughly eight decades" precisa de fonte de comércio ou nota de dados clara. O headline da BBC/O Globo está bem usado, porque documenta saliência pública.
+
+## Veredicto geral sobre exposition
+
+A exposição já comunica uma contribuição promissora: rank reversal comercial como choque de status que reduz distância de voto na UNGA. O abstract e a introdução são substantivamente informativos. Mas o manuscrito ainda lê como uma versão muito defensiva, com excesso de diagnósticos no corpo principal e erros formais que seriam penalizados por pareceristas. A prioridade é transformar o paper de "projeto bem documentado" em "argumento editorialmente limpo": menos aparato no texto, mais precisão conceitual e zero descuido visual.
+
+## Top 5 sugestões de melhoria
+
+1. Reescreva abstract e introdução em torno de uma frase-mãe: "When China becomes a country’s top export destination, UNGA voting distance to China decreases, especially in high-salience hegemonic-replacement cases."
+
+2. Corrija todos os sinais de descuido: typos, labels não resolvidos, numeração de figuras/tabelas, p-valores inconsistentes e caracteres quebrados.
+
+3. Corte o corpo principal: mova análises auxiliares para o apêndice e mantenha apenas resultados que testam hipótese ou respondem a preocupação central.
+
+4. Substitua linguagem ampla por termos mensuráveis: "foreign-policy realignment" deve virar "UNGA voting convergence toward China" sempre que o resultado empírico for esse.
+
+5. Discipline as citações: reduza clusters defensivos, cite fontes primárias para fatos institucionais e mantenha referências apenas quando elas sustentam uma afirmação que o paper não poderia fazer sozinho.
+
+```
+
+
+## Extracted Parecer / Referee Report Text 2
+
+Source path supplied by Codex: `/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/edmans_review_paper_v4_2026-05-17/parecer_contribution.md`
+
+Extracted text is included for searchability; use the attached original file as authoritative.
+
+```text
+# Parecer de Contribution (Framework Edmans)
+
+## Score: 6/10
+
+## Resumo da contribuição alegada
+
+O manuscrito argumenta que quando a China passa a ser o principal parceiro comercial de um país, esse salto ordinal cria um "status shock" saliente que pode aproximar a política externa desse país da China, além do que seria previsto pelo crescimento contínuo do comércio. A evidência central vem do Brasil em 2009, via SDiD em distância ideal-point na AGNU, complementada por análise de saliência na mídia e por um painel cross-country de países em que a China se torna principal destino de exportações.
+
+## Avaliação por dimensão
+
+### Novidade [Adequada]
+
+A contribuição é real, mas ainda não totalmente transformadora. O melhor ponto do paper é deslocar a literatura de "mais comércio gera mais alinhamento" para "mudanças discretas de posição no ranking comercial têm efeitos próprios". Isso é uma boa ideia e a ponte entre status, rank effects, saliência e política externa é promissora. Contudo, parte do resultado ainda é previsível: se a China se torna o principal parceiro comercial de um país, muitos leitores já esperariam algum realinhamento pró-China. O paper precisa convencer mais fortemente que o efeito é do marco ordinal, não apenas uma forma não linear ou simbolicamente narrada de interdependência comercial crescente.
+
+### Importância [Adequada]
+
+O tema é importante: competição EUA-China, alinhamento diplomático, status internacional e voto na AGNU são assuntos de interesse para IR/IPE. Um survey sobre influência econômica chinesa provavelmente mencionaria o achado se o efeito fosse bem estabelecido. Ainda assim, a contribuição prática é moderada, não forte. O efeito cross-country principal é pequeno e marginal no modelo base (-0.060, p = 0.058), e o resultado brasileiro é substantivamente interessante, mas ainda muito ancorado em um caso "most-likely". A implicação para policymakers dos EUA é plausível, mas o paper ainda não mostra que decisões concretas deveriam mudar com base nesse mecanismo, além de "monitorar marcos simbólicos".
+
+### Adequação ao escopo [Adequada]
+
+O paper está bem posicionado para IR/IPE e política externa. A bibliografia conversa com China’s economic statecraft, votos na AGNU, status em RI, political psychology, saliência e métodos causais para painel. O escopo parece mais natural para IO, ISQ, JOP ou BJPS do que APSR/AJPS em sua forma atual, porque a contribuição é mais específica a política externa/economia política internacional do que a uma teoria geral de comportamento político.
+
+### Generalizabilidade [Limitada]
+
+O manuscrito reconhece corretamente que o Brasil é um caso teoricamente forte: China substitui os EUA após longa predominância americana, há imprensa ativa e o mecanismo de saliência é observável. O painel cross-country ajuda, mas ainda não resolve o problema: a evidência média é menor, estatisticamente frágil em parte das especificações, e o próprio paper admite que não testa diretamente a hipótese de substituição do hegemon. Além disso, a evidência de mecanismo fora do Brasil é ausente. Assim, a generalização mais defensável hoje é estreita: o mecanismo parece plausível em casos de alta saliência, mas não está demonstrado como regularidade geral.
+
+### Trade-offs [Parcial]
+
+O paper considera explicações alternativas e discute reversibilidade, coerção, dependência comercial, crise de 2008 e ideologia de líderes. Mas isso não é o mesmo que avaliar trade-offs. O manuscrito documenta um lado do fenômeno: status comercial pode gerar realinhamento diplomático. Ele não analisa sistematicamente custos e benefícios para o país tratado, para a China, para os EUA, nem para a qualidade da política externa. Se a conclusão tem implicações normativas ou estratégicas, falta explicitar o que se ganha e o que se perde com responder a marcos simbólicos de comércio.
+
+### Hipóteses [Claras e direcionais]
+
+As hipóteses são claras: top-partner status reduz distância à China; o efeito deve ser maior quando a China substitui os EUA; mídia deve aumentar saliência; o efeito deve acumular e atenuar após saída. O paper não é kitchen-sink. O problema é que a hipótese mais distintiva, H2, não é testada diretamente no painel, e o mecanismo de política pública combina canais cognitivos, audience costs e coordenação sem adjudicar entre eles. A formulação é boa, mas a evidência de mecanismo ainda fica aquém da ambição teórica.
+
+## Veredicto geral sobre contribution
+
+A contribuição é promissora, publicável em princípio, mas ainda não está no padrão de top journal. O paper tem uma ideia clara e interessante: marcos discretos de status em hierarquias comerciais podem importar para alinhamento internacional. O principal gargalo é que a contribuição ainda depende de uma distinção conceitual difícil de sustentar empiricamente: status/rank reversal versus crescimento comercial, interesses econômicos e saliência geopolítica da ascensão chinesa. Para top journal, o paper precisa mostrar que o leitor deve atualizar fortemente sua crença sobre como comércio afeta política externa. Hoje, a atualização é moderada: "rank matters" é plausível e bem motivado, mas ainda não suficientemente demonstrado como mecanismo geral e distinto.
+
+## Sugestões construtivas
+
+1. Fortalecer a diferença entre "trade volume" e "trade rank". O paper deve tornar a contribuição menos dependente da frase "não é crescimento contínuo, é o marco ordinal" e mais convincente empiricamente. Mostre casos em que o comércio cresce muito sem mudança de ranking e casos em que a mudança de ranking ocorre com níveis distintos de trade share.
+
+2. Testar diretamente H2. A hipótese de maior efeito quando a China substitui os EUA é talvez a parte mais importante da contribuição. Sem esse teste, o argumento mais novo do paper fica subexplorado.
+
+3. Reposicionar a contribuição como teoria de "threshold salience in international political economy", não apenas como paper sobre China-Brasil. Isso elevaria a ambição teórica e ajudaria o leitor a ver por que o achado importa além do caso.
+
+4. Separar melhor mecanismo de evidência. A mídia mostra atenção; ela não mostra que elites mudaram votos por causa dessa atenção. Um pequeno conjunto de evidências sobre elites, Itamaraty, discursos legislativos, setor exportador ou documentos diplomáticos aumentaria muito a força da contribuição.
+
+5. Reduzir overclaiming. A frase "first systematic evidence for trade-status effects in international relations" é defensável, mas "contrary to Mercer, prestige matters" está forte demais para a evidência atual. O paper mostra que um tipo específico de status econômico pode estar associado a alinhamento diplomático, não que a tese geral sobre prestígio foi refutada.
+
+```
+
+
+## Extracted Parecer / Referee Report Text 3
+
+Source path supplied by Codex: `/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/edmans_review_paper_v4_2026-05-17/parecer_execution.md`
+
+Extracted text is included for searchability; use the attached original file as authoritative.
+
+```text
+# Parecer de Execution (Framework Edmans)
+
+## Score: 6.5/10
+
+## Tipo de paper: Empírico
+
+## Resumo da estratégia
+
+O paper estima o efeito de China tornar-se principal parceira comercial do Brasil em 2009 sobre a distância Brasil-China em ideal points da UNGA, usando Synthetic Difference-in-Differences. Em seguida, testa generalização com painel cross-country via `fect`/interactive fixed effects para países em que China se torna principal destino de exportações, e usa NLP em manchetes da Folha para avaliar saliência.
+
+## Princípio "Dados vs. Evidência"
+
+Os dados constituem evidência razoável de um efeito reduzido no caso brasileiro: após 2009, o Brasil fica mais próximo da China do que seu contrafactual sintético, e os placebos de 2003/2005 ajudam a separar rank reversal de crescimento comercial gradual. Mas os dados ainda não são evidência conclusiva de que o mecanismo seja status-saliência. A evidência de mídia mostra saliência, mas não identifica causalmente a ponte entre saliência e voto na UNGA. A evidência cross-country é sugestiva, não decisiva.
+
+## Avaliação por dimensão
+
+### Mensuração: Questionável, mas defensável
+
+O outcome, distância absoluta em ideal points da UNGA, é uma medida padrão e superior a simples similaridade bruta para comparação temporal. Ainda assim, ele mede alinhamento em uma arena institucional específica, não "foreign policy alignment" em sentido amplo. O paper reconhece isso parcialmente, mas a conclusão às vezes extrapola.
+
+A principal fragilidade está no tratamento. A teoria fala em "top trade partner" e status público, mas o painel operacionaliza isso como maior destino de exportações. Isso pode não coincidir com a categoria cognitivamente saliente de "maior parceiro comercial", que normalmente envolve comércio total. Essa diferença importa porque a teoria depende de saliência pública, não apenas de ranking técnico de exportações.
+
+A mensuração do mecanismo por Folha é útil, mas limitada: um jornal, classificação por ChatGPT reconhecidamente não totalmente reproduzível, validação manual por um autor e ausência de contrafactual de mídia mais forte.
+
+### Robustez: Adequada no Brasil; moderada/fraca no painel
+
+A execução brasileira é a parte mais forte: SDiD, covariáveis, placebos pré-2009, falsificação em 2012 e donor pool latino-americano. Isso melhora bastante a credibilidade.
+
+Mas faltam robustezes importantes: medidas alternativas de alinhamento na UNGA, tratamento por comércio total/importações/exportações, margem entre primeiro e segundo parceiro, janelas temporais alternativas, sensibilidade a doadores específicos e exclusão/controle de países do donor pool que também passam por rank reversals.
+
+No painel, o resultado principal é limítrofe sem covariáveis: ATT = -0.060, p = 0.058. O modelo com covariáveis fica significativo, mas a evidência depende de especificação. Além disso, há inconsistências preocupantes entre texto, figura e apêndice nos testes de pretrend/equivalence do `fect`/IFE. Isso precisa ser corrigido antes que o painel seja usado como evidência forte.
+
+### Seleção amostral: Preocupações moderadas
+
+O caso Brasil é teoricamente bem escolhido, mas é também o caso mais provável e gerador da teoria. O paper lida com isso ao incluir painel cross-country, mas o painel tem apenas 32 tratados e forte heterogeneidade substantiva. Vários tratados parecem commodity exporters ou países com trajetórias geopolíticas muito particulares.
+
+A mídia é ainda mais restrita: Folha de S.Paulo ajuda no Brasil, mas não permite inferência sobre o mecanismo fora do caso brasileiro.
+
+### Explicações alternativas: Parcialmente endereçadas
+
+O paper faz um bom trabalho evitando crítica vaga de endogeneidade. Ele considera Lula, crise de 2008, crescimento comercial gradual, trade shares, exit effects e alternativas como coercion, interest-based alignment e bandwagoning.
+
+Ainda assim, algumas alternativas permanecem vivas: boom de commodities, diplomacia BRICS/South-South no fim dos anos 2000, mudanças de agenda da UNGA em direitos humanos, e choques comuns de política externa que afetam simultaneamente comércio com China e votos. O próprio paper mostra que parte substantiva da mudança brasileira aparece em direitos humanos; isso é interessante, mas também exige mostrar que não se trata de mudança doméstica brasileira de posição nessa agenda por razões independentes da China.
+
+### Questões técnicas específicas
+
+IV: não aplicável. O paper não usa variável instrumental.
+
+Log(1+Y): não aplicável.
+
+Discretização: parcialmente aplicável. A transformação do contínuo comercial em tratamento binário é teoricamente justificada, pois o argumento é sobre rank/status. Mas exatamente por isso o paper precisa mostrar que o resultado não depende da regra "maior destino de exportações". Robustez com comércio total, importações, exportações, ranking ordinal e margem sobre o segundo colocado é essencial.
+
+NLP: a classificação por LLM é uma vulnerabilidade de execução. A validação de 100 manchetes com 88% de acurácia ajuda, mas a seção deve ser mais reprodutível e idealmente validada por dois codificadores humanos ou por um classificador determinístico replicável.
+
+## Veredicto geral sobre execution
+
+A execução é promissora e acima da média para um manuscrito em desenvolvimento, especialmente no caso brasileiro. O leitor pode tirar uma conclusão precisa e restrita: há evidência consistente com uma redução pós-2009 da distância Brasil-China na UNGA em relação a um contrafactual sintético, e essa mudança coincide com maior saliência comercial da China na mídia brasileira. Mas o leitor ainda não pode concluir com alta segurança que o mecanismo causal seja status-saliência, nem que o efeito geral cross-country esteja estabelecido. Para top journal, eu recomendaria reduzir a força das alegações ou fortalecer substancialmente mensuração, robustez e identificação do mecanismo.
+
+## Sugestões construtivas
+
+1. Separe explicitamente três níveis de claim: efeito reduzido no Brasil, evidência sugestiva de mecanismo no Brasil, e generalização cross-country.
+
+2. Refaça a definição de tratamento com alternativas: comércio total, importações, exportações, ranking ordinal e margem entre China e o segundo parceiro.
+
+3. Corrija e harmonize todos os diagnósticos cross-country, especialmente pretrend/equivalence tests no texto, figuras e apêndice.
+
+4. Adicione robustez com outcomes alternativos de alinhamento: S-score, voto idêntico por issue area, distância à China excluindo direitos humanos, e distância relativa China vs. EUA.
+
+5. Fortaleça o SDiD com sensibilidade a donor pool, exclusão de doadores potencialmente tratados e métricas claras de pre-treatment fit.
+
+6. Torne o NLP mais reproduzível: dupla codificação humana, matriz de confusão completa, prompt congelado, temperatura zero e comparação com categorias placebo.
+
+7. Teste diretamente H2: o efeito é maior quando China desloca os EUA do que quando desloca outro parceiro? Hoje o paper afirma essa moderação, mas ainda não a estima de forma convincente.
+
+```
+
+
+## Extracted Parecer / Referee Report Text 4
+
+Source path supplied by Codex: `/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/edmans_review_paper_v4_2026-05-17/parecer_exposition.md`
+
+Extracted text is included for searchability; use the attached original file as authoritative.
+
+```text
+# Parecer de Exposition (Framework Edmans)
+
+## Score: 6/10
+
+## Avaliação por dimensão
+
+### Clareza [Adequada]
+
+#### Qualidade da escrita
+
+A ideia central é compreensível e o abstract é muito melhor que uma versão vaga: ele dá estimativa, porcentagem, p-valor, desenho e mecanismo. Mas o manuscrito ainda tem erros de superfície que, em top journal, sinalizam draft não final.
+
+Exemplos: "specially" deveria ser "especially"; "the paper empirically document" deveria ser "the paper empirically documents"; "Firstly I consider" mistura registro informal e primeira pessoa; "toe reflect" e "Wolrd Trade Organization" são typos graves. Há também problemas de renderização: "China-related", "external-sector", "three-word".
+
+Sugestão de reescrita:
+
+> "I first examine Brazil, the theoretically strongest case: in 2009, China displaced the United States after roughly eight decades as Brazil’s leading trade partner."
+
+Também há problemas visuais: a Figura 3 contém "Figure 1" dentro do gráfico; Figuras 16 e 17 têm labels não resolvidos como `(#fig:plot latam)`; a Tabela 4 parece ausente; a legenda da Figura 19 reporta p-valores diferentes dos que aparecem no painel. Esses problemas precisam ser corrigidos antes de qualquer submissão.
+
+#### Significância substantiva
+
+O abstract faz algo correto: reporta "41% average post-2009 reduction" e p = 0.032. Mas a frase "approximately 0.10 standard deviations" é pouco memorável e parece potencialmente inconsistente com o efeito de 0.26 ideal-point units descrito no texto. O leitor fica sem saber qual denominador foi usado.
+
+Melhor:
+
+> "Brazil’s UNGA ideal-point distance to China fell by 0.26 points relative to the synthetic counterfactual, about 41% of Brazil’s pre-treatment distance."
+
+Ainda melhor seria conectar esse número a conteúdo substantivo:
+
+> "The convergence is concentrated in human-rights votes, where Brazil moved from abstention to support in recurring resolution families while China remained supportive."
+
+#### Precisão da linguagem
+
+O manuscrito usa "foreign-policy realignment" com frequência, mas o outcome principal é mais estreito: distância de ideal points na UNGA em relação à China. "Realignment" é aceitável como interpretação, mas precisa ser disciplinado.
+
+Exemplo problemático:
+
+> "status change ... can produce foreign policy realignment"
+
+Sugestão:
+
+> "status change can reduce UNGA voting distance to China, one observable dimension of foreign-policy alignment."
+
+Outro exemplo:
+
+> "The question one wonders after seeing the graph is..."
+
+Reescreva:
+
+> "Figure 3 raises a descriptive question: whether convergence is driven by continuous export growth rather than by the 2009 rank reversal."
+
+### Extensão [Longo]
+
+#### Introdução
+
+A introdução tem tamanho aceitável, cerca de 3 páginas, e contém os elementos essenciais: pergunta, teoria, tratamento, caso brasileiro, outcome, SDiD, painel comparado e mecanismo. O problema não é extensão bruta, mas ordem e densidade.
+
+Ela intercala literatura antes de entregar completamente a contribuição. Para top journal, eu começaria com: contexto curto, puzzle, argumento, desenho, resultado, mecanismo, contribuição. A literatura detalhada sobre status, trade alignment e cognição pode vir depois.
+
+#### Notas de rodapé
+
+O uso é moderado, cerca de 5 notas em 61 páginas. Isso é bom. Mas algumas notas fazem trabalho errado. A nota metodológica longa sobre LDV, IV e exclusão poderia ir ao apêndice. A nota com link de ChatGPT para tradução de headlines é frágil como documentação acadêmica. A nota "We thank an anonymous reviewer..." não deve aparecer em versão de submissão anônima ou pré-submissão.
+
+#### Extensões desnecessárias
+
+O corpo principal está sobrecarregado por diagnósticos. A seção cross-country tem fect, C&S, exit effects, PanelMatch, raw treated-country plots, dynamic effects, heterogeneity, leave-one-out e alternative explanations. Nem tudo precisa estar no texto principal.
+
+Eu moveria para o apêndice: PanelMatch, Figura 13 com todos os países tratados, leave-one-out, C&S dynamic plot e detalhes extensos da classificação ChatGPT. No texto principal, deixe uma tabela de ATT, uma figura dinâmica e um parágrafo claro sobre limites.
+
+A seção de mídia também pode ser comprimida. Trigramas, exemplos de "bate" e detalhes do prompt são úteis, mas o leitor precisa de uma mensagem principal: cobertura China-Brasil comércio aumenta após 2009.
+
+### Citações [Algumas problemáticas]
+
+#### Problemas específicos
+
+A bibliografia é ampla, mas não excessiva para um paper de IR/IPE com teoria, método causal e NLP. O problema é mais estratégico: algumas citações parecem defensivas ou pouco integradas.
+
+Exemplo: a nota 1 acumula várias referências metodológicas para criticar Flores-Macías e Kreps. Isso distrai da contribuição. Use uma formulação mais limpa:
+
+> "Prior designs leave concerns about dynamic confounding and exclusion restrictions; I therefore use a design centered on the discrete 2009 rank reversal."
+
+Algumas citações de métodos são necessárias, como SDiD, fect, C&S e PanelMatch. Mas não cite métodos padrão ou críticas metodológicas em cascata quando uma referência principal bastar.
+
+Fatos institucionais devem ser documentados com fonte primária ou dado, não com literatura secundária. Exemplo: "US had been Brazil’s leading trade partner for roughly eight decades" precisa de fonte de comércio ou nota de dados clara. O headline da BBC/O Globo está bem usado, porque documenta saliência pública.
+
+## Veredicto geral sobre exposition
+
+A exposição já comunica uma contribuição promissora: rank reversal comercial como choque de status que reduz distância de voto na UNGA. O abstract e a introdução são substantivamente informativos. Mas o manuscrito ainda lê como uma versão muito defensiva, com excesso de diagnósticos no corpo principal e erros formais que seriam penalizados por pareceristas. A prioridade é transformar o paper de "projeto bem documentado" em "argumento editorialmente limpo": menos aparato no texto, mais precisão conceitual e zero descuido visual.
+
+## Top 5 sugestões de melhoria
+
+1. Reescreva abstract e introdução em torno de uma frase-mãe: "When China becomes a country’s top export destination, UNGA voting distance to China decreases, especially in high-salience hegemonic-replacement cases."
+
+2. Corrija todos os sinais de descuido: typos, labels não resolvidos, numeração de figuras/tabelas, p-valores inconsistentes e caracteres quebrados.
+
+3. Corte o corpo principal: mova análises auxiliares para o apêndice e mantenha apenas resultados que testam hipótese ou respondem a preocupação central.
+
+4. Substitua linguagem ampla por termos mensuráveis: "foreign-policy realignment" deve virar "UNGA voting convergence toward China" sempre que o resultado empírico for esse.
+
+5. Discipline as citações: reduza clusters defensivos, cite fontes primárias para fatos institucionais e mantenha referências apenas quando elas sustentam uma afirmação que o paper não poderia fazer sozinho.
+
+```
+

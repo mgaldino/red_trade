@@ -1,0 +1,120 @@
+sources:
+  - id: mre_resenha_104_2009_s1
+    title: "Resenha de Política Exterior do Brasil, número 104, 1º semestre de 2009"
+    type: "official_mre_funag_pdf"
+    institution: "MRE/FUNAG"
+    url: "https://www.funag.gov.br/chdd/images/Resenhas/Novas/Resenha_numero_104_1_2009.pdf"
+    accessed_date: "2026-05-19"
+    local_raw_path: "data/raw/mechanism_evidence_china_2009_2011/mre_resenhas/Resenha_numero_104_1_2009.pdf"
+    sha256: "e28d9be27fef80f2385c35f69d5873759a848b15c4221cc49535c72ec640b9d1"
+    size_bytes: 3347675
+    notes: "MRE/FUNAG official compilation; contains MECH001-MECH004."
+  - id: mre_resenha_106_2010_s1
+    title: "Resenha de Política Exterior do Brasil, número 106, 1º semestre de 2010"
+    type: "official_mre_funag_pdf"
+    institution: "MRE/FUNAG"
+    url: "https://www.funag.gov.br/chdd/images/Resenhas/Novas/resenha106_1_2010.pdf"
+    accessed_date: "2026-05-19"
+    local_raw_path: "data/raw/mechanism_evidence_china_2009_2011/mre_resenhas/resenha106_1_2010.pdf"
+    sha256: "d6a0bfd3a04c4a6f340bf965f1c9d497fe58ca4fa83233719f9478925c757e43"
+    size_bytes: 3273081
+    notes: "MRE/FUNAG official compilation; contains MECH005."
+  - id: mre_resenha_108_2011_s1
+    title: "Resenha de Política Exterior do Brasil, número 108, 1º semestre de 2011"
+    type: "official_mre_funag_pdf"
+    institution: "MRE/FUNAG"
+    url: "https://www.funag.gov.br/chdd/images/Resenhas/Novas/Resenha108_1Sem_2011.pdf"
+    accessed_date: "2026-05-19"
+    local_raw_path: "data/raw/mechanism_evidence_china_2009_2011/mre_resenhas/Resenha108_1Sem_2011.pdf"
+    sha256: "992410f7308f429b352752c03781e3d2abe6574279036642fa0494a9c54b5a96"
+    size_bytes: 2480788
+    notes: "MRE/FUNAG official compilation; contains MECH006-MECH009."
+  - id: mre_resenha_109_2011_s2
+    title: "Resenha de Política Exterior do Brasil, número 109, 2º semestre de 2011"
+    type: "official_mre_funag_pdf"
+    institution: "MRE/FUNAG"
+    url: "https://www.funag.gov.br/chdd/images/Resenhas/Novas/Resenha109_2Sem_2011.pdf"
+    accessed_date: "2026-05-19"
+    local_raw_path: "data/raw/mechanism_evidence_china_2009_2011/mre_resenhas/Resenha109_2Sem_2011.pdf"
+    sha256: "56ff854c62d27632248304920020c9e50a7ffbfb387e5b6e5d41aa99dc701bb2"
+    size_bytes: 3096943
+    notes: "MRE/FUNAG official compilation; contains MECH011."
+  - id: camara_222695_2011
+    title: "Comissão aprova acordo de direitos civil e comercial entre Brasil e China"
+    type: "official_legislative_news"
+    institution: "Chamber of Deputies"
+    url: "https://www.camara.leg.br/noticias/222695-comissao-aprova-acordo-de-direitos-civil-e-comercial-entre-brasil-e-china/"
+    accessed_date: "2026-05-19"
+    local_raw_path: "data/raw/mechanism_evidence_china_2009_2011/camara/camara_noticias_222695_2011.html"
+    sha256: "a9a1e2169932cdccc5c665cc9d5767043d6b0e463fe5e8f2e20fa84a2ee2b74e"
+    size_bytes: 45386
+    notes: "Agência Câmara story; contains MECH010."
+  - id: falabr_filtered_text_zips_2015_2026
+    title: "Fala.BR filtered public request/response text and attachment-link CSV files, 2015-2026"
+    type: "public_lai_cgu_open_data"
+    institution: "Controladoria-Geral da União (CGU) / Fala.BR"
+    documentation_url: "https://www.gov.br/acessoainformacao/pt-br/falabr/busca-de-pedidos-e-respostas-download-de-dados"
+    accessed_date: "2026-05-19"
+    url_pattern: "https://dadosabertos-download.cgu.gov.br/FalaBR/Arquivos_FalaBR_Filtrado/Arquivos_csv_{year}.zip"
+    files:
+      - year: 2015
+        url: "https://dadosabertos-download.cgu.gov.br/FalaBR/Arquivos_FalaBR_Filtrado/Arquivos_csv_2015.zip"
+        local_raw_path: "data/raw/mechanism_evidence_china_2009_2011/falabr/Arquivos_csv_2015.zip"
+        sha256: "b994ba4948e03e50e2a800345112bd9823920687882266fda1a49f5b1649e328"
+        size_bytes: 48137300
+      - year: 2016
+        url: "https://dadosabertos-download.cgu.gov.br/FalaBR/Arquivos_FalaBR_Filtrado/Arquivos_csv_2016.zip"
+        local_raw_path: "data/raw/mechanism_evidence_china_2009_2011/falabr/Arquivos_csv_2016.zip"
+        sha256: "67c8bef97be7f07fd4d3693fd54213ce4fefe691f6006081118f8246d123f447"
+        size_bytes: 55122312
+      - year: 2017
+        url: "https://dadosabertos-download.cgu.gov.br/FalaBR/Arquivos_FalaBR_Filtrado/Arquivos_csv_2017.zip"
+        local_raw_path: "data/raw/mechanism_evidence_china_2009_2011/falabr/Arquivos_csv_2017.zip"
+        sha256: "a83dc9b486d378d995059af40ddc022d6e30b0a182a42ae1c4dc0bf30e6b5a23"
+        size_bytes: 60672488
+      - year: 2018
+        url: "https://dadosabertos-download.cgu.gov.br/FalaBR/Arquivos_FalaBR_Filtrado/Arquivos_csv_2018.zip"
+        local_raw_path: "data/raw/mechanism_evidence_china_2009_2011/falabr/Arquivos_csv_2018.zip"
+        sha256: "9977afc9ed86ed9dee3aae7d0cf120bb35177d84ba3b8faa23aaaaa21dc7632c"
+        size_bytes: 63936908
+      - year: 2019
+        url: "https://dadosabertos-download.cgu.gov.br/FalaBR/Arquivos_FalaBR_Filtrado/Arquivos_csv_2019.zip"
+        local_raw_path: "data/raw/mechanism_evidence_china_2009_2011/falabr/Arquivos_csv_2019.zip"
+        sha256: "478edb04f73deece99e02a38d5bfaea7a948a226b9cfd2ca18cf7c86db32dd34"
+        size_bytes: 69667511
+      - year: 2020
+        url: "https://dadosabertos-download.cgu.gov.br/FalaBR/Arquivos_FalaBR_Filtrado/Arquivos_csv_2020.zip"
+        local_raw_path: "data/raw/mechanism_evidence_china_2009_2011/falabr/Arquivos_csv_2020.zip"
+        sha256: "fc042fd23df7ba63d8854af6833194675ebc47b1a81be38b3145db7c9eba98f0"
+        size_bytes: 86156674
+      - year: 2021
+        url: "https://dadosabertos-download.cgu.gov.br/FalaBR/Arquivos_FalaBR_Filtrado/Arquivos_csv_2021.zip"
+        local_raw_path: "data/raw/mechanism_evidence_china_2009_2011/falabr/Arquivos_csv_2021.zip"
+        sha256: "033afc40c792fa2e680af731635c35b55bc945e1bc3111b2430d55ac8482d45d"
+        size_bytes: 66141204
+      - year: 2022
+        url: "https://dadosabertos-download.cgu.gov.br/FalaBR/Arquivos_FalaBR_Filtrado/Arquivos_csv_2022.zip"
+        local_raw_path: "data/raw/mechanism_evidence_china_2009_2011/falabr/Arquivos_csv_2022.zip"
+        sha256: "0dd870abcdacb7b5b2590538a868eb880f732e98ede398096087e38ede6002af"
+        size_bytes: 57376033
+      - year: 2023
+        url: "https://dadosabertos-download.cgu.gov.br/FalaBR/Arquivos_FalaBR_Filtrado/Arquivos_csv_2023.zip"
+        local_raw_path: "data/raw/mechanism_evidence_china_2009_2011/falabr/Arquivos_csv_2023.zip"
+        sha256: "3e87d4286f81d8b8a280f0d743b6eccfe322c13956eb7307d11db3b4559ca242"
+        size_bytes: 77573989
+      - year: 2024
+        url: "https://dadosabertos-download.cgu.gov.br/FalaBR/Arquivos_FalaBR_Filtrado/Arquivos_csv_2024.zip"
+        local_raw_path: "data/raw/mechanism_evidence_china_2009_2011/falabr/Arquivos_csv_2024.zip"
+        sha256: "ec7503c306adf5a70902b48cafdc414f65026373d32c0c28e5706164b0a7c413"
+        size_bytes: 72956688
+      - year: 2025
+        url: "https://dadosabertos-download.cgu.gov.br/FalaBR/Arquivos_FalaBR_Filtrado/Arquivos_csv_2025.zip"
+        local_raw_path: "data/raw/mechanism_evidence_china_2009_2011/falabr/Arquivos_csv_2025.zip"
+        sha256: "54fb886fae47e7ab1fea784e7c7f3b678d2cfce54913b784e778e8ead4bc41e7"
+        size_bytes: 85626372
+      - year: 2026
+        url: "https://dadosabertos-download.cgu.gov.br/FalaBR/Arquivos_FalaBR_Filtrado/Arquivos_csv_2026.zip"
+        local_raw_path: "data/raw/mechanism_evidence_china_2009_2011/falabr/Arquivos_csv_2026.zip"
+        sha256: "44b67b542a9a9c77390bb553f3a617d478c726031eb4bfde915b900af5792e96"
+        size_bytes: 32469934
+    notes: "Used for source discovery and LAI mapping. No direct mechanism evidence from 2009-2011 was included from Fala.BR because rank/status language appeared in citizen requests or later MRE responses, not in verified 2009-2011 diplomatic documents."

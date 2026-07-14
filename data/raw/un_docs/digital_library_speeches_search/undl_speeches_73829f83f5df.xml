@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+        xmlns:media="http://search.yahoo.com/mrss/"
+        xmlns:atom="http://www.w3.org/2005/Atom"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:dcterms="http://purl.org/dc/terms/"
+        xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">
+      <channel>
+        <title>United Nations Digital Library System: Speeches</title>
+        <link>https://digitallibrary.un.org/collection/Speeches</link>
+        <description>United Nations Digital Library System latest documents in Speeches</description>
+        <language>en</language>
+        <pubDate>Sat, 16 May 2026 23:57:29 GMT</pubDate>
+        <category></category>
+        <generator>Invenio 29.1.1</generator>
+        <webMaster>library-ny@un.org</webMaster>
+        <ttl>360</ttl>
+<atom:link rel="self" href="/rss?cc=Speeches&amp;p=China+%22A%2FC.1%2F64%2FL.40%22&amp;ln=en&amp;rg=25" />
+
+<opensearch:startIndex>1</opensearch:startIndex>
+<opensearch:itemsPerPage>25</opensearch:itemsPerPage>
+        <image>
+            <url>https://digitallibrary.un.org/img/site_logo_rss.png</url>
+            <title>United Nations Digital Library System</title>
+            <link>https://digitallibrary.un.org</link>
+        </image>
+         <atom:link rel="search" href="https://digitallibrary.un.org/opensearchdescription" type="application/opensearchdescription+xml" title="Content Search" />
+
+        <textInput>
+          <title>Search </title>
+          <description>Search this site:</description>
+          <name>p</name>
+          <link>https://digitallibrary.un.org/search</link>
+        </textInput>
+        
+
+      </channel>
+</rss>
+

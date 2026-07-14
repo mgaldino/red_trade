@@ -1,0 +1,5 @@
+artifact,path,exists,run_date,n_rows_long,n_rows_wide
+timing_long_csv,data/processed/diagnostics/china_top_alternative_cross_country/china_top_treatment_timing_long_2026-05-20.csv,TRUE,2026-05-20,499,
+timing_wide_csv,data/processed/diagnostics/china_top_alternative_cross_country/china_top_treatment_timing_wide_2026-05-20.csv,TRUE,2026-05-20,,226
+session_info,data/processed/diagnostics/china_top_alternative_cross_country/china_top_treatment_timing_session_info_2026-05-20.txt,TRUE,2026-05-20,,
+pdf,quality_reports/china_top_alternative_cross_country/figures/figura_3_tratamento_por_pais_original_vs_alternativas_2026-05-20.pdf,TRUE,2026-05-20,,

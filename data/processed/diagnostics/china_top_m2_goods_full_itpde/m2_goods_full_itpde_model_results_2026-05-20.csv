@@ -1,0 +1,3 @@
+metric,metric_label,rule,rule_label,status,nboots,att,se,ci_lo,ci_hi,p,r_cv,elapsed_seconds,n_obs,n_countries,n_treated,n_control,panel_min,panel_max
+pipeline_original_itpde_no_sector_filter,Pipeline original sem filtro setorial,targets_absorbing_covariate_design,Amostra absorvente com covariáveis,ok,10000,-0.10358249683741061,0.03570802087079932,-0.17357021774417727,-0.033594775930643944,0.0037218907696368094,1,,2883,93,13,80,1990,2020
+m2_goods_exports_rank_full_itpde,M2 full: bens/exportações ITPD-E,original_absorbing_covariate_design,Amostra absorvente com covariáveis,ok,500,-0.09597567458338663,0.032126829105489044,-0.15894425963014513,-0.033007089536628106,0.0028136174609149807,1,10.257000000000001,2914,94,16,78,1990,2020

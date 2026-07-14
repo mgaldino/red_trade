@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "stage": "waiting",
+  "batch": {
+    "id": "batch_68712fafbf308190b12077a9de8bfa70",
+    "object": "batch",
+    "endpoint": "/v1/chat/completions",
+    "errors": {},
+    "input_file_id": "file-3mHtmfomF3i774zZ5xoV7a",
+    "completion_window": "24h",
+    "status": "validating",
+    "output_file_id": {},
+    "error_file_id": {},
+    "created_at": 1752248239,
+    "in_progress_at": {},
+    "expires_at": 1752334639,
+    "finalizing_at": {},
+    "completed_at": {},
+    "failed_at": {},
+    "expired_at": {},
+    "cancelling_at": {},
+    "cancelled_at": {},
+    "request_counts": {
+      "total": 0,
+      "completed": 0,
+      "failed": 0
+    },
+    "metadata": {}
+  },
+  "results": {},
+  "started_at": 1752248238,
+  "hash": {
+    "provider": "97a6b35bbf67185e0e4e5e8dab344c96",
+    "prompts": "e567cd1a51af2b2f6a47b8a939d5756b",
+    "user_turns": "5373054fdd05c7e448208522ef87f87a"
+  }
+}

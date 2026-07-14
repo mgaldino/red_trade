@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Goal 9 Implementation Guide</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Goal 9 Implementation Guide</h1>
+</header>
+<h1 id="goal-9-implementation-guide">Goal 9 Implementation Guide</h1>
+<p>This guide is for the Codex agent that will edit
+<code>paper_v4.Rmd</code> to implement Goal 9 first and then prepare the
+manuscript for a later Goal 1 abstract/introduction rewrite. Use
+<code>paper_v4.Rmd</code> as the authoritative source. The rendered PDF
+is only a visual/context reference.</p>
+<p>Do <strong>not</strong> run <code>targets::tar_make()</code>. Do
+<strong>not</strong> reopen Goal 2. Do <strong>not</strong> turn this
+into a new NLP/media reproducibility plan. Do <strong>not</strong> write
+the final abstract or full introduction here; reserve that for Goal 1
+after the paper architecture is stable.</p>
+<p>The relevant reports to treat as constraints are:</p>
+<ul>
+<li><code>quality_reports/chatgpt_pro_revision_goals_paper_v4_20260517_1916.md</code></li>
+<li><code>quality_reports/2026-05-18_goal3_rank_vs_volume_diagnostic.md</code></li>
+<li><code>quality_reports/goal4_h2_scope_condition/goal4_h2_methodological_report_20260518.md</code></li>
+<li><code>quality_reports/2026-05-18_goal5_sdid_identification_prompt_report.md</code></li>
+<li><code>quality_reports/goal6_outcome_robustness/2026-05-18_goal6_outcome_robustness_report.md</code></li>
+<li><code>quality_reports/2026-05-18_goal7_cross_country_scope_prompt_report.md</code></li>
+</ul>
+<h2 id="one-page-diagnosis">One-Page Diagnosis</h2>
+<p>After Goals 3–7 are reflected, but before Goal 1 rewrites the
+abstract and introduction, the paper should read as a compact,
+Brazil-first APSR-style empirical manuscript about <strong>rank
+thresholds in international political economy</strong>. The paper should
+no longer read like a research notebook that reports every diagnostic in
+the main text. It should present a disciplined claim ladder:</p>
+<ol type="1">
+<li><p><strong>Brazil is the main reduced-form design.</strong> The
+Brazilian SDiD estimate is the paper’s strongest causal evidence. It
+estimates the average post-2009 gap in Brazil’s UNGA ideal-point
+distance to China relative to a synthetic counterfactual after China
+became Brazil’s largest export destination. It is not evidence of a
+one-year discontinuity, and it is not a direct causal test of the
+salience-to-vote mechanism.</p></li>
+<li><p><strong>Rank-versus-volume evidence is necessary but should be
+compact.</strong> Goal 3 supports the claim that the 2009 Brazil
+treatment is empirically distinguishable from smooth export-volume
+growth: China export share was rising before 2009, but the ordinal
+rank-1 category switched only in 2009. The 2003 and 2005 in-time
+placebos should be framed as <strong>rank-versus-volume timing
+tests</strong>: rapid trade growth and lower-rank promotions did not
+generate a comparable estimated shift. These are timing falsifications,
+not equivalence tests. Contemporaneous post-2009 China share and
+China-over-second margin are not clean preferred controls because they
+are mechanically tied to, or downstream from, treatment.</p></li>
+<li><p><strong>Media evidence is salience evidence, not mechanism
+identification.</strong> The Folha evidence should support only the
+attention/salience step: the 2009 rank reversal made China and
+China-Brazil trade more salient in Brazilian public discourse. It should
+not be written as showing that media attention caused UNGA votes to
+change. Goal 8 will later improve reproducibility; Goal 9 should only
+bound the claim and move excessive NLP details to the appendix.</p></li>
+<li><p><strong>Outcome robustness broadens the measurement base but
+narrows the substantive claim.</strong> Goal 6 reports that the main
+Brazil result is not an artifact of one absolute ideal-point-distance
+metric: the China-minus-US relative-distance contrast points in the
+expected direction. However, agreement and resolution-level measures are
+sensitive to agenda composition. Resolution-level evidence shows
+selective convergence, with stronger descriptive movement in human
+rights than outside human rights. The paper should therefore narrow from
+broad “foreign-policy realignment” to <strong>selective UNGA voting
+convergence toward China</strong>, especially in issue areas where
+Brazil had room to move.</p></li>
+<li><p><strong>The cross-country panel is a scope probe.</strong> Goal 7
+requires demoting the panel to a credible scope probe: one main
+estimator, one main table, one main dynamic figure, and one short
+limitations paragraph. It should not compete with Brazil as a second
+main identification design. The preferred main text estimator is the
+switching-treatment <code>fect</code> IFE specification with covariates
+if the audited values support that choice. C&amp;S absorbing-treatment
+estimates, PanelMatch, leave-one-out, raw treated panels, and detailed
+diagnostics belong in the appendix unless they change the central
+conclusion.</p></li>
+<li><p><strong>H2 is a scope condition, not a confirmed result.</strong>
+Goal 4 finds that the pooled ATT is not a direct H2 test and that the
+exploratory subgroup comparison does not provide confirmatory evidence
+that U.S.-displacement effects are larger. The manuscript should say
+that the Brazilian case lies in the high-salience U.S.-displacement
+scope condition, while cross-country H2 evidence is exploratory and
+underpowered. Remove or rewrite any claim that the panel directly
+confirms H2.</p></li>
+</ol>
+<p>Goal 9’s job is exposition and architecture: compress, relocate
+diagnostics, standardize terminology, repair captions/cross-references,
+and make the claim strength consistent with the evidence. It should not
+add many new analyses, collect new data, or solve Goal 8.</p>
+<h2 id="priority-order">Priority Order</h2>
+<h3
+id="passes-that-must-happen-before-moving-content-to-the-appendix">Passes
+that must happen before moving content to the appendix</h3>
+<ol type="1">
+<li><p><strong>Freeze the claim ladder.</strong> Before editing section
+structure, write a short internal note at the top of your implementation
+scratchpad: “Main claim = Brazil reduced-form UNGA convergence after
+rank reversal; media = salience evidence; cross-country = scope probe;
+outcome robustness = selective convergence; H2 = scope
+condition/exploratory.” Use this note to adjudicate every cut.</p></li>
+<li><p><strong>Freeze terminology.</strong> Treat the empirical
+treatment as <strong>China becoming the largest export
+destination</strong>. The already-incorporated Goal 2 note permits “top
+trade partner” as shorthand for the publicly salient Brazilian event,
+but captions, estimands, and treatment notes should use “largest export
+destination” or “top export destination.”</p></li>
+<li><p><strong>Audit all current sections, chunks, labels, tables, and
+figures.</strong> Make a quick inventory from <code>paper_v4.Rmd</code>:
+section headers, chunk labels, figure labels, table labels, and all
+references to <code>Table</code>, <code>Figure</code>,
+<code>@fig</code>, <code>@tbl</code>, <code>\ref</code>, and
+<code>(#fig:...)</code>. Do this before relocating material so that you
+do not create orphaned references.</p></li>
+<li><p><strong>Identify the main-text evidence set.</strong> Decide
+which tables and figures remain in the main text using the architecture
+below. Mark everything else as appendix material before cutting
+prose.</p></li>
+<li><p><strong>Insert the necessary claim-discipline paragraphs before
+major cuts.</strong> Add short paragraphs/caveats for
+rank-versus-volume, H2 demotion, outcome-scope narrowing, and
+cross-country scope-probe status. Once these are in place, cuts will be
+less likely to remove the paper’s safeguards.</p></li>
+</ol>
+<h3 id="passes-after-the-mainappendix-boundary-is-clear">Passes after
+the main/appendix boundary is clear</h3>
+<ol start="6" type="1">
+<li><p><strong>Compress the Brazil SDiD section to roughly three
+pages.</strong> Keep estimand, fit, estimate, rank-versus-volume placebo
+logic, compact outcome robustness, and one limitations paragraph. Move
+donor details and secondary diagnostics.</p></li>
+<li><p><strong>Compress the media section to the attention
+claim.</strong> Keep the main salience pattern and one clean
+disaggregated figure or compact set of figures. Move trigrams, examples
+of “bate,” prompt details, and validation details to the
+appendix.</p></li>
+<li><p><strong>Rebuild the cross-country section as a scope
+probe.</strong> Keep one main <code>fect</code> IFE table, one dynamic
+figure, a short paragraph on H2 as exploratory heterogeneity/scope, and
+one limitations paragraph. Move C&amp;S, PanelMatch, leave-one-out, raw
+treated panels, equivalence/carryover details, and long estimator
+discussion to the appendix.</p></li>
+<li><p><strong>Renumber, relabel, and rewrite captions/notes.</strong>
+Every main-text table/figure must have a caption and note stating unit,
+time window, treatment definition, uncertainty, and causal/descriptive
+status.</p></li>
+<li><p><strong>Line edit for terminology and typos.</strong> Run the
+validation searches listed below. Replace overbroad empirical claims and
+remove casual phrasing.</p></li>
+<li><p><strong>Render once using the repository’s ordinary
+document-rendering command.</strong> Do not run
+<code>targets::tar_make()</code>. Fix compilation warnings, duplicate
+chunk labels, missing references, and unresolved labels.</p></li>
+<li><p><strong>Stop only after validation passes.</strong> A clean Goal
+9 implementation has no unresolved cross-references, no broken labels,
+no known typos, no main-text overclaiming, and no main-text diagnostic
+sprawl.</p></li>
+</ol>
+<h2 id="main-text-architecture">Main Text Architecture</h2>
+<p>The target main-text structure is:</p>
+<ol type="1">
+<li>Introduction</li>
+<li>Theory and hypotheses</li>
+<li>Data and design</li>
+<li>Brazil SDiD evidence</li>
+<li>Brazilian media salience</li>
+<li>Cross-country scope probe</li>
+<li>Conclusion</li>
+</ol>
+<h3 id="introduction">1. Introduction</h3>
+<p><strong>Stay:</strong> The motivating 2009 Brazil headline, the
+rank-threshold puzzle, the core theoretical contrast between continuous
+trade exposure and categorical rank thresholds, and a short preview of
+the evidence ladder.</p>
+<p><strong>Compress:</strong> Literature setup. The introduction should
+not review status, China trade influence, cognitive psychology, and
+causal panel methods at length before stating the paper’s contribution.
+Leave the final reordering to Goal 1, but remove obvious contradictions
+with the revised evidence.</p>
+<p><strong>Move to appendix/delete:</strong> None now, except defensive
+methodological criticism that is too detailed for the introduction.</p>
+<p><strong>Goal 9 instruction:</strong> Do not fully rewrite the
+abstract or introduction. Make only compatibility edits: terminology, H2
+demotion, cross-country scope-probe status, and removal of claims that
+later sections no longer support.</p>
+<h3 id="theory-and-hypotheses">2. Theory and hypotheses</h3>
+<p><strong>Stay:</strong> The rank-threshold argument, coarse
+categorization, salience/attention claim, policy-response claim,
+temporal dynamics, and scope conditions.</p>
+<p><strong>Compress:</strong> The literature discussion should be
+leaner. Keep the distinction between “trade volume” and “rank
+threshold,” but reduce citation clusters that read as defensive. The
+theory should generate observable implications rather than rehearse
+every adjacent literature.</p>
+<p><strong>Move to appendix/delete:</strong> The simplified DAG can move
+to the appendix or be deleted unless it is revised to avoid implying
+that the paper causally identifies every arrow. Detailed methodological
+footnotes critiquing earlier designs should move to the appendix or be
+shortened.</p>
+<p><strong>Required change:</strong> Reframe H2. It should be a
+<strong>scope-condition expectation</strong> or <strong>exploratory
+heterogeneity implication</strong>, not a conclusively tested
+hypothesis. The Brazilian case is high-salience because China displaced
+a long-entrenched U.S. incumbent; the cross-country panel does not
+confirm H2.</p>
+<h3 id="data-and-design">3. Data and design</h3>
+<p><strong>Stay:</strong> Outcome definition, treatment definition,
+Brazil SDiD design, media data overview, and cross-country
+switching-treatment design.</p>
+<p><strong>Compress:</strong> Long equations, detailed estimator
+comparisons, and long covariate justifications. The main text needs
+enough to understand the estimand and why the estimator is appropriate,
+not a methods appendix.</p>
+<p><strong>Move to appendix:</strong> Detailed DiD/SCM/SDiD equations;
+full covariate construction; full descriptive statistics; long
+explanation of fect, C&amp;S, and PanelMatch; full discussion of
+equivalence/carryover testing.</p>
+<p><strong>Required change:</strong> Merge current “Methodology,” “Data
+and Variables,” and excessive descriptive setup into a cleaner “Data and
+Design” section. The section should make the treatment-definition note
+explicit once and then use the terminology consistently.</p>
+<h3 id="brazil-sdid-evidence">4. Brazil SDiD evidence</h3>
+<p><strong>Stay:</strong> This is the main empirical section. Keep: the
+estimand, the main SDiD fit, the main estimate, the rank-versus-volume
+timing tests, compact donor/fit summary, compact outcome robustness, and
+one limitations paragraph.</p>
+<p><strong>Compress:</strong> Descriptive figures that do not directly
+support identification. Keep only the descriptive evidence needed to
+distinguish rank from volume and orient the reader.</p>
+<p><strong>Move to appendix:</strong> Long donor-weight plots, top-10
+donor country trajectory plot, Latin America-only fit and weights, full
+donor tables, full covariate balance, donor-pool sensitivity details,
+detailed placebo distributions, raw ideal-point descriptive plots unless
+they are needed for interpretation.</p>
+<p><strong>Required change:</strong> Present the 2003 and 2005 timing
+placebos as rank-versus-volume tests, not generic robustness checks.
+Present the 2012 timing falsification as a later-break test.</p>
+<h3 id="brazilian-media-salience">5. Brazilian media salience</h3>
+<p><strong>Stay:</strong> One concise section showing that China and
+China-Brazil trade became more salient in Folha after 2009. Keep the
+evidence that directly supports the attention/salience claim.</p>
+<p><strong>Compress:</strong> The prose about trigrams, headline
+examples, “bate,” prompt engineering problems, and multiple media
+figures. Use the strongest figure(s) and one paragraph of
+interpretation.</p>
+<p><strong>Move to appendix:</strong> Extended NLP prompt, examples,
+random sample, validation table/confusion matrix, trigrams, “bate”
+examples, model/prompt caveats, and any detailed classification
+discussion. Goal 8 will later strengthen this; Goal 9 should avoid
+main-text clutter.</p>
+<p><strong>Required change:</strong> Add an explicit caveat that the
+media evidence identifies attention/salience in Brazil, not the full
+causal path from salience to UNGA votes.</p>
+<h3 id="cross-country-scope-probe">6. Cross-country scope probe</h3>
+<p><strong>Stay:</strong> One main switching-treatment <code>fect</code>
+IFE estimator, one main table, one main dynamic figure, a short
+paragraph explaining heterogeneity/scope, and one limitations
+paragraph.</p>
+<p><strong>Compress:</strong> Everything else. The panel should not be a
+methods section inside the results section.</p>
+<p><strong>Move to appendix:</strong> C&amp;S absorbing-treatment
+estimates and dynamic plot, PanelMatch ATT/ART, leave-one-out, raw
+treated-country panels, equivalence tests, carryover/exit details, long
+alternative-explanation table, and detailed H2 spell tables unless a
+compact H2 scope table is essential.</p>
+<p><strong>Required change:</strong> Make the estimand difference
+explicit: <code>fect</code> estimates the switching-treatment panel
+where treatment turns on while China is the largest export destination
+and turns off when China loses that position; C&amp;S estimates a
+persistent-treatment subset and is not the same estimand.</p>
+<h3 id="conclusion">7. Conclusion</h3>
+<p><strong>Stay:</strong> A concise restatement of the rank-threshold
+contribution and the evidence ladder.</p>
+<p><strong>Compress:</strong> Broad policy claims and claims about
+refuting the status literature.</p>
+<p><strong>Move/delete:</strong> Strong claims such as “status gains are
+mostly illusory is wrong” or “foreign-policy realignment” if they imply
+more than the evidence supports.</p>
+<p><strong>Required change:</strong> End with a narrow contribution:
+trade-rank thresholds can make economic change politically salient and
+are associated with selective UNGA voting convergence toward China in
+the strongest case, with suggestive cross-country scope evidence.</p>
+<h2 id="section-by-section-text-instructions">Section-by-Section Text
+Instructions</h2>
+<h3 id="title-and-front-matter">Title and front matter</h3>
+<p>Use the user’s current manuscript title unless the author explicitly
+prefers otherwise:</p>
+<blockquote>
+<p>The Foreign Policy Impact of Trade-Based Status Gains: When China
+Overtakes the US as Top Export Destination</p>
+</blockquote>
+<p>If the current title says “Top Trade Partner,” either change it to
+“Top Export Destination” or leave a note for the author that the title
+conflicts with the Goal 2 treatment-definition clarification. Do not
+silently let the title conflict with the captions and estimands.</p>
+<h3 id="abstract-and-introduction">Abstract and introduction</h3>
+<p>Do not perform the full Goal 1 rewrite. Make only consistency
+repairs:</p>
+<ul>
+<li>Replace empirical uses of “foreign-policy realignment” with “UNGA
+voting convergence toward China” or “one observable dimension of
+foreign-policy alignment.”</li>
+<li>Replace “cross-country estimate confirms” with “cross-country
+estimate is consistent with” or “provides suggestive scope
+evidence.”</li>
+<li>Remove any claim that the media evidence identifies the full
+mechanism.</li>
+<li>Remove any claim that H2 is conclusively tested.</li>
+<li>Ensure treatment wording matches the Goal 2 note: empirical
+treatment is China becoming the largest export destination.</li>
+</ul>
+<p>Useful compatibility sentence for the introduction, to be refined
+later under Goal 1:</p>
+<blockquote>
+<p>The paper separates three claims: a reduced-form Brazil claim about
+post-2009 UNGA voting convergence toward China, a Brazilian
+media-salience claim about the public visibility of the rank reversal,
+and a cross-country scope claim about whether similar top-rank
+transitions are associated with smaller UNGA distance to China beyond
+the Brazilian case.</p>
+</blockquote>
+<h3 id="theory-and-hypotheses-1">Theory and hypotheses</h3>
+<p>Keep the theory’s core: rank thresholds matter because actors use
+coarse categories such as “largest export market” or “top partner,” and
+the number-one threshold can make China politically salient beyond
+smooth export growth.</p>
+<p>Replace the current H2 formulation with scope-condition language.
+Suggested language:</p>
+<blockquote>
+<p><strong>Scope condition: hegemonic-rival replacement.</strong> The
+top-rank cue should be most politically salient when China displaces the
+United States or another long-entrenched, geopolitically prominent
+incumbent. The Brazilian case falls squarely inside this high-salience
+scope condition. Because the identity of the displaced partner is not
+randomly assigned and subgroup support in the cross-country panel is
+limited, the panel analysis treats U.S.-displacement as exploratory
+heterogeneity rather than a confirmatory test.</p>
+</blockquote>
+<p>If the manuscript retains numbered hypotheses, revise H2 as
+follows:</p>
+<blockquote>
+<p><strong>Hypothesis 2 / Scope expectation.</strong> The top-rank
+effect should be stronger in high-salience cases, especially when China
+displaces a long-entrenched U.S. incumbent. The empirical analysis
+treats this as a scope-condition expectation and reports exploratory
+heterogeneity rather than a definitive test.</p>
+</blockquote>
+<p>Do not write that the pooled ATT tests H2. It does not.</p>
+<h3 id="data-and-design-1">Data and design</h3>
+<p>Insert one clean treatment-definition paragraph and use it
+consistently throughout:</p>
+<blockquote>
+<p>Empirically, the treatment is China becoming a country’s largest
+export destination. I use “top trade partner” only as shorthand for the
+publicly salient Brazilian event when contemporary coverage and the Goal
+2 treatment note support that wording. In the Brazil SDiD and the
+cross-country panel, the estimand is defined by
+largest-export-destination status, not by total bilateral trade unless
+explicitly labeled otherwise.</p>
+</blockquote>
+<p>Use “UNGA ideal-point distance to China” as the primary outcome.
+Define lower values as convergence toward China. When discussing outcome
+robustness, distinguish country-year outcomes from descriptive
+resolution-level diagnostics.</p>
+<p>Move detailed equations to the appendix. The main text can summarize
+SDiD and fect in prose:</p>
+<blockquote>
+<p>SDiD estimates Brazil’s average post-2009 gap relative to a weighted
+synthetic counterfactual, using pre-treatment information to construct
+unit and time weights. The estimate should be interpreted as an average
+post-treatment reduced-form effect, not as a one-year discontinuity.</p>
+</blockquote>
+<p>For the cross-country design:</p>
+<blockquote>
+<p>The cross-country panel uses a switching-treatment design: treatment
+equals one in years when China is the country’s largest export
+destination and returns to zero if China loses that position. The main
+estimator is the counterfactual <code>fect</code> IFE estimator, which
+is more appropriate for this switching structure than
+absorbing-treatment DiD estimators. Absorbing-treatment estimators are
+reported only as appendix sensitivity checks because they estimate a
+different subset.</p>
+</blockquote>
+<h3 id="brazil-sdid-evidence-1">Brazil SDiD evidence</h3>
+<p>Open the section with the estimand and evidence hierarchy:</p>
+<blockquote>
+<p>The Brazilian analysis estimates the average post-2009 reduced-form
+effect of China’s entry into the top export-destination position on
+Brazil’s UNGA ideal-point distance to China. The design does not
+identify each mechanism linking salience to votes. Its credibility rests
+on pre-treatment fit, placebo timing tests, donor-pool sensitivity, and
+outcome robustness.</p>
+</blockquote>
+<p>Use the main SDiD estimate already supported by Goals 3 and 6: ATT
+approximately <code>-0.264</code>, placebo SE approximately
+<code>0.123</code>, p approximately <code>0.032</code>, and a roughly
+41% reduction relative to Brazil’s pre-treatment distance. Verify the
+exact values from the current targets/report before hard-coding.</p>
+<p>Add the rank-versus-volume paragraph:</p>
+<blockquote>
+<p>The rank interpretation requires more than showing that trade with
+China was increasing. Brazil’s exports to China grew before 2009,
+including years in which China rose in the export hierarchy but did not
+become number one. The in-time placebo tests therefore ask whether rapid
+trade growth and lower-rank promotions generate the same estimated UNGA
+convergence as the top-rank reversal. They do not. This pattern is
+consistent with the claim that the number-one threshold has political
+salience beyond continuous exposure; it is not an equivalence test and
+does not prove that trade volume is irrelevant.</p>
+</blockquote>
+<p>Use Goal 3 values in a compact table: 2003 placebo
+<code>-0.117</code> (SE <code>0.188</code>, p <code>0.534</code>), 2005
+placebo <code>-0.119</code> (SE <code>0.135</code>, p
+<code>0.379</code>), 2009 actual <code>-0.264</code> (SE
+<code>0.123</code>, p <code>0.032</code>), and 2012 later-break placebo
+<code>0.037</code> (SE <code>0.139</code>, p <code>0.792</code>) if
+included.</p>
+<p>Add the Goal 5 limitations paragraph:</p>
+<blockquote>
+<p>The Brazilian design cannot rule out every contemporaneous political
+development in 2009. Its credibility comes from the combination of close
+pre-treatment fit, explicit controls for trade exposure and
+crisis-related macroeconomic stress, in-time placebos during earlier
+periods of rapid China trade growth, and donor-pool sensitivity checks.
+The estimate should therefore be read as strong reduced-form evidence
+for the Brazilian rank-reversal episode, not as a direct test of every
+mechanism linking salience to votes.</p>
+</blockquote>
+<p>Add the Goal 6 outcome-scope paragraph, preferably after the main
+result and before mechanism/media:</p>
+<blockquote>
+<p>As a robustness check, I reestimated the Brazilian SDiD using
+alternative UNGA-based country-year outcomes. The main result is not an
+artifact of the exact absolute-distance metric: Brazil also moves closer
+to China relative to the United States in the China-minus-US distance
+contrast. However, annual agreement measures and resolution-level vote
+similarity are more sensitive to agenda composition, so I treat them as
+interpretive diagnostics rather than alternative primary estimands. The
+resolution-level evidence indicates selective convergence, especially
+around human-rights votes, which narrows the substantive interpretation
+from wholesale foreign-policy realignment to issue-specific UNGA
+convergence after the 2009 trade-rank reversal.</p>
+</blockquote>
+<p>Then add a short substantive caveat:</p>
+<blockquote>
+<p>This evidence should not be read as showing a uniform shift across
+the entire UNGA agenda. The post-2009 Brazil-China convergence is
+clearest in the ideal-point and relative-distance outcomes and is
+descriptively concentrated in issue areas where Brazil and China had
+room to converge, especially human rights. This pattern suggests
+selective diplomatic adjustment in politically salient areas, not a
+wholesale replacement of Brazil’s foreign-policy orientation.</p>
+</blockquote>
+<h3 id="brazilian-media-salience-1">Brazilian media salience</h3>
+<p>Reduce the section to a tight mechanism-implication test. Suggested
+opening:</p>
+<blockquote>
+<p>The SDiD estimate is reduced-form. To assess whether the rank
+reversal became publicly salient, I examine Folha de S.Paulo coverage of
+China before and after 2009. This evidence measures the attention step
+of the theory: whether China and China-Brazil trade became more visible
+in public discourse after the rank reversal.</p>
+</blockquote>
+<p>Add the required caveat:</p>
+<blockquote>
+<p>The media evidence identifies the first step in the proposed
+mechanism: the rank reversal made China’s commercial status more salient
+in Brazilian public discourse. It does not by itself prove that media
+attention caused UNGA votes to change. The policy-response channel
+remains a theoretically motivated interpretation of the reduced-form
+SDiD estimate, supported by the timing and content of the salience
+shift.</p>
+</blockquote>
+<p>Keep only the main salience figure(s). Move the prompt and
+classification process details to the appendix. Do not spend main-text
+space apologizing for LLM classification; simply state the measurement
+approach and cite the appendix for validation.</p>
+<h3 id="cross-country-scope-probe-1">Cross-country scope probe</h3>
+<p>Rename the section to something like:</p>
+<blockquote>
+<p>Cross-Country Scope Probe</p>
+</blockquote>
+<p>Do not call it a second main test or an independent confirmation of
+the theory. Use this transition:</p>
+<blockquote>
+<p>The panel analysis should not be read as a second Brazil. It
+estimates a broader and weaker estimand: the average association between
+China entering and holding the top export-destination position across
+heterogeneous cases, many of which lack Brazil’s high-salience
+displacement of a long-entrenched U.S. incumbent. Its purpose is to
+probe scope and rule out a purely Brazilian episode, not to identify the
+mechanism with the same leverage as the Brazil-media design.</p>
+</blockquote>
+<p>Use one main estimator, preferably the audited
+<code>fect_ife_china_top_cov</code> specification. Keep exact numerical
+values only after checking the Goal 7 audit outputs and current targets.
+The table must state: estimator, ATT, bootstrap SE, p-value/CI if
+available, N, treated/control units or treated spells, covariates,
+latent factors selected by CV, panel window, and treatment
+definition.</p>
+<p>Add H2 language consistent with Goal 4:</p>
+<blockquote>
+<p>The pooled panel does not test the hegemonic-replacement scope
+condition directly because it averages across treatment spells with
+different displaced incumbents. Exploratory heterogeneity estimates by
+U.S.-displacement are reported in the appendix. Given limited subgroup
+support and non-random scope conditions, I interpret these estimates as
+descriptive scope evidence rather than confirmatory evidence for H2.</p>
+</blockquote>
+<p>If reporting the Goal 4 exploratory result, write cautiously:</p>
+<blockquote>
+<p>In the available spell-level comparison, U.S.-displacement cases do
+not produce a clearly larger estimated effect than non-U.S.-displacement
+cases; the exploratory difference is imprecise. This does not overturn
+the Brazilian scope argument, but it prevents a strong cross-country
+claim that H2 has been confirmed.</p>
+</blockquote>
+<p>Add the cross-country limitations paragraph:</p>
+<blockquote>
+<p>The cross-country estimates should be interpreted cautiously. The
+panel does not measure media salience in each country, treatment spells
+differ in incumbent identity and political visibility, and
+exit/carryover diagnostics cannot by themselves distinguish salience
+from reversible interest-based mechanisms. The panel therefore probes
+whether the top-rank pattern travels beyond Brazil; it does not identify
+the full mechanism.</p>
+</blockquote>
+<h3 id="conclusion-1">Conclusion</h3>
+<p>Narrow the conclusion. Suggested replacement for overbroad concluding
+claims:</p>
+<blockquote>
+<p>The evidence indicates that rank thresholds in trade hierarchies can
+matter for one observable dimension of foreign-policy behavior: UNGA
+voting convergence toward China. The strongest evidence comes from
+Brazil’s 2009 rank-reversal episode, where SDiD estimates show a
+post-treatment reduction in distance to China and media evidence shows a
+contemporaneous rise in China-Brazil trade salience. Cross-country
+evidence is consistent with a broader top-rank pattern but remains a
+scope probe. The findings motivate further research on how categorical
+economic milestones become politically usable, without implying a
+wholesale reorientation of foreign policy or a fully identified
+salience-to-vote mechanism.</p>
+</blockquote>
+<p>Avoid “contrary to Mercer, prestige is not illusory” as a strong
+conclusion. Use softer language:</p>
+<blockquote>
+<p>The findings speak to debates about whether status gains have
+observable behavioral consequences by showing that a specific economic
+status cue can be associated with measurable UNGA voting
+convergence.</p>
+</blockquote>
+<h2 id="tables">Tables</h2>
+<p>The goal is not to maximize the number of tables. The main text
+should have only tables that carry the claim ladder. Everything else
+should move to the appendix.</p>
+<h3 id="main-text-tables">Main-text tables</h3>
+<h4
+id="main-table-1-brazil-sdid-estimate-and-rank-versus-volume-timing-tests">Main
+Table 1: Brazil SDiD estimate and rank-versus-volume timing tests</h4>
+<p><strong>Action:</strong> Revise existing SDiD/placebo table or
+replace it with a compact table that includes the Goal 3
+rank-versus-volume columns.</p>
+<p><strong>Purpose:</strong> Show the main Brazil estimate and make
+clear that 2003/2005 are tests against the “continuous export growth”
+alternative.</p>
+<p><strong>Preferred columns:</strong></p>
+<ul>
+<li>Timing year</li>
+<li>Test role / threat addressed</li>
+<li>China export-destination rank</li>
+<li>Rank-1 reversal indicator</li>
+<li>China export share (%)</li>
+<li>Signed margin over second-ranked export destination</li>
+<li>ATT</li>
+<li>Placebo SE</li>
+<li>p-value</li>
+<li>Sample note, if needed</li>
+</ul>
+<p><strong>Rows:</strong></p>
+<ul>
+<li>2003: lower-rank promotion / rapid growth without rank 1</li>
+<li>2005: rapid growth without rank 1</li>
+<li>2009: actual rank-1 reversal</li>
+<li>2012: later-break falsification, if space permits</li>
+</ul>
+<p><strong>Caption/note requirements:</strong></p>
+<ul>
+<li>Unit: ATT in absolute UNGA ideal-point distance to China.</li>
+<li>Lower values mean convergence toward China.</li>
+<li>Treatment definition: China becomes Brazil’s largest export
+destination.</li>
+<li>2003/2005 samples are truncated before 2009.</li>
+<li>Uncertainty: placebo-based SE and p-values.</li>
+<li>Interpretation: timing falsifications, not equivalence tests.</li>
+<li>Source: Goal 3 and Goal 5 reports.</li>
+</ul>
+<h4 id="main-table-2-brazil-outcome-robustness-and-interpretation">Main
+Table 2: Brazil outcome robustness and interpretation</h4>
+<p><strong>Action:</strong> Add a compact table or integrate into the
+Brazil results table if space is tight.</p>
+<p><strong>Purpose:</strong> Prevent the paper from depending solely on
+one ideal-point-distance metric while narrowing the claim to selective
+UNGA convergence.</p>
+<p><strong>Preferred columns:</strong></p>
+<ul>
+<li>Outcome / diagnostic</li>
+<li>Unit</li>
+<li>Estimate or pre-post difference</li>
+<li>Causal status</li>
+<li>Interpretation</li>
+</ul>
+<p><strong>Rows to include:</strong></p>
+<ul>
+<li>Main absolute distance to China: ATT about <code>-0.264</code>,
+placebo SE about <code>0.123</code>.</li>
+<li>Relative distance China-minus-US: estimate about
+<code>-0.521</code>.</li>
+<li>Annual agreement with China: estimate about <code>0.078</code>.</li>
+<li>Annual agreement China-minus-US: estimate about
+<code>0.066</code>.</li>
+<li>Resolution-level identical vote share: overall change about
+<code>+3.8</code> p.p. (descriptive).</li>
+<li>Human rights vs non-human-rights: about <code>+7.5</code> p.p. vs
+<code>+2.7</code> p.p. (descriptive).</li>
+</ul>
+<p><strong>Caption/note requirements:</strong></p>
+<ul>
+<li>Separate country-year SDiD outcomes from resolution-year
+diagnostics.</li>
+<li>State that resolution-level rows are descriptive and not causal
+estimates.</li>
+<li>State that agreement measures are more sensitive to agenda
+composition than ideal points.</li>
+<li>Source: Goal 6 final report.</li>
+</ul>
+<h4 id="main-table-3-cross-country-scope-probe-estimate">Main Table 3:
+Cross-country scope-probe estimate</h4>
+<p><strong>Action:</strong> Replace the current multi-estimator Table 3
+with one main table centered on the audited switching-treatment
+<code>fect</code> IFE estimator.</p>
+<p><strong>Purpose:</strong> Present the cross-country panel as a scope
+probe without making C&amp;S/PanelMatch co-primary.</p>
+<p><strong>Preferred columns:</strong></p>
+<ul>
+<li>Estimator: <code>fect</code> IFE with covariates</li>
+<li>Treatment type: switching</li>
+<li>ATT</li>
+<li>Bootstrap SE</li>
+<li>95% CI and/or p-value, if reported by the audited object</li>
+<li>N country-years</li>
+<li>Treated units and/or treated spells</li>
+<li>Control units</li>
+<li>Covariates</li>
+<li>Latent factors selected by cross-validation (<code>r_cv</code>)</li>
+<li>Panel window</li>
+</ul>
+<p><strong>Caption/note requirements:</strong></p>
+<ul>
+<li>Unit: ATT in absolute UNGA ideal-point distance to China.</li>
+<li>Treatment: indicator equals 1 when China is currently the country’s
+largest export destination and turns off when China loses that
+position.</li>
+<li>Uncertainty: bootstrap; state number of replications and clustering
+if used.</li>
+<li>Estimand: average effect for treated observations in the switching
+panel.</li>
+<li>State that C&amp;S absorbing-treatment estimates are appendix
+sensitivity checks because they estimate a persistent-treatment
+subset.</li>
+<li>Source: Goal 7 report / audited targets.</li>
+</ul>
+<h3 id="tables-to-move-to-appendix-or-revise-there">Tables to move to
+appendix or revise there</h3>
+<h4 id="original-descriptive-statistics-table">Original
+descriptive-statistics table</h4>
+<p><strong>Action:</strong> Move to appendix.</p>
+<p><strong>Purpose:</strong> Sample description, not main evidence.</p>
+<p><strong>Revision:</strong> Ensure variables, windows, and treatment
+definition are current. If the table includes variables from multiple
+designs, label which design each column belongs to.</p>
+<h4 id="full-donor-weights-and-covariate-balance">Full donor weights and
+covariate balance</h4>
+<p><strong>Action:</strong> Appendix.</p>
+<p><strong>Purpose:</strong> Support the Brazil counterfactual without
+crowding the main text.</p>
+<p><strong>Preferred columns:</strong> donor country, SDiD weight,
+pre-treatment outcome mean, key covariate balance if available. Add
+compact main-text sentence summarizing top weights and fit.</p>
+<p><strong>Source:</strong> Goal 5.</p>
+<h4 id="donor-pool-sensitivity-table">Donor-pool sensitivity table</h4>
+<p><strong>Action:</strong> Appendix, unless a sensitivity directly
+changes the conclusion.</p>
+<p><strong>Rows:</strong> Latin America-only donor pool;
+leave-one-high-weight-donor-out; exclusion of donors with relevant China
+top-rank reversals; exclusion of donors with obvious post-2009 China
+shocks if available.</p>
+<p><strong>Source:</strong> Goal 5.</p>
+<h4 id="h2-treated-spell-table">H2 treated-spell table</h4>
+<p><strong>Action:</strong> Appendix, with a short main-text mention if
+needed.</p>
+<p><strong>Columns:</strong> country, ISO3, treatment year, displaced
+partner, U.S.-displacement indicator, incumbent tenure, treated years,
+switching status.</p>
+<p><strong>Purpose:</strong> Document the H2 scope condition and
+exploratory heterogeneity.</p>
+<p><strong>Source:</strong> Goal 4.</p>
+<h4 id="h2-subgroup-exploratory-heterogeneity-table">H2 subgroup /
+exploratory heterogeneity table</h4>
+<p><strong>Action:</strong> Appendix.</p>
+<p><strong>Purpose:</strong> Show that U.S.-displacement heterogeneity
+is exploratory and not confirmatory.</p>
+<p><strong>Preferred rows:</strong> U.S.-displacement subgroup,
+non-U.S.-displacement subgroup, U.S. minus non-U.S. contrast, with
+SE/p-value where available. Include Goal 4 warning that inference is
+exploratory.</p>
+<h4 id="cs-absorbing-treatment-estimates">C&amp;S absorbing-treatment
+estimates</h4>
+<p><strong>Action:</strong> Appendix.</p>
+<p><strong>Purpose:</strong> Sensitivity for persistent-treatment
+subset, not same estimand as <code>fect</code> switching.</p>
+<p><strong>Note:</strong> Explicitly state that countries with switching
+treatment are excluded from the treated subset rather than treated as
+controls.</p>
+<h4 id="panelmatch-attart-table">PanelMatch ATT/ART table</h4>
+<p><strong>Action:</strong> Appendix.</p>
+<p><strong>Purpose:</strong> Diagnostic/sensitivity for entry and exit;
+generally noisy.</p>
+<h4 id="leave-one-out-cross-country-table">Leave-one-out cross-country
+table</h4>
+<p><strong>Action:</strong> Appendix.</p>
+<p><strong>Purpose:</strong> Influence diagnostic; not independent
+causal evidence.</p>
+<h4 id="nlp-validation-table-and-classification-prompt">NLP validation
+table and classification prompt</h4>
+<p><strong>Action:</strong> Appendix.</p>
+<p><strong>Purpose:</strong> Measurement documentation for media
+salience; Goal 8 will later improve it.</p>
+<h4 id="agenda-decomposition-and-common-support-tables">Agenda
+decomposition and common-support tables</h4>
+<p><strong>Action:</strong> Appendix.</p>
+<p><strong>Purpose:</strong> Support the Goal 6 caveat that
+resolution-level convergence is partly issue-specific and
+agenda-composition-sensitive.</p>
+<h2 id="figures">Figures</h2>
+<p>Keep only figures that are necessary for the main argument. A good
+target is four main-text figures: rank-versus-volume diagnostic, Brazil
+SDiD fit, Brazilian media salience, and cross-country dynamic
+scope-probe figure.</p>
+<h3 id="main-text-figures">Main-text figures</h3>
+<h4 id="main-figure-1-brazil-rank-versus-volume-diagnostic">Main Figure
+1: Brazil rank-versus-volume diagnostic</h4>
+<p><strong>Action:</strong> Add or replace existing export-share-only
+figure with the Goal 3 figure plotting China’s export share, China’s
+ordinal rank, and China-over-second margin around 2009.</p>
+<p><strong>Purpose:</strong> Visually show that export share was growing
+before 2009, but rank-1 status switched in 2009.</p>
+<p><strong>Caption/note requirements:</strong></p>
+<ul>
+<li>Unit: export share in percent; rank is ordinal; margin is
+export-value difference or signed margin as defined in Goal 3.</li>
+<li>Window: around 2000–2012 or the exact Goal 3 window.</li>
+<li>Treatment definition: China becomes Brazil’s largest export
+destination in 2009.</li>
+<li>State that this is descriptive, not a causal estimate.</li>
+<li>Source: <code>fig_goal3_brazil_rank_volume_2000_2012.png/pdf</code>
+and Goal 3 report.</li>
+</ul>
+<h4 id="main-figure-2-brazil-sdid-fit">Main Figure 2: Brazil SDiD
+fit</h4>
+<p><strong>Action:</strong> Keep the Brazil vs synthetic fit figure,
+revised for clean formatting and caption. This replaces raw descriptive
+trajectory figures as the main evidence figure.</p>
+<p><strong>Purpose:</strong> Show pre-treatment fit and post-treatment
+gap.</p>
+<p><strong>Caption/note requirements:</strong></p>
+<ul>
+<li>Unit: absolute UNGA ideal-point distance to China.</li>
+<li>Lower values mean convergence toward China.</li>
+<li>Time window: state exact years used in the SDiD plot.</li>
+<li>Treatment definition: China becomes Brazil’s largest export
+destination in 2009.</li>
+<li>Uncertainty is not plotted; refer to table for placebo-based
+SE/p-value.</li>
+<li>State that the plotted post-treatment gap is interpreted as an
+average post-treatment reduced-form effect, not a one-year break.</li>
+</ul>
+<h4 id="main-figure-3-brazilian-media-salience">Main Figure 3: Brazilian
+media salience</h4>
+<p><strong>Action:</strong> Keep one clean media figure. Preferred: a
+disaggregated China-headlines figure separating China-Brazil trade from
+Chinese economy, diplomacy/relations, and non-economic categories. If
+total China salience and trade-share salience are essential, combine
+them into a compact multi-panel figure; otherwise move the extra plots
+to the appendix.</p>
+<p><strong>Purpose:</strong> Show that post-2009 salience shifts toward
+bilateral trade coverage.</p>
+<p><strong>Caption/note requirements:</strong></p>
+<ul>
+<li>Unit: count or share of China-related headlines, depending on
+panel.</li>
+<li>Window: 2000–2014 or exact corpus window.</li>
+<li>Treatment definition: 2009 rank reversal in Brazil’s
+export-destination hierarchy.</li>
+<li>State that this is descriptive media-salience evidence, not causal
+evidence that media changed UNGA votes.</li>
+<li>Source: media/NLP section; Goal 8 will later refine
+documentation.</li>
+</ul>
+<h4 id="main-figure-4-cross-country-dynamic-scope-probe-figure">Main
+Figure 4: Cross-country dynamic scope-probe figure</h4>
+<p><strong>Action:</strong> Keep one dynamic <code>fect</code> IFE
+figure. Prefer the entry-aligned dynamic treatment-effect plot from the
+main <code>fect_ife_china_top_cov</code> specification if available. Do
+not keep placebo, carryover, and equivalence panels in the main text
+unless the final Goal 7 audit says they are essential.</p>
+<p><strong>Purpose:</strong> Show whether the cross-country panel has a
+post-entry pattern consistent with the Brazil result.</p>
+<p><strong>Caption/note requirements:</strong></p>
+<ul>
+<li>Unit: effect on absolute UNGA ideal-point distance to China.</li>
+<li>Time axis: periods since treatment entry.</li>
+<li>Treatment definition: China is currently the largest export
+destination; treatment turns off when China loses that position.</li>
+<li>Uncertainty: bootstrap confidence intervals; state replications and
+clustering if true.</li>
+<li>State that the figure is a scope probe, not mechanism evidence.</li>
+<li>Source: Goal 7 report / audited targets.</li>
+</ul>
+<h3 id="figures-to-move-to-appendix-or-drop">Figures to move to appendix
+or drop</h3>
+<h4 id="current-dag-figure">Current DAG figure</h4>
+<p><strong>Action:</strong> Move to appendix or delete. If kept, revise
+treatment wording and caption so it does not imply the design identifies
+every arrow.</p>
+<h4
+id="raw-ideal-point-trajectories-for-brazil-china-and-the-united-states">Raw
+ideal-point trajectories for Brazil, China, and the United States</h4>
+<p><strong>Action:</strong> Move to appendix as descriptive
+background.</p>
+<h4 id="brazil-china-raw-distance-with-separate-ols-fits">Brazil-China
+raw distance with separate OLS fits</h4>
+<p><strong>Action:</strong> Move to appendix or drop. If kept, remove
+embedded “Figure 1” text inside the plot and state clearly that it is
+descriptive only.</p>
+<h4 id="export-share-to-china-over-time">Export share to China over
+time</h4>
+<p><strong>Action:</strong> Replace in main text with Goal 3
+rank-versus-volume figure; move old export-share-only plot to appendix
+or drop.</p>
+<h4 id="top-10-donor-trajectory-plot-and-donor-weight-plots">Top-10
+donor trajectory plot and donor-weight plots</h4>
+<p><strong>Action:</strong> Move to appendix. Keep a compact donor
+summary in main text.</p>
+<h4 id="latin-america-only-donor-figures">Latin America-only donor
+figures</h4>
+<p><strong>Action:</strong> Move to appendix and fix unresolved labels
+such as <code>(#fig:plot latam)</code> and
+<code>(#fig:plot weight latam)</code>.</p>
+<h4 id="media-figures-beyond-the-main-salience-figure">Media figures
+beyond the main salience figure</h4>
+<p><strong>Action:</strong> Move extra total-count/share/trigram figures
+to appendix unless they are combined into a single concise main
+figure.</p>
+<h4 id="exit-aligned-gap-plot">Exit-aligned gap plot</h4>
+<p><strong>Action:</strong> Appendix unless Goal 7 audit says it changes
+the main conclusion. In main text, summarize exit evidence as imprecise
+and diagnostic.</p>
+<h4 id="panelmatch-figure">PanelMatch figure</h4>
+<p><strong>Action:</strong> Appendix.</p>
+<h4 id="raw-treated-country-panel-figure">Raw treated-country panel
+figure</h4>
+<p><strong>Action:</strong> Appendix. It is useful for heterogeneity but
+too large for the main text.</p>
+<h4 id="cs-dynamic-plot">C&amp;S dynamic plot</h4>
+<p><strong>Action:</strong> Appendix.</p>
+<h4 id="equivalence-test-figure">Equivalence-test figure</h4>
+<p><strong>Action:</strong> Appendix. Fix caption/p-value mismatches
+before retaining.</p>
+<h4 id="outcome-robustness-issue-area-figures">Outcome-robustness
+issue-area figures</h4>
+<p><strong>Action:</strong> Appendix unless one compact figure is needed
+to justify the narrowed claim. Prefer a compact main table over multiple
+main figures.</p>
+<h4 id="nlp-promptsample-classification-figure">NLP
+prompt/sample-classification figure</h4>
+<p><strong>Action:</strong> Appendix or drop. The main text should not
+include prompt screenshots or random classification samples.</p>
+<h2 id="appendix-relocation-map">Appendix Relocation Map</h2>
+<p>Use this map when moving material out of the main text. Preserve the
+material if it is useful for auditability, but do not let it dominate
+the submission narrative.</p>
+<h3 id="appendix-a-data-variables-and-estimator-details">Appendix A:
+Data, variables, and estimator details</h3>
+<p>Move here:</p>
+<ul>
+<li>Detailed DiD, SCM, and SDiD equations.</li>
+<li>Formal <code>fect</code>, C&amp;S, and PanelMatch estimator
+details.</li>
+<li>Full covariate construction.</li>
+<li>Full descriptive statistics table.</li>
+<li>Treatment-definition audit details if not already integrated
+elsewhere.</li>
+</ul>
+<h3
+id="appendix-b-brazil-sdid-diagnostics-and-donor-pool-checks">Appendix
+B: Brazil SDiD diagnostics and donor-pool checks</h3>
+<p>Move here:</p>
+<ul>
+<li>Full donor-weight table.</li>
+<li>Donor-weight plots.</li>
+<li>Top-10 donor trajectory plot.</li>
+<li>Covariate balance table.</li>
+<li>Latin America-only donor-pool specification.</li>
+<li>Leave-one-high-weight-donor-out sensitivity.</li>
+<li>Donor contamination exclusions.</li>
+<li>Full placebo-in-space distribution if available.</li>
+<li>Full rank-versus-volume diagnostic outputs not in the main
+table.</li>
+</ul>
+<h3
+id="appendix-c-outcome-robustness-and-issue-area-diagnostics">Appendix
+C: Outcome robustness and issue-area diagnostics</h3>
+<p>Move here:</p>
+<ul>
+<li>Alternative country-year outcome tables.</li>
+<li>Resolution-year annual similarity table.</li>
+<li>Issue-area pre/post table and figure.</li>
+<li>Human-rights versus non-human-rights diagnostic.</li>
+<li>Agenda-composition decomposition.</li>
+<li>Common-support table for issue areas.</li>
+</ul>
+<p>The main text should only summarize the implication: robustness
+reduces dependence on one ideal-point metric but narrows the substantive
+claim to selective UNGA convergence.</p>
+<h3 id="appendix-d-brazilian-medianlp-documentation">Appendix D:
+Brazilian media/NLP documentation</h3>
+<p>Move here:</p>
+<ul>
+<li>Full LLM prompt.</li>
+<li>Classification label set and examples.</li>
+<li>Random headline sample.</li>
+<li>Validation table / confusion matrix.</li>
+<li>Trigram discussion.</li>
+<li>“Bate” headline examples.</li>
+<li>Details on prompt engineering and refusals.</li>
+<li>Elite-statement examples if too long for main text.</li>
+</ul>
+<p>Do not expand this appendix into a new Goal 8 project. Goal 8 will
+later strengthen reproducibility.</p>
+<h3 id="appendix-e-cross-country-scope-probe-diagnostics">Appendix E:
+Cross-country scope-probe diagnostics</h3>
+<p>Move here:</p>
+<ul>
+<li><code>fect</code> no-covariate benchmark.</li>
+<li>FE/placebo/equivalence diagnostics.</li>
+<li>Carryover and exit diagnostics.</li>
+<li>C&amp;S absorbing-treatment estimates and dynamic figure.</li>
+<li>PanelMatch ATT/ART table and figure.</li>
+<li>Leave-one-out table.</li>
+<li>Raw treated-country panels.</li>
+<li>Treated-spell table with displaced partner and tenure.</li>
+<li>H2 exploratory subgroup estimates.</li>
+<li>Cross-country entry share and margin diagnostics from Goal 3.</li>
+</ul>
+<h3 id="appendix-f-source-and-documentation-notes">Appendix F: Source
+and documentation notes</h3>
+<p>Move or add here:</p>
+<ul>
+<li>Documentation for factual claims such as “the United States was
+Brazil’s leading trade partner for roughly eight decades.” Use existing
+trade data notes or primary sources already in the repository where
+possible. If no source is available, flag the claim for author
+verification rather than adding a broad new data-collection task.</li>
+</ul>
+<h2 id="terminology-and-claim-discipline">Terminology and Claim
+Discipline</h2>
+<h3 id="standard-terms">Standard terms</h3>
+<p>Use these terms consistently:</p>
+<ul>
+<li><strong>Largest export destination / top export
+destination:</strong> the empirical treatment in Brazil and the
+cross-country panel.</li>
+<li><strong>Top trade partner:</strong> allowed only as shorthand for
+the publicly salient Brazilian event when supported by contemporary
+coverage and the Goal 2 note. Do not use it in estimand definitions
+unless the model actually uses total trade.</li>
+<li><strong>Rank reversal:</strong> China moves into the number-one
+position in the export-destination hierarchy.</li>
+<li><strong>Trade-status cue / rank-threshold cue:</strong> theoretical
+language for why the ordinal event matters.</li>
+<li><strong>UNGA voting convergence toward China:</strong> the main
+empirical outcome interpretation.</li>
+<li><strong>Foreign-policy alignment:</strong> broader concept; use only
+when explicitly saying UNGA voting is one observable dimension of
+it.</li>
+<li><strong>Reduced-form effect:</strong> the Brazil SDiD estimate.</li>
+<li><strong>Media salience / attention evidence:</strong> the Folha
+evidence.</li>
+<li><strong>Scope probe:</strong> the cross-country panel.</li>
+<li><strong>Exploratory heterogeneity / scope condition:</strong> the
+H2/U.S.-displacement evidence.</li>
+</ul>
+<h3 id="replace-overbroad-or-casual-wording">Replace overbroad or casual
+wording</h3>
+<p>Use the following replacements throughout
+<code>paper_v4.Rmd</code>:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Avoid</th>
+<th>Replace with</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>“foreign-policy realignment” in empirical claims</td>
+<td>“UNGA voting convergence toward China”</td>
+</tr>
+<tr>
+<td>“realignment of foreign policy orientation”</td>
+<td>“reduced UNGA ideal-point distance to China”</td>
+</tr>
+<tr>
+<td>“causal effect on Brazil’s foreign policy orientation”</td>
+<td>“reduced-form effect on Brazil’s UNGA ideal-point distance to
+China”</td>
+</tr>
+<tr>
+<td>“cross-country estimate confirms”</td>
+<td>“cross-country evidence is consistent with” / “provides suggestive
+scope evidence”</td>
+</tr>
+<tr>
+<td>“direct evidence for H2”</td>
+<td>“exploratory heterogeneity evidence for the U.S.-displacement scope
+condition”</td>
+</tr>
+<tr>
+<td>“the exit effects rule out coercion/bandwagoning”</td>
+<td>“exit diagnostics weigh against large persistent-effect accounts but
+do not identify salience”</td>
+</tr>
+<tr>
+<td>“contrary to Mercer, prestige matters”</td>
+<td>“the evidence speaks to debates over whether status gains have
+observable behavioral consequences”</td>
+</tr>
+<tr>
+<td>“wholesale foreign-policy realignment”</td>
+<td>“selective issue-specific UNGA convergence”</td>
+</tr>
+<tr>
+<td>“media evidence shows the mechanism”</td>
+<td>“media evidence supports the attention/salience implication”</td>
+</tr>
+<tr>
+<td>“trade partner” in estimator/caption notes</td>
+<td>“largest export destination”</td>
+</tr>
+<tr>
+<td>“the paper empirically document”</td>
+<td>“the paper empirically documents” or, preferably, “I first examine”
+/ “We first examine” depending manuscript voice</td>
+</tr>
+</tbody>
+</table>
+<h3 id="voice-consistency">Voice consistency</h3>
+<p>The current manuscript mixes first-person singular, first-person
+plural, and impersonal phrasing. Pick one voice and apply it
+consistently. If the manuscript is single-authored, first-person
+singular is acceptable, but many political science articles use “I”
+sparingly. If the current Rmd mostly uses “we,” keep “we” for
+consistency. Do not mix “I first examine” with “we estimate” in adjacent
+paragraphs.</p>
+<h3 id="goal-2-consistency">Goal 2 consistency</h3>
+<p>Do not reopen the treatment-definition issue. The paper already has a
+note/footnote clarifying the shorthand. Goal 9 should only ensure every
+empirical table, figure note, hypothesis, and estimator description
+matches that note.</p>
+<p>Correct pattern:</p>
+<blockquote>
+<p>“The treatment equals one from 2009 onward, when China became
+Brazil’s largest export destination.”</p>
+</blockquote>
+<p>Acceptable Brazil public-salience wording:</p>
+<blockquote>
+<p>“Contemporary coverage often described the event as China becoming
+Brazil’s top trade partner; empirically, the treatment used here is
+largest-export-destination status.”</p>
+</blockquote>
+<p>Incorrect pattern:</p>
+<blockquote>
+<p>“Treatment equals one when China becomes the top trade partner,” if
+the treatment is actually export-destination based.</p>
+</blockquote>
+<h2
+id="cross-references-captions-and-presentation-defects">Cross-References,
+Captions, and Presentation Defects</h2>
+<p>Run this checklist directly on <code>paper_v4.Rmd</code>.</p>
+<h3 id="known-wording-defects-to-search-and-fix">Known wording defects
+to search and fix</h3>
+<p>Search for these exact strings or variants:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">rg</span> <span class="at">-n</span> <span class="st">&quot;specially|the paper empirically document|Firstly|toe reflect|Wolrd|two thousands|anonymous reviewer&quot;</span> paper_v4.Rmd</span></code></pre></div>
+<p>Required fixes:</p>
+<ul>
+<li><code>specially</code> → <code>especially</code></li>
+<li><code>the paper empirically document</code> →
+<code>the paper empirically documents</code>, or rewrite the
+sentence</li>
+<li><code>Firstly I consider</code> → <code>I first examine</code> or
+voice-consistent equivalent</li>
+<li><code>toe reflect</code> → <code>to reflect</code></li>
+<li><code>Wolrd Trade Organization</code> →
+<code>World Trade Organization</code></li>
+<li><code>two thousands</code> → <code>2000s</code></li>
+<li>Remove “We thank an anonymous reviewer…” from any submission
+version</li>
+</ul>
+<h3 id="known-figuretable-defects">Known figure/table defects</h3>
+<p>Search for:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">rg</span> <span class="at">-n</span> <span class="st">&quot;</span><span class="dt">\\</span><span class="st">(#fig:|#fig:plot|Table 4|Figure 19|Figure 1|</span><span class="dt">\\</span><span class="st">?</span><span class="dt">\\</span><span class="st">?|@fig|@tbl|ref\{&quot;</span> paper_v4.Rmd</span></code></pre></div>
+<p>Fix the following known problems:</p>
+<ul>
+<li>Remove embedded “Figure 1” text inside the current Brazil-China
+distance plot.</li>
+<li>Resolve labels like <code>(#fig:plot latam)</code> and
+<code>(#fig:plot weight latam)</code>.</li>
+<li>Locate or remove any missing <code>Table 4</code> references.</li>
+<li>If Figure 19 remains in the appendix, ensure its caption p-values
+match the plotted p-values.</li>
+<li>Ensure every figure/table reference points to an existing
+label.</li>
+<li>Ensure no duplicate chunk labels exist after moving chunks.</li>
+<li>Ensure table numbering is sequential after relocating tables.</li>
+</ul>
+<h3 id="treatment-definition-checks">Treatment-definition checks</h3>
+<p>Run:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">rg</span> <span class="at">-n</span> <span class="st">&quot;top trade partner|top partner|largest export destination|top export destination|displaced the US|USA regains|China loses&quot;</span> paper_v4.Rmd</span></code></pre></div>
+<p>Then verify:</p>
+<ul>
+<li>Estimator descriptions use “largest export destination.”</li>
+<li>Figure/table notes use “largest export destination.”</li>
+<li>“Top trade partner” appears only in public-salience/framing contexts
+or in the Goal 2 note.</li>
+<li>Cross-country treatment turns off when China loses the
+largest-export-destination position, not only when the United States
+regains it, unless a specific older U.S.-replacement-only specification
+is explicitly labeled as an appendix robustness check.</li>
+</ul>
+<h3 id="claim-strength-checks">Claim-strength checks</h3>
+<p>Run:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">rg</span> <span class="at">-n</span> <span class="st">&quot;foreign-policy realignment|realignment|confirms|direct evidence|rule out|Mercer|prestige|mechanism&quot;</span> paper_v4.Rmd</span></code></pre></div>
+<p>Then verify:</p>
+<ul>
+<li>“Foreign-policy realignment” is not used to describe estimated
+effects unless immediately qualified as UNGA voting convergence.</li>
+<li>“Confirms” is not used for cross-country evidence.</li>
+<li>“Direct evidence for H2” is removed.</li>
+<li>“Rule out” is not used for alternative explanations that remain
+plausible.</li>
+<li>Mercer/status claims are softened.</li>
+<li>Media evidence is described as salience/attention evidence, not
+proof that media caused voting change.</li>
+</ul>
+<h3 id="captionnote-checklist">Caption/note checklist</h3>
+<p>Every main-text table and figure note should include, as
+applicable:</p>
+<ul>
+<li>Unit of analysis or plotted quantity.</li>
+<li>Outcome unit.</li>
+<li>Time window.</li>
+<li>Treatment definition.</li>
+<li>Uncertainty measure.</li>
+<li>Cluster level, if relevant.</li>
+<li>Whether the figure/table is causal, robustness, diagnostic, or
+descriptive.</li>
+</ul>
+<p>Examples:</p>
+<p>For SDiD tables:</p>
+<blockquote>
+<p>Unit = Brazil-year. Outcome = absolute UNGA ideal-point distance to
+China. Lower values indicate convergence toward China. Treatment = China
+becomes Brazil’s largest export destination in 2009. Standard errors and
+p-values are placebo-based. The 2003 and 2005 tests are timing
+falsifications for rapid export growth without rank-1 status, not
+equivalence tests.</p>
+</blockquote>
+<p>For cross-country <code>fect</code>:</p>
+<blockquote>
+<p>Unit = country-year. Outcome = absolute UNGA ideal-point distance to
+China. Treatment = 1 when China is currently the country’s largest
+export destination and 0 otherwise. Treatment is switching and turns off
+when China loses the top export-destination position. Uncertainty =
+bootstrap [state replications and clustering after audit]. This estimate
+is a scope probe, not a mechanism test.</p>
+</blockquote>
+<p>For media:</p>
+<blockquote>
+<p>Unit = Folha de S.Paulo headline/article count or share. Window =
+2000–2014. Treatment marker = 2009 Brazil rank reversal. The figure is
+descriptive salience evidence and does not identify the effect of media
+attention on UNGA votes.</p>
+</blockquote>
+<h3 id="formatting-and-rendering-defects">Formatting and rendering
+defects</h3>
+<p>Check for broken characters in the PDF and source, especially:</p>
+<ul>
+<li><code>China-related</code></li>
+<li><code>external-sector</code></li>
+<li><code>three-word</code></li>
+<li><code>São Paulo</code></li>
+<li><code>Folha de S.Paulo</code></li>
+<li>author names with broken spaces, such as <code>V oeten</code> or
+<code>Y an</code></li>
+<li>long dashes or special characters that render incorrectly</li>
+<li>math expressions with broken hats/subscripts after moving
+equations</li>
+</ul>
+<p>Fix in source, not only in the rendered PDF.</p>
+<h2 id="what-goal-1-should-do-later">What Goal 1 Should Do Later</h2>
+<p>After Goal 9 is implemented and the main evidence architecture is
+stable, Goal 1 should rewrite the abstract and introduction around the
+final claim ladder:</p>
+<ol type="1">
+<li><strong>Core question:</strong> Do rank thresholds in trade
+hierarchies affect UNGA voting convergence beyond smooth trade
+exposure?</li>
+<li><strong>Theory:</strong> Crossing the number-one export-destination
+threshold creates a publicly legible status cue, especially in
+high-salience cases such as Brazil’s 2009 U.S.-displacement
+episode.</li>
+<li><strong>Brazil design:</strong> SDiD estimates a reduced-form
+post-2009 effect on UNGA ideal-point distance to China.</li>
+<li><strong>Rank-versus-volume:</strong> 2003 and 2005 growth/lower-rank
+placebos and Goal 3 diagnostics distinguish the rank threshold from
+smooth export growth.</li>
+<li><strong>Outcome scope:</strong> Robustness checks support the
+direction of convergence but narrow the substantive claim to selective
+UNGA convergence, especially in human rights.</li>
+<li><strong>Media evidence:</strong> Folha evidence supports the
+salience/attention implication in Brazil, not the full causal
+mechanism.</li>
+<li><strong>Cross-country evidence:</strong> The panel is a scope probe
+with a switching-treatment <code>fect</code> estimator; it is not a
+second main identification design and does not conclusively test
+H2.</li>
+</ol>
+<p>Goal 1 should not revive broad language such as “foreign-policy
+realignment” or “status gains are not illusory” unless carefully
+qualified. It should use the final tables and figures selected under
+Goal 9 as the introduction roadmap.</p>
+<h2 id="validation-checklist">Validation Checklist</h2>
+<p>Before stopping, complete these checks.</p>
+<h3 id="required-files-and-source-checks">1. Required files and source
+checks</h3>
+<ul>
+<li>Confirm <code>paper_v4.Rmd</code> was the edited source.</li>
+<li>Confirm the final Goal 6 report was present and used:
+<code>quality_reports/goal6_outcome_robustness/2026-05-18_goal6_outcome_robustness_report.md</code>.</li>
+<li>Confirm no edits were made to <code>_targets.R</code>,
+<code>_targets/</code>, or <code>_targets.yaml</code>.</li>
+<li>Confirm <code>targets::tar_make()</code> was not run.</li>
+</ul>
+<h3 id="main-text-architecture-check">2. Main-text architecture
+check</h3>
+<p>The main text should have this structure, with only minor naming
+variation:</p>
+<ul>
+<li>Introduction</li>
+<li>Theory and hypotheses</li>
+<li>Data and design</li>
+<li>Brazil SDiD evidence</li>
+<li>Brazilian media salience</li>
+<li>Cross-country scope probe</li>
+<li>Conclusion</li>
+</ul>
+<p>The main text should not contain long methods-appendix material. The
+cross-country section should not include PanelMatch, C&amp;S dynamics,
+leave-one-out, raw treated panels, and equivalence-test details except
+as one-sentence appendix references.</p>
+<h3 id="search-checks">3. Search checks</h3>
+<p>Run:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">rg</span> <span class="at">-n</span> <span class="st">&quot;specially|the paper empirically document|Firstly|toe reflect|Wolrd|two thousands|anonymous reviewer&quot;</span> paper_v4.Rmd</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">rg</span> <span class="at">-n</span> <span class="st">&quot;</span><span class="dt">\\</span><span class="st">(#fig:|#fig:plot|</span><span class="dt">\\</span><span class="st">?</span><span class="dt">\\</span><span class="st">?|Table 4|Figure 19&quot;</span> paper_v4.Rmd</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">rg</span> <span class="at">-n</span> <span class="st">&quot;foreign-policy realignment|confirms|direct evidence for H2|rule out|Mercer|prestige is illusory&quot;</span> paper_v4.Rmd</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ex">rg</span> <span class="at">-n</span> <span class="st">&quot;top trade partner|top partner|largest export destination|top export destination|displaced the US|USA regains&quot;</span> paper_v4.Rmd</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ex">rg</span> <span class="at">-n</span> <span class="st">&quot;PanelMatch|Callaway|Sant.?Anna|leave-one-out|raw treated|trigram|bate|ChatGPT classification|prompt&quot;</span> paper_v4.Rmd</span></code></pre></div>
+<p>Expected results:</p>
+<ul>
+<li>The typo search returns no remaining defects.</li>
+<li>Cross-reference search returns only valid references.</li>
+<li>Claim-strength search returns no unsupported broad claims.</li>
+<li>Treatment-definition search shows intentional usage:
+estimator/caption language is “largest export destination”; “top trade
+partner” appears only in the Goal 2 note or public-salience
+contexts.</li>
+<li>Diagnostic-method search shows appendix material or short main-text
+references only.</li>
+</ul>
+<h3 id="table-and-figure-checks">4. Table and figure checks</h3>
+<p>For every main-text table and figure:</p>
+<ul>
+<li>It is referenced in the prose.</li>
+<li>It has a unique label.</li>
+<li>It has a complete caption and note.</li>
+<li>It states the correct treatment definition.</li>
+<li>It states units and uncertainty where relevant.</li>
+<li>It is in the correct section.</li>
+<li>It is not redundant with another main-text object.</li>
+</ul>
+<p>For every appendix table and figure:</p>
+<ul>
+<li>It has a label and caption.</li>
+<li>It is referenced at least once in the main text or appendix prose,
+or it is removed.</li>
+<li>Its note does not contradict main-text treatment definitions.</li>
+</ul>
+<h3 id="claim-ladder-checks">5. Claim-ladder checks</h3>
+<p>The manuscript should satisfy all of the following:</p>
+<ul>
+<li>Brazil SDiD is presented as the main reduced-form evidence.</li>
+<li>The 2003 and 2005 placebos are framed as rank-versus-volume timing
+tests.</li>
+<li>Outcome robustness is used to narrow the substantive claim to
+selective UNGA convergence.</li>
+<li>Media evidence is bounded to salience/attention.</li>
+<li>Cross-country panel is presented as a scope probe.</li>
+<li>H2/U.S.-displacement is a scope condition or exploratory
+heterogeneity claim, not a confirmed result.</li>
+<li>C&amp;S is not presented as the same estimand as switching
+<code>fect</code>.</li>
+<li>Exit/carryover diagnostics are not presented as proof of
+salience.</li>
+</ul>
+<h3 id="rendering-checks">6. Rendering checks</h3>
+<p>Render the manuscript once using the repository’s normal R
+Markdown/PDF rendering command. Do not run
+<code>targets::tar_make()</code>.</p>
+<p>After rendering:</p>
+<ul>
+<li>Inspect the first three pages for treatment terminology and claim
+strength.</li>
+<li>Inspect all table/figure captions.</li>
+<li>Confirm no <code>??</code>, unresolved labels, or raw chunk labels
+appear.</li>
+<li>Confirm no embedded label text remains inside plots.</li>
+<li>Confirm appendix material appears in the appendix, not the main
+text.</li>
+<li>Confirm the word count is materially lower than the prior
+14,500-word version. A reasonable target after Goal 9 is roughly
+10,000–11,500 main-text words, depending on journal formatting and how
+much appendix material remains.</li>
+</ul>
+<h3 id="stop-condition">7. Stop condition</h3>
+<p>Stop only when a skeptical reader can see, without reading the
+appendix, the paper’s disciplined evidence ladder:</p>
+<blockquote>
+<p>Brazil provides the main reduced-form SDiD evidence of post-2009 UNGA
+voting convergence toward China; rank-versus-volume diagnostics
+distinguish the 2009 threshold from smooth export growth; outcome
+robustness narrows the claim to selective UNGA convergence; Folha
+evidence supports the Brazilian salience implication; and the
+cross-country panel is a cautious scope probe rather than a second
+decisive identification design.</p>
+</blockquote>
+</body>
+</html>

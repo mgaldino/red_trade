@@ -1,0 +1,92 @@
+sources:
+  - id: unvotes_cran_0_3_0
+    name: United Nations General Assembly Voting Data
+    provider: CRAN package unvotes, based on Erik Voeten UNGA voting data
+    url: "https://cran.r-project.org/src/contrib/unvotes_0.3.0.tar.gz"
+    access_method: bulk_download
+    requires_credentials: false
+    license: MIT package license; underlying public UNGA voting data
+    variables_used:
+      - rcid
+      - country_code
+      - vote
+      - unres
+      - short
+      - descr
+      - issue
+    temporal_coverage: 1946-2019 in source; 2004-2012 used here
+    geographic_coverage: UN member states
+    unit_of_analysis: country-roll-call vote
+    download_script: scripts/diagnostics/identify_unga_vote_cases_pre_post_2009.R
+    date_accessed: "2026-05-16"
+    checksum_sha256: "5c826e9ab6d6aa6bb52fe936050783e2ce5ba879166ba0444fe2f6e530dfdeed"
+    notes: Raw tarball preserved at data/raw/unvotes/unvotes_0.3.0.tar.gz.
+  - id: un_docs
+    name: Official UN Documents
+    provider: United Nations
+    url: "https://docs.un.org/"
+    access_method: web
+    requires_credentials: false
+    license: Public UN documents
+    variables_used:
+      - resolution text links generated from A/RES symbols
+    temporal_coverage: 2004-2012 selected resolutions
+    geographic_coverage: UN General Assembly
+    unit_of_analysis: resolution
+    download_script: scripts/diagnostics/identify_unga_vote_cases_pre_post_2009.R
+    date_accessed: "2026-05-16"
+    notes: Link construction uses https://docs.un.org/en/{document_symbol}.
+  - id: un_official_documents_process_tracing
+    name: Official Documents of the United Nations
+    provider: United Nations
+    url: "https://documents.un.org/"
+    access_method: api
+    requires_credentials: false
+    license: Public UN documents
+    variables_used:
+      - A/RES resolution symbols
+      - A/session/report committee report symbols
+      - A/C.x/session/L draft symbols
+      - A/C.3/session/SR summary-record symbols
+    temporal_coverage: 2004-2012 selected resolutions
+    geographic_coverage: UN General Assembly and Main Committees
+    unit_of_analysis: UN document
+    download_script: scripts/diagnostics/collect_un_process_tracing_documents.py
+    date_accessed: "2026-05-16"
+    notes: Raw PDFs preserved under data/raw/un_docs/; extracted text under data/processed/un_docs/text/.
+  - id: un_digital_library_speeches
+    name: UN Digital Library Speeches collection
+    provider: United Nations
+    url: "https://digitallibrary.un.org/collection/Speeches"
+    access_method: rss_search
+    requires_credentials: false
+    license: Public UN metadata
+    variables_used:
+      - search query
+      - record link
+      - creator
+      - RSS item count
+    temporal_coverage: 2004-2012 selected sessions and document symbols
+    geographic_coverage: UN General Assembly
+    unit_of_analysis: search-query result
+    download_script: scripts/diagnostics/collect_un_process_tracing_documents.py
+    date_accessed: "2026-05-16"
+    notes: RSS search XML preserved under data/raw/un_docs/digital_library_speeches_search/.
+  - id: china_un_mission_statements
+    name: Permanent Mission of the People's Republic of China to the UN public statement archive
+    provider: Permanent Mission of the People's Republic of China to the United Nations
+    url: "https://un.china-mission.gov.cn/eng/chinaandun/socialhr/rqwt/"
+    access_method: web
+    requires_credentials: false
+    license: Public mission statements
+    variables_used:
+      - title
+      - date/year
+      - URL
+      - statement text
+    temporal_coverage: 2004-2012 human-rights statements collected in this round
+    geographic_coverage: China at the United Nations
+    unit_of_analysis: mission statement
+    download_script: scripts/diagnostics/collect_un_process_tracing_documents.py
+    date_accessed: "2026-05-16"
+    notes: Raw HTML preserved under data/raw/un_docs/mission_statements/.

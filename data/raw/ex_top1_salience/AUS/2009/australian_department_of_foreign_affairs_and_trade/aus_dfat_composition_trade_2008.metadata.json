@@ -1,0 +1,15 @@
+{
+  "source_id": "aus_dfat_composition_trade_2008",
+  "iso3c": "AUS",
+  "url": "https://www.dfat.gov.au/news/media/Pages/australia-s-composition-of-trade-2008",
+  "fetch_url": "https://r.jina.ai/http://r.jina.ai/http://https://www.dfat.gov.au/news/media/Pages/australia-s-composition-of-trade-2008",
+  "fetch_status": "ok",
+  "status_code": 200,
+  "content_type": "text/plain; charset=utf-8",
+  "raw_file": "data/raw/ex_top1_salience/AUS/2009/australian_department_of_foreign_affairs_and_trade/aus_dfat_composition_trade_2008.html",
+  "size_bytes": 32247,
+  "error": "",
+  "accessed_at": "2026-05-23T22:04:48+00:00",
+  "eligible_source": true,
+  "count_for_benchmark_after_fetch": true
+}
