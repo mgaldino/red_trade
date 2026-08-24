@@ -1,0 +1,95 @@
+- One or more packages recorded in the lockfile are not installed.
+- Use `renv::status()` for more details.
+Warning messages:
+1: package ‘fect’ was built under R version 4.4.3 
+2: package ‘ggplot2’ was built under R version 4.4.3 
+Sourcing scripts/functions.R for the fect machinery.
+Building the UNGA-DM outcome series.
+New names:
+• `` -> `...1`
+New names:
+• `` -> `...1`
+  UNGA-DM rows without iso3c mapping (excluded): 28
+Reading SDiD targets and freezing predetermined-core covariates.
+Gate: reproducing the audited BSV predetermined-core fit locally.
+  Local BSV estimate = -0.27230386; target = -0.27230386; equal = TRUE
+Swapping in the UNGA-DM outcome for the identical 96-country panel.
+Fitting the UNGA-DM predetermined-core SDiD.
+  UNGA-DM estimate = -0.33511581
+Placebo SE for the UNGA-DM variant (1000 replications, seed 20260823).
+    Exact placebo batch 1/9 (120 re-estimations; 12 cores).
+    Exact placebo batch 2/9 (120 re-estimations; 12 cores).
+    Exact placebo batch 3/9 (120 re-estimations; 12 cores).
+    Exact placebo batch 4/9 (120 re-estimations; 12 cores).
+    Exact placebo batch 5/9 (120 re-estimations; 12 cores).
+    Exact placebo batch 6/9 (120 re-estimations; 12 cores).
+    Exact placebo batch 7/9 (120 re-estimations; 12 cores).
+    Exact placebo batch 8/9 (120 re-estimations; 12 cores).
+    Exact placebo batch 9/9 (40 re-estimations; 12 cores).
+Rank placebos for the UNGA-DM variant.
+    Reusing rank-placebo checkpoint: rank_placebos_ungadm_predetermined_core_end_2015.rds
+SDiD comparison written.
+                                              outcome_source   estimate
+               BSV Jun/2024 (paper main, audited checkpoint) -0.2723039
+ UNGA-DM all resolution-related votes (Fjelstul et al. 2026) -0.3351158
+ se_placebo  ci_95_low  ci_95_high p_normal_two_sided rank_one_sided
+  0.1300088 -0.5271163 -0.01749139        0.036215102              3
+  0.1290798 -0.5881075 -0.08212412        0.009426347              2
+ rank_two_sided rank_denominator p_rank_one_sided p_rank_two_sided  rmspe_pre
+              7               96       0.03125000       0.07291667 0.05808861
+              3               96       0.02083333       0.03125000 0.05772192
+ brazil_pre_mean estimate_pct_pre_mean
+       0.6467779              -42.1016
+       0.8365452              -40.0595
+Preparing the common-window IFE panels.
+  Common-window rows: 4727 of 5037 (dropped 310).
+Fitting IFE on the BSV common window (nboots = 10000).
+Cross-validating ...
+
+Criterion: Mean Squared Prediction Error
+
+Interactive fixed effects model...
+
+r = 0; sigma2 = 0.08374; IC = -2.11176; PC = 0.08006; MSPE = 0.09765
+r = 1; sigma2 = 0.04762; IC = -2.31194; PC = 0.05672; MSPE = 0.07659
+r = 2; sigma2 = 0.03375; IC = -2.29552; PC = 0.04816; MSPE = 0.06848
+*
+r = 3; sigma2 = 0.02888; IC = -2.09487; PC = 0.04802; MSPE = 0.09428
+
+ r* = 2
+Fitting IFE on the UNGA-DM common window (nboots = 10000).
+Cross-validating ...
+
+Criterion: Mean Squared Prediction Error
+
+Interactive fixed effects model...
+
+r = 0; sigma2 = 0.06461; IC = -2.37118; PC = 0.06177; MSPE = 0.08148
+r = 1; sigma2 = 0.03930; IC = -2.50385; PC = 0.04682; MSPE = 0.05822
+*
+r = 2; sigma2 = 0.02749; IC = -2.50083; PC = 0.03922; MSPE = 0.06366
+r = 3; sigma2 = 0.02228; IC = -2.35437; PC = 0.03704; MSPE = 0.06004
+
+ r* = 1
+IFE comparison written.
+                                               variant         att         se
+ BSV full window 1990-2022 (paper main, stored target) -0.10064201 0.03912661
+           BSV common window (<= 2020, identical rows) -0.09532156 0.03970019
+       UNGA-DM common window (<= 2020, identical rows) -0.02681859 0.04760531
+      ci_lo       ci_hi          p r_cv att_rel_pct att_sd_units n_obs
+ -0.1773302 -0.02395385 0.01010504    2    13.95599   0.12443466  5037
+ -0.1731339 -0.01750918 0.01634876    2    13.21820   0.11743683  4727
+ -0.1201250  0.06648783 0.57319467    1     3.50967   0.03170163  4727
+ n_countries n_treated n_control panel_min panel_max nboots
+         161        35       126      1990      2022  10000
+         161        35       126      1990      2020  10000
+         161        35       126      1990      2020  10000
+Extracting the stored m2 pre-trend F test.
+Attempting the fect equivalence plot on the stored m2 main fit.
+Warning message:
+Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.
+ℹ The deprecated feature was likely used in the fect package.
+  Please report the issue at <https://github.com/xuyiqing/fect/issues>. 
+  Equivalence plot status: saved
+Done in 26.0 minutes. Outputs in data/processed/diagnostics/ungadm_outcome_robustness/estimation

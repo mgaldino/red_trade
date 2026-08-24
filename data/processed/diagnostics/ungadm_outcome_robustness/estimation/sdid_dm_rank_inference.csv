@@ -1,0 +1,4 @@
+comparison_set,rank_one_sided_negative,rank_two_sided_absolute,denominator,p_rank_one_sided_negative,p_rank_two_sided_absolute
+All valid assignments,2,3,96,0.020833333333333332,0.03125
+Exclude goods-only China-top donor assignments,2,3,94,0.02127659574468085,0.031914893617021274
+Pre-fit RMSPE no larger than twice Brazil,1,2,80,0.0125,0.025

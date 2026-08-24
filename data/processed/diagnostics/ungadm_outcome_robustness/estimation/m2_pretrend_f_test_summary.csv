@@ -1,0 +1,2 @@
+model,test_status,selected_periods,q,n_bar,df1,df2,n_valid_boots,cov_rank,solve_ok,f_stat,f_p,f_equiv_p,tost_equiv_p,f_threshold,tost_threshold,max_recent_periods,max_event_time,diagnostic_message
+M2 goods-only status-current risk set: fect IFE,computed,"-12, -11, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1",12,35,12,23,10000,12,TRUE,0.41375932599899545,0.9426252150723713,8.579581568505657e-5,0.022267882527058802,0.6,0.1043192450744979,12,-1,

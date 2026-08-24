@@ -1,0 +1,4 @@
+gate,value,threshold,status
+"cor(abs_distance_china), panel 1997-2015",0.9520,>= 0.95,PASS
+"cor(abs_distance_china), Brazil series 1997-2015",0.8272,report,reported
+within-range coverage gaps,33,inspect if > 0,INSPECT

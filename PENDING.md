@@ -1,7 +1,8 @@
 # Pendências do Projeto
 
-Atualizado em: 2026-05-25, após checagem direta de `paper_v4.Rmd` e
-`paper_v4.pdf` renderizado em 2026-05-25 17:31 (-03).
+Atualizado em: 2026-08-23, após parecer de inferência causal
+(`quality_reports/2026-08-23_causal_did_inference.md`) sobre o `paper_v4.Rmd`
+atual e o `paper_v4.pdf` renderizado em 2026-07-15.
 
 ## Fonte de verdade operacional
 
@@ -113,54 +114,107 @@ O paper já calibra a interpretação AGNU:
 
 ## Pendências reais remanescentes
 
-### Significância estatística da especificação principal do Brasil
+### Contrato inferencial da especificação principal — declarar no texto
 
-**Status**: Pendência crítica de identificação/inferência
-**Prioridade**: MÁXIMA antes de nova circulação
+**Status**: Parcialmente resolvida; resta a redação do autor
+**Prioridade**: ALTA antes de nova circulação
 
-O `paper_v4.pdf` atual mostra um efeito principal negativo, mas impreciso no
-nível bilateral de 5%. Na especificação principal do Brazil SDiD, o ATT é
-`-0.264`, o erro-padrão baseado em placebo é `0.145`, o intervalo de 95% é
-`[-0.548, 0.020]` e o p-valor normal bilateral é `0.069`. A Tabela 3,
-portanto, recebe apenas a marca de 10%.
+A parte estimativa desta pendência (versão de 2026-05-25) foi resolvida em
+julho: a especificação principal passou a ser o `predetermined_core` (commit
+`2b6200d`), escolhido por argumento de identificação (remoção de covariáveis
+pós-tratamento), com revisões causais independentes em
+`quality_reports/china_demand_shock_rank_threshold/`. Números atuais da
+especificação principal:
 
-O diagnóstico por ranks produz uma leitura diferente: `p = 0.042` para o
-teste unilateral de efeito negativo, mas `p = 0.083` para o teste bilateral de
-efeito absoluto. O paper precisa definir explicitamente qual hipótese e qual
-regra inferencial são substantivamente justificadas. Não se deve escolher o
-teste unilateral apenas para atravessar o limiar de 5%.
+| Medida | Valor |
+|---|---:|
+| ATT | -0.272 |
+| SE placebo (1.000 replicações) | 0.130 |
+| p normal bilateral | 0.036 |
+| IC 95% | [-0.527, -0.017] |
+| Rank placebo direcional | 3/96 (p = 0.031) |
+| Rank absoluto bilateral | 7/96 (p = 0.073) |
 
-Há uma especificação de robustez na Tabela 5 que adiciona exposição
-predeterminada a commodities/choques de 2008--2009 e produz ATT `-0.306`, SE
-`0.148`, IC `[-0.595, -0.016]` e p `0.038`. Esse resultado pode justificar uma
-reavaliação da especificação principal se o controle for parte necessária da
-identificação, mas não deve ser promovido automaticamente apenas porque atinge
-5%. O teste de estresse completo é instável e não pode ser usado como solução.
+Os passos 1-5 da versão anterior desta pendência foram executados (specs
+pré-especificadas na Tabela 5, sinal estável, revisão causal independente).
+O que resta é a decisão de contrato aprovada em 2026-08-23 (parecer
+`quality_reports/2026-08-23_causal_did_inference.md`, seções 3-4 e 7),
+a implementar **pelo autor** no texto:
 
-Antes de editar o paper, é necessário:
+1. Declarar na seção de desenho/identificação que o teste primário é o rank
+   placebo direcional (H1 é direcional e pré-declarada na teoria), com o p do
+   SE placebo como complemento nativo e o rank bilateral como sensibilidade
+   conservadora explicada (nota de resolução: piso 1/96; 4 dos 6 placebos mais
+   extremos são positivos).
+2. Aplicar o contrato uniformemente, inclusive no diagnóstico de direitos
+   humanos (0.063 direcional citado; 0.053 donor-only como robustez).
+3. Adicionar a figura da distribuição placebo com o Brasil marcado
+   (`placebo_distribution.csv` já é lido no Rmd, linha ~305, e nunca usado).
+4. Consolidar a inferência da especificação preferida num painel único
+   (integrar à reforma da Table 2, abaixo).
+5. Levar o resumo inferencial dos dois desenhos para a introdução (hoje ela
+   não carrega inferência; o painel a p = 0.010 robusto aparece tarde).
 
-1. Fixar o contrato inferencial da especificação principal: SDiD com uma
-   unidade tratada, placebo-in-space/rank inference e hipótese unilateral ou
-   bilateral substantivamente justificada.
-2. Reestimar, em scripts separados, um conjunto pequeno e pré-especificado de
-   alternativas: baseline; exposição predeterminada a commodities; janela
-   temporal alternativa; donor pool/risk set justificado; e, se defensável,
-   extensão do período pós-2009.
-3. Para cada alternativa, reportar ATT, SE, IC, p-valor/rank p-valor, fit,
-   balance, pesos dos doadores e estabilidade do sinal. Não escolher a coluna
-   pelo p-valor.
-4. Verificar se “adicionar observações” muda o estimando. No Brazil SDiD, mais
-   doadores não equivalem a mais unidades tratadas independentes; anos
-   adicionais podem alterar o período pós-tratamento e incorporar choques
-   políticos posteriores.
-5. Fazer revisão causal independente antes de decidir qualquer mudança na
-   especificação principal.
+Critério de resolução: contrato declarado antes dos resultados, aplicado
+uniformemente, e apresentação consolidada. O rank bilateral (0.073) continua
+reportado — explicado, não omitido.
 
-Critério de resolução: uma especificação principal escolhida por argumento de
-identificação e pré-especificação, com inferência coerente e transparente. Se o
-efeito continuar não significativo bilateralmente a 5%, o paper deverá tratar
-isso como evidência imprecisa, não como resultado que precisa ser ajustado
-para obter significância.
+### Robustez de mensuração com UNGA-DM (Fjelstul, Hug & Kilby 2026)
+
+**Status**: EXECUTADO em 2026-08-23; revisão independente em andamento;
+incorporação ao manuscrito pendente (autor)
+**Prioridade**: ALTA antes de nova circulação (pré-comprometida)
+
+Check executado conforme o plano
+(`quality_reports/plans/2026-08-23_ungadm_robustness_check.md`); relatório
+final em `quality_reports/ungadm_outcome_robustness/2026-08-23_final_report.md`.
+Resultado (a reportar no paper **seja qual for**, por pré-compromisso):
+
+- **Brazil SDiD fica MAIS forte** sob UNGA-DM: ATT -0.335 (SE placebo 0.129),
+  p normal 0.009, rank direcional 2/96 (p = 0.021), rank bilateral 3/96
+  (p = 0.031) — todas as convenções abaixo de 5%, inclusive o bilateral que
+  era 0.073 no BSV. Painel idêntico (gate de reprodução 1e-8), mesmo fit pré.
+- **Painel IFE atenua a ~zero** sob UNGA-DM em janela comum com linhas
+  idênticas (≤2020): BSV -0.095 (p = 0.016, r* = 2) vs UNGA-DM -0.027
+  (p = 0.573, r* = 1). O truncamento de janela NÃO explica (BSV comum ≈ BSV
+  cheio); a troca de medida explica. A evidência de escopo cross-country é
+  sensível à fonte de mensuração do outcome.
+
+Revisão causal independente CONCLUÍDA (2026-08-23): **endossado com
+ressalvas** — parecer completo em
+`quality_reports/ungadm_outcome_robustness/2026-08-23_independent_causal_review.md`.
+Aderência ao pré-compromisso julgada integral; mapeamento país-sessão
+verificado no bruto; um defeito técnico imaterial encontrado (critério de
+exclusão China-top divergente entre colunas de rank de julho e agosto — ranks
+idênticos nas 4 combinações testadas pelo revisor).
+
+Pendências derivadas (ordem do revisor):
+1. **Antes de qualquer frase interpretativa no manuscrito sobre o painel**:
+   rodar o 2×2 completo (BSV/UNGA-DM × r = 1/2) — a atenuação está confundida
+   com a seleção de fatores (CV mudou r* = 2→1 com o outcome; IC do fect
+   virtualmente empatado entre r = 1 e 2 no UNGA-DM; variante DM tem 3 leads
+   pré-tratamento com IC excluindo zero). Complementos: bootstrap pareado da
+   diferença de ATTs; inspeção de quais tratados divergem entre as séries.
+   Aguarda aprovação do autor.
+2. Linguagem para o paper: claim sustentável é "sensível à fonte de
+   mensuração / impreciso demais para informar", NÃO "não sobrevive" (o IC do
+   UNGA-DM [-0.120, 0.066] contém o próprio ponto BSV -0.095). Simetricamente,
+   não promover o rank 2/96 do SDiD (Fiji está a 0.002 do Brasil); claim
+   estável: "todas as convenções < 5%".
+3. Housekeeping técnico antes do apêndice: harmonizar critério de exclusão
+   China-top, exportar time weights/balance da variante DM, nota de seed
+   (diferença ~2% é ruído MC; ranks determinísticos), commitar artefatos
+   untracked (aguarda instrução do autor para commit).
+4. Autor escreve o texto: tabela de apêndice BSV vs UNGA-DM + parágrafo de
+   sensibilidade de mensuração; recalibrar a passagem (~linha 610 do Rmd) que
+   usa o painel contra confounders Brasil-específicos, redistribuindo peso
+   para os testes Brasil-específicos. BSV permanece outcome principal (regra
+   pré-comprometida).
+
+Pacote menor concluído: teste F de pré-tendência do m2 extraído e equivalence
+plot do `fect` gerado
+(`data/processed/diagnostics/ungadm_outcome_robustness/estimation/m2_fect_equiv_plot.png`)
+— candidato a apêndice.
 
 ### Table 2: legibilidade
 
@@ -183,6 +237,11 @@ Ações possíveis:
 
 Critério de resolução: Table 2 legível no PDF renderizado em tamanho normal,
 sem depender de zoom excessivo.
+
+Nota 2026-08-23: integrar esta reforma com o item 4 do contrato inferencial
+acima — um painel único de inferência da especificação preferida (ATT, SE, IC,
+p normal, ranks direcional/bilateral/filtrados) pode absorver a linha "Placebo
+inference" da Table 2 e reduzir o conteúdo restante.
 
 ### C17: imagem de headlines promete 20 itens
 
