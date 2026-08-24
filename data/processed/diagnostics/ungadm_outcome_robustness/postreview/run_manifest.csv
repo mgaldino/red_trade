@@ -1,0 +1,2 @@
+run_date,audit_code_version,elapsed_minutes,parallel_cores,ife_nboots,boot_B,boot_seed,boot_failures,harmonized_excluded,previous_excluded,fect_version,synthdid_version
+2026-08-23,2026-08-23-v1-postreview,27.80803305308024,12,10000,1000,20260823,0,MLT,GAB;KWT,2.1.0,0.0.9

@@ -1,0 +1,4 @@
+comparison_set,excluded_units,rank_one_sided_negative,rank_two_sided_absolute,denominator,p_rank_one_sided_negative,p_rank_two_sided_absolute
+All valid assignments,,2,3,96,0.020833333333333332,0.03125
+Exclude goods-only China-top donor assignments (harmonized: window criterion),MLT,2,3,95,0.021052631578947368,0.031578947368421054
+Exclude goods-only China-top donor assignments (previous run: 5y qualifying criterion),GAB;KWT,2,3,94,0.02127659574468085,0.031914893617021274

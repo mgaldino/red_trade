@@ -189,27 +189,55 @@ exclusão China-top divergente entre colunas de rank de julho e agosto — ranks
 idênticos nas 4 combinações testadas pelo revisor).
 
 Pendências derivadas (ordem do revisor):
-1. **Antes de qualquer frase interpretativa no manuscrito sobre o painel**:
-   rodar o 2×2 completo (BSV/UNGA-DM × r = 1/2) — a atenuação está confundida
-   com a seleção de fatores (CV mudou r* = 2→1 com o outcome; IC do fect
-   virtualmente empatado entre r = 1 e 2 no UNGA-DM; variante DM tem 3 leads
-   pré-tratamento com IC excluindo zero). Complementos: bootstrap pareado da
-   diferença de ATTs; inspeção de quais tratados divergem entre as séries.
-   Aguarda aprovação do autor.
-2. Linguagem para o paper: claim sustentável é "sensível à fonte de
-   mensuração / impreciso demais para informar", NÃO "não sobrevive" (o IC do
-   UNGA-DM [-0.120, 0.066] contém o próprio ponto BSV -0.095). Simetricamente,
-   não promover o rank 2/96 do SDiD (Fiji está a 0.002 do Brasil); claim
-   estável: "todas as convenções < 5%".
-3. Housekeeping técnico antes do apêndice: harmonizar critério de exclusão
-   China-top, exportar time weights/balance da variante DM, nota de seed
-   (diferença ~2% é ruído MC; ranks determinísticos), commitar artefatos
-   untracked (aguarda instrução do autor para commit).
+1. **2×2 e bootstrap pareado — EXECUTADOS em 2026-08-23** (aprovados pelo
+   autor; relatório completo:
+   `quality_reports/ungadm_outcome_robustness/2026-08-23_postreview_diagnostics_report.md`;
+   outputs: `data/processed/diagnostics/ungadm_outcome_robustness/postreview/`).
+   Resultados: com fatores comuns (r = 2), BSV -0.095 (p = 0.016) vs UNGA-DM
+   -0.065 (p = 0.238) — a medida explica ~1/3 da atenuação; derrubar r para 1
+   anula até o BSV (-0.036, p = 0.336), logo a maior parte do "-0.027" era
+   artefato da seleção de fatores. Bootstrap pareado (B = 1.000, 0 falhas):
+   a diferença entre os ATTs NÃO é distinguível (p = 0.13
+   procedimento-selecionado; 0.36 com fatores comuns). Divergência por país:
+   queda bruta dentro dos tratados quase igual nas duas séries (-0.220 vs
+   -0.199); correlações médias iguais em tratados e controles (~0.75).
+   Subproduto importante: a significância do painel requer o segundo fator
+   latente mesmo no BSV.
+2. Linguagem para o paper — agora CONFIRMADA pelos testes: claim sustentável
+   é "sensível à fonte de mensuração / impreciso demais para informar", NÃO
+   "não sobrevive" (IC do UNGA-DM contém o ponto BSV; diferença de ATTs não
+   passa no bootstrap pareado). Simetricamente, não promover o rank 2/96 do
+   SDiD (Fiji está a 0.002 do Brasil); claim estável: "todas as convenções
+   < 5%".
+3. Housekeeping técnico antes do apêndice — DECIDIDO em 2026-08-23 (autor
+   aprovou): a linha "exclude China-top donor assignments" do paper usa o
+   **critério de julho/janela** — excluir doadores com status China-top
+   observado dentro de 1997-2015 (= MLT; denominador 95) — porque o rótulo
+   promete purga de contaminação, e contaminação é exposição dentro da janela
+   de análise. Alternativas descartadas: (i) critério ever-treated/5 anos
+   (GAB/KWT, tratados 2017-18, fora da janela) — mira seleção em tratamento
+   futuro, ameaça distinta; sub-inclusivo para contaminação (perde MLT) e
+   descarta placebos limpos; mantido apenas como linha de auditoria; (ii)
+   união dos dois critérios (denominador 93) — redundante, ranks idênticos
+   nas 4 combinações testadas pelo revisor; se a motivação not-yet-treated
+   surgir (parecerista), apresentar como linha própria com rótulo próprio.
+   Harmonização, time weights/balance da variante DM e nota de seed:
+   executados em `scripts/diagnostics/audit_ungadm_postreview_diagnostics.R`
+   (outputs em `data/processed/diagnostics/ungadm_outcome_robustness/postreview/`).
+   Commit do check: `74bc686`; diagnósticos pós-revisão entram em commit
+   próprio ao concluir.
 4. Autor escreve o texto: tabela de apêndice BSV vs UNGA-DM + parágrafo de
    sensibilidade de mensuração; recalibrar a passagem (~linha 610 do Rmd) que
    usa o painel contra confounders Brasil-específicos, redistribuindo peso
    para os testes Brasil-específicos. BSV permanece outcome principal (regra
-   pré-comprometida).
+   pré-comprometida). **Rascunho de apoio disponível** (pedido pelo autor em
+   2026-08-23; a escrita final é do autor):
+   `quality_reports/ungadm_outcome_robustness/2026-08-23_draft_paper_text_ungadm.md`
+   — blocos A-H (contrato inferencial, introdução, nota de dados, parágrafo
+   de sensibilidade, recalibragem ~610, apêndice com tabelas, legenda da
+   figura placebo, BibTeX de Fjelstul et al.), cada um com nota explicativa e
+   checklist de incorporação. Inclui também o contrato inferencial da
+   pendência anterior.
 
 Pacote menor concluído: teste F de pré-tendência do m2 extraído e equivalence
 plot do `fect` gerado

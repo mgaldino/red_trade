@@ -1,0 +1,59 @@
+- One or more packages recorded in the lockfile are not installed.
+- Use `renv::status()` for more details.
+Warning message:
+package ‘fect’ was built under R version 4.4.3 
+Sourcing scripts/functions.R for prepare_fect_data/fect summaries.
+Building the UNGA-DM outcome series.
+New names:
+• `` -> `...1`
+New names:
+• `` -> `...1`
+Recomputing the harmonized China-top exclusion rank column.
+  Harmonized exclusion (window criterion): MLT | previous run excluded: GAB, KWT
+                                                                         comparison_set
+                                                                  All valid assignments
+          Exclude goods-only China-top donor assignments (harmonized: window criterion)
+ Exclude goods-only China-top donor assignments (previous run: 5y qualifying criterion)
+ excluded_units rank_one_sided_negative rank_two_sided_absolute denominator
+                                      2                       3          96
+            MLT                       2                       3          95
+        GAB;KWT                       2                       3          94
+ p_rank_one_sided_negative p_rank_two_sided_absolute
+                0.02083333                0.03125000
+                0.02105263                0.03157895
+                0.02127660                0.03191489
+Refitting both SDiD variants for weights/balance exports.
+Rebuilding the common-window IFE panels.
+  Common rows: 4727
+2x2 cell 1/4: BSV, r = 1 (nboots = 10000).
+ outcome r_fixed cv_selected         att         se      ci_lo      ci_hi
+     BSV       1       FALSE -0.03597591 0.03742466 -0.1093282 0.03737641
+         p att_rel_pct att_sd_units n_obs nboots
+ 0.3364068    4.988766   0.04432258  4727  10000
+2x2 cell 2/4: UNGA-DM, r = 1 (nboots = 10000).
+ outcome r_fixed cv_selected         att        se      ci_lo      ci_hi
+ UNGA-DM       1        TRUE -0.02681859 0.0476056 -0.1201256 0.06648839
+        p att_rel_pct att_sd_units n_obs nboots
+ 0.573197     3.50967   0.03170163  4727  10000
+2x2 cell 3/4: BSV, r = 2 (nboots = 10000).
+ outcome r_fixed cv_selected         att         se      ci_lo      ci_hi
+     BSV       2        TRUE -0.09532156 0.03968064 -0.1730956 -0.0175475
+          p att_rel_pct att_sd_units n_obs nboots
+ 0.01629599     13.2182    0.1174368  4727  10000
+2x2 cell 4/4: UNGA-DM, r = 2 (nboots = 10000).
+ outcome r_fixed cv_selected         att         se      ci_lo      ci_hi
+ UNGA-DM       2       FALSE -0.06483882 0.05492222 -0.1724864 0.04280873
+         p att_rel_pct att_sd_units n_obs nboots
+ 0.2377787    8.485266   0.07664447  4727  10000
+Paired cluster bootstrap (B = 1000, stratified).
+                                          contrast observed_diff  boot_mean
+ UNGA-DM (r=1) minus BSV (r=2), procedure-selected    0.06850297 0.06749601
+     UNGA-DM (r=2) minus BSV (r=2), common factors    0.03048274 0.03802143
+    boot_sd      ci_2_5   ci_97_5 p_two_sided_percentile p_two_sided_normal
+ 0.04431935 -0.02224635 0.1480100                  0.134          0.1221850
+ 0.04392845 -0.04489674 0.1287961                  0.356          0.4877337
+ n_valid n_failed
+    1000        0
+    1000        0
+Computing per-country series divergence for treated units.
+Done in 27.8 minutes. Outputs in data/processed/diagnostics/ungadm_outcome_robustness/postreview

@@ -1,0 +1,4 @@
+note,detail
+placebo_se_seed,"UNGA-DM placebo SE uses seed 20260823 (1,000 replications); the audited BSV target se_synth_no_time_varying_covariates uses seed 20260520."
+ranks_deterministic,Placebo-in-space ranks involve no random draws; rank columns are exactly reproducible regardless of seed.
+seed_comparability,"Different placebo-permutation seeds imply Monte Carlo noise of roughly 2 percent in the SE at 1,000 replications; point estimates are unaffected."
