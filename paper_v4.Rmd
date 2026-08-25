@@ -366,11 +366,6 @@ sdid_high_time_weights_text <- sdid_time_weights %>%
 sdid_all_rank <- sdid_rank_inference %>%
   dplyr::filter(comparison_set == "All valid assignments") %>%
   dplyr::slice_head(n = 1)
-sdid_clean_rank <- sdid_rank_inference %>%
-  dplyr::filter(
-    comparison_set == "Exclude goods-only China-top donor assignments"
-  ) %>%
-  dplyr::slice_head(n = 1)
 sdid_fit_filtered_rank <- sdid_rank_inference %>%
   dplyr::filter(
     comparison_set == "Pre-fit RMSPE no larger than twice Brazil"
@@ -490,15 +485,6 @@ sdid_diag_summary <- tibble::tribble(
     sprintf("%.3f", sdid_rank2_placebo$estimate),
     "; actual 2009 timing estimate = ",
     sprintf("%.3f", sdid_actual_timing$estimate), "."
-  ),
-  "Exposure audit",
-  paste0(
-    "Excluding the goods-only China-top donor assignment leaves directional rank ",
-    sdid_clean_rank$rank_one_sided_negative, "/", sdid_clean_rank$denominator,
-    " (p = ", sprintf("%.3f", sdid_clean_rank$p_rank_one_sided_negative),
-    ") and bilateral rank ", sdid_clean_rank$rank_two_sided_absolute,
-    "/", sdid_clean_rank$denominator,
-    " (p = ", sprintf("%.3f", sdid_clean_rank$p_rank_two_sided_absolute), ")."
   )
 )
 
@@ -1436,7 +1422,6 @@ sdid_placebo_rank_table <- sdid_rank_inference %>%
     Denominator = as.integer(denominator),
     Note = dplyr::case_when(
       comparison_set == "All valid assignments" ~ "Primary rank comparison",
-      comparison_set == "Exclude goods-only China-top donor assignments" ~ "",
       TRUE ~ "Fit-filter sensitivity; not used to select the main p-value"
     )
   )
@@ -1453,7 +1438,7 @@ knitr::kable(
     font_size = 7
   ) %>%
   kableExtra::footnote(
-    general = "The primary distribution includes Brazil and all valid placebo-in-space assignments. The directional rank tests the theory-aligned direction of convergence; the bilateral absolute rank is the conservative two-sided counterpart. Interpreting these ranks as p-values requires sufficiently comparable placebo assignments; the exposure exclusion and pre-fit filter probe, but cannot guarantee, that condition. The fit-filter row was not used to choose the main result.",
+    general = "The primary distribution includes Brazil and all valid placebo-in-space assignments. The directional rank tests the theory-aligned direction of convergence; the bilateral absolute rank is the conservative two-sided counterpart. Interpreting these ranks as p-values requires sufficiently comparable placebo assignments; the donor exposure audit and the pre-fit filter probe, but cannot guarantee, that condition. The fit-filter row was not used to choose the main result.",
     general_title = "Note: ",
     escape = FALSE,
     threeparttable = TRUE
@@ -1548,7 +1533,7 @@ knitr::kable(
   ) %>%
   kableExtra::footnote(
     general = paste0(
-      "High-weight donors are donors with weights at least twice the uniform donor weight. ",
+      "High-weight donors are the ten donors with the largest SDiD unit weights. ",
       "Among them, ",
       sdid_high_weight_exposure_summary$n_high_weight_top_china_post,
       " were cases where China was the top export destination after 2009 and ",

@@ -57,7 +57,7 @@ stopifnot(abs(sum(unit_weights$unit_weight) - 1) < 1e-10)
 trend_plot <- my_plot_trends(core_fit) +
   ggplot2::labs(
     title = NULL,
-    subtitle = "Preferred specification with no effective covariate adjustment"
+    subtitle = "Preferred specification, estimated without covariates"
   )
 ggplot2::ggsave(
   file.path(figure_dir, "figure_brazil_sdid_predetermined_core_fit.pdf"),
@@ -76,7 +76,7 @@ latam_core_fit <- simple_fit_no_time_varying_covariates(
 latam_trend_plot <- my_plot_trends(latam_core_fit) +
   ggplot2::labs(
     title = NULL,
-    subtitle = "Latin America donors; no effective covariate adjustment"
+    subtitle = "Latin America donors, estimated without covariates"
   )
 ggplot2::ggsave(
   file.path(

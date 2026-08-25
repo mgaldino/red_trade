@@ -326,6 +326,7 @@ synth_fit_no_time_varying_covariates|stem|972e12e1983721fa|89260c93864337de|fac0
 synth_fit|stem|b5ce49d666a3c2ea|bfe32a18c458a9a1|fcfa3304a511e685|1675857646||t20690.7074264237s|s191811b|191811|rds|local|vector|||14.545||
 synth_fit_latam|stem|9753c08d77b8c277|8eb80ea8631db8d0|fcfa3304a511e685|721652965||t20690.7074883052s|s92764b|92764|rds|local|vector|||5.32||
 synth_fit_baseline|stem|f64175981e04f8f6|34d27ffabf887fc4|3b59b5360719d9bb|359981396||t20690.7076189841s|s190748b|190748|rds|local|vector|||11.265||
+synth_data_extended|stem|34340beb28862161|f93f7f4987592b64|e3fec4f17d99b526|1376510851||t20690.7092457696s|s156620b|156620|rds|local|vector|||0.365||
 fect_att_summary|function|ef9a1fa407cd448e
 prepare_fect_data|function|bd521d3a8d6c3ea5
 filter_usa_top_control|function|200551be423eb901
@@ -407,7 +408,7 @@ plot_serie|function|69e05cf7376f4a0f
 goal9_make_covariate_array|function|4cab7e06cc57c17e
 write_status_current_runtime_report|function|ed52a04773b4a0ca
 donor_pool_table|function|afe31372de66a65c
-.Random.seed|object|a01d60e150a0fc19
+.Random.seed|object|5b2b4cf337755324
 summarise_brazil_china_unvotes_similarity_by_issue_year|function|ed80fde39c044e94
 prepare_absorbing_china_top_sample|function|610e877ebd686ff0
 build_covariates|function|d072ff9d2623698e
@@ -502,4 +503,3 @@ goal9_sdid_outcome_results|function|d55d751581d28eb4
 build_selective_china_alignment_unga_targets|function|61b9f4e4efd7c771
 goal9_china_demand_sdid_diagnostics|function|bd1e718759c17240
 build_brazil_sdid_diagnostics_bundle|function|93f2563cfaff3d57
-synth_data_extended|stem|34340beb28862161|f93f7f4987592b64|e3fec4f17d99b526|1376510851||t20690.7092457696s|s156620b|156620|rds|local|vector|||0.365||

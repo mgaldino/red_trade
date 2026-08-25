@@ -140,6 +140,17 @@ if (!MANUSCRIPT %in% names(script_batch)) {
 # widened to tar_read_raw() and to quoted names. Matched against the file as a
 # single string so that a call wrapped across lines is still seen -- the
 # manuscript has one.
+#
+# KNOWN BLIND SPOT (registered as a GitHub issue, 2026-08-25): this regex only
+# recognizes DOUBLE-quoted or bare names inside tar_read()/tar_read_raw().
+# Two idioms are invisible to it: single quotes (tar_read('x')) and tar_load(x).
+# A read this function cannot see makes the final "none reads a target built
+# later" message FALSE CONFIDENCE, which is the exact failure class this file
+# exists to prevent. As of 2026-08-25 no orchestrated script or the manuscript
+# uses either idiom (verified repo-wide), so the map is complete TODAY. If you
+# are writing a new orchestrated script: use tar_read("x") style, or first
+# widen this regex (["']? on both quote positions; tar_(read(_raw)?|load)) and
+# re-run the 18-idiom battery from the round-3 review.
 targets_read_by <- function(path) {
   txt <- paste(readLines(path, warn = FALSE), collapse = "\n")
   hits <- unlist(regmatches(txt, gregexpr(

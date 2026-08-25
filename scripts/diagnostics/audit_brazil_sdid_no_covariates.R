@@ -89,22 +89,14 @@ dist <- sdid_rank_distribution(synth_data, label = "no_covariates",
 write_csv(dist, op("placebo_distribution.csv"))
 
 bra_rmspe <- dist$rmspe_pre[dist$iso3c == "BRA"]
-goods_panel <- safe_tar_read("china_top_m2_goods_panel")
-if (is.null(goods_panel)) stop("target `china_top_m2_goods_panel` unavailable.",
-                               call. = FALSE)
 units <- sort(unique(synth_data$iso3c))
-# Harmonized exclusion criterion (author decision 2026-08-23): donors with
-# observed goods-only China-top status inside the 1997-2015 analysis window.
-window_china_top <- goods_panel |>
-  filter(china_is_top %in% TRUE, year >= 1997L, year <= 2015L,
-         iso3c %in% units) |>
-  distinct(iso3c) |> pull(iso3c)
-excluded_units <- setdiff(window_china_top, "BRA")
-
+# No China-top exclusion row: under the goods-based donor screen no donor is
+# China-top in goods inside the window by construction (the `data`-batch
+# invariant asserts this), so that row would duplicate "All valid assignments"
+# line for line. The author chose to drop it (2026-08-25) to keep the table
+# lean rather than print a vacuous comparison.
 ranks <- bind_rows(
   sdid_rank_inference(dist, "All valid assignments"),
-  sdid_rank_inference(dist, "Exclude goods-only China-top donor assignments",
-                      keep_units = setdiff(units, excluded_units)),
   sdid_rank_inference(dist, "Pre-fit RMSPE no larger than twice Brazil",
                       keep_units = dist$iso3c[dist$status == "estimated" &
                                                 dist$rmspe_pre <= 2 * bra_rmspe])
@@ -148,6 +140,13 @@ unit_weights <- tibble(iso3c = donors, unit_weight = as.numeric(w$omega)) |>
     region = countrycode::countrycode(iso3c, "iso3c", "region"),
     cumulative_weight = cumsum(unit_weight),
     uniform_weight = 1 / length(donors),
+    # Reported high-weight set is the FIXED top ten donors by weight (author
+    # decision 2026-08-25): the appendix must not report 9 or 11 donors
+    # depending on where the 2x-uniform threshold happens to fall. The
+    # manuscript note states the same top-ten rule. (brazil_sdid_unit_weights()
+    # in functions.R still flags by the 2x-uniform rule for the internal
+    # diagnostics bundle; left untouched because editing functions.R would
+    # invalidate built targets.)
     high_weight_donor = weight_rank <= 10L
   ) |>
   left_join(latam, by = "iso3c") |>
