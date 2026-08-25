@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "sgp_mfa_uptake_2017",
+    "country": "Singapore",
+    "iso3c": "SGP",
+    "donor_pool": "Global candidate",
+    "donor_weight": "not in stale on-disk weights",
+    "rank_in_project": "goods exports: 2; goods and services two-way: 1",
+    "rank_year": "2013",
+    "vehicle": "Ministry of Foreign Affairs",
+    "source_type": "official_speech",
+    "source_country": "Singapore",
+    "publication_date": "2017-03-02",
+    "url": "https://www.mfa.gov.sg/newsroom/press-statements-transcripts-and-photos/mfa-press-release-speeches-by-minister-for-foreign-affairs-dr-vivian-balakrishnan-senior-minister-of-02-mar-2017/",
+    "title": "Speeches during the Committee of Supply Debate",
+    "language": "en",
+    "window": "supplemental official uptake",
+    "query_used": "site:mfa.gov.sg since 2013 China Singapore largest trading partner parliament",
+    "rank_label_original": "China is Singapore's largest trading partner, also since 2013",
+    "rank_level": "generic_trading_partner_1",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "yes",
+    "local_or_official": "yes",
+    "method_eligible": "no",
+    "evidence_strength": "strong",
+    "case_role": "Singapore official uptake",
+    "notes": "Later parliamentary speech embeds the 2013 first-place milestone in a broader bilateral and foreign-policy narrative."
+  },
+  "accessed_at": "2026-08-25T16:24:18+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html",
+    "size_bytes": "876111",
+    "raw_file": "data/raw/argentina_case_study/sgp/sgp_mfa_uptake_2017.html",
+    "raw_sha256": "2667fbf6146d3aaf61026f727fb690028d078fd6b3c0da05e5d180b09425d994",
+    "fetch_error": ""
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "sgp_ie_review_2013",
+    "country": "Singapore",
+    "iso3c": "SGP",
+    "donor_pool": "Global candidate",
+    "donor_weight": "not in stale on-disk weights",
+    "rank_in_project": "goods exports: 2; goods and services two-way: 1",
+    "rank_year": "2013",
+    "vehicle": "International Enterprise Singapore",
+    "source_type": "official_statistics",
+    "source_country": "Singapore",
+    "publication_date": "2014-02-20",
+    "url": "https://www.nas.gov.sg/archivesonline/data/data/pdfdoc/20140227003/mr00514_review_of_2013_trade_performance_2014_02_20.pdf",
+    "title": "Review of 2013 trade performance",
+    "language": "en",
+    "window": "principal: 2013--2014",
+    "query_used": "site:nas.gov.sg Review of 2013 trade performance China top trading partner Singapore",
+    "rank_label_original": "Top trading partner: China; top NODX market: China",
+    "rank_level": "total_merchandise_trade_1_and_nodx_1",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "yes",
+    "local_or_official": "yes",
+    "method_eligible": "yes",
+    "evidence_strength": "strong",
+    "case_role": "Singapore 2013 rank-1 cue",
+    "notes": "Official annual tables put China first in total merchandise trade and non-oil domestic exports; these public constructs differ from all-goods export destination."
+  },
+  "accessed_at": "2026-08-25T16:24:18+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "application/pdf;charset=UTF-8",
+    "size_bytes": "894187",
+    "raw_file": "data/raw/argentina_case_study/sgp/sgp_ie_review_2013.pdf",
+    "raw_sha256": "d9c0cf705c7f08817f0a467eedc6030d2ee03cacf41f429c5990e10f5ba87358",
+    "fetch_error": ""
+  }
+}

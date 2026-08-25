@@ -126,6 +126,47 @@ get_country_data2 <- function() {
 
 }
 # Trade data
+# Goods-only counterpart of get_trade_data().
+#
+# The donor-eligibility screen in clean_synth_data() must rank partners with
+# the SAME sector definition that defines treatment. The treatment concept in
+# the paper is the rising power becoming a country's largest *goods* export
+# destination, and aggregate_itpde_goods_exports() (cross-country panel) keeps
+# Agriculture, Mining and Energy, and Manufacturing. Ranking the screen on
+# total trade instead makes the two rules disagree wherever services reorder
+# a country's partners, in both directions:
+#   Malta 2011-2012   - China is the top goods destination but only third once
+#                       services are counted, so a treated unit survived into
+#                       the donor pool with 3.0% weight.
+#   Singapore 2013-14 - China tops total trade but never tops goods, so an
+#                       eligible donor was screened out for no reason.
+# The sector vector is duplicated rather than shared with the cross-country
+# target on purpose: changing how that target receives its argument would
+# invalidate the (expensive) goods aggregation. The two paths are instead
+# cross-validated empirically by scripts/diagnostics/check_donor_pool_screen.R,
+# which asserts that no donor in the resulting pool is China-top in
+# china_top_m2_goods_panel at any point in the estimation window.
+get_trade_data_goods <- function(trade_file,
+                                 goods_sector_values = c("Agriculture",
+                                                         "Mining and Energy",
+                                                         "Manufacturing")) {
+  raw <- data.table::fread(
+    trade_file,
+    select = c("year", "exporter_iso3", "importer_iso3", "trade", "broad_sector")
+  )
+  missing_sectors <- setdiff(goods_sector_values, unique(raw$broad_sector))
+  if (length(missing_sectors) > 0) {
+    stop("broad_sector values absent from ", basename(trade_file), ": ",
+         paste(missing_sectors, collapse = ", "), call. = FALSE)
+  }
+  raw %>%
+    dplyr::filter(year > 1989,
+                  broad_sector %in% goods_sector_values,
+                  exporter_iso3 != importer_iso3) %>%
+    dplyr::group_by(year, exporter_iso3, importer_iso3) %>%
+    dplyr::summarise(exports = sum(trade), .groups = "drop")
+}
+
 get_trade_data <- function(trade_file) {
   fread(trade_file) %>%
     dplyr::select(year, exporter_iso3, importer_iso3, trade) %>%

@@ -27,14 +27,14 @@
     "case_role": "rank-2 comparison",
     "notes": "Domestic official export yearbook."
   },
-  "accessed_at": "2026-08-25T16:13:44+00:00",
+  "accessed_at": "2026-08-25T16:35:04+00:00",
   "fetch": {
-    "fetch_status": "http_error",
-    "http_status": "404",
-    "content_type": "text/html; charset=UTF-8",
+    "fetch_status": "error",
+    "http_status": "",
+    "content_type": "",
     "size_bytes": "0",
     "raw_file": "",
     "raw_sha256": "",
-    "fetch_error": "HTTP Error 404: Not Found"
+    "fetch_error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))"
   }
 }

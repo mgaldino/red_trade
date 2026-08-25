@@ -17,6 +17,10 @@
 # their replications re-solves the covariate coefficients, ~1.6 s/replication
 # on 12 cores).
 #
+# This script runs the whole rebuild in one sitting. To split it into batches
+# of roughly an hour each -- same stages, same order, resumable -- use
+# scripts/run_rebuild_batch.sh instead ("list" shows the batches).
+#
 # Usage:   bash scripts/run_reproducibility_rebuild.sh
 # Logs:    output/rebuild_<timestamp>/
 # Runtime: roughly 9-11 hours; the covariate comparison columns dominate.

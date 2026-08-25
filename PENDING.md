@@ -118,8 +118,24 @@ O paper já calibra a interpretação AGNU:
 
 **Status**: BLOQUEANTE antes de qualquer circulação ou submissão
 **Prioridade**: MÁXIMA
-**Decisão do autor (2026-08-23)**: "tudo precisa ser reproduzível"; execução
-agendada pelo autor para uma madrugada (deixar rodando ao dormir).
+**Decisão do autor (2026-08-23)**: "tudo precisa ser reproduzível".
+
+> **ESCOPO AMPLIADO EM 2026-08-25 — LEIA ANTES DE RODAR.** O rebuild agora
+> carrega uma segunda correção, mais grave que a das covariáveis: o screen de
+> elegibilidade do donor pool do SDiD ranqueava parceiros por comércio
+> **total**, enquanto o paper define tratamento por exportações de **bens**.
+> Malta (China #1 em bens, 2011–2012) estava no donor pool com 3,0% de peso —
+> uma unidade tratada dentro do contrafactual, violando a suposição do modelo.
+> Singapura era o erro espelhado, excluída sem motivo. Corrigido: sai Malta,
+> entra Singapura, pool segue com 96 unidades, e **os resultados não se movem**
+> (ATT −0,2720 → −0,2728; SE 0,1302 → 0,1306; ranks idênticos, 3/96 e 7/96).
+>
+> **O comando mudou.** Rodar em lotes de ~1h, não em bloco:
+> `bash scripts/run_rebuild_batch.sh list | status | next | <lote>`.
+> Custo medido por `tar_outdated()`: 17 targets reconstroem, 18 seguem válidos
+> (toda a família cross-country já usava bens e fica intacta), ≈7h30 no total.
+> Plano, causa-raiz e runbook completo:
+> `quality_reports/plans/2026-08-25_goods_only_donor_screen.md`.
 
 #### O que aconteceu e por que isto existe
 
@@ -164,7 +180,19 @@ escrever no paper que o SE anterior era otimista.**
    construído. Outros pacotes também estão fora do lockfile (easypackages,
    ggsci, network, plm, priceR, stargazer, WDI).
 
-#### Roteiro de execução — UM COMANDO
+#### Roteiro de execução
+
+**Preferir a execução em lotes** (2026-08-25), que faz os mesmos estágios na
+mesma ordem em sessões de no máximo ~1,5h, com estado em
+`output/rebuild_batches/STATE.tsv`:
+
+```bash
+bash scripts/run_rebuild_batch.sh next
+```
+
+O bloco único abaixo continua válido para quem puder deixar rodando a noite
+inteira, mas a estimativa de ~9h é anterior à correção do donor pool e hoje
+superestima (a família cross-country não reconstrói mais):
 
 ```bash
 bash scripts/run_reproducibility_rebuild.sh

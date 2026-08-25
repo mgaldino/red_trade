@@ -27,7 +27,7 @@
     "case_role": "non-top benchmark",
     "notes": "Domestic official report identifies the leading export destinations without China among the top three."
   },
-  "accessed_at": "2026-08-25T16:13:44+00:00",
+  "accessed_at": "2026-08-25T16:35:04+00:00",
   "fetch": {
     "fetch_status": "error",
     "http_status": "",
@@ -35,6 +35,6 @@
     "size_bytes": "0",
     "raw_file": "",
     "raw_sha256": "",
-    "fetch_error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))"
+    "fetch_error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))"
   }
 }

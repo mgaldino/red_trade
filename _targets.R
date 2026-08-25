@@ -40,6 +40,14 @@ list(
   tar_target(gpi_data, get_gpi_data(gpi_file)),
   tar_target(trade_data, get_trade_data(trade_file)),
   tar_target(trade_data_ranked, rank_trade(trade_data)),
+  # Donor-eligibility screen on the SAME sector definition that defines
+  # treatment (largest GOODS export destination). trade_data_ranked stays as
+  # it is: other targets legitimately describe total trade. See
+  # get_trade_data_goods() for why ranking the screen on total trade let a
+  # treated unit (Malta 2011-2012) into the donor pool while excluding an
+  # eligible one (Singapore).
+  tar_target(trade_data_goods, get_trade_data_goods(trade_file)),
+  tar_target(trade_data_goods_ranked, rank_trade(trade_data_goods)),
   tar_target(goal3_brazil_rank_volume_data,
              goal9_brazil_rank_volume_data(trade_data)),
   tar_target(goal3_brazil_rank_volume_plot,
@@ -85,7 +93,7 @@ list(
                brazil_china_unvotes_resolution_2005_2012
              )),
   # SDiD
-  tar_target(synth_data, clean_synth_data(final_df, ranked_trade_data=trade_data_ranked,
+  tar_target(synth_data, clean_synth_data(final_df, ranked_trade_data=trade_data_goods_ranked,
                                          dpi_data=dpi_data, trade_agreement_data=trade_agreement_data)),
   # Vote-level selective UNGA alignment diagnostics for the paper
   tar_target(selective_china_alignment_unga_targets_bundle,
@@ -153,7 +161,7 @@ list(
                se_synth_placebo1
              )),
   # Robustness: baseline SDiD without institutional covariates
-  tar_target(synth_data_baseline, clean_synth_data(final_df, ranked_trade_data=trade_data_ranked)),
+  tar_target(synth_data_baseline, clean_synth_data(final_df, ranked_trade_data=trade_data_goods_ranked)),
   tar_target(synth_fit_baseline, simple_fit(data=synth_data_baseline, filter_latin_america=FALSE)),
   tar_target(se_synth_baseline, se_sdid(synth_fit_baseline, replications = 5000L)),
   tar_target(synth_fit_no_time_varying_covariates, simple_fit_no_time_varying_covariates(synth_data)),
@@ -185,7 +193,7 @@ list(
                trade_data_cleaned
              )),
   # Phase 1.2: Sensitivity analysis
-  tar_target(synth_data_extended, clean_synth_data(final_df, trade_data_ranked, year_end = 2020,
+  tar_target(synth_data_extended, clean_synth_data(final_df, trade_data_goods_ranked, year_end = 2020,
                                                   dpi_data=dpi_data, trade_agreement_data=trade_agreement_data)),
   tar_target(sensitivity_results, sensitivity_analysis(synth_data, synth_data_extended)),
   # Phase 1.3: Extended sample (2009-2019)

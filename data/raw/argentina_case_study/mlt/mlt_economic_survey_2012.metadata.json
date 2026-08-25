@@ -5,7 +5,7 @@
     "iso3c": "MLT",
     "donor_pool": "Global",
     "donor_weight": "0.03047",
-    "rank_in_project": "1",
+    "rank_in_project": "goods: not 1; goods plus services: 1",
     "rank_year": "2011",
     "vehicle": "Government of Malta",
     "source_type": "official_statistics",
@@ -24,8 +24,8 @@
     "local_or_official": "yes",
     "method_eligible": "yes",
     "evidence_strength": "strong",
-    "case_role": "aggregation contradiction",
-    "notes": "Domestic official values show mainland China was not first; China plus Hong Kong can be first."
+    "case_role": "sector-definition correction",
+    "notes": "Confirms the author-identified sector-definition error: China was not first in goods; the first-place result applies only after services are included."
   },
   "accessed_at": "2026-08-25T16:03:23+00:00",
   "fetch": {

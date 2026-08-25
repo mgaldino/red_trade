@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "sgp_mfa_yeo_2005",
+    "country": "Singapore",
+    "iso3c": "SGP",
+    "donor_pool": "Global candidate",
+    "donor_weight": "not in stale on-disk weights",
+    "rank_in_project": "goods exports: 2; goods and services two-way: 2",
+    "rank_year": "2005",
+    "vehicle": "Ministry of Foreign Affairs",
+    "source_type": "official_speech",
+    "source_country": "Singapore",
+    "publication_date": "2005-12-29",
+    "url": "https://www.mfa.gov.sg/newsroom/press-statements-transcripts-and-photos/speech-by-george-yeo-minister-for-foreign-affairs-at-the-35th-anniversary-dinner-of-the-sporechina-b-29-dec-2005/",
+    "title": "Speech at the 35th Anniversary Dinner of the Singapore-China Business Association",
+    "language": "en",
+    "window": "principal: 2005--2006",
+    "query_used": "site:mfa.gov.sg Singapore China Business Association 29 December 2005 bilateral trade",
+    "rank_label_original": "",
+    "rank_level": "none",
+    "explicit_rank_language": "no",
+    "volume_language": "yes",
+    "official_uptake": "yes",
+    "local_or_official": "yes",
+    "method_eligible": "yes",
+    "evidence_strength": "moderate",
+    "case_role": "Singapore 2005 volume and strategy",
+    "notes": "The foreign minister stresses record bilateral trade, investment, ASEAN integration and strategic interest, but no Singapore export-rank cue."
+  },
+  "accessed_at": "2026-08-25T16:24:18+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html",
+    "size_bytes": "424215",
+    "raw_file": "data/raw/argentina_case_study/sgp/sgp_mfa_yeo_2005.html",
+    "raw_sha256": "26b82d83d6379199ac7ffe3830e2a9e1722228128a10f4ece40f58a1aba9edb6",
+    "fetch_error": ""
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "sgp_mti_sip_2013",
+    "country": "Singapore",
+    "iso3c": "SGP",
+    "donor_pool": "Global candidate",
+    "donor_weight": "not in stale on-disk weights",
+    "rank_in_project": "goods exports: 2; goods and services two-way: 1",
+    "rank_year": "2013",
+    "vehicle": "Ministry of Trade and Industry",
+    "source_type": "government_news",
+    "source_country": "Singapore",
+    "publication_date": "2013-10-22",
+    "url": "https://www.nas.gov.sg/archivesonline/data/data/pdfdoc/20131029003/15th_sip_jsc_press_release.pdf",
+    "title": "Singapore and China announce new areas of cooperation at the 15th Suzhou Industrial Park Joint Steering Council",
+    "language": "en",
+    "window": "transition context: 2013",
+    "query_used": "site:nas.gov.sg Singapore China services export destination 2011 fifth 2013 SIP",
+    "rank_label_original": "5th largest services export destination in 2011",
+    "rank_level": "services_export_destination_5",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "yes",
+    "local_or_official": "yes",
+    "method_eligible": "yes",
+    "evidence_strength": "strong",
+    "case_role": "Singapore 2013 pre-result context",
+    "notes": "Before the 2013 annual result, official language marked China as an important but not leading services destination."
+  },
+  "accessed_at": "2026-08-25T16:24:18+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "application/pdf;charset=UTF-8",
+    "size_bytes": "156288",
+    "raw_file": "data/raw/argentina_case_study/sgp/sgp_mti_sip_2013.pdf",
+    "raw_sha256": "c73b2fa71cfb5cb9da03d979d06fc13fb0f463e29c97b765b9592a8f8d500832",
+    "fetch_error": ""
+  }
+}

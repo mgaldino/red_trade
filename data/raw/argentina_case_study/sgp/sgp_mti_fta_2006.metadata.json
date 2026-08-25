@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "sgp_mti_fta_2006",
+    "country": "Singapore",
+    "iso3c": "SGP",
+    "donor_pool": "Global candidate",
+    "donor_weight": "not in stale on-disk weights",
+    "rank_in_project": "goods exports: 2; goods and services two-way: 2",
+    "rank_year": "2005",
+    "vehicle": "Ministry of Trade and Industry",
+    "source_type": "government_news",
+    "source_country": "Singapore",
+    "publication_date": "2006-08-25",
+    "url": "https://www.mti.gov.sg/newsroom/china-and-singapore-to-launch-fta-negotiations/",
+    "title": "China and Singapore to launch FTA negotiations",
+    "language": "en",
+    "window": "principal: 2005--2006",
+    "query_used": "site:mti.gov.sg China Singapore launch FTA negotiations 2005 fourth largest trading partner",
+    "rank_label_original": "China is now Singapore's 4th largest trading partner",
+    "rank_level": "total_merchandise_trade_4",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "yes",
+    "local_or_official": "yes",
+    "method_eligible": "yes",
+    "evidence_strength": "strong",
+    "case_role": "Singapore 2005 official uptake",
+    "notes": "Official policy action is linked to record trade and investment, not to China being the second goods-export destination in ITPD-E."
+  },
+  "accessed_at": "2026-08-25T16:24:18+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html",
+    "size_bytes": "381610",
+    "raw_file": "data/raw/argentina_case_study/sgp/sgp_mti_fta_2006.html",
+    "raw_sha256": "57e08e962da9aa227500b2088b4f1c32254f67c53e5f5dd6243f70ab5b8d4132",
+    "fetch_error": ""
+  }
+}

@@ -27,14 +27,14 @@
     "case_role": "rank-2 comparison",
     "notes": "Domestic bilateral chamber publication; not independent press."
   },
-  "accessed_at": "2026-08-25T16:13:44+00:00",
+  "accessed_at": "2026-08-25T16:35:04+00:00",
   "fetch": {
-    "fetch_status": "http_error",
-    "http_status": "500",
-    "content_type": "text/html",
-    "size_bytes": "7309",
-    "raw_file": "data/raw/argentina_case_study/cri/cri_chamber_2007.pdf",
-    "raw_sha256": "a8a284f377cb9f21c53e5553234ecb693dc4c2c38f3306b6cde4aead5e05e913",
-    "fetch_error": "HTTP Error 500: Internal Server Error"
+    "fetch_status": "error",
+    "http_status": "",
+    "content_type": "",
+    "size_bytes": "0",
+    "raw_file": "",
+    "raw_sha256": "",
+    "fetch_error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))"
   }
 }

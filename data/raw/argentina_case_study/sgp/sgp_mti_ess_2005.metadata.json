@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "sgp_mti_ess_2005",
+    "country": "Singapore",
+    "iso3c": "SGP",
+    "donor_pool": "Global candidate",
+    "donor_weight": "not in stale on-disk weights",
+    "rank_in_project": "goods exports: 2; goods and services two-way: 2",
+    "rank_year": "2005",
+    "vehicle": "Ministry of Trade and Industry",
+    "source_type": "official_report",
+    "source_country": "Singapore",
+    "publication_date": "2006",
+    "url": "https://isomer-user-content.by.gov.sg/166/15a8565c-c494-4f59-9750-ef682807e18e/ess_2005ann_full-report.pdf",
+    "title": "Economic Survey of Singapore 2005",
+    "language": "en",
+    "window": "principal: 2005--2006",
+    "query_used": "site:mti.gov.sg Economic Survey Singapore 2005 China export market rank",
+    "rank_label_original": "China was Singapore's 4th largest trading partner",
+    "rank_level": "total_merchandise_trade_4",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "yes",
+    "local_or_official": "yes",
+    "method_eligible": "yes",
+    "evidence_strength": "strong",
+    "case_role": "Singapore 2005 metric audit",
+    "notes": "Contemporary domestic report does not reproduce or publicize the ITPD-E goods-export rank 2; it uses total merchandise trade and calls China fourth."
+  },
+  "accessed_at": "2026-08-25T16:24:18+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "application/pdf",
+    "size_bytes": "1309172",
+    "raw_file": "data/raw/argentina_case_study/sgp/sgp_mti_ess_2005.pdf",
+    "raw_sha256": "6a36e31cae668ddd58c32186e5c5ceb7dfc8ff9a6093e266d7b30a394fbffc3a",
+    "fetch_error": ""
+  }
+}
