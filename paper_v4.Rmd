@@ -302,7 +302,7 @@ Figure \@ref(fig:brazil-rank-volume) shows the timing of the rank threshold. Chi
 tar_read(goal3_brazil_rank_volume_plot)
 ```
 
-Figure \@ref(fig:plot-sdid) presents the preferred SDiD fit, estimated without covariates. As shown in the Appendix comparison between SCM and SDiD, SDiD includes unit effects and therefore permits a stable pre-treatment level difference between Brazil and its synthetic comparison. I report intercept-adjusted RMSPE by centering the pre-2009 Brazil-minus-synthetic gap before computing fit. The post-2009 gap is negative: the ATT is `r sprintf('%1.3f', estimate)` ideal-point units, the placebo-based SE is `r sprintf('%1.3f', se_estimate)`, and the conventional two-sided normal-approximation p-value is `r sprintf('%.3f', p_estimate)` with a 95 percent interval [`r sprintf('%.3f', ci_low)`, `r sprintf('%.3f', ci_high)`]. Because the theory predicts convergence, the directionally aligned placebo-in-space rank is `r sprintf('%d/%d', sdid_main_summary$rank_one_sided_negative, sdid_main_summary$rank_denominator)` (p = `r sprintf('%.3f', p_rank_directional)`); the conservative two-sided absolute rank is `r sprintf('%d/%d', sdid_main_summary$rank_two_sided_absolute, sdid_main_summary$rank_denominator)` (p = `r sprintf('%.3f', p_rank_bilateral)`). I report both rather than treating either convention as the sole inferential benchmark. Interpreting these finite-sample ranks as p-values requires placebo assignments to be sufficiently comparable to Brazil; the appendix therefore discloses donor exposure and pre-fit sensitivity rather than assuming exchangeability mechanically. Relative to Brazil's pre-treatment mean distance (`r sprintf('%.3f', mean_br)`), the ATT corresponds to a `r sprintf('%.1f', perc_change)` percent reduction. Appendix Figure \@ref(fig:appendix-brazil-china-ideal-points) shows that China is comparatively stable, so most of the reduction in absolute distance comes from movement in Brazil's position.
+Figure \@ref(fig:plot-sdid) presents the preferred SDiD fit, estimated without covariates. As shown in the Appendix comparison between SCM and SDiD, SDiD includes unit effects and therefore permits a stable pre-treatment level difference between Brazil and its synthetic comparison. I report intercept-adjusted RMSPE by centering Brazil's pre-2009 deviation from its synthetic comparison before computing fit. The post-2009 gap is negative: the ATT is `r sprintf('%1.3f', estimate)` ideal-point units, the placebo-based SE is `r sprintf('%1.3f', se_estimate)`, and the conventional two-sided normal-approximation p-value is `r sprintf('%.3f', p_estimate)` with a 95 percent interval [`r sprintf('%.3f', ci_low)`, `r sprintf('%.3f', ci_high)`]. Because the theory predicts convergence, the directionally aligned placebo-in-space rank is `r sprintf('%d/%d', sdid_main_summary$rank_one_sided_negative, sdid_main_summary$rank_denominator)` (p = `r sprintf('%.3f', p_rank_directional)`); the conservative two-sided absolute rank is `r sprintf('%d/%d', sdid_main_summary$rank_two_sided_absolute, sdid_main_summary$rank_denominator)` (p = `r sprintf('%.3f', p_rank_bilateral)`). I report both rather than treating either convention as the sole inferential benchmark. Interpreting these finite-sample ranks as p-values requires placebo assignments to be sufficiently comparable to Brazil; the appendix therefore discloses donor exposure and pre-fit sensitivity rather than assuming exchangeability mechanically. Relative to Brazil's pre-treatment mean distance (`r sprintf('%.3f', mean_br)`), the ATT corresponds to a `r sprintf('%.1f', perc_change)` percent reduction. Appendix Figure \@ref(fig:appendix-brazil-china-ideal-points) shows that China is comparatively stable, so most of the reduction in absolute distance comes from movement in Brazil's position.
 
 ```{r plot-sdid, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Preferred SDiD fit for Brazil and its synthetic comparison, estimated without covariates. Lower values indicate convergence toward China; the post-treatment gap is the average post-2009 reduced-form estimate. ", caption_note(unit = "Absolute UNGA ideal-point distance to China", se = "placebo-based SE with 20,000 replications; p-values reported in the text and table", window = "1997-2015 annual Brazil series")), fig.pos="H", out.width="95%"}
 knitr::include_graphics(file.path(
@@ -616,7 +616,7 @@ knitr::kable(
   ) %>%
   kableExtra::footnote(
     general = paste0(
-      "The outcome is absolute UNGA ideal-point distance to China; ATT is the average post-treatment Brazil-minus-synthetic gap, so negative values mean convergence. ",
+      "The outcome is absolute UNGA ideal-point distance to China; ATT is the estimated average causal effect on Brazil after 2009, so negative values mean convergence. ",
       "ATTs are reported with three decimals. Placebo-based SEs are in parentheses (20,000 replications for the preferred column; 5,000 for the comparison columns). ",
       "Stars use two-sided normal-approximation p-values based on placebo SEs: * p < 0.10; ** p < 0.05; *** p < 0.01. ",
       "Checkmarks show included covariate groups. Donor counts exclude Brazil. ",
@@ -681,7 +681,7 @@ rank_tests_note <- paste0(
     "^Note: ",
     "",
       caption_note(
-      unit = "Outcome is absolute UNGA ideal-point distance to China; ATT is the estimated post-onset Brazil-minus-synthetic gap, so negative values mean convergence; export margins are current USD billions",
+      unit = "Outcome is absolute UNGA ideal-point distance to China; ATT is the estimated causal effect on Brazil after the nominal onset, so negative values mean convergence; export margins are current USD billions",
       window = "2003-2005 timing tests end in 2008; 2012 is a later-break falsification using data through 2016"
     )
   ),
@@ -775,7 +775,7 @@ china_demand_note <- paste0(
     "^Note: ",
     "",
       caption_note(
-      unit = "Outcome is absolute UNGA ideal-point distance to China; ATT is the average post-treatment Brazil-minus-synthetic gap, so negative values mean convergence",
+      unit = "Outcome is absolute UNGA ideal-point distance to China; ATT is the estimated average causal effect on Brazil after 2009, so negative values mean convergence",
       se = "synthdid placebo SE with 5,000 replications",
       window = "1997-2015 annual SDiD panel"
     )
@@ -1336,7 +1336,7 @@ knitr::kable(
     font_size = 8
   ) %>%
   kableExtra::footnote(
-    general = "ATT is the average post-2009 Brazil-minus-synthetic gap in absolute UNGA ideal-point distance to China. RMSPE diagnostics center the Brazil-minus-synthetic gap by its pre-treatment mean before computing RMSPE, reflecting SDiD's allowance for stable level differences.",
+    general = "ATT is the estimated average causal effect on Brazil after 2009, in absolute UNGA ideal-point distance to China. RMSPE diagnostics center Brazil's deviation from its synthetic comparison by its pre-treatment mean before computing RMSPE, reflecting SDiD's allowance for stable level differences.",
     general_title = "Note: ",
     escape = FALSE,
     threeparttable = TRUE
