@@ -70,3 +70,8 @@ data/processed/diagnostics/china_top_goods_services/china_top_goods_services_ran
 # Smoke-test placebo checkpoints (low replication counts): caches, never deliverables.
 data/processed/diagnostics/*/checkpoints/placebo_se_*_[0-9].rds
 data/processed/diagnostics/*/checkpoints/placebo_se_*_[0-9][0-9].rds
+
+# Rebuild batch state and logs: machine-local run bookkeeping, never shared.
+# A versioned STATE.tsv makes a replicator skip the renv restore and the donor
+# pool gate, because run_rebuild_batch.sh reads it as "already done".
+output/rebuild_batches/

@@ -3,9 +3,13 @@
 # so the list cannot drift from the paper) plus the targets the diagnostic
 # scripts consume. Used by scripts/run_reproducibility_rebuild.sh.
 rebuild_target_names <- function(rmd = "paper_v4.Rmd") {
-  text <- readLines(rmd, warn = FALSE)
-  hits <- regmatches(text, gregexpr("tar_read\\(([A-Za-z_0-9]+)\\)", text))
-  from_paper <- unique(gsub("tar_read\\(|\\)", "", unlist(hits)))
+  # Collapsed to one string first: paper_v4.Rmd wraps at least one tar_read()
+  # across a line break, and a per-line regex silently drops those, which
+  # defeats the whole point of deriving the list from the manuscript.
+  text <- paste(readLines(rmd, warn = FALSE), collapse = "\n")
+  hits <- regmatches(
+    text, gregexpr("tar_read\\(\\s*([A-Za-z_0-9]+)\\s*\\)", text))
+  from_paper <- unique(trimws(gsub("tar_read\\(|\\)", "", unlist(hits))))
   diagnostics_extras <- c(
     "synth_fit_no_time_varying_covariates",
     "se_synth_no_time_varying_covariates",
@@ -55,18 +59,74 @@ rebuild_target_batches <- function(rmd = "paper_v4.Rmd") {
   data_targets <- c("trade_data_goods", "trade_data_goods_ranked",
                     "synth_data", "synth_data_baseline", "synth_data_extended",
                     "synth_fit", "synth_fit_baseline", "synth_fit_latam",
-                    "synth_fit_no_time_varying_covariates")
+                    "synth_fit_no_time_varying_covariates",
+                    # Read by check_donor_pool_screen.R, which runs as this
+                    # batch's gate. Without them here the gate dies on a clean
+                    # machine, because both are otherwise built in `core`. The
+                    # sector audit is a plain extraction from the aggregation
+                    # the panel already depends on, so it adds no work.
+                    "china_top_m2_goods_panel",
+                    "china_top_m2_goods_sector_audit",
+                    # Read by audit_brazil_sdid_no_covariates.R (batch
+                    # `diagnostics`), which builds the donor China exposure and
+                    # the timing falsification grid from targets instead of
+                    # from CSVs frozen under the superseded donor screen. All
+                    # three are cheap: trade_data_cleaned is already an
+                    # ancestor of synth_data, trade_data_ranked is a ranking of
+                    # a table this batch already builds, and
+                    # goal3_brazil_rank_volume_data is a 13-row Brazil series
+                    # derived from trade_data.
+                    "trade_data_ranked", "trade_data_cleaned",
+                    "goal3_brazil_rank_volume_data")
 
   expensive_se <- intersect(
     c("se_synth", "se_synth_latam", "se_synth_baseline"),
     all_targets)
+
+  # Two families of targets descend from the corrected donor screen without
+  # feeding any number in the manuscript. Both are rebuilt so that a replicator
+  # does not find artefacts built under the superseded total-trade screen
+  # sitting beside artefacts built under the goods screen -- but they are kept
+  # apart because their costs differ by an order of magnitude.
+  #
+  # `extended` is cheap (~1 h, one 5,000-replication SE) and runs by default,
+  # after the PDF exists.
+  extended_targets <- c("synth_fit_extended", "se_synth_extended",
+                        "sensitivity_results")
+
+  # `legacy` is the exploratory material from earlier drafts: alternative
+  # treatment dates, permutation tests, superseded plots. It carries FOUR more
+  # 5,000-replication placebo SEs plus a permutation test, so it costs roughly
+  # five hours, and it is opt-in for that reason. Leaving it out does not
+  # affect a single manuscript number; it only means the store keeps mixed
+  # provenance in targets nothing reads.
+  #
+  # Derived from the dependency graph, not by hand:
+  #   descendants of synth_data / synth_data_baseline / trade_data_goods_ranked
+  #   that appear in no other batch. check_batch_coverage.R recomputes this set
+  #   from tar_network() on every prep batch and fails if the list has drifted.
+  legacy_targets <- c(
+    "brazil_sdid_diagnostics_bundle", "china_demand_sdid_diagnostics_table",
+    "china_demand_sdid_panel", "donor_table",
+    "goal3_brazil_placebo_rank_volume_tests", "goal6_sdid_outcome_results",
+    "permutation_results", "placebo_teste_treatment02",
+    "placebo_teste_treatment03", "placebo_teste_treatment04",
+    "placebo_teste_treatment11", "plot_parallel", "plot_parallel_latam",
+    "plot_trend", "plot_trend_latam", "plot_weights_coef",
+    "plot_weights_coef_latam", "rmspe_diagnostics",
+    "se_synth_placebo_rank2_2004", "se_synth_placebo1", "se_synth_placebo2",
+    "se_synth_placebo3", "spaghetti_plot")
 
   batches <- c(
     list(data = data_targets),
     stats::setNames(as.list(expensive_se),
                     paste0("se_", seq_along(expensive_se)))
   )
-  batches$core <- setdiff(all_targets, unlist(batches, use.names = FALSE))
+  batches$core <- setdiff(all_targets,
+                          c(unlist(batches, use.names = FALSE),
+                            extended_targets, legacy_targets))
+  batches$extended <- extended_targets
+  batches$legacy <- legacy_targets
   batches
 }
 

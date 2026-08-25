@@ -50,7 +50,10 @@ renv::restore()
 
 ## Hardware & runtime
 
-Pipeline tested on a MacBook Pro (M1,36GB RAM); `targets::tar_make()` completes in **<3h**, peak RAM <16GB.
+Tested on a MacBook Pro (M1, 36GB RAM). The full rebuild
+(`bash scripts/run_reproducibility_rebuild.sh`, see Quick-start below) takes
+roughly **7-8 hours**, peak RAM <16GB; most of it is the placebo standard
+errors of the covariate comparison columns.
 
 # 3 Quick‑start
 
@@ -61,10 +64,20 @@ Pipeline tested on a MacBook Pro (M1,36GB RAM); `targets::tar_make()` completes 
 
 install.packages("renv")   # once
 renv::restore()             # recreate package environment
-
-library(targets)
-tar_make()                  # run full pipeline
 ```
+
+Then, from a shell at the repository root:
+
+```bash
+bash scripts/run_reproducibility_rebuild.sh
+```
+
+This is the reproduction path, not a bare `tar_make()`. It runs the pipeline in
+batches, applies the donor-pool eligibility gate, runs the four diagnostic
+scripts that write the CSVs the manuscript reads, and renders
+`output/paper_v4.pdf` as its last stage. To do it in sittings of about an hour
+instead, run `bash scripts/run_rebuild_batch.sh next` repeatedly;
+`bash scripts/run_rebuild_batch.sh list` shows the batches.
 
 Outputs (tables, figures) will be written to `output/`.
 

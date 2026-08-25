@@ -18,9 +18,16 @@
 # SAME replication count and seed the pipeline uses, so the number printed in
 # the manuscript cannot depend on which path ran (single source of truth).
 #
-# Outputs mirror the schemas of
-# data/processed/diagnostics/paper_v4_brazil_sdid_predetermined_core/ so the
-# manuscript can switch directories without structural code changes.
+# Outputs keep the schemas of the superseded
+# data/processed/diagnostics/paper_v4_brazil_sdid_predetermined_core/ directory,
+# which is how the manuscript switched directories without structural code
+# changes. Nothing is READ from there any more (2026-08-25). Two tables used to
+# be seeded from CSVs frozen on 14 July: the donor China exposure and the timing
+# falsification grid. The first broke outright once the goods screen corrected
+# the donor pool -- Singapore became a donor and the July file has no row for
+# Singapore, so the coverage assertion failed and the whole batch died here,
+# after roughly four hours of placebo standard errors. Both are now built from
+# targets.
 # Reads existing targets; never runs targets.
 
 suppressPackageStartupMessages({
@@ -34,12 +41,14 @@ run_date <- as.character(Sys.Date())
 audit_code_version <- "2026-08-24-v2-no-covariates-helpers"
 target_store <- "_targets"
 
+# brazil_sdid_donor_china_exposure() lives in functions.R and is the single
+# implementation of the donor exposure table. Sourced before the helpers so a
+# future name collision resolves in favour of the diagnostics-specific file.
+source(file.path("scripts", "functions.R"))
 source(file.path("scripts", "diagnostics", "sdid_placebo_helpers.R"))
 sdid_limit_blas_threads()
 parallel_cores <- sdid_available_cores()
 
-old_dir <- file.path("data", "processed", "diagnostics",
-                     "paper_v4_brazil_sdid_predetermined_core")
 out_dir <- file.path("data", "processed", "diagnostics",
                      "paper_v4_brazil_sdid_no_covariates")
 checkpoint_dir <- file.path(out_dir, "checkpoints")
@@ -238,43 +247,87 @@ write_csv(window_sensitivity, op("window_sensitivity.csv"))
 
 # timing placebos (already covariate-free by design)
 message("Timing placebos.")
-stopifnot(dir.exists(old_dir))
-old_timing <- read_csv(file.path(old_dir, "timing_placebos.csv"),
-                       show_col_types = FALSE)
-timing <- bind_rows(lapply(seq_len(nrow(old_timing)), function(i) {
-  r <- old_timing[i, ]
+# The falsification grid is specification metadata -- which counterfactual
+# treatment years to test, and what each one is for -- so it is declared here
+# instead of being seeded from a CSV written by a superseded run. year_end for
+# the last row tracks the panel, exactly as the original producer did.
+timing_specs <- tibble::tribble(
+  ~nominal_treatment_year, ~year_end, ~test_role,
+  2003L, 2008L, "Growth/lower-rank promotion",
+  2004L, 2008L, "China rank-2 threshold",
+  2005L, 2008L, "Rapid growth without rank 1",
+  2009L, 2015L, "Actual rank-1 reversal",
+  2012L, as.integer(max(synth_data$year)), "Later-break falsification")
+# The rank/volume columns the manuscript prints beside each falsification come
+# from the same target its rank-volume figure is drawn from
+# (goal3_brazil_rank_volume_plot), so the table and the figure cannot disagree.
+rank_volume <- safe_tar_read("goal3_brazil_rank_volume_data")
+if (is.null(rank_volume)) {
+  stop("target `goal3_brazil_rank_volume_data` unavailable; the `data` batch ",
+       "builds it.", call. = FALSE)
+}
+timing <- bind_rows(lapply(seq_len(nrow(timing_specs)), function(i) {
+  r <- timing_specs[i, ]
   f <- sdid_fit_spec(synth_data, year_end = r$year_end,
                      treat_year = r$nominal_treatment_year)
   s2 <- sdid_fit_summary_row(f, "timing")
   r |> mutate(estimate = s2$estimate,
               inference = "Point estimate only; no covariates")
-}))
+})) |>
+  left_join(
+    rank_volume |>
+      select(year, china_rank, china_share_pct,
+             china_margin_vs_competitor_usd_billion),
+    by = c("nominal_treatment_year" = "year"))
+if (nrow(timing) != nrow(timing_specs) || any(is.na(timing$china_rank))) {
+  stop("the timing grid did not match Brazil's rank-volume series for: ",
+       paste(timing$nominal_treatment_year[is.na(timing$china_rank)],
+             collapse = ", "),
+       "\nEvery falsification year must exist in goal3_brazil_rank_volume_data.",
+       call. = FALSE)
+}
 write_csv(timing, op("timing_placebos.csv"))
 
-# donor China exposure: reuse exposure file (descriptive, spec-independent),
-# reweight with the new omega; verify coverage instead of silently dropping.
-exposure <- read_csv(file.path(old_dir, "donor_china_exposure.csv"),
-                     show_col_types = FALSE)
-stopifnot(all(donors %in% exposure$iso3c))
-exposure_new <- exposure |>
-  select(-any_of(c("unit_weight", "weight_rank", "high_weight_donor"))) |>
-  left_join(unit_weights |>
-              select(iso3c, unit_weight, weight_rank, high_weight_donor),
-            by = "iso3c") |>
-  arrange(weight_rank)
-stopifnot(nrow(exposure_new) == nrow(exposure))
+# donor China exposure: descriptive and specification-independent, but POOL
+# dependent, so it is built from the live targets with the same helper the
+# previous producer used. It used to be seeded from a 14 July CSV; after the
+# goods screen correction that file listed Malta and had no Singapore, and the
+# coverage assertion below could no longer hold.
+trade_data_ranked <- safe_tar_read("trade_data_ranked")
+trade_data_cleaned <- safe_tar_read("trade_data_cleaned")
+if (is.null(trade_data_ranked) || is.null(trade_data_cleaned)) {
+  stop("targets `trade_data_ranked` / `trade_data_cleaned` unavailable; the ",
+       "`data` batch builds them.", call. = FALSE)
+}
+exposure_bundle <- brazil_sdid_donor_china_exposure(
+  trade_data_ranked, trade_data_cleaned, unit_weights,
+  pre_years = 1997:2008, post_years = 2009:2015)
+exposure_new <- exposure_bundle$exposure
+# Coverage now holds by construction, since the table is built from the live
+# weight vector. Assert it anyway, and pin the two units that motivated the
+# screen correction, so a change in the helper cannot silently drop or add
+# donors here while every file still looks reasonable.
+exposure_problems <- c(
+  if (length(setdiff(donors, exposure_new$iso3c)) > 0) sprintf(
+    "%d live donor(s) absent from the exposure table: %s",
+    length(setdiff(donors, exposure_new$iso3c)),
+    paste(sort(setdiff(donors, exposure_new$iso3c)), collapse = ", ")),
+  if (length(setdiff(exposure_new$iso3c, donors)) > 0) sprintf(
+    "%d unit(s) in the exposure table are not donors: %s",
+    length(setdiff(exposure_new$iso3c, donors)),
+    paste(sort(setdiff(exposure_new$iso3c, donors)), collapse = ", ")),
+  if (!"SGP" %in% exposure_new$iso3c)
+    paste0("SGP is missing: China never tops Singapore's goods exports in ",
+           "this window, so the corrected screen keeps it as a donor"),
+  if ("MLT" %in% exposure_new$iso3c)
+    paste0("MLT is present: Malta is China's top goods export destination in ",
+           "2011-2012 and is treated under the paper's own definition"))
+if (length(exposure_problems) > 0) {
+  stop("donor exposure table does not match the live donor pool:\n  - ",
+       paste(exposure_problems, collapse = "\n  - "), call. = FALSE)
+}
 write_csv(exposure_new, op("donor_china_exposure.csv"))
-hw <- exposure_new |> filter(high_weight_donor %in% TRUE)
-top_col <- "ever_china_top_export_destination_post_treatment"
-top_two_col <- "ever_china_top_two_export_destination_post_treatment"
-exposure_summary <- tibble(
-  n_high_weight_donors = nrow(hw),
-  total_high_weight = sum(hw$unit_weight, na.rm = TRUE),
-  n_high_weight_top_china_post = sum(hw[[top_col]] %in% TRUE),
-  n_high_weight_top_two_china_post = sum(hw[[top_two_col]] %in% TRUE),
-  weighted_share_high_weight_top_two_china_post = sum(
-    hw$unit_weight[hw[[top_two_col]] %in% TRUE], na.rm = TRUE))
-write_csv(exposure_summary, op("donor_china_exposure_summary.csv"))
+write_csv(exposure_bundle$summary, op("donor_china_exposure_summary.csv"))
 
 # Latin America donor pool
 message("Latin America donor pool.")

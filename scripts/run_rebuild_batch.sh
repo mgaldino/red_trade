@@ -35,7 +35,7 @@ mkdir -p "$STATEDIR"
 [ -f "$STATE" ] || printf 'batch\tstatus\tfinished_at\tduration\n' > "$STATE"
 
 # Ordered batch list, with rough wall-clock estimates for planning a sitting.
-BATCHES=(prep data se_1 se_2 se_3 core diagnostics table5 ungadm ungadm_post render)
+BATCHES=(prep data se_1 se_2 se_3 core diagnostics table5 ungadm ungadm_post render extended legacy)
 declare -a ESTIMATES=(
   "~10 min   renv restore, parallel-placebo validation, pipeline parse"
   "~10 min   goods ranking, donor pool, fits + DONOR POOL INVARIANT CHECK"
@@ -48,14 +48,26 @@ declare -a ESTIMATES=(
   "~40 min   UNGA-DM measurement robustness"
   "~1 h      UNGA-DM post-review diagnostics + consistency invariant"
   "~10 min   render paper_v4.pdf"
+  "~1 h      extended-window family; store consistency, no manuscript number"
+  "~5 h      OPT-IN legacy placebo/permutation family; feeds no manuscript number"
 )
+
+# The two arrays are addressed by the same index; inserting into one alone
+# would silently misdescribe every batch after the insertion point.
+if [ "${#BATCHES[@]}" -ne "${#ESTIMATES[@]}" ]; then
+  echo "BATCHES (${#BATCHES[@]}) and ESTIMATES (${#ESTIMATES[@]}) are out of sync." >&2
+  exit 3
+fi
 
 batch_index() {
   local i=0
   for b in "${BATCHES[@]}"; do [ "$b" = "$1" ] && { echo "$i"; return 0; }; i=$((i+1)); done
   return 1
 }
-is_done() { awk -F'\t' -v b="$1" '$1==b && $2=="OK"{f=1} END{exit !f}' "$STATE"; }
+# The LAST recorded run decides, not any past success. A batch that passed
+# yesterday and failed today is not done: with an OR over every record, `next`
+# would skip it and build later batches on top of a failed one.
+is_done() { awk -F'\t' -v b="$1" '$1==b{s=$2} END{exit !(s=="OK")}' "$STATE"; }
 
 cmd_list() {
   printf '\n  #  batch          estimate  contents\n'
@@ -120,7 +132,7 @@ fi
 # Keep the machine awake for the duration on macOS.
 if command -v caffeinate >/dev/null 2>&1 && [ -z "${REBUILD_CAFFEINATED:-}" ]; then
   export REBUILD_CAFFEINATED=1
-  exec caffeinate -i "$0" "$@"
+  exec caffeinate -i bash "$0" "$@"
 fi
 
 export LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 LC_CTYPE=en_US.UTF-8
@@ -152,11 +164,13 @@ case "$BATCH" in
   prep)
     step 01_renv_restore Rscript -e 'renv::restore(prompt = FALSE)'
     step 01b_env_record  Rscript -e 'writeLines(capture.output({print(renv::status()); print(sessionInfo())}), file.path("'"$STATEDIR"'", "environment.txt"))'
-    step 01c_validate_placebo Rscript scripts/diagnostics/validate_parallel_synthdid_placebo.R
+    step 01c_batch_coverage Rscript scripts/diagnostics/check_batch_coverage.R
     step 01d_parse_pipeline Rscript -e 'invisible(parse("_targets.R")); invisible(parse("scripts/functions.R")); invisible(parse("scripts/diagnostics/sdid_placebo_helpers.R")); m <- targets::tar_manifest(callr_function = NULL); source("scripts/rebuild_targets.R"); missing <- setdiff(unlist(rebuild_target_batches(), use.names = FALSE), m$name); if (length(missing) > 0) stop("batch targets absent from the manifest: ", paste(missing, collapse = ", ")); cat("pipeline parses;", nrow(m), "targets; every batch target present\n")'
     ;;
   data)
     step 02_targets_data Rscript scripts/run_rebuild_targets.R data
+    # Runs here, not in prep: it reads synth_fit, which this batch builds.
+    step 02a_validate_placebo Rscript scripts/diagnostics/validate_parallel_synthdid_placebo.R
     # The gate: the corrected pool must contain no unit that is treated under
     # the paper's own definition. Failing here costs ten minutes; failing at
     # referee stage costs the paper.
@@ -168,8 +182,16 @@ case "$BATCH" in
   core)
     step 02_targets_core Rscript scripts/run_rebuild_targets.R core
     ;;
+  legacy)
+    step 10_targets_legacy Rscript scripts/run_rebuild_targets.R legacy
+    ;;
   diagnostics)
     step 03_sdid_diagnostics Rscript scripts/diagnostics/audit_brazil_sdid_no_covariates.R
+    # paper_v4.Rmd prints three PNGs from this script through
+    # include_graphics. Nothing rebuilt them, so the donor-weight figure
+    # kept showing Malta after the tables had already dropped it.
+    step 03b_paper_figures Rscript scripts/diagnostics/prepare_paper_v4_brazil_sdid_predetermined_core_outputs.R
+    step 03c_figures_fresh Rscript scripts/diagnostics/check_paper_figures_fresh.R
     ;;
   table5)
     step 04_commodity_table5 Rscript scripts/diagnostics/audit_brazil_sdid_commodity_no_covariates.R
@@ -179,22 +201,16 @@ case "$BATCH" in
     ;;
   ungadm_post)
     step 06_ungadm_postreview Rscript scripts/diagnostics/audit_ungadm_postreview_diagnostics.R
-    step 07_consistency Rscript -e '
-      se_t <- as.numeric(targets::tar_read(se_synth_no_time_varying_covariates))[1]
-      ms <- readr::read_csv("data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/main_summary.csv", show_col_types = FALSE)
-      t5 <- readr::read_csv("data/processed/diagnostics/brazil_sdid_commodity_no_covariates/table_5_sdid_specification_results.csv", show_col_types = FALSE)
-      se_c <- ms$se_placebo[1]
-      se_5 <- t5$se_placebo[t5$specification == "no_covariates"][1]
-      ungadm <- readr::read_csv("data/processed/diagnostics/ungadm_outcome_robustness/estimation/sdid_comparison_table.csv", show_col_types = FALSE)
-      se_u <- ungadm$se_placebo[grepl("^BSV", ungadm$outcome_source)][1]
-      cat(sprintf("target=%.8f  main_summary=%.8f  tabela5=%.8f  ungadm_bsv=%.8f\n", se_t, se_c, se_5, se_u))
-      stopifnot(isTRUE(all.equal(se_t, se_c, tolerance = 1e-10)),
-                isTRUE(all.equal(se_t, se_5, tolerance = 1e-10)),
-                isTRUE(all.equal(se_t, se_u, tolerance = 1e-10)),
-                "smoke_test" %in% names(t5), !any(t5$smoke_test %in% TRUE))'
+    step 07_consistency Rscript scripts/diagnostics/check_se_consistency.R
     ;;
   render)
     step 08_render bash scripts/render_paper_v4.sh
+    ;;
+  extended)
+    step 09_targets_extended Rscript scripts/run_rebuild_targets.R extended
+    # Nothing in the manuscript reads this family, so the only thing worth
+    # asserting is that the store no longer holds a mix of screens.
+    step 09b_extended_uptodate Rscript scripts/diagnostics/check_extended_uptodate.R
     ;;
 esac
 

@@ -13,8 +13,11 @@ Destination**.
 Compiled PDF:  
 `/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/replication package/README.pdf`
 
-**Q2. What is the current manuscript source in the replication package?**  
-`/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/replication package/paper_v3.Rmd`
+**Q2. What manuscript does the replication package contain?**  
+`/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/replication package/paper_v3.Rmd`  
+That directory is an old snapshot, not the reproduction path: it predates the
+current cross-country design and contains none of the rebuild scripts. See
+"Reproduction" below.
 
 **Q2a. What is the active development manuscript?**
 `/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd`
@@ -50,7 +53,21 @@ The original design note remains useful as provenance:
 - `quality_reports/cross_country_sample/nota_recodificacao_status_current_min5_2026-05-20.html`
 
 **Q3. What should be run first for reproducibility?**  
-Restore `renv`, run `targets::tar_make()`, then render `paper_v3.Rmd`.
+One command, resumable, from the repository root:
+
+```bash
+bash scripts/run_rebuild_batch.sh next
+```
+
+Run it repeatedly until it reports every batch complete, or run
+`bash scripts/run_reproducibility_rebuild.sh` to do the whole sequence in one
+sitting (roughly 7-8 hours). `bash scripts/run_rebuild_batch.sh list` shows the
+batches and their estimates.
+
+A bare `targets::tar_make()` is NOT the reproduction path. It would try to
+rebuild unrelated exploratory targets that have been failing since earlier
+work, and it would skip the four diagnostic scripts that write the CSVs
+`paper_v4.Rmd` reads. The manuscript is `paper_v4.Rmd`.
 
 **Q4. Does the replication package still depend on mandatory online scraping/API calls?**  
 No for the default path. Local cache files are now included in `replication package/raw data/` (`folha_scrape_cache.rds`, `wb_data_cache.rds`).
@@ -61,21 +78,42 @@ No for the default path. Local cache files are now included in `replication pack
   `/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade`
 - Journal-facing replication package lives at:
   `/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/replication package`
+  (snapshot of an earlier submission, awaiting regeneration; the reproduction
+  path is the root, see "Reproduction")
 
-## Reproduction (Replication Package)
+## Reproduction
 
-Run from:
-`/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/replication package`
+Run from the repository root
+(`/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade`):
 
-```r
-install.packages("renv")
-renv::restore(prompt = FALSE)
-
-library(targets)
-tar_make()
-
-rmarkdown::render("paper_v3.Rmd", output_format = "pdf_document")
+```bash
+Rscript -e 'install.packages("renv"); renv::restore(prompt = FALSE)'
+bash scripts/run_reproducibility_rebuild.sh
 ```
+
+The root is the reproducible path. The `replication package/` directory is a
+snapshot from an earlier submission: its manuscript is `paper_v3.Rmd`, it holds
+none of the rebuild scripts, and it has not been regenerated since the
+cross-country design changed. Do not run it and do not cite it as the
+reproduction path until it is rebuilt from the root (`PENDING.md`, "Materiais
+derivados").
+
+The rebuild renders `output/paper_v4.pdf` as its last stage. The batches, in
+order:
+
+| batch | estimate | contents |
+|---|---|---|
+| `prep` | ~10 min | renv, batch coverage and ordering checks, pipeline parse |
+| `data` | ~10 min | goods ranking, donor pool, fits, **donor-pool gate** |
+| `se_1`-`se_3` | ~1 h each | placebo SEs for the covariate comparison columns |
+| `core` | ~25 min | preferred SE at 20,000, spec table, vote-level models |
+| `diagnostics` | ~25 min | no-covariate diagnostic package and manuscript figures |
+| `table5` | ~1.5 h | commodity / China-demand family |
+| `ungadm` | ~40 min | UNGA-DM measurement robustness |
+| `ungadm_post` | ~1 h | post-review diagnostics, SE consistency invariant |
+| `render` | ~10 min | `output/paper_v4.pdf` |
+| `extended` | ~1 h | extended-window family (feeds no manuscript number) |
+| `legacy` | ~5 h | opt-in; exploratory targets from earlier drafts |
 
 Optional submission variant:
 
@@ -85,8 +123,13 @@ rmarkdown::render("paper_status_trade_submission.Rmd", output_format = "pdf_docu
 
 ## Data
 
-Download Dataverse bundle and extract into:
-`/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/replication package/raw data`
+Download the Dataverse bundle and extract it into the raw-data directory the
+pipeline reads, at the repository root:
+`/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/raw data`
+
+`_targets.R` addresses every raw input as `here("raw data", ...)`, so a copy
+placed anywhere else -- including inside `replication package/` -- is not the
+one the rebuild reads.
 
 DOI: <https://doi.org/10.7910/DVN/M97OCJ>
 

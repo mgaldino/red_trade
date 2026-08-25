@@ -1436,8 +1436,7 @@ sdid_placebo_rank_table <- sdid_rank_inference %>%
     Denominator = as.integer(denominator),
     Note = dplyr::case_when(
       comparison_set == "All valid assignments" ~ "Primary rank comparison",
-      comparison_set == "Exclude goods-only China-top donor assignments" ~
-        "Excludes Malta, China-top in goods in 2011-2012",
+      comparison_set == "Exclude goods-only China-top donor assignments" ~ "",
       TRUE ~ "Fit-filter sensitivity; not used to select the main p-value"
     )
   )

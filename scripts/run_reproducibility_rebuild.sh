@@ -1,15 +1,17 @@
 #!/usr/bin/env bash
-# Overnight reproducibility rebuild for paper_v4.
+# Overnight reproducibility rebuild for paper_v4, in one sitting.
 #
-# Context (2026-08-23/24): the preferred Brazil SDiD dropped its unit-level
-# fixed covariate arrays (not separately identified from the SDiD unit fixed
-# effects; coefficients numerically zero). The manuscript text was updated
-# immediately, but the targets store, the commodity/China-demand diagnostics
-# behind Table 5, and the UNGA-DM robustness artifacts still hold values
-# produced under the old specification. This script rebuilds everything from
+# Context (2026-08-23/25). Two corrections put the store out of date with the
+# manuscript. First, the preferred Brazil SDiD dropped its unit-level fixed
+# covariate arrays (not separately identified from the SDiD unit fixed
+# effects; coefficients numerically zero). Second, the donor-eligibility
+# screen ranked trade partners on TOTAL trade while the paper defines
+# treatment on GOODS exports, which left Malta -- China's top goods
+# destination in 2011-2012, inside Brazil's post-period -- in the donor pool,
+# and kept Singapore out for the mirror reason. This rebuilds everything from
 # the pipeline so the paper is reproducible end to end.
 #
-# It also carries a second change: se_sdid() draws its placebo permutations
+# It also carries a third change: se_sdid() draws its placebo permutations
 # once from the seed and evaluates them in parallel. Replications: 20,000 for
 # the preferred no-covariate column (cheap; the SE estimator itself is noisy
 # at 1,000: five independent blocks spanned 0.1262-0.1355, moving p between
@@ -17,130 +19,52 @@
 # their replications re-solves the covariate coefficients, ~1.6 s/replication
 # on 12 cores).
 #
-# This script runs the whole rebuild in one sitting. To split it into batches
-# of roughly an hour each -- same stages, same order, resumable -- use
-# scripts/run_rebuild_batch.sh instead ("list" shows the batches).
+# WHY THIS IS A LOOP. This script used to carry its own copy of the stages.
+# The two entry points then drifted: the batch runner grew a donor-pool gate,
+# a batch-coverage check and an extended-window stage that this file never
+# got, so the same repository produced two different stores depending on which
+# command you ran. Delegating makes them equivalent by construction -- there
+# is exactly one definition of what the rebuild does, in run_rebuild_batch.sh.
 #
 # Usage:   bash scripts/run_reproducibility_rebuild.sh
-# Logs:    output/rebuild_<timestamp>/
-# Runtime: roughly 9-11 hours; the covariate comparison columns dominate.
-#          Safe to leave unattended: each stage logs separately, the script
+# Logs:    output/rebuild_batches/<batch>_<timestamp>.log
+# Runtime: roughly 7-8 hours; the covariate comparison columns dominate.
+#          Safe to leave unattended: each batch logs separately, the script
 #          stops at the first failure, targets caches completed work, and the
 #          placebo/rank checkpoints resume, so re-running the same command
 #          after an interruption continues instead of restarting.
+#
+# NOT included: the opt-in `legacy` batch (~5 h), which rebuilds exploratory
+# targets from earlier drafts that feed no number in the manuscript. Run it
+# separately with `bash scripts/run_rebuild_batch.sh legacy` if you want the
+# whole store under one screen.
 
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-# A previous tar_make() can leave a stale lock in _targets/meta/process if its
-# parent was killed while the callr child kept running (e.g. a `timeout` around
-# a test). Detect that case up front instead of failing eight seconds into
-# stage 02: if the recorded PID is gone, clear the lock; if it is alive, stop
-# and let the operator decide.
-if [ -f _targets/meta/process ]; then
-  STALE_PID="$(awk -F'|' '$1=="pid"{print $2}' _targets/meta/process 2>/dev/null || true)"
-  if [ -n "${STALE_PID:-}" ]; then
-    if ps -p "$STALE_PID" >/dev/null 2>&1; then
-      echo "A targets pipeline (PID $STALE_PID) is already using this store." >&2
-      echo "Terminate it, or run targets::tar_unblock_process(), then retry." >&2
-      exit 1
-    fi
-    echo "Clearing stale targets lock from dead PID $STALE_PID."
-    rm -f _targets/meta/process
-  fi
-fi
+RUNNER="scripts/run_rebuild_batch.sh"
+[ -f "$RUNNER" ] || { echo "missing $RUNNER" >&2; exit 1; }
 
-# Keep the machine awake for the duration on macOS.
-if command -v caffeinate >/dev/null 2>&1 && [ -z "${REBUILD_CAFFEINATED:-}" ]; then
-  export REBUILD_CAFFEINATED=1
-  exec caffeinate -i "$0" "$@"
-fi
+# The running order is defined once, in the runner. Read it rather than
+# repeating it here, so this file cannot fall behind again.
+# Deliberately not mapfile: macOS ships bash 3.2, where it does not exist.
+BATCH_LIST="$(sed -n 's/^BATCHES=(\(.*\))$/\1/p' "$RUNNER")"
+# shellcheck disable=SC2206
+BATCHES=($BATCH_LIST)
+[ "${#BATCHES[@]}" -gt 0 ] || { echo "could not read BATCHES from $RUNNER" >&2; exit 1; }
 
-export LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 LC_CTYPE=en_US.UTF-8
-# One BLAS thread per process, set BEFORE R starts (an already-loaded BLAS
-# ignores changes made from inside R): the placebo loops are already parallel.
-export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1
+echo "Rebuild stages, in order:"
+for b in "${BATCHES[@]}"; do
+  [ "$b" = "legacy" ] && continue
+  echo "  - $b"
+done
+echo
 
-STAMP="$(date +%Y%m%d_%H%M%S)"
-LOGDIR="output/rebuild_${STAMP}"
-mkdir -p "$LOGDIR"
+for b in "${BATCHES[@]}"; do
+  [ "$b" = "legacy" ] && continue
+  bash "$RUNNER" "$b"
+done
 
-say() { printf '\n=== [%s] %s ===\n' "$(date +%H:%M:%S)" "$1" | tee -a "$LOGDIR/00_summary.log"; }
-stage() {
-  local name="$1"; shift
-  say "START $name"
-  if "$@" >"$LOGDIR/$name.log" 2>&1; then
-    say "OK    $name"
-  else
-    say "FAIL  $name  (see $LOGDIR/$name.log)"
-    tail -20 "$LOGDIR/$name.log" | tee -a "$LOGDIR/00_summary.log"
-    exit 1
-  fi
-}
-
-say "Rebuild started. Logs in $LOGDIR"
-
-# 1. Restore the recorded environment. duckdb is a real dependency
-#    (scripts/functions.R, ITPD-E goods aggregation) and is currently missing,
-#    which makes every target fail to build. Record the environment state.
-stage 01_renv_restore Rscript -e 'renv::restore(prompt = FALSE)'
-stage 01b_env_record Rscript -e 'writeLines(capture.output({print(renv::status()); print(sessionInfo())}), file.path("'$LOGDIR'", "environment.txt"))'
-
-# 1c. Validate that the parallel placebo algorithm reproduces the package's
-#     serial one (seconds; documents the equivalence in the replication trail).
-stage 01c_validate_placebo Rscript scripts/diagnostics/validate_parallel_synthdid_placebo.R
-
-# 1d. Fail fast on syntax/manifest problems before any expensive stage: parse
-#     the pipeline definition and the sourced function files, and build the
-#     targets manifest (catches a broken _targets.R in seconds, not hours).
-stage 01d_parse_pipeline Rscript -e 'invisible(parse("_targets.R")); invisible(parse("scripts/functions.R")); invisible(parse("scripts/diagnostics/sdid_placebo_helpers.R")); m <- targets::tar_manifest(callr_function = NULL); source("scripts/rebuild_targets.R"); missing <- setdiff(rebuild_target_names(), m$name); if (length(missing) > 0) stop("rebuild targets absent from the manifest: ", paste(missing, collapse = ", ")); cat("pipeline parses; manifest has", nrow(m), "targets; rebuild list fully covered\n")'
-
-# 2. Rebuild the targets the manuscript and the diagnostic scripts consume.
-#    The list is derived programmatically from the tar_read() calls in
-#    paper_v4.Rmd (scripts/rebuild_targets.R), so it cannot drift from the
-#    paper. A bare tar_make() would also try to rebuild unrelated exploratory
-#    targets that have been failing since earlier work and would abort the run.
-#    Because se_sdid() changed, every placebo SE target is invalidated and
-#    recomputed; that is intended.
-stage 02_targets Rscript scripts/run_rebuild_targets.R
-
-# 3. Regenerate the no-covariate diagnostic package that the manuscript reads.
-#    It reuses the freshly built target SE, so the CSVs cannot drift from
-#    Table 3.
-stage 03_sdid_diagnostics Rscript scripts/diagnostics/audit_brazil_sdid_no_covariates.R
-
-# 4. Recompute the commodity / China-demand family (Table 5) under the
-#    no-covariate preferred specification (common permutation seed across
-#    rows; preferred row reuses the pipeline SE).
-stage 04_commodity_table5 Rscript scripts/diagnostics/audit_brazil_sdid_commodity_no_covariates.R
-
-# 5. Re-run the UNGA-DM measurement-robustness estimation under the
-#    no-covariate specification (SDiD columns share the pipeline's replication
-#    count and seed; IFE common-window comparison at 10,000 bootstraps).
-stage 05_ungadm_estimation Rscript scripts/diagnostics/audit_ungadm_outcome_robustness.R
-
-# 6. Re-run the post-review UNGA-DM diagnostics (2x2 fixed-r grid, paired
-#    bootstrap, divergence tables, harmonized rank criterion).
-stage 06_ungadm_postreview Rscript scripts/diagnostics/audit_ungadm_postreview_diagnostics.R
-
-# 7. Consistency invariant: text, Table 3, and Table 5 must report the same
-#    SE and p for the preferred specification. Fails loudly if they diverge.
-stage 07_consistency Rscript -e '
-  se_t <- as.numeric(targets::tar_read(se_synth_no_time_varying_covariates))[1]
-  ms <- readr::read_csv("data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/main_summary.csv", show_col_types = FALSE)
-  t5 <- readr::read_csv("data/processed/diagnostics/brazil_sdid_commodity_no_covariates/table_5_sdid_specification_results.csv", show_col_types = FALSE)
-  se_c <- ms$se_placebo[1]
-  se_5 <- t5$se_placebo[t5$specification == "no_covariates"][1]
-  ungadm <- readr::read_csv("data/processed/diagnostics/ungadm_outcome_robustness/estimation/sdid_comparison_table.csv", show_col_types = FALSE)
-  se_u <- ungadm$se_placebo[grepl("^BSV", ungadm$outcome_source)][1]
-  cat(sprintf("target=%.8f  main_summary=%.8f  tabela5=%.8f  ungadm_bsv=%.8f\n", se_t, se_c, se_5, se_u))
-  stopifnot(isTRUE(all.equal(se_t, se_c, tolerance = 1e-10)),
-            isTRUE(all.equal(se_t, se_5, tolerance = 1e-10)),
-            isTRUE(all.equal(se_t, se_u, tolerance = 1e-10)),
-            "smoke_test" %in% names(t5), !any(t5$smoke_test %in% TRUE))'
-
-# 8. Render against the restored renv library and record the session.
-stage 08_render bash scripts/render_paper_v4.sh
-
-say "Rebuild finished."
-say "Next: read $LOGDIR/07_consistency.log, spot-check the PDF, and update PENDING.md."
+echo
+echo "Reproducibility rebuild complete. Paper: output/paper_v4.pdf"
+echo "Optional: bash $RUNNER legacy   (~5 h, exploratory targets only)"
