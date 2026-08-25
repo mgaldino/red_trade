@@ -8,7 +8,6 @@
 # This script reads raw files only; it does not touch the targets store.
 
 suppressPackageStartupMessages({
-  library(data.table)
   library(dplyr)
   library(tidyr)
   library(readr)
@@ -70,7 +69,6 @@ stopifnot(!any(duplicated(bsv[, c("ccode", "session")])))
 stopifnot(!any(duplicated(ungadm[, c("ccode", "session")])))
 
 session_max_dm <- max(ungadm$session)
-common_sessions <- sort(intersect(bsv$session, ungadm$session))
 
 # Distances are computed within each source over that source's full country
 # set for the session, using that source's own China/US position, exactly
@@ -135,9 +133,12 @@ within_range_gaps <- bind_rows(
 # ---------------------------------------------------------------------------
 
 cor_block <- function(df, label) {
+  ok <- stats::complete.cases(df$q50_bsv, df$q50_dm,
+                              df$dist_china_bsv, df$dist_china_dm)
   tibble::tibble(
     window = label,
     n_country_sessions = nrow(df),
+    n_used_in_correlation = sum(ok),
     cor_q50 = cor(df$q50_bsv, df$q50_dm, use = "complete.obs"),
     cor_dist_china = cor(df$dist_china_bsv, df$dist_china_dm,
                          use = "complete.obs"),
@@ -241,4 +242,17 @@ cat("\nCoverage:\n")
 print(as.data.frame(coverage_summary), row.names = FALSE)
 cat("\nGates:\n")
 print(as.data.frame(gates), row.names = FALSE)
+writeLines(capture.output(sessionInfo()), file.path(out_dir, "session_info.txt"))
 cat("\nOutputs in: ", out_dir, "\n", sep = "")
+
+# A validation gate that does not interrupt is not a gate: fail loudly so an
+# orchestrator (or a replicator) cannot proceed on a broken mapping.
+hard_gates <- gates[gates$threshold != "report", ]
+if (any(hard_gates$status != "PASS" & hard_gates$status != "INSPECT")) {
+  stop("UNGA-DM validation gates failed; see ",
+       file.path(out_dir, "gates.csv"), call. = FALSE)
+}
+if (any(hard_gates$status == "INSPECT")) {
+  message("NOTE: coverage gaps require inspection (see within_range_gaps.csv); ",
+          "documented as benign on 2026-08-23.")
+}

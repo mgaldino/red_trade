@@ -4,17 +4,14 @@
 # implementing the items requested by the independent causal review
 # (quality_reports/ungadm_outcome_robustness/2026-08-23_independent_causal_review.md):
 #   1. Full 2x2 fixed-r IFE grid (BSV/UNGA-DM x r = 1/2) on the common-window,
-#      identical-row panel, 10,000 bootstraps each, to decompose measurement
-#      change from latent-factor selection.
+#      identical-row panel, 10,000 bootstraps each.
 #   2. Paired cluster bootstrap of the ATT difference (UNGA-DM minus BSV),
-#      stratified by treated/control, point fits only (se = FALSE), with the
-#      procedure-selected factor numbers (DM r=1 vs BSV r=2) and a common-r
-#      (both r=2) sensitivity.
-#   3. Per-treated-country divergence inspection between the two outcome series.
-#   4. Harmonized China-top donor-exclusion rank column for the SDiD variant
-#      (exclude donors with observed China-top status within 1997-2015: MLT),
-#      plus time-weights and balance exports for the UNGA-DM SDiD fit and a
-#      seed note. Rank recomputation reuses the stored placebo distribution.
+#      stratified by treated/control, point fits only.
+#   3. Per-treated-country divergence inspection between the outcome series.
+#   4. Time-weights/balance exports for the UNGA-DM SDiD fit and seed notes.
+# The SDiD side uses the paper's preferred NO-COVARIATE specification via
+# scripts/diagnostics/sdid_placebo_helpers.R; the previously supplied fixed
+# covariate arrays are reported only as descriptive balance rows.
 # Reads existing targets and stored CSVs; never runs targets.
 
 suppressPackageStartupMessages({
@@ -31,8 +28,12 @@ suppressPackageStartupMessages({
 options(scipen = 999)
 run_started <- Sys.time()
 run_date <- as.character(Sys.Date())
-audit_code_version <- "2026-08-23-v1-postreview"
+audit_code_version <- "2026-08-24-v2-postreview-no-covariates"
 target_store <- "_targets"
+
+source(file.path("scripts", "diagnostics", "sdid_placebo_helpers.R"))
+sdid_limit_blas_threads()
+parallel_cores <- sdid_available_cores()
 
 bsv_path <- file.path(
   "raw data", "dataverse_files-2", "IdealpointestimatesAll_Jun2024.csv"
@@ -47,32 +48,21 @@ out_dir <- file.path(
   "data", "processed", "diagnostics", "ungadm_outcome_robustness", "postreview"
 )
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
-out_path <- function(filename) file.path(out_dir, filename)
+op <- function(f) file.path(out_dir, f)
 
 ife_nboots <- as.integer(Sys.getenv("UNGADM2_IFE_NBOOTS", "10000"))
 boot_B <- as.integer(Sys.getenv("UNGADM2_BOOT_B", "1000"))
-boot_seed <- 20260823L
-parallel_cores <- as.integer(Sys.getenv(
-  "SDID_PARALLEL_CORES",
-  as.character(min(12L, parallel::detectCores(logical = FALSE)))
-))
-if (is.na(parallel_cores) || parallel_cores < 1L) parallel_cores <- 1L
-Sys.setenv(
-  OMP_NUM_THREADS = "1", OPENBLAS_NUM_THREADS = "1",
-  MKL_NUM_THREADS = "1", VECLIB_MAXIMUM_THREADS = "1"
-)
-if (ife_nboots < 10000L || boot_B < 1000L) {
+boot_seed <- 20260823L  # resampling seed only; SEs always use SDID_PLACEBO_SEED
+smoke <- ife_nboots < 10000L || boot_B < 1000L
+if (smoke) {
   message("NOTE: smoke-test counts in use (nboots = ", ife_nboots,
           ", B = ", boot_B, "); final outputs require the defaults.")
 }
 
-safe_tar_read <- function(name) {
-  tryCatch(
-    targets::tar_read_raw(name, store = target_store),
-    error = function(e) stop("Could not read target `", name, "`: ",
-                             conditionMessage(e), call. = FALSE)
-  )
-}
+safe_tar_read <- function(n) tryCatch(
+  targets::tar_read_raw(n, store = target_store),
+  error = function(e) stop("target `", n, "`: ", conditionMessage(e),
+                           call. = FALSE))
 
 message("Sourcing scripts/functions.R for prepare_fect_data/fect summaries.")
 source(file.path("scripts", "functions.R"))
@@ -81,247 +71,152 @@ source(file.path("scripts", "functions.R"))
 # UNGA-DM outcome (identical construction to audit_ungadm_outcome_robustness.R)
 # ---------------------------------------------------------------------------
 message("Building the UNGA-DM outcome series.")
-bsv_raw <- read_csv(bsv_path, show_col_types = FALSE) %>%
-  clean_names() %>%
+bsv_raw <- read_csv(bsv_path, show_col_types = FALSE) |>
+  clean_names() |>
   transmute(ccode = as.integer(ccode), session = as.integer(session), iso3c)
-ungadm_raw <- read_csv(ungadm_path, show_col_types = FALSE) %>%
-  clean_names() %>%
+ungadm_raw <- read_csv(ungadm_path, show_col_types = FALSE) |>
+  clean_names() |>
   transmute(
     ccode = as.integer(ccode), session = as.integer(session),
     country_ungadm = country, q50_dm = x50
-  ) %>%
+  ) |>
   mutate(ccode = if_else(session == 45L & ccode == 255L, 260L, ccode))
-dm_outcome <- ungadm_raw %>%
-  left_join(bsv_raw, by = c("ccode", "session")) %>%
-  filter(!is.na(iso3c)) %>%
-  group_by(session) %>%
-  mutate(china_ideal_dm = q50_dm[ccode == 710L][1]) %>%
-  ungroup() %>%
+dm_outcome <- ungadm_raw |>
+  left_join(bsv_raw, by = c("ccode", "session")) |>
+  filter(!is.na(iso3c)) |>
+  group_by(session) |>
+  mutate(china_ideal_dm = q50_dm[ccode == 710L][1]) |>
+  ungroup() |>
   mutate(
     year = session + 1945L,
     abs_distance_china_dm = abs(q50_dm - china_ideal_dm)
-  ) %>%
-  filter(year >= 1990L) %>%
+  ) |>
+  filter(year >= 1990L) |>
   select(iso3c, year, abs_distance_china_dm)
 stopifnot(!any(duplicated(dm_outcome[, c("iso3c", "year")])))
 
 # ---------------------------------------------------------------------------
-# Item 4a - Harmonized China-top donor exclusion for the SDiD rank column
-# Criterion (harmonized to the July convention): exclude donor assignments for
-# SDiD-panel countries with observed goods-only China-top status in any year of
-# the 1997-2015 window (m2 goods panel, china_is_top). Brazil stays (treated).
+# SDiD exports under the preferred no-covariate specification: refits are
+# deterministic; the BSV fit is gated against the pipeline target.
 # ---------------------------------------------------------------------------
-message("Recomputing the harmonized China-top exclusion rank column.")
-synth_units <- unique(safe_tar_read("synth_data")$iso3c)
-goods_panel <- safe_tar_read("china_top_m2_goods_panel")
-window_china_top <- goods_panel %>%
-  filter(china_is_top %in% TRUE, year >= 1997L, year <= 2015L,
-         iso3c %in% synth_units) %>%
-  distinct(iso3c) %>%
-  pull(iso3c)
-harmonized_excluded <- setdiff(window_china_top, "BRA")
-old_excluded <- {
-  m2_unit_summary <- safe_tar_read("china_top_m2_goods_status_current_unit_summary")
-  m2_unit_summary %>%
-    filter(min_duration_years == 5L, sample == "risk_set_restricted",
-           ever_treated %in% TRUE, iso3c %in% synth_units) %>%
-    pull(iso3c) %>% setdiff("BRA")
-}
-message("  Harmonized exclusion (window criterion): ",
-        paste(harmonized_excluded, collapse = ", "),
-        " | previous run excluded: ", paste(old_excluded, collapse = ", "))
-
-dm_distribution <- read_csv(
-  file.path(est_dir, "sdid_dm_placebo_distribution.csv"), show_col_types = FALSE
-)
-rank_from <- function(distribution, comparison_set, drop_units = character(0)) {
-  valid <- distribution %>%
-    filter(status == "estimated", !is.na(estimate), !iso3c %in% drop_units)
-  brazil <- valid %>% filter(iso3c == "BRA")
-  stopifnot(nrow(brazil) == 1L)
-  tibble(
-    comparison_set = comparison_set,
-    excluded_units = paste(drop_units, collapse = ";"),
-    rank_one_sided_negative = sum(valid$estimate <= brazil$estimate),
-    rank_two_sided_absolute = sum(abs(valid$estimate) >= abs(brazil$estimate)),
-    denominator = nrow(valid),
-    p_rank_one_sided_negative = mean(valid$estimate <= brazil$estimate),
-    p_rank_two_sided_absolute = mean(abs(valid$estimate) >= abs(brazil$estimate))
-  )
-}
-rank_harmonized <- bind_rows(
-  rank_from(dm_distribution, "All valid assignments"),
-  rank_from(dm_distribution,
-            "Exclude goods-only China-top donor assignments (harmonized: window criterion)",
-            harmonized_excluded),
-  rank_from(dm_distribution,
-            "Exclude goods-only China-top donor assignments (previous run: 5y qualifying criterion)",
-            old_excluded)
-)
-write_csv(rank_harmonized, out_path("sdid_dm_rank_inference_harmonized.csv"))
-print(as.data.frame(rank_harmonized), row.names = FALSE)
-
-# ---------------------------------------------------------------------------
-# Item 4b - Time weights and balance for the UNGA-DM SDiD fit (deterministic
-# refits of both variants; same construction as the estimation audit).
-# ---------------------------------------------------------------------------
-message("Refitting both SDiD variants for weights/balance exports.")
+message("Refitting both SDiD variants (no covariates) for weights/balance exports.")
 synth_data <- safe_tar_read("synth_data")
-pre_years <- 2004:2008
-frozen_means <- synth_data %>%
-  filter(year %in% pre_years) %>%
-  group_by(iso3c) %>%
-  summarise(
-    frozen_perc_trade_with_china = mean(perc_trade_with_china, na.rm = TRUE),
-    frozen_perc_trade_with_us = mean(perc_trade_with_us, na.rm = TRUE),
-    frozen_pci_cur = mean(pci_cur, na.rm = TRUE),
-    frozen_distance_us = first(distance_us),
-    frozen_inst_parliamentary = first(inst_parliamentary[year == 2008L]),
-    frozen_us_trade_agreement = first(us_trade_agreement[year == 2008L]),
-    .groups = "drop"
-  )
-predetermined_core <- c(
-  "frozen_perc_trade_with_china", "frozen_perc_trade_with_us",
-  "frozen_pci_cur", "frozen_distance_us", "frozen_inst_parliamentary",
-  "frozen_us_trade_agreement"
-)
-estimation_data_bsv <- synth_data %>% left_join(frozen_means, by = "iso3c")
-estimation_data_dm <- estimation_data_bsv %>%
-  left_join(dm_outcome, by = c("iso3c", "year")) %>%
-  mutate(abs_distance_china = abs_distance_china_dm) %>%
+estimation_data_dm <- synth_data |>
+  left_join(dm_outcome, by = c("iso3c", "year")) |>
+  mutate(abs_distance_china = abs_distance_china_dm) |>
   select(-abs_distance_china_dm)
 
-make_covariate_array <- function(data, covariate_cols) {
-  unit_levels <- unique(data$iso3c)
-  time_levels <- sort(unique(data$year))
-  out <- array(
-    NA_real_,
-    dim = c(length(unit_levels), length(time_levels), length(covariate_cols)),
-    dimnames = list(unit_levels, as.character(time_levels), covariate_cols)
-  )
-  for (k in seq_along(covariate_cols)) {
-    covariate <- covariate_cols[[k]]
-    wide <- data |>
-      dplyr::select(iso3c, year, value = dplyr::all_of(covariate)) |>
-      dplyr::mutate(
-        iso3c = factor(iso3c, levels = unit_levels),
-        year = factor(year, levels = time_levels)
-      ) |>
-      dplyr::arrange(iso3c, year) |>
-      tidyr::pivot_wider(id_cols = iso3c, names_from = year, values_from = value) |>
-      dplyr::arrange(iso3c)
-    out[, , k] <- wide |>
-      dplyr::select(dplyr::all_of(as.character(time_levels))) |>
-      as.matrix()
-  }
-  if (anyNA(out)) stop("Covariate array contains missing values.", call. = FALSE)
-  out
+fit_bsv <- sdid_fit_spec(synth_data)
+fit_dm <- sdid_fit_spec(estimation_data_dm)
+target_fit <- safe_tar_read("synth_fit_no_time_varying_covariates")
+if (!isTRUE(all.equal(as.numeric(fit_bsv), as.numeric(target_fit),
+                      tolerance = 1e-8))) {
+  stop("BSV reproduction gate failed: the stored target does not match the ",
+       "no-covariate specification. Run the reproducibility rebuild first.",
+       call. = FALSE)
 }
-fit_sdid <- function(data, covariate_cols, treated_iso3c = "BRA", year_end = 2015L) {
-  fit_data <- data |>
-    dplyr::filter(year >= 1997L, year <= year_end) |>
-    dplyr::mutate(
-      treatment = as.integer(iso3c == treated_iso3c & year >= 2009L),
-      .unit_treated = as.integer(iso3c == treated_iso3c)
-    ) |>
-    dplyr::arrange(.unit_treated, iso3c, year) |>
-    dplyr::select(-.unit_treated)
-  x_array <- make_covariate_array(fit_data, covariate_cols)
-  panel_data <- fit_data |>
-    dplyr::mutate(
-      iso3c = factor(iso3c, levels = unique(iso3c)),
-      year = as.integer(year), Y = abs_distance_china
-    ) |>
-    dplyr::select(iso3c, year, Y, treatment) |>
-    as.data.frame()
-  setup <- synthdid::panel.matrices(panel_data)
-  synthdid::synthdid_estimate(Y = setup$Y, N0 = setup$N0, T0 = setup$T0, X = x_array)
-}
-fit_bsv <- fit_sdid(estimation_data_bsv, predetermined_core)
-fit_dm <- fit_sdid(estimation_data_dm, predetermined_core)
-stopifnot(isTRUE(all.equal(
-  as.numeric(fit_bsv),
-  as.numeric(safe_tar_read("synth_fit_no_time_varying_covariates")),
-  tolerance = 1e-8
-)))
 
-export_time_weights <- function(fit, filename) {
-  setup <- attr(fit, "setup")
-  lambda <- as.numeric(attr(fit, "weights")$lambda)
-  years <- as.integer(colnames(setup$Y)[seq_len(setup$T0)])
-  tw <- tibble(year = years, time_weight = lambda) %>%
-    mutate(
-      time_weight_rank = rank(-time_weight, ties.method = "min"),
-      high_time_weight = time_weight >= 0.1
-    )
-  write_csv(tw, out_path(filename))
-  tw
-}
-tw_dm <- export_time_weights(fit_dm, "sdid_dm_time_weights.csv")
+# Harmonized China-top donor exclusion (author decision 2026-08-23): window
+# criterion. The legacy 5-year qualifying criterion is reported for audit.
+units <- sort(unique(synth_data$iso3c))
+goods_panel <- safe_tar_read("china_top_m2_goods_panel")
+window_excluded <- goods_panel |>
+  filter(china_is_top %in% TRUE, year >= 1997L, year <= 2015L,
+         iso3c %in% units) |>
+  distinct(iso3c) |>
+  pull(iso3c) |>
+  setdiff("BRA")
+m2_unit_summary <- safe_tar_read("china_top_m2_goods_status_current_unit_summary")
+legacy_excluded <- m2_unit_summary |>
+  filter(min_duration_years == 5L, sample == "risk_set_restricted",
+         ever_treated %in% TRUE, iso3c %in% units) |>
+  pull(iso3c) |>
+  setdiff("BRA")
 
-balance_table <- function(fit, data, covariate_cols, outcome_label) {
-  omega <- as.numeric(attr(fit, "weights")$omega)
-  setup <- attr(fit, "setup")
-  donor_order <- rownames(setup$Y)[seq_len(setup$N0)]
-  pre <- data %>% filter(year >= 1997L, year <= 2008L)
-  one_var <- function(varname, label, role, value_definition) {
-    donor_vals <- pre %>%
-      filter(iso3c != "BRA") %>%
-      group_by(iso3c) %>%
-      summarise(v = mean(.data[[varname]], na.rm = TRUE), .groups = "drop")
-    donor_vals <- donor_vals[match(donor_order, donor_vals$iso3c), ]
-    brazil_val <- pre %>%
-      filter(iso3c == "BRA") %>%
-      summarise(v = mean(.data[[varname]], na.rm = TRUE)) %>% pull(v)
-    synth_val <- sum(omega * donor_vals$v)
-    donor_sd <- sd(donor_vals$v)
-    tibble(
-      variable = varname, label = label, role = role,
-      brazil_pre_mean = brazil_val, synthetic_pre_mean = synth_val,
-      brazil_minus_synthetic = brazil_val - synth_val,
-      standardized_difference = (brazil_val - synth_val) /
-        ifelse(donor_sd > 0, donor_sd, NA_real_),
-      value_definition = value_definition,
-      diagnostic_scope = "Preferred-specification values weighted by omega; descriptive, not residualized synthdid balance"
-    )
-  }
-  bind_rows(
-    one_var("abs_distance_china", outcome_label, "Outcome", "1997-2008 mean"),
-    one_var("frozen_perc_trade_with_us", "Export share to the United States",
-            "Predetermined/fixed covariate", "2004-2008 mean held fixed"),
-    one_var("frozen_perc_trade_with_china", "Export share to China",
-            "Predetermined/fixed covariate", "2004-2008 mean held fixed"),
-    one_var("frozen_pci_cur", "Per-capita income",
-            "Predetermined/fixed covariate", "2004-2008 mean held fixed"),
-    one_var("frozen_distance_us", "Geographic distance to Washington",
-            "Predetermined/fixed covariate", "Time-invariant value held fixed"),
-    one_var("frozen_inst_parliamentary", "Parliamentary system",
-            "Predetermined/fixed covariate", "2008 value held fixed"),
-    one_var("frozen_us_trade_agreement", "Trade agreement with the United States",
-            "Predetermined/fixed covariate", "2008 value held fixed")
-  )
-}
-write_csv(
-  balance_table(fit_dm, estimation_data_dm, predetermined_core,
-                "Absolute UNGA ideal-point distance to China (UNGA-DM)"),
-  out_path("sdid_dm_balance.csv")
+dm_distribution <- read_csv(
+  file.path(est_dir, "sdid_dm_placebo_distribution.csv"),
+  show_col_types = FALSE
 )
-
-write_csv(
-  tibble(
-    note = c(
-      "placebo_se_seed",
-      "ranks_deterministic",
-      "seed_comparability"
-    ),
-    detail = c(
-      "UNGA-DM placebo SE uses seed 20260823 (1,000 replications); the audited BSV target se_synth_no_time_varying_covariates uses seed 20260520.",
-      "Placebo-in-space ranks involve no random draws; rank columns are exactly reproducible regardless of seed.",
-      "Different placebo-permutation seeds imply Monte Carlo noise of roughly 2 percent in the SE at 1,000 replications; point estimates are unaffected."
-    )
-  ),
-  out_path("sdid_inference_notes.csv")
+stopifnot(nrow(dm_distribution) == length(units),
+          setequal(dm_distribution$iso3c, units))
+rank_harmonized <- bind_rows(
+  sdid_rank_inference(dm_distribution, "All valid assignments"),
+  sdid_rank_inference(
+    dm_distribution,
+    "Exclude goods-only China-top donor assignments (harmonized: window criterion)",
+    keep_units = setdiff(units, window_excluded)),
+  sdid_rank_inference(
+    dm_distribution,
+    "Exclude goods-only China-top donor assignments (legacy 5-year qualifying criterion; audit only)",
+    keep_units = setdiff(units, legacy_excluded))
 )
+write_csv(rank_harmonized, op("sdid_dm_rank_inference_harmonized.csv"))
+print(as.data.frame(rank_harmonized), row.names = FALSE)
+
+dm_setup <- attr(fit_dm, "setup"); dm_weights <- attr(fit_dm, "weights")
+tw_dm <- tibble(
+  year = as.integer(colnames(dm_setup$Y)[seq_len(dm_setup$T0)]),
+  time_weight = as.numeric(dm_weights$lambda)
+) |>
+  mutate(time_weight_rank = rank(-time_weight, ties.method = "min"),
+         high_time_weight = time_weight >= 0.1)
+write_csv(tw_dm, op("sdid_dm_time_weights.csv"))
+
+donors <- rownames(dm_setup$Y)[seq_len(dm_setup$N0)]
+omega_dm <- as.numeric(dm_weights$omega)
+pre <- estimation_data_dm |> filter(year >= 1997L, year <= 2008L)
+pre_bsv <- synth_data |> filter(year >= 1997L, year <= 2008L)
+bal_one <- function(data_pre, v, label, role, defn) {
+  dv <- data_pre |> filter(iso3c != "BRA") |>
+    group_by(iso3c) |>
+    summarise(x = mean(.data[[v]], na.rm = TRUE), .groups = "drop")
+  dv <- dv[match(donors, dv$iso3c), ]
+  bv <- data_pre |> filter(iso3c == "BRA") |>
+    summarise(x = mean(.data[[v]], na.rm = TRUE)) |> pull(x)
+  sv <- sum(omega_dm * dv$x)
+  sdv <- stats::sd(dv$x)
+  tibble(variable = v, label = label, role = role,
+         brazil_pre_mean = bv, synthetic_pre_mean = sv,
+         brazil_minus_synthetic = bv - sv,
+         standardized_difference = (bv - sv) / ifelse(sdv > 0, sdv, NA_real_),
+         included_in_preferred_specification = (role == "Outcome"),
+         value_definition = defn,
+         diagnostic_scope = paste0(
+           "Omega-weighted pre-treatment values under the UNGA-DM fit; ",
+           "descriptive. The preferred specification uses no covariates."))
+}
+balance_dm <- bind_rows(
+  bal_one(pre, "abs_distance_china",
+          "Absolute UNGA ideal-point distance to China (UNGA-DM)",
+          "Outcome", "1997-2008 mean"),
+  bal_one(pre_bsv, "perc_trade_with_china", "Export share to China",
+          "Descriptive covariate", "1997-2008 mean"),
+  bal_one(pre_bsv, "perc_trade_with_us", "Export share to the United States",
+          "Descriptive covariate", "1997-2008 mean"),
+  bal_one(pre_bsv, "pci_cur", "Per-capita income",
+          "Descriptive covariate", "1997-2008 mean"),
+  bal_one(pre_bsv, "gpi", "Power index", "Descriptive covariate",
+          "1997-2008 mean")
+)
+write_csv(balance_dm, op("sdid_dm_balance.csv"))
+
+# Seed/provenance notes generated from the actual values in the comparison
+# table, so they cannot drift from the artifacts they describe.
+sdid_comparison <- read_csv(file.path(est_dir, "sdid_comparison_table.csv"),
+                            show_col_types = FALSE)
+stopifnot(nrow(sdid_comparison) == 2L)
+write_csv(tibble(
+  note = c("se_provenance", "ranks_deterministic"),
+  detail = c(
+    sprintf(
+      "BSV SE: %s replications, seed %s. UNGA-DM SE: %s replications, seed %s. Identical counts and seeds make the two columns differ only in the outcome series.",
+      format(sdid_comparison$se_replications[1], big.mark = ","),
+      sdid_comparison$se_seed[1],
+      format(sdid_comparison$se_replications[2], big.mark = ","),
+      sdid_comparison$se_seed[2]),
+    "Placebo-in-space ranks involve no random draws; rank columns are exactly reproducible regardless of seed."
+  )
+), op("sdid_inference_notes.csv"))
 
 # ---------------------------------------------------------------------------
 # Common-window IFE panels (identical construction to the estimation audit)
@@ -329,13 +224,13 @@ write_csv(
 message("Rebuilding the common-window IFE panels.")
 panel_bundle <- safe_tar_read("china_top_m2_goods_status_current_panel_bundle")
 p5 <- panel_bundle$panels[["5"]]$risk_set_restricted
-common_rows <- p5 %>%
-  left_join(dm_outcome, by = c("iso3c", "year")) %>%
+common_rows <- p5 |>
+  left_join(dm_outcome, by = c("iso3c", "year")) |>
   filter(year <= 2020L, !is.na(abs_distance_china_dm))
-panel_dm_common <- common_rows %>%
-  mutate(abs_distance_china = abs_distance_china_dm) %>%
+panel_dm_common <- common_rows |>
+  mutate(abs_distance_china = abs_distance_china_dm) |>
   select(-abs_distance_china_dm)
-panel_bsv_common <- common_rows %>% select(-abs_distance_china_dm)
+panel_bsv_common <- common_rows |> select(-abs_distance_china_dm)
 message("  Common rows: ", nrow(common_rows))
 
 # ---------------------------------------------------------------------------
@@ -353,6 +248,16 @@ run_fect_fixed_r <- function(panel, r_fixed, nboots) {
     CV = FALSE, r = r_fixed
   )
 }
+# CV-selected factor numbers come from the estimation-stage artifact rather
+# than being hard-coded, so the labels cannot drift from the data.
+ife_comparison_est <- read_csv(file.path(est_dir, "ife_comparison_table.csv"),
+                               show_col_types = FALSE)
+r_cv_bsv <- ife_comparison_est |>
+  filter(grepl("^BSV common window", variant)) |> pull(r_cv)
+r_cv_dm <- ife_comparison_est |>
+  filter(grepl("^UNGA-DM common window", variant)) |> pull(r_cv)
+stopifnot(length(r_cv_bsv) == 1L, length(r_cv_dm) == 1L)
+
 grid <- expand.grid(
   outcome = c("BSV", "UNGA-DM"), r_fixed = c(1L, 2L),
   stringsAsFactors = FALSE
@@ -368,25 +273,25 @@ for (i in seq_len(nrow(grid))) {
   s_i <- summarize_fect_model(fit_i, panel_i)
   grid_results[[i]] <- tibble(
     outcome = outcome_i, r_fixed = r_i,
-    cv_selected = (outcome_i == "BSV" && r_i == 2L) ||
-      (outcome_i == "UNGA-DM" && r_i == 1L),
+    cv_selected = (outcome_i == "BSV" && r_i == r_cv_bsv) ||
+      (outcome_i == "UNGA-DM" && r_i == r_cv_dm),
     att = s_i$att, se = s_i$se, ci_lo = s_i$ci_lo, ci_hi = s_i$ci_hi,
     p = s_i$p, att_rel_pct = s_i$att_rel_pct, att_sd_units = s_i$att_sd_units,
-    n_obs = s_i$n_obs, nboots = ife_nboots
+    n_obs = s_i$n_obs, nboots = ife_nboots, smoke_test = smoke
   )
   print(as.data.frame(grid_results[[i]]), row.names = FALSE)
 }
 grid_table <- bind_rows(grid_results)
-write_csv(grid_table, out_path("ife_2x2_fixed_r.csv"))
+write_csv(grid_table, op("ife_2x2_fixed_r.csv"))
 
 # ---------------------------------------------------------------------------
 # Item 2 - Paired cluster bootstrap of the ATT difference (point fits only)
-# Stratified country resampling (treated strata = countries with any treated
-# row in the common panel), identical draws applied to both outcomes.
+# Stratified country resampling; identical draws applied to both outcomes.
 # ---------------------------------------------------------------------------
 message("Paired cluster bootstrap (B = ", boot_B, ", stratified).")
-treated_units <- common_rows %>%
-  group_by(iso3c) %>% summarise(t = any(china_top == 1), .groups = "drop")
+treated_units <- common_rows |>
+  group_by(iso3c) |>
+  summarise(t = any(china_top == 1), .groups = "drop")
 treated_ids <- treated_units$iso3c[treated_units$t]
 control_ids <- treated_units$iso3c[!treated_units$t]
 fit_point <- function(panel, r_fixed) {
@@ -405,20 +310,23 @@ draw_list <- lapply(seq_len(boot_B), function(b) {
     sample(control_ids, length(control_ids), replace = TRUE))
 })
 boot_one <- function(b) {
+  # fect should not consume RNG with se = FALSE and fixed r, but fixing the
+  # child seed guarantees core-count independence even if it does.
+  set.seed(boot_seed + b)
   drawn <- draw_list[[b]]
   resampled <- lapply(seq_along(drawn), function(k) {
-    common_rows %>%
-      filter(iso3c == drawn[k]) %>%
+    common_rows |>
+      filter(iso3c == drawn[k]) |>
       mutate(
         iso3c = paste0(drawn[k], "_", k),
         country_id = k,
         country_name = iso3c
       )
-  }) %>% bind_rows()
-  panel_dm_b <- resampled %>%
-    mutate(abs_distance_china = abs_distance_china_dm) %>%
+  }) |> bind_rows()
+  panel_dm_b <- resampled |>
+    mutate(abs_distance_china = abs_distance_china_dm) |>
     select(-abs_distance_china_dm)
-  panel_bsv_b <- resampled %>% select(-abs_distance_china_dm)
+  panel_bsv_b <- resampled |> select(-abs_distance_china_dm)
   tryCatch({
     att_bsv_r2 <- fit_point(panel_bsv_b, 2L)
     att_dm_r1 <- fit_point(panel_dm_b, 1L)
@@ -437,11 +345,12 @@ boot_one <- function(b) {
     )
   })
 }
-boot_draws <- bind_rows(parallel::mclapply(
-  seq_len(boot_B), boot_one,
-  mc.cores = parallel_cores, mc.preschedule = TRUE, mc.set.seed = FALSE
-))
-write_csv(boot_draws, out_path("ife_paired_bootstrap_draws.csv"))
+boot_vals <- sdid_mclapply_checked(seq_len(boot_B), boot_one, parallel_cores,
+                                   what = "paired bootstrap")
+boot_draws <- bind_rows(boot_vals)
+stopifnot(nrow(boot_draws) == boot_B,
+          setequal(boot_draws$b, seq_len(boot_B)))
+write_csv(boot_draws, op("ife_paired_bootstrap_draws.csv"))
 
 summarize_diff <- function(x, label, observed_diff) {
   x <- x[is.finite(x)]
@@ -450,17 +359,17 @@ summarize_diff <- function(x, label, observed_diff) {
     observed_diff = observed_diff,
     boot_mean = mean(x),
     boot_sd = sd(x),
-    ci_2_5 = quantile(x, 0.025),
-    ci_97_5 = quantile(x, 0.975),
+    ci_2_5 = unname(quantile(x, 0.025)),
+    ci_97_5 = unname(quantile(x, 0.975)),
     p_two_sided_percentile = 2 * min(mean(x <= 0), mean(x >= 0)),
     p_two_sided_normal = 2 * stats::pnorm(-abs(observed_diff / sd(x))),
     n_valid = length(x),
     n_failed = boot_B - length(x)
   )
 }
-obs_bsv_r2 <- grid_table %>% filter(outcome == "BSV", r_fixed == 2L) %>% pull(att)
-obs_dm_r1 <- grid_table %>% filter(outcome == "UNGA-DM", r_fixed == 1L) %>% pull(att)
-obs_dm_r2 <- grid_table %>% filter(outcome == "UNGA-DM", r_fixed == 2L) %>% pull(att)
+obs_bsv_r2 <- grid_table |> filter(outcome == "BSV", r_fixed == 2L) |> pull(att)
+obs_dm_r1 <- grid_table |> filter(outcome == "UNGA-DM", r_fixed == 1L) |> pull(att)
+obs_dm_r2 <- grid_table |> filter(outcome == "UNGA-DM", r_fixed == 2L) |> pull(att)
 boot_summary <- bind_rows(
   summarize_diff(boot_draws$diff_procedure,
                  "UNGA-DM (r=1) minus BSV (r=2), procedure-selected",
@@ -469,46 +378,50 @@ boot_summary <- bind_rows(
                  "UNGA-DM (r=2) minus BSV (r=2), common factors",
                  obs_dm_r2 - obs_bsv_r2)
 )
-write_csv(boot_summary, out_path("ife_paired_bootstrap_summary.csv"))
+write_csv(boot_summary, op("ife_paired_bootstrap_summary.csv"))
 print(as.data.frame(boot_summary), row.names = FALSE)
 
 # ---------------------------------------------------------------------------
 # Item 3 - Per-treated-country divergence between the outcome series
 # ---------------------------------------------------------------------------
 message("Computing per-country series divergence for treated units.")
-divergence <- common_rows %>%
-  group_by(iso3c) %>%
+divergence <- common_rows |>
+  group_by(iso3c) |>
   summarise(
     treated_unit = any(china_top == 1),
-    first_treated_year = ifelse(any(china_top == 1),
-                                min(year[china_top == 1]), NA_integer_),
+    first_treated_year = if (any(china_top == 1)) {
+      min(year[china_top == 1])
+    } else NA_integer_,
     n_years = n(),
-    cor_bsv_dm = ifelse(n() >= 3,
-                        cor(abs_distance_china, abs_distance_china_dm), NA_real_),
+    cor_bsv_dm = if (n() >= 3) {
+      cor(abs_distance_china, abs_distance_china_dm)
+    } else NA_real_,
     mean_abs_diff = mean(abs(abs_distance_china - abs_distance_china_dm)),
     mean_bsv_pre = mean(abs_distance_china[china_top == 0]),
     mean_dm_pre = mean(abs_distance_china_dm[china_top == 0]),
-    mean_bsv_treated = ifelse(any(china_top == 1),
-                              mean(abs_distance_china[china_top == 1]), NA_real_),
-    mean_dm_treated = ifelse(any(china_top == 1),
-                             mean(abs_distance_china_dm[china_top == 1]), NA_real_),
+    mean_bsv_treated = if (any(china_top == 1)) {
+      mean(abs_distance_china[china_top == 1])
+    } else NA_real_,
+    mean_dm_treated = if (any(china_top == 1)) {
+      mean(abs_distance_china_dm[china_top == 1])
+    } else NA_real_,
     .groups = "drop"
-  ) %>%
+  ) |>
   mutate(
     within_change_bsv = mean_bsv_treated - mean_bsv_pre,
     within_change_dm = mean_dm_treated - mean_dm_pre
-  ) %>%
-  arrange(desc(treated_unit), mean_abs_diff * -1)
-write_csv(divergence, out_path("series_divergence_by_country.csv"))
-group_means <- common_rows %>%
-  mutate(group = if_else(iso3c %in% treated_ids, "ever-treated", "control")) %>%
-  group_by(group, year) %>%
+  ) |>
+  arrange(desc(treated_unit), desc(mean_abs_diff))
+write_csv(divergence, op("series_divergence_by_country.csv"))
+group_means <- common_rows |>
+  mutate(group = if_else(iso3c %in% treated_ids, "ever-treated", "control")) |>
+  group_by(group, year) |>
   summarise(
     mean_bsv = mean(abs_distance_china),
     mean_dm = mean(abs_distance_china_dm),
     .groups = "drop"
   )
-write_csv(group_means, out_path("group_mean_series_bsv_vs_dm.csv"))
+write_csv(group_means, op("group_mean_series_bsv_vs_dm.csv"))
 
 # ---------------------------------------------------------------------------
 # Provenance
@@ -522,12 +435,13 @@ manifest <- tibble(
   boot_B = boot_B,
   boot_seed = boot_seed,
   boot_failures = sum(boot_draws$status != "ok"),
-  harmonized_excluded = paste(harmonized_excluded, collapse = ";"),
-  previous_excluded = paste(old_excluded, collapse = ";"),
+  harmonized_excluded = paste(window_excluded, collapse = ";"),
+  legacy_excluded = paste(legacy_excluded, collapse = ";"),
+  smoke_test = smoke,
   fect_version = as.character(utils::packageVersion("fect")),
   synthdid_version = as.character(utils::packageVersion("synthdid"))
 )
-write_csv(manifest, out_path("run_manifest.csv"))
-writeLines(capture.output(sessionInfo()), out_path("session_info.txt"))
+write_csv(manifest, op("run_manifest.csv"))
+writeLines(capture.output(sessionInfo()), op("session_info.txt"))
 message("Done in ", sprintf("%.1f", manifest$elapsed_minutes),
         " minutes. Outputs in ", out_dir)

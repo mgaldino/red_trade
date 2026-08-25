@@ -1,0 +1,33 @@
+# Dependency scanning scope for renv.
+#
+# Rationale: renv discovers dependencies by static analysis of every R file in
+# the project. Third-party replication code stored as raw data, superseded
+# manuscript versions, and slide decks would otherwise be recorded as if the
+# paper needed them (easypackages, stargazer, WDI, plm, priceR, network,
+# ggsci, revealjs, shiny). The reproducible artifact is paper_v4.Rmd plus the
+# targets pipeline and scripts/; those are NOT ignored.
+
+# Third-party replication packages kept as raw inputs
+data/raw/external/
+
+# Superseded manuscript versions
+paper.Rmd
+paper_v2.Rmd
+paper_v3.Rmd
+paper_v3_anonymous.Rmd
+paper_v3_author_id.Rmd
+paper_status_trade_submission.Rmd
+
+# Slides and non-pipeline material
+presentations/
+Extras/
+replication package/
+2022-04-22/
+
+# Working reports (gitignored; not part of the reproducible artifact).
+# NOTE: scripts/diagnostics/ is deliberately NOT ignored — those scripts
+# produce the CSVs the manuscript reads.
+quality_reports/
+coarse-output/
+reports/
+tmp/

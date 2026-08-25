@@ -114,6 +114,226 @@ O paper já calibra a interpretação AGNU:
 
 ## Pendências reais remanescentes
 
+### BLOQUEANTE — rebuild de reprodutibilidade da spec sem covariáveis
+
+**Status**: BLOQUEANTE antes de qualquer circulação ou submissão
+**Prioridade**: MÁXIMA
+**Decisão do autor (2026-08-23)**: "tudo precisa ser reproduzível"; execução
+agendada pelo autor para uma madrugada (deixar rodando ao dormir).
+
+#### O que aconteceu e por que isto existe
+
+Em 2026-08-23 a especificação principal do Brazil SDiD passou a **não usar
+covariáveis**. Antes, ela supria arrays fixos por unidade (médias 2004-2008 de
+export shares e renda per capita, distância geográfica, valores institucionais
+de 2008). Sendo invariantes no tempo, são colineares com os efeitos fixos de
+unidade do SDiD: coeficientes numericamente zero, e um parágrafo defensivo no
+texto só para explicar o artefato. A motivação é de higiene metodológica —
+não de inferência. `scripts/functions.R::simple_fit_no_time_varying_covariates()`
+já não passa X.
+
+Efeito nos números: ATT -0.2723 -> -0.2720 (quarta casa) e ranks placebo
+**idênticos** (3/96 direcional p=0.031; 7/96 bilateral p=0.073). O SE observado
+mudou de 0.130 para 0.137 numa primeira medição, mas isso era **ruído de seed**
+com 1.000 replicações, não efeito das covariáveis — ver a seção "Descoberta que
+motivou elevar as replicações", abaixo. Com 5.000 replicações o valor estável é
+SE ~0.131 e p ~0.038, essencialmente o mesmo das duas especificações. **Não
+escrever no paper que o SE anterior era otimista.**
+
+#### O que está inconsistente AGORA (e por isso é bloqueante)
+
+1. **Store de targets desatualizado**: `synth_fit_no_time_varying_covariates`
+   e `se_synth_no_time_varying_covariates` no `_targets/` ainda contêm a
+   versão COM covariáveis. A função mudou, mas o pipeline não pôde ser
+   re-rodado nesta máquina (ver item 3). O `paper_v4.Rmd` foi apontado para os
+   CSVs de diagnóstico para não exibir números velhos, mas isso é contorno,
+   não reprodutibilidade.
+2. **Tabela 5 inconsistente** (chunk `china-demand-sdid-diagnostics`): lê
+   `data/processed/diagnostics/brazil_sdid_predetermined_commodity_controls/table_4_sdid_specification_results.csv`,
+   cuja linha `predetermined_core` é a versão COM covariáveis e com 1.000
+   replicações. O texto e a Tabela 3 mostram outro SE e outro p para a MESMA
+   especificação preferida. O ATT arredondado coincide (-0.272), o SE e o p
+   não. O rebuild resolve os dois lados de uma vez, ao passar tudo a 5.000
+   replicações e à spec sem covariáveis. Além disso, a linha "Add pre-2009 primary share" daquela tabela é
+   redundante por construção (nível fixo = colinear; ATT idêntico ao
+   preferido) e some naturalmente na reforma.
+3. **Ambiente incompleto**: `renv::status()` acusa `duckdb` gravado no
+   lockfile mas NÃO instalado. `duckdb` é dependência real
+   (`scripts/functions.R:3926`, agregação ITPD-E goods) e está em
+   `tar_option_set(packages=...)`, então **qualquer** target falha ao ser
+   construído. Outros pacotes também estão fora do lockfile (easypackages,
+   ggsci, network, plm, priceR, stargazer, WDI).
+
+#### Roteiro de execução — UM COMANDO
+
+```bash
+bash scripts/run_reproducibility_rebuild.sh
+```
+
+Roda os cinco estágios em ordem, para no primeiro erro, e grava logs
+separados em `output/rebuild_<timestamp>/`. Estimativa: **~9 h** (medição
+direta de 2026-08-24: cada réplica placebo custa 0.026 s sem covariáveis e
+1.644 s com 13 covariáveis em 12 cores — as colunas de comparação da Tabela 3
+e a linha current-baseline da Tabela 5 dominam o tempo). Seguro deixar rodando
+sozinho, e **retomável**: o `targets` cacheia o que completou, então se a
+máquina dormir no meio, re-rodar o mesmo comando continua de onde parou.
+Replicações: 20.000 na coluna preferida (sem covariáveis, ~4 min; SE fixado a
+±0.001), 5.000 nas comparações (ampliá-las custaria ~9 h cada, sem ganho — são
+colunas de estrelas, não a inferência do paper). As notas da Tabela 3, da
+Tabela 5 e da figura principal já dizem as contagens corretas. Estágios: (1) `renv::restore()` — instala o `duckdb`, única
+dependência real que faltava; (2) `tar_make()` restrito aos 30 targets que o
+manuscrito e os scripts de diagnóstico consomem (um `tar_make()` completo
+tentaria reconstruir targets exploratórios que já falhavam antes e abortaria
+a madrugada); (3) diagnósticos SDiD sem covariáveis, que agora **reusam o SE
+do target** para o CSV não divergir da Tabela 3; (4) família
+commodity/China-demand da Tabela 5 sob a spec sem covariáveis
+(`scripts/diagnostics/audit_brazil_sdid_commodity_no_covariates.R`, já
+escrito e testado); (5) render.
+
+Dry-run já confirmado: no subconjunto do SDiD, serão reconstruídos
+`synth_fit_no_time_varying_covariates`, os quatro SEs placebo e
+`brazil_sdid_spec_table`. `synth_data` e `synth_fit` seguem válidos.
+
+#### Descoberta que motivou elevar as replicações (2026-08-23)
+
+Com 1.000 permutações, o **próprio SE placebo é ruidoso**: cinco blocos
+independentes de 1.000 sobre a spec preferida deram 0.1262, 0.1296, 0.1305,
+0.1316 e 0.1355 — movendo o p entre **0.031 e 0.045 sem nada mudar nos
+dados**. Com 5.000 o SE converge para **0.1309**, que é exatamente o desvio
+padrão da distribuição placebo-in-space exaustiva (0.1310, idêntico com e sem
+covariáveis). Consequências:
+
+- `se_sdid()` foi reescrita: 5.000 replicações, permutações sorteadas uma vez
+  a partir do seed e avaliadas em paralelo — determinística e independente do
+  número de cores (verificado). Em tempo de parede fica **mais rápida** que as
+  1.000 sequenciais que substitui.
+- As dez chamadas em `_targets.R` passaram a 5.000.
+- **Correção de interpretação**: a diferença 0.130 -> 0.137 observada ao
+  remover as covariáveis era ruído de seed, NÃO compressão de variância pelas
+  covariáveis. Não escrever no paper que o SE anterior era otimista. A
+  justificativa da mudança continua sendo colinearidade/inércia e a remoção do
+  parágrafo defensivo; a inferência é praticamente neutra (p ~ 0.038 estável).
+- Isso vale para TODOS os SEs do paper, não só o preferido.
+
+#### Valores de referência para conferir o estágio 02 (medidos em 2026-08-24)
+
+`compute_sdid_se_5000.R` com as MESMAS contagens e seed do pipeline
+(20.000/5.000, seed 20260520) produziu, antes de uma queda de energia
+interromper a 4ª coluna (log: `output/se5000.log`; determinismo da se_sdid
+verificado independentemente pelo revisor, então o tar_make DEVE reproduzir):
+
+| Coluna Tabela 3 | ATT | SE | p |
+|---|---|---|---|
+| (1) Preferida, sem covariáveis (20k) | -0.2720 | 0.1302 | 0.0366 |
+| (2) Covariáveis atuais (5k) | -0.2639 | 0.1432 | 0.0652 |
+| (3) Sem instituições (5k) | -0.2645 | 0.1428 | 0.0640 |
+| (4) América Latina (5k) | (interrompida; sai do próprio rebuild) | | |
+
+Se o estágio 02 der números diferentes destes, algo mudou além do esperado —
+investigar antes de seguir. A referência standalone NÃO precisa ser re-rodada.
+
+#### Comportamento esperado ANTES do rebuild (não é bug)
+
+- Knit do `paper_v4.Rmd` agora FALHA de propósito: a Tabela 5 lê o diretório
+  novo, que só contém saída smoke (marcada `smoke_test = TRUE`), e o chunk tem
+  guarda `stopifnot(!any(smoke_test))`. Mensagem críptica de `stopifnot` =
+  rode o rebuild.
+- Os scripts UNGA-DM param no gate com a mensagem "Run the reproducibility
+  rebuild first" (verificado): o target ainda contém o fit da spec antiga.
+- Tudo isso se resolve com `bash scripts/run_reproducibility_rebuild.sh`.
+
+#### Iteração de revisão de código R (2026-08-24)
+
+O autor pediu `review-r` com iteração até "pass sem ressalva". Rodada 1:
+REPROVADO (C, 68/100) — algoritmos verificados corretos (se_sdid reproduz o
+pacote com diferença zero; sinal `estimate - main` sem resíduos), mas 9
+críticos de integração. Relatório completo:
+`quality_reports/2026-08-23_review_r_sdid_scripts.md`. TODOS os críticos e
+importantes foram implementados em seguida:
+
+- **Consolidação (S10)**: nova biblioteca única
+  `scripts/diagnostics/sdid_placebo_helpers.R` (fit, SE placebo com
+  checkpoint/fingerprint cobrindo dados+código+versão do synthdid, ranks com
+  denominador protegido, mclapply validado contra filho morto); os quatro
+  scripts de diagnóstico foram reescritos sobre ela. Elimina C5/C6/C8/M5/M6.
+- **C1 (três seeds)**: seed única 20260520 para TODOS os SEs; linha preferida
+  sempre espelha o pipeline (reusa o target ou computa com a MESMA contagem e
+  seed do target). Valor canônico medido: **SE 0.1302, p 0.0366**
+  (20.000 replicações; ATT -0.2720; IC [-0.527, -0.017]).
+- **C2**: `paper_v4.Rmd` religado ao novo diretório/arquivo da Tabela 5
+  (`brazil_sdid_commodity_no_covariates/table_5_...`), com guardas
+  `stopifnot` (specs presentes, 1 linha, anti-smoke).
+- **C3**: `make_brazil_sdid_spec_table()` sem checkmarks na coluna preferida
+  e nota parametrizada (replicações/seed, com fallback aos atributos do
+  target).
+- **C4**: os dois scripts UNGA-DM reescritos sob a spec SEM covariáveis; o
+  gate agora compara like-with-like e instrui rodar o rebuild se o target
+  estiver obsoleto. **Os artefatos UNGA-DM commitados (ATT -0.335 etc.) são
+  da spec antiga e serão regenerados nos estágios 05-06 do rebuild** — não
+  incorporar ao texto antes disso.
+- **C7**: proveniência (seed/replicações) gravada a partir da fonte real do
+  SE; `se_sdid()` agora devolve escalar com atributos.
+- **C9**: `render_paper_v4.sh` ativa o renv explicitamente sob `--vanilla` e
+  grava `output/paper_v4_session_info.txt`.
+- **M17**: `goal9_summarise_sdid_estimate()` delega à `se_sdid()`.
+- **M19 + reforço**: orquestrador com 11 estágios — renv restore + registro
+  de ambiente, validação do algoritmo placebo, `tar_make` com lista derivada
+  programaticamente do Rmd (`scripts/rebuild_targets.R`), diagnósticos,
+  Tabela 5, UNGA-DM (estimação + pós-revisão), **estágio de consistência que
+  falha se texto/Tabela 3/Tabela 5/UNGA-DM divergirem no SE**, render;
+  `caffeinate -i` para a madrugada.
+- Demais importantes (M1-M16, M18) e sugestões baratas (S1-S9) aplicados;
+  M3: claim de "distorção da variância" removido de todos os comentários
+  (a distribuição placebo exaustiva é idêntica com e sem covariáveis; a
+  justificativa é identificação + custo computacional ~60x).
+
+Rodada 2: REPROVADO por um único bloqueador NOVO (vírgula de `_targets.R:160`
+engolida por comentário — o rebuild teria morrido no estágio 02), com os 28
+achados da rodada 1 dados como RESOLVIDOS e verificados por execução (quatro
+implementações do SE placebo idênticas a 0.175362758160; seed única confirmada
+em três caminhos; SD exaustivo conferido nos dados). Rodada 3, após corrigir a
+vírgula, adicionar o estágio 01d (parse + manifest, que pega esse tipo de erro
+em segundos) e fechar dois one-liners: **PASS SEM RESSALVA**. Relatórios:
+`quality_reports/2026-08-23_review_r_sdid_scripts.md` (rodada 1) e
+`quality_reports/2026-08-24_review_r_sdid_scripts_round2.md` (rodadas 2-3,
+com o veredito final). Registro do revisor: o PASS atesta o código; os números
+do paper só ficam consistentes após o rebuild rodar com o estágio 07 verde.
+
+#### Decisões do autor (2026-08-23, fim da sessão)
+
+1. **SEs a 5.000 replicações: aprovado.** Os quatro SEs da Tabela 3 foram
+   computados fora do `targets` com a nova `se_sdid()` e o mesmo seed default
+   do pipeline (20260520), em
+   `data/processed/diagnostics/sdid_placebo_se_5000_reference.csv`
+   (script: `scripts/diagnostics/compute_sdid_se_5000.R`). Como a função é
+   determinística dado o seed, o `tar_make()` da madrugada deve reproduzir
+   esses valores exatamente — servem de conferência do estágio 2.
+2. **Proofread: adiado** para depois do rebuild, para revisar o texto final
+   uma vez só. O agente revisor foi interrompido antes de gravar o relatório;
+   quando for retomado, o produto vai para
+   `quality_reports/2026-08-23_proofread_paper_v4.md`, separando erros
+   objetivos (a aplicar) de sugestões de estilo (decisão do autor).
+3. **Frase da nota de dados: mantida.** O texto promete um apêndice UNGA-DM;
+   o autor vai escrever esse apêndice (Bloco F do rascunho
+   `quality_reports/ungadm_outcome_robustness/2026-08-23_draft_paper_text_ungadm.md`).
+   Enquanto o apêndice não entrar, a promessa fica pendente — conferir antes
+   de circular.
+
+#### Verificação após o rebuild
+
+- [ ] `tar_read(synth_fit_no_time_varying_covariates)` bate com
+      `data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/main_summary.csv`
+      no ATT (tolerância 1e-8). O SE pode diferir ~2% por ruído Monte Carlo de
+      seed (o target usa seed 20260520; o diagnóstico usa 20260823) — decidir
+      qual fonte o paper cita e usar SÓ ela.
+- [ ] Tabela 3 e Tabela 5 mostram o mesmo SE e o mesmo p para a especificação
+      preferida.
+- [ ] Texto, Tabela 3, Tabela 5 e apêndice citam os mesmos números.
+- [ ] Re-render sem erros e sem citações quebradas.
+- [ ] Considerar reapontar o `paper_v4.Rmd` da coluna (1) da Tabela 3 de volta
+      para os targets, encerrando o contorno.
+
+
 ### Contrato inferencial da especificação principal — declarar no texto
 
 **Status**: Parcialmente resolvida; resta a redação do autor
@@ -226,8 +446,20 @@ Pendências derivadas (ordem do revisor):
    (outputs em `data/processed/diagnostics/ungadm_outcome_robustness/postreview/`).
    Commit do check: `74bc686`; diagnósticos pós-revisão entram em commit
    próprio ao concluir.
-4. Autor escreve o texto: tabela de apêndice BSV vs UNGA-DM + parágrafo de
-   sensibilidade de mensuração; recalibrar a passagem (~linha 610 do Rmd) que
+4. **Parcialmente incorporado ao `paper_v4.Rmd` em 2026-08-23** (a pedido e
+   na formulação do autor): resumo inferencial na introdução (Bloco B, com
+   valores inline vindos dos targets), nota de dados UNGA-DM (Bloco C) e os
+   dois parágrafos do contrato inferencial em "Identification strategy"
+   (Bloco A); entrada BibTeX `fjelstul_etal2026` adicionada ao
+   `synth-trade-china.bib`. Correção factual aplicada e sinalizada no Bloco A:
+   piso de resolução do rank é ~1% (1/96 = 0.0104), não 0.1%.
+   FALTA: figura da distribuição placebo (Bloco G, chunk a implementar),
+   apêndice de robustez de mensuração (Bloco F), e os Blocos D e E, que o
+   autor decidiu escrever/reformular pessoalmente. Rascunho de referência:
+   `quality_reports/ungadm_outcome_robustness/2026-08-23_draft_paper_text_ungadm.md`.
+   O PDF ainda não foi recompilado após estas inserções.
+   Contexto original do item: tabela de apêndice BSV vs UNGA-DM + parágrafo de
+   sensibilidade de mensuração; recalibrar a passagem (~linha 627 do Rmd) que
    usa o painel contra confounders Brasil-específicos, redistribuindo peso
    para os testes Brasil-específicos. BSV permanece outcome principal (regra
    pré-comprometida). **Rascunho de apoio disponível** (pedido pelo autor em

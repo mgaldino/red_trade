@@ -1,0 +1,88 @@
+
+
+processing file: paper_v4.Rmd
+1/80                                       
+2/80 [setup]                               
+3/80                                       
+4/80 [basic-num]                           
+5/80                                       
+6/80 [basic-data]                          
+7/80                                       
+8/80 [table-summary-main]                  
+9/80                                       
+10/80 [brazil-rank-volume]                  
+11/80                                       
+12/80 [plot-sdid]                           
+13/80                                       
+14/80 [brazil-sdid-diagnostic-inputs]       
+15/80                                       
+16/80 [brazil-sdid-diagnostic-summary]      
+17/80                                       
+18/80 [outcome-robustness-table]            
+19/80                                       
+20/80 [china-demand-sdid-numbers]           
+21/80                                       
+22/80 [table-placebo]                       
+23/80                                       
+24/80 [china-demand-sdid-diagnostics]       
+25/80                                       
+26/80 [selective-unga-diagnostic-numbers]   
+27/80                                       
+28/80 [issue-area-prepost-table]            
+29/80                                       
+30/80 [plot-brazil-china-unvotes-issue-year]
+31/80                                       
+32/80 [plot-media-counterfactual]           
+33/80                                       
+34/80 [fect-results]                        
+35/80                                       
+36/80 [cross-country-table]                 
+37/80                                       
+38/80 [cross-country-dynamic]               
+39/80                                       
+40/80 [appendix-brazil-china-ideal-points]  
+41/80                                       
+42/80 [table-brazil-china-unvotes-year]     
+43/80                                       
+44/80 [sdid-unit-weights-complete]          
+45/80                                       
+46/80 [sdid-time-weights]                   
+47/80                                       
+48/80 [sdid-prefit-summary]                 
+49/80                                       
+50/80 [sdid-balance]                        
+51/80                                       
+52/80 [sdid-placebo-rank]                   
+53/80                                       
+54/80 [sdid-donor-sensitivity]              
+55/80                                       
+56/80 [sdid-window-sensitivity]             
+57/80                                       
+58/80 [sdid-high-weight-donor-exposure]     
+59/80                                       
+60/80 [plot-weights]                        
+61/80                                       
+62/80 [plot-latam]                          
+63/80                                       
+64/80 [cross-country-duration-table]        
+65/80                                       
+66/80 [cross-country-sector-table]          
+67/80                                       
+68/80 [cross-country-audit-table]           
+69/80                                       
+70/80 [ex-top1-recoverability-audit]        
+71/80                                       
+72/80 [ex-top1-australia-afr-context]       
+73/80                                       
+74/80 [code-chatgpt]                        
+75/80                                       
+76/80 [sample-chatgpt]                      
+77/80                                       
+78/80 [chatgpt-validation]                  
+79/80                                       
+80/80 [table-treated-appendix]              
+output file: paper_v4.knit.md
+
+/opt/homebrew/bin/pandoc +RTS -K512m -RTS paper_v4.knit.md --to latex --from markdown+autolink_bare_uris+tex_math_single_backslash --output paper_v4.tex --lua-filter /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/bookdown/rmarkdown/lua/custom-environment.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/rmarkdown/rmarkdown/lua/latex-div.lua --embed-resources --standalone --number-sections --highlight-style tango --pdf-engine xelatex --variable graphics --wrap preserve --include-in-header /var/folders/_7/m0js68194rsd8xswh57rn_kh0000gn/T//RtmpPwGbpz/rmarkdown-str171aa7747dac.html --include-in-header /var/folders/_7/m0js68194rsd8xswh57rn_kh0000gn/T//RtmpPwGbpz/rmarkdown-str171aa70e6ab06.html --variable tables=yes --standalone -Mhas-frontmatter=false --citeproc 
+
+Output created: paper_v4.pdf

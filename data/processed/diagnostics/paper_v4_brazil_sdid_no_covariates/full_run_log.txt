@@ -1,0 +1,32 @@
+- One or more packages recorded in the lockfile are not installed.
+- Use `renv::status()` for more details.
+Fitting Brazil SDiD without covariates (1997-2015).
+  ATT = -0.272007 | pre-RMSPE = 0.057633
+Placebo SE (1000 reps, seed 20260823).
+    placebo batch 1/9 (120 fits; 12 cores)
+    placebo batch 2/9 (120 fits; 12 cores)
+    placebo batch 3/9 (120 fits; 12 cores)
+    placebo batch 4/9 (120 fits; 12 cores)
+    placebo batch 5/9 (120 fits; 12 cores)
+    placebo batch 6/9 (120 fits; 12 cores)
+    placebo batch 7/9 (120 fits; 12 cores)
+    placebo batch 8/9 (120 fits; 12 cores)
+    placebo batch 9/9 (40 fits; 12 cores)
+Placebo-in-space ranks (96 reassignments).
+                                 comparison_set rank_one_sided_negative
+                          All valid assignments                       3
+ Exclude goods-only China-top donor assignments                       3
+      Pre-fit RMSPE no larger than twice Brazil                       2
+ rank_two_sided_absolute denominator p_rank_one_sided_negative
+                       7          96                0.03125000
+                       7          95                0.03157895
+                       4          71                0.02816901
+ p_rank_two_sided_absolute
+                0.07291667
+                0.07368421
+                0.05633803
+Donor sensitivity.
+Window sensitivity.
+Timing placebos.
+Latin America donor pool.
+Done in 0.3 min -> data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates

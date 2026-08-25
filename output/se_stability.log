@@ -1,0 +1,14 @@
+- One or more packages recorded in the lockfile are not installed.
+- Use `renv::status()` for more details.
+Warning message:
+package ‘ggplot2’ was built under R version 4.4.3 
+
+SE com 5000 permutacoes: 0.1309
+SE por bloco de 1.000 (5 blocos independentes):
+   0.1355  0.1262  0.1296  0.1316  0.1305 
+  min=0.1262  max=0.1355  amplitude=0.0093
+
+ATT=-0.2720
+  p com SE de 5.000: 0.0377
+  p com o menor bloco: 0.0312
+  p com o maior bloco: 0.0447

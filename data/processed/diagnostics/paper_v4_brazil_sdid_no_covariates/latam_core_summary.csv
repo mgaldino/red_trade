@@ -1,0 +1,2 @@
+specification,estimate,se_placebo,ci_95_low,ci_95_high,p_normal_two_sided,rmspe_pre,rmspe_post,rmspe_ratio,n_units,n_donors,n_pre_years,n_post_years,status,error,inference
+Latin America donors; no covariates,-0.32554122906351857,NA,NA,NA,NA,0.06875355828040872,0.38157984217480884,5.549965001353825,20,19,12,7,estimated,,Point estimate only

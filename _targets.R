@@ -101,7 +101,7 @@ list(
              selective_china_alignment_unga_targets_bundle$country_placebo_summary),
   # residuals all countries
   tar_target(synth_fit, simple_fit(data=synth_data, filter_latin_america=FALSE)),
-  tar_target(se_synth , se_sdid(synth_fit, replications = 1000L)),
+  tar_target(se_synth , se_sdid(synth_fit, replications = 5000L)),
   tar_target(china_demand_primary_goods_export_exposure,
              goal9_pre2009_primary_goods_export_exposure(trade_file)),
   tar_target(china_demand_sdid_panel,
@@ -115,7 +115,7 @@ list(
                china_demand_sdid_panel,
                synth_fit,
                se_synth,
-               se_replications = 1000L
+               se_replications = 5000L
              )),
   tar_target(goal6_sdid_outcome_results,
              goal9_sdid_outcome_results(synth_data, unga_data, synth_fit, se_synth)),
@@ -125,19 +125,19 @@ list(
   tar_target(spaghetti_plot, plot_controls(synth_fit)),
   # residuals latam
   tar_target(synth_fit_latam, simple_fit(synth_data, filter_latin_america=TRUE)),
-  tar_target(se_synth_latam, se_sdid(synth_fit_latam, replications = 1000L)),
+  tar_target(se_synth_latam, se_sdid(synth_fit_latam, replications = 5000L)),
   tar_target(plot_trend_latam, my_plot_trends(synth_fit_latam)),
   tar_target(plot_parallel_latam, my_plot_dif(synth_fit_latam)),
   tar_target(plot_weights_coef_latam, my_plot_weigths(synth_fit_latam, latam=T)),
   #robustness checks
   tar_target(placebo_teste_treatment02, simple_fit(synth_data, time_treatment=2002, time_end=2009)),
-  tar_target(se_synth_placebo2, se_sdid(placebo_teste_treatment02, replications = 1000L)),
+  tar_target(se_synth_placebo2, se_sdid(placebo_teste_treatment02, replications = 5000L)),
   tar_target(placebo_teste_treatment03, simple_fit(synth_data, time_treatment=2003, time_end=2009)),
-  tar_target(se_synth_placebo_rank2_2004, se_sdid(placebo_teste_treatment03, replications = 1000L)),
+  tar_target(se_synth_placebo_rank2_2004, se_sdid(placebo_teste_treatment03, replications = 5000L)),
   tar_target(placebo_teste_treatment11, simple_fit(synth_data, time_treatment=2011,  time_end=2019)),
-  tar_target(se_synth_placebo1, se_sdid(placebo_teste_treatment11, replications = 1000L)),
+  tar_target(se_synth_placebo1, se_sdid(placebo_teste_treatment11, replications = 5000L)),
   tar_target(placebo_teste_treatment04, simple_fit(synth_data, time_treatment=2004, time_end=2009)),
-  tar_target(se_synth_placebo3, se_sdid(placebo_teste_treatment04, replications = 1000L)),
+  tar_target(se_synth_placebo3, se_sdid(placebo_teste_treatment04, replications = 5000L)),
   tar_target(goal3_brazil_placebo_rank_volume_tests,
              goal9_brazil_rank_volume_placebos(
                goal3_brazil_rank_volume_data,
@@ -155,9 +155,10 @@ list(
   # Robustness: baseline SDiD without institutional covariates
   tar_target(synth_data_baseline, clean_synth_data(final_df, ranked_trade_data=trade_data_ranked)),
   tar_target(synth_fit_baseline, simple_fit(data=synth_data_baseline, filter_latin_america=FALSE)),
-  tar_target(se_synth_baseline, se_sdid(synth_fit_baseline, replications = 1000L)),
+  tar_target(se_synth_baseline, se_sdid(synth_fit_baseline, replications = 5000L)),
   tar_target(synth_fit_no_time_varying_covariates, simple_fit_no_time_varying_covariates(synth_data)),
-  tar_target(se_synth_no_time_varying_covariates, se_sdid(synth_fit_no_time_varying_covariates, replications = 1000L)),
+  # preferred column: no covariates makes replications cheap (~4 min); 20k pins the SE to +-0.001
+  tar_target(se_synth_no_time_varying_covariates, se_sdid(synth_fit_no_time_varying_covariates, replications = 20000L)),
   tar_target(brazil_sdid_spec_table,
              make_brazil_sdid_spec_table(
                synth_fit,
@@ -189,7 +190,7 @@ list(
   tar_target(sensitivity_results, sensitivity_analysis(synth_data, synth_data_extended)),
   # Phase 1.3: Extended sample (2009-2019)
   tar_target(synth_fit_extended, simple_fit(synth_data_extended, time_end = 2020)),
-  tar_target(se_synth_extended, se_sdid(synth_fit_extended, replications = 1000L)),
+  tar_target(se_synth_extended, se_sdid(synth_fit_extended, replications = 5000L)),
   # Phase 1.4: Donor pool composition table
   tar_target(donor_table, donor_pool_table(synth_fit, unga_data, trade_data_cleaned)),
   # Phase 2: Cross-country event study

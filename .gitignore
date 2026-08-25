@@ -66,3 +66,7 @@ data/raw/batis_bpm6/
 data/raw/mechanism_evidence_china_2009_2011/falabr/Arquivos_csv_*.zip
 data/processed/diagnostics/china_top_goods_services/china_top_goods_services_country_year_partner_*.csv
 data/processed/diagnostics/china_top_goods_services/china_top_goods_services_rank_long_*.csv
+
+# Smoke-test placebo checkpoints (low replication counts): caches, never deliverables.
+data/processed/diagnostics/*/checkpoints/placebo_se_*_[0-9].rds
+data/processed/diagnostics/*/checkpoints/placebo_se_*_[0-9][0-9].rds

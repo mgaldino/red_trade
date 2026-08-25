@@ -1,0 +1,4 @@
+comparison_set,excluded_units,rank_one_sided_negative,rank_two_sided_absolute,denominator,p_rank_one_sided_negative,p_rank_two_sided_absolute
+All valid assignments,,3,7,96,0.03125,0.07291666666666667
+Exclude goods-only China-top donor assignments,MLT,3,7,95,0.031578947368421054,0.07368421052631578
+Pre-fit RMSPE no larger than twice Brazil,ALB;BHR;BLR;CIV;DOM;DZA;EGY;FJI;HTI;IND;JOR;LBN;LBY;MWI;NGA;NIC;PNG;QAT;RWA;SWZ;TCD;TUN;UGA;UKR;VEN,2,4,71,0.028169014084507043,0.056338028169014086

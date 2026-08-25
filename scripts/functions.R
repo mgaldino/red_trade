@@ -788,7 +788,7 @@ fixed_pre_treatment_cov_matrix <- function(data, pre_years = 2004:2008) {
 }
 
 simple_fit_no_time_varying_covariates <- function(data, time_treatment=2008, time_end=2016, filter_latin_america=FALSE) {
-  set.seed(12345)
+  # (no set.seed: synthdid_estimate is deterministic)
   if(filter_latin_america) {
     data <- data %>%
       dplyr::filter(latin_america)
@@ -803,8 +803,12 @@ simple_fit_no_time_varying_covariates <- function(data, time_treatment=2008, tim
     arrange(.unit_treated, iso3c, year) %>%
     dplyr::select(-.unit_treated)
 
-  covariates <- fixed_pre_treatment_cov_matrix(data)
-
+  # No covariates: unit-level fixed arrays are not separately identified from
+  # the SDiD unit fixed effects (their coefficients are numerically zero,
+  # max|beta| ~ 3e-17), so they add nothing to the estimate while making each
+  # placebo re-estimation roughly 60x slower. The estimator uses outcomes
+  # alone; the exhaustive placebo-in-space SD is identical with and without
+  # the arrays (0.1310), so inference is unaffected.
   panel_data <- data %>%
     mutate(treatment = as.integer(treatment),
            year = as.integer(year),
@@ -814,7 +818,7 @@ simple_fit_no_time_varying_covariates <- function(data, time_treatment=2008, tim
     as.data.frame()
 
   setup <- synthdid::panel.matrices(panel_data)
-  synthdid::synthdid_estimate(Y=setup$Y, N0=setup$N0, T0=setup$T0, X=covariates)
+  synthdid::synthdid_estimate(Y=setup$Y, N0=setup$N0, T0=setup$T0)
 }
 
 sdid_panel_counts <- function(data, time_end = 2016L, latin_america_only = FALSE) {
@@ -893,7 +897,18 @@ make_brazil_sdid_spec_table <- function(synth_fit,
                                         synth_fit_no_time_varying_covariates,
                                         se_synth_no_time_varying_covariates,
                                         synth_fit_latam,
-                                        se_synth_latam) {
+                                        se_synth_latam,
+                                        preferred_se_replications = 20000L,
+                                        comparison_se_replications = 5000L,
+                                        se_seed = 20260520L) {
+  # Replication counts and seed default to the values used in _targets.R and
+  # se_sdid(); when the SE targets carry provenance attributes, prefer those.
+  reps_attr <- attr(se_synth_no_time_varying_covariates, "replications")
+  if (!is.null(reps_attr)) preferred_se_replications <- reps_attr
+  comp_attr <- attr(se_synth, "replications")
+  if (!is.null(comp_attr)) comparison_se_replications <- comp_attr
+  seed_attr <- attr(se_synth_no_time_varying_covariates, "seed")
+  if (!is.null(seed_attr)) se_seed <- seed_attr
   main_spec <- sdid_spec_summary(
     synth_fit,
     se_synth,
@@ -975,19 +990,7 @@ make_brazil_sdid_spec_table <- function(synth_fit,
       format_sdid_estimate(no_time_varying_spec$estimate_value, no_time_varying_spec$se_value),
       format_sdid_se(no_time_varying_spec$se_value),
       "",
-      "$\\checkmark$",
-      "$\\checkmark$",
-      "",
-      "",
-      "$\\checkmark$",
-      "",
-      "$\\checkmark$",
-      "",
-      "",
-      "",
-      "$\\checkmark$",
-      "",
-      "$\\checkmark$",
+      rep("", 13),  # preferred specification: no covariates enter the estimator
       no_time_varying_spec$n_obs,
       no_time_varying_spec$n_donors,
       "Global",
@@ -1009,21 +1012,102 @@ make_brazil_sdid_spec_table <- function(synth_fit,
     table = spec_table,
     note = paste0(
       "Unit = ATT in absolute UNGA ideal-point distance to China; lower values indicate convergence toward China. ",
-      "Standard error = placebo-based standard errors with 1,000 replications shown in parentheses below ATT. ",
+      sprintf(
+        "Standard error = placebo-based standard errors shown in parentheses below ATT (%s replications for the preferred column, %s for the comparison columns; permutation seed %d). ",
+        format(preferred_se_replications, big.mark = ","),
+        format(comparison_se_replications, big.mark = ","),
+        se_seed
+      ),
       "ATTs are reported with three decimals. Significance stars use two-sided normal-approximation p-values based on the placebo standard errors: * p < 0.10; ** p < 0.05; *** p < 0.01. ",
       "Time window = annual country-year SDiD panels shown in the table. ",
       "Treatment definition = Treatment indicator equals 1 from 2009 onward, when China becomes Brazil's top export destination displacing the USA, and 0 before 2009. ",
       "Checkmarks indicate covariates included in each specification. Donor country counts exclude Brazil. ",
-      "Column (3) uses only pre-treatment or time-invariant covariates: 2004-2008 country means for China trade share, U.S. trade share, and per-capita income; time-invariant geographic distance to Washington; 2008 parliamentary-system status; and 2008 U.S. trade-agreement status. These values are held fixed across all panel years to avoid post-treatment adjustment."
+      "Column (3) is the preferred specification and conditions on no covariates: unit-level fixed arrays are not separately identified from the SDiD unit fixed effects, so the estimator uses the outcome path alone."
     )
   )
 }
 
 
 ## compute standard error (plecebos method)
-se_sdid <- function(fitted_model, replications = 1000L, seed = 20260520L) {
+# Placebo standard error for a single-treated-unit SDiD fit.
+#
+# Two departures from synthdid::vcov(method = "placebo"), both about
+# reproducibility rather than about the estimator:
+#
+#   1. 5,000 replications instead of 1,000. With 1,000 draws the estimated SE
+#      itself carries visible Monte Carlo noise: five independent blocks of
+#      1,000 on the preferred Brazil fit gave 0.1262 to 0.1355, moving the
+#      normal-approximation p-value between 0.031 and 0.045 with no change in
+#      the data. At 5,000 the SE lands on 0.1309, matching the standard
+#      deviation of the exhaustive placebo-in-space distribution (0.1310).
+#   2. The permutations are drawn once from `seed` and then evaluated in
+#      parallel, so the result is deterministic given the seed and the number
+#      of cores does not affect it. This also makes 5,000 replications cheaper
+#      in wall time than the sequential 1,000 it replaces.
+#
+# The algorithm is otherwise identical to synthdid's: resample donor order,
+# renormalize the unit weights over the drawn controls, re-estimate, and take
+# the finite-population standard deviation of the resulting estimates.
+se_sdid <- function(fitted_model, replications = 5000L, seed = 20260520L,
+                    cores = NULL) {
+  setup <- attr(fitted_model, "setup")
+  opts <- attr(fitted_model, "opts")
+  fit_weights <- attr(fitted_model, "weights")
+  n_treated <- nrow(setup$Y) - setup$N0
+  if (setup$N0 <= n_treated) {
+    stop("Placebo SE requires more control than treated units.", call. = FALSE)
+  }
+  if (is.null(cores)) {
+    detected <- parallel::detectCores(logical = FALSE)
+    cores <- if (is.na(detected)) 1L else max(1L, min(12L, detected))
+  }
+  if (.Platform$OS.type == "windows") cores <- 1L  # mclapply does not fork on Windows
+  # Draw all permutations from `seed` without disturbing the caller's RNG.
+  old_seed <- if (exists(".Random.seed", envir = globalenv())) {
+    get(".Random.seed", envir = globalenv())
+  }
+  on.exit(if (!is.null(old_seed)) {
+    assign(".Random.seed", old_seed, envir = globalenv())
+  }, add = TRUE)
   set.seed(seed)
-  se = sqrt(vcov(fitted_model, method = "placebo", replications = replications))
+  draws <- replicate(replications, sample(seq_len(setup$N0)))
+  # Local copy of synthdid:::sum_normalize so a package update cannot change
+  # behavior silently (renv also pins the package).
+  sum_normalize_local <- function(x) {
+    if (sum(x) != 0) x / sum(x) else rep(1 / length(x), length(x))
+  }
+  theta <- function(j) {
+    ind <- draws[, j]
+    n_control <- length(ind) - n_treated
+    bootstrap_weights <- fit_weights
+    bootstrap_weights$omega <- sum_normalize_local(
+      fit_weights$omega[ind[seq_len(n_control)]]
+    )
+    as.numeric(do.call(
+      synthdid::synthdid_estimate,
+      c(list(Y = setup$Y[ind, , drop = FALSE], N0 = n_control, T0 = setup$T0,
+             X = setup$X[ind, , , drop = FALSE], weights = bootstrap_weights),
+        opts)
+    ))
+  }
+  values <- parallel::mclapply(
+    seq_len(replications), theta,
+    mc.cores = cores, mc.preschedule = TRUE, mc.set.seed = FALSE
+  )
+  if (length(values) != replications || any(vapply(values, is.null, logical(1)))) {
+    stop("mclapply lost placebo replications (child process killed?).",
+         call. = FALSE)
+  }
+  estimates <- unlist(values)
+  if (length(estimates) != replications || any(!is.finite(estimates))) {
+    stop("Invalid placebo estimates in se_sdid().", call. = FALSE)
+  }
+  structure(
+    sqrt((replications - 1) / replications) * stats::sd(estimates),
+    replications = replications,
+    seed = seed,
+    synthdid_version = as.character(utils::packageVersion("synthdid"))
+  )
 }
 
 ############################
@@ -6098,8 +6182,9 @@ goal9_fit_china_demand_sdid <- function(data,
 
 goal9_summarise_sdid_estimate <- function(fit, se_replications = 1000L, seed = 20260520L) {
   estimate <- as.numeric(fit)
-  set.seed(seed)
-  se <- as.numeric(sqrt(vcov(fit, method = "placebo", replications = se_replications)))
+  # Delegates to se_sdid(): same algorithm as synthdid::vcov(method = "placebo"),
+  # deterministic given the seed, and parallel instead of sequential.
+  se <- as.numeric(se_sdid(fit, replications = se_replications, seed = seed))
   tibble::tibble(
     estimate = estimate,
     se_placebo = se,

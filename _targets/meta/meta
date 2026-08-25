@@ -206,7 +206,6 @@ plot_diagnostics_main_china_top|stem|d3ced7833bc3bcac|e4d10eeacb512aad|c781bbadc
 plot_pm_combined_china_top|stem|5233c4ace94384e6|c2895e142809b5ad|0719251b78de8995|-1272161281||t20591.1477939798s|s2032103b|2032103|rds|local|vector|||0.035||
 goal3_brazil_rank_volume_data|stem|80716d744a0a14a0|502ad24e6c3705e3|9c3276702766d7f1|-2015728641||t20591.6995042152s|s1630b|1630|rds|local|vector|||1.3||
 goal3_brazil_rank_volume_plot|stem|81c236ad33e794b5|d4ac01ebec9d56b4|b7c90de88bf822bf|2134785402||t20591.6995122256s|s1429634b|1429634|rds|local|vector|||0.076||
-synth_fit_no_time_varying_covariates|stem|670a2c0ad963f1c1|89260c93864337de|3403f9b2093e2ed1|2089484093||t20592.0592978515s|s83342b|83342|rds|local|vector|||6.226||
 china_top_panel|stem|3eabc56b301172c6|172f76054d6b1cb9|5e55d28a8926f725|534993925||t20592.7218786044s|s81316b|81316|rds|local|vector|||0.792||
 china_top_short_lived_fect_data|stem|4b10cf3eab9542f9|46ce9151d245d15a|b33db6ea5ebed0dd|874563293||t20592.7218798287s|s43860b|43860|rds|local|vector|||0.085||
 fect_ife_china_top_short_lived|stem|5e9adf0c4f103a86|9218d400d2be2a08|2330f9437f48d9ca|1311803520||t20592.7334538169s|s20538362b|20538362|rds|local|vector|||999.132||
@@ -314,6 +313,17 @@ cross_country_recent_pretrend_f_test_table|stem|90da3b5cb978a6df|adad899d40eb89f
 fect_ife_china_top_m2_goods_status_current_min5_recent_pretrend_f_test|stem|b1eabbfccba8e424|038abc8e94e799a2|b1c45b5b62fa3e5b|1604099235||t20597.9318388691s|s864b|864|rds|local|vector|||0.007||
 china_top_m2_goods_status_current_pretrend_summary|stem|e87a86cc4e22cf0e|9abf3c99f5ba89dd|422aa414086704db|1346109753||t20597.9318389206s|s468b|468|rds|local|vector|||0||
 china_top_m2_goods_status_current_pretrend_periods|stem|a1baa3dfc1e57a89|8b8ca35b418ffc6f|422aa414086704db|737011650||t20597.9318389671s|s513b|513|rds|local|vector|||0||
+ex_top1_country_codes_file|stem|8ebd2cd3b538a9f7|f62a26170039d6c5|2c530c1562a7fbd1|-1925529191|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/ex_top1_salience/ex_top1_country_codes.csv|t20596.9237199962s|s6947b|6947|file|local|vector|||3.381|package 'ggplot2' was built under R version 4.4.3. package 'tibble' was built under R version 4.4.3. package 'purrr' was built under R version 4.4.3. package 'dplyr' was built under R version 4.4.3. package 'httr' was built under R version 4.4.3. package 'fect' was built under R version 4.4.3|
+ex_top1_source_evidence_file|stem|e454ba9156540fda|65534ae31a1bfe5f|2c530c1562a7fbd1|-1103487437|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/ex_top1_salience/ex_top1_source_evidence.csv|t20596.9225288629s|s21534b|21534|file|local|vector|||0.001||
+ex_top1_status_comparison_file|stem|d69cefd499620d1c|e5d96f33e9cfcdce|2c530c1562a7fbd1|1633913383|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/ex_top1_salience/status_cue_vs_ex_top1_coverage.csv|t20596.9237200065s|s5703b|5703|file|local|vector|||0.001||
+status_cue_country_codes_file|stem|82c786990114b41a|a6cb85dea164cbf9|2c530c1562a7fbd1|-1501551923|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/status_cue_salience/status_cue_country_codes.csv|t20593.6262565428s|s4714b|4714|file|local|vector|||0||
+status_cue_source_evidence_file|stem|a6c957b5149f2dc5|1583bed7088f5398|2c530c1562a7fbd1|380886744|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/status_cue_salience/status_cue_source_evidence.csv|t20593.6262565401s|s14468b|14468|file|local|vector|||0.001||
+ex_top1_salience_input_validation|stem|60f8e26f43889c32|3b095cacf79e6679|5f8e64624deed2be|1617884709||t20599.031600814s|s484b|484|rds|local|vector|||0.098||
+ex_top1_salience_appendix_tables|stem|13cfcec7cf62f2e2|6dfe61cbb26291b2|ee16e2b9feb29618|1630560545||t20599.0316017412s|s4686b|4686|rds|local|vector|||0.067||
+permutation_results|stem|5c6e09a58b5dc6c5|4bfd65f11b66a440|28aeb1a352ee8fe4|1916855523||t20599.0411605937s|s3557b|3557|rds|local|vector|||825.87||
+rmspe_diagnostics|stem|2a4f6a133525d6a2|6aef927a981cf3ea|328bcd08fc8ad4f4|1275697434||t20599.0411608258s|s1010b|1010|rds|local|vector|||0.001||
+brazil_sdid_diagnostics_bundle|stem|763bf652666f2313|d44f29b74ab80122|22831cce3eddce21|1776161171||t20599.0430978373s|s16379b|16379|rds|local|vector|||167.339||
+brazil_sdid_spec_table|stem|4222f0be9cc39afb|8fce14e354b927d4|5f157b82b4274ee1|1004075947||t20599.0430983804s|s1162b|1162|rds|local|vector|||0.03||
 make_fect_recent_pretrend_table|function|aa58d8d7fa98c1a5
 get_wb_data|function|db57e3eb97152b49
 prepare_nonabsorbing_china_top_fect_data|function|e4c3c9cd193c1d4c
@@ -359,14 +369,14 @@ get_country_data|function|d28598a9924c321f
 bind_folha|function|c077c147b86b3c5c
 classify_treatment_events|function|7b493fba795e9ed6
 goal9_bounded_logit|function|d000df83f704e96f
-bc_unvotes_clean_text|function|ea1a86ab7ee9e732
+bc_unvotes_clean_text|function|d36bb20ac722fed4
 summarise_brazil_china_unvotes_similarity_by_issue_year|function|ed80fde39c044e94
 brazil_sdid_placebo_summary|function|4f819291e8856c81
 brazil_sdid_time_weights|function|d45ec633b4f86de0
 brazil_sdid_unit_weights|function|475d0383a62d0fc0
 my_plot_weigths|function|e317eec36db6863a
 summarise_brazil_china_unvotes_similarity_by_year|function|780b371e3058244b
-selective_unga_clean_text|function|ea1a86ab7ee9e732
+selective_unga_clean_text|function|d36bb20ac722fed4
 make_status_current_panel|function|b912b393dd11f661
 build_pre_china_distance|function|61fc8c5e31741453
 generate_plot_data|function|ae5a7b4ded3e89f4
@@ -380,7 +390,7 @@ goal9_scale_vec|function|b3d042c6c69caeb2
 goal9_human_rights_vs_non_human_rights|function|87b4fc48f1fdabf4
 format_sdid_se|function|a34821840c5940a9
 summarize_china_top_panel|function|cee2f8885bfa4d68
-.Random.seed|object|c2698547152ba8e6
+.Random.seed|object|e341e380d1ca0845
 compute_cohens_kappa|function|0d85002526885e6a
 sdid_panel_counts|function|63960fa9dc92a880
 fect_att_summary|function|ef9a1fa407cd448e
@@ -439,6 +449,7 @@ goal9_plot_brazil_rank_volume|function|25f9c14235e0e952
 filter_usa_top_control|function|200551be423eb901
 validate_absorbing_china_top_sample|function|6bfaeaeaf4b1cfba
 get_ideology_data|function|4f8f202f6dc9878f
+simple_fit_no_time_varying_covariates|function|5da13385fef1cd67
 build_switching_panel|function|00f561d3d138f467
 get_macro|function|29039831984eb804
 prepare_data_folha|function|2045449c6b3fa001
@@ -464,13 +475,12 @@ run_panelmatch_analysis|function|6cab038b351ec383
 run_wild_cluster_bootstrap|function|cadbd5f19a52baf2
 run_restricted_did|function|fa2f2078b240dafe
 fisher_randomization_test|function|ac3742b6baf610d5
-build_brazil_china_unvotes_resolution_data|function|772a905ef703ef3f
+build_brazil_china_unvotes_resolution_data|function|cc4dec848303024f
 build_any_displacement_panel|function|6569c61d480669eb
 build_ex_top1_salience_appendix_tables|function|35177529d0886d4d
 sdid_spec_summary|function|4262121c6574fc3d
 summarize_fect_model|function|87707c52704cdca6
-simple_fit_no_time_varying_covariates|function|fec5ec0333e37987
-selective_unga_build_vote_panel|function|e53ec6c607c9dec8
+selective_unga_build_vote_panel|function|a4167534a4a83e7a
 make_cross_country_short_lived_table|function|9f0d9255738766f2
 make_cross_country_absorbing_table|function|db6508827c93e118
 brazil_sdid_balance_table|function|4dedcbe0d3b9e2f0
@@ -486,17 +496,7 @@ goal9_sdid_outcome_results|function|d55d751581d28eb4
 run_fect_leave_one_out|function|833e600afa413bc2
 make_brazil_sdid_spec_table|function|c282d9a3d6e95235
 fit_status_current_fect_models|function|d90348c0592a49bc
-build_selective_china_alignment_unga_targets|function|f82f1b8d56283053
+build_selective_china_alignment_unga_targets|function|61b9f4e4efd7c771
 reconstruct_fect_recent_pretrend_f_test|function|b7cbd7495e78a819
 build_brazil_sdid_diagnostics_bundle|function|93f2563cfaff3d57
-ex_top1_country_codes_file|stem|8ebd2cd3b538a9f7|f62a26170039d6c5|2c530c1562a7fbd1|-1925529191|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/ex_top1_salience/ex_top1_country_codes.csv|t20596.9237199962s|s6947b|6947|file|local|vector|||3.381|package 'ggplot2' was built under R version 4.4.3. package 'tibble' was built under R version 4.4.3. package 'purrr' was built under R version 4.4.3. package 'dplyr' was built under R version 4.4.3. package 'httr' was built under R version 4.4.3. package 'fect' was built under R version 4.4.3|
-ex_top1_source_evidence_file|stem|e454ba9156540fda|65534ae31a1bfe5f|2c530c1562a7fbd1|-1103487437|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/ex_top1_salience/ex_top1_source_evidence.csv|t20596.9225288629s|s21534b|21534|file|local|vector|||0.001||
-ex_top1_status_comparison_file|stem|d69cefd499620d1c|e5d96f33e9cfcdce|2c530c1562a7fbd1|1633913383|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/ex_top1_salience/status_cue_vs_ex_top1_coverage.csv|t20596.9237200065s|s5703b|5703|file|local|vector|||0.001||
-status_cue_country_codes_file|stem|82c786990114b41a|a6cb85dea164cbf9|2c530c1562a7fbd1|-1501551923|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/status_cue_salience/status_cue_country_codes.csv|t20593.6262565428s|s4714b|4714|file|local|vector|||0||
-status_cue_source_evidence_file|stem|a6c957b5149f2dc5|1583bed7088f5398|2c530c1562a7fbd1|380886744|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/status_cue_salience/status_cue_source_evidence.csv|t20593.6262565401s|s14468b|14468|file|local|vector|||0.001||
-ex_top1_salience_input_validation|stem|60f8e26f43889c32|3b095cacf79e6679|5f8e64624deed2be|1617884709||t20599.031600814s|s484b|484|rds|local|vector|||0.098||
-ex_top1_salience_appendix_tables|stem|13cfcec7cf62f2e2|6dfe61cbb26291b2|ee16e2b9feb29618|1630560545||t20599.0316017412s|s4686b|4686|rds|local|vector|||0.067||
-permutation_results|stem|5c6e09a58b5dc6c5|4bfd65f11b66a440|28aeb1a352ee8fe4|1916855523||t20599.0411605937s|s3557b|3557|rds|local|vector|||825.87||
-rmspe_diagnostics|stem|2a4f6a133525d6a2|6aef927a981cf3ea|328bcd08fc8ad4f4|1275697434||t20599.0411608258s|s1010b|1010|rds|local|vector|||0.001||
-brazil_sdid_diagnostics_bundle|stem|763bf652666f2313|d44f29b74ab80122|22831cce3eddce21|1776161171||t20599.0430978373s|s16379b|16379|rds|local|vector|||167.339||
-brazil_sdid_spec_table|stem|4222f0be9cc39afb|8fce14e354b927d4|5f157b82b4274ee1|1004075947||t20599.0430983804s|s1162b|1162|rds|local|vector|||0.03||
+synth_fit_no_time_varying_covariates|stem|670a2c0ad963f1c1|89260c93864337de|d62163e662d99241|2089484093||t20592.0592978515s||83342|rds|local|vector|||0.01|no non-missing arguments to max; returning -Inf|could not find packages duckdb in library paths

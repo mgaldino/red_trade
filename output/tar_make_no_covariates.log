@@ -1,0 +1,30 @@
+- One or more packages recorded in the lockfile are not installed.
+- Use `renv::status()` for more details.
+- One or more packages recorded in the lockfile are not installed.
+- Use `renv::status()` for more details.
+here() starts at /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade
+→ de-duplicating /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/…
+→ reading /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_target…
+→ parsing /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_target…
+→ noting builders and branches
+→ parsing /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_target…
+→ restricting metadata records
+→ querying 297 local files in /Users/manoelgaldino/Documents/DCP/Papers/RDD Tra…
+→ reading /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_target…
+→ parsing /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_target…
++ synth_fit_no_time_varying_covariates dispatched
+✖ synth_fit_no_time_varying_covariates errored
+→ de-duplicating /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/…
+✖ errored pipeline [2.2s, 0 completed, 25 skipped]
+Warning messages:
+1: package ‘ggplot2’ was built under R version 4.4.3 
+2: package ‘did’ was built under R version 4.4.3 
+3: package ‘fect’ was built under R version 4.4.3 
+4: package ‘PanelMatch’ was built under R version 4.4.3 
+5: no non-missing arguments to max; returning -Inf 
+6: 1 targets produced warnings. Run targets::tar_meta(fields = warnings, complete_only = TRUE) for the messages. 
+Error:
+! Error in tar_make():
+  could not find packages duckdb in library paths 
+  See https://books.ropensci.org/targets/debugging.html
+Execution halted
