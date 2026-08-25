@@ -1,0 +1,37 @@
+
+=== [23:44:27] Rebuild started. Logs in output/rebuild_20260824_234427 ===
+
+=== [23:44:27] START 01_renv_restore ===
+
+=== [23:44:32] OK    01_renv_restore ===
+
+=== [23:44:32] START 01b_env_record ===
+
+=== [23:44:50] OK    01b_env_record ===
+
+=== [23:44:50] START 01c_validate_placebo ===
+
+=== [23:52:36] OK    01c_validate_placebo ===
+
+=== [23:52:36] START 01d_parse_pipeline ===
+
+=== [23:52:41] OK    01d_parse_pipeline ===
+
+=== [23:52:41] START 02_targets ===
+
+=== [23:52:52] FAIL  02_targets  (see output/rebuild_20260824_234427/02_targets.log) ===
+Rebuilding 31 targets.
+here() starts at /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade
+→ de-duplicating /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/…
+→ reading /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_target…
+→ parsing /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_target…
+→ noting builders and branches
+→ parsing /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_target…
+→ restricting metadata records
+→ querying 297 local files in /Users/manoelgaldino/Documents/DCP/Papers/RDD Tra…
+→ reading /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_target…
+Error:
+! Error in tar_make():
+  Process ID 5035 is already running a {targets} pipeline with the /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_targets folder as the local data store for data and metadata files. Please do not attempt to run more than one pipeline on the same data store because it will mangle those important local files. Before trying again, check that process 5035 is really a {targets} pipeline and not a false positive, then terminate it manually. In case of a false positive, run targets::tar_unblock_process(store = "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_targets") (or manually remove '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_targets/meta/process' ) and try again. False positives may happen if you run different calls to tar_make() in quick succession or if you run tar_make(callr_function = NULL) in a different R process and keep that process running.
+  See https://books.ropensci.org/targets/debugging.html
+Execution halted

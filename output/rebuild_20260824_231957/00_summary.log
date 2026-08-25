@@ -1,0 +1,32 @@
+
+=== [23:19:57] Rebuild started. Logs in output/rebuild_20260824_231957 ===
+
+=== [23:19:57] START 01_renv_restore ===
+
+=== [23:32:50] OK    01_renv_restore ===
+
+=== [23:32:50] START 01b_env_record ===
+
+=== [23:33:04] OK    01b_env_record ===
+
+=== [23:33:04] START 01c_validate_placebo ===
+
+=== [23:39:04] OK    01c_validate_placebo ===
+
+=== [23:39:04] START 01d_parse_pipeline ===
+
+=== [23:39:08] OK    01d_parse_pipeline ===
+
+=== [23:39:08] START 02_targets ===
+
+=== [23:39:16] FAIL  02_targets  (see output/rebuild_20260824_231957/02_targets.log) ===
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+here() starts at /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade
+Error:
+! Error in tar_make():
+  ℹ In argument: `tidyselect::any_of(rebuild_target_names())`.
+Caused by error in `rebuild_target_names()`:
+! could not find function "rebuild_target_names"
+  See https://books.ropensci.org/targets/debugging.html
+Execution halted

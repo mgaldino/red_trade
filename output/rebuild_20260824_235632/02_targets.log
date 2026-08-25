@@ -1,0 +1,32 @@
+Rebuilding 31 targets.
+here() starts at /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade
+→ de-duplicating /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/…
+→ reading /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_target…
+→ parsing /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_target…
+→ noting builders and branches
+→ parsing /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_target…
+→ restricting metadata records
+→ querying 297 local files in /Users/manoelgaldino/Documents/DCP/Papers/RDD Tra…
+→ parsing /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_target…
++ se_synth_latam dispatched
+→ 70 targets ■■■■■■■■■■■■■■■■■■■■■■■■■        [28m 27.4s, 1+, 56-]
+✔ se_synth_latam completed [28m 25.6s, 133 B]
+→ 70 targets ■■■■■■■■■■■■■■■■■■■■■■■■■        [28m 27.4s, 1+, 56-]+ se_synth_no_time_varying_covariates dispatched
+→ 70 targets ■■■■■■■■■■■■■■■■■■■■■■■■■        [28m 27.4s, 1+, 56-]→ 70 targets ■■■■■■■■■■■■■■■■■■■■■■■■■■       [32m 31.2s, 2+, 56-]
+✔ se_synth_no_time_varying_covariates completed [4m 3.8s, 133 B]
+→ 70 targets ■■■■■■■■■■■■■■■■■■■■■■■■■■       [32m 31.2s, 2+, 56-]+ se_synth dispatched
+→ 70 targets ■■■■■■■■■■■■■■■■■■■■■■■■■■       [32m 31.2s, 2+, 56-]→ 70 targets ■■■■■■■■■■■■■■■■■■■■■■■■■■       [1h 48m 16.6s, 3+, 56-]
+✔ se_synth completed [1h 15m 45.4s, 133 B]
+→ 70 targets ■■■■■■■■■■■■■■■■■■■■■■■■■■       [1h 48m 16.6s, 3+, 56-]+ se_synth_baseline dispatched
+→ 70 targets ■■■■■■■■■■■■■■■■■■■■■■■■■■       [1h 48m 16.6s, 3+, 56-]→ 70 targets ■■■■■■■■■■■■■■■■■■■■■■■■■■■      [3h 3m 40.8s, 4+, 56-]
+✔ se_synth_baseline completed [1h 15m 24.2s, 132 B]
+→ 70 targets ■■■■■■■■■■■■■■■■■■■■■■■■■■■      [3h 3m 40.8s, 4+, 56-]+ brazil_sdid_spec_table dispatched
+→ 70 targets ■■■■■■■■■■■■■■■■■■■■■■■■■■■      [3h 3m 40.8s, 4+, 56-]✔ brazil_sdid_spec_table completed [50ms, 1.14 kB]
+→ 70 targets ■■■■■■■■■■■■■■■■■■■■■■■■■■■      [3h 3m 40.8s, 4+, 56-]→ de-duplicating /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/…
+→ 70 targets ■■■■■■■■■■■■■■■■■■■■■■■■■■■      [3h 3m 40.8s, 4+, 56-]→ 70 targets ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  [3h 3m 40.9s, 5+, 65-]
+✔ ended pipeline [3h 3m 41.5s, 5 completed, 65 skipped]
+Warning messages:
+1: package ‘ggplot2’ was built under R version 4.4.3 
+2: package ‘did’ was built under R version 4.4.3 
+3: package ‘fect’ was built under R version 4.4.3 
+4: package ‘PanelMatch’ was built under R version 4.4.3 

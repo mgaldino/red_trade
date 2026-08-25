@@ -1,0 +1,91 @@
+
+
+processing file: paper_v4.Rmd
+1/82                                       
+2/82 [setup]                               
+3/82                                       
+4/82 [basic-num]                           
+5/82                                       
+6/82 [basic-data]                          
+7/82                                       
+8/82 [table-summary-main]                  
+9/82                                       
+10/82 [brazil-rank-volume]                  
+11/82                                       
+12/82 [plot-sdid]                           
+13/82                                       
+14/82 [brazil-sdid-diagnostic-inputs]       
+15/82                                       
+16/82 [plot-placebo-distribution]           
+17/82                                       
+18/82 [brazil-sdid-diagnostic-summary]      
+19/82                                       
+20/82 [outcome-robustness-table]            
+21/82                                       
+22/82 [china-demand-sdid-numbers]           
+23/82                                       
+24/82 [table-placebo]                       
+25/82                                       
+26/82 [china-demand-sdid-diagnostics]       
+27/82                                       
+28/82 [selective-unga-diagnostic-numbers]   
+29/82                                       
+30/82 [issue-area-prepost-table]            
+31/82                                       
+32/82 [plot-brazil-china-unvotes-issue-year]
+33/82                                       
+34/82 [plot-media-counterfactual]           
+35/82                                       
+36/82 [fect-results]                        
+37/82                                       
+38/82 [cross-country-table]                 
+39/82                                       
+40/82 [cross-country-dynamic]               
+41/82                                       
+42/82 [appendix-brazil-china-ideal-points]  
+43/82                                       
+44/82 [table-brazil-china-unvotes-year]     
+45/82                                       
+46/82 [sdid-unit-weights-complete]          
+47/82                                       
+48/82 [sdid-time-weights]                   
+49/82                                       
+50/82 [sdid-prefit-summary]                 
+51/82                                       
+52/82 [sdid-balance]                        
+53/82                                       
+54/82 [sdid-placebo-rank]                   
+55/82                                       
+56/82 [sdid-donor-sensitivity]              
+57/82                                       
+58/82 [sdid-window-sensitivity]             
+59/82                                       
+60/82 [sdid-high-weight-donor-exposure]     
+61/82                                       
+62/82 [plot-weights]                        
+63/82                                       
+64/82 [plot-latam]                          
+65/82                                       
+66/82 [cross-country-duration-table]        
+67/82                                       
+68/82 [cross-country-sector-table]          
+69/82                                       
+70/82 [cross-country-audit-table]           
+71/82                                       
+72/82 [ex-top1-recoverability-audit]        
+73/82                                       
+74/82 [ex-top1-australia-afr-context]       
+75/82                                       
+76/82 [code-chatgpt]                        
+77/82                                       
+78/82 [sample-chatgpt]                      
+79/82                                       
+80/82 [chatgpt-validation]                  
+81/82                                       
+82/82 [table-treated-appendix]              
+output file: paper_v4.knit.md
+
+/opt/homebrew/bin/pandoc +RTS -K512m -RTS paper_v4.knit.md --to latex --from markdown+autolink_bare_uris+tex_math_single_backslash --output paper_v4.tex --lua-filter /Users/manoelgaldino/Library/Caches/org.R-project.R/R/renv/cache/v5/macos/R-4.4/aarch64-apple-darwin20/bookdown/0.46/97fad20876c9a6fa1860e820b3a56ce9/bookdown/rmarkdown/lua/custom-environment.lua --lua-filter /Users/manoelgaldino/Library/Caches/org.R-project.R/R/renv/cache/v5/macos/R-4.4/aarch64-apple-darwin20/rmarkdown/2.29/df99277f63d01c34e95e3d2f06a79736/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/manoelgaldino/Library/Caches/org.R-project.R/R/renv/cache/v5/macos/R-4.4/aarch64-apple-darwin20/rmarkdown/2.29/df99277f63d01c34e95e3d2f06a79736/rmarkdown/rmarkdown/lua/latex-div.lua --embed-resources --standalone --number-sections --highlight-style tango --pdf-engine xelatex --variable graphics --wrap preserve --include-in-header /var/folders/_7/m0js68194rsd8xswh57rn_kh0000gn/T//Rtmph0nXKK/rmarkdown-str920744ff9dd5.html --include-in-header /var/folders/_7/m0js68194rsd8xswh57rn_kh0000gn/T//Rtmph0nXKK/rmarkdown-str920769d32e56.html --variable tables=yes --standalone -Mhas-frontmatter=false --citeproc 
+
+Output created: paper_v4.pdf
+There were 50 or more warnings (use warnings() to see the first 50)

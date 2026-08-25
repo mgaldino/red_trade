@@ -1,0 +1,10 @@
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+here() starts at /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade
+Error:
+! Error in tar_make():
+  ℹ In argument: `tidyselect::any_of(rebuild_target_names())`.
+Caused by error in `rebuild_target_names()`:
+! could not find function "rebuild_target_names"
+  See https://books.ropensci.org/targets/debugging.html
+Execution halted

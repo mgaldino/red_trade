@@ -1,0 +1,56 @@
+
+
+processing file: paper_v4.Rmd
+1/84                                       
+2/84 [setup]                               
+3/84                                       
+4/84 [basic-num]                           
+5/84                                       
+6/84 [basic-data]                          
+7/84                                       
+8/84 [table-summary-main]                  
+9/84                                       
+10/84 [brazil-rank-volume]                  
+11/84                                       
+12/84 [plot-sdid]                           
+13/84                                       
+14/84 [brazil-sdid-diagnostic-inputs]       
+15/84                                       
+16/84 [plot-placebo-distribution]           
+17/84                                       
+18/84 [brazil-sdid-diagnostic-summary]      
+19/84                                       
+20/84 [outcome-robustness-table]            
+21/84                                       
+22/84 [china-demand-sdid-numbers]           
+23/84                                       
+24/84 [table-placebo]                       
+25/84                                       
+26/84 [china-demand-sdid-diagnostics]       
+27/84                                       
+28/84 [selective-unga-diagnostic-numbers]   
+29/84                                       
+Error:
+! Failed to parse the inline R code: `r sprintf("%. Restricting attention to a single issue domain opens a design that ideal points computed over all votes cannot support: a triple difference. Ideal points compress every resolution in a session into one score, leaving no contrast between issue domains to exploit, whereas vote-level data preserve it. The third difference is therefore across domains within the same country and year, comparing Brazil with the donor pool, before and after 2009, in human-rights votes relative to every other vote. Brazil remains the only treated country; the design adds a dimension of comparison, not treated units. Identification here asks for more than parallel trends between treated and control units: whatever bias a non-parallel trend introduces must be the same in the two issue domains, so that it cancels in the third difference [@olden_moen2022]. Because this evidence corroborates the main result and locates part of the mechanism rather than carrying the causal claim on its own, that requirement is less demanding than in the main design. Appendix Figure \@ref(fig:plot-ddd-pretrends) shows that Brazil's distance from the donor pool moves in parallel across the two domains before 2009 and separates afterwards.3f", nonhr_china_us_diff$estimate)`
+Reason: '\@' is an unrecognized escape in character string (<input>:1:1065)
+Backtrace:
+     x
+  1. \-rmarkdown::render(...)
+  2.   \-knitr::knit(knit_input, knit_output, envir = envir, quiet = quiet)
+  3.     \-knitr:::process_file(text, output)
+  4.       +-xfun:::handle_error(...)
+  5.       +-base::withCallingHandlers(...)
+  6.       \-knitr:::process_group(group)
+  7.         \-knitr:::call_inline(x)
+  8.           +-knitr:::in_input_dir(inline_exec(block))
+  9.           | \-knitr:::in_dir(input_dir(), expr)
+ 10.           \-knitr:::inline_exec(block)
+ 11.             \-base::tryCatch(...)
+ 12.               \-base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 13.                 \-base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 14.                   \-value[[3L]](cond)
+ 15.                     \-knitr:::stop2(...)
+There were 48 warnings (use warnings() to see them)
+
+Quitting from lines 867-870 (paper_v4.Rmd)
+Execution halted

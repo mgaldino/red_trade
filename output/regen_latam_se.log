@@ -1,0 +1,193 @@
+Fitting Brazil SDiD without covariates (1997-2015).
+  ATT = -0.272007 | pre-RMSPE = 0.057633
+  SE = 0.130159 (Reused target se_synth_no_time_varying_covariates (pipeline is the source of truth).)
+Placebo-in-space ranks (96 reassignments).
+    Reusing rank-placebo checkpoint: rank_placebos_no_covariates.rds
+                                 comparison_set
+                          All valid assignments
+ Exclude goods-only China-top donor assignments
+      Pre-fit RMSPE no larger than twice Brazil
+                                                                                      excluded_units
+                                                                                                    
+                                                                                                 MLT
+ ALB;BHR;BLR;CIV;DOM;DZA;EGY;FJI;HTI;IND;JOR;LBN;LBY;MWI;NGA;NIC;PNG;QAT;RWA;SWZ;TCD;TUN;UGA;UKR;VEN
+ rank_one_sided_negative rank_two_sided_absolute denominator
+                       3                       7          96
+                       3                       7          95
+                       2                       4          71
+ p_rank_one_sided_negative p_rank_two_sided_absolute
+                0.03125000                0.07291667
+                0.03157895                0.07368421
+                0.02816901                0.05633803
+Donor sensitivity.
+Window sensitivity.
+Timing placebos.
+Latin America donor pool.
+    Placebo batch 1/167 (120 re-estimations; 12 cores).
+    Placebo batch 2/167 (120 re-estimations; 12 cores).
+    Placebo batch 3/167 (120 re-estimations; 12 cores).
+    Placebo batch 4/167 (120 re-estimations; 12 cores).
+    Placebo batch 5/167 (120 re-estimations; 12 cores).
+    Placebo batch 6/167 (120 re-estimations; 12 cores).
+    Placebo batch 7/167 (120 re-estimations; 12 cores).
+    Placebo batch 8/167 (120 re-estimations; 12 cores).
+    Placebo batch 9/167 (120 re-estimations; 12 cores).
+    Placebo batch 10/167 (120 re-estimations; 12 cores).
+    Placebo batch 11/167 (120 re-estimations; 12 cores).
+    Placebo batch 12/167 (120 re-estimations; 12 cores).
+    Placebo batch 13/167 (120 re-estimations; 12 cores).
+    Placebo batch 14/167 (120 re-estimations; 12 cores).
+    Placebo batch 15/167 (120 re-estimations; 12 cores).
+    Placebo batch 16/167 (120 re-estimations; 12 cores).
+    Placebo batch 17/167 (120 re-estimations; 12 cores).
+    Placebo batch 18/167 (120 re-estimations; 12 cores).
+    Placebo batch 19/167 (120 re-estimations; 12 cores).
+    Placebo batch 20/167 (120 re-estimations; 12 cores).
+    Placebo batch 21/167 (120 re-estimations; 12 cores).
+    Placebo batch 22/167 (120 re-estimations; 12 cores).
+    Placebo batch 23/167 (120 re-estimations; 12 cores).
+    Placebo batch 24/167 (120 re-estimations; 12 cores).
+    Placebo batch 25/167 (120 re-estimations; 12 cores).
+    Placebo batch 26/167 (120 re-estimations; 12 cores).
+    Placebo batch 27/167 (120 re-estimations; 12 cores).
+    Placebo batch 28/167 (120 re-estimations; 12 cores).
+    Placebo batch 29/167 (120 re-estimations; 12 cores).
+    Placebo batch 30/167 (120 re-estimations; 12 cores).
+    Placebo batch 31/167 (120 re-estimations; 12 cores).
+    Placebo batch 32/167 (120 re-estimations; 12 cores).
+    Placebo batch 33/167 (120 re-estimations; 12 cores).
+    Placebo batch 34/167 (120 re-estimations; 12 cores).
+    Placebo batch 35/167 (120 re-estimations; 12 cores).
+    Placebo batch 36/167 (120 re-estimations; 12 cores).
+    Placebo batch 37/167 (120 re-estimations; 12 cores).
+    Placebo batch 38/167 (120 re-estimations; 12 cores).
+    Placebo batch 39/167 (120 re-estimations; 12 cores).
+    Placebo batch 40/167 (120 re-estimations; 12 cores).
+    Placebo batch 41/167 (120 re-estimations; 12 cores).
+    Placebo batch 42/167 (120 re-estimations; 12 cores).
+    Placebo batch 43/167 (120 re-estimations; 12 cores).
+    Placebo batch 44/167 (120 re-estimations; 12 cores).
+    Placebo batch 45/167 (120 re-estimations; 12 cores).
+    Placebo batch 46/167 (120 re-estimations; 12 cores).
+    Placebo batch 47/167 (120 re-estimations; 12 cores).
+    Placebo batch 48/167 (120 re-estimations; 12 cores).
+    Placebo batch 49/167 (120 re-estimations; 12 cores).
+    Placebo batch 50/167 (120 re-estimations; 12 cores).
+    Placebo batch 51/167 (120 re-estimations; 12 cores).
+    Placebo batch 52/167 (120 re-estimations; 12 cores).
+    Placebo batch 53/167 (120 re-estimations; 12 cores).
+    Placebo batch 54/167 (120 re-estimations; 12 cores).
+    Placebo batch 55/167 (120 re-estimations; 12 cores).
+    Placebo batch 56/167 (120 re-estimations; 12 cores).
+    Placebo batch 57/167 (120 re-estimations; 12 cores).
+    Placebo batch 58/167 (120 re-estimations; 12 cores).
+    Placebo batch 59/167 (120 re-estimations; 12 cores).
+    Placebo batch 60/167 (120 re-estimations; 12 cores).
+    Placebo batch 61/167 (120 re-estimations; 12 cores).
+    Placebo batch 62/167 (120 re-estimations; 12 cores).
+    Placebo batch 63/167 (120 re-estimations; 12 cores).
+    Placebo batch 64/167 (120 re-estimations; 12 cores).
+    Placebo batch 65/167 (120 re-estimations; 12 cores).
+    Placebo batch 66/167 (120 re-estimations; 12 cores).
+    Placebo batch 67/167 (120 re-estimations; 12 cores).
+    Placebo batch 68/167 (120 re-estimations; 12 cores).
+    Placebo batch 69/167 (120 re-estimations; 12 cores).
+    Placebo batch 70/167 (120 re-estimations; 12 cores).
+    Placebo batch 71/167 (120 re-estimations; 12 cores).
+    Placebo batch 72/167 (120 re-estimations; 12 cores).
+    Placebo batch 73/167 (120 re-estimations; 12 cores).
+    Placebo batch 74/167 (120 re-estimations; 12 cores).
+    Placebo batch 75/167 (120 re-estimations; 12 cores).
+    Placebo batch 76/167 (120 re-estimations; 12 cores).
+    Placebo batch 77/167 (120 re-estimations; 12 cores).
+    Placebo batch 78/167 (120 re-estimations; 12 cores).
+    Placebo batch 79/167 (120 re-estimations; 12 cores).
+    Placebo batch 80/167 (120 re-estimations; 12 cores).
+    Placebo batch 81/167 (120 re-estimations; 12 cores).
+    Placebo batch 82/167 (120 re-estimations; 12 cores).
+    Placebo batch 83/167 (120 re-estimations; 12 cores).
+    Placebo batch 84/167 (120 re-estimations; 12 cores).
+    Placebo batch 85/167 (120 re-estimations; 12 cores).
+    Placebo batch 86/167 (120 re-estimations; 12 cores).
+    Placebo batch 87/167 (120 re-estimations; 12 cores).
+    Placebo batch 88/167 (120 re-estimations; 12 cores).
+    Placebo batch 89/167 (120 re-estimations; 12 cores).
+    Placebo batch 90/167 (120 re-estimations; 12 cores).
+    Placebo batch 91/167 (120 re-estimations; 12 cores).
+    Placebo batch 92/167 (120 re-estimations; 12 cores).
+    Placebo batch 93/167 (120 re-estimations; 12 cores).
+    Placebo batch 94/167 (120 re-estimations; 12 cores).
+    Placebo batch 95/167 (120 re-estimations; 12 cores).
+    Placebo batch 96/167 (120 re-estimations; 12 cores).
+    Placebo batch 97/167 (120 re-estimations; 12 cores).
+    Placebo batch 98/167 (120 re-estimations; 12 cores).
+    Placebo batch 99/167 (120 re-estimations; 12 cores).
+    Placebo batch 100/167 (120 re-estimations; 12 cores).
+    Placebo batch 101/167 (120 re-estimations; 12 cores).
+    Placebo batch 102/167 (120 re-estimations; 12 cores).
+    Placebo batch 103/167 (120 re-estimations; 12 cores).
+    Placebo batch 104/167 (120 re-estimations; 12 cores).
+    Placebo batch 105/167 (120 re-estimations; 12 cores).
+    Placebo batch 106/167 (120 re-estimations; 12 cores).
+    Placebo batch 107/167 (120 re-estimations; 12 cores).
+    Placebo batch 108/167 (120 re-estimations; 12 cores).
+    Placebo batch 109/167 (120 re-estimations; 12 cores).
+    Placebo batch 110/167 (120 re-estimations; 12 cores).
+    Placebo batch 111/167 (120 re-estimations; 12 cores).
+    Placebo batch 112/167 (120 re-estimations; 12 cores).
+    Placebo batch 113/167 (120 re-estimations; 12 cores).
+    Placebo batch 114/167 (120 re-estimations; 12 cores).
+    Placebo batch 115/167 (120 re-estimations; 12 cores).
+    Placebo batch 116/167 (120 re-estimations; 12 cores).
+    Placebo batch 117/167 (120 re-estimations; 12 cores).
+    Placebo batch 118/167 (120 re-estimations; 12 cores).
+    Placebo batch 119/167 (120 re-estimations; 12 cores).
+    Placebo batch 120/167 (120 re-estimations; 12 cores).
+    Placebo batch 121/167 (120 re-estimations; 12 cores).
+    Placebo batch 122/167 (120 re-estimations; 12 cores).
+    Placebo batch 123/167 (120 re-estimations; 12 cores).
+    Placebo batch 124/167 (120 re-estimations; 12 cores).
+    Placebo batch 125/167 (120 re-estimations; 12 cores).
+    Placebo batch 126/167 (120 re-estimations; 12 cores).
+    Placebo batch 127/167 (120 re-estimations; 12 cores).
+    Placebo batch 128/167 (120 re-estimations; 12 cores).
+    Placebo batch 129/167 (120 re-estimations; 12 cores).
+    Placebo batch 130/167 (120 re-estimations; 12 cores).
+    Placebo batch 131/167 (120 re-estimations; 12 cores).
+    Placebo batch 132/167 (120 re-estimations; 12 cores).
+    Placebo batch 133/167 (120 re-estimations; 12 cores).
+    Placebo batch 134/167 (120 re-estimations; 12 cores).
+    Placebo batch 135/167 (120 re-estimations; 12 cores).
+    Placebo batch 136/167 (120 re-estimations; 12 cores).
+    Placebo batch 137/167 (120 re-estimations; 12 cores).
+    Placebo batch 138/167 (120 re-estimations; 12 cores).
+    Placebo batch 139/167 (120 re-estimations; 12 cores).
+    Placebo batch 140/167 (120 re-estimations; 12 cores).
+    Placebo batch 141/167 (120 re-estimations; 12 cores).
+    Placebo batch 142/167 (120 re-estimations; 12 cores).
+    Placebo batch 143/167 (120 re-estimations; 12 cores).
+    Placebo batch 144/167 (120 re-estimations; 12 cores).
+    Placebo batch 145/167 (120 re-estimations; 12 cores).
+    Placebo batch 146/167 (120 re-estimations; 12 cores).
+    Placebo batch 147/167 (120 re-estimations; 12 cores).
+    Placebo batch 148/167 (120 re-estimations; 12 cores).
+    Placebo batch 149/167 (120 re-estimations; 12 cores).
+    Placebo batch 150/167 (120 re-estimations; 12 cores).
+    Placebo batch 151/167 (120 re-estimations; 12 cores).
+    Placebo batch 152/167 (120 re-estimations; 12 cores).
+    Placebo batch 153/167 (120 re-estimations; 12 cores).
+    Placebo batch 154/167 (120 re-estimations; 12 cores).
+    Placebo batch 155/167 (120 re-estimations; 12 cores).
+    Placebo batch 156/167 (120 re-estimations; 12 cores).
+    Placebo batch 157/167 (120 re-estimations; 12 cores).
+    Placebo batch 158/167 (120 re-estimations; 12 cores).
+    Placebo batch 159/167 (120 re-estimations; 12 cores).
+    Placebo batch 160/167 (120 re-estimations; 12 cores).
+    Placebo batch 161/167 (120 re-estimations; 12 cores).
+    Placebo batch 162/167 (120 re-estimations; 12 cores).
+    Placebo batch 163/167 (120 re-estimations; 12 cores).
+    Placebo batch 164/167 (120 re-estimations; 12 cores).
+    Placebo batch 165/167 (120 re-estimations; 12 cores).
+    Placebo batch 166/167 (120 re-estimations; 12 cores).
+    Placebo batch 167/167 (80 re-estimations; 12 cores).
+Done in 2.0 min -> data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates

@@ -1,0 +1,26 @@
+Fitting Brazil SDiD without covariates (1997-2015).
+  ATT = -0.272007 | pre-RMSPE = 0.057633
+  SE = 0.130159 (Reused target se_synth_no_time_varying_covariates (pipeline is the source of truth).)
+Placebo-in-space ranks (96 reassignments).
+    Reusing rank-placebo checkpoint: rank_placebos_no_covariates.rds
+                                 comparison_set
+                          All valid assignments
+ Exclude goods-only China-top donor assignments
+      Pre-fit RMSPE no larger than twice Brazil
+                                                                                      excluded_units
+                                                                                                    
+                                                                                                 MLT
+ ALB;BHR;BLR;CIV;DOM;DZA;EGY;FJI;HTI;IND;JOR;LBN;LBY;MWI;NGA;NIC;PNG;QAT;RWA;SWZ;TCD;TUN;UGA;UKR;VEN
+ rank_one_sided_negative rank_two_sided_absolute denominator
+                       3                       7          96
+                       3                       7          95
+                       2                       4          71
+ p_rank_one_sided_negative p_rank_two_sided_absolute
+                0.03125000                0.07291667
+                0.03157895                0.07368421
+                0.02816901                0.05633803
+Donor sensitivity.
+Window sensitivity.
+Timing placebos.
+Latin America donor pool.
+Done in 0.1 min -> data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates

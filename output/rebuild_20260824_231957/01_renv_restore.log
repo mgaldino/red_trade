@@ -1,0 +1,15 @@
+- One or more packages recorded in the lockfile are not installed.
+- Use `renv::status()` for more details.
+The following package(s) will be updated:
+
+# CRAN -----------------------------------------------------------------------
+- duckdb   [* -> 1.4.1]
+
+# Downloading packages -------------------------------------------------------
+- Querying repositories for available binary packages ... Done!
+- Querying repositories for available source packages ... Done!
+- Downloading duckdb from CRAN ...              OK [4.3 Mb in 0.44s]
+Successfully downloaded 1 package in 3.9 seconds.
+
+# Installing packages --------------------------------------------------------
+- Installing duckdb ...                         OK [built from source and cached in 13m]
