@@ -1,0 +1,13 @@
+
+=== [13:47:06] Batch 'prep' started. Log: output/rebuild_batches/prep_20260825_134706.log ===
+
+=== [13:47:06] START 01_renv_restore ===
+- The library is already synchronized with the lockfile.
+
+=== [13:47:12] OK    01_renv_restore ===
+
+=== [13:47:12] START 01b_env_record ===
+
+=== [13:47:33] OK    01b_env_record ===
+
+=== [13:47:33] START 01c_validate_placebo ===
