@@ -42,11 +42,18 @@ rebuild_target_batches <- function(rmd = "paper_v4.Rmd") {
   all_targets <- rebuild_target_names(rmd)
 
   # Listed in full rather than intersected with the manuscript's targets:
-  # trade_data_goods, trade_data_goods_ranked and synth_data_baseline are
-  # upstream dependencies the paper never reads directly, but naming them
-  # keeps the gate explicit about what it is verifying.
+  # trade_data_goods, trade_data_goods_ranked, synth_data_baseline and
+  # synth_data_extended are upstream dependencies the paper never reads
+  # directly, but naming them keeps the gate explicit about what it is
+  # verifying. synth_data_extended matters here for a specific reason: the
+  # donor-pool invariant validates all three panels, so leaving it out of the
+  # batch makes the gate compare two freshly built panels against a stale one
+  # and fail on the stale one's old total-trade screen. It is cheap to build
+  # (well under a second); the expensive members of its family
+  # (synth_fit_extended, se_synth_extended, sensitivity_results) feed no
+  # manuscript number and stay out of the rebuild.
   data_targets <- c("trade_data_goods", "trade_data_goods_ranked",
-                    "synth_data", "synth_data_baseline",
+                    "synth_data", "synth_data_baseline", "synth_data_extended",
                     "synth_fit", "synth_fit_baseline", "synth_fit_latam",
                     "synth_fit_no_time_varying_covariates")
 

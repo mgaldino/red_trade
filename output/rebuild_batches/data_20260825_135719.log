@@ -1,0 +1,64 @@
+
+=== [13:57:19] Batch 'data' started. Log: output/rebuild_batches/data_20260825_135719.log ===
+
+=== [13:57:19] START 02_targets_data ===
+Batch 'data': rebuilding 8 targets.
+  trade_data_goods, trade_data_goods_ranked, synth_data, synth_data_baseline, synth_fit, synth_fit_baseline, synth_fit_latam, synth_fit_no_time_varying_covariates
+here() starts at /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade
+→ de-duplicating /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/…
+→ reading /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_target…
+→ parsing /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_target…
+→ noting builders and branches
+→ parsing /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_target…
+→ restricting metadata records
+→ querying 297 local files in /Users/manoelgaldino/Documents/DCP/Papers/RDD Tra…
+→ parsing /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_target…
++ trade_data_goods dispatched
+→ 29 targets ■■■■■■■■■■■■■■■■■■■■■■           [52.9s, 1+, 19-]
+✔ trade_data_goods completed [47.7s, 7.01 MB]
+→ 29 targets ■■■■■■■■■■■■■■■■■■■■■■           [52.9s, 1+, 19-]+ trade_data_goods_ranked dispatched
+→ 29 targets ■■■■■■■■■■■■■■■■■■■■■■           [52.9s, 1+, 19-]✔ trade_data_goods_ranked completed [353ms, 72.94 kB]
+→ 29 targets ■■■■■■■■■■■■■■■■■■■■■■           [52.9s, 1+, 19-]+ synth_data dispatched
+→ 29 targets ■■■■■■■■■■■■■■■■■■■■■■           [52.9s, 1+, 19-]✔ synth_data completed [363ms, 147.08 kB]
+→ 29 targets ■■■■■■■■■■■■■■■■■■■■■■           [52.9s, 1+, 19-]+ synth_data_baseline dispatched
+→ 29 targets ■■■■■■■■■■■■■■■■■■■■■■           [52.9s, 1+, 19-]✔ synth_data_baseline completed [22ms, 146.08 kB]
+→ 29 targets ■■■■■■■■■■■■■■■■■■■■■■           [52.9s, 1+, 19-]+ synth_fit_no_time_varying_covariates dispatched
+→ 29 targets ■■■■■■■■■■■■■■■■■■■■■■           [52.9s, 1+, 19-]✔ synth_fit_no_time_varying_covariates completed [259ms, 136.27 kB]
+→ 29 targets ■■■■■■■■■■■■■■■■■■■■■■           [52.9s, 1+, 19-]+ synth_fit dispatched
+→ 29 targets ■■■■■■■■■■■■■■■■■■■■■■           [52.9s, 1+, 19-]→ 29 targets ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■    [1m 9s, 6+, 21-]
+✔ synth_fit completed [14.5s, 191.81 kB]
+→ 29 targets ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■    [1m 9s, 6+, 21-]+ synth_fit_latam dispatched
+→ 29 targets ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■    [1m 9s, 6+, 21-]→ 29 targets ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■   [1m 14.4s, 7+, 21-]
+✔ synth_fit_latam completed [5.3s, 92.76 kB]
+→ 29 targets ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■   [1m 14.4s, 7+, 21-]+ synth_fit_baseline dispatched
+→ 29 targets ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■   [1m 14.4s, 7+, 21-]→ 29 targets ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  [1m 25.7s, 8+, 21-]
+✔ synth_fit_baseline completed [11.3s, 190.75 kB]
+→ 29 targets ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  [1m 25.7s, 8+, 21-]→ de-duplicating /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/…
+→ 29 targets ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  [1m 25.7s, 8+, 21-]✔ ended pipeline [1m 26.4s, 8 completed, 21 skipped]
+Warning messages:
+1: package ‘ggplot2’ was built under R version 4.4.3 
+2: package ‘did’ was built under R version 4.4.3 
+3: package ‘fect’ was built under R version 4.4.3 
+4: package ‘PanelMatch’ was built under R version 4.4.3 
+
+=== [13:58:58] OK    02_targets_data ===
+
+=== [13:58:58] START 02b_donor_pool_invariant ===
+Donor-pool eligibility invariant (screen must match the goods-based treatment definition)
+
+synth_data: 96 units (95 donors), 1997-2016
+  goods-panel coverage of donors: 95/95
+  no donor is China-top in goods anywhere in the window
+
+synth_data_baseline: 96 units (95 donors), 1997-2016
+  goods-panel coverage of donors: 95/95
+  no donor is China-top in goods anywhere in the window
+
+synth_data_extended: 90 units (89 donors), 1997-2019
+  goods-panel coverage of donors: 89/89
+Error: Donor-pool screen violated for 'synth_data_extended':
+  - 2 donor(s) are China's top goods export destination inside the window: MLT (2011/2012), PNG (2018/2019)
+The donor pool must contain only units untreated under the paper's own treatment definition (largest goods export destination).
+Execution halted
+
+=== [13:59:04] FAIL  02b_donor_pool_invariant  (see output/rebuild_batches/data_20260825_135719.log) ===

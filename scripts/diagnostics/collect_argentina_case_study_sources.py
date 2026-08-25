@@ -316,7 +316,7 @@ SOURCES = [
         "Strong strategic/volume salience without matching export-rank language.",
     ),
     s(
-        "mlt_economic_survey_2012", "Malta", "MLT", "Global", "0.03047",
+        "mlt_economic_survey_2012", "Malta", "MLT", "Global, replaced by Singapore", "historical 0.03047",
         "goods: not 1; goods plus services: 1", "2011", "Government of Malta", "official_statistics", "Malta", "2012",
         "https://www.parlament.mt/media/87889/economic-survey-2012.pdf",
         "Economic Survey, November 2012", "en", "following year: 2011--2012",
@@ -326,7 +326,7 @@ SOURCES = [
         "Confirms the author-identified sector-definition error: China was not first in goods; the first-place result applies only after services are included.",
     ),
     s(
-        "mlt_enterprise_2012", "Malta", "MLT", "Global", "0.03047",
+        "mlt_enterprise_2012", "Malta", "MLT", "Global, replaced by Singapore", "historical 0.03047",
         "goods: not 1; goods plus services: 1", "2011", "Malta Enterprise", "government_news", "Malta", "2012",
         "https://www.maltaenterprise.com/business-delegation-visit-hong-kong-shanghai",
         "Business delegation to visit Hong Kong and Shanghai", "en",
@@ -337,7 +337,7 @@ SOURCES = [
         "Domestic official page corroborates that China was not the first goods destination.",
     ),
     s(
-        "sgp_mti_ess_2005", "Singapore", "SGP", "Global candidate", "not in stale on-disk weights",
+        "sgp_mti_ess_2005", "Singapore", "SGP", "Global corrected", "approx 0.0295",
         "goods exports: 2; goods and services two-way: 2", "2005", "Ministry of Trade and Industry", "official_report", "Singapore", "2006",
         "https://isomer-user-content.by.gov.sg/166/15a8565c-c494-4f59-9750-ef682807e18e/ess_2005ann_full-report.pdf",
         "Economic Survey of Singapore 2005", "en", "principal: 2005--2006",
@@ -347,7 +347,7 @@ SOURCES = [
         "Contemporary domestic report does not reproduce or publicize the ITPD-E goods-export rank 2; it uses total merchandise trade and calls China fourth.",
     ),
     s(
-        "sgp_mfa_yeo_2005", "Singapore", "SGP", "Global candidate", "not in stale on-disk weights",
+        "sgp_mfa_yeo_2005", "Singapore", "SGP", "Global corrected", "approx 0.0295",
         "goods exports: 2; goods and services two-way: 2", "2005", "Ministry of Foreign Affairs", "official_speech", "Singapore", "2005-12-29",
         "https://www.mfa.gov.sg/newsroom/press-statements-transcripts-and-photos/speech-by-george-yeo-minister-for-foreign-affairs-at-the-35th-anniversary-dinner-of-the-sporechina-b-29-dec-2005/",
         "Speech at the 35th Anniversary Dinner of the Singapore-China Business Association", "en",
@@ -357,7 +357,7 @@ SOURCES = [
         "The foreign minister stresses record bilateral trade, investment, ASEAN integration and strategic interest, but no Singapore export-rank cue.",
     ),
     s(
-        "sgp_mti_fta_2006", "Singapore", "SGP", "Global candidate", "not in stale on-disk weights",
+        "sgp_mti_fta_2006", "Singapore", "SGP", "Global corrected", "approx 0.0295",
         "goods exports: 2; goods and services two-way: 2", "2005", "Ministry of Trade and Industry", "government_news", "Singapore", "2006-08-25",
         "https://www.mti.gov.sg/newsroom/china-and-singapore-to-launch-fta-negotiations/",
         "China and Singapore to launch FTA negotiations", "en", "principal: 2005--2006",
@@ -367,7 +367,7 @@ SOURCES = [
         "Official policy action is linked to record trade and investment, not to China being the second goods-export destination in ITPD-E.",
     ),
     s(
-        "sgp_mti_sip_2013", "Singapore", "SGP", "Global candidate", "not in stale on-disk weights",
+        "sgp_mti_sip_2013", "Singapore", "SGP", "Global corrected", "approx 0.0295",
         "goods exports: 2; goods and services two-way: 1", "2013", "Ministry of Trade and Industry", "government_news", "Singapore", "2013-10-22",
         "https://www.nas.gov.sg/archivesonline/data/data/pdfdoc/20131029003/15th_sip_jsc_press_release.pdf",
         "Singapore and China announce new areas of cooperation at the 15th Suzhou Industrial Park Joint Steering Council", "en",
@@ -378,7 +378,7 @@ SOURCES = [
         "Before the 2013 annual result, official language marked China as an important but not leading services destination.",
     ),
     s(
-        "sgp_ie_review_2013", "Singapore", "SGP", "Global candidate", "not in stale on-disk weights",
+        "sgp_ie_review_2013", "Singapore", "SGP", "Global corrected", "approx 0.0295",
         "goods exports: 2; goods and services two-way: 1", "2013", "International Enterprise Singapore", "official_statistics", "Singapore", "2014-02-20",
         "https://www.nas.gov.sg/archivesonline/data/data/pdfdoc/20140227003/mr00514_review_of_2013_trade_performance_2014_02_20.pdf",
         "Review of 2013 trade performance", "en", "principal: 2013--2014",
@@ -388,7 +388,7 @@ SOURCES = [
         "Official annual tables put China first in total merchandise trade and non-oil domestic exports; these public constructs differ from all-goods export destination.",
     ),
     s(
-        "sgp_mfa_uptake_2017", "Singapore", "SGP", "Global candidate", "not in stale on-disk weights",
+        "sgp_mfa_uptake_2017", "Singapore", "SGP", "Global corrected", "approx 0.0295",
         "goods exports: 2; goods and services two-way: 1", "2013", "Ministry of Foreign Affairs", "official_speech", "Singapore", "2017-03-02",
         "https://www.mfa.gov.sg/newsroom/press-statements-transcripts-and-photos/mfa-press-release-speeches-by-minister-for-foreign-affairs-dr-vivian-balakrishnan-senior-minister-of-02-mar-2017/",
         "Speeches during the Committee of Supply Debate", "en", "supplemental official uptake",
