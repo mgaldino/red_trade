@@ -190,10 +190,13 @@ write_csv(balance, op("balance.csv"))
 # donor sensitivity: leave-one-out for top donors + drop top 10
 message("Donor sensitivity.")
 top10 <- unit_weights$iso3c[seq_len(10)]
+# Labels use country names (the manuscript prints them); the removed_donors
+# column keeps the ISO3 code as the machine-readable identifier.
+top10_names <- unit_weights$country_name[seq_len(10)]
 loo <- bind_rows(lapply(seq_along(top10), function(i) {
   u <- top10[i]
   f <- sdid_fit_spec(synth_data, units = setdiff(units, u))
-  sdid_fit_summary_row(f, paste0("Drop ", u, " (rank ", i, ")")) |>
+  sdid_fit_summary_row(f, paste0("Drop ", top10_names[i], " (rank ", i, ")")) |>
     mutate(removed_donors = u, n_removed_donors = 1L)
 }))
 drop10 <- sdid_fit_spec(synth_data, units = setdiff(units, top10)) |>
@@ -278,9 +281,36 @@ message("Latin America donor pool.")
 latam_units <- synth_data |> filter(latin_america) |>
   distinct(iso3c) |> pull(iso3c)
 latam_fit <- sdid_fit_spec(synth_data, units = union(latam_units, "BRA"))
+# The regional pool is small, so its placebo SE is cheap: compute it with the
+# same replication count and seed as the preferred specification, which makes
+# the two columns directly comparable.
+latam_se <- as.numeric(sdid_placebo_se(
+  latam_fit, se_info$replications, seed = SDID_PLACEBO_SEED,
+  cores = parallel_cores, checkpoint_dir = checkpoint_dir,
+  label = "latam_no_covariates"
+))
+# Placebo-in-space ranks within the regional pool: with 20 units the rank test
+# cannot go below 1/20, which is worth reporting alongside the rank itself.
+latam_panel <- synth_data |> filter(iso3c %in% union(latam_units, "BRA"))
+latam_dist <- sdid_rank_distribution(latam_panel, label = "latam_no_covariates",
+                                     cores = parallel_cores,
+                                     checkpoint_dir = checkpoint_dir)
+write_csv(latam_dist, op("latam_placebo_distribution.csv"))
+latam_rank <- sdid_rank_inference(latam_dist, "Latin America donor pool")
 latam_summary <- sdid_fit_summary_row(latam_fit,
-                                      "Latin America donors; no covariates") |>
-  mutate(inference = "Point estimate only")
+                                      "Latin America donors; no covariates",
+                                      latam_se) |>
+  mutate(rank_one_sided_negative = latam_rank$rank_one_sided_negative,
+         rank_two_sided_absolute = latam_rank$rank_two_sided_absolute,
+         rank_denominator = latam_rank$denominator,
+         p_rank_one_sided_negative = latam_rank$p_rank_one_sided_negative,
+         p_rank_two_sided_absolute = latam_rank$p_rank_two_sided_absolute,
+         rank_floor = 1 / latam_rank$denominator,
+         se_replications = se_info$replications,
+         se_seed = SDID_PLACEBO_SEED,
+         inference = paste0("Directional placebo rank is primary; placebo SE with ",
+                            format(se_info$replications, big.mark = ","),
+                            " replications, same seed as the preferred specification"))
 write_csv(latam_summary, op("latam_core_summary.csv"))
 
 # provenance
