@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "arg_cancilleria_2007_volume",
+    "country": "Argentina",
+    "iso3c": "ARG",
+    "donor_pool": "Latin America",
+    "donor_weight": "0.059",
+    "rank_in_project": "3",
+    "rank_year": "2007-H1",
+    "vehicle": "Cancillería Argentina",
+    "source_type": "government_news",
+    "source_country": "Argentina",
+    "publication_date": "2007",
+    "url": "https://cancilleria.gob.ar/es/actualidad/comunicados/nuevos-logros-en-la-relacion-comercial-con-china",
+    "title": "Nuevos logros en la relación comercial con China",
+    "language": "es",
+    "window": "principal: 2007--2008",
+    "query_used": "site:cancilleria.gob.ar China tercer cliente exportaciones primer semestre 2007",
+    "rank_label_original": "China fue el tercer cliente",
+    "rank_level": "export_destination_3",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "yes",
+    "local_or_official": "yes",
+    "method_eligible": "yes",
+    "evidence_strength": "moderate",
+    "case_role": "Argentina timing check",
+    "notes": "First-half rank shows that the move to second place occurred within 2007."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html; charset=utf-8",
+    "size_bytes": "49016",
+    "raw_file": "data/raw/argentina_case_study/arg/arg_cancilleria_2007_volume.html",
+    "raw_sha256": "46ffdae52e5dc0ddf9bbd50c53f5a33c8acea756b49d4f078092edea3a8f7647",
+    "fetch_error": ""
+  }
+}

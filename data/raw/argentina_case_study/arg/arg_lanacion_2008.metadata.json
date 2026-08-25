@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "arg_lanacion_2008",
+    "country": "Argentina",
+    "iso3c": "ARG",
+    "donor_pool": "Latin America",
+    "donor_weight": "0.059",
+    "rank_in_project": "2",
+    "rank_year": "2007",
+    "vehicle": "La Nación",
+    "source_type": "newspaper",
+    "source_country": "Argentina",
+    "publication_date": "2008-01-16",
+    "url": "https://www.lanacion.com.ar/economia/las-exportaciones-superaron-los-us-55000-millones-en-2007-nid979301/",
+    "title": "Las exportaciones superaron los US$ 55.000 millones en 2007",
+    "language": "es",
+    "window": "principal: 2007--2008",
+    "query_used": "site:lanacion.com.ar exportaciones 2007 Brasil China Estados Unidos orden",
+    "rank_label_original": "Brasil, China y Estados Unidos, en ese orden",
+    "rank_level": "ordered_export_destinations",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "no",
+    "local_or_official": "yes",
+    "method_eligible": "yes",
+    "evidence_strength": "strong",
+    "case_role": "Argentina core",
+    "notes": "Contemporary domestic press reporting official customs data."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html; charset=utf-8",
+    "size_bytes": "328101",
+    "raw_file": "data/raw/argentina_case_study/arg/arg_lanacion_2008.html",
+    "raw_sha256": "8e6cb9da04fecd7d48c438238b972ceb91d56eb8efe92bda0182432a9a2322e0",
+    "fetch_error": ""
+  }
+}

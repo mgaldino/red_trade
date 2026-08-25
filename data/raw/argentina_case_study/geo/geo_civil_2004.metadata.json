@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "geo_civil_2004",
+    "country": "Georgia",
+    "iso3c": "GEO",
+    "donor_pool": "Global",
+    "donor_weight": "0.03048",
+    "rank_in_project": "9",
+    "rank_year": "2004",
+    "vehicle": "Civil Georgia",
+    "source_type": "digital_news",
+    "source_country": "Georgia",
+    "publication_date": "2004-12-26",
+    "url": "https://civil.ge/archives/106895",
+    "title": "Georgia, China boost relations",
+    "language": "en",
+    "window": "benchmark year: 2004--2005",
+    "query_used": "site:civil.ge China Georgia trade relations 2004 exports",
+    "rank_label_original": "",
+    "rank_level": "none",
+    "explicit_rank_language": "no",
+    "volume_language": "yes",
+    "official_uptake": "yes",
+    "local_or_official": "yes",
+    "method_eligible": "yes",
+    "evidence_strength": "moderate",
+    "case_role": "non-top benchmark",
+    "notes": "Local coverage calls 2004 a bilateral milestone but contains no export-rank cue."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html; charset=UTF-8",
+    "size_bytes": "121366",
+    "raw_file": "data/raw/argentina_case_study/geo/geo_civil_2004.html",
+    "raw_sha256": "3760d7d5694b0f5e3bef36444b3525e0550143a343028b03af30c77e36df636f",
+    "fetch_error": ""
+  }
+}

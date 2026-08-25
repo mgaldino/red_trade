@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "mlt_enterprise_2012",
+    "country": "Malta",
+    "iso3c": "MLT",
+    "donor_pool": "Global",
+    "donor_weight": "0.03047",
+    "rank_in_project": "1",
+    "rank_year": "2011",
+    "vehicle": "Malta Enterprise",
+    "source_type": "government_news",
+    "source_country": "Malta",
+    "publication_date": "2012",
+    "url": "https://www.maltaenterprise.com/business-delegation-visit-hong-kong-shanghai",
+    "title": "Business delegation to visit Hong Kong and Shanghai",
+    "language": "en",
+    "window": "following year: 2011--2012",
+    "query_used": "site:maltaenterprise.com China 71.6 Hong Kong 286 exports 2011",
+    "rank_label_original": "China €71.6m; Hong Kong €286m",
+    "rank_level": "separate_export_values",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "yes",
+    "local_or_official": "yes",
+    "method_eligible": "yes",
+    "evidence_strength": "strong",
+    "case_role": "aggregation contradiction",
+    "notes": "Domestic official page treats mainland China and Hong Kong separately."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html; charset=utf-8",
+    "size_bytes": "34849",
+    "raw_file": "data/raw/argentina_case_study/mlt/mlt_enterprise_2012.html",
+    "raw_sha256": "c7d792ac1ff975275203ad1f6866691f2af6691266e69e74444cfc9da2eaa2ad",
+    "fetch_error": ""
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "cri_uned_retrospective",
+    "country": "Costa Rica",
+    "iso3c": "CRI",
+    "donor_pool": "Latin America",
+    "donor_weight": "0.052",
+    "rank_in_project": "2",
+    "rank_year": "2006--2008",
+    "vehicle": "UNED Observatorio de Comercio Exterior",
+    "source_type": "public_university_analysis",
+    "source_country": "Costa Rica",
+    "publication_date": "undated",
+    "url": "https://www.uned.ac.cr/ocex/index.php/publicaciones/revistas?catid=124&id=647%3Aabriendo-las-puertas-a-asia-10-anos-del-tlc-con-china&view=article",
+    "title": "TLC con China: geopolítica, comercio y diplomacia",
+    "language": "es",
+    "window": "retrospective mechanism audit",
+    "query_used": "site:uned.ac.cr China \"segundo mercado de destino\" exportaciones Costa Rica 2006",
+    "rank_label_original": "segundo mercado de destino de nuestras exportaciones",
+    "rank_level": "export_destination_2",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "no",
+    "local_or_official": "yes",
+    "method_eligible": "no",
+    "evidence_strength": "strong",
+    "case_role": "retrospective political uptake",
+    "notes": "Costa Rican public-university analysis explicitly links the rank to the 2007 diplomatic switch; outside contemporaneous coding."
+  },
+  "accessed_at": "2026-08-25T16:05:54+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html; charset=utf-8",
+    "size_bytes": "52726",
+    "raw_file": "data/raw/argentina_case_study/cri/cri_uned_retrospective.html",
+    "raw_sha256": "0c936aa73e41e63e312c698734b664fdbf33221f07387e367214ed7ed0dc66a8",
+    "fetch_error": ""
+  }
+}

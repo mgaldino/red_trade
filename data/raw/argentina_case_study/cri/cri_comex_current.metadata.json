@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "cri_comex_current",
+    "country": "Costa Rica",
+    "iso3c": "CRI",
+    "donor_pool": "Latin America",
+    "donor_weight": "0.052",
+    "rank_in_project": "2",
+    "rank_year": "2007",
+    "vehicle": "COMEX Costa Rica",
+    "source_type": "government_background",
+    "source_country": "Costa Rica",
+    "publication_date": "undated",
+    "url": "https://www.comex.go.cr/tratados/china/",
+    "title": "Tratado de Libre Comercio entre Costa Rica y China",
+    "language": "es",
+    "window": "retrospective official uptake",
+    "query_used": "site:comex.go.cr tratados China segundo socio comercio Costa Rica",
+    "rank_label_original": "segundo socio comercial individual",
+    "rank_level": "generic_trade_partner_2",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "yes",
+    "local_or_official": "yes",
+    "method_eligible": "no",
+    "evidence_strength": "moderate",
+    "case_role": "official uptake",
+    "notes": "Current background page; supports institutional uptake, not contemporaneous coding."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html; charset=utf-8",
+    "size_bytes": "161610",
+    "raw_file": "data/raw/argentina_case_study/cri/cri_comex_current.html",
+    "raw_sha256": "ce432516b97e429fc95305c2c62fa67a960219ddf6d0f2d5520deacfe906b9af",
+    "fetch_error": ""
+  }
+}

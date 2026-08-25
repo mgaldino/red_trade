@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "arg_ambito_2010",
+    "country": "Argentina",
+    "iso3c": "ARG",
+    "donor_pool": "Latin America",
+    "donor_weight": "0.059",
+    "rank_in_project": "2",
+    "rank_year": "2010",
+    "vehicle": "Ámbito",
+    "source_type": "business_news",
+    "source_country": "Argentina",
+    "publication_date": "2010-07-09",
+    "url": "https://www.ambito.com/edicion-impresa/cristina-viaja-china-la-soja-la-agenda-n3631410",
+    "title": "Cristina viaja a China con la soja en la agenda",
+    "language": "es",
+    "window": "secondary: 2010--2011",
+    "query_used": "site:ambito.com Cristina China 2010 \"segundo destino\" exportaciones",
+    "rank_label_original": "segundo destino de las exportaciones argentinas",
+    "rank_level": "export_destination_2",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "no",
+    "local_or_official": "yes",
+    "method_eligible": "yes",
+    "evidence_strength": "strong",
+    "case_role": "Argentina secondary",
+    "notes": "Domestic coverage connects the rank to a presidential visit and business mission."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html; charset=UTF-8",
+    "size_bytes": "107993",
+    "raw_file": "data/raw/argentina_case_study/arg/arg_ambito_2010.html",
+    "raw_sha256": "c3aafb45b7c94797fb178e01871da2f6f1bb7c35b6ff95801a769274bcb211bc",
+    "fetch_error": ""
+  }
+}

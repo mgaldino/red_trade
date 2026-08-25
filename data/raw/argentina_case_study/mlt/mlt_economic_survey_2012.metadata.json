@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "mlt_economic_survey_2012",
+    "country": "Malta",
+    "iso3c": "MLT",
+    "donor_pool": "Global",
+    "donor_weight": "0.03047",
+    "rank_in_project": "1",
+    "rank_year": "2011",
+    "vehicle": "Government of Malta",
+    "source_type": "official_statistics",
+    "source_country": "Malta",
+    "publication_date": "2012",
+    "url": "https://www.parlament.mt/media/87889/economic-survey-2012.pdf",
+    "title": "Economic Survey, November 2012",
+    "language": "en",
+    "window": "following year: 2011--2012",
+    "query_used": "site:parlament.mt economic survey 2012 Malta exports China Hong Kong 2011",
+    "rank_label_original": "Germany 326.2; Hong Kong 286.1; China 71.5",
+    "rank_level": "ordered_export_values",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "yes",
+    "local_or_official": "yes",
+    "method_eligible": "yes",
+    "evidence_strength": "strong",
+    "case_role": "aggregation contradiction",
+    "notes": "Domestic official values show mainland China was not first; China plus Hong Kong can be first."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "application/pdf",
+    "size_bytes": "565534",
+    "raw_file": "data/raw/argentina_case_study/mlt/mlt_economic_survey_2012.pdf",
+    "raw_sha256": "b4158affef6d90188a3e41f75f5687bdab1b1a6ee1a5a223681e4eae40cd2545",
+    "fetch_error": ""
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "geo_wits_2004",
+    "country": "Georgia",
+    "iso3c": "GEO",
+    "donor_pool": "Global",
+    "donor_weight": "0.03048",
+    "rank_in_project": "9",
+    "rank_year": "2004",
+    "vehicle": "WITS/World Bank",
+    "source_type": "international_statistics",
+    "source_country": "International",
+    "publication_date": "undated",
+    "url": "https://wits.worldbank.org/CountryProfile/en/Country/GEO/Year/2004/Summarytext",
+    "title": "Georgia Trade Summary 2004",
+    "language": "en",
+    "window": "retrospective rank audit",
+    "query_used": "WITS Georgia export partners 2004 China",
+    "rank_label_original": "Turkey, Turkmenistan, Russia, Armenia, United Kingdom",
+    "rank_level": "ordered_export_destinations",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "no",
+    "local_or_official": "no",
+    "method_eligible": "no",
+    "evidence_strength": "strong",
+    "case_role": "non-top benchmark",
+    "notes": "Metric audit confirms that China was outside the leading export destinations."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html; charset=utf-8",
+    "size_bytes": "78320",
+    "raw_file": "data/raw/argentina_case_study/geo/geo_wits_2004.html",
+    "raw_sha256": "6fe00ef77464005cba73658382224a8c3395c6dc6fe2130cc90d2ddca706cc03",
+    "fetch_error": ""
+  }
+}

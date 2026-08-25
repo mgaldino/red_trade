@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "col_eltiempo_half_2014",
+    "country": "Colombia",
+    "iso3c": "COL",
+    "donor_pool": "Latin America",
+    "donor_weight": "0.068",
+    "rank_in_project": "2",
+    "rank_year": "2014",
+    "vehicle": "El Tiempo",
+    "source_type": "newspaper",
+    "source_country": "Colombia",
+    "publication_date": "2014-09-02",
+    "url": "https://www.eltiempo.com/archivo/documento/CMS-14475655",
+    "title": "Exportaciones a China ya son la mitad de las que van a EE. UU.",
+    "language": "es",
+    "window": "principal: 2014--2015",
+    "query_used": "site:eltiempo.com 2014 China exportaciones mitad Estados Unidos socio histórico",
+    "rank_label_original": "mitad de las que van a Estados Unidos",
+    "rank_level": "rank_comparison_not_ordinal",
+    "explicit_rank_language": "no",
+    "volume_language": "yes",
+    "official_uptake": "no",
+    "local_or_official": "yes",
+    "method_eligible": "yes",
+    "evidence_strength": "moderate",
+    "case_role": "rank-2 comparison",
+    "notes": "Status comparison is salient but the title itself does not say second."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html; charset=UTF-8",
+    "size_bytes": "181829",
+    "raw_file": "data/raw/argentina_case_study/col/col_eltiempo_half_2014.html",
+    "raw_sha256": "0a246a5be402099dd463b7f917cf1560c66fa89058b70523e23cb58b14b7f66b",
+    "fetch_error": ""
+  }
+}

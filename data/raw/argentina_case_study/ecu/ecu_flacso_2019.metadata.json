@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "ecu_flacso_2019",
+    "country": "Ecuador",
+    "iso3c": "ECU",
+    "donor_pool": "Latin America",
+    "donor_weight": "0.040",
+    "rank_in_project": "2",
+    "rank_year": "2015",
+    "vehicle": "FLACSO Ecuador repository",
+    "source_type": "academic_thesis",
+    "source_country": "Ecuador",
+    "publication_date": "2019",
+    "url": "https://repositorio.flacsoandes.edu.ec/bitstream/10469/15641/8/TFLACSO-2019SLHV.pdf",
+    "title": "Relaciones comerciales Ecuador-China",
+    "language": "es",
+    "window": "retrospective metric audit",
+    "query_used": "Ecuador China sexto destino exportaciones 2015 FLACSO",
+    "rank_label_original": "China ... sexto destino de exportaciones en 2015",
+    "rank_level": "export_destination_6",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "no",
+    "local_or_official": "yes",
+    "method_eligible": "no",
+    "evidence_strength": "strong",
+    "case_role": "metric contradiction",
+    "notes": "Later domestic academic source conflicts with the project rank-2 flag."
+  },
+  "accessed_at": "2026-08-25T16:13:44+00:00",
+  "fetch": {
+    "fetch_status": "http_error",
+    "http_status": "403",
+    "content_type": "text/html",
+    "size_bytes": "3081",
+    "raw_file": "data/raw/argentina_case_study/ecu/ecu_flacso_2019.pdf",
+    "raw_sha256": "4842b43d3b604e6536b046a63b5a1560b63765f3d551d3d5ba29c5b887ff087d",
+    "fetch_error": "HTTP Error 403: Forbidden"
+  }
+}

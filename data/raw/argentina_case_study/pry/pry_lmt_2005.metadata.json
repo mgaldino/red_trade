@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "pry_lmt_2005",
+    "country": "Paraguay",
+    "iso3c": "PRY",
+    "donor_pool": "Global",
+    "donor_weight": "0.02690",
+    "rank_in_project": "11",
+    "rank_year": "2005",
+    "vehicle": "Associated Press syndication",
+    "source_type": "news_agency",
+    "source_country": "United States",
+    "publication_date": "2005-01-23",
+    "url": "https://www.lmtonline.com/lmtenespanol/article/Paraguay-no-tendr-relaciones-diplom-ticas-con-10261960.php",
+    "title": "Paraguay no tendrá relaciones diplomáticas con China",
+    "language": "es",
+    "window": "benchmark year: 2005--2006",
+    "query_used": "Paraguay China relaciones diplomáticas 2005 exportaciones 7,6 importaciones 180",
+    "rank_label_original": "exportaciones 7,6 millones; importaciones 180 millones",
+    "rank_level": "trade_values_no_ordinal",
+    "explicit_rank_language": "no",
+    "volume_language": "yes",
+    "official_uptake": "yes",
+    "local_or_official": "no",
+    "method_eligible": "no",
+    "evidence_strength": "moderate",
+    "case_role": "non-top benchmark",
+    "notes": "Contemporary foreign-minister statement makes China salient diplomatically, not as export status."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html; charset=utf-8",
+    "size_bytes": "427306",
+    "raw_file": "data/raw/argentina_case_study/pry/pry_lmt_2005.html",
+    "raw_sha256": "c24293d6496c905b98712e5a2be3c01d92191b25e4df0696975be4327b47206a",
+    "fetch_error": ""
+  }
+}

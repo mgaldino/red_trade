@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "jam_embassy_2005",
+    "country": "Jamaica",
+    "iso3c": "JAM",
+    "donor_pool": "Latin America",
+    "donor_weight": "0.052",
+    "rank_in_project": "2",
+    "rank_year": "2004",
+    "vehicle": "Embassy of China in Jamaica",
+    "source_type": "foreign_government",
+    "source_country": "China",
+    "publication_date": "2005",
+    "url": "https://jm.china-embassy.gov.cn/eng/zygx/jmhz/200509/t20050910_10326779.htm",
+    "title": "Trade cooperation between China and Jamaica",
+    "language": "en",
+    "window": "principal: 2004--2005",
+    "query_used": "China Jamaica trade volume 2004 biggest English Caribbean partner",
+    "rank_label_original": "biggest English-speaking Caribbean trading partner",
+    "rank_level": "different_construct_rank1",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "yes",
+    "local_or_official": "no",
+    "method_eligible": "no",
+    "evidence_strength": "weak",
+    "case_role": "volume-only comparator",
+    "notes": "Foreign-government source and a different construct; not countable as domestic cue."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html",
+    "size_bytes": "5205",
+    "raw_file": "data/raw/argentina_case_study/jam/jam_embassy_2005.htm",
+    "raw_sha256": "b51e343795d7e97f15880ed5c901e56a99212ec614476fd81517922d5dd12c7d",
+    "fetch_error": ""
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "ecu_planv_current",
+    "country": "Ecuador",
+    "iso3c": "ECU",
+    "donor_pool": "Latin America",
+    "donor_weight": "0.040",
+    "rank_in_project": "2",
+    "rank_year": "2015",
+    "vehicle": "Plan V",
+    "source_type": "digital_news",
+    "source_country": "Ecuador",
+    "publication_date": "undated",
+    "url": "https://planv.com.ec/historias/radiografia-china-america-latina-y-el-ecuador-diez-anos-la-franja-y-la-ruta/",
+    "title": "Radiografía de China en América Latina y el Ecuador",
+    "language": "es",
+    "window": "retrospective metric audit",
+    "query_used": "site:planv.com.ec China Ecuador sexto destino exportaciones 2015",
+    "rank_label_original": "en 2015, China ocupaba el sexto lugar",
+    "rank_level": "export_destination_6",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "no",
+    "local_or_official": "yes",
+    "method_eligible": "no",
+    "evidence_strength": "strong",
+    "case_role": "metric contradiction",
+    "notes": "Later domestic report says second place was reached only after the study period."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html; charset=UTF-8",
+    "size_bytes": "754124",
+    "raw_file": "data/raw/argentina_case_study/ecu/ecu_planv_current.html",
+    "raw_sha256": "ebe6a63d52206783621e6ba1abebd794038981fee407645c1c64f267dad3363e",
+    "fetch_error": ""
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "jam_statin_historical",
+    "country": "Jamaica",
+    "iso3c": "JAM",
+    "donor_pool": "Latin America",
+    "donor_weight": "0.052",
+    "rank_in_project": "2",
+    "rank_year": "2004",
+    "vehicle": "STATIN Jamaica",
+    "source_type": "official_statistics",
+    "source_country": "Jamaica",
+    "publication_date": "undated",
+    "url": "https://statinja.gov.jm/trade-econ%20statistics/internationalmerchandisetrade/traderankine.aspx",
+    "title": "Trade ranking by country",
+    "language": "en",
+    "window": "retrospective metric audit",
+    "query_used": "site:statinja.gov.jm 2004 domestic exports China rank Jamaica",
+    "rank_label_original": "United States, Canada, China",
+    "rank_level": "ordered_export_destinations",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "yes",
+    "local_or_official": "yes",
+    "method_eligible": "no",
+    "evidence_strength": "strong",
+    "case_role": "metric contradiction",
+    "notes": "Historical official table appears to place China third in domestic exports."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html; charset=utf-8",
+    "size_bytes": "49370",
+    "raw_file": "data/raw/argentina_case_study/jam/jam_statin_historical.html",
+    "raw_sha256": "c1508d922c86f9ffaeead9692b140ab10a3e6607e128acf552746c3c915e8b93",
+    "fetch_error": ""
+  }
+}

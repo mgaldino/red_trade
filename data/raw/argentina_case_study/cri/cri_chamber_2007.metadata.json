@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "cri_chamber_2007",
+    "country": "Costa Rica",
+    "iso3c": "CRI",
+    "donor_pool": "Latin America",
+    "donor_weight": "0.052",
+    "rank_in_project": "2",
+    "rank_year": "2007",
+    "vehicle": "Cámara de Industria y Comercio Costa Rica-China",
+    "source_type": "business_magazine",
+    "source_country": "Costa Rica",
+    "publication_date": "2007",
+    "url": "https://www.cicccr.com/conexion/Conexion14.pdf",
+    "title": "Conexión China, número 14",
+    "language": "es",
+    "window": "principal: 2007--2008",
+    "query_used": "Costa Rica China \"segundo mercado\" exportaciones Conexion 14",
+    "rank_label_original": "después de Estados Unidos ... el segundo mercado",
+    "rank_level": "export_destination_2",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "no",
+    "local_or_official": "yes",
+    "method_eligible": "yes",
+    "evidence_strength": "moderate",
+    "case_role": "rank-2 comparison",
+    "notes": "Domestic bilateral chamber publication; not independent press."
+  },
+  "accessed_at": "2026-08-25T16:13:44+00:00",
+  "fetch": {
+    "fetch_status": "http_error",
+    "http_status": "500",
+    "content_type": "text/html",
+    "size_bytes": "7309",
+    "raw_file": "data/raw/argentina_case_study/cri/cri_chamber_2007.pdf",
+    "raw_sha256": "a8a284f377cb9f21c53e5553234ecb693dc4c2c38f3306b6cde4aead5e05e913",
+    "fetch_error": "HTTP Error 500: Internal Server Error"
+  }
+}

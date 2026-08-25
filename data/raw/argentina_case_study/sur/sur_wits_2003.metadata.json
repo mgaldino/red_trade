@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "sur_wits_2003",
+    "country": "Suriname",
+    "iso3c": "SUR",
+    "donor_pool": "Latin America",
+    "donor_weight": "not in supplied donor list",
+    "rank_in_project": "8",
+    "rank_year": "2003",
+    "vehicle": "WITS/World Bank",
+    "source_type": "international_statistics",
+    "source_country": "International",
+    "publication_date": "undated",
+    "url": "https://wits.worldbank.org/CountryProfile/en/Country/SUR/Year/2003/TradeFlow/EXPIMP/Partner/by-country",
+    "title": "Suriname trade by partner 2003",
+    "language": "en",
+    "window": "retrospective rank audit",
+    "query_used": "WITS Suriname export partners 2003 China",
+    "rank_label_original": "Unspecified, Belgium, United Arab Emirates, Guyana, India",
+    "rank_level": "ordered_export_destinations",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "no",
+    "local_or_official": "no",
+    "method_eligible": "no",
+    "evidence_strength": "strong",
+    "case_role": "archive-limited benchmark",
+    "notes": "No local contemporary source was recovered; do not code public absence from this alone."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html; charset=utf-8",
+    "size_bytes": "89631",
+    "raw_file": "data/raw/argentina_case_study/sur/sur_wits_2003.html",
+    "raw_sha256": "944d10e2fc8a1ae8179ad03970d3a5fb4c443db15a07a737fd58faedbd7e1aa7",
+    "fetch_error": ""
+  }
+}

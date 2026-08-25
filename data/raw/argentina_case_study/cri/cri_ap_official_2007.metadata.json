@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "cri_ap_official_2007",
+    "country": "Costa Rica",
+    "iso3c": "CRI",
+    "donor_pool": "Latin America",
+    "donor_weight": "0.052",
+    "rank_in_project": "2",
+    "rank_year": "2007",
+    "vehicle": "Associated Press syndication",
+    "source_type": "news_agency",
+    "source_country": "United States",
+    "publication_date": "2007-02-19",
+    "url": "https://www.myplainview.com/news/article/Resaltan-aumento-de-exportaciones-de-Costa-Rica-a-8549548.php",
+    "title": "Resaltan aumento de exportaciones de Costa Rica a China",
+    "language": "es",
+    "window": "principal: 2007--2008",
+    "query_used": "Costa Rica China segundo destino exportaciones 2007 ministro comercio",
+    "rank_label_original": "China ... segundo destino de las exportaciones",
+    "rank_level": "export_destination_2",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "yes",
+    "local_or_official": "yes",
+    "method_eligible": "no",
+    "evidence_strength": "strong",
+    "case_role": "rank-2 comparison",
+    "notes": "Non-domestic syndication, but quotes a contemporary Costa Rican minister; supplemental."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html; charset=utf-8",
+    "size_bytes": "434700",
+    "raw_file": "data/raw/argentina_case_study/cri/cri_ap_official_2007.html",
+    "raw_sha256": "e780f09737e2bd3ed48c2d8508883f304507b96763e11fe0ab3a7428bb471c68",
+    "fetch_error": ""
+  }
+}

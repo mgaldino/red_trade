@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "arg_cancilleria_2009a",
+    "country": "Argentina",
+    "iso3c": "ARG",
+    "donor_pool": "Latin America",
+    "donor_weight": "0.059",
+    "rank_in_project": "2",
+    "rank_year": "2007",
+    "vehicle": "Cancillería Argentina",
+    "source_type": "official_speech",
+    "source_country": "Argentina",
+    "publication_date": "2009-09-07",
+    "url": "https://cancilleria.gob.ar/es/actualidad/comunicados/desde-beijing-taiana-califica-las-relaciones-entre-argentina-y-china-como",
+    "title": "Desde Beijing, Taiana califica las relaciones ... como estratégicas",
+    "language": "es",
+    "window": "supplemental official uptake",
+    "query_used": "site:cancilleria.gob.ar \"segundo destino\" exportaciones argentinas China",
+    "rank_label_original": "China se transformó en el segundo destino",
+    "rank_level": "export_destination_2",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "yes",
+    "local_or_official": "yes",
+    "method_eligible": "no",
+    "evidence_strength": "strong",
+    "case_role": "Argentina official uptake",
+    "notes": "Outside the strict 2007--2008 window; relevant as subsequent official uptake."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html; charset=utf-8",
+    "size_bytes": "48286",
+    "raw_file": "data/raw/argentina_case_study/arg/arg_cancilleria_2009a.html",
+    "raw_sha256": "2ff51c7333249ee3559bb87e414ad6f2019f62e4e7cff43e851b7120684a8b2e",
+    "fetch_error": ""
+  }
+}

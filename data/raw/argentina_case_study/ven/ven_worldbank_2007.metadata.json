@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "ven_worldbank_2007",
+    "country": "Venezuela",
+    "iso3c": "VEN",
+    "donor_pool": "Latin America",
+    "donor_weight": "0.026",
+    "rank_in_project": "2",
+    "rank_year": "2007",
+    "vehicle": "World Bank",
+    "source_type": "international_statistics",
+    "source_country": "International",
+    "publication_date": "2012",
+    "url": "https://documents1.worldbank.org/curated/en/970071468309390287/pdf/72796020090Ven0Box0371958B00PUBLIC0.pdf",
+    "title": "Venezuela trade profile",
+    "language": "en",
+    "window": "retrospective metric audit",
+    "query_used": "Venezuela export markets 2007 China 7 percent World Bank",
+    "rank_label_original": "United States, Colombia, Brazil, China",
+    "rank_level": "ordered_export_destinations",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "no",
+    "local_or_official": "no",
+    "method_eligible": "no",
+    "evidence_strength": "strong",
+    "case_role": "metric contradiction",
+    "notes": "Later international profile places China fourth, not second."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "application/pdf;charset=utf-8",
+    "size_bytes": "636741",
+    "raw_file": "data/raw/argentina_case_study/ven/ven_worldbank_2007.pdf",
+    "raw_sha256": "af8c06e453f77f8b550e31ebb002d675d014cbedd981b02f4161e57e77530267",
+    "fetch_error": ""
+  }
+}

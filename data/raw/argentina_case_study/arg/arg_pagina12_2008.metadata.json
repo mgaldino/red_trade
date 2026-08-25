@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "arg_pagina12_2008",
+    "country": "Argentina",
+    "iso3c": "ARG",
+    "donor_pool": "Latin America",
+    "donor_weight": "0.059",
+    "rank_in_project": "2",
+    "rank_year": "2007",
+    "vehicle": "Página/12 Cash",
+    "source_type": "newspaper",
+    "source_country": "Argentina",
+    "publication_date": "2008-04-27",
+    "url": "https://www.pagina12.com.ar/diario/suplementos/cash/17-3470-2008-04-27.html",
+    "title": "Un socio estratégico",
+    "language": "es",
+    "window": "principal: 2007--2008",
+    "query_used": "site:pagina12.com.ar China \"segundo socio comercial\" 2007 Argentina",
+    "rank_label_original": "China fue el segundo socio comercial del país en 2007",
+    "rank_level": "generic_trade_partner_2",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "no",
+    "local_or_official": "yes",
+    "method_eligible": "yes",
+    "evidence_strength": "moderate",
+    "case_role": "Argentina supplement",
+    "notes": "Generic bilateral-trade rank, not the exact export-destination construct."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html",
+    "size_bytes": "25613",
+    "raw_file": "data/raw/argentina_case_study/arg/arg_pagina12_2008.html",
+    "raw_sha256": "a4c756c0b713bdddc84c6dedafc06b93a26607d2a44175d77aad276f23e0e1b5",
+    "fetch_error": ""
+  }
+}

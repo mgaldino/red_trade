@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "bol_mefp_2015",
+    "country": "Bolivia",
+    "iso3c": "BOL",
+    "donor_pool": "Latin America",
+    "donor_weight": "not in supplied donor list",
+    "rank_in_project": "4",
+    "rank_year": "2015",
+    "vehicle": "Ministerio de Economía y Finanzas Públicas",
+    "source_type": "official_report",
+    "source_country": "Bolivia",
+    "publication_date": "2016",
+    "url": "https://www.economiayfinanzas.gob.bo/sites/default/files/2022-11/memoria2015.pdf",
+    "title": "Memoria de la economía boliviana 2015",
+    "language": "es",
+    "window": "following year: 2015--2016",
+    "query_used": "site:economiayfinanzas.gob.bo memoria 2015 China exportaciones Bolivia",
+    "rank_label_original": "Brasil, Argentina y Estados Unidos",
+    "rank_level": "leading_export_destinations",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "yes",
+    "local_or_official": "yes",
+    "method_eligible": "yes",
+    "evidence_strength": "strong",
+    "case_role": "non-top benchmark",
+    "notes": "Domestic official report identifies the leading export destinations without China among the top three."
+  },
+  "accessed_at": "2026-08-25T16:13:44+00:00",
+  "fetch": {
+    "fetch_status": "error",
+    "http_status": "",
+    "content_type": "",
+    "size_bytes": "0",
+    "raw_file": "",
+    "raw_sha256": "",
+    "fetch_error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "arg_cancilleria_2009b",
+    "country": "Argentina",
+    "iso3c": "ARG",
+    "donor_pool": "Latin America",
+    "donor_weight": "0.059",
+    "rank_in_project": "2",
+    "rank_year": "2007",
+    "vehicle": "Cancillería Argentina",
+    "source_type": "government_news",
+    "source_country": "Argentina",
+    "publication_date": "2009-10-16",
+    "url": "https://cancilleria.gob.ar/es/actualidad/comunicados/argentina-china-reunion-economica-de-alto-nivel",
+    "title": "Argentina-China: reunión económica de alto nivel",
+    "language": "es",
+    "window": "supplemental official uptake",
+    "query_used": "site:cancilleria.gob.ar Argentina China \"segundo destino\" 2009",
+    "rank_label_original": "el segundo destino de las exportaciones argentinas",
+    "rank_level": "export_destination_2",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "yes",
+    "local_or_official": "yes",
+    "method_eligible": "no",
+    "evidence_strength": "strong",
+    "case_role": "Argentina official uptake",
+    "notes": "Links export volume and status to the bilateral high-level commission."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html; charset=utf-8",
+    "size_bytes": "44278",
+    "raw_file": "data/raw/argentina_case_study/arg/arg_cancilleria_2009b.html",
+    "raw_sha256": "2b8bada0c66544e4a650a804281813d31cc9d440ef010612307b1b67c9a417d3",
+    "fetch_error": ""
+  }
+}

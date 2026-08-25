@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "tcd_unctad_2005",
+    "country": "Chad",
+    "iso3c": "TCD",
+    "donor_pool": "Global",
+    "donor_weight": "0.02769",
+    "rank_in_project": "2",
+    "rank_year": "2004",
+    "vehicle": "UNCTAD",
+    "source_type": "international_report",
+    "source_country": "International",
+    "publication_date": "2005",
+    "url": "https://unctad.org/system/files/official-document/ldcmisc20053_fr.pdf",
+    "title": "Profil de la vulnérabilité commerciale du Tchad",
+    "language": "fr",
+    "window": "following year: 2004--2005",
+    "query_used": "Tchad Chine destination exportations 2004 deuxième UNCTAD",
+    "rank_label_original": "la Chine ... 21 pour cent des exportations",
+    "rank_level": "export_share_no_ordinal",
+    "explicit_rank_language": "no",
+    "volume_language": "yes",
+    "official_uptake": "no",
+    "local_or_official": "no",
+    "method_eligible": "no",
+    "evidence_strength": "moderate",
+    "case_role": "archive-limited case",
+    "notes": "Confirms large China exposure, but not a domestic contemporaneous rank cue."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "application/pdf",
+    "size_bytes": "835091",
+    "raw_file": "data/raw/argentina_case_study/tcd/tcd_unctad_2005.pdf",
+    "raw_sha256": "317373eef7bad0152fc711ac314ac8a7f5735bbd2911cefcc2f79620af9d85b1",
+    "fetch_error": ""
+  }
+}

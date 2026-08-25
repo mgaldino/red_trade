@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "col_eltiempo_rank_2014",
+    "country": "Colombia",
+    "iso3c": "COL",
+    "donor_pool": "Latin America",
+    "donor_weight": "0.068",
+    "rank_in_project": "2",
+    "rank_year": "2014",
+    "vehicle": "El Tiempo",
+    "source_type": "newspaper",
+    "source_country": "Colombia",
+    "publication_date": "2014-08-11",
+    "url": "https://www.eltiempo.com/archivo/documento/CMS-14368997",
+    "title": "China gana participación entre los destinos de exportación",
+    "language": "es",
+    "window": "principal: 2014--2015",
+    "query_used": "site:eltiempo.com exportaciones China 12,4 Panamá \"le siguen\" 2014",
+    "rank_label_original": "Le siguen, en su orden, China ... Panamá",
+    "rank_level": "ordered_export_destinations",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "no",
+    "local_or_official": "yes",
+    "method_eligible": "yes",
+    "evidence_strength": "strong",
+    "case_role": "rank-2 comparison",
+    "notes": "Domestic newspaper gives an ordered list after the United States."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html; charset=UTF-8",
+    "size_bytes": "174381",
+    "raw_file": "data/raw/argentina_case_study/col/col_eltiempo_rank_2014.html",
+    "raw_sha256": "30a68d7aa03de203fbc273a00c1c9d4d87fb1bc090e615c7e19d94b7922cc4db",
+    "fetch_error": ""
+  }
+}

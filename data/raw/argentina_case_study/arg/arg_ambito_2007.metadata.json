@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "arg_ambito_2007",
+    "country": "Argentina",
+    "iso3c": "ARG",
+    "donor_pool": "Latin America",
+    "donor_weight": "0.059",
+    "rank_in_project": "2",
+    "rank_year": "2007",
+    "vehicle": "Ámbito",
+    "source_type": "business_news",
+    "source_country": "Argentina",
+    "publication_date": "2007-12-20",
+    "url": "https://www.ambito.com/secciones-especiales/el-comercio-china-n3477301",
+    "title": "El comercio con China",
+    "language": "es",
+    "window": "principal: 2007--2008",
+    "query_used": "site:ambito.com Argentina China \"segundo destino\" exportaciones 2007",
+    "rank_label_original": "el segundo destino de las exportaciones argentinas",
+    "rank_level": "export_destination_2",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "no",
+    "local_or_official": "yes",
+    "method_eligible": "yes",
+    "evidence_strength": "strong",
+    "case_role": "Argentina core",
+    "notes": "Contemporary domestic business press; the result-level snippet contains the rank phrase."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html; charset=UTF-8",
+    "size_bytes": "106207",
+    "raw_file": "data/raw/argentina_case_study/arg/arg_ambito_2007.html",
+    "raw_sha256": "35a2fdd0c3bdc7726b97e0f8c28d349e86931d03510fd4af6535c92b18e6cafa",
+    "fetch_error": ""
+  }
+}

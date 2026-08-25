@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "col_elcolombiano_2015",
+    "country": "Colombia",
+    "iso3c": "COL",
+    "donor_pool": "Latin America",
+    "donor_weight": "0.068",
+    "rank_in_project": "2",
+    "rank_year": "2014",
+    "vehicle": "El Colombiano",
+    "source_type": "newspaper",
+    "source_country": "Colombia",
+    "publication_date": "2015-02-18",
+    "url": "https://www.elcolombiano.com/amp/negocios/economia/exportaciones-colombianas-cayeron-6-8-por-ciento-en-2014-dane-ED1324116",
+    "title": "Exportaciones colombianas cayeron 6,8 por ciento en 2014",
+    "language": "es",
+    "window": "principal: 2014--2015",
+    "query_used": "site:elcolombiano.com \"El segundo destino fue China\" 2014",
+    "rank_label_original": "El segundo destino fue China",
+    "rank_level": "export_destination_2",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "no",
+    "local_or_official": "yes",
+    "method_eligible": "yes",
+    "evidence_strength": "strong",
+    "case_role": "rank-2 comparison",
+    "notes": "Following-year domestic report of DANE's annual result."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html",
+    "size_bytes": "58726",
+    "raw_file": "data/raw/argentina_case_study/col/col_elcolombiano_2015.html",
+    "raw_sha256": "b96796a54301e017726a8dc227b4cff024a590051a9f7d798db868f9f03be5ed",
+    "fetch_error": ""
+  }
+}

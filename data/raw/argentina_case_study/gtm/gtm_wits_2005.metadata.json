@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "gtm_wits_2005",
+    "country": "Guatemala",
+    "iso3c": "GTM",
+    "donor_pool": "Global",
+    "donor_weight": "0.02731",
+    "rank_in_project": "10",
+    "rank_year": "2005",
+    "vehicle": "WITS/World Bank",
+    "source_type": "international_statistics",
+    "source_country": "International",
+    "publication_date": "undated",
+    "url": "https://wits.worldbank.org/CountryProfile/en/Country/GTM/Year/2005/TradeFlow/EXPIMP/Partner/by-country",
+    "title": "Guatemala trade by partner 2005",
+    "language": "en",
+    "window": "retrospective rank audit",
+    "query_used": "WITS Guatemala exports partners 2005 China",
+    "rank_label_original": "United States, El Salvador, Honduras, Mexico, Nicaragua",
+    "rank_level": "ordered_export_destinations",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "no",
+    "local_or_official": "no",
+    "method_eligible": "no",
+    "evidence_strength": "strong",
+    "case_role": "non-top benchmark",
+    "notes": "China was a major import origin, not a top export destination."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html; charset=utf-8",
+    "size_bytes": "160932",
+    "raw_file": "data/raw/argentina_case_study/gtm/gtm_wits_2005.html",
+    "raw_sha256": "aec074058a99b756e908743333169fa6631cda05b88f824d79fe821c07d3e805",
+    "fetch_error": ""
+  }
+}

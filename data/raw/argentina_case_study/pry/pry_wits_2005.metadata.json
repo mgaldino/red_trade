@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "pry_wits_2005",
+    "country": "Paraguay",
+    "iso3c": "PRY",
+    "donor_pool": "Global",
+    "donor_weight": "0.02690",
+    "rank_in_project": "11",
+    "rank_year": "2005",
+    "vehicle": "WITS/World Bank",
+    "source_type": "international_statistics",
+    "source_country": "International",
+    "publication_date": "undated",
+    "url": "https://wits.worldbank.org/CountryProfile/es/Country/PRY/Year/2005/Summarytext",
+    "title": "Paraguay Trade Summary 2005",
+    "language": "es",
+    "window": "retrospective rank audit",
+    "query_used": "WITS Paraguay export partners 2005 China",
+    "rank_label_original": "Brasil, Uruguay, Argentina, Islas Caimán, Rusia",
+    "rank_level": "ordered_export_destinations",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "no",
+    "local_or_official": "no",
+    "method_eligible": "no",
+    "evidence_strength": "strong",
+    "case_role": "non-top benchmark",
+    "notes": "Confirms China was not a leading export destination."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html; charset=utf-8",
+    "size_bytes": "77872",
+    "raw_file": "data/raw/argentina_case_study/pry/pry_wits_2005.html",
+    "raw_sha256": "4c5dcfc1cdf7b437e45f8922fb44c56e4c002c775929dac048e6b629663c22a2",
+    "fetch_error": ""
+  }
+}

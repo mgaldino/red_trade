@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "col_dane_2014",
+    "country": "Colombia",
+    "iso3c": "COL",
+    "donor_pool": "Latin America",
+    "donor_weight": "0.068",
+    "rank_in_project": "2",
+    "rank_year": "2014",
+    "vehicle": "DANE",
+    "source_type": "official_statistics",
+    "source_country": "Colombia",
+    "publication_date": "2014",
+    "url": "https://www.dane.gov.co/files/investigaciones/boletines/exportaciones/bol_exp_jul14.pdf",
+    "title": "Boletín técnico: exportaciones, julio de 2014",
+    "language": "es",
+    "window": "principal: 2014--2015",
+    "query_used": "site:dane.gov.co bol_exp_jul14 China 11,5 Estados Unidos 24,8",
+    "rank_label_original": "Estados Unidos 24,8%; China 11,5%",
+    "rank_level": "ordered_official_table",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "yes",
+    "local_or_official": "yes",
+    "method_eligible": "yes",
+    "evidence_strength": "strong",
+    "case_role": "rank-2 comparison",
+    "notes": "Contemporary official table orders destinations by export share."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "application/pdf",
+    "size_bytes": "915504",
+    "raw_file": "data/raw/argentina_case_study/col/col_dane_2014.pdf",
+    "raw_sha256": "1058a8f42101b01961e51a0d9c9284915314ea359f57fdefb2b4380ebc9fc9fa",
+    "fetch_error": ""
+  }
+}

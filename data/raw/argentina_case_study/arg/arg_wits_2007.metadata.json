@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "arg_wits_2007",
+    "country": "Argentina",
+    "iso3c": "ARG",
+    "donor_pool": "Latin America",
+    "donor_weight": "0.059",
+    "rank_in_project": "2",
+    "rank_year": "2007",
+    "vehicle": "WITS/World Bank",
+    "source_type": "international_statistics",
+    "source_country": "International",
+    "publication_date": "undated",
+    "url": "https://wits.worldbank.org/CountryProfile/es/Country/ARG/Year/2007/Summarytext",
+    "title": "Argentina Trade Summary 2007",
+    "language": "es",
+    "window": "retrospective rank audit",
+    "query_used": "WITS Argentina export partners 2007 China Chile United States",
+    "rank_label_original": "Brazil, China, United States, Chile",
+    "rank_level": "ordered_export_destinations",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "no",
+    "local_or_official": "no",
+    "method_eligible": "no",
+    "evidence_strength": "strong",
+    "case_role": "metric audit",
+    "notes": "Not public-cue evidence; used only to audit the partner ordering and displacement claim."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html; charset=utf-8",
+    "size_bytes": "78075",
+    "raw_file": "data/raw/argentina_case_study/arg/arg_wits_2007.html",
+    "raw_sha256": "230ec9a74273e2b8efb91d94a359a511850b075a2a77a16bc6957143cb8b9fbf",
+    "fetch_error": ""
+  }
+}

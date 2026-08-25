@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "ven_elpais_2007",
+    "country": "Venezuela",
+    "iso3c": "VEN",
+    "donor_pool": "Latin America",
+    "donor_weight": "0.026",
+    "rank_in_project": "2",
+    "rank_year": "2007",
+    "vehicle": "El País",
+    "source_type": "newspaper",
+    "source_country": "Spain",
+    "publication_date": "2007-11-07",
+    "url": "https://elpais.com/internacional/2007/11/07/actualidad/1194390012_850215.html",
+    "title": "Chávez estrecha lazos con China",
+    "language": "es",
+    "window": "principal: 2007--2008",
+    "query_used": "Venezuela China comercio petróleo 2007 Chávez visita",
+    "rank_label_original": "",
+    "rank_level": "none",
+    "explicit_rank_language": "no",
+    "volume_language": "yes",
+    "official_uptake": "yes",
+    "local_or_official": "no",
+    "method_eligible": "no",
+    "evidence_strength": "moderate",
+    "case_role": "volume-only comparator",
+    "notes": "Strong strategic/volume salience without matching export-rank language."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html; charset=utf-8",
+    "size_bytes": "374652",
+    "raw_file": "data/raw/argentina_case_study/ven/ven_elpais_2007.html",
+    "raw_sha256": "7d18cdffc2eee27b0245b97f3fc7f0e3f9502918994bd8d393a2ee183a8b15ff",
+    "fetch_error": ""
+  }
+}

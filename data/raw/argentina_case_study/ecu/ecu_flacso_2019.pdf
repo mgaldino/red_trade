@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verificación de acceso | Biblioteca</title>
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta http-equiv="Cache-Control" content="no-store">
+  <meta name="referrer" content="same-origin">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body { background-color: #1a1a2e; min-height: 100vh; display: flex; align-items: center; }
+    .card-custom { background-color: #272840; border: none; }
+  </style>
+</head>
+<body class="d-flex justify-content-center">
+  <main class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-5">
+
+        <noscript>
+          <div class="alert alert-danger text-center" role="alert">
+            <strong>Atención:</strong> Su navegador tiene JavaScript deshabilitado. Necesita activarlo para acceder al catálogo y al repositorio.
+          </div>
+        </noscript>
+
+        <div class="card card-custom shadow-lg text-center p-4">
+          <div class="card-body text-light">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="text-warning mb-3" viewBox="0 0 16 16" aria-hidden="true">
+              <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.567-1.113.32-2.233.66-3.465 1.127C1.474 2.815 1 3.434 1 4.297v8.835c0 .778.58 1.417 1.34 1.58.648.142 1.285.3 1.836.476 1.05.345 2.134.7 3.32.7H8v-1.724a1.864 1.864 0 0 0 .524.238 1.905 1.905 0 0 0 1.258-.092 1.932 1.932 0 0 0 .614-.238V16h.059c1.186 0 2.27-.3 3.32-.7.551-.176 1.188-.334 1.836-.476.76-.163 1.34-.802 1.34-1.58V4.297c0-.863-.474-1.482-1.607-2.603C13.161 1.227 12.04.887 10.928.567 9.843.265 8.69 0 8 0z"/>
+            </svg>
+
+            <h1 class="h4 mb-3" id="verification-title">Comprobación de Seguridad</h1>
+            <p class="text-muted mb-4" id="verification-desc">
+              Para proteger los servicios del repositorio  contra tráfico automatizado, por favor confirme que es una persona.
+            </p>
+
+            <button id="human-verify-btn" class="btn btn-primary btn-lg w-100" aria-labelledby="verification-title" aria-describedby="verification-desc" disabled>
+              Verificando entorno...
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="/human/human.js" defer type="aabc1de8c1af4a4f69c04862-text/javascript"></script>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="aabc1de8c1af4a4f69c04862-|49" defer></script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"79556c5d5e4049ec841b867707cc2215"}' crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "cri_procomer_2007",
+    "country": "Costa Rica",
+    "iso3c": "CRI",
+    "donor_pool": "Latin America",
+    "donor_weight": "0.052",
+    "rank_in_project": "2",
+    "rank_year": "2007",
+    "vehicle": "PROCOMER",
+    "source_type": "official_statistics",
+    "source_country": "Costa Rica",
+    "publication_date": "2008",
+    "url": "https://www.procomer.com/wp-content/uploads/Materiales/anuario-estadistico-exportacion-20072020-01-02_16-02-55.pdf",
+    "title": "Anuario estadístico de exportación 2007",
+    "language": "es",
+    "window": "principal: 2007--2008",
+    "query_used": "site:procomer.com \"segundo destino\" China exportaciones 2007",
+    "rank_label_original": "China, el segundo destino de las exportaciones costarricenses",
+    "rank_level": "export_destination_2",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "yes",
+    "local_or_official": "yes",
+    "method_eligible": "yes",
+    "evidence_strength": "strong",
+    "case_role": "rank-2 comparison",
+    "notes": "Domestic official export yearbook."
+  },
+  "accessed_at": "2026-08-25T16:13:44+00:00",
+  "fetch": {
+    "fetch_status": "http_error",
+    "http_status": "404",
+    "content_type": "text/html; charset=UTF-8",
+    "size_bytes": "0",
+    "raw_file": "",
+    "raw_sha256": "",
+    "fetch_error": "HTTP Error 404: Not Found"
+  }
+}

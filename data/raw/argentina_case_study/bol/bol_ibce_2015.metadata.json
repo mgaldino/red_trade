@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "bol_ibce_2015",
+    "country": "Bolivia",
+    "iso3c": "BOL",
+    "donor_pool": "Latin America",
+    "donor_weight": "not in supplied donor list",
+    "rank_in_project": "4",
+    "rank_year": "2015",
+    "vehicle": "IBCE",
+    "source_type": "business_statistics",
+    "source_country": "Bolivia",
+    "publication_date": "2015",
+    "url": "https://ibce.org.bo/documentos/informacion-mercado/2015/Bolivia-exportacion-segun-pais-destino-gestion-2015.pdf",
+    "title": "Bolivia: exportación según país de destino, gestión 2015",
+    "language": "es",
+    "window": "benchmark year: 2015",
+    "query_used": "site:ibce.org.bo Bolivia exportación país destino China 2015",
+    "rank_label_original": "China, quinto destino, 5 por ciento",
+    "rank_level": "export_destination_5",
+    "explicit_rank_language": "yes",
+    "volume_language": "yes",
+    "official_uptake": "no",
+    "local_or_official": "yes",
+    "method_eligible": "yes",
+    "evidence_strength": "strong",
+    "case_role": "non-top benchmark",
+    "notes": "Domestic business-statistics sheet conflicts mildly with the project rank-4 flag but agrees China was non-top."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "application/pdf",
+    "size_bytes": "50691",
+    "raw_file": "data/raw/argentina_case_study/bol/bol_ibce_2015.pdf",
+    "raw_sha256": "5ec9ae7a0666e89d5ad582531af229f47177aa3d5af445d7688b6ec759974ced",
+    "fetch_error": ""
+  }
+}

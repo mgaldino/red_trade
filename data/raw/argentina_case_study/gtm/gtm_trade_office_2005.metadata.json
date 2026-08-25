@@ -1,0 +1,40 @@
+{
+  "source": {
+    "source_id": "gtm_trade_office_2005",
+    "country": "Guatemala",
+    "iso3c": "GTM",
+    "donor_pool": "Global",
+    "donor_weight": "0.02731",
+    "rank_in_project": "10",
+    "rank_year": "2005",
+    "vehicle": "Associated Press syndication",
+    "source_type": "news_agency",
+    "source_country": "United States",
+    "publication_date": "2005-06-12",
+    "url": "https://www.myplainview.com/news/article/Guatemala-abrir-oficinas-comerciales-en-Beijin-8703297.php",
+    "title": "Guatemala abrirá oficinas comerciales en Beijing",
+    "language": "es",
+    "window": "benchmark year: 2005--2006",
+    "query_used": "Guatemala oficinas comerciales Beijing 2005 exportó 20 millones importó 251",
+    "rank_label_original": "exportó apenas 20 millones; importó 251 millones",
+    "rank_level": "trade_values_no_ordinal",
+    "explicit_rank_language": "no",
+    "volume_language": "yes",
+    "official_uptake": "yes",
+    "local_or_official": "no",
+    "method_eligible": "no",
+    "evidence_strength": "moderate",
+    "case_role": "non-top benchmark",
+    "notes": "China was politically visible as an import relationship, without export-status language."
+  },
+  "accessed_at": "2026-08-25T16:03:23+00:00",
+  "fetch": {
+    "fetch_status": "ok",
+    "http_status": "200",
+    "content_type": "text/html; charset=utf-8",
+    "size_bytes": "425811",
+    "raw_file": "data/raw/argentina_case_study/gtm/gtm_trade_office_2005.html",
+    "raw_sha256": "730a73d225f3049d8d791e71d5c6667c61abbae53ea05a4d4a2a5fc7e5592959",
+    "fetch_error": ""
+  }
+}
