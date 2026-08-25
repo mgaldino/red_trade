@@ -28,6 +28,24 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
+# A previous tar_make() can leave a stale lock in _targets/meta/process if its
+# parent was killed while the callr child kept running (e.g. a `timeout` around
+# a test). Detect that case up front instead of failing eight seconds into
+# stage 02: if the recorded PID is gone, clear the lock; if it is alive, stop
+# and let the operator decide.
+if [ -f _targets/meta/process ]; then
+  STALE_PID="$(awk -F'|' '$1=="pid"{print $2}' _targets/meta/process 2>/dev/null || true)"
+  if [ -n "${STALE_PID:-}" ]; then
+    if ps -p "$STALE_PID" >/dev/null 2>&1; then
+      echo "A targets pipeline (PID $STALE_PID) is already using this store." >&2
+      echo "Terminate it, or run targets::tar_unblock_process(), then retry." >&2
+      exit 1
+    fi
+    echo "Clearing stale targets lock from dead PID $STALE_PID."
+    rm -f _targets/meta/process
+  fi
+fi
+
 # Keep the machine awake for the duration on macOS.
 if command -v caffeinate >/dev/null 2>&1 && [ -z "${REBUILD_CAFFEINATED:-}" ]; then
   export REBUILD_CAFFEINATED=1
