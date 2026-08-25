@@ -80,7 +80,7 @@ stage 01d_parse_pipeline Rscript -e 'invisible(parse("_targets.R")); invisible(p
 #    targets that have been failing since earlier work and would abort the run.
 #    Because se_sdid() changed, every placebo SE target is invalidated and
 #    recomputed; that is intended.
-stage 02_targets Rscript -e 'source("scripts/rebuild_targets.R"); targets::tar_make(names = tidyselect::any_of(rebuild_target_names()))'
+stage 02_targets Rscript scripts/run_rebuild_targets.R
 
 # 3. Regenerate the no-covariate diagnostic package that the manuscript reads.
 #    It reuses the freshly built target SE, so the CSVs cannot drift from
