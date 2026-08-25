@@ -215,6 +215,67 @@ covariáveis). Consequências:
   parágrafo defensivo; a inferência é praticamente neutra (p ~ 0.038 estável).
 - Isso vale para TODOS os SEs do paper, não só o preferido.
 
+#### REBUILD: estágios 01-07 CONCLUÍDOS (2026-08-25). Falta só o render (08).
+
+**Estágio 07 (consistência) PASSOU** — as quatro fontes reportam o mesmo SE
+para a especificação preferida, até a 8ª casa:
+
+```
+target=0.13015889  main_summary=0.13015889  tabela5=0.13015889  ungadm_bsv=0.13015889
+```
+
+Era exatamente essa a inconsistência que tornava o rebuild bloqueante. **A
+pendência de reprodutibilidade está resolvida**; falta apenas re-renderizar o
+PDF (`bash scripts/render_paper_v4.sh`, minutos), adiado a pedido do autor.
+
+**Números finais, todos do pipeline:**
+
+Tabela 3 / texto (spec preferida, sem covariáveis, 20.000 reps, seed 20260520):
+ATT -0.2720, SE 0.1302, p 0.037, IC [-0.527, -0.017], ranks 3/96 (p = 0.031) e
+7/96 (p = 0.073).
+
+Tabela 5 (commodity, 5.000 reps, seed comum entre linhas):
+
+| Especificação | ATT | SE | p |
+|---|---:|---:|---:|
+| Current covariates (comparação) | -0.2639 | 0.1432 | 0.065 |
+| **Preferida: sem covariáveis** | **-0.2720** | **0.1302** | **0.037** |
+| Primary share x 2008-09 | -0.2839 | 0.1280 | 0.027 |
+| Agriculture/mining x 2008-09 | -0.2839 | 0.1275 | 0.026 |
+| Price exposure x 2008-09 | -0.2762 | 0.1301 | 0.034 |
+| Prior China share x 2008-09 | -0.2843 | 0.1296 | 0.028 |
+
+Todas as robustezes de commodity ficaram entre p = 0.026 e 0.034 (antes a
+família ia até 0.051), num intervalo estreito de ATT (-0.272 a -0.284).
+
+**Check UNGA-DM, agora com as duas colunas na MESMA spec, mesmas replicações e
+mesmo seed** (diferem só no outcome, como o pré-compromisso exigia):
+
+| Fonte | ATT | SE | p | rank dir. | rank bilat. |
+|---|---:|---:|---:|---:|---:|
+| BSV (principal) | -0.2720 | 0.1302 | 0.037 | 0.031 | 0.073 |
+| UNGA-DM | **-0.3352** | 0.1234 | **0.007** | **0.021** | **0.031** |
+
+Conclusão do check preservada sob a spec nova: sob o dado corrigido o caso
+brasileiro fica mais forte e **todas** as convenções caem abaixo de 5%.
+
+**Painel e 2×2 (estágio 06)** — o padrão da revisão independente se confirma:
+
+| ATT (p) | r = 1 | r = 2 |
+|---|---|---|
+| BSV | -0.036 (0.336) | **-0.095 (0.016)** ← CV |
+| UNGA-DM | **-0.027 (0.573)** ← CV | -0.065 (0.238) |
+
+Bootstrap pareado (B = 1.000): a diferença entre os ATTs **não** é
+distinguível de zero — p = 0.134 no contraste procedimento-selecionado e
+p = 0.356 com fatores comuns. Linguagem para o paper permanece a aprovada:
+painel "sensível à fonte de mensuração", nunca "não sobrevive"; e a
+significância do painel requer o segundo fator latente mesmo no BSV.
+
+Os números UNGA-DM do relatório de 2026-08-23 (ATT -0.335, p 0.009) ficam
+confirmados sob a especificação vigente: **não é mais preciso esperar
+reestimação para incorporar o apêndice ao texto.**
+
 #### ESTADO DO REBUILD (parcial, 2026-08-25 03:07)
 
 Rodou 3h10 e completou **6 dos 11 estágios**; interrompido a pedido do autor no

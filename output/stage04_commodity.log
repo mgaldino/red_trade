@@ -1,0 +1,101 @@
+Reading panel and persisted commodity/price inputs.
+[1/6] current_baseline (13 covariates)
+    Reusing completed checkpoint: placebo_se_current_baseline_5000.rds
+    ATT = -0.2639 | SE = 0.1432
+[2/6] no_covariates (0 covariates)
+    ATT = -0.2720 | SE = 0.1302
+    Reusing rank-placebo checkpoint: rank_placebos_no_covariates.rds
+[3/6] primary_gfc_2008_2009 (1 covariates)
+    Reusing completed checkpoint: placebo_se_primary_gfc_2008_2009_5000.rds
+    ATT = -0.2839 | SE = 0.1280
+    Reusing rank-placebo checkpoint: rank_placebos_primary_gfc_2008_2009.rds
+[4/6] agriculture_mining_gfc (2 covariates)
+    Reusing completed checkpoint: placebo_se_agriculture_mining_gfc_5000.rds
+    ATT = -0.2839 | SE = 0.1275
+[5/6] weighted_price_gfc (1 covariates)
+    Resuming checkpoint with 2040/5000 placebo estimates.
+    Placebo batch 1/25 (120 re-estimations; 12 cores).
+    Placebo batch 2/25 (120 re-estimations; 12 cores).
+    Placebo batch 3/25 (120 re-estimations; 12 cores).
+    Placebo batch 4/25 (120 re-estimations; 12 cores).
+    Placebo batch 5/25 (120 re-estimations; 12 cores).
+    Placebo batch 6/25 (120 re-estimations; 12 cores).
+    Placebo batch 7/25 (120 re-estimations; 12 cores).
+    Placebo batch 8/25 (120 re-estimations; 12 cores).
+    Placebo batch 9/25 (120 re-estimations; 12 cores).
+    Placebo batch 10/25 (120 re-estimations; 12 cores).
+    Placebo batch 11/25 (120 re-estimations; 12 cores).
+    Placebo batch 12/25 (120 re-estimations; 12 cores).
+    Placebo batch 13/25 (120 re-estimations; 12 cores).
+    Placebo batch 14/25 (120 re-estimations; 12 cores).
+    Placebo batch 15/25 (120 re-estimations; 12 cores).
+    Placebo batch 16/25 (120 re-estimations; 12 cores).
+    Placebo batch 17/25 (120 re-estimations; 12 cores).
+    Placebo batch 18/25 (120 re-estimations; 12 cores).
+    Placebo batch 19/25 (120 re-estimations; 12 cores).
+    Placebo batch 20/25 (120 re-estimations; 12 cores).
+    Placebo batch 21/25 (120 re-estimations; 12 cores).
+    Placebo batch 22/25 (120 re-estimations; 12 cores).
+    Placebo batch 23/25 (120 re-estimations; 12 cores).
+    Placebo batch 24/25 (120 re-estimations; 12 cores).
+    Placebo batch 25/25 (80 re-estimations; 12 cores).
+    ATT = -0.2762 | SE = 0.1301
+[6/6] pre_china_gfc (1 covariates)
+    Placebo batch 1/42 (120 re-estimations; 12 cores).
+    Placebo batch 2/42 (120 re-estimations; 12 cores).
+    Placebo batch 3/42 (120 re-estimations; 12 cores).
+    Placebo batch 4/42 (120 re-estimations; 12 cores).
+    Placebo batch 5/42 (120 re-estimations; 12 cores).
+    Placebo batch 6/42 (120 re-estimations; 12 cores).
+    Placebo batch 7/42 (120 re-estimations; 12 cores).
+    Placebo batch 8/42 (120 re-estimations; 12 cores).
+    Placebo batch 9/42 (120 re-estimations; 12 cores).
+    Placebo batch 10/42 (120 re-estimations; 12 cores).
+    Placebo batch 11/42 (120 re-estimations; 12 cores).
+    Placebo batch 12/42 (120 re-estimations; 12 cores).
+    Placebo batch 13/42 (120 re-estimations; 12 cores).
+    Placebo batch 14/42 (120 re-estimations; 12 cores).
+    Placebo batch 15/42 (120 re-estimations; 12 cores).
+    Placebo batch 16/42 (120 re-estimations; 12 cores).
+    Placebo batch 17/42 (120 re-estimations; 12 cores).
+    Placebo batch 18/42 (120 re-estimations; 12 cores).
+    Placebo batch 19/42 (120 re-estimations; 12 cores).
+    Placebo batch 20/42 (120 re-estimations; 12 cores).
+    Placebo batch 21/42 (120 re-estimations; 12 cores).
+    Placebo batch 22/42 (120 re-estimations; 12 cores).
+    Placebo batch 23/42 (120 re-estimations; 12 cores).
+    Placebo batch 24/42 (120 re-estimations; 12 cores).
+    Placebo batch 25/42 (120 re-estimations; 12 cores).
+    Placebo batch 26/42 (120 re-estimations; 12 cores).
+    Placebo batch 27/42 (120 re-estimations; 12 cores).
+    Placebo batch 28/42 (120 re-estimations; 12 cores).
+    Placebo batch 29/42 (120 re-estimations; 12 cores).
+    Placebo batch 30/42 (120 re-estimations; 12 cores).
+    Placebo batch 31/42 (120 re-estimations; 12 cores).
+    Placebo batch 32/42 (120 re-estimations; 12 cores).
+    Placebo batch 33/42 (120 re-estimations; 12 cores).
+    Placebo batch 34/42 (120 re-estimations; 12 cores).
+    Placebo batch 35/42 (120 re-estimations; 12 cores).
+    Placebo batch 36/42 (120 re-estimations; 12 cores).
+    Placebo batch 37/42 (120 re-estimations; 12 cores).
+    Placebo batch 38/42 (120 re-estimations; 12 cores).
+    Placebo batch 39/42 (120 re-estimations; 12 cores).
+    Placebo batch 40/42 (120 re-estimations; 12 cores).
+    Placebo batch 41/42 (120 re-estimations; 12 cores).
+    Placebo batch 42/42 (80 re-estimations; 12 cores).
+    ATT = -0.2843 | SE = 0.1296
+          specification   estimate se_placebo p_value_two_sided
+       current_baseline -0.2639405  0.1431625        0.06523531
+          no_covariates -0.2720074  0.1301589        0.03663482
+  primary_gfc_2008_2009 -0.2839206  0.1279764        0.02651808
+ agriculture_mining_gfc -0.2838867  0.1275478        0.02603240
+     weighted_price_gfc -0.2762035  0.1301276        0.03379076
+          pre_china_gfc -0.2843225  0.1296149        0.02826460
+ rank_p_one_sided_negative
+                        NA
+                   0.03125
+                   0.03125
+                        NA
+                        NA
+                        NA
+Done in 92.0 min -> data/processed/diagnostics/brazil_sdid_commodity_no_covariates

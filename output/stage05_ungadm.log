@@ -1,0 +1,244 @@
+Warning messages:
+1: package ‘fect’ was built under R version 4.4.3 
+2: package ‘ggplot2’ was built under R version 4.4.3 
+Sourcing scripts/functions.R for the fect machinery.
+Building the UNGA-DM outcome series.
+New names:
+• `` -> `...1`
+New names:
+• `` -> `...1`
+  UNGA-DM rows without iso3c mapping (excluded): 28
+Reading SDiD targets.
+Gate: reproducing the pipeline's preferred (no-covariate) fit locally.
+  Local BSV estimate = -0.27200743; target = -0.27200743; equal = TRUE
+Swapping in the UNGA-DM outcome for the identical panel.
+Fitting the UNGA-DM variant (no covariates).
+  UNGA-DM estimate = -0.33516134
+Placebo SE for the UNGA-DM variant (20000 replications, seed 20260520).
+    Placebo batch 1/167 (120 re-estimations; 12 cores).
+    Placebo batch 2/167 (120 re-estimations; 12 cores).
+    Placebo batch 3/167 (120 re-estimations; 12 cores).
+    Placebo batch 4/167 (120 re-estimations; 12 cores).
+    Placebo batch 5/167 (120 re-estimations; 12 cores).
+    Placebo batch 6/167 (120 re-estimations; 12 cores).
+    Placebo batch 7/167 (120 re-estimations; 12 cores).
+    Placebo batch 8/167 (120 re-estimations; 12 cores).
+    Placebo batch 9/167 (120 re-estimations; 12 cores).
+    Placebo batch 10/167 (120 re-estimations; 12 cores).
+    Placebo batch 11/167 (120 re-estimations; 12 cores).
+    Placebo batch 12/167 (120 re-estimations; 12 cores).
+    Placebo batch 13/167 (120 re-estimations; 12 cores).
+    Placebo batch 14/167 (120 re-estimations; 12 cores).
+    Placebo batch 15/167 (120 re-estimations; 12 cores).
+    Placebo batch 16/167 (120 re-estimations; 12 cores).
+    Placebo batch 17/167 (120 re-estimations; 12 cores).
+    Placebo batch 18/167 (120 re-estimations; 12 cores).
+    Placebo batch 19/167 (120 re-estimations; 12 cores).
+    Placebo batch 20/167 (120 re-estimations; 12 cores).
+    Placebo batch 21/167 (120 re-estimations; 12 cores).
+    Placebo batch 22/167 (120 re-estimations; 12 cores).
+    Placebo batch 23/167 (120 re-estimations; 12 cores).
+    Placebo batch 24/167 (120 re-estimations; 12 cores).
+    Placebo batch 25/167 (120 re-estimations; 12 cores).
+    Placebo batch 26/167 (120 re-estimations; 12 cores).
+    Placebo batch 27/167 (120 re-estimations; 12 cores).
+    Placebo batch 28/167 (120 re-estimations; 12 cores).
+    Placebo batch 29/167 (120 re-estimations; 12 cores).
+    Placebo batch 30/167 (120 re-estimations; 12 cores).
+    Placebo batch 31/167 (120 re-estimations; 12 cores).
+    Placebo batch 32/167 (120 re-estimations; 12 cores).
+    Placebo batch 33/167 (120 re-estimations; 12 cores).
+    Placebo batch 34/167 (120 re-estimations; 12 cores).
+    Placebo batch 35/167 (120 re-estimations; 12 cores).
+    Placebo batch 36/167 (120 re-estimations; 12 cores).
+    Placebo batch 37/167 (120 re-estimations; 12 cores).
+    Placebo batch 38/167 (120 re-estimations; 12 cores).
+    Placebo batch 39/167 (120 re-estimations; 12 cores).
+    Placebo batch 40/167 (120 re-estimations; 12 cores).
+    Placebo batch 41/167 (120 re-estimations; 12 cores).
+    Placebo batch 42/167 (120 re-estimations; 12 cores).
+    Placebo batch 43/167 (120 re-estimations; 12 cores).
+    Placebo batch 44/167 (120 re-estimations; 12 cores).
+    Placebo batch 45/167 (120 re-estimations; 12 cores).
+    Placebo batch 46/167 (120 re-estimations; 12 cores).
+    Placebo batch 47/167 (120 re-estimations; 12 cores).
+    Placebo batch 48/167 (120 re-estimations; 12 cores).
+    Placebo batch 49/167 (120 re-estimations; 12 cores).
+    Placebo batch 50/167 (120 re-estimations; 12 cores).
+    Placebo batch 51/167 (120 re-estimations; 12 cores).
+    Placebo batch 52/167 (120 re-estimations; 12 cores).
+    Placebo batch 53/167 (120 re-estimations; 12 cores).
+    Placebo batch 54/167 (120 re-estimations; 12 cores).
+    Placebo batch 55/167 (120 re-estimations; 12 cores).
+    Placebo batch 56/167 (120 re-estimations; 12 cores).
+    Placebo batch 57/167 (120 re-estimations; 12 cores).
+    Placebo batch 58/167 (120 re-estimations; 12 cores).
+    Placebo batch 59/167 (120 re-estimations; 12 cores).
+    Placebo batch 60/167 (120 re-estimations; 12 cores).
+    Placebo batch 61/167 (120 re-estimations; 12 cores).
+    Placebo batch 62/167 (120 re-estimations; 12 cores).
+    Placebo batch 63/167 (120 re-estimations; 12 cores).
+    Placebo batch 64/167 (120 re-estimations; 12 cores).
+    Placebo batch 65/167 (120 re-estimations; 12 cores).
+    Placebo batch 66/167 (120 re-estimations; 12 cores).
+    Placebo batch 67/167 (120 re-estimations; 12 cores).
+    Placebo batch 68/167 (120 re-estimations; 12 cores).
+    Placebo batch 69/167 (120 re-estimations; 12 cores).
+    Placebo batch 70/167 (120 re-estimations; 12 cores).
+    Placebo batch 71/167 (120 re-estimations; 12 cores).
+    Placebo batch 72/167 (120 re-estimations; 12 cores).
+    Placebo batch 73/167 (120 re-estimations; 12 cores).
+    Placebo batch 74/167 (120 re-estimations; 12 cores).
+    Placebo batch 75/167 (120 re-estimations; 12 cores).
+    Placebo batch 76/167 (120 re-estimations; 12 cores).
+    Placebo batch 77/167 (120 re-estimations; 12 cores).
+    Placebo batch 78/167 (120 re-estimations; 12 cores).
+    Placebo batch 79/167 (120 re-estimations; 12 cores).
+    Placebo batch 80/167 (120 re-estimations; 12 cores).
+    Placebo batch 81/167 (120 re-estimations; 12 cores).
+    Placebo batch 82/167 (120 re-estimations; 12 cores).
+    Placebo batch 83/167 (120 re-estimations; 12 cores).
+    Placebo batch 84/167 (120 re-estimations; 12 cores).
+    Placebo batch 85/167 (120 re-estimations; 12 cores).
+    Placebo batch 86/167 (120 re-estimations; 12 cores).
+    Placebo batch 87/167 (120 re-estimations; 12 cores).
+    Placebo batch 88/167 (120 re-estimations; 12 cores).
+    Placebo batch 89/167 (120 re-estimations; 12 cores).
+    Placebo batch 90/167 (120 re-estimations; 12 cores).
+    Placebo batch 91/167 (120 re-estimations; 12 cores).
+    Placebo batch 92/167 (120 re-estimations; 12 cores).
+    Placebo batch 93/167 (120 re-estimations; 12 cores).
+    Placebo batch 94/167 (120 re-estimations; 12 cores).
+    Placebo batch 95/167 (120 re-estimations; 12 cores).
+    Placebo batch 96/167 (120 re-estimations; 12 cores).
+    Placebo batch 97/167 (120 re-estimations; 12 cores).
+    Placebo batch 98/167 (120 re-estimations; 12 cores).
+    Placebo batch 99/167 (120 re-estimations; 12 cores).
+    Placebo batch 100/167 (120 re-estimations; 12 cores).
+    Placebo batch 101/167 (120 re-estimations; 12 cores).
+    Placebo batch 102/167 (120 re-estimations; 12 cores).
+    Placebo batch 103/167 (120 re-estimations; 12 cores).
+    Placebo batch 104/167 (120 re-estimations; 12 cores).
+    Placebo batch 105/167 (120 re-estimations; 12 cores).
+    Placebo batch 106/167 (120 re-estimations; 12 cores).
+    Placebo batch 107/167 (120 re-estimations; 12 cores).
+    Placebo batch 108/167 (120 re-estimations; 12 cores).
+    Placebo batch 109/167 (120 re-estimations; 12 cores).
+    Placebo batch 110/167 (120 re-estimations; 12 cores).
+    Placebo batch 111/167 (120 re-estimations; 12 cores).
+    Placebo batch 112/167 (120 re-estimations; 12 cores).
+    Placebo batch 113/167 (120 re-estimations; 12 cores).
+    Placebo batch 114/167 (120 re-estimations; 12 cores).
+    Placebo batch 115/167 (120 re-estimations; 12 cores).
+    Placebo batch 116/167 (120 re-estimations; 12 cores).
+    Placebo batch 117/167 (120 re-estimations; 12 cores).
+    Placebo batch 118/167 (120 re-estimations; 12 cores).
+    Placebo batch 119/167 (120 re-estimations; 12 cores).
+    Placebo batch 120/167 (120 re-estimations; 12 cores).
+    Placebo batch 121/167 (120 re-estimations; 12 cores).
+    Placebo batch 122/167 (120 re-estimations; 12 cores).
+    Placebo batch 123/167 (120 re-estimations; 12 cores).
+    Placebo batch 124/167 (120 re-estimations; 12 cores).
+    Placebo batch 125/167 (120 re-estimations; 12 cores).
+    Placebo batch 126/167 (120 re-estimations; 12 cores).
+    Placebo batch 127/167 (120 re-estimations; 12 cores).
+    Placebo batch 128/167 (120 re-estimations; 12 cores).
+    Placebo batch 129/167 (120 re-estimations; 12 cores).
+    Placebo batch 130/167 (120 re-estimations; 12 cores).
+    Placebo batch 131/167 (120 re-estimations; 12 cores).
+    Placebo batch 132/167 (120 re-estimations; 12 cores).
+    Placebo batch 133/167 (120 re-estimations; 12 cores).
+    Placebo batch 134/167 (120 re-estimations; 12 cores).
+    Placebo batch 135/167 (120 re-estimations; 12 cores).
+    Placebo batch 136/167 (120 re-estimations; 12 cores).
+    Placebo batch 137/167 (120 re-estimations; 12 cores).
+    Placebo batch 138/167 (120 re-estimations; 12 cores).
+    Placebo batch 139/167 (120 re-estimations; 12 cores).
+    Placebo batch 140/167 (120 re-estimations; 12 cores).
+    Placebo batch 141/167 (120 re-estimations; 12 cores).
+    Placebo batch 142/167 (120 re-estimations; 12 cores).
+    Placebo batch 143/167 (120 re-estimations; 12 cores).
+    Placebo batch 144/167 (120 re-estimations; 12 cores).
+    Placebo batch 145/167 (120 re-estimations; 12 cores).
+    Placebo batch 146/167 (120 re-estimations; 12 cores).
+    Placebo batch 147/167 (120 re-estimations; 12 cores).
+    Placebo batch 148/167 (120 re-estimations; 12 cores).
+    Placebo batch 149/167 (120 re-estimations; 12 cores).
+    Placebo batch 150/167 (120 re-estimations; 12 cores).
+    Placebo batch 151/167 (120 re-estimations; 12 cores).
+    Placebo batch 152/167 (120 re-estimations; 12 cores).
+    Placebo batch 153/167 (120 re-estimations; 12 cores).
+    Placebo batch 154/167 (120 re-estimations; 12 cores).
+    Placebo batch 155/167 (120 re-estimations; 12 cores).
+    Placebo batch 156/167 (120 re-estimations; 12 cores).
+    Placebo batch 157/167 (120 re-estimations; 12 cores).
+    Placebo batch 158/167 (120 re-estimations; 12 cores).
+    Placebo batch 159/167 (120 re-estimations; 12 cores).
+    Placebo batch 160/167 (120 re-estimations; 12 cores).
+    Placebo batch 161/167 (120 re-estimations; 12 cores).
+    Placebo batch 162/167 (120 re-estimations; 12 cores).
+    Placebo batch 163/167 (120 re-estimations; 12 cores).
+    Placebo batch 164/167 (120 re-estimations; 12 cores).
+    Placebo batch 165/167 (120 re-estimations; 12 cores).
+    Placebo batch 166/167 (120 re-estimations; 12 cores).
+    Placebo batch 167/167 (80 re-estimations; 12 cores).
+Rank placebos for the UNGA-DM variant.
+SDiD comparison written.
+                                              outcome_source   estimate
+                    BSV Jun/2024 (paper main, no covariates) -0.2720074
+ UNGA-DM all resolution-related votes (Fjelstul et al. 2026) -0.3351613
+ se_placebo p_normal_two_sided p_rank_one_sided p_rank_two_sided
+  0.1301589        0.036634818       0.03125000       0.07291667
+  0.1234113        0.006611413       0.02083333       0.03125000
+Preparing the common-window IFE panels.
+  Common-window rows: 4727 of 5037 (dropped 310).
+Fitting IFE on the BSV common window (nboots = 10000).
+Cross-validating ...
+
+Criterion: Mean Squared Prediction Error
+
+Interactive fixed effects model...
+
+r = 0; sigma2 = 0.08374; IC = -2.11176; PC = 0.08006; MSPE = 0.09765
+r = 1; sigma2 = 0.04762; IC = -2.31194; PC = 0.05672; MSPE = 0.07659
+r = 2; sigma2 = 0.03375; IC = -2.29552; PC = 0.04816; MSPE = 0.06848
+*
+r = 3; sigma2 = 0.02888; IC = -2.09487; PC = 0.04802; MSPE = 0.09428
+
+ r* = 2
+Fitting IFE on the UNGA-DM common window (nboots = 10000).
+Cross-validating ...
+
+Criterion: Mean Squared Prediction Error
+
+Interactive fixed effects model...
+
+r = 0; sigma2 = 0.06461; IC = -2.37118; PC = 0.06177; MSPE = 0.08148
+r = 1; sigma2 = 0.03930; IC = -2.50385; PC = 0.04682; MSPE = 0.05822
+*
+r = 2; sigma2 = 0.02749; IC = -2.50083; PC = 0.03922; MSPE = 0.06366
+r = 3; sigma2 = 0.02228; IC = -2.35437; PC = 0.03704; MSPE = 0.06004
+
+ r* = 1
+IFE comparison written.
+                                               variant         att         se
+ BSV full window 1990-2022 (paper main, stored target) -0.10064201 0.03912661
+           BSV common window (<= 2020, identical rows) -0.09532156 0.03970019
+       UNGA-DM common window (<= 2020, identical rows) -0.02681859 0.04760531
+      ci_lo       ci_hi          p r_cv att_rel_pct att_sd_units n_obs
+ -0.1773302 -0.02395385 0.01010504    2    13.95599   0.12443466  5037
+ -0.1731339 -0.01750918 0.01634876    2    13.21820   0.11743683  4727
+ -0.1201250  0.06648783 0.57319467    1     3.50967   0.03170163  4727
+ n_countries n_treated n_control panel_min panel_max nboots
+         161        35       126      1990      2022  10000
+         161        35       126      1990      2020  10000
+         161        35       126      1990      2020  10000
+Extracting the stored m2 pre-trend F test.
+Attempting the fect equivalence plot on the stored m2 main fit.
+Warning message:
+Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.
+ℹ The deprecated feature was likely used in the fect package.
+  Please report the issue at <https://github.com/xuyiqing/fect/issues>. 
+  Equivalence plot status: saved
+Done in 35.1 minutes. Outputs in data/processed/diagnostics/ungadm_outcome_robustness/estimation
