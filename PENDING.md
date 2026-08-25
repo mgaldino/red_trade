@@ -215,6 +215,53 @@ covariáveis). Consequências:
   parágrafo defensivo; a inferência é praticamente neutra (p ~ 0.038 estável).
 - Isso vale para TODOS os SEs do paper, não só o preferido.
 
+#### ESTADO DO REBUILD (parcial, 2026-08-25 03:07)
+
+Rodou 3h10 e completou **6 dos 11 estágios**; interrompido a pedido do autor no
+início do estágio 04. Retomar com o MESMO comando — os estágios 02 e 03 estão
+gravados e serão pulados:
+
+```bash
+bash scripts/run_reproducibility_rebuild.sh
+```
+
+| Estágio | Status |
+|---|---|
+| 01, 01b, 01c, 01d | OK (renv restore instalou o duckdb; validação do algoritmo placebo passou) |
+| 02 targets | **OK, 3h03** — quatro SEs reconstruídos |
+| 03 diagnósticos SDiD | **OK** |
+| 04 commodity (Tabela 5) | interrompido no início — faltam ~5h (4 specs com covariáveis × ~1h15) |
+| 05-06 UNGA-DM | pendente (~1-2h) |
+| 07 consistência, 08 render | pendente (minutos) |
+
+**Falta: ~6-8 horas.** Custo por SE medido em produção: **1h15 com covariáveis**
+(`se_synth`, `se_synth_baseline`) contra **4 minutos sem** — confirma que o
+gargalo era o array de covariáveis, não as replicações.
+
+**Verificação já feita (2026-08-25)**: o SE do pipeline bate EXATAMENTE com a
+referência standalone medida um dia antes, por caminho independente:
+
+| Fonte | ATT | SE | p |
+|---|---|---|---|
+| target `se_synth_no_time_varying_covariates` (20.000 reps, seed 20260520) | -0.272007 | **0.130159** | 0.0366 |
+| CSV do estágio 03 (o que o Rmd lê) | -0.272007 | **0.130159** | 0.0366 |
+| referência standalone de 2026-08-24 | — | **0.130159** | 0.0366 |
+
+Diferença target vs CSV vs referência: **0.00e+00**. O determinismo da
+`se_sdid()` está confirmado em produção, não só em teste. Ranks (que não
+dependem de sorteio): 3/96 direcional (p = 0.031), 7/96 bilateral (p = 0.073).
+
+**Números canônicos do paper, portanto**: ATT -0.272, SE 0.130, p 0.037,
+IC 95% [-0.527, -0.017], rank direcional 3/96 (p = 0.031), bilateral 7/96
+(p = 0.073).
+
+**Três erros de operação já corrigidos e commitados** (não voltam): seleção de
+targets avaliada no processo callr (`bquote`, commit 4fceba0); lock obsoleto do
+store bloqueando o relançamento (guarda no orquestrador, commit f1c9410);
+`RhpcBLASctl` fora do lockfile. Lição operacional: **não usar `timeout` em
+volta de `tar_make`** (o filho callr sobrevive ao pai e mantém o lock) e **não
+editar o orquestrador enquanto ele roda** (o bash lê o arquivo incrementalmente).
+
 #### Valores de referência para conferir o estágio 02 (medidos em 2026-08-24)
 
 `compute_sdid_se_5000.R` com as MESMAS contagens e seed do pipeline

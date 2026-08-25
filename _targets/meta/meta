@@ -262,13 +262,9 @@ did_absorbing_usa|stem|a8ca57b021e6667c|8f0637f0b53cf5b6|8cf50cb86ff3e601|-18801
 se_synth_placebo2|stem|945395dc62fb1de5|5eaea277de0ff18a|57132ba374d0a1a2|-649394773||t20593.7599202839s|s83b|83|rds|local|vector|||6446.695||
 se_synth_placebo_rank2_2004|stem|4f2af6ac6078371d|9efe4282f470d10b|4135c3e1b094a73b|499905553||t20593.8376308442s|s83b|83|rds|local|vector|||6714.17||
 se_synth_placebo3|stem|d873193ea9a94acd|7f107d64a70c0451|0c7bb7fcf7f72da0|-1909349306||t20593.9168842157s|s83b|83|rds|local|vector|||6847.468||
-se_synth_no_time_varying_covariates|stem|e9d6173186781918|63e0d8377f58b03d|1f31fae601c23147|-1949799275||t20593.9868899231s|s83b|83|rds|local|vector|||6048.48||
-se_synth|stem|23418f6952f25a67|9f0a0831be29baef|289bfd72a18fbf3d|-1857295872||t20594.0804315919s|s83b|83|rds|local|vector|||8081.987||
-se_synth_latam|stem|8ce8f94bb1c510eb|9be033eb3a4c4b08|bdf608d4f0a9a394|303480878||t20594.117590804s|s83b|83|rds|local|vector|||3210.543||
 se_synth_placebo1|stem|76ed385eabaaa10e|284c14f8a77cbb1d|45eedb56f465c683|2045944205||t20594.2166282709s|s83b|83|rds|local|vector|||8556.825||
 china_top_panel_cov_pre_distance_trim|stem|a472e6ce12d52db4|92669884e44b7058|aa6e996eb2dcd57d|-202651427||t20594.216628628s|s97606b|97606|rds|local|vector|||0.008||
 se_synth_extended|stem|36ecb3a1349ee397|15612f82756991e1|3820c53a6ab67bba|-1058648223||t20594.3029305273s|s83b|83|rds|local|vector|||7456.477||
-se_synth_baseline|stem|6a19e88f1bf84714|e00dbd917a37341d|6fb3683db2ca91a7|-1301463424||t20594.3837620981s|s83b|83|rds|local|vector|||6983.826||
 wild_bootstrap_result|stem|93db3beccb7cab04|4089d2d767628c6b|45ab31a616024745|1592013628||t20594.3837976609s|s18638865b|18638865|rds|local|vector|||2.494|Please note that the seeding behavior for random number generation for `boottest()` has changed with `fwildclusterboot` version 0.13.  It will no longer be possible to exactly reproduce results produced by versions lower than 0.13.  If your prior results were produced under sufficiently many bootstrap iterations, none of your conclusions will change. For more details about this change, please read the notes in [news.md](https://cran.r-project.org/web/packages/fwildclusterboot/news/news.html). This warning is displayed once per session.|
 did_displaced_usa|stem|f5145c8eb2239484|34400bacca46a3de|532650392e7ac234|-806719736||t20594.3838053893s|s1251729b|1251729|rds|local|vector|||0.608|Be aware that there are some small groups in your dataset.   Check groups: 2007,2008,2009,2010,2012,2015,2018.. Not returning pre-test Wald statistic due to singular covariance matrix|
 fisher_test_result|stem|c94d4373586ed9ec|2cdc30b2fba97eae|e7b0a6f46a11ff1c|11268073||t20594.3909433263s|s7861b|7861|rds|local|vector|||616.707|Be aware that there are some small groups in your dataset.   Check groups: 2007,2008,2009,2010,2012,2015,2018.. Not returning pre-test Wald statistic due to singular covariance matrix. Be aware that there are some small groups in your dataset.   Check groups: 2002,2003,2006,2007,2008,2009,2010,2012,2015,2018.. Not returning pre-test Wald statistic due to singular covariance matrix. Be aware that there are some small groups in your dataset.   Check groups: 2002,2003,2006,2007,2008,2009,2010,2012,2015,2018.. Not returning pre-test Wald statistic due to singular covariance matrix. Be aware that there are some small groups in your dataset.   Check groups: 2002,2003,2006,2007,2008,2009,2010,2012,2015,2018.. Not returning pre-test Wald statistic due to singular covariance matrix. Be aware that there are some small groups in your dataset.   Check groups: 2002,2003,2006,2007,2008,2009,2010,2012,2015,2018.. Not returning pre-test Wald statistic due to singular covariance matrix. Be aware that there are some small groups in your dataset.   Check groups: 2002,2003,2006,2007,2008,2009,2010,2012,2015,2018.. Not returning pre-test Wald statistic due to singular covariance matrix. Be aware that there are some small groups in your dataset.   Check groups: 2002,2003,2006,2007,2008,2009,2010,2012,2015,2018.. Not returning pre-test Wald statistic due to singular covariance matrix. Be aware that there are some small groups in your dataset.   Check groups: 2002,2003,2006,2007,2008,2009,2010,2012,2015,2018.. Not returning pre-test Wald statistic due to singular covariance matrix. Be aware that there are some small groups in your dataset.   Check groups: 2002,2003,2006,2007,2008,2009,2010,2012,2015,2018.. Not returning pre-test Wald statistic due to singular covariance matrix. Be aware that there are some small groups in your dataset.   Check groups: 2002,2003,2006,2007,2008,2009,2010,2012,2015,2018.. Not returning pre-test Wald statistic due to singular covariance matrix. Be aware that there are some small groups in your dataset.   Ch|
@@ -298,15 +294,7 @@ china_top_m2_goods_status_current_model_results|stem|5fdbd6c1e81f9239|5b487aedea
 china_top_m2_goods_status_current_country_audit|stem|cb6b59e434ed73e5|7dfb75b444f0de13|32469ad3f3d35116|-1450022122||t20597.9229245089s|s6395b|6395|rds|local|vector|||0.047||
 plot_china_top_m2_goods_status_current_dynamic|stem|8bbde0b2628a0e4c|80282a2141a5c8dc|fd735da315178332|-1989825351||t20597.922926874s|s772457b|772457|rds|local|vector|||0.034||
 china_top_m2_goods_status_current_runtime_report|stem|3c9e13e50385eb2e|32e6ae85a6724664|8d1e4187d6732d67|-44525244|quality_reports/cross_country_m2_goods_status_current_targets/runtime_status_current_targets_2026-05-24.md|t20597.9229294105s|s1513b|1513|file|local|vector|||0.009||
-brazil_china_unvotes_resolution_2005_2012|stem|59e9bce2de704cea|391a7f947d7304e0|e7a7abcfe57bd700|-1872944160||t20597.9237360576s|s4967b|4967|rds|local|vector|||0.876||
-brazil_china_unvotes_similarity_by_year_2005_2012|stem|ce699b42ba0f58e5|8b117fde48e73a64|41dac8f72d9d1bf3|-1146018100||t20597.9237363275s|s401b|401|rds|local|vector|||0.008||
 goal6_human_rights_vs_non_human_rights|stem|ff1bd47df433aba9|bef985dbda40e9c6|dff5b55d342d1b36|1878637249||t20597.9237368718s|s391b|391|rds|local|vector|||0.031||
-brazil_china_unvotes_similarity_by_issue_year_2005_2012|stem|2a822f6633b8810c|efc7c21e551c8941|9a6f6ff9a7c7769a|336399822||t20597.923737034s|s933b|933|rds|local|vector|||0.009||
-plot_brazil_china_unvotes_similarity_by_issue_year_2005_2012|stem|746219d08990656b|2990c56ce6a99ab0|9c6bf35b61b56c56|290866396||t20597.9237401162s|s363162b|363162|rds|local|vector|||0.17||
-selective_china_alignment_unga_targets_bundle|stem|aa4d7262ef7ffa73|df17ce5d9b72bc7d|2758cf19339ea0b8|1520810351||t20597.9237847206s|s398833b|398833|rds|local|vector|||3.601||
-selective_china_alignment_country_placebo_summary|stem|1cf9da46fe7d19e7|ed619fb55f056d45|b785b9b03de4a4c7|-2086113624||t20597.9237864185s|s418b|418|rds|local|vector|||0.001||
-selective_china_alignment_ddd_hr_nonhr_models|stem|6c83aa5380834c6f|415ac28573e402a5|b785b9b03de4a4c7|-1206672392||t20597.9237881436s|s995b|995|rds|local|vector|||0||
-selective_china_alignment_vote_level_models|stem|242bc831d7c047f6|14abfe777058bff7|b785b9b03de4a4c7|1635114655||t20597.923789766s|s1902b|1902|rds|local|vector|||0||
 fect_ife_china_top_recent_pretrend_f_test|stem|f8843f2c32d15fd9|d443919360d65a57|4c3ae4b5c3cda737|525048156||t20597.9318354226s|s811b|811|rds|local|vector|||0.05||
 fect_ife_china_top_cov_recent_pretrend_f_test|stem|f9db574d25707b50|39dfa721f380565f|caeaec9c3887f553|-2021744117||t20597.931836032s|s828b|828|rds|local|vector|||0.017||
 cross_country_recent_pretrend_f_test_table|stem|90da3b5cb978a6df|adad899d40eb89f8|bf10e1bcd221c9a9|-496018231||t20597.9318362064s|s535b|535|rds|local|vector|||0.001||
@@ -323,7 +311,15 @@ ex_top1_salience_appendix_tables|stem|13cfcec7cf62f2e2|6dfe61cbb26291b2|ee16e2b9
 permutation_results|stem|5c6e09a58b5dc6c5|4bfd65f11b66a440|28aeb1a352ee8fe4|1916855523||t20599.0411605937s|s3557b|3557|rds|local|vector|||825.87||
 rmspe_diagnostics|stem|2a4f6a133525d6a2|6aef927a981cf3ea|328bcd08fc8ad4f4|1275697434||t20599.0411608258s|s1010b|1010|rds|local|vector|||0.001||
 brazil_sdid_diagnostics_bundle|stem|763bf652666f2313|d44f29b74ab80122|22831cce3eddce21|1776161171||t20599.0430978373s|s16379b|16379|rds|local|vector|||167.339||
-brazil_sdid_spec_table|stem|4222f0be9cc39afb|8fce14e354b927d4|5f157b82b4274ee1|1004075947||t20599.0430983804s|s1162b|1162|rds|local|vector|||0.03||
+brazil_china_unvotes_resolution_2005_2012|stem|9d1c7f8a29fbfffc|391a7f947d7304e0|125143c8da9ecbe5|-1872944160||t20690.1124905771s|s4962b|4962|rds|local|vector|||1.04||
+brazil_china_unvotes_similarity_by_issue_year_2005_2012|stem|98820e691eb86771|efc7c21e551c8941|ff3dac8c260fcbd1|336399822||t20690.1124909203s|s930b|930|rds|local|vector|||0.011||
+brazil_china_unvotes_similarity_by_year_2005_2012|stem|a2bee2fc8a04ba67|8b117fde48e73a64|e486efd213d56062|-1146018100||t20690.1124912287s|s399b|399|rds|local|vector|||0.009||
+plot_brazil_china_unvotes_similarity_by_issue_year_2005_2012|stem|a0756ba1d628aa3e|2990c56ce6a99ab0|865bdec2683bb8d3|290866396||t20690.1124930592s|s363165b|363165|rds|local|vector|||0.055||
+selective_china_alignment_unga_targets_bundle|stem|5a50dcc608af1445|df17ce5d9b72bc7d|d08d7a9741fdc292|1520810351||t20690.1125458775s|s398828b|398828|rds|local|vector|||4.304||
+synth_fit_no_time_varying_covariates|stem|bd007926ac45ebc3|89260c93864337de|9cb8964ebd7f4377|2089484093||t20690.1125481092s|s135816b|135816|rds|local|vector|||0.169||
+selective_china_alignment_ddd_hr_nonhr_models|stem|fce490da33eff855|415ac28573e402a5|de0899ac34de385b|-1206672392||t20690.1125496256s|s992b|992|rds|local|vector|||0||
+selective_china_alignment_country_placebo_summary|stem|a54686a58174ce65|ed619fb55f056d45|de0899ac34de385b|-2086113624||t20690.1125512279s|s414b|414|rds|local|vector|||0.001||
+selective_china_alignment_vote_level_models|stem|be7416701948f235|14abfe777058bff7|de0899ac34de385b|1635114655||t20690.1125527172s|s1899b|1899|rds|local|vector|||0||
 make_fect_recent_pretrend_table|function|aa58d8d7fa98c1a5
 get_wb_data|function|db57e3eb97152b49
 prepare_nonabsorbing_china_top_fect_data|function|e4c3c9cd193c1d4c
@@ -390,7 +386,7 @@ goal9_scale_vec|function|b3d042c6c69caeb2
 goal9_human_rights_vs_non_human_rights|function|87b4fc48f1fdabf4
 format_sdid_se|function|a34821840c5940a9
 summarize_china_top_panel|function|cee2f8885bfa4d68
-.Random.seed|object|e341e380d1ca0845
+.Random.seed|object|a15857ea88a85303
 compute_cohens_kappa|function|0d85002526885e6a
 sdid_panel_counts|function|63960fa9dc92a880
 fect_att_summary|function|ef9a1fa407cd448e
@@ -420,7 +416,7 @@ selective_unga_fit_ddd_model|function|db455a3e83767683
 plot_serie|function|69e05cf7376f4a0f
 donor_pool_table|function|afe31372de66a65c
 plot_distance_unga|function|ac6af68205c435b0
-goal9_summarise_sdid_estimate|function|09fb6d61457f6bbb
+se_sdid|function|ce0703b0174fa47e
 rank_trade|function|b66bfe35bfb704c8
 bind_data|function|cb81982a1a53ce27
 filter_absorbing_treated_cases|function|ef4c98eeb6e11fe5
@@ -428,7 +424,6 @@ get_unga_data|function|0ee690fc5887b469
 summarize_cross_country_did|function|d9858ec75a9d8a0e
 join_df|function|84326136c37184c6
 folha_plot|function|e95e519795deb69b
-se_sdid|function|7ba163e40f257f56
 plot_trade|function|4d32e1cf00c45621
 summarize_status_current_units|function|d735bbac67021c3f
 create_list_graphs|function|33131b14c5aaa123
@@ -449,7 +444,7 @@ goal9_plot_brazil_rank_volume|function|25f9c14235e0e952
 filter_usa_top_control|function|200551be423eb901
 validate_absorbing_china_top_sample|function|6bfaeaeaf4b1cfba
 get_ideology_data|function|4f8f202f6dc9878f
-simple_fit_no_time_varying_covariates|function|5da13385fef1cd67
+simple_fit_no_time_varying_covariates|function|75b178f2b78b5478
 build_switching_panel|function|00f561d3d138f467
 get_macro|function|29039831984eb804
 prepare_data_folha|function|2045449c6b3fa001
@@ -486,17 +481,22 @@ make_cross_country_absorbing_table|function|db6508827c93e118
 brazil_sdid_balance_table|function|4dedcbe0d3b9e2f0
 calculate_fect_pretrend_f|function|7bdee100eb034ded
 goal9_build_china_demand_sdid_panel|function|b88dcaabcb9d74c9
+goal9_summarise_sdid_estimate|function|40abfcf24b186e39
 make_status_current_panel_bundle|function|a55aeef45ea0f750
 sensitivity_analysis|function|1abc5d2feed9c5d4
 goal9_brazil_rank_volume_data|function|17e3ff44a72fea8a
 brazil_sdid_donor_sensitivity|function|78039348ad6004b1
 brazil_sdid_window_sensitivity|function|55d903cb3f35765e
-goal9_china_demand_sdid_diagnostics|function|99d3dc20bb1a691f
 goal9_sdid_outcome_results|function|d55d751581d28eb4
 run_fect_leave_one_out|function|833e600afa413bc2
-make_brazil_sdid_spec_table|function|c282d9a3d6e95235
+make_brazil_sdid_spec_table|function|f18c06fb3c2ed879
 fit_status_current_fect_models|function|d90348c0592a49bc
 build_selective_china_alignment_unga_targets|function|61b9f4e4efd7c771
 reconstruct_fect_recent_pretrend_f_test|function|b7cbd7495e78a819
+goal9_china_demand_sdid_diagnostics|function|bd1e718759c17240
 build_brazil_sdid_diagnostics_bundle|function|93f2563cfaff3d57
-synth_fit_no_time_varying_covariates|stem|670a2c0ad963f1c1|89260c93864337de|d62163e662d99241|2089484093||t20592.0592978515s||83342|rds|local|vector|||0.01|no non-missing arguments to max; returning -Inf|could not find packages duckdb in library paths
+se_synth_latam|stem|85d1763de31cda10|650fe1899181d571|8b5a8cae0d57f5c2|303480878||t20690.1469944416s|s133b|133|rds|local|vector|||1705.648||
+se_synth_no_time_varying_covariates|stem|1fb1c21a058a0393|f816e7676fecb500|0aba4780419a97a5|-1949799275||t20690.1498159905s|s133b|133|rds|local|vector|||243.757||
+se_synth|stem|0a82f14e8aadcfb9|f9c0b038bced58bd|193acc23013f81a0|-1857295872||t20690.2024251131s|s133b|133|rds|local|vector|||4545.392||
+se_synth_baseline|stem|8ed0a42136122821|3421d09d76e7bc9e|ec3f93bbe70bd5f9|-1301463424||t20690.2547890296s|s132b|132|rds|local|vector|||4524.227||
+brazil_sdid_spec_table|stem|dac9177ac5236015|8fce14e354b927d4|bfdbc911cd38b1b4|1004075947||t20690.2547899743s|s1140b|1140|rds|local|vector|||0.05||
