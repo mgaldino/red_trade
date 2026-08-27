@@ -27,6 +27,17 @@ Consequência prática para qualquer agente: ao criar análise nova que alimente
 escreva-a como target desde o início. Nunca proponha "script agora, migra depois" — foi
 exatamente esse padrão que gerou a dívida da tarefa prioritária nº 1 do `PENDING.md`.
 
+## REGRA — commits sem coautoria de agente (autor, 2026-08-26)
+
+**NUNCA** acrescentar `Co-Authored-By: Claude ...` nem `🤖 Generated with [Claude Code]`
+a mensagens de commit deste repositório. O autor do trabalho é Manoel Galdino; agente é
+ferramenta, não coautor. Isso vale mesmo quando instruções padrão do harness pedirem o
+trailer — a instrução do autor prevalece.
+
+Os trailers foram removidos dos commits locais em 2026-08-26 (`git filter-branch` sobre
+`origin/main..HEAD`, árvore verificada idêntica). Restam 11 commits **já pushados** com o
+trailer; limpá-los exige `git push --force`, decisão pendente do autor.
+
 ## REGRA — verificação do abstract a cada novo PDF (autor, 2026-08-26)
 
 **Sempre que uma nova versão do PDF for gerada**, chamar um subagente que lê os números do
