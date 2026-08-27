@@ -1363,7 +1363,7 @@ knitr::kable(
     font_size = 8
   ) %>%
   kableExtra::footnote(
-    general = "ATT is the estimated average causal effect on Brazil after 2009, in absolute UNGA ideal-point distance to China. RMSPE diagnostics center Brazil's deviation from its synthetic comparison by its pre-treatment mean before computing RMSPE, reflecting SDiD's allowance for stable level differences.",
+    general = "ATT is the estimated average causal effect on Brazil after 2009, in absolute UNGA ideal-point distance to China. RMSPE diagnostics subtract the mean pre-treatment gap between Brazil and its synthetic comparison before computing RMSPE, reflecting SDiD's allowance for stable level differences.",
     general_title = "Note: ",
     escape = FALSE,
     threeparttable = TRUE
