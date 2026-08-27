@@ -992,14 +992,11 @@ These statements show that the 2009 status cue was absorbed into official langua
 
 # Cross-Country Evidence Beyond Brazil
 
-The cross-country analysis serves two purposes. First, it tests whether durable top-rank goods-export status is followed by movement toward China beyond the Brazilian case. Second, it is an additional robustness check against explanations tied to Brazil's 2009 calendar year, such as the global financial crisis, the BRICS/G20 moment, or the commodity cycle. If durable top-rank trade status matters, countries where China enters and holds the largest goods export-destination position should move closer to China in UNGA ideal-point space when aligned by their own treatment entry.
+The cross-country analysis serves two purposes. Firstly, it tests whether durable top-rank goods-export status is followed by movement toward China beyond the Brazilian case. Secondly, it is an additional robustness check against explanations tied to Brazil's 2009 calendar year, such as the global financial crisis, the BRICS/G20 moment, or the commodity cycle. If durable top-rank trade status matters, countries where China enters and holds the largest goods export-destination position should move closer to China in UNGA ideal-point space when aligned by their own treatment entry.
 
 The two designs test nested implications of the argument. Brazil is the high-salience case: China displaced the United States, the hegemonic benchmark, and the attention mechanism can be observed directly in media and official discourse. The cross-country panel tests whether China becoming the number one good-exports destination is a good proxy for the status change of China for that country, since unlike Brazil, there is no other status change evidence on the larger sample.
 
 I therefore estimate the same treatment logic in a goods-only status-current panel: treated country-years are those where China is rank 1 among goods export destinations and the China-top period lasts at least five observed years. Never-China-top countries remain controls. Short China-top episodes and post-exit off-status years for treated countries are removed from the main risk set. This analysis evaluates whether the rank-threshold pattern is compatible with evidence beyond the theory-generating case while matching the durable treatment observed in Brazil. The corresponding estimand is the ATT on absolute UNGA ideal-point distance to China for country-years in qualifying China-top periods.
-
-
-
 
 
 ```{r fect-results, include=FALSE}
