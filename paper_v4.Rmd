@@ -1153,7 +1153,7 @@ Future research can extend the design in three directions. First, cross-country 
 
 # Appendix
 
-We present more details about the performance and checks on the fitted model and how we used ChatGPT to perform the NLP analysis.
+I present more details about the performance and checks on the fitted model and how I used ChatGPT to perform the NLP analysis.
 
 ## Brazil and China Ideal-Point Series
 
@@ -1575,7 +1575,7 @@ knitr::include_graphics(file.path(
 ))
 ```
 
-We also fit a model for a donor pool of Latin American states (excluding Caribbean countries), which is substantively attractive because the donor countries are regionally closer to Brazil. This regional donor pool is a sensitivity check rather than the preferred specification: the main design seeks a pre-treatment synthetic counterfactual with adequate donor support and fit, while the Latin American pool is much smaller.
+I also fit a model for a donor pool of Latin American states (excluding Caribbean countries), which is substantively attractive because the donor countries are regionally closer to Brazil. This regional donor pool is a sensitivity check rather than the preferred specification: the main design seeks a pre-treatment synthetic counterfactual with adequate donor support and fit, while the Latin American pool is much smaller.
 
 
 ```{r plot-latam, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("SDiD fit with a Latin American donor pool, estimated without covariates. ", caption_note(unit = "Absolute UNGA ideal-point distance to China", se = "not recomputed for this point-estimate sensitivity", window = "1997-2015 annual series")), fig.pos="H", out.width="95%"}
@@ -1731,7 +1731,7 @@ knitr::kable(
 
 ## Public Cue and Recoverability Audit
 
-In order to assess how closely the empirical treatment used in the panel regression -- China becoming a country’s largest destination for goods exports -- maps onto the theorized treatment (a publicly salient change in status), we conducted a cross-country audit of news media and official sources. The audit examines whether explicit rank language can be recovered around the time of treatment entry and whether source coverage is sufficiently complete for non-recovery to count as informative silence. Table \@ref(tab:ex-top1-recoverability-audit) therefore distinguishes among observed status cues concerning China, the recoverability of the displaced incumbent, and caveats about the underlying trade metric. Cases in which no status cue was recovered are not automatically interpreted as showing that the cue was absent. Non-recovery may instead reflect limited access to contemporaneous records many years after the event, especially in countries where official speeches and news archives are less systematically preserved or digitized.
+In order to assess how closely the empirical treatment used in the panel regression -- China becoming a country’s largest destination for goods exports -- maps onto the theorized treatment (a publicly salient change in status), I conducted a cross-country audit of news media and official sources. The audit examines whether explicit rank language can be recovered around the time of treatment entry and whether source coverage is sufficiently complete for non-recovery to count as informative silence. Table \@ref(tab:ex-top1-recoverability-audit) therefore distinguishes among observed status cues concerning China, the recoverability of the displaced incumbent, and caveats about the underlying trade metric. Cases in which no status cue was recovered are not automatically interpreted as showing that the cue was absent. Non-recovery may instead reflect limited access to contemporaneous records many years after the event, especially in countries where official speeches and news archives are less systematically preserved or digitized.
 
 
 ```{r ex-top1-recoverability-audit, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
@@ -1859,7 +1859,7 @@ system_block <- paste(
 
 The classified headline file is treated as an archived derived dataset rather than regenerated during manuscript rendering. This choice reflects the practical behavior of LLM-based coding: early runs sometimes returned incomplete classifications, altered original headlines, or used slightly inconsistent labels, which made exact matching back to the archive difficult. I therefore fixed the prompt, normalized labels, preserved the resulting classified file, and validate the coding below against an independently coded sample. The evidence in the main text is used as a headline-level salience diagnostic.
 
-Below we provide a random sample of the headlines and the classification provided by ChatGPT.
+Below I provide a random sample of the headlines and the classification provided by ChatGPT.
 
 ```{r sample-chatgpt, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Random sample of China-related Folha de Sao Paulo headlines and ChatGPT classifications. ", caption_note(unit = "headline text and category labels", window = "sample drawn from the 2000-2014 corpus")), fig.pos="H", out.width="\\linewidth"}
 knitr::include_graphics(tar_read(sample_headlines_image_file))
@@ -2020,9 +2020,9 @@ ungadm_fmt_rank <- function(rank_value, denom, p_value) {
 }
 ```
 
-The main estimations in the paper used the classic ideal-point measurement by BSV [inserir citação correta] as the response variable. However, according to @fjelstul_etal2026, the set of resolutions included in the BSV [citar correto] dataset is not complete. They provided a broader dataset, along with re-estimations of ideal points based on the new data. To assess whether the results of the paper change with this new measurement, we reran the main estimations with this new response variable. To make the comparisons fair, we used exactly the same specifications as far as possible, so that any change in the results is driven by the new measurement, not by a different model, different covariates, or different seeds in the bootstrap computations. The only differences are the series, since the time window is smaller for the @fjelstul_etal2026 data, and the time weights in the SDiD, which the algorithm recomputes and which we do not control. It is also important to note that `r nrow(ungadm_unmapped)` country-session rows had no ISO3c match and `r nrow(ungadm_missing_outcome)` SDiD rows had no outcome in the alternative measurement.
+The main estimations in the paper used the classic ideal-point measurement by BSV [@bailey_etal2017] as the response variable. However, according to @fjelstul_etal2026, the set of resolutions included in the BSV dataset is not complete. They provided a broader dataset, along with re-estimations of ideal points based on the new data. To assess whether the results of the paper change with this new measurement, I reran the main estimations with this new response variable. To make the comparisons fair, I used exactly the same specifications as far as possible, so that any change in the results is driven by the new measurement, not by a different model, different covariates, or different seeds. The only differences are the series, since the time window is smaller for the @fjelstul_etal2026 data, and the time weights in the SDiD, which the algorithm recomputes and which I do not control. It is also important to note that `r nrow(ungadm_unmapped)` country-session rows had no ISO3c match and `r nrow(ungadm_missing_outcome)` SDiD rows had no outcome in the alternative measurement.
 
-The results are consistent with the main estimation. Table \@ref(tab:ungadm-sdid-comparison) shows the comparison. Under UNGA-DM, the point estimate is nominally higher than the original in absolute terms (`r sprintf("%.3f", ungadm_dm_row$estimate)` versus `r sprintf("%.3f", ungadm_bsv_row$estimate)`), with a lower p-value of `r sprintf("%.3f", ungadm_dm_row$p_normal_two_sided)`. The directional rank is the same in both measurements (`r ungadm_fmt_rank(ungadm_dm_row$rank_one_sided, ungadm_dm_row$rank_denominator, ungadm_dm_row$p_rank_one_sided)`). The bilateral rank improves from `r ungadm_fmt_rank(ungadm_bsv_row$rank_two_sided, ungadm_bsv_row$rank_denominator, ungadm_bsv_row$p_rank_two_sided)` to `r ungadm_fmt_rank(ungadm_dm_row$rank_two_sided, ungadm_dm_row$rank_denominator, ungadm_dm_row$p_rank_two_sided)`. However, with fewer countries in the sample, the p-value actually increases, remaining slightly above 5 percent. It is noteworthy that the pre-treatment averages are different (`r sprintf("%.3f", ungadm_bsv_row$brazil_pre_mean)` against
+The results are consistent with the main estimation. Table \@ref(tab:ungadm-sdid-comparison) shows the comparison. Under UNGA-DM, the point estimate is nominally higher than the original in absolute terms (`r sprintf("%.3f", ungadm_dm_row$estimate)` versus `r sprintf("%.3f", ungadm_bsv_row$estimate)`), with a lower p-value of `r sprintf("%.3f", ungadm_dm_row$p_normal_two_sided)`. The directional rank is the same in both measurements (`r ungadm_fmt_rank(ungadm_dm_row$rank_one_sided, ungadm_dm_row$rank_denominator, ungadm_dm_row$p_rank_one_sided)`). The bilateral rank improves from `r ungadm_fmt_rank(ungadm_bsv_row$rank_two_sided, ungadm_bsv_row$rank_denominator, ungadm_bsv_row$p_rank_two_sided)` to `r ungadm_fmt_rank(ungadm_dm_row$rank_two_sided, ungadm_dm_row$rank_denominator, ungadm_dm_row$p_rank_two_sided)`. It is noteworthy that the pre-treatment averages are different (`r sprintf("%.3f", ungadm_bsv_row$brazil_pre_mean)` against
 `r sprintf("%.3f", ungadm_dm_row$brazil_pre_mean)`) in the original estimation. But the effect measured as a percentage of the pre-treatment average is similar: `r sprintf("%.1f", ungadm_bsv_row$estimate_pct_pre_mean)` and `r sprintf("%.1f", ungadm_dm_row$estimate_pct_pre_mean)` percent.
 
 ```{r ungadm-sdid-comparison, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
@@ -2094,7 +2094,7 @@ knitr::kable(
   )
 ```
 
-Now we present diagnostic statistics for the UNGA-DM outcome. The first is the placebo-in-space distribution, shown in Figure \@ref(fig:ungadm-placebo-distribution). The results are quite similar to those of the original estimation, which shows that the placebo ranks do not depend on the outcome variable used. Table \@ref(tab:ungadm-rank-criteria) shows specifically that the position is the same in both metrics; only the denominator changes, and it is lower in the alternative outcome.
+Now I present diagnostic statistics for the UNGA-DM SDiD fit. The first is the placebo-in-space distribution, shown in Figure \@ref(fig:ungadm-placebo-distribution). The results are quite similar to those of the original estimation, which shows that the placebo ranks do not depend on the outcome variable used. Table \@ref(tab:ungadm-rank-criteria) shows specifically that the position is the same in both metrics, thus, no change here.
 
 ```{r ungadm-placebo-distribution, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Placebo-in-space distribution under the UNGA-DM outcome, with Brazil marked. Brazil's estimate is the ", scales::ordinal(ungadm_dm_row$rank_one_sided), " most negative of ", ungadm_dm_row$rank_denominator, " assignments (directional p = ", sprintf("%.3f", ungadm_dm_row$p_rank_one_sided), "); the two-sided absolute rank is ", ungadm_dm_row$rank_two_sided, "/", ungadm_dm_row$rank_denominator, " (p = ", sprintf("%.3f", ungadm_dm_row$p_rank_two_sided), "). Negative values indicate convergence toward China. ", caption_note(unit = "Estimated post-2009 gap in absolute UNGA ideal-point distance to China, UNGA-DM measure", window = "1997-2015 annual SDiD panel")), fig.pos="H", fig.width=7, fig.asp=0.5}
 ungadm_placebo_valid <- ungadm_dm_placebo %>%
@@ -2155,7 +2155,7 @@ knitr::kable(
   )
 ```
 
-Now we show the weights. Since they are estimated for each fit, they are not the same. Table \@ref(tab:ungadm-donor-weights) presents how much they change in that regard. The fit is spread among donors in a similar way in both fits: `r sprintf("%.3f", ungadm_max_weight_dm)` under UNGA-DM and `r sprintf("%.3f", ungadm_max_weight_bsv)` under BSV. The correlation of the donor pool weights is moderate (`r sprintf("%.3f", ungadm_weight_cor)`), but among the top ten donors, `r ungadm_top10_overlap` are the same. All in all, it shows that the synthetic fit is robust to such changes.
+Now I show the weights. Since they are estimated for each fit, they are not the same. Table \@ref(tab:ungadm-donor-weights) presents how much they change in that regard. The fit is spread among donors in a similar way in both fits: `r sprintf("%.3f", ungadm_max_weight_dm)` under UNGA-DM and `r sprintf("%.3f", ungadm_max_weight_bsv)` under BSV. The correlation of the donor pool weights is moderate (`r sprintf("%.3f", ungadm_weight_cor)`), but among the top ten donors, `r ungadm_top10_overlap` are the same. All in all, it shows that the synthetic fit is robust to such changes.
 
 ```{r ungadm-donor-weights, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 ungadm_weights_tbl <- ungadm_weights %>%
@@ -2200,9 +2200,9 @@ knitr::kable(
   )
 ```
 
-Regarding the panel regression, Table \@ref(tab:ungadm-ife-window) compares the IFE estimation in the same time window. The effect is smaller under UNGA-DM:
+Regarding the panel regression, table \@ref(tab:ungadm-ife-window) shows the IFE estimation in the same time window for both outcomes, and the original estimation with the larger time window. The effect is smaller under UNGA-DM:
 `r sprintf("%.3f", ungadm_ife_dm_common$att)` with p =
-`r sprintf("%.3f", ungadm_ife_dm_common$p)`. One important difference is the number of latent factors chosen by cross-validation: `r ungadm_ife_bsv_common$r_cv` under BSV and `r ungadm_ife_dm_common$r_cv` under UNGA-DM.
+`r sprintf("%.3f", ungadm_ife_dm_common$p)`. However, the models are note the same, since the number of latent factors chosen by cross-validation are different: `r ungadm_ife_bsv_common$r_cv` under BSV and `r ungadm_ife_dm_common$r_cv` under UNGA-DM.
 
 ```{r ungadm-ife-window, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 ungadm_ife_tbl <- ungadm_ife_comparison %>%
@@ -2244,7 +2244,7 @@ knitr::kable(
   )
 ```
 
-To make the comparison as close to apples-to-apples as possible, Table \@ref(tab:ungadm-ife-2x2) fixes the number of latent factors at two. The results suggest that part of the smaller effect is due to picking only one factor to accommodate units' differential responses to shocks, which may also be induced by the smaller time window. This suggests some sensitivity to the outcome measurement in the panel regression, although it is reassuring that the point estimates all point in the same direction.
+To make the comparison as close to apples-to-apples as possible, table \@ref(tab:ungadm-ife-2x2) fixes the number of latent factors at two. The results suggest that part of the smaller effect is due to picking only one factor to accommodate units' differential responses to shocks, which may also be induced by the combination of smaller time window and different measurements, or only the alternative outcome. This suggests some sensitivity to the outcome measurement in the panel regression, although it is reassuring that the point estimates all point in the same direction.
 
 ```{r ungadm-ife-2x2, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 ungadm_2x2_tbl <- ungadm_ife_2x2 %>%
@@ -2290,4 +2290,4 @@ knitr::kable(
   )
 ```
 
-To sum up, the SDiD is insensitive to the alternative outcome measurement. On the other hand, the IFE estimation is sensitive to the chosen metrics, and the shorter time window, along with fewer countries in the sample, makes the noise high enough that we do not have any power to rule out that the effect is zero or substantively insignificant. Nonetheless, the point estimates are consistent.
+To sum up, the SDiD is insensitive to the alternative outcome measurement. On the other hand, the IFE estimation is sensitive to the chosen metrics and the shorter time window. Nonetheless, the point estimates are consistent among metrics and the difference is not in itself significant, which is reassuring.
