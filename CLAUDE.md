@@ -3,7 +3,7 @@
 ## Projeto
 Paper: "The Foreign Policy Impact of Trade-Based Status Gains: When China Overtakes the US as Top Trade Partner". Em Revise & Resubmit. Tambem submetido ao Simposio FGV-USP em 2026-04-10 (versao anonimizada: `paper_v4_anonymous.Rmd` / `output/paper_v4_anonymous.pdf`, folha de rosto apenas com titulo e abstract de 139 palavras).
 
-SDiD principal (SEM covariáveis, decisão do autor 2026-08-23; arrays fixos eram colineares com os efeitos fixos de unidade): ATT=-0.272 (SE placebo 0.130 com 20.000 replicações, seed 20260520), p normal bilateral=0.037, IC95 [-0.527, -0.017]; rank placebo direcional 3/96 (p=0.031), rank absoluto bilateral 7/96 (p=0.073) — ranks idênticos à spec antiga; SEs do pipeline agora via se_sdid() paralela/determinística (20k preferida, 5k comparações). Cross-country IFE goods-only status-current (5 anos, restricted risk set): ATT=-0.101 (SE 0.039), p=0.010; robusto em 3/5/7 anos e clean sample (p 0.003-0.019). Fonte: `data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/` e targets `china_top_m2_goods_status_current_*`. ATENÇÃO: o store de targets está pendente do rebuild de reprodutibilidade (`bash scripts/run_reproducibility_rebuild.sh`, ~9-11h, ver PENDING.md — BLOQUEANTE antes de circular).
+SDiD principal (SEM covariáveis, decisão do autor 2026-08-23; arrays fixos eram colineares com os efeitos fixos de unidade): ATT=-0.272 (SE placebo 0.130 com 20.000 replicações, seed 20260520), p normal bilateral=0.037, IC95 [-0.527, -0.017]; rank placebo direcional 3/96 (p=0.031), rank absoluto bilateral 7/96 (p=0.073) — ranks idênticos à spec antiga; SEs do pipeline agora via se_sdid() paralela/determinística (20k preferida, 5k comparações). Cross-country IFE goods-only status-current (5 anos, restricted risk set): ATT=-0.101 (SE 0.039), p=0.010; robusto em 3/5/7 anos e clean sample (p 0.003-0.019). Fonte: `data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/` e targets `china_top_m2_goods_status_current_*`. Rebuild de reprodutibilidade CONCLUÍDO em 2026-08-26 (12/12 lotes OK, ~9h25): estes números vêm do store reconstruído sob o screen de doadores baseado em bens, e `output/paper_v4.pdf` é de 2026-08-26.
 
 Autor: Manoel Galdino (DCP-USP).
 
@@ -12,6 +12,41 @@ Autor: Manoel Galdino (DCP-USP).
 - Tag `v4.2` criada em 2026-05-18 como snapshot pré-revisão de teoria e painel cross-country (`paper_v4.Rmd` no commit `1b45624`).
 - Arquivo ativo do paper: `paper_v4.Rmd`.
 - Para consultar o snapshot: `git show v4.2:paper_v4.Rmd`.
+
+## REGRA DE ARQUITETURA (autor, 2026-08-26) — inegociável
+
+**Nada que entra no paper pode ficar fora do `targets`**, com duas exceções nomeadas: a
+chamada à API do Banco Mundial e o scraping da Folha, que entram como dados já coletados e
+cacheados (para não onerar a pesquisa; a submissão explica isso). Todo o resto — números,
+tabelas, figuras, diagnósticos — tem de ser target ou arquivo produzido por target.
+
+Motivo: o pacote de replicação vai afirmar que a análise usa `targets`. Script fora do
+grafo produzindo número do manuscrito derruba o claim diante de um parecerista.
+
+Consequência prática para qualquer agente: ao criar análise nova que alimente o paper,
+escreva-a como target desde o início. Nunca proponha "script agora, migra depois" — foi
+exatamente esse padrão que gerou a dívida da tarefa prioritária nº 1 do `PENDING.md`.
+
+## REGRA — verificação do abstract a cada novo PDF (autor, 2026-08-26)
+
+**Sempre que uma nova versão do PDF for gerada**, chamar um subagente que lê os números do
+abstract e verifica duas coisas:
+
+1. **Consistência interna**: cada número do abstract bate com o mesmo número no corpo do
+   paper (resultados, tabelas, conclusão).
+2. **Consistência com a fonte**: cada número bate com o arquivo/target que o produz.
+
+Motivo: os números do abstract são digitados à mão (não são `r inline`, porque o abstract
+mora no YAML header) — decisão do autor de mantê-los assim e conferir antes de submeter.
+Sem esse gate, todo rebuild é uma chance de o abstract divergir do corpo sem nada falhar.
+O mesmo vale para os números digitados na conclusão.
+
+## TAREFA PRIORITÁRIA Nº 1 (2026-08-26)
+
+Migrar para o `targets` toda a camada de diagnósticos que alimenta o paper — issue #6,
+plano em `quality_reports/plans/2026-08-25_migrate_diagnostics_to_targets.md`. Migrar
+TUDO de uma vez (SDiD + figuras + commodity + UNGA-DM); sem fases-piloto. Gabarito
+numérico: outputs da rodada de 2026-08-26 (identidade a 1e-12). Ver `PENDING.md`.
 
 ## Estado recente
 

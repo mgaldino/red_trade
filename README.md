@@ -6,18 +6,52 @@ Active development title in `paper_v4`: **The Foreign Policy Impact of
 Trade-Based Status Gains: When China Overtakes the US as Top Export
 Destination**.
 
+
+## TODO before submission (author tasks, 2026-08-26)
+
+Manuscript work the author deferred until after the reproducibility rebuild
+(concluded 2026-08-26, 12/12 batches). Code work is tracked in GitHub issues
+#1-#7; issue #6 (migrate everything the paper prints into `targets`) is the
+priority-one task.
+
+- [ ] **UNGA-DM incorporation** with the regenerated numbers: ATT −0.331, SE
+      0.125, normal p 0.008, directional rank 3/96 (p 0.031), **bilateral rank
+      5/96 (p 0.052)**. The pre-commitment stands, but the phrase "all
+      conventions below 5%" from the 2026-08-23 draft does not survive the
+      regenerated bilateral rank and must be rewritten. Support draft:
+      `quality_reports/ungadm_outcome_robustness/2026-08-23_draft_paper_text_ungadm.md`.
+- [ ] **`paper_v4.Rmd:207` promises a UNGA-DM appendix that does not exist** —
+      write it or drop the forward reference.
+- [ ] **Appendix sentence claiming the UNGA-DM placebo SE was not recomputed**
+      is now false; it was recomputed in the `ungadm` batch.
+- [ ] **Eligibility-rule sentence**: state that the donor screen ranks by the
+      same goods-export measure that defines treatment.
+- [ ] **Inferential contract in the text** (decision of 2026-08-23): declare the
+      directional placebo rank as the primary test, applied uniformly.
+- [ ] **Table 2 legibility.**
+- [ ] **`proofread`**, deliberately deferred until after the rebuild.
+- [ ] **Abstract and conclusion numbers are typed by hand** (the abstract lives
+      in the YAML header). Per the rule in `CLAUDE.md`, every new PDF must be
+      checked by a subagent against the body and against the source files.
+- [ ] **Replication package**: regenerate from the spec in
+      `quality_reports/plans/2026-08-26_replication_package_spec.md`. The old
+      `replication package/` directory (v3 snapshot, 8.7 GB, README describing a
+      different paper) was deleted on 2026-08-26; its good practices are
+      preserved in that spec. Decision taken: point at the public USITC source
+      for ITPD-E with version and hash rather than shipping the 8.4 GB file.
+
 ## Q&A (Quick Answers)
 
 **Q1. Where is the replication package README used for submission?**  
-`/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/replication package/README.Rmd`  
-Compiled PDF:  
-`/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/replication package/README.pdf`
+It does not exist yet. The old one shipped with the v3 snapshot, which was
+deleted on 2026-08-26 (it described a different paper and contained
+`*[fill later]*` and `ADD-HASH-HERE` placeholders). The specification for the
+new package — including which practices from the old one to keep — is
+`quality_reports/plans/2026-08-26_replication_package_spec.md`.
 
 **Q2. What manuscript does the replication package contain?**  
-`/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/replication package/paper_v3.Rmd`  
-That directory is an old snapshot, not the reproduction path: it predates the
-current cross-country design and contains none of the rebuild scripts. See
-"Reproduction" below.
+There is no package directory at present. The reproduction path is the
+repository root, and the manuscript is `paper_v4.Rmd`. See "Reproduction" below.
 
 **Q2a. What is the active development manuscript?**
 `/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd`
@@ -69,8 +103,17 @@ rebuild unrelated exploratory targets that have been failing since earlier
 work, and it would skip the four diagnostic scripts that write the CSVs
 `paper_v4.Rmd` reads. The manuscript is `paper_v4.Rmd`.
 
-**Q4. Does the replication package still depend on mandatory online scraping/API calls?**  
-No for the default path. Local cache files are now included in `replication package/raw data/` (`folha_scrape_cache.rds`, `wb_data_cache.rds`).
+**Q4. Does reproduction depend on mandatory online scraping/API calls?**  
+**Yes, at present — this is being fixed (issues #3 and #7).** A clean-machine
+`tar_make()` currently reaches the network at four points: the World Bank
+indicator API and `wb_countries()`, `raw.githubusercontent.com` (cow2iso
+mapping, `functions.R:280`), and `globalmacrodata.com` (`gmd()`,
+`functions.R:292`, which aborts outright once its version leaves the published
+list). The Folha and World Bank caches exist at
+`data/raw/network_caches/` but are not yet wired into the pipeline. The
+approved fix freezes every external source as a declared file target, leaving
+the World Bank and Folha as the documented exceptions plus globalmacrodata,
+cow2iso, ChatGPT classification, and the Python appendix collectors.
 
 ## Repository Structure
 
@@ -91,11 +134,13 @@ Rscript -e 'install.packages("renv"); renv::restore(prompt = FALSE)'
 bash scripts/run_reproducibility_rebuild.sh
 ```
 
-The root is the reproducible path. The `replication package/` directory is a
-snapshot from an earlier submission: its manuscript is `paper_v3.Rmd`, it holds
-none of the rebuild scripts, and it has not been regenerated since the
-cross-country design changed. Do not run it and do not cite it as the
-reproduction path until it is rebuilt from the root (`PENDING.md`, "Materiais
+The root is the reproducible path. The `replication package/` directory that
+used to sit here was a snapshot from an earlier submission (manuscript
+`paper_v3.Rmd`, none of the rebuild scripts, never regenerated after the
+cross-country design changed); it was deleted on 2026-08-26 and its worthwhile
+structure is recorded in
+`quality_reports/plans/2026-08-26_replication_package_spec.md`
+(`PENDING.md`, "Materiais
 derivados").
 
 The rebuild renders `output/paper_v4.pdf` as its last stage. The batches, in
@@ -128,20 +173,20 @@ pipeline reads, at the repository root:
 `/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/raw data`
 
 `_targets.R` addresses every raw input as `here("raw data", ...)`, so a copy
-placed anywhere else -- including inside `replication package/` -- is not the
-one the rebuild reads.
+placed anywhere else is not the one the rebuild reads.
 
 DOI: <https://doi.org/10.7910/DVN/M97OCJ>
 
 ## Notes
 
-- The replication package includes precomputed NLP classification outputs in:
-  `/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/replication package/chatgpt data`
-- The replication package includes local cache files for deterministic default runs:
-  `/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/replication package/raw data/folha_scrape_cache.rds`
-  `/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/replication package/raw data/wb_data_cache.rds`
-- Full package documentation is maintained in:
-  `/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/replication package/README.Rmd`
+- Precomputed NLP classification outputs (headline classification by ChatGPT):
+  `data/folha_classificado.rds` and `data/raw/network_caches/df_classifcation.rds`
+- Network caches rescued from the deleted v3 snapshot, to be wired into the
+  pipeline as file targets (issues #3 and #7):
+  `data/raw/network_caches/folha_scrape_cache.rds`
+  `data/raw/network_caches/wb_data_cache.rds`
+- Package documentation is to be written; the specification is
+  `quality_reports/plans/2026-08-26_replication_package_spec.md`
 - Do not use `paper_v4.extraction_cache.json` as current manuscript evidence
   without regenerating it; it may contain text extracted from older PDFs.
 

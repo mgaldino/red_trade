@@ -21,7 +21,7 @@ fontsize: 12pt
 abstract: "\\singlespacing  How do trade-based status gains affect UNGA voting convergence toward China? I argue that rank reversals in trade hierarchies create politically usable status cues: when China becomes a country's top export destination and remains there, policymakers can more easily justify selective diplomatic adjustment toward Beijing. I test the argument in Brazil, where China overtook the United States as the largest export destination in 2009, using Synthetic Difference-in-Differences on UNGA ideal-point distance. In the preferred specification, the estimated effect is a reduction of 0.27 ideal-point units in Brazil's distance to China relative to its synthetic counterfactual, about 42 percent of Brazil's pre-treatment mean. Vote-level diagnostics show that the movement is clearest in human-rights resolutions where China and the United States diverged. Brazilian newspaper evidence shows increased China-related trade salience after the rank reversal. Cross-country estimates from an interactive fixed-effects panel model show a compatible directional pattern among countries where China persistently becomes the top goods export destination. The evidence suggests that discrete and durable trade-status milestones can shape observable multilateral alignment beyond smooth trade growth."
 geometry: margin=2.5cm
 spacing: double
-mainfont: Times New Roman
+mainfont: TeX Gyre Termes
 bibliography: "synth-trade-china.bib"
 link-citations: true
 ---
@@ -31,7 +31,6 @@ link-citations: true
 library(tidyverse)
 library(targets)
 knitr::opts_chunk$set(echo = FALSE)
-source(here::here("scripts", "functions.R"))
 
 caption_note <- function(unit = NULL, se = NULL, cluster = NULL, window = NULL) {
   fields <- c(
@@ -46,14 +45,9 @@ caption_note <- function(unit = NULL, se = NULL, cluster = NULL, window = NULL) 
   paste0("Note: ", paste(fields, collapse = ". "), ".")
 }
 
-resolve_existing_file <- function(candidates) {
-  hits <- candidates[file.exists(candidates)]
-  if (length(hits) == 0) {
-    stop("Missing file. Tried: ", paste(candidates, collapse = " | "))
-  }
-  hits[[1]]
-}
-
+# System dependency: `wc` (POSIX word count). Present on macOS and Linux; on a machine
+# without it, or with a different output format, this call fails and the "Word count:"
+# line breaks. Declared here so the replication README can list it.
 word_count_text <- function(input = knitr::current_input(), subtract_n = 20L) {
   wc_raw <- system2("wc", c("-w", input), stdout = TRUE)
   wc_n <- as.integer(strsplit(trimws(wc_raw), "\\s+")[[1]][1])

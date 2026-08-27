@@ -17,6 +17,49 @@ Não use `PENDING.md`, `README.md`, relatórios antigos de revisão ou
 `paper_v4.extraction_cache.json` como fonte de verdade sem conferir o Rmd/PDF
 atuais. O cache de extração pode conter texto de versões anteriores.
 
+## TAREFA PRIORITÁRIA Nº 1 — migrar para o `targets` TUDO que entra no paper
+
+**Status**: ABERTA, é a próxima tarefa de código do projeto (decisão do autor, 2026-08-26)
+**Prioridade**: MÁXIMA — antes de qualquer outra coisa de código
+**Rastreamento**: issue #6 (`gh issue view 6`); plano em
+`quality_reports/plans/2026-08-25_migrate_diagnostics_to_targets.md`
+
+Regra do autor, sem exceção além das duas nomeadas: **nada que entra no paper pode ficar
+fora do `targets`, exceto as chamadas externas ao Banco Mundial e o scraping da Folha**
+(esses ficam como dados já coletados, cacheados e declarados, para não onerar a pesquisa —
+e a submissão explica isso). Motivo: o pacote de replicação vai afirmar que a análise usa
+`targets`; script fora do grafo produzindo número do manuscrito derruba o claim.
+
+**ATUALIZAÇÃO 2026-08-26 — a auditoria adversarial ampliou o problema**
+(`quality_reports/2026-08-26_adversarial_audit_targets_coverage.md`, 6 bloqueantes):
+a lista de exceções está incompleta por um fator de três, e **duas das fontes de rede
+omitidas rodam DENTRO do grafo**, a cada build numa máquina limpa —
+`functions.R:280` baixa cow2iso do GitHub e `:292` chama `gmd()`, que baixa de
+globalmacrodata.com; `:100` chama `wb_countries()` (segundo endpoint do BM). Os três
+alimentam `synth_data`/`final_df` (72 descendentes cada) e portanto a Tabela 1 e as colunas
+(2)-(4) da Tabela 3. Ou seja: **estar dentro do grafo não basta — o critério é nenhuma folha
+tocar a rede**. Além disso, os snapshots que produziram os números existem só na máquina do
+autor (`macro_data`/`country_data` de 2025-07-05, `ideology_data` de 2025-07-07;
+`_targets/objects/` = 515 MB, não versionado). Ver a EMENDA no plano.
+
+Hoje **206 targets** existem, e o manuscrito lê 26 deles — mas também lê **13 CSVs**
+escritos por scripts de diagnóstico que o `targets` não rastreia
+(`scripts/diagnostics/audit_*.R`, `prepare_paper_v4_*.R`). `main_summary`,
+`rank_inference`, `unit_weights` etc. NÃO são targets (verificado contra o manifesto). Um
+`tar_make()` puro num clone limpo não os produz.
+
+Escopo: **migrar tudo de uma vez** (SDiD + figuras + commodity/table5 + UNGA-DM). Não há
+migração parcial "para ver funcionando": se não funciona dentro do `targets`, há algo
+errado no código, não no `targets`.
+
+Custo medido (rodada de 2026-08-25/26, não é estimativa): o diagnóstico do SDiD leva **16
+segundos** e as figuras **8 segundos** — os fits caros (SEs a 20.000 replicações, família
+`fect_ife_*`) já são targets e NÃO serão reconstruídos. O grosso do recálculo é a família
+commodity, que reaproveita checkpoints validados por fingerprint.
+
+Critério de aceitação: saídas idênticas às da rodada de 2026-08-26 (gabarito numérico,
+tolerância 1e-12) e `tar_make()` + render suficientes para reproduzir o paper.
+
 ## Estado atual do `paper_v4`
 
 ### Resolvido: cross-country China #1 status-current
@@ -114,7 +157,15 @@ O paper já calibra a interpretação AGNU:
 
 ## Pendências reais remanescentes
 
-### BLOQUEANTE — rebuild de reprodutibilidade da spec sem covariáveis
+### RESOLVIDO (2026-08-26) — rebuild de reprodutibilidade da spec sem covariáveis
+
+**Status**: CONCLUÍDO. 12/12 lotes OK entre 2026-08-25 16:35 e 2026-08-26 10:59 (~9h25),
+sob o screen de doadores corrigido (bens). Invariante de consistência do SE passou nas
+quatro fontes; `output/paper_v4.pdf` regenerado em 2026-08-26. Números finais: ATT −0,2728,
+SE 0,1306 (20k, seed 20260520), p 0,037, rank direcional 3/96 (p 0,031), bilateral 7/96.
+O texto abaixo é o registro histórico do que era a pendência.
+
+#### (histórico)
 
 **Status**: BLOQUEANTE antes de qualquer circulação ou submissão
 **Prioridade**: MÁXIMA
