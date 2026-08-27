@@ -1731,7 +1731,8 @@ knitr::kable(
 
 ## Public Cue and Recoverability Audit
 
-In order to better understand how the empirical treatment in the panel regression -- top good-exports destination -- was capturing the theoretical treatment -- public status change --, we ran a cross-country media and source audit. It asks whether public or official rank language is recoverable around entry and whether non-recovery should be read as meaningful silence. Table \@ref(tab:ex-top1-recoverability-audit) therefore separates observed China status cues, displaced-incumbent recoverability, and metric caveats. Negative cases are not interpreted as proof that the status cue was absent, because it may be a failure of accessing what happened after so many years of the event, specially in countries with worse record keeping of official speeches and media news pieces.
+In order to assess how closely the empirical treatment used in the panel regression, China becoming a country’s largest destination for goods exports, maps onto the theorized treatment (a publicly salient change in status), we conducted a cross-country audit of news media and official sources. The audit examines whether explicit rank language can be recovered around the time of treatment entry and whether source coverage is sufficiently complete for non-recovery to count as informative silence. Table \@ref(tab:ex-top1-recoverability-audit) therefore distinguishes among observed status cues concerning China, whether the displaced incumbent can be identified, and caveats concerning the underlying trade metric. Cases in which no status cue was recovered are not automatically interpreted as showing that the cue was absent. Non-recovery may instead reflect limited access to contemporaneous records many years after the event, especially in countries where official speeches and news archives are less systematically preserved or digitized.
+
 
 ```{r ex-top1-recoverability-audit, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 ex_top1_tables <- tar_read(ex_top1_salience_appendix_tables)
@@ -1775,18 +1776,43 @@ if (!exists("ex_top1_tables")) {
 }
 afr_context_tbl <- ex_top1_tables$afr_context_table
 
+# A single documented source across six wide columns has to be scaled down to fit the
+# text block, which leaves it unreadable. Transposing to one field per row keeps every
+# value at full width and at a legible size.
+afr_tex_escape <- function(x) {
+  x <- gsub("\\\\", "\\\\textbackslash{}", x)
+  gsub("([&%$#_{}])", "\\\\\\1", x)
+}
+afr_tex_path <- function(x) {
+  # allow a line break after each separator so the raw-file pointer wraps in the cell
+  paste0("\\texttt{", gsub("/", "/\\\\allowbreak{}", afr_tex_escape(x)), "}")
+}
+
+afr_context_long <- tibble::tibble(
+  Field = names(afr_context_tbl),
+  Value = vapply(afr_context_tbl, function(col) as.character(col[[1]]), character(1))
+) %>%
+  dplyr::mutate(
+    Value = dplyr::if_else(Field == "Raw file", afr_tex_path(Value), afr_tex_escape(Value)),
+    Field = afr_tex_escape(Field)
+  )
+
 knitr::kable(
-  afr_context_tbl,
+  afr_context_long,
   format = "latex",
   booktabs = TRUE,
-  escape = TRUE,
+  escape = FALSE,
+  col.names = NULL,
+  linesep = "",
   caption = "Australian Financial Review context source for Australia.",
-  align = "llllll"
+  align = c("l", "l")
 ) %>%
   kableExtra::kable_styling(
-    latex_options = c("HOLD_position", "scale_down"),
-    font_size = 7
+    latex_options = "HOLD_position",
+    font_size = 9
   ) %>%
+  kableExtra::column_spec(1, bold = TRUE, width = "4.6cm") %>%
+  kableExtra::column_spec(2, width = "10.0cm") %>%
   kableExtra::footnote(
     general = "The AFR item documents a broad aggregate-trading-partner cue. It is retained as context for metric mismatch and prior salience, not as evidence of newspaper uptake of the strict export-destination treatment.",
     general_title = "Note: ",
@@ -1994,37 +2020,10 @@ ungadm_fmt_rank <- function(rank_value, denom, p_value) {
 }
 ```
 
-> **[RASCUNHO -- substituir por texto do autor.]** *Parágrafo 1 -- o que é a
-> checagem e por que ela está aqui.* Apresentar a medida alternativa de ideal
-> points [@fjelstul_etal2026], estimada sobre outro conjunto de votações
-> relacionadas a resoluções; dizer que o check foi pré-comprometido (o resultado
-> entra no paper seja qual for) e que o BSV segue como outcome principal. Fixar o
-> que muda e o que não muda: mesmo painel, mesmo donor pool, mesma contagem de
-> replicações e mesma seed do SE placebo (20.000, seed 20260520). A única
-> entrada que difere é a série de outcome; os pesos do controle sintético são
-> reestimados a partir dela, o que o parágrafo 4 retoma. Cobertura da junção:
-> `r nrow(ungadm_unmapped)` linhas país-sessão do UNGA-DM ficaram sem
-> correspondência ISO3c e `r nrow(ungadm_missing_outcome)` linhas do painel SDiD
-> ficaram sem outcome sob a medida alternativa.
+The main estimations in the paper used as response variable the classic ideal-point measurement by BSV [inserir citação correta]. However, according to @fjelstul_etal2026, the set of resolutions included in the BSV [citar correto] dataset is not complete. They provided a broader dataset, along with reestimations of ideal points based on this new data. To assess if the results of the paper change with this new measurement, we reran the main estimations with this new response variable. To make the comparasions fair, we used exactly the same specifications as long as possible, so the drive in the change of results are given by the new measruement, not by different model, covariates our even different seeds in the bootstrap computations. The only difference is the series, since the time window is smaller for the @fjelstul_etal2026 data, and the time weights in the SDiD, which are recomputed by the algorithm and we do not have control over them. It is also impotant to note that  `r nrow(ungadm_unmapped)` country-session rows had no ISO3c match and `r nrow(ungadm_missing_outcome)` SDiD rows had no outcome in the alternative measurement.
 
-> **[RASCUNHO.]** *Parágrafo 2 -- leitura da Tabela
-> \@ref(tab:ungadm-sdid-comparison).* Sob o UNGA-DM o efeito estimado é maior em
-> valor absoluto (`r sprintf("%.3f", ungadm_dm_row$estimate)` contra
-> `r sprintf("%.3f", ungadm_bsv_row$estimate)`) e o p da aproximação normal cai
-> para `r sprintf("%.3f", ungadm_dm_row$p_normal_two_sided)`. O rank direcional é
-> idêntico nas duas medidas
-> (`r ungadm_fmt_rank(ungadm_dm_row$rank_one_sided, ungadm_dm_row$rank_denominator, ungadm_dm_row$p_rank_one_sided)`);
-> o rank bilateral melhora de
-> `r ungadm_fmt_rank(ungadm_bsv_row$rank_two_sided, ungadm_bsv_row$rank_denominator, ungadm_bsv_row$p_rank_two_sided)`
-> para
-> `r ungadm_fmt_rank(ungadm_dm_row$rank_two_sided, ungadm_dm_row$rank_denominator, ungadm_dm_row$p_rank_two_sided)`,
-> ficando logo acima de 5 por cento. Vale observar que as médias
-> pré-tratamento das duas séries diferem
-> (`r sprintf("%.3f", ungadm_bsv_row$brazil_pre_mean)` contra
-> `r sprintf("%.3f", ungadm_dm_row$brazil_pre_mean)`), de modo que o efeito como
-> percentual da média pré é próximo nas duas
-> (`r sprintf("%.1f", ungadm_bsv_row$estimate_pct_pre_mean)` e
-> `r sprintf("%.1f", ungadm_dm_row$estimate_pct_pre_mean)` por cento).
+The results are consistent with the main estimation. Table \@ref(tab:ungadm-sdid-comparison) shows the comparison. Under UNGA-DM, the point estimate is nominally higher than the original in absolut terms: (`r sprintf("%.3f", ungadm_dm_row$estimate)` versus `r sprintf("%.3f", ungadm_bsv_row$estimate)`), with a lower p-value `r sprintf("%.3f", ungadm_dm_row$p_normal_two_sided)`. The direction rank is the same in both measurements (`r ungadm_fmt_rank(ungadm_dm_row$rank_one_sided, ungadm_dm_row$rank_denominator, ungadm_dm_row$p_rank_one_sided)`). The bilateral rank improves from `r ungadm_fmt_rank(ungadm_bsv_row$rank_two_sided, ungadm_bsv_row$rank_denominator, ungadm_bsv_row$p_rank_two_sided)` to `r ungadm_fmt_rank(ungadm_dm_row$rank_two_sided, ungadm_dm_row$rank_denominator, ungadm_dm_row$p_rank_two_sided)`. However, with less countries in the sample, the p-value actually increases, being slightly above 5%. It is notworthy to know that the pre-treatment averages are different, (`r sprintf("%.3f", ungadm_bsv_row$brazil_pre_mean)` against
+`r sprintf("%.3f", ungadm_dm_row$brazil_pre_mean)`) in the original estimation. But the effect measured as pre-treatment average percent is similar: (`r sprintf("%.1f", ungadm_bsv_row$estimate_pct_pre_mean)` and`r sprintf("%.1f", ungadm_dm_row$estimate_pct_pre_mean)` per cent).
 
 ```{r ungadm-sdid-comparison, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 ungadm_comparison_tbl <- tibble::tibble(
@@ -2095,13 +2094,7 @@ knitr::kable(
   )
 ```
 
-> **[RASCUNHO.]** *Parágrafo 3 -- distribuição placebo e critérios de exclusão de
-> doadores.* Comentar a Figura \@ref(fig:ungadm-placebo-distribution) como espelho
-> da figura do corpo do paper, e a Tabela \@ref(tab:ungadm-rank-criteria), que
-> mostra que os ranks sob UNGA-DM não dependem do critério de exclusão de
-> doadores com status China-top: as três linhas dão o mesmo rank direcional e
-> praticamente o mesmo bilateral. Vale lembrar aqui a convenção declarada na
-> seção de identificação, e o piso de resolução de cerca de 1 por cento.
+Now we present diagnostics statistics for the UNGA-DM outcome. Firstly, the placebo-in-space distribution, as shown in \@ref(fig:ungadm-placebo-distribution). The results are quite similar to the original estimation, which shows that the placebo ranks are not dependent on the outcome variable used. Table \@ref(tab:ungadm-rank-criteria) shows specifically that the position is the same in both metrics, only the denominator changes, lower in the alternative outcome.
 
 ```{r ungadm-placebo-distribution, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Placebo-in-space distribution under the UNGA-DM outcome, with Brazil marked. Brazil's estimate is the ", scales::ordinal(ungadm_dm_row$rank_one_sided), " most negative of ", ungadm_dm_row$rank_denominator, " assignments (directional p = ", sprintf("%.3f", ungadm_dm_row$p_rank_one_sided), "); the two-sided absolute rank is ", ungadm_dm_row$rank_two_sided, "/", ungadm_dm_row$rank_denominator, " (p = ", sprintf("%.3f", ungadm_dm_row$p_rank_two_sided), "). Negative values indicate convergence toward China. ", caption_note(unit = "Estimated post-2009 gap in absolute UNGA ideal-point distance to China, UNGA-DM measure", window = "1997-2015 annual SDiD panel")), fig.pos="H", fig.width=7, fig.asp=0.5}
 ungadm_placebo_valid <- ungadm_dm_placebo %>%
@@ -2162,20 +2155,7 @@ knitr::kable(
   )
 ```
 
-> **[RASCUNHO.]** *Parágrafo 4 -- quanto o contrafactual muda.* Como os pesos são
-> estimados a partir da própria série pré-tratamento, trocar a medida reestima o
-> controle sintético; convém dizer isso antes que o parecerista pergunte. A
-> Tabela \@ref(tab:ungadm-donor-weights) documenta o tamanho da mudança: o
-> ajuste é difuso nas duas medidas (o maior peso individual é
-> `r sprintf("%.3f", ungadm_max_weight_dm)` sob UNGA-DM e
-> `r sprintf("%.3f", ungadm_max_weight_bsv)` sob BSV), os dois vetores de pesos
-> têm correlação de `r sprintf("%.3f", ungadm_weight_cor)`, e
-> `r ungadm_top10_overlap` dos dez maiores doadores são os mesmos nas duas. A
-> leitura honesta: a diferença entre as colunas da Tabela
-> \@ref(tab:ungadm-sdid-comparison) combina a troca de série com a reestimação
-> dos pesos. O que permanece fixo é o painel, o donor pool e as configurações de
-> inferência. É aqui também que cabe dizer o que a medida alternativa faz de
-> diferente (amostra de votações, tratamento de abstenções).
+Now we show the weights. Since they are estimated for each fit, they are not the same. Table \@ref(tab:ungadm-donor-weights) presents how much change in that regard. The fit is spread among donors in a similar way in both fit: `r sprintf("%.3f", ungadm_max_weight_dm)` under UNGA-DM and`r sprintf("%.3f", ungadm_max_weight_bsv)` under BSV. The correlation of the donor pool weight is moderate: `r sprintf("%.3f", ungadm_weight_cor)`, but among the tp ten donors, six are the same: `r ungadm_top10_overlap`. All in all, it shows that the synthetic fit is robust to such changes.
 
 ```{r ungadm-donor-weights, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 ungadm_weights_tbl <- ungadm_weights %>%
@@ -2220,15 +2200,9 @@ knitr::kable(
   )
 ```
 
-> **[RASCUNHO.]** *Parágrafo 5 -- o painel cross-country.* A Tabela
-> \@ref(tab:ungadm-ife-window) compara o painel IFE nas duas medidas em janela
-> comum e com linhas idênticas. O ponto a fazer: o truncamento de janela não
-> explica a diferença (a linha BSV em janela comum é praticamente igual à BSV
-> cheia); sob UNGA-DM o efeito atenua para
-> `r sprintf("%.3f", ungadm_ife_dm_common$att)` com p =
-> `r sprintf("%.3f", ungadm_ife_dm_common$p)`. Note-se que a validação cruzada
-> seleciona `r ungadm_ife_bsv_common$r_cv` fatores latentes no BSV e
-> `r ungadm_ife_dm_common$r_cv` no UNGA-DM, o que o parágrafo seguinte explora.
+Regarding the panel regression, table \@ref(tab:ungadm-ife-window) compares the IFE estimation in the same time window. The effect is smallaer under UNGA-DM:
+`r sprintf("%.3f", ungadm_ife_dm_common$att)` with p =
+`r sprintf("%.3f", ungadm_ife_dm_common$p)`. One important difference is that number of latent factors choosen by cross-validation:  `r ungadm_ife_bsv_common$r_cv` latent factors under BSV and `r ungadm_ife_dm_common$r_cv` for UNGA-DM.
 
 ```{r ungadm-ife-window, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 ungadm_ife_tbl <- ungadm_ife_comparison %>%
@@ -2270,19 +2244,7 @@ knitr::kable(
   )
 ```
 
-> **[RASCUNHO.]** *Parágrafo 6 -- decomposição da atenuação, e a linguagem que o
-> resultado sustenta.* A Tabela \@ref(tab:ungadm-ife-2x2) fixa o número de
-> fatores nas duas medidas. Com fatores comuns (r = 2), a diferença entre as
-> medidas encolhe; com r = 1, nem o BSV é distinguível de zero. Ou seja: parte da
-> atenuação vem da medida e parte da seleção do número de fatores, e a
-> significância do painel depende do segundo fator latente em ambas as séries. O
-> bootstrap pareado não distingue os dois ATTs (p =
-> `r sprintf("%.3f", ungadm_boot_selected$p_two_sided_percentile)` na comparação
-> procedimento-selecionado e p =
-> `r sprintf("%.3f", ungadm_boot_common$p_two_sided_percentile)` com fatores
-> comuns). O claim sustentável é que a evidência de escopo cross-country é
-> **sensível à fonte de mensuração** e imprecisa demais para discriminar entre as
-> duas medidas -- não que ela "não sobrevive".
+To make an apples to apples comparison as possible, table \@ref(tab:ungadm-ife-2x2) fix the number of latent factors in two. the results suggest that part of the smaller effect is due to picking one factor only to accomodate the differential response to shocks of units, which may also be induced by the smaller time window. This suggests some sensibility to the measurement outcome in the panel regression, although it is reassuring that the point estimations all point in the same direction.
 
 ```{r ungadm-ife-2x2, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 ungadm_2x2_tbl <- ungadm_ife_2x2 %>%
@@ -2328,10 +2290,4 @@ knitr::kable(
   )
 ```
 
-> **[RASCUNHO.]** *Parágrafo 7 -- fechamento.* Recapitular em duas ou três frases:
-> o teste brasileiro é robusto à troca de medida e fica mais forte sob UNGA-DM; a
-> evidência de escopo cross-country é sensível à fonte de mensuração; o BSV
-> permanece o outcome principal por ser a medida usada na literatura com que o
-> paper dialoga e por pré-compromisso anterior à execução do check. Se o autor
-> quiser, é aqui que entra a frase que recalibra o peso do painel como defesa
-> contra confounders Brasil-específicos.
+To sum up, the SDiD is insensitive to the alternative outcome measurement. On the other hand, the IFE estimation is senstitive to the chosen metrics, and the shorter time window along with less countries in the sample makes the noise high enough that we do not have any power to rule out that the effect is zero or substantively insignificant. Nonetheless, the point estimates are consistent.
