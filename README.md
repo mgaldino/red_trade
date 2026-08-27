@@ -36,6 +36,12 @@ priority-one task.
       target) so the pipeline emits this revised figure, then make the Rmd
       consume that target. The manually generated image must not remain the
       final reproducibility path.
+- [ ] **Rewrite the fit-diagnostic language once RMSPE is lambda-weighted** (issue #8).
+      RMSPE is a synthetic-control diagnostic: SCM matches pre-treatment levels and has no
+      unit fixed effects, so pre-fit quality licenses the comparison. SDiD absorbs level
+      differences in unit effects, weights pre-periods, and regularizes against exact
+      pre-fit, so what it assumes is parallelism of the weighted pre-trend. The code will
+      be corrected; the prose is the author's call.
 - [ ] **`proofread`**, deliberately deferred until after the rebuild.
 - [ ] **Abstract and conclusion numbers are typed by hand** (the abstract lives
       in the YAML header). Per the rule in `CLAUDE.md`, every new PDF must be
