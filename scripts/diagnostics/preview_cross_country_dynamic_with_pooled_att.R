@@ -219,7 +219,10 @@ figure <- ggplot2::ggplot() +
     y = "Effect on UNGA ideal-point distance to China",
     caption = paste(
       "Points and vertical bars: event-time estimates and pointwise 95% bootstrap CIs.",
-      "Orange band and dashed line: pooled ATT and its 95% CI over all 440 treated country-years (h=+1 to +20).",
+      sprintf(
+        "Orange band and dashed line: pooled ATT and its 95%% CI over all %d treated country-years (h=+1 to +20).",
+        model_main$n_treated_country_years[[1]]
+      ),
       "This is a pooled average, not a cumulative sum. Display: h=-12 to +15.",
       "N labels show contributing treated countries at selected post-entry horizons.",
       sep = "\n"
