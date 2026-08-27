@@ -1057,11 +1057,14 @@ sig_sentence <- function(att, p) {
 }
 ```
 
-The preferred cross-country specification is the no-covariate IFE model on the goods-only restricted risk set. The estimate is `r fmt3(main_cross_s$att)` ideal-point units (bootstrap SE = `r fmt3(main_cross_s$se)`, 95 percent CI [`r fmt3(main_cross_s$ci_lo)`, `r fmt3(main_cross_s$ci_hi)`], p = `r format_p(main_cross_s$p)`). It corresponds to about `r fmt1(main_cross_s$att_rel_pct)` percent of the pre-treatment mean distance to China, or `r fmt3(main_cross_s$att_sd_units)` standard deviations of the outcome. `r sig_sentence(main_cross_s$att, main_cross_s$p)` The clean single-entry robustness estimate is `r fmt3(clean_cross_s$att)` (p = `r format_p(clean_cross_s$p)`). The switching-allowed estimate is smaller, `r fmt3(switching_cross_s$att)` (p = `r format_p(switching_cross_s$p)`), which is consistent with attenuation when short China-top periods and post-exit off-status years are allowed into the comparison structure. The cross-country evidence is smaller than the Brazil SDiD effect, consistent with Brazil being a most-likely case in which China displaced the United States and the rank reversal was publicly salient. The direction is the same: durable China-top goods-export status is associated with reduced UNGA distance to China beyond the Brazilian case. Appendix Tables \@ref(tab:cross-country-duration-table) and \@ref(tab:cross-country-audit-table) report duration-threshold robustness and sample-coding audits.
+The preferred cross-country specification is the no-covariate IFE model on the goods-only restricted risk set. The estimate is `r fmt3(main_cross_s$att)` ideal-point units (bootstrap SE = `r fmt3(main_cross_s$se)`, 95 percent CI [`r fmt3(main_cross_s$ci_lo)`, `r fmt3(main_cross_s$ci_hi)`], p = `r format_p(main_cross_s$p)`). It corresponds to about `r fmt1(main_cross_s$att_rel_pct)` percent of the pre-treatment mean distance to China, or `r fmt3(main_cross_s$att_sd_units)` standard deviations of the outcome. `r sig_sentence(main_cross_s$att, main_cross_s$p)` The clean single-entry robustness estimate is `r fmt3(clean_cross_s$att)` (p = `r format_p(clean_cross_s$p)`).  Appendix Tables \@ref(tab:cross-country-duration-table) and \@ref(tab:cross-country-audit-table) report duration-threshold robustness and sample-coding audits.
 
 ```{r cross-country-table, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 cross_tbl <- m2_model_results %>%
-  dplyr::filter(min_duration_years == 5L) %>%
+  dplyr::filter(
+    min_duration_years == 5L,
+    specification %in% c("risk_set_restricted", "clean_single_spell")
+  ) %>%
   dplyr::mutate(
     Model = specification_label,
     Estimator = "IFE",
@@ -1098,7 +1101,7 @@ cross_note <- paste0(
   " Goods-only ranks are computed from ITPD-E Agriculture, Mining and Energy, and Manufacturing sectors; Services are excluded before ranks are constructed. ",
   "Units (T/C) = treated/control units. ",
   "For IFE rows, r* is the number of latent factors selected by cross-validation over r = 0:3. ",
-  "The restricted risk-set row is the main cross-country estimate. The clean single-entry row excludes treated countries with multiple China-top periods. The switching-allowed row is a status-current robustness check that keeps a balanced panel and changes the comparison structure."
+  "The restricted risk-set row is the main cross-country estimate. The clean single-entry row excludes treated countries with multiple China-top periods."
 )
 
 knitr::kable(
