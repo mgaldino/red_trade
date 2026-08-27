@@ -33,6 +33,18 @@ priority-one task.
 - [ ] **Abstract and conclusion numbers are typed by hand** (the abstract lives
       in the YAML header). Per the rule in `CLAUDE.md`, every new PDF must be
       checked by a subagent against the body and against the source files.
+- [ ] **Set up Time Machine (or an equivalent backup of the working
+      directory).** On 2026-08-26 two deletions destroyed the only in-repository
+      copy of the Folha network cache and of `cow2iso.csv`; both were recovered
+      by chance from sibling directories outside the repository, and a forensic
+      audit (`quality_reports/2026-08-26_forensic_deletion_audit.md`) had to be
+      run to find out. Git is not the answer here: `quality_reports/` is
+      deliberately gitignored (internal reviews and referee correspondence do
+      not belong in a public repository), and `raw data/` is far too large to
+      version. What protects those files is a backup of the working directory,
+      which does not exist today. 294 review documents and 8.6 GB of raw inputs
+      currently live in exactly one place.
+
 - [ ] **Replication package**: regenerate from the spec in
       `quality_reports/plans/2026-08-26_replication_package_spec.md`. The old
       `replication package/` directory (v3 snapshot, 8.7 GB, README describing a
