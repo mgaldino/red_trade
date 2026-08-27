@@ -16,17 +16,24 @@
 # What it deliberately skips:
 #   raw data/          8.4 GB of it is the ITPD-E, public at the USITC
 #   _targets/          reproducible by rerunning the pipeline
-#   anything in git    already protected by the push
 #
-# It never deletes anything at the destination. That is the point: rsync
-# --delete would mirror an accidental deletion into the backup, destroying the
-# very copy the backup exists to preserve. The cost is that the destination
-# accumulates renamed and retired files, which is irrelevant at this size.
+# TWO SAFETY PROPERTIES, both deliberate:
+#
+#   1. It never deletes at the destination. rsync --delete would mirror an
+#      accidental deletion into the backup, destroying the very copy the backup
+#      exists to preserve. The cost is that the destination accumulates renamed
+#      and retired files, which is irrelevant at this size.
+#
+#   2. It never overwrites a destination file in place without keeping the old
+#      one. A file truncated or corrupted at the source would otherwise
+#      overwrite the good backup copy on the next run. Superseded versions go
+#      to _attic/<timestamp>/ instead, which stays empty on clean runs.
 
 set -euo pipefail
 
 SRC="/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade"
 DEST="$HOME/Library/Mobile Documents/com~apple~CloudDocs/red_trade_backup"
+ATTIC="$DEST/_attic/$(date +%Y%m%d_%H%M%S)"
 
 if [ ! -d "$SRC" ]; then
   echo "Source project not found: $SRC" >&2
@@ -45,54 +52,100 @@ mkdir -p "$DEST"
 echo "Backing up to: $DEST"
 echo
 
+failures=0
+
 copy_dir() {
   # $1 = path relative to the project root
-  local rel="$1"
+  rel="$1"
   if [ ! -d "$SRC/$rel" ]; then
-    echo "  SKIP (missing): $rel" >&2
+    echo "  SOURCE MISSING (nothing to copy): $rel" >&2
     return 1
   fi
   mkdir -p "$DEST/$rel"
-  # -a archive, -h human sizes, --no-perms/--no-owner/--no-group because iCloud
-  # does not preserve them and would otherwise report an error per file
-  rsync -rlth --no-perms --no-owner --no-group --exclude=".DS_Store" \
-    "$SRC/$rel/" "$DEST/$rel/"
+  # -rlth: recurse, keep symlinks, preserve times, human-readable sizes.
+  # --no-perms/--no-owner/--no-group: iCloud does not preserve them and would
+  # otherwise report an error per file.
+  # --backup/--backup-dir: a file replaced at the destination is moved to the
+  # attic rather than overwritten, so a truncated source cannot destroy a good
+  # backup copy.
+  if ! rsync -rlth --no-perms --no-owner --no-group \
+       --backup --backup-dir="$ATTIC/$rel" \
+       --exclude=".DS_Store" \
+       "$SRC/$rel/" "$DEST/$rel/"; then
+    echo "  RSYNC FAILED: $rel" >&2
+    return 1
+  fi
   echo "  copied: $rel"
 }
 
 copy_file() {
-  local rel="$1"
+  rel="$1"
   if [ ! -f "$SRC/$rel" ]; then
-    echo "  SKIP (missing): $rel" >&2
+    echo "  SOURCE MISSING (nothing to copy): $rel" >&2
     return 1
   fi
   mkdir -p "$DEST/$(dirname "$rel")"
-  rsync -lth --no-perms --no-owner --no-group "$SRC/$rel" "$DEST/$rel"
+  if ! rsync -lth --no-perms --no-owner --no-group \
+       --backup --backup-dir="$ATTIC/$(dirname "$rel")" \
+       "$SRC/$rel" "$DEST/$rel"; then
+    echo "  RSYNC FAILED: $rel" >&2
+    return 1
+  fi
   echo "  copied: $rel"
 }
 
-failures=0
-copy_dir  "quality_reports"          || failures=$((failures + 1))
-copy_dir  "data/raw/network_caches"  || failures=$((failures + 1))
+copy_dir  "quality_reports"             || failures=$((failures + 1))
+copy_dir  "data/raw/network_caches"     || failures=$((failures + 1))
 copy_file "data/folha_classificado.rds" || failures=$((failures + 1))
 
 echo
 echo "Destination now holds:"
-du -sh "$DEST" 2>/dev/null | awk '{print "  " $1 "  total"}'
+# -A reports apparent size, so iCloud-evicted files are not counted as 0 bytes.
+du -shA "$DEST" 2>&1 | awk '{print "  " $1 "  total"}' || echo "  (could not measure)"
 
-# Verify the two files that cannot be regenerated at all: the Folha scrape
-# cache (the newspaper cannot be re-scraped) and its classification.
+# Completeness check on quality_reports/, the real payload: most of it exists
+# nowhere else. Every source file must have a counterpart at the destination.
+# Extra files at the destination are expected and fine — that is what retiring
+# without deleting looks like.
+echo
+echo "Completeness check on quality_reports/:"
+missing_count=0
+while IFS= read -r f; do
+  rel="${f#"$SRC/"}"
+  if [ ! -f "$DEST/$rel" ]; then
+    missing_count=$((missing_count + 1))
+    [ "$missing_count" -le 10 ] && echo "  NOT BACKED UP: $rel" >&2
+  fi
+done < <(find "$SRC/quality_reports" -type f ! -name ".DS_Store" 2>/dev/null)
+
+if [ "$missing_count" -eq 0 ]; then
+  n=$(find "$SRC/quality_reports" -type f ! -name ".DS_Store" 2>/dev/null | wc -l | tr -d ' ')
+  echo "  ok: all $n files present at the destination"
+else
+  echo "  $missing_count file(s) missing at the destination" >&2
+  failures=$((failures + 1))
+fi
+
+# Byte-level check on the files that cannot be regenerated at all: the Folha
+# scrape cache (the newspaper cannot be re-scraped) and its classification.
 echo
 echo "Integrity check on the files that cannot be regenerated:"
 check_hash() {
-  local rel="$1"
-  if [ ! -f "$SRC/$rel" ] || [ ! -f "$DEST/$rel" ]; then
-    echo "  MISSING: $rel" >&2
+  rel="$1"
+  if [ ! -f "$SRC/$rel" ]; then
+    echo "  GONE FROM THE PROJECT (the backup copy is now the only one): $rel" >&2
     return 1
   fi
-  local a b
-  a=$(shasum -a 256 "$SRC/$rel"  | awk '{print $1}')
-  b=$(shasum -a 256 "$DEST/$rel" | awk '{print $1}')
+  if [ ! -f "$DEST/$rel" ]; then
+    echo "  NOT BACKED UP: $rel" >&2
+    return 1
+  fi
+  a=$(shasum -a 256 "$SRC/$rel"  | awk '{print $1}') || a=""
+  b=$(shasum -a 256 "$DEST/$rel" | awk '{print $1}') || b=""
+  if [ -z "$a" ] || [ -z "$b" ]; then
+    echo "  COULD NOT HASH: $rel" >&2
+    return 1
+  fi
   if [ "$a" = "$b" ]; then
     echo "  ok: $rel"
   else
@@ -105,6 +158,20 @@ check_hash "data/raw/network_caches/folha_scrape_cache.rds" || failures=$((failu
 check_hash "data/raw/network_caches/wb_data_cache.rds"      || failures=$((failures + 1))
 check_hash "data/raw/network_caches/cow2iso.csv"            || failures=$((failures + 1))
 check_hash "data/folha_classificado.rds"                    || failures=$((failures + 1))
+
+# The attic is empty on a clean run. Anything in it means a destination file was
+# replaced — worth a look, because the superseded version may be the good one.
+if [ -d "$ATTIC" ]; then
+  attic_n=$(find "$ATTIC" -type f 2>/dev/null | wc -l | tr -d ' ')
+  if [ "$attic_n" -gt 0 ]; then
+    echo
+    echo "  NOTE: $attic_n destination file(s) were replaced this run."
+    echo "  The superseded versions are kept at: $ATTIC"
+  else
+    rmdir "$ATTIC" 2>/dev/null || true
+    rmdir "$DEST/_attic" 2>/dev/null || true
+  fi
+fi
 
 echo
 if [ "$failures" -ne 0 ]; then

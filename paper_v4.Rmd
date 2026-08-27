@@ -290,7 +290,7 @@ The cross-country panel provides a second check against Brazil-specific timing e
 
 The Brazilian analysis estimates the average post-2009 reduced-form effect of China's entry into the top export-destination position on Brazil's UNGA ideal-point distance to China. It asks whether Brazil moved closer to China than a synthetic counterfactual after the 2009 rank reversal.
 
-Figure \@ref(fig:brazil-rank-volume) shows the timing of the rank threshold. China's export share rose before 2009, but China became the top-ranked export destination only in 2009. The signed margin over the relevant competitor also changes sign at that threshold. The preferred SDiD specification uses only pre-2009 averages of the China and U.S. export shares rather than their post-treatment paths. The rank margin is part of the threshold event itself, so it is used as a timing diagnostic rather than as a separate control.
+Figure \@ref(fig:brazil-rank-volume) shows the timing of the rank threshold. China's export share rose before 2009, but China became the top-ranked export destination only in 2009. The signed margin over the relevant competitor also changes sign at that threshold, reinforcing the relevance of the treatment.
 
 ```{r brazil-rank-volume, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Brazil rank-versus-volume diagnostic for China's export-destination status. Panels show China's export share, ordinal rank, and signed margin over the relevant competitor. The dashed line marks the 2009 rank reversal. ", caption_note(unit = "Export share in percent; ordinal rank; export-value margin in current USD billions", window = "2000-2012 annual Brazil series")), fig.pos="H", fig.width=7.2, fig.height=7.2}
 tar_read(goal3_brazil_rank_volume_plot)
