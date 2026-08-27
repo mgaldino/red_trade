@@ -26,8 +26,6 @@ priority-one task.
       is now false; it was recomputed in the `ungadm` batch.
 - [ ] **Eligibility-rule sentence**: state that the donor screen ranks by the
       same goods-export measure that defines treatment.
-- [ ] **Inferential contract in the text** (decision of 2026-08-23): declare the
-      directional placebo rank as the primary test, applied uniformly.
 - [ ] **Table 2 legibility.**
 - [ ] **`proofread`**, deliberately deferred until after the rebuild.
 - [ ] **Abstract and conclusion numbers are typed by hand** (the abstract lives

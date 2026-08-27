@@ -521,50 +521,43 @@ do paper só ficam consistentes após o rebuild rodar com o estágio 07 verde.
       para os targets, encerrando o contorno.
 
 
-### Contrato inferencial da especificação principal — declarar no texto
+### Convenção de teste da especificação principal — JÁ ESTÁ NO TEXTO
 
-**Status**: Parcialmente resolvida; resta a redação do autor
-**Prioridade**: ALTA antes de nova circulação
+**Status**: RESOLVIDA em `paper_v4.Rmd`; não reabrir
+**Prioridade**: FECHADA, salvo exigência de parecerista
 
 A parte estimativa desta pendência (versão de 2026-05-25) foi resolvida em
 julho: a especificação principal passou a ser o `predetermined_core` (commit
 `2b6200d`), escolhido por argumento de identificação (remoção de covariáveis
 pós-tratamento), com revisões causais independentes em
 `quality_reports/china_demand_shock_rank_threshold/`. Números atuais da
-especificação principal:
+especificação principal (rebuild de 2026-08-26; fonte:
+`paper_v4_brazil_sdid_no_covariates/main_summary.csv`):
 
 | Medida | Valor |
 |---|---:|
-| ATT | -0.272 |
-| SE placebo (1.000 replicações) | 0.130 |
-| p normal bilateral | 0.036 |
-| IC 95% | [-0.527, -0.017] |
+| ATT | -0.273 |
+| SE placebo (20.000 replicações, seed 20260520) | 0.131 |
+| p normal bilateral | 0.037 |
+| IC 95% | [-0.529, -0.017] |
 | Rank placebo direcional | 3/96 (p = 0.031) |
 | Rank absoluto bilateral | 7/96 (p = 0.073) |
 
-Os passos 1-5 da versão anterior desta pendência foram executados (specs
-pré-especificadas na Tabela 5, sinal estável, revisão causal independente).
-O que resta é a decisão de contrato aprovada em 2026-08-23 (parecer
-`quality_reports/2026-08-23_causal_did_inference.md`, seções 3-4 e 7),
-a implementar **pelo autor** no texto:
+O que o parecer de 2026-08-23 pedia
+(`quality_reports/2026-08-23_causal_did_inference.md`, seções 3-4 e 7) já está
+escrito, na formulação do autor, na seção "Identification strategy" (~linhas
+285-289 do Rmd): o teste é o rank placebo direcional, justificado pela hipótese
+direcional; o SE da aproximação normal entra como complemento; o rank bilateral
+é reportado como avaliação conservadora, com o piso de resolução de ~1%
+(1/96 = 0.0104) explicado; e a mesma convenção vale para todo diagnóstico
+baseado em placebo, inclusive o benchmark de direitos humanos.
 
-1. Declarar na seção de desenho/identificação que o teste primário é o rank
-   placebo direcional (H1 é direcional e pré-declarada na teoria), com o p do
-   SE placebo como complemento nativo e o rank bilateral como sensibilidade
-   conservadora explicada (nota de resolução: piso 1/96; 4 dos 6 placebos mais
-   extremos são positivos).
-2. Aplicar o contrato uniformemente, inclusive no diagnóstico de direitos
-   humanos (0.063 direcional citado; 0.053 donor-only como robustez).
-3. Adicionar a figura da distribuição placebo com o Brasil marcado
-   (`placebo_distribution.csv` já é lido no Rmd, linha ~305, e nunca usado).
-4. Consolidar a inferência da especificação preferida num painel único
-   (integrar à reforma da Table 2, abaixo).
-5. Levar o resumo inferencial dos dois desenhos para a introdução (hoje ela
-   não carrega inferência; o painel a p = 0.010 robusto aparece tarde).
+Também já feitos: a figura da distribuição placebo com o Brasil marcado (chunk
+`plot-placebo-distribution`) e o p do rank direcional inline na introdução.
 
-Critério de resolução: contrato declarado antes dos resultados, aplicado
-uniformemente, e apresentação consolidada. O rank bilateral (0.073) continua
-reportado — explicado, não omitido.
+Resta um único item deste bloco, e ele vive na reforma da Table 2 abaixo:
+consolidar ATT, SE, IC, p normal e os ranks num painel único de inferência. O
+rank bilateral (0.073) continua reportado — explicado, não omitido.
 
 ### Robustez de mensuração com UNGA-DM (Fjelstul, Hug & Kilby 2026)
 
@@ -636,7 +629,7 @@ Pendências derivadas (ordem do revisor):
 4. **Parcialmente incorporado ao `paper_v4.Rmd` em 2026-08-23** (a pedido e
    na formulação do autor): resumo inferencial na introdução (Bloco B, com
    valores inline vindos dos targets), nota de dados UNGA-DM (Bloco C) e os
-   dois parágrafos do contrato inferencial em "Identification strategy"
+   dois parágrafos sobre a convenção de teste em "Identification strategy"
    (Bloco A); entrada BibTeX `fjelstul_etal2026` adicionada ao
    `synth-trade-china.bib`. Correção factual aplicada e sinalizada no Bloco A:
    piso de resolução do rank é ~1% (1/96 = 0.0104), não 0.1%.
@@ -652,10 +645,10 @@ Pendências derivadas (ordem do revisor):
    pré-comprometida). **Rascunho de apoio disponível** (pedido pelo autor em
    2026-08-23; a escrita final é do autor):
    `quality_reports/ungadm_outcome_robustness/2026-08-23_draft_paper_text_ungadm.md`
-   — blocos A-H (contrato inferencial, introdução, nota de dados, parágrafo
+   — blocos A-H (convenção de teste, introdução, nota de dados, parágrafo
    de sensibilidade, recalibragem ~610, apêndice com tabelas, legenda da
    figura placebo, BibTeX de Fjelstul et al.), cada um com nota explicativa e
-   checklist de incorporação. Inclui também o contrato inferencial da
+   checklist de incorporação. Inclui também a convenção de teste da
    pendência anterior.
 
 Pacote menor concluído: teste F de pré-tendência do m2 extraído e equivalence
@@ -685,7 +678,7 @@ Ações possíveis:
 Critério de resolução: Table 2 legível no PDF renderizado em tamanho normal,
 sem depender de zoom excessivo.
 
-Nota 2026-08-23: integrar esta reforma com o item 4 do contrato inferencial
+Nota 2026-08-23: integrar esta reforma com o painel único de inferência pedido
 acima — um painel único de inferência da especificação preferida (ATT, SE, IC,
 p normal, ranks direcional/bilateral/filtrados) pode absorver a linha "Placebo
 inference" da Table 2 e reduzir o conteúdo restante.
