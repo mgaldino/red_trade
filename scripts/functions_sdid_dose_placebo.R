@@ -8,7 +8,7 @@
 # that alignment responds smoothly to the DOSE of trade exposure to China, with
 # no special role for the rank-#1 threshold. The donor pool is a sample of "dose
 # without the crown": countries whose export share to China grew by varying
-# amounts but which never became China's rank-#1 goods-export destination.
+# amounts but for which China never became the rank-#1 goods-export destination.
 #
 # Crossing each donor's pseudo-ATT with its exposure dose separates the two
 # stories. A flat dose-ATT relation, with Brazil extreme even against high-dose
@@ -30,14 +30,15 @@
 # trade_data_ranked -- both ALL-SECTOR series, i.e. get_trade_data() applies no
 # broad_sector filter, so services are included. Treatment and the donor screen,
 # by contrast, are defined on GOODS (trade_data_goods_ranked). The two bases
-# disagree for exactly one donor: Singapore is China's rank-#1 partner in
-# 2013-2014 on all-sector trade but never better than rank #2 on goods, which is
-# why it is an eligible donor and why the exposure file nonetheless flags it as
-# "China top export destination post-2009". The dose measure is therefore an
-# export share computed on the all-sector file -- exports to China over the
-# country's total exports to all partners, since process_trade_data() groups by
-# exporter and total_trade is the sum of that exporter's outward flows -- and
-# the pool remains untreated on the goods definition that identifies the design.
+# disagree for exactly one donor: China is Singapore's rank-#1 export
+# destination in 2013-2014 on all-sector trade but never better than rank #2 on
+# goods, which is why Singapore is an eligible donor and why the exposure file
+# nonetheless flags it as "China top export destination post-2009". The dose
+# measure is therefore an export share computed on the all-sector file --
+# exports to China over the country's total exports to all partners, since
+# process_trade_data() groups by exporter and total_trade is the sum of that
+# exporter's outward flows -- and the pool remains untreated on the goods
+# definition that identifies the design.
 #
 # INFERENCE DISCIPLINE. The slope and correlations below are DESCRIPTIVE ONLY.
 # Donor pseudo-ATTs are not independent: each is fitted against a donor pool that
@@ -55,7 +56,7 @@
 # the targets graph (it belongs to the standalone audit layer); sourcing it from
 # target code would drag an unmanaged file into the pipeline's dependency
 # tracking. The self-test row written by
-# summarise_brazil_sdid_dose_placebo_ranks() reproduces the full-pool ranks from
+# write_brazil_sdid_dose_placebo_ranks() reproduces the full-pool ranks from
 # rank_inference.csv and fails loudly if this duplicate ever drifts.
 brazil_sdid_dose_placebo_rank_inference <- function(distribution,
                                                     comparison_set,
@@ -159,6 +160,20 @@ build_brazil_sdid_dose_placebo_dataset <- function(placebo_path,
          "dose disagrees with delta_mean_china_export_share_post_minus_pre ",
          "(max absolute discrepancy ", format(max_abs_delta_discrepancy),
          "); the exposure file is internally inconsistent.", call. = FALSE)
+  }
+
+  # The join below is a left_join on iso3c, so a duplicated key on the exposure
+  # side would silently MULTIPLY donor rows: the OLS N would inflate, the
+  # quartile cutoff would move, and the high-dose subgroup could change, with
+  # nothing failing. Assert the key is unique instead of trusting the file.
+  duplicated_exposure_iso3c <- unique(exposure$iso3c[duplicated(exposure$iso3c)])
+  if (length(duplicated_exposure_iso3c) > 0L) {
+    stop("build_brazil_sdid_dose_placebo_dataset: iso3c is not unique in ",
+         exposure_path, ", so the donor join would duplicate rows and change ",
+         "the OLS sample, the quartile cutoff and the high-dose subgroup ",
+         "without any error. Duplicated iso3c: ",
+         paste(sort(duplicated_exposure_iso3c), collapse = ", "), ".",
+         call. = FALSE)
   }
 
   donors <- donor_estimates |>
@@ -410,12 +425,16 @@ brazil_sdid_dose_placebo_summary_row <- function(results) {
     high_dose_boundary_rule = "dose >= cutoff",
     dose_measurement_basis = paste(
       "China export share computed on the all-sector trade file (goods and",
-      "services) from donor_china_exposure.csv: exports to China divided by",
-      "total exports to all partners, i.e. trade_with_china / total_trade,",
-      "where total_trade is the sum of the country's exports across all",
-      "partners and NOT a measure of two-way trade. Treatment and the donor",
-      "screen are defined on goods, so no donor crossed the rank-1 threshold",
-      "on the treatment-defining sector definition."
+      "services) from donor_china_exposure.csv. The ANNUAL share is exports to",
+      "China divided by total exports to all partners, i.e. trade_with_china /",
+      "total_trade, where total_trade is the sum of the country's exports",
+      "across all partners and NOT a measure of two-way trade. Each period",
+      "dose is the MEAN OF THE ANNUAL SHARES within the period, not a ratio of",
+      "period totals; the two differ whenever total exports vary across years.",
+      "Periods are pre-treatment 1997-2008 and post-treatment 2009-2015.",
+      "Treatment and the donor screen are defined on goods, so no donor",
+      "crossed the rank-1 threshold on the treatment-defining sector",
+      "definition over 1997-2015."
     ),
     slope_inference_note = paste(
       "Slope and correlations are descriptive only: donor pseudo-ATTs share",
@@ -436,10 +455,10 @@ brazil_sdid_dose_placebo_summary_row <- function(results) {
       "the diagnostic shows the presence or absence of a dose gradient BELOW the",
       "threshold and does not identify the discontinuity at the threshold. The",
       "sector qualifier is load-bearing. On the all-sector basis this file uses",
-      "to MEASURE the dose, exactly one donor reached rank 1: Singapore, China's",
-      "top all-sector export destination in 2013-2014, which sits inside both",
-      "high-dose subgroups. The crownless span is therefore a property of the",
-      "goods definition alone."
+      "to MEASURE the dose, exactly one donor reached rank 1: China was",
+      "Singapore's top all-sector export destination in 2013-2014, and",
+      "Singapore sits inside both high-dose subgroups. The crownless span is",
+      "therefore a property of the goods definition alone."
     )
   )
 }
@@ -686,12 +705,12 @@ plot_brazil_sdid_dose_placebo <- function(results, dose_key = "delta_share") {
       caption = paste0(
         "Each point is a donor given the 2009 pseudo-treatment. The dose is an ",
         "all-sector export share (goods and services); treatment\n",
-        "and the donor screen are defined on goods only. No donor became ",
-        "China's top goods-export destination, so the plot shows the\n",
-        "dose gradient below the threshold rather than the discontinuity at it. ",
-        "The dotted line marks the top-quartile dose cutoff.\n",
-        "The fitted line is descriptive only: donor pools overlap, so no ",
-        "standard error is reported for the slope."
+        "and the donor screen are defined on goods only. China never became ",
+        "any donor's top goods-export destination over 1997-2015, so\n",
+        "the plot shows the dose gradient below the threshold rather than the ",
+        "discontinuity at it. The dotted line marks the top-quartile\n",
+        "dose cutoff. The fitted line is descriptive only: donor pools overlap, ",
+        "so no standard error is reported for the slope."
       )
     ) +
     ggplot2::theme_minimal(base_size = 11) +
