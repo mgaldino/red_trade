@@ -1,0 +1,116 @@
+{
+  "$id": "1",
+  "Titulo": "Protocolo Adicional ao Convênio de Cooperação Educativa entre o Governo da República Federativa do Brasil e o Governo da República Argentina sobre Integração Educacional para a Formação de Recursos Humanos em Nível de Pós-Graduação",
+  "OutraParte": "Argentina",
+  "OutrasPartes": [
+    "Argentina"
+  ],
+  "SignatarioBrasil": "Paulo Renato de Souza",
+  "CargoSignatarioBrasil": "Ministro da Educação",
+  "Depositario": null,
+  "LocalCelebracao": "Buenos Aires",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "15/06/2000",
+  "TipoAcordo": "BL",
+  "PossuiHtml": false,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Argentina",
+      "NomeSignatario": "Juan José Llach",
+      "CargoSignatario": "Ministro da Educação"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Cooperação e Desenvolvimento",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "127",
+    "DataDOU": "04/07/2000"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": "37.126",
+    "DataEntradaVigor": "15/06/2000",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 2451,
+      "NomeArquivo": "Argentina - DOU - Publicação DAI - 127 - 2000.pdf",
+      "Descricao": "Publicação no DOU da DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "11",
+    "Id": 2452,
+    "NomeArquivo": "Argentina - PA - Pós-Graduação.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "12",
+      "DescricaoObservacao": "Conforme disposto no Artigo XVI: \"Este Protocolo Adicional entrará em vigor na data de sua assinatura e vigorará durante o período de vigência do Convênio de Cooperação Educativa, celebrado em 10 de novembro de 1997\"."
+    }
+  ]
+}

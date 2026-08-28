@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República da Turquia Sobre Assistência Mútua Administrativa em Matéria Aduaneira",
+  "OutraParte": "Turquia",
+  "OutrasPartes": [
+    "Turquia"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "27/05/2010",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Turquia",
+      "NomeSignatario": "Ahmet Davutoglu",
+      "CargoSignatario": "Ministro dos Negócios Estrangeiros"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Economia, Finanças e Tributos",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "598",
+    "DataMensagem": "29/12/2015",
+    "NumeroDOU": "249",
+    "DataDOU": "30/12/2015"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "139",
+    "DataDecreto": "21/09/2017",
+    "NumeroDOU": "183",
+    "DataDOU": "22/09/2017"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "2016/14162810",
+      "DataDocumento": "13/06/2016",
+      "Local": null,
+      "DataRecebimento": "15/06/2016",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "141",
+      "DataDocumento": "12/10/2017",
+      "Local": "Embaixada em Ancara",
+      "DataRecebimento": "12/10/2017",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "9346",
+    "DataDecreto": "16/04/2018",
+    "NumeroDOU": "73",
+    "DataDOU": "17/04/2018"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "11/11/2017",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 26503,
+      "NomeArquivo": "Turquia - DOU - Decreto do Promulgação - 73 - 2018.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 24346,
+      "NomeArquivo": "Turquia - DOU - Decreto Legislativo - 139 -2017.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 6425,
+      "NomeArquivo": "Turquia - DOU - Mensagem ao Congresso - 249 - 2015.pdf",
+      "Descricao": "Mensagem ao Congresso Nacional",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 12023,
+    "NomeArquivo": "Turquia - Acordo - Assistência Mútua Matéria Aduaneira.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme o disposto no Artigo 17\r\n\"1.                     Este Acordo entrará em vigor no décimo terceiro (13º) dia seguinte à troca de Notas em que uma Parte informa à outra, por via diplomática, que suas formalidades legais internas necessárias à entrada em vigor deste Acordo foram concluídas.\""
+    }
+  ]
+}

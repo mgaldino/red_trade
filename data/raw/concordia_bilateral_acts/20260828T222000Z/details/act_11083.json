@@ -1,0 +1,110 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo para a Criação do \"Visto MERCOSUL\" - Decisão CMC nº 16/03",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai",
+    "sem depositário"
+  ],
+  "SignatarioBrasil": null,
+  "CargoSignatarioBrasil": null,
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Montevidéu",
+  "NomePaisCelebracao": "Uruguai",
+  "DataCelebracao": "16/12/2003",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "sem depositário",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Consulares e Migratórios",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": "799",
+    "DataMensagem": "24/11/2005",
+    "NumeroDOU": "226",
+    "DataDOU": "25/11/2005"
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": "346",
+    "DataDecreto": "23/12/2008",
+    "NumeroDOU": "250",
+    "DataDOU": "24/12/2008"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Situação especial",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 4755,
+      "NomeArquivo": "Acordo - Criação - Visto - MERCOSUL - DOU - Decreto Legislativo - 250 - 2008.pdf",
+      "Descricao": "Acordo - Criação - Visto - MERCOSUL - DOU - Decreto Legislativo - 250 - 2008",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 4753,
+      "NomeArquivo": "Acordo - Criação - Visto - MERCOSUL - DOU - Mensagem ao Congresso - 226 - 2005.pdf",
+      "Descricao": "Acordo - Criação - Visto - MERCOSUL - DOU - Mensagem ao Congresso - 226 - 2005",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 4752,
+    "NomeArquivo": "Dec. 16-03 - Acordo - Criação - Visto - MERCOSUL - port esp.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": []
+}

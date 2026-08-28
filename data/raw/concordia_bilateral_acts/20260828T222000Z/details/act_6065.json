@@ -1,0 +1,124 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo, por troca de Notas, para o Estabelecimento de uma Faixa Non Aedificandi em Zonas Urbanas entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai [adicional ao Acordo de 16/9/1980]",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Samuel Pinheiro Guimarães",
+  "CargoSignatarioBrasil": "Secretário Geral das Relações Exteriroes",
+  "Depositario": null,
+  "LocalCelebracao": "Assunção",
+  "NomePaisCelebracao": "Paraguai",
+  "DataCelebracao": "09/04/2008",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "T",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": "Rubén Ramirez Lezcano",
+      "CargoSignatario": "Ministro das Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": {
+    "$id": "3",
+    "Id": 5906,
+    "Titulo": "Acordo, PTN, para o Estabelecimento de uma Faixa Non Aedificandi em Zonas Urbanas, Adicional ao Acordo de 16/09/1980 (substituído)"
+  },
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Cooperação e Desenvolvimento",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "910",
+    "DataMensagem": "20/11/2008",
+    "NumeroDOU": "227",
+    "DataDOU": "21/11/2008"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "594",
+    "DataDecreto": "27/08/2009",
+    "NumeroDOU": "165",
+    "DataDOU": "28/08/2009"
+  },
+  "Ratificacao": [
+    {
+      "$id": "7",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "7.763",
+    "DataDecreto": "19/06/2012",
+    "NumeroDOU": "118",
+    "DataDOU": "20/06/2012"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "30/05/2011",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 10253,
+      "NomeArquivo": "Paraguai - DOU - Promulgação - 118 - 2012.pdf",
+      "Descricao": "Publicação no DOU de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 10252,
+      "NomeArquivo": "Paraguai - DOU - Decreto Legislativo - 165 - 2009.pdf",
+      "Descricao": "Publicação no DOU de Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 10251,
+      "NomeArquivo": "Paraguai - DOU - Mensagem ao Congresso - 227 - 2008.pdf",
+      "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 10024,
+    "NomeArquivo": "Paraguai - ATN - Zona Non Aedificandi.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto na Nota Brasileira: \"Em resposta, apraz-me comunicar que o Governo da República Federativa do Brasil concorda com os termos propostos pela Nota transcrita acima, e que, conseqüentemente, a Nota de Vossa Excelência e a presente Nota constituem um Acordo entre os dois Governos, que entrará em vigor a partir da data em que ambas as Partes comuniquem, por escrito e por via diplomática, o cumprimento dos requisitos legais internos necessários\"."
+    }
+  ]
+}

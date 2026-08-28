@@ -1,0 +1,101 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo-Quadro sobre Comércio entre o MERCOSUL e o Reino do Marrocos",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "26/11/2004",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Comércio Internacional e Investimentos",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 27534,
+      "NomeArquivo": "MERCOSUL - Ata de Depósito - Marrocos.pdf",
+      "Descricao": "Ata de Depósito do Instrumento de Ratificação do Brasil.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "10",
+    "Id": 27532,
+    "NomeArquivo": "Acordo-Quadro - Comércio - MERCOSUL - Marrocos.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "11",
+      "DescricaoObservacao": "Conforme disposto no Artigo 10: \"1. O presente Acordo entrará em vigor trinta dias após a data da última notificação, pelas Partes Contratantes, por escrito e pelos canais diplomáticos, do cumprimento das formalidades legais internas necessárias para esse fim.\""
+    }
+  ]
+}

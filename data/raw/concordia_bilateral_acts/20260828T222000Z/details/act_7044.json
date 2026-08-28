@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República Argentina para a Construção de uma Ponte Internacional sobre o Rio Peperi-Guaçu, entre as Cidades de Paraíso, Brasil, e San Pedro, Argentina.",
+  "OutraParte": "Argentina",
+  "OutrasPartes": [
+    "Argentina"
+  ],
+  "SignatarioBrasil": "Antonio de Aguiar Patriota",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Buenos Aires",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "31/01/2011",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Argentina",
+      "NomeSignatario": "Héctor Marcos Timerman",
+      "CargoSignatario": "Ministro de Relações Exteriores, Comércio Internacional e Culto; Julio de Vido, Ministro de Planejamento Federal, Investimento Público e Serviços"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Fronteira, Infraestrutura e Integração Regional",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "46",
+    "DataMensagem": "14/02/2012",
+    "NumeroDOU": "33",
+    "DataDOU": "15/02/2012"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "306",
+    "DataDecreto": "04/07/2013",
+    "NumeroDOU": "128",
+    "DataDOU": "05/07/2013"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "200",
+      "DataDocumento": "01/10/2014",
+      "Local": "Ministério das Relações Exteriores e Culto",
+      "DataRecebimento": "01/10/2014",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "486",
+      "DataDocumento": "11/07/2013",
+      "Local": "Embaixada em Buenos Aires",
+      "DataRecebimento": "11/07/2013",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "8699",
+    "DataDecreto": "28/03/2016",
+    "NumeroDOU": "59",
+    "DataDOU": "29/03/2016"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "01/10/2014",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 8109,
+      "NomeArquivo": "Argentina - DOU - Decreto de Promulgação - 59 - 2016.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 2072,
+      "NomeArquivo": "Argentina - DOU - Mensagem ao Congresso - 33 - 2012.pdf",
+      "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 2071,
+      "NomeArquivo": "Argentina - DOU - Decreto Legislativo - 128 - 2013.pdf",
+      "Descricao": "Publicação no DOU de Decreto Legislativo",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 2070,
+    "NomeArquivo": "Argentina - Acordo - Ponte Peperi-Guaçu.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo V \"O presente Acordo entrará em vigor na data da segunda notificação pela qual uma das Partes informa a outra, por via diplomática, do cumprimento dos respectivos requisitos internos para sua entrada em vigor.\""
+    }
+  ]
+}

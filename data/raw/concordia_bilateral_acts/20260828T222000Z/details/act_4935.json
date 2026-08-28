@@ -1,0 +1,106 @@
+{
+  "$id": "1",
+  "Titulo": "Memorando de Entendimento entre o Ministério do Desenvolvimento, Indústria e Comércio Exterior da República Federativa do Brasil e a Comissão Estatal para Planificação da Economia da República Popular da China sobre Cooperação Industrial.",
+  "OutraParte": "China",
+  "OutrasPartes": [
+    "China"
+  ],
+  "SignatarioBrasil": "Embaixador Sérgio Silva do Amaral",
+  "CargoSignatarioBrasil": "Ministério do Desenvolvimento, Indústria e Comércio Exterior",
+  "Depositario": null,
+  "LocalCelebracao": "Pequim",
+  "NomePaisCelebracao": "China",
+  "DataCelebracao": "02/12/2002",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "China",
+      "NomeSignatario": "Zhang Guobao",
+      "CargoSignatario": "Vice-Ministro da Comissão Estatal de Planejamento do Desenvolvimento"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Cooperação e Desenvolvimento",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "14",
+    "DataDOU": "20/02/2003"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Expirado",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "02/12/2002",
+    "DataEntradaVigorCI": null,
+    "Expirou": "02/12/2004",
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 3745,
+      "NomeArquivo": "China - DOU - Publicação DAI - 14 - 2003.pdf",
+      "Descricao": "Publicação no DOU da DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "10",
+    "Id": 3744,
+    "NomeArquivo": "China - Memorando de Entendimento - Planificação da Economia.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "11",
+      "DescricaoObservacao": "Conforme disposto no Artigo VIII \"O presente Memorando de Entendimento entrará em vigor na data de sua assinatura e terá vigência por um prazo de dois anos, contando a partir de sua entrada em vigor, com possibilidade de prorrogação pelo período que convierem as Partes.\""
+    }
+  ]
+}

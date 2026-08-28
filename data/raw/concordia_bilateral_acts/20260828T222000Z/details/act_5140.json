@@ -1,0 +1,116 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República da Índia sobre Isenção de Vistos para Portadores de Passaportes Diplomáticos, Oficiais e de Serviço",
+  "OutraParte": "Índia",
+  "OutrasPartes": [
+    "Índia"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Nova Delhi",
+  "NomePaisCelebracao": "Índia",
+  "DataCelebracao": "25/01/2004",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Índia",
+      "NomeSignatario": "Yashwant Senha",
+      "CargoSignatario": "Ministro de Estado das Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Consulares e Migratórios",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": "17/08/2004",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": "29/06/2004",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "227",
+    "DataDOU": "26/11/2004"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "17/11/2004",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 7656,
+      "NomeArquivo": "Índia - DOU - Publicação DAI - 227 - 2004.pdf",
+      "Descricao": "Publicação no DOU da DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "11",
+    "Id": 7663,
+    "NomeArquivo": "Índia - Acordo - Isenção de Vistos.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "12",
+      "DescricaoObservacao": "Conforme disposto no artigo 9 parágrafo 1: \"O presente Acordo entrará em vigor 90 (noventa) dias após a data de recebimento da segunda Nota diplomática pela qual uma Parte informa e outra de que todos os requisitos para a entrada em vigor do Acordo requeridos por suas respectivas legislações nacionais tenham sido cumpridos.\""
+    }
+  ]
+}

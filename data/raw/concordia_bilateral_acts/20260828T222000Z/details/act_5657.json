@@ -1,0 +1,102 @@
+{
+  "$id": "1",
+  "Titulo": "Protocolo entre o Ministério da Educação da República Federativa do Brasil e o Ministério da Educação, Ciência e Tecnologia da República Argentina para a Criação do Mecanismo Permanente Conjunto em Temas Educacionais",
+  "OutraParte": "Argentina",
+  "OutrasPartes": [
+    "Argentina"
+  ],
+  "SignatarioBrasil": "Fernando Haddad",
+  "CargoSignatarioBrasil": "Ministro da Educação",
+  "Depositario": null,
+  "LocalCelebracao": "Buenos Aires",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "19/07/2006",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Argentina",
+      "NomeSignatario": "Daniel Filmus",
+      "CargoSignatario": "Ministro da Educação, Ciência e Tecnologia"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Cooperação e Desenvolvimento",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "19/07/2006",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [],
+  "DocumentoIntegra": {
+    "$id": "9",
+    "Id": 2139,
+    "NomeArquivo": "Argentina - Protocolo - Temas Educacionais.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "10",
+      "DescricaoObservacao": "Por se tratar de Protocolo interministerial, não foi publicado no D.O.U."
+    },
+    {
+      "$id": "11",
+      "DescricaoObservacao": "Conforme disposto no Parágrafo 7º \"O presente Protocolo entrará em vigor na data de sua assinatura e terá duração de quatro anos, prorrogáveis por igual período, a menos que uma Parte notifique a outra, por escrito, de sua intenção de terminá-lo. A denúncia deste Protocolo somente se tornará efetiva no ano seguinte, não afetando a realização ads atividades prevista nos no programa de trabalho do ano em que decida terminá-lo.\""
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "$id": "1",
+  "Titulo": "Declaração Conjunta - Visita de Trabalho à República Argentina do Presidente da República Federativa do Brasil, Luiz Inácio Lula da Silva",
+  "OutraParte": "Argentina",
+  "OutrasPartes": [
+    "Argentina"
+  ],
+  "SignatarioBrasil": "Luiz Inácio Lula da Silva",
+  "CargoSignatarioBrasil": "Presidente da República",
+  "Depositario": null,
+  "LocalCelebracao": "Buenos Aires",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "23/04/2009",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Argentina",
+      "NomeSignatario": "Cristina Fernández de Kirchner",
+      "CargoSignatario": "Presidente da República"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Cooperação e Desenvolvimento",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "23/04/2009",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [],
+  "DocumentoIntegra": {
+    "$id": "9",
+    "Id": 2337,
+    "NomeArquivo": "Argentina - Declaração Conjunta - Visita de Trabalho.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": []
+}

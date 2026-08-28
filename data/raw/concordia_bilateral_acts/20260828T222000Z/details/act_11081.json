@@ -1,0 +1,115 @@
+{
+  "$id": "1",
+  "Titulo": "Mecanismo para o Exercício Profissional Temporário - Decisão CMC 25/03",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": null,
+  "CargoSignatarioBrasil": null,
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Montevidéu",
+  "NomePaisCelebracao": "Uruguai",
+  "DataCelebracao": "15/12/2003",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Consulares e Migratórios",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "626",
+    "DataMensagem": "26/07/2006",
+    "NumeroDOU": "143",
+    "DataDOU": "27/07/2006"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "347",
+    "DataDecreto": "23/12/2008",
+    "NumeroDOU": "250",
+    "DataDOU": "24/12/2008"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "9.499",
+    "DataDecreto": "10/09/2018",
+    "NumeroDOU": "175",
+    "DataDOU": "11/09/2018"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "17/04/2013",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 28069,
+      "NomeArquivo": "Exercício Profissional Temporário - DOU - Decreto de Promulgação - 175 - 2018.pdf",
+      "Descricao": "Publicação no DOU de Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 27167,
+      "NomeArquivo": "DOU - Decreto Legislativo - 250 - 2008.pdf",
+      "Descricao": "Publicação no DOU de Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 27165,
+      "NomeArquivo": "DOU - Mensagem ao Congresso - 143 - 2006.pdf",
+      "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 4760,
+    "NomeArquivo": "Dec. 25-03 - Exercício - Profissional - Temporário - port.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Entrada em vigor: Art. 4 - A presente Decisão deverá ser incorporada aos ordenamentos jurídicos nacionais, de acordo aos procedimentos respectivos de cada Estado Parte."
+    }
+  ]
+}

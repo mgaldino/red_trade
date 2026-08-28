@@ -1,0 +1,101 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo, por troca de Notas, relativo à Incorporação dos Conceitos de Responsabilidade Social e Ambiental ao Planejamento das Atividades de Itaipu Binacional",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Valter Pecly Moreira",
+  "CargoSignatarioBrasil": "Embaixador",
+  "Depositario": null,
+  "LocalCelebracao": "Assunção",
+  "NomePaisCelebracao": "Paraguai",
+  "DataCelebracao": "31/03/2005",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": "Leila Rachid de Cowles",
+      "CargoSignatario": "Ministra das Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Meio Ambiente e Sustentabilidade",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "85",
+    "DataDOU": "05/05/2005"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": "41763",
+    "DataEntradaVigor": "31/03/2005",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 10549,
+      "NomeArquivo": "DOU - Publicação DAI - 85 - 2005.pdf",
+      "Descricao": "Publicação no DOU pela DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "10",
+    "Id": 10550,
+    "NomeArquivo": "Paraguai - Acordo Notas - Responsabilidade Social.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": []
+}

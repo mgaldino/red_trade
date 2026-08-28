@@ -1,0 +1,123 @@
+{
+  "$id": "1",
+  "Titulo": "Memorando de Entendimento para o Estabelecimento de um Grupo Bilateral de Inteligência Brasil-Paraguai na Esfera da Pirataria, da Falsificação e do Contrabando de Produtos Pirateados e Falsificados",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Assunção",
+  "NomePaisCelebracao": "Paraguai",
+  "DataCelebracao": "20/06/2005",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": "Leila Rachid",
+      "CargoSignatario": "Ministra das Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "629",
+    "DataMensagem": "26/07/2006",
+    "NumeroDOU": "143",
+    "DataDOU": "27/07/2006"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "983",
+    "DataDecreto": "22/12/2009",
+    "NumeroDOU": "245",
+    "DataDOU": "23/12/2009"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "830",
+      "DataDocumento": "24/12/2009",
+      "Local": "Embaixada em Assunção",
+      "DataRecebimento": "24/12/2009",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 10554,
+      "NomeArquivo": "DOU - Decreto Legislativo - 245 - 2009.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 10555,
+      "NomeArquivo": "DOU - Mensagem ao Congresso - 143 - 2006.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 10551,
+    "NomeArquivo": "Paraguai - ME - Contrabando e Falsificados.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme disposto no parágrafo 9: \"O presente Memorando de Entendimento entrará em vigor a partir da data da segunda nota diplomática pela qual uma das Partes comunique à outra a finalização dos trâmites internos necessários para sua implementação. O Memorando de Entendimento se manterá em vigor até que uma das Partes comunique a outra, por escrito e por via diplomática, sua intenção de denunciá-lo. A denúncia surtirá efeito a partir de (30) dias contados do recebimento da notificação correspondente\"."
+    }
+  ]
+}

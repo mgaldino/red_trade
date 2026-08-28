@@ -1,0 +1,106 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo, por troca de Notas, para Encerrar as Atividades da Comissão Mista Brasil-Paraguai Criada para a Construção da Rodovia Concepción-Ponta Porã Através do Comunicado Conjunto de 6 de Outubro de 1956",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Bernardo Pericás Neto",
+  "CargoSignatarioBrasil": "Embaixador",
+  "Depositario": null,
+  "LocalCelebracao": "Assunção",
+  "NomePaisCelebracao": "Paraguai",
+  "DataCelebracao": "12/05/2000",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": "Juan Esteban Aguirre",
+      "CargoSignatario": "Ministro de Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Relações Diplomáticas e Consulares",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "114",
+    "DataDOU": "14/06/2000"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "16/07/2000",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 10067,
+      "NomeArquivo": "Paraguai - DOU - Publicação DAI - 114 - 2000.pdf",
+      "Descricao": "Publicação no DOU da DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "10",
+    "Id": 10066,
+    "NomeArquivo": "Paraguai - Acordo PTN - Encerramento Comissão Mista.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "11",
+      "DescricaoObservacao": "Conforme Disposto no Texto da Nota Brasileira \"Tendo a Comissão Mista Brasil-Paraguai cumprido integralmente a finalidade para a qual foi constituída, esta nota e a de Vossa Excelência de idêntico teor e mesma data constituirão acordo pelo qual a Comissão Mista Brasil-Paraguai fica extinta a partir de 16 de julho de 2000.\""
+    }
+  ]
+}

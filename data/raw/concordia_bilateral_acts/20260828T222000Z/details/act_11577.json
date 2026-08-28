@@ -1,0 +1,121 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo Modificativo do Acordo para a Concessão de um Prazo de Noventa (90) Dias aos Turistas Nacionais dos Estados Partes do Mercosul e Estados Associados",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": null,
+  "CargoSignatarioBrasil": null,
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Paraná, Província de Entre Ríos",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "16/12/2014",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [
+    {
+      "$id": "2",
+      "Id": 11245,
+      "Titulo": "Acordo para a Concessão de um Prazo de Noventa (90) Dias aos Turistas Nacionais dos Estados Partes do MERCOSUL e Estados Associados (Bolívia, Colômbia, Chile, Equador e Peru) - Decisão CMC nº 10/06"
+    }
+  ],
+  "SignatarioOutraParte": [
+    {
+      "$id": "3",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Serviços e Transporte",
+      "IsPrincipal": false
+    },
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": "455",
+    "DataMensagem": "17/08/2016",
+    "NumeroDOU": "159",
+    "DataDOU": "18/08/2016"
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": "171",
+    "DataDecreto": "06/12/2018",
+    "NumeroDOU": "235",
+    "DataDOU": "07/12/2018"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em promulgação/Casa Civil",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 29527,
+      "NomeArquivo": "Carta de Ratificação.pdf",
+      "Descricao": "Carta de Ratificação brasileira",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 29228,
+      "NomeArquivo": "DOU - Decreto Legislativo - 235 - 2018.pdf",
+      "Descricao": "Publicação no DOU de Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 13684,
+      "NomeArquivo": "DOU - Mensagem - 159 - 2016.pdf",
+      "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 182,
+    "NomeArquivo": "Turistas Nacionais.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no artigo 5 \"O presente acordo entrará em vigor trinta dias depois do depósito do último instrumento de  ratificação dos Estados Partes do MERCOSUL. Na mesma data entrará em vigor para os Estados Associados que tenham ratificado anteriormente. Para os Estados Associados que não tenham ratificado com anteriormente. Para os Estados associados que não tenham ratificado com anterioridade a essa data, o acordo entrará em vigor no mesmo dia em que se deposite o respectivo instrumento de ratificação.''"
+    }
+  ]
+}

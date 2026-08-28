@@ -1,0 +1,100 @@
+{
+  "$id": "1",
+  "Titulo": "Memorando para o Estabelecimento do Mecanismo de Diálogo Político e Cooperação entre os Estados Partes do Mercado Comum do Sul (MERCOSUL) e Estados Associados e a República da Turquia.",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai",
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Foz Iguaçu",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "16/12/2010",
+  "TipoAcordo": "ML",
+  "PossuiHtml": false,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Cooperação e Desenvolvimento",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [],
+  "DocumentoIntegra": {
+    "$id": "10",
+    "Id": 2404,
+    "NomeArquivo": "MERCOSUL-Turquia - port esp turco ing.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "11",
+      "DescricaoObservacao": "De acordo com o Artigo 5, o Memorando entrará em vigor na data de sua assinatura."
+    }
+  ]
+}

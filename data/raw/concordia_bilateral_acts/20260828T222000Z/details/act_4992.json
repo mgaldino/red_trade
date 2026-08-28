@@ -1,0 +1,106 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo Complementar ao Acordo de Cooperação Técnica entre o Governo da República Argentina e o Governo da República Federativa do Brasil para Implementar na Província de Buenos Aires o Sistema de Voto Eletrônico",
+  "OutraParte": "Argentina",
+  "OutrasPartes": [
+    "Argentina"
+  ],
+  "SignatarioBrasil": "José Carlos Sepúlveda Pertence",
+  "CargoSignatarioBrasil": "Presidente do Tribunal Superior Eleitoral",
+  "Depositario": null,
+  "LocalCelebracao": "Buenos Aires",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "30/07/2003",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Argentina",
+      "NomeSignatario": "Rafael Antonio Bielsa",
+      "CargoSignatario": "Ministro das Relações Exteriores, Comércio Internacional e Culto"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Cooperação e Desenvolvimento",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "183",
+    "DataDOU": "22/09/2003"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Expirado",
+    "NumeroRegistroONU": "39976",
+    "DataEntradaVigor": "30/07/2003",
+    "DataEntradaVigorCI": null,
+    "Expirou": "30/01/2004",
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 2349,
+      "NomeArquivo": "Argentina - DOU - Publicação DAI - 183 - 2003.pdf",
+      "Descricao": "Publicação no DOU da DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "10",
+    "Id": 2348,
+    "NomeArquivo": "Argentina - Acordo - Voto Eletrônico.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "11",
+      "DescricaoObservacao": "Conforme disposto no Artigo 6, Parágrafo 1: \"O presente Acordo Complementar entrará em vigor na data de sua assinatura, terá duração de cinco (5) meses e poderá ser prorrogado por acordo entre as partes e por via diplomática.\""
+    }
+  ]
+}

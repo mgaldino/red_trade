@@ -1,0 +1,98 @@
+{
+  "$id": "1",
+  "Titulo": "Memorando de Entendimento entre o Governo da República Federativa do Brasil e o Governo da República da África do Sul (no Campo da Educação).",
+  "OutraParte": "África do Sul",
+  "OutrasPartes": [
+    "África do Sul"
+  ],
+  "SignatarioBrasil": "Fernando Haddad",
+  "CargoSignatarioBrasil": "Ministro da Educação",
+  "Depositario": null,
+  "LocalCelebracao": "Paris",
+  "NomePaisCelebracao": "França",
+  "DataCelebracao": "07/07/2009",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "África do Sul",
+      "NomeSignatario": "Blade Nzimande",
+      "CargoSignatario": "Ministro da Educação Superior"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Educação e Cultura",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "07/07/2009",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [],
+  "DocumentoIntegra": {
+    "$id": "9",
+    "Id": 100,
+    "NomeArquivo": "África do Sul - MdE - Cooperação no Campo da Educação.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "10",
+      "DescricaoObservacao": "Conforme disposto no Artigo 7, \"O presente Memorando entrará em vigor na data de sua assinatura e permanecerá em vigor pelo período de 3 (três) anos, e deverá ser renovado automaticamente por períodos adicionais de 1 (um) ano.\""
+    }
+  ]
+}

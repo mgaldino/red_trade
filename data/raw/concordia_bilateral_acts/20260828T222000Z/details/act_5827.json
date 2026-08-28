@@ -1,0 +1,106 @@
+{
+  "$id": "1",
+  "Titulo": "Convênio de Cooperação sobre Saúde Animal em Área de Fronteira entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Amorim; Reinhold Stephanes",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores; Ministro da Agricultura, Pecuária e Abastecimento",
+  "Depositario": null,
+  "LocalCelebracao": "Assunção",
+  "NomePaisCelebracao": "Paraguai",
+  "DataCelebracao": "21/05/2007",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": "Rubén Ramírez Lezcano; Alfredo Silvio Molinas ",
+      "CargoSignatario": "Ministro de Relações Exteriores; Ministro da Agricultura e Pecuária "
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Agricultura, Pecuária e Pesca",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "114",
+    "DataDOU": "15/06/2007"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "21/05/2007",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 10099,
+      "NomeArquivo": "Paraguai - DOU - Publicação DAI - 114 - 2007.pdf",
+      "Descricao": "Publicação no DOU pela DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "10",
+    "Id": 10098,
+    "NomeArquivo": "Paraguai - Convênio - Saúde Animal.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "11",
+      "DescricaoObservacao": "Conforme disposto no Artigo III: \"O presente Convênio entrará em vigor da data de sua assinatura. Terá duração de três (3) anos, prorrogáveis automaticamente por iguais períodos. Qualquer uma das Partes poderá denunciá-lo mediante notificação, por escrito e por via diplomática, dirigida à outra Parte, com pelo menos seis (6) meses de antecedência em relação à data pretendida de término do Convênio.\""
+    }
+  ]
+}

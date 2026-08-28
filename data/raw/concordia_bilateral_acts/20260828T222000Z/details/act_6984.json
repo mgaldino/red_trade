@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República da Turquia sobre o Trabalho Remunerado de Dependentes de Membros de Missões Diplomáticas e Repartições Consulares",
+  "OutraParte": "Turquia",
+  "OutrasPartes": [
+    "Turquia"
+  ],
+  "SignatarioBrasil": "Antonio de Aguiar Patriota",
+  "CargoSignatarioBrasil": "Secretário-Geral das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Ancara",
+  "NomePaisCelebracao": "Turquia",
+  "DataCelebracao": "21/10/2010",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Turquia",
+      "NomeSignatario": "Feridun Sinirlioglu",
+      "CargoSignatario": "Subsecretário de Estado do Ministério dos Negócios Estrangeiros"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Relações Diplomáticas e Consulares",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "154",
+    "DataMensagem": "25/05/2011",
+    "NumeroDOU": "100",
+    "DataDOU": "26/05/2011"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "244",
+    "DataDecreto": "28/06/2012",
+    "NumeroDOU": "125",
+    "DataDOU": "29/06/2012"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "82627212-PDGY",
+      "DataDocumento": "17/08/2015",
+      "Local": "Ministério dos Negócios Estrangeiros da República da Turquia",
+      "DataRecebimento": "28/09/2015",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "139",
+      "DataDocumento": "25/09/2012",
+      "Local": "Embaixada em Ancara",
+      "DataRecebimento": "25/09/2012",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "9133",
+    "DataDecreto": "18/08/2017",
+    "NumeroDOU": "160",
+    "DataDOU": "21/08/2017"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "28/10/2015",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 23168,
+      "NomeArquivo": "Turquia - DOU - Decreto de Promulgação - 160 - 2017.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação ",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 12481,
+      "NomeArquivo": "Turquia - DOU - Decreto Legislativo - 244 - 2012.pdf",
+      "Descricao": "DOU Decreto Legislativo.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 12479,
+      "NomeArquivo": "Turquia - DOU - Publicação DAI - Mensagem ao Congresso - 154 - 2011.pdf",
+      "Descricao": "DOU Mensagem ao Congresso.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 4476,
+    "NomeArquivo": "Turquia - Acordo - Dependentes.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme Disposto no Artigo 9º \"Este Acordo Entrará em Vigor no Trigésimo (30) Dia Após a Data da Última Notificação a Respeito do Cumprimento dos Respectivos Requisitos Legais Internos.\""
+    }
+  ]
+}

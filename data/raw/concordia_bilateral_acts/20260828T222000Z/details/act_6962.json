@@ -1,0 +1,106 @@
+{
+  "$id": "1",
+  "Titulo": "Memorando de Entendimento sobre Cooperação entre o Instituto Rio Branco do Ministério das Relações Exteriores da República Federativa do Brasil e a Universidade de Assuntos Estrangeiros da China",
+  "OutraParte": "China",
+  "OutrasPartes": [
+    "China"
+  ],
+  "SignatarioBrasil": "Georges Lamazière",
+  "CargoSignatarioBrasil": "Diretor Geral do Instituto Rio Branco",
+  "Depositario": null,
+  "LocalCelebracao": "Pequim",
+  "NomePaisCelebracao": "China",
+  "DataCelebracao": "14/09/2010",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "China",
+      "NomeSignatario": "Heng Xiaojun",
+      "CargoSignatario": "Vice-Presidente da Academia Diplomática da China"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Relações Diplomáticas e Consulares",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "195",
+    "DataDOU": "08/10/2012"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "14/09/2010",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 3728,
+      "NomeArquivo": "China - DOU - Publicação DAI - 195 - 2012.pdf",
+      "Descricao": "Publicação no DOU pela DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "10",
+    "Id": 3727,
+    "NomeArquivo": "China - MdE - Intituto Rio Branco.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "11",
+      "DescricaoObservacao": "\"O presente Memorando de Entendimento terá efeitos na data de sua assinatura, por três anos, renováveis automaticamente por períodos sucessivos de três anos, salvo notificação, por escrito, de qualquer dos dois Institutos, efetuada pelo menos 90 (noventa) dias antes da data de vencimento do Memorando. O término deste Memorando não afetará projetos em execução\"."
+    }
+  ]
+}

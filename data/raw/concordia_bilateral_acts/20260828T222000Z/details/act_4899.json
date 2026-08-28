@@ -1,0 +1,106 @@
+{
+  "$id": "1",
+  "Titulo": "Ajuste Complementar, por Troca de Notas, entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai, de Cooperação no Campo da Redução da Demanda de Entorpecentes entre Municípios Fronteiriços, ao Acordo de 29/03/1988",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Luiz Augusto de Castro Neves",
+  "CargoSignatarioBrasil": "Embaixador",
+  "Depositario": null,
+  "LocalCelebracao": "Assunção",
+  "NomePaisCelebracao": "Paraguai",
+  "DataCelebracao": "09/09/2002",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": "José Antonio Moreno Ruffinelli",
+      "CargoSignatario": "Ministro de Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "205",
+    "DataDOU": "22/10/2002"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "09/09/2002",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 10218,
+      "NomeArquivo": "Paraguai - DOU - Publicação DAI - 205 - 2002.pdf",
+      "Descricao": "Publicação no DOU da DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "10",
+    "Id": 10217,
+    "NomeArquivo": "Paraguai - AC PTN - Entorpecentes.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "11",
+      "DescricaoObservacao": "Conforme Disposto no Texto da Nota Brasileira \"Caso o Governo paraguaio concorde com o acima proposto,\r\na presente Nota e a Nota em resposta de Vossa Excelência, em que se expresse concordância do Governo da República do Paraguai, constituirão Ajuste Complementar ao Acordo sobre Prevenção, Controle, Fiscalização e Repressão ao Uso Indevido e ao Tráfico Ilícito de Entorpecentes e de Substâncias Psicotrópicas de 1988, a entrar em vigor na data da resposta de Vossa Excelência, com validade por tempo indeterminado e podendo ser denunciado, por qualquer uma das Partes, mediante Nota diplomática, com antecedência de 90 (noventa) dias.\""
+    }
+  ]
+}

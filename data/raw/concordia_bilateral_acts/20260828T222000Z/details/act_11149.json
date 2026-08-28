@@ -1,0 +1,115 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo sobre Tráfico Ilícito de Migrantes entre os Estados Partes do MERCOSUL - Decisão nº 37/04",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Belo Horizonte",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "16/12/2004",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "949",
+    "DataMensagem": "19/11/2009",
+    "NumeroDOU": "222",
+    "DataDOU": "20/11/2009"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "133",
+    "DataDecreto": "26/05/2011",
+    "NumeroDOU": "101",
+    "DataDOU": "27/05/2011"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "7.953",
+    "DataDecreto": "12/03/2013",
+    "NumeroDOU": "49",
+    "DataDOU": "13/03/2013"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "10/10/2012",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 27452,
+      "NomeArquivo": "Acordo - Tráfico - Migrantes - DOU - Decreto de Promulgação - 49 - 2013.pdf",
+      "Descricao": "Publicação no DOU de Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 4025,
+      "NomeArquivo": "Acordo - Tráfico - Migrantes - DOU - Decreto Legislativo - 101 - 2011.pdf",
+      "Descricao": "Acordo - Tráfico - Migrantes - DOU - Decreto Legislativo - 101 - 2011",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 4024,
+      "NomeArquivo": "Acordo - Tráfico - Migrantes - DOU - Mensagem ao Congresso - 222 - 2009.pdf",
+      "Descricao": "Acordo - Tráfico - Migrantes - DOU - Mensagem ao Congresso - 222 - 2009",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 4023,
+    "NomeArquivo": "Acordo - Tráfico - Migrantes - port esp.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme o disposto no art. 12: \"O presente Acordo entrará em vigência trinta (30) dias após o depósito do instrumento de ratificação pelo quarto Estado Parte do MERCOSUL\"."
+    }
+  ]
+}

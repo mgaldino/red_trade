@@ -1,0 +1,122 @@
+{
+  "$id": "1",
+  "Titulo": "Protocolo Constitutivo do Parlamento do Mercosul - Decisão CMC n° 23/05",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Luiz Inácio Lula da Silva/ Celso Luiz Nunes Amorim",
+  "CargoSignatarioBrasil": "Presidente da República/ Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Montevidéu",
+  "NomePaisCelebracao": "Uruguai",
+  "DataCelebracao": "09/12/2005",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Relações Diplomáticas e Consulares",
+      "IsPrincipal": false
+    },
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "408",
+    "DataMensagem": "24/05/2006",
+    "NumeroDOU": "99",
+    "DataDOU": "25/05/2006"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "408",
+    "DataDecreto": "12/09/2006",
+    "NumeroDOU": "176",
+    "DataDOU": "13/09/2006"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "6.105",
+    "DataDecreto": "30/04/2007",
+    "NumeroDOU": "83",
+    "DataDOU": "02/05/2007"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "24/02/2007",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 26381,
+      "NomeArquivo": "Mercosul - Ata Depósito - Brasil - Protocolo Constitutivo - Parlamento Msul.pdf",
+      "Descricao": "Ata de Depósito de Ratificação do Brasil.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 26380,
+      "NomeArquivo": "Mercosul - DOU - Mensagem ao Congresso - 99 - 2006.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 26379,
+      "NomeArquivo": "Mercosul - DOU - Decreto Legislativo - 176 - 2006.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 26378,
+      "NomeArquivo": "Mercosul - DOU - Decreto de Promulgação - 83 - 2007.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 3623,
+    "NomeArquivo": "Dec. 23-05 - Protocolo - Parlamento - MERCOSUL - port esp.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo 23: \"O presente Protocolo entrará em vigor no trigésimo dia contado a partir da data em que o quarto Estado Parte tenha depositado seu instrumento de ratificação.\""
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "$id": "1",
+  "Titulo": "Ajuste Complementar ao Acordo Básico de Cooperação Técnica e Científica entre o Governo da República Federativa do Brasil e o Governo dos Estados Unidos Mexicanos em Matéria de Saúde.",
+  "OutraParte": "México",
+  "OutrasPartes": [
+    "México"
+  ],
+  "SignatarioBrasil": "José Serra",
+  "CargoSignatarioBrasil": "Ministro de Estado da Saúde",
+  "Depositario": null,
+  "LocalCelebracao": "São Paulo",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "02/05/2001",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "México",
+      "NomeSignatario": "Julio  Frenk Mora",
+      "CargoSignatario": "Secretário de Estado da Saúde"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Trabalho, Saúde e Previdência",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "95",
+    "DataDOU": "20/05/2002"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Expirado",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "02/05/2001",
+    "DataEntradaVigorCI": null,
+    "Expirou": "02/05/2005",
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 8890,
+      "NomeArquivo": "México - DOU - DAI - 95 - 2002.pdf",
+      "Descricao": "Publicação no DOU da DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "10",
+    "Id": 8889,
+    "NomeArquivo": "México - AC - Cooperação em Matéria de Saúde.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "11",
+      "DescricaoObservacao": "Conforme Artigo XII, \"1. O presente Ajuste entrará em vigor a partir da data de sua\r\nassinatura e terá uma duração de quatro (4) anos, prorrogáveis por\r\nperíodos de igual duração, prévia avaliação e mediante comunicação\r\nescrita entre as Partes.\""
+    }
+  ]
+}

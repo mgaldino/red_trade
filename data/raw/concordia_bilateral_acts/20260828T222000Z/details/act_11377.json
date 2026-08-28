@@ -1,0 +1,119 @@
+{
+  "$id": "1",
+  "Titulo": "Memorando de Entendimento sobre Cooperação na Área de Meio Ambiente no Âmbito do Fórum de Diálogo Índia, Brasil e África do Sul (IBAS)",
+  "OutraParte": "África do Sul",
+  "OutrasPartes": [
+    "África do Sul",
+    "Índia"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Nova Delhi",
+  "NomePaisCelebracao": "Índia",
+  "DataCelebracao": "15/10/2008",
+  "TipoAcordo": "TL",
+  "PossuiHtml": false,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "África do Sul",
+      "NomeSignatario": "NC Dlamini Zuma",
+      "CargoSignatario": "Ministra dos Negócios Estrangeiros"
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "Índia",
+      "NomeSignatario": "Pranab Mukerjee",
+      "CargoSignatario": "Ministro de Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Meio Ambiente e Sustentabilidade",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "8",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "9",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "210",
+    "DataDOU": "29/10/2008"
+  },
+  "Vigencia": {
+    "$id": "10",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "15/10/2008",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "11",
+      "Id": 34547,
+      "NomeArquivo": "IBAS_DOU_260622_184147.pdf",
+      "Descricao": "Publicação no Diário Oficial",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 34546,
+    "NomeArquivo": "IBAS_Texto_260622_183811.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "\"Artigo 9 - Este Memorando de Entendimento entra em vigor na data de sua assinatura.\""
+    }
+  ]
+}

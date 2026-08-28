@@ -1,0 +1,106 @@
+{
+  "$id": "1",
+  "Titulo": "Programa Executivo Cultural entre o Governo da República Federativa do Brasil e o Governo da República da Índia para os Anos 2004-2005",
+  "OutraParte": "Índia",
+  "OutrasPartes": [
+    "Índia"
+  ],
+  "SignatarioBrasil": "Vera Lúcia Barrouin Crivano Machado",
+  "CargoSignatarioBrasil": "Embaixadora",
+  "Depositario": null,
+  "LocalCelebracao": "Nova Delhi",
+  "NomePaisCelebracao": "Índia",
+  "DataCelebracao": "25/01/2004",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Índia",
+      "NomeSignatario": "Dhehedra Kuman",
+      "CargoSignatario": "Secretário da Cultura"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Educação e Cultura",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "35",
+    "DataDOU": "19/02/2004"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Expirado",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "25/01/2004",
+    "DataEntradaVigorCI": null,
+    "Expirou": "31/12/2005",
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 8098,
+      "NomeArquivo": "Índia - DOU - Publicação da DAI - 35 - 2004.pdf",
+      "Descricao": "Publicação no DOU pela DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "10",
+    "Id": 7557,
+    "NomeArquivo": "Índia- Programa Executivo - Cultural 2004 - 2005.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "11",
+      "DescricaoObservacao": "Conforme disposto no artigo 11 do parágrafo 2: \"O presente Programa entrará em vigor na data de sua assinatura e permanecerá vigente até 31 de dezembro de 2005 ou até que outro o substitua.\""
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre a República Federativa do Brasil e a República da Índia em Cooperação Científica e Tecnológica",
+  "OutraParte": "Índia",
+  "OutrasPartes": [
+    "Índia"
+  ],
+  "SignatarioBrasil": "Sergio Machado Rezende",
+  "CargoSignatarioBrasil": "Ministro da Ciência e Tecnologia",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "12/09/2006",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Índia",
+      "NomeSignatario": "Anan Sharma",
+      "CargoSignatario": "Ministro de Estado para Negócios Estrangeiros"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": {
+    "$id": "3",
+    "Id": 3283,
+    "Titulo": "Acordo sobre Cooperação nos Campos da Ciência e Tecnologia entre a República Federativa do Brasil e a República da Índia."
+  },
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Ciência, Tecnologia e Inovação",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "838",
+    "DataMensagem": "29/10/2008",
+    "NumeroDOU": "211",
+    "DataDOU": "30/10/2008"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "213",
+    "DataDecreto": "07/04/2010",
+    "NumeroDOU": "66",
+    "DataDOU": "08/04/2010"
+  },
+  "Ratificacao": [
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "BRA/POL/103/3/2007",
+      "DataDocumento": "17/09/2007",
+      "Local": "Embaixada da Índia",
+      "DataRecebimento": "20/09/2007",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "8",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "183",
+      "DataDocumento": "21/07/2010",
+      "Local": "Embaixada em Nova Delhi",
+      "DataRecebimento": "21/07/2010",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "9",
+    "NumeroDecreto": "7.904",
+    "DataDecreto": "04/02/2013",
+    "NumeroDOU": "25",
+    "DataDOU": "05/02/2013"
+  },
+  "Vigencia": {
+    "$id": "10",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "21/07/2011",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "11",
+      "Id": 7567,
+      "NomeArquivo": "Índia - DOU - Decreto de Promulgação - 25 - 2013.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 7566,
+      "NomeArquivo": "Índia - DOU - Decreto Legislativo - 66 - 2010.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "13",
+      "Id": 7565,
+      "NomeArquivo": "Índia - DOU - Mensagem ao Congresso - 211 - 2008.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "14",
+    "Id": 7547,
+    "NomeArquivo": "Índia - Acordo - Coop. Científica e Tecnológica.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "15",
+      "DescricaoObservacao": "Conforme Disposto no Artigo 14 \"O presente Acordo deverá entrar em vigor quando a segunda Parte houver notificado a primeira, por escrito e por via diplomática, do cumprimento dos requisitos constitucionais necessários para a sua implementação.\""
+    }
+  ]
+}

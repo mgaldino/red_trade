@@ -1,0 +1,140 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo Quadro sobre Cooperação em Matéria de Segurança Regional entre os Estados Partes do MERCOSUL, a República da Bolívia, a República do Chile, a República do Equador, a República do Peru e a República Bolivariana da Venezuela (Decisão CMC nº 16/06), assinado em Córdoba, em 20 de julho de 2006, e Ata de Retificação, assinada em Assunção, em 24/1/2012",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": null,
+  "CargoSignatarioBrasil": null,
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Córdoba",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "20/07/2006",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": {
+    "$id": "3",
+    "Id": 11145,
+    "Titulo": "Acordo Marco sobre Cooperação em Matéria de Segurança Regional entre os Estados Partes do MERCOSUL, Bolívia e Chile - Decisão CMC n° 35/04."
+  },
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": "711",
+    "DataMensagem": "03/12/2020",
+    "NumeroDOU": "232",
+    "DataDOU": "04/12/2020"
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": "95",
+    "DataDecreto": "13/09/2023",
+    "NumeroDOU": "176",
+    "DataDOU": "14/09/2023"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "13.010",
+    "DataDecreto": "09/06/2026",
+    "NumeroDOU": "106",
+    "DataDOU": "10/06/2026"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "21/11/2025",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 34464,
+      "NomeArquivo": "DECRETO Nº 13.010.pdf",
+      "Descricao": "Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 32280,
+      "NomeArquivo": "Decreto Legislativo 95 2023 DOU 176 14 set 2023.pdf",
+      "Descricao": "Decreto Legislativo DOU 14 set 23",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 30603,
+      "NomeArquivo": "DOU - Mensagem - Cooperação em Matéria de Segurança Regional.pdf",
+      "Descricao": "Publicação no DOU de Mensagem",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "13",
+      "Id": 30598,
+      "NomeArquivo": "Ata de Adesão.pdf",
+      "Descricao": "Ata de Adesão da Colômbia",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "14",
+      "Id": 725,
+      "NomeArquivo": "Ata de Retificação - português.pdf",
+      "Descricao": "Ata de Retificação - português",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "15",
+      "Id": 724,
+      "NomeArquivo": "Ata de Retificação - português.doc",
+      "Descricao": "Ata de Retificação - português",
+      "Extensao": ".doc"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "16",
+    "Id": 3425,
+    "NomeArquivo": "Dec. 16-06 - Acordo - Quadro - Segurança Regional e Ata de Retificação.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "17",
+      "DescricaoObservacao": "Artigo 14. Vigência e Depósito. O presente Acordo entrará em vigor trinta (30) dias após o depósito do instrumento de ratificação pelo quarto Estado Parte do MERCOSUL. Nessa mesma data, entrará em vigor para os Estados Associados que o tiverem ratificado anteriormente. Para os Estados Associados que não o tiverem ratificado com anterioridade a essa data, o Acordo entrará em vigor no mesmo dia em que se deposite o respectivo instrumento de ratificação."
+    }
+  ]
+}

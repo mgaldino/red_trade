@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo Quadro sobre Cooperação em Matéria de Defesa entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Amorim; Waldir Pires",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores; Ministro da Defesa",
+  "Depositario": null,
+  "LocalCelebracao": "Assunção",
+  "NomePaisCelebracao": "Paraguai",
+  "DataCelebracao": "21/05/2007",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": "Rubén Ramírez Lezcano; Roberto González Segovia",
+      "CargoSignatario": "Ministro das Relações Exteriores; Ministro da Defesa Nacional "
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Defesa e Segurança",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "39",
+    "DataMensagem": "31/01/2008",
+    "NumeroDOU": "23",
+    "DataDOU": "01/02/2008"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "78",
+    "DataDecreto": "26/02/2010",
+    "NumeroDOU": "39",
+    "DataDOU": "01/03/2010"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "VMRE/DT/L/Nº 110/201",
+      "DataDocumento": "21/08/2017",
+      "Local": null,
+      "DataRecebimento": "19/09/2017",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "156 a ",
+      "DataDocumento": "03/03/2010",
+      "Local": "Embaixada em Assunção",
+      "DataRecebimento": "03/03/2010",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "9.318",
+    "DataDecreto": "20/03/2018",
+    "NumeroDOU": "55",
+    "DataDOU": "21/03/2018"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "19/10/2017",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 26218,
+      "NomeArquivo": "Paraguai - DOU - Decreto Promulgação  - 55 - 2018.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 10095,
+      "NomeArquivo": "Paraguai - DOU - Decreto Legislativo - 39 - 2010.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 10094,
+      "NomeArquivo": "Paraguai - DOU - Mensagem ao Congresso - 23 - 2008.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 10092,
+    "NomeArquivo": "Paraguai - Acordo Quadro - Defesa.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo 9: \"O presente Acordo entrará em vigor trinta (30) dias após a data de recebimento da última notificação mediante a qual uma das Partes comunica à outra, por escrito e por via diplomática, que foram cumpridos os respectivos requisitos internos necessários.\""
+    }
+  ]
+}

@@ -1,0 +1,325 @@
+{
+  "$id": "1",
+  "Page": 1,
+  "Count": 9,
+  "TotalPages": 1,
+  "TotalCount": 9,
+  "Items": [
+    {
+      "$id": "2",
+      "Id": 7231,
+      "Titulo": "Memorando de Entendimento entre o Ministério das Relações Exteriores da República Federativa do Brasil e o Ministério do Comércio da República da Indonésia sobre o Incentivo à Promoção do Comércio e do Investimento",
+      "Assuntos": [
+        {
+          "$id": "3",
+          "Id": 285,
+          "Nome": "Comércio Internacional e Investimentos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Indonésia",
+      "DataCelebracao": "16/11/2011",
+      "OutrasPartes": [
+        "Indonésia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "4",
+          "Id": 9250,
+          "NomeArquivo": "DOU - Publicação DAI - 92 - 2016.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "5",
+        "Id": 7516,
+        "NomeArquivo": "Indonésia - MdE - Comércio e Investimento.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "6",
+      "Id": 6274,
+      "Titulo": "Memorando de Entendimento entre o Governo da República Federativa do Brasil e o Governo da República da Indonésia sobre Cooperação em Energia e Mineração",
+      "Assuntos": [
+        {
+          "$id": "7",
+          "Id": 292,
+          "Nome": "Energia e Recursos Estratégicos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Indonésia",
+      "DataCelebracao": "18/11/2008",
+      "OutrasPartes": [
+        "Indonésia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "8",
+          "Id": 7537,
+          "NomeArquivo": "Indonédia - DOU - Publicação DAI - 230 - 2008.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "9",
+        "Id": 7536,
+        "NomeArquivo": "Indonédia - MdE - Mineração e Energia.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "10",
+      "Id": 6275,
+      "Titulo": "Memorando de Entendimento entre o Governo da República Federativa do Brasil e o Governo da República da Indonésia sobre Cooperação no Campo da Agricultura",
+      "Assuntos": [
+        {
+          "$id": "11",
+          "Id": 283,
+          "Nome": "Agricultura, Pecuária e Pesca",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Indonésia",
+      "DataCelebracao": "18/11/2008",
+      "OutrasPartes": [
+        "Indonésia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "12",
+          "Id": 7535,
+          "NomeArquivo": "Indonésia - DOU - Publicação DAI - 230 - 2008.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "13",
+        "Id": 7534,
+        "NomeArquivo": "Indonésia - MdE - Agricultura.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "14",
+      "Id": 6276,
+      "Titulo": "Memorando de Entendimento entre o Governo da Repúlica do Brasil e o Governo da Indonésia sobre a Erradicação da Pobreza",
+      "Assuntos": [
+        {
+          "$id": "15",
+          "Id": 289,
+          "Nome": "Direito, Justiça & Segurança Pública",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Indonésia",
+      "DataCelebracao": "18/11/2008",
+      "OutrasPartes": [
+        "Indonésia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "16",
+          "Id": 7532,
+          "NomeArquivo": "Indonésia - DOU - Publicação DAI - 230 - 2008.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "17",
+        "Id": 7531,
+        "NomeArquivo": "Indonésia - MdE - Erradicação da Pobreza.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "18",
+      "Id": 6277,
+      "Titulo": "Declaração sobre a Parceria Estratégica entre a República Federativa do Brasil e a República da Indonésia",
+      "Assuntos": [
+        {
+          "$id": "19",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Indonésia",
+      "DataCelebracao": "18/11/2008",
+      "OutrasPartes": [
+        "Indonésia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "20",
+        "Id": 7530,
+        "NomeArquivo": "Indonésia - Declaração - Parceria Estratégica.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "21",
+      "Id": 6167,
+      "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República da Indonésia sobre Isenção de Vistos para Portadores de Passaportes Diplomáticos e Oficiais ou de Serviço",
+      "Assuntos": [
+        {
+          "$id": "22",
+          "Id": 286,
+          "Nome": "Consulares e Migratórios",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Expirado",
+      "OutraParte": "Indonésia",
+      "DataCelebracao": "12/07/2008",
+      "OutrasPartes": [
+        "Indonésia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "23",
+          "Id": 8166,
+          "NomeArquivo": "Indonésia - DOU - Publicação DAI - 237 - 2008.pdf",
+          "Descricao": "Publicação DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "24",
+        "Id": 7589,
+        "NomeArquivo": "Indonésia - Acordo - Isenção de Vistos.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "25",
+      "Id": 6168,
+      "Titulo": "Memorando de Entendimento entre o Governo da República Federativa do Brasil e o Governo da República da Indonésia sobre Cooperação Educacional",
+      "Assuntos": [
+        {
+          "$id": "26",
+          "Id": 291,
+          "Nome": "Educação e Cultura",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Indonésia",
+      "DataCelebracao": "12/07/2008",
+      "OutrasPartes": [
+        "Indonésia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "27",
+          "Id": 7542,
+          "NomeArquivo": "Indonédia - DOU - Publicação DAI - 151 - 2008.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "28",
+        "Id": 7541,
+        "NomeArquivo": "Indonésia - MdE - Educação.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "29",
+      "Id": 6169,
+      "Titulo": "Protocolo de Intenções entre o Governo da República Federativa do Brasil e o Governo da República da Indonésia sobre Cooperação Técnica na Área de Técnicas de Produção de Etanol Combustível",
+      "Assuntos": [
+        {
+          "$id": "30",
+          "Id": 292,
+          "Nome": "Energia e Recursos Estratégicos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Indonésia",
+      "DataCelebracao": "12/07/2008",
+      "OutrasPartes": [
+        "Indonésia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "31",
+          "Id": 7539,
+          "NomeArquivo": "Indonédia - DOU - Publicação DAI - 151 - 2008.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "32",
+        "Id": 7538,
+        "NomeArquivo": "Indonédia - Protocolo de Intenções - Etanol.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "33",
+      "Id": 5922,
+      "Titulo": "Memorando de Entendimento entre o Governo da República Federativa do Brasil e o Governo da Repúlica da Indonédia para o Estabelecimento de uma Comissão Mista para Cooperação Bilateral",
+      "Assuntos": [
+        {
+          "$id": "34",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Indonésia",
+      "DataCelebracao": "22/08/2007",
+      "OutrasPartes": [
+        "Indonésia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "35",
+          "Id": 7545,
+          "NomeArquivo": "Indonésia - DOU - Publicação DAI - 170 - 2007.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "36",
+        "Id": 7544,
+        "NomeArquivo": "Indonésia - MdE - Comissão Mista.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    }
+  ]
+}

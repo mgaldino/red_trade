@@ -1,0 +1,122 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo de Livre Comércio entre o MERCOSUL e o Estado da Palestina - XLII Reunião do CMC e Cúpula de Presidentes",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Antonio de Aguiar Patriota",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Montevidéu",
+  "NomePaisCelebracao": "Uruguai",
+  "DataCelebracao": "20/12/2011",
+  "TipoAcordo": "ML",
+  "PossuiHtml": false,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Comércio Internacional e Investimentos",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "262",
+    "DataMensagem": "11/05/2016",
+    "NumeroDOU": "90",
+    "DataDOU": "12/05/2016"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "150",
+    "DataDecreto": "10/09/2018",
+    "NumeroDOU": "175",
+    "DataDOU": "11/09/2018"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "12.432",
+    "DataDecreto": "11/04/2025",
+    "NumeroDOU": "81/81-B",
+    "DataDOU": "30/04/2025"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "09/08/2024",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 33126,
+      "NomeArquivo": "ALC-MERCOSUL-Palestina_DOU81_30.04.2025_S1_P3-229_compressed.pdf",
+      "Descricao": "Publicação no DOU - promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 28080,
+      "NomeArquivo": "DL DEST.pdf",
+      "Descricao": "Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 28079,
+      "NomeArquivo": "DL DEST.pdf",
+      "Descricao": "Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 26525,
+      "NomeArquivo": "Mercosul - Comércio Palestina - DOU - Mensagem ao Congresso - 90 - 2016.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 26524,
+    "NomeArquivo": "Mercosul - Acordo - Livre Comércio - Palestina.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo 5 - Entrada em vigor: \"1. Até que todas as Partes Signatárias tenham finalizado seus procedimentos de ratificação, este Acordo entrará em vigor, bilateralmente, 30 dias depois que o Depositário tenha informado a respeito do recebimento dos dois primeiros instrumentos de ratificação, contato que a Palestina esteja entre as Partes Signatárias que tenham depositado o instrumento de ratificação. 2. A respeito das demais Pares Signatárias, este Acordo entrará em vigor 30 dias depois que o Depositário tenha informado sobre o recebimento de cada um dos instrumentos de ratificação.\""
+    }
+  ]
+}

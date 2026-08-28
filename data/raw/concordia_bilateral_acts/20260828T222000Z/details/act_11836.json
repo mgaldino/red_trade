@@ -1,0 +1,87 @@
+{
+  "$id": "1",
+  "Titulo": "Estatuto da Comissão Latino-Americana de Aviação Civil (CLAC), aprovado por meio da Resolução AE/02-01, durante a Segunda Assembleia-Geral Extraordinária da Comissão",
+  "OutraParte": "México",
+  "OutrasPartes": [
+    "México"
+  ],
+  "SignatarioBrasil": null,
+  "CargoSignatarioBrasil": null,
+  "Depositario": "México",
+  "LocalCelebracao": "Buenos Aires",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "01/10/2009",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "México",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Serviços e Transporte",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "6",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "7",
+    "Vigencia": "Situação especial",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [],
+  "DocumentoIntegra": {
+    "$id": "8",
+    "Id": 20922,
+    "NomeArquivo": "Transporte Aéreo - Novo Estatuto CLAC - Resolução AE02-01.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "9",
+      "DescricaoObservacao": "Conforme disposto no Artigo 32: \"O texto modificado do estatuto entrará em vigor quando for depositado o décimo quarto instrumento de aprovação por parte dos estados membros.\""
+    }
+  ]
+}

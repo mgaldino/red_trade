@@ -1,0 +1,126 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República Popular da China sobre Isenção de Vistos para Portadores de Passaportes Diplomático, Oficial e de Serviços",
+  "OutraParte": "China",
+  "OutrasPartes": [
+    "China"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Pequim",
+  "NomePaisCelebracao": "China",
+  "DataCelebracao": "24/05/2004",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [
+    {
+      "$id": "2",
+      "Id": 12819,
+      "Titulo": "Emenda ao Acordo entre o Governo da República Federativa do Brasil e o Governo da República Popular da China sobre Isenção de Vistos para Portadores de Passaportes Diplomático, Oficial e de Serviços, de 2004"
+    }
+  ],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "3",
+      "NomeOutraParte": "China",
+      "NomeSignatario": "Li Zhaoxing",
+      "CargoSignatario": "Ministro dos Negócios Estrangeiros"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": {
+    "$id": "4",
+    "Id": 3536,
+    "Titulo": "Acordo, por Troca de Notas, sobre Vistos de Múltiplas Entradas em Passaportes Diplomáticos e de Serviço, entre o Governo da República Federativa do Brasil e o Governo da República Popular da China."
+  },
+  "Assuntos": [
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Consulares e Migratórios",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "8",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "547",
+      "DataDocumento": "12/07/2004",
+      "Local": "Ministério de Negócios Estrangeiros da República Popular da China",
+      "DataRecebimento": "16/07/2004",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "9",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "115",
+      "DataDocumento": "30/06/2004",
+      "Local": "Embaixada em Pequim",
+      "DataRecebimento": "30/06/2004",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "10",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "153",
+    "DataDOU": "10/08/2004"
+  },
+  "Vigencia": {
+    "$id": "11",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "10/08/2004",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "12",
+      "Id": 3812,
+      "NomeArquivo": "China - DOU - Publicação DAI - 153 - 2004.pdf",
+      "Descricao": "Publicação no DOU pela DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 3811,
+    "NomeArquivo": "China - Acordo - Isenção de Vistos.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo VII, Parágrafo 1: \"O presente Acordo entrará em vigor 30 (trinta) dias depois da data de recebimento da segunda Nota em que as Partes Contratantes informam uma à outra de que todos os requisitos para a entrada em vigor deste Acordo estipulados pela sua respectiva legislação nacional tenham sido alcançados. Este Acordo permanecerá em vigor por período de tempo indefinido.\""
+    }
+  ]
+}

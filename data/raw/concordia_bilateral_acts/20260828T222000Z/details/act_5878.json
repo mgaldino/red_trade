@@ -1,0 +1,106 @@
+{
+  "$id": "1",
+  "Titulo": "Ajuste Complementar ao Acordo Básico de Cooperação Científica e Técnica entre o Governo da República Federativa do Brasil e o Governo da República Oriental do Uruguai para Implementação do Projeto ``Fortalecimento Institucional da Secretaria de Saúde Pública do Governo Uruguaio na Área de Vigilância Sanitária``",
+  "OutraParte": "Uruguai",
+  "OutrasPartes": [
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "Samuel Pinheiro Guimarães",
+  "CargoSignatarioBrasil": "Secretário-Geral do Ministério das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Montevidéu",
+  "NomePaisCelebracao": "Uruguai",
+  "DataCelebracao": "24/07/2007",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": "Belela Herrera",
+      "CargoSignatario": "Subsecretária de Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Trabalho, Saúde e Previdência",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "184",
+    "DataDOU": "24/09/2007"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "24/07/2007",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 12624,
+      "NomeArquivo": "DOU - Publicação DAI - 184 - 2007.pdf",
+      "Descricao": "Publicação no DOU pela DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "10",
+    "Id": 12626,
+    "NomeArquivo": "Uruguai - AC - Vigilância Sanitária.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "11",
+      "DescricaoObservacao": "Conforme disposto no Artigo VII: \"O presente Ajuste Complementar entrará em vigor na data de sua assinatura e vigorará por dois (2) anos, sendo renovado automaticamente por iguais períodos, até o cumprimento de seu objeto, salvo manifestação contrária de qualquer das Partes Contratantes\"."
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo dos Estados Unidos Mexicanos para o Estabelecimento da Comissão Binacional Brasil-México",
+  "OutraParte": "México",
+  "OutrasPartes": [
+    "México"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "28/03/2007",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [
+    {
+      "$id": "2",
+      "Id": 12810,
+      "Titulo": "Protocolo por meio do qual se Modifica o Acordo entre o Governo dos Estados Unidos Mexicanos e o Governo da República Federativa do Brasil para o Estabelecimento da Comissão Binacional México-Brasil"
+    }
+  ],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "3",
+      "NomeOutraParte": "México",
+      "NomeSignatario": "Patricia Espinosa Cantellano",
+      "CargoSignatario": "Secretária de Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": {
+    "$id": "4",
+    "Id": 3089,
+    "Titulo": "Memorando de Entendimento para o Estabelecimento de um Mecanismo de Consulta em Matéria de Interesse Mútuo entre o governo da República Federativa do Brasil e o Governo dos Estados Unidos Mexicanos."
+  },
+  "Assuntos": [
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Cooperação e Desenvolvimento",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "8",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "9",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "63",
+    "DataDOU": "02/04/2007"
+  },
+  "Vigencia": {
+    "$id": "10",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": "50868",
+    "DataEntradaVigor": "28/03/2007",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "11",
+      "Id": 8633,
+      "NomeArquivo": "México - DOU - DAI - 63 - 2007.pdf",
+      "Descricao": "Publicação no DOU da DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 8632,
+    "NomeArquivo": "México - Acordo - Comissão Binacional - 2007.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme Artigo Sexto, \"O presente Acordo entrará em vigor na data de sua assinatura e terá\r\nvigência indefinida.\""
+    },
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme Artigo Sexto, subitem 5, \"Ao entrar em vigor o presente Acordo, tornar-se-á sem efeito o\r\nMemorando de Entendimento entre o Governo da República Federativa do Brasil e o\r\nGoverno dos Estados Unidos Mexicanos para o Estabelecimento de um Mecanismo\r\nde Consulta em Matérias de Interesse Mútuo, feito na cidade de Cancún em 29 de\r\nabril de 1983. Da mesma forma, tornar-se-á sem efeito a Comissão Brasil-México\r\nSéculo XXI adotada pelos Governos de ambos os países no Comunicado de Imprensa\r\nConjunto emitido em Brasília, Brasil, em 27 de abril de 1999 no âmbito da visita de\r\nEstado do Presidente do México.\""
+    }
+  ]
+}

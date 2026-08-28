@@ -1,0 +1,123 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo de Cooperação na Área do Turismo entre o Governo da República Federativa do Brasil e o Governo da República da Índia",
+  "OutraParte": "Índia",
+  "OutrasPartes": [
+    "Índia"
+  ],
+  "SignatarioBrasil": "Walfrido Mares Guia",
+  "CargoSignatarioBrasil": "Ministro de Estado do Turismo",
+  "Depositario": null,
+  "LocalCelebracao": "Nova Delhi",
+  "NomePaisCelebracao": "Índia",
+  "DataCelebracao": "25/01/2004",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Índia",
+      "NomeSignatario": "Arun Jaitley",
+      "CargoSignatario": "Ministro de Estado da Justiça e Ministro de Estado do Comério e Indústria"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Serviços e Transporte",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "621",
+    "DataMensagem": "22/09/2004",
+    "NumeroDOU": "184",
+    "DataDOU": "23/09/2004"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "77",
+    "DataDecreto": "18/04/2006",
+    "NumeroDOU": "75",
+    "DataDOU": "19/04/2006"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "179",
+      "DataDocumento": "03/11/2011",
+      "Local": "Embaixada em Nova Delhi",
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 7665,
+      "NomeArquivo": "Índia - DOU - Decreto Legislativo - 75 - 2006.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 7664,
+      "NomeArquivo": "Índia - DOU - Mensagem ao Congresso - 184 - 2004.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 7666,
+    "NomeArquivo": "Índia - Acordo - Turismo.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme disposto no artigo VII: \"Este Acordo entrará em vigor na data da última notificação pelas quais as Partes se informem, por via diplomática, do cumprimento das formalidades estabelecidas pela legislação de cada país para este efeito.\""
+    }
+  ]
+}

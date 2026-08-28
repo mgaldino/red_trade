@@ -1,0 +1,106 @@
+{
+  "$id": "1",
+  "Titulo": "Ajuste Complementar ao Acordo Básico de Cooperação Técnica e Científica entre o Governo da República Federativa do Brasil e o Governo dos Estados Unidos Mexicanos para Implementação do Projeto “Intercâmbio de Experiências e Conhecimentos entre Brasil e México sobre Práticas Integrativas, Complementares e de Competência Intercultural na Oferta de Serviços de Saúde”",
+  "OutraParte": "México",
+  "OutrasPartes": [
+    "México"
+  ],
+  "SignatarioBrasil": "Marco Farani",
+  "CargoSignatarioBrasil": "Diretor da Agência Brasileira de Cooperação",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "11/08/2009",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "México",
+      "NomeSignatario": "Andrés Valencia",
+      "CargoSignatario": "Embaixador dos Estados Unidos Mexicanos na República Federativa do Brasil"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Trabalho, Saúde e Previdência",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "162",
+    "DataDOU": "25/08/2009"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "11/08/2009",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 11071,
+      "NomeArquivo": "México - DOU - Publicação DAI - 162 - 2009.pdf",
+      "Descricao": "Publicação no DOU pela DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "10",
+    "Id": 11070,
+    "NomeArquivo": "México - AC - Intercâmbio de Experiências.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "11",
+      "DescricaoObservacao": "De acordo com o artigo 7º \"O presente Ajuste Complementar entrará em vigor na data de sua assinatura e terá vigência de dois (2) anos, renováveis automaticamente, até o cumprimento de seu objeto, salvo manifestação contrária de qualquer das Partes.\""
+    }
+  ]
+}

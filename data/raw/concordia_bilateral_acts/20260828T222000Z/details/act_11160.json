@@ -1,0 +1,108 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo-Quadro de Cooperação Econômica entre os Estados Partes do MERCOSUL e os Estados Membros do Conselho de Cooperação dos Estados Árabes do Golfo (CCG)",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "10/05/2005",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Comércio Internacional e Investimentos",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "445",
+    "DataMensagem": "26/06/2008",
+    "NumeroDOU": "122",
+    "DataDOU": "27/06/2008"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "275",
+    "DataDecreto": "19/05/2010",
+    "NumeroDOU": "95",
+    "DataDOU": "20/05/2010"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 3989,
+      "NomeArquivo": "Acordo - Quadro - Cooperação - Econômica - DOU - Decreto Legislativo - 95 - 2010.pdf",
+      "Descricao": "Acordo - Quadro - Cooperação - Econômica - MERCOSUL - CCG - DOU - Decreto Legislativo - 95 - 2010",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 3988,
+      "NomeArquivo": "Acordo - Quadro - Cooperação - Econômica - DOU - Mensagem ao Congresso - 122 - 2008.pdf",
+      "Descricao": "Acordo - Quadro - Cooperação - Econômica - MERCOSUL - CCG - DOU - Mensagem ao Congresso - 122 - 2008",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "11",
+    "Id": 3987,
+    "NomeArquivo": "MERCOSUL - Acordo Quadro de Coop. Econômica.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "12",
+      "DescricaoObservacao": "Conforme o disposto no art. IX: \"Cada Parte notificará à outra Parte por escrito da conclusão dos procedimentos legais necessários. Este Acordo entrará em vigor na data da última notificação recebida. Este Acordo permanecerá em vigor a menos que uma das Partes Contratantes notifique a outra Parte Contratante, com pelo menos seis meses de antecedência, de sua intenção de denunciá-lo. Quando este Acordo for assim denunciado, todas as obrigações e compromissos derivados de qualquer atividade ou programa executado sob os dispositivos deste Acordo permanecerão válidos, salvo entendimento em contrário entre Partes Contratantes\"."
+    }
+  ]
+}

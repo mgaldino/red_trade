@@ -1,0 +1,244 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo sobre o Novo Banco de Desenvolvimento (NBD)",
+  "OutraParte": "África do Sul",
+  "OutrasPartes": [
+    "África do Sul",
+    "Brasil",
+    "China",
+    "Índia",
+    "Rússia",
+    "Bangladesh",
+    "Emirados Árabes Unidos",
+    "Argélia",
+    "Egito",
+    "Uzbequistão"
+  ],
+  "SignatarioBrasil": "Guido Mantega",
+  "CargoSignatarioBrasil": "Ministro de Estado da Fazenda",
+  "Depositario": "Brasil",
+  "LocalCelebracao": "Fortaleza",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "15/07/2014",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "África do Sul",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "Brasil",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "4",
+      "NomeOutraParte": "China",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "5",
+      "NomeOutraParte": "Índia",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "6",
+      "NomeOutraParte": "Rússia",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "7",
+      "NomeOutraParte": "Bangladesh",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "8",
+      "NomeOutraParte": "Emirados Árabes Unidos",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "9",
+      "NomeOutraParte": "Argélia",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "10",
+      "NomeOutraParte": "Egito",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "11",
+      "NomeOutraParte": "Uzbequistão",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "12",
+      "Id": 0,
+      "Nome": "Economia, Finanças e Tributos",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "13",
+    "NumeroMensagem": "444",
+    "DataMensagem": "29/12/2014",
+    "NumeroDOU": "252",
+    "DataDOU": "30/12/2014"
+  },
+  "DecretoLegislativo": {
+    "$id": "14",
+    "NumeroDecreto": "131",
+    "DataDecreto": "03/06/2015",
+    "NumeroDOU": "105",
+    "DataDOU": "05/06/2015"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "15",
+    "NumeroDecreto": "8.624",
+    "DataDecreto": "29/12/2015",
+    "NumeroDOU": "249",
+    "DataDOU": "30/12/2015"
+  },
+  "Vigencia": {
+    "$id": "16",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": "53647",
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "17",
+      "Id": 34742,
+      "NomeArquivo": "CPP Guido Mantega NDB_260723_141258.pdf",
+      "Descricao": "Carta de Plenos Poderes Brasil ",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "18",
+      "Id": 34741,
+      "NomeArquivo": "Carta de Plenos Poderes Rússia (2).pdf",
+      "Descricao": "Carta de Plenos Poderes Rússia",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "19",
+      "Id": 34411,
+      "NomeArquivo": "Instrument of Acession to NDB Agreement.pdf",
+      "Descricao": "Publicação do Instrumento de Adesão - Uzbequistão",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "20",
+      "Id": 34168,
+      "NomeArquivo": "Instrumento de Adesão - Egito.pdf",
+      "Descricao": "Publicação do Instrumento de Adesão - Egito",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "21",
+      "Id": 33165,
+      "NomeArquivo": "Instrumento de Adesão - Argélia.pdf",
+      "Descricao": "Publicação do Instrumento de Adesão - Argélia",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "22",
+      "Id": 31070,
+      "NomeArquivo": "Instrumento de Adesão - EAU.pdf",
+      "Descricao": "Publicação do Instrumento de Adesão - Emirados Árabes Unidos",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "23",
+      "Id": 31053,
+      "NomeArquivo": "BRICS - Carta de Acessão - NDB - Bangladesh.pdf",
+      "Descricao": "Publicação da Carta de Acessão - Bangladesh",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "24",
+      "Id": 28017,
+      "NomeArquivo": "BRICS - Carta de Ratificação - NBD - India.pdf",
+      "Descricao": "Publicação da Carta de Ratificação - Índia",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "25",
+      "Id": 28016,
+      "NomeArquivo": "BRICS - Carta de Ratificação - NBD - Brasil.pdf",
+      "Descricao": "Publicação da Carta de Ratificação - Brasil",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "26",
+      "Id": 28015,
+      "NomeArquivo": "BRICS - Carta de Ratificação - NBD - Rússia.pdf",
+      "Descricao": "Publicação da Carta de Ratificação - Rússia",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "27",
+      "Id": 28014,
+      "NomeArquivo": "BRICS - Carta de Ratificação - NBD - China.pdf",
+      "Descricao": "Publicação da Carta de Ratificação - China ",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "28",
+      "Id": 28013,
+      "NomeArquivo": "BRICS - Carta de Ratificação - NBD - África do Sul.pdf",
+      "Descricao": "Publicação da Carta de Ratificação - África do Sul ",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "29",
+      "Id": 6156,
+      "NomeArquivo": "Novo Banco de Desenvolvimento - DOU - Decreto de Promulgação - 249 - 2015.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "30",
+      "Id": 305,
+      "NomeArquivo": "Acordo Novo Banco de Desenvolvimento - Decreto Legislativo - 105 - 2015.pdf",
+      "Descricao": "Acordo Novo Banco de Desenvolvimento - Decreto Legislativo - 105 - 2015",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "31",
+    "Id": 29,
+    "NomeArquivo": "Acordo Sobre o Novo Banco de Desenvolvimento - Agreement on the New Development Bank.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": []
+}

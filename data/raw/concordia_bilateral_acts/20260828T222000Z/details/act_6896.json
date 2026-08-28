@@ -1,0 +1,106 @@
+{
+  "$id": "1",
+  "Titulo": "Memorando de Entendimento para a Cooperação Científica, Tecnológica, Acadêmica, e de Inovação entre a República Federativa do Brasil e a República Oriental do Uruguai",
+  "OutraParte": "Uruguai",
+  "OutrasPartes": [
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "Celso Amorin",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Santana do Livramento",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "30/07/2010",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": "Luis Almagro",
+      "CargoSignatario": "Ministro de Estado das Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Cooperação e Desenvolvimento",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "229",
+    "DataDOU": "01/12/2010"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Expirado",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "30/07/2010",
+    "DataEntradaVigorCI": null,
+    "Expirou": "30/07/2014",
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 12818,
+      "NomeArquivo": "Uruguai - DOU - Publicação DAI - 229 - 2010.pdf",
+      "Descricao": "Publicação no DOU pela DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "10",
+    "Id": 12817,
+    "NomeArquivo": "Uruguai - MdE - Tecnologia.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "11",
+      "DescricaoObservacao": "Conforme Disposto no Artigo XIII §1º \"Este Memorando de Entendimento entrará em vigor a partir da data da sua assinatura e permanecerá em vigor por um período de 4 anos, prorrogável por outro período de igual duração por consentimento mútuo das Partes.\""
+    }
+  ]
+}

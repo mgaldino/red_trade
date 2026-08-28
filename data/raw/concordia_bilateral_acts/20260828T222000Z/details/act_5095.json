@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Convenção entre o Governo da República Federativa do Brasil e o Governo da República da África do Sul para Evitar a Dupla Tributação e Prevenir a Evasão Fiscal em Relação aos Impostos sobre a Renda",
+  "OutraParte": "África do Sul",
+  "OutrasPartes": [
+    "África do Sul"
+  ],
+  "SignatarioBrasil": "Samuel Pinheiro Guimarães",
+  "CargoSignatarioBrasil": "Ministro de Estado, Interino, das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Pretória",
+  "NomePaisCelebracao": "África do Sul",
+  "DataCelebracao": "08/11/2003",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "África do Sul",
+      "NomeSignatario": "Trevor Manuel",
+      "CargoSignatario": "Ministro das Finanças"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Economia, Finanças e Tributos",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "185",
+    "DataMensagem": "04/04/2005",
+    "NumeroDOU": "65",
+    "DataDOU": "06/04/2005"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "301",
+    "DataDecreto": "13/07/2006",
+    "NumeroDOU": "134",
+    "DataDOU": "14/07/2006"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": "29/12/2003",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": "24/07/2006",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "5922",
+    "DataDecreto": "03/10/2006",
+    "NumeroDOU": "191",
+    "DataDOU": "04/10/2006"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": "45154",
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 1223,
+      "NomeArquivo": "África do Sul-DOU-Decreto Legislativo-134-2006.pdf",
+      "Descricao": "Publicação no DOU de Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 1220,
+      "NomeArquivo": "África do Sul-DOU-Mensagem ao Congresso-65-2005.pdf",
+      "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 1219,
+      "NomeArquivo": "África do Sul-DOU-Decreto de Promulgação-371-2006.pdf",
+      "Descricao": "Publicação no DOU de Decreto de Promulgação",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 1218,
+    "NomeArquivo": "África do Sul-Acordo-Dupla Tributação.pdf",
+    "Descricao": "África do Sul-Acordo-Dupla Tributação",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo XXIX \"Cada Estado Contratante notificará ao outro o cumprimento dos procedimentos exigidos por sua legislação para a entrada em vigor da presente Convenção. A Convenção entrará em vigor na data de recebimento da última dessas notificações.\""
+    }
+  ]
+}

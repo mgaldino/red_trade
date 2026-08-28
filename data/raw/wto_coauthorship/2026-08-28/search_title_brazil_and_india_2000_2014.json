@@ -1,0 +1,17 @@
+{
+  "accessed_at": "2026-08-28T22:16:36.936Z",
+  "coverage_note": "Lista de resultados exibida pelo portal oficial; títulos podem estar truncados na interface e exigem validação no PDF/registro de catálogo.",
+  "extracted_records": 0,
+  "query": {
+    "collection": "WTO",
+    "date_from": "01/01/2000",
+    "date_to": "31/12/2014",
+    "hits_per_page": 500,
+    "interface_language": "ENGLISH",
+    "title_query": "Brazil AND India"
+  },
+  "records": [],
+  "reported_hits": 0,
+  "search_url": "https://docs.wto.org/dol2fe/Pages/FE_Search/FE_S_S006.aspx?MetaCollection=WTO&IssuingDateFrom=01%2f01%2f2000&IssuingDateTo=31%2f12%2f2014&CATTITLE=Brazil+AND+India&Language=ENGLISH&SearchPage=FE_S_S001&languageUIChanged=true",
+  "source": "WTO Documents Online"
+}

@@ -1,0 +1,106 @@
+{
+  "$id": "1",
+  "Titulo": "Ajuste Complementar ao Acordo Básico de Cooperação Técnica e Científica entre o Governo da República Federativa do Brasil e o Governo dos Estados Unidos Mexicanos para a Implementação do Projeto “Apoio Técnico para Expansão e Consolidação da Rede de Bancos de Leite Humano no México”",
+  "OutraParte": "México",
+  "OutrasPartes": [
+    "México"
+  ],
+  "SignatarioBrasil": "Ministro Marco Farani",
+  "CargoSignatarioBrasil": "Diretor da ABC",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "11/06/2012",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "México",
+      "NomeSignatario": "Alejandro de la Peña Navarrete",
+      "CargoSignatario": "Embaixador do México no Brasil"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Trabalho, Saúde e Previdência",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "100",
+    "DataDOU": "27/05/2016"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "11/06/2012",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 9779,
+      "NomeArquivo": "México - DOU - Publicação DAI - 100 - 2016.pdf",
+      "Descricao": "Publicação no DOU da DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "10",
+    "Id": 8243,
+    "NomeArquivo": "México - AC - Bancos de Leite Humano.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "11",
+      "DescricaoObservacao": "Conforme disposto no Artigo VII: \"Artigo VII: O presente Ajuste Complementar entrará em vigor na data de sua assinatura e terá vigência de 2 (dois) anos, renováveis automaticamente até o cumprimento de seu objeto, salvo manifestação contrária de qualquer das Partes.\""
+    }
+  ]
+}

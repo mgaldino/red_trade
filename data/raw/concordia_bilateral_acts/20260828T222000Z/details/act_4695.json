@@ -1,0 +1,106 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo, por troca de Notas, para a Construção de Dique de Contenção no Rio Quaraí entre o Governo da República Federativa do Brasil e o Governo da República Oriental do Uruguai",
+  "OutraParte": "Uruguai",
+  "OutrasPartes": [
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "Raymundo S. R. Magno ",
+  "CargoSignatarioBrasil": "Encarregado de Negócios a. i.",
+  "Depositario": null,
+  "LocalCelebracao": "Montevidéu",
+  "NomePaisCelebracao": "Uruguai",
+  "DataCelebracao": "27/12/2000",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": "Didier Opertti Badán",
+      "CargoSignatario": "Ministro das Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Cooperação e Desenvolvimento",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "48",
+    "DataDOU": "09/03/2001"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "27/12/2000",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 12037,
+      "NomeArquivo": "Uruguai - DOU - Publicação DAI - 48 - 2001.pdf",
+      "Descricao": "Publicação no DOU pela DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "10",
+    "Id": 12036,
+    "NomeArquivo": "Uruguai - Troca de Notas - Rio Quaraí.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "11",
+      "DescricaoObservacao": "Conforme fecho da Nota: \"     Caso as disposições acima sejam aceitas pelo Governo da República Oriental do Uruguai, a presente Nota e a Nota de resposta de Vossa Excelência, de mesma data e idêntico teor, constituirão um Acordo entre nossos dois Governos, a entrar em vigor na presente data.\""
+    }
+  ]
+}

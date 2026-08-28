@@ -1,0 +1,38 @@
+{
+  "source_name": "Concórdia — Acervo de atos internacionais do Brasil",
+  "provider": "Ministério das Relações Exteriores",
+  "portal_url": "https://concordia.itamaraty.gov.br",
+  "api_base_url": "https://aplicacao.itamaraty.gov.br/ApiConcordia",
+  "swagger_version": "v1-12-0-0",
+  "access_method": "API pública oficial; GET para catálogos/detalhes e POST para pesquisa avançada",
+  "credentials_required": false,
+  "license": "Não identificada na interface ou no Swagger; dados públicos oficiais",
+  "started_at_utc": "2026-08-28T22:26:58+00:00",
+  "completed_at_utc": "2026-08-28T22:31:35+00:00",
+  "window": {
+    "start_year": 2000,
+    "end_year": 2014
+  },
+  "partners": {
+    "China": 58,
+    "Índia": 145,
+    "África do Sul": 4,
+    "Argentina": 19,
+    "Paraguai": 242,
+    "México": 184,
+    "Indonésia": 146,
+    "Turquia": 328,
+    "Uruguai": 350
+  },
+  "page_size": 100,
+  "search_type": "Data de celebração (IdTipoData=1)",
+  "agreement_types_collected": [
+    "BL",
+    "TL",
+    "ML"
+  ],
+  "unique_act_ids": 504,
+  "search_hits_including_cross_partner_duplicates": 515,
+  "raw_is_immutable": true,
+  "request_log": "data/raw/concordia_bilateral_acts/20260828T222000Z/request_log.json"
+}

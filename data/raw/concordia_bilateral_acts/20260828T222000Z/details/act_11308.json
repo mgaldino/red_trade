@@ -1,0 +1,96 @@
+{
+  "$id": "1",
+  "Titulo": "Memorando de Entendimento sobre Cooperação em Comércio e Investimentos e Plano de Ação entre o MERCOSUL e a República de Singapura",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Jorge d'Escragnolle Taunay Filho",
+  "CargoSignatarioBrasil": "Subsecretário-Geral da América do Sul",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Nova York",
+  "NomePaisCelebracao": "Estados Unidos",
+  "DataCelebracao": "24/09/2007",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Comércio Internacional e Investimentos",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "213",
+    "DataDOU": "06/11/2007"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "06/11/2007",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 2999,
+      "NomeArquivo": "Publicação do Ato - DOU - 213 - 2007.pdf",
+      "Descricao": "Publicação - DOU - 213 - 2007",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "10",
+    "Id": 2998,
+    "NomeArquivo": "Memorando de Entendimento - Cooperação - Comércio - Investimentos - MERCOSUL - Singapura - esp port ing.pdf",
+    "Descricao": "Memorando de Entendimento - Cooperação - Comércio - Investimentos - MERCOSUL - Singapura - esp port ing.pdf",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": []
+}

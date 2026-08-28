@@ -1,0 +1,106 @@
+{
+  "$id": "1",
+  "Titulo": "Memorando de Entendimento sobre Cooperação entre o Ministério do Planejamento, Orçamento e Gestão da República Federativa do Brasil e o Ministério do Comércio da República Popular da China.",
+  "OutraParte": "China",
+  "OutrasPartes": [
+    "China"
+  ],
+  "SignatarioBrasil": "Guido Mantega",
+  "CargoSignatarioBrasil": "Ministro do Planejamento, Orçamento e Gestão",
+  "Depositario": null,
+  "LocalCelebracao": "Pequim",
+  "NomePaisCelebracao": "China",
+  "DataCelebracao": "24/05/2004",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "China",
+      "NomeSignatario": "Bo Xi Lai",
+      "CargoSignatario": "Ministro do Comércio"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Serviços e Transporte",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "109",
+    "DataDOU": "08/07/2004"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "24/05/2004",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 3751,
+      "NomeArquivo": "China - DOU - Publicação DAI - 109 - 2004.pdf",
+      "Descricao": "Publicação no DOU da DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "10",
+    "Id": 3750,
+    "NomeArquivo": "China - Memorando de Entendimetno - Hidroferroviário.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "11",
+      "DescricaoObservacao": "Conforme disposto no Artigo V \"Este Memorando de Entendimento entrará em vigor na data de sua assinatura e terá validade de 10 (dez) anos, renováveis automaticamente por iguais períodos. Este Memorando de Entendimento somente deixará de vigorar no caso de denúncia por uma das Partes signatárias,  a qual deverá manifestar sua decisão expressamente à outra, por escrito e com antecipação mínima de 6 (seis) meses. A denúncia do presente Memorando não afetará os projetos que estejam, porventura, ainda em curso.\""
+    }
+  ]
+}

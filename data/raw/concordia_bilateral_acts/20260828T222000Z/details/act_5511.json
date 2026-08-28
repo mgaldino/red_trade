@@ -1,0 +1,98 @@
+{
+  "$id": "1",
+  "Titulo": "Ajuste Complementar ao Acordo de Cooperação Científica e Tecnológica entre a República Federativa do Brasil e a República Argentina para a Pesquisa, Desenvolvimento Tecnológico e Produção de Insumos, de Medicamentos e de Recursos para Diagnóstico.",
+  "OutraParte": "Argentina",
+  "OutrasPartes": [
+    "Argentina"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Mininistro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Puerto Iguazú",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "30/11/2005",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Argentina",
+      "NomeSignatario": "Ginés Gonzáles Garcia",
+      "CargoSignatario": "Mininistro da Saúde e Ambiente"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Trabalho, Saúde e Previdência",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "30/11/2005",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [],
+  "DocumentoIntegra": {
+    "$id": "9",
+    "Id": 2221,
+    "NomeArquivo": "Argentina - AC -Recursos para Diagnóstico.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "10",
+      "DescricaoObservacao": "Conforme disposto no Artigo XI: \"O Presente Ajuste entrará em vigor na data de sua assinatura e terá duração de 5 anos, automaticamente renovado, a menos que uma das Partes comunique à outra, por via diplomática, sua decisão de denunciá-lo. Neste caso, a denúncia surtirá efeito seis meses após a data do recebimento da notificação\"."
+    }
+  ]
+}

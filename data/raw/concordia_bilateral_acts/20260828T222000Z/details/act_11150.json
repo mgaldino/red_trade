@@ -1,0 +1,114 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo sobre Transferência de Pessoas Condenadas entre os Estados Partes do MERCOSUL - Decisão nº 34/04",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Belo Horizonte",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "16/12/2004",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [
+    {
+      "$id": "2",
+      "Id": 11168,
+      "Titulo": "Emenda ao Acordo sobre Transferência de Pessoas Condenadas no âmbito do MERCOSUL - Decisão CMC nº 12/05"
+    }
+  ],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "3",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": "179",
+    "DataMensagem": "31/03/2005",
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": "291",
+    "DataDecreto": "23/10/2007",
+    "NumeroDOU": "205",
+    "DataDOU": "24/10/2007"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "8.315",
+    "DataDecreto": "24/09/2014",
+    "NumeroDOU": "184",
+    "DataDOU": "24/09/2014"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "18/01/2012",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 27295,
+      "NomeArquivo": "MERCOSUL - DOU - Decreto de Promulgação - 184 A - 2014.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 27294,
+      "NomeArquivo": "MERCOSUL - DOU - Decreto Lesgislativo - 205 - 2007.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 4022,
+    "NomeArquivo": "Acordo - Transferência - Pessoas - Condenadas - port esp.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme o disposto no art. 17: \"O presente Acordo entrará em vigor nos termos previstos pelos artigos 2º, 40 e 42 do Protocolo de Ouro Preto sobre a Estrutura Institucional do MERCOSUL\"."
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "$id": "1",
+  "Titulo": "Memorando de Entendimento entre o Governo da República Federativa do Brasil e o Governo da República Argentina sobre Cooperação na Área de Bioenergia, Incluindo Biocombustíveis",
+  "OutraParte": "Argentina",
+  "OutrasPartes": [
+    "Argentina"
+  ],
+  "SignatarioBrasil": "Márcio Zimmermann",
+  "CargoSignatarioBrasil": "Ministro, interino, de Minas e Energia",
+  "Depositario": null,
+  "LocalCelebracao": "Buenos Aires",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "31/01/2011",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Argentina",
+      "NomeSignatario": "Julio De Vido",
+      "CargoSignatario": "Ministro de Planejamento Federal, Investimento Público e Serviços"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Energia e Recursos Estratégicos",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "053",
+    "DataMensagem": "19/02/2013",
+    "NumeroDOU": "034",
+    "DataDOU": "20/02/2013"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "153",
+    "DataDecreto": "17/07/2015",
+    "NumeroDOU": "136",
+    "DataDOU": "20/07/2015"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "535",
+      "DataDocumento": "12/08/2015",
+      "Local": "Embaixada em Buenos Aires",
+      "DataRecebimento": "12/08/2015",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Superado",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 2066,
+      "NomeArquivo": "Argentina - DOU - Mensagem ao Congresso - 53 - 2013.pdf",
+      "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 1341,
+      "NomeArquivo": "Argentina - DOU - Decreto Legislativo - 136 - 2015.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 2065,
+    "NomeArquivo": "Argentina - Memorando de Entendimento - Biocombustíveis.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme disposto no Artigo V \"Este Memorando de Entendimento entrará em vigor na data da segunda notificação pela qual uma Parte informa a outra, por via diplomática, do cumprimento dos respectivos requisitos internos.\""
+    }
+  ]
+}

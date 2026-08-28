@@ -1,0 +1,106 @@
+{
+  "$id": "1",
+  "Titulo": "Protocolo de Intenções entre o Governo da República Federativa do Brasil e o Governo da República Oriental do Uruguai na Área da Luta Contra a Discriminação e Promoção da Igualdade Racial",
+  "OutraParte": "Uruguai",
+  "OutrasPartes": [
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "Matilde Ribeiro",
+  "CargoSignatarioBrasil": "Ministra da Sec. Esp. de Políticas de Prom. da Igualdade Racial",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "29/08/2006",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": "Felipe Michelini",
+      "CargoSignatario": "Vice-Ministro da Cultura"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "184",
+    "DataDOU": "25/09/2006"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "29/08/2006",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 12297,
+      "NomeArquivo": "Uruguai - DOU - Publicação DAI - 184 - 2006.pdf",
+      "Descricao": "Publicação no DOU pela DAI.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "10",
+    "Id": 12296,
+    "NomeArquivo": "Uruguai - PI - Igualdade racial.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "11",
+      "DescricaoObservacao": "Conforme exposto no Artigo 8° '' O presente Protocolo tem a validade de 5 (cinco) anos, prorrogável automaticamente por períodos semelhantes, salvo se uma das Partes notificar à outra, por via diplomática, e com antecedência mínima de 6 (seis) meses à data de expiração, a sua intenção de denunciá-lo, sem prejuízo das atividades em curso."
+    }
+  ]
+}

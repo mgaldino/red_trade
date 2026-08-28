@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Protocolo Alterando a Convenção entre o Governo da República Federativa do Brasil e o Governo da República da Índia Destinada a Evitar a Dupla Tributação e Prevenir a Evasão Fiscal em Matéria de impostos sobre a Renda, Celebrada em Nova Delhi, em 26 de abril de 1988",
+  "OutraParte": "Índia",
+  "OutrasPartes": [
+    "Índia"
+  ],
+  "SignatarioBrasil": "Carlos Alberto Barreto",
+  "CargoSignatarioBrasil": "Secretário da Receita Federal",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "15/10/2013",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Índia",
+      "NomeSignatario": "Ashok Tomar",
+      "CargoSignatario": "Embaixador da Índia no Brasil"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Economia, Finanças e Tributos",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "473",
+    "DataMensagem": "06/11/2015",
+    "NumeroDOU": "213",
+    "DataDOU": "09/11/2015"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "81",
+    "DataDecreto": "25/05/2017",
+    "NumeroDOU": "100",
+    "DataDOU": "26/05/2017"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "25",
+      "DataDocumento": "18/02/2014",
+      "Local": "Embaixada da Índia em Brasília",
+      "DataRecebimento": "20/02/2014",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "132",
+      "DataDocumento": "07/07/2017",
+      "Local": null,
+      "DataRecebimento": "07/07/2017",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "9.219",
+    "DataDecreto": "04/12/2017",
+    "NumeroDOU": "232",
+    "DataDOU": "05/12/2017"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "06/08/2017",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 25172,
+      "NomeArquivo": "Índia - DOU - Decreto de Promulgação - 232 - 2017.pdf",
+      "Descricao": "Publicação do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 21518,
+      "NomeArquivo": "Índia - DOU - Decreto Legislativo - 100 - 2017.pdf",
+      "Descricao": "Publicação no DOU de Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 5251,
+      "NomeArquivo": "Índia - DOU - Mensagem ao Congresso - 213 - 2015.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso ",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 7514,
+    "NomeArquivo": "Índia - Protocolo Alternativo - Dupla Tributação.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo II: \"Cada Estado Contratante notificará ao outro por escrito, por via diplomática, o cumprimento dos procedimentos exigidos por sua legislação para a entrada em vigor do presente Protocolo. O Protocolo entrará em vigor 30 dias após a data de recebimento da última dessas notificações, e suas disposições terão eficácia naquela data.\""
+    }
+  ]
+}

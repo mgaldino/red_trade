@@ -1,0 +1,108 @@
+{
+  "$id": "1",
+  "Titulo": "Decisão nº 37/05, do Conselho do Mercado Comum (CMC) do MERCOSUL, que aprova a regulamentação transitória da Decisão CMC nº 54/04 sobre \"Eliminação da Dupla Cobrança e Distribuição da Renda Aduaneira\"",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Montevidéu",
+  "NomePaisCelebracao": "Uruguai",
+  "DataCelebracao": "08/12/2005",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Comércio Internacional e Investimentos",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "5.637",
+    "DataDecreto": "26/12/2005",
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "5.738",
+    "DataDecreto": "30/03/2006",
+    "NumeroDOU": "63",
+    "DataDOU": "31/03/2006"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 27355,
+      "NomeArquivo": "MERCOSUL - Decreto Legislativo - 2005.pdf",
+      "Descricao": "Publicação do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 3758,
+      "NomeArquivo": "Dec. 37-05 - Regulamentação - Dec. CMC 54-04 - DOU - Decreto de Promulgação - 63 - 2006.pdf",
+      "Descricao": "Dec. 37-05 - Regulamentação - Dec. CMC 54-04 - DOU - Decreto de Promulgação - 63 - 2006",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "11",
+    "Id": 3732,
+    "NomeArquivo": "Dec. 37-05 - Regulamentação - Dec. CMC 54-04 - port esp.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "12",
+      "DescricaoObservacao": "Revoga a Diretiva CCM nº 03/04 - Conf art. 25 (pg 241)."
+    }
+  ]
+}

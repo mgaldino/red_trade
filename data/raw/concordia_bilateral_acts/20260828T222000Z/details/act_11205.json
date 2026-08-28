@@ -1,0 +1,109 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo-Quadro sobre Comércio entre o MERCOSUL e o Estado de Israel. Acordo de Livre Comércio entre o MERCOSUL e o Estado de Israel (18/12/2007)",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Luiz Nunes Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Montevidéu",
+  "NomePaisCelebracao": "Uruguai",
+  "DataCelebracao": "08/12/2005",
+  "TipoAcordo": "ML",
+  "PossuiHtml": false,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Comércio Internacional e Investimentos",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "813",
+    "DataMensagem": "21/10/2008",
+    "NumeroDOU": "205",
+    "DataDOU": "22/10/2008"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "936",
+    "DataDecreto": "17/12/2009",
+    "NumeroDOU": "242",
+    "DataDOU": "18/12/2009"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "6",
+    "NumeroDecreto": "7.159",
+    "DataDecreto": "27/04/2010",
+    "NumeroDOU": "79",
+    "DataDOU": "28/04/2010"
+  },
+  "Vigencia": {
+    "$id": "7",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "03/04/2010",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "8",
+      "Id": 3716,
+      "NomeArquivo": "Acordo - Livre Comércio - MERCOSUL - Israel - DOU - Decreto de Promulgação - 79 - 2010.pdf",
+      "Descricao": "Acordo - Livre Comércio - MERCOSUL - Israel - DOU - Decreto de Promulgação - 79 - 2010",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "9",
+      "Id": 3715,
+      "NomeArquivo": "Acordos - Comércio - MERCOSUL - Israel - DOU - Decreto Legislativo - 242 - 2009.pdf",
+      "Descricao": "Acordos - Comércio - MERCOSUL - Israel - DOU - Decreto Legislativo - 242 - 2009",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 3714,
+      "NomeArquivo": "Acordos - Comércio - MERCOSUL - Israel - DOU - Mensagem ao Congresso - 205 - 2008.pdf",
+      "Descricao": "Acordos - Comércio - MERCOSUL - Israel - DOU - Mensagem ao Congresso - 205 - 2008",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "11",
+    "Id": 3698,
+    "NomeArquivo": "Acordo-Quadro - Comércio - MERCOSUL - Israel - port esp heb ing.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "12",
+      "DescricaoObservacao": "Conforme o disposto no art. 10: \"O presente Acordo entrará em vigor trinta dias após a data da última notificação pelas Partes Contratantes, por escrito e pelos canais diplomáticos, do cumprimento das formalidades legais internas necessárias para esse fim\"."
+    }
+  ]
+}

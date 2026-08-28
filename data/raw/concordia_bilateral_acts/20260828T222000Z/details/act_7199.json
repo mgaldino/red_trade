@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo sobre Transferência de Pessoas Condenadas entre a República Federativa do Brasil e a República da Turquia",
+  "OutraParte": "Turquia",
+  "OutrasPartes": [
+    "Turquia"
+  ],
+  "SignatarioBrasil": "Antonio de Aguiar Patriota",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Ancara",
+  "NomePaisCelebracao": "Turquia",
+  "DataCelebracao": "07/10/2011",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Turquia",
+      "NomeSignatario": "Sadullah Ergin",
+      "CargoSignatario": "Ministro da Justiça"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "373",
+    "DataMensagem": "12/11/2014",
+    "NumeroDOU": "220",
+    "DataDOU": "13/11/2014"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "140",
+    "DataDecreto": "09/08/2018",
+    "NumeroDOU": "154",
+    "DataDOU": "10/08/2018"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "2015/14162810",
+      "DataDocumento": "17/06/2015",
+      "Local": null,
+      "DataRecebimento": "16/06/2015",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "093",
+      "DataDocumento": "28/08/2018",
+      "Local": "Embaixada em Ancara",
+      "DataRecebimento": "29/08/2018",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "9.752",
+    "DataDecreto": "10/04/2019",
+    "NumeroDOU": "70",
+    "DataDOU": "11/04/2019"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "28/09/2018",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 29634,
+      "NomeArquivo": "Turquia - DOU - Decreto Presidencial nº 9.752 de 10-4-2019.pdf",
+      "Descricao": "Publicação no DOU do Decreto Presidencial de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 27634,
+      "NomeArquivo": "Turquia DOU Decreto 140 de 2018.pdf",
+      "Descricao": "Turquia DOU Decreto 140 de 2018",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 12064,
+      "NomeArquivo": "Turquia - DOU - Mensagem ao Congresso - 220 - 2014.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 1074,
+    "NomeArquivo": "Turquia - Acordo- Transferência Pessoas Condenadas.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "\"Conforme o disposto no Artigo 20 Entrada em Vigor\r\n \r\nEste Acordo entrará em vigor no trigésimo dia após ser recebida a última notificação de uma das Partes, por escrito, no sentido de que seus respectivos procedimentos internos para entrada em vigor deste Acordo tenham sido cumpridos.\""
+    }
+  ]
+}

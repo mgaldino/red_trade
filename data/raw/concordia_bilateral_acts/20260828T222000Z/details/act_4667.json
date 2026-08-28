@@ -1,0 +1,113 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo, por troca de Notas, Tornando Extinto o Protocolo Adicional sobre Relações de Trabalho e Previdência Social Relativo aos Contratos de Trabalho dos Trabalhadores, Empreiteiros e Subempreiteiros de Obras e Locadores e Sublocadores de Serviços, de 10/09/1974",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Luiz Felipe Lampreia",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "20/09/2000",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": "Juan Esteban Aguirre",
+      "CargoSignatario": "Ministro de Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Trabalho, Saúde e Previdência",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "199",
+    "DataDOU": "16/10/2000"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "20/09/2000",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 10145,
+      "NomeArquivo": "Paraguai - DOU - Publicação DAI - 199 - 2000.pdf",
+      "Descricao": "Publicação no DOU da DAI",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 10143,
+      "NomeArquivo": "Paraguai - DOU - Publicação DAI - 187 - 2000.pdf",
+      "Descricao": "Publicação no DOU da DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "11",
+    "Id": 10142,
+    "NomeArquivo": "Paraguai - Acordo PTN - Extinção do Protocolo.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "12",
+      "DescricaoObservacao": "Conforme Disposto no Texto da Nota Brasileira §2º \"A respeito, tendo em conta a decisão tomada pelo Conselho de Administração de ITAIPU em sua 168ª reunião, em 29 de agosto de 2000, e em conformidade com o previsto no Artigo 14 do referido acordo, tenho a honra de propor ao ilustre Governo de Vossa Excelência, em nome do Governo da República Federativa do Brasil, a denúncia, de comum acordo, do Protocolo Adicional sobre Relações de Trabalho e Previdência Social Relativo aos Contratos de Trabalho dos Trabalhadores, dos Empreiteiros e Subempreiteiros de Obras e Locadores e Sublocadores de Serviços, celebrado entre ambas as Partes, em 10 de setembro de 1974, que ficará extinto a partir da data da presente nota.\""
+    }
+  ]
+}

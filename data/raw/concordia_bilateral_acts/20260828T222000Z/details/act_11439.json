@@ -1,0 +1,124 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo Quadro de Cooperação entre os Estados Partes do MERCOSUL e Estados Associados para a Criação de Equipes Conjuntas de Investigação (22/10)",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai",
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Luiz Nunes Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "San Juan",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "02/08/2010",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": "185",
+    "DataMensagem": "05/06/2017",
+    "NumeroDOU": "107",
+    "DataDOU": "06/06/2017"
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": "162 de 2018",
+    "DataDecreto": "19/10/2018",
+    "NumeroDOU": "203 de 22/10/2018",
+    "DataDOU": "22/10/2018"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "10.452",
+    "DataDecreto": "10/08/2020",
+    "NumeroDOU": "153",
+    "DataDOU": "11/08/2020"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "22/05/2020",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 30481,
+      "NomeArquivo": "DOU - Decreto de Promulgação - 153 - 2020.pdf",
+      "Descricao": "Publicação no DOU de Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 28943,
+      "NomeArquivo": "Ata de Retificação - Equipes Conjuntas (b).pdf",
+      "Descricao": "Ata de Retificação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 28942,
+      "NomeArquivo": "DOU - DEC LEG- 162- 2018.pdf",
+      "Descricao": "Publicação no DOU de Dec Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "13",
+      "Id": 21726,
+      "NomeArquivo": "DOU - Mensagem ao Congresso - 107 - 2017.pdf",
+      "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "14",
+    "Id": 456,
+    "NomeArquivo": "Decisão 22-10 - Equipe Conjunta de Investigação - português, espanhol.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": []
+}

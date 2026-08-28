@@ -1,0 +1,4285 @@
+{
+  "$id": "1",
+  "Page": 1,
+  "Count": 100,
+  "TotalPages": 2,
+  "TotalCount": 166,
+  "Items": [
+    {
+      "$id": "2",
+      "Id": 12053,
+      "Titulo": "MERCOSUL/CMC/DEC. Nº 39/14 - Fundo MERCOSUL de Garantias para Micro, Pequenas e Médias Empresas (Fundo de Garantias)",
+      "Assuntos": [
+        {
+          "$id": "3",
+          "Id": 285,
+          "Nome": "Comércio Internacional e Investimentos",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "4",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Tramitação MRE",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "17/12/2014",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "5",
+        "Id": 24766,
+        "NomeArquivo": "DEC_039-2014_PT_FERR_Fundo MCS PYMES.pdf.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "6",
+      "Id": 11577,
+      "Titulo": "Acordo Modificativo do Acordo para a Concessão de um Prazo de Noventa (90) Dias aos Turistas Nacionais dos Estados Partes do Mercosul e Estados Associados",
+      "Assuntos": [
+        {
+          "$id": "7",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        },
+        {
+          "$id": "8",
+          "Id": 298,
+          "Nome": "Serviços e Transporte",
+          "IsPrincipal": false
+        }
+      ],
+      "Vigencia": "Em promulgação/Casa Civil",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "16/12/2014",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "9",
+          "Id": 29527,
+          "NomeArquivo": "Carta de Ratificação.pdf",
+          "Descricao": "Carta de Ratificação brasileira",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "10",
+          "Id": 29228,
+          "NomeArquivo": "DOU - Decreto Legislativo - 235 - 2018.pdf",
+          "Descricao": "Publicação no DOU de Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "11",
+          "Id": 13684,
+          "NomeArquivo": "DOU - Mensagem - 159 - 2016.pdf",
+          "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "12",
+        "Id": 182,
+        "NomeArquivo": "Turistas Nacionais.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "13",
+      "Id": 11578,
+      "Titulo": "Acordo-Quadro de Comércio e Cooperação Econômica entre o MERCOSUL e a República da Tunísia",
+      "Assuntos": [
+        {
+          "$id": "14",
+          "Id": 285,
+          "Nome": "Comércio Internacional e Investimentos",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "15",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Tramitação MRE",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "16/12/2014",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "16",
+        "Id": 2285,
+        "NomeArquivo": "Acordo-Quadro - Comércio e Cooperação Econômica - MERCOSUL-Tunísia - port esp árab ing.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "17",
+      "Id": 11580,
+      "Titulo": "Memorando de Entendimento de Comércio e Cooperação Econômica entre o MERCOSUL e a República do Líbano",
+      "Assuntos": [
+        {
+          "$id": "18",
+          "Id": 285,
+          "Nome": "Comércio Internacional e Investimentos",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "19",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Tramitação MRE",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "16/12/2014",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "20",
+        "Id": 2283,
+        "NomeArquivo": "Memorando de Entendimento - Comércio e Cooperação Econômica - MERCOSUL-Líbano - port esp árab ing.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "21",
+      "Id": 11581,
+      "Titulo": "Segundo Acordo Modificativo do Anexo do Acordo sobre Documentos de Viagem dos Estados Partes do MERCOSUL e Estados Associados",
+      "Assuntos": [
+        {
+          "$id": "22",
+          "Id": 286,
+          "Nome": "Consulares e Migratórios",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "23",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Substituído",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "16/12/2014",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "24",
+          "Id": 26243,
+          "NomeArquivo": "Mercosul - DAI - Promulgação - 195 - 2015.pdf",
+          "Descricao": "Publicação no DOU pela DAI da Promulgação",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "25",
+        "Id": 3074,
+        "NomeArquivo": "Segundo Acordo - Modificativo - Acordo - Anexo - Documentos - Viagem - port esp.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "26",
+      "Id": 7575,
+      "Titulo": "Acordo entre os Estados Partes do Mercosul e os Estados Associados para o Intercâmbio de Informações sobre a Fabricação e o Tráfico Ilícito de Armas de Fogo, Munições, Explosivos e Outros Materiais Relacionados",
+      "Assuntos": [
+        {
+          "$id": "27",
+          "Id": 289,
+          "Nome": "Direito, Justiça & Segurança Pública",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "28",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Substituído",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "29/06/2012",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [],
+      "DocumentoIntegra": null
+    },
+    {
+      "$id": "29",
+      "Id": 7313,
+      "Titulo": "Ajuste Complementar ao Acordo Básico de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai para Implementação do Projeto “Fortalecimento Institucional da Divisão Nacional de Vigilância Sanitária do Ministério da Saúde Pública e Bem Estar Social da República do Paraguai”",
+      "Assuntos": [
+        {
+          "$id": "30",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "24/05/2012",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "31",
+          "Id": 9785,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 111 - 2012.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "32",
+        "Id": 9784,
+        "NomeArquivo": "Paraguai - AC - ANVISA.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "33",
+      "Id": 11510,
+      "Titulo": "Protocolo de Montevidéu sobre Compromisso com a Democracia no MERCOSUL (USHUAIA II), firmado por ocasião da XLII Reunião do CMC e Cúpula de Presidentes do MERCOSUL e Estados Associados",
+      "Assuntos": [
+        {
+          "$id": "34",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        },
+        {
+          "$id": "35",
+          "Id": 297,
+          "Nome": "Relações Diplomáticas e Consulares",
+          "IsPrincipal": false
+        }
+      ],
+      "Vigencia": "Tramitação Congresso Nacional",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "20/12/2011",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "36",
+          "Id": 26511,
+          "NomeArquivo": "Mercosul - Ata de Depósito - -Equador - Compromisso Democracia.pdf",
+          "Descricao": "Ata de Depósito de Ratificação do Equador.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "37",
+          "Id": 26510,
+          "NomeArquivo": "Mercosul - Protocolo - DOU - Mensagem ao Congresso - 236 - 2012.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso.",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "38",
+        "Id": 346,
+        "NomeArquivo": "Protocolo Ushuaia II - espanhol, português.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "39",
+      "Id": 11511,
+      "Titulo": "Acordo de Livre Comércio entre o MERCOSUL e o Estado da Palestina - XLII Reunião do CMC e Cúpula de Presidentes",
+      "Assuntos": [
+        {
+          "$id": "40",
+          "Id": 285,
+          "Nome": "Comércio Internacional e Investimentos",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "41",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "20/12/2011",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "42",
+          "Id": 33126,
+          "NomeArquivo": "ALC-MERCOSUL-Palestina_DOU81_30.04.2025_S1_P3-229_compressed.pdf",
+          "Descricao": "Publicação no DOU - promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "43",
+          "Id": 28080,
+          "NomeArquivo": "DL DEST.pdf",
+          "Descricao": "Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "44",
+          "Id": 28079,
+          "NomeArquivo": "DL DEST.pdf",
+          "Descricao": "Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "45",
+          "Id": 26525,
+          "NomeArquivo": "Mercosul - Comércio Palestina - DOU - Mensagem ao Congresso - 90 - 2016.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso.",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "46",
+        "Id": 26524,
+        "NomeArquivo": "Mercosul - Acordo - Livre Comércio - Palestina.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "47",
+      "Id": 12494,
+      "Titulo": "Acordo Modificativo do Anexo do Acordo sobre Documentos de Viagem dos Estados Partes do MERCOSUL e Estados Associados",
+      "Assuntos": [
+        {
+          "$id": "48",
+          "Id": 286,
+          "Nome": "Consulares e Migratórios",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "49",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "28/06/2011",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "50",
+        "Id": 30984,
+        "NomeArquivo": "Acordo Modificativo - Anexo - Documentos de Viagem - pt.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "51",
+      "Id": 7141,
+      "Titulo": "Ajuste Complementar ao Acordo entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai de 29 de Março de 1988, para a Cooperação em Segurança Pública e Enfrentamento ao Tráfico de Drogas e Substâncias Psicotrópicas e Crimes Conexos.",
+      "Assuntos": [
+        {
+          "$id": "52",
+          "Id": 289,
+          "Nome": "Direito, Justiça & Segurança Pública",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "28/06/2011",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "53",
+          "Id": 9802,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 102 - 2012.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "54",
+        "Id": 9801,
+        "NomeArquivo": "Paraguai - AC - Segurança Pública.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "55",
+      "Id": 7142,
+      "Titulo": "Ajuste Complementar ao Acordo de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai para a Implementação do Projeto “Fortalecimento Institucional da Assessoria Jurídica da Presidência da República do Paraguai”",
+      "Assuntos": [
+        {
+          "$id": "56",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "28/06/2011",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "57",
+          "Id": 22731,
+          "NomeArquivo": "Paraguai - DOU - Cooperação Técnica - 144 - 2017.pdf",
+          "Descricao": "Publicação do DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "58",
+        "Id": 9789,
+        "NomeArquivo": "Paraguai - AC Assessoria  Jurídica.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "59",
+      "Id": 7143,
+      "Titulo": "Ajuste Complementar ao Acordo de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai para a Implementação do Projeto “Apoio à Elaboração e à Implementação do Programa Nacional para o Desenvolvimento da Cadeia Produtiva Leiteira no Paraguai”",
+      "Assuntos": [
+        {
+          "$id": "60",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "28/06/2011",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "61",
+          "Id": 18686,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 22 - 2017.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "62",
+        "Id": 9788,
+        "NomeArquivo": "Paraguai - AC - Pecuaria Leiteira.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "63",
+      "Id": 7144,
+      "Titulo": "Ajuste Complementar ao Acordo de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai para a Implementação do Projeto “Fortalecimento da Transparência e Desenvolvimento de Capacidades dos Governos Locais do Paraguai”",
+      "Assuntos": [
+        {
+          "$id": "64",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "28/06/2011",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "65",
+        "Id": 9787,
+        "NomeArquivo": "Paraguai - AC - Transparência.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "66",
+      "Id": 11464,
+      "Titulo": "Acordo sobre Mandado MERCOSUL de Captura e Procedimentos de Entrega entre os Estados Partes do MERCOSUL e Estados Associados - Decisão 48/10",
+      "Assuntos": [
+        {
+          "$id": "67",
+          "Id": 289,
+          "Nome": "Direito, Justiça & Segurança Pública",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "68",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "16/12/2010",
+      "OutrasPartes": [
+        "Paraguai",
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "69",
+          "Id": 27616,
+          "NomeArquivo": "DOU - Decreto Legislativo - 154 - 2018.pdf",
+          "Descricao": "Publicação no DOU de Decreto Legislativo",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "70",
+        "Id": 26204,
+        "NomeArquivo": "Mandado de Captura - port esp.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "71",
+      "Id": 11465,
+      "Titulo": "Acordo-Quadro de Comércio e Cooperação Econômica entre o MERCOSUL e a Organização para a Libertação da Palestina, em Nome da Autoridade Nacional Palestina.",
+      "Assuntos": [
+        {
+          "$id": "72",
+          "Id": 285,
+          "Nome": "Comércio Internacional e Investimentos",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "73",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Tramitação MRE",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "16/12/2010",
+      "OutrasPartes": [
+        "Paraguai",
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "74",
+          "Id": 26952,
+          "NomeArquivo": "Mercosul - Palestina Síria - Ratificação.pdf",
+          "Descricao": "Mercosul - Palestina Síria - Ratificação",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "75",
+        "Id": 2414,
+        "NomeArquivo": "MERCOSUL-Palestina - Comércio - port esp árabe ing.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "76",
+      "Id": 11466,
+      "Titulo": "Acordo-Quadro para o Estabelecimento de uma Área de Livre Comércio entre o MERCOSUL e a República Árabe da Síria",
+      "Assuntos": [
+        {
+          "$id": "77",
+          "Id": 285,
+          "Nome": "Comércio Internacional e Investimentos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Tramitação MRE",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "16/12/2010",
+      "OutrasPartes": [
+        "Paraguai",
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "78",
+          "Id": 26951,
+          "NomeArquivo": "Mercosul - Palestina Síria - Ratificação.pdf",
+          "Descricao": "Mercosul - Palestina Síria - Ratificação",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "79",
+        "Id": 2413,
+        "NomeArquivo": "MERCOSUL-Síria - Livre Comércio - port esp árabe ing.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "80",
+      "Id": 11468,
+      "Titulo": "Memorando para o Estabelecimento de Mecanismo de Diálogo Político e Cooperação entre o MERCOSUL e a República de Cuba",
+      "Assuntos": [
+        {
+          "$id": "81",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "82",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "16/12/2010",
+      "OutrasPartes": [
+        "Paraguai",
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "83",
+        "Id": 2405,
+        "NomeArquivo": "MERCOSUL-Cuba - port esp.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "84",
+      "Id": 11469,
+      "Titulo": "Memorando para o Estabelecimento do Mecanismo de Diálogo Político e Cooperação entre os Estados Partes do Mercado Comum do Sul (MERCOSUL) e Estados Associados e a República da Turquia.",
+      "Assuntos": [
+        {
+          "$id": "85",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "86",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "16/12/2010",
+      "OutrasPartes": [
+        "Paraguai",
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "87",
+        "Id": 2404,
+        "NomeArquivo": "MERCOSUL-Turquia - port esp turco ing.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "88",
+      "Id": 11470,
+      "Titulo": "Acordo de Defesa da Concorrência do MERCOSUL",
+      "Assuntos": [
+        {
+          "$id": "89",
+          "Id": 290,
+          "Nome": "Economia, Finanças e Tributos",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "90",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em promulgação/MRE",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "16/12/2010",
+      "OutrasPartes": [
+        "Paraguai",
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "91",
+          "Id": 22919,
+          "NomeArquivo": "Nota VMREI-DGP-DIE-NR 121-17 - Chancelaria paraguaia.pdf",
+          "Descricao": "Nota pela qual a Chancelaria paraguaia informa sobre a ratificação brasileira",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "92",
+          "Id": 16977,
+          "NomeArquivo": "DOU - Decreto Legislativo - 241 - 2016.pdf",
+          "Descricao": "Publicação no DOU de Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "93",
+          "Id": 397,
+          "NomeArquivo": "Acordo Defesa da Concorrência - DOU - Mensagem ao Congresso - 236 - 2012.pdf",
+          "Descricao": "Acordo Defesa da Concorrência - DOU - Mensagem ao Congresso - 236 - 2012",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "94",
+        "Id": 396,
+        "NomeArquivo": "Defesa da Concorrência - MERCOSUL - port esp.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "95",
+      "Id": 11439,
+      "Titulo": "Acordo Quadro de Cooperação entre os Estados Partes do MERCOSUL e Estados Associados para a Criação de Equipes Conjuntas de Investigação (22/10)",
+      "Assuntos": [
+        {
+          "$id": "96",
+          "Id": 289,
+          "Nome": "Direito, Justiça & Segurança Pública",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "97",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "02/08/2010",
+      "OutrasPartes": [
+        "Paraguai",
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "98",
+          "Id": 30481,
+          "NomeArquivo": "DOU - Decreto de Promulgação - 153 - 2020.pdf",
+          "Descricao": "Publicação no DOU de Decreto de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "99",
+          "Id": 28943,
+          "NomeArquivo": "Ata de Retificação - Equipes Conjuntas (b).pdf",
+          "Descricao": "Ata de Retificação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "100",
+          "Id": 28942,
+          "NomeArquivo": "DOU - DEC LEG- 162- 2018.pdf",
+          "Descricao": "Publicação no DOU de Dec Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "101",
+          "Id": 21726,
+          "NomeArquivo": "DOU - Mensagem ao Congresso - 107 - 2017.pdf",
+          "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "102",
+        "Id": 456,
+        "NomeArquivo": "Decisão 22-10 - Equipe Conjunta de Investigação - português, espanhol.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "103",
+      "Id": 11440,
+      "Titulo": "Acordo sobre o Aquífero Guarani e Declaração Conjunta",
+      "Assuntos": [
+        {
+          "$id": "104",
+          "Id": 295,
+          "Nome": "Meio Ambiente e Sustentabilidade",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Argentina",
+      "DataCelebracao": "02/08/2010",
+      "OutrasPartes": [
+        "Argentina",
+        "Paraguai",
+        "Uruguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "105",
+          "Id": 32219,
+          "NomeArquivo": "DOU - Diario Oficial da União - 17 - 2023.pdf",
+          "Descricao": "Publicação no DOU ",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "106",
+          "Id": 30614,
+          "NomeArquivo": "Instrumento de Ratificação - Paraguai.pdf",
+          "Descricao": "Instrumento de Ratificação do Paraguai",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "107",
+          "Id": 30580,
+          "NomeArquivo": "Nota ao Paraguai sobre ratificação paraguaia.pdf",
+          "Descricao": "Notificação do Paraguai sobre a ratificação paraguaia",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "108",
+          "Id": 30579,
+          "NomeArquivo": "Nota à Argentina sobre ratificação paraguaia.pdf",
+          "Descricao": "Notificação da Argentina sobre a ratificação paraguaia",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "109",
+          "Id": 30578,
+          "NomeArquivo": "EP.BR.3.203.2020 - Ratificação do Paraguai.pdf",
+          "Descricao": "Instrumento de Ratificação do Paraguai",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "110",
+          "Id": 23037,
+          "NomeArquivo": "Nota 622 - Ratificação brasileira.pdf",
+          "Descricao": "Nota pela qual a Embaixada do Brasil em Buenos Aires comunica à Chancelaria a ratificação brasileira",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "111",
+          "Id": 23013,
+          "NomeArquivo": "Nota 248.2017 - Ratificação brasileira.pdf",
+          "Descricao": "Nota pela qual a Embaixada do Brasil em Montevidéu comunica à Chancelaria a ratificação brasileira",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "112",
+          "Id": 23012,
+          "NomeArquivo": "Nota PARBREM 408.2017 - Ratificação brasileira.pdf",
+          "Descricao": "Nota pela qual a Embaixada do Brasil em Assunção comunica à Chancelaria a ratificação brasileira",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "113",
+          "Id": 21195,
+          "NomeArquivo": "DOU - Decreto Legislativo - 89 - 2017.pdf",
+          "Descricao": "Publicação no DOU de Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "114",
+          "Id": 18684,
+          "NomeArquivo": "Instrumento de Ratificação Uruguai - 2012.pdf",
+          "Descricao": "Instrumento de Ratificação do Uruguai",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "115",
+          "Id": 18683,
+          "NomeArquivo": "Instrumento de Ratificação Argentina - 2012.pdf",
+          "Descricao": "Instrumento de Ratificação da Argentina",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "116",
+          "Id": 222,
+          "NomeArquivo": "DOU - Mensagem ao Congresso - 100 - 2015.pdf",
+          "Descricao": "Acordo Aquífero Guarani - DOU - Mensagem ao Congresso - 100 - 2015",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "117",
+        "Id": 230,
+        "NomeArquivo": "Acordo Aquífero Guarani - português e espanhol.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "118",
+      "Id": 11442,
+      "Titulo": "Protocolo de Integração Educativa e Reconhecimento de Certificados, Títulos e Estudos de Nível Primário/Fundamental/Básico e Médio/Secundário entre os Estados Partes do MERCOSUL e Estados Associados (Decisão 21/10)",
+      "Assuntos": [
+        {
+          "$id": "119",
+          "Id": 291,
+          "Nome": "Educação e Cultura",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "120",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "02/08/2010",
+      "OutrasPartes": [
+        "Paraguai",
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "121",
+          "Id": 30144,
+          "NomeArquivo": "Publicação no DOU - Promulgação - Mercosul.pdf",
+          "Descricao": "Publicação no DOU do Decreto Presidencial - Promulgação.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "122",
+          "Id": 29058,
+          "NomeArquivo": "DOU - Decreto Legislativo - 216 - 2018.pdf",
+          "Descricao": "Publicação no DOU de Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "123",
+          "Id": 22162,
+          "NomeArquivo": "DOU - Mensagem ao Congresso - 123 - 2017.pdf",
+          "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "124",
+        "Id": 454,
+        "NomeArquivo": "Protocolo Integração Educativa - português, espanhol.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "125",
+      "Id": 11443,
+      "Titulo": "Regulamento do Fundo para a Convergência Estrutural e Fortalecimento Institucional do MERCOSUL - FOCEM (Decisão nº 01/10)",
+      "Assuntos": [
+        {
+          "$id": "126",
+          "Id": 285,
+          "Nome": "Comércio Internacional e Investimentos",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "127",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "02/08/2010",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "128",
+          "Id": 2446,
+          "NomeArquivo": "FOCEM - Decisão 01-10 - DOU - Decreto de Promulgação - 223 - 2010.pdf",
+          "Descricao": "FOCEM - Decisão 01-10 - DOU - Decreto de Promulgação - 223 - 2010",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": null
+    },
+    {
+      "$id": "129",
+      "Id": 11444,
+      "Titulo": "Tratado de Livre Comércio entre o MERCOSUL e a República Árabe do Egito - Decisão 26/10",
+      "Assuntos": [
+        {
+          "$id": "130",
+          "Id": 285,
+          "Nome": "Comércio Internacional e Investimentos",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "131",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "02/08/2010",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "132",
+          "Id": 26457,
+          "NomeArquivo": "Mercosul - Acordo Livre Comércio - MERCOSUL - Egito - Inglês.pdf",
+          "Descricao": "Íntegra do Acordo em Inglês.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "133",
+          "Id": 26447,
+          "NomeArquivo": "MERCOSUL - Egito - DOU - Decreto Legislativo - 195 - 2015.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "134",
+          "Id": 26445,
+          "NomeArquivo": "MERCOSUL - Egito - DOU - Decreto de Promulgação - 234 - 2017.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "135",
+          "Id": 26442,
+          "NomeArquivo": "Mercosul - Ata Depósito Uruguai - Livre Comércio - Egito.pdf",
+          "Descricao": "Ata de Depósito de Ratificação do Uruguai.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "136",
+          "Id": 26441,
+          "NomeArquivo": "Mercosul - Ata Depósito Paraguai - Livre Comércio - Egito.pdf",
+          "Descricao": "Ata de Depósito de Ratificação do Paraguai.",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "137",
+        "Id": 26456,
+        "NomeArquivo": "Mercosul - Acordo Livre Comércio - MERCOSUL - Egito - Português.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "138",
+      "Id": 6756,
+      "Titulo": "Comunicado Conjunto dos Ministros das Relações Exteriores da República Federativa do Brasil e da República do Paraguai",
+      "Assuntos": [
+        {
+          "$id": "139",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "05/05/2010",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "140",
+        "Id": 17698,
+        "NomeArquivo": "Paraguai - Declaração Conjunta.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "141",
+      "Id": 6753,
+      "Titulo": "Ajuste Complementar ao Acordo de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai para a Implementação do Projeto “Capacitação em Políticas Públicas para o Desenvolvimento”",
+      "Assuntos": [
+        {
+          "$id": "142",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "03/05/2010",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "143",
+          "Id": 10184,
+          "NomeArquivo": "Paraguai - DOU - Políticas Públicas - 201 - 2010.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "144",
+        "Id": 10191,
+        "NomeArquivo": "Paraguai - AC - Políticas Públicas.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "145",
+      "Id": 6754,
+      "Titulo": "Ajuste Complementar ao Acordo de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai para a Implementação do Projeto “Técnicas de Diversificação das Atividades Agropecuárias para a Agricultura Familiar no Paraguai”",
+      "Assuntos": [
+        {
+          "$id": "146",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "03/05/2010",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "147",
+          "Id": 10181,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 201 - 2010.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "148",
+        "Id": 10179,
+        "NomeArquivo": "Paraguai - AC - Agricultura Familiar.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "149",
+      "Id": 6755,
+      "Titulo": "Ajuste Complementar ao Acordo de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai para a Implementação do Projeto “Apoio ao Fortalecimento do Governo Eletrônico no Paraguai”",
+      "Assuntos": [
+        {
+          "$id": "150",
+          "Id": 284,
+          "Nome": "Ciência, Tecnologia e Inovação",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "03/05/2010",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "151",
+          "Id": 10176,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 203 - 2010.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "152",
+        "Id": 10175,
+        "NomeArquivo": "Paraguai - AC - Governo Eletrônico Paraguai 3.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "153",
+      "Id": 11413,
+      "Titulo": "Acordo de Sede entre a República Argentina e o Mercado Comum do Sul (MERCOSUL) para o Funcionamento do Instituto de Políticas Públicas de Direitos Humanos",
+      "Assuntos": [
+        {
+          "$id": "154",
+          "Id": 289,
+          "Nome": "Direito, Justiça & Segurança Pública",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "155",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "08/12/2009",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "156",
+        "Id": 517,
+        "NomeArquivo": "Acordo Argentina-MERCOSUL - Direitos Humanos - português e espanhol.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "157",
+      "Id": 11782,
+      "Titulo": "Decisão CMC Nº 21/09, aprovada durante a Sétima Rodada de Negociação de Compromissos Específicos em Matéria de Serviços",
+      "Assuntos": [
+        {
+          "$id": "158",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "159",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Tramitação Ministérios/Casa Civil",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "07/12/2009",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "160",
+          "Id": 34680,
+          "NomeArquivo": "DEC_21-2009_paginas_rubricadas.pdf",
+          "Descricao": "Páginas rubricadas",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "161",
+        "Id": 7347,
+        "NomeArquivo": "Decisão 21-2009 - port.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "162",
+      "Id": 6540,
+      "Titulo": "Ajuste Complementar ao Acordo de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai para Implementação do Projeto “Centro de Formação Profissional Brasil – Paraguai em Hernandarias - Fase IV Ampliação e Expansão”",
+      "Assuntos": [
+        {
+          "$id": "163",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "03/11/2009",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "164",
+          "Id": 10186,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 4 - 2010.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "165",
+        "Id": 10185,
+        "NomeArquivo": "Paraguai - AC - Centro de Formaçãp Profissional.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "166",
+      "Id": 6535,
+      "Titulo": "Memorando de Entendimento entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai sobre Cooperação em Matéria de Comunicação Pública",
+      "Assuntos": [
+        {
+          "$id": "167",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "27/10/2009",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "168",
+          "Id": 9782,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 228 - 2009.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "169",
+        "Id": 9781,
+        "NomeArquivo": "Paraguai - MdE - Comunicação Pública.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "170",
+      "Id": 6482,
+      "Titulo": "Acordo por Notas Reversais entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai sobre as Bases Financeiras do Anexo C do Tratado de Itaipu",
+      "Assuntos": [
+        {
+          "$id": "171",
+          "Id": 285,
+          "Nome": "Comércio Internacional e Investimentos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "01/09/2009",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "172",
+          "Id": 10053,
+          "NomeArquivo": "Paragua - DOU - Promulgação - 122 - 2011.pdf",
+          "Descricao": "Publicação no DOU de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "173",
+          "Id": 10052,
+          "NomeArquivo": "Paragua - DOU - Decreto Legislativo - 91 - 2011.pdf",
+          "Descricao": "Publicação no DOU de Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "174",
+          "Id": 10051,
+          "NomeArquivo": "Paragua - DOU - Mensagem ao Congresso - 222 - 2009.pdf",
+          "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "175",
+        "Id": 10033,
+        "NomeArquivo": "paraguai - Notas Reversaveis - Anexo C Itaipu.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "176",
+      "Id": 6427,
+      "Titulo": "Declaração Conjunta dos Presidentes da República Federativa do Brasil e da República do Paraguai.",
+      "Assuntos": [
+        {
+          "$id": "177",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "25/07/2009",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "178",
+        "Id": 9837,
+        "NomeArquivo": "Declaração Conjunta 2009.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "179",
+      "Id": 11407,
+      "Titulo": "Acordo de Sede entre a República Oriental do Uruguai e o Mercado Comum do Sul (MERCOSUL) para o Funcionamento da Secretaria Permanente do Foro Consultivo Econômico-Social (FCES)",
+      "Assuntos": [
+        {
+          "$id": "180",
+          "Id": 290,
+          "Nome": "Economia, Finanças e Tributos",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "181",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "24/07/2009",
+      "OutrasPartes": [
+        "Paraguai",
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "182",
+        "Id": 526,
+        "NomeArquivo": "FCES - Acordo de Sede - espanhol.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "183",
+      "Id": 11394,
+      "Titulo": "Acordo de Comércio Preferencial entre o Mercado Comum do Sul e a União Aduaneira da África Austral (ACP MERCOSUL-SACU)",
+      "Assuntos": [
+        {
+          "$id": "184",
+          "Id": 285,
+          "Nome": "Comércio Internacional e Investimentos",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "185",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "03/04/2009",
+      "OutrasPartes": [
+        "Paraguai",
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "186",
+          "Id": 27529,
+          "NomeArquivo": "ACP - MERCOSUL-SACU - DOU - Decreto de Promulgação - 63 - 2016.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "187",
+          "Id": 27528,
+          "NomeArquivo": "Acordo - Comércio - MERCOSUL - SACU - revisto - DOU - Decreto Legislativo - 180 - 2015.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo revisto.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "188",
+          "Id": 27527,
+          "NomeArquivo": "Acordo - Comércio - MERCOSUL-SACU - DOU - Decreto Legislativo - 243 - 2010.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "189",
+          "Id": 27526,
+          "NomeArquivo": "Acordo - Comércio - MERCOSUL-SACU - DOU - Mensagem ao Congresso - 68 - 2010.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "190",
+          "Id": 541,
+          "NomeArquivo": "ACP Mercosul SACU Anexo III Apêndice III.doc",
+          "Descricao": "ACP Mercosul-SACU - Anexo III - Apêndice III",
+          "Extensao": ".doc"
+        },
+        {
+          "$id": "191",
+          "Id": 540,
+          "NomeArquivo": "ACP Mercosul SACU Anexo III Apêndice II.doc",
+          "Descricao": "ACP Mercosul-SACU - Anexo III - Apêndice II",
+          "Extensao": ".doc"
+        },
+        {
+          "$id": "192",
+          "Id": 539,
+          "NomeArquivo": "ACP Mercosul SACU Anexo III.doc",
+          "Descricao": "ACP Mercosul-SACU - Anexo III",
+          "Extensao": ".doc"
+        },
+        {
+          "$id": "193",
+          "Id": 538,
+          "NomeArquivo": "ACP Mercosul SACU Anexo II.doc",
+          "Descricao": "ACP Mercosul-SACU - Anexo II",
+          "Extensao": ".doc"
+        },
+        {
+          "$id": "194",
+          "Id": 537,
+          "NomeArquivo": "ACP Mercosul SACU Anexo I.doc",
+          "Descricao": "ACP Mercosul-SACU - Anexo I",
+          "Extensao": ".doc"
+        },
+        {
+          "$id": "195",
+          "Id": 536,
+          "NomeArquivo": "ACP Mercosul SACU.doc",
+          "Descricao": "ACP Mercosul-SACU",
+          "Extensao": ".doc"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "196",
+        "Id": 28484,
+        "NomeArquivo": "ACP - Mercosul - SACU.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "197",
+      "Id": 11813,
+      "Titulo": "Emenda, por Troca de Notas, ao Ajuste Complementar ao Acordo de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai na Área de Formação e Capacitação Profissional",
+      "Assuntos": [
+        {
+          "$id": "198",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "20/10/2008",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "199",
+          "Id": 10189,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 21 - 2009.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "200",
+        "Id": 10190,
+        "NomeArquivo": "Paraguai - Troca de Notas - Capacitação Profissional.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "201",
+      "Id": 6245,
+      "Titulo": "Ajuste Complementar ao Acordo de Cooperação Técnica para a Implementação do Projeto “Capacitação em Análise Sócio-Demográfica, Distribuição Espacial da População e Meio Ambiente e Saúde Reprodutiva no Paraguai”",
+      "Assuntos": [
+        {
+          "$id": "202",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "15/10/2008",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "203",
+          "Id": 9846,
+          "NomeArquivo": "Paraguai - DOU - Publicação pela DAI - 210 - 2008.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "204",
+        "Id": 9843,
+        "NomeArquivo": "Paraguai - AC Análise Sócio-Demografia.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "205",
+      "Id": 11352,
+      "Titulo": "Acordo entre os Estados Partes do MERCOSUL e Estados Associados sobre Cooperação Regional para a Proteção dos Direitos das Crianças e Adolescentes em Situação de Vulnerabilidade - Decisão CMC nº 25/08",
+      "Assuntos": [
+        {
+          "$id": "206",
+          "Id": 289,
+          "Nome": "Direito, Justiça & Segurança Pública",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "207",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "30/06/2008",
+      "OutrasPartes": [
+        "Paraguai",
+        "sem depositário"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "208",
+          "Id": 31087,
+          "NomeArquivo": "Nota VMRE-DT-L-MSUR Nº 84 - Depósito do instrumento de ratificação.pdf",
+          "Descricao": "Nota sobre o depósito do instrumento de ratificação brasileiro",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "209",
+          "Id": 30815,
+          "NomeArquivo": "DOU - Decreto Legislativo - 81 - 2021.pdf",
+          "Descricao": "Publicação no DOU de Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "210",
+          "Id": 21728,
+          "NomeArquivo": "DOU - Mensagem ao Congresso - 107 - 2017.pdf",
+          "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "211",
+        "Id": 2763,
+        "NomeArquivo": "Dec. 25-08 - Acordo - Proteção - Crianças e adolescentes - Vulnerabilidade - port esp.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "212",
+      "Id": 11353,
+      "Titulo": "Acordo para a Implementação de Bases de Dados Compartilhadas de Crianças e Adolescentes em Situação de Vulnerabilidade do MERCOSUL e Estados Associados - Decisão CMC nº 26/08",
+      "Assuntos": [
+        {
+          "$id": "213",
+          "Id": 286,
+          "Nome": "Consulares e Migratórios",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "214",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "30/06/2008",
+      "OutrasPartes": [
+        "Paraguai",
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "215",
+          "Id": 31086,
+          "NomeArquivo": "Nota VMRE-DT-L-MSUR Nº 84 - Depósito do instrumento de ratificação.pdf",
+          "Descricao": "Nota sobre o depósito do instrumento de ratificação brasileiro",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "216",
+          "Id": 30814,
+          "NomeArquivo": "DOU - Decreto Legislativo - 81 - 2021.pdf",
+          "Descricao": "Publicação no DOU de Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "217",
+          "Id": 21727,
+          "NomeArquivo": "DOU - Mensagem ao Congresso - 107 - 2017.pdf",
+          "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "218",
+        "Id": 26554,
+        "NomeArquivo": "Mercosul - Acordo - Bases de Dados - Crianças e Adolescentes.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "219",
+      "Id": 11354,
+      "Titulo": "Acordo sobre a Criação e a Implementação de um Sistema de Credenciamento de Cursos de Graduação para o Reconhecimento Regional da Qualidade Acadêmica dos Respectivos Diplomas no MERCOSUL e Estados Associados - Decisão CMC nº 17/08",
+      "Assuntos": [
+        {
+          "$id": "220",
+          "Id": 291,
+          "Nome": "Educação e Cultura",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "221",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Mercosul",
+      "DataCelebracao": "30/06/2008",
+      "OutrasPartes": [
+        "Mercosul",
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "222",
+          "Id": 30389,
+          "NomeArquivo": "DOU - Decreto de Promulgação - 56 - 2020.pdf",
+          "Descricao": "Publicação no DOU de Decreto de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "223",
+          "Id": 26666,
+          "NomeArquivo": "Mercosul - Ata Depósito Brasil - Credenciamento Curso Graduação.pdf",
+          "Descricao": "Ata de Depósito de Ratificação do Brasil.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "224",
+          "Id": 26664,
+          "NomeArquivo": "Mercosul - DOU - Mensagem ao Congresso - 236 - 2008.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "225",
+          "Id": 26663,
+          "NomeArquivo": "Mercosul - DOU - Decreto Legislativo - 101 - 2011.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo.",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "226",
+        "Id": 2730,
+        "NomeArquivo": "Dec. 17-08 - Acordo - Credenciamento - Cursos - port esp.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "227",
+      "Id": 11355,
+      "Titulo": "Acordo-Quadro entre o MERCOSUL e o Reino Hashemita da Jordânia - Decisão CMC nº 28/08",
+      "Assuntos": [
+        {
+          "$id": "228",
+          "Id": 285,
+          "Nome": "Comércio Internacional e Investimentos",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "229",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Tramitação MRE",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "30/06/2008",
+      "OutrasPartes": [
+        "Paraguai",
+        "sem depositário"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "230",
+          "Id": 27822,
+          "NomeArquivo": "MSUL - Jordânia - Ata de Depósito - 2009.pdf",
+          "Descricao": "Ata de Depósito do Instrumento de Ratificação do Brasil.",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "231",
+        "Id": 26547,
+        "NomeArquivo": "Msul - Ac-Quadro - Jordânia.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "232",
+      "Id": 11357,
+      "Titulo": "Acordo-Quadro para o Estabelecimento de uma Área de Livre Comércio entre o MERCOSUL e a República da Turquia - Decisão nº 29/08",
+      "Assuntos": [
+        {
+          "$id": "233",
+          "Id": 285,
+          "Nome": "Comércio Internacional e Investimentos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Tramitação MRE",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "30/06/2008",
+      "OutrasPartes": [
+        "Paraguai",
+        "ALADI"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "234",
+          "Id": 26405,
+          "NomeArquivo": "Mercosul - Ata Depósito - Uruguai - Acordo-Quadro - Livre Comércio.pdf",
+          "Descricao": "Ata de Depósito de Ratificação do Uruguai.",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "235",
+        "Id": 2719,
+        "NomeArquivo": "Dec. 29-08 - Acordo - Livre Comércio - MERCOSUL-Turquia - port esp ing tur.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "236",
+      "Id": 11359,
+      "Titulo": "Acordo sobre Documentos de Viagem dos Estados Partes do MERCOSUL e Estados Associados",
+      "Assuntos": [
+        {
+          "$id": "237",
+          "Id": 286,
+          "Nome": "Consulares e Migratórios",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "238",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Substituído",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "30/06/2008",
+      "OutrasPartes": [
+        "Paraguai",
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "239",
+          "Id": 26396,
+          "NomeArquivo": "Acordo - Documentos de Viagem - DOU - Portaria - 169 - 2009.pdf",
+          "Descricao": "Mercosul - DOU - - Doc Viagens - Portaria - 169 - 2009",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "240",
+        "Id": 2713,
+        "NomeArquivo": "Acordo - Documentos de Viagem - port esp.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "241",
+      "Id": 6064,
+      "Titulo": "Ajuste Complementar ao Acordo de Cooperação Técnica para a Implementação do Projeto ``Políticas de Acesso à Terra, Reforma Agrária e Fortalecimento Institucional do Instituto Nacional de Desenvolvimento Rural e da Terra (INDERT) ``",
+      "Assuntos": [
+        {
+          "$id": "242",
+          "Id": 283,
+          "Nome": "Agricultura, Pecuária e Pesca",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "09/04/2008",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "243",
+          "Id": 9666,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 97 - 2008.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "244",
+        "Id": 9842,
+        "NomeArquivo": "Paraguai - AC - INDERT.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "245",
+      "Id": 6065,
+      "Titulo": "Acordo, por troca de Notas, para o Estabelecimento de uma Faixa Non Aedificandi em Zonas Urbanas entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai [adicional ao Acordo de 16/9/1980]",
+      "Assuntos": [
+        {
+          "$id": "246",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "09/04/2008",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "247",
+          "Id": 10253,
+          "NomeArquivo": "Paraguai - DOU - Promulgação - 118 - 2012.pdf",
+          "Descricao": "Publicação no DOU de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "248",
+          "Id": 10252,
+          "NomeArquivo": "Paraguai - DOU - Decreto Legislativo - 165 - 2009.pdf",
+          "Descricao": "Publicação no DOU de Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "249",
+          "Id": 10251,
+          "NomeArquivo": "Paraguai - DOU - Mensagem ao Congresso - 227 - 2008.pdf",
+          "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "250",
+        "Id": 10024,
+        "NomeArquivo": "Paraguai - ATN - Zona Non Aedificandi.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "251",
+      "Id": 11308,
+      "Titulo": "Memorando de Entendimento sobre Cooperação em Comércio e Investimentos e Plano de Ação entre o MERCOSUL e a República de Singapura",
+      "Assuntos": [
+        {
+          "$id": "252",
+          "Id": 285,
+          "Nome": "Comércio Internacional e Investimentos",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "253",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "24/09/2007",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "254",
+          "Id": 2999,
+          "NomeArquivo": "Publicação do Ato - DOU - 213 - 2007.pdf",
+          "Descricao": "Publicação - DOU - 213 - 2007",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "255",
+        "Id": 2998,
+        "NomeArquivo": "Memorando de Entendimento - Cooperação - Comércio - Investimentos - MERCOSUL - Singapura - esp port ing.pdf",
+        "Descricao": "Memorando de Entendimento - Cooperação - Comércio - Investimentos - MERCOSUL - Singapura - esp port ing.pdf",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "256",
+      "Id": 5906,
+      "Titulo": "Acordo, PTN, para o Estabelecimento de uma Faixa Non Aedificandi em Zonas Urbanas, Adicional ao Acordo de 16/09/1980 (substituído)",
+      "Assuntos": [
+        {
+          "$id": "257",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Substituído",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "08/08/2007",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "258",
+        "Id": 9857,
+        "NomeArquivo": "Paraguai - Acordo PTN -  Non - Aedificandi.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "259",
+      "Id": 12493,
+      "Titulo": "Acordo de Sede entre a República Oriental do Uruguai e o Mercado Comum do Sul (MERCOSUL) para o Funcionamento do Parlamento do MERCOSUL",
+      "Assuntos": [
+        {
+          "$id": "260",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        },
+        {
+          "$id": "261",
+          "Id": 297,
+          "Nome": "Relações Diplomáticas e Consulares",
+          "IsPrincipal": false
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "29/06/2007",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "262",
+        "Id": 30983,
+        "NomeArquivo": "Acordo de Sede - Uruguai-Mercosul.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "263",
+      "Id": 5858,
+      "Titulo": "Declaração de Intenções sobre Cooperação Técnica para Elaboração do Projeto Básico da Linha de Transmissão entre a Subestação Itaipu-Margem Direita e a Subestação Limpio, na Cidade de Assunção, com tensão de 500 KV",
+      "Assuntos": [
+        {
+          "$id": "264",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "28/06/2007",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "265",
+        "Id": 9573,
+        "NomeArquivo": "Declaração de Intenções.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "266",
+      "Id": 11294,
+      "Titulo": "Acordo Complementar entre os Estados Partes do MERCOSUL e o Convênio Andrés Bello (CAB) sobre Reconhecimento de Estudos, Títulos e Certificados de Educação Primária/Básica e Média/Secundária Não Técnica - Decisão nº 29/07",
+      "Assuntos": [
+        {
+          "$id": "267",
+          "Id": 291,
+          "Nome": "Educação e Cultura",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "268",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "28/06/2007",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "269",
+          "Id": 26384,
+          "NomeArquivo": "Mercosul - Ata Depósito - Uruguai - AC - Reconhecimento - Estudos Títulos Certificados.pdf",
+          "Descricao": "Ata de Depósito de Ratificação do Uruguai.",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "270",
+        "Id": 3125,
+        "NomeArquivo": "Acordo Complementar - Cooperação - MERCOSUL - Andrés Bello - educação - port esp .pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "271",
+      "Id": 5825,
+      "Titulo": "Acordo Quadro sobre Cooperação em Matéria de Defesa entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai",
+      "Assuntos": [
+        {
+          "$id": "272",
+          "Id": 288,
+          "Nome": "Defesa e Segurança",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "21/05/2007",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "273",
+          "Id": 26218,
+          "NomeArquivo": "Paraguai - DOU - Decreto Promulgação  - 55 - 2018.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "274",
+          "Id": 10095,
+          "NomeArquivo": "Paraguai - DOU - Decreto Legislativo - 39 - 2010.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "275",
+          "Id": 10094,
+          "NomeArquivo": "Paraguai - DOU - Mensagem ao Congresso - 23 - 2008.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "276",
+        "Id": 10092,
+        "NomeArquivo": "Paraguai - Acordo Quadro - Defesa.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "277",
+      "Id": 5826,
+      "Titulo": "Declaração que Estabelece o Mecanismo 2+2 de Consulta e Avaliação Estratégica entre o Ministério da Defesa e o Ministério das Relações Exteriores da República Federativa do Brasil e o Ministério de Defesa Nacional e o Ministério das Relações Exteriores da República do Paraguai",
+      "Assuntos": [
+        {
+          "$id": "278",
+          "Id": 288,
+          "Nome": "Defesa e Segurança",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "21/05/2007",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "279",
+        "Id": 10097,
+        "NomeArquivo": "Paraguai - Declaração - Consulta e Avaliação Estratégica.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "280",
+      "Id": 5827,
+      "Titulo": "Convênio de Cooperação sobre Saúde Animal em Área de Fronteira entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai",
+      "Assuntos": [
+        {
+          "$id": "281",
+          "Id": 283,
+          "Nome": "Agricultura, Pecuária e Pesca",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "21/05/2007",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "282",
+          "Id": 10099,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 114 - 2007.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "283",
+        "Id": 10098,
+        "NomeArquivo": "Paraguai - Convênio - Saúde Animal.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "284",
+      "Id": 5828,
+      "Titulo": "Protocolo de Intenções entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai sobre Cooperação Técnica em Políticas para Diversidade Cultural",
+      "Assuntos": [
+        {
+          "$id": "285",
+          "Id": 291,
+          "Nome": "Educação e Cultura",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "21/05/2007",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "286",
+          "Id": 9408,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 114 - 2007.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "287",
+        "Id": 9407,
+        "NomeArquivo": "Paraguai Diversidade Cultural.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "288",
+      "Id": 5829,
+      "Titulo": "Protocolo de Intenções entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai sobre Cooperação Técnica em Políticas e Programas Nacionais de Cultura",
+      "Assuntos": [
+        {
+          "$id": "289",
+          "Id": 291,
+          "Nome": "Educação e Cultura",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "21/05/2007",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "290",
+          "Id": 9411,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 114 - 2007.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "291",
+        "Id": 9505,
+        "NomeArquivo": "Paraguai Políticas Nacionais de Cultura pdf.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "292",
+      "Id": 5830,
+      "Titulo": "Memorando de Entendimento para a Promoção do Comércio e do Investimento entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai",
+      "Assuntos": [
+        {
+          "$id": "293",
+          "Id": 285,
+          "Nome": "Comércio Internacional e Investimentos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "21/05/2007",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "294",
+          "Id": 9478,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 114 - 2007.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "295",
+        "Id": 9481,
+        "NomeArquivo": "Paraguai Comércio e Investimento pdf.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "296",
+      "Id": 5831,
+      "Titulo": "Memorando de Entendimento entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai para o Estabelecimento de Plano de Ação para o Desenvolvimento dos Biocombustíveis no Paraguai",
+      "Assuntos": [
+        {
+          "$id": "297",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "21/05/2007",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "298",
+          "Id": 9488,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 114 - 2007.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "299",
+        "Id": 9491,
+        "NomeArquivo": "Paraguai Plano de Ação Biocombustíveis.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "300",
+      "Id": 5832,
+      "Titulo": "Ajuste Complementar ao Acordo de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai para Implementação do Projeto ``Intercâmbio de Experiências e Conhecimentos sobre Educação Escolar Indígena ``",
+      "Assuntos": [
+        {
+          "$id": "301",
+          "Id": 291,
+          "Nome": "Educação e Cultura",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "21/05/2007",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "302",
+          "Id": 9503,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 114 - 2007.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "303",
+        "Id": 9502,
+        "NomeArquivo": "Paraguai Educação Indígena.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "304",
+      "Id": 5833,
+      "Titulo": "Ajuste Complementar ao Acordo de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai para Implementação do Projeto ``Fortalecimento da Educação Técnica e Profissional do Paraguai ``",
+      "Assuntos": [
+        {
+          "$id": "305",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "21/05/2007",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "306",
+          "Id": 9510,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 114 - 2007.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "307",
+        "Id": 9511,
+        "NomeArquivo": "Paraguai Educação Profissional.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "308",
+      "Id": 5834,
+      "Titulo": "Ajuste Complementar ao Acordo de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai para Implementação do Projeto ``Intercâmbio de Conhecimentos sobre Sistemas de Conservação Integrada e Patrimônio Cultural ``",
+      "Assuntos": [
+        {
+          "$id": "309",
+          "Id": 291,
+          "Nome": "Educação e Cultura",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "21/05/2007",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "310",
+          "Id": 9509,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 114 - 2007.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "311",
+        "Id": 9512,
+        "NomeArquivo": "Paraguai Patrimônio Cultural.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "312",
+      "Id": 5835,
+      "Titulo": "Ajuste Complementar ao Acordo de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai para Implementação do Projeto ``Capacitação em Museologia ``",
+      "Assuntos": [
+        {
+          "$id": "313",
+          "Id": 291,
+          "Nome": "Educação e Cultura",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "21/05/2007",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "314",
+          "Id": 9878,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 114 - 2007.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "315",
+        "Id": 9513,
+        "NomeArquivo": "Paraguai - AC Museologia.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "316",
+      "Id": 5836,
+      "Titulo": "Ajuste Complementar ao Acordo de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai para Implementação do Projeto ``Fortalecimento da Vigilância em Saúde, com Ênfase no Combate à Dengue e na Implementação do Regulamento Sanitário Internacional ``",
+      "Assuntos": [
+        {
+          "$id": "317",
+          "Id": 299,
+          "Nome": "Trabalho, Saúde e Previdência",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "21/05/2007",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "318",
+          "Id": 9516,
+          "NomeArquivo": "Paraguai - DOU - Publicação Dai - 114 - 2007.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "319",
+        "Id": 9535,
+        "NomeArquivo": "AC Implem Projeto Dengue pdf.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "320",
+      "Id": 5837,
+      "Titulo": "Ajuste Complementar ao Acordo de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai para Implementação do Projeto ``Capacitação de Técnicos e Agricultores Familiares para o Desenvolvimento da Produção Leiteira no Paraguai ``",
+      "Assuntos": [
+        {
+          "$id": "321",
+          "Id": 283,
+          "Nome": "Agricultura, Pecuária e Pesca",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "21/05/2007",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "322",
+          "Id": 9530,
+          "NomeArquivo": "Paraguai - DOU  - Publicação Dai - 114 - 2007.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "323",
+        "Id": 9534,
+        "NomeArquivo": "AC Produção Leiteira pdf.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "324",
+      "Id": 5838,
+      "Titulo": "Declaração Conjunta",
+      "Assuntos": [
+        {
+          "$id": "325",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "21/05/2007",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "326",
+        "Id": 9533,
+        "NomeArquivo": "Paraguai -  Declaraçao Conjunta 21.05.2007.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "327",
+      "Id": 5803,
+      "Titulo": "Programa Executivo Educacional entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai",
+      "Assuntos": [
+        {
+          "$id": "328",
+          "Id": 291,
+          "Nome": "Educação e Cultura",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Expirado",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "12/04/2007",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "329",
+          "Id": 10088,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 106 - 2007.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "330",
+        "Id": 10087,
+        "NomeArquivo": "Paraguai - Programa Executivo Educacional.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "331",
+      "Id": 5771,
+      "Titulo": "Programa Executivo Cultural do Acordo Básico de Cooperação Educacional, Científica e Cultural entre Governo da República Federativa do Brasil e o Governo da República do Paraguai para o período 2007-2009",
+      "Assuntos": [
+        {
+          "$id": "332",
+          "Id": 291,
+          "Nome": "Educação e Cultura",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Expirado",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "02/03/2007",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "333",
+          "Id": 9896,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 47 - 2007.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "334",
+        "Id": 9894,
+        "NomeArquivo": "Paraguai - Programa Executivo - Cultural.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "335",
+      "Id": 5746,
+      "Titulo": "Memorando de Entendimento entre Governo da República Federativa do Brasil e o Governo da República do Paraguai sobre Aspectos Técnicos e Financeiros Relacionados a Itaipu Binacional",
+      "Assuntos": [
+        {
+          "$id": "336",
+          "Id": 292,
+          "Nome": "Energia e Recursos Estratégicos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "19/01/2007",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "337",
+          "Id": 9883,
+          "NomeArquivo": "Paraguai - DOU - Retificação - 57 - 2007.pdf",
+          "Descricao": "Publicação no DOU de Retificação ",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "338",
+          "Id": 9882,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 18 -2007.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "339",
+        "Id": 9880,
+        "NomeArquivo": "Paraguai - MdE - Itaipu Binacional.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "340",
+      "Id": 11282,
+      "Titulo": "Ata de Compromisso de Adesão da Venezuela ao Protocolo Modificativo do Protocolo de Olivos para a Solução de Controvérsias no MERCOSUL",
+      "Assuntos": [
+        {
+          "$id": "341",
+          "Id": 289,
+          "Nome": "Direito, Justiça & Segurança Pública",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "342",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "19/01/2007",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "343",
+        "Id": 26324,
+        "NomeArquivo": "Mercosul - Ata Compromisso - Adesão Venezuela.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "344",
+      "Id": 11283,
+      "Titulo": "Protocolo Modificativo do Protocolo de Olivos para a Solução de Controvérsias no MERCOSUL",
+      "Assuntos": [
+        {
+          "$id": "345",
+          "Id": 289,
+          "Nome": "Direito, Justiça & Segurança Pública",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "346",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "19/01/2007",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "347",
+          "Id": 30229,
+          "NomeArquivo": "DOU - Decreto de Promulgação - 22 - 2020.pdf",
+          "Descricao": "Publicação no DOU de Decreto de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "348",
+          "Id": 3172,
+          "NomeArquivo": "Protocolo Modificativo - Olivos - Solução - Controvérsias - DOU - Decreto Legislativo - 165 - 2009.pdf",
+          "Descricao": "Protocolo Modificativo - Olivos - Solução - Controvérsias - DOU - Decreto Legislativo - 165 - 2009",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "349",
+          "Id": 3171,
+          "NomeArquivo": "Protocolo Modificativo - Olivos - Solução - Controvérsias - DOU - Mensagem ao Congresso - 113 - 2007.pdf",
+          "Descricao": "Protocolo Modificativo - Olivos - Solução - Controvérsias - DOU - Mensagem ao Congresso - 113 - 2007",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "350",
+        "Id": 3170,
+        "NomeArquivo": "Protocolo Modificativo - Olivos - Solução - Controvérsias - port esp.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "351",
+      "Id": 11274,
+      "Titulo": "Memorando de Entendimento para o Estabelecimento de Mecanismo de Diálogo Político e Cooperação entre os Estados Partes e Estados Associados do Mercado Comum do Sul (MERCOSUL) e a Federação da Rússia",
+      "Assuntos": [
+        {
+          "$id": "352",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "353",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "15/12/2006",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "354",
+        "Id": 26323,
+        "NomeArquivo": "Mercosul - MdE - Mecanismo de Dialógo - Msul Federação Russa.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "355",
+      "Id": 11268,
+      "Titulo": "Acordo entre os Estados Membros da Comunidade Sul-Americana de Nações sobre Dispensa da Exigência de Visto de Turista e Habilitação de Documentos de Identidade para Ingresso e Trânsito em seus Territórios",
+      "Assuntos": [
+        {
+          "$id": "356",
+          "Id": 286,
+          "Nome": "Consulares e Migratórios",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "357",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Situação especial",
+      "OutraParte": "Argentina",
+      "DataCelebracao": "24/11/2006",
+      "OutrasPartes": [
+        "Argentina",
+        "Bolívia",
+        "Chile",
+        "Colômbia",
+        "Equador",
+        "Guiana",
+        "Paraguai",
+        "Z a excluir (não usar)",
+        "Suriname",
+        "Uruguai",
+        "Venezuela"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "358",
+          "Id": 34908,
+          "NomeArquivo": "UNASUL - Dispensa - Vistos - ing.pdf",
+          "Descricao": "Documento com íntegra do Acordo (ING)",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "359",
+          "Id": 34907,
+          "NomeArquivo": "UNASUL - Dispensa - Vistos - esp.pdf",
+          "Descricao": "Documento com íntegra do Acordo (ESP)",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "360",
+        "Id": 3273,
+        "NomeArquivo": "UNASUL - Dispensa - Vistos - port esp ing.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "361",
+      "Id": 5719,
+      "Titulo": "Ajuste Complementar ao Acordo de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai para Implementação do Projeto \"Apoio à Implantação e Implementação de Banco de Leite Humano no Paraguai\".",
+      "Assuntos": [
+        {
+          "$id": "362",
+          "Id": 299,
+          "Nome": "Trabalho, Saúde e Previdência",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "23/11/2006",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "363",
+          "Id": 9921,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 23 - 2007.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "364",
+        "Id": 9924,
+        "NomeArquivo": "Paraguai - AC - Banco de Leite Humano.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "365",
+      "Id": 5720,
+      "Titulo": "Ajuste Complementar ao Acordo de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai para Implementação do Projeto \"Capacitação Técnica de Pesquisadores nas Principais Cadeias Produtivas do Agronegócio do Paraguai\"",
+      "Assuntos": [
+        {
+          "$id": "366",
+          "Id": 283,
+          "Nome": "Agricultura, Pecuária e Pesca",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "23/11/2006",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "367",
+          "Id": 9914,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 24 - 2007.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "368",
+        "Id": 9916,
+        "NomeArquivo": "Paraguai - AC - Agronegócio.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "369",
+      "Id": 5721,
+      "Titulo": "Ajuste Complementar ao Acordo de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai para Implementação do Projeto \"Desenvolvimento de Técnicas para a Produção de Matérias-Primas de Biocombustíveis no Paraguai\".",
+      "Assuntos": [
+        {
+          "$id": "370",
+          "Id": 292,
+          "Nome": "Energia e Recursos Estratégicos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "23/11/2006",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "371",
+          "Id": 9908,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 24 - 2007.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "372",
+        "Id": 9910,
+        "NomeArquivo": "Paraguai - AC - Biocombustíveis.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "373",
+      "Id": 5722,
+      "Titulo": "Ajuste Complementar ao Acordo de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República de Paraguai para Implementação do Projeto \"Modelagem de Política Postal no Paraguai, com o Estabelecimento do Serviço Postal Universal\"",
+      "Assuntos": [
+        {
+          "$id": "374",
+          "Id": 298,
+          "Nome": "Serviços e Transporte",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "23/11/2006",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "375",
+          "Id": 9906,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 25- 2007.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "376",
+        "Id": 9907,
+        "NomeArquivo": "Paraguai - AC - Serviço Postal.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "377",
+      "Id": 5723,
+      "Titulo": "Ajuste Complementar ao Acordo de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai para Implementação do Projeto ``Capacitação de Técnicos e Gestores Públicos em Desenvolvimento de Instrumentos de Políticas Públicas para a Agricultura Familiar/Campesina ``",
+      "Assuntos": [
+        {
+          "$id": "378",
+          "Id": 283,
+          "Nome": "Agricultura, Pecuária e Pesca",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "23/11/2006",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "379",
+          "Id": 9833,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 23 - 2007.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "380",
+        "Id": 9832,
+        "NomeArquivo": "Paraguai - AC - Aglicultura.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "381",
+      "Id": 5724,
+      "Titulo": "Ajuste Complementar ao Acordo de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República de Paraguai para Implementação do Projeto ``Fortalecimento Institucional das Assessorias Internacionais dos Ministérios da Saúde do Brasil e do Paraguai ``",
+      "Assuntos": [
+        {
+          "$id": "382",
+          "Id": 299,
+          "Nome": "Trabalho, Saúde e Previdência",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "23/11/2006",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "383",
+          "Id": 9845,
+          "NomeArquivo": "Paraguai - DOU - Publicação DAI - 23 - 2007.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "384",
+        "Id": 9844,
+        "NomeArquivo": "Paraguai - AC - Saúde.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "385",
+      "Id": 5725,
+      "Titulo": "Memorandum Operativo Relativo entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai Relativo à Cooperação Brasileira para a Revitalização do Cabeceira Paraguaia da Ponte da Amizade",
+      "Assuntos": [
+        {
+          "$id": "386",
+          "Id": 293,
+          "Nome": "Fronteira, Infraestrutura e Integração Regional",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Superado",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "23/11/2006",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "387",
+        "Id": 9850,
+        "NomeArquivo": "Paraguai - Memorandum Operativo - Ponte da Amizade.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "388",
+      "Id": 5726,
+      "Titulo": "Memorando de Entendimento entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai para a Cooperação em Matéria de Combate à Fabricação e ao Tráfico Ilícitos de Armas de Fogo, Munições, Acessórios, Explosivos e Outros Materiais Correlatos",
+      "Assuntos": [
+        {
+          "$id": "389",
+          "Id": 289,
+          "Nome": "Direito, Justiça & Segurança Pública",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "23/11/2006",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "390",
+          "Id": 9872,
+          "NomeArquivo": "Paraguai - DOU - Decreto Legislativo - 193 - 2009.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "391",
+          "Id": 9871,
+          "NomeArquivo": "Paraguai - DOU - Mensagem ao Congresso - 112 - 2008.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "392",
+        "Id": 9865,
+        "NomeArquivo": "Paraguai - MdE - Armas.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "393",
+      "Id": 5727,
+      "Titulo": "Comunicado Conjunto dos Ministros das Relações Exteriores da República Federativa do Brasil e da República do Paraguai",
+      "Assuntos": [
+        {
+          "$id": "394",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "23/11/2006",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "395",
+        "Id": 9930,
+        "NomeArquivo": "Paraguai - Comunicado Conjunto Ministros.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "396",
+      "Id": 5675,
+      "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai de Cooperação para o Desenvolvimento Sustentável e a Gestão Integrada da Bacia Hidrográfica do Rio Apa",
+      "Assuntos": [
+        {
+          "$id": "397",
+          "Id": 292,
+          "Nome": "Energia e Recursos Estratégicos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "11/09/2006",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "398",
+          "Id": 10764,
+          "NomeArquivo": "DOU - Decreto de Promulgação - 86 - 2010.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "399",
+          "Id": 10765,
+          "NomeArquivo": "DOU - Decreto Legislativo - 169 - 2009.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "400",
+          "Id": 10763,
+          "NomeArquivo": "DOU - Mensagem ao Congresso - 243 - 2006.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "401",
+        "Id": 10766,
+        "NomeArquivo": "Paraguai - Acordo - Rio APA.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "402",
+      "Id": 5676,
+      "Titulo": "Acordo, por Troca de Notas, para o Estabelecimento de um Depósito Franco no Porto de Rio Grande para Cargas Transportadas por Rodovia, celebrado em Brasília, em 11 de setembro de 2006, que complementa o ``Convênio entre a República Federativa do Brasil e a República do Paraguai para o Estabelecimento de um Depósito Franco no Porto de Rio Grande ``, celebrado em Brasília, no dia 21 de julho de 1987.",
+      "Assuntos": [
+        {
+          "$id": "403",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "11/09/2006",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "404",
+          "Id": 10773,
+          "NomeArquivo": "DOU - Decreto de Promulgação - 86 - 2010.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "405",
+          "Id": 10772,
+          "NomeArquivo": "DOU - Decreto Legislativo - 245 - 2009.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "406",
+          "Id": 10771,
+          "NomeArquivo": "DOU - Mensagem ao Congresso - 124 - 2007.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "407",
+        "Id": 10775,
+        "NomeArquivo": "Paraguai - Troca de Notas - Porto Grande - 2006.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "408",
+      "Id": 11245,
+      "Titulo": "Acordo para a Concessão de um Prazo de Noventa (90) Dias aos Turistas Nacionais dos Estados Partes do MERCOSUL e Estados Associados (Bolívia, Colômbia, Chile, Equador e Peru) - Decisão CMC nº 10/06",
+      "Assuntos": [
+        {
+          "$id": "409",
+          "Id": 286,
+          "Nome": "Consulares e Migratórios",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "410",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em promulgação/Casa Civil",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "20/07/2006",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "411",
+        "Id": 3445,
+        "NomeArquivo": "Mercosul - Acordo - Para a Concenssão de um prazo de 90 dias aos Turistas dos Estados do Mercosul e Associados - Espanhol e Português.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "412",
+      "Id": 11246,
+      "Titulo": "Acordo Quadro sobre Cooperação em Matéria de Segurança Regional entre os Estados Partes do MERCOSUL, a República da Bolívia, a República do Chile, a República do Equador, a República do Peru e a República Bolivariana da Venezuela (Decisão CMC nº 16/06), assinado em Córdoba, em 20 de julho de 2006, e Ata de Retificação, assinada em Assunção, em 24/1/2012",
+      "Assuntos": [
+        {
+          "$id": "413",
+          "Id": 289,
+          "Nome": "Direito, Justiça & Segurança Pública",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "414",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "20/07/2006",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "415",
+          "Id": 34464,
+          "NomeArquivo": "DECRETO Nº 13.010.pdf",
+          "Descricao": "Decreto de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "416",
+          "Id": 32280,
+          "NomeArquivo": "Decreto Legislativo 95 2023 DOU 176 14 set 2023.pdf",
+          "Descricao": "Decreto Legislativo DOU 14 set 23",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "417",
+          "Id": 30603,
+          "NomeArquivo": "DOU - Mensagem - Cooperação em Matéria de Segurança Regional.pdf",
+          "Descricao": "Publicação no DOU de Mensagem",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "418",
+          "Id": 30598,
+          "NomeArquivo": "Ata de Adesão.pdf",
+          "Descricao": "Ata de Adesão da Colômbia",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "419",
+          "Id": 725,
+          "NomeArquivo": "Ata de Retificação - português.pdf",
+          "Descricao": "Ata de Retificação - português",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "420",
+          "Id": 724,
+          "NomeArquivo": "Ata de Retificação - português.doc",
+          "Descricao": "Ata de Retificação - português",
+          "Extensao": ".doc"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "421",
+        "Id": 3425,
+        "NomeArquivo": "Dec. 16-06 - Acordo - Quadro - Segurança Regional e Ata de Retificação.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "422",
+      "Id": 11247,
+      "Titulo": "Acordo sobre Gratuidade de Vistos para Estudantes e Docentes dos Estados Partes do MERCOSUL - Decisão CMC nº 21/06",
+      "Assuntos": [
+        {
+          "$id": "423",
+          "Id": 286,
+          "Nome": "Consulares e Migratórios",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "424",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "20/07/2006",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "425",
+          "Id": 30281,
+          "NomeArquivo": "DOU - Decreto de Promulgação - 40 - 2020.pdf",
+          "Descricao": "Publicação no DOU de Decreto de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "426",
+          "Id": 26320,
+          "NomeArquivo": "Mercosul - Ata Deposito Brasil - Cooperação - Gratuidade Visto - Estudante e Docente.pdf",
+          "Descricao": "Ata de Depósito de Ratificação do Brasil.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "427",
+          "Id": 26319,
+          "NomeArquivo": "Mercosul - DOU - Mensagem ao Congresso - 245 - 2007.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "428",
+          "Id": 26318,
+          "NomeArquivo": "Mercosul - DOU - Decreto Legislativo - 245 - 2009.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo.",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "429",
+        "Id": 3420,
+        "NomeArquivo": "Dec. 21-06 - Acordo - Gratuidade - Vistos - port esp.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "430",
+      "Id": 11248,
+      "Titulo": "Acordo Quadro sobre Comércio entre o MERCOSUL e a República Islâmica do Paquistão - Decisão nº 07/06",
+      "Assuntos": [
+        {
+          "$id": "431",
+          "Id": 285,
+          "Nome": "Comércio Internacional e Investimentos",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "432",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Tramitação MRE",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "20/07/2006",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "433",
+          "Id": 29453,
+          "NomeArquivo": "Mercosul - Ata Depósito Paraguai - Comércio - RIsl Paquistão.pdf",
+          "Descricao": "Ata de Depósito de Ratificação do Paraguai.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "434",
+          "Id": 26280,
+          "NomeArquivo": "Mercosul - Ata Depósito Uruguai - Comércio - RIsl Paquistão.pdf",
+          "Descricao": "Ata de Depósito de Ratificação do Uruguai.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "435",
+          "Id": 26279,
+          "NomeArquivo": "Mercosul - Ata Depósito Argentina - Comércio - RIsl Paquistão.pdf",
+          "Descricao": "Ata de Depósito de Ratificação da Argentina.",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "436",
+        "Id": 26278,
+        "NomeArquivo": "Mercosul - Acordo Quadro - Comércio - RIsl Paquistão.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "437",
+      "Id": 11249,
+      "Titulo": "Protocolo de Contratações Públicas do MERCOSUL - Decisão CMC nº 23/06",
+      "Assuntos": [
+        {
+          "$id": "438",
+          "Id": 285,
+          "Nome": "Comércio Internacional e Investimentos",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "439",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Superado",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "20/07/2006",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "440",
+        "Id": 3380,
+        "NomeArquivo": "Dec. 23-06 - Protocolo - Contratações - Públicas - port esp.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "441",
+      "Id": 11242,
+      "Titulo": "Protocolo de Adesão da República Bolivariana da Venezuela ao MERCOSUL",
+      "Assuntos": [
+        {
+          "$id": "442",
+          "Id": 285,
+          "Nome": "Comércio Internacional e Investimentos",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "443",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "04/07/2006",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "444",
+          "Id": 26377,
+          "NomeArquivo": "Mercosul - Ata Depósito - Adesão Venezuela.pdf",
+          "Descricao": "Ata de Depósito de Ratificação do Brasil.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "445",
+          "Id": 26374,
+          "NomeArquivo": "Mercosul - DOU - Mensagem Congresso - 37 - 2007.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "446",
+          "Id": 26373,
+          "NomeArquivo": "Mercosul - DOU - Decreto de Promulgação - 236 - 2012.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "447",
+          "Id": 26372,
+          "NomeArquivo": "Mercosul - DOU - Decreto Legislativo - 241 - 2009.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo.",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "448",
+        "Id": 3450,
+        "NomeArquivo": "Protocolo - Adesão - Venezuela - port esp.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "449",
+      "Id": 11210,
+      "Titulo": "Solicitação de Adesão da República Bolivariana da Venezuela ao MERCOSUL - Decisão CMC nº 29/05",
+      "Assuntos": [
+        {
+          "$id": "450",
+          "Id": 285,
+          "Nome": "Comércio Internacional e Investimentos",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "451",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "09/12/2005",
+      "OutrasPartes": [
+        "Paraguai",
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "452",
+        "Id": 3657,
+        "NomeArquivo": "Dec. 29-05 - Solicitação - Adesão - Venezuela - port.PDF",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".PDF"
+      }
+    },
+    {
+      "$id": "453",
+      "Id": 11211,
+      "Titulo": "Acordo-Quadro sobre Complementação Energética Regional entre os Estados Partes do MERCOSUL e Estados Associados (Acordo de Alcance Parcial de Promoção do Comércio n° 19 - AAP.PC N°19) - AAP19",
+      "Assuntos": [
+        {
+          "$id": "454",
+          "Id": 285,
+          "Nome": "Comércio Internacional e Investimentos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "09/12/2005",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "455",
+        "Id": 3655,
+        "NomeArquivo": "Acordo - Complementação Econômica Regional - port esp.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "456",
+      "Id": 11212,
+      "Titulo": "Acordo-Quadro sobre Complementação Energética Regional entre os Estados Partes do MERCOSUL e Estados Associados",
+      "Assuntos": [
+        {
+          "$id": "457",
+          "Id": 292,
+          "Nome": "Energia e Recursos Estratégicos",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "458",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "09/12/2005",
+      "OutrasPartes": [
+        "Paraguai",
+        "ALADI"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "459",
+          "Id": 3656,
+          "NomeArquivo": "Acordo - Complementação Econômica Regional - DOU - Mensagem ao Congresso - 128 - 2006.pdf",
+          "Descricao": "Acordo - Complementação Econômica Regional - DOU - Mensagem ao Congresso - 128 - 2006",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "460",
+          "Id": 3654,
+          "NomeArquivo": "Acordo - Complementação Energética Regional - DOU - Decreto de Promulgação - 230 - 2010.pdf",
+          "Descricao": "Acordo - Complementação Econômica Regional - DOU - Decreto de Promulgação - 230 - 2010",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "461",
+          "Id": 3653,
+          "NomeArquivo": "Acordo - Complementação Energética Regional - DOU - Decreto Legislativo - 245 - 2009.pdf",
+          "Descricao": "Acordo - Complementação Econômica Regional - DOU - Decreto Legislativo - 245 - 2009",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "462",
+        "Id": 3650,
+        "NomeArquivo": "Acordo - Complementação Econômica Regional - port esp.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "463",
+      "Id": 11213,
+      "Titulo": "Protocolo Constitutivo do Parlamento do Mercosul - Decisão CMC n° 23/05",
+      "Assuntos": [
+        {
+          "$id": "464",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        },
+        {
+          "$id": "465",
+          "Id": 297,
+          "Nome": "Relações Diplomáticas e Consulares",
+          "IsPrincipal": false
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "09/12/2005",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "466",
+          "Id": 26381,
+          "NomeArquivo": "Mercosul - Ata Depósito - Brasil - Protocolo Constitutivo - Parlamento Msul.pdf",
+          "Descricao": "Ata de Depósito de Ratificação do Brasil.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "467",
+          "Id": 26380,
+          "NomeArquivo": "Mercosul - DOU - Mensagem ao Congresso - 99 - 2006.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "468",
+          "Id": 26379,
+          "NomeArquivo": "Mercosul - DOU - Decreto Legislativo - 176 - 2006.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "469",
+          "Id": 26378,
+          "NomeArquivo": "Mercosul - DOU - Decreto de Promulgação - 83 - 2007.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação.",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "470",
+        "Id": 3623,
+        "NomeArquivo": "Dec. 23-05 - Protocolo - Parlamento - MERCOSUL - port esp.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "471",
+      "Id": 11203,
+      "Titulo": "Decisão nº 37/05, do Conselho do Mercado Comum (CMC) do MERCOSUL, que aprova a regulamentação transitória da Decisão CMC nº 54/04 sobre \"Eliminação da Dupla Cobrança e Distribuição da Renda Aduaneira\"",
+      "Assuntos": [
+        {
+          "$id": "472",
+          "Id": 285,
+          "Nome": "Comércio Internacional e Investimentos",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "473",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "08/12/2005",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "474",
+          "Id": 27355,
+          "NomeArquivo": "MERCOSUL - Decreto Legislativo - 2005.pdf",
+          "Descricao": "Publicação do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "475",
+          "Id": 3758,
+          "NomeArquivo": "Dec. 37-05 - Regulamentação - Dec. CMC 54-04 - DOU - Decreto de Promulgação - 63 - 2006.pdf",
+          "Descricao": "Dec. 37-05 - Regulamentação - Dec. CMC 54-04 - DOU - Decreto de Promulgação - 63 - 2006",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "476",
+        "Id": 3732,
+        "NomeArquivo": "Dec. 37-05 - Regulamentação - Dec. CMC 54-04 - port esp.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "477",
+      "Id": 11205,
+      "Titulo": "Acordo-Quadro sobre Comércio entre o MERCOSUL e o Estado de Israel. Acordo de Livre Comércio entre o MERCOSUL e o Estado de Israel (18/12/2007)",
+      "Assuntos": [
+        {
+          "$id": "478",
+          "Id": 285,
+          "Nome": "Comércio Internacional e Investimentos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "08/12/2005",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "479",
+          "Id": 3716,
+          "NomeArquivo": "Acordo - Livre Comércio - MERCOSUL - Israel - DOU - Decreto de Promulgação - 79 - 2010.pdf",
+          "Descricao": "Acordo - Livre Comércio - MERCOSUL - Israel - DOU - Decreto de Promulgação - 79 - 2010",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "480",
+          "Id": 3715,
+          "NomeArquivo": "Acordos - Comércio - MERCOSUL - Israel - DOU - Decreto Legislativo - 242 - 2009.pdf",
+          "Descricao": "Acordos - Comércio - MERCOSUL - Israel - DOU - Decreto Legislativo - 242 - 2009",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "481",
+          "Id": 3714,
+          "NomeArquivo": "Acordos - Comércio - MERCOSUL - Israel - DOU - Mensagem ao Congresso - 205 - 2008.pdf",
+          "Descricao": "Acordos - Comércio - MERCOSUL - Israel - DOU - Mensagem ao Congresso - 205 - 2008",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "482",
+        "Id": 3698,
+        "NomeArquivo": "Acordo-Quadro - Comércio - MERCOSUL - Israel - port esp heb ing.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "483",
+      "Id": 5526,
+      "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai para a Construção de uma Segunda Ponte Internacional sobre o Rio Paraná",
+      "Assuntos": [
+        {
+          "$id": "484",
+          "Id": 293,
+          "Nome": "Fronteira, Infraestrutura e Integração Regional",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "08/12/2005",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "485",
+          "Id": 10758,
+          "NomeArquivo": "DOU - Decreto Legislativo - 182 - 2008.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "486",
+          "Id": 10759,
+          "NomeArquivo": "DOU - Decreto de Promulgação - 237 - 2008.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "487",
+          "Id": 10757,
+          "NomeArquivo": "DOU - Mensagem ao Congresso - 118 - 2006.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "488",
+        "Id": 10571,
+        "NomeArquivo": "Paraguai - Acordo - Ponte Internacional Rio Paraná.doc.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "489",
+      "Id": 5527,
+      "Titulo": "Acordo, por troca de Notas, referente à Atualização das Bases Financeiras do Anexo C do Tratado de Itaipu",
+      "Assuntos": [
+        {
+          "$id": "490",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "08/12/2005",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "491",
+          "Id": 10753,
+          "NomeArquivo": "DOU - Publicação DAI - 243 - 2005.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "492",
+        "Id": 10754,
+        "NomeArquivo": "Paraguai - Troca de Notas - Atualização das Bases Financeiras do Tratado de Itaipu.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "493",
+      "Id": 5394,
+      "Titulo": "Memorando de Entendimento para o Estabelecimento de um Grupo Bilateral de Inteligência Brasil-Paraguai na Esfera da Pirataria, da Falsificação e do Contrabando de Produtos Pirateados e Falsificados",
+      "Assuntos": [
+        {
+          "$id": "494",
+          "Id": 289,
+          "Nome": "Direito, Justiça & Segurança Pública",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "20/06/2005",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "495",
+          "Id": 10554,
+          "NomeArquivo": "DOU - Decreto Legislativo - 245 - 2009.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "496",
+          "Id": 10555,
+          "NomeArquivo": "DOU - Mensagem ao Congresso - 143 - 2006.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "497",
+        "Id": 10551,
+        "NomeArquivo": "Paraguai - ME - Contrabando e Falsificados.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "498",
+      "Id": 11169,
+      "Titulo": "Protocolo sobre Transferência de Pessoas Sujeitas a Regimes Especiais (Complementar ao Acordo sobre Transferência de Pessoas Condenadas entre os Estados Partes do MERCOSUL e a República da Bolívia e a República do Chile) - Decisão CMC nº 13/05",
+      "Assuntos": [
+        {
+          "$id": "499",
+          "Id": 289,
+          "Nome": "Direito, Justiça & Segurança Pública",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "500",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+      "OutraParte": "Paraguai",
+      "DataCelebracao": "20/06/2005",
+      "OutrasPartes": [
+        "Paraguai"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "501",
+          "Id": 33158,
+          "NomeArquivo": "DL-58-2023.pdf",
+          "Descricao": "Publicação no DOU de Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "502",
+          "Id": 30213,
+          "NomeArquivo": "DOU - Mensagem ao Congresso - 17 - 2020.pdf",
+          "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "503",
+        "Id": 3894,
+        "NomeArquivo": "Dec. 13-05 - Protocolo - Transferência - Pessoas - Regimes - Especiais - port esp.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    }
+  ]
+}

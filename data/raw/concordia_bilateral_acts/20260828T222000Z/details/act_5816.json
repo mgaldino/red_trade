@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República da Índia sobre Assistência Mútua em Matéria Aduaneira",
+  "OutraParte": "Índia",
+  "OutrasPartes": [
+    "Índia"
+  ],
+  "SignatarioBrasil": "Jorge Antonio Deher Rachid",
+  "CargoSignatarioBrasil": "Secretário da Receita Federal do Brasil",
+  "Depositario": null,
+  "LocalCelebracao": "Nova Delhi",
+  "NomePaisCelebracao": "Índia",
+  "DataCelebracao": "04/05/2007",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Índia",
+      "NomeSignatario": "S. K. Shingal",
+      "CargoSignatario": "Diretor do Conselho Central de Imposto e Aduanas"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Economia, Finanças e Tributos",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "72",
+    "DataMensagem": "25/02/2010",
+    "NumeroDOU": "38",
+    "DataDOU": "26/02/2010"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "304",
+    "DataDecreto": "24/10/2011",
+    "NumeroDOU": "205",
+    "DataDOU": "25/10/2011"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "BRA/POL/103/11/2007",
+      "DataDocumento": "01/10/2013",
+      "Local": "Embaixada da Índia",
+      "DataRecebimento": "01/10/2013",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "176",
+      "DataDocumento": "02/11/2011",
+      "Local": "Embaixada em Nova Delhi",
+      "DataRecebimento": "02/11/2011",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "8363",
+    "DataDecreto": "17/11/2014",
+    "NumeroDOU": "223",
+    "DataDOU": "18/11/2014"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "30/11/2013",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 7634,
+      "NomeArquivo": "Índia - DOU - Decreto de Promulgação - 223 - 2014.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 7633,
+      "NomeArquivo": "Índia - DOU - Decreto Legislativo - 205 - 2011.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 7632,
+      "NomeArquivo": "Índia - DOU - Mensagem ao Congresso - 38 - 2010.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 8273,
+    "NomeArquivo": "Índia - Acordo - Matéria Aduaneira.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme Disposto no Artigo 17 §1° \"Cada Parte Contratante notificará a outra por via diplomática quando todas as exigências legais para a entrada em vigor do presente Acordo tiverem sido atendidas. O presente Acordo entrará em vigor sessenta dias após a data do recebimento da última das notificações.\""
+    }
+  ]
+}

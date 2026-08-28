@@ -1,0 +1,110 @@
+{
+  "$id": "1",
+  "Titulo": "Protocolo Modificativo do Protocolo de Olivos para a Solução de Controvérsias no MERCOSUL",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Luiz Inácio Lula da Silva; Celso Amorim",
+  "CargoSignatarioBrasil": "Presidente da República; Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Rio de Janeiro",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "19/01/2007",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "367",
+    "DataMensagem": "13/05/2007",
+    "NumeroDOU": "113",
+    "DataDOU": "14/06/2007"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "589",
+    "DataDecreto": "27/08/2009",
+    "NumeroDOU": "165",
+    "DataDOU": "28/08/2009"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "10.215",
+    "DataDecreto": "30/01/2020",
+    "NumeroDOU": "22",
+    "DataDOU": "31/01/2020"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 30229,
+      "NomeArquivo": "DOU - Decreto de Promulgação - 22 - 2020.pdf",
+      "Descricao": "Publicação no DOU de Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 3172,
+      "NomeArquivo": "Protocolo Modificativo - Olivos - Solução - Controvérsias - DOU - Decreto Legislativo - 165 - 2009.pdf",
+      "Descricao": "Protocolo Modificativo - Olivos - Solução - Controvérsias - DOU - Decreto Legislativo - 165 - 2009",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 3171,
+      "NomeArquivo": "Protocolo Modificativo - Olivos - Solução - Controvérsias - DOU - Mensagem ao Congresso - 113 - 2007.pdf",
+      "Descricao": "Protocolo Modificativo - Olivos - Solução - Controvérsias - DOU - Mensagem ao Congresso - 113 - 2007",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 3170,
+    "NomeArquivo": "Protocolo Modificativo - Olivos - Solução - Controvérsias - port esp.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": []
+}

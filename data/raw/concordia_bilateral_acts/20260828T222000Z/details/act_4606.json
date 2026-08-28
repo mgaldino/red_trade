@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo de Cooperação Mútua entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai para Combater o Tráfego de Aeronaves Envolvidas em Atividades Ilícitas Transnacionais",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Luiz Felipe Lampreia",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "10/02/2000",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": "José Félix Fernández Estigarribia",
+      "CargoSignatario": "Ministro das Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Defesa e Segurança",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "554",
+    "DataMensagem": "27/04/2000",
+    "NumeroDOU": "82",
+    "DataDOU": "28/04/2000"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "31",
+    "DataDecreto": "25/03/2002",
+    "NumeroDOU": "59",
+    "DataDOU": "27/03/2002"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "VMRE/N/DT/Nº155/01",
+      "DataDocumento": "14/08/2001",
+      "Local": "Ministério de Relações Exteriores",
+      "DataRecebimento": "23/08/2001",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "4240",
+    "DataDecreto": "21/05/2002",
+    "NumeroDOU": "97",
+    "DataDOU": "22/05/2002"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": "38504",
+    "DataEntradaVigor": "16/04/2002",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 10064,
+      "NomeArquivo": "Paraguai - DOU - Decreto de Promulgação - 97 - 2002.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 10062,
+      "NomeArquivo": "Paraguai - DOU - Decreto Legislativo - 59 - 2002.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 10061,
+      "NomeArquivo": "Paraguai - DOU - Mensagem ao Congresso - 82 - 2000.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 10054,
+    "NomeArquivo": "Paraguai - Acordo - Tráfego de Aeronaves.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme Disposto no Artigo VII §1º \"Cada uma das Partes notificará a outra do cumprimento das formalidades requeridas pela respectiva legislação interna para que o Acordo entre em vigor. Este Acordo entrará em vigor na data do recebimento da última dessas notificações.\" §2º \"O presente Acordo permanecerá em vigor por prazo ilimitado, a menos que uma das Partes o denuncie, por via diplomática. A denúncia surtirá efeito 90 (noventa) dias após a data da respectiva notificação.\""
+    }
+  ]
+}

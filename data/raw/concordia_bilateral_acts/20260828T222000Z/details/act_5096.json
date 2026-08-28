@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República da África do Sul no Campo da Cooperação Científica e Tecnológica",
+  "OutraParte": "África do Sul",
+  "OutrasPartes": [
+    "África do Sul"
+  ],
+  "SignatarioBrasil": "Roberto Amaral",
+  "CargoSignatarioBrasil": "Ministro da Ciência e Tecnologia",
+  "Depositario": null,
+  "LocalCelebracao": "Pretória",
+  "NomePaisCelebracao": "África do Sul",
+  "DataCelebracao": "08/11/2003",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "África do Sul",
+      "NomeSignatario": "Ben Ngubane",
+      "CargoSignatario": "Ministro de Artes, Cultura, Ciência e Tecnologia"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Ciência, Tecnologia e Inovação",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "355",
+    "DataMensagem": "28/06/2004",
+    "NumeroDOU": "123",
+    "DataDOU": "29/06/2004"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "294",
+    "DataDecreto": "12/07/2006",
+    "NumeroDOU": "133",
+    "DataDOU": "13/07/2006"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "BL1/BRA/16",
+      "DataDocumento": "17/07/2008",
+      "Local": "Departamento de Negócios Estrangeiros",
+      "DataRecebimento": "17/07/2008",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "176",
+      "DataDocumento": "05/09/2006",
+      "Local": "Embaixada em Pretória",
+      "DataRecebimento": "05/09/2006",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "6.617",
+    "DataDecreto": "23/10/2008",
+    "NumeroDOU": "207",
+    "DataDOU": "24/10/2008"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Expirado",
+    "NumeroRegistroONU": "47133",
+    "DataEntradaVigor": "17/07/2008",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 1285,
+      "NomeArquivo": "África do Sul - DOU - Mensagem ao Congresso - 123 - 2004.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 1284,
+      "NomeArquivo": "África do Sul - DOU - Decreto Legislativo - 133 - 2006.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 1283,
+      "NomeArquivo": "África do Sul - DOU - Decreto de Promulgação - 207 - 2008.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 1264,
+    "NomeArquivo": "África do Sul - Acordo - Cooperação Científica e Tecnológica.pdf",
+    "Descricao": "África do Sul - Acordo - Cooperação Científica e Tecnológica",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo 13, Parágrafo 1: \"Este Acordo entrará em vigor na data em que cada Parte notificar a outra por escrito, pelos canais diplomáticos, de sua adequação às exigências constitucionais de cada Parte, necessárias à implementação deste Acordo. A data de entrada em vigor será a data da última notificação.\""
+    }
+  ]
+}

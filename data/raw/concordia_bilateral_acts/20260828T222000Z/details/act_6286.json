@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Ajuste Complementar ao Acordo para Permissão de Residência, Estudo e Trabalho a Nacionais Fronteiriços Brasileiros e Uruguaios, para Prestação de Serviços de Saúde",
+  "OutraParte": "Uruguai",
+  "OutrasPartes": [
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "José Gomes Temporão",
+  "CargoSignatarioBrasil": "Ministro de Estado da Saúde",
+  "Depositario": null,
+  "LocalCelebracao": "Rio de Janeiro",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "28/11/2008",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": "Maria Júlia Muño",
+      "CargoSignatario": "Ministra de Saúde Pública"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Trabalho, Saúde e Previdência",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "218",
+    "DataMensagem": "09/04/2009",
+    "NumeroDOU": "69",
+    "DataDOU": "13/04/2009"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "933",
+    "DataDecreto": "11/12/2009",
+    "NumeroDOU": "238",
+    "DataDOU": "14/12/2009"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": "14/09/2009",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "531",
+      "DataDocumento": "17/12/2009",
+      "Local": "Embaixada em Montevidéu",
+      "DataRecebimento": "18/12/2009",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "7.239",
+    "DataDecreto": "26/07/2010",
+    "NumeroDOU": "142",
+    "DataDOU": "27/07/2010"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "17/01/2010",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 12716,
+      "NomeArquivo": "Uruguai - DOU - Decreto Legislativo - 238 - 2009.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 12715,
+      "NomeArquivo": "Uruguai - DOU - Decreto de Promulgação - 142 - 2010.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promugação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 12714,
+      "NomeArquivo": "Uruguai - DOU - CongresSo - 218 - 2009.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 12713,
+    "NomeArquivo": "Uruguai - Acordo - Nacionais Fronteiriços.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no artigo XI, parágrafo único: \"Este Ajuste Complementar entrará em vigor trinta dias após o recebimento da segunda Nota diplomática (18/12/2009) atestando co cumprimento dos requisitos internos de vigência\""
+    }
+  ]
+}

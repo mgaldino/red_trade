@@ -1,0 +1,115 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo-Quadro entre o MERCOSUL e a República Árabe do Egito - Decisão nº 16/04",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Luiz Nunes Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Puerto Iguazú",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "07/07/2004",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Comércio Internacional e Investimentos",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "360",
+    "DataMensagem": "12/06/2008",
+    "NumeroDOU": "112",
+    "DataDOU": "13/06/2008"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "217",
+    "DataDecreto": "07/04/2010",
+    "NumeroDOU": "66",
+    "DataDOU": "08/04/2010"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 27556,
+      "NomeArquivo": "Acordo - Quadro - MERCOSUL - Egito - DOU - Mensagem ao Congresso - 112 - 2008.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 27555,
+      "NomeArquivo": "Acordo - Quadro - MERCOSUL - Egito - DOU - Decreto Legislativo - 66 - 2010.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 27554,
+      "NomeArquivo": "MSUL - Egito - Ata Depósito - Brasil.pdf",
+      "Descricao": "Ata de Depósito do Instrumento de Ratificação do Brasil.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 27553,
+    "NomeArquivo": "MSUL - Acordo - Egito.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme disposto no Artigo 10: \"1. O presente Acordo entrará em vigor trinta dias após a data em que as Partes Contratantes tiverem notificado formalmente, por escrito e pelos canais diplomáticos, o cumprimento das formalidades legais internas necessárias para esse fim. 2. Este Acordo permanecerá em vigor por um período de três anos. A partir de então, será considerado automaticamente prorrogado a cada três anos, a não ser que uma das Partes Contratantes decida não renová-lo, por meio de notificação escrita apresentada por canais diplomáticos. Essa decisão dever ser tomada com antecedência de pelo menos 30 dias em relação à expiração do período de três anos. A denúncia entrará em vigência 6 (seis) meses após a data da notificação.\""
+    }
+  ]
+}

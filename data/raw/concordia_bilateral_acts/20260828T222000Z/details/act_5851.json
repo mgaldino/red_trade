@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo de Co-produção Audiovisual entre o Governo da República Federativa do Brasil e o Governo da República da Índia",
+  "OutraParte": "Índia",
+  "OutrasPartes": [
+    "Índia"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Nova Delhi",
+  "NomePaisCelebracao": "Índia",
+  "DataCelebracao": "04/06/2007",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Índia",
+      "NomeSignatario": "P. R. Dasmunsi",
+      "CargoSignatario": "Ministro da Informação e Radiodifusão"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Educação e Cultura",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "36",
+    "DataMensagem": "31/01/2008",
+    "NumeroDOU": "23",
+    "DataDOU": "01/02/2008"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "649",
+    "DataDecreto": "25/09/2009",
+    "NumeroDOU": "185",
+    "DataDOU": "28/09/2009"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "WIII/321/02/2010",
+      "DataDocumento": "03/11/2010",
+      "Local": "Ministério das Relações Exteriores da Índia",
+      "DataRecebimento": "03/11/2010",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "155",
+      "DataDocumento": "26/05/2010",
+      "Local": "Embaixada em Nova Delhi",
+      "DataRecebimento": "26/05/2010",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "7.597",
+    "DataDecreto": "01/11/2011",
+    "NumeroDOU": "211",
+    "DataDOU": "03/11/2011"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": "50853",
+    "DataEntradaVigor": "03/11/2010",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 7623,
+      "NomeArquivo": "Índia - DOU - Decreto de Promulgação - 211 - 2011.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 7622,
+      "NomeArquivo": "Índia - DOU - Decreto Legislativo - 185 - 2009.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 7621,
+      "NomeArquivo": "Índia - DOU - Mensagem ao Congresso 23 - 2008.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 7616,
+    "NomeArquivo": "Índia - Acordo - Co-produção Audiovisual.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme Disposto no Artigo 13 § 1º \"O presente Acordo entrará em vigor na data da segunda notificação entre as Partes Contratantes, por via diplomática, sobre o cumprimento dos requisitos para a aprovação deste Acordo.\" § 2º \"O presente Acordo, assim como o seu Anexo, que é parte integrante do mesmo, permanecerá em vigor por tempo indeterminado, exceto no caso previsto no parágrafo 3 deste Artigo.\" § 3º \"Qualquer uma das Partes Contratantes poderá denunciar o presente Acordo mediante o encaminhamento de notificação escrita à outra Parte Contratante, com seis meses de antecedência, expondo essa intenção, por via diplomática.\""
+    }
+  ]
+}

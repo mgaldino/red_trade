@@ -1,0 +1,122 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo sobre Cooperação no Âmbito da Defesa entre a República Federativa do Brasil e a República Oriental do Uruguai",
+  "OutraParte": "Uruguai",
+  "OutrasPartes": [
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "Nelson Jobim",
+  "CargoSignatarioBrasil": "Ministro de Estado da Defesa",
+  "Depositario": null,
+  "LocalCelebracao": "Santana do Livramento",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "30/07/2010",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [
+    {
+      "$id": "2",
+      "Id": 12593,
+      "Titulo": "Emenda ao Acordo sobre Cooperação no Âmbito da Defesa entre a República Federativa do Brasil e a República Oriental do Uruguai"
+    }
+  ],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "3",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": "Luis Rosadilla",
+      "CargoSignatario": "Ministro de Estado da Defesa"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Defesa e Segurança",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "640",
+    "DataMensagem": "28/11/2023",
+    "NumeroDOU": "226",
+    "DataDOU": "29/11/2023"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "91/11",
+      "DataDocumento": "11/11/2011",
+      "Local": "Ministério de Relações Exteriores da República Oriental do Uruguai",
+      "DataRecebimento": "11/11/2011",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "8",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "9",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "10",
+    "Vigencia": "Tramitação Congresso Nacional",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "11",
+      "Id": 32124,
+      "NomeArquivo": "MENSAGEM - 28 de novembro de 2023.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso Nacional",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 12821,
+    "NomeArquivo": "Uruguai - Acordo - Defesa.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme Disposto no Artigo 9 §1º \"O presente Acordo entrará em vigor 30 (trinta) dias depois que cada Parte notifique à outra, por via diplomática, o cumprimento dos requisitos internos necessários para a sua aprovação.\""
+    }
+  ]
+}

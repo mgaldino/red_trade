@@ -1,0 +1,123 @@
+{
+  "$id": "1",
+  "Titulo": "Ajuste Complementar ao Acordo para Permissão de Residência, Estudo e Trabalho a Nacionais Fronteiriços Brasileiros e Uruguaios para a Prestação de Serviços de Assistência de Emergência e Cooperação em Defesa Civil.",
+  "OutraParte": "Uruguai",
+  "OutrasPartes": [
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "João Carlos de Souza Gomes",
+  "CargoSignatarioBrasil": "Embaixador do Brasil no Uruguai",
+  "Depositario": null,
+  "LocalCelebracao": "Montevidéu",
+  "NomePaisCelebracao": "Uruguai",
+  "DataCelebracao": "07/11/2013",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": "Luis Almagro Lemes",
+      "CargoSignatario": "Ministro de Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Fronteira, Infraestrutura e Integração Regional",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "797",
+    "DataMensagem": "28/12/2018",
+    "NumeroDOU": "250",
+    "DataDOU": "31/12/2018"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "28",
+    "DataDecreto": "27/04/2023",
+    "NumeroDOU": "81",
+    "DataDOU": "28/04/2023"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "23",
+      "DataDocumento": "27/01/2016",
+      "Local": "Embaixada em Montevidéu",
+      "DataRecebimento": "28/01/2016",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "260",
+      "DataDocumento": "08/08/2024",
+      "Local": "Embaixada em Montevidéu",
+      "DataRecebimento": "08/08/2024",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "12.404",
+    "DataDecreto": "13/03/2025",
+    "NumeroDOU": "50",
+    "DataDOU": "14/03/2025"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "07/09/2024",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 33030,
+      "NomeArquivo": "URUGUAI, DOU 50, 14.03.2025, s1, p22-23.pdf",
+      "Descricao": "Publicação no DOU - promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 29314,
+      "NomeArquivo": "Publicação no DOU da Mensagem ao Congresso Nacional.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso Nacional",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 12436,
+    "NomeArquivo": "Uruguai - AC - Cooperação em Defesa Civil.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme disposto no Artigo VIII: \"Este Ajuste Complementar entrará em vigor 30 (trinta) dias após o recebimento da última Nota diplomática atestando o cumprimento dos requisitos internos para sua entrada em vigor.\""
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "$id": "1",
+  "Titulo": "Protocolo de Assunção sobre Compromisso com a Promoção e Proteção dos Direitos Humanos do MERCOSUL - Decisão CMC nº 17/05",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Luiz Inácio Lula da Silva/ Celso Luiz Nunes Amorim",
+  "CargoSignatarioBrasil": "Presidente da República/ Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Assunção",
+  "NomePaisCelebracao": "Paraguai",
+  "DataCelebracao": "20/06/2005",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "897",
+    "DataMensagem": "13/10/2006",
+    "NumeroDOU": "198",
+    "DataDOU": "16/10/2006"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "592",
+    "DataDecreto": "27/08/2009",
+    "NumeroDOU": "165",
+    "DataDOU": "28/08/2009"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "7.225",
+    "DataDecreto": "01/07/2010",
+    "NumeroDOU": "125",
+    "DataDOU": "02/07/2010"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "03/04/2010",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 27445,
+      "NomeArquivo": "Dec. 17-05 - Protocolo - Direitos - Humanos - DOU - Mensagem ao Congresso - 198 - 2006.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 27444,
+      "NomeArquivo": "Dec. 17-05 - Protocolo - Direitos - Humanos - DOU - Decreto Legislativo - 165 - 2009.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 27443,
+      "NomeArquivo": "Dec. 17-05 - Protocolo - Direitos - Humanos - DOU - Decreto de Promulgação - 125 - 2010.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 27439,
+      "NomeArquivo": "Mercosul - Ata Depósito Brasil - Promoção e Proteção DH.pdf",
+      "Descricao": "Ata de Depósito do Instrumento de Ratificação do Brasil.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 3879,
+    "NomeArquivo": "Dec. 17-05 - Direitos - Humanos - port esp.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo 8: \"O presente Protocolo entrará em vigor trinta (30) dias depois do depósito do instrumento de ratificação pelo quarto Estado Parte do Mercosul.\""
+    }
+  ]
+}

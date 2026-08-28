@@ -1,0 +1,1842 @@
+{
+  "$id": "1",
+  "Page": 1,
+  "Count": 46,
+  "TotalPages": 1,
+  "TotalCount": 46,
+  "Items": [
+    {
+      "$id": "2",
+      "Id": 7548,
+      "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República Popular da China sobre a Facilitação da Concessão de Vistos para Homens de Negócios",
+      "Assuntos": [
+        {
+          "$id": "3",
+          "Id": 286,
+          "Nome": "Consulares e Migratórios",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "16/07/2014",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "4",
+          "Id": 3672,
+          "NomeArquivo": "China - DOU - Publicação DAI - 154 - 2014.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "5",
+        "Id": 3673,
+        "NomeArquivo": "China - Acordo - Homens de Negócios.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "6",
+      "Id": 7550,
+      "Titulo": "Protocolo Complementar ao Acordo de Cooperação em Matéria de Defesa entre o Governo da República Federativa do Brasil e o Governo da República Popular da China, na Área de Sensoriamento Remoto, Telecomunicações e Tecnologia da Informação",
+      "Assuntos": [
+        {
+          "$id": "7",
+          "Id": 288,
+          "Nome": "Defesa e Segurança",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Pendente",
+      "OutraParte": "China",
+      "DataCelebracao": "16/07/2014",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "8",
+        "Id": 3671,
+        "NomeArquivo": "China - PC - Defesa.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "9",
+      "Id": 11566,
+      "Titulo": "Acordo sobre o Novo Banco de Desenvolvimento (NBD)",
+      "Assuntos": [
+        {
+          "$id": "10",
+          "Id": 290,
+          "Nome": "Economia, Finanças e Tributos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "África do Sul",
+      "DataCelebracao": "15/07/2014",
+      "OutrasPartes": [
+        "África do Sul",
+        "China",
+        "Índia",
+        "Rússia",
+        "Bangladesh",
+        "Emirados Árabes Unidos",
+        "Argélia",
+        "Egito",
+        "Uzbequistão"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "11",
+          "Id": 34742,
+          "NomeArquivo": "CPP Guido Mantega NDB_260723_141258.pdf",
+          "Descricao": "Carta de Plenos Poderes Brasil ",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "12",
+          "Id": 34741,
+          "NomeArquivo": "Carta de Plenos Poderes Rússia (2).pdf",
+          "Descricao": "Carta de Plenos Poderes Rússia",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "13",
+          "Id": 34411,
+          "NomeArquivo": "Instrument of Acession to NDB Agreement.pdf",
+          "Descricao": "Publicação do Instrumento de Adesão - Uzbequistão",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "14",
+          "Id": 34168,
+          "NomeArquivo": "Instrumento de Adesão - Egito.pdf",
+          "Descricao": "Publicação do Instrumento de Adesão - Egito",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "15",
+          "Id": 33165,
+          "NomeArquivo": "Instrumento de Adesão - Argélia.pdf",
+          "Descricao": "Publicação do Instrumento de Adesão - Argélia",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "16",
+          "Id": 31070,
+          "NomeArquivo": "Instrumento de Adesão - EAU.pdf",
+          "Descricao": "Publicação do Instrumento de Adesão - Emirados Árabes Unidos",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "17",
+          "Id": 31053,
+          "NomeArquivo": "BRICS - Carta de Acessão - NDB - Bangladesh.pdf",
+          "Descricao": "Publicação da Carta de Acessão - Bangladesh",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "18",
+          "Id": 28017,
+          "NomeArquivo": "BRICS - Carta de Ratificação - NBD - India.pdf",
+          "Descricao": "Publicação da Carta de Ratificação - Índia",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "19",
+          "Id": 28016,
+          "NomeArquivo": "BRICS - Carta de Ratificação - NBD - Brasil.pdf",
+          "Descricao": "Publicação da Carta de Ratificação - Brasil",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "20",
+          "Id": 28015,
+          "NomeArquivo": "BRICS - Carta de Ratificação - NBD - Rússia.pdf",
+          "Descricao": "Publicação da Carta de Ratificação - Rússia",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "21",
+          "Id": 28014,
+          "NomeArquivo": "BRICS - Carta de Ratificação - NBD - China.pdf",
+          "Descricao": "Publicação da Carta de Ratificação - China ",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "22",
+          "Id": 28013,
+          "NomeArquivo": "BRICS - Carta de Ratificação - NBD - África do Sul.pdf",
+          "Descricao": "Publicação da Carta de Ratificação - África do Sul ",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "23",
+          "Id": 6156,
+          "NomeArquivo": "Novo Banco de Desenvolvimento - DOU - Decreto de Promulgação - 249 - 2015.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "24",
+          "Id": 305,
+          "NomeArquivo": "Acordo Novo Banco de Desenvolvimento - Decreto Legislativo - 105 - 2015.pdf",
+          "Descricao": "Acordo Novo Banco de Desenvolvimento - Decreto Legislativo - 105 - 2015",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "25",
+        "Id": 29,
+        "NomeArquivo": "Acordo Sobre o Novo Banco de Desenvolvimento - Agreement on the New Development Bank.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "26",
+      "Id": 11567,
+      "Titulo": "Tratado para o Estabelecimento do Arranjo Contingente de Reservas dos BRICS",
+      "Assuntos": [
+        {
+          "$id": "27",
+          "Id": 290,
+          "Nome": "Economia, Finanças e Tributos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "15/07/2014",
+      "OutrasPartes": [
+        "China",
+        "África do Sul",
+        "Rússia",
+        "Índia"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "28",
+          "Id": 34788,
+          "NomeArquivo": "CPP Contigente Reserva BRICS_260724_125726.pdf",
+          "Descricao": "Carta de Plenos Poderes Brasil",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "29",
+          "Id": 28022,
+          "NomeArquivo": "BRICS - Carta de Ratificação - Reservas dos BRICS - África do Sul.pdf",
+          "Descricao": "Publicação da Carta de Ratificação - África do Sul ",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "30",
+          "Id": 28021,
+          "NomeArquivo": "BRICS - Carta de Ratificação - Reservas dos BRICS - Índia.pdf",
+          "Descricao": "Publicação da Carta de Ratificação - India",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "31",
+          "Id": 28020,
+          "NomeArquivo": "BRICS - Carta de Ratificação - Reservas dos BRICS - Brasil.pdf",
+          "Descricao": "Publicação da Carta de Ratificação - Brasil",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "32",
+          "Id": 28019,
+          "NomeArquivo": "BRICS - Carta de Ratificação - Reservas dos BRICS - China.pdf",
+          "Descricao": "Publicação da Carta de Ratificação - China ",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "33",
+          "Id": 28018,
+          "NomeArquivo": "BRICS - Carta de Ratificação - Reservas dos BRICS - Rússia.pdf",
+          "Descricao": "Publicação da Carta de Ratificação - Rússia",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "34",
+          "Id": 8271,
+          "NomeArquivo": "Tratado - Arranjo Contingente de Reservas - DOU - Decreto de Promulgação - 63 - 2016.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "35",
+          "Id": 304,
+          "NomeArquivo": "Tratado Arranjo Contingente de Reservas - Decreto Legislativo - 102 - 2015.pdf",
+          "Descricao": "Tratado - Arranjo Contingente de Reservas - Decreto Legislativo - 105 - 2015",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "36",
+        "Id": 30035,
+        "NomeArquivo": "ACR - Texto.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "37",
+      "Id": 7336,
+      "Titulo": "Memorando de Entendimento entre o Governo da República Federativa do Brasil e o Governo da República Popular da China sobre o Estabelecimento Recíproco de Centros Culturais",
+      "Assuntos": [
+        {
+          "$id": "38",
+          "Id": 291,
+          "Nome": "Educação e Cultura",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "21/06/2012",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "39",
+          "Id": 3678,
+          "NomeArquivo": "China - DOU - Publicação DAI - 185 - 2012.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "40",
+        "Id": 3679,
+        "NomeArquivo": "China - ME - Centros Culturais.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "41",
+      "Id": 7337,
+      "Titulo": "Plano Decenal de Cooperação entre o Governo da República Federativa do Brasil e o Governo da República Popular da China",
+      "Assuntos": [
+        {
+          "$id": "42",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "21/06/2012",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "43",
+        "Id": 3742,
+        "NomeArquivo": "China - Plano Decenal.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "44",
+      "Id": 7338,
+      "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República Popular da China Sobre Assistência Mútua Administrativa em Matéria Aduaneira",
+      "Assuntos": [
+        {
+          "$id": "45",
+          "Id": 290,
+          "Nome": "Economia, Finanças e Tributos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "21/06/2012",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "46",
+          "Id": 28995,
+          "NomeArquivo": "China - Decreto Promulgação - 9.452 - 2018.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "47",
+          "Id": 26736,
+          "NomeArquivo": "China - Decreto Legislativo - 112 - 2018.pdf",
+          "Descricao": "China - Decreto Legislativo - 112 - 2018",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "48",
+          "Id": 6426,
+          "NomeArquivo": "China - DOU - Mensagem ao Congresso - 249 - 2015.pdf",
+          "Descricao": "Mensagem ao Congresso Nacional",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "49",
+        "Id": 3681,
+        "NomeArquivo": "China - Acordo - Cooperação Aduaneira red.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "50",
+      "Id": 7101,
+      "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República Popular da China sobre Cooperação em Matéria de Defesa",
+      "Assuntos": [
+        {
+          "$id": "51",
+          "Id": 288,
+          "Nome": "Defesa e Segurança",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Tramitação Congresso Nacional",
+      "OutraParte": "China",
+      "DataCelebracao": "12/04/2011",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "52",
+          "Id": 34682,
+          "NomeArquivo": "DOU 133_17.07.2026_p75.pdf",
+          "Descricao": "Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "53",
+        "Id": 3731,
+        "NomeArquivo": "China - AC - Cooperação em Matéria de Defesa.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "54",
+      "Id": 7102,
+      "Titulo": "Comunicado Conjunto entre a República Federativa do Brasil e a República Popular da China",
+      "Assuntos": [
+        {
+          "$id": "55",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "12/04/2011",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "56",
+        "Id": 3697,
+        "NomeArquivo": "Comunicado Conjunto - Chinês e Port..pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "57",
+      "Id": 6962,
+      "Titulo": "Memorando de Entendimento sobre Cooperação entre o Instituto Rio Branco do Ministério das Relações Exteriores da República Federativa do Brasil e a Universidade de Assuntos Estrangeiros da China",
+      "Assuntos": [
+        {
+          "$id": "58",
+          "Id": 297,
+          "Nome": "Relações Diplomáticas e Consulares",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "14/09/2010",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "59",
+          "Id": 3728,
+          "NomeArquivo": "China - DOU - Publicação DAI - 195 - 2012.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "60",
+        "Id": 3727,
+        "NomeArquivo": "China - MdE - Intituto Rio Branco.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "61",
+      "Id": 6693,
+      "Titulo": "Programa Executivo de Cooperação Cultural entre o Governo da República Federativa do Brasil e o Governo da República Popular da China para os Anos de 2010-2012",
+      "Assuntos": [
+        {
+          "$id": "62",
+          "Id": 291,
+          "Nome": "Educação e Cultura",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "16/04/2010",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "63",
+          "Id": 3726,
+          "NomeArquivo": "China - DOU - Publicação DAI - 229 - 2010.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "64",
+        "Id": 3725,
+        "NomeArquivo": "China - Programa Executivo - Cooperação Cultural.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "65",
+      "Id": 6694,
+      "Titulo": "Memorando de Entendimento entre o Ministério das Relações Exteriores da República Federativa do Brasil e o Ministério do Comércio da República Popular da China para o Estabelecimento de Grupo de Trabalho sobre Propriedade Intelectual no Âmbito da Subcomissão Econômico-Comercial da Comissão Sino-Brasileira de Alto Nível de Concertação e Cooperação",
+      "Assuntos": [
+        {
+          "$id": "66",
+          "Id": 284,
+          "Nome": "Ciência, Tecnologia e Inovação",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "16/04/2010",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "67",
+          "Id": 3858,
+          "NomeArquivo": "China - DOU - Publicação DAI - 229 - 2010.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "68",
+        "Id": 3741,
+        "NomeArquivo": "China - MdE - Propriedade Intelectual.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "69",
+      "Id": 6692,
+      "Titulo": "Plano de Ação Conjunta entre o Governo da República Federativa do Brasil e o Governo da República Popular da China, 2010-2014",
+      "Assuntos": [
+        {
+          "$id": "70",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Expirado",
+      "OutraParte": "China",
+      "DataCelebracao": "15/04/2010",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "71",
+        "Id": 3755,
+        "NomeArquivo": "China - Plano de Ação Conjunta.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "72",
+      "Id": 6371,
+      "Titulo": "Tratado entre a República Federativa do Brasil e a República Popular da China sobre Auxílio Judicial em Matéria Civil e Comercial",
+      "Assuntos": [
+        {
+          "$id": "73",
+          "Id": 289,
+          "Nome": "Direito, Justiça & Segurança Pública",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "19/05/2009",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "74",
+          "Id": 4118,
+          "NomeArquivo": "China - Ata brasileira de Ratificação.pdf",
+          "Descricao": "Ata da troca de instrumentos de ratificação - Matéria Civil e Comercial",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "75",
+          "Id": 3764,
+          "NomeArquivo": "China - DOU - Decreto de Promulgação - 68 - 2015.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "76",
+          "Id": 3763,
+          "NomeArquivo": "China - DOU - Mensagem ao Congresso - 165 - 2010.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "77",
+          "Id": 3762,
+          "NomeArquivo": "China - DOU - Decreto Legislativo - 203 - 2012.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "78",
+        "Id": 3740,
+        "NomeArquivo": "China - Tratado - Matéria Civil e Comercial.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "79",
+      "Id": 6372,
+      "Titulo": "Memorando de Entendimento entre o Governo da República Federativa do Brasil e o Governo da República da China sobre Petróleo, Equipamento e Financiamento",
+      "Assuntos": [
+        {
+          "$id": "80",
+          "Id": 292,
+          "Nome": "Energia e Recursos Estratégicos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "19/05/2009",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "81",
+        "Id": 3721,
+        "NomeArquivo": "China - ME - Petróleo, Equip. e Financiamento.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "82",
+      "Id": 6373,
+      "Titulo": "Comunicado Conjunto entre a República do Brasil e a República Popular da China sobre o Contínuo Fortalecimento da Parceria Estratégica",
+      "Assuntos": [
+        {
+          "$id": "83",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "19/05/2009",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "84",
+        "Id": 3723,
+        "NomeArquivo": "China - Comunicado Conjunto.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "85",
+      "Id": 6319,
+      "Titulo": "Protocolo entre o Governo da República Federativa do Brasil e o Governo da República Popular da China sobre Cooperação em Energia e Mineração",
+      "Assuntos": [
+        {
+          "$id": "86",
+          "Id": 292,
+          "Nome": "Energia e Recursos Estratégicos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "19/02/2009",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "87",
+          "Id": 3729,
+          "NomeArquivo": "China - DOU - Publicação DAI - 37 - 2009.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "88",
+        "Id": 3730,
+        "NomeArquivo": "China - Protocolo - Energia e Mineração.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "89",
+      "Id": 5643,
+      "Titulo": "Acordo sobre o Fortalecimento da Cooperação na Área de Implementação de Infra-Estrutura de Construção entre o Governo da República Federativa do Brasil e o Governo da República Popular da China",
+      "Assuntos": [
+        {
+          "$id": "90",
+          "Id": 292,
+          "Nome": "Energia e Recursos Estratégicos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "05/06/2006",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "91",
+          "Id": 3997,
+          "NomeArquivo": "China - DOU - Congresso - 124 - 2006.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "92",
+          "Id": 3994,
+          "NomeArquivo": "China - DOU - Decreto Legislativo - 176 - 2006.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "93",
+          "Id": 3993,
+          "NomeArquivo": "China - DOU - Promulgação - 3 - 2007.pdf",
+          "Descricao": "Publicação no DOU de Promulgação",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "94",
+        "Id": 4252,
+        "NomeArquivo": "China - Acordo - Infra-estrutura.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "95",
+      "Id": 5644,
+      "Titulo": "Memorando de Entendimento sobre o Estabelecimento da Subcomissão de Energia e Recursos Minerais da Comissão Sino-brasileira de Alto Nível de Concertação e Cooperação entre o Ministério de Minas e Energia da República Federativa do Brasil e a Comissão de Desenvolvimento e Reforma do Estado da República Popular da China.",
+      "Assuntos": [
+        {
+          "$id": "96",
+          "Id": 292,
+          "Nome": "Energia e Recursos Estratégicos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "05/06/2006",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "97",
+          "Id": 3733,
+          "NomeArquivo": "China - DOU - Publicação DAI - 218 - 2006.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "98",
+        "Id": 3734,
+        "NomeArquivo": "China - ME - Subcomissão de Energia.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "99",
+      "Id": 5594,
+      "Titulo": "Programa-Executivo do Acordo de Cooperação Cultural e Educacional entre o Governo da República Federativa do Brasil e o Governo da República Popular da China para os anos de 2006 a 2008",
+      "Assuntos": [
+        {
+          "$id": "100",
+          "Id": 291,
+          "Nome": "Educação e Cultura",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "23/03/2006",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "101",
+        "Id": 3957,
+        "NomeArquivo": "China - Programa Executivo - Cooperação Cultural e Educacional.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "102",
+      "Id": 5423,
+      "Titulo": "Memorando de Entendimento sobre Cooperação na Área de Proteção Ambiental entre o Ministério do Meio Ambiente da República Federativa do Brasil e a Administração Estatal de Proteção Ambiental da República Popular da China",
+      "Assuntos": [
+        {
+          "$id": "103",
+          "Id": 295,
+          "Nome": "Meio Ambiente e Sustentabilidade",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "17/08/2005",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "104",
+          "Id": 3788,
+          "NomeArquivo": "China - DOU - Publicação DAI - 191 - 2005.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "105",
+        "Id": 3786,
+        "NomeArquivo": "China - MdE - Proteção Ambiental.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "106",
+      "Id": 5247,
+      "Titulo": "Tratado de Extradição entre a República Federativa do Brasil e a República Popular da China",
+      "Assuntos": [
+        {
+          "$id": "107",
+          "Id": 289,
+          "Nome": "Direito, Justiça & Segurança Pública",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "12/11/2004",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "108",
+          "Id": 3914,
+          "NomeArquivo": "China - DOU - Decreto de Promulgação - 68 - 2015.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "109",
+          "Id": 3911,
+          "NomeArquivo": "China - DOU - Decreto Legislativo - 135 - 2014.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "110",
+          "Id": 3908,
+          "NomeArquivo": "China - DOU - Mensagem ao Congresso - 48 - 2010.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "111",
+        "Id": 3880,
+        "NomeArquivo": "China - Acordo - Extradição.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "112",
+      "Id": 5248,
+      "Titulo": "Acordo de Cooperação para o Combate à Criminalidade Organizada Transnacional e outras Modalidades Delituosas",
+      "Assuntos": [
+        {
+          "$id": "113",
+          "Id": 289,
+          "Nome": "Direito, Justiça & Segurança Pública",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+      "OutraParte": "China",
+      "DataCelebracao": "12/11/2004",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "114",
+          "Id": 3869,
+          "NomeArquivo": "China - DOU - Decreto Legislativo - 110 - 2009.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "115",
+          "Id": 3867,
+          "NomeArquivo": "China - DOU - Mensagem ao Congresso - 146 - 2005.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "116",
+        "Id": 3856,
+        "NomeArquivo": "China - Acordo - Criminalidade.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "117",
+      "Id": 5249,
+      "Titulo": "Memorando de Entendimento entre o Ministério do Desenvolvimento, Indústria e Comércio da República Federativa do Brasil e a Comissão Nacional de Desenvolvimento e Reforma da República Popular da China em Cooperação Industrial.",
+      "Assuntos": [
+        {
+          "$id": "118",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Expirado",
+      "OutraParte": "China",
+      "DataCelebracao": "12/11/2004",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "119",
+          "Id": 3841,
+          "NomeArquivo": "China - DOU - Publicação DAI - 227 - 2004.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "120",
+        "Id": 3843,
+        "NomeArquivo": "China - ME - Cooperação Industrial.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "121",
+      "Id": 5250,
+      "Titulo": "Memorando de Entendimento entre a República Federativa do Brasil e a República Popular da China sobre Cooperação em Matéria de Comércio e Investimento.",
+      "Assuntos": [
+        {
+          "$id": "122",
+          "Id": 290,
+          "Nome": "Economia, Finanças e Tributos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Superado",
+      "OutraParte": "China",
+      "DataCelebracao": "12/11/2004",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "123",
+          "Id": 3823,
+          "NomeArquivo": "China - DOU - Publicação DAI - 228 - 2004.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "124",
+        "Id": 3822,
+        "NomeArquivo": "China - ME - Comércio e Investimento.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "125",
+      "Id": 5251,
+      "Titulo": "Memorando de Entendimento entre o Ministério do Turismo da República Federativa do Brasil e a Administração Nacional de Turismo da República Popular da China na Facilitação de Viagens de Grupos de Turistas Chineses ao Brasil",
+      "Assuntos": [
+        {
+          "$id": "126",
+          "Id": 298,
+          "Nome": "Serviços e Transporte",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "12/11/2004",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "127",
+          "Id": 3839,
+          "NomeArquivo": "China - DOU - Publicação DAI - 228 - 2004.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "128",
+        "Id": 3840,
+        "NomeArquivo": "China - ME - Turismo.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "129",
+      "Id": 5252,
+      "Titulo": "Protocolo Complementar ao Acordo Quadro sobre Cooperação em Aplicações Pacíficas de Ciência e Tecnologia do Espaço Exterior para Cooperação no Sistema de Aplicações CBERS.",
+      "Assuntos": [
+        {
+          "$id": "130",
+          "Id": 294,
+          "Nome": "Mar e Espaço",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "12/11/2004",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "131",
+          "Id": 3826,
+          "NomeArquivo": "China - DOU - Publicação DAI - 227 - 2004.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "132",
+        "Id": 3828,
+        "NomeArquivo": "China - PC - CBERS.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "133",
+      "Id": 5253,
+      "Titulo": "Protocolo Complementar ao Acordo Quadro entre o Governo da República Federativa do Brasil e a República Popular da China sobre Cooperação em Aplicações Pacíficas de Ciência e Tecnologia do Espaço Exterior para o Desenvolvimento Conjunto do Satélite CBERS-2B",
+      "Assuntos": [
+        {
+          "$id": "134",
+          "Id": 294,
+          "Nome": "Mar e Espaço",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "12/11/2004",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "135",
+          "Id": 3824,
+          "NomeArquivo": "China - DOU - Publicação DAI - 228 - 2004.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "136",
+        "Id": 3825,
+        "NomeArquivo": "China - PC - CBERS.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "137",
+      "Id": 5255,
+      "Titulo": "Protocolo entre o Ministério da Agricultura, Pecuária e Abastecimento da República Federativa do Brasil e a Administração Geral de Supervisão de Qualidade, Inspeção e Quarentena da República Popular da China sobre Quarentena e Condições Sanitárias e Veterinárias de Carne de Aves a ser Exportada do Brasil para a República Popular da China",
+      "Assuntos": [
+        {
+          "$id": "138",
+          "Id": 283,
+          "Nome": "Agricultura, Pecuária e Pesca",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "12/11/2004",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "139",
+          "Id": 3774,
+          "NomeArquivo": "China - DOU - Publicação DAI - 227 - 2004.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "140",
+        "Id": 3791,
+        "NomeArquivo": "China - Protocolo - Condições Sanitárias Carnes de Aves.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "141",
+      "Id": 5170,
+      "Titulo": "Tratado entre a República Federativa do Brasil e o República Popular da China sobre Assistência Judiciária Mútua em Matéria Penal",
+      "Assuntos": [
+        {
+          "$id": "142",
+          "Id": 289,
+          "Nome": "Direito, Justiça & Segurança Pública",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "24/05/2004",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "143",
+          "Id": 3833,
+          "NomeArquivo": "China - DOU - Mensagem ao Congresso - 170 - 2004.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "144",
+          "Id": 3832,
+          "NomeArquivo": "China - DOU - Decreto Legislativo - 133 - 2006.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "145",
+          "Id": 3831,
+          "NomeArquivo": "China - DOU -  Decreto de Promulgação - 232 - 2007.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "146",
+        "Id": 3827,
+        "NomeArquivo": "China - Tratado - Matéria Penal.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "147",
+      "Id": 5171,
+      "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República Popular da China sobre Isenção de Vistos para Portadores de Passaportes Diplomático, Oficial e de Serviços",
+      "Assuntos": [
+        {
+          "$id": "148",
+          "Id": 286,
+          "Nome": "Consulares e Migratórios",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "24/05/2004",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "149",
+          "Id": 3812,
+          "NomeArquivo": "China - DOU - Publicação DAI - 153 - 2004.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "150",
+        "Id": 3811,
+        "NomeArquivo": "China - Acordo - Isenção de Vistos.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "151",
+      "Id": 5172,
+      "Titulo": "Memorando de Entendimento entre a República Federativa do Brasil e a República Popular da China sobre o Estabelecimento da Comissão Sino-Brasileira de Alto Nível de Concertação e Cooperação",
+      "Assuntos": [
+        {
+          "$id": "152",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "24/05/2004",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "153",
+          "Id": 3808,
+          "NomeArquivo": "China - DOU - Publicação DAI - 139 - 2004.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "154",
+        "Id": 3807,
+        "NomeArquivo": "China - MdE - Concertação e Cooperação.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "155",
+      "Id": 5173,
+      "Titulo": "Acordo, por troca de Notas, entre o Ministério das Relações Exteriores da República Federativa do Brasil e o Ministério dos Negócios Estrangeiros da República Popular da China para Flexibilização da Concessão de Vistos para Empresários",
+      "Assuntos": [
+        {
+          "$id": "156",
+          "Id": 286,
+          "Nome": "Consulares e Migratórios",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Substituído",
+      "OutraParte": "China",
+      "DataCelebracao": "24/05/2004",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "157",
+          "Id": 3796,
+          "NomeArquivo": "China - DOU - Publicação DAI - 122 - 2004.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "158",
+        "Id": 3793,
+        "NomeArquivo": "China - Acordo - Flexibilização de Vistos.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "159",
+      "Id": 5174,
+      "Titulo": "Comunicado Conjunto entre a República Federativa do Brasil e a República Popular da China",
+      "Assuntos": [
+        {
+          "$id": "160",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "24/05/2004",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "161",
+        "Id": 3778,
+        "NomeArquivo": "China - Declaração Conjunta.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "162",
+      "Id": 5175,
+      "Titulo": "Memorando de Entendimento entre o Ministério da Agricultura, Pecuária e Abastecimento da República Federativa do Brasil e a Administração Geral para Supervisão da Qualidade, Inspeção e Quarentena da República Popular da China na Área de Segurança Sanitária e Fitossanitária de Produtos Alimentares.",
+      "Assuntos": [
+        {
+          "$id": "163",
+          "Id": 283,
+          "Nome": "Agricultura, Pecuária e Pesca",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "24/05/2004",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "164",
+          "Id": 3747,
+          "NomeArquivo": "China - DOU - Publicação DAI - 109 - 2004.pdf",
+          "Descricao": "Publicação no DOU da DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "165",
+        "Id": 3746,
+        "NomeArquivo": "China - Memorando de Entendimento - Segurança Sanitária e Fitossanitária.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "166",
+      "Id": 5176,
+      "Titulo": "Memorando de Entendimento sobre a Cooperação para o Desenvolvimento de um Sistema de Aplicações para o Programa do Satélite Sino-brasileiro de Recursos Terrestres.",
+      "Assuntos": [
+        {
+          "$id": "167",
+          "Id": 294,
+          "Nome": "Mar e Espaço",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "24/05/2004",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "168",
+          "Id": 3749,
+          "NomeArquivo": "China - DOU - Publicação DAI - 109 - 2004.pdf",
+          "Descricao": "Publicação no DOU da DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "169",
+        "Id": 3748,
+        "NomeArquivo": "China - Memorando de Entendimento - Recursos Terrestres.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "170",
+      "Id": 5177,
+      "Titulo": "Memorando de Entendimento sobre Cooperação entre o Ministério do Planejamento, Orçamento e Gestão da República Federativa do Brasil e o Ministério do Comércio da República Popular da China.",
+      "Assuntos": [
+        {
+          "$id": "171",
+          "Id": 298,
+          "Nome": "Serviços e Transporte",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "24/05/2004",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "172",
+          "Id": 3751,
+          "NomeArquivo": "China - DOU - Publicação DAI - 109 - 2004.pdf",
+          "Descricao": "Publicação no DOU da DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "173",
+        "Id": 3750,
+        "NomeArquivo": "China - Memorando de Entendimetno - Hidroferroviário.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "174",
+      "Id": 5178,
+      "Titulo": "Acordo de Cooperação Esportiva entre o Ministério do Esporte da República Federativa do Brasil e a Administração Geral do Esporte do Estado da República Popular da China.",
+      "Assuntos": [
+        {
+          "$id": "175",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "24/05/2004",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "176",
+          "Id": 3753,
+          "NomeArquivo": "China - DOU - Publicação DAI - 109 - 2004.pdf",
+          "Descricao": "Publicação no DOU da DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "177",
+        "Id": 3752,
+        "NomeArquivo": "China - Memorando de Entendimento - Cooperação Esportiva.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "178",
+      "Id": 5179,
+      "Titulo": "Ajuste Complementar sobre Vigilância de Medicamentos e Produtos Relacionados à Saúde ao Acordo de Cooperação Científica e Tecnológica entre o Governo da República Federativa do Brasil e o Governo da República Popular da China",
+      "Assuntos": [
+        {
+          "$id": "179",
+          "Id": 299,
+          "Nome": "Trabalho, Saúde e Previdência",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "24/05/2004",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "180",
+          "Id": 3756,
+          "NomeArquivo": "China - DOU - Publicação DAI - 109 - 2004.pdf",
+          "Descricao": "Publicação no DOU da DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "181",
+        "Id": 3754,
+        "NomeArquivo": "China - Ajuste Complementar - Vigilância de Medicamentos.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "182",
+      "Id": 5180,
+      "Titulo": "Ajuste Complementar sobre Saúde e Ciências Médicas ao Acordo de Cooperação Científica e Tecnológica",
+      "Assuntos": [
+        {
+          "$id": "183",
+          "Id": 299,
+          "Nome": "Trabalho, Saúde e Previdência",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Expirado",
+      "OutraParte": "China",
+      "DataCelebracao": "24/05/2004",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "184",
+          "Id": 3851,
+          "NomeArquivo": "China - DOU - Publicação DAI - 109 - 2004.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "185",
+        "Id": 3850,
+        "NomeArquivo": "China - AC - Saúde e Ciências Médicas.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "186",
+      "Id": 5015,
+      "Titulo": "Memorando de Entendimento entre o Ministério do Meio Ambiente da República Federativa do Brasil e o Ministério dos Recursos Hídricos da República Popular da China em Cooperação Técnica e Científica no Campo dos Recursos Hídricos",
+      "Assuntos": [
+        {
+          "$id": "187",
+          "Id": 292,
+          "Nome": "Energia e Recursos Estratégicos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Expirado",
+      "OutraParte": "China",
+      "DataCelebracao": "24/09/2003",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "188",
+          "Id": 3885,
+          "NomeArquivo": "China - DOU - Publicação DAI - 192 - 2003.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "189",
+        "Id": 3887,
+        "NomeArquivo": "China - MdE - Recursos Hídricos.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "190",
+      "Id": 4935,
+      "Titulo": "Memorando de Entendimento entre o Ministério do Desenvolvimento, Indústria e Comércio Exterior da República Federativa do Brasil e a Comissão Estatal para Planificação da Economia da República Popular da China sobre Cooperação Industrial.",
+      "Assuntos": [
+        {
+          "$id": "191",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Expirado",
+      "OutraParte": "China",
+      "DataCelebracao": "02/12/2002",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "192",
+          "Id": 3745,
+          "NomeArquivo": "China - DOU - Publicação DAI - 14 - 2003.pdf",
+          "Descricao": "Publicação no DOU da DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "193",
+        "Id": 3744,
+        "NomeArquivo": "China - Memorando de Entendimento - Planificação da Economia.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "194",
+      "Id": 4934,
+      "Titulo": "Protocolo Complementar ao Acordo-Quadro entre o Governo da República Federativa do Brasil e o Governo da República Popular da China sobre Cooperação em Aplicações Pacíficas de Ciência e Tecnologia do Espaço Exterior para a Continuidade do Desenvolvimento Conjunto de Satélites de Recursos Terrestres.",
+      "Assuntos": [
+        {
+          "$id": "195",
+          "Id": 295,
+          "Nome": "Meio Ambiente e Sustentabilidade",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "27/11/2002",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "196",
+          "Id": 3708,
+          "NomeArquivo": "China - DOU - Mensagem ao Congresso - 165 - 2003.pdf",
+          "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "197",
+          "Id": 3706,
+          "NomeArquivo": "China - DOU -Decreto Legislativo - 226 - 2005.pdf",
+          "Descricao": "Publicação no DOU de Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "198",
+          "Id": 3705,
+          "NomeArquivo": "China - DOU - Decreto de Promulgação - 174 - 2008.pdf",
+          "Descricao": "Publicação no DOU de Decreto de Promulgação",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "199",
+        "Id": 3712,
+        "NomeArquivo": "China - Acordo - Recursos Terrestres.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "200",
+      "Id": 4779,
+      "Titulo": "Programa Executivo Cultural do Acordo de Cooperação Cultural e Educacional entre o Governo da República Federativa do Brasil e a República Popular da China para os anos de 2001 a 2004.",
+      "Assuntos": [
+        {
+          "$id": "201",
+          "Id": 291,
+          "Nome": "Educação e Cultura",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "12/11/2001",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "202",
+        "Id": 3702,
+        "NomeArquivo": "China - Programa Executivo - Cooperação Artístico-Educacional.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "203",
+      "Id": 4670,
+      "Titulo": "Protocolo de Cooperação em Tecnologia Espacial entre o Governo da República Federativa do Brasil e o Governo da República Popular da China.",
+      "Assuntos": [
+        {
+          "$id": "204",
+          "Id": 295,
+          "Nome": "Meio Ambiente e Sustentabilidade",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "21/09/2000",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "205",
+          "Id": 3700,
+          "NomeArquivo": "China - DOU - Publicação DAI - 187 - 2000.pdf",
+          "Descricao": "Publicação no DOU da DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "206",
+        "Id": 3699,
+        "NomeArquivo": "China - Protocolo - Tecnologia Espacial.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "207",
+      "Id": 4662,
+      "Titulo": "Acordo, por troca de Notas, sobre a Concessão de Vistos de Múltiplas Entradas, pelo período da missão, aos brasileiros e chineses portadores de passaportes diplomáticos e oficiais.",
+      "Assuntos": [
+        {
+          "$id": "208",
+          "Id": 286,
+          "Nome": "Consulares e Migratórios",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Substituído",
+      "OutraParte": "China",
+      "DataCelebracao": "17/08/2000",
+      "OutrasPartes": [
+        "China"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "209",
+          "Id": 3704,
+          "NomeArquivo": "China -DOU - Publicação DAI - 37 - 2001.pdf",
+          "Descricao": "Publicação no DOU da DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "210",
+        "Id": 3703,
+        "NomeArquivo": "China - Acordo por Troca de Notas - Vistos de Múltiplas Entradas.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo sobre Dispensa de Tradução de Documentos Administrativos para Efeitos de Imigração entre os Estados Partes do MERCOSUL - Decisão nº 44/00",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai",
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Luiz Felipe Lampreia",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Florianópolis",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "15/12/2000",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Consulares e Migratórios",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": "209",
+    "DataMensagem": "01/04/2002",
+    "NumeroDOU": "62",
+    "DataDOU": "02/04/2002"
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": "887",
+    "DataDecreto": "01/09/2005",
+    "NumeroDOU": "170",
+    "DataDOU": "02/09/2005"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "5.851",
+    "DataDecreto": "18/07/2006",
+    "NumeroDOU": "137",
+    "DataDOU": "19/07/2006"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "17/11/2005",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 27131,
+      "NomeArquivo": "MERCOSUL - DOU - Mensagem ao Congresso - 62 - 2002.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 27130,
+      "NomeArquivo": "MERCOSUL - DOU - Decreto Legislativo - 170 - 2005.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 27129,
+      "NomeArquivo": "MERCOSUL - DOU - Decreto de Promulgação - 137 - 2006.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 27128,
+    "NomeArquivo": "Mercosul - Acordo - Dispensa Tradução Documentos - Estados Partes.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo 5º: \"1. O presente Acordo entrará em vigor, com relação aos dois primeiros Estados Partes que o ratifiquem, ou notifiquem a incorporação aos seus ordenamentos jurídicos internos, trinta (30) dias depois da data em que o segundo desses Estados Partes deposite seu instrumento de ratificação ou de sua notificação. Para os demais Estados Partes, entrará em vigor ao trigésimo dia a contar do depósito de seu respectivo instrumento de ratificação ou da notificação.\""
+    }
+  ]
+}

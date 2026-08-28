@@ -1,0 +1,136 @@
+partner,year,raw_acts,distinct_dates,strategic_instrument,acts_in_packages,max_package_size,package_share,top_date_share,revision_share,distinct_subjects,post_2009,group
+China,2000,2,2,0,0,1,0,0.5,0.5,2,FALSE,Tratada
+China,2001,1,1,0,0,1,0,1,0,1,FALSE,Tratada
+China,2002,2,2,0,0,1,0,0.5,0,2,FALSE,Tratada
+China,2003,1,1,0,0,1,0,1,0,1,FALSE,Tratada
+China,2004,19,2,1,19,11,1,0.5789473684210527,0.10526315789473684,8,FALSE,Tratada
+China,2005,1,1,0,0,1,0,1,0,1,FALSE,Tratada
+China,2006,3,2,1,2,2,0.6666666666666666,0.6666666666666666,0,2,FALSE,Tratada
+China,2007,0,0,0,0,0,0,0,0,0,FALSE,Tratada
+China,2008,0,0,0,0,0,0,0,0,0,FALSE,Tratada
+China,2009,4,2,1,3,3,0.75,0.75,0,3,TRUE,Tratada
+China,2010,4,3,1,2,2,0.5,0.5,0,4,TRUE,Tratada
+China,2011,2,1,0,2,2,1,1,0,2,TRUE,Tratada
+China,2012,3,1,1,3,3,1,1,0,3,TRUE,Tratada
+China,2013,0,0,0,0,0,0,0,0,0,TRUE,Tratada
+China,2014,2,1,0,2,2,1,1,0.5,2,TRUE,Tratada
+Índia,2000,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+Índia,2001,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+Índia,2002,2,2,0,0,1,0,0.5,0,2,FALSE,Doador prioritário
+Índia,2003,1,1,0,0,1,0,1,0,1,FALSE,Doador prioritário
+Índia,2004,4,1,0,4,4,1,1,0,4,FALSE,Doador prioritário
+Índia,2005,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+Índia,2006,7,3,0,6,4,0.8571428571428571,0.5714285714285714,0.2857142857142857,5,FALSE,Doador prioritário
+Índia,2007,4,3,0,2,2,0.5,0.5,0,4,FALSE,Doador prioritário
+Índia,2008,7,2,0,7,4,1,0.5714285714285714,0,4,FALSE,Doador prioritário
+Índia,2009,0,0,0,0,0,0,0,0,0,TRUE,Doador prioritário
+Índia,2010,0,0,0,0,0,0,0,0,0,TRUE,Doador prioritário
+Índia,2011,1,1,0,0,1,0,1,1,1,TRUE,Doador prioritário
+Índia,2012,4,1,0,4,4,1,1,0,3,TRUE,Doador prioritário
+Índia,2013,2,1,0,2,2,1,1,0.5,2,TRUE,Doador prioritário
+Índia,2014,3,1,0,3,3,1,1,0,3,TRUE,Doador prioritário
+África do Sul,2000,3,2,0,2,2,0.6666666666666666,0.6666666666666666,0,1,FALSE,Doador prioritário
+África do Sul,2001,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+África do Sul,2002,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+África do Sul,2003,4,2,0,3,3,0.75,0.75,0,4,FALSE,Doador prioritário
+África do Sul,2004,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+África do Sul,2005,1,1,0,0,1,0,1,0,1,FALSE,Doador prioritário
+África do Sul,2006,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+África do Sul,2007,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+África do Sul,2008,1,1,0,0,1,0,1,0,1,FALSE,Doador prioritário
+África do Sul,2009,4,2,0,3,3,0.75,0.75,0,3,TRUE,Doador prioritário
+África do Sul,2010,3,2,0,2,2,0.6666666666666666,0.6666666666666666,0,2,TRUE,Doador prioritário
+África do Sul,2011,0,0,0,0,0,0,0,0,0,TRUE,Doador prioritário
+África do Sul,2012,0,0,0,0,0,0,0,0,0,TRUE,Doador prioritário
+África do Sul,2013,1,1,0,0,1,0,1,0,1,TRUE,Doador prioritário
+África do Sul,2014,0,0,0,0,0,0,0,0,0,TRUE,Doador prioritário
+México,2000,1,1,0,0,1,0,1,0,1,FALSE,Doador prioritário
+México,2001,1,1,0,0,1,0,1,0,1,FALSE,Doador prioritário
+México,2002,1,1,0,0,1,0,1,0,1,FALSE,Doador prioritário
+México,2003,2,2,0,0,1,0,0.5,0,2,FALSE,Doador prioritário
+México,2004,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+México,2005,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+México,2006,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+México,2007,4,3,0,2,2,0.5,0.5,0.25,4,FALSE,Doador prioritário
+México,2008,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+México,2009,19,2,0,18,18,0.9473684210526315,0.9473684210526315,0,3,TRUE,Doador prioritário
+México,2010,1,1,0,0,1,0,1,0,1,TRUE,Doador prioritário
+México,2011,1,1,0,0,1,0,1,0,1,TRUE,Doador prioritário
+México,2012,12,2,0,11,11,0.9166666666666666,0.9166666666666666,0,3,TRUE,Doador prioritário
+México,2013,0,0,0,0,0,0,0,0,0,TRUE,Doador prioritário
+México,2014,0,0,0,0,0,0,0,0,0,TRUE,Doador prioritário
+Indonésia,2000,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+Indonésia,2001,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+Indonésia,2002,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+Indonésia,2003,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+Indonésia,2004,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+Indonésia,2005,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+Indonésia,2006,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+Indonésia,2007,1,1,0,0,1,0,1,0,1,FALSE,Doador prioritário
+Indonésia,2008,7,2,1,7,4,1,0.5714285714285714,0.14285714285714285,6,FALSE,Doador prioritário
+Indonésia,2009,0,0,0,0,0,0,0,0,0,TRUE,Doador prioritário
+Indonésia,2010,0,0,0,0,0,0,0,0,0,TRUE,Doador prioritário
+Indonésia,2011,1,1,0,0,1,0,1,0,1,TRUE,Doador prioritário
+Indonésia,2012,0,0,0,0,0,0,0,0,0,TRUE,Doador prioritário
+Indonésia,2013,0,0,0,0,0,0,0,0,0,TRUE,Doador prioritário
+Indonésia,2014,0,0,0,0,0,0,0,0,0,TRUE,Doador prioritário
+Turquia,2000,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+Turquia,2001,1,1,0,0,1,0,1,0,1,FALSE,Doador prioritário
+Turquia,2002,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+Turquia,2003,1,1,0,0,1,0,1,0,1,FALSE,Doador prioritário
+Turquia,2004,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+Turquia,2005,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+Turquia,2006,2,1,1,2,2,1,1,0,2,FALSE,Doador prioritário
+Turquia,2007,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+Turquia,2008,0,0,0,0,0,0,0,0,0,FALSE,Doador prioritário
+Turquia,2009,0,0,0,0,0,0,0,0,0,TRUE,Doador prioritário
+Turquia,2010,5,3,1,3,3,0.6,0.6,0,4,TRUE,Doador prioritário
+Turquia,2011,2,1,0,2,2,1,1,0,1,TRUE,Doador prioritário
+Turquia,2012,0,0,0,0,0,0,0,0,0,TRUE,Doador prioritário
+Turquia,2013,0,0,0,0,0,0,0,0,0,TRUE,Doador prioritário
+Turquia,2014,0,0,0,0,0,0,0,0,0,TRUE,Doador prioritário
+Argentina,2000,3,2,0,2,2,0.6666666666666666,0.6666666666666666,0,2,FALSE,Regional secundário
+Argentina,2001,7,3,0,5,5,0.7142857142857143,0.7142857142857143,0,7,FALSE,Regional secundário
+Argentina,2002,3,3,0,0,1,0,0.3333333333333333,0,3,FALSE,Regional secundário
+Argentina,2003,11,4,0,8,8,0.7272727272727273,0.7272727272727273,0.09090909090909091,6,FALSE,Regional secundário
+Argentina,2004,1,1,0,0,1,0,1,0,1,FALSE,Regional secundário
+Argentina,2005,20,3,0,18,18,0.9,0.9,0.05,10,FALSE,Regional secundário
+Argentina,2006,3,3,0,0,1,0,0.3333333333333333,0,2,FALSE,Regional secundário
+Argentina,2007,2,2,0,0,1,0,0.5,0,2,FALSE,Regional secundário
+Argentina,2008,15,3,0,14,10,0.9333333333333333,0.6666666666666666,0,10,FALSE,Regional secundário
+Argentina,2009,5,2,0,4,4,0.8,0.8,0,4,TRUE,Regional secundário
+Argentina,2010,3,1,0,3,3,1,1,0,2,TRUE,Regional secundário
+Argentina,2011,9,1,1,9,9,1,1,0,5,TRUE,Regional secundário
+Argentina,2012,8,2,0,7,7,0.875,0.875,0,5,TRUE,Regional secundário
+Argentina,2013,1,1,0,0,1,0,1,0,1,TRUE,Regional secundário
+Argentina,2014,2,2,0,0,1,0,0.5,0,2,TRUE,Regional secundário
+Paraguai,2000,7,4,0,5,3,0.7142857142857143,0.42857142857142855,0,6,FALSE,Regional secundário
+Paraguai,2001,0,0,0,0,0,0,0,0,0,FALSE,Regional secundário
+Paraguai,2002,5,4,0,2,2,0.4,0.4,0,4,FALSE,Regional secundário
+Paraguai,2003,3,2,0,2,2,0.6666666666666666,0.6666666666666666,0,3,FALSE,Regional secundário
+Paraguai,2004,2,2,0,0,1,0,0.5,0.5,2,FALSE,Regional secundário
+Paraguai,2005,4,3,0,2,2,0.5,0.5,0,4,FALSE,Regional secundário
+Paraguai,2006,11,2,0,11,9,1,0.8181818181818182,0,7,FALSE,Regional secundário
+Paraguai,2007,19,6,0,14,14,0.7368421052631579,0.7368421052631579,0.05263157894736842,7,FALSE,Regional secundário
+Paraguai,2008,4,3,0,2,2,0.5,0.5,0.5,2,FALSE,Regional secundário
+Paraguai,2009,4,4,0,0,1,0,0.25,0,2,TRUE,Regional secundário
+Paraguai,2010,4,2,0,3,3,0.75,0.75,0,2,TRUE,Regional secundário
+Paraguai,2011,4,1,0,4,4,1,1,0,2,TRUE,Regional secundário
+Paraguai,2012,1,1,0,0,1,0,1,0,1,TRUE,Regional secundário
+Paraguai,2013,0,0,0,0,0,0,0,0,0,TRUE,Regional secundário
+Paraguai,2014,0,0,0,0,0,0,0,0,0,TRUE,Regional secundário
+Uruguai,2000,2,2,0,0,1,0,0.5,0.5,2,FALSE,Excluído: tratamento comercial posterior
+Uruguai,2001,0,0,0,0,0,0,0,0,0,FALSE,Excluído: tratamento comercial posterior
+Uruguai,2002,5,2,0,4,4,0.8,0.8,0.2,4,FALSE,Excluído: tratamento comercial posterior
+Uruguai,2003,3,3,0,0,1,0,0.3333333333333333,0,2,FALSE,Excluído: tratamento comercial posterior
+Uruguai,2004,4,4,0,0,1,0,0.25,0,3,FALSE,Excluído: tratamento comercial posterior
+Uruguai,2005,7,2,0,6,6,0.8571428571428571,0.8571428571428571,0,6,FALSE,Excluído: tratamento comercial posterior
+Uruguai,2006,13,4,0,11,9,0.8461538461538461,0.6923076923076923,0,7,FALSE,Excluído: tratamento comercial posterior
+Uruguai,2007,5,2,0,4,4,0.8,0.8,0.2,4,FALSE,Excluído: tratamento comercial posterior
+Uruguai,2008,6,4,0,3,3,0.5,0.5,0.16666666666666666,4,FALSE,Excluído: tratamento comercial posterior
+Uruguai,2009,6,2,0,6,3,1,0.5,0,4,TRUE,Excluído: tratamento comercial posterior
+Uruguai,2010,9,2,0,9,6,1,0.6666666666666666,0.1111111111111111,6,TRUE,Excluído: tratamento comercial posterior
+Uruguai,2011,12,1,1,12,12,1,1,0,4,TRUE,Excluído: tratamento comercial posterior
+Uruguai,2012,1,1,0,0,1,0,1,0,1,TRUE,Excluído: tratamento comercial posterior
+Uruguai,2013,3,2,0,2,2,0.6666666666666666,0.6666666666666666,0,3,TRUE,Excluído: tratamento comercial posterior
+Uruguai,2014,1,1,0,0,1,0,1,0,1,TRUE,Excluído: tratamento comercial posterior

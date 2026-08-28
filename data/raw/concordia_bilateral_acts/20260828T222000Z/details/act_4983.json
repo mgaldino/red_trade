@@ -1,0 +1,116 @@
+{
+  "$id": "1",
+  "Titulo": "Ajuste Complementar ao Acordo de Cooperação Científica e Técnica entre o governo da República Federativa do Brasil e do Governo da República Oriental do Uruguai sobre Atividades de Cooperação entre a Secretaria de Ciência e Tecnologia do Estado do Rio Grande do Sul e o Escritório de Planejamento e Orçamento da Presidência da República Oriental do Uruguai.",
+  "OutraParte": "Uruguai",
+  "OutrasPartes": [
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "Eduardo dos Santos",
+  "CargoSignatarioBrasil": "Embaixador",
+  "Depositario": null,
+  "LocalCelebracao": "Montevidéu",
+  "NomePaisCelebracao": "Uruguai",
+  "DataCelebracao": "24/06/2003",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": "Didier Opertti",
+      "CargoSignatario": "Min. das Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Cooperação e Desenvolvimento",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "123/2008",
+      "DataDocumento": "07/05/2008",
+      "Local": "SERE",
+      "DataRecebimento": "07/05/2008",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "97",
+    "DataDOU": "23/05/2008"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "07/05/2008",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 12651,
+      "NomeArquivo": "Uruguai - DOU - Publicação DAI - 97 - 2008.pdf",
+      "Descricao": "Publicação no DOU pela DAI.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "11",
+    "Id": 12649,
+    "NomeArquivo": "Uruguai - AC - Cooperação Científica e Técnica.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "12",
+      "DescricaoObservacao": "Conforme exposto nos artigos 9° 10° e 11° '' 9. Este Ajuste Complementar vigorará por 2 (dois) anos, sendo automaticamente renovado por períodos sucessivos de 1 (um) ano, a menos que uma das Partes manifeste à outra, com antecedência mínima de 90 (noventa) dias, sua intenção de dá-lo por terminado. 10. O término do presente Ajuste Complementar não afetará a validade nem a duração, ou mesmo o desenvolvimento dos projetos que se encontrarem em execução, a menos que as Partes acordem o contrário. 11. Este Ajuste Complementar entrará em vigor na data em que as Partes comuniquem por via diplomática o cumprimento dos requisitos legais internos para obrigar-se por acordos internacionais.''"
+    }
+  ]
+}

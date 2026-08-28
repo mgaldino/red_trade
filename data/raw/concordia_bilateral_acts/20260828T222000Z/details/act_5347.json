@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República Oriental do Uruguai para a Criação de Escolas e/ou Institutos Binacionais Fronteiriços Profissionais e/ou Técnicos e para o Credenciamento de Cursos Técnicos Binacionais Fronteiriços",
+  "OutraParte": "Uruguai",
+  "OutrasPartes": [
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "01/04/2005",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": "Reinaldo Gargano",
+      "CargoSignatario": "Ministro das Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Educação e Cultura",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "622",
+    "DataMensagem": "06/08/2009",
+    "NumeroDOU": "150",
+    "DataDOU": "07/08/2009"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "804",
+    "DataDecreto": "20/12/2010",
+    "NumeroDOU": "243",
+    "DataDOU": "21/12/2010"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "91/08",
+      "DataDocumento": "04/12/2008",
+      "Local": "Ministério das Relações Exteriores da República Oriental do Uruguai",
+      "DataRecebimento": "04/12/2008",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "446",
+      "DataDocumento": "22/09/2011",
+      "Local": "Embaixada em Montevidéu",
+      "DataRecebimento": "22/09/2011",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "8.455",
+    "DataDecreto": "20/05/2015",
+    "NumeroDOU": "95",
+    "DataDOU": "21/05/2015"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "22/09/2011",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 12792,
+      "NomeArquivo": "Uruguai - DOU - Decreto de Promulgação - 95 - 2015.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 12753,
+      "NomeArquivo": "Uruguai - DOU - Decreto Legislativo - 243 - 2010.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 12752,
+      "NomeArquivo": "Uruguai - DOU - Congresso - 150 - 2009.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 152,
+    "NomeArquivo": "Uruguai - Acordo - Institutos Binacionais Fronteiriços.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo XIV, parágrafo único: \"O presente Acordo entrará em vigor na data do recebimento da segunda notificação em que uma das Partes comunique o cumprimento de seus respectivos requisitos internos de aprovação, e terá vigência por tempo indeterminado\""
+    }
+  ]
+}

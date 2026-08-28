@@ -1,0 +1,1884 @@
+{
+  "$id": "1",
+  "Page": 1,
+  "Count": 41,
+  "TotalPages": 1,
+  "TotalCount": 41,
+  "Items": [
+    {
+      "$id": "2",
+      "Id": 7546,
+      "Titulo": "Memorando de Entendimento entre o Ministério das Relações Exteriores da República Federativa do Brasil e o Ministério de Negócios Estrangeiros da República da Índia sobre o Estabelecimento de Mecanismo de Consulta sobre Assuntos Consulares e de Mobilidade",
+      "Assuntos": [
+        {
+          "$id": "3",
+          "Id": 297,
+          "Nome": "Relações Diplomáticas e Consulares",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Índia",
+      "DataCelebracao": "16/07/2014",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "4",
+          "Id": 7505,
+          "NomeArquivo": "Índia - DOU - Publicação DAI - 154 - 2014.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "5",
+        "Id": 7504,
+        "NomeArquivo": "Índia - MdE - Assuntos Consulares.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "6",
+      "Id": 7547,
+      "Titulo": "Ajuste Complementar entre o Governo da República Federativa do Brasil e o Governo da República da Índia Estabelecendo Cooperação na Ampliação de uma Estação Terrestre Brasileira para o Recebimento e Processamento de Dados de Satélites de Sensoriamento Remoto Indianos (SRI)",
+      "Assuntos": [
+        {
+          "$id": "7",
+          "Id": 294,
+          "Nome": "Mar e Espaço",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+      "OutraParte": "Índia",
+      "DataCelebracao": "16/07/2014",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "8",
+        "Id": 8144,
+        "NomeArquivo": "Índia - AC - Satélites.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "9",
+      "Id": 7549,
+      "Titulo": "Memorando de Entendimento entre o Governo da República Federativa do Brasil e o Governo da República da Índia sobre Cooperação na Área de Meio Ambiente",
+      "Assuntos": [
+        {
+          "$id": "10",
+          "Id": 295,
+          "Nome": "Meio Ambiente e Sustentabilidade",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Índia",
+      "DataCelebracao": "16/07/2014",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "11",
+          "Id": 7501,
+          "NomeArquivo": "Índia - DOU - Publicação DAI - 158 - 2014.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "12",
+        "Id": 7500,
+        "NomeArquivo": "Índia - MdE - Meio Ambiente.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "13",
+      "Id": 11566,
+      "Titulo": "Acordo sobre o Novo Banco de Desenvolvimento (NBD)",
+      "Assuntos": [
+        {
+          "$id": "14",
+          "Id": 290,
+          "Nome": "Economia, Finanças e Tributos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "África do Sul",
+      "DataCelebracao": "15/07/2014",
+      "OutrasPartes": [
+        "África do Sul",
+        "China",
+        "Índia",
+        "Rússia",
+        "Bangladesh",
+        "Emirados Árabes Unidos",
+        "Argélia",
+        "Egito",
+        "Uzbequistão"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "15",
+          "Id": 34742,
+          "NomeArquivo": "CPP Guido Mantega NDB_260723_141258.pdf",
+          "Descricao": "Carta de Plenos Poderes Brasil ",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "16",
+          "Id": 34741,
+          "NomeArquivo": "Carta de Plenos Poderes Rússia (2).pdf",
+          "Descricao": "Carta de Plenos Poderes Rússia",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "17",
+          "Id": 34411,
+          "NomeArquivo": "Instrument of Acession to NDB Agreement.pdf",
+          "Descricao": "Publicação do Instrumento de Adesão - Uzbequistão",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "18",
+          "Id": 34168,
+          "NomeArquivo": "Instrumento de Adesão - Egito.pdf",
+          "Descricao": "Publicação do Instrumento de Adesão - Egito",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "19",
+          "Id": 33165,
+          "NomeArquivo": "Instrumento de Adesão - Argélia.pdf",
+          "Descricao": "Publicação do Instrumento de Adesão - Argélia",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "20",
+          "Id": 31070,
+          "NomeArquivo": "Instrumento de Adesão - EAU.pdf",
+          "Descricao": "Publicação do Instrumento de Adesão - Emirados Árabes Unidos",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "21",
+          "Id": 31053,
+          "NomeArquivo": "BRICS - Carta de Acessão - NDB - Bangladesh.pdf",
+          "Descricao": "Publicação da Carta de Acessão - Bangladesh",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "22",
+          "Id": 28017,
+          "NomeArquivo": "BRICS - Carta de Ratificação - NBD - India.pdf",
+          "Descricao": "Publicação da Carta de Ratificação - Índia",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "23",
+          "Id": 28016,
+          "NomeArquivo": "BRICS - Carta de Ratificação - NBD - Brasil.pdf",
+          "Descricao": "Publicação da Carta de Ratificação - Brasil",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "24",
+          "Id": 28015,
+          "NomeArquivo": "BRICS - Carta de Ratificação - NBD - Rússia.pdf",
+          "Descricao": "Publicação da Carta de Ratificação - Rússia",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "25",
+          "Id": 28014,
+          "NomeArquivo": "BRICS - Carta de Ratificação - NBD - China.pdf",
+          "Descricao": "Publicação da Carta de Ratificação - China ",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "26",
+          "Id": 28013,
+          "NomeArquivo": "BRICS - Carta de Ratificação - NBD - África do Sul.pdf",
+          "Descricao": "Publicação da Carta de Ratificação - África do Sul ",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "27",
+          "Id": 6156,
+          "NomeArquivo": "Novo Banco de Desenvolvimento - DOU - Decreto de Promulgação - 249 - 2015.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "28",
+          "Id": 305,
+          "NomeArquivo": "Acordo Novo Banco de Desenvolvimento - Decreto Legislativo - 105 - 2015.pdf",
+          "Descricao": "Acordo Novo Banco de Desenvolvimento - Decreto Legislativo - 105 - 2015",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "29",
+        "Id": 29,
+        "NomeArquivo": "Acordo Sobre o Novo Banco de Desenvolvimento - Agreement on the New Development Bank.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "30",
+      "Id": 11567,
+      "Titulo": "Tratado para o Estabelecimento do Arranjo Contingente de Reservas dos BRICS",
+      "Assuntos": [
+        {
+          "$id": "31",
+          "Id": 290,
+          "Nome": "Economia, Finanças e Tributos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "China",
+      "DataCelebracao": "15/07/2014",
+      "OutrasPartes": [
+        "China",
+        "África do Sul",
+        "Rússia",
+        "Índia"
+      ],
+      "TipoAcordo": "ML",
+      "Documentos": [
+        {
+          "$id": "32",
+          "Id": 34788,
+          "NomeArquivo": "CPP Contigente Reserva BRICS_260724_125726.pdf",
+          "Descricao": "Carta de Plenos Poderes Brasil",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "33",
+          "Id": 28022,
+          "NomeArquivo": "BRICS - Carta de Ratificação - Reservas dos BRICS - África do Sul.pdf",
+          "Descricao": "Publicação da Carta de Ratificação - África do Sul ",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "34",
+          "Id": 28021,
+          "NomeArquivo": "BRICS - Carta de Ratificação - Reservas dos BRICS - Índia.pdf",
+          "Descricao": "Publicação da Carta de Ratificação - India",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "35",
+          "Id": 28020,
+          "NomeArquivo": "BRICS - Carta de Ratificação - Reservas dos BRICS - Brasil.pdf",
+          "Descricao": "Publicação da Carta de Ratificação - Brasil",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "36",
+          "Id": 28019,
+          "NomeArquivo": "BRICS - Carta de Ratificação - Reservas dos BRICS - China.pdf",
+          "Descricao": "Publicação da Carta de Ratificação - China ",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "37",
+          "Id": 28018,
+          "NomeArquivo": "BRICS - Carta de Ratificação - Reservas dos BRICS - Rússia.pdf",
+          "Descricao": "Publicação da Carta de Ratificação - Rússia",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "38",
+          "Id": 8271,
+          "NomeArquivo": "Tratado - Arranjo Contingente de Reservas - DOU - Decreto de Promulgação - 63 - 2016.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "39",
+          "Id": 304,
+          "NomeArquivo": "Tratado Arranjo Contingente de Reservas - Decreto Legislativo - 102 - 2015.pdf",
+          "Descricao": "Tratado - Arranjo Contingente de Reservas - Decreto Legislativo - 105 - 2015",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "40",
+        "Id": 30035,
+        "NomeArquivo": "ACR - Texto.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "41",
+      "Id": 7481,
+      "Titulo": "Protocolo Alterando a Convenção entre o Governo da República Federativa do Brasil e o Governo da República da Índia Destinada a Evitar a Dupla Tributação e Prevenir a Evasão Fiscal em Matéria de impostos sobre a Renda, Celebrada em Nova Delhi, em 26 de abril de 1988",
+      "Assuntos": [
+        {
+          "$id": "42",
+          "Id": 290,
+          "Nome": "Economia, Finanças e Tributos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Índia",
+      "DataCelebracao": "15/10/2013",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "43",
+          "Id": 25172,
+          "NomeArquivo": "Índia - DOU - Decreto de Promulgação - 232 - 2017.pdf",
+          "Descricao": "Publicação do Decreto de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "44",
+          "Id": 21518,
+          "NomeArquivo": "Índia - DOU - Decreto Legislativo - 100 - 2017.pdf",
+          "Descricao": "Publicação no DOU de Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "45",
+          "Id": 5251,
+          "NomeArquivo": "Índia - DOU - Mensagem ao Congresso - 213 - 2015.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso ",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "46",
+        "Id": 7514,
+        "NomeArquivo": "Índia - Protocolo Alternativo - Dupla Tributação.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "47",
+      "Id": 7482,
+      "Titulo": "Acordo sobre Transferência de Pessoas Condenadas entre a República Federativa do Brasil e a República da Índia",
+      "Assuntos": [
+        {
+          "$id": "48",
+          "Id": 289,
+          "Nome": "Direito, Justiça & Segurança Pública",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Índia",
+      "DataCelebracao": "15/10/2013",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "49",
+          "Id": 29975,
+          "NomeArquivo": "Publicação no DOU do Decreto Presidencial - Promulgação.pdf",
+          "Descricao": "Publicação no Dou do Decreto Presidencial - Promulgação.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "50",
+          "Id": 28087,
+          "NomeArquivo": "Índia - DOU - Publicação Decreto Legislativo.pdf",
+          "Descricao": "Índia - DOU - Decreto Legislativo 146/2018",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "51",
+          "Id": 13681,
+          "NomeArquivo": "Índia - DOU - Mensagem ao Congresso - 159 - 2016.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "52",
+        "Id": 13033,
+        "NomeArquivo": "Índia - Acordo - Transferência de Pessoas Condenadas.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "53",
+      "Id": 7279,
+      "Titulo": "Declaração de Intenções para a Promoção da Igualdade de Gênero e a Promoção dos Direitos da Mulher e da Criança",
+      "Assuntos": [
+        {
+          "$id": "54",
+          "Id": 289,
+          "Nome": "Direito, Justiça & Segurança Pública",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Índia",
+      "DataCelebracao": "30/03/2012",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "55",
+        "Id": 7493,
+        "NomeArquivo": "Índia - Declaração de Intenções - Direiros Humanos.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "56",
+      "Id": 7280,
+      "Titulo": "Memorando de Entendimento entre o Governo da República Federativa do Brasil e o Governo da República da Índia em Cooperação na Área de Biotecnologia",
+      "Assuntos": [
+        {
+          "$id": "57",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Expirado",
+      "OutraParte": "Índia",
+      "DataCelebracao": "30/03/2012",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "58",
+          "Id": 7478,
+          "NomeArquivo": "índia - DOU - Publiação DAI - 102 - 2012.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "59",
+        "Id": 7477,
+        "NomeArquivo": "Índia - MdE - Biotecnologia.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "60",
+      "Id": 7282,
+      "Titulo": "Programa Executivo de Intercâmbios Culturais entre o Governo da República Federativa do Brasil e o Governo da República da Índia para o Período 2012-2014",
+      "Assuntos": [
+        {
+          "$id": "61",
+          "Id": 291,
+          "Nome": "Educação e Cultura",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Expirado",
+      "OutraParte": "Índia",
+      "DataCelebracao": "30/03/2012",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "62",
+          "Id": 7486,
+          "NomeArquivo": "Índia - DOU - Publicação DAI - 102 - 2012.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "63",
+        "Id": 7485,
+        "NomeArquivo": "Índia - Programa Executivo - Intermcâmbio Cultural.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "64",
+      "Id": 7283,
+      "Titulo": "Memorando de Entendimento sobre Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República da Índia",
+      "Assuntos": [
+        {
+          "$id": "65",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Índia",
+      "DataCelebracao": "30/03/2012",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "66",
+          "Id": 7483,
+          "NomeArquivo": "Índia - DOU - Publicação DAI - 102 - 2012.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "67",
+        "Id": 7482,
+        "NomeArquivo": "Índia - MdE - Cooperação Técnica.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "68",
+      "Id": 11505,
+      "Titulo": "Memorando de Entendimento sobre Cooperação Mútua entre o Instituto Rio Branco do Ministério das Relações Exteriores da República Federativa do Brasil, o Instituto de Serviço Exterior do Ministério de Negócios Estrangeiros da República da Índia e a Academia Diplomática do Departamento de Relações Internacionais e Cooperação da República da África do Sul",
+      "Assuntos": [
+        {
+          "$id": "69",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "70",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Índia",
+      "DataCelebracao": "18/10/2011",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "TL",
+      "Documentos": [
+        {
+          "$id": "71",
+          "Id": 34482,
+          "NomeArquivo": "IBAS DOU.pdf",
+          "Descricao": "DOU Publicado pela DAI",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "72",
+          "Id": 34206,
+          "NomeArquivo": "Memorando de Entendimento_ África do Sul (HINDI)_260512_170138.pdf",
+          "Descricao": "Documento com íntegra do Acordo (HINDI)",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "73",
+          "Id": 34205,
+          "NomeArquivo": "Memorando de Entendimento_ África do Sul (ENG)_260512_170025.pdf",
+          "Descricao": "Documento com íntegra do Acordo (ENG)",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "74",
+        "Id": 34207,
+        "NomeArquivo": "Memorando de Entendimento_ África do Sul_260512_165848.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "75",
+      "Id": 7071,
+      "Titulo": "Acordo sobre Serviços Aéreos entre o Governo da República do Brasil e o Governo da República da Índia",
+      "Assuntos": [
+        {
+          "$id": "76",
+          "Id": 298,
+          "Nome": "Serviços e Transporte",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Índia",
+      "DataCelebracao": "08/03/2011",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "77",
+          "Id": 32959,
+          "NomeArquivo": "DOU 27, 07.02.2025 S1 p. 7-10.pdf",
+          "Descricao": "Publicação no DOU - promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "78",
+          "Id": 25909,
+          "NomeArquivo": "India - Nota.pdf",
+          "Descricao": "India - Nota",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "79",
+          "Id": 25265,
+          "NomeArquivo": "Índia - DOU - Decreto Legislativo - 181 - 2017.pdf",
+          "Descricao": "Publicação no DOU de Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "80",
+          "Id": 9104,
+          "NomeArquivo": "Índia - DOU - Mensagem ao Congresso - 87 - 2016.pdf",
+          "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "81",
+        "Id": 7471,
+        "NomeArquivo": "Índia - Acordo - Serviços Aéreos.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "82",
+      "Id": 13247,
+      "Titulo": "Acordo Tripartite entre o Governo da República Federativa do Brasil, o Governo da República da Índia e o Governo a República da África do Sul sobre Cooperação no Campo do Turismo no Âmbito do Fórum de Diálogo IBAS",
+      "Assuntos": [
+        {
+          "$id": "83",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        },
+        {
+          "$id": "84",
+          "Id": 298,
+          "Nome": "Serviços e Transporte",
+          "IsPrincipal": false
+        }
+      ],
+      "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+      "OutraParte": "Índia",
+      "DataCelebracao": "15/10/2008",
+      "OutrasPartes": [
+        "Índia",
+        "África do Sul"
+      ],
+      "TipoAcordo": "TL",
+      "Documentos": [
+        {
+          "$id": "85",
+          "Id": 34616,
+          "NomeArquivo": "2011-06-28 - NV South Africa IBSA Tourism ratification.pdf",
+          "Descricao": "Nota Verbal África do Sul Ratificação (Brasil)",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "86",
+          "Id": 34494,
+          "NomeArquivo": "IBAS Turismo DOU Despacho_260612_140755.pdf",
+          "Descricao": "DOU Despacho",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "87",
+          "Id": 34493,
+          "NomeArquivo": "IBAS Turismo DOU DL_260612_140901.pdf",
+          "Descricao": " DOU Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "88",
+          "Id": 34492,
+          "NomeArquivo": "IBAS Turismo NV_260612_140702.pdf",
+          "Descricao": "Nota Verbal Brasil Ratificação (Índia)",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "89",
+          "Id": 34491,
+          "NomeArquivo": "IBAS Turismo NV-Brasil_260612_140618.pdf",
+          "Descricao": "Nota Verbal Brasil Ratificação (África do Sul)",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "90",
+          "Id": 34489,
+          "NomeArquivo": "IBAS Turismo DL_260612_140504.pdf",
+          "Descricao": "Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "91",
+          "Id": 34488,
+          "NomeArquivo": "IBAS Turismo EN_260612_140409.pdf",
+          "Descricao": "Documento com íntegra do Acordo (ING)",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "92",
+          "Id": 34487,
+          "NomeArquivo": "IBAS Turismo Hindu_260612_140338.pdf",
+          "Descricao": "Documento com íntegra do Acordo (Hindu)",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "93",
+        "Id": 34486,
+        "NomeArquivo": "IBAS Turismo PT_260612_140301.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "94",
+      "Id": 11375,
+      "Titulo": "Memorando de Entendimento entre o Governo da República Federativa do Brasil, o Governo da República da Índia e o Governo da República da África do Sul sobre Facilitação Comercial para Padronizações, Regulações Técnicas e Avaliação de Conformidade",
+      "Assuntos": [
+        {
+          "$id": "95",
+          "Id": 285,
+          "Nome": "Comércio Internacional e Investimentos",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "96",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Ratificação",
+      "OutraParte": "Índia",
+      "DataCelebracao": "15/10/2008",
+      "OutrasPartes": [
+        "Índia",
+        "África do Sul"
+      ],
+      "TipoAcordo": "TL",
+      "Documentos": [
+        {
+          "$id": "97",
+          "Id": 29762,
+          "NomeArquivo": "IBAS - Facilitação Comercial - DOU - Decreto Legislativo - 168-A - 2010.pdf",
+          "Descricao": "Publicação no DOU de Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "98",
+          "Id": 29761,
+          "NomeArquivo": "IBAS - Facilitação Comercial - DOU - Mensagem ao Congresso - 95 - 2009.pdf",
+          "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "99",
+        "Id": 29760,
+        "NomeArquivo": "MdE - IBAS - Facilitação Comercial.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "100",
+      "Id": 11377,
+      "Titulo": "Memorando de Entendimento sobre Cooperação na Área de Meio Ambiente no Âmbito do Fórum de Diálogo Índia, Brasil e África do Sul (IBAS)",
+      "Assuntos": [
+        {
+          "$id": "101",
+          "Id": 295,
+          "Nome": "Meio Ambiente e Sustentabilidade",
+          "IsPrincipal": false
+        },
+        {
+          "$id": "102",
+          "Id": 296,
+          "Nome": "Organizações e Grupos Internacionais",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "África do Sul",
+      "DataCelebracao": "15/10/2008",
+      "OutrasPartes": [
+        "África do Sul",
+        "Índia"
+      ],
+      "TipoAcordo": "TL",
+      "Documentos": [
+        {
+          "$id": "103",
+          "Id": 34547,
+          "NomeArquivo": "IBAS_DOU_260622_184147.pdf",
+          "Descricao": "Publicação no Diário Oficial",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "104",
+        "Id": 34546,
+        "NomeArquivo": "IBAS_Texto_260622_183811.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "105",
+      "Id": 6073,
+      "Titulo": "Tratado de Extradição entre a República Federativa do Brasil e a República da Índia",
+      "Assuntos": [
+        {
+          "$id": "106",
+          "Id": 289,
+          "Nome": "Direito, Justiça & Segurança Pública",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Índia",
+      "DataCelebracao": "16/04/2008",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "107",
+          "Id": 21429,
+          "NomeArquivo": "Índia - DOU - Decreto de Promulgação - 98 - 2017.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "108",
+          "Id": 7662,
+          "NomeArquivo": "Índia - DOU - Decreto Legislativo - 97 - 2012.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "109",
+          "Id": 7661,
+          "NomeArquivo": "Índia - DOU - Mensagem ao Congresso - 136 - 2008.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "110",
+        "Id": 1182,
+        "NomeArquivo": "Índia - Tratado - Extradição.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "111",
+      "Id": 6074,
+      "Titulo": "Memorando de Entendimento entre o Governo da República Federativa do Brasil e o Governo da República da Índia na Área de Defesa Civil e Assistência Humanitária",
+      "Assuntos": [
+        {
+          "$id": "112",
+          "Id": 289,
+          "Nome": "Direito, Justiça & Segurança Pública",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Índia",
+      "DataCelebracao": "16/04/2008",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "113",
+          "Id": 7460,
+          "NomeArquivo": "Índia - DOU - Publicação DAI - 84 - 2008.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "114",
+        "Id": 7459,
+        "NomeArquivo": "Índia - MdE - Defesa Civil.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "115",
+      "Id": 6075,
+      "Titulo": "Memorando de Entendimento para Cooperação no Setor de Petróleo e Gás Natural entre o Ministério de Minas e Energia do Governo da República Federativa do Brasil e o Ministério do Petróleo e Gás Natural do Governo da República Da Índia",
+      "Assuntos": [
+        {
+          "$id": "116",
+          "Id": 292,
+          "Nome": "Energia e Recursos Estratégicos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Expirado",
+      "OutraParte": "Índia",
+      "DataCelebracao": "16/04/2008",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "117",
+          "Id": 7462,
+          "NomeArquivo": "Índia - DOU - Publicação DAI - 84 - 2008.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "118",
+        "Id": 7461,
+        "NomeArquivo": "Índia - MdE - Gás Natural e Petróleo.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "119",
+      "Id": 6076,
+      "Titulo": "Memorando de Entendimento entre o Governo da República Federativa do Brasil e a República da Índia para a Cooperação em Agricultura e Setores Afins",
+      "Assuntos": [
+        {
+          "$id": "120",
+          "Id": 283,
+          "Nome": "Agricultura, Pecuária e Pesca",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Índia",
+      "DataCelebracao": "16/04/2008",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "121",
+          "Id": 7464,
+          "NomeArquivo": "Índia - DOU - Publicação DAI - 84 -2008.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "122",
+        "Id": 7463,
+        "NomeArquivo": "Índia - MdE - Agricultura.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "123",
+      "Id": 6029,
+      "Titulo": "Memorando de Entendimento entre o Governo da República Federativa do Brasil e o Governo da República Federativa do Brasil sobre a Luta Contra a Fome e a Pobreza",
+      "Assuntos": [
+        {
+          "$id": "124",
+          "Id": 289,
+          "Nome": "Direito, Justiça & Segurança Pública",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Índia",
+      "DataCelebracao": "18/02/2008",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "125",
+          "Id": 7642,
+          "NomeArquivo": "Índia - DOU - Publicação DAI - 36 - 2008.pdf",
+          "Descricao": "Publicação no DOU da DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "126",
+        "Id": 7640,
+        "NomeArquivo": "Índia - MdE - Combate à Fome.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "127",
+      "Id": 6030,
+      "Titulo": "Memorando de Entendimento entre o Governo da República Federativa do Brasil e o Governo da República da Índia sobre Cooperação em Esportes e Assuntos de Juventude",
+      "Assuntos": [
+        {
+          "$id": "128",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Expirado",
+      "OutraParte": "Índia",
+      "DataCelebracao": "18/02/2008",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "129",
+          "Id": 7644,
+          "NomeArquivo": "Índia - DOU - Publicação DAI - 38 - 2008.pdf",
+          "Descricao": "Publicação no DOU da DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "130",
+        "Id": 7643,
+        "NomeArquivo": "Índia - MdE - Esporte e Juventude.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "131",
+      "Id": 6031,
+      "Titulo": "Memorando de Entendimento entre a República Federativa do Brasil e a República da Índia sobre Cooperação no Setor de Infra-Estrutura",
+      "Assuntos": [
+        {
+          "$id": "132",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Expirado",
+      "OutraParte": "Índia",
+      "DataCelebracao": "18/02/2008",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "133",
+          "Id": 7653,
+          "NomeArquivo": "Índia - DOU - Publicação DAI - 36 - 2008.pdf",
+          "Descricao": "Publicação no DOU da DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "134",
+        "Id": 7652,
+        "NomeArquivo": "Índia - MdE - Infraestrutura.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "135",
+      "Id": 5930,
+      "Titulo": "Memorando de Entendimento entre o Governo da República Federativa do Brasil e o Governo da República da Índia sobre Cooperação Mútua entre as Academias Diplomáticas",
+      "Assuntos": [
+        {
+          "$id": "136",
+          "Id": 297,
+          "Nome": "Relações Diplomáticas e Consulares",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Índia",
+      "DataCelebracao": "12/09/2007",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "137",
+          "Id": 7638,
+          "NomeArquivo": "Índia - DOU - Publicação DAI - 191 - 2007.pdf",
+          "Descricao": "Publicação no DOU da DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "138",
+        "Id": 7637,
+        "NomeArquivo": "India - MdE - Academias Diplomáticas.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "139",
+      "Id": 5851,
+      "Titulo": "Acordo de Co-produção Audiovisual entre o Governo da República Federativa do Brasil e o Governo da República da Índia",
+      "Assuntos": [
+        {
+          "$id": "140",
+          "Id": 291,
+          "Nome": "Educação e Cultura",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Índia",
+      "DataCelebracao": "04/06/2007",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "141",
+          "Id": 7623,
+          "NomeArquivo": "Índia - DOU - Decreto de Promulgação - 211 - 2011.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "142",
+          "Id": 7622,
+          "NomeArquivo": "Índia - DOU - Decreto Legislativo - 185 - 2009.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "143",
+          "Id": 7621,
+          "NomeArquivo": "Índia - DOU - Mensagem ao Congresso 23 - 2008.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "144",
+        "Id": 7616,
+        "NomeArquivo": "Índia - Acordo - Co-produção Audiovisual.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "145",
+      "Id": 5852,
+      "Titulo": "Ajuste Complementar entre o Governo da República Federativa do Brasil e o Governo da República da Índia sobre Cooperação para a Ampliação da Estação Brasileira Terrestre de Recepção e Processamento de Dados dos Satélites de Sensoreamento Remoto da Índia",
+      "Assuntos": [
+        {
+          "$id": "146",
+          "Id": 294,
+          "Nome": "Mar e Espaço",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Expirado",
+      "OutraParte": "Índia",
+      "DataCelebracao": "04/06/2007",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "147",
+        "Id": 7624,
+        "NomeArquivo": "Índia - AC - Satélite.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "148",
+      "Id": 5816,
+      "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República da Índia sobre Assistência Mútua em Matéria Aduaneira",
+      "Assuntos": [
+        {
+          "$id": "149",
+          "Id": 290,
+          "Nome": "Economia, Finanças e Tributos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Índia",
+      "DataCelebracao": "04/05/2007",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "150",
+          "Id": 7634,
+          "NomeArquivo": "Índia - DOU - Decreto de Promulgação - 223 - 2014.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "151",
+          "Id": 7633,
+          "NomeArquivo": "Índia - DOU - Decreto Legislativo - 205 - 2011.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "152",
+          "Id": 7632,
+          "NomeArquivo": "Índia - DOU - Mensagem ao Congresso - 38 - 2010.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "153",
+        "Id": 8273,
+        "NomeArquivo": "Índia - Acordo - Matéria Aduaneira.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "154",
+      "Id": 5677,
+      "Titulo": "Acordo sobre Serviços Aéreos entre o Governo da República Federativa do Brasil e o Governo da Índia",
+      "Assuntos": [
+        {
+          "$id": "155",
+          "Id": 298,
+          "Nome": "Serviços e Transporte",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Substituído",
+      "OutraParte": "Índia",
+      "DataCelebracao": "12/09/2006",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "156",
+          "Id": 7527,
+          "NomeArquivo": "Índia - DOU - Decreto Legislativo - 182 - 2008.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "157",
+          "Id": 7526,
+          "NomeArquivo": "Índia - DOU - Mensagem ao Congresso - 13 - 2007.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "158",
+        "Id": 7524,
+        "NomeArquivo": "Índia - Acordo - Serviços Áereos 2006.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "159",
+      "Id": 5678,
+      "Titulo": "Acordo entre a República Federativa do Brasil e a República da Índia em Cooperação Científica e Tecnológica",
+      "Assuntos": [
+        {
+          "$id": "160",
+          "Id": 284,
+          "Nome": "Ciência, Tecnologia e Inovação",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Índia",
+      "DataCelebracao": "12/09/2006",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "161",
+          "Id": 7567,
+          "NomeArquivo": "Índia - DOU - Decreto de Promulgação - 25 - 2013.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "162",
+          "Id": 7566,
+          "NomeArquivo": "Índia - DOU - Decreto Legislativo - 66 - 2010.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "163",
+          "Id": 7565,
+          "NomeArquivo": "Índia - DOU - Mensagem ao Congresso - 211 - 2008.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "164",
+        "Id": 7547,
+        "NomeArquivo": "Índia - Acordo - Coop. Científica e Tecnológica.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "165",
+      "Id": 5679,
+      "Titulo": "Memorando de Entendimento entre o Governo da República Federativa do Brasil e o Governo da República da Índia para Cooperação na Área de Assentamentos Humanos",
+      "Assuntos": [
+        {
+          "$id": "166",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Índia",
+      "DataCelebracao": "12/09/2006",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "167",
+          "Id": 7613,
+          "NomeArquivo": "Índia - DOU - Publicação DAI - 184 - 2006.pdf",
+          "Descricao": "Publicação no DOU da DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "168",
+        "Id": 7612,
+        "NomeArquivo": "Índia - MdE - Área de Assentamentos Humanos.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "169",
+      "Id": 5680,
+      "Titulo": "Memorandum de Entendimento entre o Governo da República Federativa do Brasil e o Governo da República da Índia com Vistas à Implementação das \"Semanas de Cultura Brasileira na Índia\" e das \"Semanas de Cultura Indiana no Brasil\"",
+      "Assuntos": [
+        {
+          "$id": "170",
+          "Id": 291,
+          "Nome": "Educação e Cultura",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Índia",
+      "DataCelebracao": "12/09/2006",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "171",
+          "Id": 7615,
+          "NomeArquivo": "Índia - DOU - Publicação DAI - 184 - 2006.pdf",
+          "Descricao": "Publicação no DOU da DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "172",
+        "Id": 7614,
+        "NomeArquivo": "Índia - MdE - Semana Cultural.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "173",
+      "Id": 5551,
+      "Titulo": "Programa Executivo Cultural entre o Governo da República Federativa do Brasil e o Governo da República da Índia para os Anos 2006-2007",
+      "Assuntos": [
+        {
+          "$id": "174",
+          "Id": 291,
+          "Nome": "Educação e Cultura",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Expirado",
+      "OutraParte": "Índia",
+      "DataCelebracao": "02/02/2006",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "175",
+          "Id": 7499,
+          "NomeArquivo": "Índia - DOU - Publicação DAI - 51 - 2006.pdf",
+          "Descricao": "Publicação no DOU da DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "176",
+        "Id": 7498,
+        "NomeArquivo": "Índia - Programa Executivo - Cultural.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "177",
+      "Id": 5552,
+      "Titulo": "Acordo entre o Governo da Republica Federativa do Brasil e o o Governo da Republica da Índia sobre o Exercício de Atividades Remuneradas por Parte dos Dependentes do Pessoal Diplomático e Consular",
+      "Assuntos": [
+        {
+          "$id": "178",
+          "Id": 297,
+          "Nome": "Relações Diplomáticas e Consulares",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Índia",
+      "DataCelebracao": "02/02/2006",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "179",
+          "Id": 7481,
+          "NomeArquivo": "Índia - DOU - Mensagem ao Congresso - 136 - 2007.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "180",
+          "Id": 7480,
+          "NomeArquivo": "Índia - DOU - Decreto Legislativo - 166 - 2009.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "181",
+          "Id": 7479,
+          "NomeArquivo": "Índia - DOU - Decreto de Promulgação - 221 - 2014.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "182",
+        "Id": 7484,
+        "NomeArquivo": "índia- Acordo - Atividade Remunerada Dependentes.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "183",
+      "Id": 5550,
+      "Titulo": "Programa de Intercâmbio entre o Governo da República Federativa do Brasil e o Governo da República da Índia de Cooperação no Campo da Educação",
+      "Assuntos": [
+        {
+          "$id": "184",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Índia",
+      "DataCelebracao": "01/02/2006",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "185",
+          "Id": 7553,
+          "NomeArquivo": "Índia - DOU - Publicação DAI - 51 - 2006.pdf",
+          "Descricao": "Publicação no DOU da DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "186",
+        "Id": 7552,
+        "NomeArquivo": "Índia - Programa de Intercâmbio - Educação.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "187",
+      "Id": 5139,
+      "Titulo": "Acordo de Cooperação na Área do Turismo entre o Governo da República Federativa do Brasil e o Governo da República da Índia",
+      "Assuntos": [
+        {
+          "$id": "188",
+          "Id": 298,
+          "Nome": "Serviços e Transporte",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+      "OutraParte": "Índia",
+      "DataCelebracao": "25/01/2004",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "189",
+          "Id": 7665,
+          "NomeArquivo": "Índia - DOU - Decreto Legislativo - 75 - 2006.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "190",
+          "Id": 7664,
+          "NomeArquivo": "Índia - DOU - Mensagem ao Congresso - 184 - 2004.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "191",
+        "Id": 7666,
+        "NomeArquivo": "Índia - Acordo - Turismo.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "192",
+      "Id": 5140,
+      "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República da Índia sobre Isenção de Vistos para Portadores de Passaportes Diplomáticos, Oficiais e de Serviço",
+      "Assuntos": [
+        {
+          "$id": "193",
+          "Id": 286,
+          "Nome": "Consulares e Migratórios",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Índia",
+      "DataCelebracao": "25/01/2004",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "194",
+          "Id": 7656,
+          "NomeArquivo": "Índia - DOU - Publicação DAI - 227 - 2004.pdf",
+          "Descricao": "Publicação no DOU da DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "195",
+        "Id": 7663,
+        "NomeArquivo": "Índia - Acordo - Isenção de Vistos.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "196",
+      "Id": 5141,
+      "Titulo": "Programa Executivo Cultural entre o Governo da República Federativa do Brasil e o Governo da República da Índia para os Anos 2004-2005",
+      "Assuntos": [
+        {
+          "$id": "197",
+          "Id": 291,
+          "Nome": "Educação e Cultura",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Expirado",
+      "OutraParte": "Índia",
+      "DataCelebracao": "25/01/2004",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "198",
+          "Id": 8098,
+          "NomeArquivo": "Índia - DOU - Publicação da DAI - 35 - 2004.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "199",
+        "Id": 7557,
+        "NomeArquivo": "Índia- Programa Executivo - Cultural 2004 - 2005.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "200",
+      "Id": 5143,
+      "Titulo": "Acordo-Quadro entre o Governo da República Federativa do Brasil e o Governo da República da índia sobre a Cooperação nos Usos Pacíficos do Espaço Exterior",
+      "Assuntos": [
+        {
+          "$id": "201",
+          "Id": 294,
+          "Nome": "Mar e Espaço",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Índia",
+      "DataCelebracao": "25/01/2004",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "202",
+          "Id": 9245,
+          "NomeArquivo": "Índia - DOU - Mensagem ao Congresso - 2005.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "203",
+          "Id": 8900,
+          "NomeArquivo": "India - DOU - Decreto de Promulgação - 135 - 2014.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "204",
+          "Id": 8899,
+          "NomeArquivo": "India - DOU - Decreto Legislativo - 182 - 2008.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "205",
+        "Id": 8898,
+        "NomeArquivo": "India- Acordo - Espaço Exterior.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "206",
+      "Id": 5118,
+      "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República da Índia sobre Cooperação em Assuntos Relativos à Defesa",
+      "Assuntos": [
+        {
+          "$id": "207",
+          "Id": 288,
+          "Nome": "Defesa e Segurança",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Índia",
+      "DataCelebracao": "01/12/2003",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "208",
+          "Id": 8080,
+          "NomeArquivo": "Índia - DOU - Decreto de Promulgação - 90 - 2007.pdf",
+          "Descricao": "Publicação no DOU de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "209",
+          "Id": 8079,
+          "NomeArquivo": "Índia - DOU - Decreto Legislativo - 224 - 2006.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "210",
+          "Id": 8078,
+          "NomeArquivo": "Índia - DOU - Mensagem ao Congresso - 99 - 2004.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "211",
+        "Id": 8075,
+        "NomeArquivo": "Índia - Acordo - Defesa.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "212",
+      "Id": 4896,
+      "Titulo": "Memorando de Entendimento entre o Governo da República Federativa do Brasil e o Governo da República da Índia que Estabelece uma Comissão Mista de Cooperação Política, Econômica, Científica, Tecnológica e Cultural",
+      "Assuntos": [
+        {
+          "$id": "213",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Índia",
+      "DataCelebracao": "22/08/2002",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "214",
+          "Id": 7708,
+          "NomeArquivo": "Índia - DOU - Publicação DAI - 175 - 2002.pdf",
+          "Descricao": "Publicação no DOU da DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "215",
+        "Id": 7709,
+        "NomeArquivo": "Índia - MdE - Comissão Mista.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "216",
+      "Id": 4833,
+      "Titulo": "Memorando de Entendimento entre a República Federativa do Brasil e o Governo da República da Índia Referente à Cooperação Tecnológica na Área de Mistura de Etanol em Combustíveis para Transportes",
+      "Assuntos": [
+        {
+          "$id": "217",
+          "Id": 292,
+          "Nome": "Energia e Recursos Estratégicos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Expirado",
+      "OutraParte": "Índia",
+      "DataCelebracao": "08/04/2002",
+      "OutrasPartes": [
+        "Índia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "218",
+          "Id": 7964,
+          "NomeArquivo": "Índia - DOU - Mensagem ao Congresso - 161 - 2002.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "219",
+          "Id": 7963,
+          "NomeArquivo": "Índia - DOU - Decreto Legislativo - 38 - 2006.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "220",
+          "Id": 7962,
+          "NomeArquivo": "Índia - DOU - Decreto de Promulgação - 121 - 2006.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "221",
+        "Id": 8020,
+        "NomeArquivo": "Índia - MdE - Etanol.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    }
+  ]
+}

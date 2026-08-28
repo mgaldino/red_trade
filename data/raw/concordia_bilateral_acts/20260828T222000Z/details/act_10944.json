@@ -1,0 +1,122 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo-Quadro sobre Meio Ambiente do MERCOSUL - Decisão nº 02/01",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai",
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Lafer",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Assunção",
+  "NomePaisCelebracao": "Paraguai",
+  "DataCelebracao": "22/06/2001",
+  "TipoAcordo": "ML",
+  "PossuiHtml": false,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Meio Ambiente e Sustentabilidade",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": "1.068",
+    "DataMensagem": "04/10/2001",
+    "NumeroDOU": "192",
+    "DataDOU": "05/10/2001"
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": "333",
+    "DataDecreto": "24/07/2003",
+    "NumeroDOU": "142",
+    "DataDOU": "25/07/2003"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "5.208",
+    "DataDecreto": "17/09/2004",
+    "NumeroDOU": "181",
+    "DataDOU": "20/09/2004"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "23/06/2004",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 27045,
+      "NomeArquivo": "Acordo-Quadro - Meio Ambiente - MERCOSUL - DOU - Mensagem ao Congresso - 192 - 2001.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 27044,
+      "NomeArquivo": "Acordo-Quadro - Meio Ambiente - MERCOSUL - DOU - Decreto Legislativo - 142 - 2003.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 27043,
+      "NomeArquivo": "Acordo-Quadro - Meio Ambiente - MERCOSUL - DOU - Decreto de Promulgação - 181 - 2004.pdf",
+      "Descricao": "Publicação no DOU da Promulgação.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 1730,
+    "NomeArquivo": "Acordo-Quadro - Meio Ambiente - MERCOSUL.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo 9º: \"O presente Acordo terá vigência indefinida e entrará em vigor num prazo de 30 (trinta) dias depois do depósito do quarto instrumento de ratificação.\""
+    }
+  ]
+}

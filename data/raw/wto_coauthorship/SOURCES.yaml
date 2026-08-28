@@ -1,0 +1,15 @@
+sources:
+  - id: wto_documents_online
+    institution: World Trade Organization
+    title: WTO Documents Online
+    url: https://docs.wto.org/dol2fe/Pages/FE_Search/FE_S_S001.aspx
+    accessed_at: 2026-08-28
+    access_mode: public_web_interface_and_explicit_direct_document_links
+    period_requested: 2000-01-01/2014-12-31
+    notes:
+      - Pair-conditioned title searches are discovery devices, not an authorship census.
+      - No documented public API was identified during the access audit.
+      - The portal robots.txt declared Disallow slash for all user agents on the access date.
+      - Direct PDFs used in validation are listed individually in the CSV manifests and JSON download logs.
+    transformations: none_raw_files_preserved
+

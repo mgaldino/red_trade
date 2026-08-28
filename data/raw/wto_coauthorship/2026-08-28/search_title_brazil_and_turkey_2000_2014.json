@@ -1,0 +1,606 @@
+{
+  "accessed_at": "2026-08-28T22:18:33.619Z",
+  "coverage_note": "Lista de resultados exibida pelo portal oficial; títulos podem estar truncados na interface e exigem validação no PDF/registro de catálogo.",
+  "extracted_records": 34,
+  "query": {
+    "collection": "WTO",
+    "date_from": "01/01/2000",
+    "date_to": "31/12/2014",
+    "hits_per_page": 500,
+    "interface_language": "ENGLISH",
+    "title_query": "Brazil AND Turkey"
+  },
+  "records": [
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "128557",
+      "date": "12/11/2014",
+      "document_number": "14-6622",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=q:/G/SPS/NBRA1003.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=r:/G/SPS/NBRA1003.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "20 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=s:/G/SPS/NBRA1003.pdf&Open=True",
+      "symbol": "G/SPS/N/BRA/1003",
+      "title_displayed": "Committee on Sanitary and Phytosanitary Measures - Notification - Brazil - Chickens and turkeys"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "113585",
+      "date": "30/11/2012",
+      "document_number": "12-6633",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=q:/WT/GC/150.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=r:/WT/GC/150.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "8 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=s:/WT/GC/150.pdf&Open=True",
+      "symbol": "WT/GC/150",
+      "title_displayed": "General Council - 11 December 2012 - Ukraine article XXVIII notification - Communication from Asean, Australia, Brazil, Canada, Chile, Colombia, Croatia, Egypt, European Union, Guatemala, Hong Kong China, Iceland, Japan, Korea, Liechtenstein, Mexico, New Zealand, Norwa[...], Turkey and the United States"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "96936",
+      "date": "27/11/2012",
+      "document_number": "12-6543",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/C/W678.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/G/C/W678.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "11 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=s:/G/C/W678.pdf&Open=True",
+      "symbol": "G/C/W/678",
+      "title_displayed": "Council for Trade in Goods - Ukraine's Article XXVIII notification : joint statement by Australia, Brazil, Canada, Chile, Colombia, Croatia, the European Union, Guatemala, Hong Kong, China, Iceland, Japan, Korea, Liechtenstein, Malaysia, Mexico, New Zealand, Norway, Om[...]d, Turkey and the United States"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "96646",
+      "date": "04/05/2011",
+      "document_number": "11-2320",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/SCMQ2/BRA31.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/G/SCMQ2/BRA31.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 3,
+      "size": "16 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/G/SCMQ2/BRA31.pdf&Open=True",
+      "symbol": "G/SCM/Q2/BRA/31",
+      "title_displayed": "Committee on Subsidies and Countervailing Measures - Subsidies - Replies to questions posed by Turkey regarding the nNew and full notification of Brazil"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "86806",
+      "date": "19/04/2011",
+      "document_number": "11-2006",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/SCMQ2/BRA26.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/G/SCMQ2/BRA26.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "15 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/G/SCMQ2/BRA26.pdf&Open=True",
+      "symbol": "G/SCM/Q2/BRA/26",
+      "title_displayed": "Committee on Subsidies and Countervailing Measures - Subsidies - Questions posed by Turkey regarding the new and full notification of Brazil"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "118088",
+      "date": "31/03/2011",
+      "document_number": "English",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 1,
+      "size": "11 KB",
+      "spanish_url": null,
+      "symbol": "RD/SERV/54",
+      "title_displayed": "Working Party on Domestic Regulation - Unofficial room document - Communication from Argentina, Brazil, China, Ecuador, India, Indonesia, The Philippines, South Africa, Turkey, and the Group of Small, Vulnerable Economies (SVES) - Proposal on paragraph 42 of the Chairperson's draft text"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "103788",
+      "date": "09/12/2009",
+      "document_number": "09-6384",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/MIN09/W1A3.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/MIN09/W1A3.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "11 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/MIN09/W1A3.pdf&Open=True",
+      "symbol": "WT/MIN(09)/W/1/Add.3",
+      "title_displayed": "Ministerial Conference - Seventh Session - Geneva, 30 November - 2 December 2009 - Strengthening the WTO - Communication from Australia, Brazil, Canada, China, Hong Kong China, European Communities, India, Japan, Korea, Malaysia, Mauritius, Mexico, Norway, South Africa[...]d States and Uruguay - Addendum"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "94034",
+      "date": "10/11/2009",
+      "document_number": "09-5612",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/MIN09/W1A2.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/MIN09/W1A2.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "11 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/MIN09/W1A2.pdf&Open=True",
+      "symbol": "WT/MIN(09)/W/1/Add.2",
+      "title_displayed": "Ministerial Conference - Seventh Session - Geneva, 30 November - 2 December 2009 - Strengthening the WTO - Communication from Australia, Brazil, Canada, China, Hong Kong China, European Communities, India, Japan, Korea, Malaysia, Mauritius, Mexico, Norway, South Africa[...]d States and Uruguay - Addendum"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "90807",
+      "date": "30/10/2009",
+      "document_number": "09-5435",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/MIN09/W1A1.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/MIN09/W1A1.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "12 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/MIN09/W1A1.pdf&Open=True",
+      "symbol": "WT/MIN(09)/W/1/Add.1",
+      "title_displayed": "Ministerial Conference - Seventh Session - Geneva, 30 November - 2 December 2009 - Strengthening the WTO - Communication from Australia, Brazil, Canada, China, Hong Kong China, European Communities, India, Japan, Korea, Malaysia, Mauritius, Mexico, Norway, South Africa[...]d States and Uruguay - Addendum"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "92550",
+      "date": "16/10/2009",
+      "document_number": "09-5119",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/MIN09/W1.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/MIN09/W1.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "13 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/MIN09/W1.pdf&Open=True",
+      "symbol": "WT/MIN(09)/W/1",
+      "title_displayed": "Ministerial Conference - Seventh Session - Geneva, 30 November - 2 December 2009 - Strengthening the WTO - Communication from Australia, Brazil, Canada, China, Hong Kong China, European Communities, India, Japan, Korea, Malaysia, Mauritius, Mexico, Norway, South Africa[...]rkey, United States and Uruguay"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "80404",
+      "date": "29/07/2008",
+      "document_number": "08-3623",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/C/W52A3.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/C/W52A3.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "11 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/C/W52A3.pdf&Open=True",
+      "symbol": "TN/C/W/52/Add.3",
+      "title_displayed": "Trade Negotiations Committee - Draft Modalities for TRIPS Related Issues - Communication from Communication from Albania, Brazil, China, Colombia, Croatia, Ecuador, the European Communities, Georgia, Iceland, India, Indonesia, the Kyrgyz Republic, Liechtenstein, the Fo[...]nd the African Group - Addendum"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "69295",
+      "date": "25/07/2008",
+      "document_number": "08-3600",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/C/W52A2.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/C/W52A2.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "11 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/C/W52A2.pdf&Open=True",
+      "symbol": "TN/C/W/52/Add.2",
+      "title_displayed": "Trade Negotiations Committee - Draft Modalities for TRIPS Related Issues - Communication from Albania, Brazil, China, Colombia, Croatia, Ecuador, the European Communities, Georgia, Iceland, India, Indonesia, the Kyrgyz Republic, Liechtenstein, the Former Yugoslav Repub[...]nd the African Group - Addendum"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "91464",
+      "date": "24/07/2008",
+      "document_number": "08-3590",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/C/W52A1.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/C/W52A1.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "11 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/C/W52A1.pdf&Open=True",
+      "symbol": "TN/C/W/52/Add.1",
+      "title_displayed": "Trade Negotiations Committee - Draft Modalities for TRIPS Related Issues - Communication from Albania, Brazil, China, Colombia, Ecuador, the European Communities, Iceland, India, Indonesia, the Kyrgyz Republic, Liechtenstein, the Former Yugoslav Republic of Macedonia,[...]nd the African Group - Addendum"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "92094",
+      "date": "19/07/2008",
+      "document_number": "08-3499",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/C/W52.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/C/W52.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 3,
+      "size": "15 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/C/W52.pdf&Open=True",
+      "symbol": "TN/C/W/52",
+      "title_displayed": "Trade Negotiations Committee - Draft Modalities for TRIPS Related Issues - Communication from Albania, Brazil, China, Colombia, Ecuador, the European Communities, Iceland, India, Indonesia, the Kyrgyz Republic, Liechtenstein, the Former Yugoslav Republic of Macedonia,[...]ACP Group and the African Group"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "82559",
+      "date": "17/07/2008",
+      "document_number": "08-3469",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 2,
+      "size": "15 KB",
+      "spanish_url": null,
+      "symbol": "JOB(08)/80",
+      "title_displayed": "[Council for Trade-Related Aspects of Intellectual Property Rights] - Draft Modalities for TRIPS-Related Issues - Communication from Albania, Brazil, China, Ecuador, the European Communities, India, Indonesia, the Kyrgyz Republic, the Former Yugoslav Republic of Macedo[...]ACP Group and the African Group"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "75603",
+      "date": "15/02/2005",
+      "document_number": "05-0616",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/RL/W171.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/RL/W171.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 4,
+      "size": "34 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/RL/W171.pdf&Open=True",
+      "symbol": "TN/RL/W/171",
+      "title_displayed": "Negotiating Group on Rules - Senior Officials' Statement - Communication from Brazil, Chile, Colombia, Costa Rica, Hong Kong, China; Israel, Japan, Korea, Rep. of; Mexico, Norway, Singapore, Switzerland, the Separate Customs Territory of Taiwan, Penghu, Kinmen and Matsu, Thailand and Turkey"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "78218",
+      "date": "14/02/2005",
+      "document_number": "05-0592",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 2,
+      "size": "19 KB",
+      "spanish_url": null,
+      "symbol": "JOB(05)/10/Rev.1",
+      "title_displayed": "Negotiating Group on Rules - Proposal on de Minimis Margins of Dumping - Paper from Brazil, Chile, Colombia, Costa Rica, Hong Kong, China; Israel, Japan, Korea, Rep. of; Norway, Singapore, Switzerland, the Separate Customs Territory of Taiwan, Penghu, Kinmen and Matsu, Thailand and Turkey - Revision"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "53313",
+      "date": "14/02/2005",
+      "document_number": "05-0593",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 2,
+      "size": "18 KB",
+      "spanish_url": null,
+      "symbol": "JOB(05)/11/Rev.1",
+      "title_displayed": "Negotiating Group on Rules - Proposal on Negligible Imports - Paper from Brazil, Chile, Colombia, Costa Rica, Hong Kong, China; Israel, Japan, Korea, Rep. of; Norway, Singapore, Switzerland, the Separate Customs Territory of Taiwan, Penghu, Kinmen and Matsu, Thailand and Turkey - Revision"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "51880",
+      "date": "14/02/2005",
+      "document_number": "05-0590",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/RL/GEN31R1.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/RL/GEN31R1.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 3,
+      "size": "19 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/RL/GEN31R1.pdf&Open=True",
+      "symbol": "TN/RL/GEN/31/Rev.1",
+      "title_displayed": "Negotiating Group on Rules - Proposal on Negligible Imports - Paper from Brazil, Chile, Colombia, Costa Rica, Hong Kong, China; Israel, Japan, Korea, Rep. of; Norway, Singapore, Switzerland, the Separate Customs Territory of Taiwan, Penghu, Kinmen and Matsu, Thailand and Turkey - Revision"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "46856",
+      "date": "14/07/2004",
+      "document_number": "04-3016",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/RL/GEN1.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/RL/GEN1.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "28 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/RL/GEN1.pdf&Open=True",
+      "symbol": "TN/RL/GEN/1",
+      "title_displayed": "Negotiating Group on Rules - Lesser Duty Rule - Communication from Brazil; Chile; Colombia; Costa Rica; Hong Kong, China; Israel; Japan; Korea, Republic of; Mexico; Norway; Singapore; Switzerland; Separate Customs Territory of Taiwan, Penghu, Kinmen and Matsu; Thailand and Turkey"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "73206",
+      "date": "13/04/2004",
+      "document_number": "04-1651",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 2,
+      "size": "23 KB",
+      "spanish_url": null,
+      "symbol": "JOB(04)/40/Rev.1",
+      "title_displayed": "Negotiating Group on Rules - Communication from Brazil; Chile; Colombia; Costa Rica; Hong Kong, China; Israel; Japan; Korea, Republic of; Mexico; Norway; Singapore; Switzerland; Separate Customs Territory of Taiwan, Penghu, Kinmen and Matsu; Thailand and Turkey - Lesser Duty Rule - Revision"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "70364",
+      "date": "08/04/2004",
+      "document_number": "04-1628",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 2,
+      "size": "23 KB",
+      "spanish_url": null,
+      "symbol": "JOB(04)/40",
+      "title_displayed": "Negotiating Group on Rules - Communication from Brazil; Chile; Colombia; Costa Rica; Hong Kong, China; Israel; Japan; Korea, Republic of; Mexico; Norway; Singapore; Switzerland; Chinese Taipei; Thailand and Turkey - Lesser Duty Rule"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "103230",
+      "date": "16/06/2003",
+      "document_number": "03-3154",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/RL/W119.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/RL/W119.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 4,
+      "size": "27 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/RL/W119.pdf&Open=True",
+      "symbol": "TN/RL/W/119",
+      "title_displayed": "Negotiating Group on Rules - Proposal on Lesser Duty - Paper from Brazil; Chile; Colombia; Costa Rica; Hong Kong, China; Israel; Japan; Korea; Mexico; Norway; Singapore; Switzerland; the Separate Customs Territory of Taiwan, Penghu, Kinmen and Matsu; Thailand and Turkey"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "14756",
+      "date": "06/05/2003",
+      "document_number": "03-2413",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/RL/W104.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/RL/W104.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 3,
+      "size": "23 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/RL/W104.pdf&Open=True",
+      "symbol": "TN/RL/W/104",
+      "title_displayed": "Negotiating Group on Rules - Agreements on Anti-Dumping Practices and Subsidies and Countervailing Measures Illustrative Common Issues - Paper by Brazil; Chile; Costa Rica; Hong Kong, China; Japan; Korea; Norway; Switzerland; Thailand and Turkey"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "25848",
+      "date": "19/03/2003",
+      "document_number": "03-1605",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/RL/W76.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/RL/W76.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 3,
+      "size": "24 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/RL/W76.pdf&Open=True",
+      "symbol": "TN/RL/W/76",
+      "title_displayed": "Negotiating Group on Rules - Proposal on Sunset - Paper from Brazil; Chile; Colombia; Costa Rica; Hong Kong, China; Israel; Japan; Korea; Norway; the Separate Customs Territory of Taiwan, Penghu, Kinmen and Matsu; Switzerland; Thailand and Turkey"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "21783",
+      "date": "24/01/2003",
+      "document_number": "03-0404",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/RL/W46.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/RL/W46.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "15 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/RL/W46.pdf&Open=True",
+      "symbol": "TN/RL/W/46",
+      "title_displayed": "Negotiating Group on Rules - Fourth Contribution to the Discussion of the Negotiating Group on Rules on Anti-Dumping Measures - Paper by Brazil; Chile; Colombia; Costa Rica; Hong Kong, China; Israel; Korea; Japan; Mexico; Norway; Separate Customs Territory of Taiwan,[...]witzerland; Thailand and Turkey"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "42325",
+      "date": "22/11/2002",
+      "document_number": "02-6499",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/RL/W28R1.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/RL/W28R1.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 3,
+      "size": "26 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/RL/W28R1.pdf&Open=True",
+      "symbol": "TN/RL/W/28/Rev.1",
+      "title_displayed": "Negotiating Group on Rules - General Contribution to the Discussion of the Negotiating Group on Rules on Anti-Dumping Measures - Paper from Brazil; Chile; Colombia; Costa Rica; Hong Kong, China; Israel; Japan; Korea; Mexico; Norway; Separate Customs Territory of Taiwan[...]Thailand; and Turkey - Revision"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "42718",
+      "date": "15/11/2002",
+      "document_number": "02-6346",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/RL/W28.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/RL/W28.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 3,
+      "size": "26 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/RL/W28.pdf&Open=True",
+      "symbol": "TN/RL/W/28",
+      "title_displayed": "Negotiating Group on Rules - General Contribution to the Discussion of the Negotiating Group on Rules on Anti-Dumping Measures - Paper from Brazil; Chile; Colombia; Costa Rica; Hong Kong, China; Israel; Japan; Korea; Norway; Separate Customs Territory of Taiwan, Pengh[...]itzerland; Thailand; and Turkey"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "35698",
+      "date": "15/11/2002",
+      "document_number": "02-6351",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/RL/W29.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/RL/W29.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 5,
+      "size": "32 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/RL/W29.pdf&Open=True",
+      "symbol": "TN/RL/W/29",
+      "title_displayed": "Negotiating Group on Rules - Third Contribution to Discussion of the Negotiating Group on Rules on Anti-Dumping Measures - Paper from Brazil; Chile; Colombia; Costa Rica; Hong Kong, China; Japan; Korea; Norway; Separate Customs Territory of Taiwan, Penghu, Kinmen and M[...]tzerland; Thailand; and Turkey"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "57086",
+      "date": "26/04/2002",
+      "document_number": "02-2421",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/RL/W6.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/RL/W6.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 6,
+      "size": "36 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/RL/W6.pdf&Open=True",
+      "symbol": "TN/RL/W/6",
+      "title_displayed": "Negotiating Group on Rules - Anti-Dumping: Illustrative Major Issues - Paper from Brazil; Chile, Colombia, Costa Rica, Hong Kong, China, Israel, Japan; Korea, Mexico, Norway, Singapore, Switzerland, Thailand and Turkey"
+    },
+    {
+      "access": "Derestricted",
+      "catalogue_id": "7331",
+      "date": "10/01/2001",
+      "document_number": "01-0097",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/SCMQ1/TUR5.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/G/SCMQ1/TUR5.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 14,
+      "size": "80 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/G/SCMQ1/TUR5.pdf&Open=True",
+      "symbol": "G/ADP/Q1/TUR/5 ; G/SCM/Q1/TUR/5",
+      "title_displayed": "Committee on Anti-Dumping Practices - Committee on Subsidies and Countervailing Measures - Notification of Laws and Regulations under Articles 18.5 and 32.6 of the Agreements - Replies to Questions Posed by Japan, the United States, and Brazil Regarding the Notificatio[...]ing the Notification of Turkey"
+    },
+    {
+      "access": "Derestricted",
+      "catalogue_id": "9256",
+      "date": "26/10/2000",
+      "document_number": "00-4467",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/SCMQ1/TUR4.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/G/SCMQ1/TUR4.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 4,
+      "size": "32 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/G/SCMQ1/TUR4.pdf&Open=True",
+      "symbol": "G/ADP/Q1/TUR/4 ; G/SCM/Q1/TUR/4",
+      "title_displayed": "Committee on Anti-Dumping Practices - Committee on Subsidies and Countervailing Measures - Notification of Laws and Regulations under Articles 18.5 and 32.6 of the Agreements - Questions Posed by Brazil Regarding the Notification of Turkey"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "25530",
+      "date": "12/10/2000",
+      "document_number": "00-4209",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/ADP/D27-1.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/G/ADP/D27-1.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "16 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/G/ADP/D27-1.pdf&Open=True",
+      "symbol": "G/ADP/D27/1 ; G/L/397 ; WT/DS208/1",
+      "title_displayed": "Turkey - Anti-Dumping Duty on Steel and Iron Pipe Fittings - Request for Consultations from Brazil"
+    },
+    {
+      "access": "Derestricted",
+      "catalogue_id": "1759",
+      "date": "13/01/2000",
+      "document_number": "00-0139",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/SCMQ1/USA19.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/G/SCMQ1/USA19.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 26,
+      "size": "141 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/G/SCMQ1/USA19.pdf&Open=True",
+      "symbol": "G/ADP/Q1/USA/19 ; G/SCM/Q1/USA/19",
+      "title_displayed": "Committee on Anti-Dumping Practices - Committee on Subsidies and Countervailing Measures - Notification of Laws and Regulations under Articles 18.5 and 32.6 of the Agreements - Replies to Questions from Argentina, Brazil, the European Communities, Hong Kong, China, Jap[...]tification of the United States"
+    }
+  ],
+  "reported_hits": 34,
+  "search_url": "https://docs.wto.org/dol2fe/Pages/FE_Search/FE_S_S006.aspx?MetaCollection=WTO&IssuingDateFrom=01%2f01%2f2000&IssuingDateTo=31%2f12%2f2014&CATTITLE=Brazil+AND+Turkey&Language=ENGLISH&SearchPage=FE_S_S001&languageUIChanged=true",
+  "source": "WTO Documents Online"
+}

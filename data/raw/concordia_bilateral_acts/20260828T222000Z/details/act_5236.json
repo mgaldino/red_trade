@@ -1,0 +1,112 @@
+{
+  "$id": "1",
+  "Titulo": "Ajuste Complementar ao Acordo de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai na Área de Formação e Capacitação Profissional",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Lauro Barbosa da Silva Moreira",
+  "CargoSignatarioBrasil": "Diretor-Geral da ABC",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "22/10/2004",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [
+    {
+      "$id": "2",
+      "Id": 11813,
+      "Titulo": "Emenda, por Troca de Notas, ao Ajuste Complementar ao Acordo de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai na Área de Formação e Capacitação Profissional"
+    }
+  ],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "3",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": "Luis Gonzalez Arias",
+      "CargoSignatario": "Embaixador do Paraguai"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Cooperação e Desenvolvimento",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "7",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "04",
+    "DataDOU": "06/01/2005"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": " 41458",
+    "DataEntradaVigor": "22/10/2004",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 10182,
+      "NomeArquivo": "Paraguai - DOU - Publicação DAI - 04 - 2005.pdf",
+      "Descricao": "Publicação no DOU pela DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "11",
+    "Id": 10180,
+    "NomeArquivo": "Paraguai - AC - Capacitação Profissional.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "12",
+      "DescricaoObservacao": "Conforme disposto no Artigo 8: \"O presente Ajuste Complementar entrará em vigor na data de sua assinatura e terá  vigência de dois anos, podendo ser renovado por mais 2 (dois) anos, mediante notificação, por via diplomática, entre as Partes.\""
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo-Quadro sobre Complementação Energética Regional entre os Estados Partes do MERCOSUL e Estados Associados (Acordo de Alcance Parcial de Promoção do Comércio n° 19 - AAP.PC N°19) - AAP19",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Luiz Inácio Lula da Silva/ Celso Luiz Nunes Amorim",
+  "CargoSignatarioBrasil": "Presidente da República/ Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Montevidéu",
+  "NomePaisCelebracao": "Uruguai",
+  "DataCelebracao": "09/12/2005",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Comércio Internacional e Investimentos",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "518",
+    "DataMensagem": "05/07/2006",
+    "NumeroDOU": "128",
+    "DataDOU": "06/07/2006"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "979",
+    "DataDecreto": "22/12/2009",
+    "NumeroDOU": "245",
+    "DataDOU": "23/12/2009"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "6",
+    "NumeroDecreto": "7.377",
+    "DataDecreto": "01/12/2010",
+    "NumeroDOU": "230",
+    "DataDOU": "02/12/2010"
+  },
+  "Vigencia": {
+    "$id": "7",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [],
+  "DocumentoIntegra": {
+    "$id": "8",
+    "Id": 3655,
+    "NomeArquivo": "Acordo - Complementação Econômica Regional - port esp.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": []
+}

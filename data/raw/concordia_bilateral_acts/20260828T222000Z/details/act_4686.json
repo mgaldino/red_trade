@@ -1,0 +1,120 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo sobre Isenção de Vistos em Passaportes Comuns",
+  "OutraParte": "México",
+  "OutrasPartes": [
+    "México"
+  ],
+  "SignatarioBrasil": "Luiz Felipe Lampreia",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "23/11/2000",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "México",
+      "NomeSignatario": "Jorge Eduardo Navarreta",
+      "CargoSignatario": "Embaixador"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Consulares e Migratórios",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "625",
+    "DataMensagem": "11/07/2002",
+    "NumeroDOU": "133",
+    "DataDOU": "12/07/2002"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "969",
+    "DataDecreto": "16/12/2003",
+    "NumeroDOU": "245",
+    "DataDOU": "17/12/2003"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": "08/01/2004",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "4952",
+    "DataDecreto": "14/01/2004",
+    "NumeroDOU": "10",
+    "DataDOU": "15/01/2004"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "07/02/2004",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 9027,
+      "NomeArquivo": "México - DOU - Decreto de Promulgação - 10 - 2004.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 9151,
+      "NomeArquivo": "México - DOU - Decreto Legislativo - 245 (pg.20) - 2003.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 9152,
+      "NomeArquivo": "México - DOU - Mensagem ao Congresso - 133 (pg.22) - 2002.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 9021,
+    "NomeArquivo": "México - Acordo de Isenção de Vistos em Passaportes Comuns - 2000.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme Artigo XI, \"O presente Acordo entrará em vigor 30 (trinta) dias após a data em que o Governo da República Federativa do Brasil comunique ao Governo dos Estados Unidos Mexicanos o cumprimento dos requisitos legais internos necessários para este efeito.\""
+    }
+  ]
+}

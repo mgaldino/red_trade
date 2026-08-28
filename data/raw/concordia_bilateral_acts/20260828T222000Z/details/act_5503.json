@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre a República Federativa do Brasil e a República Argentina para Concessão de Permanência a Detentores de Vistos Temporários ou a Turistas",
+  "OutraParte": "Argentina",
+  "OutrasPartes": [
+    "Argentina"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Puerto Iguazú",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "30/11/2005",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Argentina",
+      "NomeSignatario": "Rafael Antonio Bielsa",
+      "CargoSignatario": "Ministro das Relações Exteriores, Comércio Internacional e Culto"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Consulares e Migratórios",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "113",
+    "DataMensagem": "23/02/2006",
+    "NumeroDOU": "40",
+    "DataDOU": "24/02/2006"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "227",
+    "DataDecreto": "03/09/2008",
+    "NumeroDOU": "171",
+    "DataDOU": "04/09/2008"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "162",
+      "DataDocumento": "10/05/2007",
+      "Local": "MRE, Comércio Internacional e Culto",
+      "DataRecebimento": "10/05/2007",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "638",
+      "DataDocumento": "20/10/2008",
+      "Local": "Embaixada em Buenos Aires",
+      "DataRecebimento": "20/10/2008",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "6736",
+    "DataDecreto": "12/01/2009",
+    "NumeroDOU": "8",
+    "DataDOU": "13/01/2009"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "27/11/2008",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 2420,
+      "NomeArquivo": "Argentina - DOU - Decreto de Promulgação - 8 - 2009.pdf",
+      "Descricao": "Publicação no DOU de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 2321,
+      "NomeArquivo": "Argentina - DOU - Decreto de Legislativo - 171 - 2008.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 2320,
+      "NomeArquivo": "Argentina - DOU - Mensagem ao Congresso - 40 - 2006.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 2324,
+    "NomeArquivo": "Argentina - Acordo - Permanência Vistos Temporarios e Turustas.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme Disposto no Artigo 11: \"O presente Acordo entrará em vigência trinta dias após a data da última das notas pelas quais as Partes comuniquem o cumprimento das formalidades legais internas para sua entrada em vigor\"."
+    }
+  ]
+}

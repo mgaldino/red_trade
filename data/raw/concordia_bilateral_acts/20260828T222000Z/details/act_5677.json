@@ -1,0 +1,127 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo sobre Serviços Aéreos entre o Governo da República Federativa do Brasil e o Governo da Índia",
+  "OutraParte": "Índia",
+  "OutrasPartes": [
+    "Índia"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "12/09/2006",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Índia",
+      "NomeSignatario": "Anan Sharma",
+      "CargoSignatario": "Ministro de Estado para Negócios Estrangeiros"
+    }
+  ],
+  "AcordoSubstituiu": {
+    "$id": "3",
+    "Id": 7071,
+    "Titulo": "Acordo sobre Serviços Aéreos entre o Governo da República do Brasil e o Governo da República da Índia"
+  },
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Serviços e Transporte",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "23",
+    "DataMensagem": "17/01/2007",
+    "NumeroDOU": "13",
+    "DataDOU": "18/01/2007"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "259",
+    "DataDecreto": "18/09/2008",
+    "NumeroDOU": "182",
+    "DataDOU": "19/09/2008"
+  },
+  "Ratificacao": [
+    {
+      "$id": "7",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "8",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "214",
+      "DataDocumento": "25/09/2008",
+      "Local": "Embaixada em Nova Delhi",
+      "DataRecebimento": "25/09/2008",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "9",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "10",
+    "Vigencia": "Substituído",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "11",
+      "Id": 7527,
+      "NomeArquivo": "Índia - DOU - Decreto Legislativo - 182 - 2008.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 7526,
+      "NomeArquivo": "Índia - DOU - Mensagem ao Congresso - 13 - 2007.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 7524,
+    "NomeArquivo": "Índia - Acordo - Serviços Áereos 2006.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme Disposto no Artigo 22 \"As autoridades competentes da República Federativa do Brasil e da Índia permitirão operações em conformidade com os termos deste Acordo, mediante sua assinatura. Este Acordo entrará em vigor na data a ser determinada por meio de troca de Notas diplomáticas que indiquem que todos os procedimentos internos necessários foram cumpridos por ambas as Partes Contratantes.\""
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "$id": "1",
+  "Titulo": "Memorando de Entendimento sobre Cooperação Mútua entre o Instituto Rio Branco do Ministério das Relações Exteriores da República Federativa do Brasil, o Instituto de Serviço Exterior do Ministério de Negócios Estrangeiros da República da Índia e a Academia Diplomática do Departamento de Relações Internacionais e Cooperação da República da África do Sul",
+  "OutraParte": "Índia",
+  "OutrasPartes": [
+    "Índia"
+  ],
+  "SignatarioBrasil": null,
+  "CargoSignatarioBrasil": null,
+  "Depositario": null,
+  "LocalCelebracao": "Pretória",
+  "NomePaisCelebracao": "África do Sul",
+  "DataCelebracao": "18/10/2011",
+  "TipoAcordo": "TL",
+  "PossuiHtml": false,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Índia",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Cooperação e Desenvolvimento",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "7",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "107",
+    "DataDOU": "11/06/2026"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "18/10/2011",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 34482,
+      "NomeArquivo": "IBAS DOU.pdf",
+      "Descricao": "DOU Publicado pela DAI",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 34206,
+      "NomeArquivo": "Memorando de Entendimento_ África do Sul (HINDI)_260512_170138.pdf",
+      "Descricao": "Documento com íntegra do Acordo (HINDI)",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 34205,
+      "NomeArquivo": "Memorando de Entendimento_ África do Sul (ENG)_260512_170025.pdf",
+      "Descricao": "Documento com íntegra do Acordo (ENG)",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 34207,
+    "NomeArquivo": "Memorando de Entendimento_ África do Sul_260512_165848.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "ART. VIII. 1. Este Memorando de Entendimento surtirá efeito na data de sua assinatura e permanecerá em aplicação por período de três anos, a partir de então renovável automaticamente, a cada vez, por período adicional de três anos, exceto se denunciado por um dos Institutos ao menos três meses antes da expiração de seu período de validade."
+    }
+  ]
+}

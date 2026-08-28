@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo sobre o Fortalecimento da Cooperação na Área de Implementação de Infra-Estrutura de Construção entre o Governo da República Federativa do Brasil e o Governo da República Popular da China",
+  "OutraParte": "China",
+  "OutrasPartes": [
+    "China"
+  ],
+  "SignatarioBrasil": "Silas Rondeau",
+  "CargoSignatarioBrasil": "Ministro de Minas e Energia",
+  "Depositario": null,
+  "LocalCelebracao": "Pequim",
+  "NomePaisCelebracao": "China",
+  "DataCelebracao": "05/06/2006",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "China",
+      "NomeSignatario": "Ma Xiuhong",
+      "CargoSignatario": "Vice-Ministra do Comércio Exterior"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Energia e Recursos Estratégicos",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "489",
+    "DataMensagem": "29/06/2006",
+    "NumeroDOU": "124",
+    "DataDOU": "30/06/2006"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "409",
+    "DataDecreto": "12/09/2006",
+    "NumeroDOU": "176",
+    "DataDOU": "13/09/2006"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "265",
+      "DataDocumento": "20/11/2006",
+      "Local": null,
+      "DataRecebimento": "22/11/2006",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "84",
+      "DataDocumento": "18/09/2006",
+      "Local": "Embaixada em Pequim",
+      "DataRecebimento": "18/09/2006",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "6009",
+    "DataDecreto": "03/01/2007",
+    "NumeroDOU": "3",
+    "DataDOU": "04/01/2007"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "22/11/2006",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 3997,
+      "NomeArquivo": "China - DOU - Congresso - 124 - 2006.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 3994,
+      "NomeArquivo": "China - DOU - Decreto Legislativo - 176 - 2006.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 3993,
+      "NomeArquivo": "China - DOU - Promulgação - 3 - 2007.pdf",
+      "Descricao": "Publicação no DOU de Promulgação",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 4252,
+    "NomeArquivo": "China - Acordo - Infra-estrutura.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto Artigo VII, parágrafo 1: \"Este Acordo entrará em vigor na data de recebimento, por escrito e por via diplomática, da segunda notificação pela qual uma Parte informe a outra do cumprimento dos respectivos requisitos constitucionais internos necessários para tal efeito."
+    }
+  ]
+}

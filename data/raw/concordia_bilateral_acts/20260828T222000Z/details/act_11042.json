@@ -1,0 +1,121 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo sobre Residência para Nacionais dos Estados Partes do MERCOSUL, Bolívia e Chile",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai",
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Fernando Henrique Cardoso",
+  "CargoSignatarioBrasil": "Presidente da República",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "06/12/2002",
+  "TipoAcordo": "ML",
+  "PossuiHtml": false,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": {
+    "$id": "4",
+    "Id": 5502,
+    "Titulo": "Acordo, por troca de notas, entre o Brasil e a Argentina para bilateralização do Acordo sobre Residência para Nacionais do Mercosul e o seu Anexo"
+  },
+  "Assuntos": [
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "6",
+      "Id": 0,
+      "Nome": "Consulares e Migratórios",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "7",
+    "NumeroMensagem": "101",
+    "DataMensagem": "25/03/2003",
+    "NumeroDOU": "59",
+    "DataDOU": "26/03/2003"
+  },
+  "DecretoLegislativo": {
+    "$id": "8",
+    "NumeroDecreto": "925",
+    "DataDecreto": "15/09/2005",
+    "NumeroDOU": "179",
+    "DataDOU": "16/09/2005"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "9",
+    "NumeroDecreto": "6.975",
+    "DataDecreto": "07/10/2009",
+    "NumeroDOU": "193",
+    "DataDOU": "08/10/2009"
+  },
+  "Vigencia": {
+    "$id": "10",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "28/07/2009",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "11",
+      "Id": 5361,
+      "NomeArquivo": "Acordo - Residência - Nacionais - Mercosul - Bolívia - Chile - DOU - Decreto de Promulgação - 193 - 2009.pdf",
+      "Descricao": "Acordo - Residência - Nacionais - Mercosul - Bolívia - Chile - DOU - Decreto de Promulgação - 193 - 2009",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 5360,
+      "NomeArquivo": "Acordo - Residência - Nacionais - Mercosul - Bolívia - Chile - DOU - Decreto Legislativo - 179 - 2005.pdf",
+      "Descricao": "Acordo - Residência - Nacionais - Mercosul - Bolívia - Chile - DOU - Decreto Legislativo - 179 - 2005",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "13",
+      "Id": 5359,
+      "NomeArquivo": "Acordo - Residência - Nacionais - Mercosul - Bolívia - Chile - DOU - Mensagem ao Congresso - 59 - 2003.pdf",
+      "Descricao": "Acordo - Residência - Nacionais - Mercosul - Bolívia - Chile - DOU - Mensagem ao Congresso - 59 - 2003",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "14",
+    "Id": 5346,
+    "NomeArquivo": "Acordo - Residência - Nacionais - MERCOSUL - Bolívia - Chile - port esp.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": []
+}

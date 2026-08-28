@@ -1,0 +1,115 @@
+{
+  "$id": "1",
+  "Titulo": "Protocolo de Olivos para a Solução de Controvérsias",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai",
+    "Paraguai"
+  ],
+  "SignatarioBrasil": null,
+  "CargoSignatarioBrasil": null,
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Olivos",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "18/02/2002",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": {
+    "$id": "4",
+    "Id": 10217,
+    "Titulo": "Protocolo de Brasília para a Solução de Controvérsias - Dec. nº 01/91"
+  },
+  "Assuntos": [
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "6",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "7",
+    "NumeroMensagem": "640",
+    "DataMensagem": "17/07/2002",
+    "NumeroDOU": "137",
+    "DataDOU": "18/07/2002"
+  },
+  "DecretoLegislativo": {
+    "$id": "8",
+    "NumeroDecreto": "712",
+    "DataDecreto": "14/10/2003",
+    "NumeroDOU": "200",
+    "DataDOU": "15/10/2003"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "9",
+    "NumeroDecreto": "4.982",
+    "DataDecreto": "09/02/2004",
+    "NumeroDOU": "28",
+    "DataDOU": "10/02/2004"
+  },
+  "Vigencia": {
+    "$id": "10",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "01/01/2004",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "11",
+      "Id": 1421,
+      "NomeArquivo": "Protocolo de Olivos - Solução de Controvérsias - MERCOSUL - DOU - Decreto de Promulgação - 28 - 2004.pdf",
+      "Descricao": "Protocolo de Olivos - Solução de Controvérsias - MERCOSUL - Decreto de Promulgação - 28 - 2004",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 1420,
+      "NomeArquivo": "Protocolo de Olivos - Solução de Controvérsias - MERCOSUL - DOU - Decreto Legislativo - 200 - 2003.pdf",
+      "Descricao": "Protocolo de Olivos - Solução de Controvérsias - MERCOSUL - Decreto Legislativo - 200 - 2003",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "13",
+      "Id": 1419,
+      "NomeArquivo": "Protocolo de Olivos - Solução de Controvérsias - MERCOSUL - DOU - Mensagem ao Congresso - 137 - 2002.pdf",
+      "Descricao": "Protocolo de Olivos - Solução de Controvérsias - MERCOSUL - Mensagem ao Congresso - 137 - 2002",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": null,
+  "Observacoes": []
+}

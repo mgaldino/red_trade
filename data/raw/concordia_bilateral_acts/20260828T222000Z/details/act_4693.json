@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo para a Viabilização da Construção e Operação de Novas Travessias Rodoviárias sobre o Rio Uruguai entre o Governo da República Federativa do Brasil e o Governo da República da Argentina",
+  "OutraParte": "Argentina",
+  "OutrasPartes": [
+    "Argentina"
+  ],
+  "SignatarioBrasil": "Elizeu Padilha",
+  "CargoSignatarioBrasil": "Ministro dos Transportes",
+  "Depositario": null,
+  "LocalCelebracao": "Florianópolis",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "15/12/2000",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Argentina",
+      "NomeSignatario": "Adalberto Rodrígues Giavarini",
+      "CargoSignatario": "Minis.das Rel.Ext., Comércio Internacional e Culto da Argentina"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Serviços e Transporte",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "256",
+    "DataMensagem": "23/03/2001",
+    "NumeroDOU": "59-E",
+    "DataDOU": "26/03/2001"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "645",
+    "DataDecreto": "19/09/2003",
+    "NumeroDOU": "182",
+    "DataDOU": "19/09/2003"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Telegrama",
+      "NumeroDocumento": "MG01522Z",
+      "DataDocumento": "04/09/2002",
+      "Local": "Embaixada em Buenos Aires",
+      "DataRecebimento": "04/09/2002",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "115",
+      "DataDocumento": "06/10/2003",
+      "Local": "Embaixada em Buenos Aires",
+      "DataRecebimento": "06/10/2003",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "4990",
+    "DataDecreto": "18/02/2004",
+    "NumeroDOU": "34-A",
+    "DataDOU": "18/02/2004"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": "40439",
+    "DataEntradaVigor": "06/10/2003",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 2445,
+      "NomeArquivo": "Argentina - DOU - Decreto Legislativo - 182 - 2003.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 2444,
+      "NomeArquivo": "Argentina - DOU - Decreto de Promulgação - 34-A - 2004.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 2396,
+      "NomeArquivo": "Argentina - DOU - Mensagem ao Congresso - 59-E - 2001.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 2395,
+    "NomeArquivo": "Argentina - Acordo - Travessias Rodoviárias.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo VI: \"As Partes se notificarão sobre o cumprimento das respectivas formalidades legais internas necessárias para a vigência do presente Acordo, o qual entrará em vigor a partir da segunda notificação\"."
+    }
+  ]
+}

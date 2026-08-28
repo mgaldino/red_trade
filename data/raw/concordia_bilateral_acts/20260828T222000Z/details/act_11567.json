@@ -1,0 +1,167 @@
+{
+  "$id": "1",
+  "Titulo": "Tratado para o Estabelecimento do Arranjo Contingente de Reservas dos BRICS",
+  "OutraParte": "China",
+  "OutrasPartes": [
+    "China",
+    "África do Sul",
+    "Rússia",
+    "Índia",
+    "Brasil"
+  ],
+  "SignatarioBrasil": "Guido Mantega",
+  "CargoSignatarioBrasil": "Ministro de Estado da Fazenda",
+  "Depositario": "Brasil",
+  "LocalCelebracao": "Fortaleza",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "15/07/2014",
+  "TipoAcordo": "ML",
+  "PossuiHtml": false,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "China",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "África do Sul",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "4",
+      "NomeOutraParte": "Rússia",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "5",
+      "NomeOutraParte": "Índia",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "6",
+      "NomeOutraParte": "Brasil",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "7",
+      "Id": 0,
+      "Nome": "Economia, Finanças e Tributos",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "8",
+    "NumeroMensagem": "445",
+    "DataMensagem": "29/12/2014",
+    "NumeroDOU": "252",
+    "DataDOU": "30/12/2014"
+  },
+  "DecretoLegislativo": {
+    "$id": "9",
+    "NumeroDecreto": "130",
+    "DataDecreto": "03/06/2015",
+    "NumeroDOU": "105",
+    "DataDOU": "05/06/2015"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "10",
+    "NumeroDecreto": "8702",
+    "DataDecreto": "01/04/2016",
+    "NumeroDOU": "63",
+    "DataDOU": "04/04/2016"
+  },
+  "Vigencia": {
+    "$id": "11",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "01/04/2016",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "12",
+      "Id": 34788,
+      "NomeArquivo": "CPP Contigente Reserva BRICS_260724_125726.pdf",
+      "Descricao": "Carta de Plenos Poderes Brasil",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "13",
+      "Id": 28022,
+      "NomeArquivo": "BRICS - Carta de Ratificação - Reservas dos BRICS - África do Sul.pdf",
+      "Descricao": "Publicação da Carta de Ratificação - África do Sul ",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "14",
+      "Id": 28021,
+      "NomeArquivo": "BRICS - Carta de Ratificação - Reservas dos BRICS - Índia.pdf",
+      "Descricao": "Publicação da Carta de Ratificação - India",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "15",
+      "Id": 28020,
+      "NomeArquivo": "BRICS - Carta de Ratificação - Reservas dos BRICS - Brasil.pdf",
+      "Descricao": "Publicação da Carta de Ratificação - Brasil",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "16",
+      "Id": 28019,
+      "NomeArquivo": "BRICS - Carta de Ratificação - Reservas dos BRICS - China.pdf",
+      "Descricao": "Publicação da Carta de Ratificação - China ",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "17",
+      "Id": 28018,
+      "NomeArquivo": "BRICS - Carta de Ratificação - Reservas dos BRICS - Rússia.pdf",
+      "Descricao": "Publicação da Carta de Ratificação - Rússia",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "18",
+      "Id": 8271,
+      "NomeArquivo": "Tratado - Arranjo Contingente de Reservas - DOU - Decreto de Promulgação - 63 - 2016.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "19",
+      "Id": 304,
+      "NomeArquivo": "Tratado Arranjo Contingente de Reservas - Decreto Legislativo - 102 - 2015.pdf",
+      "Descricao": "Tratado - Arranjo Contingente de Reservas - Decreto Legislativo - 105 - 2015",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "20",
+    "Id": 30035,
+    "NomeArquivo": "ACR - Texto.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": []
+}

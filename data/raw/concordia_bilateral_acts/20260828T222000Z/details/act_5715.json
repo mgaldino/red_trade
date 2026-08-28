@@ -1,0 +1,106 @@
+{
+  "$id": "1",
+  "Titulo": "Ajuste Complementar ao Acordo Básico de Cooperação Científica e Técnica entre o Governo da República Federativa do Brasil e o Governo da República Oriental do Uruguai para Implementação do Projeto ''Fortalecimento Institucional das Assessorias Internacionais dos Ministérios da Saúde do Brasil e do Uruguai''",
+  "OutraParte": "Uruguai",
+  "OutrasPartes": [
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "Celco Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Montevidéu",
+  "NomePaisCelebracao": "Uruguai",
+  "DataCelebracao": "22/11/2006",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": "Reinaldo Gargano",
+      "CargoSignatario": "Ministro de Relaçoes Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Trabalho, Saúde e Previdência",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "25",
+    "DataDOU": "05/02/2007"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "22/11/2006",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 12883,
+      "NomeArquivo": "Uruguai - DOU - Publicação DAI - 25 - 2007.pdf",
+      "Descricao": "Publicação no DOU pela DAI.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "10",
+    "Id": 12877,
+    "NomeArquivo": "Uruguai - AC - Assessorias Internacionais.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "11",
+      "DescricaoObservacao": "Conforme exposto nos artigos 7°, 9° e 10° ''O presente Ajuste Complementar entrará em vigor na data de sua assinatura e vigorará por 2 (dois) anos, sendo renovado automaticamente, até o cumprimento de seu objeto, salvo manifestação contrária de qualquer das Partes Contratantes. 9. O presente Ajuste Complementar poderá ser emendado mediante troca de Notas diplomáticas entre as Partes Contratantes e suas modificações entrarão em vigor na data que for mutuamente acordada. 10.Qualquer uma das Partes Contratantes poderá notificar, por via diplomática, sua decisão de denunciar o presente Ajuste Complementar. A denúncia somente surtirá efeito 3 (três) meses após o recebimento da respectiva notificação, cabendo às Partes Contratantes decidir sobre a continuidade ou não das atividades que estiverem em execução."
+    }
+  ]
+}

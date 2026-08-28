@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo Quadro de Cooperação em Matéria de Defesa entre a República Federativa do Brasil e a República Argentina.",
+  "OutraParte": "Argentina",
+  "OutrasPartes": [
+    "Argentina"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Puerto Iguazú",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "30/11/2005",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Argentina",
+      "NomeSignatario": "Rafael Antonio Bielsa",
+      "CargoSignatario": "Mininistro das Relações Exteriores, Comércio Internacional e Culto"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Defesa e Segurança",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "166",
+    "DataMensagem": "16/03/2006",
+    "NumeroDOU": "53",
+    "DataDOU": "17/03/2006"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "484",
+    "DataDecreto": "20/12/2006",
+    "NumeroDOU": "245",
+    "DataDOU": "22/12/2006"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "12/06",
+      "DataDocumento": "13/01/2006",
+      "Local": "MRE Comércio Internacional e Culto",
+      "DataRecebimento": "16/01/2006",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "830",
+      "DataDocumento": "27/12/2006",
+      "Local": "Embaixada em Buenos Aires",
+      "DataRecebimento": "27/12/2006",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "6084",
+    "DataDecreto": "19/04/2007",
+    "NumeroDOU": "76",
+    "DataDOU": "20/04/2007"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "27/01/2007",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 2415,
+      "NomeArquivo": "Argentina - DOU - Promulgação - 76 - 2006.pdf",
+      "Descricao": "Publicação no DOU de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 2229,
+      "NomeArquivo": "Argentina - DOU - Decreto Legislativo - 245 - 2006.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 2228,
+      "NomeArquivo": "Argentina - DOU - Mensagem ao Congresso - 53 - 2006.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 2254,
+    "NomeArquivo": "Argentina - Acordo Quadro - Cooperação em Matéria de Defesa.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo 10:\"Este Acordo permanecerá em vigor até que uma das Partes decida por escrito e por via diplomática, notificar a outra Parte sua intenção de denunciá-lo. A denúncia terá efeito noventa (90) dias após o recebimento da respectiva notificação\"."
+    }
+  ]
+}

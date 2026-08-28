@@ -1,0 +1,133 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República Oriental do Uruguai para Permissão de Residência, Estudo e Trabalho a Nacionais Fronteiriços Brasileiros e Uruguaios (Acordo de Indocumentados)",
+  "OutraParte": "Uruguai",
+  "OutrasPartes": [
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "Celso Lafer",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Montevidéu",
+  "NomePaisCelebracao": "Uruguai",
+  "DataCelebracao": "21/08/2002",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "T",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [
+    {
+      "$id": "2",
+      "Id": 6104,
+      "Titulo": "Emenda, por troca de Notas, ao Acordo entre o Governo da República Federativa do Brasil e o Governo da República Oriental do Uruguai para Permissão de Residência, Estudo e Trabalho a Nacionais Fronteiriços Brasileiros e Uruguaios"
+    }
+  ],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "3",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": "Didier Opertti Badán",
+      "CargoSignatario": "Ministro das Relações Exteriores do Uruguai"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Fronteira, Infraestrutura e Integração Regional",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "167",
+    "DataMensagem": "07/03/2003",
+    "NumeroDOU": "87",
+    "DataDOU": "08/03/2003"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "907",
+    "DataDecreto": "21/11/2003",
+    "NumeroDOU": "228",
+    "DataDOU": "24/11/2003"
+  },
+  "Ratificacao": [
+    {
+      "$id": "7",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "5105",
+    "DataDecreto": "14/06/2004",
+    "NumeroDOU": "113",
+    "DataDOU": "15/06/2004"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": "42224",
+    "DataEntradaVigor": "14/04/2004",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 17049,
+      "NomeArquivo": "Uruguai - Ata de Ratificação - Acordo de Cooperação.pdf",
+      "Descricao": "Ata de Troca de Instrumentos de Ratificação ",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 17048,
+      "NomeArquivo": "Uruguai - DOU - Mensagem ao Congresso - 87 - 2003.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 17047,
+      "NomeArquivo": "Uruguai - DOU - Decreto Legislativo - 228 - 2003.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "13",
+      "Id": 17046,
+      "NomeArquivo": "Uruguai - DOU - Decreto de Promulgação - 113 - 2004.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação ",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "14",
+    "Id": 17045,
+    "NomeArquivo": "Uruguai - Acordo - Permissão de Residência.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "15",
+      "DescricaoObservacao": "Conforme disposto no Artigo IX: \"Este Acordo entrará em vigor na data da troca dos instrumentos de ratificação pelas Partes.\""
+    }
+  ]
+}

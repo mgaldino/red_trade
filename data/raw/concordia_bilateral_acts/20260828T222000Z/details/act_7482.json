@@ -1,0 +1,120 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo sobre Transferência de Pessoas Condenadas entre a República Federativa do Brasil e a República da Índia",
+  "OutraParte": "Índia",
+  "OutrasPartes": [
+    "Índia"
+  ],
+  "SignatarioBrasil": "Luiz Alberto Figueiredo Machado",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "15/10/2013",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "T",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Índia",
+      "NomeSignatario": "Salman Khurshid",
+      "CargoSignatario": "Ministro de Negócios Extrangeiros"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "457",
+    "DataMensagem": "17/08/2016",
+    "NumeroDOU": "159",
+    "DataDOU": "18/08/2016"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "146",
+    "DataDecreto": "10/09/2018",
+    "NumeroDOU": "175",
+    "DataDOU": "11/09/2018"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "9900",
+    "DataDecreto": "08/07/2019",
+    "NumeroDOU": "130",
+    "DataDOU": "09/07/2019"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "24/02/2019",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 29975,
+      "NomeArquivo": "Publicação no DOU do Decreto Presidencial - Promulgação.pdf",
+      "Descricao": "Publicação no Dou do Decreto Presidencial - Promulgação.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 28087,
+      "NomeArquivo": "Índia - DOU - Publicação Decreto Legislativo.pdf",
+      "Descricao": "Índia - DOU - Decreto Legislativo 146/2018",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 13681,
+      "NomeArquivo": "Índia - DOU - Mensagem ao Congresso - 159 - 2016.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 13033,
+    "NomeArquivo": "Índia - Acordo - Transferência de Pessoas Condenadas.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme disposto no primeiro parágrafo, Artigo 19: \"Este Acordo estará sujeito à ratificação e entrará em vigor trinta (30) dias após a data de troca dos instrumentos de ratificação.\""
+    }
+  ]
+}

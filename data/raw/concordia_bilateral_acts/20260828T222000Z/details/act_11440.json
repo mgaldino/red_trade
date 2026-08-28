@@ -1,0 +1,193 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo sobre o Aquífero Guarani e Declaração Conjunta",
+  "OutraParte": "Argentina",
+  "OutrasPartes": [
+    "Argentina",
+    "Brasil",
+    "Paraguai",
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "Celso Luiz Nunes Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Brasil",
+  "LocalCelebracao": "San Juan",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "02/08/2010",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Argentina",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "Brasil",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "4",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "5",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "6",
+      "Id": 0,
+      "Nome": "Meio Ambiente e Sustentabilidade",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "7",
+    "NumeroMensagem": "172",
+    "DataMensagem": "27/05/2015",
+    "NumeroDOU": "100",
+    "DataDOU": "28/05/2015"
+  },
+  "DecretoLegislativo": {
+    "$id": "8",
+    "NumeroDecreto": "52",
+    "DataDecreto": "03/05/2017",
+    "NumeroDOU": "89",
+    "DataDOU": "11/05/2017"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "9",
+    "NumeroDecreto": "11.893",
+    "DataDecreto": "23/01/2024",
+    "NumeroDOU": "17",
+    "DataDOU": "24/01/2024"
+  },
+  "Vigencia": {
+    "$id": "10",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "26/11/2020",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "11",
+      "Id": 32219,
+      "NomeArquivo": "DOU - Diario Oficial da União - 17 - 2023.pdf",
+      "Descricao": "Publicação no DOU ",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 30614,
+      "NomeArquivo": "Instrumento de Ratificação - Paraguai.pdf",
+      "Descricao": "Instrumento de Ratificação do Paraguai",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "13",
+      "Id": 30580,
+      "NomeArquivo": "Nota ao Paraguai sobre ratificação paraguaia.pdf",
+      "Descricao": "Notificação do Paraguai sobre a ratificação paraguaia",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "14",
+      "Id": 30579,
+      "NomeArquivo": "Nota à Argentina sobre ratificação paraguaia.pdf",
+      "Descricao": "Notificação da Argentina sobre a ratificação paraguaia",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "15",
+      "Id": 30578,
+      "NomeArquivo": "EP.BR.3.203.2020 - Ratificação do Paraguai.pdf",
+      "Descricao": "Instrumento de Ratificação do Paraguai",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "16",
+      "Id": 23037,
+      "NomeArquivo": "Nota 622 - Ratificação brasileira.pdf",
+      "Descricao": "Nota pela qual a Embaixada do Brasil em Buenos Aires comunica à Chancelaria a ratificação brasileira",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "17",
+      "Id": 23013,
+      "NomeArquivo": "Nota 248.2017 - Ratificação brasileira.pdf",
+      "Descricao": "Nota pela qual a Embaixada do Brasil em Montevidéu comunica à Chancelaria a ratificação brasileira",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "18",
+      "Id": 23012,
+      "NomeArquivo": "Nota PARBREM 408.2017 - Ratificação brasileira.pdf",
+      "Descricao": "Nota pela qual a Embaixada do Brasil em Assunção comunica à Chancelaria a ratificação brasileira",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "19",
+      "Id": 21195,
+      "NomeArquivo": "DOU - Decreto Legislativo - 89 - 2017.pdf",
+      "Descricao": "Publicação no DOU de Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "20",
+      "Id": 18684,
+      "NomeArquivo": "Instrumento de Ratificação Uruguai - 2012.pdf",
+      "Descricao": "Instrumento de Ratificação do Uruguai",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "21",
+      "Id": 18683,
+      "NomeArquivo": "Instrumento de Ratificação Argentina - 2012.pdf",
+      "Descricao": "Instrumento de Ratificação da Argentina",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "22",
+      "Id": 222,
+      "NomeArquivo": "DOU - Mensagem ao Congresso - 100 - 2015.pdf",
+      "Descricao": "Acordo Aquífero Guarani - DOU - Mensagem ao Congresso - 100 - 2015",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "23",
+    "Id": 230,
+    "NomeArquivo": "Acordo Aquífero Guarani - português e espanhol.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "24",
+      "DescricaoObservacao": "Conforme disposto no Artigo 21, parágrafo 1:''O presente Acordo entrará em vigor no trigésimo dia contado a partir da data em que tenha\r\nsido depositado o quarto instrumento de ratificação.''"
+    }
+  ]
+}

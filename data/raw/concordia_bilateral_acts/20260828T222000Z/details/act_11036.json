@@ -1,0 +1,129 @@
+{
+  "$id": "1",
+  "Titulo": "Protocolo de Integração Educacional para o Prosseguimento de Estudos de Pós-Graduação nas Universidades dos Estados Partes do MERCOSUL e da República da Bolívia",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai",
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Lafer",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "05/12/2002",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Educação e Cultura",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": "98",
+    "DataMensagem": "25/03/2003",
+    "NumeroDOU": "59",
+    "DataDOU": "26/03/2003"
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": "62",
+    "DataDecreto": "27/01/2004",
+    "NumeroDOU": "19",
+    "DataDOU": "28/01/2004"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Situação especial",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 26270,
+      "NomeArquivo": "Mercosul - DOU - Mensagem ao Congresso - Integração Educacional - Pós-graduação - 59 - 2003.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 26269,
+      "NomeArquivo": "Mercosul - DOU - Decreto Legislativo - Integração Educacional - Pós-graduação - 19 - 2004.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 26268,
+      "NomeArquivo": "Mercosul - Ata Depósito Uruguai - Integração Educacional.pdf",
+      "Descricao": "Ata de Depósito de Ratificação do Uruguai.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "13",
+      "Id": 26267,
+      "NomeArquivo": "Mercosul - Ata Depósito Brasil - Integração Educacional.pdf",
+      "Descricao": "Ata de Depósito de Ratificação do Brasil.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "14",
+    "Id": 26266,
+    "NomeArquivo": "Mercosul - Integração Educadional - Pós-Grad - port esp.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "15",
+      "DescricaoObservacao": "Conforme disposto no Artigo Nono: \"O presente Protocolo entrara em vigor trinta (30) dias após o deposito dos instrumentos de ratificação de pelo menos um Estado Parte do MERCOSUL e pela Republica da Bolívia. Para os demais Estados Partes, entrara em vigor no trigésimo dia posterior ao deposito de seu respectivo instrumento de ratificação.\""
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo-Quadro sobre Complementação Energética Regional entre os Estados Partes do MERCOSUL e Estados Associados",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai",
+    "ALADI"
+  ],
+  "SignatarioBrasil": "Luiz Inácio Lula da Silva/ Celso Luiz Nunes Amorim",
+  "CargoSignatarioBrasil": "Presidente da República/ Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Montevidéu",
+  "NomePaisCelebracao": "Uruguai",
+  "DataCelebracao": "09/12/2005",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "ALADI",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Energia e Recursos Estratégicos",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": "518",
+    "DataMensagem": "05/07/2006",
+    "NumeroDOU": "128",
+    "DataDOU": "06/07/2006"
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": "979",
+    "DataDecreto": "22/12/2009",
+    "NumeroDOU": "245",
+    "DataDOU": "23/12/2009"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "7.377",
+    "DataDecreto": "01/12/2010",
+    "NumeroDOU": "230",
+    "DataDOU": "02/12/2010"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "26/02/2010",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 3656,
+      "NomeArquivo": "Acordo - Complementação Econômica Regional - DOU - Mensagem ao Congresso - 128 - 2006.pdf",
+      "Descricao": "Acordo - Complementação Econômica Regional - DOU - Mensagem ao Congresso - 128 - 2006",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 3654,
+      "NomeArquivo": "Acordo - Complementação Energética Regional - DOU - Decreto de Promulgação - 230 - 2010.pdf",
+      "Descricao": "Acordo - Complementação Econômica Regional - DOU - Decreto de Promulgação - 230 - 2010",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 3653,
+      "NomeArquivo": "Acordo - Complementação Energética Regional - DOU - Decreto Legislativo - 245 - 2009.pdf",
+      "Descricao": "Acordo - Complementação Econômica Regional - DOU - Decreto Legislativo - 245 - 2009",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 3650,
+    "NomeArquivo": "Acordo - Complementação Econômica Regional - port esp.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": []
+}

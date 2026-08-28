@@ -1,0 +1,120 @@
+{
+  "$id": "1",
+  "Titulo": "Tratado de Extradição entre a República Federativa do Brasil e a República da Índia",
+  "OutraParte": "Índia",
+  "OutrasPartes": [
+    "Índia"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "16/04/2008",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "T",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Índia",
+      "NomeSignatario": "Villas Muttemwar",
+      "CargoSignatario": "Ministro de Energias Novas e Renováveis"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "517",
+    "DataMensagem": "16/07/2008",
+    "NumeroDOU": "136",
+    "DataDOU": "17/07/2008"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "187",
+    "DataDecreto": "18/05/2012",
+    "NumeroDOU": "97",
+    "DataDOU": "21/05/2012"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "9055",
+    "DataDecreto": "23/05/2017",
+    "NumeroDOU": "98",
+    "DataDOU": "24/05/2017"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "20/08/2015",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 21429,
+      "NomeArquivo": "Índia - DOU - Decreto de Promulgação - 98 - 2017.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 7662,
+      "NomeArquivo": "Índia - DOU - Decreto Legislativo - 97 - 2012.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 7661,
+      "NomeArquivo": "Índia - DOU - Mensagem ao Congresso - 136 - 2008.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 1182,
+    "NomeArquivo": "Índia - Tratado - Extradição.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme Disposto no Artigo 25 §1º \"O presente Tratado deverá ser ratificado por ambas as Partes e os instrumentos de ratificação serão trocados assim que possível. O Tratado entrará em vigor 30 dias após a data da troca dos referidos instrumentos.\""
+    }
+  ]
+}

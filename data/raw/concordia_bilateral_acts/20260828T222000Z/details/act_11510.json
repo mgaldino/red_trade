@@ -1,0 +1,108 @@
+{
+  "$id": "1",
+  "Titulo": "Protocolo de Montevidéu sobre Compromisso com a Democracia no MERCOSUL (USHUAIA II), firmado por ocasião da XLII Reunião do CMC e Cúpula de Presidentes do MERCOSUL e Estados Associados",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Antonio de Aguiar Patriota",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Montevidéu",
+  "NomePaisCelebracao": "Uruguai",
+  "DataCelebracao": "20/12/2011",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Relações Diplomáticas e Consulares",
+      "IsPrincipal": false
+    },
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "552",
+    "DataMensagem": "06/12/2012",
+    "NumeroDOU": "236",
+    "DataDOU": "07/12/2012"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Tramitação Congresso Nacional",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 26511,
+      "NomeArquivo": "Mercosul - Ata de Depósito - -Equador - Compromisso Democracia.pdf",
+      "Descricao": "Ata de Depósito de Ratificação do Equador.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 26510,
+      "NomeArquivo": "Mercosul - Protocolo - DOU - Mensagem ao Congresso - 236 - 2012.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "11",
+    "Id": 346,
+    "NomeArquivo": "Protocolo Ushuaia II - espanhol, português.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "12",
+      "DescricaoObservacao": "Conforme disposto no ARTIGO 11: \"O presente Protocolo estará aberto à assinatura das Partes até 1º de março de 2012. O presente Protocolo entrará em vigor trinta (30) dias após o depósito do instrumento de ratificação pelo quarto Estado Parte do MERCOSUL. Na mesma data entrará em vigor para os Estados Associados que o tiverem ratificado anteriormente. Para os Estados Associados que não o tiverem ratificado anteriormente a essa data, entrará em vigor no mesmo dia em que for depositado o respectivo instrumento de ratificação. Os direitos e obrigações derivados do Protocolo somente aplicam-se aos Estados que o tenham ratificado. Nas matérias reguladas pelo presente Protocolo, as relações entre as Partes que o tenham ratificado e aqueles que ainda não o tiverem ratificado e destes últimos entre si continuarão regendo-se pelo Protocolo de Ushuaia sobre Compromisso Democrático no MERCOSUL, Bolívia e Chile. Uma vez que todos os Estados signatários e aderentes do Protocolo de Ushuaia sobre Compromisso Democrático no MERCOSUL, Bolívia e Chile, tiverem ratificado o presente Protocolo, o primeiro ficará sem efeitos.\""
+    }
+  ]
+}

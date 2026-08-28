@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo de Cooperação entre os Governos da República Federativa do Brasil e da República Argentina para o Combate ao Tráfego de Aeronaves Supostamente Envolvidas em Atividades Ilícitas Internacionais",
+  "OutraParte": "Argentina",
+  "OutrasPartes": [
+    "Argentina"
+  ],
+  "SignatarioBrasil": "Geraldo Magela da Cruz Quintão",
+  "CargoSignatarioBrasil": "Ministro da Defesa",
+  "Depositario": null,
+  "LocalCelebracao": "Buenos Aires",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "09/12/2002",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Argentina",
+      "NomeSignatario": "José Horacio Jaunarema",
+      "CargoSignatario": "Ministro da Defesa"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Defesa e Segurança",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "99",
+    "DataMensagem": "25/03/2003",
+    "NumeroDOU": "59",
+    "DataDOU": "26/03/2003"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "51",
+    "DataDecreto": "17/04/2006",
+    "NumeroDOU": "74",
+    "DataDOU": "18/04/2006"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "143",
+      "DataDocumento": "25/07/2006",
+      "Local": "Min. de Rel. Exteriores, Comércio Int. e Culto",
+      "DataRecebimento": "25/07/2006",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "271 PDEF",
+      "DataDocumento": null,
+      "Local": "SERE",
+      "DataRecebimento": "03/05/2006",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "5933",
+    "DataDecreto": "13/10/2006",
+    "NumeroDOU": "198",
+    "DataDOU": "16/10/2006"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "25/07/2006",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 2375,
+      "NomeArquivo": "Argentina - DOU - Mensagem ao Congresso - 59 - 2003.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 2374,
+      "NomeArquivo": "Argentina - DOU - Decreto Legislativo - 74 - 2006.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 2373,
+      "NomeArquivo": "Argentina - DOU - Decreto de Promulgação - 198 - 2006.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 2367,
+    "NomeArquivo": "Argentina - Acordo - Tráfego de Aeronaves.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo 7, Parágrafos 1 e 2: \"Cada uma das Partes notificará a outra do cumprimento das formalidades requeridas pela respectiva legislação interna para que o Acordo entre em vigor. Este Acordo entra em vigor na data do recebimento da última dessas notificações.\""
+    }
+  ]
+}

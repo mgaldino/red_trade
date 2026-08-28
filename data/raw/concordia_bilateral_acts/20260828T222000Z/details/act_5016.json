@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Convenção Destinada a Evitar a Dupla Tributação e Prevenir a Evasão Fiscal em Relação aos Impostos sobre a Renda.",
+  "OutraParte": "México",
+  "OutrasPartes": [
+    "México"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministério das Rel. Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Cidade do México",
+  "NomePaisCelebracao": "México",
+  "DataCelebracao": "25/09/2003",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "México",
+      "NomeSignatario": "Luiz Ernesto Derbez Bautista",
+      "CargoSignatario": "Sec. das Rel. Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Economia, Finanças e Tributos",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "854",
+    "DataMensagem": "13/12/2004",
+    "NumeroDOU": "239",
+    "DataDOU": "14/12/2004"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "58",
+    "DataDecreto": "17/04/2006",
+    "NumeroDOU": "74",
+    "DataDOU": "18/04/2006"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "249",
+      "DataDocumento": "07/12/2006",
+      "Local": null,
+      "DataRecebimento": "07/12/2006",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": "12/10/2006",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "6000",
+    "DataDecreto": "26/12/2006",
+    "NumeroDOU": "247",
+    "DataDOU": "27/12/2006"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": "43562",
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 8985,
+      "NomeArquivo": "México - DOU - Promulgação - 247 - 2006.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 8982,
+      "NomeArquivo": "México - DOU - Decreto Legislativo - 74 (pg.3) - 2006.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 8981,
+      "NomeArquivo": "México - DOU - Mensagem ao Congresso - 239 (pg.6) - 2004.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 8975,
+    "NomeArquivo": "México - Convenção - Bitributação - 2003 (reduzido).pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme Artigo 29, \"1.\t\tCada um dos Estados Contratantes notificará o outro, por escrito, por via diplomática, que os procedimentos requeridos por sua legislação para a entrada em vigor da presente Convenção foram cumpridos. A Convenção entrará em vigor na data de recebimento da última notificação. \r\n\r\n2.\t\tA Convenção produzirá efeitos: \r\n\r\n\r\na)\tno caso do México, a partir do primeiro dia do mês de janeiro do ano calendário seguinte à data em que entre em vigor;\r\n\r\nb)\tno caso do  Brasil:\r\n\r\ni)\tno que concerne aos impostos retidos na fonte, às importâncias pagas  ou creditadas no ou depois do primeiro dia de janeiro, inclusive, do ano calendário imediatamente seguinte àquele em que a Convenção entrar em vigor;\r\n\r\nii)\tno que concerne aos outros impostos de que trata a  Convenção, no ano fiscal que comece no primeiro dia de janeiro, inclusive, do ano calendário imediatamente seguinte àquele em que a Convenção entrar em vigor.\""
+    }
+  ]
+}

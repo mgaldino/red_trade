@@ -1,0 +1,127 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República Oriental do Uruguai para a Construção de uma Segunda Ponte sobre o Rio Jaguarão, nas Proximidades das Cidades de Jaguarão e Rio Branco, e Recuperação da Atual Ponte Barão de Mauá",
+  "OutraParte": "Uruguai",
+  "OutrasPartes": [
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "Elizeu Lemos Padilha",
+  "CargoSignatarioBrasil": "Ministro dos Transportes",
+  "Depositario": null,
+  "LocalCelebracao": "Ponte Barão de Mauá",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "21/11/2000",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": "Lúcio Cáceres",
+      "CargoSignatario": "Ministro dos Transportes e Obras Públicas"
+    }
+  ],
+  "AcordoSubstituiu": {
+    "$id": "3",
+    "Id": 5767,
+    "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República Oriental do Uruguai para a Construção de uma Segunda Ponte Internacional sobre o Rio Jaguarão, nas proximidades das Cidades de Jaguarão e Rio Branco"
+  },
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Fronteira, Infraestrutura e Integração Regional",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "341",
+    "DataMensagem": "18/04/2001",
+    "NumeroDOU": "76",
+    "DataDOU": "19/04/2001"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "326",
+    "DataDecreto": "27/06/2003",
+    "NumeroDOU": "123",
+    "DataDOU": "30/06/2003"
+  },
+  "Ratificacao": [
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "59/04",
+      "DataDocumento": "14/04/2004",
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "8",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "9",
+    "NumeroDecreto": "4979",
+    "DataDecreto": "03/02/2004",
+    "NumeroDOU": "24",
+    "DataDOU": "04/02/2004"
+  },
+  "Vigencia": {
+    "$id": "10",
+    "Vigencia": "Substituído",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "21/11/2000",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "11",
+      "Id": 12627,
+      "NomeArquivo": "Uruguai - DOU - Decreto Legislativo - 123 - 2003.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 12761,
+      "NomeArquivo": "Uruguai - DOU - Decreto de Promulgação - 24 - 2004.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 12457,
+    "NomeArquivo": "Uruguai - Acordo - Ponte Barão de Mauá.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme exposto no artigo 6° '' 1.As Partes se notificarão sobre o cumprimento das respectivas formalidades legais internas necessárias para a vigência do presente Acordo, o qual entrará em vigor a partir da data de recepção da segunda notificação.\r\n\r\n2.Qualquer uma das Partes poderá, a qualquer tempo, denunciar o presente Acordo, por via diplomática e com uma antecedência de um ano.''"
+    }
+  ]
+}

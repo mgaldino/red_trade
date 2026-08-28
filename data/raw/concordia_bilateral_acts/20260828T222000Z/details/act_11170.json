@@ -1,0 +1,108 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo de Admissão de Títulos, Certificados e Diplomas para o Exercício da Docência no Ensino do Espanhol e do Português como Línguas Estrangeiras nos Estados Partes do MERCOSUL - Decisão CMC nº 09/05",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Luiz Nunes Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Assunção",
+  "NomePaisCelebracao": "Paraguai",
+  "DataCelebracao": "20/06/2005",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Educação e Cultura",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "577",
+    "DataMensagem": "27/07/2009",
+    "NumeroDOU": "142",
+    "DataDOU": "28/07/2009"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "803",
+    "DataDecreto": "20/12/2010",
+    "NumeroDOU": "243",
+    "DataDOU": "21/12/2010"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 26879,
+      "NomeArquivo": "DOU - Decreto Legislativo - 243 - 2010.pdf",
+      "Descricao": "Publicação no DOU de Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 26878,
+      "NomeArquivo": "DOU - Mensagem ao Congresso - 142 - 2009.pdf",
+      "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "11",
+    "Id": 3889,
+    "NomeArquivo": "Dec. 09-05 - Acordo - Admissão - Títulos - Português - Espanhol - port esp.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "12",
+      "DescricaoObservacao": "Conforme o disposto no art. 10: \"O presente Acordo, parte integrante do Tratado de Assunção, entrará em vigor trinta (30) dias depois do depósito do instrumento de ratificação pelo quarto Estado Parte. Os Estados Partes que tiverem ratificado, poderão concordar com a sua aplicação bilateral por troca de notas."
+    }
+  ]
+}

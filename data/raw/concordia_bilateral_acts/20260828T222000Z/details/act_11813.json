@@ -1,0 +1,116 @@
+{
+  "$id": "1",
+  "Titulo": "Emenda, por Troca de Notas, ao Ajuste Complementar ao Acordo de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai na Área de Formação e Capacitação Profissional",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Valter Percly Moreira ",
+  "CargoSignatarioBrasil": "Embaixador ",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "20/10/2008",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [
+    {
+      "$id": "2",
+      "Id": 5236,
+      "Titulo": "Ajuste Complementar ao Acordo de Cooperação Técnica entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai na Área de Formação e Capacitação Profissional"
+    }
+  ],
+  "SignatarioOutraParte": [
+    {
+      "$id": "3",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": "Diretor-Geral da ABC",
+      "CargoSignatario": "Embaixador do Paraguai"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Cooperação e Desenvolvimento",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "7",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "21",
+    "DataDOU": "30/01/2009"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "17/12/2008",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 10189,
+      "NomeArquivo": "Paraguai - DOU - Publicação DAI - 21 - 2009.pdf",
+      "Descricao": "Publicação no DOU pela DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "11",
+    "Id": 10190,
+    "NomeArquivo": "Paraguai - Troca de Notas - Capacitação Profissional.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "12",
+      "DescricaoObservacao": "Conforme disposto na Nota Verbal paraguaia nº 2491: \"Ministério das Relações Exteriores da República do Paraguai, expressa a concordância com a proposta do Brasil. A presente Emenda entrou em vigor em 17 de dezembro de 2008.\""
+    },
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme disposto na Nota Verbal brasileira nº 653: \"Nessa condições, a Embaixada propõe a alteração do Artigo 8, que passaria a ter a seguinte redação: O presente Ajuste Complementar entrará em vigor na data de sua assinatura e vigorará por dois (2) anos, sendo então renovado automaticamente, até o cumprimento de seu objeto, salvo manifestação contrária de qualquer das Partes Contratantes\"."
+    }
+  ]
+}

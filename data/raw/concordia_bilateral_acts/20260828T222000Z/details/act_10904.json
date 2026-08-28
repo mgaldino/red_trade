@@ -1,0 +1,122 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo sobre Dispensa de Tradução de Documentos Administrativos para Efeitos de Imigração entre os Estados Partes do MERCOSUL, a República da Bolívia e a República do Chile - Decisão nº 45/00",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai",
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Luiz Felipe Lampreia",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Florianópolis",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "15/12/2000",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Consulares e Migratórios",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": "269",
+    "DataMensagem": "16/04/2002",
+    "NumeroDOU": "73",
+    "DataDOU": "20/04/2002"
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": "198",
+    "DataDecreto": "07/05/2004",
+    "NumeroDOU": "88",
+    "DataDOU": "10/05/2004"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "5.852",
+    "DataDecreto": "18/07/2006",
+    "NumeroDOU": "137",
+    "DataDOU": "19/07/2006"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "29/12/2005",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 26928,
+      "NomeArquivo": "MERCOSUL - DOU - Decreto de Promulgação - 137 - 2006.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 26927,
+      "NomeArquivo": "MERCOSUL - DOU - Decreto Legislativo - 88 - 2004.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 26926,
+      "NomeArquivo": "MERCOSUL - DOU - Mensagem ao Congresso - 73 - 2002.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 26912,
+    "NomeArquivo": "Mercosul - Acordo - Dispensa Tradução - Documento Administrativos Imigração - Bolívia+Chile.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo 5º: \"1. O presente Acordo entrará em vigor trinta (30) dias depois do depósito do instrumento de ratificação de pelo menos um Estado Parte do Mercosul e de pelo menos um Estado Associado. Para os demais Estados Parte do Mercosul e de pelo menos um Estado Associado. Para os demais Estados Partes entrará em vigor no trigésimo dia a contar do depósito de seu respectivo instrumento de ratificação.\""
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "source": "WTO Documents Online",
+  "accessed_at": "2026-08-28T22:24:12.733431+00:00",
+  "manifest": "data/processed/wto_coauthorship/wto_manual_validation_sample_40.csv",
+  "user_agent": "red-trade-wto-coauthorship-pilot/0.1 (academic research; low-volume manifest download)",
+  "delay_seconds": 0.0,
+  "records": [
+    {
+      "catalogue_id": "59922",
+      "symbol": "TN/RL/GEN/8",
+      "url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/RL/GEN8.pdf&Open=True",
+      "path": "data/raw/wto_coauthorship/2026-08-28/validation_pdfs/59922__TN_RL_GEN_8.pdf",
+      "status": "downloaded",
+      "bytes": 26116,
+      "sha256": "8545e7c2652bfc85bef6bd57b7adafd7603c7df9c841b76fd5ed65fbdd9f662c",
+      "content_type": "application/PDF",
+      "content_disposition": "inline;filename=GEN8.pdf"
+    }
+  ]
+}

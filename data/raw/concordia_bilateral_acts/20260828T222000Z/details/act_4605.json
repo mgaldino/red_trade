@@ -1,0 +1,120 @@
+{
+  "$id": "1",
+  "Titulo": "Tratado sobre Transferência de Pessoas Condenadas e de Menores sob Tratamento Especial entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Luiz Felipe Lampreia",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "10/02/2000",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "T",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": "José Félix Fernández Estigarribia",
+      "CargoSignatario": "Ministro das Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "752",
+    "DataMensagem": "30/05/2000",
+    "NumeroDOU": "104",
+    "DataDOU": "31/05/2000"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "94",
+    "DataDecreto": "22/05/2002",
+    "NumeroDOU": "98",
+    "DataDOU": "23/05/2002"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "4443",
+    "DataDecreto": "28/10/2002",
+    "NumeroDOU": "210",
+    "DataDOU": "29/10/2002"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "09/10/2002",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 9905,
+      "NomeArquivo": "Peru - DOU - Decreto de Promulgação - 210 - 2002.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 9904,
+      "NomeArquivo": "Paraguai - DOU - Decreto Legislativo - 98 - 2002.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 9903,
+      "NomeArquivo": "Paraguai - DOU - Mensagem ao Congresso - 104 - 2000.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 9899,
+    "NomeArquivo": "Paraguai - Tratado - Pessoas Condenadas.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme Disposto no Artigo 13 §1º \"O presente Tratado entrará em vigor 30 (trinta) dias após a troca dos instrumentos de ratificação e  terá duração indefinida.\""
+    }
+  ]
+}

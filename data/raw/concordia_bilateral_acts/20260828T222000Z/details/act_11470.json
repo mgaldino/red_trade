@@ -1,0 +1,117 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo de Defesa da Concorrência do MERCOSUL",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai",
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Foz do Iguaçu",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "16/12/2010",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Economia, Finanças e Tributos",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": "547",
+    "DataMensagem": "06/12/2012",
+    "NumeroDOU": "236",
+    "DataDOU": "07/12/2012"
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": "150",
+    "DataDecreto": "15/12/2016",
+    "NumeroDOU": "241",
+    "DataDOU": "16/12/2016"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em promulgação/MRE",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "07/04/2024",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 22919,
+      "NomeArquivo": "Nota VMREI-DGP-DIE-NR 121-17 - Chancelaria paraguaia.pdf",
+      "Descricao": "Nota pela qual a Chancelaria paraguaia informa sobre a ratificação brasileira",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 16977,
+      "NomeArquivo": "DOU - Decreto Legislativo - 241 - 2016.pdf",
+      "Descricao": "Publicação no DOU de Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 397,
+      "NomeArquivo": "Acordo Defesa da Concorrência - DOU - Mensagem ao Congresso - 236 - 2012.pdf",
+      "Descricao": "Acordo Defesa da Concorrência - DOU - Mensagem ao Congresso - 236 - 2012",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 396,
+    "NomeArquivo": "Defesa da Concorrência - MERCOSUL - port esp.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": []
+}

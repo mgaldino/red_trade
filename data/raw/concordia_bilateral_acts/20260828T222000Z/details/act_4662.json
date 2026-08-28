@@ -1,0 +1,110 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo, por troca de Notas, sobre a Concessão de Vistos de Múltiplas Entradas, pelo período da missão, aos brasileiros e chineses portadores de passaportes diplomáticos e oficiais.",
+  "OutraParte": "China",
+  "OutrasPartes": [
+    "China"
+  ],
+  "SignatarioBrasil": "Affonso Celso de Ouro-Preto",
+  "CargoSignatarioBrasil": "Embaixador em Pequim",
+  "Depositario": null,
+  "LocalCelebracao": "Pequim",
+  "NomePaisCelebracao": "China",
+  "DataCelebracao": "17/08/2000",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "China",
+      "NomeSignatario": "--",
+      "CargoSignatario": "Ministro dos Negócios Estrangeiros da China"
+    }
+  ],
+  "AcordoSubstituiu": {
+    "$id": "3",
+    "Id": 5173,
+    "Titulo": "Acordo, por troca de Notas, entre o Ministério das Relações Exteriores da República Federativa do Brasil e o Ministério dos Negócios Estrangeiros da República Popular da China para Flexibilização da Concessão de Vistos para Empresários"
+  },
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Consulares e Migratórios",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "7",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "37",
+    "DataDOU": "21/02/2001"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Substituído",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "18/09/2000",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 3704,
+      "NomeArquivo": "China -DOU - Publicação DAI - 37 - 2001.pdf",
+      "Descricao": "Publicação no DOU da DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "11",
+    "Id": 3703,
+    "NomeArquivo": "China - Acordo por Troca de Notas - Vistos de Múltiplas Entradas.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "12",
+      "DescricaoObservacao": "\"A presente nota e a sua nota nº 53 do dia 28 de julho de 2000 constituem acordo entre a República Popular da China e a República Federativa do Brasil e entrará em vigor 31 dias após a presente Nota.\""
+    }
+  ]
+}

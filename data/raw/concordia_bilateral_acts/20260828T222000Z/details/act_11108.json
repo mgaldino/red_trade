@@ -1,0 +1,122 @@
+{
+  "$id": "1",
+  "Titulo": "Protocolo Adicional ao Acordo Quadro sobre Meio Ambiente do MERCOSUL em Matéria de Cooperação e Assistência em Emergências Ambientais - Decisão CMC nº 14/04",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Porto Iguaçú",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "07/07/2004",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Meio Ambiente e Sustentabilidade",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "749",
+    "DataMensagem": "01/09/2006",
+    "NumeroDOU": "170",
+    "DataDOU": "04/09/2006"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "150",
+    "DataDecreto": "14/06/2011",
+    "NumeroDOU": "114",
+    "DataDOU": "15/06/2011"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "7.940",
+    "DataDecreto": "20/02/2013",
+    "NumeroDOU": "35",
+    "DataDOU": "21/02/2013"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "21/04/2012",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 27552,
+      "NomeArquivo": "Protocolo Adicional - Acordo - Emergências - Ambientais - DOU - Mensagem ao Congresso - 170 - 2006.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 27551,
+      "NomeArquivo": "Protocolo Adicional - Acordo - Emergências - Ambientais - DOU - Decreto Legislativo - 114 - 2011.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 27550,
+      "NomeArquivo": "Protocolo Adicional - Acordo - Emergências - Ambientais - DOU - Decreto de Promulgação - 35 - 2013.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 27548,
+      "NomeArquivo": "MSUL - PA - Ata Depósito - Brasil.pdf",
+      "Descricao": "Ata de Depósito do Instrumento de Ratificação do Brasil.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 4288,
+    "NomeArquivo": "Dec. 14-04 - Protocolo Adicional - Acordo - Emergências - Ambientais - port esp.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no no Artigo 11: \"O presente Protocolo terá duração indefinida e entrará em vigor 30 (trinta) dias depois da data do depósito do quarto instrumento de ratificação.\""
+    }
+  ]
+}

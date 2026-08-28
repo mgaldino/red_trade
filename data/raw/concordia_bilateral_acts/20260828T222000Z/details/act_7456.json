@@ -1,0 +1,125 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo, por Troca de Notas, sobre a Simplificação de Legalizações em Documentos Públicos entre a República Federativa do Brasil e a República Oriental do Uruguai",
+  "OutraParte": "Uruguai",
+  "OutrasPartes": [
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "Antonio de Aguiar Patriota",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "09/07/2013",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": "Luis Almagro Lemes",
+      "CargoSignatario": "Ministro das Relações Exteriores da República Oriental do Uruguai"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Cooperação e Desenvolvimento",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "430",
+    "DataMensagem": "20/10/2015",
+    "NumeroDOU": "201",
+    "DataDOU": "21/10/2015"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "9",
+    "DataDecreto": "15/02/2018",
+    "NumeroDOU": "32",
+    "DataDOU": "16/02/2018"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": "01/15",
+      "DataDocumento": "07/01/2015",
+      "Local": null,
+      "DataRecebimento": "07/01/2015",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": null,
+      "NumeroDocumento": "128",
+      "DataDocumento": "06/03/2018",
+      "Local": null,
+      "DataRecebimento": "06/03/2018",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "12.621",
+    "DataDecreto": "16/09/2025",
+    "NumeroDOU": "177",
+    "DataDOU": "17/09/2025"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "06/03/2018",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 33445,
+      "NomeArquivo": "DOU177_17.09.2025_S1_P2.pdf",
+      "Descricao": "Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 26006,
+      "NomeArquivo": "DOU - Decreto Legislativo - 32 - 2018.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 14829,
+      "NomeArquivo": "DOU - Mensagem ao Congresso - 201 - 2015.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 12446,
+    "NomeArquivo": "Uruguai - Acordo por Troca de Notas - Legalização de Documentos Públicos.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": []
+}

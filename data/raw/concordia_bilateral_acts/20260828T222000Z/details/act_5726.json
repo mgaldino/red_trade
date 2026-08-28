@@ -1,0 +1,123 @@
+{
+  "$id": "1",
+  "Titulo": "Memorando de Entendimento entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai para a Cooperação em Matéria de Combate à Fabricação e ao Tráfico Ilícitos de Armas de Fogo, Munições, Acessórios, Explosivos e Outros Materiais Correlatos",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Assunção",
+  "NomePaisCelebracao": "Paraguai",
+  "DataCelebracao": "23/11/2006",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": "Rubén Ramírez Lezcano",
+      "CargoSignatario": "Ministro de Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "361",
+    "DataMensagem": "12/06/2008",
+    "NumeroDOU": "112",
+    "DataDOU": "13/06/2008"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "696",
+    "DataDecreto": "07/10/2009",
+    "NumeroDOU": "193",
+    "DataDOU": "08/10/2009"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "645",
+      "DataDocumento": "16/10/2009",
+      "Local": "Embaixada em Assunção",
+      "DataRecebimento": "16/10/2009",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 9872,
+      "NomeArquivo": "Paraguai - DOU - Decreto Legislativo - 193 - 2009.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 9871,
+      "NomeArquivo": "Paraguai - DOU - Mensagem ao Congresso - 112 - 2008.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 9865,
+    "NomeArquivo": "Paraguai - MdE - Armas.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme disposto no Artigo VIII: \"O presente Memorando de Entendimento entrará em vigor trinta (30) dias após a data da última notificação pela qual uma das Partes comunique por escrito e por via diplomática a conclusão dos trâmites internos necessários para sua implementação. O Memorando de Entendimento se manterá em vigor até trinta (30) dias depois que uma de suas Partes comunique a outra, por via diplomática, sua intenção de denunciá-lo.\""
+    }
+  ]
+}

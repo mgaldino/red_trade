@@ -1,0 +1,125 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República da África do Sul de Cooperação Técnica",
+  "OutraParte": "África do Sul",
+  "OutrasPartes": [
+    "África do Sul"
+  ],
+  "SignatarioBrasil": "Luiz Felipe Lampreia",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Cidade do Cabo",
+  "NomePaisCelebracao": "África do Sul",
+  "DataCelebracao": "01/03/2000",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "África do Sul",
+      "NomeSignatario": "Nkosazana Zuma",
+      "CargoSignatario": "Ministra das Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Cooperação e Desenvolvimento",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "672",
+    "DataMensagem": "30/07/2002",
+    "NumeroDOU": "146",
+    "DataDOU": "31/07/2002"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "332",
+    "DataDecreto": "22/07/2003",
+    "NumeroDOU": "140",
+    "DataDOU": "23/07/2003"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "4824",
+    "DataDecreto": "02/09/2003",
+    "NumeroDOU": "170",
+    "DataDOU": "03/09/2003"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": "39980",
+    "DataEntradaVigor": "25/07/2003",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 1186,
+      "NomeArquivo": "África do Sul-DOU-Mensagem ao Congresso-146-2002.pdf",
+      "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 1185,
+      "NomeArquivo": "África do Sul-DOU-Decreto Legislativo-140-2003.pdf",
+      "Descricao": "Publicação no DOU de Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 1184,
+      "NomeArquivo": "África do Sul-DOU-Decreto de Promulgação-170-2003.pdf",
+      "Descricao": "Publicação no DOU de Decreto de Promulgação",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 1183,
+    "NomeArquivo": "África do Sul-Acordo-Cooperação Técnica.pdf",
+    "Descricao": "África do Sul-Acordo-Cooperação Técnica",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": []
+}

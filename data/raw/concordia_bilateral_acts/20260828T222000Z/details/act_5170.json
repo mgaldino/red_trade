@@ -1,0 +1,120 @@
+{
+  "$id": "1",
+  "Titulo": "Tratado entre a República Federativa do Brasil e o República Popular da China sobre Assistência Judiciária Mútua em Matéria Penal",
+  "OutraParte": "China",
+  "OutrasPartes": [
+    "China"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Pequim",
+  "NomePaisCelebracao": "China",
+  "DataCelebracao": "24/05/2004",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "T",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "China",
+      "NomeSignatario": "Li Zhaoxing",
+      "CargoSignatario": "Ministro dos Negócios Estrangeiros"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "550",
+    "DataMensagem": "01/09/2004",
+    "NumeroDOU": "170",
+    "DataDOU": "02/09/2004"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "296",
+    "DataDecreto": "12/07/2006",
+    "NumeroDOU": "133",
+    "DataDOU": "13/07/2006"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "6282",
+    "DataDecreto": "03/12/2007",
+    "NumeroDOU": "232",
+    "DataDOU": "04/12/2007"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": "45311",
+    "DataEntradaVigor": "26/10/2007",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 3833,
+      "NomeArquivo": "China - DOU - Mensagem ao Congresso - 170 - 2004.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 3832,
+      "NomeArquivo": "China - DOU - Decreto Legislativo - 133 - 2006.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 3831,
+      "NomeArquivo": "China - DOU -  Decreto de Promulgação - 232 - 2007.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 3827,
+    "NomeArquivo": "China - Tratado - Matéria Penal.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme disposto no Artigo 27, Parágrafo 1: \"O presente Tratado estará sujeito a ratificação e entrará em vigor a partir do trigésimo dia após a data de troca dos instrumentos de ratificação.\""
+    }
+  ]
+}

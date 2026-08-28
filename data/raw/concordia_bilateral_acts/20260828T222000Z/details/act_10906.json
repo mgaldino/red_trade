@@ -1,0 +1,115 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo sobre o Benefício de Justiça Gratuita e a Assistência Jurídica Gratuita entre os Estados Partes do MERCOSUL, a República da Bolívia e a República do Chile - Decisão nº 50/00",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Luiz Felipe Lampreia",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Florianópolis",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "15/12/2000",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "258",
+    "DataMensagem": "11/04/2002",
+    "NumeroDOU": "70",
+    "DataDOU": "12/04/2002"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "292",
+    "DataDecreto": "12/07/2006",
+    "NumeroDOU": "133",
+    "DataDOU": "13/07/2006"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "6.679",
+    "DataDecreto": "08/12/2008",
+    "NumeroDOU": "239",
+    "DataDOU": "09/12/2008"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "30/08/2007",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 26864,
+      "NomeArquivo": "MERCOSUL - DOU - Mensagem ao Congresso - 70 - 2002.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 26863,
+      "NomeArquivo": "MERCOSUL - DOU - Decreto Legislativo - 133 - 2006.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 26862,
+      "NomeArquivo": "MERCOSUL - DOU - Decreto de Promulgação - 239 - 2008.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 2054,
+    "NomeArquivo": "Acordo - Assistência Jurídica Mútua - MERCOSUL-Bolívia-Chile .pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme disposto no Artigo 16: \"O presente Acordo entrará em vigor, trinta (30) dias depois do depósito dos instrumentos de ratificação pelo menos um Estado Parte do Mercosul e pelo menos um Estado Associado. Para os demais Estados Partes, entrará em vigor no trigésimo dia posterior ao depósito de seu respectivo instrumento de ratificação.\""
+    }
+  ]
+}

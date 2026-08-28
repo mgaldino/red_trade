@@ -1,0 +1,229 @@
+{
+  "source": "WTO Documents Online",
+  "accessed_at": "2026-08-28T22:34:02.227300+00:00",
+  "manifest": "data/processed/wto_coauthorship/wto_mention_validation_sample_20.csv",
+  "user_agent": "red-trade-wto-coauthorship-pilot/0.1 (academic research; low-volume manifest download)",
+  "delay_seconds": 0.75,
+  "records": [
+    {
+      "catalogue_id": "128049",
+      "symbol": "G/AG/GEN/120 ; G/L/1075 ; G/LIC/D/49 ; G/PSI/D/5 ; G/SPS/GEN/1371 ; G/TBT/D/47 ; WT/DS484/1",
+      "url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=q:/WT/DS/484-1.pdf&Open=True",
+      "path": "data/raw/wto_coauthorship/2026-08-28/validation_pdfs/128049__G_AG_GEN_120_G_L_1075_G_LIC_D_49_G_PSI_D_5_G_SPS_GEN_1371_G_TBT_D_47_WT_DS484_1.pdf",
+      "status": "downloaded",
+      "bytes": 26110,
+      "sha256": "f635b116640839a333ea3926e8a6202334e77a0420df2403a4e054aaefbfa942",
+      "content_type": "application/PDF",
+      "content_disposition": "inline;filename=484-1.pdf"
+    },
+    {
+      "catalogue_id": "125627",
+      "symbol": "WT/DS481/3",
+      "url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=q:/WT/DS/481-3.pdf&Open=True",
+      "path": "data/raw/wto_coauthorship/2026-08-28/validation_pdfs/125627__WT_DS481_3.pdf",
+      "status": "downloaded",
+      "bytes": 16277,
+      "sha256": "b0d46568dfc85ac1293ba9cf08814bb8ba26671825c6a8394c215cfe396bf556",
+      "content_type": "application/PDF",
+      "content_disposition": "inline;filename=481-3.pdf"
+    },
+    {
+      "catalogue_id": "121883",
+      "symbol": "WT/DS472/3",
+      "url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=q:/WT/DS/472-3.pdf&Open=True",
+      "path": "data/raw/wto_coauthorship/2026-08-28/validation_pdfs/121883__WT_DS472_3.pdf",
+      "status": "downloaded",
+      "bytes": 15745,
+      "sha256": "4632395c837ef9f0aca22a6889ea985da33e1cc528fbb96c5fe4219f04e50d0e",
+      "content_type": "application/PDF",
+      "content_disposition": "inline;filename=472-3.pdf"
+    },
+    {
+      "catalogue_id": "96991",
+      "symbol": "WT/DS451/6",
+      "url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/DS/451-6.pdf&Open=True",
+      "path": "data/raw/wto_coauthorship/2026-08-28/validation_pdfs/96991__WT_DS451_6.pdf",
+      "status": "downloaded",
+      "bytes": 7673,
+      "sha256": "c9853df0ecd3d585c41a0a624d60345e2fab1e2a14a23ecb59ded5f2b2c7e8fd",
+      "content_type": "application/PDF",
+      "content_disposition": "inline;filename=451-6.pdf"
+    },
+    {
+      "catalogue_id": "42271",
+      "symbol": "G/ADP/D92/1 ; G/L/990 ; WT/DS439/1",
+      "url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/ADP/D92-1.pdf&Open=True",
+      "path": "data/raw/wto_coauthorship/2026-08-28/validation_pdfs/42271__G_ADP_D92_1_G_L_990_WT_DS439_1.pdf",
+      "status": "downloaded",
+      "bytes": 22532,
+      "sha256": "726425c310aa5f588c7a96242b29ff6b434524478f19f5255e898dbd9713d65e",
+      "content_type": "application/PDF",
+      "content_disposition": "inline;filename=D92-1.pdf"
+    },
+    {
+      "catalogue_id": "80918",
+      "symbol": "WT/BFA/W/204",
+      "url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/BFA/W204.pdf&Open=True",
+      "path": "data/raw/wto_coauthorship/2026-08-28/validation_pdfs/80918__WT_BFA_W_204.pdf",
+      "status": "downloaded",
+      "bytes": 33342,
+      "sha256": "2f9aa7492be0335403295e866d8757d5473ff5ddf1c3ca62430f2024dfe7c25e",
+      "content_type": "application/PDF",
+      "content_disposition": "inline;filename=W204.pdf"
+    },
+    {
+      "catalogue_id": "89561",
+      "symbol": "G/LIC/Q/BRA/5/Add.1",
+      "url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/LICQ/BRA5A1.pdf&Open=True",
+      "path": "data/raw/wto_coauthorship/2026-08-28/validation_pdfs/89561__G_LIC_Q_BRA_5_Add.1.pdf",
+      "status": "downloaded",
+      "bytes": 15046,
+      "sha256": "9ffeea0c7fdb449e983375c0e03939ae7013cf3ff58a36466bcb6f5cde99c651",
+      "content_type": "application/PDF",
+      "content_disposition": "inline;filename=BRA5A1.pdf"
+    },
+    {
+      "catalogue_id": "74369",
+      "symbol": "G/LIC/Q/BRA/11",
+      "url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/LICQ/BRA11.pdf&Open=True",
+      "path": "data/raw/wto_coauthorship/2026-08-28/validation_pdfs/74369__G_LIC_Q_BRA_11.pdf",
+      "status": "downloaded",
+      "bytes": 18938,
+      "sha256": "364b212f53e6c4de36fcc5f595d0c4e7192d020b0e81f564b44f1590403b1e1c",
+      "content_type": "application/PDF",
+      "content_disposition": "inline;filename=BRA11.pdf"
+    },
+    {
+      "catalogue_id": "91865",
+      "symbol": "G/LIC/Q/BRA/10",
+      "url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/LICQ/BRA10.pdf&Open=True",
+      "path": "data/raw/wto_coauthorship/2026-08-28/validation_pdfs/91865__G_LIC_Q_BRA_10.pdf",
+      "status": "downloaded",
+      "bytes": 12273,
+      "sha256": "3a7e5b6e5ecc991496a198cf28ee81334f9ef01c8baf193981b62b5f1a13d430",
+      "content_type": "application/PDF",
+      "content_disposition": "inline;filename=BRA10.pdf"
+    },
+    {
+      "catalogue_id": "94881",
+      "symbol": "G/LIC/Q/BRA/5",
+      "url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/LICQ/BRA5.pdf&Open=True",
+      "path": "data/raw/wto_coauthorship/2026-08-28/validation_pdfs/94881__G_LIC_Q_BRA_5.pdf",
+      "status": "downloaded",
+      "bytes": 23333,
+      "sha256": "e6802747e0cf3ccee7b427acc27d49314f6ccf956acabfe6a15de9a00bb8a984",
+      "content_type": "application/PDF",
+      "content_disposition": "inline;filename=BRA5.pdf"
+    },
+    {
+      "catalogue_id": "88674",
+      "symbol": "WT/DS355/2",
+      "url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/DS/355-2.pdf&Open=True",
+      "path": "data/raw/wto_coauthorship/2026-08-28/validation_pdfs/88674__WT_DS355_2.pdf",
+      "status": "downloaded",
+      "bytes": 24357,
+      "sha256": "1a7786649eeba1920d76c0b0d89290652a0a4e45a6aed5bd25fb3fd3f99a47f7",
+      "content_type": "application/PDF",
+      "content_disposition": "inline;filename=355-2.pdf"
+    },
+    {
+      "catalogue_id": "62444",
+      "symbol": "G/ADP/D71/1 ; G/L/810 ; WT/DS355/1",
+      "url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/ADP/D71-1.pdf&Open=True",
+      "path": "data/raw/wto_coauthorship/2026-08-28/validation_pdfs/62444__G_ADP_D71_1_G_L_810_WT_DS355_1.pdf",
+      "status": "downloaded",
+      "bytes": 36579,
+      "sha256": "c6efadecd0a31becb70fb413ec262105421ee534536e8ef0d2c1292ff3780a90",
+      "content_type": "application/PDF",
+      "content_disposition": "inline;filename=D71-1.pdf"
+    },
+    {
+      "catalogue_id": "57238",
+      "symbol": "WT/DS332/2",
+      "url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/DS/332-2.pdf&Open=True",
+      "path": "data/raw/wto_coauthorship/2026-08-28/validation_pdfs/57238__WT_DS332_2.pdf",
+      "status": "downloaded",
+      "bytes": 14041,
+      "sha256": "9e517f491d4a4881dcd01d856f06d81f7a0865ffcd4ca3f4866800f5ed3f5d9c",
+      "content_type": "application/PDF",
+      "content_disposition": "inline;filename=332-2.pdf"
+    },
+    {
+      "catalogue_id": "53721",
+      "symbol": "G/SCM/W/512",
+      "url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/SCM/W512.pdf&Open=True",
+      "path": "data/raw/wto_coauthorship/2026-08-28/validation_pdfs/53721__G_SCM_W_512.pdf",
+      "status": "downloaded",
+      "bytes": 16745,
+      "sha256": "1f3541becf8706e69a5fded87c1b6324ff3c12ef06bc8cd4d067b1c710766e89",
+      "content_type": "application/PDF",
+      "content_disposition": "inline;filename=W512.pdf"
+    },
+    {
+      "catalogue_id": "16369",
+      "symbol": "G/SCM/W/475",
+      "url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/SCM/W475.pdf&Open=True",
+      "path": "data/raw/wto_coauthorship/2026-08-28/validation_pdfs/16369__G_SCM_W_475.pdf",
+      "status": "downloaded",
+      "bytes": 15706,
+      "sha256": "21f0ded08974b22264a1197645567e2b621ecf5987ffbfc246227da390e511f8",
+      "content_type": "application/PDF",
+      "content_disposition": "inline;filename=W475.pdf"
+    },
+    {
+      "catalogue_id": "96450",
+      "symbol": "G/SCM/W/479",
+      "url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/SCM/W479.pdf&Open=True",
+      "path": "data/raw/wto_coauthorship/2026-08-28/validation_pdfs/96450__G_SCM_W_479.pdf",
+      "status": "already_present_same_hash",
+      "bytes": 32517,
+      "sha256": "0b5a5a9fb44ba95f12a5aa8504ea004d1351d194057d405d257cbda63dcb423d",
+      "content_type": "application/PDF",
+      "content_disposition": "inline;filename=W479.pdf"
+    },
+    {
+      "catalogue_id": "95090",
+      "symbol": "G/SCM/W/477",
+      "url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/SCM/W477.pdf&Open=True",
+      "path": "data/raw/wto_coauthorship/2026-08-28/validation_pdfs/95090__G_SCM_W_477.pdf",
+      "status": "already_present_same_hash",
+      "bytes": 19058,
+      "sha256": "20f6e7d3f9e450d4951c8b247db408c9e6cfb180aa16b89033bc7fbcea07d085",
+      "content_type": "application/PDF",
+      "content_disposition": "inline;filename=W477.pdf"
+    },
+    {
+      "catalogue_id": "95091",
+      "symbol": "G/SCM/W/474",
+      "url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/SCM/W474.pdf&Open=True",
+      "path": "data/raw/wto_coauthorship/2026-08-28/validation_pdfs/95091__G_SCM_W_474.pdf",
+      "status": "already_present_same_hash",
+      "bytes": 21114,
+      "sha256": "3b7da01e04d6b7332ed4c145e2ec8f5ef1da1480f1506dffa397581969feff62",
+      "content_type": "application/PDF",
+      "content_disposition": "inline;filename=W474.pdf"
+    },
+    {
+      "catalogue_id": "43525",
+      "symbol": "S/L/95",
+      "url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/S/L/95.pdf&Open=True",
+      "path": "data/raw/wto_coauthorship/2026-08-28/validation_pdfs/43525__S_L_95.pdf",
+      "status": "already_present_same_hash",
+      "bytes": 14566,
+      "sha256": "1c8d44528566f6eba4298fef149f4d58e71dd08eaa739dc90e6e49e5e7376460",
+      "content_type": "application/PDF",
+      "content_disposition": "inline;filename=95.pdf"
+    },
+    {
+      "catalogue_id": "88943",
+      "symbol": "G/ADP/D35/1 ; G/L/447 ; WT/DS229/1",
+      "url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/ADP/D35-1.pdf&Open=True",
+      "path": "data/raw/wto_coauthorship/2026-08-28/validation_pdfs/88943__G_ADP_D35_1_G_L_447_WT_DS229_1.pdf",
+      "status": "already_present_same_hash",
+      "bytes": 17388,
+      "sha256": "f20fdeafc358cf9bf0e4df6c575424ee7436a6fa779e1015ed89b40a12fe12af",
+      "content_type": "application/PDF",
+      "content_disposition": "inline;filename=D35-1.pdf"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo sobre Regularização Migratória Interna de Cidadãos do MERCOSUL - Dec. nº 28/02",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai",
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Lafer",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "05/12/2002",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Consulares e Migratórios",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": "481",
+    "DataMensagem": "18/09/2003",
+    "NumeroDOU": "182",
+    "DataDOU": "19/09/2003"
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": "928",
+    "DataDecreto": "15/09/2005",
+    "NumeroDOU": "179",
+    "DataDOU": "16/09/2005"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 26234,
+      "NomeArquivo": "Mercosul - Ata de Depósito - Paraguai - Regularização Migratória.pdf",
+      "Descricao": "Ata de Depósito de Ratificação do Paraguai.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 26233,
+      "NomeArquivo": "Acordo - Regularização - Migratória - MERCOSUL - DOU - Mensagem ao Congresso - 182 - 2003.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 26232,
+      "NomeArquivo": "Acordo - Regularização - Migratória - MERCOSUL - DOU - Decreto Legislativo - 179 - 2005.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 5616,
+    "NomeArquivo": "Acordo - Regularização - Migratória - MERCOSUL - port esp.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo 5: \"O presente Acordo entrará em vigência após a notificação pelos quatro Estados Partes à República do Paraguai de que foram cumpridas as formalidades internas necessárias a sua entrada em vigor.\""
+    }
+  ]
+}

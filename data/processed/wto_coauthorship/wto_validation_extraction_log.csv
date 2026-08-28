@@ -1,0 +1,41 @@
+sample_index,catalogue_id,symbol,pdf_path,text_path,full_text_characters,first_page_characters
+1,59922,TN/RL/GEN/8,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/59922__TN_RL_GEN_8.pdf,data/processed/wto_coauthorship/validation_text/59922.txt,4979,2777
+2,56812,TN/RL/GEN/2,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/56812__TN_RL_GEN_2.pdf,data/processed/wto_coauthorship/validation_text/56812.txt,4768,2606
+3,61763,TN/RL/GEN/28,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/61763__TN_RL_GEN_28.pdf,data/processed/wto_coauthorship/validation_text/61763.txt,24969,3142
+4,96936,G/C/W/678,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/96936__G_C_W_678.pdf,data/processed/wto_coauthorship/validation_text/96936.txt,4537,3344
+5,1814,S/CSS/W/13,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/1814__S_CSS_W_13.pdf,data/processed/wto_coauthorship/validation_text/1814.txt,6878,2361
+6,44267,IP/C/W/429/Rev.1,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/44267__IP_C_W_429_Rev.1.pdf,data/processed/wto_coauthorship/validation_text/44267.txt,18456,2858
+7,90807,WT/MIN(09)/W/1/Add.1,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/90807__WT_MIN_09_W_1_Add.1.pdf,data/processed/wto_coauthorship/validation_text/90807.txt,2310,2310
+8,69295,TN/C/W/52/Add.2,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/69295__TN_C_W_52_Add.2.pdf,data/processed/wto_coauthorship/validation_text/69295.txt,1035,1035
+9,2597,G/AG/NG/W/139 ; G/AG/W/50,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/2597__G_AG_NG_W_139_G_AG_W_50.pdf,data/processed/wto_coauthorship/validation_text/2597.txt,6405,3132
+10,54861,IP/C/W/474 ; TN/C/W/41/Rev.2 ; WT/GC/W/564/Rev.2,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/54861__IP_C_W_474_TN_C_W_41_Rev.2_WT_GC_W_564_Rev.2.pdf,data/processed/wto_coauthorship/validation_text/54861.txt,5955,3418
+11,54183,TN/S/W/31,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/54183__TN_S_W_31.pdf,data/processed/wto_coauthorship/validation_text/54183.txt,15030,3282
+12,87544,TN/C/W/49 ; WT/GC/W/590,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/87544__TN_C_W_49_WT_GC_W_590.pdf,data/processed/wto_coauthorship/validation_text/87544.txt,2398,2398
+13,57597,TN/C/W/41/Rev.1 ; WT/GC/W/564/Rev.1,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/57597__TN_C_W_41_Rev.1_WT_GC_W_564_Rev.1.pdf,data/processed/wto_coauthorship/validation_text/57597.txt,5696,3170
+14,57669,TN/RL/GEN/10,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/57669__TN_RL_GEN_10.pdf,data/processed/wto_coauthorship/validation_text/57669.txt,15132,2767
+15,113585,WT/GC/150,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/113585__WT_GC_150.pdf,data/processed/wto_coauthorship/validation_text/113585.txt,1677,1677
+16,103248,TN/S/W/23,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/103248__TN_S_W_23.pdf,data/processed/wto_coauthorship/validation_text/103248.txt,8766,2961
+17,56932,TN/RL/GEN/20,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/56932__TN_RL_GEN_20.pdf,data/processed/wto_coauthorship/validation_text/56932.txt,16167,3549
+18,89623,WT/BFA/W/191,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/89623__WT_BFA_W_191.pdf,data/processed/wto_coauthorship/validation_text/89623.txt,5460,3789
+19,20804,IP/C/W/296,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/20804__IP_C_W_296.pdf,data/processed/wto_coauthorship/validation_text/20804.txt,33876,2748
+20,107275,G/C/W/428 ; G/TRIMS/W/25,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/107275__G_C_W_428_G_TRIMS_W_25.pdf,data/processed/wto_coauthorship/validation_text/107275.txt,10775,3336
+21,5187,TN/C/9,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/5187__TN_C_9.pdf,data/processed/wto_coauthorship/validation_text/5187.txt,2383,2383
+22,11719,TN/RL/W/45,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/11719__TN_RL_W_45.pdf,data/processed/wto_coauthorship/validation_text/11719.txt,48975,3113
+23,503,WT/DS217/12 ; WT/DS234/20,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/503__WT_DS217_12_WT_DS234_20.pdf,data/processed/wto_coauthorship/validation_text/503.txt,2163,2163
+24,51259,TN/RL/GEN/38,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/51259__TN_RL_GEN_38.pdf,data/processed/wto_coauthorship/validation_text/51259.txt,24857,2601
+25,59833,IP/C/W/442,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/59833__IP_C_W_442.pdf,data/processed/wto_coauthorship/validation_text/59833.txt,14375,3149
+26,70468,TN/RL/GEN/43,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/70468__TN_RL_GEN_43.pdf,data/processed/wto_coauthorship/validation_text/70468.txt,23781,3170
+27,82383,TN/RL/W/214/Rev.1,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/82383__TN_RL_W_214_Rev.1.pdf,data/processed/wto_coauthorship/validation_text/82383.txt,3150,3150
+28,103230,TN/RL/W/119,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/103230__TN_RL_W_119.pdf,data/processed/wto_coauthorship/validation_text/103230.txt,10693,2815
+29,47772,TN/RL/GEN/46,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/47772__TN_RL_GEN_46.pdf,data/processed/wto_coauthorship/validation_text/47772.txt,25270,3029
+30,14032,TN/RL/W/93,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/14032__TN_RL_W_93.pdf,data/processed/wto_coauthorship/validation_text/14032.txt,17424,3050
+31,88943,G/ADP/D35/1 ; G/L/447 ; WT/DS229/1,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/88943__G_ADP_D35_1_G_L_447_WT_DS229_1.pdf,data/processed/wto_coauthorship/validation_text/88943.txt,4959,3725
+32,14756,TN/RL/W/104,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/14756__TN_RL_W_104.pdf,data/processed/wto_coauthorship/validation_text/14756.txt,9076,2926
+33,71824,TN/MA/W/54,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/71824__TN_MA_W_54.pdf,data/processed/wto_coauthorship/validation_text/71824.txt,7458,2867
+34,95091,G/SCM/W/474,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/95091__G_SCM_W_474.pdf,data/processed/wto_coauthorship/validation_text/95091.txt,5456,2824
+35,43525,S/L/95,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/43525__S_L_95.pdf,data/processed/wto_coauthorship/validation_text/43525.txt,2714,2714
+36,71995,IP/C/W/443,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/71995__IP_C_W_443.pdf,data/processed/wto_coauthorship/validation_text/71995.txt,34487,3158
+37,42718,TN/RL/W/28,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/42718__TN_RL_W_28.pdf,data/processed/wto_coauthorship/validation_text/42718.txt,10557,3290
+38,95090,G/SCM/W/477,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/95090__G_SCM_W_477.pdf,data/processed/wto_coauthorship/validation_text/95090.txt,4528,2926
+39,96450,G/SCM/W/479,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/96450__G_SCM_W_479.pdf,data/processed/wto_coauthorship/validation_text/96450.txt,16649,2701
+40,1355,JOB(04)/52/Rev.1,data/raw/wto_coauthorship/2026-08-28/validation_pdfs/1355__JOB_04_52_Rev.1.pdf,data/processed/wto_coauthorship/validation_text/1355.txt,13005,376

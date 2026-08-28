@@ -1,0 +1,1779 @@
+{
+  "accessed_at": "2026-08-28T22:21:58.273Z",
+  "collection_note": "Nova coleta sem alterar o seletor de paginação após tentativa incompleta preservada separadamente.",
+  "coverage_note": "Lista de resultados exibida pelo portal oficial; títulos podem estar truncados na interface e exigem validação no PDF/registro de catálogo.",
+  "extracted_records": 104,
+  "query": {
+    "collection": "WTO",
+    "date_from": "01/01/2000",
+    "date_to": "31/12/2014",
+    "hits_per_page": "portal_default; DOM_exposed_all_records",
+    "interface_language": "ENGLISH",
+    "title_query": "Brazil AND India"
+  },
+  "records": [
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "100386",
+      "date": "19/04/2011",
+      "document_number": "11-2027",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/C/W59.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/C/W59.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 3,
+      "size": "22 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/C/W59.pdf&Open=True",
+      "symbol": "TN/C/W/59",
+      "title_displayed": "Trade Negotiations Committee - Draft Decision to enhance mutual supportiveness between the TRIPS Agreement and the Convention on Biological Diversity - Communication from Brazil, China, Colombia, Ecuador, India, Indonesia, Peru, Thailand, the ACP Group, and the African Group"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "118088",
+      "date": "31/03/2011",
+      "document_number": "English",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 1,
+      "size": "11 KB",
+      "spanish_url": null,
+      "symbol": "RD/SERV/54",
+      "title_displayed": "Working Party on Domestic Regulation - Unofficial room document - Communication from Argentina, Brazil, China, Ecuador, India, Indonesia, The Philippines, South Africa, Turkey, and the Group of Small, Vulnerable Economies (SVES) - Proposal on paragraph 42 of the Chairperson's draft text"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "81056",
+      "date": "26/11/2010",
+      "document_number": "10-6376",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 2,
+      "size": "13 KB",
+      "spanish_url": null,
+      "symbol": "JOB/MA/73",
+      "title_displayed": "Negotiating Group on Market Access - Market Access for Non-Agricultural Products - Responses by the Co-Sponsors to the Questions from Malaysia on the Proposal on an \"Understanding to Facilitate the Implementation of the TBT Agreement as Applied to Trade in the Chemical[...]rom Argentina, Brazil and India"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "107190",
+      "date": "15/11/2010",
+      "document_number": "10-6107",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 3,
+      "size": "21 KB",
+      "spanish_url": null,
+      "symbol": "JOB/MA/61",
+      "title_displayed": "Negotiating Group on Market Access - Market Access for Non-Agricultural Products - Replies by the Co-Sponsors of the Framework for Industry-Specific Proposals to Questions Posed by the Republic of Korea in Document JOB/MA/18 - Communication from Brazil, the European Union and India"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "105605",
+      "date": "15/11/2010",
+      "document_number": "10-6108",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 4,
+      "size": "22 KB",
+      "spanish_url": null,
+      "symbol": "JOB/MA/62",
+      "title_displayed": "Negotiating Group on Market Access - Market Access for Non-Agricultural Products - Replies by the Co-Sponsors of the Framework for Industry-Specific Proposals to Questions Posed by the Kingdom of Saudi Arabia in Document JOB/MA/30 - Communication from Brazil, the European Union and India"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "27141",
+      "date": "01/10/2010",
+      "document_number": "10-5018",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 10,
+      "size": "44 KB",
+      "spanish_url": null,
+      "symbol": "JOB(08)/103/Rev.3",
+      "title_displayed": "Committee on Trade and Development - Transparency Mechanism for Preferential Trade Arrangements - Draft proposal by Brazil, China, India and the United States - Revision"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "107743",
+      "date": "20/09/2010",
+      "document_number": "10-4747",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 3,
+      "size": "17 KB",
+      "spanish_url": null,
+      "symbol": "JOB/MA/48",
+      "title_displayed": "Negotiating Group on Market Access - Market Access for Non-Agricultural Products - Replies from the Co-sponsors of the \"Understanding to facilitate the implementation of the TBT Agreement as applied to trade in the chemical products sector\" to questions posed by the A[...]rom Argentina, Brazil and India"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "99907",
+      "date": "16/07/2010",
+      "document_number": "10-3879",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/BFA/W207.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/BFA/W207.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "13 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/BFA/W207.pdf&Open=True",
+      "symbol": "WT/BFA/W/207",
+      "title_displayed": "Committee on Budget, Finance and Administration - Joint Statement on Report on Diversity in the WTO Secretariat - Brazil, China, Ecuador, India and Pakistan"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "90476",
+      "date": "12/07/2010",
+      "document_number": "10-3797",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 3,
+      "size": "21 KB",
+      "spanish_url": null,
+      "symbol": "JOB/MA/37",
+      "title_displayed": "Negotiating Group on Market Access - Market Access for Non-Agricultural Products - Draft Paper on Remanufacturing - Communication from Argentina, Bolivarian Republic of Venezuela, Brazil, Ecuador and India"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "102028",
+      "date": "05/07/2010",
+      "document_number": "10-3643",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 2,
+      "size": "16 KB",
+      "spanish_url": null,
+      "symbol": "JOB/MA/30",
+      "title_displayed": "Negotiating Group on Market Access - Market Access for Non-Agricultural Products - Questions from the Kingdom of Saudi Arabia on the Brazil, EU and India proposal for a \"Framework for Industry-specific NTB Proposals\" (TN/MA/W/136) - Communication from Saudi Arabia"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "80679",
+      "date": "24/06/2010",
+      "document_number": "10-3471",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 9,
+      "size": "45 KB",
+      "spanish_url": null,
+      "symbol": "JOB(08)/103/Rev.2",
+      "title_displayed": "Committee on Trade and Development - Transparency Mechanism for Preferential Trade Arrangements - Draft Proposal by Brazil, China, India and the United States - Revision"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "80918",
+      "date": "17/05/2010",
+      "document_number": "10-2759",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/BFA/W204.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/BFA/W204.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 4,
+      "size": "33 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/BFA/W204.pdf&Open=True",
+      "symbol": "WT/BFA/W/204",
+      "title_displayed": "Committee on Budget, Finance and Administration - Report on Diversity in the WTO Secretariat - Response to Measures Proposed in Joint Statement by Brazil, China, Ecuador, Egypt, India, Pakistan and South Africa"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "81064",
+      "date": "12/04/2010",
+      "document_number": "10-1886",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/BFA/W198.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/BFA/W198.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "25 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/BFA/W198.pdf&Open=True",
+      "symbol": "WT/BFA/W/198",
+      "title_displayed": "Committee on Budget, Finance and Administration - Joint Statement on Report on Diversity in the WTO Secretariat - Brazil, China, Ecuador, Egypt, India, Pakistan and South Africa"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "92641",
+      "date": "15/03/2010",
+      "document_number": "10-1368",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/MA/W136.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/MA/W136.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 7,
+      "size": "33 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/MA/W136.pdf&Open=True",
+      "symbol": "TN/MA/W/136",
+      "title_displayed": "Negotiating Group on Market Access - Market Access for Non-Agricultural Products - Framework for Industry-Specific NTB Proposals - Communication from Brazil, the European Union and India - Negotiating Text"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "104651",
+      "date": "25/02/2010",
+      "document_number": "10-1074",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/COMTD/N31.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/COMTD/N31.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "13 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/COMTD/N31.pdf&Open=True",
+      "symbol": "WT/COMTD/N/31",
+      "title_displayed": "Committee on Trade and Development - Notification of Regional Trade Agreement - Argentina, Brazil, Paraguay and Uruguay, States Parties to the Mercosur, and India"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "92202",
+      "date": "11/02/2010",
+      "document_number": "10-0770",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/RL/GEN163.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/RL/GEN163.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 6,
+      "size": "37 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/RL/GEN163.pdf&Open=True",
+      "symbol": "TN/RL/GEN/163",
+      "title_displayed": "Negotiating Group on Rules - Fisheries Subsidies - Special and Differential Treatment - Communication from Brazil, China, India and Mexico"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "76429",
+      "date": "22/01/2010",
+      "document_number": "10-0334",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/MA/W132.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/MA/W132.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 5,
+      "size": "29 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/MA/W132.pdf&Open=True",
+      "symbol": "TN/MA/W/132",
+      "title_displayed": "Negotiating Group on Market Access - Market Access for Non-Agricultural Products - Responses to Brazil and India's Questions on Trade in Remanufactured Goods - Communication from Japan, Switzerland and the United States"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "91638",
+      "date": "11/12/2009",
+      "document_number": "09-6458",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 2,
+      "size": "16 KB",
+      "spanish_url": null,
+      "symbol": "JOB(09)/183",
+      "title_displayed": "Negotiating Group on Market Access - Market Access for Non-Agricultural Products - Questions on the Ministerial Decision on Trade in Remanufactured Goods - Communication from Brazil and India"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "103788",
+      "date": "09/12/2009",
+      "document_number": "09-6384",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/MIN09/W1A3.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/MIN09/W1A3.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "11 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/MIN09/W1A3.pdf&Open=True",
+      "symbol": "WT/MIN(09)/W/1/Add.3",
+      "title_displayed": "Ministerial Conference - Seventh Session - Geneva, 30 November - 2 December 2009 - Strengthening the WTO - Communication from Australia, Brazil, Canada, China, Hong Kong China, European Communities, India, Japan, Korea, Malaysia, Mauritius, Mexico, Norway, South Africa[...]d States and Uruguay - Addendum"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "92494",
+      "date": "27/11/2009",
+      "document_number": "09-6029",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 9,
+      "size": "42 KB",
+      "spanish_url": null,
+      "symbol": "JOB(08)/103/Rev.1",
+      "title_displayed": "Committee on Trade and Development - Transparency Mechanism for Preferential Trade Arrangements - Draft Proposal by Brazil, China, India and the United States - Revision"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "94034",
+      "date": "10/11/2009",
+      "document_number": "09-5612",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/MIN09/W1A2.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/MIN09/W1A2.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "11 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/MIN09/W1A2.pdf&Open=True",
+      "symbol": "WT/MIN(09)/W/1/Add.2",
+      "title_displayed": "Ministerial Conference - Seventh Session - Geneva, 30 November - 2 December 2009 - Strengthening the WTO - Communication from Australia, Brazil, Canada, China, Hong Kong China, European Communities, India, Japan, Korea, Malaysia, Mauritius, Mexico, Norway, South Africa[...]d States and Uruguay - Addendum"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "89623",
+      "date": "04/11/2009",
+      "document_number": "09-5493",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/BFA/W191.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/BFA/W191.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "18 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/BFA/W191.pdf&Open=True",
+      "symbol": "WT/BFA/W/191",
+      "title_displayed": "Committee on Budget, Finance and Administration - Joint Proposal on the Improvement of Diversification of the WTO Secretariat - By Brazil, China, Cuba, India, Pakistan, South Africa"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "90807",
+      "date": "30/10/2009",
+      "document_number": "09-5435",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/MIN09/W1A1.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/MIN09/W1A1.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "12 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/MIN09/W1A1.pdf&Open=True",
+      "symbol": "WT/MIN(09)/W/1/Add.1",
+      "title_displayed": "Ministerial Conference - Seventh Session - Geneva, 30 November - 2 December 2009 - Strengthening the WTO - Communication from Australia, Brazil, Canada, China, Hong Kong China, European Communities, India, Japan, Korea, Malaysia, Mauritius, Mexico, Norway, South Africa[...]d States and Uruguay - Addendum"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "92550",
+      "date": "16/10/2009",
+      "document_number": "09-5119",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/MIN09/W1.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/MIN09/W1.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "13 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/MIN09/W1.pdf&Open=True",
+      "symbol": "WT/MIN(09)/W/1",
+      "title_displayed": "Ministerial Conference - Seventh Session - Geneva, 30 November - 2 December 2009 - Strengthening the WTO - Communication from Australia, Brazil, Canada, China, Hong Kong China, European Communities, India, Japan, Korea, Malaysia, Mauritius, Mexico, Norway, South Africa[...]rkey, United States and Uruguay"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "85968",
+      "date": "04/05/2009",
+      "document_number": "09-2158",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/C/W620.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/G/C/W620.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "17 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/G/C/W620.pdf&Open=True",
+      "symbol": "G/C/W/620",
+      "title_displayed": "Council for Trade in Goods - Request for Extension of the Waiver for Preferential Tariff Treatment for Least-Developed Countries - Submission from Brazil, China, India, and Republic of Korea"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "93816",
+      "date": "15/10/2008",
+      "document_number": "08-4964",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 9,
+      "size": "41 KB",
+      "spanish_url": null,
+      "symbol": "JOB(08)/103",
+      "title_displayed": "Committee on Trade and Development - Transparency Mechanism for Preferential Trade Arrangements - Draft proposal by Brazil, China, India and the United States"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "80404",
+      "date": "29/07/2008",
+      "document_number": "08-3623",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/C/W52A3.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/C/W52A3.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "11 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/C/W52A3.pdf&Open=True",
+      "symbol": "TN/C/W/52/Add.3",
+      "title_displayed": "Trade Negotiations Committee - Draft Modalities for TRIPS Related Issues - Communication from Communication from Albania, Brazil, China, Colombia, Croatia, Ecuador, the European Communities, Georgia, Iceland, India, Indonesia, the Kyrgyz Republic, Liechtenstein, the Fo[...]nd the African Group - Addendum"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "69295",
+      "date": "25/07/2008",
+      "document_number": "08-3600",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/C/W52A2.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/C/W52A2.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "11 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/C/W52A2.pdf&Open=True",
+      "symbol": "TN/C/W/52/Add.2",
+      "title_displayed": "Trade Negotiations Committee - Draft Modalities for TRIPS Related Issues - Communication from Albania, Brazil, China, Colombia, Croatia, Ecuador, the European Communities, Georgia, Iceland, India, Indonesia, the Kyrgyz Republic, Liechtenstein, the Former Yugoslav Repub[...]nd the African Group - Addendum"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "91464",
+      "date": "24/07/2008",
+      "document_number": "08-3590",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/C/W52A1.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/C/W52A1.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "11 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/C/W52A1.pdf&Open=True",
+      "symbol": "TN/C/W/52/Add.1",
+      "title_displayed": "Trade Negotiations Committee - Draft Modalities for TRIPS Related Issues - Communication from Albania, Brazil, China, Colombia, Ecuador, the European Communities, Iceland, India, Indonesia, the Kyrgyz Republic, Liechtenstein, the Former Yugoslav Republic of Macedonia,[...]nd the African Group - Addendum"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "92094",
+      "date": "19/07/2008",
+      "document_number": "08-3499",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/C/W52.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/C/W52.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 3,
+      "size": "15 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/C/W52.pdf&Open=True",
+      "symbol": "TN/C/W/52",
+      "title_displayed": "Trade Negotiations Committee - Draft Modalities for TRIPS Related Issues - Communication from Albania, Brazil, China, Colombia, Ecuador, the European Communities, Iceland, India, Indonesia, the Kyrgyz Republic, Liechtenstein, the Former Yugoslav Republic of Macedonia,[...]ACP Group and the African Group"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "82559",
+      "date": "17/07/2008",
+      "document_number": "08-3469",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 2,
+      "size": "15 KB",
+      "spanish_url": null,
+      "symbol": "JOB(08)/80",
+      "title_displayed": "[Council for Trade-Related Aspects of Intellectual Property Rights] - Draft Modalities for TRIPS-Related Issues - Communication from Albania, Brazil, China, Ecuador, the European Communities, India, Indonesia, the Kyrgyz Republic, the Former Yugoslav Republic of Macedo[...]ACP Group and the African Group"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "84938",
+      "date": "13/06/2008",
+      "document_number": "08-2775",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/C/W49A1.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/C/W49A1.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "12 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/C/W49A1.pdf&Open=True",
+      "symbol": "TN/C/W/49/Add.1 ; WT/GC/W/590/Add.1",
+      "title_displayed": "General Council - Trade Negotiations Committee - Doha Work Programme - Relationship between the TRIPS Agreement and the Convention of Biological Diversity - Appropriate action to be taken/decided by the General Council on TRIPS & CBD - Communication from Brazil, China,[...]Group and ACP Group - Addendum"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "87544",
+      "date": "28/05/2008",
+      "document_number": "08-2479",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/C/W49.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/C/W49.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "24 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/C/W49.pdf&Open=True",
+      "symbol": "TN/C/W/49 ; WT/GC/W/590",
+      "title_displayed": "General Council - Trade Negotiations Committee - Doha Work Programme - Relationship between the TRIPS Agreement and the Convention of Biological Diversity - Appropriate action to be taken/decided by the General Council on TRIPS & CBD - Communication from Brazil, China,[...]ezuela, LDC Group and ACP Group"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "63913",
+      "date": "31/01/2008",
+      "document_number": "08-0469",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/RL/W215.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/RL/W215.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 4,
+      "size": "27 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/RL/W215.pdf&Open=True",
+      "symbol": "TN/RL/W/215",
+      "title_displayed": "Negotiating Group on Rules - Prohibition of Zeroing - Statement of Brazil; Chile; China; Colombia; Costa Rica; Hong Kong, China; India; Indonesia; Israel; Japan; Korea, Rep. of; Mexico; Norway; Pakistan; Singapore; South Africa; Switzerland; Separate Customs Territory[...]Matsu; Thailand; and Viet Nam"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "70494",
+      "date": "25/01/2008",
+      "document_number": "08-0379",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/RL/W214R3.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/RL/W214R3.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "12 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/RL/W214R3.pdf&Open=True",
+      "symbol": "TN/RL/W/214/Rev.3",
+      "title_displayed": "Negotiating Group on Rules - Statement on ''Zeroing'' in the Anti-Dumping Negotiations - Statement of Brazil; Chile; China; Costa Rica; Hong Kong, China; India; Japan; Korea, Rep. of; Mexico; Norway; Singapore; Switzerland; Separate Customs Territory of Taiwan, Penghu[...]d Matsu and Thailand - Revision"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "71755",
+      "date": "18/12/2007",
+      "document_number": "07-5634",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/RL/W214R2.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/RL/W214R2.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "12 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/RL/W214R2.pdf&Open=True",
+      "symbol": "TN/RL/W/214/Rev.2",
+      "title_displayed": "Negotiating Group on Rules - Statement on ''Zeroing'' in the Anti-Dumping Negotiations - Statement of Brazil; Chile; China; Costa Rica; Hong Kong, China; India; Japan; Korea, Rep. of; Mexico; Norway; Singapore; Switzerland; Separate Customs Territory of Taiwan, Penghu[...]Matsu; and Thailand - Revision"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "82383",
+      "date": "13/12/2007",
+      "document_number": "07-5529",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/RL/W214R1.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/RL/W214R1.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "12 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/RL/W214R1.pdf&Open=True",
+      "symbol": "TN/RL/W/214/Rev.1",
+      "title_displayed": "Negotiating Group on Rules - Statement on ''Zeroing'' in the Anti-Dumping Negotiations - Statement of Brazil; Chile; China; Costa Rica; Hong Kong, China; India; Japan; Korea, Rep. of; Mexico; Norway; Singapore; Switzerland; Separate Customs Territory of Taiwan, Penghu,[...]Matsu; and Thailand - Revision"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "73756",
+      "date": "07/12/2007",
+      "document_number": "07-5484",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/RL/W214.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/RL/W214.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "12 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/RL/W214.pdf&Open=True",
+      "symbol": "TN/RL/W/214",
+      "title_displayed": "Negotiating Group on Rules - Statement on ''Zeroing'' in the Anti-Dumping Negotiations - Statement of Brazil; Chile; China; Costa Rica; Hong Kong, China; India; Japan; Korea, Rep. of; Mexico; Norway; Singapore; Switzerland; Separate Customs Territory of Taiwan, Penghu[...]Kinmen and Matsu; and Thailand"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "76154",
+      "date": "01/10/2007",
+      "document_number": "07-4141",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 3,
+      "size": "32 KB",
+      "spanish_url": null,
+      "symbol": "JOB(07)/142",
+      "title_displayed": "Committee on Trade and Development - Transparency for Preferential Trade Arrangements - Non-Paper by Brazil and India"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "5187",
+      "date": "16/04/2007",
+      "document_number": "07-1507",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/C/9.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/C/9.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "11 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/C/9.pdf&Open=True",
+      "symbol": "TN/C/9",
+      "title_displayed": "Trade Negotiations Committee - Letter from Ministers Responsible for Trade of Brazil, European Communities, India and United States"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "58446",
+      "date": "02/04/2007",
+      "document_number": "07-1349",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 5,
+      "size": "34 KB",
+      "spanish_url": null,
+      "symbol": "JOB(07)/39",
+      "title_displayed": "Negotiating Group on Market Access - Market Access for Non-Agricultural Products - Proposal on NTBs - Negotiating Group on Market Access - Draft text on \"Procedures for Resolution of Non-Tariff Barriers\" - Communication from Argentina, Bolivarian Republic of Venezuela[...]ines, South Africa and Tunisia"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "1355",
+      "date": "14/03/2007",
+      "document_number": "07-1071",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/Jobs/Ext04/52R1.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/Jobs/Ext04/52R1.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 7,
+      "size": "25 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/Jobs/Ext04/52R1.pdf&Open=True",
+      "symbol": "JOB(04)/52/Rev.1",
+      "title_displayed": "Dispute Settlement Body - Special Session - Textual Contribution to the Negotiations on Improvements and Clarifications of The Dispute Settlement Understanding - Non-Paper presented by Argentina, Brazil, Canada, India, New Zealand and Norway - Revision"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "57011",
+      "date": "26/01/2007",
+      "document_number": "07-0375",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 3,
+      "size": "20 KB",
+      "spanish_url": null,
+      "symbol": "JOB(07)/11",
+      "title_displayed": "Negotiating Group on Market Access - Market Access for Non-Agricultural Products - Reponses to some questions asked regarding the NTB Resolution Mechanism by the NAMA 11 Group of Developing Countries - Communication from Argentina, Bolivarian Republic of Venezuela, Bra[...]pines, South Africa and Tunisia"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "51382",
+      "date": "04/12/2006",
+      "document_number": "06-5787",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/GC/W574.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/GC/W574.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "13 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/GC/W574.pdf&Open=True",
+      "symbol": "WT/GC/W/574",
+      "title_displayed": "General Council - 14 - 15 December 2006 - Transparency for Preferential Trade Arrangements - Draft Decision - Communication from Brazil and India"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "54861",
+      "date": "05/07/2006",
+      "document_number": "06-3246",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/IP/C/W474.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/IP/C/W474.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "27 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/IP/C/W474.pdf&Open=True",
+      "symbol": "IP/C/W/474 ; TN/C/W/41/Rev.2 ; WT/GC/W/564/Rev.2",
+      "title_displayed": "General Council - Trade Negotiations Committee - Doha Work Programme - The Outstanding Implementation Issue on the Relationship between the TRIPS Agreement and the Convention on Biological Diversity - Communication from Brazil, China, Colombia, Cuba, India, Pakistan, P[...]hailand and Tanzania - Revision"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "51960",
+      "date": "23/06/2006",
+      "document_number": "06-3076",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 2,
+      "size": "16 KB",
+      "spanish_url": null,
+      "symbol": "JOB(06)/194/Add.1",
+      "title_displayed": "Negotiating Group on Market Access - Market Access for Non-agricultural Products - Comments by the NAMA 11 Group of Developing Countries - Communication from Argentina, Bolivarian Republic of Venezuela, Brazil, Egypt, India, Indonesia, Namibia, Philippines, South Africa and Tunisia - Addendum"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "57581",
+      "date": "19/06/2006",
+      "document_number": "06-2957",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 5,
+      "size": "34 KB",
+      "spanish_url": null,
+      "symbol": "JOB(06)/194",
+      "title_displayed": "Negotiating Group on Market Access - Market Access for Non-agricultural Products - Comments by the NAMA 11 Group of Developing Countries - Communication from Argentina, Bolivarian Republic of Venezuela, Brazil, Egypt, India, Indonesia, Namibia, Philippines, South Africa and Tunisia"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "57597",
+      "date": "06/06/2006",
+      "document_number": "06-2694",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/C/W41R1.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/C/W41R1.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "25 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/C/W41R1.pdf&Open=True",
+      "symbol": "TN/C/W/41/Rev.1 ; WT/GC/W/564/Rev.1",
+      "title_displayed": "General Council - Trade Negotiations Committee - Doha Work Programme - The Outstanding Implementation Issue on the Relationship between the TRIPS Agreement and the Convention on Biological Diversity - Communication from Brazil, India, Pakistan, Peru, Thailand and Tanzania - Revision"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "51865",
+      "date": "31/05/2006",
+      "document_number": "06-2605",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/C/W41.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/C/W41.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "16 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/C/W41.pdf&Open=True",
+      "symbol": "TN/C/W/41 ; WT/GC/W/564",
+      "title_displayed": "General Council - Trade Negotiations Committee - Doha Work Programme - The Outstanding Implementation Issue on the Relationship between the TRIPS Agreement and the Convention on Biological Diversity - Communication from Brazil, India, Pakistan, Peru, Thailand and Tanzania"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "72150",
+      "date": "17/03/2006",
+      "document_number": "06-1224",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 3,
+      "size": "15 KB",
+      "spanish_url": null,
+      "symbol": "JOB(05)/19/Rev.1",
+      "title_displayed": "Dispute Settlement Body - Special Session - Textual Contributions to the Negotiations on Improvements and Clarifications of the Dispute Settlement Understanding - Non-Paper Presented by Argentina, Brazil, Canada, India, Mexico, New Zealand and Norway - Revision"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "72135",
+      "date": "06/03/2006",
+      "document_number": "06-0941",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 5,
+      "size": "30 KB",
+      "spanish_url": null,
+      "symbol": "JOB(06)/39",
+      "title_displayed": "Negotiating Group on Rules - Proposals on the Mandatory Application of the Lesser Duty Rule - Paper from Brazil; Hong Kong, China; India and Japan"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "70663",
+      "date": "03/03/2006",
+      "document_number": "06-0935",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/RL/GEN99.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/RL/GEN99.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 5,
+      "size": "30 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/RL/GEN99.pdf&Open=True",
+      "symbol": "TN/RL/GEN/99",
+      "title_displayed": "Negotiating Group on Rules - Proposals on the Mandatory Application of the Lesser Duty Rule - Paper from Brazil; Hong Kong, China; India and Japan"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "63202",
+      "date": "01/12/2005",
+      "document_number": "05-5695",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/COMTD/W145.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/COMTD/W145.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 5,
+      "size": "30 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/COMTD/W145.pdf&Open=True",
+      "symbol": "WT/COMTD/W/145",
+      "title_displayed": "Committee on Trade and Development - Reclaiming Development in the WTO Doha Development Round - Submission by Argentina, Brazil, India, Indonesia, Namibia, Pakistan, the Philippines, South Africa and Venezuela to the Committee on Trade and Development"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "75819",
+      "date": "18/11/2005",
+      "document_number": "05-5450",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/IP/C/W459.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/IP/C/W459.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 13,
+      "size": "71 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/IP/C/W459.pdf&Open=True",
+      "symbol": "IP/C/W/459",
+      "title_displayed": "Council for Trade-Related Aspects of Intellectual Property Rights - The Relationship Between the TRIPS Agreement and the Convention on Biological Diversity (CBD) and the Protection of Traditional Knowledge - Technical Observations on the United States Submission IP/C/W[...]ombia, Cuba, India and Pakistan"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "59937",
+      "date": "08/11/2005",
+      "document_number": "05-5233",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/MA/W65.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/MA/W65.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "15 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/MA/W65.pdf&Open=True",
+      "symbol": "TN/MA/W/65",
+      "title_displayed": "Negotiating Group on Market Access - Market Access for Non-Agricultural Products - Flexibilities for Developing Countries - Communication from Argentina, Bolivarian Republic of Venezuela, Brazil, China, Egypt, India, Indonesia, Namibia, Pakistan, Philippines and South Africa"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "57255",
+      "date": "12/07/2005",
+      "document_number": "05-3079",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 3,
+      "size": "18 KB",
+      "spanish_url": null,
+      "symbol": "JOB(05)/149",
+      "title_displayed": "Committee on Trade-Related Investment Measures - Communication from Brazil and India - Flexibilities Left in the TRIMS Agreement for Developing Countries"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "71824",
+      "date": "15/04/2005",
+      "document_number": "05-1595",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/MA/W54.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/MA/W54.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 3,
+      "size": "27 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/MA/W54.pdf&Open=True",
+      "symbol": "TN/MA/W/54",
+      "title_displayed": "Negotiating Group on Market Access - Market Access for Non-Agricultural Products - Communication to the Negotiating Group on Non-Agricultural Market Access from Argentina, Brazil and India"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "59833",
+      "date": "18/03/2005",
+      "document_number": "05-1126",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/IP/C/W442.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/IP/C/W442.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 4,
+      "size": "36 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/IP/C/W442.pdf&Open=True",
+      "symbol": "IP/C/W/442",
+      "title_displayed": "Council for Trade-Related Aspects of Intellectual Property Rights - The Relationship between the TRIPS Agreement and the Convention on Biological Diversity (CBD) and the Protection of Traditional Knowledge - Elements of the Obligation to Disclose Evidence of Benefit-Sh[...]dor, India, Peru and Thailand"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "71995",
+      "date": "18/03/2005",
+      "document_number": "05-1147",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/IP/C/W443.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/IP/C/W443.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 9,
+      "size": "57 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/IP/C/W443.pdf&Open=True",
+      "symbol": "IP/C/W/443",
+      "title_displayed": "Council for Trade-Related Aspects of Intellectual Property Rights - The Relationship between the TRIPS Agreement and the Convention on Biological Diversity (CBD) and the Protection of Traditional Knowledge - Technical Observations on Issues Raised in Technical Observat[...]ubmission from Brazil and India"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "78225",
+      "date": "22/02/2005",
+      "document_number": "05-0728",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 5,
+      "size": "17 KB",
+      "spanish_url": null,
+      "symbol": "JOB(05)/19",
+      "title_displayed": "Dispute Settlement Body - Special Session - Textual Contribution to the Negotiations on Improvements and Clarifications of the Dispute Settlement Understanding - Non-paper Presented by Argentina, Brazil, Canada, India, Mexico, New Zealand and Norway"
+    },
+    {
+      "access": "Derestricted",
+      "catalogue_id": "54183",
+      "date": "18/02/2005",
+      "document_number": "05-0693",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/S/W31.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/S/W31.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 6,
+      "size": "35 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/S/W31.pdf&Open=True",
+      "symbol": "TN/S/W/31",
+      "title_displayed": "Council for Trade in Services - Special Session - Communication from Argentina, Bolivia, Brazil, Chile, Colombia, India, Mexico, Pakistan, Peru, Philippines, Thailand and Uruguay - Categories of natural persons for commitments under Mode 4 of GATS"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "86747",
+      "date": "10/12/2004",
+      "document_number": "04-5467",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/IP/C/W438.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/IP/C/W438.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 5,
+      "size": "37 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/IP/C/W438.pdf&Open=True",
+      "symbol": "IP/C/W/438",
+      "title_displayed": "Council for Trade-Related Aspects of Intellectual Property Rights - The Relationship between the TRIPS Agreement and the Convention on Biological Diversity (CBD) and the Protection of Traditional Knowledge-Elements of the Obligation to Disclose Evidence of Prior Inform[...]n, Peru, Thailand and Venezuela"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "43568",
+      "date": "29/09/2004",
+      "document_number": "04-4084",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/C/W495.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/G/C/W495.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 15,
+      "size": "77 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/G/C/W495.pdf&Open=True",
+      "symbol": "G/C/W/495",
+      "title_displayed": "Council for Trade in Goods - Third Major Review of the Implementation of the Agreement on Textiles and Clothing by the Council for Trade in Goods - Communication from Argentina; Bangladesh; Brazil; China; Colombia; Costa Rica; Egypt; Guatemala; Hong Kong, China[...]Thailand; Uruguay; and Vietnam"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "52864",
+      "date": "29/09/2004",
+      "document_number": "04-4095",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 2,
+      "size": "25 KB",
+      "spanish_url": null,
+      "symbol": "JOB(04)/142",
+      "title_displayed": "Council for Trade in Services - Special Session - Communication from Argentina, Brazil, Chile, China, Colombia, Dominican Republic, Egypt, Guatemala, India, Mexico, Pakistan, Peru, Philippines and Thailand - Mode 4 - Transparency Issues"
+    },
+    {
+      "access": "Derestricted",
+      "catalogue_id": "103248",
+      "date": "29/09/2004",
+      "document_number": "04-4093",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/S/W23.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/S/W23.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 3,
+      "size": "20 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/S/W23.pdf&Open=True",
+      "symbol": "TN/S/W/23",
+      "title_displayed": "Council for Trade in Services - Special Session - Communication from Brazil, Colombia, Dominican Republic, El Salvador, India, Indonesia, Nicaragua, The Philippines and Thailand - Review of Progress in Negotiations, Including Pursuant to Paragraph 15 of the Guidelines[...]egotiations - Tourism Services"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "44267",
+      "date": "27/09/2004",
+      "document_number": "04-4042",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/IP/C/W429R1.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/IP/C/W429R1.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 5,
+      "size": "38 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/IP/C/W429R1.pdf&Open=True",
+      "symbol": "IP/C/W/429/Rev.1",
+      "title_displayed": "Council for Trade-Related Aspects of Intellectual Property Rights - Elements of the Obligation to Disclose the Source and Country of Origin of the Biological Resources and/or Traditional Knowledge Used in an invention - Submission from Brazil, Cuba, Ecuador, India, Pak[...]land, and Venezuela - Revision"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "71628",
+      "date": "21/09/2004",
+      "document_number": "04-3967",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/IP/C/W429.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/IP/C/W429.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 5,
+      "size": "37 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/IP/C/W429.pdf&Open=True",
+      "symbol": "IP/C/W/429",
+      "title_displayed": "Council for Trade-Related Aspects of Intellectual Property Rights - Elements of the Obligation to Disclose the Source and Country of Origin of Biological Resource and/or Traditional Knowledge Used in an Invention - Submission from Brazil, India, Pakistan, Peru, Thailand, and Venezuela"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "46613",
+      "date": "02/07/2004",
+      "document_number": "04-2858",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 2,
+      "size": "22 KB",
+      "spanish_url": null,
+      "symbol": "JOB(04)/93",
+      "title_displayed": "Council for Trade in Goods - Proposed Terms of Reference - Study on the Effect of the Elimination of TRIMs - Joint Proposal from India and Brazil"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "108618",
+      "date": "19/05/2004",
+      "document_number": "04-2206",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 8,
+      "size": "477 KB",
+      "spanish_url": null,
+      "symbol": "JOB(04)/52",
+      "title_displayed": "Dispute Settlement Body - Special Session - Textual Contribution to the Negotiations on Improvements and Clarifications of The Dispute Settlement Understanding - Non-Paper presented by Argentina, Brazil, Canada, India, New Zealand and Norway"
+    },
+    {
+      "access": "Derestricted",
+      "catalogue_id": "53234",
+      "date": "31/03/2004",
+      "document_number": "04-1460",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/S/W19.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/S/W19.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 3,
+      "size": "25 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/S/W19.pdf&Open=True",
+      "symbol": "TN/S/W/19",
+      "title_displayed": "Council for Trade in Services - Special Session - Communication from Bolivia, Brazil, Chile, China, Colombia, Cuba, Dominican Republic, Ecuador, Egypt, Guatemala, India, Indonesia, Mexico, Nicaragua, Pakistan, Peru, Philippines and Thailand - Review of Progress as es[...]s on Trade in Services (S/L/93)"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "53931",
+      "date": "02/03/2004",
+      "document_number": "04-0927",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/IP/C/W420.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/IP/C/W420.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "21 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/IP/C/W420.pdf&Open=True",
+      "symbol": "IP/C/W/420",
+      "title_displayed": "Council for Trade-Related Aspects of Intellectual Property Rights - The Relationship between the TRIPS Agreement and the Convention on Biological Diversity and the Protection of Traditional Knowledge - Checklist of Issues - Submission by Brazil, Cuba, Ecuador, India, Peru, Thailand and Venezuela"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "40542",
+      "date": "21/10/2003",
+      "document_number": "03-5568",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/L/541.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/L/541.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "14 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/L/541.pdf&Open=True",
+      "symbol": "WT/L/541",
+      "title_displayed": "Communiqué of Meeting of Ministers and Representatives of Argentina, Bolivia, Brazil, Chile, China, Cuba, Egypt, India, Mexico, Paraguay, South Africa and Venezuela - Buenos Aires, 10 October 2003 - Communication from Argentina"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "33993",
+      "date": "30/09/2003",
+      "document_number": "03-5144",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/MIN03/W6A2.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/MIN03/W6A2.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "10 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/MIN03/W6A2.pdf&Open=True",
+      "symbol": "WT/MIN(03)/W/6/Add.2",
+      "title_displayed": "Ministerial Conference - Fifth Session - Cancún, 10 - 14 September 2003 - Agriculture - Framework Proposal - Joint Proposal by Argentina, Bolivia, Brazil, Chile, China, Colombia, Costa Rica, Cuba, Ecuador, Egypt, El Salvador, Guatemala, India, Mexico, Pakistan, Paragua[...]ailand and Venezuela - Addendum"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "21519",
+      "date": "09/09/2003",
+      "document_number": "03-4711",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/MIN03/W6A1.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/MIN03/W6A1.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "10 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/MIN03/W6A1.pdf&Open=True",
+      "symbol": "WT/MIN(03)/W/6/Add.1",
+      "title_displayed": "Ministerial Conference - Fifth Session - Cancún, 10 - 14 September 2003 - Agriculture - Framework Proposal - Joint Proposal by Argentina, Bolivia, Brazil, Chile, China, Colombia, Costa Rica, Cuba, Ecuador, El Salvador, Guatemala, India, Mexico, Pakistan, Paraguay, Peru[...]ailand and Venezuela - Addendum"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "15319",
+      "date": "04/09/2003",
+      "document_number": "03-4609",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/MIN03/W6.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/MIN03/W6.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 4,
+      "size": "24 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/MIN03/W6.pdf&Open=True",
+      "symbol": "WT/MIN(03)/W/6",
+      "title_displayed": "Ministerial Conference - Fifth Session - Cancún, 10 - 14 September 2003 - Agriculture - Framework Proposal - Joint Proposal by Argentina, Bolivia, Brazil, Chile, China, Colombia, Costa Rica, Cuba, Ecuador, El Salvador, Guatemala, India, Mexico, Pakistan, Paraguay, Peru[...]Africa, Thailand and Venezuela"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "3096",
+      "date": "29/08/2003",
+      "document_number": "03-4546",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 4,
+      "size": "22 KB",
+      "spanish_url": null,
+      "symbol": "JOB(03)/162/Rev.1",
+      "title_displayed": "[Committee on Agriculture] - Agriculture - Framework proposal - Joint Proposal by Argentina, Brazil, Bolivia, China, Chile, Colombia, Costa Rica, Cuba, Ecuador, El Salvador, Guatemala, India, Mexico, Pakistan, Paraguay, Peru, Philippines, South Africa, Thailand and Venezuela - Revision"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "1060",
+      "date": "20/08/2003",
+      "document_number": "03-4335",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 4,
+      "size": "21 KB",
+      "spanish_url": null,
+      "symbol": "JOB(03)/162",
+      "title_displayed": "[Committee on Agriculture] - Agriculture - Framework proposal - Joint Proposal by Argentina, Brazil, Bolivia, China, Chile, Colombia, Costa Rica, Ecuador, Guatemala, India, Mexico, Paraguay, Peru, Philippines, South Africa and Thailand"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "10036",
+      "date": "14/07/2003",
+      "document_number": "03-3818",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/GC/W503.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/GC/W503.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 3,
+      "size": "23 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/GC/W503.pdf&Open=True",
+      "symbol": "WT/GC/W/503",
+      "title_displayed": "General Council - Trade in Textiles and Clothing: Developing Members' Concern about Potential Reduction in Market (Quota) Access in 2004 - Communication from Bangladesh; Brazil; Costa Rica; Egypt; Guatemala; Hong Kong, China; India; Indonesia; Macao, China; Maldives; P[...]ri Lanka; Thailand and Vietnam"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "70734",
+      "date": "24/06/2003",
+      "document_number": "03-3362",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/IP/C/W403.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/IP/C/W403.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 6,
+      "size": "44 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/IP/C/W403.pdf&Open=True",
+      "symbol": "IP/C/W/403",
+      "title_displayed": "Council for Trade-Related Aspects of Intellectual Property Rights - The Relationship between the TRIPS Agreement and the Convention on Biological Diversity and the Protection of Traditional Knowledge - Submission by Bolivia, Brazil, Cuba, Dominican Republic, Ecuador, India, Peru, Thailand, Venezuela"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "8983",
+      "date": "06/06/2003",
+      "document_number": "03-2980",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/TN/C/W13.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/TN/C/W13.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 3,
+      "size": "23 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/TN/C/W13.pdf&Open=True",
+      "symbol": "TN/C/W/13",
+      "title_displayed": "Trade Negotiations Committee - The Doha Agenda: Towards Cancún - Communication from Argentina, Bolivia, Botswana, Brazil, Chile, China, Colombia, Cuba, Dominican Republic, Ecuador, El Salvador, Gabon, Guatemala, Honduras, India, Malaysia, Mexico, Morocco"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "503",
+      "date": "19/03/2003",
+      "document_number": "03-1600",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/DS/234-20.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/DS/234-20.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "12 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/DS/234-20.pdf&Open=True",
+      "symbol": "WT/DS217/12 ; WT/DS234/20",
+      "title_displayed": "United States - Continued Dumping and Subsidy Offset Act of 2000 - Request by Australia, Brazil, Canada, Chile, the European Communities, India, Indonesia, Japan, Korea, Mexico and Thailand for Arbitration under Article 21.3(c) of the DSU"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "29081",
+      "date": "30/10/2002",
+      "document_number": "02-5979",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/IP/C/W385.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/IP/C/W385.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 16,
+      "size": "99 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/IP/C/W385.pdf&Open=True",
+      "symbol": "IP/C/W/385",
+      "title_displayed": "Council for Trade-Related Aspects of Intellectual Property Rights - Non-Violation and Situation Nullification or Impairment under the TRIPS Agreement - Communication from Argentina, Bolivia, Brazil, Colombia, Cuba, Ecuador, Egypt, India, Kenya, Malaysia, Pakistan, Peru, Sri Lanka and Venezuela"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "107275",
+      "date": "09/10/2002",
+      "document_number": "02-5436",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/TRIMS/W25.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/G/TRIMS/W25.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 3,
+      "size": "25 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/G/TRIMS/W25.pdf&Open=True",
+      "symbol": "G/C/W/428 ; G/TRIMS/W/25",
+      "title_displayed": "Council for Trade in Goods - Committee on Trade-Related Investment Measures - Communication from Brazil and India"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "90218",
+      "date": "23/07/2002",
+      "document_number": "02-4056",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/SCM/W520.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/G/SCM/W520.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "17 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/G/SCM/W520.pdf&Open=True",
+      "symbol": "G/SCM/W/520",
+      "title_displayed": "Committee on Subsidies and Countervailing Measures - Implementation-Related Issues Referred to the Committee by Ministers - Review by the SCM Committee of the Provisions of the Agreement on Subsidies and Countervailing Measures Regarding Countervailing Duty Investigati[...]Communities to Brazil and India"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "30419",
+      "date": "22/07/2002",
+      "document_number": "02-4033",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/SCM/W519.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/G/SCM/W519.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "17 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/G/SCM/W519.pdf&Open=True",
+      "symbol": "G/SCM/W/519",
+      "title_displayed": "Committee on Subsidies and Countervailing Measures - Implementation-Related Issues Referred to the Committee by Ministers - Review by the SCM Committee of the Provisions of the Agreement on Subsidies and Countervailing Measures Regarding Countervailing Duty Investigati[...]Communities to Brazil and India"
+    },
+    {
+      "access": "Restricted",
+      "catalogue_id": "59762",
+      "date": "05/07/2002",
+      "document_number": "02-3771",
+      "english_url": null,
+      "french_url": null,
+      "languages_available": [],
+      "pages": 4,
+      "size": "27 KB",
+      "spanish_url": null,
+      "symbol": "JOB(02)/77",
+      "title_displayed": "Council for Trade in Services - Special Session - Communication from Argentina, Bolivia, Brazil, Dominican Republic, Ecuador, Egypt, Guatemala, Honduras, India, Indonesia, Malaysia, Mexico, Nicaragua, Pakistan, Panama, Paraguay, Peru, Philippines, Senegal, Sri Lanka, Thailand, Venezuela and Uruguay"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "68572",
+      "date": "03/07/2002",
+      "document_number": "02-3730",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/SCM/W517.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/G/SCM/W517.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "12 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/G/SCM/W517.pdf&Open=True",
+      "symbol": "G/SCM/W/517",
+      "title_displayed": "Committee on Subsidies and Countervailing Measures - Implementation-related issues referred to the committee by ministers - Review by the SCM Committee of the Provisions of the Agreement on Subsidies and Countervailing Measures Regarding Countervailing Duty Investigati[...]Communities to Brazil and India"
+    },
+    {
+      "access": "Derestricted",
+      "catalogue_id": "53721",
+      "date": "29/05/2002",
+      "document_number": "02-2954",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/SCM/W512.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/G/SCM/W512.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "16 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/G/SCM/W512.pdf&Open=True",
+      "symbol": "G/SCM/W/512",
+      "title_displayed": "Committee on Subsidies and Countervailing Measures - Implementation Related Issues Referred to the Committee by Ministers - Follow-Up Questions from the United States to Brazil and India on Tiret 80 Proposals (G/SCM/W/464, G/SCM/W/465)"
+    },
+    {
+      "access": "Derestricted",
+      "catalogue_id": "49587",
+      "date": "17/01/2002",
+      "document_number": "02-0221",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/SCM/W478.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/G/SCM/W478.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 4,
+      "size": "22 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/G/SCM/W478.pdf&Open=True",
+      "symbol": "G/SCM/W/478",
+      "title_displayed": "Committee on Subsidies and Countervailing Measures - Implementation-Related Issues Referred to the Committee by Ministers - Comments from Egypt on Issues Raised by Brazil and India"
+    },
+    {
+      "access": "Derestricted",
+      "catalogue_id": "96450",
+      "date": "16/01/2002",
+      "document_number": "02-0196",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/SCM/W479.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/G/SCM/W479.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 5,
+      "size": "32 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/G/SCM/W479.pdf&Open=True",
+      "symbol": "G/SCM/W/479",
+      "title_displayed": "Committee on Subsidies and Countervailing Measures - Implementation-Related Issues Referred to the Committee by Ministers - Questions from the United States to Brazil and India"
+    },
+    {
+      "access": "Derestricted",
+      "catalogue_id": "95091",
+      "date": "15/01/2002",
+      "document_number": "02-0178",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/SCM/W474.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/G/SCM/W474.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "21 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/G/SCM/W474.pdf&Open=True",
+      "symbol": "G/SCM/W/474",
+      "title_displayed": "Committee on Subsidies and Countervailing Measures - Implementation-Related Issues Referredto the Committee by Ministers - Questions from Australia to Brazil and India"
+    },
+    {
+      "access": "Derestricted",
+      "catalogue_id": "16369",
+      "date": "15/01/2002",
+      "document_number": "02-0187",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/SCM/W475.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/G/SCM/W475.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "15 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/G/SCM/W475.pdf&Open=True",
+      "symbol": "G/SCM/W/475",
+      "title_displayed": "Committee on Subsidies and Countervailing Measures - Implementation-Related Issues Referred to the Committee by Ministers - Questions from the European Communities to Brazil and India"
+    },
+    {
+      "access": "Derestricted",
+      "catalogue_id": "82068",
+      "date": "15/01/2002",
+      "document_number": "02-0186",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/SCM/W476.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/G/SCM/W476.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "18 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/G/SCM/W476.pdf&Open=True",
+      "symbol": "G/SCM/W/476",
+      "title_displayed": "Committee on Subsidies and Countervailing Measures - Implementation-related Issues Referred to the Committee by Ministries - Questions Posed by Colombia to Brazil and India - Colombia"
+    },
+    {
+      "access": "Derestricted",
+      "catalogue_id": "95090",
+      "date": "15/01/2002",
+      "document_number": "02-0177",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/SCM/W477.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/G/SCM/W477.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "19 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/G/SCM/W477.pdf&Open=True",
+      "symbol": "G/SCM/W/477",
+      "title_displayed": "Committee on Subsidies and Countervailing Measures - Implementation-Related Issues Referredto the Committee by Ministers - Questions from Canada to Brazil and India"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "70717",
+      "date": "12/11/2001",
+      "document_number": "01-5594",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/DS/234-14C1.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/DS/234-14C1.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "10 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/DS/234-14C1.pdf&Open=True",
+      "symbol": "WT/DS217/6/Corr.1 ; WT/DS234/14/Corr.1",
+      "title_displayed": "United States - Continued Dumping and Subsidy Offset Act of 2000 - Constitution of the Panel Established at the Request of Australia, Brazil, Canada, Chile, the European Communities, India, Indonesia, Japan, Korea, Mexico and Thailand - Corrigendum"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "70836",
+      "date": "05/11/2001",
+      "document_number": "01-5407",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/DS/234-14.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/DS/234-14.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "16 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/DS/234-14.pdf&Open=True",
+      "symbol": "WT/DS217/6 ; WT/DS234/14",
+      "title_displayed": "United States - Continued Dumping and Subsidy Offset Act of 2000 - Constitution of the Panel Established at the Request of Australia, Brazil, Canada, Chile, the European Communities, India, Indonesia, Japan, Korea, Mexico and Thailand - Note by the Secretariat"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "82740",
+      "date": "04/10/2001",
+      "document_number": "01-4803",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/GC/W450.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/GC/W450.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 4,
+      "size": "27 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/GC/W450.pdf&Open=True",
+      "symbol": "IP/C/W/312 ; WT/GC/W/450",
+      "title_displayed": "Council for Trade-Related Aspects of Intellectual Property Rights - General Council - Proposal by the African Group, Bangladesh, Barbados, Bolivia, Brazil, Cuba, Dominican Republic, Ecuador, Haiti, Honduras, India, Indonesia, Jamaica, Pakistan, Paraguay, Philippines, P[...]i Lanka, Thailand and Venezuela"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "58527",
+      "date": "13/07/2001",
+      "document_number": "01-3528",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/WT/DS/217-5.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/WT/DS/217-5.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "19 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/WT/DS/217-5.pdf&Open=True",
+      "symbol": "WT/DS217/5",
+      "title_displayed": "United States - Continued Dumping and Subsidy Offset Act of 2000 - Request for the Establishment of a Panel by Australia, Brazil, Chile, the European Communities, India, Indonesia, Japan, Korea and Thailand"
+    },
+    {
+      "access": "Derestricted",
+      "catalogue_id": "20804",
+      "date": "29/06/2001",
+      "document_number": "01-3268",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/IP/C/W296.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/IP/C/W296.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 9,
+      "size": "62 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/IP/C/W296.pdf&Open=True",
+      "symbol": "IP/C/W/296",
+      "title_displayed": "Council for Trade-Related Aspects of Intellectual Property Rights - Submission by the African Group, Barbados, Bolivia, Brazil, Cuba, Dominican Republic, Ecuador, Honduras, India, Indonesia, Jamaica, Pakistan, Paraguay, Philippines, Peru, Sri Lanka, Thailand and Venezuela"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "88943",
+      "date": "17/04/2001",
+      "document_number": "01-1945",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/ADP/D35-1.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/G/ADP/D35-1.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 2,
+      "size": "17 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/G/ADP/D35-1.pdf&Open=True",
+      "symbol": "G/ADP/D35/1 ; G/L/447 ; WT/DS229/1",
+      "title_displayed": "Brazil - Anti-Dumping Duties on Jute Bags from India - Request for Consultations by India"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "2597",
+      "date": "20/03/2001",
+      "document_number": "01-1371",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/AG/W50.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/G/AG/W50.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 3,
+      "size": "22 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/G/AG/W50.pdf&Open=True",
+      "symbol": "G/AG/NG/W/139 ; G/AG/W/50",
+      "title_displayed": "Committee on Agriculture - Special Session - WTO Negotiations on Agriculture - Export Credits for Agricultural Products - Proposal by MERCOSUR (Argentina, Brazil, Paraguay and Uruguay), Bolivia, Chile, Costa Rica, Guatemala, India and Malaysia"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "2287",
+      "date": "06/02/2001",
+      "document_number": "01-0967",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/S/CSS/W13C1.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/S/Css/W13C1.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 1,
+      "size": "14 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/S/Css/W13C1.pdf&Open=True",
+      "symbol": "S/CSS/W/13/Corr.1",
+      "title_displayed": "Council for Trade in Services - Special Session - Communication from Argentina, Brazil, Cuba, the Dominican Republic, El Salvador, Honduras, India, Indonesia, Malaysia, Mexico, Nicaragua, Pakistan, Panama, Paraguay, Philippines, Sri Lanka, Thailand, Uruguay, and the Me[...]es and Procedures - Corrigendum"
+    },
+    {
+      "access": "Unrestricted",
+      "catalogue_id": "44379",
+      "date": "09/01/2001",
+      "document_number": "01-0074",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/G/SCM/D39-1.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/G/SCM/D39-1.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 3,
+      "size": "21 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/G/SCM/D39-1.pdf&Open=True",
+      "symbol": "G/ADP/D31/1 ; G/L/430 ; G/SCM/D39/1 ; WT/DS217/1",
+      "title_displayed": "United States - Continued Dumping and Subsidy Offset Act of 2000 - Request for Consultations by Australia, Brazil, Chile, the European Communities, India, Indonesia, Japan, Korea and Thailand"
+    },
+    {
+      "access": "Derestricted",
+      "catalogue_id": "1814",
+      "date": "24/11/2000",
+      "document_number": "00-5076",
+      "english_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q:/S/CSS/W13.pdf&Open=True",
+      "french_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=R:/S/Css/W13.pdf&Open=True",
+      "languages_available": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "pages": 3,
+      "size": "20 KB",
+      "spanish_url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=S:/S/Css/W13.pdf&Open=True",
+      "symbol": "S/CSS/W/13",
+      "title_displayed": "Council for Trade in Services - Special Session - Communication from Argentina, Brazil, Cuba, the Dominican Republic, El Salvador, Honduras, India, Indonesia, Malaysia, Mexico, Nicaragua, Pakistan, Panama, Paraguay, Philippines, Sri Lanka, Thailand, Uruguay, and the Me[...]ating Guidelines and Procedures"
+    }
+  ],
+  "reported_hits": 104,
+  "search_url": "https://docs.wto.org/dol2fe/Pages/FE_Search/FE_S_S006.aspx?MetaCollection=WTO&IssuingDateFrom=01%2f01%2f2000&IssuingDateTo=31%2f12%2f2014&CATTITLE=Brazil%20AND%20India&Language=ENGLISH&SearchPage=FE_S_S001&languageUIChanged=true",
+  "source": "WTO Documents Online"
+}

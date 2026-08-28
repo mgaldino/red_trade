@@ -1,0 +1,116 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo sobre Documentos de Viagem dos Estados Partes do MERCOSUL e Estados Associados",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai",
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Luiz Nunes Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "San Miguel de Tucumán",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "30/06/2008",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": {
+    "$id": "4",
+    "Id": 11777,
+    "Titulo": "Acordo sobre Documentos de Viagem e de Retorno dos Estados Partes do Mercosul e Estados Associados"
+  },
+  "AcordoSubstituido": {
+    "$id": "5",
+    "Id": 11581,
+    "Titulo": "Segundo Acordo Modificativo do Anexo do Acordo sobre Documentos de Viagem dos Estados Partes do MERCOSUL e Estados Associados"
+  },
+  "Assuntos": [
+    {
+      "$id": "6",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "7",
+      "Id": 0,
+      "Nome": "Consulares e Migratórios",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "8",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "9",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "10",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "169",
+    "DataDOU": "03/09/2009"
+  },
+  "Vigencia": {
+    "$id": "11",
+    "Vigencia": "Substituído",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "30/06/2008",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "12",
+      "Id": 26396,
+      "NomeArquivo": "Acordo - Documentos de Viagem - DOU - Portaria - 169 - 2009.pdf",
+      "Descricao": "Mercosul - DOU - - Doc Viagens - Portaria - 169 - 2009",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 2713,
+    "NomeArquivo": "Acordo - Documentos de Viagem - port esp.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo 8: \"O presente Acordo entrará em vigor no momento de sua assinatura.\""
+    }
+  ]
+}

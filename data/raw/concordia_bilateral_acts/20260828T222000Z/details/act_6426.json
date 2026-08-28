@@ -1,0 +1,120 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo dos Estados Unidos Mexicanos sobre a concessão de autorização de trabalho para dependentes de Agentes Diplomáticos, Funcionários Consulares e Pessoal Técnico e Administrativo de Missões Diplomáticas e Consulares acreditados no outro País.",
+  "OutraParte": "México",
+  "OutrasPartes": [
+    "México"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Brasilia",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "23/07/2009",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "México",
+      "NomeSignatario": "Patrícia Espinosa",
+      "CargoSignatario": "Secretária de Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Relações Diplomáticas e Consulares",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "900",
+    "DataMensagem": "04/11/2009",
+    "NumeroDOU": "211",
+    "DataDOU": "05/11/2009"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "134",
+    "DataDecreto": "26/05/2011",
+    "NumeroDOU": "101",
+    "DataDOU": "27/05/2011"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "139",
+      "DataDocumento": "31/05/2011",
+      "Local": "Embaixada no México",
+      "DataRecebimento": "31/05/2011",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "8310",
+    "DataDecreto": "23/09/2014",
+    "NumeroDOU": "184",
+    "DataDOU": "24/09/2014"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "30/06/2011",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 8468,
+      "NomeArquivo": "México - DOU - Promulgação - 184 - 2014.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 8465,
+      "NomeArquivo": "México - DOU - Decreto Legislativo - 101 (pg.77) - 2011.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 8464,
+      "NomeArquivo": "México - DOU - Mensagem - 211 - 2009.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 8469,
+    "NomeArquivo": "México - Acordo - Dependentes - 2009.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme Artigo 10, \"Este Acordo entrará em vigor trinta (30) dias após a data de recepção da Nota em que o Governo da República Federativa do Brasil notifique à Embaixada do México naquele país o cumprimento dos requisitos exigidos por sua legislação nacional para tal finalidade.\""
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo de Cooperação entre a República Federativa do Brasil e a República Argentina Relativo à Cooperação entre suas Autoridades de Defesa da Concorrência na Aplicação de suas Leis de Concorrência",
+  "OutraParte": "Argentina",
+  "OutrasPartes": [
+    "Argentina"
+  ],
+  "SignatarioBrasil": "Antonio Palocci Filho/Márcio Thomaz Bastos",
+  "CargoSignatarioBrasil": "Ministro de Estado da Fazenda/Ministro de Estado da Justiça",
+  "Depositario": null,
+  "LocalCelebracao": "Buenos Aires",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "16/10/2003",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Argentina",
+      "NomeSignatario": "Rafael Bielsa/Roberto Lavagna",
+      "CargoSignatario": "Ministro das Relações Exteriores, Comércio Internacional e Culto/Ministro da Economia e Produção"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Economia, Finanças e Tributos",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "526",
+    "DataMensagem": "09/08/2005",
+    "NumeroDOU": "153",
+    "DataDOU": "10/08/2005"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "264",
+    "DataDecreto": "18/09/2008",
+    "NumeroDOU": "182",
+    "DataDOU": "19/09/2008"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "414",
+      "DataDocumento": "02/12/2010",
+      "Local": "Ministério das Relações Exteriores, Comércio Internacional e Culto",
+      "DataRecebimento": "07/12/2010",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "580",
+      "DataDocumento": "10/10/2008",
+      "Local": "Embaixada em Buenos Aires",
+      "DataRecebimento": "14/10/2008",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "8.338",
+    "DataDecreto": "13/11/2014",
+    "NumeroDOU": "221",
+    "DataDOU": "14/11/2014"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "07/12/2010",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 3409,
+      "NomeArquivo": "Argentina - DOU - Decreto de Promulgação - 221 - 2014.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 3405,
+      "NomeArquivo": "Argentina - DOU - Decreto Legislativo - 182 - 2008.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 3404,
+      "NomeArquivo": "Argentina - DOU - Mensagem ao Congresso - 153 - 2005.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 3317,
+    "NomeArquivo": "Argentina - Acordo - Leis de Concorrência.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto nos termos do paragrafo 1º  de seu Artigo XVIII: \"Este Acordo entrará em vigor na data da última notificação pela qual uma das Partes informe a outra, por via diplomática, sobre o cumprimento das respectivas formalidades legais necessárias a sua entrada em vigor\"."
+    }
+  ]
+}

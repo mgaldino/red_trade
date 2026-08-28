@@ -1,0 +1,127 @@
+{
+  "$id": "1",
+  "Titulo": "Tratado entre a República Federativa do Brasil e a República Popular da China sobre Auxílio Judicial em Matéria Civil e Comercial",
+  "OutraParte": "China",
+  "OutrasPartes": [
+    "China"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Pequim",
+  "NomePaisCelebracao": "China",
+  "DataCelebracao": "19/05/2009",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "T",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "China",
+      "NomeSignatario": "Yabg Hiechi",
+      "CargoSignatario": "Ministro dos Negócios Estrangeiros"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "506",
+    "DataMensagem": "26/08/2010",
+    "NumeroDOU": "165",
+    "DataDOU": "27/08/2010"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "539",
+    "DataDecreto": "18/10/2012",
+    "NumeroDOU": "203",
+    "DataDOU": "19/10/2012"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "8.430",
+    "DataDecreto": "09/04/2015",
+    "NumeroDOU": "68",
+    "DataDOU": "10/04/2015"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "16/08/2014",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 4118,
+      "NomeArquivo": "China - Ata brasileira de Ratificação.pdf",
+      "Descricao": "Ata da troca de instrumentos de ratificação - Matéria Civil e Comercial",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 3764,
+      "NomeArquivo": "China - DOU - Decreto de Promulgação - 68 - 2015.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 3763,
+      "NomeArquivo": "China - DOU - Mensagem ao Congresso - 165 - 2010.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 3762,
+      "NomeArquivo": "China - DOU - Decreto Legislativo - 203 - 2012.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 3740,
+    "NomeArquivo": "China - Tratado - Matéria Civil e Comercial.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo 30: \"Este Tratado está sujeito a ratificação. Os instrumentos de ratificação serão trocados em Brasília. Este Tratado entrará em vigor no trigésimo dia após a data da troca dos instrumentos de ratificação\"."
+    }
+  ]
+}

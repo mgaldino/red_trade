@@ -1,0 +1,129 @@
+{
+  "$id": "1",
+  "Titulo": "Tratado de Livre Comércio entre o MERCOSUL e a República Árabe do Egito - Decisão 26/10",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "San Juan",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "02/08/2010",
+  "TipoAcordo": "ML",
+  "PossuiHtml": false,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Comércio Internacional e Investimentos",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "216",
+    "DataDecreto": "09/10/2015",
+    "NumeroDOU": "195",
+    "DataDOU": "10/10/2015"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "9.229",
+    "DataDecreto": "06/12/2017",
+    "NumeroDOU": "234",
+    "DataDOU": "07/12/2017"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 26457,
+      "NomeArquivo": "Mercosul - Acordo Livre Comércio - MERCOSUL - Egito - Inglês.pdf",
+      "Descricao": "Íntegra do Acordo em Inglês.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 26447,
+      "NomeArquivo": "MERCOSUL - Egito - DOU - Decreto Legislativo - 195 - 2015.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 26445,
+      "NomeArquivo": "MERCOSUL - Egito - DOU - Decreto de Promulgação - 234 - 2017.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 26442,
+      "NomeArquivo": "Mercosul - Ata Depósito Uruguai - Livre Comércio - Egito.pdf",
+      "Descricao": "Ata de Depósito de Ratificação do Uruguai.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "13",
+      "Id": 26441,
+      "NomeArquivo": "Mercosul - Ata Depósito Paraguai - Livre Comércio - Egito.pdf",
+      "Descricao": "Ata de Depósito de Ratificação do Paraguai.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "14",
+    "Id": 26456,
+    "NomeArquivo": "Mercosul - Acordo Livre Comércio - MERCOSUL - Egito - Português.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "15",
+      "DescricaoObservacao": "Conforme disposto no Artigo 5 - Entrada em vigor: \"Este Acordo entrará em vigor dentro de 30 (trinta) dias a contar da notificação pelo Depositário do depósito do instrumento de ratificação da última Parte Signatária.\""
+    }
+  ]
+}

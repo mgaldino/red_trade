@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo de Cooperação Mútua entre o Governo da República Federativa do Brasil e a República Oriental do Uruguai para Combater o Tráfego de Aeronaves Envolvidas com Atividades Ilícitas Transnacionais.",
+  "OutraParte": "Uruguai",
+  "OutrasPartes": [
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "José Viegas Filho",
+  "CargoSignatarioBrasil": "Ministro da Defesa",
+  "Depositario": null,
+  "LocalCelebracao": "Montevidéu",
+  "NomePaisCelebracao": "Uruguai",
+  "DataCelebracao": "14/09/2004",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": "Yamandú Fau Casalla",
+      "CargoSignatario": "Ministro da Defesa"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Serviços e Transporte",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "160",
+    "DataMensagem": "22/03/2005",
+    "NumeroDOU": "56",
+    "DataDOU": "23/03/2005"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "294",
+    "DataDecreto": "23/10/2007",
+    "NumeroDOU": "205",
+    "DataDOU": "24/10/2007"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": "17/05/2006",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": "20/11/2007",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "6398",
+    "DataDecreto": "13/03/2008",
+    "NumeroDOU": "51",
+    "DataDOU": "14/03/2008"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "15/11/2007",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 12745,
+      "NomeArquivo": "Uruguai - DOU - Mensagem ao Congresso - 56 - 2005.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 12744,
+      "NomeArquivo": "Uruguai - DOU -  Decreto Legislativo - 205 - 2007.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 12743,
+      "NomeArquivo": "Uruguai - DOU - Decreto de Promulgação - 51 - 2008.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 12742,
+    "NomeArquivo": "Uruguai - Acordo - Aeronaves Ilícitas.docx.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme o disposto no art. VII: \"1.Este Acordo entrará em vigor na data do recebimento da\r\núltima notificação pelas quais as Partes comuniquem o cumprimento\r\ndos respectivos requisitos jurídicos nacionais relativos à celebração de\r\nTr a t a d o s .\r\n2.A denúncia do presente Acordo não afetará a validade de\r\nquaisquer programas estabelecidos anteriormente à denúncia, os quais\r\ncontinuarão em vigor até o seu término.\r\n3.O presente Acordo permanecerá em vigor por prazo ilimitado,\r\na menos que uma das Partes o denuncie por via diplomática\""
+    }
+  ]
+}

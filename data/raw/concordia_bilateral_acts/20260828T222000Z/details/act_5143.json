@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo-Quadro entre o Governo da República Federativa do Brasil e o Governo da República da índia sobre a Cooperação nos Usos Pacíficos do Espaço Exterior",
+  "OutraParte": "Índia",
+  "OutrasPartes": [
+    "Índia"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Nova Delhi",
+  "NomePaisCelebracao": "Índia",
+  "DataCelebracao": "25/01/2004",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Índia",
+      "NomeSignatario": "Yashwant Sinha",
+      "CargoSignatario": "Ministro das Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Mar e Espaço",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "46",
+    "DataMensagem": "27/01/2005",
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "256",
+    "DataDecreto": "18/09/2008",
+    "NumeroDOU": "182",
+    "DataDOU": "19/09/2008"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "WIII/239/4/2004",
+      "DataDocumento": "22/10/2008",
+      "Local": "Ministério das Relações Exteriores da Índia",
+      "DataRecebimento": "20/10/2011",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "217",
+      "DataDocumento": "26/09/2008",
+      "Local": "Embaixada em Nova Delhi",
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "8287",
+    "DataDecreto": "16/07/2014",
+    "NumeroDOU": "135",
+    "DataDOU": "17/07/2014"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "20/10/2011",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 9245,
+      "NomeArquivo": "Índia - DOU - Mensagem ao Congresso - 2005.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 8900,
+      "NomeArquivo": "India - DOU - Decreto de Promulgação - 135 - 2014.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 8899,
+      "NomeArquivo": "India - DOU - Decreto Legislativo - 182 - 2008.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 8898,
+    "NomeArquivo": "India- Acordo - Espaço Exterior.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no artigo 14: \"O presente Acordo entrará em vigor na data da última notificação de conclusão pelas Partes dos procedimentos legais internos necessários à sua entrada em vigor. O presente Acordo permanecerá em vigor por um período de 10 (dez) anos e será prorrogado automaticamente por iguais períodos de 10 (dez) anos.\""
+    }
+  ]
+}

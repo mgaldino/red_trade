@@ -1,0 +1,123 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre a República Federativa do Brasil e a República Argentina sobre Cooperação entre suas Academias Diplomáticas.",
+  "OutraParte": "Argentina",
+  "OutrasPartes": [
+    "Argentina"
+  ],
+  "SignatarioBrasil": "Min. João Almino de Souza Filho",
+  "CargoSignatarioBrasil": "Diretor do Instituto Rio Branco",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "02/12/2002",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Argentina",
+      "NomeSignatario": "Emb. José Ramón Sanchís Muñoz",
+      "CargoSignatario": "Diretor do ISEN"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Relações Diplomáticas e Consulares",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "338",
+      "DataDocumento": "02/12/2005",
+      "Local": "Embaixada em Buenos Aires",
+      "DataRecebimento": "23/11/2005",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "10/2003",
+      "DataDocumento": "31/01/2003",
+      "Local": "Secretaria de Estado das Relações Exteriores",
+      "DataRecebimento": "31/01/2003",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "243",
+    "DataDOU": "20/12/2005"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "23/12/2005",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 2265,
+      "NomeArquivo": "Argentina - Acordo - Academias Diplomáticas.pdf",
+      "Descricao": "Argentina - Acordo - Academias DIplomáticas",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 2264,
+      "NomeArquivo": "Argentina - DOU - 243 - 2005.pdf",
+      "Descricao": "Argentina - DOU - 243 - 2005",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 2270,
+    "NomeArquivo": "Argentina - Acordo - Academias Diplomáticas.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme disposto no Artigo V, §1: \"O presente Acordo entrará em vigor 30 (trinta) dias após a data da última notificação das Partes sobre o cumprimento das respectivas formalidades legais internas necessárias à aprovação deste Acordo.\""
+    }
+  ]
+}

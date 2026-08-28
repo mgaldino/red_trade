@@ -1,0 +1,113 @@
+{
+  "$id": "1",
+  "Titulo": "Memorando de Entendimento sobre Interconexão Gasífera entre o Ministério de Minas e Energia da República Federativa do Brasil, o Ministério de Energia e Petróleo da República Bolivariana da Venezuela e o Ministério de Planejamento Federal, Investimento Público e Serviços da República Argentina",
+  "OutraParte": "Venezuela",
+  "OutrasPartes": [
+    "Venezuela",
+    "Argentina"
+  ],
+  "SignatarioBrasil": "Silas Rondeau Cavalcante Silva",
+  "CargoSignatarioBrasil": "Ministro de Estado de Minas e Energia",
+  "Depositario": null,
+  "LocalCelebracao": "Montevidéu",
+  "NomePaisCelebracao": "Uruguai",
+  "DataCelebracao": "09/12/2005",
+  "TipoAcordo": "TL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Venezuela",
+      "NomeSignatario": "Rafael Ramíres Carreno",
+      "CargoSignatario": "Ministério de Energia e Petróleo da República Bolivariana da Venezuela"
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "Argentina",
+      "NomeSignatario": "Julio De Vido",
+      "CargoSignatario": "Ministério de Planejamento Federal, Investimento Público e Serviços da República Argentina"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Energia e Recursos Estratégicos",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "7",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "73",
+    "DataDOU": "17/04/2006"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "09/12/2005",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 21314,
+      "NomeArquivo": "MdE - Interconexão Gasífera - DOU - Publicação DAI - 73 - 2006.pdf",
+      "Descricao": "Publicação no DOU pela DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "11",
+    "Id": 21312,
+    "NomeArquivo": "Memorando - Interconexão Gasífera.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "12",
+      "DescricaoObservacao": "Conforme disposto no Artigo Décimo Quarto: \"O presente Memorando entrará em vigor no momento de sua assinatura e terá uma duração de 12 meses, prorrogáveis mediante comunicação escrita e poderá ser modificado por mutuo consentimento das Partes, formalizado por meio de comunicações escritas nas quais se especifique a data de entrada em vigor de tais modificações. Igualmente, qualquer das partes poderá dar por terminado o presente Memorando em qualquer momento, mediante comunicação escrita dirigida as outras partes.\""
+    }
+  ]
+}

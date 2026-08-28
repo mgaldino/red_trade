@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República da Índia sobre Cooperação em Assuntos Relativos à Defesa",
+  "OutraParte": "Índia",
+  "OutrasPartes": [
+    "Índia"
+  ],
+  "SignatarioBrasil": "José Viegas Filho",
+  "CargoSignatarioBrasil": "Ministro de Estado da Defesa",
+  "Depositario": null,
+  "LocalCelebracao": "Nova Delhi",
+  "NomePaisCelebracao": "Índia",
+  "DataCelebracao": "01/12/2003",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Índia",
+      "NomeSignatario": "George Fernandes",
+      "CargoSignatario": "Ministro de Estado da Defesa"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Defesa e Segurança",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "271",
+    "DataMensagem": "24/05/2004",
+    "NumeroDOU": "99",
+    "DataDOU": "25/05/2004"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "475",
+    "DataDecreto": "22/11/2006",
+    "NumeroDOU": "224",
+    "DataDOU": "23/11/2006"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "BRA/POL/109/1/2006",
+      "DataDocumento": "13/07/2006",
+      "Local": "Embaixada da Índia no Brasil",
+      "DataRecebimento": "17/07/2006",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "33",
+      "DataDocumento": "27/12/2006",
+      "Local": "Ministério das Relações Exteriores",
+      "DataRecebimento": "27/12/2006",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "6111",
+    "DataDecreto": "10/05/2007",
+    "NumeroDOU": "90",
+    "DataDOU": "11/05/2007"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": "45313",
+    "DataEntradaVigor": "27/12/2006",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 8080,
+      "NomeArquivo": "Índia - DOU - Decreto de Promulgação - 90 - 2007.pdf",
+      "Descricao": "Publicação no DOU de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 8079,
+      "NomeArquivo": "Índia - DOU - Decreto Legislativo - 224 - 2006.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 8078,
+      "NomeArquivo": "Índia - DOU - Mensagem ao Congresso - 99 - 2004.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 8075,
+    "NomeArquivo": "Índia - Acordo - Defesa.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo 9: \"Este Acordo entrará em vigor na data em que ambas as Partes tiverem notificado a outra Parte, por escrito, do término dos trâmites legais internos, de acordo com as respectivas exigências constitucionais necessárias para aprovação deste Acordo. A data de entrada em vigor será aquela da última notificação. O Acordo permanecerá em vigor até que uma das Partes decida denunciá-lo, por escrito, pelos canais diplomáticos. A denúncia terá efeito 90 dias a partir da notificação e não afetará os programas e atividades em curso ao abrigo do Acordo, a menos que as Partes decidam de outro modo.\""
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "raw_run": "data/raw/concordia_bilateral_acts/20260828T222000Z",
+  "processed_at": "2026-08-28T19:31:47-03:00",
+  "decision_rules": {
+    "analytic_bilateral": "TipoAcordo == BL; parceiro consultado consta em OutrasPartes; data válida na janela",
+    "same_day_package": "dois ou mais atos bilaterais da mesma díade na mesma data",
+    "strategic_instrument": [
+      "\\bparceria estrategica\\b",
+      "\\bplano (?:de )?acao conjunta\\b",
+      "\\bplano decenal\\b",
+      "\\bcomissao .{0,80}\\balto nivel\\b",
+      "\\bdialogo estrategico\\b",
+      "\\bagenda estrategica\\b"
+    ],
+    "instrument_type": "classificação derivada do título; não é campo nativo da API",
+    "multilateral_handling": "preservado em search_hits; excluído do painel bilateral"
+  },
+  "counts": {
+    "search_hits": 515,
+    "unique_act_ids_all_hits": 504,
+    "analytic_bilateral_rows": 396,
+    "unique_analytic_act_ids": 396,
+    "subject_rows": 396
+  },
+  "outputs": {
+    "data/processed/diagnostics/concordia_bilateral_acts/20260828T222000Z/concordia_search_hits_2000_2014.csv": {
+      "sha256": "f580ac3a885298c7633960582c339be66dfaf540d18232c018320b2c243ab300",
+      "bytes": 507588
+    },
+    "data/processed/diagnostics/concordia_bilateral_acts/20260828T222000Z/concordia_bilateral_acts_2000_2014.csv": {
+      "sha256": "2113d506658b718943226b1640887e121813b424747ef9e53afed2b7e3fe32a5",
+      "bytes": 399507
+    },
+    "data/processed/diagnostics/concordia_bilateral_acts/20260828T222000Z/concordia_bilateral_act_subjects_2000_2014.csv": {
+      "sha256": "4aa25ddf5e44f47d1e70cd6351dd2abb3e835f873a976fa35654d02ef13866b0",
+      "bytes": 26959
+    }
+  }
+}

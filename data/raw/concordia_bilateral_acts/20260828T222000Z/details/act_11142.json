@@ -1,0 +1,115 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo sobre Transferência de Pessoas Condenadas dos Estados Partes do Mercosul, com a República da Bolívia e a República do Chile - Decisão nº 34/04",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Luiz Nunes Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Belo Horizonte",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "16/12/2004",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "954",
+    "DataMensagem": "11/12/2007",
+    "NumeroDOU": "238",
+    "DataDOU": "12/12/2007"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "148",
+    "DataDecreto": "09/06/2011",
+    "NumeroDOU": "111",
+    "DataDOU": "10/06/2011"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "9.566",
+    "DataDecreto": "16/11/2018",
+    "NumeroDOU": "221",
+    "DataDOU": "19/11/2018"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "01/05/2018",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 29093,
+      "NomeArquivo": "Mercosul, Bolivia, Chile - DOU - Decreto de Promulgação - 221 - 2018.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 4086,
+      "NomeArquivo": "Acordo - Pessoas - Condenadas - DOU - Decreto Legislativo - 111 - 2011.pdf",
+      "Descricao": "Acordo - Pessoas - Condenadas - DOU - Decreto Legislativo - 111 - 2011",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 4085,
+      "NomeArquivo": "Acordo - Pessoas - Condenadas - DOU - Mensagem ao Congresso - 238 - 2007.pdf",
+      "Descricao": "Acordo - Pessoas - Condenadas - DOU - Mensagem ao Congresso - 238 - 2007",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 4081,
+    "NomeArquivo": "Acordo - Pessoas - Condenadas - MERCOSUL - Bolívia - Chile - port esp.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme o disposto no art. 17, §2: \"O presente Acordo entrará em vigor no primeiro dia do terceiro mês da data que se tenha depositado o quarto instrumento de ratificação dos Estados Partes do MERCOSUL e pelo menos um dos instrumentos de ratificação dos Estados Associados\"."
+    }
+  ]
+}

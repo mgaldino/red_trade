@@ -1,0 +1,116 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República Oriental do Uruguai sobre Cooperação entre suas Academias Diplomáticas",
+  "OutraParte": "Uruguai",
+  "OutrasPartes": [
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "João Almino de Souza Filho",
+  "CargoSignatarioBrasil": "Diretor do Instituto Rio Branco",
+  "Depositario": null,
+  "LocalCelebracao": "Montevidéu",
+  "NomePaisCelebracao": "Uruguai",
+  "DataCelebracao": "21/08/2002",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": "Embaixador José Luiz Aldabalde",
+      "CargoSignatario": "Diretor do Instituto Artigas"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Relações Diplomáticas e Consulares",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "488",
+      "DataDocumento": "30/11/2004",
+      "Local": "Embaixada em Montevidéu",
+      "DataRecebimento": "02/09/2004",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "488",
+      "DataDocumento": "21/08/2002",
+      "Local": "Embaixada em Montevidéu",
+      "DataRecebimento": "29/10/2004",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "4",
+    "DataDOU": "06/01/2005"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Expirado",
+    "NumeroRegistroONU": "41680",
+    "DataEntradaVigor": "28/11/2004",
+    "DataEntradaVigorCI": null,
+    "Expirou": "21/08/2012",
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 12628,
+      "NomeArquivo": "Uruguai - DOU - Publicação DAI - 4 - 2005.pdf",
+      "Descricao": "Publicação no DOU pela DAI.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "11",
+    "Id": 12492,
+    "NomeArquivo": "Uruguai - Acordo - Academias Diplomáticas.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "12",
+      "DescricaoObservacao": "Conforme Exposto no artigo 5° ''1.O presente Acordo entrará em vigor 30 (trinta) dias após a data da última notificação das Partes sobre o cumprimento das respectivas formalidades legais internas necessárias à aprovação deste Acordo.\r\n2.O presente Acordo permanecerá vigente pelo prazo de 5 (cinco) anos, renovável automaticamente por igual período, salvo notificação expressa de uma das Partes à outra sobre sua intenção de denunciá-lo. A denúncia surtirá efeito 6 (seis) meses após a data do recebimento da notificação.\r\n 3.A denúncia do presente Acordo não afetará a conclusão de atividades ou projetos acordados durante sua vigência.\r\n 4.O presente Acordo poderá ser modificado de comum acordo entre as Partes. As modificações entrarão em vigor segundo o estipulado no parágrafo 1deste artigo.''"
+    }
+  ]
+}

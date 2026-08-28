@@ -1,0 +1,134 @@
+{
+  "$id": "1",
+  "Titulo": "Protocolo Complementar ao Acordo-Quadro entre o Governo da República Federativa do Brasil e o Governo da República Popular da China sobre Cooperação em Aplicações Pacíficas de Ciência e Tecnologia do Espaço Exterior para a Continuidade do Desenvolvimento Conjunto de Satélites de Recursos Terrestres.",
+  "OutraParte": "China",
+  "OutrasPartes": [
+    "China"
+  ],
+  "SignatarioBrasil": "Ronaldo Mota Sardenberg",
+  "CargoSignatarioBrasil": "Ministro da Ciência e Tecnologia",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "27/11/2002",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "China",
+      "NomeSignatario": "Jiang Yuande",
+      "CargoSignatario": "Embaixador"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Meio Ambiente e Sustentabilidade",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "412",
+    "DataMensagem": "26/08/2003",
+    "NumeroDOU": "165",
+    "DataDOU": "27/08/2003"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "1020",
+    "DataDecreto": "24/11/2005",
+    "NumeroDOU": "226",
+    "DataDOU": "25/11/2005"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "53",
+      "DataDocumento": "20/03/2008",
+      "Local": "Ministério dos Negócios Estrangeiros",
+      "DataRecebimento": "25/03/2008",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": "02/12/2005",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "6.560",
+    "DataDecreto": "08/09/2008",
+    "NumeroDOU": "174",
+    "DataDOU": "09/09/2008"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": "35218",
+    "DataEntradaVigor": "25/03/2008",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 3708,
+      "NomeArquivo": "China - DOU - Mensagem ao Congresso - 165 - 2003.pdf",
+      "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 3706,
+      "NomeArquivo": "China - DOU -Decreto Legislativo - 226 - 2005.pdf",
+      "Descricao": "Publicação no DOU de Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 3705,
+      "NomeArquivo": "China - DOU - Decreto de Promulgação - 174 - 2008.pdf",
+      "Descricao": "Publicação no DOU de Decreto de Promulgação",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 3712,
+    "NomeArquivo": "China - Acordo - Recursos Terrestres.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo XVIII \"As Partes trocarão Notas, através de canais diplomáticos, sobre a aprovação deste Protocolo, que entrará em vigor na data em que a última notificação for recebida.\""
+    },
+    {
+      "$id": "15",
+      "DescricaoObservacao": "Conforme disposto no Artigo XIX \"Este Protocolo permanecerá em vigor por cinco anos consecutivos. Será automaticamente renovado por períodos iguais e sucessivos de cinco anos, a não ser que uma das Partes notifique a outra Parte através de canais diplomáticos, com um mínimo de seis meses de antecedência, de sua intenção de denunciar este Protocolo.\""
+    }
+  ]
+}

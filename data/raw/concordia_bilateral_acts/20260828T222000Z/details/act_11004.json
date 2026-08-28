@@ -1,0 +1,117 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo de Cooperação e Assistência Jurisdicional em Matéria Civil, Comercial, Trabalhista e Administrativa entre os Estados Partes do MERCOSUL e a República da Bolívia e a República do Chile - Decisão nº 08/02",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai",
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Lafer",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Buenos Aires",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "05/07/2002",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": "1.123",
+    "DataMensagem": "17/12/2002",
+    "NumeroDOU": "244",
+    "DataDOU": "18/12/2002"
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": "1.021",
+    "DataDecreto": "24/11/2005",
+    "NumeroDOU": "226",
+    "DataDOU": "25/11/2005"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "6.891",
+    "DataDecreto": "02/07/2009",
+    "NumeroDOU": "125",
+    "DataDOU": "03/07/2009"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "08/02/2009",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 5770,
+      "NomeArquivo": "Acordo - Cooperação - Assistência - Jurisdicional - DOU - Decreto de Promulgação - 125 - 2009.pdf",
+      "Descricao": "Acordo - Cooperação - Assistência - Jurisdicional - DOU - Decreto de Promulgação - 125 - 2009",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 5769,
+      "NomeArquivo": "Acordo - Cooperação - Assistência - Jurisdicional - DOU - Decreto Legislativo - 226 - 2005.pdf",
+      "Descricao": "Acordo - Cooperação - Assistência - Jurisdicional - DOU - Decreto Legislativo - 226 - 2005",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 5768,
+      "NomeArquivo": "Acordo - Cooperação - Assistência - Jurisdicional - DOU - Mensagem ao Congresso - 244 - 2002.pdf",
+      "Descricao": "Acordo - Cooperação - Assistência - Jurisdicional - DOU - Mensagem ao Congresso - 244 - 2002",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 5775,
+    "NomeArquivo": "Acordo - Cooperação - Assistência - Jurisdicional - MERCOSUL - Bolívia - Chile - port esp.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": []
+}

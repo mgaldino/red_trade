@@ -1,0 +1,119 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo Quadro sobre Comércio entre o MERCOSUL e a República Islâmica do Paquistão - Decisão nº 07/06",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Luiz Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Córdoba",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "20/07/2006",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Comércio Internacional e Investimentos",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Tramitação MRE",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": "03/11/2024",
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 29453,
+      "NomeArquivo": "Mercosul - Ata Depósito Paraguai - Comércio - RIsl Paquistão.pdf",
+      "Descricao": "Ata de Depósito de Ratificação do Paraguai.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 26280,
+      "NomeArquivo": "Mercosul - Ata Depósito Uruguai - Comércio - RIsl Paquistão.pdf",
+      "Descricao": "Ata de Depósito de Ratificação do Uruguai.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 26279,
+      "NomeArquivo": "Mercosul - Ata Depósito Argentina - Comércio - RIsl Paquistão.pdf",
+      "Descricao": "Ata de Depósito de Ratificação da Argentina.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 26278,
+    "NomeArquivo": "Mercosul - Acordo Quadro - Comércio - RIsl Paquistão.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "No dia 04 de outubro de 2024 a República Islâmica do Paquistão realizou a ratificação do presente acordo. Tendo sido ratificado pelos demais Estados signatários, o Acordo em questão entrará em vigor no dia 03 de novembro de 2024."
+    },
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo 10: \"1. O presente Acordo entrará em vigor trinta dias após a data da última notificação, pelas Partes Contratantes, por escrito e pelos canais diplomáticos, do cumprimento das formalidades legais internas necessárias para esse fim. 2. Este acordo permanecerá em vigor por um período de 3 anos, automaticamente renováveis por igual período de 3 anos. Cada Parte poderá denunciar o Acordo a qualquer momento por meio de notificação à outra Parte, pelos canais diplomáticos. A denúncia entrará em vigor seis meses após a data da sua notificação.\""
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo Sobre Cooperação em Assuntos Relacionados a Defesa Entre o Governo da República Federativa do Brasil e o Governo da República da Turquia",
+  "OutraParte": "Turquia",
+  "OutrasPartes": [
+    "Turquia"
+  ],
+  "SignatarioBrasil": "José Viegas Filho",
+  "CargoSignatarioBrasil": "Ministro da Defesa",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "14/08/2003",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Turquia",
+      "NomeSignatario": "M. Vecdi Gönül",
+      "CargoSignatario": "Ministro da Defesa Nacional"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Defesa e Segurança",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "586",
+    "DataMensagem": "31/10/2003",
+    "NumeroDOU": "213",
+    "DataDOU": "03/11/2003"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "277",
+    "DataDecreto": "04/10/2007",
+    "NumeroDOU": "193",
+    "DataDOU": "05/10/2007"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "6030/276-78",
+      "DataDocumento": "23/10/2007",
+      "Local": "Embaixada da Turquia no Brasil",
+      "DataRecebimento": "25/06/2004",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "2004/ALGY/283611",
+      "DataDocumento": "18/10/2007",
+      "Local": "Ministério das Relações Exteriores",
+      "DataRecebimento": "18/10/2007",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "6.411",
+    "DataDecreto": "24/03/2008",
+    "NumeroDOU": "57",
+    "DataDOU": "25/03/2008"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": "47135",
+    "DataEntradaVigor": "23/10/2007",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 11965,
+      "NomeArquivo": "Turquia - DOU - Mensagem ao Congresso - 213 - 2003.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso ",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 11964,
+      "NomeArquivo": "Turquia - DOU - Decreto Legislativo - 193 -2007.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 11961,
+      "NomeArquivo": "Turquia - DOU - Decreto de Promulgação - 57 -2008.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 25720,
+    "NomeArquivo": "Turquia - Acordo - Assuntos Relacionados a Defesa.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme o disposto no Artigo VI \"O presente Acordo entrará em vigor na data de recebimento, pela respectiva Parte, da última Nota na qual se comunica o cumprimento dos requisitos legais internos necessários à sua entrada em vigor.\""
+    }
+  ]
+}

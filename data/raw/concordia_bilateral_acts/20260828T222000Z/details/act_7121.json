@@ -1,0 +1,123 @@
+{
+  "$id": "1",
+  "Titulo": "Plano de Ação Conjunta entre o Governo da República Federativa do Brasil e o Governo da República Oriental do Uruguai para Fazer Avançar a Cooperação Bilateral na Área de Massificação do Acesso à Internet em Banda Larga e Telecomunicações em Geral (2011 - 2015)",
+  "OutraParte": "Uruguai",
+  "OutrasPartes": [
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "Aloizio Mercadante; Paulo Bernardo Silva",
+  "CargoSignatarioBrasil": "Ministro da Ciência e Tecnologia/ Ministro das Comunicações",
+  "Depositario": null,
+  "LocalCelebracao": "Montevidéu",
+  "NomePaisCelebracao": "Uruguai",
+  "DataCelebracao": "30/05/2011",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": "Roberto Kreimerman",
+      "CargoSignatario": "Ministro de Indústria, Energia e Mineração"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Ciência, Tecnologia e Inovação",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "41",
+    "DataMensagem": "18/02/2013",
+    "NumeroDOU": "33",
+    "DataDOU": "19/02/2013"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "159",
+    "DataDecreto": "07/08/2015",
+    "NumeroDOU": "151",
+    "DataDOU": "10/08/2015"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "134",
+      "DataDocumento": "12/04/2016",
+      "Local": "Embaixada em Montevidéu",
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Expirado",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 12630,
+      "NomeArquivo": "Uruguai - DOU - Mensagem ao Congresso - 33 - 2013.pdf",
+      "Descricao": "Publicação do DOU da Mensagem ao Congesso",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 2136,
+      "NomeArquivo": "Uruguai - DOU - Decreto Legislativo - 151 - 2015.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 2133,
+    "NomeArquivo": "Uruguai - Plano de Ação - Banda Larga.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme o disposto no Artigo 6º: \"Este Plano de Ação Conjunta entrará em vigor na data da última notificação, por via diplomática, em que as Partes comuniquem uma a outra sobre o cumprimento de seus respectivos requisitos internos para esse fim. Este Plano permanecerá em vigor pelo período de cinco anos.\""
+    }
+  ]
+}

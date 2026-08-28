@@ -1,0 +1,110 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo sobre Regularização Migratória Interna de Cidadãos do MERCOSUL, Bolívia e Chile - Decisão nº 28/02",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai",
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Lafer",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "05/12/2002",
+  "TipoAcordo": "ML",
+  "PossuiHtml": false,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Consulares e Migratórios",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": "87",
+    "DataMensagem": "20/03/2003",
+    "NumeroDOU": "56",
+    "DataDOU": "21/03/2003"
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": "923",
+    "DataDecreto": "15/09/2005",
+    "NumeroDOU": "179",
+    "DataDOU": "16/09/2005"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 5479,
+      "NomeArquivo": "Acordo - Regularização - Migratória - MERCOSUL - Bolívia - Chile - DOU - Decreto Legislativo - 179 - 2005.pdf",
+      "Descricao": "Acordo - Regularização - Migratória - MERCOSUL - Bolívia - Chile - DOU - Decreto Legislativo - 179 - 2005",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 5478,
+      "NomeArquivo": "Acordo - Regularização - Migratória - MERCOSUL - Bolívia - Chile - DOU - Mensagem ao Congresso - 56 - 2003.pdf",
+      "Descricao": "Acordo - Regularização - Migratória - MERCOSUL - Bolívia - Chile - DOU - Mensagem ao Congresso - 56 - 2003",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 5480,
+    "NomeArquivo": "Acordo - Regularização - Migratória - MERCOSUL - Bolívia - Chile - port esp.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": []
+}

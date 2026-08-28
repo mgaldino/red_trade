@@ -1,0 +1,106 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo Quadro de Interconexão Energética entre a República Federativa do Brasil e a República Oriental do Uruguai",
+  "OutraParte": "Uruguai",
+  "OutrasPartes": [
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores e Silas Rondeau, Ministro de Minas e Energia",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "16/03/2006",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": "Reinaldo Gargano",
+      "CargoSignatario": "Ministro das Relações Exteriores e Jorge Lepra, Ministro de Ind., Energia e Miner."
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Cooperação e Desenvolvimento",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "6051",
+    "DataDecreto": "28/02/2007",
+    "NumeroDOU": "40",
+    "DataDOU": "28/02/2007"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 12929,
+      "NomeArquivo": "Uruguai - DOU - Decreto de Promulgação - 40-A - 2007.pdf",
+      "Descricao": "Publicação no DOU pela DAI.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "10",
+    "Id": 12928,
+    "NomeArquivo": "Uruguai - Acordo - Interconexão Energética.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "11",
+      "DescricaoObservacao": "Conforme exposto no artigo 8° ''1. O presente Acordo entrará em vigor na data da última Nota em que as Partes se comuniquem o cumprimento dos requisitos internos para a sua entrada em vigor e terá validade indefinida, salvo se uma das Partes notificar a outra por via diplomática, com uma antecipação de seis meses, sua intenção de denunciá-lo.\r\n\r\n2. A denúncia do presente Acordo Quadro não afetará os projetos que se encontrem em etapa de execução, nem os contratos celebrados ao amparo do presente Instrumento.\r\n\r\n3. As Partes deverão protocolizar o presente Acordo Quadro junto à Secretaria-Geral da ALADI como o Protocolo Adicional ao Acordo de Complementação Econômica no 2, entre o Brasil e o Uruguai de 20 de dezembro de 1982 (AAP.CE no 2)."
+    }
+  ]
+}

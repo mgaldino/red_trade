@@ -1,0 +1,117 @@
+{
+  "$id": "1",
+  "Titulo": "Protocolo de Integração Educativa e Reconhecimento de Certificados, Títulos e Estudos de Nível Primário/Fundamental/Básico e Médio/Secundário entre os Estados Partes do MERCOSUL e Estados Associados (Decisão 21/10)",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai",
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Luiz Nunes Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "San Juan",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "02/08/2010",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Educação e Cultura",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": "217",
+    "DataMensagem": "28/06/2017",
+    "NumeroDOU": "123",
+    "DataDOU": "29/06/2017"
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": "163",
+    "DataDecreto": "08/11/2018",
+    "NumeroDOU": "216",
+    "DataDOU": "09/11/2018"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "10.092",
+    "DataDecreto": "06/11/2019",
+    "NumeroDOU": "216",
+    "DataDOU": "07/11/2019"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 30144,
+      "NomeArquivo": "Publicação no DOU - Promulgação - Mercosul.pdf",
+      "Descricao": "Publicação no DOU do Decreto Presidencial - Promulgação.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 29058,
+      "NomeArquivo": "DOU - Decreto Legislativo - 216 - 2018.pdf",
+      "Descricao": "Publicação no DOU de Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 22162,
+      "NomeArquivo": "DOU - Mensagem ao Congresso - 123 - 2017.pdf",
+      "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 454,
+    "NomeArquivo": "Protocolo Integração Educativa - português, espanhol.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": []
+}

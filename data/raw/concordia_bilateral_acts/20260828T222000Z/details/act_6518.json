@@ -1,0 +1,106 @@
+{
+  "$id": "1",
+  "Titulo": "Plano de ação entre o Governo da República Federativa do Brasil e o Governo da República da África do Sul sobre Cooperação Esportiva 2009 – 2011",
+  "OutraParte": "África do Sul",
+  "OutrasPartes": [
+    "África do Sul"
+  ],
+  "SignatarioBrasil": "Orlando Silva",
+  "CargoSignatarioBrasil": "Ministro dos Esportes",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "09/10/2009",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "África do Sul",
+      "NomeSignatario": "Makhenkesi Stofile",
+      "CargoSignatario": "Ministro dos Esportes e Lazer"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Cooperação e Desenvolvimento",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "199",
+    "DataDOU": "19/10/2009"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Expirado",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "09/10/2009",
+    "DataEntradaVigorCI": null,
+    "Expirou": "31/12/2011",
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 80,
+      "NomeArquivo": "África do Sul - DOU - Publicação DAI - 199 - 2009 - pg 56.pdf",
+      "Descricao": "África do Sul - DOU - Publicação DAI - 199 - 2009 - pg 56",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "10",
+    "Id": 79,
+    "NomeArquivo": "África do Sul - PdA - Cooperação Esportiva 2009-2011.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "11",
+      "DescricaoObservacao": "Conforme disposto no Artigo 8, \"Este Plano de Ação terá efeitos na data de sua assinatura, permanecerá em vigor até 31 de dezembro de 2011 e poderá ser renovado por novo período conforme determinarem as Partes por escrito, salvo se uma das Partes quiser terminá-lo, nos termos do parágrafo 3 deste Artigo.\""
+    }
+  ]
+}

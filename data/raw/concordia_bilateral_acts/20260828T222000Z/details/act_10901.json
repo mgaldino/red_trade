@@ -1,0 +1,108 @@
+{
+  "$id": "1",
+  "Titulo": "Lista de Compromissos Específicos do Brasil resultante da \"II Rodada Negociadora de Compromissos Específicos em Matéria de Serviços\"",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": null,
+  "CargoSignatarioBrasil": null,
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Florianópolis",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "15/12/2000",
+  "TipoAcordo": "ML",
+  "PossuiHtml": false,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Cooperação e Desenvolvimento",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "1.251",
+    "DataMensagem": "13/11/2001",
+    "NumeroDOU": "218",
+    "DataDOU": "14/11/2001"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "1.016",
+    "DataDecreto": "11/11/2005",
+    "NumeroDOU": "218",
+    "DataDOU": "14/11/2005"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Superado",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 27145,
+      "NomeArquivo": "Lista de compromissos específicos - DOU - Mensagem ao Congresso - 218 - 2001.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 27144,
+      "NomeArquivo": "Lista de compromissos específicos - DOU - Decreto Legislativo - 218 - 2005.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "11",
+    "Id": 2119,
+    "NomeArquivo": "Decisão 56-00 - Compromissos Específicos - Serviços - port.PDF",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".PDF"
+  },
+  "Observacoes": [
+    {
+      "$id": "12",
+      "DescricaoObservacao": "Conforme disposto pelo Artigo 3: \"A presente Decisão 56/00 deverá ser incorporada aos ordenamentos jurídicos nacionais, de acordo aos procedimentos próprios de cada Estado Parte.\""
+    }
+  ]
+}

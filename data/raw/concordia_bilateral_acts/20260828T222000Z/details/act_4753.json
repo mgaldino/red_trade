@@ -1,0 +1,120 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo Entre o Governo da República Federativa do Brasil e o Governo da República da Turquia Sobre a Isenção de Visto Para Titulares de Passaportes Comuns",
+  "OutraParte": "Turquia",
+  "OutrasPartes": [
+    "Turquia"
+  ],
+  "SignatarioBrasil": "Luiz Felipe Seixas Correa",
+  "CargoSignatarioBrasil": "Secretário-Geral do Ministério das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Ancara",
+  "NomePaisCelebracao": "Turquia",
+  "DataCelebracao": "20/08/2001",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "T",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Turquia",
+      "NomeSignatario": "Farouk Logoglu",
+      "CargoSignatario": "Secretário-Geral da Chancelaria Turca"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Consulares e Migratórios",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "51",
+    "DataMensagem": "30/01/2002",
+    "NumeroDOU": "22",
+    "DataDOU": "31/01/2002"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "211",
+    "DataDecreto": "03/12/2003",
+    "NumeroDOU": " 98",
+    "DataDOU": "24/05/2004"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "5124",
+    "DataDecreto": "01/07/2004",
+    "NumeroDOU": "126",
+    "DataDOU": "02/07/2004"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": "41665",
+    "DataEntradaVigor": "01/07/2004",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 11923,
+      "NomeArquivo": "Turquia - DOU - Decreto de Promulgação - 126 - 2004.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 11921,
+      "NomeArquivo": "Turquia - DOU - Decreto Legislativo - 98 - 2004.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 11920,
+      "NomeArquivo": "Turquia - DOU - Mensagem ao Congresso - 22 - 2002.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso ",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 11925,
+    "NomeArquivo": "Turquia - Acordo - Passaportes Comuns.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme o disposto no Artigo 11 \"1.O presente Acordo será válido por tempo indeterminado e está sujeito a aprovação ou ratificação, conforme as formalidades legais internas das Partes Contratantes, e entrará em vigor na data da última das Notas diplomáticas nas quais as Partes Contratantes informam sobre o cumprimento dos respectivos requerimentos legais internos necessários para sua entrada em vigor.\""
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Tratado de Cooperação Jurídica Internacional em Matéria Penal entre a República Federativa do Brasil e os Estados Unidos Mexicanos",
+  "OutraParte": "México",
+  "OutrasPartes": [
+    "México"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Mininistro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Cidade do México",
+  "NomePaisCelebracao": "México",
+  "DataCelebracao": "06/08/2007",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "México",
+      "NomeSignatario": "Eduardo Tomás Medina Mora Icaza",
+      "CargoSignatario": "Procurador Geral da República"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "993",
+    "DataMensagem": "20/12/2007",
+    "NumeroDOU": "245",
+    "DataDOU": "21/12/2007"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "606",
+    "DataDecreto": "02/09/2009",
+    "NumeroDOU": "169",
+    "DataDOU": "03/09/2009"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "BRA001169/355-03/\"08",
+      "DataDocumento": "17/06/2008",
+      "Local": null,
+      "DataRecebimento": "17/06/2008",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "199",
+      "DataDocumento": "11/09/2009",
+      "Local": "Embaixada no México",
+      "DataRecebimento": "11/09/2009",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "7595",
+    "DataDecreto": "01/11/2011",
+    "NumeroDOU": "211",
+    "DataDOU": "03/11/2011"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "15/10/2009",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 8597,
+      "NomeArquivo": "México - DOU - Promulgação - 211 - 2011.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 8596,
+      "NomeArquivo": "México - DOU - Decreto - 169 - 2009.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 8595,
+      "NomeArquivo": "México - DOU - Mensagem - 245 - 2007.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 11207,
+    "NomeArquivo": "México - Tratado - Matéria Penal.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme Artigo 34, \"O presente Tratado entrará em vigor trinta (30) dias depois da data de recepção da última notificação, pela via diplomática, pela qual as Partes se comuniquem o cumprimento de seus respectivos requisitos legais internos necessários para tal fim.\""
+    }
+  ]
+}

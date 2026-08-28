@@ -1,0 +1,139 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República da África do Sul sobre Cooperação em Assuntos Relativos à Defesa",
+  "OutraParte": "África do Sul",
+  "OutrasPartes": [
+    "África do Sul"
+  ],
+  "SignatarioBrasil": "Embaixador José Viegas Filho",
+  "CargoSignatarioBrasil": "Ministro da Defesa",
+  "Depositario": null,
+  "LocalCelebracao": "Cape Town",
+  "NomePaisCelebracao": "África do Sul",
+  "DataCelebracao": "04/06/2003",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "África do Sul",
+      "NomeSignatario": "Mosiuoa Gerard Patrick Lekota",
+      "CargoSignatario": "Ministro da Defesa"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Defesa e Segurança",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "425",
+    "DataMensagem": "29/08/2003",
+    "NumeroDOU": "168",
+    "DataDOU": "01/09/2003"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "784",
+    "DataDecreto": "08/07/2005",
+    "NumeroDOU": "131",
+    "DataDOU": "11/07/2005"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "19",
+      "DataDocumento": "20/08/2013",
+      "Local": "Dep. de Rel. Internacionais e Cooperação da África",
+      "DataRecebimento": "20/08/2013",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "155",
+      "DataDocumento": "18/07/2005",
+      "Local": "Embaixada em Pretória",
+      "DataRecebimento": "18/07/2005",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "12.872",
+    "DataDecreto": "10/03/2026",
+    "NumeroDOU": "47",
+    "DataDOU": "11/03/2026"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "20/08/2013",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 33967,
+      "NomeArquivo": "DOU_11.3.2026_p.1 e 2.pdf",
+      "Descricao": "Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 1207,
+      "NomeArquivo": "África do Sul-Nota Verbal da África do Sul-19-2013.pdf",
+      "Descricao": "Nota Verbal de Ratificação da África do Sul",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 1206,
+      "NomeArquivo": "África do Sul-Nota Verbal do Brasil-155-2005.pdf",
+      "Descricao": "Nota Verbal de Ratificação do Brasil",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "13",
+      "Id": 1205,
+      "NomeArquivo": "África do Sul-DOU-Mensagem ao Congresso-168-2003.pdf",
+      "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "14",
+      "Id": 1204,
+      "NomeArquivo": "África do Sul-DOU-Decreto Legislativo-131-2005.pdf",
+      "Descricao": "Publicação no DOU de Decreto Legislativo",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "15",
+    "Id": 1203,
+    "NomeArquivo": "África do Sul-Acordo-Cooperação em Defesa.pdf",
+    "Descricao": "África do Sul-Acordo-Cooperação em Defesa",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": []
+}

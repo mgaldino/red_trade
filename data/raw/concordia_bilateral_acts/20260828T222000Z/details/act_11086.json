@@ -1,0 +1,110 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo de Comércio Preferencial (ACP) entre o MERCOSUL e a República da Índia",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Nova Delhi",
+  "NomePaisCelebracao": "Índia",
+  "DataCelebracao": "25/01/2004",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Comércio Internacional e Investimentos",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "644",
+    "DataMensagem": "30/09/2005",
+    "NumeroDOU": "190",
+    "DataDOU": "03/10/2005"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "221",
+    "DataDecreto": "03/09/2008",
+    "NumeroDOU": "171",
+    "DataDOU": "04/09/2008"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "6.864",
+    "DataDecreto": "29/05/2009",
+    "NumeroDOU": "130",
+    "DataDOU": "10/07/2014"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "01/06/2009",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 27861,
+      "NomeArquivo": "ACP - MERCOSUL - Índia - DOU - Decreto de Promulgação - 130 - 2014.pdf",
+      "Descricao": "ACP - MERCOSUL - Índia - DOU - Decreto de Promulgação - 130 - 2014",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 4745,
+      "NomeArquivo": "ACP - MERCOSUL - Índia - DOU - Decreto Legislativo - 171 - 2008.pdf",
+      "Descricao": "ACP - MERCOSUL - Índia - DOU - Decreto Legislativo - 171 - 2008",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 4744,
+      "NomeArquivo": "ACP - MERCOSUL - Índia - DOU - Mensagem ao Congresso - 190 - 2005.pdf",
+      "Descricao": "ACP - MERCOSUL - Índia - DOU - Mensagem ao Congresso - 190 - 2005",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 4741,
+    "NomeArquivo": "ACP - MERCOSUL - Índia - port esp ing.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": []
+}

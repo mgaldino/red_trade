@@ -1,0 +1,141 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre a República Federativa do Brasil e a República Argentina sobre Localidades Fronteiriças Vinculadas",
+  "OutraParte": "Argentina",
+  "OutrasPartes": [
+    "Argentina"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Puerto Iguazú",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "30/11/2005",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Argentina",
+      "NomeSignatario": "Rafael Antonio Bielsa",
+      "CargoSignatario": "Ministro das Relações Exteriores, Comércio Internacional e Culto"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Fronteira, Infraestrutura e Integração Regional",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "253",
+    "DataMensagem": "08/05/2008",
+    "NumeroDOU": "88",
+    "DataDOU": "09/05/2008"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "145",
+    "DataDecreto": "02/06/2011",
+    "NumeroDOU": "106",
+    "DataDOU": "03/06/2011"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "293",
+      "DataDocumento": "02/11/2009",
+      "Local": "MRE Comércil Internacional e Culto",
+      "DataRecebimento": "02/11/2009",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "379",
+      "DataDocumento": "07/06/2011",
+      "Local": "Embaixada em Buenos Aires",
+      "DataRecebimento": "07/06/2011",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "8636",
+    "DataDecreto": "13/01/2016",
+    "NumeroDOU": "9",
+    "DataDOU": "14/01/2016"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "07/07/2011",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 19616,
+      "NomeArquivo": "Troca de notas para ampliação da lista de Localidades Fronteiriças Vinculadas.pdf",
+      "Descricao": "Troca de notas - ampliação da lista de localidades fronteiriças vinculadas",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 6912,
+      "NomeArquivo": "Argentina - DOU - Decreto de Promulgação - 9 - 2016.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 2637,
+      "NomeArquivo": "Argentina - DOU - Decreto Legislativo - 106 - 2011.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "13",
+      "Id": 2636,
+      "NomeArquivo": "Argentina - DOU - Congresso - 88 - 2008.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "14",
+    "Id": 1224,
+    "NomeArquivo": "Argentina - Acordo - Localidades Fronteiriças Vinculadas.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "15",
+      "DescricaoObservacao": "Nos termos do Artigo 10, inciso 1 do Acordo, a Troca de Notas de 20 de outubro de 2016 incorpora os municípios de Santo Antônio do Sudoeste e de San Antonio ao Acordo sobre Localidades Fronteiriças Vinculadas."
+    },
+    {
+      "$id": "16",
+      "DescricaoObservacao": "Conforme Disposto no Artigo XII, parágrafo 1:  \"O presente Acordo entrará em vigor 30 (trinta) dias após a data da última das notas pelas quais as Partes comuniquem o cumprimento das formalidades legais internas para a sua entrada em vigor\"."
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República Argentina para o Provimento de Capacidade Espacial.",
+  "OutraParte": "Argentina",
+  "OutrasPartes": [
+    "Argentina"
+  ],
+  "SignatarioBrasil": "Renato Navarro Guerreiro",
+  "CargoSignatarioBrasil": "Presidente da ANATEL",
+  "Depositario": null,
+  "LocalCelebracao": "Rio de Janeiro",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "08/05/2001",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Argentina",
+      "NomeSignatario": "Henoch Aguiar",
+      "CargoSignatario": "Ministro das Comunicações"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Mar e Espaço",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "1105",
+    "DataMensagem": "22/10/2001",
+    "NumeroDOU": "203",
+    "DataDOU": "23/10/2001"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "609",
+    "DataDecreto": "11/09/2003",
+    "NumeroDOU": "177",
+    "DataDOU": "12/09/2003"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "72",
+      "DataDocumento": "19/03/2004",
+      "Local": "Embaixada em Buenos Aires",
+      "DataRecebimento": "19/03/2004",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "149",
+      "DataDocumento": "18/12/2003",
+      "Local": "SERE",
+      "DataRecebimento": "18/12/2003",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "5118",
+    "DataDecreto": "28/06/2004",
+    "NumeroDOU": "123",
+    "DataDOU": "29/06/2004"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "23/03/2004",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 2825,
+      "NomeArquivo": "Argentina - DOU - Mensagem ao Congresso - 203 - 2001.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 2393,
+      "NomeArquivo": "Argentina - DOU - Decreto Legislativo - 177 - 2003.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 2391,
+      "NomeArquivo": "Argentina - DOU - Promulgação - 123 - 2004.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 2827,
+    "NomeArquivo": "Argentina - Acordo - Capacidade Espacial.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo 13: \"O presente Acordo entrará em vigor no momento da recepção da última notificação mediante as quais as Partes comuniquem o cumprimento dos requisitos previstos em suas legislações internas e terá duração indeterminada\"."
+    }
+  ]
+}

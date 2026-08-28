@@ -1,0 +1,92 @@
+[
+  {
+    "$id": "1",
+    "Descricao": "Tramitação MRE",
+    "Ordem": 1,
+    "Id": 1
+  },
+  {
+    "$id": "2",
+    "Descricao": "Tramitação Ministérios/Casa Civil",
+    "Ordem": 2,
+    "Id": 2
+  },
+  {
+    "$id": "3",
+    "Descricao": "Tramitação Congresso Nacional",
+    "Ordem": 3,
+    "Id": 3
+  },
+  {
+    "$id": "4",
+    "Descricao": "Em Ratificação",
+    "Ordem": 4,
+    "Id": 4
+  },
+  {
+    "$id": "5",
+    "Descricao": "Em promulgação/MRE",
+    "Ordem": 5,
+    "Id": 5
+  },
+  {
+    "$id": "6",
+    "Descricao": "Em Vigor",
+    "Ordem": 6,
+    "Id": 6
+  },
+  {
+    "$id": "7",
+    "Descricao": "Expirado",
+    "Ordem": 7,
+    "Id": 7
+  },
+  {
+    "$id": "8",
+    "Descricao": "Em ratificação da(s) outra(s) Parte(s)",
+    "Ordem": 8,
+    "Id": 8
+  },
+  {
+    "$id": "9",
+    "Descricao": "Denunciado",
+    "Ordem": 9,
+    "Id": 9
+  },
+  {
+    "$id": "10",
+    "Descricao": "Suspenso",
+    "Ordem": 10,
+    "Id": 10
+  },
+  {
+    "$id": "11",
+    "Descricao": "Substituído",
+    "Ordem": 11,
+    "Id": 11
+  },
+  {
+    "$id": "12",
+    "Descricao": "Situação especial",
+    "Ordem": 12,
+    "Id": 12
+  },
+  {
+    "$id": "13",
+    "Descricao": "Pendente",
+    "Ordem": 13,
+    "Id": 13
+  },
+  {
+    "$id": "14",
+    "Descricao": "Superado",
+    "Ordem": 14,
+    "Id": 14
+  },
+  {
+    "$id": "15",
+    "Descricao": "Em promulgação/Casa Civil",
+    "Ordem": 15,
+    "Id": 15
+  }
+]

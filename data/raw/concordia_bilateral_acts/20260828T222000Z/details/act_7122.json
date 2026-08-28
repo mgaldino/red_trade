@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo-Quadro entre o Governo da República Federativa do Brasil e o Governo da República Oriental do Uruguai para Intercâmbio de Informações e Cooperação em Segurança Pública",
+  "OutraParte": "Uruguai",
+  "OutrasPartes": [
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "José Eduardo Cardozo",
+  "CargoSignatarioBrasil": "Ministro da Justiça",
+  "Depositario": null,
+  "LocalCelebracao": "Montevidéu",
+  "NomePaisCelebracao": "Uruguai",
+  "DataCelebracao": "30/05/2011",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": "Eduardo Bonomi",
+      "CargoSignatario": "Ministro do Interior do Uruguai"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Defesa e Segurança",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "41",
+    "DataMensagem": "24/02/2015",
+    "NumeroDOU": "37",
+    "DataDOU": "25/02/2015"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "151",
+    "DataDecreto": "15/12/2016",
+    "NumeroDOU": "241",
+    "DataDOU": "16/12/2016"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": null,
+      "DataDocumento": "04/05/2012",
+      "Local": "Embaixada em Montevidéu",
+      "DataRecebimento": "04/05/2012",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "52",
+      "DataDocumento": "08/02/2017",
+      "Local": "Embaixada em Montevidéu",
+      "DataRecebimento": "08/02/2017",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "9.096",
+    "DataDecreto": "18/07/2017",
+    "NumeroDOU": "137",
+    "DataDOU": "19/07/2017"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "08/02/2017",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 22545,
+      "NomeArquivo": "Uruguai - DOU - Decreto de Promulgação - 137 - 2017.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 16959,
+      "NomeArquivo": "Uruguai - DOU - Decreto Legislativo - 151 - 2016.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 12637,
+      "NomeArquivo": "Uruguai - DOU - Mensagem ao Congresso - 37 - 2015.pdf",
+      "Descricao": "Publicação do DOU da Mensagem ao Congesso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 12635,
+    "NomeArquivo": "Uruguai - Acordo-quadro - Segurança Pública.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme o disposto no Artigo VII: \"O presente Acordo entrará em vigor na data da segunda notificação de que foram cumpridos os requisitos internos para sua vigência e terá vigência de dois (2) anos, sendo renovado automaticamente, salvo manifestação contrária de qualquer das Partes.\""
+    }
+  ]
+}

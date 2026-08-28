@@ -1,0 +1,134 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República Oriental do Uruguai para a Construção de uma Segunda Ponte Internacional sobre o Rio Jaguarão, nas proximidades das Cidades de Jaguarão e Rio Branco",
+  "OutraParte": "Uruguai",
+  "OutrasPartes": [
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "San Juan de Anchorena, Colonia",
+  "NomePaisCelebracao": "Uruguai",
+  "DataCelebracao": "26/02/2007",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": "Reinaldo Gargano",
+      "CargoSignatario": "Ministro de Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": {
+    "$id": "3",
+    "Id": 4684,
+    "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República Oriental do Uruguai para a Construção de uma Segunda Ponte sobre o Rio Jaguarão, nas Proximidades das Cidades de Jaguarão e Rio Branco, e Recuperação da Atual Ponte Barão de Mauá"
+  },
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Fronteira, Infraestrutura e Integração Regional",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "712",
+    "DataMensagem": "26/09/2007",
+    "NumeroDOU": "187",
+    "DataDOU": "27/09/2007"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "46",
+    "DataDecreto": "30/03/2009",
+    "NumeroDOU": "61",
+    "DataDOU": "31/03/2009"
+  },
+  "Ratificacao": [
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "03/08",
+      "DataDocumento": "14/01/2008",
+      "Local": "Ministério de Relações Exteriores da República Oriental do Uruguai",
+      "DataRecebimento": "16/01/2008",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "8",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "155",
+      "DataDocumento": "02/04/2009",
+      "Local": "Embaixada em Montevidéu",
+      "DataRecebimento": "02/04/2009",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "9",
+    "NumeroDecreto": "7.900",
+    "DataDecreto": "04/02/2013",
+    "NumeroDOU": "25",
+    "DataDOU": "05/02/2013"
+  },
+  "Vigencia": {
+    "$id": "10",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "02/04/2009",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "11",
+      "Id": 12506,
+      "NomeArquivo": "Uruguai - DOU - Mensagem ao Congresso - 187 - 2007.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 12504,
+      "NomeArquivo": "Uruguai - DOU - Decreto Legislativo - 61 - 2009.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "13",
+      "Id": 12503,
+      "NomeArquivo": "Uruguai - DOU - Decreto de Promulgação - 25 - 2013.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promugação",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "14",
+    "Id": 12500,
+    "NomeArquivo": "Uruguai - Acordo - Obras Públicas - Ponte Cidades de Jaguarão e Rio Branco.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "15",
+      "DescricaoObservacao": "Conforme disposto no Artigo VI, parágrafo 1° \"As Partes se notificarão sobre o cumprimento das respectivas formalidades legais internas necessárias para a vigência do presente Acordo, o qual entrará em vigor a partir da data de recepção da segunda notificação.\""
+    }
+  ]
+}

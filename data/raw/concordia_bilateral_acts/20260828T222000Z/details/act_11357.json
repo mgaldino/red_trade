@@ -1,0 +1,102 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo-Quadro para o Estabelecimento de uma Área de Livre Comércio entre o MERCOSUL e a República da Turquia - Decisão nº 29/08",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai",
+    "ALADI"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "San Miguel de Tucumán",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "30/06/2008",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "ALADI",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Comércio Internacional e Investimentos",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Tramitação MRE",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "21/07/2019",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 26405,
+      "NomeArquivo": "Mercosul - Ata Depósito - Uruguai - Acordo-Quadro - Livre Comércio.pdf",
+      "Descricao": "Ata de Depósito de Ratificação do Uruguai.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "10",
+    "Id": 2719,
+    "NomeArquivo": "Dec. 29-08 - Acordo - Livre Comércio - MERCOSUL-Turquia - port esp ing tur.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "11",
+      "DescricaoObservacao": "Conforme disposto no Artigo 10: \"1. Este Acordo entrará em vigor trinta dias após a data da última notificação pela qual as Partes Contratantes informam, por escrito e pelos canais diplomáticos, a conclusão dos procedimentos internos necessários para este fim. 2. Este Acordo permanecerá em vigor por um período de três anos e, ao término, será considerado automaticamente prorrogado a menos que uma das Partes Contratantes decida, por notificação escrita e pelos canais diplomáticos, não renová-lo. Essa decisão terá de ser tomada pelo menos trinta dias antes da expiração do período de três anos. A denúncia entrará em vigor seis meses depois da data de sua notificação.\""
+    }
+  ]
+}

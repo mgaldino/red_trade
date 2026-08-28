@@ -1,0 +1,180 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre os Estados Membros da Comunidade Sul-Americana de Nações sobre Dispensa da Exigência de Visto de Turista e Habilitação de Documentos de Identidade para Ingresso e Trânsito em seus Territórios",
+  "OutraParte": "Argentina",
+  "OutrasPartes": [
+    "Argentina",
+    "Bolívia",
+    "Brasil",
+    "Chile",
+    "Colômbia",
+    "Equador",
+    "Guiana",
+    "Paraguai",
+    "Z a excluir (não usar)",
+    "Suriname",
+    "Uruguai",
+    "Venezuela"
+  ],
+  "SignatarioBrasil": "Celso Luiz Nunes Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Brasil",
+  "LocalCelebracao": "Santiago",
+  "NomePaisCelebracao": "Chile",
+  "DataCelebracao": "24/11/2006",
+  "TipoAcordo": "ML",
+  "PossuiHtml": false,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Argentina",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "Bolívia",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "4",
+      "NomeOutraParte": "Brasil",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "5",
+      "NomeOutraParte": "Chile",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "6",
+      "NomeOutraParte": "Colômbia",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "7",
+      "NomeOutraParte": "Equador",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "8",
+      "NomeOutraParte": "Guiana",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "9",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "10",
+      "NomeOutraParte": "Z a excluir (não usar)",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "11",
+      "NomeOutraParte": "Suriname",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "12",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "13",
+      "NomeOutraParte": "Venezuela",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "14",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "15",
+      "Id": 0,
+      "Nome": "Consulares e Migratórios",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "16",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "17",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "18",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "19",
+    "Vigencia": "Situação especial",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "20",
+      "Id": 34908,
+      "NomeArquivo": "UNASUL - Dispensa - Vistos - ing.pdf",
+      "Descricao": "Documento com íntegra do Acordo (ING)",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "21",
+      "Id": 34907,
+      "NomeArquivo": "UNASUL - Dispensa - Vistos - esp.pdf",
+      "Descricao": "Documento com íntegra do Acordo (ESP)",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "22",
+    "Id": 3273,
+    "NomeArquivo": "UNASUL - Dispensa - Vistos - port esp ing.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": []
+}

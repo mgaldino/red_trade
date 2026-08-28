@@ -1,0 +1,106 @@
+{
+  "$id": "1",
+  "Titulo": "Ajuste Complementar ao Acordo Básico de Cooperação entre o Governo da República Federativa do Brasil e o Governo da República Oriental do Uruguai para Implementação do Projeto ''Capacitação e Transferência de Metodologia para o Zoneamento do Cultivo da Videira no Uruguai e Caracterização Enológica dos Vinhos Regionais''",
+  "OutraParte": "Uruguai",
+  "OutrasPartes": [
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "01/04/2005",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": "Reinaldo Gargano",
+      "CargoSignatario": "Ministro das Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Agricultura, Pecuária e Pesca",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "77",
+    "DataDOU": "25/04/2005"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": "42235",
+    "DataEntradaVigor": "01/04/2005",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 12781,
+      "NomeArquivo": "Uruguai - DOU - Vinhos Regionais - 77 - 2005.pdf",
+      "Descricao": "Publicação no DOU pela DAI.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "10",
+    "Id": 12780,
+    "NomeArquivo": "Uruguai - AC - Vinhos Regionais.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "11",
+      "DescricaoObservacao": "Conforme exposto nos artigos 10°, 11°, 12° e 13° '' 10. O presente Ajuste Complementar entrará em vigor na data da sua assinatura e deverá ter vigência de 2 anos, sendo renovado automaticamente por períodos iguais e sucessivos, a menos que uma das Partes Contratantes o denuncie por Nota Diplomática, com antecedência de 6 (seis) meses à data de expiração do período de vigência. 11. O presente Ajuste Complementar poderá ser alterado por Nota diplomática entre as Partes Contratantes, ficando entendido que as suas modificações entrarão em vigor na data que for mutuamente acordada. 12. Qualquer das Partes Contratantes poderá denunciar o presente Ajuste Complementar com antecedência mínima de 6 (seis) meses da data do término de sua vigência, mediante notificação por Nota diplomática à outra Parte Contratante. 13. Em caso de denúncia do presente Ajuste Complementar, as atividades que se encontrarem em execução no âmbito do projeto em questão não serão afetadas, salvo se as Partes Contratantes resolverem o contrário, por escrito."
+    }
+  ]
+}

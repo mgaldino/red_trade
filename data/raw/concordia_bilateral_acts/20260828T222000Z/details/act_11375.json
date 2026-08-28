@@ -1,0 +1,141 @@
+{
+  "$id": "1",
+  "Titulo": "Memorando de Entendimento entre o Governo da República Federativa do Brasil, o Governo da República da Índia e o Governo da República da África do Sul sobre Facilitação Comercial para Padronizações, Regulações Técnicas e Avaliação de Conformidade",
+  "OutraParte": "Índia",
+  "OutrasPartes": [
+    "Índia",
+    "África do Sul"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Nova Delhi",
+  "NomePaisCelebracao": "Índia",
+  "DataCelebracao": "15/10/2008",
+  "TipoAcordo": "TL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Índia",
+      "NomeSignatario": " PRANAB MUKERJEE",
+      "CargoSignatario": "Ministro das Relações Exteriores"
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "África do Sul",
+      "NomeSignatario": " M. B. MPAHLWA",
+      "CargoSignatario": "Ministro do Comércio e da Industria"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Comércio Internacional e Investimentos",
+      "IsPrincipal": false
+    },
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": "342",
+    "DataMensagem": "20/05/2009",
+    "NumeroDOU": "95",
+    "DataDOU": "21/05/2009"
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": "666",
+    "DataDecreto": "01/09/2010",
+    "NumeroDOU": "168-A",
+    "DataDOU": "01/09/2010"
+  },
+  "Ratificacao": [
+    {
+      "$id": "8",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": " ",
+      "DataRecebimento": null,
+      "RatificacaoBrasil": false,
+      "Parte": "Índia"
+    },
+    {
+      "$id": "9",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": " ",
+      "DataRecebimento": null,
+      "RatificacaoBrasil": false,
+      "Parte": "África do Sul"
+    },
+    {
+      "$id": "10",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "11",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "12",
+    "Vigencia": "Em Ratificação",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "13",
+      "Id": 29762,
+      "NomeArquivo": "IBAS - Facilitação Comercial - DOU - Decreto Legislativo - 168-A - 2010.pdf",
+      "Descricao": "Publicação no DOU de Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "14",
+      "Id": 29761,
+      "NomeArquivo": "IBAS - Facilitação Comercial - DOU - Mensagem ao Congresso - 95 - 2009.pdf",
+      "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "15",
+    "Id": 29760,
+    "NomeArquivo": "MdE - IBAS - Facilitação Comercial.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": []
+}

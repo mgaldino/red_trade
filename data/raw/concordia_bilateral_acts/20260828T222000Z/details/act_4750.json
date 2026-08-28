@@ -1,0 +1,120 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo, por troca de Notas, para a Outorga de Vistos Gratuitos aos Estudantes e Docentes.",
+  "OutraParte": "Argentina",
+  "OutrasPartes": [
+    "Argentina"
+  ],
+  "SignatarioBrasil": "Celso Lafer",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Buenos Aires",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "14/08/2001",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Argentina",
+      "NomeSignatario": "Adalberto Rodriguez Giavarini",
+      "CargoSignatario": "Min. de Rel. Ext., Comércio Intern. e Culto"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Consulares e Migratórios",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "50",
+    "DataMensagem": "30/01/2002",
+    "NumeroDOU": "22",
+    "DataDOU": "31/01/2002"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "785",
+    "DataDecreto": "08/07/2005",
+    "NumeroDOU": "131",
+    "DataDOU": "11/10/2005"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "400",
+      "DataDocumento": "14/07/2005",
+      "Local": "Embaixada em Buenos Aires",
+      "DataRecebimento": "14/07/2005",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "5562",
+    "DataDecreto": "10/10/2005",
+    "NumeroDOU": "196",
+    "DataDOU": "11/10/2005"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": "43906",
+    "DataEntradaVigor": "15/07/2005",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 2749,
+      "NomeArquivo": "Argentina - DOU - Promulgação - 196 - 2005.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 2410,
+      "NomeArquivo": "Argentina - DOU - Decreto Legislativo - 131 - 2005.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo ",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 2408,
+      "NomeArquivo": "Argentina - DOU - Mensagem ao Congresso - 22 - 2002.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 2357,
+    "NomeArquivo": "Argentina - Acordo por Troca de Notas - Vistos Gratuitos.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme disposto no penúltimo parágrafo \" Sobre este particular, tenho a satisfação de informar Vossa Excelência de que a proposta acima é aceitável para o Governo da República Federativa do Brasil, sendo que a presente Nota e a de Vossa Excelência constituem um Acordo entre nossos dois Governos, a entrar em vigor na data da última das notificações pelas quais as Partes se comuniquem o cumprimento de seus requisitos internos necessários para sua entrada em vigor.\""
+    }
+  ]
+}

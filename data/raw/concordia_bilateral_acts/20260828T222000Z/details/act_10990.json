@@ -1,0 +1,131 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo de Assistência Jurídica Mútua em Assuntos Penais entre o Mercosul, a República da Bolívia e a República do Chile - Decisão nº 12/01",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai",
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Lafer",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Buenos Aires",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "18/02/2002",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": "23",
+    "DataMensagem": "20/01/2009",
+    "NumeroDOU": "14",
+    "DataDOU": "21/01/2009"
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": "132",
+    "DataDecreto": "26/05/2011",
+    "NumeroDOU": "101",
+    "DataDOU": "27/05/2011"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "8.331",
+    "DataDecreto": "12/11/2014",
+    "NumeroDOU": "220",
+    "DataDOU": "13/11/2014"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 28765,
+      "NomeArquivo": "Instrumento de Adesão por parte do Brasil.pdf",
+      "Descricao": "Instrumento de Adesão ",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 28764,
+      "NomeArquivo": "Carta de Ratificação.pdf",
+      "Descricao": "Carta de Ratificação ",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 5810,
+      "NomeArquivo": "Acordo - Assistência - Jurídica - Mútua - Penal - MERCOSUL - Bolívia - Chile - 220 - 2014.pdf",
+      "Descricao": "Acordo - Assistência - Jurídica - Mútua - Penal - MERCOSUL - Bolívia - Chile - DOU - Decrreto de Promulgação - 220 - 2014",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "13",
+      "Id": 5809,
+      "NomeArquivo": "Acordo - Assistênca - Jurídica - Mútua - Penal - MERCOSUL - Bolívia - Chile - 101 - 2011.pdf",
+      "Descricao": "Acordo - Assistência - Jurídica - Mútua - Penal - MERCOSUL - Bolívia - Chile - DOU - Decreto Legislativo - 101 - 2011",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "14",
+      "Id": 5808,
+      "NomeArquivo": "Acordo - Assistência - Jurídica - Mútua - Penal - MERCOSUL - Bolívia - Chile - DOU - 14 - 2009.pdf",
+      "Descricao": "Acordo - Assistência - Jurídica - Mútua - Penal - MERCOSUL - Bolívia - Chile - DOU - Mensagem ao Congresso - 14 - 2009",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "15",
+    "Id": 509,
+    "NomeArquivo": "Assistência Jurídica Mútua em Assuntos Penais MERCOSUL, Bolívia e Chile - português.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": []
+}

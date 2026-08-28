@@ -1,0 +1,114 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo, por troca de Notas, entre o Ministério das Relações Exteriores da República Federativa do Brasil e o Ministério dos Negócios Estrangeiros da República Popular da China para Flexibilização da Concessão de Vistos para Empresários",
+  "OutraParte": "China",
+  "OutrasPartes": [
+    "China"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Pequim",
+  "NomePaisCelebracao": "China",
+  "DataCelebracao": "24/05/2004",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "China",
+      "NomeSignatario": "Li Zhaoxing",
+      "CargoSignatario": "Ministro dos Negócios Estrangeiros"
+    }
+  ],
+  "AcordoSubstituiu": {
+    "$id": "3",
+    "Id": 7548,
+    "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República Popular da China sobre a Facilitação da Concessão de Vistos para Homens de Negócios"
+  },
+  "AcordoSubstituido": {
+    "$id": "4",
+    "Id": 4662,
+    "Titulo": "Acordo, por troca de Notas, sobre a Concessão de Vistos de Múltiplas Entradas, pelo período da missão, aos brasileiros e chineses portadores de passaportes diplomáticos e oficiais."
+  },
+  "Assuntos": [
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Consulares e Migratórios",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "8",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "9",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "122",
+    "DataDOU": "28/06/2004"
+  },
+  "Vigencia": {
+    "$id": "10",
+    "Vigencia": "Substituído",
+    "NumeroRegistroONU": "42242",
+    "DataEntradaVigor": "24/06/2004",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "11",
+      "Id": 3796,
+      "NomeArquivo": "China - DOU - Publicação DAI - 122 - 2004.pdf",
+      "Descricao": "Publicação no DOU pela DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 3793,
+    "NomeArquivo": "China - Acordo - Flexibilização de Vistos.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme disposto no parágrafo 4: \" [...] tenho a honra de propor que a presente Nota e a Nota de resposta de Vossa Excelência constituam um Acordo entre o Ministério das Relações Exteriores da República Federativa do Brasil e o Ministério dos Negócios Estrangeiros da República Popular da China, a entrar em vigor no 31º (trigésimo primeiro) dia após a data da Nota de resposta de Vossa Excelência.\""
+    }
+  ]
+}

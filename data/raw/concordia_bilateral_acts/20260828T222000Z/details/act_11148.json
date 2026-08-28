@@ -1,0 +1,115 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo para a Facilitação de Atividades Empresariais no MERCOSUL - Decisão nº 32/04",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Belo Horizonte",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "16/12/2004",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Consulares e Migratórios",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "80",
+    "DataMensagem": "09/02/2006",
+    "NumeroDOU": "30",
+    "DataDOU": "10/02/2006"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "298",
+    "DataDecreto": "26/10/2007",
+    "NumeroDOU": "208",
+    "DataDOU": "29/10/2007"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "6.418",
+    "DataDecreto": "31/03/2008",
+    "NumeroDOU": "62",
+    "DataDOU": "01/04/2008"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "27/12/2007",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 4029,
+      "NomeArquivo": "Acordo - Atividades - Empresariais - DOU - Decreto de Promulgação - 62 - 2008.pdf",
+      "Descricao": "Acordo - Atividades - Empresariais - DOU - Decreto de Promulgação - 62 - 2008",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 4028,
+      "NomeArquivo": "Acordo - Atividades - Empresariais - DOU - Decreto Legislativo - 208 - 2007.pdf",
+      "Descricao": "Acordo - Atividades - Empresariais - DOU - Decreto Legislativo - 208 - 2007",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 4027,
+      "NomeArquivo": "Acordo - Atividades - Empresariais - DOU - Mensagem ao Congresso - 30 - 2006.pdf",
+      "Descricao": "Acordo - Atividades - Empresariais - DOU - Mensagem ao Congresso - 30 - 2006",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 4026,
+    "NomeArquivo": "Acordo - Atividades - Empresariais - port esp.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme o disposto no art. 11, §1: \"O presente Acordo entrará em vigor, para os dois primeiros Estados que ratifiquem, 30 (trinta) dias depois do depósito do segundo instrumento de ratificação\"."
+    }
+  ]
+}

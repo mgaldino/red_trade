@@ -1,0 +1,141 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo sobre Serviços Aéreos entre o Governo da República do Brasil e o Governo da República da Índia",
+  "OutraParte": "Índia",
+  "OutrasPartes": [
+    "Índia"
+  ],
+  "SignatarioBrasil": "Antonio de Aguiar Patriota",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Nova Delhi",
+  "NomePaisCelebracao": "Índia",
+  "DataCelebracao": "08/03/2011",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Índia",
+      "NomeSignatario": "Shri Vayalar Ravi",
+      "CargoSignatario": "Ministro da Aviação Civil"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": {
+    "$id": "3",
+    "Id": 5677,
+    "Titulo": "Acordo sobre Serviços Aéreos entre o Governo da República Federativa do Brasil e o Governo da Índia"
+  },
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Serviços e Transporte",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "206",
+    "DataMensagem": "06/05/2016",
+    "NumeroDOU": "87",
+    "DataDOU": "09/05/2016"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "181",
+    "DataDecreto": "11/12/2017",
+    "NumeroDOU": "237",
+    "DataDOU": "12/12/2017"
+  },
+  "Ratificacao": [
+    {
+      "$id": "7",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "8",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "3",
+      "DataDocumento": "02/01/2018",
+      "Local": "Embaixada em Nova Delhi",
+      "DataRecebimento": "02/01/2018",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "9",
+    "NumeroDecreto": "12.378",
+    "DataDecreto": "06/02/2025",
+    "NumeroDOU": "27",
+    "DataDOU": "07/02/2025"
+  },
+  "Vigencia": {
+    "$id": "10",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "11",
+      "Id": 32959,
+      "NomeArquivo": "DOU 27, 07.02.2025 S1 p. 7-10.pdf",
+      "Descricao": "Publicação no DOU - promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 25909,
+      "NomeArquivo": "India - Nota.pdf",
+      "Descricao": "India - Nota",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "13",
+      "Id": 25265,
+      "NomeArquivo": "Índia - DOU - Decreto Legislativo - 181 - 2017.pdf",
+      "Descricao": "Publicação no DOU de Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "14",
+      "Id": 9104,
+      "NomeArquivo": "Índia - DOU - Mensagem ao Congresso - 87 - 2016.pdf",
+      "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "15",
+    "Id": 7471,
+    "NomeArquivo": "Índia - Acordo - Serviços Aéreos.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "16",
+      "DescricaoObservacao": "Conforme disposto no Artigo 26: \"Este Acordo entrará em vigor na data de recebimento da segunda nota diplomática indicando que todos os procedimentos internos necessários foram completados pelas Partes.\""
+    }
+  ]
+}

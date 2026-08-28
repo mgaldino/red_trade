@@ -1,0 +1,134 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República da África do Sul Relativo à Assistência Mútua entre suas Administrações Aduaneiras.",
+  "OutraParte": "África do Sul",
+  "OutrasPartes": [
+    "África do Sul"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Cidade do Cabo",
+  "NomePaisCelebracao": "África do Sul",
+  "DataCelebracao": "11/05/2008",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "África do Sul",
+      "NomeSignatario": "Nkosazana Dlamini Zuma",
+      "CargoSignatario": "Ministra de Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Economia, Finanças e Tributos",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "1002",
+    "DataMensagem": "15/12/2008",
+    "NumeroDOU": "244",
+    "DataDOU": "16/12/2008"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "662",
+    "DataDecreto": "01/09/2010",
+    "NumeroDOU": "168A",
+    "DataDOU": "01/09/2010"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "7808",
+      "DataDocumento": "08/07/2008",
+      "Local": "Ministério dos Negócios Estrangeiros",
+      "DataRecebimento": "05/10/2012",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "312/10",
+      "DataDocumento": "11/10/2010",
+      "Local": "Embaixada em Pretória",
+      "DataRecebimento": "11/10/2010",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "8.362",
+    "DataDecreto": "17/11/2014",
+    "NumeroDOU": "223",
+    "DataDOU": "18/11/2014"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "01/12/2012",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 1282,
+      "NomeArquivo": "África do Sul - DOU - Decreto de Promulgação - 223 - 2014.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação ",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 1279,
+      "NomeArquivo": "África do Sul - DOU - Decreto Legislativo - 168 A - 2010.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo ",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 1276,
+      "NomeArquivo": "África do Sul - DOU - Mensagem ao Congresso - 244 - 2008.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso ",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 1165,
+    "NomeArquivo": "pdf Ac Assistencia mutua Adm Aduaneiras Port e Inlg.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Após negociação entre as Partes, chegou-se ao entendimento de que a entrada em vigor do Acordo foi 1 de dezembro de 2012."
+    },
+    {
+      "$id": "15",
+      "DescricaoObservacao": "Conforme disposto no Artigo 22: \" 1. O presente Acordo terá vigência indeterminada, mas qualquer das Partes poderá denunciá-lo por via diplomática, notificando à outra Parte, por escrito, sobre a denúncia em qualquer ano calendário que se inicie cinco anos após o ano no qual o Acordo entre em vigor.\r\n\t\r\n2. O Acordo cessará de produzir efeitos três meses após a data de recebimento de tal notificação.  Não obstante, os procedimentos em curso no momento da denúncia serão concluídos segundo as disposições do presente Acordo.\""
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo de Cooperação em Matéria de Comunicação entre a República Federativa do Brasil e a República Oriental do Uruguai",
+  "OutraParte": "Uruguai",
+  "OutrasPartes": [
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "01/04/2005",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": "Reinaldo Gargano",
+      "CargoSignatario": "Ministro das Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Serviços e Transporte",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "443",
+    "DataMensagem": "18/07/2005",
+    "NumeroDOU": "137",
+    "DataDOU": "19/07/2005"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "271",
+    "DataDecreto": "10/06/2009",
+    "NumeroDOU": "110",
+    "DataDOU": "12/06/2009"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "273",
+      "DataDocumento": "01/10/2007",
+      "Local": "Ministério das Relações Exteriores da República Oriental do Uruguai.",
+      "DataRecebimento": "02/10/2007",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "272",
+      "DataDocumento": "18/06/2009",
+      "Local": "Embaixada em Montevidéu",
+      "DataRecebimento": "18/06/2009",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "8.602",
+    "DataDecreto": "18/12/2015",
+    "NumeroDOU": "243",
+    "DataDOU": "21/12/2015"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "18/06/2009",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 18346,
+      "NomeArquivo": "Uruguai  - DOU - Decreto Legislativo - 271 - 2009.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 18345,
+      "NomeArquivo": "Uruguai  - DOU - Mensagem ao Congresso - 443 - 2005.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 6147,
+      "NomeArquivo": "Uruguai  - DOU - Decreto de Promulgação - 243 - 2015.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 20021,
+    "NomeArquivo": "Uruguai - Acordo - Comunicação.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no artigo 7: \"O presente Acordo entrará em vigor na data da segunda notificação em que uma das Partes comunique à outra o cumprimento dos requisitos legais internos para sua aprovação. Terá vigência de 5 (cinco) anos e será renovado automaticamente por sucessivos períodos de 12 (doze) meses, caso não seja denunciado por qualquer das Partes, por escrito e pela via diplomática. A denúncia surtirá efeito transcorridos 90 (noventa) dias a partir da notificação.\""
+    }
+  ]
+}

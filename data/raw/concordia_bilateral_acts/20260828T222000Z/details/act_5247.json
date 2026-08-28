@@ -1,0 +1,120 @@
+{
+  "$id": "1",
+  "Titulo": "Tratado de Extradição entre a República Federativa do Brasil e a República Popular da China",
+  "OutraParte": "China",
+  "OutrasPartes": [
+    "China"
+  ],
+  "SignatarioBrasil": "CELSO AMORIM",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "12/11/2004",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "T",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "China",
+      "NomeSignatario": "LI ZHAOXING",
+      "CargoSignatario": "Ministro dos Negócios Estrangeiros"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "112",
+    "DataMensagem": "11/03/2010",
+    "NumeroDOU": "48",
+    "DataDOU": "12/03/2010"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "268",
+    "DataDecreto": "16/07/2014",
+    "NumeroDOU": "135",
+    "DataDOU": "17/07/2014"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "8.431",
+    "DataDecreto": "09/04/2015",
+    "NumeroDOU": "68",
+    "DataDOU": "10/04/2015"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "16/08/2014",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 3914,
+      "NomeArquivo": "China - DOU - Decreto de Promulgação - 68 - 2015.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 3911,
+      "NomeArquivo": "China - DOU - Decreto Legislativo - 135 - 2014.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 3908,
+      "NomeArquivo": "China - DOU - Mensagem ao Congresso - 48 - 2010.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 3880,
+    "NomeArquivo": "China - Acordo - Extradição.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme disposto no 1º parágrafo do Artigo 22: \"O presente Tratado está sujeito a ratificação. Os instrumentos de ratificação serão trocados em Pequim. O presente Tratado entrará em vigor no 30° (trigésimo) dia após a troca dos instrumentos de ratificação.\""
+    }
+  ]
+}

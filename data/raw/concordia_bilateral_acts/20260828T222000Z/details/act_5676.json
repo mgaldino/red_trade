@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo, por Troca de Notas, para o Estabelecimento de um Depósito Franco no Porto de Rio Grande para Cargas Transportadas por Rodovia, celebrado em Brasília, em 11 de setembro de 2006, que complementa o ``Convênio entre a República Federativa do Brasil e a República do Paraguai para o Estabelecimento de um Depósito Franco no Porto de Rio Grande ``, celebrado em Brasília, no dia 21 de julho de 1987.",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "11/09/2006",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": "Rubén Ramírez Lezcano",
+      "CargoSignatario": "Ministro de Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Cooperação e Desenvolvimento",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "426",
+    "DataMensagem": "28/05/2007",
+    "NumeroDOU": "124",
+    "DataDOU": "29/06/2007"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "982",
+    "DataDecreto": "22/12/2009",
+    "NumeroDOU": "245",
+    "DataDOU": "23/12/2009"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "206",
+      "DataDocumento": "31/10/2008",
+      "Local": "Ministério das Relações Exteriores",
+      "DataRecebimento": "07/11/2008",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "835",
+      "DataDocumento": "29/12/2009",
+      "Local": "Embaixada em Assunção",
+      "DataRecebimento": "29/12/2009",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "7.169",
+    "DataDecreto": "06/05/2010",
+    "NumeroDOU": "86",
+    "DataDOU": "07/05/2010"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "07/05/2010",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 10773,
+      "NomeArquivo": "DOU - Decreto de Promulgação - 86 - 2010.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 10772,
+      "NomeArquivo": "DOU - Decreto Legislativo - 245 - 2009.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 10771,
+      "NomeArquivo": "DOU - Mensagem ao Congresso - 124 - 2007.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 10775,
+    "NomeArquivo": "Paraguai - Troca de Notas - Porto Grande - 2006.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme o disposto na Nota: \"2. Em resposta, apraz-me comunicar que o Governo da República\r\nFederativa do Brasil concorda com o uso do Depósito Franco\r\ndo Porto de Rio Grande para cargas transportadas por rodovia, nos\r\ntermos propostos pela Nota transcrita acima, e que, conseqüentemente,\r\na Nota de Vossa Excelência e a presente Nota constituem um\r\nAcordo entre os dois Governos, que entrará em vigor a partir da data\r\nem que ambas as Partes comuniquem o cumprimento dos requisitos\r\nlegais internos necessários, sem prejuízo de que se possam adotar,\r\nnesse ínterim, as medidas administrativas permitidas pelas legislações\r\nde ambas as Partes para facilitar a operação do regime do Depósito\r\nFranco nos termos acordados.\""
+    }
+  ]
+}

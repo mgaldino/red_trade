@@ -1,0 +1,108 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo-Quadro entre o MERCOSUL e o Reino Hashemita da Jordânia - Decisão CMC nº 28/08",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai",
+    "sem depositário"
+  ],
+  "SignatarioBrasil": "Celso Luiz Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "San Miguel de Tucumán",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "30/06/2008",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "sem depositário",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Comércio Internacional e Investimentos",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Tramitação MRE",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "31/08/2011",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 27822,
+      "NomeArquivo": "MSUL - Jordânia - Ata de Depósito - 2009.pdf",
+      "Descricao": "Ata de Depósito do Instrumento de Ratificação do Brasil.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "11",
+    "Id": 26547,
+    "NomeArquivo": "Msul - Ac-Quadro - Jordânia.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "12",
+      "DescricaoObservacao": "Conforme disposto no Artigo 9: \"O presente Acordo entrará em vigor trinta dias após a data em que as Partes Contratantes tenham notificado formalmente, por escrito e pelos canais diplomáticos, do cumprimento das formalidades internas necessárias para esse fim. Este Acordo permanecerá em vigor por um período de 3 anos e, a partir de então, será considerado automaticamente estendido, a menos que uma das Partes Contratantes decida, por meio de notificação por escrito e pelos canais diplomáticos, não renová-lo. Esta decisão deverá ser tomada até trinta dias antes que expire o período de três anos. A denúncia entrará em vigor seis meses após a data de sua notificação.\""
+    }
+  ]
+}

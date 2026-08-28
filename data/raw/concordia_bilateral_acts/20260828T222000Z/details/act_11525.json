@@ -1,0 +1,202 @@
+{
+  "$id": "1",
+  "Titulo": "Convenção que estabelece a Rede de Aquicultura das Américas",
+  "OutraParte": "Bolívia",
+  "OutrasPartes": [
+    "Bolívia",
+    "Brasil",
+    "Chile",
+    "Colômbia",
+    "Costa Rica",
+    "Cuba",
+    "Equador",
+    "Guatemala",
+    "Nicarágua",
+    "Panamá",
+    "Peru",
+    "Uruguai"
+  ],
+  "SignatarioBrasil": null,
+  "CargoSignatarioBrasil": null,
+  "Depositario": "Brasil",
+  "LocalCelebracao": "Manágua",
+  "NomePaisCelebracao": "Nicarágua",
+  "DataCelebracao": "18/04/2012",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Bolívia",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "Brasil",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "4",
+      "NomeOutraParte": "Chile",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "5",
+      "NomeOutraParte": "Colômbia",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "6",
+      "NomeOutraParte": "Costa Rica",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "7",
+      "NomeOutraParte": "Cuba",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "8",
+      "NomeOutraParte": "Equador",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "9",
+      "NomeOutraParte": "Guatemala",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "10",
+      "NomeOutraParte": "Nicarágua",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "11",
+      "NomeOutraParte": "Panamá",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "12",
+      "NomeOutraParte": "Peru",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "13",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "14",
+      "Id": 0,
+      "Nome": "Agricultura, Pecuária e Pesca",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "15",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "16",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "17",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "18",
+    "Vigencia": "Tramitação MRE",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "19",
+      "Id": 34796,
+      "NomeArquivo": "Instrumento de adesão - Peru.pdf",
+      "Descricao": "instrumento de Adesão Peru",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "20",
+      "Id": 34795,
+      "NomeArquivo": "Instrumento de adesão - Panamá.pdf",
+      "Descricao": "instrumento de Adesão Panamá",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "21",
+      "Id": 34794,
+      "NomeArquivo": "Instrumento de adesão - Cuba.pdf",
+      "Descricao": "instrumento de Adesão Cuba",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "22",
+      "Id": 34793,
+      "NomeArquivo": "Instrumento de ratificação - Uruguai.pdf",
+      "Descricao": "Instrumento de Ratificação Uruguai",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "23",
+      "Id": 34792,
+      "NomeArquivo": "Instrumento de ratificação - Guatemala.pdf",
+      "Descricao": "Instrumento de Ratificação Guatemala",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "24",
+      "Id": 34791,
+      "NomeArquivo": "Instrumento de ratificação - Equador.pdf",
+      "Descricao": "Instrumento de Ratificação Equador",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "25",
+    "Id": 24642,
+    "NomeArquivo": "Rede de Aquicultura das Américas (port).pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": []
+}

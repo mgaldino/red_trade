@@ -1,0 +1,129 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo sobre a Criação e a Implementação de um Sistema de Credenciamento de Cursos de Graduação para o Reconhecimento Regional da Qualidade Acadêmica dos Respectivos Diplomas no MERCOSUL e Estados Associados - Decisão CMC nº 17/08",
+  "OutraParte": "Mercosul",
+  "OutrasPartes": [
+    "Mercosul",
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Luiz Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": "Mercosul",
+  "LocalCelebracao": "San Miguel de Tucumán",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "30/06/2008",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Mercosul",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Educação e Cultura",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": "974",
+    "DataMensagem": "03/12/2008",
+    "NumeroDOU": "236",
+    "DataDOU": "04/12/2008"
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": "131",
+    "DataDecreto": "26/05/2011",
+    "NumeroDOU": "101",
+    "DataDOU": "27/05/2011"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "10.287",
+    "DataDecreto": "20/03/2020",
+    "NumeroDOU": "56",
+    "DataDOU": "23/03/2020"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "05/10/2019",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 30389,
+      "NomeArquivo": "DOU - Decreto de Promulgação - 56 - 2020.pdf",
+      "Descricao": "Publicação no DOU de Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 26666,
+      "NomeArquivo": "Mercosul - Ata Depósito Brasil - Credenciamento Curso Graduação.pdf",
+      "Descricao": "Ata de Depósito de Ratificação do Brasil.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 26664,
+      "NomeArquivo": "Mercosul - DOU - Mensagem ao Congresso - 236 - 2008.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "13",
+      "Id": 26663,
+      "NomeArquivo": "Mercosul - DOU - Decreto Legislativo - 101 - 2011.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "14",
+    "Id": 2730,
+    "NomeArquivo": "Dec. 17-08 - Acordo - Credenciamento - Cursos - port esp.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "15",
+      "DescricaoObservacao": "Conforme disposto no Artigo V, Parágrafo 2: \"O presente Acordo entrará em vigor trinta (30) dias depois do depósito do instrumento de ratificação pelo quarto Estado Parte do MERCOSUL. Na mesma data  entrará em vigor para os Estados Associados que o tenham ratificado anteriormente. Para os Estados Associados que não tiverem ratificado antes essa data, entrará em vigor no mesmo dia no qual seja depositado o respectivo instrumento de ratificação.\""
+    }
+  ]
+}

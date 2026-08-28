@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Memorando de Entendimento entre a República Federativa do Brasil e a República Argentina para o Estabelecimento de um Mecanismo Permanente de Intercâmbio de Informações sobre a Circulação e o Tráfico Ilícito de Armas de Fogo, Munições, Explosivos e outros Materiais Correlatos",
+  "OutraParte": "Argentina",
+  "OutrasPartes": [
+    "Argentina"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Buenos Aires",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "16/10/2003",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Argentina",
+      "NomeSignatario": "Rafael Antonio Bielsa",
+      "CargoSignatario": "Ministro das Relações Exteriores, Comércio Internacional e Culto"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "103",
+    "DataMensagem": "09/03/2004",
+    "NumeroDOU": "47",
+    "DataDOU": "10/03/2004"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "291",
+    "DataDecreto": "12/07/2006",
+    "NumeroDOU": "133",
+    "DataDOU": "13/07/2006"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "287",
+      "DataDocumento": "16/11/2003",
+      "Local": "Ministério das Relações Exteriores, Comércio Internacional e Culto",
+      "DataRecebimento": "16/11/2003",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "449",
+      "DataDocumento": "14/07/2006",
+      "Local": "Embaixada em Buenos Aires",
+      "DataRecebimento": "14/07/2006",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "5945",
+    "DataDecreto": "26/10/2006",
+    "NumeroDOU": "207",
+    "DataDOU": "27/10/2006"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "14/07/2006",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 2439,
+      "NomeArquivo": "Argentina - DOU - Decreto de Promulgação - 207 - 2006.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação ",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 2436,
+      "NomeArquivo": "Argentina - DOU - Decreto Legislativo - 133 - 2006.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 2434,
+      "NomeArquivo": "Argentina - DOU - Mensagem ao Congresso - 47 - 2004.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 2433,
+    "NomeArquivo": "Argentina - MdE - Intercâmbio de Informações.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme Disposto em seu Parágrafo Sexto: \"O presente Memorando de Entendimento entrará em vigor a partir da data da segunda nota diplomática pela qual uma das Partes comunique a outra a conclusão dos trâmites internos necessários para sua implementação. O Memorando de Entendimento se manterá em vigor até o momento em que uma de suas Partes comunique a outra, por via diplomática, sua intenção de terminá-lo\"."
+    }
+  ]
+}

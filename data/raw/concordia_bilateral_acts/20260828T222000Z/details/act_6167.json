@@ -1,0 +1,122 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República da Indonésia sobre Isenção de Vistos para Portadores de Passaportes Diplomáticos e Oficiais ou de Serviço",
+  "OutraParte": "Indonésia",
+  "OutrasPartes": [
+    "Indonésia"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Jacarta",
+  "NomePaisCelebracao": "Indonésia",
+  "DataCelebracao": "12/07/2008",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [
+    {
+      "$id": "2",
+      "Id": 12146,
+      "Titulo": "Emenda ao Acordo entre o Governo da República Federativa do Brasil e o Governo da República da Indonésia sobre Isenção de Vistos para Portadores de Passaportes Diplomáticos e Oficiais ou de Serviço."
+    }
+  ],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "3",
+      "NomeOutraParte": "Indonésia",
+      "NomeSignatario": "N. Hassan Wirajuda",
+      "CargoSignatario": "Ministro dos Negócios Estrangeiros"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Consulares e Migratórios",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "451/VI/12",
+      "DataDocumento": "19/12/2008",
+      "Local": "Embaixada da República da Indonésia em Brasília",
+      "DataRecebimento": "19/12/2008",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "8",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": "28/07/2008",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "9",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "237",
+    "DataDOU": "05/12/2008"
+  },
+  "Vigencia": {
+    "$id": "10",
+    "Vigencia": "Expirado",
+    "NumeroRegistroONU": "50610",
+    "DataEntradaVigor": "18/01/2009",
+    "DataEntradaVigorCI": null,
+    "Expirou": "05/12/2018",
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "11",
+      "Id": 8166,
+      "NomeArquivo": "Indonésia - DOU - Publicação DAI - 237 - 2008.pdf",
+      "Descricao": "Publicação DOU pela DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 7589,
+    "NomeArquivo": "Indonésia - Acordo - Isenção de Vistos.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme disposto no Artigo 10, parágrafo 1: \"Este Acordo entrará em vigor trinta (30) dias após o recebimento da segunda Nota diplomática em que uma Parte informa à outra do cumprimento de todos os respectivos requisitos legais para sua entrada em vigor.\""
+    }
+  ]
+}

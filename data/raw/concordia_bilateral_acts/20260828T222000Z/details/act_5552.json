@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre o Governo da Republica Federativa do Brasil e o o Governo da Republica da Índia sobre o Exercício de Atividades Remuneradas por Parte dos Dependentes do Pessoal Diplomático e Consular",
+  "OutraParte": "Índia",
+  "OutrasPartes": [
+    "Índia"
+  ],
+  "SignatarioBrasil": "Pedro Motta Pinto Coelho",
+  "CargoSignatarioBrasil": "Subsecretário-Geral Político para África, Ásia/Oceania e Oriente Médio do Ministério das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "02/02/2006",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Índia",
+      "NomeSignatario": "Hardeep Singh Puri",
+      "CargoSignatario": "Embaixador da República da Índia no Brasil"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Relações Diplomáticas e Consulares",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "505",
+    "DataMensagem": "16/07/2007",
+    "NumeroDOU": "136",
+    "DataDOU": "17/07/2007"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "596",
+    "DataDecreto": "28/08/2009",
+    "NumeroDOU": "166",
+    "DataDOU": "31/08/2009"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "D-II/451/14(1)/2004",
+      "DataDocumento": "16/04/2012",
+      "Local": "Ministério das Relações Exteriores da Índia",
+      "DataRecebimento": "16/04/2012",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "192",
+      "DataDocumento": "22/09/2009",
+      "Local": "Embaixada em Nova Delhi",
+      "DataRecebimento": "22/09/2009",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "8342",
+    "DataDecreto": "13/11/2014",
+    "NumeroDOU": "221",
+    "DataDOU": "14/11/2014"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "16/05/2012",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 7481,
+      "NomeArquivo": "Índia - DOU - Mensagem ao Congresso - 136 - 2007.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 7480,
+      "NomeArquivo": "Índia - DOU - Decreto Legislativo - 166 - 2009.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 7479,
+      "NomeArquivo": "Índia - DOU - Decreto de Promulgação - 221 - 2014.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 7484,
+    "NomeArquivo": "índia- Acordo - Atividade Remunerada Dependentes.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no artigo 8 parágrafo 1: \"Cada Parte Contratante deverá notificar a outra do cumprimento dos respectivos requisitos legais internos necessários à entrada em vigor deste Acordo, a qual se dará 30 (trinta) dias após a data do recebimento da segunda notificação. Este acordo deverá vigorar indefinidamente.\""
+    }
+  ]
+}

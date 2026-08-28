@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo por Notas Reversais entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai sobre as Bases Financeiras do Anexo C do Tratado de Itaipu",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Eduardo dos Santos",
+  "CargoSignatarioBrasil": "Embaixador da República Federativa do Brasil",
+  "Depositario": null,
+  "LocalCelebracao": "Assunção",
+  "NomePaisCelebracao": "Paraguai",
+  "DataCelebracao": "01/09/2009",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": "Héctor Lacognata",
+      "CargoSignatario": "Ministro das Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Comércio Internacional e Investimentos",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "951",
+    "DataMensagem": "19/11/2009",
+    "NumeroDOU": "222",
+    "DataDOU": "20/11/2009"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "129",
+    "DataDecreto": "12/05/2011",
+    "NumeroDOU": "91",
+    "DataDOU": "13/05/2011"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "69",
+      "DataDocumento": "26/02/2010",
+      "Local": null,
+      "DataRecebimento": "02/03/2010",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "344",
+      "DataDocumento": "14/05/2011",
+      "Local": "MRE",
+      "DataRecebimento": "14/05/2011",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "7506",
+    "DataDecreto": "27/06/2011",
+    "NumeroDOU": "122",
+    "DataDOU": "28/06/2011"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "14/05/2011",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 10053,
+      "NomeArquivo": "Paragua - DOU - Promulgação - 122 - 2011.pdf",
+      "Descricao": "Publicação no DOU de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 10052,
+      "NomeArquivo": "Paragua - DOU - Decreto Legislativo - 91 - 2011.pdf",
+      "Descricao": "Publicação no DOU de Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 10051,
+      "NomeArquivo": "Paragua - DOU - Mensagem ao Congresso - 222 - 2009.pdf",
+      "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 10033,
+    "NomeArquivo": "paraguai - Notas Reversaveis - Anexo C Itaipu.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto na Nota Brasileira, parágrafo 2: \"A presente Nota e a de Vossa Excelência, de igual teor e mesma data, constituem um acordo entre os dois Governos e entrarão em vigor na data em que ambos tenham comunicado à outra Parte o cumprimento dos procedimentos internos de sua aprovação pelos respectivos Congressos Nacionais\"."
+    }
+  ]
+}

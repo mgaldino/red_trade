@@ -1,0 +1,113 @@
+{
+  "$id": "1",
+  "Titulo": "Convenção para Evitar a Dupla Tributação em Matéria de Impostos de Renda, Prevenir e Combater a Evasão Fiscal e sobre Matérias Aduaneiras entre o Governo da República Federativa do Brasil e o Governo da República do Paraguai",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Luiz Felipe Lampreia",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "20/09/2000",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "T",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": "Juan Esteban Aguirre Martinez",
+      "CargoSignatario": "Ministro das Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Economia, Finanças e Tributos",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "27",
+    "DataMensagem": "18/01/2001",
+    "NumeroDOU": "14-E",
+    "DataDOU": "19/01/2001"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "972",
+    "DataDecreto": "16/12/2003",
+    "NumeroDOU": "245",
+    "DataDOU": "17/12/2003"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Situação especial",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 10104,
+      "NomeArquivo": "Paraguai - DOU - Decreto Legislativo - 245 - 2003.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 10103,
+      "NomeArquivo": "Paraguai - DOU - Mensagem ao Congresso - 14E - 2001.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "11",
+    "Id": 10100,
+    "NomeArquivo": "Paraguai - Convenção - Aduanas, Impostos e Tarifas.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "12",
+      "DescricaoObservacao": "Conforme Disposto no Artigo 42 §1º \" A presente Convenção será ratificada e os instrumentos de ratificação serão trocados em Brasília o mais breve possível.\" §2º \"A presente Convenção entrará em vigor a partir da troca dos instrumentos de ratificação e suas disposições se aplicarão:\r\na) no que concerne aos imposto retidos na fonte, aos rendimentos pagos, remetido ou creditados no ou depois do primeiro dia de janeiro do ano-calendário imediatamente seguinte àquele em que a Convenção entrar em vigor;\r\nb) no que concerne às outras modalidade de impostos sobre a renda de que trata a presente Convenção, aos rendimentos produzidos no ano fiscal que comece no ou depois do primeiro dia de janeiro do ano-calendário imediatamente seguinte àquele em que a Convenção entrar em vigor;\r\nc) no que concerne aos demais impostos referidos no inciso \"i\", do parágrafo 1 do Artigo 3 e no parágrafo 1 do Artigo 26 da presente Convenção aos fatos geradores que ocorram no ou depois do primeiro dia de janeiro do ano-calendário imediatamente seguinte àquele em que a Convenção entrar em vigor; e\r\nd) no que concerne aos Artigos 28 a 41, na data do intercâmbio dos instrumentos de ratificação.\""
+    }
+  ]
+}

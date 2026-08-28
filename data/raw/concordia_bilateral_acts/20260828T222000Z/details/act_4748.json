@@ -1,0 +1,123 @@
+{
+  "$id": "1",
+  "Titulo": "Protocolo adicional ao Acordo-Quadro de Cooperação em Aplicações Pacíficas da Ciência e Tecnologias Espaciais Relativo à Concessão de Reciprocidade na Aquisição de Equipamentos para a Cooperação Espacial.",
+  "OutraParte": "Argentina",
+  "OutrasPartes": [
+    "Argentina"
+  ],
+  "SignatarioBrasil": "Ronaldo Sardenberg",
+  "CargoSignatarioBrasil": "Ministro de Ciência e Tecnologia",
+  "Depositario": null,
+  "LocalCelebracao": "Buenos Aires",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "14/08/2001",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Argentina",
+      "NomeSignatario": "Adalberto Rodriquez Giavarini",
+      "CargoSignatario": "Ministro de Relações Exteriores, Comércio Internacional e Culto"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Meio Ambiente e Sustentabilidade",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "49",
+    "DataMensagem": "30/01/2002",
+    "NumeroDOU": "22",
+    "DataDOU": "31/01/2002"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "610",
+    "DataDecreto": "11/09/2003",
+    "NumeroDOU": "177",
+    "DataDOU": "12/09/2003"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "141",
+      "DataDocumento": "27/11/2003",
+      "Local": "SERE",
+      "DataRecebimento": "27/11/2003",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 2372,
+      "NomeArquivo": "Argentina - DOU - Decreto Legislativo - 177 - 2003.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 2371,
+      "NomeArquivo": "Argentina - DOU - Mensagem ao Congresso - 22 - 2002.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 2370,
+    "NomeArquivo": "Argentina - PA - Cooperação Espacial.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme disposto no Artigo 6: \"O presente Acordo entrará em vigor a partir da data da última notificação em que as Partes comuniquem o cumprimento de seus respectivos requisitos internos necessários para sua vigência\"."
+    }
+  ]
+}

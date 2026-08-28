@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre a República Federativa do Brasil e a República Oriental do Uruguai sobre Transporte Fluvial e Lacustre na Hidrovia Uruguai-Brasil",
+  "OutraParte": "Uruguai",
+  "OutrasPartes": [
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "Celso Amorin",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Santana do Livramento",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "30/07/2010",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": "Luis Almagro",
+      "CargoSignatario": "Ministro das Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Serviços e Transporte",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "43",
+    "DataMensagem": "14/02/2012",
+    "NumeroDOU": "33",
+    "DataDOU": "15/02/2012"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "305",
+    "DataDecreto": "28/06/2013",
+    "NumeroDOU": "124",
+    "DataDOU": "01/07/2013"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "81/11",
+      "DataDocumento": "17/10/2011",
+      "Local": null,
+      "DataRecebimento": "17/10/2011",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "280",
+      "DataDocumento": "04/07/2013",
+      "Local": null,
+      "DataRecebimento": "05/07/2013",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "8548",
+    "DataDecreto": "23/10/2015",
+    "NumeroDOU": "204",
+    "DataDOU": "26/10/2015"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "03/08/2013",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 18508,
+      "NomeArquivo": "Uruguai - DOU - Decreto Legislativo - 124 - 2013.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 18507,
+      "NomeArquivo": "Uruguai - DOU - Mensagem  ao Congresso - 33 - 2013.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 4689,
+      "NomeArquivo": "Uruguai - DOU - Decreto de Promulgação - 204 - 2015.pdf",
+      "Descricao": "Publicação no DOU da Decreto de Promulgação",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 507,
+    "NomeArquivo": "Uruguai - Acordo - Transporte Fluvial.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo XIII ''O presente Acordo entrará em vigor 30 (trinta) dias depois que cada Parte notifique à outra, por via diplomática, o cumprimento dos requisitos internos necessários para a sua aprovação. O Acordo terá validade por tempo indeterminado, salvo se, em qualquer momento, uma das Partes notificar à outra, com antecedência mínima de 60 (sessenta) dias, o seu desejo de denunciá-lo.''"
+    }
+  ]
+}

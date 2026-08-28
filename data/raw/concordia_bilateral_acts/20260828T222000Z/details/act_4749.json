@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Convênio sobre assistência aos Nacionais de cada uma das Partes que se Encontrem em Território de Estados nos quais não haja Representação Diplomática ou Consular de seus Respectivos Países.",
+  "OutraParte": "Argentina",
+  "OutrasPartes": [
+    "Argentina"
+  ],
+  "SignatarioBrasil": "Celso Lafer",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Buenos Aires",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "14/08/2001",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Argentina",
+      "NomeSignatario": "Adalberto Rodriquez Giavarini",
+      "CargoSignatario": "Min. de Relações Exteriores, Comércio Internacional e Culto"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Relações Diplomáticas e Consulares",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "245",
+    "DataMensagem": "09/04/2002",
+    "NumeroDOU": "68",
+    "DataDOU": "10/04/2002"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "611",
+    "DataDecreto": "11/09/2003",
+    "NumeroDOU": "177",
+    "DataDOU": "12/09/2003"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "5363/2003",
+      "DataDocumento": "07/10/2003",
+      "Local": "Embaixada em Buenos Aires",
+      "DataRecebimento": "09/10/2003",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "107",
+      "DataDocumento": "25/09/2003",
+      "Local": "Embaixada em Buenos Aires",
+      "DataRecebimento": "25/09/2003",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "4921",
+    "DataDecreto": "17/12/2003",
+    "NumeroDOU": "246",
+    "DataDOU": "18/12/2003"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "07/10/2003",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 2489,
+      "NomeArquivo": "Argentina - DOU - Decreto de Pomulgação - 246 - 2003.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 2488,
+      "NomeArquivo": "Argentina - DOU - Decreto Legislativo - 177 - 2003.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 2487,
+      "NomeArquivo": "Argentina - DOU - Mensagem ao Congresso - 68 - 2002.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 2441,
+    "NomeArquivo": "Argentina - Convênio - Assistência aos Nacionais.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo 6°: '' O presente Convênio entrará em vigor na data da última notificação pela qual as Partes comuniquem entre si o cumprimento dos requisitos internos necessários a tal fim. Qualquer das Partes poderá denunciá-lo mediante aviso escrito, efetuado por via diplomática. A denúncia será efetiva a partir de 60 (sessenta) dias da realização da mencionada notificação.''"
+    }
+  ]
+}

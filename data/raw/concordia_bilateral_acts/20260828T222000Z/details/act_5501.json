@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo para o Estabelecimento de um Mecanismo de Cooperação Comercial entre a República Argentina e a República Federativa do Brasil",
+  "OutraParte": "Argentina",
+  "OutrasPartes": [
+    "Argentina"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Minístro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Puerto Iguazú",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "30/11/2005",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Argentina",
+      "NomeSignatario": "Rafael Antonio Bielsa",
+      "CargoSignatario": "Minístro das Relações Exteriores, Comércio Internnacional e Culto"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Comércio Internacional e Investimentos",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "184",
+    "DataMensagem": "27/03/2006",
+    "NumeroDOU": "60",
+    "DataDOU": "28/03/2006"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "493",
+    "DataDecreto": "17/07/2009",
+    "NumeroDOU": "136",
+    "DataDOU": "20/07/2009"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "185",
+      "DataDocumento": "23/07/2009",
+      "Local": "MRE, Comércio e Culto",
+      "DataRecebimento": "24/07/2009",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "433",
+      "DataDocumento": "23/07/2009",
+      "Local": "Embaixada em Buenos Aires",
+      "DataRecebimento": "23/07/2009",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "7.090",
+    "DataDecreto": "01/02/2010",
+    "NumeroDOU": "22",
+    "DataDOU": "02/02/2010"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "22/10/2009",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 2425,
+      "NomeArquivo": "Argentina - DOU - Promulgação - 22 - 2010.pdf",
+      "Descricao": "Publicação no DOU de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 2424,
+      "NomeArquivo": "Argentina - DOU - Decreto Legislativo - 136 - 2009.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 2423,
+      "NomeArquivo": "Argentina - DOU - Mensagem ao Congresso - 60 - 2006.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 2430,
+    "NomeArquivo": "Argentina - Acordo - Estabelecimento Coop. Comercial.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo 7 : \"O presente Acordo entrará em vigor 90 (noventa) dias após a notificação recíproca pelas Partes de que foram cumpridas as formalidades internas necessárias à entrada em vigor\""
+    }
+  ]
+}

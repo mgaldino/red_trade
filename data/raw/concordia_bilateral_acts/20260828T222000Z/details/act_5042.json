@@ -1,0 +1,113 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo, por Troca de Notas, entre o Governo da República Federativa do Brasil e o Governo da República Argentina para Simplificação de Legalizações em Documentos Públicos",
+  "OutraParte": "Argentina",
+  "OutrasPartes": [
+    "Argentina"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Buenos Aires",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "16/10/2003",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": true,
+  "TipoRatificacao": "D",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Argentina",
+      "NomeSignatario": "Rafael Antonio Bielsa",
+      "CargoSignatario": "Ministro das Relações Exteriores, Comércio Internacional e Culto"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Cooperação e Desenvolvimento",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": null,
+    "DataMensagem": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": "77",
+    "DataDOU": "23/04/2004"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Denunciado",
+    "NumeroRegistroONU": "41671",
+    "DataEntradaVigor": "16/10/2003",
+    "DataEntradaVigorCI": null,
+    "Expirou": "12/09/2017",
+    "DataDenuncia": "14/07/2017",
+    "DataEfeitoDenuncia": "12/09/2017"
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 23711,
+      "NomeArquivo": "DOU Argentina Extinção do Acordo ptn.pdf",
+      "Descricao": "Publicação DOU extinção do Acordo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 2394,
+      "NomeArquivo": "Argentina - DOU - Publicação DAI - 77 - 2004.pdf",
+      "Descricao": "Publicação no DOU da DAI",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "11",
+    "Id": 2392,
+    "NomeArquivo": "Argentina - Acordo - Legalizações em Documentos Públicos.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "12",
+      "DescricaoObservacao": "Conforme Disposto na Nota da República Argentina: \"Se o acima exposto for aceitável para o Governo da República Federativa do Brasil, a presente Nota e a Nota de Vossa Excelência, de que conste essa conformidade, constituirão Acordo entre a República Argentina e a República Federativa do Brasil para a simplificação de legalização em documentos públicos, que entrará em vigor a partir da data de vossa nota de resposta\"."
+    }
+  ]
+}

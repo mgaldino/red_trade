@@ -1,0 +1,131 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo sobre Residência para Nacionais dos Estados Partes do MERCOSUL - Decisão CMC nº 28/02",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai",
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Fernando Henrique Cardoso",
+  "CargoSignatarioBrasil": "Presidente da República",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "06/12/2002",
+  "TipoAcordo": "ML",
+  "PossuiHtml": false,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Consulares e Migratórios",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": "100",
+    "DataMensagem": "25/03/2003",
+    "NumeroDOU": "59",
+    "DataDOU": "26/03/2003"
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": "210",
+    "DataDecreto": "20/05/2004",
+    "NumeroDOU": "98",
+    "DataDOU": "24/05/2004"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "6.964",
+    "DataDecreto": "29/09/2009",
+    "NumeroDOU": "187",
+    "DataDOU": "30/09/2009"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "28/07/2009",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 27879,
+      "NomeArquivo": "Mercosul - Recibo de Depósito - Residência para Nacionais.jpg",
+      "Descricao": "Acordo - Residência - Mercosul - Recibo Data de Depósito ",
+      "Extensao": ".jpg"
+    },
+    {
+      "$id": "11",
+      "Id": 27877,
+      "NomeArquivo": "Mercosul - Instrumento de Ratificação - Residência para Nacionais.pdf",
+      "Descricao": "Acordo - Residência - Mercosul - Instrumento de Ratificação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 5370,
+      "NomeArquivo": "Acordo - Residência - Mercosul - DOU - Decreto de Promulgação - 187 - 2009.pdf",
+      "Descricao": "Acordo - Residência - Mercosul - DOU - Decreto de Promulgação - 187 - 2009",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "13",
+      "Id": 5369,
+      "NomeArquivo": "Acordo - Residência - Mercosul - DOU - Decreto Legislativo - 98 - 2004.pdf",
+      "Descricao": "Acordo - Residência - Mercosul - DOU - Decreto Legislativo - 98 - 2004",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "14",
+      "Id": 5368,
+      "NomeArquivo": "Acordo - Residência - Mercosul - DOU - Mensagem ao Congresso - 59 - 2003.pdf",
+      "Descricao": "Acordo - Residência - Mercosul - DOU - Mensagem ao Congresso - 59 - 2003",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "15",
+    "Id": 5365,
+    "NomeArquivo": "Acordo - Residência - Nacionais - MERCOSUL - port.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": []
+}

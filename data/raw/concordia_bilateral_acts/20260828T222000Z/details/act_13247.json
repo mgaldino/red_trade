@@ -1,0 +1,192 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo Tripartite entre o Governo da República Federativa do Brasil, o Governo da República da Índia e o Governo a República da África do Sul sobre Cooperação no Campo do Turismo no Âmbito do Fórum de Diálogo IBAS",
+  "OutraParte": "Índia",
+  "OutrasPartes": [
+    "Índia",
+    "África do Sul"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Nova Delhi",
+  "NomePaisCelebracao": "Índia",
+  "DataCelebracao": "15/10/2008",
+  "TipoAcordo": "TL",
+  "PossuiHtml": false,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Índia",
+      "NomeSignatario": "Pranab Mukerjee",
+      "CargoSignatario": "Ministro das Relações Exteriores"
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "África do Sul",
+      "NomeSignatario": "N.C. Dlamini Zuma",
+      "CargoSignatario": "Ministra dos Negócios Estrangeiros"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Serviços e Transporte",
+      "IsPrincipal": false
+    },
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": "11",
+    "DataMensagem": "13/01/2009",
+    "NumeroDOU": "9",
+    "DataDOU": "14/01/2009"
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": "208",
+    "DataDecreto": "07/04/2010",
+    "NumeroDOU": "66",
+    "DataDOU": "08/04/2010"
+  },
+  "Ratificacao": [
+    {
+      "$id": "8",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": "       ",
+      "DataRecebimento": null,
+      "RatificacaoBrasil": false,
+      "Parte": "Índia"
+    },
+    {
+      "$id": "9",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "ML1/IBSA/4/A26",
+      "DataDocumento": "28/06/2011",
+      "Local": "Embaixada em Pretória",
+      "DataRecebimento": null,
+      "RatificacaoBrasil": false,
+      "Parte": "África do Sul"
+    },
+    {
+      "$id": "10",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "114/10",
+      "DataDocumento": "15/04/2010",
+      "Local": "Embaixada em Pretória",
+      "DataRecebimento": "16/04/2010",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "11",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "12",
+    "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "13",
+      "Id": 34616,
+      "NomeArquivo": "2011-06-28 - NV South Africa IBSA Tourism ratification.pdf",
+      "Descricao": "Nota Verbal África do Sul Ratificação (Brasil)",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "14",
+      "Id": 34494,
+      "NomeArquivo": "IBAS Turismo DOU Despacho_260612_140755.pdf",
+      "Descricao": "DOU Despacho",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "15",
+      "Id": 34493,
+      "NomeArquivo": "IBAS Turismo DOU DL_260612_140901.pdf",
+      "Descricao": " DOU Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "16",
+      "Id": 34492,
+      "NomeArquivo": "IBAS Turismo NV_260612_140702.pdf",
+      "Descricao": "Nota Verbal Brasil Ratificação (Índia)",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "17",
+      "Id": 34491,
+      "NomeArquivo": "IBAS Turismo NV-Brasil_260612_140618.pdf",
+      "Descricao": "Nota Verbal Brasil Ratificação (África do Sul)",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "18",
+      "Id": 34489,
+      "NomeArquivo": "IBAS Turismo DL_260612_140504.pdf",
+      "Descricao": "Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "19",
+      "Id": 34488,
+      "NomeArquivo": "IBAS Turismo EN_260612_140409.pdf",
+      "Descricao": "Documento com íntegra do Acordo (ING)",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "20",
+      "Id": 34487,
+      "NomeArquivo": "IBAS Turismo Hindu_260612_140338.pdf",
+      "Descricao": "Documento com íntegra do Acordo (Hindu)",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "21",
+    "Id": 34486,
+    "NomeArquivo": "IBAS Turismo PT_260612_140301.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "22",
+      "DescricaoObservacao": "Artigo 14: \"O presente Acordo entrará em vigor na data em que cada Parte tiver notificado às outras, por escrito e por via diplomática, do cumprimento de seus requisitos constitucionais necessários a sua implementação\"."
+    },
+    {
+      "$id": "23",
+      "DescricaoObservacao": "A ratificação deste Acordo pelo Brasil foi informada à República da África do Sul pela Nota Verbal nº 114/10 e à República da Índia pela Nota Verbal nº 116/10, ambas anexadas nesta página."
+    }
+  ]
+}

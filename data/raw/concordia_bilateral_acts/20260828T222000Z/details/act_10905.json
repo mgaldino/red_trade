@@ -1,0 +1,129 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo sobre o Benefício da Justiça Gratuita e Assistência Jurídica Gratuita entre os Estados Partes do MERCOSUL - Decisão nº 49/00",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai",
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Luiz Felipe Lampreia",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Florianópolis",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "15/12/2000",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    },
+    {
+      "$id": "3",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "5",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "6",
+    "NumeroMensagem": "210",
+    "DataMensagem": "01/04/2002",
+    "NumeroDOU": "62",
+    "DataDOU": "02/04/2002"
+  },
+  "DecretoLegislativo": {
+    "$id": "7",
+    "NumeroDecreto": "146",
+    "DataDecreto": "06/02/2004",
+    "NumeroDOU": "27",
+    "DataDOU": "09/02/2004"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "6.086",
+    "DataDecreto": "19/04/2007",
+    "NumeroDOU": "76",
+    "DataDOU": "20/04/2007"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "03/02/2007",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 27110,
+      "NomeArquivo": "MERCOSUL - DOU - Mensagem ao Congresso - 62 - 2002.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 27109,
+      "NomeArquivo": "MERCOSUL - DOU - Decreto Legislativo - 27 - 2004.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 27108,
+      "NomeArquivo": "MERCOSUL - DOU - Decreto de Promulgação - 76 - 2007.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "13",
+      "Id": 27107,
+      "NomeArquivo": "Mercosul - Ata de Depósito - Brasil - Ratificação.pdf",
+      "Descricao": "Ata de Depósito do Instrumento de Ratificação do Brasil.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "14",
+    "Id": 27105,
+    "NomeArquivo": "Mercosul - Acordo - Benefício Justiça Gratuita - Estados Parte.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "15",
+      "DescricaoObservacao": "Conforme disposto no Artigo 16º: \"O presente Acordo entrará em vigor, com relação aos dois primeiros Estados partes que o ratifiquem, trinta (30) dias depois da data em que o segundo desses Estados Partes deposite seu instrumento de ratificação. Para os demais Estados Partes que o ratifiquem, entrará em vigor no trigésimo dia posterior  ao depósito do respectivo instrumento de ratificação.\""
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "$id": "1",
+  "Titulo": "Protocolo sobre Transferência de Pessoas Sujeitas a Regimes Especiais (Complementar ao Acordo sobre Transferência de Pessoas Condenadas entre os Estados Partes do MERCOSUL e a República da Bolívia e a República do Chile) - Decisão CMC nº 13/05",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Luiz Nunes Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Assunção",
+  "NomePaisCelebracao": "Paraguai",
+  "DataCelebracao": "20/06/2005",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "14",
+    "DataMensagem": "23/01/2020",
+    "NumeroDOU": "17",
+    "DataDOU": "24/01/2020"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "58",
+    "DataDecreto": "15/06/2023",
+    "NumeroDOU": "113",
+    "DataDOU": "16/06/2023"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": null,
+    "DataDecreto": null,
+    "NumeroDOU": null,
+    "DataDOU": null
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 33158,
+      "NomeArquivo": "DL-58-2023.pdf",
+      "Descricao": "Publicação no DOU de Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 30213,
+      "NomeArquivo": "DOU - Mensagem ao Congresso - 17 - 2020.pdf",
+      "Descricao": "Publicação no DOU de Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "11",
+    "Id": 3894,
+    "NomeArquivo": "Dec. 13-05 - Protocolo - Transferência - Pessoas - Regimes - Especiais - port esp.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "12",
+      "DescricaoObservacao": "Conforme o disposto no art. 8: \"O presente Protocolo entrará em vigor trinta (30) dias depois do depósito do instrumento de ratificação pelo quarto estado Parte do MERCOSUL. Na mesma data entrará em vigor para os Estados Associados que o houvessem ratificado anteriormente\"."
+    }
+  ]
+}

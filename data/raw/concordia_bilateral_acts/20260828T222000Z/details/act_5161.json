@@ -1,0 +1,120 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre a República Federativa do Brasil e a República Oriental do Uruguai sobre cooperação policial em matéria de Investigação, prevenção e controle de fatos delituosos",
+  "OutraParte": "Uruguai",
+  "OutrasPartes": [
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "Celso Amorim",
+  "CargoSignatarioBrasil": "Ministro de Estado das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Rio Branco",
+  "NomePaisCelebracao": "Uruguai",
+  "DataCelebracao": "14/04/2004",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "T",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": "Didier Opertti Badán",
+      "CargoSignatario": "Ministro das Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Direito, Justiça & Segurança Pública",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "549",
+    "DataMensagem": "01/09/2004",
+    "NumeroDOU": "170",
+    "DataDOU": "02/09/2004"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "302",
+    "DataDecreto": "13/07/2006",
+    "NumeroDOU": "134",
+    "DataDOU": "14/07/2006"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "6.731",
+    "DataDecreto": "12/01/2009",
+    "NumeroDOU": "8",
+    "DataDOU": "13/01/2009"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "05/10/2008",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 13470,
+      "NomeArquivo": "Uruguai - DOU - Mensagem ao Congresso - 170 - 2004.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 12708,
+      "NomeArquivo": "Uruguai - DOU - Decreto Legislativo - 134 - 2006.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 12706,
+      "NomeArquivo": "Uruguai - DOU - Decreto de Promulgação - 8 - 2009.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "12",
+    "Id": 12702,
+    "NomeArquivo": "Uruguai - Acordo - Policial Delituoso.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "13",
+      "DescricaoObservacao": "Conforme exposto nos artigos 19° e 20° ''19. O presente Acordo entrará em vigor (60) sessenta dias após a data em que as Partes trocarem os respectivos instrumentos de ratificação. 20. Quaisquer das Partes poderá denunciar o presente Acordo, mediante notificação escrita, por via diplomática. A denúncia surtirá efeito seis meses após a data de sua formalização."
+    }
+  ]
+}

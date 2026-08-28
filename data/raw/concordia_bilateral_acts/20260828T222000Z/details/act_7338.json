@@ -1,0 +1,130 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República Popular da China Sobre Assistência Mútua Administrativa em Matéria Aduaneira",
+  "OutraParte": "China",
+  "OutrasPartes": [
+    "China"
+  ],
+  "SignatarioBrasil": "Guido Mantega",
+  "CargoSignatarioBrasil": "Ministro da Fazenda",
+  "Depositario": null,
+  "LocalCelebracao": "Rio de janeiro",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "21/06/2012",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "N",
+  "IsNotificacaoBrasil": true,
+  "IsNotificacaoOutraParte": true,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "China",
+      "NomeSignatario": "Yu Guangzhou",
+      "CargoSignatario": "Diretor da Administração Geral das Alfândegas"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Economia, Finanças e Tributos",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "599",
+    "DataMensagem": "29/12/2015",
+    "NumeroDOU": "249",
+    "DataDOU": "30/12/2015"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "112",
+    "DataDecreto": "10/05/2018",
+    "NumeroDOU": "90",
+    "DataDOU": "11/05/2018"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "219",
+      "DataDocumento": "13/11/2012",
+      "Local": "Embaixada em Pequim",
+      "DataRecebimento": "13/11/2012",
+      "RatificacaoBrasil": false,
+      "Parte": "Outra parte"
+    },
+    {
+      "$id": "7",
+      "FormaComunicacao": "Nota Verbal",
+      "NumeroDocumento": "87",
+      "DataDocumento": "01/06/2018",
+      "Local": "Embaixada em Pequim",
+      "DataRecebimento": "04/06/2018",
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "8",
+    "NumeroDecreto": "9.542",
+    "DataDecreto": "29/10/2018",
+    "NumeroDOU": "209",
+    "DataDOU": "30/10/2018"
+  },
+  "Vigencia": {
+    "$id": "9",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "04/09/2018",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "10",
+      "Id": 28995,
+      "NomeArquivo": "China - Decreto Promulgação - 9.452 - 2018.pdf",
+      "Descricao": "Publicação no DOU do Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 26736,
+      "NomeArquivo": "China - Decreto Legislativo - 112 - 2018.pdf",
+      "Descricao": "China - Decreto Legislativo - 112 - 2018",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 6426,
+      "NomeArquivo": "China - DOU - Mensagem ao Congresso - 249 - 2015.pdf",
+      "Descricao": "Mensagem ao Congresso Nacional",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 3681,
+    "NomeArquivo": "China - Acordo - Cooperação Aduaneira red.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo 17: \"Este Acordo entrará em vigor três meses após a data de recebimento da última notificação, por escrito, pela qual as Partes informam uma à outra, por via diplomática, de que foram cumpridos seus respectivos procedimentos internos necessários para a entrada em vigor deste Acordo\"."
+    }
+  ]
+}

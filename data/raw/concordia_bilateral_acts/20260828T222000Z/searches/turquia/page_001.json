@@ -1,0 +1,480 @@
+{
+  "$id": "1",
+  "Page": 1,
+  "Count": 11,
+  "TotalPages": 1,
+  "TotalCount": 11,
+  "Items": [
+    {
+      "$id": "2",
+      "Id": 7198,
+      "Titulo": "Acordo sobre Auxílio Jurídico Mútuo em Matéria Penal entre a República Federativa do Brasil e a República da Turquia",
+      "Assuntos": [
+        {
+          "$id": "3",
+          "Id": 289,
+          "Nome": "Direito, Justiça & Segurança Pública",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Turquia",
+      "DataCelebracao": "07/10/2011",
+      "OutrasPartes": [
+        "Turquia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "4",
+          "Id": 12074,
+          "NomeArquivo": "Turquia - DOU - Decreto Legislativo - 137 - 2014.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "5",
+          "Id": 12050,
+          "NomeArquivo": "Turquia - DOU - Mensagem ao Congresso - 35 - 2013.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "6",
+        "Id": 1098,
+        "NomeArquivo": "Turquia - Acordo - Auxílio Jurídico Mútuo em Matéria Penal.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "7",
+      "Id": 7199,
+      "Titulo": "Acordo sobre Transferência de Pessoas Condenadas entre a República Federativa do Brasil e a República da Turquia",
+      "Assuntos": [
+        {
+          "$id": "8",
+          "Id": 289,
+          "Nome": "Direito, Justiça & Segurança Pública",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Turquia",
+      "DataCelebracao": "07/10/2011",
+      "OutrasPartes": [
+        "Turquia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "9",
+          "Id": 29634,
+          "NomeArquivo": "Turquia - DOU - Decreto Presidencial nº 9.752 de 10-4-2019.pdf",
+          "Descricao": "Publicação no DOU do Decreto Presidencial de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "10",
+          "Id": 27634,
+          "NomeArquivo": "Turquia DOU Decreto 140 de 2018.pdf",
+          "Descricao": "Turquia DOU Decreto 140 de 2018",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "11",
+          "Id": 12064,
+          "NomeArquivo": "Turquia - DOU - Mensagem ao Congresso - 220 - 2014.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "12",
+        "Id": 1074,
+        "NomeArquivo": "Turquia - Acordo- Transferência Pessoas Condenadas.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "13",
+      "Id": 7033,
+      "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República da Turquia para Evitar a Dupla Tributação e Prevenir a Evasão Fiscal em Matéria de Impostos sobre a Renda",
+      "Assuntos": [
+        {
+          "$id": "14",
+          "Id": 290,
+          "Nome": "Economia, Finanças e Tributos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Turquia",
+      "DataCelebracao": "16/12/2010",
+      "OutrasPartes": [
+        "Turquia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "15",
+          "Id": 11699,
+          "NomeArquivo": "Turquia - DOU - Mensagem ao Congesso - 189 - 2011.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso ",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "16",
+          "Id": 11698,
+          "NomeArquivo": "Turquia - DOU - Decreto Legislativo - 132 - 2012.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "17",
+          "Id": 11697,
+          "NomeArquivo": "Turquia - DOU - Decreto de Promulgação - 223 - 2013.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "18",
+        "Id": 11695,
+        "NomeArquivo": "Turquia - Acordo - Dupla Tributação.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "19",
+      "Id": 6984,
+      "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República da Turquia sobre o Trabalho Remunerado de Dependentes de Membros de Missões Diplomáticas e Repartições Consulares",
+      "Assuntos": [
+        {
+          "$id": "20",
+          "Id": 297,
+          "Nome": "Relações Diplomáticas e Consulares",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Turquia",
+      "DataCelebracao": "21/10/2010",
+      "OutrasPartes": [
+        "Turquia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "21",
+          "Id": 23168,
+          "NomeArquivo": "Turquia - DOU - Decreto de Promulgação - 160 - 2017.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação ",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "22",
+          "Id": 12481,
+          "NomeArquivo": "Turquia - DOU - Decreto Legislativo - 244 - 2012.pdf",
+          "Descricao": "DOU Decreto Legislativo.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "23",
+          "Id": 12479,
+          "NomeArquivo": "Turquia - DOU - Publicação DAI - Mensagem ao Congresso - 154 - 2011.pdf",
+          "Descricao": "DOU Mensagem ao Congresso.",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "24",
+        "Id": 4476,
+        "NomeArquivo": "Turquia - Acordo - Dependentes.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "25",
+      "Id": 6782,
+      "Titulo": "Acordo entre o Governo da República Federativa do Brasil e o Governo da República da Turquia Sobre Assistência Mútua Administrativa em Matéria Aduaneira",
+      "Assuntos": [
+        {
+          "$id": "26",
+          "Id": 290,
+          "Nome": "Economia, Finanças e Tributos",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Turquia",
+      "DataCelebracao": "27/05/2010",
+      "OutrasPartes": [
+        "Turquia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "27",
+          "Id": 26503,
+          "NomeArquivo": "Turquia - DOU - Decreto do Promulgação - 73 - 2018.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação.",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "28",
+          "Id": 24346,
+          "NomeArquivo": "Turquia - DOU - Decreto Legislativo - 139 -2017.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "29",
+          "Id": 6425,
+          "NomeArquivo": "Turquia - DOU - Mensagem ao Congresso - 249 - 2015.pdf",
+          "Descricao": "Mensagem ao Congresso Nacional",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "30",
+        "Id": 12023,
+        "NomeArquivo": "Turquia - Acordo - Assistência Mútua Matéria Aduaneira.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "31",
+      "Id": 6783,
+      "Titulo": "Acordo entre o Ministério das Relações Exteriores da República Federativa do Brasil e o Ministério dos Negócios Estrangeiros da República da Turquia Sobre Intercâmbio de Diplomatas",
+      "Assuntos": [
+        {
+          "$id": "32",
+          "Id": 291,
+          "Nome": "Educação e Cultura",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Turquia",
+      "DataCelebracao": "27/05/2010",
+      "OutrasPartes": [
+        "Turquia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "33",
+          "Id": 11690,
+          "NomeArquivo": "Turquia - DOU - Publicação DAI - 249 - 2010.pdf",
+          "Descricao": "Publicação DOU pela DAI.",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "34",
+        "Id": 11692,
+        "NomeArquivo": "Turquia - Acordo - Diplomatas.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "35",
+      "Id": 6784,
+      "Titulo": "Plano de ação da parceria estratégica entre a República Federativa do Brasil e a República da Turquia.",
+      "Assuntos": [
+        {
+          "$id": "36",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Turquia",
+      "DataCelebracao": "27/05/2010",
+      "OutrasPartes": [
+        "Turquia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "37",
+        "Id": 11704,
+        "NomeArquivo": "Turquia - Plano de Ação - Parceria Estratégica.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "38",
+      "Id": 5541,
+      "Titulo": "Memorando de Entendimento entre o Governo da República Federativa do Brasil e o Governo da República da Turquia para a Criação de Comissão Conjunta de Alto Nível",
+      "Assuntos": [
+        {
+          "$id": "39",
+          "Id": 287,
+          "Nome": "Cooperação e Desenvolvimento",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em ratificação da(s) outra(s) Parte(s)",
+      "OutraParte": "Turquia",
+      "DataCelebracao": "19/01/2006",
+      "OutrasPartes": [
+        "Turquia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [],
+      "DocumentoIntegra": {
+        "$id": "40",
+        "Id": 13274,
+        "NomeArquivo": "Turquia - MdE - Comissão de Alto Nível.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "41",
+      "Id": 5542,
+      "Titulo": "Memorando de Entendimento entre o Ministerio das Relações Exteriores da República Federativa do Brasil e o Ministério das Relações Exteriores da República da Turquia sobre Cooperação entre as Academias Diplomáticas de ambos os países",
+      "Assuntos": [
+        {
+          "$id": "42",
+          "Id": 297,
+          "Nome": "Relações Diplomáticas e Consulares",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Turquia",
+      "DataCelebracao": "19/01/2006",
+      "OutrasPartes": [
+        "Turquia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "43",
+          "Id": 11709,
+          "NomeArquivo": "Turquia - DOU - MdE - 56 - 2009.pdf",
+          "Descricao": "Publicação no DOU pela DAI",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "44",
+        "Id": 13272,
+        "NomeArquivo": "Turquia - MdE - Academias Diplomáticas.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "45",
+      "Id": 4997,
+      "Titulo": "Acordo Sobre Cooperação em Assuntos Relacionados a Defesa Entre o Governo da República Federativa do Brasil e o Governo da República da Turquia",
+      "Assuntos": [
+        {
+          "$id": "46",
+          "Id": 288,
+          "Nome": "Defesa e Segurança",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Turquia",
+      "DataCelebracao": "14/08/2003",
+      "OutrasPartes": [
+        "Turquia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "47",
+          "Id": 11965,
+          "NomeArquivo": "Turquia - DOU - Mensagem ao Congresso - 213 - 2003.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso ",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "48",
+          "Id": 11964,
+          "NomeArquivo": "Turquia - DOU - Decreto Legislativo - 193 -2007.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "49",
+          "Id": 11961,
+          "NomeArquivo": "Turquia - DOU - Decreto de Promulgação - 57 -2008.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "50",
+        "Id": 25720,
+        "NomeArquivo": "Turquia - Acordo - Assuntos Relacionados a Defesa.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    },
+    {
+      "$id": "51",
+      "Id": 4753,
+      "Titulo": "Acordo Entre o Governo da República Federativa do Brasil e o Governo da República da Turquia Sobre a Isenção de Visto Para Titulares de Passaportes Comuns",
+      "Assuntos": [
+        {
+          "$id": "52",
+          "Id": 286,
+          "Nome": "Consulares e Migratórios",
+          "IsPrincipal": true
+        }
+      ],
+      "Vigencia": "Em Vigor",
+      "OutraParte": "Turquia",
+      "DataCelebracao": "20/08/2001",
+      "OutrasPartes": [
+        "Turquia"
+      ],
+      "TipoAcordo": "BL",
+      "Documentos": [
+        {
+          "$id": "53",
+          "Id": 11923,
+          "NomeArquivo": "Turquia - DOU - Decreto de Promulgação - 126 - 2004.pdf",
+          "Descricao": "Publicação no DOU do Decreto de Promulgação",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "54",
+          "Id": 11921,
+          "NomeArquivo": "Turquia - DOU - Decreto Legislativo - 98 - 2004.pdf",
+          "Descricao": "Publicação no DOU do Decreto Legislativo",
+          "Extensao": ".pdf"
+        },
+        {
+          "$id": "55",
+          "Id": 11920,
+          "NomeArquivo": "Turquia - DOU - Mensagem ao Congresso - 22 - 2002.pdf",
+          "Descricao": "Publicação no DOU da Mensagem ao Congresso ",
+          "Extensao": ".pdf"
+        }
+      ],
+      "DocumentoIntegra": {
+        "$id": "56",
+        "Id": 11925,
+        "NomeArquivo": "Turquia - Acordo - Passaportes Comuns.pdf",
+        "Descricao": "Documento com íntegra do Acordo",
+        "Extensao": ".pdf"
+      }
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo entre a República Federativa do Brasil e a República Oriental do Uruguai sobre Residência Permanente com o Objetivo de Alcançar a Livre Circulação de Pessoas",
+  "OutraParte": "Uruguai",
+  "OutrasPartes": [
+    "Uruguai"
+  ],
+  "SignatarioBrasil": "Antonio de Aguiar Patriota",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": null,
+  "LocalCelebracao": "Brasília",
+  "NomePaisCelebracao": "Brasil",
+  "DataCelebracao": "09/07/2013",
+  "TipoAcordo": "BL",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "T",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Uruguai",
+      "NomeSignatario": "Luis Almagro Lemes",
+      "CargoSignatario": "Ministro das Relações Exteriores"
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Consulares e Migratórios",
+      "IsPrincipal": true
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "4",
+    "NumeroMensagem": "178",
+    "DataMensagem": "28/05/2015",
+    "NumeroDOU": "101",
+    "DataDOU": "29/05/2015"
+  },
+  "DecretoLegislativo": {
+    "$id": "5",
+    "NumeroDecreto": "152",
+    "DataDecreto": "19/12/2016",
+    "NumeroDOU": "243",
+    "DataDOU": "20/12/2016"
+  },
+  "Ratificacao": [
+    {
+      "$id": "6",
+      "FormaComunicacao": null,
+      "NumeroDocumento": null,
+      "DataDocumento": null,
+      "Local": null,
+      "DataRecebimento": null,
+      "RatificacaoBrasil": true,
+      "Parte": "Brasil"
+    }
+  ],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "9089",
+    "DataDecreto": "06/07/2017",
+    "NumeroDOU": "129",
+    "DataDOU": "07/07/2017"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": "28/04/2017",
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 22309,
+      "NomeArquivo": "Uruguai - DOU - Promulgação - 129 - 2017.pdf",
+      "Descricao": "Uruguai - DOU - Promulgação - 129 - 2017",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 20365,
+      "NomeArquivo": "Uruguai - Ata de Ratificação - Residência Permanente.pdf",
+      "Descricao": "Ata de Troca de Instrumento de Ratificação - Residência Permanente",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 17024,
+      "NomeArquivo": "Uruguai - DOU - Decreto Legislativo - 243 - 2016.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 301,
+      "NomeArquivo": "DOU - Mensagem ao Congresso - 101 - 2015.pdf",
+      "Descricao": "DOU - Mensagem ao Congresso - 101 - 2015",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 300,
+    "NomeArquivo": "Uruguai - Acordo - Residência Permanente.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo 13: \" Este Acordo entrará em vigor 30 (trinta) dias corridos a contar da data da troca dos instrumentos de ratificação pelas Partes\"."
+    }
+  ]
+}

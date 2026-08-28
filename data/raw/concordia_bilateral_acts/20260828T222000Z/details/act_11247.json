@@ -1,0 +1,122 @@
+{
+  "$id": "1",
+  "Titulo": "Acordo sobre Gratuidade de Vistos para Estudantes e Docentes dos Estados Partes do MERCOSUL - Decisão CMC nº 21/06",
+  "OutraParte": "Paraguai",
+  "OutrasPartes": [
+    "Paraguai"
+  ],
+  "SignatarioBrasil": "Celso Luiz Amorim",
+  "CargoSignatarioBrasil": "Ministro das Relações Exteriores",
+  "Depositario": "Paraguai",
+  "LocalCelebracao": "Córdoba",
+  "NomePaisCelebracao": "Argentina",
+  "DataCelebracao": "20/07/2006",
+  "TipoAcordo": "ML",
+  "PossuiHtml": true,
+  "VersaoHtml": null,
+  "IsPublicacaoDireta": false,
+  "TipoRatificacao": "",
+  "IsNotificacaoBrasil": false,
+  "IsNotificacaoOutraParte": false,
+  "Emendas": [],
+  "Emendendados": [],
+  "SignatarioOutraParte": [
+    {
+      "$id": "2",
+      "NomeOutraParte": "Paraguai",
+      "NomeSignatario": null,
+      "CargoSignatario": null
+    }
+  ],
+  "AcordoSubstituiu": null,
+  "AcordoSubstituido": null,
+  "Assuntos": [
+    {
+      "$id": "3",
+      "Id": 0,
+      "Nome": "Organizações e Grupos Internacionais",
+      "IsPrincipal": true
+    },
+    {
+      "$id": "4",
+      "Id": 0,
+      "Nome": "Consulares e Migratórios",
+      "IsPrincipal": false
+    }
+  ],
+  "MensagemCongresso": {
+    "$id": "5",
+    "NumeroMensagem": "996",
+    "DataMensagem": "20/12/2007",
+    "NumeroDOU": "245",
+    "DataDOU": "21/12/2007"
+  },
+  "DecretoLegislativo": {
+    "$id": "6",
+    "NumeroDecreto": "993",
+    "DataDecreto": "22/12/2009",
+    "NumeroDOU": "245",
+    "DataDOU": "23/12/2009"
+  },
+  "Ratificacao": [],
+  "DecretoPromulgacao": {
+    "$id": "7",
+    "NumeroDecreto": "10.256",
+    "DataDecreto": "27/02/2020",
+    "NumeroDOU": "40",
+    "DataDOU": "28/02/2020"
+  },
+  "Vigencia": {
+    "$id": "8",
+    "Vigencia": "Em Vigor",
+    "NumeroRegistroONU": null,
+    "DataEntradaVigor": null,
+    "DataEntradaVigorCI": null,
+    "Expirou": null,
+    "DataDenuncia": null,
+    "DataEfeitoDenuncia": null
+  },
+  "Documentos": [
+    {
+      "$id": "9",
+      "Id": 30281,
+      "NomeArquivo": "DOU - Decreto de Promulgação - 40 - 2020.pdf",
+      "Descricao": "Publicação no DOU de Decreto de Promulgação",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "10",
+      "Id": 26320,
+      "NomeArquivo": "Mercosul - Ata Deposito Brasil - Cooperação - Gratuidade Visto - Estudante e Docente.pdf",
+      "Descricao": "Ata de Depósito de Ratificação do Brasil.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "11",
+      "Id": 26319,
+      "NomeArquivo": "Mercosul - DOU - Mensagem ao Congresso - 245 - 2007.pdf",
+      "Descricao": "Publicação no DOU da Mensagem ao Congresso.",
+      "Extensao": ".pdf"
+    },
+    {
+      "$id": "12",
+      "Id": 26318,
+      "NomeArquivo": "Mercosul - DOU - Decreto Legislativo - 245 - 2009.pdf",
+      "Descricao": "Publicação no DOU do Decreto Legislativo.",
+      "Extensao": ".pdf"
+    }
+  ],
+  "DocumentoIntegra": {
+    "$id": "13",
+    "Id": 3420,
+    "NomeArquivo": "Dec. 21-06 - Acordo - Gratuidade - Vistos - port esp.pdf",
+    "Descricao": "Documento com íntegra do Acordo",
+    "Extensao": ".pdf"
+  },
+  "Observacoes": [
+    {
+      "$id": "14",
+      "DescricaoObservacao": "Conforme disposto no Artigo 4: \"O presente Acordo entrará em vigor trinta (30) dias depois do depósito do quarto instrumento de ratificação dos Estados Partes do MERCOSUL. A República do Paraguai será depositária do presente Acordo e dos respectivos instrumentos de ratificação, devendo notificar aos demais Estados Partes a data do depósito desses instrumentos e da entrada em vigor do Acordo, do qual lhes enviará cópia devidamente autenticada.\""
+    }
+  ]
+}
