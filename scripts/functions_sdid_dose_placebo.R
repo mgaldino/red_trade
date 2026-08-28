@@ -58,12 +58,22 @@
 # string, or a dedicated analysis_arm column, so no file can be read in
 # isolation and leave the arm in doubt.
 #
-# The two bases disagree about the crown for exactly one donor: China is
-# Singapore's rank-#1 export destination in 2013-2014 on all-sector trade but
-# never better than rank #2 on goods over 1997-2015, which is why Singapore is
-# an eligible donor and why the exposure file nonetheless flags it as "China top
-# export destination post-2009". Singapore's position on the goods dose is
-# recorded explicitly in the summary for this reason.
+# WITHIN THE 1997-2015 ESTIMATION WINDOW the two bases disagree about the crown
+# for exactly one donor: China is Singapore's rank-#1 export destination in
+# 2013-2014 on all-sector trade but never better than rank #2 on goods, which is
+# why Singapore is an eligible donor and why the exposure file nonetheless flags
+# it as "China top export destination post-2009". Singapore's position on the
+# goods dose is recorded explicitly in the summary for this reason.
+#
+# The window scope on that sentence is load-bearing. Over the trade data's full
+# 1990-2022 span THREE donors disagree about the crown:
+# PAN and PNG reach goods rank 1 (2021-2022 and 2018-2019) but never all-sector
+# rank 1, and SGP reaches all-sector rank 1 but never goods rank 1. Eight further
+# donors -- GAB, GHA, GIN, KWT, QAT, TCD, UKR, VEN -- reach rank 1 on both bases
+# out of window. Every one of these counts is recomputed from the ranked tables
+# at each build by brazil_sdid_dose_placebo_rank_one_check(), which ships both an
+# in-window and an any-year column so neither statement can be read at the wrong
+# time scope.
 #
 # ---------------------------------------------------------------------------
 # DOSE DEFINITION, REPLICATED RATHER THAN REINVENTED
@@ -332,12 +342,60 @@ brazil_sdid_dose_placebo_verify_dose_definition <- function(trade_all_sector,
   compared <- reference |>
     dplyr::left_join(replicated, by = "iso3c")
 
-  absent <- compared$iso3c[is.na(compared$dose_pre_share) &
-                             !is.na(compared$reference_pre)]
-  if (length(absent) > 0L) {
+  # Coverage gate on BOTH windows and BOTH sides of the comparison. Any NA that
+  # reaches the max() below makes the tolerance condition NA, and the `if` then
+  # aborts with base R's "missing value where TRUE/FALSE needed" instead of
+  # naming anything, so every route by which an NA can arrive is diagnosed here.
+  #
+  # The windows are independently missable: period_dose() returns NA per period
+  # for a unit absent or degenerate throughout that period, so a unit can carry
+  # a value for one window and not the other -- present in the pre window, gone
+  # from the post window, which is the situation of the small territories in the
+  # exposure file. The sides are independently missable too: the reference dose
+  # is read from a CSV whose columns are typed double, so a blank cell arrives
+  # as NA rather than as a parse failure.
+  #
+  # Reported once each, and between them exhaustive. The reference guard runs
+  # first and claims every is.na(reference); the replication guard then sees
+  # only rows whose reference is present, so the two sets are disjoint and their
+  # union is every is.na(reference) | is.na(dose). Reference first because a
+  # missing reference value is a defect in the file being verified AGAINST:
+  # reporting instead that the replication "does not cover" a unit whose
+  # reference dose is itself absent would name the wrong side.
+  window_detail <- function(iso3c, flag_pre, flag_post) {
+    rows <- which(flag_pre | flag_post)
+    windows <- dplyr::case_when(
+      flag_pre & flag_post ~ "pre and post",
+      flag_pre ~ "pre",
+      TRUE ~ "post"
+    )[rows]
+    units <- iso3c[rows]
+    paste0(units, " (", windows, ")")[order(units)]
+  }
+
+  reference_absent <- window_detail(
+    compared$iso3c,
+    is.na(compared$reference_pre),
+    is.na(compared$reference_post)
+  )
+  if (length(reference_absent) > 0L) {
+    stop("brazil_sdid_dose_placebo_verify_dose_definition: ", exposure_path,
+         " carries no all-sector dose for unit(s), with the window(s) missing ",
+         "in parentheses: ", paste(reference_absent, collapse = ", "),
+         ". The reference side of the comparison is undefined there, so the ",
+         "replication has nothing to be checked against.", call. = FALSE)
+  }
+
+  replicated_absent <- window_detail(
+    compared$iso3c,
+    is.na(compared$dose_pre_share) & !is.na(compared$reference_pre),
+    is.na(compared$dose_post_share) & !is.na(compared$reference_post)
+  )
+  if (length(replicated_absent) > 0L) {
     stop("brazil_sdid_dose_placebo_verify_dose_definition: the replicated ",
          "all-sector dose is missing for unit(s) present in ", exposure_path,
-         ": ", paste(sort(absent), collapse = ", "),
+         ", with the window(s) missing in parentheses: ",
+         paste(replicated_absent, collapse = ", "),
          ". The replication does not cover the reference sample.",
          call. = FALSE)
   }
@@ -494,7 +552,11 @@ brazil_sdid_dose_placebo_arms <- function() {
         "The dose is a GOODS-ONLY export share (ITPD-E Agriculture, Mining and ",
         "Energy, and Manufacturing), the same sector definition used to assign ",
         "treatment and to screen the donor pool."
-      )
+      ),
+      # Nothing to add on the primary arm: the caption's crownless sentence is
+      # about the goods definition, which is also this arm's x axis, so the
+      # statement and the measure the reader is looking at already coincide.
+      caption_arm_note = ""
     ),
     robustness_all_sector = list(
       arm = "robustness_all_sector",
@@ -519,6 +581,19 @@ brazil_sdid_dose_placebo_arms <- function() {
         "and the donor screen are defined on goods only, so this arm ",
         "deliberately mixes two sector definitions to test whether the ",
         "measurement basis matters."
+      ),
+      # The caption's crownless sentence is scoped to GOODS -- the definition
+      # that assigns treatment -- and stays true on this arm. But this arm's x
+      # axis is the ALL-SECTOR share, and on that measure one PLOTTED donor,
+      # Singapore, does reach China rank 1 inside the estimation window (2013 and
+      # 2014). A reader holding only this PNG would otherwise take away "no donor
+      # reached the threshold" while looking at the one measure on which a donor
+      # did. The clause is attached to this arm alone so the primary caption --
+      # and therefore the primary PNG -- is unchanged.
+      caption_arm_note = paste0(
+        " On this all-sector measure one plotted donor, Singapore, did reach ",
+        "China rank 1 in 2013-2014, which the goods definition that assigns ",
+        "treatment does not."
       )
     )
   )
@@ -694,9 +769,15 @@ build_brazil_sdid_dose_placebo_dataset <- function(placebo_path,
     }
   }
 
+  # Every field here reaches a shipped file. The row count of the placebo
+  # distribution and the count of its non-estimated rows were carried here and
+  # written nowhere, and both are already recoverable from what does ship:
+  # n_valid_assignments below gives the estimated rows, and the ranks CSV's
+  # excluded_units column names every unit the status/NA filter dropped, on every
+  # row. Alternative discarded: shipping them as two more summary columns, which
+  # would widen an already 136-column file with numbers a reader can read off the
+  # ranks table.
   checks <- tibble::tibble(
-    n_placebo_rows = nrow(placebo),
-    n_placebo_not_estimated = sum(placebo$status != "estimated" | is.na(placebo$estimate)),
     n_valid_assignments = nrow(valid),
     n_donors = nrow(donor_estimates),
     n_exposure_rows = nrow(exposure),
@@ -952,6 +1033,12 @@ compute_brazil_sdid_dose_placebo_results <- function(dataset,
 # The rank is descending (1 = largest dose) with ties.method = "min", and the
 # percentile is the share of donors at or below this donor's dose, so the two
 # read consistently: rank 14 of 95 pairs with a percentile near 0.86.
+#
+# The denominator behind that rank is deliberately NOT returned here. It is the
+# count of donors with a dose on the column, which is already computed once in
+# build_brazil_sdid_dose_placebo_dataset() and shipped as
+# <arm>_<definition>_n_donors_with_dose. Returning a second copy would put the
+# same number in two places with nothing keeping them equal.
 brazil_sdid_dose_placebo_focus_donor <- function(donors, high_dose, arms,
                                                  focus_iso3c) {
   row <- donors |> dplyr::filter(iso3c == focus_iso3c)
@@ -972,8 +1059,15 @@ brazil_sdid_dose_placebo_focus_donor <- function(donors, high_dose, arms,
         dose = value,
         rank_descending = as.integer(rank(-dose, ties.method = "min",
                                           na.last = "keep")[donors$iso3c == focus_iso3c]),
-        n_donors_with_dose = sum(!is.na(dose)),
-        percentile = mean(dose <= value, na.rm = TRUE),
+        # A focus donor with no dose on this column has no percentile. Left
+        # unguarded, `dose <= NA` is all-NA and mean(na.rm = TRUE) over nothing
+        # returns NaN, which prints like a computed number. NA_real_ is returned
+        # instead, matching rank_descending, which na.last = "keep" already sets
+        # to NA in the same situation. Dormant on the shipped data -- Singapore
+        # has a dose on all four columns, and no donor is missing one -- but the
+        # function takes an arbitrary iso3c precisely so a later reviewer can ask
+        # about a donor for which it would fire.
+        percentile = if (is.na(value)) NA_real_ else mean(dose <= value, na.rm = TRUE),
         in_high_dose_subgroup = focus_iso3c %in% high_dose[[key]]$iso3c
       )
     }
@@ -1109,14 +1203,46 @@ brazil_sdid_dose_placebo_summary_row <- function(results) {
     quantile_type = 7L,
     high_dose_boundary_rule = "dose >= cutoff",
 
+    # COVERAGE BLOCK -- TWO POPULATIONS, NAMED IN EVERY COLUMN.
+    #
+    # Two populations meet in this block, and every column names its own. The
+    # exporter counts range over EVERY exporter present in trade_data_goods
+    # inside the window (245 of them: the input to the dose computation), while
+    # the minimum-years columns range over the 95 DONORS the diagnostic actually
+    # analyses. Drop the suffixes and the block reads as one population and then
+    # contradicts itself -- 18 undefined country-years sitting beside a
+    # full-window minimum -- so the suffixes are what make it readable on its
+    # own, without reference to this file.
+    #
+    # What it says once disambiguated: 18 country-years have an undefined share,
+    # they belong to PRI and PSE, and NEITHER is a donor. Every one of the 95
+    # donors averages the complete window on both sides, which is exactly what
+    # min pre = 12 = the length of 1997-2008 and min post = 7 = the length of
+    # 2009-2015 assert.
+    #
+    # n_exporters_in_window, not "with_dose": of the 245, 240 have a pre dose,
+    # 237 a post dose and 232 a delta dose, so no single count of exporters "with
+    # dose" exists. The per-dose-definition counts that DO matter are the donor
+    # counts already shipped above as <arm>_<definition>_n_donors_with_dose,
+    # whose population its name states. Alternative discarded: adding four
+    # exporter-level per-dose counts here, which would ship numbers describing no
+    # estimation sample -- the OLS, the cutoff and the subgroups are all donor
+    # quantities.
+    #
+    # The robustness arm has no counterpart block and needs no parallel rename:
+    # its dose is read ready-made from donor_china_exposure.csv rather than
+    # computed inside this graph, so no coverage record of its inputs exists to
+    # ship. Its population-bearing columns are the arm-block
+    # robustness_all_sector_<definition>_n_donors_* ones, already named for the
+    # donor population they describe.
     primary_goods_pre_window = coverage$pre_window,
     primary_goods_post_window = coverage$post_window,
-    primary_goods_n_exporters_with_dose = coverage$n_exporters,
-    primary_goods_n_country_years = coverage$n_country_years,
-    primary_goods_n_country_years_undefined_share = coverage$n_country_years_undefined_share,
-    primary_goods_undefined_share_iso3c = coverage$undefined_share_iso3c,
-    primary_goods_min_n_years_defined_pre = min(results$donors$goods_n_years_defined_pre),
-    primary_goods_min_n_years_defined_post = min(results$donors$goods_n_years_defined_post),
+    primary_goods_n_exporters_in_window = coverage$n_exporters,
+    primary_goods_n_country_years_among_exporters_in_window = coverage$n_country_years,
+    primary_goods_n_country_years_undefined_share_among_exporters_in_window = coverage$n_country_years_undefined_share,
+    primary_goods_undefined_share_iso3c_among_exporters_in_window = coverage$undefined_share_iso3c,
+    primary_goods_min_n_years_defined_pre_among_donors = min(results$donors$goods_n_years_defined_pre),
+    primary_goods_min_n_years_defined_post_among_donors = min(results$donors$goods_n_years_defined_post),
 
     dose_definition_check_reference_file = definition_check$reference_file,
     dose_definition_check_n_units = definition_check$n_units_compared,
@@ -1437,17 +1563,26 @@ plot_brazil_sdid_dose_placebo <- function(results,
     stop("plot_brazil_sdid_dose_placebo: unknown arm '", arm_key, "'.",
          call. = FALSE)
   }
-  dose_column <- arm$dose_columns[[dose_key]]
-  if (is.null(dose_column) || is.na(dose_column)) {
-    stop("plot_brazil_sdid_dose_placebo: unknown dose definition '", dose_key,
-         "' for arm '", arm_key, "'.", call. = FALSE)
+  # Membership is tested BEFORE extraction. arm$dose_columns is a named CHARACTER
+  # VECTOR, and `[[` on a character vector aborts with base R's "subscript out of
+  # bounds" for an absent name, so a guard placed after the extraction never
+  # runs. The arm guard above can be written the other way round only because
+  # results$arms IS a list, and `[[` on a list returns NULL for an absent name.
+  # isTRUE() rather than a bare `%in%` so a zero-length or vectorised dose_key
+  # reaches this message instead of failing inside `if`.
+  if (!isTRUE(dose_key %in% names(arm$dose_columns))) {
+    stop("plot_brazil_sdid_dose_placebo: unknown dose definition '",
+         paste(dose_key, collapse = ", "), "' for arm '", arm_key,
+         "'. Known definitions: ",
+         paste(names(arm$dose_columns), collapse = ", "), ".", call. = FALSE)
   }
+  dose_column <- arm$dose_columns[[dose_key]]
   key <- paste0(arm_key, "_", dose_key)
   cutoff <- results$high_dose[[key]]$cutoff
-  # Base subsetting rather than dplyr::filter(): the association table's columns
-  # are themselves called `analysis_arm` and `dose_definition`, and masking them
-  # against same-named local values is exactly the kind of shadowing that
-  # silently returns every row.
+  # Base subsetting, for directness. dplyr::filter() would work here too: the
+  # values being matched live in `arm_key` and `dose_key`, which do not collide
+  # with the `analysis_arm` and `dose_definition` columns they are matched
+  # against.
   assoc <- results$associations[
     results$associations$analysis_arm == arm_key &
       results$associations$dose_definition == dose_key, ]
@@ -1479,7 +1614,12 @@ plot_brazil_sdid_dose_placebo <- function(results,
     arm$caption_basis,
     " China never became any donor's top goods-export destination over ",
     "1997-2015, so the plot shows the dose gradient below the threshold rather ",
-    "than the discontinuity at it. Brazil has no dose coordinate on either arm ",
+    "than the discontinuity at it.",
+    # Arm-specific qualification, empty on the primary arm. It sits here, right
+    # after the crownless sentence it qualifies, so the reader meets the
+    # exception where the rule was stated.
+    arm$caption_arm_note,
+    " Brazil has no dose coordinate on either arm ",
     "and is added to the top-quartile rank test unconditionally. The dotted ",
     "line marks the top-quartile dose cutoff. The fitted line is descriptive ",
     "only: donor pools overlap, so no standard error is reported for the slope."
