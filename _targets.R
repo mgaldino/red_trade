@@ -199,6 +199,21 @@ list(
   # Consumes the stored no-covariate SDiD diagnostics as tracked file inputs;
   # nothing here re-estimates Brazil's ATT, and dose is never a control -- it
   # only stratifies the comparison set for the rank test.
+  #
+  # TWO MEASUREMENT ARMS. The PRIMARY dose is goods-only, computed here from
+  # trade_data_goods -- the same object rank_trade() ranks to assign treatment,
+  # so dose and treatment share one sector definition. The ROBUSTNESS dose is
+  # the all-sector share read from donor_china_exposure.csv and is retained in
+  # full as the measurement-robustness comparison.
+  #
+  # DEPENDING ON trade_data_goods (and on trade_data / the ranked tables for the
+  # build-time gates) is deliberate. An upstream dependency does not invalidate
+  # the upstream target: these four are already built and current, and
+  # tar_make(shortcut = TRUE) reads them from the store. The alternative --
+  # re-reading raw data/ITPDE_R03.csv inside this subgraph to keep it
+  # disconnected -- was discarded because it would compute the dose from a
+  # second, untracked copy of the trade data and lose the guarantee that dose
+  # and treatment come from the very same object.
   tar_target(brazil_sdid_dose_placebo_distribution_file,
              here("data", "processed", "diagnostics",
                   "paper_v4_brazil_sdid_no_covariates",
@@ -214,10 +229,52 @@ list(
                   "paper_v4_brazil_sdid_no_covariates",
                   "rank_inference.csv"),
              format = "file"),
+  # Primary (goods-only) dose, on the same sector basis that assigns treatment.
+  tar_target(brazil_sdid_dose_placebo_goods_dose,
+             brazil_sdid_dose_placebo_period_dose(
+               trade_data_goods,
+               basis_label = "goods-only"
+             )),
+  # Build-time proof that the goods dose replicates the all-sector definition:
+  # the same function, run on the all-sector table, must reproduce
+  # donor_china_exposure.csv to 1e-12 or the build stops. Turns the header's
+  # "property for property" claim into something a referee can see fail.
+  tar_target(brazil_sdid_dose_placebo_definition_check,
+             brazil_sdid_dose_placebo_verify_dose_definition(
+               trade_data,
+               brazil_sdid_dose_placebo_exposure_file
+             )),
+  tar_target(brazil_sdid_dose_placebo_donor_iso3c,
+             brazil_sdid_dose_placebo_screened_donors(
+               brazil_sdid_dose_placebo_exposure_file
+             )),
+  # Aborts if any donor sits at goods rank 1 inside 1997-2015: that would mean a
+  # treated unit survived the screen into the donor pool and the "dose without
+  # the crown" premise no longer holds.
+  tar_target(brazil_sdid_dose_placebo_goods_rank_one_check,
+             brazil_sdid_dose_placebo_rank_one_check(
+               trade_data_goods_ranked,
+               brazil_sdid_dose_placebo_donor_iso3c,
+               basis_label = "goods-only",
+               abort_if_any_in_window = TRUE
+             )),
+  # Records rather than gates: Singapore at all-sector rank 1 in 2013-2014 is
+  # the known, expected fact the truncation note exists to disclose.
+  tar_target(brazil_sdid_dose_placebo_all_sector_rank_one_check,
+             brazil_sdid_dose_placebo_rank_one_check(
+               trade_data_ranked,
+               brazil_sdid_dose_placebo_donor_iso3c,
+               basis_label = "all-sector",
+               abort_if_any_in_window = FALSE
+             )),
   tar_target(brazil_sdid_dose_placebo_dataset,
              build_brazil_sdid_dose_placebo_dataset(
                brazil_sdid_dose_placebo_distribution_file,
-               brazil_sdid_dose_placebo_exposure_file
+               brazil_sdid_dose_placebo_exposure_file,
+               brazil_sdid_dose_placebo_goods_dose,
+               brazil_sdid_dose_placebo_definition_check,
+               brazil_sdid_dose_placebo_goods_rank_one_check,
+               brazil_sdid_dose_placebo_all_sector_rank_one_check
              )),
   tar_target(brazil_sdid_dose_placebo_results,
              compute_brazil_sdid_dose_placebo_results(
@@ -240,7 +297,18 @@ list(
                     "dose_response_rank_inference.csv")
              ),
              format = "file"),
-  # The ggplot is built inside this file target instead of being stored as its
+  # Per-donor doses on both bases. Without this file the summary's claims about
+  # Singapore's position and about how closely the two bases order the donors
+  # are unfalsifiable from the shipped outputs alone.
+  tar_target(brazil_sdid_dose_placebo_donors_file,
+             write_brazil_sdid_dose_placebo_donors(
+               brazil_sdid_dose_placebo_results,
+               here("data", "processed", "diagnostics",
+                    "brazil_sdid_dose_response_placebo",
+                    "dose_response_donor_doses.csv")
+             ),
+             format = "file"),
+  # The ggplot is built inside these file targets instead of being stored as its
   # own target. A ggplot object captures plot_env, and serializing that
   # environment is session-dependent: bit-identical inputs produced two
   # different object hashes in two different sessions, so a stored-plot target
@@ -250,12 +318,30 @@ list(
   # elsewhere in this pipeline because the manuscript tar_read()s those objects
   # directly. That reason does not apply here -- this figure is consumed only as
   # a PNG file, so the object has no consumer worth the spurious invalidation.
+  #
+  # The PRIMARY (goods-only) figure keeps the unqualified filename and carries
+  # its arm in the subtitle, axis label and caption; the robustness figure gets
+  # an explicitly qualified name. Alternative discarded: renaming both files to
+  # arm-qualified names, which would leave the phase-1
+  # dose_response_placebo_scatter.png on disk as an orphan produced by no
+  # target -- a stale all-sector figure sitting beside the new ones, which is
+  # exactly the arm ambiguity this design exists to remove.
   tar_target(brazil_sdid_dose_placebo_figure_file,
              write_brazil_sdid_dose_placebo_figure(
                brazil_sdid_dose_placebo_results,
                here("data", "processed", "diagnostics",
                     "brazil_sdid_dose_response_placebo",
-                    "dose_response_placebo_scatter.png")
+                    "dose_response_placebo_scatter.png"),
+               arm_key = "primary_goods"
+             ),
+             format = "file"),
+  tar_target(brazil_sdid_dose_placebo_robustness_figure_file,
+             write_brazil_sdid_dose_placebo_figure(
+               brazil_sdid_dose_placebo_results,
+               here("data", "processed", "diagnostics",
+                    "brazil_sdid_dose_response_placebo",
+                    "dose_response_placebo_scatter_all_sector_robustness.png"),
+               arm_key = "robustness_all_sector"
              ),
              format = "file"),
   # Phase 1.2: Sensitivity analysis
@@ -376,6 +462,14 @@ list(
                china_top_m2_goods_status_current_dynamic_results,
                min_duration_years = 5L,
                specification = "risk_set_restricted"
+             )),
+  tar_target(plot_china_top_m2_goods_status_current_entry_years,
+             plot_treated_entry_year_distribution(
+               china_top_m2_goods_status_current_unit_summary,
+               min_duration_years = 5L,
+               sample_name = "risk_set_restricted",
+               reference_year = 2009L,
+               highlight_iso3c = "BRA"
              )),
   tar_target(china_top_m2_goods_status_current_runtime_report,
              write_status_current_runtime_report(

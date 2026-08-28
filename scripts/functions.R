@@ -4752,6 +4752,94 @@ plot_status_current_dynamic <- function(dynamic_data,
     )
 }
 
+# Dispersion of treatment entry years across the cross-country treated units.
+# The figure answers a specific objection to the design: Brazil's 2009 entry is
+# endogenous to the global financial crisis, so a reader may suspect that the
+# cross-country panel is really a set of countries that all crossed the
+# threshold in the same crisis window. Plotting each treated country at its own
+# entry year, with the Brazilian year marked, shows how far entry is spread over
+# calendar time.
+plot_treated_entry_year_distribution <- function(unit_summary,
+                                                 min_duration_years = 5L,
+                                                 sample_name = "risk_set_restricted",
+                                                 reference_year = 2009L,
+                                                 highlight_iso3c = "BRA") {
+  plot_data <- unit_summary |>
+    dplyr::filter(
+      min_duration_years == .env$min_duration_years,
+      sample == .env$sample_name,
+      ever_treated,
+      !is.na(first_treat)
+    ) |>
+    dplyr::transmute(
+      iso3c,
+      country_name,
+      first_treat = as.integer(first_treat),
+      highlighted = iso3c %in% .env$highlight_iso3c
+    ) |>
+    dplyr::arrange(dplyr::desc(first_treat), dplyr::desc(country_name)) |>
+    dplyr::mutate(country_name = factor(country_name, levels = country_name))
+
+  year_range <- range(plot_data$first_treat)
+  year_breaks <- seq(year_range[1], year_range[2], by = 1L)
+
+  ggplot2::ggplot(
+    plot_data,
+    ggplot2::aes(x = first_treat, y = country_name)
+  ) +
+    ggplot2::geom_vline(
+      xintercept = reference_year,
+      linewidth = 0.45,
+      linetype = "dashed",
+      color = "grey35"
+    ) +
+    ggplot2::geom_segment(
+      ggplot2::aes(xend = first_treat, yend = country_name),
+      x = year_range[1] - 0.6,
+      linewidth = 0.25,
+      color = "grey80"
+    ) +
+    ggplot2::geom_point(
+      ggplot2::aes(color = highlighted, size = highlighted)
+    ) +
+    ggplot2::annotate(
+      "text",
+      x = reference_year,
+      y = nrow(plot_data) + 0.9,
+      label = as.character(reference_year),
+      hjust = -0.18,
+      size = 3.2,
+      color = "grey35",
+      fontface = "bold"
+    ) +
+    ggplot2::scale_color_manual(
+      values = c(`FALSE` = "#1f4e79", `TRUE` = "#b2182b"),
+      guide = "none"
+    ) +
+    ggplot2::scale_size_manual(
+      values = c(`FALSE` = 1.9, `TRUE` = 2.9),
+      guide = "none"
+    ) +
+    ggplot2::scale_x_continuous(
+      breaks = year_breaks,
+      expand = ggplot2::expansion(mult = c(0.02, 0.03))
+    ) +
+    ggplot2::scale_y_discrete(expand = ggplot2::expansion(add = c(0.7, 1.8))) +
+    ggplot2::labs(
+      x = "First year of the qualifying China-top goods-export period",
+      y = NULL
+    ) +
+    ggplot2::theme_minimal(base_size = 11) +
+    ggplot2::theme(
+      panel.grid.major.y = ggplot2::element_blank(),
+      panel.grid.minor = ggplot2::element_blank(),
+      panel.grid.major.x = ggplot2::element_line(linewidth = 0.2, color = "grey92"),
+      axis.text.x = ggplot2::element_text(size = 8),
+      axis.text.y = ggplot2::element_text(size = 8.5),
+      plot.title = ggplot2::element_blank()
+    )
+}
+
 write_status_current_runtime_report <- function(model_results,
                                                 sample_counts,
                                                 output_path = file.path(
