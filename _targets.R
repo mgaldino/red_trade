@@ -19,6 +19,7 @@ tar_option_set(packages = c("tidyverse", "tidyr", "ggplot2", "janitor", "data.ta
 # Run the R scripts in the R/ folder with your custom functions:
 tar_source("scripts/functions.R")
 tar_source("scripts/functions_unvotes.R")
+tar_source("scripts/functions_sdid_dose_placebo.R")
 # tar_source("other_functions.R") # Source other scripts as needed.
 
 # Replace the target list below with your own:
@@ -192,6 +193,63 @@ list(
                trade_data_ranked,
                trade_data_cleaned
              )),
+  # Dose-response placebo diagnostic. Crosses each donor's pseudo-ATT with its
+  # trade exposure to China to discriminate the continuous-dependence rival
+  # (alignment tracks the DOSE of exposure) from the rank-threshold mechanism.
+  # Consumes the stored no-covariate SDiD diagnostics as tracked file inputs;
+  # nothing here re-estimates Brazil's ATT, and dose is never a control -- it
+  # only stratifies the comparison set for the rank test.
+  tar_target(brazil_sdid_dose_placebo_distribution_file,
+             here("data", "processed", "diagnostics",
+                  "paper_v4_brazil_sdid_no_covariates",
+                  "placebo_distribution.csv"),
+             format = "file"),
+  tar_target(brazil_sdid_dose_placebo_exposure_file,
+             here("data", "processed", "diagnostics",
+                  "paper_v4_brazil_sdid_no_covariates",
+                  "donor_china_exposure.csv"),
+             format = "file"),
+  tar_target(brazil_sdid_dose_placebo_rank_reference_file,
+             here("data", "processed", "diagnostics",
+                  "paper_v4_brazil_sdid_no_covariates",
+                  "rank_inference.csv"),
+             format = "file"),
+  tar_target(brazil_sdid_dose_placebo_dataset,
+             build_brazil_sdid_dose_placebo_dataset(
+               brazil_sdid_dose_placebo_distribution_file,
+               brazil_sdid_dose_placebo_exposure_file
+             )),
+  tar_target(brazil_sdid_dose_placebo_results,
+             compute_brazil_sdid_dose_placebo_results(
+               brazil_sdid_dose_placebo_dataset
+             )),
+  tar_target(brazil_sdid_dose_placebo_summary_file,
+             write_brazil_sdid_dose_placebo_summary(
+               brazil_sdid_dose_placebo_results,
+               here("data", "processed", "diagnostics",
+                    "brazil_sdid_dose_response_placebo",
+                    "dose_response_summary.csv")
+             ),
+             format = "file"),
+  tar_target(brazil_sdid_dose_placebo_ranks_file,
+             write_brazil_sdid_dose_placebo_ranks(
+               brazil_sdid_dose_placebo_results,
+               brazil_sdid_dose_placebo_rank_reference_file,
+               here("data", "processed", "diagnostics",
+                    "brazil_sdid_dose_response_placebo",
+                    "dose_response_rank_inference.csv")
+             ),
+             format = "file"),
+  tar_target(brazil_sdid_dose_placebo_plot,
+             plot_brazil_sdid_dose_placebo(brazil_sdid_dose_placebo_results)),
+  tar_target(brazil_sdid_dose_placebo_figure_file,
+             write_brazil_sdid_dose_placebo_figure(
+               brazil_sdid_dose_placebo_plot,
+               here("data", "processed", "diagnostics",
+                    "brazil_sdid_dose_response_placebo",
+                    "dose_response_placebo_scatter.png")
+             ),
+             format = "file"),
   # Phase 1.2: Sensitivity analysis
   tar_target(synth_data_extended, clean_synth_data(final_df, trade_data_goods_ranked, year_end = 2020,
                                                   dpi_data=dpi_data, trade_agreement_data=trade_agreement_data)),
