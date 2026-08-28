@@ -1008,6 +1008,8 @@ The two designs examine related but distinct implications of the argument. Brazi
 
 I therefore estimate the same treatment logic in a goods-only status-current panel: treated country-years are those where China is rank 1 among goods export destinations and the China-top period lasts at least five observed years. Never-China-top countries remain controls. Short China-top episodes and post-exit off-status years for treated countries are removed from the main risk set. This analysis evaluates whether the rank-threshold pattern is compatible with evidence beyond the theory-generating case while matching the durable treatment observed in Brazil. The corresponding estimand is the ATT on absolute UNGA ideal-point distance to China for country-years in qualifying China-top periods.
 
+The pooled cross-country ATT averages effects over all 440 country-years in which treatment is active. Under `fect`'s event-time convention, $h = 0$ denotes the last observed untreated year before entry and $h = +1$ the first treated year; $h = 0$ therefore serves only as a pre-entry diagnostic and is not included in the pooled ATT, which covers $h = +1$ through $h = +20$.
+
 
 ```{r fect-results, include=FALSE}
 library(dplyr)
