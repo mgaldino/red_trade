@@ -240,11 +240,19 @@ list(
                     "dose_response_rank_inference.csv")
              ),
              format = "file"),
-  tar_target(brazil_sdid_dose_placebo_plot,
-             plot_brazil_sdid_dose_placebo(brazil_sdid_dose_placebo_results)),
+  # The ggplot is built inside this file target instead of being stored as its
+  # own target. A ggplot object captures plot_env, and serializing that
+  # environment is session-dependent: bit-identical inputs produced two
+  # different object hashes in two different sessions, so a stored-plot target
+  # (and this figure downstream of it) would report outdated and rebuild on a
+  # replication machine with nothing substantive having changed.
+  # Alternative discarded: keep a plot-object target, which is the convention
+  # elsewhere in this pipeline because the manuscript tar_read()s those objects
+  # directly. That reason does not apply here -- this figure is consumed only as
+  # a PNG file, so the object has no consumer worth the spurious invalidation.
   tar_target(brazil_sdid_dose_placebo_figure_file,
              write_brazil_sdid_dose_placebo_figure(
-               brazil_sdid_dose_placebo_plot,
+               brazil_sdid_dose_placebo_results,
                here("data", "processed", "diagnostics",
                     "brazil_sdid_dose_response_placebo",
                     "dose_response_placebo_scatter.png")

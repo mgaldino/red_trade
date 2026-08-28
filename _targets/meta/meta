@@ -205,9 +205,7 @@ brazil_sdid_spec_table|stem|c96cd759f52c1988|8fce14e354b927d4|14352b13e2f398c5|1
 synth_fit_extended|stem|d18c23393c5584c7|4ccadad831bca9cf|002225796c4250ac|1066361118||t20691.5272647805s|s207161b|207161|rds|local|vector|||9.066||
 sensitivity_results|stem|a7aa31ed0a07cd41|8afb32216f980fcc|1334c771811ee16d|954951987||t20691.5289648922s|s488b|488|rds|local|vector|||146.867||
 se_synth_extended|stem|6551c70cf75b1f03|dd1c76ec670e85db|b5cd4f50aaea8ce9|-1058648223||t20691.5829413842s|s133b|133|rds|local|vector|||4663.545||
-brazil_sdid_dose_placebo_distribution_file|stem|f73380c8db8bace3|8b78e14290085ad4|2c530c1562a7fbd1|120002711|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/placebo_distribution.csv|t20691.1285016091s|s5388b|5388|file|local|vector|||3.364|package ‘ggplot2’ was built under R version 4.4.3. package ‘did’ was built under R version 4.4.3. package ‘fect’ was built under R version 4.4.3. package ‘PanelMatch’ was built under R version 4.4.3|
-brazil_sdid_dose_placebo_rank_reference_file|stem|192e10e8305329a7|a1d7d50c693c5934|2c530c1562a7fbd1|1487091107|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/rank_inference.csv|t20691.128501884s|s393b|393|file|local|vector|||0||
-brazil_sdid_dose_placebo_exposure_file|stem|09eacf013b9c43e1|24f763bc264f4f24|2c530c1562a7fbd1|1797771675|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/donor_china_exposure.csv|t20691.1285737163s|s26661b|26661|file|local|vector|||0.001||
+nt|object|9d25c34cc666697d|||||||||||||||
 fect_att_summary|function|ef9a1fa407cd448e
 prepare_fect_data|function|bd521d3a8d6c3ea5
 filter_usa_top_control|function|200551be423eb901
@@ -215,9 +213,9 @@ build_stacked_did_data|function|83db9d73a169c44a
 selective_unga_fit_vote_model|function|cfea6c9a4aeb2deb
 plot_event_study_did|function|bc68e839066a505e
 fect_tost_p|function|5e65df08de8623b3
-write_brazil_sdid_dose_placebo_figure|function|750317dafcb9310a
+ensure_brazil_sdid_dose_placebo_dir|function|5a9462329e731174
+plot_brazil_sdid_dose_placebo|function|282417e7321de91e
 prepare_absorbing_china_top_covariate_sample|function|5f28a44cf5a48f23
-brazil_sdid_dose_placebo_write_csv|function|dc7cbfd61eff4278
 run_cross_country_did|function|a7b909fa948510b1
 compute_cohens_kappa|function|0d85002526885e6a
 prepare_data_folha|function|2045449c6b3fa001
@@ -245,7 +243,7 @@ prepare_event_study_data|function|e1bd2198399f33cc
 selective_unga_vote_score|function|5a3f6514902acecf
 plot_china_top_country_panel|function|4c8f71047df9025b
 clean_synth_data|function|9143d3a92e08ebb8
-brazil_sdid_dose_placebo_summary_row|function|21a50d5c9c43db21
+brazil_sdid_dose_placebo_summary_row|function|e7418d5cf6e22413
 filter_absorbing_treated_cases|function|ef4c98eeb6e11fe5
 format_sdid_se|function|a34821840c5940a9
 format_group_att_table|function|82d28d8a0e46acb3
@@ -289,7 +287,6 @@ make_fect_recent_pretrend_table|function|aa58d8d7fa98c1a5
 selective_unga_fit_ddd_model|function|db455a3e83767683
 build_brazil_sdid_dose_placebo_dataset|function|aaf528023f16dff7
 classify_treatment_events|function|7b493fba795e9ed6
-plot_brazil_sdid_dose_placebo|function|7f451bfa49aef5f5
 get_country_data2|function|1053f0384d182aaa
 sdid_significance_stars|function|73b9d38a03a7ae41
 summarize_cross_country_did|function|d9858ec75a9d8a0e
@@ -297,7 +294,7 @@ plot_serie|function|69e05cf7376f4a0f
 goal9_make_covariate_array|function|4cab7e06cc57c17e
 write_status_current_runtime_report|function|ed52a04773b4a0ca
 donor_pool_table|function|afe31372de66a65c
-.Random.seed|object|0316e5c48a46d5eb
+.Random.seed|object|b14b52f1d3add3d3
 summarise_brazil_china_unvotes_similarity_by_issue_year|function|ed80fde39c044e94
 prepare_absorbing_china_top_sample|function|610e877ebd686ff0
 build_covariates|function|d072ff9d2623698e
@@ -352,15 +349,15 @@ run_fect_carryover|function|9da261c068c51538
 run_wild_cluster_bootstrap|function|cadbd5f19a52baf2
 selective_unga_country_placebo|function|afad079994b8cc54
 selective_unga_fit_vote_model_set|function|460b2b7cdf27ca27
-write_brazil_sdid_dose_placebo_ranks|function|3a5f3cad4817ab69
+brazil_sdid_dose_placebo_write_csv|function|76f31a6112ade1b3
+write_brazil_sdid_dose_placebo_figure|function|69e5e802b6ca9e5d
 run_restricted_did|function|fa2f2078b240dafe
 fisher_randomization_test|function|ac3742b6baf610d5
-compute_brazil_sdid_dose_placebo_results|function|7b174f6e7410d2c8
+compute_brazil_sdid_dose_placebo_results|function|eee22ff0cea172c1
 brazil_sdid_summarise_fit|function|16b0fe80dc29dfca
 aggregate_itpde_goods_exports|function|35da5bf8238b5ebd
 goal9_build_china_demand_sdid_panel|function|b88dcaabcb9d74c9
 sdid_spec_summary|function|4262121c6574fc3d
-write_brazil_sdid_dose_placebo_summary|function|f3726e0f4534eaa7
 summarize_fect_model|function|87707c52704cdca6
 make_cross_country_short_lived_table|function|9f0d9255738766f2
 make_cross_country_absorbing_table|function|db6508827c93e118
@@ -384,6 +381,8 @@ build_ex_top1_salience_appendix_tables|function|35177529d0886d4d
 build_any_displacement_panel|function|6569c61d480669eb
 make_status_current_panel_bundle|function|a55aeef45ea0f750
 run_fect_leave_one_out|function|833e600afa413bc2
+write_brazil_sdid_dose_placebo_summary|function|cce81ca4e6466a64
+write_brazil_sdid_dose_placebo_ranks|function|d37e3cdce0b600ee
 fit_status_current_fect_models|function|d90348c0592a49bc
 goal9_brazil_rank_volume_data|function|17e3ff44a72fea8a
 sensitivity_analysis|function|1abc5d2feed9c5d4
@@ -395,9 +394,11 @@ goal9_sdid_outcome_results|function|d55d751581d28eb4
 build_selective_china_alignment_unga_targets|function|61b9f4e4efd7c771
 goal9_china_demand_sdid_diagnostics|function|bd1e718759c17240
 build_brazil_sdid_diagnostics_bundle|function|93f2563cfaff3d57
-brazil_sdid_dose_placebo_dataset|stem|266324143210b090|0455269eb9c4a73b|c6629408299c9776|-685767024||t20693.0151579552s|s6998b|6998|rds|local|vector|||0.109||
-brazil_sdid_dose_placebo_results|stem|638ba199d807d8bc|eec9f08ec753e1e8|f569b83a5450f517|465792671||t20693.0151587751s|s7875b|7875|rds|local|vector|||0.044||
-brazil_sdid_dose_placebo_plot|stem|c61f827178b4e872|2251a8773af4a779|f4514bea18fb774f|-200891221||t20693.0151613s|s364512b|364512|rds|local|vector|||0.1||
-brazil_sdid_dose_placebo_summary_file|stem|c763b02b28e6c212|41321522ca0a5065|d3d17903e34aa684|1828482997|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/brazil_sdid_dose_response_placebo/dose_response_summary.csv|t20693.0151616946s|s2285b|2285|file|local|vector|||0.028||
-brazil_sdid_dose_placebo_ranks_file|stem|fb9bcfa97f76b148|251142a728d4c3ed|18a666de9446a636|1724783459|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/brazil_sdid_dose_response_placebo/dose_response_rank_inference.csv|t20693.0151620522s|s1168b|1168|file|local|vector|||0.015||
-brazil_sdid_dose_placebo_figure_file|stem|6faa61d8067185a9|4e1168282b558c89|753661cced34a400|-1838741672|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/brazil_sdid_dose_response_placebo/dose_response_placebo_scatter.png|t20693.0151671352s|s239239b|239239|file|local|vector|||0.403||
+brazil_sdid_dose_placebo_distribution_file|stem|f73380c8db8bace3|8b78e14290085ad4|2c530c1562a7fbd1|120002711|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/placebo_distribution.csv|t20691.1285016091s|s5388b|5388|file|local|vector|||1.661|package ‘ggplot2’ was built under R version 4.4.3. package ‘did’ was built under R version 4.4.3. package ‘fect’ was built under R version 4.4.3. package ‘PanelMatch’ was built under R version 4.4.3|
+brazil_sdid_dose_placebo_rank_reference_file|stem|192e10e8305329a7|a1d7d50c693c5934|2c530c1562a7fbd1|1487091107|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/rank_inference.csv|t20691.128501884s|s393b|393|file|local|vector|||0||
+brazil_sdid_dose_placebo_exposure_file|stem|09eacf013b9c43e1|24f763bc264f4f24|2c530c1562a7fbd1|1797771675|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/donor_china_exposure.csv|t20691.1285737163s|s26661b|26661|file|local|vector|||0||
+brazil_sdid_dose_placebo_dataset|stem|266324143210b090|0455269eb9c4a73b|c6629408299c9776|-685767024||t20693.0439547066s|s6998b|6998|rds|local|vector|||0.098||
+brazil_sdid_dose_placebo_results|stem|b6e3cf92e95396d6|eec9f08ec753e1e8|8aa20f6c8114ebb6|465792671||t20693.0439552536s|s7885b|7885|rds|local|vector|||0.042||
+brazil_sdid_dose_placebo_figure_file|stem|d8bc6dcf73032b6b|9c121372bcdc048d|2d0891fa431cca46|-1838741672|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/brazil_sdid_dose_response_placebo/dose_response_placebo_scatter.png|t20693.0439590916s|s249868b|249868|file|local|vector|||0.327||
+brazil_sdid_dose_placebo_summary_file|stem|8cb1cc7de239f7db|41321522ca0a5065|09cfe70430e9ad71|1828482997|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/brazil_sdid_dose_response_placebo/dose_response_summary.csv|t20693.0439596802s|s2920b|2920|file|local|vector|||0.042||
+brazil_sdid_dose_placebo_ranks_file|stem|3fc74168f17ff523|251142a728d4c3ed|edcdcdbf0744e214|1724783459|/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/brazil_sdid_dose_response_placebo/dose_response_rank_inference.csv|t20693.0439599s|s1190b|1190|file|local|vector|||0.013||

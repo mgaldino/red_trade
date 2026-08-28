@@ -27,14 +27,17 @@
 # MEASUREMENT PROVENANCE (important caveat, recorded in the summary output).
 # The dose columns consumed here come from donor_china_exposure.csv, which
 # brazil_sdid_donor_china_exposure() builds from trade_data_cleaned and
-# trade_data_ranked -- both TOTAL-trade series. Treatment and the donor screen,
+# trade_data_ranked -- both ALL-SECTOR series, i.e. get_trade_data() applies no
+# broad_sector filter, so services are included. Treatment and the donor screen,
 # by contrast, are defined on GOODS (trade_data_goods_ranked). The two bases
 # disagree for exactly one donor: Singapore is China's rank-#1 partner in
-# 2013-2014 on total trade but never better than rank #2 on goods, which is why
-# it is an eligible donor and why the exposure file nonetheless flags it as
-# "China top export destination post-2009". The dose measure is therefore a
-# total-trade export share, and the pool remains untreated on the goods
-# definition that identifies the design.
+# 2013-2014 on all-sector trade but never better than rank #2 on goods, which is
+# why it is an eligible donor and why the exposure file nonetheless flags it as
+# "China top export destination post-2009". The dose measure is therefore an
+# export share computed on the all-sector file -- exports to China over the
+# country's total exports to all partners, since process_trade_data() groups by
+# exporter and total_trade is the sum of that exporter's outward flows -- and
+# the pool remains untreated on the goods definition that identifies the design.
 #
 # INFERENCE DISCIPLINE. The slope and correlations below are DESCRIPTIVE ONLY.
 # Donor pseudo-ATTs are not independent: each is fitted against a donor pool that
@@ -273,9 +276,17 @@ compute_brazil_sdid_dose_placebo_results <- function(dataset,
     post_share = "dose_post_share"
   )
 
+  # These labels are pasted into the `comparison_set` column of the rank output,
+  # so they are the only description of the dose a reader of that CSV alone ever
+  # sees. They carry the "all-sector" qualifier for the same reason the figure
+  # and dose_measurement_basis do: the dose rests on the all-sector trade file
+  # while treatment and the donor screen are defined on goods, and a label that
+  # said only "China export share" would hide that two sector definitions are in
+  # play. The self-test row's comparison_set is a separate literal below and is
+  # deliberately left alone -- it names the reference row, not a dose.
   dose_labels <- c(
-    delta_share = "Change in China export share, post minus pre",
-    post_share = "Post-period mean China export share"
+    delta_share = "Change in all-sector China export share, post minus pre",
+    post_share = "Post-period mean all-sector China export share"
   )
 
   high_dose <- lapply(dose_definitions, function(column) {
@@ -398,10 +409,13 @@ brazil_sdid_dose_placebo_summary_row <- function(results) {
     quantile_type = 7L,
     high_dose_boundary_rule = "dose >= cutoff",
     dose_measurement_basis = paste(
-      "Total-trade China export share from donor_china_exposure.csv",
-      "(trade_with_china / total_trade); treatment and the donor screen are",
-      "defined on goods, so no donor crossed the rank-1 threshold on the",
-      "treatment-defining sector definition."
+      "China export share computed on the all-sector trade file (goods and",
+      "services) from donor_china_exposure.csv: exports to China divided by",
+      "total exports to all partners, i.e. trade_with_china / total_trade,",
+      "where total_trade is the sum of the country's exports across all",
+      "partners and NOT a measure of two-way trade. Treatment and the donor",
+      "screen are defined on goods, so no donor crossed the rank-1 threshold",
+      "on the treatment-defining sector definition."
     ),
     slope_inference_note = paste(
       "Slope and correlations are descriptive only: donor pseudo-ATTs share",
@@ -409,12 +423,34 @@ brazil_sdid_dose_placebo_summary_row <- function(results) {
       "error or p-value for the slope is defensible. Only the rank p-values are",
       "inferential."
     ),
+    # The sector qualifier below is not decoration. "Dose without the crown" is
+    # true on GOODS, the definition that assigns treatment, and false on the
+    # ALL-SECTOR file this same row uses to MEASURE the dose, where Singapore
+    # held rank 1. Naming Singapore here is the only way a reader of this CSV
+    # can learn it: neither this file nor rank_inference.csv carries a per-donor
+    # exposure column, so an unqualified claim would be unfalsifiable from the
+    # shipped outputs alone.
     truncation_note = paste(
-      "Donors span dose without the rank-1 crown, so the diagnostic shows the",
-      "presence or absence of a dose gradient BELOW the threshold; it does not",
-      "identify the discontinuity at the threshold."
+      "Donors span dose without the rank-1 crown on the goods definition that",
+      "defines treatment: no donor-year sits at goods rank 1 over 1997-2015, so",
+      "the diagnostic shows the presence or absence of a dose gradient BELOW the",
+      "threshold and does not identify the discontinuity at the threshold. The",
+      "sector qualifier is load-bearing. On the all-sector basis this file uses",
+      "to MEASURE the dose, exactly one donor reached rank 1: Singapore, China's",
+      "top all-sector export destination in 2013-2014, which sits inside both",
+      "high-dose subgroups. The crownless span is therefore a property of the",
+      "goods definition alone."
     )
   )
+}
+
+
+# Creates the output directory for a file the diagnostic is about to write.
+# Both writers below (the CSV writer and the figure writer) need this, so the
+# call lives in one place rather than being repeated verbatim at each site.
+ensure_brazil_sdid_dose_placebo_dir <- function(path) {
+  dir.create(dirname(path), recursive = TRUE, showWarnings = FALSE)
+  invisible(path)
 }
 
 
@@ -436,7 +472,7 @@ brazil_sdid_dose_placebo_summary_row <- function(results) {
 # bound below is a few ULP, which passes parser noise and still fails by many
 # orders of magnitude on any genuine rounding of the data.
 brazil_sdid_dose_placebo_write_csv <- function(data, path) {
-  dir.create(dirname(path), recursive = TRUE, showWarnings = FALSE)
+  ensure_brazil_sdid_dose_placebo_dir(path)
   readr::write_csv(data, path, na = "")
 
   roundtrip <- utils::read.csv(path, colClasses = "character",
@@ -550,6 +586,12 @@ write_brazil_sdid_dose_placebo_ranks <- function(results,
 # from another source would change the measurement basis behind the reader's
 # back. The vertical dashed line marks the top-quartile cutoff, so the figure
 # shows exactly which donors enter the high-dose rank test.
+#
+# The axis label and the caption both say the dose is an ALL-SECTOR export share
+# while the threshold statement is about GOODS. Two sector definitions are in
+# play (see MEASUREMENT PROVENANCE at the top of this file) and a reader who
+# sees only the figure must be able to tell, so the mixed basis is carried in
+# the figure text rather than left to the summary CSV.
 plot_brazil_sdid_dose_placebo <- function(results, dose_key = "delta_share") {
   dose_column <- results$dose_definitions[[dose_key]]
   cutoff <- results$high_dose[[dose_key]]$cutoff
@@ -639,10 +681,12 @@ plot_brazil_sdid_dose_placebo <- function(results, dose_key = "delta_share") {
       colour = "grey20"
     ) +
     ggplot2::labs(
-      x = "Change in export share to China, 2009-2015 mean minus 1997-2008 mean (percentage points)",
+      x = "Change in all-sector export share to China, 2009-2015 mean minus 1997-2008 mean (percentage points)",
       y = "Placebo pseudo-ATT on UNGA ideal-point distance to China",
       caption = paste0(
-        "Each point is a donor given the 2009 pseudo-treatment. No donor became ",
+        "Each point is a donor given the 2009 pseudo-treatment. The dose is an ",
+        "all-sector export share (goods and services); treatment\n",
+        "and the donor screen are defined on goods only. No donor became ",
         "China's top goods-export destination, so the plot shows the\n",
         "dose gradient below the threshold rather than the discontinuity at it. ",
         "The dotted line marks the top-quartile dose cutoff.\n",
@@ -661,13 +705,26 @@ plot_brazil_sdid_dose_placebo <- function(results, dose_key = "delta_share") {
 }
 
 
-write_brazil_sdid_dose_placebo_figure <- function(plot, path,
+# Builds the figure and writes it, taking `results` rather than a ready-made
+# ggplot.
+#
+# WHY THE PLOT IS NOT PASSED IN. A ggplot object carries its `plot_env`, and
+# serializing that environment is session-dependent: the same inputs produced
+# two different object hashes in two different sessions, which would make a
+# stored-plot target -- and this file target downstream of it -- report outdated
+# and rebuild on a replication machine for no substantive reason. Building the
+# plot inside the target that writes the PNG means no ggplot object is ever
+# hashed, so the only thing tracked is the PNG itself. plot_brazil_sdid_dose_placebo()
+# stays a separate named function so the figure's construction can be read, and
+# re-run interactively, on its own.
+write_brazil_sdid_dose_placebo_figure <- function(results, path,
+                                                  dose_key = "delta_share",
                                                   width = 9, height = 6.2,
                                                   dpi = 300) {
-  dir.create(dirname(path), recursive = TRUE, showWarnings = FALSE)
+  ensure_brazil_sdid_dose_placebo_dir(path)
   ggplot2::ggsave(
     filename = path,
-    plot = plot,
+    plot = plot_brazil_sdid_dose_placebo(results, dose_key = dose_key),
     width = width,
     height = height,
     dpi = dpi,
