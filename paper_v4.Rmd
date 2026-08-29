@@ -277,7 +277,43 @@ knitr::kable(
   )
 ```
 
-For the cross-country evidence beyond Brazil, the main sample is restricted to durable China-top export-destination periods measured with goods exports only. The treatment equals one only in country-years where China is the largest goods export destination and that China-top period lasts at least five observed years in the joint trade-rank and UNGA-outcome panel. Treated countries must first enter this status in or after 2000, after an observed prior year in which China was not number one. Countries that never reach China-top goods-export status remain controls. For treated countries, the main risk set keeps clean pre-entry non-China-top years and qualifying treated years, while excluding post-exit off-status years and short China-top episodes. This operationalization matches the salience logic more closely than either a one-year entry definition or an absorbing treatment rule: the theory expects political visibility, bureaucratic learning, and diplomatic adaptation to be clearer when the new trade hierarchy persists and is currently true. I compute partner ranks from ITPD-E goods sectors only, excluding services before ranks are constructed. For this panel, I use the `fect` counterfactual estimator with interactive fixed effects, which allows countries to load differently on common latent shocks [@liu2024practical]. I refer to this as the IFE specification below.
+For country $i$ in year $t$, let $R_{it}$ denote China's rank among the country's goods export destinations, and let $P_{ik}$ denote its $k$th observed period with $R_{it}=1$. Write $e_{ik}$ for the period's entry year and $t_{ik}^{-}$ for the preceding observed country-year. We define a durable period and code treatment as follows:
+
+\[
+Q_{ik}
+=
+\mathbf{1}\!\left\{
+e_{ik}\geq 2000,\;
+R_{i,t_{ik}^{-}}>1,\;
+|P_{ik}|\geq 5
+\right\},
+\qquad
+D_{it}
+=
+\mathbf{1}\!\left\{
+t\in P_{ik}\text{ for some }k\text{ with }Q_{ik}=1
+\right\}.
+\]
+
+Thus, $D_{it}=1$ only while China is the largest goods export destination within a durable period. The five-year threshold counts country-years observed in both the trade-rank and UNGA-outcome data; they need not be five consecutive calendar years.
+
+Sample inclusion is a separate rule. Let $N_i=1$ if China is never the country's largest observed goods export destination, and let $E_i=\min\{e_{ik}:Q_{ik}=1\}$ be the country's first durable entry. An observed country-year enters the main risk set when
+
+\[
+S_{it}
+=
+\mathbf{1}\!\left\{
+N_i=1
+\;\text{ or }\;
+\left[E_i<\infty
+\;\text{ and }\;
+\left(D_{it}=1
+\;\text{ or }\;
+(t<E_i\text{ and }R_{it}>1)\right)\right]
+\right\}.
+\]
+
+Never-China-top countries therefore contribute all observed years as controls. A treated country contributes clean non-China-top years before its first durable entry and the years inside durable periods. Short China-top periods, post-entry off-status years, and countries whose China-top periods never qualify are excluded; a later re-entry is retained only if it independently satisfies the durable-period rule. This status-current operationalization matches the salience logic more closely than either a one-year entry definition or an absorbing treatment rule: the theory expects political visibility, bureaucratic learning, and diplomatic adaptation to be clearer when the new trade hierarchy persists and is currently true. I compute partner ranks from ITPD-E goods sectors only, excluding services before ranks are constructed. For this panel, I use the `fect` counterfactual estimator with interactive fixed effects, which allows countries to load differently on common latent shocks [@liu2024practical]. I refer to this as the IFE specification below.
 
 ## Identification Strategy
 
