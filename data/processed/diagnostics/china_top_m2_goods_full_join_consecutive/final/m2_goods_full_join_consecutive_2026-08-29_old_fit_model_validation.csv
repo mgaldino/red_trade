@@ -1,0 +1,9 @@
+statistic,archived_value,reconstructed_value,absolute_difference,passed
+ATT,-0.1006420140210192,-0.1006420140210192,0,TRUE
+Bootstrap SE,0.03912661176449206,0.03912661176449206,0,TRUE
+Selected latent factors,2,2,0,TRUE
+Observations,5037,5037,0,TRUE
+Countries,161,161,0,TRUE
+Treated countries,35,35,0,TRUE
+Control countries,126,126,0,TRUE
+Treated country-years,440,440,0,TRUE

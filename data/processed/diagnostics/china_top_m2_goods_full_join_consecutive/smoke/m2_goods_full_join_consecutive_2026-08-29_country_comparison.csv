@@ -1,0 +1,162 @@
+iso3c,old_country_name,old_in_estimation,old_n_obs,old_ever_treated,old_treated_years,old_first_treat,new_country_name,new_in_estimation,new_n_obs,new_ever_treated,new_treated_years,new_first_treat,country_name,classification_change
+SOM,Somalia,TRUE,23,FALSE,0,,,FALSE,,,,,Somalia,country_removed
+KAZ,Kazakhstan,TRUE,31,TRUE,16,2007,Kazakhstan,TRUE,27,TRUE,16,2007,Kazakhstan,estimation_row_count_changed
+MMR,Myanmar (Burma),TRUE,33,TRUE,9,2014,Myanmar (Burma),TRUE,32,TRUE,9,2014,Myanmar (Burma),estimation_row_count_changed
+PRK,North Korea,TRUE,25,TRUE,12,2008,North Korea,TRUE,24,TRUE,12,2008,North Korea,estimation_row_count_changed
+RUS,Russia,TRUE,31,TRUE,11,2012,Russia,TRUE,30,TRUE,11,2012,Russia,estimation_row_count_changed
+SDN,Sudan,TRUE,16,TRUE,6,2000,Sudan,TRUE,15,TRUE,6,2000,Sudan,estimation_row_count_changed
+YEM,Yemen,TRUE,24,TRUE,11,2005,Yemen,TRUE,20,TRUE,11,2005,Yemen,estimation_row_count_changed
+AFG,Afghanistan,TRUE,33,FALSE,0,,Afghanistan,TRUE,33,FALSE,0,,Afghanistan,unchanged
+AGO,Angola,TRUE,33,TRUE,16,2007,Angola,TRUE,33,TRUE,16,2007,Angola,unchanged
+ALB,Albania,TRUE,33,FALSE,0,,Albania,TRUE,33,FALSE,0,,Albania,unchanged
+AND,Andorra,TRUE,30,FALSE,0,,Andorra,TRUE,30,FALSE,0,,Andorra,unchanged
+ARE,United Arab Emirates,TRUE,33,FALSE,0,,United Arab Emirates,TRUE,33,FALSE,0,,United Arab Emirates,unchanged
+ARG,Argentina,TRUE,33,FALSE,0,,Argentina,TRUE,33,FALSE,0,,Argentina,unchanged
+ATG,Antigua & Barbuda,TRUE,33,FALSE,0,,Antigua & Barbuda,TRUE,33,FALSE,0,,Antigua & Barbuda,unchanged
+AUS,Australia,TRUE,33,TRUE,14,2009,Australia,TRUE,33,TRUE,14,2009,Australia,unchanged
+AUT,Austria,TRUE,33,FALSE,0,,Austria,TRUE,33,FALSE,0,,Austria,unchanged
+AZE,Azerbaijan,TRUE,31,FALSE,0,,Azerbaijan,TRUE,31,FALSE,0,,Azerbaijan,unchanged
+BDI,Burundi,TRUE,32,FALSE,0,,Burundi,TRUE,32,FALSE,0,,Burundi,unchanged
+BEL,Belgium,TRUE,24,FALSE,0,,Belgium,TRUE,24,FALSE,0,,Belgium,unchanged
+BGD,Bangladesh,TRUE,33,FALSE,0,,Bangladesh,TRUE,33,FALSE,0,,Bangladesh,unchanged
+BGR,Bulgaria,TRUE,33,FALSE,0,,Bulgaria,TRUE,33,FALSE,0,,Bulgaria,unchanged
+BHR,Bahrain,TRUE,33,FALSE,0,,Bahrain,TRUE,33,FALSE,0,,Bahrain,unchanged
+BHS,Bahamas,TRUE,33,FALSE,0,,Bahamas,TRUE,33,FALSE,0,,Bahamas,unchanged
+BIH,Bosnia & Herzegovina,TRUE,29,FALSE,0,,Bosnia & Herzegovina,TRUE,29,FALSE,0,,Bosnia & Herzegovina,unchanged
+BLR,Belarus,TRUE,31,FALSE,0,,Belarus,TRUE,31,FALSE,0,,Belarus,unchanged
+BLZ,Belize,TRUE,33,FALSE,0,,Belize,TRUE,33,FALSE,0,,Belize,unchanged
+BOL,Bolivia,TRUE,33,FALSE,0,,Bolivia,TRUE,33,FALSE,0,,Bolivia,unchanged
+BRA,Brazil,TRUE,33,TRUE,14,2009,Brazil,TRUE,33,TRUE,14,2009,Brazil,unchanged
+BRB,Barbados,TRUE,33,FALSE,0,,Barbados,TRUE,33,FALSE,0,,Barbados,unchanged
+BRN,Brunei,TRUE,33,FALSE,0,,Brunei,TRUE,33,FALSE,0,,Brunei,unchanged
+BTN,Bhutan,TRUE,33,FALSE,0,,Bhutan,TRUE,33,FALSE,0,,Bhutan,unchanged
+BWA,Botswana,TRUE,33,FALSE,0,,Botswana,TRUE,33,FALSE,0,,Botswana,unchanged
+CAN,Canada,TRUE,33,FALSE,0,,Canada,TRUE,33,FALSE,0,,Canada,unchanged
+CHE,Switzerland,TRUE,21,FALSE,0,,Switzerland,TRUE,21,FALSE,0,,Switzerland,unchanged
+CHL,Chile,TRUE,33,TRUE,16,2007,Chile,TRUE,33,TRUE,16,2007,Chile,unchanged
+CIV,Côte d’Ivoire,TRUE,33,FALSE,0,,Côte d’Ivoire,TRUE,33,FALSE,0,,Côte d’Ivoire,unchanged
+COD,Congo - Kinshasa,TRUE,32,TRUE,14,2008,Congo - Kinshasa,TRUE,32,TRUE,14,2008,Congo - Kinshasa,unchanged
+COG,Congo - Brazzaville,TRUE,30,TRUE,12,2011,Congo - Brazzaville,TRUE,30,TRUE,12,2011,Congo - Brazzaville,unchanged
+COL,Colombia,TRUE,33,FALSE,0,,Colombia,TRUE,33,FALSE,0,,Colombia,unchanged
+COM,Comoros,TRUE,33,FALSE,0,,Comoros,TRUE,33,FALSE,0,,Comoros,unchanged
+CPV,Cape Verde,TRUE,33,FALSE,0,,Cape Verde,TRUE,33,FALSE,0,,Cape Verde,unchanged
+CRI,Costa Rica,TRUE,33,FALSE,0,,Costa Rica,TRUE,33,FALSE,0,,Costa Rica,unchanged
+CUB,Cuba,TRUE,32,TRUE,18,2004,Cuba,TRUE,32,TRUE,18,2004,Cuba,unchanged
+CYP,Cyprus,TRUE,33,FALSE,0,,Cyprus,TRUE,33,FALSE,0,,Cyprus,unchanged
+CZE,Czechia,TRUE,30,FALSE,0,,Czechia,TRUE,30,FALSE,0,,Czechia,unchanged
+DEU,Germany,TRUE,33,FALSE,0,,Germany,TRUE,33,FALSE,0,,Germany,unchanged
+DJI,Djibouti,TRUE,33,FALSE,0,,Djibouti,TRUE,33,FALSE,0,,Djibouti,unchanged
+DMA,Dominica,TRUE,33,FALSE,0,,Dominica,TRUE,33,FALSE,0,,Dominica,unchanged
+DNK,Denmark,TRUE,33,FALSE,0,,Denmark,TRUE,33,FALSE,0,,Denmark,unchanged
+DOM,Dominican Republic,TRUE,31,FALSE,0,,Dominican Republic,TRUE,31,FALSE,0,,Dominican Republic,unchanged
+DZA,Algeria,TRUE,33,FALSE,0,,Algeria,TRUE,33,FALSE,0,,Algeria,unchanged
+ECU,Ecuador,TRUE,33,FALSE,0,,Ecuador,TRUE,33,FALSE,0,,Ecuador,unchanged
+EGY,Egypt,TRUE,33,FALSE,0,,Egypt,TRUE,33,FALSE,0,,Egypt,unchanged
+ERI,Eritrea,TRUE,30,TRUE,9,2014,Eritrea,TRUE,30,TRUE,9,2014,Eritrea,unchanged
+ESP,Spain,TRUE,33,FALSE,0,,Spain,TRUE,33,FALSE,0,,Spain,unchanged
+EST,Estonia,TRUE,31,FALSE,0,,Estonia,TRUE,31,FALSE,0,,Estonia,unchanged
+FIN,Finland,TRUE,33,FALSE,0,,Finland,TRUE,33,FALSE,0,,Finland,unchanged
+FJI,Fiji,TRUE,33,FALSE,0,,Fiji,TRUE,33,FALSE,0,,Fiji,unchanged
+FRA,France,TRUE,33,FALSE,0,,France,TRUE,33,FALSE,0,,France,unchanged
+FSM,Micronesia (Federated States of),TRUE,31,FALSE,0,,Micronesia (Federated States of),TRUE,31,FALSE,0,,Micronesia (Federated States of),unchanged
+GAB,Gabon,TRUE,33,TRUE,6,2017,Gabon,TRUE,33,TRUE,6,2017,Gabon,unchanged
+GBR,United Kingdom,TRUE,33,FALSE,0,,United Kingdom,TRUE,33,FALSE,0,,United Kingdom,unchanged
+GEO,Georgia,TRUE,30,FALSE,0,,Georgia,TRUE,30,FALSE,0,,Georgia,unchanged
+GNB,Guinea-Bissau,TRUE,30,FALSE,0,,Guinea-Bissau,TRUE,30,FALSE,0,,Guinea-Bissau,unchanged
+GNQ,Equatorial Guinea,TRUE,24,TRUE,6,2017,Equatorial Guinea,TRUE,24,TRUE,6,2017,Equatorial Guinea,unchanged
+GRC,Greece,TRUE,33,FALSE,0,,Greece,TRUE,33,FALSE,0,,Greece,unchanged
+GRD,Grenada,TRUE,33,FALSE,0,,Grenada,TRUE,33,FALSE,0,,Grenada,unchanged
+GTM,Guatemala,TRUE,33,FALSE,0,,Guatemala,TRUE,33,FALSE,0,,Guatemala,unchanged
+GUY,Guyana,TRUE,33,FALSE,0,,Guyana,TRUE,33,FALSE,0,,Guyana,unchanged
+HND,Honduras,TRUE,33,FALSE,0,,Honduras,TRUE,33,FALSE,0,,Honduras,unchanged
+HRV,Croatia,TRUE,31,FALSE,0,,Croatia,TRUE,31,FALSE,0,,Croatia,unchanged
+HTI,Haiti,TRUE,33,FALSE,0,,Haiti,TRUE,33,FALSE,0,,Haiti,unchanged
+HUN,Hungary,TRUE,33,FALSE,0,,Hungary,TRUE,33,FALSE,0,,Hungary,unchanged
+IDN,Indonesia,TRUE,32,TRUE,7,2016,Indonesia,TRUE,32,TRUE,7,2016,Indonesia,unchanged
+IND,India,TRUE,33,FALSE,0,,India,TRUE,33,FALSE,0,,India,unchanged
+IRL,Ireland,TRUE,33,FALSE,0,,Ireland,TRUE,33,FALSE,0,,Ireland,unchanged
+IRN,Iran,TRUE,30,TRUE,13,2007,Iran,TRUE,30,TRUE,13,2007,Iran,unchanged
+ISL,Iceland,TRUE,33,FALSE,0,,Iceland,TRUE,33,FALSE,0,,Iceland,unchanged
+ISR,Israel,TRUE,33,FALSE,0,,Israel,TRUE,33,FALSE,0,,Israel,unchanged
+ITA,Italy,TRUE,33,FALSE,0,,Italy,TRUE,33,FALSE,0,,Italy,unchanged
+JAM,Jamaica,TRUE,33,FALSE,0,,Jamaica,TRUE,33,FALSE,0,,Jamaica,unchanged
+JOR,Jordan,TRUE,33,FALSE,0,,Jordan,TRUE,33,FALSE,0,,Jordan,unchanged
+JPN,Japan,TRUE,33,TRUE,15,2008,Japan,TRUE,33,TRUE,15,2008,Japan,unchanged
+KEN,Kenya,TRUE,33,FALSE,0,,Kenya,TRUE,33,FALSE,0,,Kenya,unchanged
+KHM,Cambodia,TRUE,30,FALSE,0,,Cambodia,TRUE,30,FALSE,0,,Cambodia,unchanged
+KIR,Kiribati,TRUE,23,FALSE,0,,Kiribati,TRUE,23,FALSE,0,,Kiribati,unchanged
+KNA,St. Kitts & Nevis,TRUE,33,FALSE,0,,St. Kitts & Nevis,TRUE,33,FALSE,0,,St. Kitts & Nevis,unchanged
+KOR,South Korea,TRUE,32,TRUE,20,2003,South Korea,TRUE,32,TRUE,20,2003,South Korea,unchanged
+KWT,Kuwait,TRUE,33,TRUE,5,2018,Kuwait,TRUE,33,TRUE,5,2018,Kuwait,unchanged
+LBN,Lebanon,TRUE,33,FALSE,0,,Lebanon,TRUE,33,FALSE,0,,Lebanon,unchanged
+LBY,Libya,TRUE,33,FALSE,0,,Libya,TRUE,33,FALSE,0,,Libya,unchanged
+LCA,St. Lucia,TRUE,33,FALSE,0,,St. Lucia,TRUE,33,FALSE,0,,St. Lucia,unchanged
+LKA,Sri Lanka,TRUE,33,FALSE,0,,Sri Lanka,TRUE,33,FALSE,0,,Sri Lanka,unchanged
+LSO,Lesotho,TRUE,33,FALSE,0,,Lesotho,TRUE,33,FALSE,0,,Lesotho,unchanged
+LTU,Lithuania,TRUE,31,FALSE,0,,Lithuania,TRUE,31,FALSE,0,,Lithuania,unchanged
+LUX,Luxembourg,TRUE,24,FALSE,0,,Luxembourg,TRUE,24,FALSE,0,,Luxembourg,unchanged
+LVA,Latvia,TRUE,31,FALSE,0,,Latvia,TRUE,31,FALSE,0,,Latvia,unchanged
+MAR,Morocco,TRUE,33,FALSE,0,,Morocco,TRUE,33,FALSE,0,,Morocco,unchanged
+MCO,Monaco,TRUE,10,FALSE,0,,Monaco,TRUE,10,FALSE,0,,Monaco,unchanged
+MDA,Moldova,TRUE,31,FALSE,0,,Moldova,TRUE,31,FALSE,0,,Moldova,unchanged
+MDG,Madagascar,TRUE,33,FALSE,0,,Madagascar,TRUE,33,FALSE,0,,Madagascar,unchanged
+MDV,Maldives,TRUE,33,FALSE,0,,Maldives,TRUE,33,FALSE,0,,Maldives,unchanged
+MEX,Mexico,TRUE,33,FALSE,0,,Mexico,TRUE,33,FALSE,0,,Mexico,unchanged
+MHL,Marshall Islands,TRUE,32,FALSE,0,,Marshall Islands,TRUE,32,FALSE,0,,Marshall Islands,unchanged
+MKD,North Macedonia,TRUE,30,FALSE,0,,North Macedonia,TRUE,30,FALSE,0,,North Macedonia,unchanged
+MNE,Montenegro,TRUE,17,FALSE,0,,Montenegro,TRUE,17,FALSE,0,,Montenegro,unchanged
+MRT,Mauritania,TRUE,32,TRUE,17,2006,Mauritania,TRUE,32,TRUE,17,2006,Mauritania,unchanged
+MUS,Mauritius,TRUE,33,FALSE,0,,Mauritius,TRUE,33,FALSE,0,,Mauritius,unchanged
+MWI,Malawi,TRUE,33,FALSE,0,,Malawi,TRUE,33,FALSE,0,,Malawi,unchanged
+MYS,Malaysia,TRUE,33,TRUE,14,2009,Malaysia,TRUE,33,TRUE,14,2009,Malaysia,unchanged
+NAM,Namibia,TRUE,33,FALSE,0,,Namibia,TRUE,33,FALSE,0,,Namibia,unchanged
+NER,Niger,TRUE,30,FALSE,0,,Niger,TRUE,30,FALSE,0,,Niger,unchanged
+NGA,Nigeria,TRUE,33,FALSE,0,,Nigeria,TRUE,33,FALSE,0,,Nigeria,unchanged
+NIC,Nicaragua,TRUE,33,FALSE,0,,Nicaragua,TRUE,33,FALSE,0,,Nicaragua,unchanged
+NLD,Netherlands,TRUE,33,FALSE,0,,Netherlands,TRUE,33,FALSE,0,,Netherlands,unchanged
+NOR,Norway,TRUE,33,FALSE,0,,Norway,TRUE,33,FALSE,0,,Norway,unchanged
+NPL,Nepal,TRUE,33,FALSE,0,,Nepal,TRUE,33,FALSE,0,,Nepal,unchanged
+NRU,Nauru,TRUE,23,FALSE,0,,Nauru,TRUE,23,FALSE,0,,Nauru,unchanged
+NZL,New Zealand,TRUE,33,TRUE,10,2013,New Zealand,TRUE,33,TRUE,10,2013,New Zealand,unchanged
+OMN,Oman,TRUE,32,TRUE,19,2004,Oman,TRUE,32,TRUE,19,2004,Oman,unchanged
+PAK,Pakistan,TRUE,33,FALSE,0,,Pakistan,TRUE,33,FALSE,0,,Pakistan,unchanged
+PER,Peru,TRUE,33,TRUE,13,2010,Peru,TRUE,33,TRUE,13,2010,Peru,unchanged
+PHL,Philippines,TRUE,33,TRUE,18,2005,Philippines,TRUE,33,TRUE,18,2005,Philippines,unchanged
+PLW,Palau,TRUE,25,FALSE,0,,Palau,TRUE,25,FALSE,0,,Palau,unchanged
+POL,Poland,TRUE,33,FALSE,0,,Poland,TRUE,33,FALSE,0,,Poland,unchanged
+PRT,Portugal,TRUE,33,FALSE,0,,Portugal,TRUE,33,FALSE,0,,Portugal,unchanged
+PRY,Paraguay,TRUE,33,FALSE,0,,Paraguay,TRUE,33,FALSE,0,,Paraguay,unchanged
+ROU,Romania,TRUE,33,FALSE,0,,Romania,TRUE,33,FALSE,0,,Romania,unchanged
+RWA,Rwanda,TRUE,33,FALSE,0,,Rwanda,TRUE,33,FALSE,0,,Rwanda,unchanged
+SAU,Saudi Arabia,TRUE,33,TRUE,10,2013,Saudi Arabia,TRUE,33,TRUE,10,2013,Saudi Arabia,unchanged
+SEN,Senegal,TRUE,33,FALSE,0,,Senegal,TRUE,33,FALSE,0,,Senegal,unchanged
+SGP,Singapore,TRUE,33,FALSE,0,,Singapore,TRUE,33,FALSE,0,,Singapore,unchanged
+SLB,Solomon Islands,TRUE,33,TRUE,20,2003,Solomon Islands,TRUE,33,TRUE,20,2003,Solomon Islands,unchanged
+SLE,Sierra Leone,TRUE,33,TRUE,11,2012,Sierra Leone,TRUE,33,TRUE,11,2012,Sierra Leone,unchanged
+SLV,El Salvador,TRUE,33,FALSE,0,,El Salvador,TRUE,33,FALSE,0,,El Salvador,unchanged
+SMR,San Marino,TRUE,23,FALSE,0,,San Marino,TRUE,23,FALSE,0,,San Marino,unchanged
+STP,São Tomé & Príncipe,TRUE,24,FALSE,0,,São Tomé & Príncipe,TRUE,24,FALSE,0,,São Tomé & Príncipe,unchanged
+SUR,Suriname,TRUE,33,FALSE,0,,Suriname,TRUE,33,FALSE,0,,Suriname,unchanged
+SVK,Slovakia,TRUE,30,FALSE,0,,Slovakia,TRUE,30,FALSE,0,,Slovakia,unchanged
+SVN,Slovenia,TRUE,31,FALSE,0,,Slovenia,TRUE,31,FALSE,0,,Slovenia,unchanged
+SWE,Sweden,TRUE,33,FALSE,0,,Sweden,TRUE,33,FALSE,0,,Sweden,unchanged
+SWZ,Eswatini,TRUE,33,FALSE,0,,Eswatini,TRUE,33,FALSE,0,,Eswatini,unchanged
+SYC,Seychelles,TRUE,31,FALSE,0,,Seychelles,TRUE,31,FALSE,0,,Seychelles,unchanged
+SYR,Syria,TRUE,33,FALSE,0,,Syria,TRUE,33,FALSE,0,,Syria,unchanged
+TGO,Togo,TRUE,33,FALSE,0,,Togo,TRUE,33,FALSE,0,,Togo,unchanged
+THA,Thailand,TRUE,32,TRUE,14,2008,Thailand,TRUE,32,TRUE,14,2008,Thailand,unchanged
+TJK,Tajikistan,TRUE,30,FALSE,0,,Tajikistan,TRUE,30,FALSE,0,,Tajikistan,unchanged
+TKM,Turkmenistan,TRUE,31,TRUE,13,2010,Turkmenistan,TRUE,31,TRUE,13,2010,Turkmenistan,unchanged
+TON,Tonga,TRUE,24,FALSE,0,,Tonga,TRUE,24,FALSE,0,,Tonga,unchanged
+TTO,Trinidad & Tobago,TRUE,33,FALSE,0,,Trinidad & Tobago,TRUE,33,FALSE,0,,Trinidad & Tobago,unchanged
+TUN,Tunisia,TRUE,33,FALSE,0,,Tunisia,TRUE,33,FALSE,0,,Tunisia,unchanged
+TUR,Turkey,TRUE,33,FALSE,0,,Turkey,TRUE,33,FALSE,0,,Turkey,unchanged
+TUV,Tuvalu,TRUE,22,FALSE,0,,Tuvalu,TRUE,22,FALSE,0,,Tuvalu,unchanged
+UGA,Uganda,TRUE,33,FALSE,0,,Uganda,TRUE,33,FALSE,0,,Uganda,unchanged
+URY,Uruguay,TRUE,33,TRUE,10,2013,Uruguay,TRUE,33,TRUE,10,2013,Uruguay,unchanged
+USA,United States,TRUE,33,FALSE,0,,United States,TRUE,33,FALSE,0,,United States,unchanged
+VCT,St. Vincent & Grenadines,TRUE,33,FALSE,0,,St. Vincent & Grenadines,TRUE,33,FALSE,0,,St. Vincent & Grenadines,unchanged
+VUT,Vanuatu,TRUE,32,FALSE,0,,Vanuatu,TRUE,32,FALSE,0,,Vanuatu,unchanged
+WSM,Samoa,TRUE,33,FALSE,0,,Samoa,TRUE,33,FALSE,0,,Samoa,unchanged
+ZAF,South Africa,TRUE,29,TRUE,14,2009,South Africa,TRUE,29,TRUE,14,2009,South Africa,unchanged
+ZWE,Zimbabwe,TRUE,28,TRUE,7,2011,Zimbabwe,TRUE,28,TRUE,7,2011,Zimbabwe,unchanged

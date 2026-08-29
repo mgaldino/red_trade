@@ -1,0 +1,2 @@
+coding,run_label,nboots,elapsed_seconds,att,se,ci_lo,ci_hi,p,r_cv,att_rel_pct,att_sd_units,n_obs,n_countries,n_treated,n_control,n_treated_country_years,n_entries,n_exits,n_left_censored,panel_min,panel_max,pre_treated_mean,outcome_sd
+Full union + consecutive trade-defined treatment,final,10000,536.6870000000001,-0.10072962830167595,0.039284768671216226,-0.17772777489725977,-0.023731481706092142,0.010344712795288327,2,14.120770163092939,0.12449194010027693,5002,160,35,125,440,35,0,0,1990,2022,0.7133437279855327,0.8091257009934885

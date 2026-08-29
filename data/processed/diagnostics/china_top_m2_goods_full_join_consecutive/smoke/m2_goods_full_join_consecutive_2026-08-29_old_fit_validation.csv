@@ -1,0 +1,5 @@
+validation,passed,detail
+all_reconstructed_rows_observed_in_old_fit,TRUE,
+old_fit_observation_count_matches,TRUE,n=5037
+old_outcome_matches_within_1e_12,TRUE,max_abs_difference=8.881784e-16
+old_treatment_matches_exactly,TRUE,

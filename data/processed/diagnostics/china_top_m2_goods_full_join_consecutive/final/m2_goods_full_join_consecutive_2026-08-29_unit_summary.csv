@@ -1,0 +1,253 @@
+iso3c,country_name,trade_rank_years,outcome_years,ever_observed_china_top,unknown_trade_rank_years,n_observed_china_top_periods,n_qualifying_periods,first_qualifying_entry,longest_china_top_period,total_qualifying_treated_years,country_role,first_treat
+LIE,Liechtenstein,0,34,FALSE,34,0,0,,0,0,excluded_no_observed_trade_rank,0
+YAR,Yemen Arab Republic,0,1,FALSE,34,0,0,,0,0,excluded_no_observed_trade_rank,0
+ABW,Aruba,33,0,TRUE,1,1,0,,1,0,excluded_nonqualifying_china_top,0
+ARM,Armenia,31,33,TRUE,3,3,0,,2,0,excluded_nonqualifying_china_top,0
+BEN,Benin,33,34,TRUE,1,3,0,,2,0,excluded_nonqualifying_china_top,0
+BFA,Burkina Faso,33,34,TRUE,1,2,0,,3,0,excluded_nonqualifying_china_top,0
+CAF,Central African Republic,33,27,TRUE,1,3,0,,2,0,excluded_nonqualifying_china_top,0
+CMR,Cameroon,33,34,TRUE,1,4,0,,3,0,excluded_nonqualifying_china_top,0
+COK,Cook Islands,33,0,TRUE,1,1,0,,1,0,excluded_nonqualifying_china_top,0
+ETH,Ethiopia,30,34,TRUE,4,3,0,,2,0,excluded_nonqualifying_china_top,0
+FRE,FRE,33,0,TRUE,1,3,0,,3,0,excluded_nonqualifying_china_top,0
+GHA,Ghana,33,34,TRUE,1,1,0,,1,0,excluded_nonqualifying_china_top,0
+GIN,Guinea,33,34,TRUE,1,2,0,,1,0,excluded_nonqualifying_china_top,0
+GMB,Gambia,33,34,TRUE,1,3,0,,3,0,excluded_nonqualifying_china_top,0
+IRQ,Iraq,33,25,TRUE,1,2,0,,4,0,excluded_nonqualifying_china_top,0
+KGZ,Kyrgyzstan,31,30,TRUE,3,1,0,,4,0,excluded_nonqualifying_china_top,0
+LAO,Laos,33,34,TRUE,1,2,0,,1,0,excluded_nonqualifying_china_top,0
+LBR,Liberia,33,25,TRUE,1,2,0,,1,0,excluded_nonqualifying_china_top,0
+MLI,Mali,33,34,TRUE,1,3,0,,2,0,excluded_nonqualifying_china_top,0
+MLT,Malta,33,34,TRUE,1,2,0,,2,0,excluded_nonqualifying_china_top,0
+MNG,Mongolia,33,34,TRUE,1,1,0,,30,0,excluded_nonqualifying_china_top,0
+MOZ,Mozambique,33,34,TRUE,1,1,0,,1,0,excluded_nonqualifying_china_top,0
+PAN,Panama,33,34,TRUE,1,1,0,,2,0,excluded_nonqualifying_china_top,0
+PNG,Papua New Guinea,33,34,TRUE,1,1,0,,2,0,excluded_nonqualifying_china_top,0
+QAT,Qatar,33,34,TRUE,1,1,0,,2,0,excluded_nonqualifying_china_top,0
+SOM,Somalia,33,24,TRUE,1,1,0,,1,0,excluded_nonqualifying_china_top,0
+SSD,South Sudan,11,13,TRUE,23,1,0,,11,0,excluded_nonqualifying_china_top,0
+TCD,Chad,33,33,TRUE,1,1,0,,2,0,excluded_nonqualifying_china_top,0
+TLS,Timor-Leste,21,22,TRUE,13,1,0,,2,0,excluded_nonqualifying_china_top,0
+TZA,Tanzania,33,34,TRUE,1,1,0,,1,0,excluded_nonqualifying_china_top,0
+UKR,Ukraine,31,34,TRUE,3,2,0,,2,0,excluded_nonqualifying_china_top,0
+UZB,Uzbekistan,31,29,TRUE,3,1,0,,2,0,excluded_nonqualifying_china_top,0
+VEN,Venezuela,33,32,TRUE,1,1,0,,2,0,excluded_nonqualifying_china_top,0
+VNM,Vietnam,33,34,TRUE,1,1,0,,1,0,excluded_nonqualifying_china_top,0
+ZMB,Zambia,33,34,TRUE,1,4,0,,2,0,excluded_nonqualifying_china_top,0
+AFG,Afghanistan,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+AIA,Anguilla,33,0,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+ALB,Albania,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+AND,Andorra,33,31,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+ANT,ANT,21,0,FALSE,13,0,0,,0,0,never_observed_china_top_control,0
+ARE,United Arab Emirates,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+ARG,Argentina,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+ASM,American Samoa,23,0,FALSE,11,0,0,,0,0,never_observed_china_top_control,0
+ATA,Antarctica,23,0,FALSE,11,0,0,,0,0,never_observed_china_top_control,0
+ATF,French Southern Territories,33,0,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+ATG,Antigua & Barbuda,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+AUT,Austria,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+AZE,Azerbaijan,31,33,FALSE,3,0,0,,0,0,never_observed_china_top_control,0
+BDI,Burundi,33,33,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+BEL,Belgium,24,34,FALSE,10,0,0,,0,0,never_observed_china_top_control,0
+BES,Caribbean Netherlands,12,0,FALSE,22,0,0,,0,0,never_observed_china_top_control,0
+BGD,Bangladesh,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+BGR,Bulgaria,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+BHR,Bahrain,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+BHS,Bahamas,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+BIH,Bosnia & Herzegovina,31,31,FALSE,3,0,0,,0,0,never_observed_china_top_control,0
+BLM,St. Barthélemy,10,0,FALSE,24,0,0,,0,0,never_observed_china_top_control,0
+BLR,Belarus,31,34,FALSE,3,0,0,,0,0,never_observed_china_top_control,0
+BLX,BLX,10,0,FALSE,24,0,0,,0,0,never_observed_china_top_control,0
+BLZ,Belize,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+BMU,Bermuda,33,0,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+BOL,Bolivia,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+BRB,Barbados,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+BRN,Brunei,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+BTN,Bhutan,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+BVT,Bouvet Island,25,0,FALSE,9,0,0,,0,0,never_observed_china_top_control,0
+BWA,Botswana,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+CAN,Canada,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+CCK,Cocos (Keeling) Islands,33,0,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+CHE,Switzerland,33,22,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+CIV,Côte d’Ivoire,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+COL,Colombia,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+COM,Comoros,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+CPV,Cape Verde,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+CRI,Costa Rica,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+CSK,Czechoslovakia,3,3,FALSE,31,0,0,,0,0,never_observed_china_top_control,0
+CUW,Curaçao,13,0,FALSE,21,0,0,,0,0,never_observed_china_top_control,0
+CXR,Christmas Island,33,0,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+CYM,Cayman Islands,33,0,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+CYP,Cyprus,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+CZE,Czechia,30,31,FALSE,4,0,0,,0,0,never_observed_china_top_control,0
+DDR,DDR,1,0,FALSE,33,0,0,,0,0,never_observed_china_top_control,0
+DEU,Germany,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+DJI,Djibouti,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+DMA,Dominica,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+DNK,Denmark,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+DOM,Dominican Republic,33,32,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+DZA,Algeria,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+ECU,Ecuador,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+EGY,Egypt,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+ESH,Western Sahara,33,0,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+ESP,Spain,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+EST,Estonia,31,33,FALSE,3,0,0,,0,0,never_observed_china_top_control,0
+ETF,ETF,3,0,FALSE,31,0,0,,0,0,never_observed_china_top_control,0
+FIN,Finland,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+FJI,Fiji,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+FLK,Falkland Islands,33,0,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+FRA,France,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+FRO,Faroe Islands,33,0,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+FSM,Micronesia (Federated States of),32,32,FALSE,2,0,0,,0,0,never_observed_china_top_control,0
+GBR,United Kingdom,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+GEO,Georgia,31,31,FALSE,3,0,0,,0,0,never_observed_china_top_control,0
+GIB,Gibraltar,33,0,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+GLP,Guadeloupe,10,0,FALSE,24,0,0,,0,0,never_observed_china_top_control,0
+GNB,Guinea-Bissau,33,31,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+GRC,Greece,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+GRD,Grenada,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+GRL,Greenland,33,0,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+GTM,Guatemala,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+GUF,French Guiana,10,0,FALSE,24,0,0,,0,0,never_observed_china_top_control,0
+GUM,Guam,23,0,FALSE,11,0,0,,0,0,never_observed_china_top_control,0
+GUY,Guyana,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+HMD,Heard & McDonald Islands,23,0,FALSE,11,0,0,,0,0,never_observed_china_top_control,0
+HND,Honduras,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+HRV,Croatia,31,32,FALSE,3,0,0,,0,0,never_observed_china_top_control,0
+HTI,Haiti,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+HUN,Hungary,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+IND,India,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+IOT,British Indian Ocean Territory,33,0,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+IRL,Ireland,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+ISL,Iceland,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+ISR,Israel,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+ITA,Italy,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+JAM,Jamaica,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+JOR,Jordan,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+KEN,Kenya,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+KHM,Cambodia,33,31,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+KIR,Kiribati,33,24,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+KNA,St. Kitts & Nevis,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+LBN,Lebanon,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+LBY,Libya,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+LCA,St. Lucia,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+LKA,Sri Lanka,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+LSO,Lesotho,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+LTU,Lithuania,31,33,FALSE,3,0,0,,0,0,never_observed_china_top_control,0
+LUX,Luxembourg,24,34,FALSE,10,0,0,,0,0,never_observed_china_top_control,0
+LVA,Latvia,31,33,FALSE,3,0,0,,0,0,never_observed_china_top_control,0
+MAC,Macao SAR China,33,0,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+MAR,Morocco,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+MCO,Monaco,12,31,FALSE,22,0,0,,0,0,never_observed_china_top_control,0
+MDA,Moldova,31,32,FALSE,3,0,0,,0,0,never_observed_china_top_control,0
+MDG,Madagascar,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+MDV,Maldives,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+MEX,Mexico,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+MHL,Marshall Islands,32,33,FALSE,2,0,0,,0,0,never_observed_china_top_control,0
+MKD,North Macedonia,31,31,FALSE,3,0,0,,0,0,never_observed_china_top_control,0
+MNE,Montenegro,17,18,FALSE,17,0,0,,0,0,never_observed_china_top_control,0
+MNP,Northern Mariana Islands,31,0,FALSE,3,0,0,,0,0,never_observed_china_top_control,0
+MSR,Montserrat,33,0,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+MTQ,Martinique,10,0,FALSE,24,0,0,,0,0,never_observed_china_top_control,0
+MUS,Mauritius,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+MWI,Malawi,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+MYT,Mayotte,14,0,FALSE,20,0,0,,0,0,never_observed_china_top_control,0
+NAM,Namibia,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+NER,Niger,33,31,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+NFK,Norfolk Island,33,0,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+NGA,Nigeria,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+NIC,Nicaragua,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+NIU,Niue,33,0,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+NLD,Netherlands,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+NOR,Norway,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+NPL,Nepal,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+NRU,Nauru,33,24,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+NTZ,NTZ,4,0,FALSE,30,0,0,,0,0,never_observed_china_top_control,0
+PAK,Pakistan,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+PCN,Pitcairn Islands,33,0,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+PLW,Palau,29,26,FALSE,5,0,0,,0,0,never_observed_china_top_control,0
+POL,Poland,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+PRI,Puerto Rico,10,0,FALSE,24,0,0,,0,0,never_observed_china_top_control,0
+PRT,Portugal,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+PRY,Paraguay,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+PSE,Palestinian Territories,23,0,FALSE,11,0,0,,0,0,never_observed_china_top_control,0
+PYF,French Polynesia,33,0,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+REU,Réunion,10,0,FALSE,24,0,0,,0,0,never_observed_china_top_control,0
+ROU,Romania,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+RWA,Rwanda,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+SCG,SCG,3,0,FALSE,31,0,0,,0,0,never_observed_china_top_control,0
+SEN,Senegal,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+SGP,Singapore,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+SGS,South Georgia & South Sandwich Islands,23,0,FALSE,11,0,0,,0,0,never_observed_china_top_control,0
+SHN,St. Helena,33,0,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+SLV,El Salvador,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+SMR,San Marino,23,32,FALSE,11,0,0,,0,0,never_observed_china_top_control,0
+SPM,St. Pierre & Miquelon,33,0,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+SRB,Serbia,17,0,FALSE,17,0,0,,0,0,never_observed_china_top_control,0
+STP,São Tomé & Príncipe,33,25,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+SUR,Suriname,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+SVK,Slovakia,30,31,FALSE,4,0,0,,0,0,never_observed_china_top_control,0
+SVN,Slovenia,31,32,FALSE,3,0,0,,0,0,never_observed_china_top_control,0
+SVU,SVU,2,0,FALSE,32,0,0,,0,0,never_observed_china_top_control,0
+SWE,Sweden,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+SWZ,Eswatini,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+SXM,Sint Maarten,12,0,FALSE,22,0,0,,0,0,never_observed_china_top_control,0
+SYC,Seychelles,33,32,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+SYR,Syria,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+TCA,Turks & Caicos Islands,33,0,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+TGO,Togo,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+TJK,Tajikistan,31,31,FALSE,3,0,0,,0,0,never_observed_china_top_control,0
+TKL,Tokelau,33,0,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+TON,Tonga,33,25,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+TTO,Trinidad & Tobago,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+TUN,Tunisia,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+TUR,Turkey,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+TUV,Tuvalu,33,23,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+UGA,Uganda,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+UMI,United States Minor Outlying Islands (the),24,0,FALSE,10,0,0,,0,0,never_observed_china_top_control,0
+USA,United States,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+VAT,Vatican City,23,0,FALSE,11,0,0,,0,0,never_observed_china_top_control,0
+VCT,St. Vincent & Grenadines,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+VGB,British Virgin Islands,33,0,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+VUT,Vanuatu,33,33,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+WLF,Wallis & Futuna,33,0,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+WSM,Samoa,33,34,FALSE,1,0,0,,0,0,never_observed_china_top_control,0
+YUG,Yugoslavia,2,27,FALSE,32,0,0,,0,0,never_observed_china_top_control,0
+AGO,Angola,33,34,TRUE,1,1,1,2007,16,16,treated_qualifying,2007
+AUS,Australia,33,34,TRUE,1,1,1,2009,14,14,treated_qualifying,2009
+BRA,Brazil,33,34,TRUE,1,1,1,2009,14,14,treated_qualifying,2009
+CHL,Chile,33,34,TRUE,1,1,1,2007,16,16,treated_qualifying,2007
+COD,Congo - Kinshasa,33,33,TRUE,1,1,1,2008,15,15,treated_qualifying,2008
+COG,Congo - Brazzaville,33,34,TRUE,1,2,1,2011,12,12,treated_qualifying,2011
+CUB,Cuba,33,34,TRUE,1,2,2,2004,12,18,treated_qualifying,2004
+ERI,Eritrea,30,31,TRUE,4,1,1,2014,9,9,treated_qualifying,2014
+GAB,Gabon,33,34,TRUE,1,1,1,2017,6,6,treated_qualifying,2017
+GNQ,Equatorial Guinea,33,29,TRUE,1,3,1,2017,6,6,treated_qualifying,2017
+HKG,Hong Kong SAR China,26,0,TRUE,8,2,2,2001,10,15,treated_qualifying,2001
+IDN,Indonesia,33,34,TRUE,1,2,1,2016,7,7,treated_qualifying,2016
+IRN,Iran,33,34,TRUE,1,2,1,2007,13,13,treated_qualifying,2007
+JPN,Japan,33,34,TRUE,1,1,1,2008,15,15,treated_qualifying,2008
+KAZ,Kazakhstan,31,32,TRUE,3,2,1,2007,16,16,treated_qualifying,2007
+KOR,South Korea,33,33,TRUE,1,1,1,2003,20,20,treated_qualifying,2003
+KWT,Kuwait,33,34,TRUE,1,1,1,2018,5,5,treated_qualifying,2018
+MMR,Myanmar (Burma),33,34,TRUE,1,2,1,2014,9,9,treated_qualifying,2014
+MRT,Mauritania,33,33,TRUE,1,1,1,2006,17,17,treated_qualifying,2006
+MYS,Malaysia,33,34,TRUE,1,1,1,2009,14,14,treated_qualifying,2009
+NCL,New Caledonia,25,0,TRUE,9,1,1,2014,9,9,treated_qualifying,2014
+NZL,New Zealand,33,34,TRUE,1,1,1,2013,10,10,treated_qualifying,2013
+OMN,Oman,33,34,TRUE,1,2,1,2004,19,19,treated_qualifying,2004
+PER,Peru,33,34,TRUE,1,1,1,2010,13,13,treated_qualifying,2010
+PHL,Philippines,33,34,TRUE,1,1,1,2005,18,18,treated_qualifying,2005
+PRK,North Korea,33,33,TRUE,1,4,1,2008,12,12,treated_qualifying,2008
+RUS,Russia,31,34,TRUE,3,2,1,2012,11,11,treated_qualifying,2012
+SAU,Saudi Arabia,33,34,TRUE,1,1,1,2013,10,10,treated_qualifying,2013
+SDN,Sudan,33,34,TRUE,1,4,1,2000,6,6,treated_qualifying,2000
+SLB,Solomon Islands,33,34,TRUE,1,1,1,2003,20,20,treated_qualifying,2003
+SLE,Sierra Leone,33,34,TRUE,1,1,1,2012,11,11,treated_qualifying,2012
+THA,Thailand,33,34,TRUE,1,1,1,2008,14,14,treated_qualifying,2008
+TKM,Turkmenistan,31,32,TRUE,3,1,1,2010,13,13,treated_qualifying,2010
+TWN,Taiwan,33,0,TRUE,1,1,1,2002,21,21,treated_qualifying,2002
+URY,Uruguay,33,34,TRUE,1,1,1,2013,10,10,treated_qualifying,2013
+YEM,Yemen,33,33,TRUE,1,6,1,2005,11,11,treated_qualifying,2005
+ZAF,South Africa,33,30,TRUE,1,1,1,2009,14,14,treated_qualifying,2009
+ZWE,Zimbabwe,33,34,TRUE,1,2,1,2011,7,7,treated_qualifying,2011
