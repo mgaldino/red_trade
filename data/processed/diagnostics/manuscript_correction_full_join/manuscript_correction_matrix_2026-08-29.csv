@@ -1,0 +1,9 @@
+priority,manuscript_component,status,correction
+P0,Treatment definition (main text),Ready,Replace ambiguous joint-panel language with trade-defined consecutive calendar years and source-specific missingness.
+P0,Cross-country targets,Not integrated,"Move the full join, complete grid, treatment, risk-set, and support flags into new targets before manuscript adoption."
+P0,Robustness claims,Blocked pending re-estimation,Re-run 3/7-year thresholds and clean single-entry robustness; the diagnostic final run covers only the main five-year restricted risk set.
+P1,Main IFE result,Ready,"Update the computed result to ATT -0.101, SE 0.039, CI [-0.178, -0.024], p = 0.010, with 35 treated and 125 controls."
+P1,Factor dimension,Ready,"Disclose that fixed r=1 gives ATT -0.047 (p=0.199), while CV selects r=2 and reproduces ATT -0.101 (p=0.010)."
+P1,Tables and dynamic figure,Needs target rebuild,"Regenerate the main table, dynamic figure, sample audit, and treated-country appendix from corrected targets."
+P1,Introduction robustness range,Blocked pending re-estimation,Do not retain the claim that p-values are stable across durations/samples until corrected robustness models exist.
+P2,Data provenance note,Ready,"Document the ITPD-E/UNGA full union, complete 1990-2023 grid, tie handling, and outcome-independent treatment coding."

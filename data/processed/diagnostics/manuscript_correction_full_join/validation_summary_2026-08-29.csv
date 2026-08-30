@@ -1,0 +1,10 @@
+validation,passed
+Master panel has unique country-year keys,TRUE
+Master panel is a complete 1990-2023 grid,TRUE
+Estimation panel has no missing outcome or treatment,TRUE
+Estimation treatment is binary,TRUE
+Congo 2021 is treated with missing outcome,TRUE
+Congo 2021 remains in risk set and outside estimation,TRUE
+Corrected treated country-years equal 440,TRUE
+Corrected estimation observations equal 5002,TRUE
+Current manuscript source anchors were all located,TRUE
