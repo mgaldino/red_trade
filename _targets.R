@@ -640,10 +640,13 @@ list(
              },
              format = "file"),
   tar_target(china_top_m2_goods_full_union_master_ungadm_candidate,
-             join_ungadm_to_full_union_master(
-               china_top_m2_goods_full_union_master_panel,
-               ungadm_outcome_candidate
-             )),
+             {
+               ungadm_validation_gate_candidate
+               join_ungadm_to_full_union_master(
+                 china_top_m2_goods_full_union_master_panel,
+                 ungadm_outcome_candidate
+               )
+             }),
   tar_target(ungadm_master_join_validation_candidate,
              validate_ungadm_master_join(
                china_top_m2_goods_full_union_master_panel,
@@ -736,9 +739,21 @@ list(
                )
              ),
              format = "file"),
-  tar_target(ungadm_sdid_baseline_validation_candidate,
+  tar_target(ungadm_sdid_reference_validation_candidate,
              {
                ungadm_sdid_reference_files
+               validate_ungadm_sdid_reference_files(
+                 file.path(
+                   "data", "processed", "diagnostics",
+                   "ungadm_outcome_robustness"
+                 )
+               )
+             }),
+  tar_target(ungadm_sdid_baseline_validation_candidate,
+             {
+               stopifnot(
+                 all(ungadm_sdid_reference_validation_candidate$passed)
+               )
                validate_ungadm_sdid_against_baseline(
                  ungadm_sdid_outputs_candidate,
                  file.path(
@@ -838,29 +853,41 @@ list(
                ungadm_ife_dm_common_fit_candidate
              )),
   tar_target(ungadm_ife_bsv_r1_fit_candidate,
-             run_ungadm_fect_fixed_r_candidate(
-               ungadm_common_window_bundle_candidate$panel_bsv,
-               r_fixed = 1L,
-               nboots = 10000L
-             )),
+             {
+               ungadm_common_window_gate_candidate
+               run_ungadm_fect_fixed_r_candidate(
+                 ungadm_common_window_bundle_candidate$panel_bsv,
+                 r_fixed = 1L,
+                 nboots = 10000L
+               )
+             }),
   tar_target(ungadm_ife_bsv_r2_fit_candidate,
-             run_ungadm_fect_fixed_r_candidate(
-               ungadm_common_window_bundle_candidate$panel_bsv,
-               r_fixed = 2L,
-               nboots = 10000L
-             )),
+             {
+               ungadm_common_window_gate_candidate
+               run_ungadm_fect_fixed_r_candidate(
+                 ungadm_common_window_bundle_candidate$panel_bsv,
+                 r_fixed = 2L,
+                 nboots = 10000L
+               )
+             }),
   tar_target(ungadm_ife_dm_r1_fit_candidate,
-             run_ungadm_fect_fixed_r_candidate(
-               ungadm_common_window_bundle_candidate$panel_dm,
-               r_fixed = 1L,
-               nboots = 10000L
-             )),
+             {
+               ungadm_common_window_gate_candidate
+               run_ungadm_fect_fixed_r_candidate(
+                 ungadm_common_window_bundle_candidate$panel_dm,
+                 r_fixed = 1L,
+                 nboots = 10000L
+               )
+             }),
   tar_target(ungadm_ife_dm_r2_fit_candidate,
-             run_ungadm_fect_fixed_r_candidate(
-               ungadm_common_window_bundle_candidate$panel_dm,
-               r_fixed = 2L,
-               nboots = 10000L
-             )),
+             {
+               ungadm_common_window_gate_candidate
+               run_ungadm_fect_fixed_r_candidate(
+                 ungadm_common_window_bundle_candidate$panel_dm,
+                 r_fixed = 2L,
+                 nboots = 10000L
+               )
+             }),
   tar_target(ungadm_ife_fixed_fits_candidate,
              list(
                bsv_r1 = ungadm_ife_bsv_r1_fit_candidate,
@@ -877,16 +904,26 @@ list(
                nboots = 10000L
              )),
   tar_target(ungadm_ife_paired_bootstrap_draws_candidate,
-             run_ungadm_paired_bootstrap_candidate(
-               ungadm_common_window_bundle_candidate$common_rows,
-               B = 1000L,
-               boot_seed = 20260823L,
-               checkpoint_block = "ungadm_ife_paired",
-               core_cap = 12L
-             )),
+             {
+               ungadm_common_window_gate_candidate
+               run_ungadm_paired_bootstrap_candidate(
+                 ungadm_common_window_bundle_candidate$common_rows,
+                 bsv_selected_r = as.integer(
+                   ungadm_ife_bsv_common_fit_candidate$r.cv
+                 ),
+                 dm_selected_r = as.integer(
+                   ungadm_ife_dm_common_fit_candidate$r.cv
+                 ),
+                 B = 1000L,
+                 boot_seed = 20260823L,
+                 checkpoint_block = "ungadm_ife_paired",
+                 core_cap = 12L
+               )
+             }),
   tar_target(ungadm_ife_paired_bootstrap_summary_candidate,
              build_ungadm_paired_bootstrap_summary_candidate(
                ungadm_ife_paired_bootstrap_draws_candidate,
+               ungadm_ife_comparison_candidate,
                ungadm_ife_fixed_grid_candidate,
                B = 1000L
              )),

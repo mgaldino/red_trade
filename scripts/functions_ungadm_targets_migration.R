@@ -79,6 +79,15 @@ ungadm_require_columns <- function(data, required, label) {
   invisible(data)
 }
 
+ungadm_trade_treatment_columns <- function() {
+  c(
+    "trade_rank_row_present", "trade_rank_observed", "n_top_ties",
+    "top_partner", "top_export_value", "rank_CHN", "rank_USA",
+    "china_top_status", "previous_china_top_status",
+    "china_top_period_start", "china_top_period_id"
+  )
+}
+
 ungadm_add_source_distances <- function(data,
                                         ideal_column,
                                         source_label) {
@@ -494,6 +503,12 @@ assert_ungadm_validation <- function(validation, expected_names) {
 }
 
 join_ungadm_to_full_union_master <- function(master_panel, ungadm_outcome) {
+  treatment_columns <- ungadm_trade_treatment_columns()
+  ungadm_require_columns(
+    master_panel,
+    c("iso3c", "year", treatment_columns),
+    "full-union master before UNGA-DM join"
+  )
   abort_if_duplicate_keys(
     master_panel,
     c("iso3c", "year"),
@@ -506,15 +521,6 @@ join_ungadm_to_full_union_master <- function(master_panel, ungadm_outcome) {
   )
   master_keys <- master_panel |>
     dplyr::select(iso3c, year)
-  treatment_columns <- intersect(
-    c(
-      "trade_rank_row_present", "trade_rank_observed", "n_top_ties",
-      "top_partner", "top_export_value", "rank_CHN", "rank_USA",
-      "china_top_status", "previous_china_top_status",
-      "china_top_period_start", "china_top_period_id"
-    ),
-    names(master_panel)
-  )
   treatment_before <- master_panel |>
     dplyr::select(iso3c, year, dplyr::all_of(treatment_columns))
   augmented <- master_panel |>
@@ -550,17 +556,22 @@ join_ungadm_to_full_union_master <- function(master_panel, ungadm_outcome) {
 }
 
 validate_ungadm_master_join <- function(master_panel, augmented_master) {
+  treatment_columns <- ungadm_trade_treatment_columns()
+  ungadm_require_columns(
+    master_panel,
+    c("iso3c", "year", treatment_columns),
+    "full-union master in UNGA-DM join validation"
+  )
+  ungadm_require_columns(
+    augmented_master,
+    c(
+      "iso3c", "year", treatment_columns, "abs_distance_china_dm",
+      "ungadm_outcome_observed"
+    ),
+    "UNGA-DM-augmented master in join validation"
+  )
   future <- augmented_master |>
     dplyr::filter(year %in% 2021:2023)
-  treatment_columns <- intersect(
-    c(
-      "trade_rank_row_present", "trade_rank_observed", "n_top_ties",
-      "top_partner", "top_export_value", "rank_CHN", "rank_USA",
-      "china_top_status", "previous_china_top_status",
-      "china_top_period_start", "china_top_period_id"
-    ),
-    names(master_panel)
-  )
   validation <- tibble::tibble(
     validation = c(
       "master_row_count_unchanged",
@@ -995,9 +1006,73 @@ ungadm_sdid_baseline_keys <- function() {
   )
 }
 
+ungadm_expected_sdid_reference_manifest <- function(reference_directory) {
+  tibble::tribble(
+    ~name, ~path, ~expected_sha256,
+    "comparison",
+    file.path(reference_directory, "estimation", "sdid_comparison_table.csv"),
+    "5e7e6cddd7dfeb845a0b90316699770fb51b96539d25712136eb46d43ba7dadc",
+    "placebo_distribution",
+    file.path(
+      reference_directory,
+      "estimation",
+      "sdid_dm_placebo_distribution.csv"
+    ),
+    "d71cd822a5d62a51d7a22343e6753d5bca162b4dc49270850e6edd0cb92603dd",
+    "rank_inference_harmonized",
+    file.path(
+      reference_directory,
+      "postreview",
+      "sdid_dm_rank_inference_harmonized.csv"
+    ),
+    "ee03666e2ab09b2cfc5d39ac93e2bab645b94d925cf041906f9a081798fd1814",
+    "unit_weights_bsv_vs_dm",
+    file.path(
+      reference_directory,
+      "estimation",
+      "sdid_unit_weights_bsv_vs_dm.csv"
+    ),
+    "eba127b5e1182cbbc24ec3a2b213e1d7279f522d460138cfb6ee1395dfd45ec1"
+  )
+}
+
+validate_ungadm_sdid_reference_files <- function(reference_directory) {
+  validation <- ungadm_expected_sdid_reference_manifest(
+    reference_directory
+  ) |>
+    dplyr::mutate(
+      exists = file.exists(path),
+      sha256 = vapply(
+        path,
+        function(candidate) {
+          if (!file.exists(candidate)) return(NA_character_)
+          digest::digest(
+            file = candidate,
+            algo = "sha256",
+            serialize = FALSE
+          )
+        },
+        character(1)
+      ),
+      passed = exists & !is.na(sha256) & sha256 == expected_sha256
+    )
+  if (any(!(validation$passed %in% TRUE))) {
+    failed <- validation |>
+      dplyr::filter(!(.data$passed %in% TRUE)) |>
+      dplyr::pull(name)
+    stop(
+      "Frozen UNGA-DM SDiD references failed hash validation: ",
+      paste(failed, collapse = ", "),
+      call. = FALSE
+    )
+  }
+  validation
+}
+
 validate_ungadm_sdid_against_baseline <- function(bundle,
                                                    reference_directory,
                                                    tolerance = 1e-12) {
+  validate_ungadm_sdid_reference_files(reference_directory)
   reference_files <- c(
     comparison = file.path(
       reference_directory,
@@ -1073,14 +1148,19 @@ build_ungadm_common_window_bundle <- function(
   dropped_rows <- joined |>
     dplyr::filter(
       year > common_max_year |
-        !ungadm_outcome_observed |
+        !dplyr::coalesce(outcome_observed, FALSE) |
+        is.na(abs_distance_china) |
+        !dplyr::coalesce(ungadm_outcome_observed, FALSE) |
         is.na(abs_distance_china_dm)
     ) |>
     dplyr::count(
-      reason = dplyr::if_else(
-        year > common_max_year,
-        paste0("beyond UNGA-DM endpoint (year > ", common_max_year, ")"),
-        "UNGA-DM outcome missing"
+      reason = dplyr::case_when(
+        year > common_max_year ~ paste0(
+          "beyond UNGA-DM endpoint (year > ", common_max_year, ")"
+        ),
+        !dplyr::coalesce(outcome_observed, FALSE) |
+          is.na(abs_distance_china) ~ "BSV outcome missing",
+        TRUE ~ "UNGA-DM outcome missing"
       ),
       iso3c,
       name = "n"
@@ -1152,12 +1232,20 @@ validate_ungadm_common_window_bundle <- function(common_bundle) {
   bsv <- tibble::as_tibble(common_bundle$panel_bsv)
   dm <- tibble::as_tibble(common_bundle$panel_dm)
   key_columns <- c("iso3c", "year")
-  metadata_columns <- intersect(
-    c(
-      "china_top", "china_top_status", "treatment_role",
-      "qualifying_period", "first_treat", "country_id", "id"
-    ),
-    names(bsv)
+  metadata_columns <- c(
+    "china_top", "china_top_status", "treatment_role",
+    "qualifying_period", "first_treat", "country_id", "id"
+  )
+  required <- c(key_columns, metadata_columns, "abs_distance_china")
+  ungadm_require_columns(
+    bsv,
+    required,
+    "BSV common-window panel"
+  )
+  ungadm_require_columns(
+    dm,
+    required,
+    "UNGA-DM common-window panel"
   )
   tibble::tibble(
     validation = c(
@@ -1426,8 +1514,8 @@ build_ungadm_ife_fixed_grid_candidate <- function(fits,
 ungadm_fit_fect_point <- function(panel, r_fixed) {
   r_fixed <- as.integer(r_fixed)
   if (length(r_fixed) != 1L || is.na(r_fixed) ||
-      !r_fixed %in% c(1L, 2L)) {
-    stop("Paired-bootstrap point fits permit only r = 1 or r = 2.",
+      !r_fixed %in% 0:3) {
+    stop("Paired-bootstrap point fits require r in 0:3.",
          call. = FALSE)
   }
   fect_data <- prepare_fect_data(
@@ -1452,6 +1540,8 @@ ungadm_paired_bootstrap_one <- function(index,
                                          draw,
                                          common_rows,
                                          boot_seed,
+                                         bsv_selected_r,
+                                         dm_selected_r,
                                          fit_function) {
   set.seed(as.integer(boot_seed + index))
   resampled <- dplyr::bind_rows(lapply(seq_along(draw), function(k) {
@@ -1470,28 +1560,48 @@ ungadm_paired_bootstrap_one <- function(index,
     dplyr::mutate(abs_distance_china = abs_distance_china_dm) |>
     dplyr::select(-abs_distance_china_dm, -ungadm_outcome_observed)
   tryCatch({
-    att_bsv_r2 <- fit_function(panel_bsv, 2L)
-    att_dm_r1 <- fit_function(panel_dm, 1L)
-    att_dm_r2 <- fit_function(panel_dm, 2L)
-    estimates <- c(att_bsv_r2, att_dm_r1, att_dm_r2)
+    att_bsv_selected <- fit_function(panel_bsv, bsv_selected_r)
+    att_dm_selected <- fit_function(panel_dm, dm_selected_r)
+    att_bsv_r2 <- if (bsv_selected_r == 2L) {
+      att_bsv_selected
+    } else {
+      fit_function(panel_bsv, 2L)
+    }
+    att_dm_r2 <- if (dm_selected_r == 2L) {
+      att_dm_selected
+    } else {
+      fit_function(panel_dm, 2L)
+    }
+    estimates <- c(
+      att_bsv_selected,
+      att_dm_selected,
+      att_bsv_r2,
+      att_dm_r2
+    )
     if (any(!is.finite(estimates))) {
       stop("point fit returned a nonfinite ATT")
     }
     tibble::tibble(
       b = as.integer(index),
       status = "ok",
+      bsv_selected_r = as.integer(bsv_selected_r),
+      dm_selected_r = as.integer(dm_selected_r),
+      att_bsv_selected = att_bsv_selected,
+      att_dm_selected = att_dm_selected,
       att_bsv_r2 = att_bsv_r2,
-      att_dm_r1 = att_dm_r1,
       att_dm_r2 = att_dm_r2,
-      diff_procedure = att_dm_r1 - att_bsv_r2,
+      diff_procedure = att_dm_selected - att_bsv_selected,
       diff_common_r2 = att_dm_r2 - att_bsv_r2
     )
   }, error = function(error) {
     tibble::tibble(
       b = as.integer(index),
       status = paste0("error: ", conditionMessage(error)),
+      bsv_selected_r = as.integer(bsv_selected_r),
+      dm_selected_r = as.integer(dm_selected_r),
+      att_bsv_selected = NA_real_,
+      att_dm_selected = NA_real_,
       att_bsv_r2 = NA_real_,
-      att_dm_r1 = NA_real_,
       att_dm_r2 = NA_real_,
       diff_procedure = NA_real_,
       diff_common_r2 = NA_real_
@@ -1501,12 +1611,16 @@ ungadm_paired_bootstrap_one <- function(index,
 
 ungadm_paired_bootstrap_columns <- function() {
   c(
-    "b", "status", "att_bsv_r2", "att_dm_r1", "att_dm_r2",
+    "b", "status", "bsv_selected_r", "dm_selected_r",
+    "att_bsv_selected", "att_dm_selected", "att_bsv_r2", "att_dm_r2",
     "diff_procedure", "diff_common_r2"
   )
 }
 
-ungadm_paired_checkpoint_valid <- function(distribution, B) {
+ungadm_paired_checkpoint_valid <- function(distribution,
+                                            B,
+                                            bsv_selected_r = NULL,
+                                            dm_selected_r = NULL) {
   columns <- ungadm_paired_bootstrap_columns()
   if (!is.data.frame(distribution) ||
       !identical(names(distribution), columns) ||
@@ -1518,7 +1632,25 @@ ungadm_paired_checkpoint_valid <- function(distribution, B) {
       any(!grepl("^(ok|error: .+)$", distribution$status))) {
     return(FALSE)
   }
-  numeric_columns <- setdiff(columns, c("b", "status"))
+  selected_columns <- c("bsv_selected_r", "dm_selected_r")
+  if (!all(vapply(distribution[selected_columns], is.integer, logical(1))) ||
+      anyNA(distribution[selected_columns]) ||
+      any(!unlist(distribution[selected_columns], use.names = FALSE) %in%
+            0:3)) {
+    return(FALSE)
+  }
+  if (!is.null(bsv_selected_r) &&
+      any(distribution$bsv_selected_r != as.integer(bsv_selected_r))) {
+    return(FALSE)
+  }
+  if (!is.null(dm_selected_r) &&
+      any(distribution$dm_selected_r != as.integer(dm_selected_r))) {
+    return(FALSE)
+  }
+  numeric_columns <- setdiff(
+    columns,
+    c("b", "status", selected_columns)
+  )
   if (!all(vapply(distribution[numeric_columns], is.numeric, logical(1)))) {
     return(FALSE)
   }
@@ -1532,12 +1664,17 @@ ungadm_paired_checkpoint_valid <- function(distribution, B) {
 ungadm_paired_code_fingerprint <- function(fit_function) {
   digest::digest(
     list(
+      deparse(body(run_ungadm_paired_bootstrap_candidate)),
       deparse(body(ungadm_paired_bootstrap_one)),
       deparse(body(ungadm_paired_checkpoint_valid)),
       deparse(body(ungadm_paired_bootstrap_columns)),
+      deparse(body(ungadm_paired_code_fingerprint)),
       deparse(body(sdid_read_checkpoint)),
       deparse(body(sdid_atomic_save_rds)),
       deparse(body(sdid_mclapply_checked)),
+      deparse(body(sdid_limit_blas_threads)),
+      deparse(body(sdid_available_cores)),
+      deparse(body(sdid_candidate_checkpoint_directory)),
       deparse(body(prepare_fect_data)),
       deparse(body(fit_function)),
       as.character(utils::packageVersion("fect"))
@@ -1549,6 +1686,8 @@ ungadm_paired_code_fingerprint <- function(fit_function) {
 
 run_ungadm_paired_bootstrap_candidate <- function(
     common_rows,
+    bsv_selected_r,
+    dm_selected_r,
     B = 1000L,
     boot_seed = 20260823L,
     checkpoint_block = "ungadm_ife_paired",
@@ -1559,14 +1698,20 @@ run_ungadm_paired_bootstrap_candidate <- function(
   B <- as.integer(B)
   boot_seed <- as.integer(boot_seed)
   batch_size <- as.integer(batch_size)
+  bsv_selected_r <- as.integer(bsv_selected_r)
+  dm_selected_r <- as.integer(dm_selected_r)
   if (length(B) != 1L || is.na(B) || B < 1L ||
       length(boot_seed) != 1L || is.na(boot_seed) ||
-      length(batch_size) != 1L || is.na(batch_size) || batch_size < 1L) {
+      length(batch_size) != 1L || is.na(batch_size) || batch_size < 1L ||
+      length(bsv_selected_r) != 1L || is.na(bsv_selected_r) ||
+      !bsv_selected_r %in% 0:3 ||
+      length(dm_selected_r) != 1L || is.na(dm_selected_r) ||
+      !dm_selected_r %in% 0:3) {
     stop("Invalid paired-bootstrap controls.", call. = FALSE)
   }
   required <- c(
     "iso3c", "year", "china_top", "abs_distance_china",
-    "abs_distance_china_dm"
+    "abs_distance_china_dm", "ungadm_outcome_observed"
   )
   ungadm_require_columns(common_rows, required, "paired-bootstrap rows")
   if (anyNA(common_rows[required]) ||
@@ -1595,6 +1740,8 @@ run_ungadm_paired_bootstrap_candidate <- function(
       code = ungadm_paired_code_fingerprint(fit_function),
       B = B,
       boot_seed = boot_seed,
+      bsv_selected_r = bsv_selected_r,
+      dm_selected_r = dm_selected_r,
       draws = draws,
       data = common_rows |>
         dplyr::arrange(iso3c, year) |>
@@ -1621,8 +1768,11 @@ run_ungadm_paired_bootstrap_candidate <- function(
   distribution <- tibble::tibble(
     b = integer(),
     status = character(),
+    bsv_selected_r = integer(),
+    dm_selected_r = integer(),
+    att_bsv_selected = numeric(),
+    att_dm_selected = numeric(),
     att_bsv_r2 = numeric(),
-    att_dm_r1 = numeric(),
     att_dm_r2 = numeric(),
     diff_procedure = numeric(),
     diff_common_r2 = numeric()
@@ -1631,7 +1781,12 @@ run_ungadm_paired_bootstrap_candidate <- function(
     cached <- sdid_read_checkpoint(checkpoint_path)
     cache_valid <- is.list(cached) &&
       identical(cached$fingerprint, fingerprint) &&
-      ungadm_paired_checkpoint_valid(cached$distribution, B)
+      ungadm_paired_checkpoint_valid(
+        cached$distribution,
+        B,
+        bsv_selected_r,
+        dm_selected_r
+      )
     if (cache_valid) {
       distribution <- cached$distribution |>
         dplyr::filter(status == "ok") |>
@@ -1660,6 +1815,8 @@ run_ungadm_paired_bootstrap_candidate <- function(
           draws[[index]],
           common_rows,
           boot_seed,
+          bsv_selected_r,
+          dm_selected_r,
           fit_function
         )
       },
@@ -1667,7 +1824,12 @@ run_ungadm_paired_bootstrap_candidate <- function(
       what = "UNGA-DM paired bootstrap"
     )
     batch_rows <- dplyr::bind_rows(values)
-    if (!ungadm_paired_checkpoint_valid(batch_rows, B) ||
+    if (!ungadm_paired_checkpoint_valid(
+      batch_rows,
+      B,
+      bsv_selected_r,
+      dm_selected_r
+    ) ||
         !identical(sort(batch_rows$b), sort(as.integer(batch)))) {
       stop("Invalid paired-bootstrap result batch.", call. = FALSE)
     }
@@ -1682,7 +1844,12 @@ run_ungadm_paired_bootstrap_candidate <- function(
       checkpoint_path
     )
   }
-  if (!ungadm_paired_checkpoint_valid(distribution, B) ||
+  if (!ungadm_paired_checkpoint_valid(
+    distribution,
+    B,
+    bsv_selected_r,
+    dm_selected_r
+  ) ||
       nrow(distribution) != B ||
       !identical(distribution$b, seq_len(B))) {
     stop("Paired bootstrap did not return the complete draw index.",
@@ -1717,7 +1884,10 @@ ungadm_summarize_bootstrap_difference <- function(values,
     boot_sd = standard_error,
     ci_2_5 = unname(stats::quantile(values, 0.025)),
     ci_97_5 = unname(stats::quantile(values, 0.975)),
-    p_two_sided_percentile = 2 * min(mean(values <= 0), mean(values >= 0)),
+    p_two_sided_percentile = min(
+      1,
+      2 * min(mean(values <= 0), mean(values >= 0))
+    ),
     p_two_sided_normal = 2 * stats::pnorm(
       -abs(observed_difference / standard_error)
     ),
@@ -1727,13 +1897,14 @@ ungadm_summarize_bootstrap_difference <- function(values,
 }
 
 build_ungadm_paired_bootstrap_summary_candidate <- function(draws,
+                                                             comparison,
                                                              fixed_grid,
                                                              B = 1000L) {
   extract_att <- function(outcome, r_fixed) {
     value <- fixed_grid |>
       dplyr::filter(
-        .data$outcome == outcome,
-        .data$r_fixed == r_fixed
+        .data$outcome == .env$outcome,
+        .data$r_fixed == .env$r_fixed
       ) |>
       dplyr::pull(att)
     if (length(value) != 1L || !is.finite(value)) {
@@ -1741,14 +1912,48 @@ build_ungadm_paired_bootstrap_summary_candidate <- function(draws,
     }
     value
   }
+  extract_selected <- function(prefix) {
+    row <- comparison |>
+      dplyr::filter(grepl(paste0("^", prefix, " common window"), variant))
+    if (nrow(row) != 1L ||
+        !is.finite(row$att[[1]]) ||
+        !is.finite(row$r_cv[[1]]) ||
+        !as.integer(row$r_cv[[1]]) %in% 0:3) {
+      stop(
+        prefix,
+        " common-window comparison lacks a unique valid CV selection.",
+        call. = FALSE
+      )
+    }
+    list(att = as.numeric(row$att[[1]]), r = as.integer(row$r_cv[[1]]))
+  }
+  bsv_selected <- extract_selected("BSV")
+  dm_selected <- extract_selected("UNGA-DM")
+  ungadm_require_columns(
+    draws,
+    c(
+      "bsv_selected_r", "dm_selected_r", "diff_procedure",
+      "diff_common_r2"
+    ),
+    "paired-bootstrap draws"
+  )
+  if (any(draws$bsv_selected_r != bsv_selected$r) ||
+      any(draws$dm_selected_r != dm_selected$r)) {
+    stop(
+      "Paired-bootstrap factors do not match the CV-selected factors.",
+      call. = FALSE
+    )
+  }
   bsv_r2 <- extract_att("BSV", 2L)
-  dm_r1 <- extract_att("UNGA-DM", 1L)
   dm_r2 <- extract_att("UNGA-DM", 2L)
   dplyr::bind_rows(
     ungadm_summarize_bootstrap_difference(
       draws$diff_procedure,
-      "UNGA-DM (r=1) minus BSV (r=2), procedure-selected",
-      dm_r1 - bsv_r2,
+      paste0(
+        "UNGA-DM (r=", dm_selected$r, ") minus BSV (r=",
+        bsv_selected$r, "), procedure-selected"
+      ),
+      dm_selected$att - bsv_selected$att,
       B
     ),
     ungadm_summarize_bootstrap_difference(
@@ -1818,9 +2023,11 @@ ungadm_ife_validation_names <- function() {
     "ife_inference_is_finite",
     "ife_dynamic_has_both_outcomes",
     "ife_fixed_grid_is_complete",
+    "ife_fixed_grid_inference_is_finite",
     "ife_fixed_grid_not_smoke",
     "ife_paired_draws_complete",
     "ife_paired_draws_successful",
+    "ife_paired_selection_matches_cv",
     "ife_paired_summary_complete",
     "ife_divergence_unique_countries",
     "ife_group_means_unique_group_year"
@@ -1840,6 +2047,28 @@ validate_ungadm_ife_outputs <- function(comparison,
     dplyr::select(common_bundle$panel_dm, iso3c, year)
   )
   inference_columns <- c("att", "se", "ci_lo", "ci_hi", "p")
+  bootstrap_summary_columns <- c(
+    "observed_diff", "boot_mean", "boot_sd", "ci_2_5", "ci_97_5",
+    "p_two_sided_percentile", "p_two_sided_normal"
+  )
+  bsv_common <- comparison |>
+    dplyr::filter(grepl("^BSV common window", variant))
+  dm_common <- comparison |>
+    dplyr::filter(grepl("^UNGA-DM common window", variant))
+  procedure_summary <- paired_summary |>
+    dplyr::filter(grepl("procedure-selected$", contrast))
+  selected_factors_match <- nrow(bsv_common) == 1L &&
+    nrow(dm_common) == 1L &&
+    nrow(procedure_summary) == 1L &&
+    is.finite(bsv_common$r_cv[[1]]) &&
+    is.finite(dm_common$r_cv[[1]]) &&
+    all(paired_draws$bsv_selected_r == as.integer(bsv_common$r_cv[[1]])) &&
+    all(paired_draws$dm_selected_r == as.integer(dm_common$r_cv[[1]])) &&
+    isTRUE(all.equal(
+      procedure_summary$observed_diff[[1]],
+      dm_common$att[[1]] - bsv_common$att[[1]],
+      tolerance = 1e-12
+    ))
   tibble::tibble(
     validation = ungadm_ife_validation_names(),
     passed = c(
@@ -1862,6 +2091,10 @@ validate_ungadm_ife_outputs <- function(comparison,
         setequal(paste(fixed_grid$outcome, fixed_grid$r_fixed),
                  c("BSV 1", "BSV 2", "UNGA-DM 1", "UNGA-DM 2")) &&
         all(fixed_grid$nboots >= 10000L),
+      all(vapply(fixed_grid[inference_columns], function(value) {
+        all(is.finite(value))
+      }, logical(1))) &&
+        all(is.finite(fixed_grid$n_obs)),
       all(fixed_grid$smoke_test %in% FALSE),
       nrow(paired_draws) == B &&
         identical(paired_draws$b, seq_len(B)),
@@ -1874,9 +2107,19 @@ validate_ungadm_ife_outputs <- function(comparison,
           function(value) all(is.finite(value)),
           logical(1)
         )),
+      selected_factors_match,
       nrow(paired_summary) == 2L &&
         all(paired_summary$n_valid == B) &&
-        all(paired_summary$n_failed == 0L),
+        all(paired_summary$n_failed == 0L) &&
+        all(vapply(
+          paired_summary[bootstrap_summary_columns],
+          function(value) all(is.finite(value)),
+          logical(1)
+        )) &&
+        all(paired_summary$p_two_sided_percentile >= 0) &&
+        all(paired_summary$p_two_sided_percentile <= 1) &&
+        all(paired_summary$p_two_sided_normal >= 0) &&
+        all(paired_summary$p_two_sided_normal <= 1),
       anyDuplicated(series_diagnostics$divergence$iso3c) == 0L &&
         setequal(series_diagnostics$divergence$iso3c,
                  common_bundle$common_rows$iso3c),
@@ -1896,9 +2139,15 @@ validate_ungadm_ife_outputs <- function(comparison,
       paste(inference_columns, collapse = ";"),
       paste(sort(unique(dynamic$variant)), collapse = ";"),
       paste(paste(fixed_grid$outcome, fixed_grid$r_fixed), collapse = ";"),
+      paste(inference_columns, collapse = ";"),
       paste(unique(fixed_grid$smoke_test), collapse = ";"),
       paste0("draws=", nrow(paired_draws)),
       paste0("failures=", sum(paired_draws$status != "ok")),
+      paste0(
+        "BSV r=", if (nrow(bsv_common) == 1L) bsv_common$r_cv[[1]] else NA,
+        "; UNGA-DM r=",
+        if (nrow(dm_common) == 1L) dm_common$r_cv[[1]] else NA
+      ),
       paste0("summary rows=", nrow(paired_summary)),
       paste0("countries=", nrow(series_diagnostics$divergence)),
       paste0("group-year rows=", nrow(series_diagnostics$group_means))

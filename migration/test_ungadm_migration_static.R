@@ -58,6 +58,69 @@ expect_true(
   "frozen UNGA-DM inputs match the contract"
 )
 
+sdid_reference_directory <- file.path(
+  "data", "processed", "diagnostics", "ungadm_outcome_robustness"
+)
+sdid_reference_validation <- validate_ungadm_sdid_reference_files(
+  sdid_reference_directory
+)
+expect_true(
+  nrow(sdid_reference_validation) == 4L &&
+    all(sdid_reference_validation$passed),
+  "frozen UNGA-DM SDiD references match the contract hashes"
+)
+tampered_reference_directory <- tempfile("ungadm-sdid-reference-")
+dir.create(
+  file.path(tampered_reference_directory, "estimation"),
+  recursive = TRUE
+)
+dir.create(
+  file.path(tampered_reference_directory, "postreview"),
+  recursive = TRUE
+)
+copied_references <- file.copy(
+  sdid_reference_validation$path,
+  c(
+    file.path(
+      tampered_reference_directory,
+      "estimation",
+      "sdid_comparison_table.csv"
+    ),
+    file.path(
+      tampered_reference_directory,
+      "estimation",
+      "sdid_dm_placebo_distribution.csv"
+    ),
+    file.path(
+      tampered_reference_directory,
+      "postreview",
+      "sdid_dm_rank_inference_harmonized.csv"
+    ),
+    file.path(
+      tampered_reference_directory,
+      "estimation",
+      "sdid_unit_weights_bsv_vs_dm.csv"
+    )
+  )
+)
+expect_true(
+  all(copied_references),
+  "SDiD hash-test fixtures are complete"
+)
+writeLines(
+  "tampered",
+  file.path(
+    tampered_reference_directory,
+    "estimation",
+    "sdid_comparison_table.csv"
+  )
+)
+expect_error(
+  validate_ungadm_sdid_reference_files(tampered_reference_directory),
+  "SDiD reference validation rejects a changed file"
+)
+unlink(tampered_reference_directory, recursive = TRUE)
+
 harmonized <- build_ungadm_harmonized_bundle(bsv_file, dm_file)
 validation_outputs <- build_ungadm_validation_outputs(harmonized)
 assert_ungadm_validation(
@@ -134,6 +197,15 @@ expect_true(
   all(is.na(augmented$abs_distance_china_dm[augmented$year >= 2021L])),
   "2021-2023 remain explicit UNGA-DM missing values"
 )
+master_missing_treatment_column <- master |>
+  dplyr::select(-china_top_period_id)
+expect_error(
+  join_ungadm_to_full_union_master(
+    master_missing_treatment_column,
+    dm_fixture
+  ),
+  "master join rejects a missing contractual treatment column"
+)
 
 row_audit <- master |>
   dplyr::mutate(
@@ -141,6 +213,7 @@ row_audit <- master |>
     specification_unit_eligible = TRUE,
     risk_set_eligible = TRUE,
     abs_distance_china = 0.4,
+    outcome_observed = TRUE,
     china_top = china_top_status,
     treatment_role = dplyr::if_else(
       iso3c == "AAA",
@@ -162,6 +235,34 @@ expect_true(
     dplyr::select(common$panel_dm, iso3c, year, china_top)
   ),
   "common BSV and UNGA-DM variants have identical rows and treatment"
+)
+common_missing_metadata <- common
+common_missing_metadata$panel_dm <- common_missing_metadata$panel_dm |>
+  dplyr::select(-qualifying_period)
+expect_error(
+  validate_ungadm_common_window_bundle(common_missing_metadata),
+  "common-window validation rejects a missing contractual metadata column"
+)
+row_audit_missing_bsv <- row_audit |>
+  dplyr::mutate(
+    outcome_observed = dplyr::if_else(
+      iso3c == "BBB" & year == 2000L,
+      FALSE,
+      outcome_observed
+    ),
+    abs_distance_china = dplyr::if_else(
+      iso3c == "BBB" & year == 2000L,
+      NA_real_,
+      abs_distance_china
+    )
+  )
+common_missing_bsv <- build_ungadm_common_window_bundle(
+  row_audit_missing_bsv,
+  augmented
+)
+expect_true(
+  any(common_missing_bsv$dropped_rows$reason == "BSV outcome missing"),
+  "common-window row audit distinguishes missing BSV outcomes"
 )
 
 sdid_fixture <- tidyr::expand_grid(
@@ -232,6 +333,8 @@ stub_fit <- function(panel, r_fixed) {
 }
 draws_first <- run_ungadm_paired_bootstrap_candidate(
   common$common_rows,
+  bsv_selected_r = 2L,
+  dm_selected_r = 1L,
   B = 4L,
   boot_seed = 20260823L,
   checkpoint_directory = checkpoint_directory,
@@ -246,6 +349,8 @@ expect_true(
 fit_counter$n <- 0L
 draws_reused <- run_ungadm_paired_bootstrap_candidate(
   common$common_rows,
+  bsv_selected_r = 2L,
+  dm_selected_r = 1L,
   B = 4L,
   boot_seed = 20260823L,
   checkpoint_directory = checkpoint_directory,
@@ -265,6 +370,8 @@ sdid_atomic_save_rds(checkpoint, checkpoint_path)
 fit_counter$n <- 0L
 draws_resumed <- run_ungadm_paired_bootstrap_candidate(
   common$common_rows,
+  bsv_selected_r = 2L,
+  dm_selected_r = 1L,
   B = 4L,
   boot_seed = 20260823L,
   checkpoint_directory = checkpoint_directory,
@@ -284,6 +391,8 @@ stub_fit_changed <- function(panel, r_fixed) {
 }
 draws_invalidated <- run_ungadm_paired_bootstrap_candidate(
   common$common_rows,
+  bsv_selected_r = 2L,
+  dm_selected_r = 1L,
   B = 4L,
   boot_seed = 20260823L,
   checkpoint_directory = checkpoint_directory,
@@ -297,5 +406,54 @@ expect_true(
   "code change invalidates the paired-bootstrap checkpoint"
 )
 
+dynamic_checkpoint_directory <- tempfile("ungadm-paired-dynamic-")
+fit_counter$n <- 0L
+draws_dynamic <- run_ungadm_paired_bootstrap_candidate(
+  common$common_rows,
+  bsv_selected_r = 0L,
+  dm_selected_r = 3L,
+  B = 2L,
+  boot_seed = 20260823L,
+  checkpoint_directory = dynamic_checkpoint_directory,
+  core_cap = 1L,
+  batch_size = 2L,
+  fit_function = stub_fit
+)
+expect_true(
+  all(draws_dynamic$bsv_selected_r == 0L) &&
+    all(draws_dynamic$dm_selected_r == 3L) &&
+    fit_counter$n == 8L,
+  "paired bootstrap follows arbitrary CV selections in 0:3"
+)
+dynamic_summary <- build_ungadm_paired_bootstrap_summary_candidate(
+  draws_dynamic,
+  tibble::tribble(
+    ~variant, ~att, ~r_cv,
+    "BSV common window (fixture)", 0.4, 0L,
+    "UNGA-DM common window (fixture)", 3.5, 3L
+  ),
+  tibble::tribble(
+    ~outcome, ~r_fixed, ~att,
+    "BSV", 2L, 2.4,
+    "UNGA-DM", 2L, 2.5
+  ),
+  B = 2L
+)
+expect_true(
+  grepl("UNGA-DM \\(r=3\\) minus BSV \\(r=0\\)",
+        dynamic_summary$contrast[[1]]) &&
+    isTRUE(all.equal(dynamic_summary$observed_diff[[1]], 3.1)),
+  "paired-bootstrap summary labels and contrasts the selected factors"
+)
+expect_true(
+  grepl(
+    "run_ungadm_paired_bootstrap_candidate",
+    paste(deparse(body(ungadm_paired_code_fingerprint)), collapse = " "),
+    fixed = TRUE
+  ),
+  "checkpoint fingerprint covers the bootstrap orchestrator"
+)
+
 unlink(checkpoint_directory, recursive = TRUE)
+unlink(dynamic_checkpoint_directory, recursive = TRUE)
 message("ALL_STATIC_UNGADM_MIGRATION_TESTS_PASSED")
