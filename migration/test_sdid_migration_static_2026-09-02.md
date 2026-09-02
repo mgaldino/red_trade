@@ -22,14 +22,15 @@ Cobertura:
 - reprovação de violação material dos limites de share;
 - gate agregado fail-closed quando `passed` é `NA`;
 - gate agregado exige tabela não vazia, nomes únicos e o conjunto exato de
-  checks obrigatórios;
+  checks obrigatórios, reprovando também checks extras e `passed = FALSE`;
 - escrita/leitura atômica de checkpoint e descarte seguro de RDS corrompido;
 - retomada de rank placebo parcial, computando apenas unidades faltantes com
   um fit falso barato, sem modelo estatístico;
 - descarte integral de checkpoint de rank legível, mas semanticamente inválido;
 - retomada de linha de rank com erro transitório, preservando as linhas válidas;
-- fingerprint de rank inclui a função que calcula estimativa e RMSPE, e o RMSPE
-  estimado deve ser não negativo;
+- fingerprint de rank inclui tanto a função que calcula estimativa e RMSPE
+  quanto a função que constrói a matriz de covariáveis;
+- checkpoint de rank rejeita explicitamente RMSPE negativo;
 - fixture ITPD-E 2004–2008 processada em DuckDB;
 - exclusão de serviços e fluxos domésticos do denominador de bens;
 - cálculo da participação chinesa sobre bens;
@@ -44,7 +45,7 @@ Também passaram:
 
 - parse de `_targets.R` e `scripts/functions_sdid_targets_migration.R`;
 - `git diff --check`;
-- manifesto estático com 288 targets.
+- manifesto estático com 288 targets;
 - validação estrutural do baseline commodity real: 239 linhas, cinco com
   cobertura parcial e cinco com exportações de bens iguais a zero.
 

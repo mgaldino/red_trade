@@ -208,6 +208,7 @@ sdid_fit_summary_row <- function(fit, specification, se_value = NA_real_) {
     list(
       deparse(body(sdid_placebo_estimates)),
       deparse(body(sdid_sum_normalize)),
+      deparse(body(sdid_build_covariate_array)),
       deparse(body(sdid_fit_spec)),
       deparse(body(sdid_fit_summary_row)),
       deparse(body(sdid_rank_distribution)),

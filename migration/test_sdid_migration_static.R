@@ -144,6 +144,23 @@ expect_error(
   ),
   "aggregate validation rejects duplicate checks"
 )
+expect_error(
+  assert_sdid_migration_validation(
+    tibble::tibble(
+      validation = c("known", "unexpected"),
+      passed = c(TRUE, TRUE)
+    ),
+    expected_validations = "known"
+  ),
+  "aggregate validation rejects an unexpected extra check"
+)
+expect_error(
+  assert_sdid_migration_validation(
+    tibble::tibble(validation = "known", passed = FALSE),
+    expected_validations = "known"
+  ),
+  "aggregate validation rejects an explicit failed check"
+)
 
 checkpoint_directory <- tempfile(pattern = "sdid-checkpoint-")
 dir.create(checkpoint_directory)
@@ -157,6 +174,43 @@ writeLines("not an RDS file", atomic_checkpoint)
 expect_true(
   is.null(suppressWarnings(sdid_read_checkpoint(atomic_checkpoint))),
   "corrupt checkpoint is ignored safely"
+)
+
+# A code change anywhere in the functional chain that produces a persisted
+# rank estimate must invalidate its fingerprint, including helper functions
+# called by name from the functions whose bodies are already hashed.
+fingerprint_original <- .sdid_code_fingerprint()
+original_covariate_builder_fingerprint <- sdid_build_covariate_array
+sdid_build_covariate_array <- function(data, covariate_cols) {
+  stop("fingerprint-only covariate builder")
+}
+fingerprint_covariate_builder_changed <- .sdid_code_fingerprint()
+sdid_build_covariate_array <- original_covariate_builder_fingerprint
+expect_true(
+  !identical(fingerprint_original, fingerprint_covariate_builder_changed),
+  "rank fingerprint covers covariate-array construction"
+)
+original_summary_fingerprint <- sdid_fit_summary_row
+sdid_fit_summary_row <- function(fit, specification, se_value = NA_real_) {
+  stop("fingerprint-only summary")
+}
+fingerprint_summary_changed <- .sdid_code_fingerprint()
+sdid_fit_summary_row <- original_summary_fingerprint
+expect_true(
+  !identical(fingerprint_original, fingerprint_summary_changed),
+  "rank fingerprint covers estimate and RMSPE summary"
+)
+
+negative_rmspe_row <- tibble::tibble(
+  iso3c = "AAA",
+  estimate = 0,
+  rmspe_pre = -0.1,
+  status = "estimated",
+  error = ""
+)
+expect_true(
+  !sdid_rank_checkpoint_valid(negative_rmspe_row, "AAA"),
+  "rank checkpoint rejects negative RMSPE"
 )
 
 # Exercise partial rank resumption without fitting a model. The first run
