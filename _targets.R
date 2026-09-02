@@ -21,6 +21,8 @@ tar_source("scripts/functions.R")
 tar_source("scripts/functions_unvotes.R")
 tar_source("scripts/functions_sdid_dose_placebo.R")
 tar_source("scripts/functions_targets_migration.R")
+tar_source("scripts/diagnostics/sdid_placebo_helpers.R")
+tar_source("scripts/functions_sdid_targets_migration.R")
 # tar_source("other_functions.R") # Source other scripts as needed.
 
 # Replace the target list below with your own:
@@ -194,6 +196,334 @@ list(
                trade_data_ranked,
                trade_data_cleaned
              )),
+  # Candidate migration of every Brazil SDiD CSV/figure currently read by the
+  # paper. Expensive placebo targets stay separate and none of these names
+  # replace production before the side-by-side comparison passes.
+  tar_target(brazil_sdid_preferred_se_info_candidate,
+             reuse_sdid_preferred_se_candidate(
+               synth_fit_no_time_varying_covariates,
+               synth_fit_no_time_varying_covariates,
+               se_synth_no_time_varying_covariates,
+               replications = 20000L
+             )),
+  tar_target(brazil_sdid_preferred_rank_distribution_candidate,
+             sdid_rank_distribution(
+               synth_data,
+               covariate_cols = character(0),
+               label = "no_covariates",
+               cores = sdid_available_cores(),
+               checkpoint_dir = NULL
+             )),
+  tar_target(brazil_sdid_latam_units_candidate,
+             synth_data |>
+               dplyr::filter(latin_america) |>
+               dplyr::distinct(iso3c) |>
+               dplyr::pull(iso3c)),
+  tar_target(brazil_sdid_latam_fit_candidate,
+             sdid_fit_spec(
+               synth_data,
+               units = union(brazil_sdid_latam_units_candidate, "BRA")
+             )),
+  tar_target(brazil_sdid_latam_se_candidate,
+             sdid_placebo_se(
+               brazil_sdid_latam_fit_candidate,
+               replications = 20000L,
+               seed = SDID_PLACEBO_SEED,
+               cores = sdid_available_cores(),
+               checkpoint_dir = NULL,
+               label = "latam_no_covariates"
+             )),
+  tar_target(brazil_sdid_latam_rank_distribution_candidate,
+             sdid_rank_distribution(
+               synth_data |>
+                 dplyr::filter(
+                   iso3c %in% union(brazil_sdid_latam_units_candidate, "BRA")
+                 ),
+               covariate_cols = character(0),
+               label = "latam_no_covariates",
+               cores = sdid_available_cores(),
+               checkpoint_dir = NULL
+             )),
+  tar_target(brazil_sdid_paper_outputs_candidate,
+             build_paper_sdid_outputs_candidate(
+               synth_data,
+               synth_fit_no_time_varying_covariates,
+               brazil_sdid_preferred_se_info_candidate,
+               brazil_sdid_preferred_rank_distribution_candidate,
+               brazil_sdid_latam_fit_candidate,
+               brazil_sdid_latam_se_candidate,
+               brazil_sdid_latam_rank_distribution_candidate,
+               goal3_brazil_rank_volume_data,
+               trade_data_ranked,
+               trade_data_cleaned
+             )),
+  tar_target(brazil_sdid_paper_reference_files,
+             file.path(
+               "data", "processed", "diagnostics",
+               "paper_v4_brazil_sdid_no_covariates",
+               paste0(
+                 c(
+                   "main_summary", "unit_weights", "time_weights", "balance",
+                   "rank_inference", "placebo_distribution",
+                   "donor_sensitivity", "window_sensitivity",
+                   "donor_china_exposure", "donor_china_exposure_summary",
+                   "timing_placebos", "latam_core_summary"
+                 ),
+                 ".csv"
+               )
+             ),
+             format = "file"),
+  tar_target(brazil_sdid_paper_outputs_validation_candidate,
+             {
+               brazil_sdid_paper_reference_files
+               validate_paper_sdid_outputs_candidate(
+                 brazil_sdid_paper_outputs_candidate,
+                 file.path(
+                   "data", "processed", "diagnostics",
+                   "paper_v4_brazil_sdid_no_covariates"
+                 )
+               )
+             }),
+  tar_target(brazil_sdid_paper_outputs_validation_gate_candidate,
+             assert_sdid_migration_validation(
+               brazil_sdid_paper_outputs_validation_candidate
+             )),
+  tar_target(brazil_sdid_paper_output_files_candidate,
+             {
+               brazil_sdid_paper_outputs_validation_gate_candidate
+               write_paper_sdid_outputs_candidate(
+                 brazil_sdid_paper_outputs_candidate,
+                 file.path(
+                   "data", "processed", "targets_migration",
+                   "paper_v4_brazil_sdid_no_covariates"
+                 )
+               )
+             },
+             format = "file"),
+  tar_target(brazil_sdid_main_fit_figure_candidate,
+             {
+               brazil_sdid_paper_outputs_validation_gate_candidate
+               write_sdid_fit_figure_candidate(
+                 synth_fit_no_time_varying_covariates,
+                 file.path(
+                   "images", "targets_migration",
+                   "figure_brazil_sdid_predetermined_core_fit.png"
+                 ),
+                 "Preferred specification, estimated without covariates"
+               )
+             },
+             format = "file"),
+  tar_target(brazil_sdid_weights_figure_candidate,
+             {
+               brazil_sdid_paper_outputs_validation_gate_candidate
+               write_sdid_weights_figure_candidate(
+                 brazil_sdid_paper_outputs_candidate$unit_weights,
+                 file.path(
+                   "images", "targets_migration",
+                   "figure_brazil_sdid_predetermined_core_weights.png"
+                 )
+               )
+             },
+             format = "file"),
+  tar_target(brazil_sdid_latam_fit_figure_candidate,
+             {
+               brazil_sdid_paper_outputs_validation_gate_candidate
+               write_sdid_fit_figure_candidate(
+                 brazil_sdid_latam_fit_candidate,
+                 file.path(
+                   "images", "targets_migration",
+                   "figure_brazil_sdid_predetermined_core_latam_fit.png"
+                 ),
+                 "Latin America donors, estimated without covariates"
+               )
+             },
+             format = "file"),
+  # Commodity inputs are reconstructed from the frozen raw ITPD-E and Pink
+  # Sheet files. The legacy derived CSVs are comparison references only.
+  tar_target(brazil_sdid_pink_sheet_file_candidate,
+             file.path(
+               "data", "raw", "commodity_prices",
+               "world_bank_pink_sheet",
+               "CMO-Historical-Data-Annual_2026-07-11.xlsx"
+             ),
+             format = "file"),
+  tar_target(brazil_sdid_commodity_exposure_bundle_candidate,
+             build_sdid_commodity_exposure_from_itpde(trade_file)),
+  tar_target(brazil_sdid_commodity_exposure_candidate,
+             brazil_sdid_commodity_exposure_bundle_candidate$exposure),
+  tar_target(brazil_sdid_commodity_exposure_yearly_candidate,
+             brazil_sdid_commodity_exposure_bundle_candidate$yearly),
+  tar_target(brazil_sdid_commodity_exposure_audit_candidate,
+             brazil_sdid_commodity_exposure_bundle_candidate$audit),
+  tar_target(brazil_sdid_pink_sheet_indices_candidate,
+             read_sdid_pink_sheet_indices(
+               brazil_sdid_pink_sheet_file_candidate
+             )),
+  tar_target(brazil_sdid_commodity_reference_exposure_file,
+             file.path(
+               "data", "processed", "diagnostics",
+               "brazil_sdid_predetermined_commodity_controls",
+               "table_2_pre2009_commodity_exposure_by_country.csv"
+             ),
+             format = "file"),
+  tar_target(brazil_sdid_commodity_reference_price_file,
+             file.path(
+               "data", "processed", "diagnostics",
+               "brazil_sdid_predetermined_commodity_controls",
+               "table_3_world_bank_commodity_price_indices.csv"
+             ),
+             format = "file"),
+  tar_target(brazil_sdid_commodity_derivation_validation_candidate,
+             validate_sdid_commodity_derivations(
+               brazil_sdid_commodity_exposure_candidate,
+               brazil_sdid_pink_sheet_indices_candidate,
+               brazil_sdid_commodity_reference_exposure_file,
+               brazil_sdid_commodity_reference_price_file
+             )),
+  tar_target(brazil_sdid_commodity_derivation_gate_candidate,
+             assert_sdid_migration_validation(
+               brazil_sdid_commodity_derivation_validation_candidate
+             )),
+  tar_target(brazil_sdid_commodity_panel_candidate,
+             {
+               brazil_sdid_commodity_derivation_gate_candidate
+               build_sdid_commodity_panel_candidate(
+                 synth_data,
+                 brazil_sdid_commodity_exposure_candidate,
+                 brazil_sdid_pink_sheet_indices_candidate
+               )
+             }),
+  tar_target(brazil_sdid_commodity_fit_current_baseline_candidate,
+             fit_sdid_commodity_specification_candidate(
+               brazil_sdid_commodity_panel_candidate,
+               "current_baseline"
+             )),
+  tar_target(brazil_sdid_commodity_fit_no_covariates_candidate,
+             fit_sdid_commodity_specification_candidate(
+               brazil_sdid_commodity_panel_candidate,
+               "no_covariates"
+             )),
+  tar_target(brazil_sdid_commodity_fit_primary_gfc_candidate,
+             fit_sdid_commodity_specification_candidate(
+               brazil_sdid_commodity_panel_candidate,
+               "primary_gfc_2008_2009"
+             )),
+  tar_target(brazil_sdid_commodity_fit_agriculture_mining_candidate,
+             fit_sdid_commodity_specification_candidate(
+               brazil_sdid_commodity_panel_candidate,
+               "agriculture_mining_gfc"
+             )),
+  tar_target(brazil_sdid_commodity_fit_weighted_price_candidate,
+             fit_sdid_commodity_specification_candidate(
+               brazil_sdid_commodity_panel_candidate,
+               "weighted_price_gfc"
+             )),
+  tar_target(brazil_sdid_commodity_fit_pre_china_candidate,
+             fit_sdid_commodity_specification_candidate(
+               brazil_sdid_commodity_panel_candidate,
+               "pre_china_gfc"
+             )),
+  tar_target(brazil_sdid_commodity_se_current_baseline_candidate,
+             compute_sdid_comparison_se_candidate(
+               brazil_sdid_commodity_fit_current_baseline_candidate,
+               "current_baseline",
+               replications = 5000L
+             )),
+  tar_target(brazil_sdid_commodity_se_no_covariates_candidate,
+             reuse_sdid_preferred_se_candidate(
+               brazil_sdid_commodity_fit_no_covariates_candidate,
+               synth_fit_no_time_varying_covariates,
+               se_synth_no_time_varying_covariates,
+               replications = 20000L
+             )),
+  tar_target(brazil_sdid_commodity_se_primary_gfc_candidate,
+             compute_sdid_comparison_se_candidate(
+               brazil_sdid_commodity_fit_primary_gfc_candidate,
+               "primary_gfc_2008_2009",
+               replications = 5000L
+             )),
+  tar_target(brazil_sdid_commodity_se_agriculture_mining_candidate,
+             compute_sdid_comparison_se_candidate(
+               brazil_sdid_commodity_fit_agriculture_mining_candidate,
+               "agriculture_mining_gfc",
+               replications = 5000L
+             )),
+  tar_target(brazil_sdid_commodity_se_weighted_price_candidate,
+             compute_sdid_comparison_se_candidate(
+               brazil_sdid_commodity_fit_weighted_price_candidate,
+               "weighted_price_gfc",
+               replications = 5000L
+             )),
+  tar_target(brazil_sdid_commodity_se_pre_china_candidate,
+             compute_sdid_comparison_se_candidate(
+               brazil_sdid_commodity_fit_pre_china_candidate,
+               "pre_china_gfc",
+               replications = 5000L
+             )),
+  tar_target(brazil_sdid_commodity_primary_rank_distribution_candidate,
+             sdid_rank_distribution(
+               brazil_sdid_commodity_panel_candidate,
+               covariate_cols = "primary_x_2008_2009_z",
+               label = "primary_gfc_2008_2009",
+               cores = sdid_available_cores(),
+               checkpoint_dir = NULL
+             )),
+  tar_target(brazil_sdid_commodity_fits_candidate,
+             list(
+               current_baseline = brazil_sdid_commodity_fit_current_baseline_candidate,
+               no_covariates = brazil_sdid_commodity_fit_no_covariates_candidate,
+               primary_gfc_2008_2009 = brazil_sdid_commodity_fit_primary_gfc_candidate,
+               agriculture_mining_gfc = brazil_sdid_commodity_fit_agriculture_mining_candidate,
+               weighted_price_gfc = brazil_sdid_commodity_fit_weighted_price_candidate,
+               pre_china_gfc = brazil_sdid_commodity_fit_pre_china_candidate
+             )),
+  tar_target(brazil_sdid_commodity_se_information_candidate,
+             list(
+               current_baseline = brazil_sdid_commodity_se_current_baseline_candidate,
+               no_covariates = brazil_sdid_commodity_se_no_covariates_candidate,
+               primary_gfc_2008_2009 = brazil_sdid_commodity_se_primary_gfc_candidate,
+               agriculture_mining_gfc = brazil_sdid_commodity_se_agriculture_mining_candidate,
+               weighted_price_gfc = brazil_sdid_commodity_se_weighted_price_candidate,
+               pre_china_gfc = brazil_sdid_commodity_se_pre_china_candidate
+             )),
+  tar_target(brazil_sdid_commodity_table_candidate,
+             build_sdid_commodity_table_candidate(
+               brazil_sdid_commodity_fits_candidate,
+               brazil_sdid_commodity_se_information_candidate,
+               brazil_sdid_preferred_rank_distribution_candidate,
+               brazil_sdid_commodity_primary_rank_distribution_candidate
+             )),
+  tar_target(brazil_sdid_commodity_table_reference_file,
+             file.path(
+               "data", "processed", "diagnostics",
+               "brazil_sdid_commodity_no_covariates",
+               "table_5_sdid_specification_results.csv"
+             ),
+             format = "file"),
+  tar_target(brazil_sdid_commodity_table_validation_candidate,
+             compare_sdid_candidate_frame(
+               brazil_sdid_commodity_table_candidate,
+               brazil_sdid_commodity_table_reference_file,
+               "specification",
+               "commodity_table_5"
+             )),
+  tar_target(brazil_sdid_commodity_table_validation_gate_candidate,
+             assert_sdid_migration_validation(
+               brazil_sdid_commodity_table_validation_candidate
+             )),
+  tar_target(brazil_sdid_commodity_table_file_candidate,
+             {
+               brazil_sdid_commodity_table_validation_gate_candidate
+               write_sdid_table_candidate(
+                 brazil_sdid_commodity_table_candidate,
+                 file.path(
+                   "data", "processed", "targets_migration",
+                   "brazil_sdid_commodity_no_covariates",
+                   "table_5_sdid_specification_results.csv"
+                 )
+               )
+             },
+             format = "file"),
   # Dose-response placebo diagnostic. Crosses each donor's pseudo-ATT with its
   # trade exposure to China to discriminate the continuous-dependence rival
   # (alignment tracks the DOSE of exposure) from the rank-threshold mechanism.
