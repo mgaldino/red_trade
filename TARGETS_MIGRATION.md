@@ -66,7 +66,7 @@ insumos brutos congelados, documentados e validados por hash.
 | SDiD Brasil | Parte dos diagnósticos e figuras vem de scripts externos | Bundles e file targets dependentes dos alvos de estimação vigentes | Implementado; revisão independente `A/PASS` |
 | Commodity e Tabela 5 | Tabelas derivadas por scripts de diagnóstico | Targets a montante e tabelas produzidas dentro do grafo | Implementado; revisão independente `A/PASS` |
 | UNGA-DM | Dois scripts externos produzem estimação e pós-revisão | Outcome harmonizado, SDiD, IFE, bootstrap, ranks, tabelas e figuras como targets | Implementado; revisão independente `A/PASS` em `migration/review_r_ungadm_round3.md` |
-| Evidência de status | Coletores misturam HTTP, codificação e derivações | HTTP externo; bruto e codificação congelados; derivações e tabelas dentro do grafo | Contrato congelado; implementação em andamento |
+| Evidência de status | Coletores misturam HTTP, codificação e derivações | HTTP externo; bruto e codificação congelados; derivações e tabelas dentro do grafo | Implementado; revisões independentes R e Python `A/PASS` |
 | Manuscrito | Leituras diretas de CSVs diagnósticos e imagens manuais | `tar_read()` e caminhos retornados por file targets | Pendente do fechamento dos blocos a montante |
 
 Nenhum bloco será promovido isoladamente. A implementação pode ser organizada por
