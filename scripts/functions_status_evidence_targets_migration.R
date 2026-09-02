@@ -29,6 +29,62 @@ status_evidence_bool <- function(x, label) {
   value == "true"
 }
 
+status_evidence_integer <- function(x, label, minimum, maximum) {
+  value <- trimws(as.character(x))
+  valid_lexeme <- !is.na(value) & grepl("^[0-9]+$", value)
+  parsed <- suppressWarnings(as.integer(value))
+  valid_range <- !is.na(parsed) & parsed >= minimum & parsed <= maximum
+  if (any(!valid_lexeme | !valid_range)) {
+    stop(
+      label,
+      " must contain only whole years from ",
+      minimum,
+      " through ",
+      maximum,
+      ".",
+      call. = FALSE
+    )
+  }
+  parsed
+}
+
+status_evidence_valid_iso_date <- function(x) {
+  value <- as.character(x)
+  lexically_valid <- !is.na(value) &
+    grepl("^[0-9]{4}-[0-9]{2}-[0-9]{2}$", value)
+  parsed <- suppressWarnings(as.Date(value, format = "%Y-%m-%d"))
+  lexically_valid & !is.na(parsed) & format(parsed, "%Y-%m-%d") == value
+}
+
+status_evidence_valid_http_url <- function(x) {
+  value <- as.character(x)
+  !is.na(value) & grepl(
+    "^https?://[^/?#[:space:]]+(?:[/?#]|$)",
+    value,
+    perl = TRUE
+  )
+}
+
+status_evidence_expected_audit_universe <- function() {
+  tibble::tribble(
+    ~iso3c, ~country_name, ~entry_year,
+    "SLB", "Solomon Islands", 2003L,
+    "PHL", "Philippines", 2005L,
+    "AGO", "Angola", 2007L,
+    "CHL", "Chile", 2008L,
+    "BRA", "Brazil", 2009L,
+    "MYS", "Malaysia", 2009L,
+    "AUS", "Australia", 2010L,
+    "SLE", "Sierra Leone", 2012L,
+    "URY", "Uruguay", 2013L,
+    "MMR", "Myanmar (Burma)", 2014L,
+    "SAU", "Saudi Arabia", 2015L,
+    "GAB", "Gabon", 2017L,
+    "KWT", "Kuwait", 2018L,
+    "QAT", "Qatar", 2021L
+  )
+}
+
 status_evidence_file_sha256 <- function(path) {
   digest::digest(
     file = path,
@@ -239,8 +295,19 @@ validate_status_evidence_source_ledger <- function(source,
     logical(1)
   )
   key <- if (identical(kind, "status")) source$raw_file else source$source_id
-  entry_year <- suppressWarnings(as.integer(source$entry_year))
-  evidence_year <- suppressWarnings(as.integer(source$evidence_year))
+  entry_year_text <- trimws(as.character(source$entry_year))
+  evidence_year_text <- trimws(as.character(source$evidence_year))
+  entry_year <- suppressWarnings(as.integer(entry_year_text))
+  evidence_year <- suppressWarnings(as.integer(evidence_year_text))
+  years_valid <-
+    all(grepl("^[0-9]+$", entry_year_text)) &&
+    all(grepl("^[0-9]+$", evidence_year_text)) &&
+    !anyNA(entry_year) &&
+    !anyNA(evidence_year) &&
+    all(entry_year >= 1990L & entry_year <= 2023L) &&
+    all(evidence_year >= 1990L & evidence_year <= 2023L)
+  dates_valid <- all(status_evidence_valid_iso_date(source$publication_date))
+  urls_valid <- all(status_evidence_valid_http_url(source$url))
   tibble::tibble(
     validation = c(
       "ledger_hash_matches",
@@ -248,6 +315,7 @@ validate_status_evidence_source_ledger <- function(source,
       "ledger_keys_unique_and_nonmissing",
       "ledger_country_codes_valid",
       "ledger_years_valid",
+      "ledger_publication_dates_valid",
       "ledger_urls_valid",
       "ledger_booleans_valid",
       "ledger_raw_pointers_manifested"
@@ -260,10 +328,9 @@ validate_status_evidence_source_ledger <- function(source,
       nrow(source) == expected_rows,
       !anyNA(key) && all(nzchar(key)) && anyDuplicated(key) == 0L,
       !anyNA(source$iso3c) && all(grepl("^[A-Z]{3}$", source$iso3c)),
-      !anyNA(entry_year) && !anyNA(evidence_year) &&
-        all(entry_year >= 1990L & entry_year <= 2023L) &&
-        all(evidence_year >= 1990L & evidence_year <= 2023L),
-      !anyNA(source$url) && all(grepl("^https?://", source$url)),
+      years_valid,
+      dates_valid,
+      urls_valid,
       all(bool_valid),
       all(status_evidence_raw_pointer_membership(
         source$raw_file,
@@ -277,7 +344,11 @@ validate_status_evidence_source_ledger <- function(source,
       paste0("unique=", dplyr::n_distinct(key)),
       paste0("countries=", dplyr::n_distinct(source$iso3c)),
       paste0(min(evidence_year), "-", max(evidence_year)),
-      paste0("urls=", nrow(source)),
+      paste0("valid_dates=", sum(status_evidence_valid_iso_date(
+        source$publication_date
+      )), "/", nrow(source)),
+      paste0("valid_urls=", sum(status_evidence_valid_http_url(source$url)),
+             "/", nrow(source)),
       paste(bool_columns, bool_valid, sep = "=", collapse = ";"),
       paste0("manifested=", sum(status_evidence_raw_pointer_membership(
         source$raw_file,
@@ -296,7 +367,14 @@ read_status_evidence_audit_universe <- function(path) {
     "status-evidence audit universe"
   )
   universe |>
-    dplyr::mutate(entry_year = as.integer(entry_year)) |>
+    dplyr::mutate(
+      entry_year = status_evidence_integer(
+        entry_year,
+        "audit-universe entry_year",
+        1990L,
+        2023L
+      )
+    ) |>
     dplyr::arrange(entry_year, iso3c)
 }
 
@@ -326,10 +404,17 @@ read_ex_top1_country_annotations <- function(path) {
 validate_status_evidence_manual_inputs <- function(universe,
                                                    overrides,
                                                    annotations) {
+  expected_universe <- status_evidence_expected_audit_universe() |>
+    dplyr::arrange(entry_year, iso3c)
+  observed_universe <- universe |>
+    dplyr::select(iso3c, country_name, entry_year) |>
+    dplyr::arrange(entry_year, iso3c)
   tibble::tibble(
     validation = c(
       "audit_universe_has_14_unique_cases",
       "audit_universe_years_valid",
+      "audit_universe_iso3c_valid",
+      "audit_universe_exact_contract",
       "status_overrides_unique_and_in_universe",
       "status_override_codes_allowed",
       "ex_annotations_cover_universe_once"
@@ -338,6 +423,8 @@ validate_status_evidence_manual_inputs <- function(universe,
       nrow(universe) == 14L && anyDuplicated(universe$iso3c) == 0L,
       !anyNA(universe$entry_year) &&
         all(universe$entry_year >= 1990L & universe$entry_year <= 2023L),
+      !anyNA(universe$iso3c) && all(grepl("^[A-Z]{3}$", universe$iso3c)),
+      identical(observed_universe, expected_universe),
       anyDuplicated(overrides$iso3c) == 0L &&
         all(overrides$iso3c %in% universe$iso3c),
       all(overrides$salience_code %in% c("high", "medium", "low", "unknown")) &&
@@ -349,6 +436,8 @@ validate_status_evidence_manual_inputs <- function(universe,
     detail = c(
       paste0("rows=", nrow(universe)),
       paste0(min(universe$entry_year), "-", max(universe$entry_year)),
+      paste(sort(universe$iso3c), collapse = ";"),
+      "iso3c-country_name-entry_year",
       paste0("overrides=", nrow(overrides)),
       paste(sort(unique(overrides$salience_code)), collapse = ";"),
       paste0("annotations=", nrow(annotations))
@@ -683,7 +772,11 @@ build_ex_top1_country_codes_candidate <- function(universe,
           broad_trade_partner_context_sources,
           broad_trade_partner_context_labels
         ),
-        ~ dplyr::na_if(.x, "")
+        ~ dplyr::if_else(
+          n_sources_total > 0L,
+          .x,
+          dplyr::na_if(.x, "")
+        )
       )
     ) |>
     dplyr::select(
@@ -862,10 +955,213 @@ validate_status_evidence_derivations <- function(status_country,
   )
 }
 
+status_evidence_output_spec <- function(kind) {
+  common <- list(
+    status = list(
+      integer = c(
+        "entry_year", "n_newspaper_sources_strong",
+        "n_official_sources_strong", "n_total_strong_or_moderate"
+      ),
+      logical = c(
+        "has_explicit_export_rank_label",
+        "has_explicit_generic_trade_partner_label",
+        "has_official_uptake", "has_newspaper_uptake"
+      ),
+      double = character(),
+      na = "",
+      eol = "\r\n",
+      hash = "ca2fb896d5a6c7614ce1ad7907368b409ecf209a97367d00b19236c70d709533"
+    ),
+    ex_top1 = list(
+      integer = c(
+        "entry_year", "incumbent_rank_year", "n_sources_total",
+        "n_countable_sources", "n_rank_or_displacement_sources",
+        "n_trade_coverage_sources", "n_official_sources", "n_news_sources",
+        "n_broad_trade_partner_context_sources", "n_independent_sources"
+      ),
+      logical = character(),
+      double = c("incumbent_export_share", "china_export_share"),
+      na = "NA",
+      eol = "\n",
+      hash = "568e1a9f6461347de4a74abc5b26c32770c2220cdd286cb91bf655a4f56fdce4"
+    ),
+    comparison = list(
+      integer = c(
+        "entry_year", "incumbent_rank_year",
+        "n_broad_trade_partner_context_sources"
+      ),
+      logical = character(),
+      double = c("incumbent_export_share", "china_export_share"),
+      na = "NA",
+      eol = "\n",
+      hash = "f45ae615f6c2e7f0fe7582f08878f64e7f77526bfe7557307d2319693e8925b9"
+    )
+  )
+  if (!kind %in% names(common)) {
+    stop("Unknown status-evidence output kind: ", kind, call. = FALSE)
+  }
+  common[[kind]]
+}
+
+status_evidence_expected_types <- function(data, kind) {
+  spec <- status_evidence_output_spec(kind)
+  expected <- stats::setNames(rep("character", ncol(data)), names(data))
+  expected[spec$integer] <- "integer"
+  expected[spec$logical] <- "logical"
+  expected[spec$double] <- "double"
+  expected
+}
+
+status_evidence_cast_reference <- function(reference, candidate, kind) {
+  spec <- status_evidence_output_spec(kind)
+  output <- reference
+  for (column in names(output)) {
+    if (column %in% spec$integer) {
+      value <- output[[column]]
+      missing <- is.na(value) | value %in% c("", "NA")
+      parsed <- rep(NA_integer_, length(value))
+      parsed[!missing] <- status_evidence_integer(
+        value[!missing],
+        paste0(kind, " reference ", column),
+        0L,
+        9999L
+      )
+      output[[column]] <- parsed
+    } else if (column %in% spec$double) {
+      value <- output[[column]]
+      value[value %in% c("", "NA")] <- NA_character_
+      output[[column]] <- suppressWarnings(as.numeric(value))
+    } else if (column %in% spec$logical) {
+      output[[column]] <- status_evidence_bool(
+        output[[column]],
+        paste0(kind, " reference ", column)
+      )
+    } else {
+      missing_like <- output[[column]] %in% c("", "NA")
+      output[[column]][missing_like & is.na(candidate[[column]])] <- NA_character_
+    }
+  }
+  output
+}
+
+status_evidence_serialize_output <- function(data, kind) {
+  spec <- status_evidence_output_spec(kind)
+  output <- data
+  if (identical(kind, "status")) {
+    logical_columns <- names(output)[vapply(output, is.logical, logical(1))]
+    output <- output |>
+      dplyr::mutate(
+        dplyr::across(
+          dplyr::all_of(logical_columns),
+          ~ tolower(as.character(.x))
+        )
+      )
+  }
+  text <- readr::format_csv(output, na = spec$na, eol = "\n")
+  if (identical(spec$eol, "\r\n")) {
+    text <- gsub("\n", "\r\n", text, fixed = TRUE)
+  }
+  charToRaw(text)
+}
+
+status_evidence_raw_sha256 <- function(value) {
+  digest::digest(value, algo = "sha256", serialize = FALSE)
+}
+
+status_evidence_frames_equal <- function(candidate, reference) {
+  if (!identical(names(candidate), names(reference)) ||
+      nrow(candidate) != nrow(reference)) {
+    return(FALSE)
+  }
+  checks <- vapply(
+    names(candidate),
+    function(column) {
+      x <- candidate[[column]]
+      y <- reference[[column]]
+      if (!identical(typeof(x), typeof(y)) ||
+          !identical(is.na(x), is.na(y))) {
+        return(FALSE)
+      }
+      observed <- !is.na(x)
+      if (is.double(x)) {
+        return(all(abs(x[observed] - y[observed]) <= 1e-12))
+      }
+      identical(x[observed], y[observed])
+    },
+    logical(1)
+  )
+  all(checks)
+}
+
+validate_status_evidence_reference_equivalence <- function(candidate,
+                                                           reference_file,
+                                                           kind) {
+  spec <- status_evidence_output_spec(kind)
+  reference <- status_evidence_read_character_csv(reference_file)
+  names_match <- identical(names(candidate), names(reference))
+  types <- vapply(candidate, typeof, character(1))
+  expected_types <- status_evidence_expected_types(candidate, kind)
+  type_contract_matches <- identical(types, expected_types)
+  values_match <- FALSE
+  if (names_match && type_contract_matches) {
+    cast_reference <- status_evidence_cast_reference(reference, candidate, kind)
+    values_match <- status_evidence_frames_equal(candidate, cast_reference)
+  }
+  candidate_hash <- status_evidence_raw_sha256(
+    status_evidence_serialize_output(candidate, kind)
+  )
+  tibble::tibble(
+    validation = paste0(
+      kind,
+      c(
+        "_reference_file_hash_matches",
+        "_reference_names_and_order_match",
+        "_candidate_type_contract_matches",
+        "_reference_values_match",
+        "_candidate_serialized_hash_matches"
+      )
+    ),
+    passed = c(
+      identical(status_evidence_file_sha256(reference_file), spec$hash),
+      names_match,
+      type_contract_matches,
+      values_match,
+      identical(candidate_hash, spec$hash)
+    ),
+    detail = c(
+      basename(reference_file),
+      paste(names(candidate), collapse = ";"),
+      paste(types, collapse = ";"),
+      paste0("rows=", nrow(candidate)),
+      candidate_hash
+    )
+  )
+}
+
+status_evidence_reference_validation_names <- function() {
+  unlist(lapply(
+    c("status", "ex_top1", "comparison"),
+    function(kind) {
+      paste0(
+        kind,
+        c(
+          "_reference_file_hash_matches",
+          "_reference_names_and_order_match",
+          "_candidate_type_contract_matches",
+          "_reference_values_match",
+          "_candidate_serialized_hash_matches"
+        )
+      )
+    }
+  ), use.names = FALSE)
+}
+
 status_evidence_validation_names <- function() {
   c(
     "audit_universe_has_14_unique_cases",
     "audit_universe_years_valid",
+    "audit_universe_iso3c_valid",
+    "audit_universe_exact_contract",
     "status_overrides_unique_and_in_universe",
     "status_override_codes_allowed",
     "ex_annotations_cover_universe_once",
@@ -877,7 +1173,8 @@ status_evidence_validation_names <- function() {
     "implication_codes_allowed",
     "derived_years_match_universe",
     "embedded_incumbent_matches_frozen_input",
-    "derived_counts_nonnegative"
+    "derived_counts_nonnegative",
+    status_evidence_reference_validation_names()
   )
 }
 
@@ -911,21 +1208,10 @@ assert_status_evidence_validation <- function(validation, required = NULL) {
   validation
 }
 
-write_status_evidence_csv_candidate <- function(data,
-                                                path,
-                                                lowercase_logical = FALSE) {
-  output <- data
-  if (lowercase_logical) {
-    logical_columns <- names(output)[vapply(output, is.logical, logical(1))]
-    output <- output |>
-      dplyr::mutate(
-        dplyr::across(
-          dplyr::all_of(logical_columns),
-          ~ tolower(as.character(.x))
-        )
-      )
-  }
+write_status_evidence_csv_candidate <- function(data, path, kind) {
   dir.create(dirname(path), recursive = TRUE, showWarnings = FALSE)
-  readr::write_csv(output, path, na = "")
+  connection <- file(path, open = "wb")
+  on.exit(close(connection), add = TRUE)
+  writeBin(status_evidence_serialize_output(data, kind), connection)
   path
 }

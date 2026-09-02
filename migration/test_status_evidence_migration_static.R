@@ -22,17 +22,24 @@ expect_error <- function(expression, label) {
   expect_true(failed, label)
 }
 
-compare_frame <- function(candidate, reference_file, label) {
-  reference <- readr::read_csv(reference_file, show_col_types = FALSE)
+expect_validation_false <- function(validation, name, label) {
+  row <- validation |>
+    dplyr::filter(validation == name)
   expect_true(
-    isTRUE(all.equal(
-      as.data.frame(candidate),
-      as.data.frame(reference),
-      check.attributes = FALSE,
-      tolerance = 1e-12
-    )),
+    nrow(row) == 1L && identical(row$passed, FALSE),
     label
   )
+}
+
+compare_frame <- function(candidate, reference_file, kind, label) {
+  validation <- validate_status_evidence_reference_equivalence(
+    candidate,
+    reference_file,
+    kind
+  )
+  assert_status_evidence_validation(validation)
+  expect_true(all(validation$passed), label)
+  validation
 }
 
 status_manifest <- file.path(
@@ -123,6 +130,51 @@ expect_error(
   "invalid boolean coding is rejected"
 )
 
+invalid_year <- status_source
+invalid_year$entry_year[[1]] <- "2005.9"
+expect_validation_false(
+  validate_status_evidence_source_ledger(
+    invalid_year,
+    status_source_file,
+    "status",
+    status_raw_files,
+    status_raw_directory,
+    21L
+  ),
+  "ledger_years_valid",
+  "fractional year coding is rejected"
+)
+
+invalid_date <- status_source
+invalid_date$publication_date[[1]] <- "2021-02-30"
+expect_validation_false(
+  validate_status_evidence_source_ledger(
+    invalid_date,
+    status_source_file,
+    "status",
+    status_raw_files,
+    status_raw_directory,
+    21L
+  ),
+  "ledger_publication_dates_valid",
+  "invalid ISO publication date is rejected"
+)
+
+invalid_url <- status_source
+invalid_url$url[[1]] <- "file:///tmp/source"
+expect_validation_false(
+  validate_status_evidence_source_ledger(
+    invalid_url,
+    status_source_file,
+    "status",
+    status_raw_files,
+    status_raw_directory,
+    21L
+  ),
+  "ledger_urls_valid",
+  "non-HTTP source URL is rejected"
+)
+
 invalid_pointer <- status_source
 invalid_pointer$raw_file[[1]] <- "data/raw/status_cue_salience/../escape.html"
 expect_error(
@@ -171,6 +223,21 @@ expect_error(
   "duplicated audit-universe keys are rejected"
 )
 
+altered_universe <- universe
+altered_universe$iso3c[altered_universe$iso3c == "SAU"] <- "ZZZ"
+altered_annotations <- annotations
+altered_annotations$iso3c[altered_annotations$iso3c == "SAU"] <- "ZZZ"
+expect_error(
+  assert_status_evidence_validation(
+    validate_status_evidence_manual_inputs(
+      altered_universe,
+      overrides,
+      altered_annotations
+    )
+  ),
+  "altered 14-case universe is rejected before derivation"
+)
+
 incumbent_file <- file.path(
   "data", "processed", "diagnostics",
   "incumbent_salience_moderators_2026-05-19.csv"
@@ -210,10 +277,6 @@ derivation_validation <- validate_status_evidence_derivations(
   incumbent_base,
   ex_source
 )
-assert_status_evidence_validation(
-  dplyr::bind_rows(manual_validation, derivation_validation),
-  status_evidence_validation_names()
-)
 
 status_country_reference <- file.path(
   "data", "processed", "status_cue_salience", "status_cue_country_codes.csv"
@@ -225,20 +288,36 @@ comparison_reference <- file.path(
   "data", "processed", "ex_top1_salience",
   "status_cue_vs_ex_top1_coverage.csv"
 )
-compare_frame(
+status_reference_validation <- compare_frame(
   status_country,
   status_country_reference,
+  "status",
   "status country codes reproduce the 14-row baseline"
 )
-compare_frame(
+ex_reference_validation <- compare_frame(
   ex_country,
   ex_country_reference,
+  "ex_top1",
   "former-incumbent country codes reproduce the 14-row baseline"
 )
-compare_frame(
+comparison_reference_validation <- compare_frame(
   comparison,
   comparison_reference,
+  "comparison",
   "status/incumbent comparison reproduces the 14-row baseline"
+)
+reference_validation <- dplyr::bind_rows(
+  status_reference_validation,
+  ex_reference_validation,
+  comparison_reference_validation
+)
+assert_status_evidence_validation(
+  dplyr::bind_rows(
+    manual_validation,
+    derivation_validation,
+    reference_validation
+  ),
+  status_evidence_validation_names()
 )
 
 baseline_appendix <- build_ex_top1_salience_appendix_tables(
@@ -257,10 +336,29 @@ candidate_comparison_file <- file.path(temporary_directory, "comparison.csv")
 write_status_evidence_csv_candidate(
   status_country,
   candidate_status_file,
-  lowercase_logical = TRUE
+  "status"
 )
-write_status_evidence_csv_candidate(ex_country, candidate_ex_file)
-write_status_evidence_csv_candidate(comparison, candidate_comparison_file)
+write_status_evidence_csv_candidate(ex_country, candidate_ex_file, "ex_top1")
+write_status_evidence_csv_candidate(
+  comparison,
+  candidate_comparison_file,
+  "comparison"
+)
+expect_true(
+  identical(
+    status_evidence_file_sha256(candidate_status_file),
+    status_evidence_file_sha256(status_country_reference)
+  ) &&
+    identical(
+      status_evidence_file_sha256(candidate_ex_file),
+      status_evidence_file_sha256(ex_country_reference)
+    ) &&
+    identical(
+      status_evidence_file_sha256(candidate_comparison_file),
+      status_evidence_file_sha256(comparison_reference)
+    ),
+  "all three serialized candidate CSVs match their frozen hashes"
+)
 candidate_appendix <- build_ex_top1_salience_appendix_tables(
   candidate_comparison_file,
   candidate_ex_file,
@@ -285,11 +383,18 @@ expect_true(
   "Australian context appendix table is unchanged"
 )
 
-targets::tar_validate(callr_function = NULL)
+static_store <- tempfile("status_evidence_targets_static_store_")
+targets::tar_validate(
+  callr_function = NULL,
+  script = "_targets.R",
+  store = static_store
+)
 network <- targets::tar_network(
   targets_only = TRUE,
   outdated = FALSE,
-  callr_function = NULL
+  callr_function = NULL,
+  script = "_targets.R",
+  store = static_store
 )
 graph <- igraph::graph_from_data_frame(
   network$edges,
@@ -297,6 +402,16 @@ graph <- igraph::graph_from_data_frame(
   vertices = data.frame(name = network$vertices$name)
 )
 expect_true(igraph::is_dag(graph), "target-only graph remains acyclic")
+expect_true(
+  !startsWith(
+    normalizePath(static_store, mustWork = FALSE),
+    normalizePath(
+      targets::tar_config_get("store"),
+      mustWork = FALSE
+    )
+  ),
+  "DAG audit uses an isolated store rather than the shared checkout store"
+)
 has_path <- function(from, to) {
   length(igraph::shortest_paths(
     graph,

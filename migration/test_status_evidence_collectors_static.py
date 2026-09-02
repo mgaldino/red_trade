@@ -4,8 +4,11 @@
 from __future__ import annotations
 
 import ast
+import argparse
 import csv
 import hashlib
+import importlib.util
+import json
 import sys
 import tempfile
 from pathlib import Path
@@ -73,6 +76,49 @@ def write_fixture_ledger(path: Path, raw_file: str) -> None:
         )
 
 
+def load_collector(path: Path, module_name: str):
+    spec = importlib.util.spec_from_file_location(module_name, path)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"Cannot load collector: {path}")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[module_name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+def run_entrypoint_tests() -> None:
+    original_validate = acquisition.validate_frozen_archive
+    original_acquire = acquisition.acquire_missing_ledger_files
+    try:
+        acquisition.validate_frozen_archive = lambda **kwargs: []
+
+        def reject_acquisition(**kwargs):
+            raise AssertionError("default main reached the acquisition function")
+
+        acquisition.acquire_missing_ledger_files = reject_acquisition
+        for index, filename in enumerate(
+            (
+                "collect_status_cue_salience_sources.py",
+                "collect_ex_top1_salience_sources.py",
+            ),
+            start=1,
+        ):
+            collector = load_collector(
+                DIAGNOSTICS / filename,
+                f"status_evidence_collector_fixture_{index}",
+            )
+            collector.parse_args = lambda: argparse.Namespace(
+                acquire=False,
+                timeout=20,
+                retries=3,
+                backoff=1.0,
+            )
+            expect(collector.main() == 0, f"{filename} default is read-only")
+    finally:
+        acquisition.validate_frozen_archive = original_validate
+        acquisition.acquire_missing_ledger_files = original_acquire
+
+
 def run_fixture_tests() -> None:
     with tempfile.TemporaryDirectory(prefix="status_evidence_python_") as temp:
         root = Path(temp)
@@ -98,7 +144,8 @@ def run_fixture_tests() -> None:
         expect(len(rows) == 1, "fixture archive and ledger validate")
 
         original = body.read_bytes()
-        results = acquisition.acquire_missing_ledger_files(
+        entries = acquisition.read_checksum_manifest(manifest, raw_dir)
+        batch = acquisition.acquire_missing_ledger_files(
             root=root,
             raw_dir=raw_dir,
             rows=rows,
@@ -106,9 +153,12 @@ def run_fixture_tests() -> None:
             timeout_seconds=1,
             retries=1,
             backoff_seconds=0,
+            frozen_entries=entries,
         )
         expect(
-            results[0].status == "cached_ok" and body.read_bytes() == original,
+            batch.results[0].status == "cached_ok"
+            and batch.staging_dir is None
+            and body.read_bytes() == original,
             "present raw files are reused without overwrite",
         )
 
@@ -157,9 +207,11 @@ def run_fixture_tests() -> None:
             "explicit acquisition mode may validate a manifested missing file",
         )
         original_request = acquisition.request_missing_url
+        frozen_manifest = manifest.read_bytes()
 
         def fake_request_missing_url(**kwargs):
-            kwargs["output_path"].write_bytes(b"future")
+            with kwargs["output_path"].open("xb") as handle:
+                handle.write(b"future")
             return acquisition.AcquisitionResult(
                 source_id="",
                 url=kwargs["url"],
@@ -174,7 +226,7 @@ def run_fixture_tests() -> None:
 
         acquisition.request_missing_url = fake_request_missing_url
         try:
-            results = acquisition.acquire_missing_ledger_files(
+            batch = acquisition.acquire_missing_ledger_files(
                 root=root,
                 raw_dir=raw_dir,
                 rows=rows,
@@ -182,16 +234,256 @@ def run_fixture_tests() -> None:
                 timeout_seconds=1,
                 retries=1,
                 backoff_seconds=0,
+                frozen_entries=acquisition.read_checksum_manifest(
+                    manifest,
+                    raw_dir,
+                ),
             )
         finally:
             acquisition.request_missing_url = original_request
         expect(
-            results[0].status == "ok" and missing.read_bytes() == b"future",
-            "stubbed missing acquisition writes a new raw body",
+            batch.results[0].status == "recovered_frozen_ok"
+            and missing.read_bytes() == b"future",
+            "matching staged bytes restore a manifested missing raw file",
+        )
+        expect(batch.staging_dir is not None, "acquisition uses a unique staging run")
+        expect(
+            any(batch.staging_dir.rglob("missing.metadata.json")),
+            "new acquisition archives metadata only in staging",
+        )
+        acquisition.write_json_log(
+            batch.staging_dir / "fetch_log.json",
+            batch.results,
+        )
+        staging_manifest = acquisition.write_staging_manifest(batch.staging_dir)
+        expect(
+            staging_manifest.is_file() and manifest.read_bytes() == frozen_manifest,
+            "run log and staging manifest leave the frozen manifest immutable",
+        )
+        rows = acquisition.validate_frozen_archive(
+            root=root,
+            ledger_path=ledger,
+            raw_dir=raw_dir,
+            manifest_path=manifest,
+            expected_entries=1,
+        )
+        expect(len(rows) == 1, "restored frozen archive validates on the next run")
+
+
+def run_staging_failure_tests() -> None:
+    with tempfile.TemporaryDirectory(prefix="status_evidence_staging_") as temp:
+        root = Path(temp)
+        raw_dir = root / "data" / "raw" / "fixture"
+        raw_dir.mkdir(parents=True)
+        manifest = raw_dir / "checksums.sha256"
+        manifest.write_text(
+            f"{sha256_bytes(b'expected')}  missing.html\n",
+            encoding="utf-8",
+        )
+        ledger = root / "ledger.csv"
+        write_fixture_ledger(ledger, "data/raw/fixture/missing.html")
+        rows = acquisition.validate_frozen_archive(
+            root=root,
+            ledger_path=ledger,
+            raw_dir=raw_dir,
+            manifest_path=manifest,
+            expected_entries=1,
+            allow_missing=True,
+        )
+        original_manifest = manifest.read_bytes()
+        original_request = acquisition.request_missing_url
+
+        def fake_changed_request(**kwargs):
+            with kwargs["output_path"].open("xb") as handle:
+                handle.write(b"changed")
+            return acquisition.AcquisitionResult(
+                source_id="",
+                url=kwargs["url"],
+                status="ok",
+                status_code=200,
+                content_type="text/html",
+                raw_file="",
+                size_bytes=7,
+                error="",
+                accessed_at="2026-09-02T00:00:00+00:00",
+            )
+
+        acquisition.request_missing_url = fake_changed_request
+        try:
+            batch = acquisition.acquire_missing_ledger_files(
+                root=root,
+                raw_dir=raw_dir,
+                rows=rows,
+                user_agent="fixture/1.0",
+                timeout_seconds=1,
+                retries=1,
+                backoff_seconds=0,
+                frozen_entries=acquisition.read_checksum_manifest(
+                    manifest,
+                    raw_dir,
+                ),
+            )
+        finally:
+            acquisition.request_missing_url = original_request
+        expect(
+            batch.results[0].status == "hash_mismatch_staged_ok"
+            and not (raw_dir / "missing.html").exists()
+            and manifest.read_bytes() == original_manifest,
+            "changed recovery stays staged and cannot refreeze the baseline",
+        )
+
+        anchor = raw_dir / "anchor.txt"
+        anchor.write_bytes(b"anchor")
+        manifest.write_text(
+            f"{sha256_bytes(b'anchor')}  anchor.txt\n",
+            encoding="utf-8",
+        )
+        write_fixture_ledger(ledger, "data/raw/fixture/new_source.html")
+        rows = acquisition.validate_frozen_archive(
+            root=root,
+            ledger_path=ledger,
+            raw_dir=raw_dir,
+            manifest_path=manifest,
+            expected_entries=1,
+            allow_missing=True,
+            allow_unmanifested=True,
+        )
+        original_request = acquisition.request_missing_url
+        acquisition.request_missing_url = fake_changed_request
+        try:
+            batch = acquisition.acquire_missing_ledger_files(
+                root=root,
+                raw_dir=raw_dir,
+                rows=rows,
+                user_agent="fixture/1.0",
+                timeout_seconds=1,
+                retries=1,
+                backoff_seconds=0,
+                frozen_entries=acquisition.read_checksum_manifest(
+                    manifest,
+                    raw_dir,
+                ),
+            )
+        finally:
+            acquisition.request_missing_url = original_request
+        expect(
+            batch.results[0].status == "new_source_staged_ok"
+            and not (raw_dir / "new_source.html").exists(),
+            "new unmanifested sources require a separate authorial refreeze",
+        )
+
+
+def run_validation_edge_tests() -> None:
+    with tempfile.TemporaryDirectory(prefix="status_evidence_edges_") as temp:
+        root = Path(temp)
+        raw_dir = root / "data" / "raw" / "fixture"
+        raw_dir.mkdir(parents=True)
+        body = raw_dir / "source.html"
+        body.write_bytes(b"error body")
+        metadata = raw_dir / "source.metadata.json"
+        metadata.write_text(
+            json.dumps(
+                {
+                    "fetch_status": "http_error",
+                    "status_code": 404,
+                    "content_type": "text/html",
+                    "error": "HTTP 404",
+                }
+            ),
+            encoding="utf-8",
+        )
+        manifest = raw_dir / "checksums.sha256"
+        manifest.write_text(
+            f"{sha256_bytes(body.read_bytes())}  source.html\n",
+            encoding="utf-8",
+        )
+        ledger = root / "ledger.csv"
+        write_fixture_ledger(ledger, "data/raw/fixture/source.html")
+        rows = acquisition.validate_frozen_archive(
+            root=root,
+            ledger_path=ledger,
+            raw_dir=raw_dir,
+            manifest_path=manifest,
+            expected_entries=1,
+        )
+        batch = acquisition.acquire_missing_ledger_files(
+            root=root,
+            raw_dir=raw_dir,
+            rows=rows,
+            user_agent="fixture/1.0",
+            timeout_seconds=1,
+            retries=1,
+            backoff_seconds=0,
+            frozen_entries=acquisition.read_checksum_manifest(manifest, raw_dir),
         )
         expect(
-            (raw_dir / "missing.metadata.json").is_file(),
-            "new acquisition archives a metadata sidecar",
+            batch.results[0].status == "cached_http_error"
+            and batch.results[0].status_code == 404,
+            "cached status comes from metadata rather than the filename",
+        )
+
+        original_manifest = manifest.read_text(encoding="utf-8")
+        manifest.write_text(
+            original_manifest
+            + f"{sha256_bytes(b'ghost')}  unowned_metadata.json\n",
+            encoding="utf-8",
+        )
+        expect_error(
+            lambda: acquisition.validate_frozen_archive(
+                root=root,
+                ledger_path=ledger,
+                raw_dir=raw_dir,
+                manifest_path=manifest,
+                expected_entries=2,
+                allow_missing=True,
+            ),
+            "acquisition mode rejects missing non-ledger manifest entries",
+        )
+        manifest.write_text(original_manifest, encoding="utf-8")
+
+        expect_error(
+            lambda: acquisition.validate_http_url("file:///tmp/source"),
+            "non-HTTP acquisition URLs are rejected",
+        )
+        expect_error(
+            lambda: acquisition.validate_acquisition_options(
+                timeout_seconds=0,
+                retries=1,
+                backoff_seconds=0,
+            ),
+            "nonpositive timeout is rejected",
+        )
+        expect_error(
+            lambda: acquisition.validate_acquisition_options(
+                timeout_seconds=1,
+                retries=0,
+                backoff_seconds=0,
+            ),
+            "zero retries is rejected",
+        )
+        expect_error(
+            lambda: acquisition.validate_acquisition_options(
+                timeout_seconds=1,
+                retries=1,
+                backoff_seconds=-1,
+            ),
+            "negative backoff is rejected",
+        )
+        existing_log = root / "fetch_log.json"
+        acquisition.write_json_log(existing_log, batch.results)
+        expect_error(
+            lambda: acquisition.write_json_log(existing_log, batch.results),
+            "run-scoped logs cannot be overwritten",
+        )
+        protected = root / "protected.raw"
+        protected.write_bytes(b"original")
+        expect_error(
+            lambda: acquisition._write_bytes_exclusive(protected, b"replacement"),
+            "exclusive raw writes reject a competing existing file",
+        )
+        expect(
+            protected.read_bytes() == b"original",
+            "exclusive raw write failure preserves existing bytes",
         )
 
 
@@ -203,6 +495,7 @@ def run_source_tests() -> None:
         "write_sources_yaml",
         "write_data_dictionary",
         "write_collection_log",
+        "write_checksum_manifest",
         "run_gdelt_queries",
     }
     for filename in (
@@ -257,5 +550,8 @@ def run_source_tests() -> None:
 
 if __name__ == "__main__":
     run_source_tests()
+    run_entrypoint_tests()
     run_fixture_tests()
+    run_staging_failure_tests()
+    run_validation_edge_tests()
     print("ALL_STATIC_STATUS_EVIDENCE_PYTHON_TESTS_PASSED")

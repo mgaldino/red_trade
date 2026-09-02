@@ -13,13 +13,16 @@ import csv
 import hashlib
 import json
 import logging
+import shutil
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
+import uuid
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Iterable
+from typing import BinaryIO, Iterable
 
 
 LOGGER = logging.getLogger(__name__)
@@ -38,6 +41,14 @@ class AcquisitionResult:
     size_bytes: int
     error: str
     accessed_at: str
+
+
+@dataclass(frozen=True)
+class AcquisitionBatch:
+    """Results and immutable staging directory for one acquisition run."""
+
+    results: tuple[AcquisitionResult, ...]
+    staging_dir: Path | None
 
 
 def utc_now() -> str:
@@ -61,6 +72,31 @@ def read_csv_rows(path: Path) -> list[dict[str, str]]:
 
     with path.open("r", encoding="utf-8-sig", newline="") as handle:
         return list(csv.DictReader(handle))
+
+
+def validate_http_url(value: str) -> str:
+    """Return a normalized HTTP(S) URL or reject unsupported locations."""
+
+    parsed = urllib.parse.urlsplit(value)
+    if parsed.scheme.lower() not in {"http", "https"} or not parsed.hostname:
+        raise ValueError(f"Only HTTP(S) URLs with a hostname are allowed: {value!r}")
+    return value
+
+
+def validate_acquisition_options(
+    *,
+    timeout_seconds: int,
+    retries: int,
+    backoff_seconds: float,
+) -> None:
+    """Validate retry controls before any acquisition or cached-file return."""
+
+    if timeout_seconds <= 0:
+        raise ValueError("timeout_seconds must be positive")
+    if retries < 1:
+        raise ValueError("retries must be at least 1")
+    if backoff_seconds < 0:
+        raise ValueError("backoff_seconds cannot be negative")
 
 
 def _safe_repo_path(root: Path, raw_dir: Path, value: str) -> Path:
@@ -118,6 +154,7 @@ def validate_frozen_archive(
     manifest_path: Path,
     expected_entries: int,
     allow_missing: bool = False,
+    allow_unmanifested: bool = False,
 ) -> list[dict[str, str]]:
     """Validate the ledger, every manifest entry, and every ledger raw pointer."""
 
@@ -135,10 +172,17 @@ def validate_frozen_archive(
             f"Expected {expected_entries} checksum entries in {manifest_path}, "
             f"found {len(entries)}"
         )
+    row_paths: list[tuple[dict[str, str], Path, str]] = []
+    for row in rows:
+        validate_http_url(row["url"])
+        path = _safe_repo_path(root, raw_dir, row["raw_file"])
+        relative = path.relative_to(raw_dir.resolve()).as_posix()
+        row_paths.append((row, path, relative))
+    ledger_relatives = {relative for _, _, relative in row_paths}
     for relative, expected in entries.items():
         path = raw_dir / relative
         if not path.is_file():
-            if allow_missing:
+            if allow_missing and relative in ledger_relatives:
                 continue
             raise FileNotFoundError(f"Manifested raw file is absent: {path}")
         observed = sha256(path)
@@ -147,13 +191,16 @@ def validate_frozen_archive(
                 f"Raw SHA-256 mismatch for {path}: expected {expected}, got {observed}"
             )
 
-    for row in rows:
-        path = _safe_repo_path(root, raw_dir, row["raw_file"])
-        relative = path.relative_to(raw_dir.resolve()).as_posix()
+    for _, path, relative in row_paths:
         if not path.is_file() and not allow_missing:
             raise FileNotFoundError(f"Ledger raw_file is absent: {path}")
-        if relative not in entries:
+        if relative not in entries and not allow_unmanifested:
             raise ValueError(f"Ledger raw_file is not in checksum manifest: {relative}")
+        if relative not in entries and path.exists():
+            raise ValueError(
+                "Unmanifested acquisition paths must not already exist: "
+                f"{relative}"
+            )
     return rows
 
 
@@ -187,6 +234,69 @@ def _body_path(raw_path: Path) -> Path:
     return raw_path
 
 
+def _write_bytes_exclusive(path: Path, value: bytes) -> None:
+    """Create a new file atomically with respect to competing creators."""
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("xb") as handle:
+        handle.write(value)
+
+
+def _write_text_exclusive(path: Path, value: str) -> None:
+    """Create a UTF-8 text file without any overwrite window."""
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("x", encoding="utf-8", newline="") as handle:
+        handle.write(value)
+
+
+def _write_stream_exclusive(path: Path, stream: BinaryIO) -> int:
+    """Stream a response into a newly created file and return its size."""
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    size = 0
+    created = False
+    try:
+        with path.open("xb") as handle:
+            created = True
+            while True:
+                chunk = stream.read(1024 * 1024)
+                if not chunk:
+                    break
+                handle.write(chunk)
+                size += len(chunk)
+    except Exception:
+        if created and path.is_file():
+            path.unlink()
+        raise
+    return size
+
+
+def _copy_exclusive(source: Path, destination: Path) -> None:
+    """Copy a staged artifact into a missing frozen path without overwrite."""
+
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    created = False
+    try:
+        with source.open("rb") as source_handle, destination.open("xb") as target:
+            created = True
+            shutil.copyfileobj(source_handle, target, length=1024 * 1024)
+    except Exception:
+        if created and destination.is_file():
+            destination.unlink()
+        raise
+
+
+def create_staging_directory(raw_dir: Path) -> Path:
+    """Create an immutable, collision-resistant directory for one fetch run."""
+
+    timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+    run_id = f"{timestamp}_{uuid.uuid4().hex}"
+    staging_dir = raw_dir.resolve() / "acquisition_staging" / run_id
+    staging_dir.mkdir(parents=True, exist_ok=False)
+    return staging_dir
+
+
 def _write_metadata_sidecar(
     raw_path: Path,
     result: AcquisitionResult,
@@ -197,17 +307,14 @@ def _write_metadata_sidecar(
     """Archive metadata for a new fetch without replacing an older sidecar."""
 
     target = _metadata_path(raw_path)
-    if target.exists():
-        timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-        target = target.with_name(f"{target.stem}_{timestamp}{target.suffix}")
     payload = {
         **result.__dict__,
         "iso3c": iso3c,
         "fetch_url": fetch_url,
     }
-    target.write_text(
+    _write_text_exclusive(
+        target,
         json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
     )
 
 
@@ -222,6 +329,12 @@ def request_missing_url(
 ) -> AcquisitionResult:
     """Fetch one missing URL with retry/backoff and without overwriting raw data."""
 
+    validate_http_url(url)
+    validate_acquisition_options(
+        timeout_seconds=timeout_seconds,
+        retries=retries,
+        backoff_seconds=backoff_seconds,
+    )
     if output_path.exists():
         raise FileExistsError(f"Refusing to overwrite raw file: {output_path}")
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -231,10 +344,9 @@ def request_missing_url(
         request = urllib.request.Request(url, headers={"User-Agent": user_agent})
         try:
             with urllib.request.urlopen(request, timeout=timeout_seconds) as response:
-                body = response.read()
                 status_code = getattr(response, "status", None)
                 content_type = response.headers.get("Content-Type", "")
-            output_path.write_bytes(body)
+                size_bytes = _write_stream_exclusive(output_path, response)
             return AcquisitionResult(
                 source_id="",
                 url=url,
@@ -242,38 +354,30 @@ def request_missing_url(
                 status_code=status_code,
                 content_type=content_type,
                 raw_file="",
-                size_bytes=len(body),
+                size_bytes=size_bytes,
                 error="",
                 accessed_at=accessed_at,
             )
         except urllib.error.HTTPError as error:
-            body = error.read()
-            if body:
-                output_path.write_bytes(body)
-                return AcquisitionResult(
-                    source_id="",
-                    url=url,
-                    status="http_error",
-                    status_code=error.code,
-                    content_type=error.headers.get("Content-Type", ""),
-                    raw_file="",
-                    size_bytes=len(body),
-                    error=str(error),
-                    accessed_at=accessed_at,
-                )
-            last_error = repr(error)
+            size_bytes = _write_stream_exclusive(output_path, error)
+            return AcquisitionResult(
+                source_id="",
+                url=url,
+                status="http_error",
+                status_code=error.code,
+                content_type=error.headers.get("Content-Type", ""),
+                raw_file="",
+                size_bytes=size_bytes,
+                error=str(error),
+                accessed_at=accessed_at,
+            )
         except (OSError, TimeoutError, urllib.error.URLError) as error:
             last_error = repr(error)
         if attempt < retries:
             time.sleep(backoff_seconds * (2 ** (attempt - 1)))
 
     error_path = output_path.with_suffix(output_path.suffix + ".error.txt")
-    if error_path.exists():
-        timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-        error_path = output_path.with_suffix(
-            output_path.suffix + f".{timestamp}.error.txt"
-        )
-    error_path.write_text(last_error, encoding="utf-8")
+    _write_text_exclusive(error_path, last_error)
     return AcquisitionResult(
         source_id="",
         url=url,
@@ -308,33 +412,73 @@ def acquire_missing_ledger_files(
     timeout_seconds: int,
     retries: int,
     backoff_seconds: float,
-) -> list[AcquisitionResult]:
-    """Acquire only absent ledger files; present raw data are immutable."""
+    frozen_entries: dict[str, str],
+) -> AcquisitionBatch:
+    """Acquire absent ledger files into immutable staging.
 
+    A missing file already declared by the frozen manifest is restored to its
+    contracted path only when the staged bytes match the frozen SHA-256. A new,
+    unmanifested source remains in staging until a separate authorial refreeze.
+    """
+
+    validate_acquisition_options(
+        timeout_seconds=timeout_seconds,
+        retries=retries,
+        backoff_seconds=backoff_seconds,
+    )
+    rows = list(rows)
+    pending = [
+        row
+        for row in rows
+        if not _safe_repo_path(root, raw_dir, row["raw_file"]).is_file()
+    ]
+    staging_dir = create_staging_directory(raw_dir) if pending else None
     results: list[AcquisitionResult] = []
     for index, row in enumerate(rows, start=1):
         source_id = _source_id(row, index)
         raw_path = _safe_repo_path(root, raw_dir, row["raw_file"])
         if raw_path.is_file():
-            status = "cached_error" if raw_path.name.endswith(".error.txt") else "cached_ok"
+            metadata = _load_existing_metadata(raw_path)
+            original_status = str(
+                metadata.get("fetch_status") or metadata.get("status") or ""
+            ).strip()
+            if not original_status:
+                original_status = (
+                    "error" if raw_path.name.endswith(".error.txt") else "ok"
+                )
+            status = f"cached_{original_status.removeprefix('cached_')}"
+            status_code_value = metadata.get("status_code")
+            try:
+                status_code = (
+                    int(status_code_value)
+                    if status_code_value not in (None, "")
+                    else None
+                )
+            except (TypeError, ValueError):
+                status_code = None
             results.append(
                 AcquisitionResult(
                     source_id=source_id,
                     url=row["url"],
                     status=status,
-                    status_code=None,
-                    content_type="",
+                    status_code=status_code,
+                    content_type=str(metadata.get("content_type") or ""),
                     raw_file=str(raw_path.relative_to(root.resolve())),
                     size_bytes=raw_path.stat().st_size,
-                    error="",
+                    error=str(metadata.get("error") or ""),
                     accessed_at=utc_now(),
                 )
             )
             continue
 
+        if staging_dir is None:
+            raise RuntimeError("Missing staging directory for pending acquisition")
+        relative = raw_path.relative_to(raw_dir.resolve()).as_posix()
         metadata = _load_existing_metadata(raw_path)
         download_url = str(metadata.get("fetch_url") or row["url"])
-        body_path = _body_path(raw_path)
+        validate_http_url(download_url)
+        staged_pointer = staging_dir / relative
+        body_path = _body_path(staged_pointer)
         LOGGER.info("Fetching missing source %s", source_id)
         fetched = request_missing_url(
             url=download_url,
@@ -348,15 +492,28 @@ def acquire_missing_ledger_files(
         if fetched.status == "error":
             candidates = sorted(body_path.parent.glob(body_path.name + "*.error.txt"))
             if not candidates:
-                raise RuntimeError(f"Missing error artifact after failed fetch: {body_path}")
+                raise RuntimeError(
+                    f"Missing error artifact after failed fetch: {body_path}"
+                )
             actual_path = candidates[-1]
+        expected_hash = frozen_entries.get(relative)
+        if expected_hash is None:
+            status = f"new_source_staged_{fetched.status}"
+            final_path = actual_path
+        elif sha256(actual_path) == expected_hash:
+            _copy_exclusive(actual_path, raw_path)
+            status = f"recovered_frozen_{fetched.status}"
+            final_path = raw_path
+        else:
+            status = f"hash_mismatch_staged_{fetched.status}"
+            final_path = actual_path
         result = AcquisitionResult(
             source_id=source_id,
             url=row["url"],
-            status=fetched.status,
+            status=status,
             status_code=fetched.status_code,
             content_type=fetched.content_type,
-            raw_file=str(actual_path.relative_to(root.resolve())),
+            raw_file=str(final_path.relative_to(root.resolve())),
             size_bytes=fetched.size_bytes,
             error=fetched.error,
             accessed_at=fetched.accessed_at,
@@ -368,29 +525,27 @@ def acquire_missing_ledger_files(
             fetch_url=download_url,
         )
         results.append(result)
-    return results
+    return AcquisitionBatch(results=tuple(results), staging_dir=staging_dir)
 
 
 def write_json_log(path: Path, results: Iterable[AcquisitionResult]) -> None:
-    """Write an acquisition log; never overwrite a historical log."""
+    """Write one run-scoped acquisition log with exclusive creation."""
 
     payload = [result.__dict__ for result in results]
-    target = path
-    if target.exists():
-        timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-        target = path.with_name(f"{path.stem}_{timestamp}{path.suffix}")
-    target.parent.mkdir(parents=True, exist_ok=True)
-    target.write_text(
+    _write_text_exclusive(
+        path,
         json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
     )
 
 
-def write_checksum_manifest(manifest_path: Path, raw_dir: Path) -> None:
-    """Regenerate the raw checksum manifest after a deliberate acquisition."""
+def write_staging_manifest(staging_dir: Path) -> Path:
+    """Create a run-scoped manifest without mutating the frozen manifest."""
 
+    manifest_path = staging_dir / "checksums.sha256"
     lines = []
-    for path in sorted(raw_dir.rglob("*")):
+    for path in sorted(staging_dir.rglob("*")):
         if path.is_file() and path != manifest_path:
-            lines.append(f"{sha256(path)}  {path.relative_to(raw_dir).as_posix()}")
-    manifest_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+            relative = path.relative_to(staging_dir).as_posix()
+            lines.append(f"{sha256(path)}  {relative}")
+    _write_text_exclusive(manifest_path, "\n".join(lines) + "\n")
+    return manifest_path

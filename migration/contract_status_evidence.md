@@ -31,6 +31,11 @@ Os coletores Python podem:
    de `data/raw/`;
 4. registrar logs de aquisição.
 
+O manifest congelado nunca é reescrito pelo coletor. Uma recuperação de arquivo já
+manifestado só é promovida ao caminho contratado quando os bytes adquiridos coincidem
+com o SHA-256 original. Respostas diferentes e fontes novas ficam em um diretório de
+staging imutável, com log e manifest próprios, até revisão e refreeze autoral separados.
+
 Os coletores não podem produzir ou sobrescrever os CSVs de codificação, códigos por
 país, comparações ou tabelas do apêndice.
 
@@ -58,6 +63,11 @@ uma nova resposta HTTP.
 - escrita dos três CSVs derivados usados pelo pipeline;
 - construção das tabelas `recoverability_table` e `afr_context_table` consumidas pelo
   manuscrito.
+
+Os três CSVs históricos permanecem como referências congeladas. Os writers do novo
+grafo gravam cópias byte a byte equivalentes em
+`data/processed/targets_migration/status_evidence/`; o consumidor do apêndice usa essas
+cópias somente depois do gate em memória.
 
 ## Baseline congelado
 
@@ -111,11 +121,13 @@ casos pesquisados, não como cobertura completa da amostra tratada atual.
 3. Os ledgers têm 21 e 22 chaves-fonte únicas e coincidem com os hashes congelados.
 4. Todos os `raw_file` não vazios pertencem ao diretório bruto correto, existem e
    constam do manifest correspondente.
-5. O universo tem 14 chaves `iso3c` únicas e anos de entrada inteiros.
+5. O universo coincide exatamente, em código ISO3, nome e ano de entrada, com os 14
+   casos contratados; anos fracionários, códigos inválidos ou substituições são erro.
 6. Os códigos usam somente os vocabulários contratuais; flags booleanas não admitem
    valores implícitos ou ausentes.
-7. A derivação nova deve reproduzir as três tabelas de referência em chaves, dimensões,
-   tipos e valores. Diferenças de serialização são comparadas separadamente do conteúdo.
+7. A derivação nova deve reproduzir as três tabelas de referência em nomes e ordem de
+   colunas, tipos, chaves, dimensões, valores e SHA-256 serializado antes de qualquer
+   writer.
 8. As duas tabelas entregues ao manuscrito devem ser idênticas, em conteúdo, às tabelas
    produzidas a partir do baseline atual.
 9. Nenhum target do bloco pode depender de rede, relógio de execução ou descoberta do

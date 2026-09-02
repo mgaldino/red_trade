@@ -28,12 +28,19 @@ Gates confirmados:
 - o `main()` dos dois coletores não chama agregações, comparações ou writers de
   arquivos processados;
 - os dois `main()` delegam somente aquisição bruta ao helper compartilhado;
+- a execução padrão dos dois entrypoints retorna sem chamar a função de aquisição;
 - os ledgers têm 21 e 22 linhas;
 - arquivos brutos presentes são reutilizados e não sobrescritos;
 - conteúdo adulterado e travessia de caminho são rejeitados;
-- aquisição explícita pode identificar um arquivo manifestado ausente;
-- uma aquisição HTTP simulada, sem rede, cria um novo corpo bruto e seu sidecar
-  de metadados.
+- recuperação simulada só promove bytes que coincidem com o hash congelado;
+- bytes divergentes e fontes novas permanecem em staging imutável até refreeze
+  autoral separado;
+- log, metadados e manifest do run ficam em staging e não alteram o manifest
+  congelado;
+- status HTTP de arquivos existentes é recuperado do sidecar, não inferido pelo
+  nome;
+- URLs não HTTP(S), opções inválidas, missing não recuperável e tentativas de
+  overwrite exclusivo são rejeitados.
 
 ## R e DAG
 
@@ -55,14 +62,19 @@ Gates confirmados:
   coincidem com os manifests;
 - os hashes e schemas dos ledgers autorais coincidem com o contrato;
 - booleanos inválidos, ponteiros inseguros e chaves duplicadas são rejeitados;
+- anos fracionários, datas impossíveis e URLs sem HTTP(S) válido são rejeitados;
+- o universo deve coincidir exatamente com os 14 pares autorais de código, nome e
+  ano; substituições preservando 14 linhas falham;
 - o input congelado de identificação do incumbente coincide com o SHA-256
   contratado;
-- as três derivações reproduzem, a `1e-12`, os CSVs de referência em conteúdo:
-  14 × 14, 14 × 25 e 14 × 18;
+- as três derivações reproduzem os CSVs de referência em nomes e ordem de
+  colunas, tipos, chaves, dimensões, valores e SHA-256 serializado: 14 × 14,
+  14 × 25 e 14 × 18;
 - `recoverability_table` e `afr_context_table`, as duas tabelas consumidas pelo
   manuscrito, são idênticas às versões construídas do baseline;
 - `targets::tar_validate(callr_function = NULL)` passa;
-- o DAG somente de targets permanece acíclico;
+- o DAG somente de targets, analisado com store temporário isolado do checkout
+  principal, permanece acíclico;
 - os file targets brutos são ancestrais dos outputs por país;
 - o gate de derivação é ancestral das tabelas do apêndice.
 

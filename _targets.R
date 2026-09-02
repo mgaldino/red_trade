@@ -1413,6 +1413,18 @@ list(
              here("data", "processed", "status_cue_salience",
                   "status_cue_source_evidence.csv"),
              format = "file"),
+  tar_target(status_cue_country_codes_reference_file,
+             here("data", "processed", "status_cue_salience",
+                  "status_cue_country_codes.csv"),
+             format = "file"),
+  tar_target(ex_top1_country_codes_reference_file,
+             here("data", "processed", "ex_top1_salience",
+                  "ex_top1_country_codes.csv"),
+             format = "file"),
+  tar_target(ex_top1_status_comparison_reference_file,
+             here("data", "processed", "ex_top1_salience",
+                  "status_cue_vs_ex_top1_coverage.csv"),
+             format = "file"),
   tar_target(status_cue_source_evidence_candidate,
              read_status_evidence_source_ledger(
                status_cue_source_evidence_file,
@@ -1551,11 +1563,30 @@ list(
                status_evidence_incumbent_base_candidate,
                ex_top1_source_evidence_candidate
              )),
+  tar_target(status_evidence_reference_validation_candidate,
+             dplyr::bind_rows(
+               validate_status_evidence_reference_equivalence(
+                 status_cue_country_codes_candidate,
+                 status_cue_country_codes_reference_file,
+                 "status"
+               ),
+               validate_status_evidence_reference_equivalence(
+                 ex_top1_country_codes_candidate,
+                 ex_top1_country_codes_reference_file,
+                 "ex_top1"
+               ),
+               validate_status_evidence_reference_equivalence(
+                 ex_top1_status_comparison_candidate,
+                 ex_top1_status_comparison_reference_file,
+                 "comparison"
+               )
+             )),
   tar_target(status_evidence_derivation_gate_candidate,
              assert_status_evidence_validation(
                dplyr::bind_rows(
                  status_evidence_manual_validation_candidate,
-                 status_evidence_derivation_validation_candidate
+                 status_evidence_derivation_validation_candidate,
+                 status_evidence_reference_validation_candidate
                ),
                status_evidence_validation_names()
              )),
@@ -1564,9 +1595,9 @@ list(
                status_evidence_derivation_gate_candidate
                write_status_evidence_csv_candidate(
                  status_cue_country_codes_candidate,
-                 here("data", "processed", "status_cue_salience",
-                      "status_cue_country_codes.csv"),
-                 lowercase_logical = TRUE
+                 here("data", "processed", "targets_migration",
+                      "status_evidence", "status_cue_country_codes.csv"),
+                 "status"
                )
              },
              format = "file"),
@@ -1575,8 +1606,9 @@ list(
                status_evidence_derivation_gate_candidate
                write_status_evidence_csv_candidate(
                  ex_top1_country_codes_candidate,
-                 here("data", "processed", "ex_top1_salience",
-                      "ex_top1_country_codes.csv")
+                 here("data", "processed", "targets_migration",
+                      "status_evidence", "ex_top1_country_codes.csv"),
+                 "ex_top1"
                )
              },
              format = "file"),
@@ -1585,8 +1617,9 @@ list(
                status_evidence_derivation_gate_candidate
                write_status_evidence_csv_candidate(
                  ex_top1_status_comparison_candidate,
-                 here("data", "processed", "ex_top1_salience",
-                      "status_cue_vs_ex_top1_coverage.csv")
+                 here("data", "processed", "targets_migration",
+                      "status_evidence", "status_cue_vs_ex_top1_coverage.csv"),
+                 "comparison"
                )
              },
              format = "file"),

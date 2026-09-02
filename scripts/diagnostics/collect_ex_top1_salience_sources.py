@@ -1322,6 +1322,7 @@ def main() -> int:
         manifest_path=CHECKSUMS,
         expected_entries=EXPECTED_MANIFEST_ENTRIES,
         allow_missing=args.acquire,
+        allow_unmanifested=args.acquire,
     )
     logging.info(
         "Validated %d source rows and %d raw checksums",
@@ -1332,7 +1333,8 @@ def main() -> int:
         logging.info("Read-only check complete; pass --acquire to fetch absent raw files")
         return 0
 
-    results = acquisition.acquire_missing_ledger_files(
+    frozen_entries = acquisition.read_checksum_manifest(CHECKSUMS, RAW_DIR)
+    batch = acquisition.acquire_missing_ledger_files(
         root=ROOT,
         raw_dir=RAW_DIR,
         rows=rows,
@@ -1340,15 +1342,30 @@ def main() -> int:
         timeout_seconds=args.timeout,
         retries=args.retries,
         backoff_seconds=args.backoff,
+        frozen_entries=frozen_entries,
     )
-    attempted = [result for result in results if not result.status.startswith("cached_")]
-    if attempted:
-        acquisition.write_json_log(RAW_DIR / "fetch_log.json", results)
-        acquisition.write_checksum_manifest(CHECKSUMS, RAW_DIR)
+    attempted = [
+        result
+        for result in batch.results
+        if not result.status.startswith("cached_")
+    ]
+    if batch.staging_dir is not None:
+        acquisition.write_json_log(
+            batch.staging_dir / "fetch_log.json",
+            batch.results,
+        )
+        acquisition.write_staging_manifest(batch.staging_dir)
         logging.info("Archived %d new acquisition result(s)", len(attempted))
     else:
         logging.info("All coded raw files already exist; no files were changed")
-    return 0
+    blocking = [
+        result
+        for result in attempted
+        if result.status.startswith("hash_mismatch_")
+        or result.status.endswith("_http_error")
+        or result.status.endswith("_error")
+    ]
+    return 2 if blocking else 0
 
 
 if __name__ == "__main__":
