@@ -28,8 +28,11 @@ Cobertura:
   um fit falso barato, sem modelo estatístico;
 - descarte integral de checkpoint de rank legível, mas semanticamente inválido;
 - retomada de linha de rank com erro transitório, preservando as linhas válidas;
-- fingerprint de rank inclui tanto a função que calcula estimativa e RMSPE
-  quanto a função que constrói a matriz de covariáveis;
+- fingerprint de rank inclui a construção da matriz de covariáveis, o cálculo
+  de estimativa e RMSPE, a avaliação paralela validada e a maquinaria de
+  validação, leitura e escrita atômica de checkpoints;
+- teste integrado grava um checkpoint de rank completo, altera o helper de
+  avaliação paralela e confirma a recomputação das três linhas;
 - checkpoint de rank rejeita explicitamente RMSPE negativo;
 - fixture ITPD-E 2004–2008 processada em DuckDB;
 - exclusão de serviços e fluxos domésticos do denominador de bens;

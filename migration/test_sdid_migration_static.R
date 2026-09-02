@@ -200,6 +200,46 @@ expect_true(
   !identical(fingerprint_original, fingerprint_summary_changed),
   "rank fingerprint covers estimate and RMSPE summary"
 )
+original_mclapply_fingerprint <- sdid_mclapply_checked
+sdid_mclapply_checked <- function(items, fun, cores, what = "task") {
+  original_mclapply_fingerprint(items, fun, cores, what)
+}
+fingerprint_mclapply_changed <- .sdid_code_fingerprint()
+sdid_mclapply_checked <- original_mclapply_fingerprint
+expect_true(
+  !identical(fingerprint_original, fingerprint_mclapply_changed),
+  "rank fingerprint covers checked parallel evaluation"
+)
+original_checkpoint_validator_fingerprint <- sdid_rank_checkpoint_valid
+sdid_rank_checkpoint_valid <- function(distribution, units) {
+  original_checkpoint_validator_fingerprint(distribution, units)
+}
+fingerprint_checkpoint_validator_changed <- .sdid_code_fingerprint()
+sdid_rank_checkpoint_valid <- original_checkpoint_validator_fingerprint
+expect_true(
+  !identical(fingerprint_original, fingerprint_checkpoint_validator_changed),
+  "rank fingerprint covers checkpoint validation"
+)
+original_checkpoint_reader_fingerprint <- sdid_read_checkpoint
+sdid_read_checkpoint <- function(path) {
+  original_checkpoint_reader_fingerprint(path)
+}
+fingerprint_checkpoint_reader_changed <- .sdid_code_fingerprint()
+sdid_read_checkpoint <- original_checkpoint_reader_fingerprint
+expect_true(
+  !identical(fingerprint_original, fingerprint_checkpoint_reader_changed),
+  "rank fingerprint covers checkpoint reading"
+)
+original_checkpoint_writer_fingerprint <- sdid_atomic_save_rds
+sdid_atomic_save_rds <- function(object, path) {
+  original_checkpoint_writer_fingerprint(object, path)
+}
+fingerprint_checkpoint_writer_changed <- .sdid_code_fingerprint()
+sdid_atomic_save_rds <- original_checkpoint_writer_fingerprint
+expect_true(
+  !identical(fingerprint_original, fingerprint_checkpoint_writer_changed),
+  "rank fingerprint covers checkpoint writing"
+)
 
 negative_rmspe_row <- tibble::tibble(
   iso3c = "AAA",
@@ -245,6 +285,42 @@ rank_first <- sdid_rank_distribution(
   checkpoint_dir = rank_checkpoint_directory,
   batch_size = 1L
 )
+
+# A completed and semantically valid checkpoint must still be rebuilt after a
+# change to a helper in the fingerprint chain. This exercises invalidation at
+# the persisted-checkpoint boundary instead of checking the digest alone.
+rank_fingerprint_directory <- file.path(checkpoint_directory, "rank-fingerprint")
+.rank_test_calls <- 0L
+rank_fingerprint_first <- sdid_rank_distribution(
+  rank_fixture,
+  label = "fingerprint_test",
+  cores = 1L,
+  checkpoint_dir = rank_fingerprint_directory,
+  batch_size = 1L
+)
+original_mclapply_checkpoint_fingerprint <- sdid_mclapply_checked
+sdid_mclapply_checked <- function(items, fun, cores, what = "task") {
+  original_mclapply_checkpoint_fingerprint(items, fun, cores, what)
+}
+.rank_test_calls <- 0L
+rank_fingerprint_second <- sdid_rank_distribution(
+  rank_fixture,
+  label = "fingerprint_test",
+  cores = 1L,
+  checkpoint_dir = rank_fingerprint_directory,
+  batch_size = 1L
+)
+sdid_mclapply_checked <- original_mclapply_checkpoint_fingerprint
+expect_true(
+  nrow(rank_fingerprint_first) == 3L &&
+    nrow(rank_fingerprint_second) == 3L,
+  "rank helper-change fixture remains complete"
+)
+expect_true(
+  .rank_test_calls == 3L,
+  "rank helper change invalidates and rebuilds a completed checkpoint"
+)
+
 rank_checkpoint_path <- file.path(
   rank_checkpoint_directory,
   "rank_placebos_resume_test.rds"

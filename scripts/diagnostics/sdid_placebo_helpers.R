@@ -206,11 +206,15 @@ sdid_fit_summary_row <- function(fit, specification, se_value = NA_real_) {
 .sdid_code_fingerprint <- function() {
   digest::digest(
     list(
+      deparse(body(sdid_mclapply_checked)),
+      deparse(body(sdid_read_checkpoint)),
+      deparse(body(sdid_atomic_save_rds)),
       deparse(body(sdid_placebo_estimates)),
       deparse(body(sdid_sum_normalize)),
       deparse(body(sdid_build_covariate_array)),
       deparse(body(sdid_fit_spec)),
       deparse(body(sdid_fit_summary_row)),
+      deparse(body(sdid_rank_checkpoint_valid)),
       deparse(body(sdid_rank_distribution)),
       as.character(utils::packageVersion("synthdid"))
     ),
