@@ -83,18 +83,25 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
-def _sha256_regular_file(path: Path) -> str:
-    """Hash one regular file through a no-follow descriptor."""
+def _inspect_regular_file(path: Path) -> tuple[str, int]:
+    """Hash and size one regular file through a no-follow descriptor."""
 
     flags = os.O_RDONLY | getattr(os, "O_NOFOLLOW", 0)
     descriptor = os.open(path, flags)
     with os.fdopen(descriptor, "rb") as handle:
-        if not stat.S_ISREG(os.fstat(handle.fileno()).st_mode):
+        file_stat = os.fstat(handle.fileno())
+        if not stat.S_ISREG(file_stat.st_mode):
             raise ValueError(f"Expected a regular file: {path}")
         digest = hashlib.sha256()
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
-    return digest.hexdigest()
+    return digest.hexdigest(), file_stat.st_size
+
+
+def _sha256_regular_file(path: Path) -> str:
+    """Hash one regular file through a no-follow descriptor."""
+
+    return _inspect_regular_file(path)[0]
 
 
 def read_csv_rows(path: Path) -> list[dict[str, str]]:
@@ -217,16 +224,50 @@ def validate_acquisition_options(
         raise ValueError("backoff_seconds must be finite and nonnegative")
 
 
-def _safe_repo_path(root: Path, raw_dir: Path, value: str) -> Path:
-    """Resolve a repository-relative raw path and reject path traversal."""
+def _reject_symlink_parents(raw_root: Path, path: Path) -> None:
+    """Reject existing symlinks or non-directories before a raw leaf."""
 
-    if not value or Path(value).is_absolute():
+    try:
+        relative = path.relative_to(raw_root)
+    except ValueError as error:
+        raise ValueError(
+            f"Raw path escapes its contracted directory: {path}"
+        ) from error
+    current = raw_root
+    for part in relative.parts[:-1]:
+        current = current / part
+        try:
+            mode = current.lstat().st_mode
+        except FileNotFoundError:
+            break
+        if stat.S_ISLNK(mode):
+            raise ValueError(f"Raw path has a symlink parent: {current}")
+        if not stat.S_ISDIR(mode):
+            raise ValueError(f"Raw path parent is not a directory: {current}")
+
+
+def _safe_repo_path(root: Path, raw_dir: Path, value: str) -> Path:
+    """Return a lexical raw path without resolving its final component."""
+
+    relative_path = Path(value)
+    if (
+        not value
+        or relative_path.is_absolute()
+        or ".." in relative_path.parts
+    ):
         raise ValueError(f"raw_file must be a non-empty relative path: {value!r}")
     root_resolved = root.resolve()
     raw_resolved = raw_dir.resolve()
-    path = (root_resolved / value).resolve()
-    if path != raw_resolved and raw_resolved not in path.parents:
-        raise ValueError(f"raw_file escapes the collector raw directory: {value}")
+    path = root_resolved.joinpath(*relative_path.parts)
+    try:
+        relative = path.relative_to(raw_resolved)
+    except ValueError as error:
+        raise ValueError(
+            f"raw_file escapes the collector raw directory: {value}"
+        ) from error
+    if not relative.parts:
+        raise ValueError(f"raw_file must identify a file below raw_dir: {value}")
+    _reject_symlink_parents(raw_resolved, path)
     return path
 
 
@@ -257,9 +298,11 @@ def read_checksum_manifest(manifest_path: Path, raw_dir: Path) -> dict[str, str]
         normalized = relative_path.as_posix()
         if normalized in entries:
             raise ValueError(f"Duplicate checksum path: {normalized}")
-        path = (raw_dir / relative_path).resolve()
-        if raw_dir.resolve() not in path.parents:
-            raise ValueError(f"Checksum path escapes raw directory: {relative}")
+        raw_resolved = raw_dir.resolve()
+        path = raw_resolved.joinpath(*relative_path.parts)
+        if not relative_path.parts:
+            raise ValueError(f"Checksum path must identify a file: {relative}")
+        _reject_symlink_parents(raw_resolved, path)
         entries[normalized] = digest
     return entries
 
@@ -301,23 +344,30 @@ def validate_frozen_archive(
         row_paths.append((row, path, relative))
     ledger_relatives = {relative for _, _, relative in row_paths}
     for relative, expected in entries.items():
-        path = raw_dir / relative
-        if not path.is_file():
+        path = raw_dir.resolve().joinpath(*Path(relative).parts)
+        _reject_symlink_parents(raw_dir.resolve(), path)
+        if not os.path.lexists(path):
             if allow_missing and relative in ledger_relatives:
                 continue
             raise FileNotFoundError(f"Manifested raw file is absent: {path}")
-        observed = sha256(path)
+        try:
+            observed = _sha256_regular_file(path)
+        except (OSError, ValueError) as error:
+            raise ValueError(
+                f"Manifested raw path is not a safe regular file: {path}"
+            ) from error
         if observed != expected:
             raise ValueError(
                 f"Raw SHA-256 mismatch for {path}: expected {expected}, got {observed}"
             )
 
     for _, path, relative in row_paths:
-        if not path.is_file() and not allow_missing:
+        path_present = os.path.lexists(path)
+        if not path_present and not allow_missing:
             raise FileNotFoundError(f"Ledger raw_file is absent: {path}")
         if relative not in entries and not allow_unmanifested:
             raise ValueError(f"Ledger raw_file is not in checksum manifest: {relative}")
-        if relative not in entries and path.exists():
+        if relative not in entries and path_present:
             raise ValueError(
                 "Unmanifested acquisition paths must not already exist: "
                 f"{relative}"
@@ -589,9 +639,10 @@ def _acquire_ledger_row(
     expected_hash = frozen_entries.get(relative)
     if os.path.lexists(raw_path):
         try:
-            observed_hash = _sha256_regular_file(raw_path)
+            observed_hash, observed_size = _inspect_regular_file(raw_path)
         except FileNotFoundError:
             observed_hash = None
+            observed_size = 0
         except (OSError, ValueError) as error:
             return AcquisitionResult(
                 source_id=source_id,
@@ -649,7 +700,7 @@ def _acquire_ledger_row(
             status_code=status_code,
             content_type=str(metadata.get("content_type") or ""),
             raw_file=str(raw_path.relative_to(root.resolve())),
-            size_bytes=raw_path.stat().st_size,
+            size_bytes=observed_size,
             error=str(metadata.get("error") or ""),
             accessed_at=utc_now(),
         )
@@ -753,7 +804,9 @@ def acquire_missing_ledger_files(
     pending = [
         row
         for row in rows
-        if not _safe_repo_path(root, raw_dir, row["raw_file"]).is_file()
+        if not os.path.lexists(
+            _safe_repo_path(root, raw_dir, row["raw_file"])
+        )
     ]
     staging_dir = create_staging_directory(raw_dir) if pending else None
     results: list[AcquisitionResult] = []

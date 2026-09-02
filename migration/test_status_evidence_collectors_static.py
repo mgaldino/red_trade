@@ -10,6 +10,7 @@ import hashlib
 import importlib.util
 import json
 import math
+import os
 import sys
 import tempfile
 import urllib.request
@@ -201,7 +202,7 @@ def run_entrypoint_acquisition_fixture_tests() -> None:
 
 
 def run_entrypoint_preprocessing_race_tests() -> None:
-    """Exercise matching and conflicting publication before row processing."""
+    """Exercise regular and symlink publication before row processing."""
 
     original_create = acquisition.create_staging_directory
     original_request = acquisition.request_missing_url
@@ -222,9 +223,12 @@ def run_entrypoint_preprocessing_race_tests() -> None:
                 ),
                 start=1,
             ):
-                for case, competing_bytes, expected_exit in (
-                    ("matching", b"expected", 0),
-                    ("conflicting", b"conflict", 2),
+                for case, expected_exit in (
+                    ("matching", 0),
+                    ("conflicting", 2),
+                    ("unmanifested", 2),
+                    ("symlink_matching", 2),
+                    ("dangling_symlink", 2),
                 ):
                     root = fixture_root / f"collector_{collector_index}_{case}"
                     raw_dir = root / "data" / "raw" / "fixture"
@@ -236,14 +240,33 @@ def run_entrypoint_preprocessing_race_tests() -> None:
                         "data/raw/fixture/missing.html",
                     )
                     manifest = raw_dir / "checksums.sha256"
-                    frozen_manifest = (
-                        f"{sha256_bytes(b'expected')}  missing.html\n"
-                    )
+                    if case == "unmanifested":
+                        frozen_manifest = ""
+                        expected_manifest_entries = 0
+                    elif case == "symlink_matching":
+                        (raw_dir / "other.html").write_bytes(b"expected")
+                        frozen_manifest = (
+                            f"{sha256_bytes(b'expected')}  missing.html\n"
+                            f"{sha256_bytes(b'expected')}  other.html\n"
+                        )
+                        expected_manifest_entries = 2
+                    else:
+                        frozen_manifest = (
+                            f"{sha256_bytes(b'expected')}  missing.html\n"
+                        )
+                        expected_manifest_entries = 1
                     manifest.write_text(frozen_manifest, encoding="utf-8")
 
                     def create_and_publish(directory):
                         staging = original_create(directory)
-                        raw_path.write_bytes(competing_bytes)
+                        if case == "matching":
+                            raw_path.write_bytes(b"expected")
+                        elif case in {"conflicting", "unmanifested"}:
+                            raw_path.write_bytes(b"conflict")
+                        elif case == "symlink_matching":
+                            raw_path.symlink_to("other.html")
+                        else:
+                            raw_path.symlink_to("absent.html")
                         return staging
 
                     acquisition.create_staging_directory = create_and_publish
@@ -258,7 +281,9 @@ def run_entrypoint_preprocessing_race_tests() -> None:
                     collector.RAW_DIR = raw_dir
                     collector.EVIDENCE_CSV = ledger
                     collector.CHECKSUMS = manifest
-                    collector.EXPECTED_MANIFEST_ENTRIES = 1
+                    collector.EXPECTED_MANIFEST_ENTRIES = (
+                        expected_manifest_entries
+                    )
                     collector.parse_args = lambda: argparse.Namespace(
                         acquire=True,
                         timeout=1,
@@ -279,9 +304,27 @@ def run_entrypoint_preprocessing_race_tests() -> None:
                         if case == "matching"
                         else "destination_conflict_cached"
                     )
+                    if case == "matching":
+                        competitor_preserved = (
+                            raw_path.read_bytes() == b"expected"
+                        )
+                    elif case in {"conflicting", "unmanifested"}:
+                        competitor_preserved = (
+                            raw_path.read_bytes() == b"conflict"
+                        )
+                    else:
+                        expected_link = (
+                            "other.html"
+                            if case == "symlink_matching"
+                            else "absent.html"
+                        )
+                        competitor_preserved = (
+                            raw_path.is_symlink()
+                            and os.readlink(raw_path) == expected_link
+                        )
                     expect(
                         exit_code == expected_exit
-                        and raw_path.read_bytes() == competing_bytes
+                        and competitor_preserved
                         and manifest.read_text(encoding="utf-8")
                         == frozen_manifest
                         and len(staging_runs) == 1
@@ -321,7 +364,68 @@ def run_fixture_tests() -> None:
         )
         expect(len(rows) == 1, "fixture archive and ledger validate")
 
+        alias = raw_dir / "alias.html"
+        alias.symlink_to("source.html")
+        manifest.write_text(
+            f"{sha256_bytes(body.read_bytes())}  alias.html\n",
+            encoding="utf-8",
+        )
+        write_fixture_ledger(ledger, "data/raw/fixture/alias.html")
+        expect_error(
+            lambda: acquisition.validate_frozen_archive(
+                root=root,
+                ledger_path=ledger,
+                raw_dir=raw_dir,
+                manifest_path=manifest,
+                expected_entries=1,
+            ),
+            "manifested symlink is rejected even when target bytes match",
+        )
+        alias.unlink()
+
+        alias.symlink_to("absent.html")
+        expect_error(
+            lambda: acquisition.validate_frozen_archive(
+                root=root,
+                ledger_path=ledger,
+                raw_dir=raw_dir,
+                manifest_path=manifest,
+                expected_entries=1,
+                allow_missing=True,
+            ),
+            "manifested dangling symlink is a conflict rather than missing",
+        )
+        alias.unlink()
+
+        parent_target = raw_dir / "parent_target"
+        parent_target.mkdir()
+        (parent_target / "source.html").write_bytes(body.read_bytes())
+        (raw_dir / "linked_parent").symlink_to("parent_target")
+        manifest.write_text(
+            f"{sha256_bytes(body.read_bytes())}  linked_parent/source.html\n",
+            encoding="utf-8",
+        )
+        write_fixture_ledger(
+            ledger,
+            "data/raw/fixture/linked_parent/source.html",
+        )
+        expect_error(
+            lambda: acquisition.validate_frozen_archive(
+                root=root,
+                ledger_path=ledger,
+                raw_dir=raw_dir,
+                manifest_path=manifest,
+                expected_entries=1,
+            ),
+            "raw pointers with symlink parents are rejected",
+        )
+
         original = body.read_bytes()
+        manifest.write_text(
+            f"{sha256_bytes(original)}  source.html\n",
+            encoding="utf-8",
+        )
+        write_fixture_ledger(ledger, "data/raw/fixture/source.html")
         entries = acquisition.read_checksum_manifest(manifest, raw_dir)
         batch = acquisition.acquire_missing_ledger_files(
             root=root,

@@ -50,6 +50,9 @@ Gates confirmados:
   concorrente, conflito e erro interno são classificados separadamente;
 - publicações matching e conflitantes anteriores ao processamento da linha são
   revalidadas contra o hash congelado nos dois entrypoints, com códigos de saída 0 e 2;
+- symlink final, dangling symlink, diretório pai symlinkado e concorrente não
+  manifestado são rejeitados sem seguir o link; as fixtures cobrem os dois entrypoints,
+  seus códigos de saída e a preservação do pathname concorrente;
 - toda execução que cria staging termina com `fetch_log.json` e manifest próprios,
   inclusive em conflito ou falha inesperada de uma linha; arquivos concorrentes são
   preservados e o destino contratado nunca é removido.

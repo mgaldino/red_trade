@@ -147,6 +147,10 @@ casos pesquisados, não como cobertura completa da amostra tratada atual.
 13. Um destino que apareça entre o preflight e o processamento da linha deve ser
     revalidado contra o SHA-256 congelado. O store configurado para esta worktree deve
     ser seu `_targets/` local, nunca o store do checkout de `main`.
+14. Nos coletores Python, a validação e a reutilização de arquivos brutos devem
+    preservar o pathname lexical até a abertura e nunca seguir symlink no arquivo
+    final. Symlink final, dangling symlink, diretório pai symlinkado e destino presente
+    sem hash congelado são conflitos bloqueantes e não podem ser aceitos como cache.
 
 ## Testes autorizados antes do build
 
