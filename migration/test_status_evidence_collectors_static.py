@@ -9,6 +9,7 @@ import csv
 import hashlib
 import importlib.util
 import json
+import math
 import sys
 import tempfile
 from pathlib import Path
@@ -117,6 +118,84 @@ def run_entrypoint_tests() -> None:
     finally:
         acquisition.validate_frozen_archive = original_validate
         acquisition.acquire_missing_ledger_files = original_acquire
+
+
+def run_entrypoint_acquisition_fixture_tests() -> None:
+    """Exercise both real ``main(acquire=True)`` integrations without HTTP."""
+
+    original_request = acquisition.request_missing_url
+
+    def fake_request_missing_url(**kwargs):
+        acquisition._write_bytes_exclusive(kwargs["output_path"], b"entrypoint")
+        return acquisition.AcquisitionResult(
+            source_id="",
+            url=kwargs["url"],
+            status="ok",
+            status_code=200,
+            content_type="text/html",
+            raw_file="",
+            size_bytes=len(b"entrypoint"),
+            error="",
+            accessed_at="2026-09-02T00:00:00+00:00",
+        )
+
+    acquisition.request_missing_url = fake_request_missing_url
+    try:
+        with tempfile.TemporaryDirectory(
+            prefix="status_evidence_entrypoints_"
+        ) as temp:
+            fixture_root = Path(temp)
+            for index, filename in enumerate(
+                (
+                    "collect_status_cue_salience_sources.py",
+                    "collect_ex_top1_salience_sources.py",
+                ),
+                start=1,
+            ):
+                root = fixture_root / f"collector_{index}"
+                raw_dir = root / "data" / "raw" / "fixture"
+                raw_dir.mkdir(parents=True)
+                ledger = root / "ledger.csv"
+                raw_file = "data/raw/fixture/missing.html"
+                write_fixture_ledger(ledger, raw_file)
+                manifest = raw_dir / "checksums.sha256"
+                frozen_manifest = (
+                    f"{sha256_bytes(b'entrypoint')}  missing.html\n"
+                )
+                manifest.write_text(frozen_manifest, encoding="utf-8")
+
+                collector = load_collector(
+                    DIAGNOSTICS / filename,
+                    f"status_evidence_collector_acquire_fixture_{index}",
+                )
+                collector.ROOT = root
+                collector.RAW_DIR = raw_dir
+                collector.EVIDENCE_CSV = ledger
+                collector.CHECKSUMS = manifest
+                collector.EXPECTED_MANIFEST_ENTRIES = 1
+                collector.parse_args = lambda: argparse.Namespace(
+                    acquire=True,
+                    timeout=1,
+                    retries=1,
+                    backoff=0.0,
+                )
+                exit_code = collector.main()
+                staging_runs = list(
+                    (raw_dir / "acquisition_staging").iterdir()
+                )
+                expect(
+                    exit_code == 0
+                    and (raw_dir / "missing.html").read_bytes()
+                    == b"entrypoint"
+                    and manifest.read_text(encoding="utf-8")
+                    == frozen_manifest
+                    and len(staging_runs) == 1
+                    and (staging_runs[0] / "fetch_log.json").is_file()
+                    and (staging_runs[0] / "checksums.sha256").is_file(),
+                    f"{filename} --acquire path is covered end to end offline",
+                )
+    finally:
+        acquisition.request_missing_url = original_request
 
 
 def run_fixture_tests() -> None:
@@ -441,10 +520,18 @@ def run_validation_edge_tests() -> None:
         )
         manifest.write_text(original_manifest, encoding="utf-8")
 
-        expect_error(
-            lambda: acquisition.validate_http_url("file:///tmp/source"),
-            "non-HTTP acquisition URLs are rejected",
-        )
+        for invalid_url in (
+            "file:///tmp/source",
+            "https://-",
+            "http://user@",
+            "https://example.com:bad",
+            "https://example.com/ bad",
+            "https://example.com/%zz",
+        ):
+            expect_error(
+                lambda value=invalid_url: acquisition.validate_http_url(value),
+                f"invalid acquisition URL is rejected: {invalid_url}",
+            )
         expect_error(
             lambda: acquisition.validate_acquisition_options(
                 timeout_seconds=0,
@@ -469,6 +556,15 @@ def run_validation_edge_tests() -> None:
             ),
             "negative backoff is rejected",
         )
+        for nonfinite in (math.nan, math.inf, -math.inf):
+            expect_error(
+                lambda value=nonfinite: acquisition.validate_acquisition_options(
+                    timeout_seconds=1,
+                    retries=1,
+                    backoff_seconds=value,
+                ),
+                f"non-finite backoff {nonfinite!r} is rejected",
+            )
         existing_log = root / "fetch_log.json"
         acquisition.write_json_log(existing_log, batch.results)
         expect_error(
@@ -486,6 +582,66 @@ def run_validation_edge_tests() -> None:
             "exclusive raw write failure preserves existing bytes",
         )
 
+        class FailingStream:
+            def __init__(self) -> None:
+                self.calls = 0
+
+            def read(self, size: int) -> bytes:
+                self.calls += 1
+                if self.calls == 1:
+                    return b"partial"
+                raise OSError("fixture stream failure")
+
+        failed_stream_target = root / "failed_stream.raw"
+        expect_error(
+            lambda: acquisition._write_stream_exclusive(
+                failed_stream_target,
+                FailingStream(),
+            ),
+            "failed stream publication raises without publishing a raw file",
+        )
+        expect(
+            not failed_stream_target.exists()
+            and any(root.glob(".failed_stream.raw.partial-*")),
+            "failed stream keeps only a uniquely named partial audit artifact",
+        )
+        expect_error(
+            lambda: acquisition._write_stream_exclusive(
+                protected,
+                type("Stream", (), {"read": lambda self, size: b""})(),
+            ),
+            "stream publication cannot replace a competing raw file",
+        )
+        expect(
+            protected.read_bytes() == b"original",
+            "stream publication failure never removes the competing file",
+        )
+
+        copy_source = root / "copy_source.raw"
+        copy_source.write_bytes(b"candidate")
+        expect_error(
+            lambda: acquisition._copy_verified_exclusive(
+                copy_source,
+                protected,
+                sha256_bytes(b"candidate"),
+            ),
+            "verified promotion cannot replace a competing raw file",
+        )
+        expect(
+            protected.read_bytes() == b"original",
+            "verified promotion failure never removes the competing file",
+        )
+        mismatch_target = root / "mismatch.raw"
+        expect(
+            not acquisition._copy_verified_exclusive(
+                copy_source,
+                mismatch_target,
+                sha256_bytes(b"different"),
+            )
+            and not mismatch_target.exists(),
+            "hash-mismatched bytes are never published to the frozen path",
+        )
+
 
 def run_source_tests() -> None:
     forbidden_main_calls = {
@@ -496,6 +652,7 @@ def run_source_tests() -> None:
         "write_data_dictionary",
         "write_collection_log",
         "write_checksum_manifest",
+        "write_checksums",
         "run_gdelt_queries",
     }
     for filename in (
@@ -551,6 +708,7 @@ def run_source_tests() -> None:
 if __name__ == "__main__":
     run_source_tests()
     run_entrypoint_tests()
+    run_entrypoint_acquisition_fixture_tests()
     run_fixture_tests()
     run_staging_failure_tests()
     run_validation_edge_tests()

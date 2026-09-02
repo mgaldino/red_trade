@@ -120,7 +120,9 @@ casos pesquisados, não como cobertura completa da amostra tratada atual.
 2. Cada arquivo bruto coincide com o SHA-256 declarado.
 3. Os ledgers têm 21 e 22 chaves-fonte únicas e coincidem com os hashes congelados.
 4. Todos os `raw_file` não vazios pertencem ao diretório bruto correto, existem e
-   constam do manifest correspondente.
+   constam do manifest correspondente. `url` e todo `archive_url` não vazio devem
+   ser HTTP(S) sintaticamente válidos, com hostname e porta válidos, sem espaços,
+   controles ou escapes percentuais malformados.
 5. O universo coincide exatamente, em código ISO3, nome e ano de entrada, com os 14
    casos contratados; anos fracionários, códigos inválidos ou substituições são erro.
 6. Os códigos usam somente os vocabulários contratuais; flags booleanas não admitem
@@ -134,6 +136,9 @@ casos pesquisados, não como cobertura completa da amostra tratada atual.
    arquivo `incumbent_salience_moderators_*` por ordenação de nomes.
 10. Os coletores Python alterados precisam de revisão independente `review-python` com
     `PASS`; o código R precisa de revisão independente `review-r` com `PASS`.
+11. A promoção de uma recuperação congelada deve vincular verificação e cópia aos
+    mesmos bytes, revalidar o destino e nunca remover por pathname um arquivo que
+    possa ter sido criado ou substituído concorrentemente.
 
 ## Testes autorizados antes do build
 

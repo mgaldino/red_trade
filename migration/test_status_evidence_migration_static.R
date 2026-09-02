@@ -160,19 +160,44 @@ expect_validation_false(
   "invalid ISO publication date is rejected"
 )
 
-invalid_url <- status_source
-invalid_url$url[[1]] <- "file:///tmp/source"
+invalid_urls <- c(
+  "file:///tmp/source",
+  "https://-",
+  "http://user@",
+  "https://example.com:bad",
+  "https://example.com/ bad",
+  "https://example.com/%zz"
+)
+for (bad_url in invalid_urls) {
+  invalid_url <- status_source
+  invalid_url$url[[1]] <- bad_url
+  expect_validation_false(
+    validate_status_evidence_source_ledger(
+      invalid_url,
+      status_source_file,
+      "status",
+      status_raw_files,
+      status_raw_directory,
+      21L
+    ),
+    "ledger_urls_valid",
+    paste0("invalid source URL is rejected: ", bad_url)
+  )
+}
+
+invalid_archive_url <- status_source
+invalid_archive_url$archive_url[[1]] <- "file:///tmp/archive"
 expect_validation_false(
   validate_status_evidence_source_ledger(
-    invalid_url,
+    invalid_archive_url,
     status_source_file,
     "status",
     status_raw_files,
     status_raw_directory,
     21L
   ),
-  "ledger_urls_valid",
-  "non-HTTP source URL is rejected"
+  "ledger_archive_urls_valid",
+  "nonblank invalid archive URL is rejected"
 )
 
 invalid_pointer <- status_source

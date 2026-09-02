@@ -58,11 +58,81 @@ status_evidence_valid_iso_date <- function(x) {
 
 status_evidence_valid_http_url <- function(x) {
   value <- as.character(x)
-  !is.na(value) & grepl(
-    "^https?://[^/?#[:space:]]+(?:[/?#]|$)",
-    value,
-    perl = TRUE
-  )
+  vapply(value, function(url) {
+    if (is.na(url) || !nzchar(url) ||
+        grepl("[[:space:][:cntrl:]\\\\]", url, perl = TRUE) ||
+        grepl("%(?![0-9A-Fa-f]{2})", url, perl = TRUE)) {
+      return(FALSE)
+    }
+    match <- regexec(
+      "^(https?)://([^/?#]+)(.*)$",
+      url,
+      ignore.case = TRUE,
+      perl = TRUE
+    )
+    fields <- regmatches(url, match)[[1L]]
+    if (length(fields) != 4L) {
+      return(FALSE)
+    }
+    authority <- fields[[3L]]
+    if (grepl("@", authority, fixed = TRUE)) {
+      return(FALSE)
+    }
+    if (startsWith(authority, "[")) {
+      host_match <- regexec(
+        "^\\[([0-9A-Fa-f:.]+)\\](?::([0-9]+))?$",
+        authority,
+        perl = TRUE
+      )
+      host_fields <- regmatches(authority, host_match)[[1L]]
+      if (length(host_fields) == 0L ||
+          !grepl(":", host_fields[[2L]], fixed = TRUE)) {
+        return(FALSE)
+      }
+      port <- if (length(host_fields) >= 3L) host_fields[[3L]] else ""
+    } else {
+      host_match <- regexec(
+        "^([^:]+)(?::([0-9]+))?$",
+        authority,
+        perl = TRUE
+      )
+      host_fields <- regmatches(authority, host_match)[[1L]]
+      if (length(host_fields) == 0L) {
+        return(FALSE)
+      }
+      host <- host_fields[[2L]]
+      port <- if (length(host_fields) >= 3L) host_fields[[3L]] else ""
+      if (nchar(host, type = "bytes") > 253L) {
+        return(FALSE)
+      }
+      if (grepl("^[0-9]+(?:\\.[0-9]+){3}$", host, perl = TRUE)) {
+        octets <- suppressWarnings(as.integer(strsplit(host, ".", fixed = TRUE)[[1L]]))
+        if (length(octets) != 4L || anyNA(octets) ||
+            any(octets < 0L | octets > 255L)) {
+          return(FALSE)
+        }
+      } else {
+        labels <- strsplit(host, ".", fixed = TRUE)[[1L]]
+        labels_valid <- nzchar(host) &&
+          all(nchar(labels, type = "bytes") <= 63L) &&
+          all(grepl(
+            "^[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?$",
+            labels,
+            perl = TRUE
+          ))
+        if (!labels_valid) {
+          return(FALSE)
+        }
+      }
+    }
+    if (nzchar(port)) {
+      port_number <- suppressWarnings(as.integer(port))
+      if (is.na(port_number) || port_number < 1L || port_number > 65535L) {
+        return(FALSE)
+      }
+    }
+    TRUE
+  }, logical(1), USE.NAMES = FALSE)
 }
 
 status_evidence_expected_audit_universe <- function() {
@@ -308,6 +378,11 @@ validate_status_evidence_source_ledger <- function(source,
     all(evidence_year >= 1990L & evidence_year <= 2023L)
   dates_valid <- all(status_evidence_valid_iso_date(source$publication_date))
   urls_valid <- all(status_evidence_valid_http_url(source$url))
+  archive_url_present <- !is.na(source$archive_url) & nzchar(source$archive_url)
+  archive_urls_valid <- all(
+    !archive_url_present |
+      status_evidence_valid_http_url(source$archive_url)
+  )
   tibble::tibble(
     validation = c(
       "ledger_hash_matches",
@@ -317,6 +392,7 @@ validate_status_evidence_source_ledger <- function(source,
       "ledger_years_valid",
       "ledger_publication_dates_valid",
       "ledger_urls_valid",
+      "ledger_archive_urls_valid",
       "ledger_booleans_valid",
       "ledger_raw_pointers_manifested"
     ),
@@ -331,6 +407,7 @@ validate_status_evidence_source_ledger <- function(source,
       years_valid,
       dates_valid,
       urls_valid,
+      archive_urls_valid,
       all(bool_valid),
       all(status_evidence_raw_pointer_membership(
         source$raw_file,
@@ -349,6 +426,15 @@ validate_status_evidence_source_ledger <- function(source,
       )), "/", nrow(source)),
       paste0("valid_urls=", sum(status_evidence_valid_http_url(source$url)),
              "/", nrow(source)),
+      paste0(
+        "valid_nonblank_archive_urls=",
+        sum(
+          archive_url_present &
+            status_evidence_valid_http_url(source$archive_url)
+        ),
+        "/",
+        sum(archive_url_present)
+      ),
       paste(bool_columns, bool_valid, sep = "=", collapse = ";"),
       paste0("manifested=", sum(status_evidence_raw_pointer_membership(
         source$raw_file,

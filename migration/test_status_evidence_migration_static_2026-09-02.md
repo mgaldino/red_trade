@@ -39,8 +39,12 @@ Gates confirmados:
   congelado;
 - status HTTP de arquivos existentes é recuperado do sidecar, não inferido pelo
   nome;
-- URLs não HTTP(S), opções inválidas, missing não recuperável e tentativas de
-  overwrite exclusivo são rejeitados.
+- URLs não HTTP(S), opções inválidas (inclusive backoff não finito), missing não
+  recuperável e tentativas de overwrite exclusivo são rejeitados;
+- os dois entrypoints percorrem o ramo `--acquire` ponta a ponta com HTTP
+  substituído por fixture local, incluindo promoção, log e manifest de staging;
+- promoção e publicação usam candidatos completos e criação exclusiva; falhas
+  preservam arquivos concorrentes e deixam somente partials auditáveis no staging.
 
 ## R e DAG
 
@@ -62,7 +66,8 @@ Gates confirmados:
   coincidem com os manifests;
 - os hashes e schemas dos ledgers autorais coincidem com o contrato;
 - booleanos inválidos, ponteiros inseguros e chaves duplicadas são rejeitados;
-- anos fracionários, datas impossíveis e URLs sem HTTP(S) válido são rejeitados;
+- anos fracionários, datas impossíveis, hostnames/portas/caminhos inválidos e
+  `archive_url` não vazio sem HTTP(S) válido são rejeitados;
 - o universo deve coincidir exatamente com os 14 pares autorais de código, nome e
   ano; substituições preservando 14 linhas falham;
 - o input congelado de identificação do incumbente coincide com o SHA-256
@@ -83,3 +88,8 @@ Gates confirmados:
 Esses testes demonstram equivalência de transformações e topologia do DAG, não
 um build completo. A execução de `targets::tar_make()` continua dependente de
 autorização específica do autor.
+
+O teste R foi executado com R 4.4.2 em `Rscript --vanilla`; as versões de alguns
+pacotes instalados diferem do `renv.lock`, mas a equivalência serializada exata
+passou. A execução controlada futura deve ativar o ambiente `renv` e registrar o
+`sessionInfo()` completo.

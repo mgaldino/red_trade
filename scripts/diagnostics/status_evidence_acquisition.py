@@ -11,9 +11,12 @@ from __future__ import annotations
 
 import csv
 import hashlib
+import ipaddress
 import json
 import logging
-import shutil
+import math
+import os
+import re
 import time
 import urllib.error
 import urllib.parse
@@ -77,9 +80,51 @@ def read_csv_rows(path: Path) -> list[dict[str, str]]:
 def validate_http_url(value: str) -> str:
     """Return a normalized HTTP(S) URL or reject unsupported locations."""
 
+    if (
+        not isinstance(value, str)
+        or not value
+        or "\\" in value
+        or any(character.isspace() or ord(character) < 32 for character in value)
+        or re.search(r"%(?![0-9A-Fa-f]{2})", value)
+    ):
+        raise ValueError(f"Invalid HTTP(S) URL: {value!r}")
     parsed = urllib.parse.urlsplit(value)
-    if parsed.scheme.lower() not in {"http", "https"} or not parsed.hostname:
+    if (
+        parsed.scheme.lower() not in {"http", "https"}
+        or not parsed.hostname
+        or parsed.username is not None
+        or parsed.password is not None
+    ):
         raise ValueError(f"Only HTTP(S) URLs with a hostname are allowed: {value!r}")
+    try:
+        port = parsed.port
+    except ValueError as error:
+        raise ValueError(f"Invalid HTTP(S) port in URL: {value!r}") from error
+    if port == 0:
+        raise ValueError(f"HTTP(S) port must be between 1 and 65535: {value!r}")
+    hostname = parsed.hostname
+    try:
+        ipaddress.ip_address(hostname)
+    except ValueError:
+        try:
+            ascii_hostname = hostname.encode("idna").decode("ascii")
+        except UnicodeError as error:
+            raise ValueError(f"Invalid HTTP(S) hostname: {value!r}") from error
+        labels = ascii_hostname.split(".")
+        if (
+            len(ascii_hostname.encode("ascii")) > 253
+            or any(
+                not label
+                or len(label.encode("ascii")) > 63
+                or re.fullmatch(
+                    r"[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?",
+                    label,
+                )
+                is None
+                for label in labels
+            )
+        ):
+            raise ValueError(f"Invalid HTTP(S) hostname: {value!r}")
     return value
 
 
@@ -95,8 +140,8 @@ def validate_acquisition_options(
         raise ValueError("timeout_seconds must be positive")
     if retries < 1:
         raise ValueError("retries must be at least 1")
-    if backoff_seconds < 0:
-        raise ValueError("backoff_seconds cannot be negative")
+    if not math.isfinite(backoff_seconds) or backoff_seconds < 0:
+        raise ValueError("backoff_seconds must be finite and nonnegative")
 
 
 def _safe_repo_path(root: Path, raw_dir: Path, value: str) -> Path:
@@ -175,6 +220,9 @@ def validate_frozen_archive(
     row_paths: list[tuple[dict[str, str], Path, str]] = []
     for row in rows:
         validate_http_url(row["url"])
+        archive_url = row.get("archive_url", "").strip()
+        if archive_url:
+            validate_http_url(archive_url)
         path = _safe_repo_path(root, raw_dir, row["raw_file"])
         relative = path.relative_to(raw_dir.resolve()).as_posix()
         row_paths.append((row, path, relative))
@@ -251,40 +299,69 @@ def _write_text_exclusive(path: Path, value: str) -> None:
 
 
 def _write_stream_exclusive(path: Path, stream: BinaryIO) -> int:
-    """Stream a response into a newly created file and return its size."""
+    """Publish a complete stream without deleting pathnames after failures.
+
+    Bytes first go to a run-unique partial file. A successful hard link then
+    publishes exactly that completed inode at ``path`` without overwriting a
+    competing creator. Failed partials are deliberately retained as audit
+    evidence inside the unique acquisition-staging directory.
+    """
 
     path.parent.mkdir(parents=True, exist_ok=True)
+    partial = path.with_name(f".{path.name}.partial-{uuid.uuid4().hex}")
     size = 0
-    created = False
-    try:
-        with path.open("xb") as handle:
-            created = True
-            while True:
-                chunk = stream.read(1024 * 1024)
-                if not chunk:
-                    break
-                handle.write(chunk)
-                size += len(chunk)
-    except Exception:
-        if created and path.is_file():
-            path.unlink()
-        raise
+    with partial.open("xb") as handle:
+        while True:
+            chunk = stream.read(1024 * 1024)
+            if not chunk:
+                break
+            handle.write(chunk)
+            size += len(chunk)
+        handle.flush()
+        os.fsync(handle.fileno())
+    os.link(partial, path, follow_symlinks=False)
+    partial.unlink()
     return size
 
 
-def _copy_exclusive(source: Path, destination: Path) -> None:
-    """Copy a staged artifact into a missing frozen path without overwrite."""
+def _copy_verified_exclusive(
+    source: Path,
+    destination: Path,
+    expected_hash: str,
+) -> bool:
+    """Promote only bytes copied and hashed from one open source descriptor.
+
+    A complete promotion candidate is built beside the staged source. Its hash
+    is computed during that same descriptor-bound copy. Only a matching
+    candidate is hard-linked into the missing frozen path. The destination is
+    then hashed independently. No failure path unlinks the contracted raw
+    pathname, so a concurrent creator can never be removed by cleanup.
+    """
 
     destination.parent.mkdir(parents=True, exist_ok=True)
-    created = False
-    try:
-        with source.open("rb") as source_handle, destination.open("xb") as target:
-            created = True
-            shutil.copyfileobj(source_handle, target, length=1024 * 1024)
-    except Exception:
-        if created and destination.is_file():
-            destination.unlink()
-        raise
+    candidate = source.with_name(
+        f".{source.name}.promotion-candidate-{uuid.uuid4().hex}"
+    )
+    digest = hashlib.sha256()
+    with source.open("rb") as source_handle, candidate.open("xb") as target:
+        while True:
+            chunk = source_handle.read(1024 * 1024)
+            if not chunk:
+                break
+            digest.update(chunk)
+            target.write(chunk)
+        target.flush()
+        os.fsync(target.fileno())
+    if digest.hexdigest() != expected_hash:
+        return False
+    os.link(candidate, destination, follow_symlinks=False)
+    if sha256(destination) != expected_hash:
+        raise RuntimeError(
+            "Promoted raw file does not match its frozen SHA-256: "
+            f"{destination}"
+        )
+    candidate.unlink()
+    return True
 
 
 def create_staging_directory(raw_dir: Path) -> Path:
@@ -500,8 +577,7 @@ def acquire_missing_ledger_files(
         if expected_hash is None:
             status = f"new_source_staged_{fetched.status}"
             final_path = actual_path
-        elif sha256(actual_path) == expected_hash:
-            _copy_exclusive(actual_path, raw_path)
+        elif _copy_verified_exclusive(actual_path, raw_path, expected_hash):
             status = f"recovered_frozen_{fetched.status}"
             final_path = raw_path
         else:
