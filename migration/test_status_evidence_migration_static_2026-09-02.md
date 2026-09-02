@@ -48,6 +48,8 @@ Gates confirmados:
   substituído por fixture local, incluindo promoção, log e manifest de staging;
 - promoção e publicação usam candidatos completos e criação exclusiva; sucesso
   concorrente, conflito e erro interno são classificados separadamente;
+- publicações matching e conflitantes anteriores ao processamento da linha são
+  revalidadas contra o hash congelado nos dois entrypoints, com códigos de saída 0 e 2;
 - toda execução que cria staging termina com `fetch_log.json` e manifest próprios,
   inclusive em conflito ou falha inesperada de uma linha; arquivos concorrentes são
   preservados e o destino contratado nunca é removido.
@@ -89,6 +91,7 @@ Gates confirmados:
 - `targets::tar_validate(callr_function = NULL)` passa;
 - o DAG somente de targets, analisado com store temporário isolado do checkout
   principal, permanece acíclico;
+- `_targets.yaml` configura o store local desta worktree, não o store de `main`;
 - os file targets brutos são ancestrais dos outputs por país;
 - o gate de derivação é ancestral das tabelas do apêndice.
 

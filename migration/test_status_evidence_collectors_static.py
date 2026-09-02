@@ -200,6 +200,103 @@ def run_entrypoint_acquisition_fixture_tests() -> None:
         acquisition.request_missing_url = original_request
 
 
+def run_entrypoint_preprocessing_race_tests() -> None:
+    """Exercise matching and conflicting publication before row processing."""
+
+    original_create = acquisition.create_staging_directory
+    original_request = acquisition.request_missing_url
+
+    def reject_request(**kwargs):
+        raise AssertionError("preprocessing race unexpectedly reached HTTP")
+
+    acquisition.request_missing_url = reject_request
+    try:
+        with tempfile.TemporaryDirectory(
+            prefix="status_evidence_preprocessing_race_"
+        ) as temp:
+            fixture_root = Path(temp)
+            for collector_index, filename in enumerate(
+                (
+                    "collect_status_cue_salience_sources.py",
+                    "collect_ex_top1_salience_sources.py",
+                ),
+                start=1,
+            ):
+                for case, competing_bytes, expected_exit in (
+                    ("matching", b"expected", 0),
+                    ("conflicting", b"conflict", 2),
+                ):
+                    root = fixture_root / f"collector_{collector_index}_{case}"
+                    raw_dir = root / "data" / "raw" / "fixture"
+                    raw_dir.mkdir(parents=True)
+                    raw_path = raw_dir / "missing.html"
+                    ledger = root / "ledger.csv"
+                    write_fixture_ledger(
+                        ledger,
+                        "data/raw/fixture/missing.html",
+                    )
+                    manifest = raw_dir / "checksums.sha256"
+                    frozen_manifest = (
+                        f"{sha256_bytes(b'expected')}  missing.html\n"
+                    )
+                    manifest.write_text(frozen_manifest, encoding="utf-8")
+
+                    def create_and_publish(directory):
+                        staging = original_create(directory)
+                        raw_path.write_bytes(competing_bytes)
+                        return staging
+
+                    acquisition.create_staging_directory = create_and_publish
+                    collector = load_collector(
+                        DIAGNOSTICS / filename,
+                        (
+                            "status_evidence_collector_preprocessing_race_"
+                            f"{collector_index}_{case}"
+                        ),
+                    )
+                    collector.ROOT = root
+                    collector.RAW_DIR = raw_dir
+                    collector.EVIDENCE_CSV = ledger
+                    collector.CHECKSUMS = manifest
+                    collector.EXPECTED_MANIFEST_ENTRIES = 1
+                    collector.parse_args = lambda: argparse.Namespace(
+                        acquire=True,
+                        timeout=1,
+                        retries=1,
+                        backoff=0.0,
+                    )
+                    exit_code = collector.main()
+                    staging_runs = list(
+                        (raw_dir / "acquisition_staging").iterdir()
+                    )
+                    log = json.loads(
+                        (staging_runs[0] / "fetch_log.json").read_text(
+                            encoding="utf-8"
+                        )
+                    )
+                    expected_status = (
+                        "cached_ok"
+                        if case == "matching"
+                        else "destination_conflict_cached"
+                    )
+                    expect(
+                        exit_code == expected_exit
+                        and raw_path.read_bytes() == competing_bytes
+                        and manifest.read_text(encoding="utf-8")
+                        == frozen_manifest
+                        and len(staging_runs) == 1
+                        and log[0]["status"] == expected_status
+                        and (staging_runs[0] / "checksums.sha256").is_file(),
+                        (
+                            f"{filename} classifies a {case} pre-row "
+                            "publication and returns the contracted exit code"
+                        ),
+                    )
+    finally:
+        acquisition.create_staging_directory = original_create
+        acquisition.request_missing_url = original_request
+
+
 def run_fixture_tests() -> None:
     with tempfile.TemporaryDirectory(prefix="status_evidence_python_") as temp:
         root = Path(temp)
@@ -620,6 +717,7 @@ def run_validation_edge_tests() -> None:
             "https://example.com/?q=[raw]",
             "https://example.com/#a#b",
             "http://[::1]/source",
+            "https://001.002.003.004/source",
         ):
             expect_error(
                 lambda value=invalid_url: acquisition.validate_http_url(value),
@@ -847,6 +945,7 @@ if __name__ == "__main__":
     run_source_tests()
     run_entrypoint_tests()
     run_entrypoint_acquisition_fixture_tests()
+    run_entrypoint_preprocessing_race_tests()
     run_fixture_tests()
     run_staging_failure_tests()
     run_batch_finalization_failure_tests()

@@ -461,6 +461,14 @@ expect_true(
 )
 
 static_store <- tempfile("status_evidence_targets_static_store_")
+configured_store <- targets::tar_config_get("store")
+expect_true(
+  identical(
+    normalizePath(configured_store, mustWork = FALSE),
+    normalizePath("_targets", mustWork = FALSE)
+  ),
+  "configured targets store is local to the migration worktree"
+)
 targets::tar_validate(
   callr_function = NULL,
   script = "_targets.R",

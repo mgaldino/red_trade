@@ -158,9 +158,12 @@ def validate_http_url(value: str) -> str:
         raise ValueError(f"Invalid HTTP(S) URI components: {value!r}")
     if port == 0:
         raise ValueError(f"HTTP(S) port must be between 1 and 65535: {value!r}")
+    ipv4_lexeme = re.fullmatch(r"[0-9]+(?:\.[0-9]+){3}", hostname) is not None
     try:
         address = ipaddress.ip_address(hostname)
     except ValueError:
+        if ipv4_lexeme:
+            raise ValueError(f"Invalid canonical IPv4 address: {value!r}")
         labels = hostname.split(".")
         if (
             len(hostname.encode("ascii")) > 253
@@ -582,7 +585,46 @@ def _acquire_ledger_row(
 
     source_id = _source_id(row, index)
     raw_path = _safe_repo_path(root, raw_dir, row["raw_file"])
-    if raw_path.is_file():
+    relative = raw_path.relative_to(raw_dir.resolve()).as_posix()
+    expected_hash = frozen_entries.get(relative)
+    if os.path.lexists(raw_path):
+        try:
+            observed_hash = _sha256_regular_file(raw_path)
+        except FileNotFoundError:
+            observed_hash = None
+        except (OSError, ValueError) as error:
+            return AcquisitionResult(
+                source_id=source_id,
+                url=row["url"],
+                status="destination_conflict_cached",
+                status_code=None,
+                content_type="",
+                raw_file=str(raw_path.relative_to(root.resolve())),
+                size_bytes=0,
+                error=f"Cannot safely validate competing raw file: {error!r}",
+                accessed_at=utc_now(),
+            )
+        if observed_hash is not None and (
+            expected_hash is None or observed_hash != expected_hash
+        ):
+            return AcquisitionResult(
+                source_id=source_id,
+                url=row["url"],
+                status="destination_conflict_cached",
+                status_code=None,
+                content_type="",
+                raw_file=str(raw_path.relative_to(root.resolve())),
+                size_bytes=raw_path.lstat().st_size,
+                error=(
+                    "Competing raw file has no frozen SHA-256."
+                    if expected_hash is None
+                    else "Competing raw file does not match its frozen SHA-256."
+                ),
+                accessed_at=utc_now(),
+            )
+    else:
+        observed_hash = None
+    if observed_hash is not None:
         metadata = _load_existing_metadata(raw_path)
         original_status = str(
             metadata.get("fetch_status") or metadata.get("status") or ""
@@ -614,7 +656,6 @@ def _acquire_ledger_row(
 
     if staging_dir is None:
         raise RuntimeError("Missing staging directory for pending acquisition")
-    relative = raw_path.relative_to(raw_dir.resolve()).as_posix()
     metadata = _load_existing_metadata(raw_path)
     download_url = str(metadata.get("fetch_url") or row["url"])
     validate_http_url(download_url)
@@ -638,7 +679,6 @@ def _acquire_ledger_row(
             )
         actual_path = candidates[-1]
 
-    expected_hash = frozen_entries.get(relative)
     result_error = fetched.error
     if expected_hash is None:
         status = f"new_source_staged_{fetched.status}"

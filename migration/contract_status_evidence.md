@@ -144,6 +144,9 @@ casos pesquisados, não como cobertura completa da amostra tratada atual.
     deve terminar com log e manifest próprios, inclusive quando uma linha falhar ou
     encontrar um destino concorrente; conflitos são bloqueantes e nunca apagam o
     arquivo concorrente.
+13. Um destino que apareça entre o preflight e o processamento da linha deve ser
+    revalidado contra o SHA-256 congelado. O store configurado para esta worktree deve
+    ser seu `_targets/` local, nunca o store do checkout de `main`.
 
 ## Testes autorizados antes do build
 
