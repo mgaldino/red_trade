@@ -201,6 +201,119 @@ def run_entrypoint_acquisition_fixture_tests() -> None:
         acquisition.request_missing_url = original_request
 
 
+def run_entrypoint_preexisting_conflict_tests() -> None:
+    """Require exit code 2 for conflicts present before collector preflight."""
+
+    original_acquire = acquisition.acquire_missing_ledger_files
+
+    def reject_acquisition(**kwargs):
+        raise AssertionError("preflight conflict reached acquisition")
+
+    acquisition.acquire_missing_ledger_files = reject_acquisition
+    try:
+        with tempfile.TemporaryDirectory(
+            prefix="status_evidence_preexisting_conflict_"
+        ) as temp:
+            fixture_root = Path(temp)
+            for collector_index, filename in enumerate(
+                (
+                    "collect_status_cue_salience_sources.py",
+                    "collect_ex_top1_salience_sources.py",
+                ),
+                start=1,
+            ):
+                for case in (
+                    "hash_mismatch",
+                    "unmanifested",
+                    "symlink_matching",
+                    "dangling_symlink",
+                ):
+                    root = fixture_root / f"collector_{collector_index}_{case}"
+                    raw_dir = root / "data" / "raw" / "fixture"
+                    raw_dir.mkdir(parents=True)
+                    raw_path = raw_dir / "source.html"
+                    ledger = root / "ledger.csv"
+                    write_fixture_ledger(
+                        ledger,
+                        "data/raw/fixture/source.html",
+                    )
+                    manifest = raw_dir / "checksums.sha256"
+                    if case == "unmanifested":
+                        raw_path.write_bytes(b"conflict")
+                        frozen_manifest = ""
+                        expected_manifest_entries = 0
+                    elif case == "symlink_matching":
+                        (raw_dir / "other.html").write_bytes(b"expected")
+                        raw_path.symlink_to("other.html")
+                        frozen_manifest = (
+                            f"{sha256_bytes(b'expected')}  source.html\n"
+                            f"{sha256_bytes(b'expected')}  other.html\n"
+                        )
+                        expected_manifest_entries = 2
+                    elif case == "dangling_symlink":
+                        raw_path.symlink_to("absent.html")
+                        frozen_manifest = (
+                            f"{sha256_bytes(b'expected')}  source.html\n"
+                        )
+                        expected_manifest_entries = 1
+                    else:
+                        raw_path.write_bytes(b"conflict")
+                        frozen_manifest = (
+                            f"{sha256_bytes(b'expected')}  source.html\n"
+                        )
+                        expected_manifest_entries = 1
+                    manifest.write_text(frozen_manifest, encoding="utf-8")
+
+                    collector = load_collector(
+                        DIAGNOSTICS / filename,
+                        (
+                            "status_evidence_collector_preexisting_"
+                            f"{collector_index}_{case}"
+                        ),
+                    )
+                    collector.ROOT = root
+                    collector.RAW_DIR = raw_dir
+                    collector.EVIDENCE_CSV = ledger
+                    collector.CHECKSUMS = manifest
+                    collector.EXPECTED_MANIFEST_ENTRIES = (
+                        expected_manifest_entries
+                    )
+                    collector.parse_args = lambda: argparse.Namespace(
+                        acquire=True,
+                        timeout=1,
+                        retries=1,
+                        backoff=0.0,
+                    )
+                    exit_code = collector.main()
+                    if case in {"hash_mismatch", "unmanifested"}:
+                        competitor_preserved = (
+                            raw_path.read_bytes() == b"conflict"
+                        )
+                    else:
+                        expected_link = (
+                            "other.html"
+                            if case == "symlink_matching"
+                            else "absent.html"
+                        )
+                        competitor_preserved = (
+                            raw_path.is_symlink()
+                            and os.readlink(raw_path) == expected_link
+                        )
+                    expect(
+                        exit_code == 2
+                        and competitor_preserved
+                        and manifest.read_text(encoding="utf-8")
+                        == frozen_manifest
+                        and not (raw_dir / "acquisition_staging").exists(),
+                        (
+                            f"{filename} returns 2 for preexisting {case} "
+                            "without changing the archive"
+                        ),
+                    )
+    finally:
+        acquisition.acquire_missing_ledger_files = original_acquire
+
+
 def run_entrypoint_preprocessing_race_tests() -> None:
     """Exercise regular and symlink publication before row processing."""
 
@@ -1049,6 +1162,7 @@ if __name__ == "__main__":
     run_source_tests()
     run_entrypoint_tests()
     run_entrypoint_acquisition_fixture_tests()
+    run_entrypoint_preexisting_conflict_tests()
     run_entrypoint_preprocessing_race_tests()
     run_fixture_tests()
     run_staging_failure_tests()

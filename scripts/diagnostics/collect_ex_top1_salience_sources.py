@@ -1315,15 +1315,19 @@ def main() -> int:
 
     args = parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
-    rows = acquisition.validate_frozen_archive(
-        root=ROOT,
-        ledger_path=EVIDENCE_CSV,
-        raw_dir=RAW_DIR,
-        manifest_path=CHECKSUMS,
-        expected_entries=EXPECTED_MANIFEST_ENTRIES,
-        allow_missing=args.acquire,
-        allow_unmanifested=args.acquire,
-    )
+    try:
+        rows = acquisition.validate_frozen_archive(
+            root=ROOT,
+            ledger_path=EVIDENCE_CSV,
+            raw_dir=RAW_DIR,
+            manifest_path=CHECKSUMS,
+            expected_entries=EXPECTED_MANIFEST_ENTRIES,
+            allow_missing=args.acquire,
+            allow_unmanifested=args.acquire,
+        )
+    except acquisition.FrozenArchiveValidationError as error:
+        logging.error("%s", error)
+        return 2
     logging.info(
         "Validated %d source rows and %d raw checksums",
         len(rows),

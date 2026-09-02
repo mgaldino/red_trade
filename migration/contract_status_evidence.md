@@ -151,6 +151,9 @@ casos pesquisados, não como cobertura completa da amostra tratada atual.
     preservar o pathname lexical até a abertura e nunca seguir symlink no arquivo
     final. Symlink final, dangling symlink, diretório pai symlinkado e destino presente
     sem hash congelado são conflitos bloqueantes e não podem ser aceitos como cache.
+15. Falhas de validação do arquivo congelado devem ser tipadas e convertidas pelos dois
+    entrypoints em código de saída 2, inclusive quando o conflito já existe antes do
+    preflight; erro de validação nunca pode escapar como código 0 ou exceção não tratada.
 
 ## Testes autorizados antes do build
 

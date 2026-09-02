@@ -67,6 +67,10 @@ class FrozenDestinationConflictError(RuntimeError):
     """A competing frozen destination exists with unexpected bytes."""
 
 
+class FrozenArchiveValidationError(RuntimeError):
+    """The frozen archive or its author-owned ledger failed validation."""
+
+
 def utc_now() -> str:
     """Return an ISO-8601 UTC timestamp without fractional seconds."""
 
@@ -307,7 +311,7 @@ def read_checksum_manifest(manifest_path: Path, raw_dir: Path) -> dict[str, str]
     return entries
 
 
-def validate_frozen_archive(
+def _validate_frozen_archive(
     *,
     root: Path,
     ledger_path: Path,
@@ -373,6 +377,36 @@ def validate_frozen_archive(
                 f"{relative}"
             )
     return rows
+
+
+def validate_frozen_archive(
+    *,
+    root: Path,
+    ledger_path: Path,
+    raw_dir: Path,
+    manifest_path: Path,
+    expected_entries: int,
+    allow_missing: bool = False,
+    allow_unmanifested: bool = False,
+) -> list[dict[str, str]]:
+    """Validate a frozen archive and expose a typed preflight failure."""
+
+    try:
+        return _validate_frozen_archive(
+            root=root,
+            ledger_path=ledger_path,
+            raw_dir=raw_dir,
+            manifest_path=manifest_path,
+            expected_entries=expected_entries,
+            allow_missing=allow_missing,
+            allow_unmanifested=allow_unmanifested,
+        )
+    except FrozenArchiveValidationError:
+        raise
+    except Exception as error:
+        raise FrozenArchiveValidationError(
+            f"Frozen archive validation failed: {error}"
+        ) from error
 
 
 def _metadata_path(raw_path: Path) -> Path:

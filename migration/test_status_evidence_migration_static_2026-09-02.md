@@ -53,6 +53,8 @@ Gates confirmados:
 - symlink final, dangling symlink, diretório pai symlinkado e concorrente não
   manifestado são rejeitados sem seguir o link; as fixtures cobrem os dois entrypoints,
   seus códigos de saída e a preservação do pathname concorrente;
+- conflitos já presentes antes do preflight são falhas tipadas e fazem ambos os
+  entrypoints retornarem código 2, sem criar staging ou alterar o arquivo/manifest;
 - toda execução que cria staging termina com `fetch_log.json` e manifest próprios,
   inclusive em conflito ou falha inesperada de uma linha; arquivos concorrentes são
   preservados e o destino contratado nunca é removido.
