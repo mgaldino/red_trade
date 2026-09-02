@@ -23,6 +23,7 @@ tar_source("scripts/functions_sdid_dose_placebo.R")
 tar_source("scripts/functions_targets_migration.R")
 tar_source("scripts/diagnostics/sdid_placebo_helpers.R")
 tar_source("scripts/functions_sdid_targets_migration.R")
+tar_source("scripts/functions_ungadm_targets_migration.R")
 # tar_source("other_functions.R") # Source other scripts as needed.
 
 # Replace the target list below with your own:
@@ -558,6 +559,394 @@ list(
                    "data", "processed", "targets_migration",
                    "brazil_sdid_commodity_no_covariates",
                    "table_5_sdid_specification_results.csv"
+                 )
+               )
+             },
+             format = "file"),
+  # UNGA-DM measurement robustness. HTTP acquisition remains outside targets;
+  # frozen source files, harmonization, deterministic diagnostics, models and
+  # every paper-facing derivative are represented in the candidate graph.
+  tar_target(ungadm_ideal_points_file_candidate,
+             file.path(
+               "raw data", "unga_dm",
+               "unga_dm_ideal_points_all_resolution_votes_s75.csv"
+             ),
+             format = "file"),
+  tar_target(ungadm_codebook_file_candidate,
+             file.path("raw data", "unga_dm", "unga_dm_codebook.pdf"),
+             format = "file"),
+  tar_target(ungadm_sources_file_candidate,
+             file.path("raw data", "unga_dm", "SOURCES.md"),
+             format = "file"),
+  tar_target(ungadm_input_validation_candidate,
+             validate_ungadm_input_files(
+               unga_file,
+               ungadm_ideal_points_file_candidate,
+               ungadm_codebook_file_candidate,
+               ungadm_sources_file_candidate
+             )),
+  tar_target(ungadm_harmonized_bundle_candidate,
+             {
+               stopifnot(all(ungadm_input_validation_candidate$passed))
+               build_ungadm_harmonized_bundle(
+                 unga_file,
+                 ungadm_ideal_points_file_candidate,
+                 min_year = 1990L
+               )
+             }),
+  tar_target(ungadm_outcome_candidate,
+             ungadm_harmonized_bundle_candidate$outcome),
+  tar_target(ungadm_unmapped_rows_candidate,
+             ungadm_harmonized_bundle_candidate$unmatched),
+  tar_target(ungadm_validation_outputs_candidate,
+             build_ungadm_validation_outputs(
+               ungadm_harmonized_bundle_candidate
+             )),
+  tar_target(ungadm_validation_gate_candidate,
+             assert_ungadm_validation(
+               ungadm_validation_outputs_candidate$validation,
+               ungadm_validation_names()
+             )),
+  tar_target(ungadm_validation_files_candidate,
+             {
+               ungadm_validation_gate_candidate
+               write_ungadm_tables_candidate(
+                 list(
+                   input_provenance = ungadm_input_validation_candidate,
+                   correlations = ungadm_validation_outputs_candidate$correlations,
+                   coverage_summary = ungadm_validation_outputs_candidate$coverage_summary,
+                   within_range_gaps = ungadm_validation_outputs_candidate$within_range_gaps,
+                   brazil_series_overlay = ungadm_validation_outputs_candidate$brazil_series,
+                   brazil_gap_summary = ungadm_validation_outputs_candidate$brazil_gap_summary,
+                   gates = ungadm_validation_outputs_candidate$validation
+                 ),
+                 file.path(
+                   "data", "processed", "targets_migration", "ungadm",
+                   "validation"
+                 )
+               )
+             },
+             format = "file"),
+  tar_target(ungadm_validation_overlay_figure_candidate,
+             {
+               ungadm_validation_gate_candidate
+               write_ungadm_validation_overlay_candidate(
+                 ungadm_validation_outputs_candidate$brazil_series,
+                 file.path(
+                   "images", "targets_migration", "ungadm",
+                   "brazil_series_overlay.png"
+                 )
+               )
+             },
+             format = "file"),
+  tar_target(china_top_m2_goods_full_union_master_ungadm_candidate,
+             join_ungadm_to_full_union_master(
+               china_top_m2_goods_full_union_master_panel,
+               ungadm_outcome_candidate
+             )),
+  tar_target(ungadm_master_join_validation_candidate,
+             validate_ungadm_master_join(
+               china_top_m2_goods_full_union_master_panel,
+               china_top_m2_goods_full_union_master_ungadm_candidate
+             )),
+  tar_target(ungadm_master_join_gate_candidate,
+             assert_ungadm_validation(
+               ungadm_master_join_validation_candidate,
+               ungadm_master_join_validation_names()
+             )),
+  tar_target(ungadm_sdid_panel_bundle_candidate,
+             {
+               ungadm_master_join_gate_candidate
+               build_ungadm_sdid_panel_bundle(
+                 synth_data,
+                 ungadm_outcome_candidate
+               )
+             }),
+  tar_target(ungadm_sdid_panel_validation_candidate,
+             validate_ungadm_sdid_panel(
+               synth_data,
+               ungadm_sdid_panel_bundle_candidate
+             )),
+  tar_target(ungadm_sdid_panel_gate_candidate,
+             assert_ungadm_validation(
+               ungadm_sdid_panel_validation_candidate,
+               ungadm_sdid_panel_validation_names()
+             )),
+  tar_target(ungadm_sdid_fit_candidate,
+             {
+               ungadm_sdid_panel_gate_candidate
+               sdid_fit_spec(ungadm_sdid_panel_bundle_candidate$panel)
+             }),
+  tar_target(ungadm_sdid_se_candidate,
+             run_sdid_placebo_se_candidate(
+               ungadm_sdid_fit_candidate,
+               replications = 20000L,
+               label = "ungadm_no_covariates",
+               checkpoint_block = "ungadm_sdid",
+               seed = SDID_PLACEBO_SEED,
+               core_cap = 12L
+             )),
+  tar_target(ungadm_sdid_se_info_candidate,
+             list(
+               se = as.numeric(ungadm_sdid_se_candidate),
+               replications = 20000L,
+               seed = SDID_PLACEBO_SEED,
+               source = paste0(
+                 "Locally computed placebo SE using the canonical ",
+                 "resumable implementation."
+               )
+             )),
+  tar_target(ungadm_sdid_rank_distribution_candidate,
+             run_sdid_rank_distribution_candidate(
+               ungadm_sdid_panel_bundle_candidate$panel,
+               covariate_cols = character(0),
+               label = "ungadm_no_covariates",
+               checkpoint_block = "ungadm_sdid"
+             )),
+  tar_target(ungadm_sdid_outputs_candidate,
+             build_ungadm_sdid_outputs_candidate(
+               ungadm_sdid_panel_bundle_candidate$panel,
+               ungadm_sdid_fit_candidate,
+               ungadm_sdid_se_info_candidate,
+               ungadm_sdid_rank_distribution_candidate,
+               synth_fit_no_time_varying_covariates,
+               brazil_sdid_paper_outputs_candidate,
+               china_top_m2_goods_full_union_trade_rank,
+               china_top_m2_goods_full_union_treatment_unit_summary
+             )),
+  tar_target(ungadm_sdid_reference_files,
+             c(
+               file.path(
+                 "data", "processed", "diagnostics",
+                 "ungadm_outcome_robustness", "estimation",
+                 c(
+                   "sdid_comparison_table.csv",
+                   "sdid_dm_placebo_distribution.csv"
+                 )
+               ),
+               file.path(
+                 "data", "processed", "diagnostics",
+                 "ungadm_outcome_robustness", "postreview",
+                 "sdid_dm_rank_inference_harmonized.csv"
+               ),
+               file.path(
+                 "data", "processed", "diagnostics",
+                 "ungadm_outcome_robustness", "estimation",
+                 "sdid_unit_weights_bsv_vs_dm.csv"
+               )
+             ),
+             format = "file"),
+  tar_target(ungadm_sdid_baseline_validation_candidate,
+             {
+               ungadm_sdid_reference_files
+               validate_ungadm_sdid_against_baseline(
+                 ungadm_sdid_outputs_candidate,
+                 file.path(
+                   "data", "processed", "diagnostics",
+                   "ungadm_outcome_robustness"
+                 )
+               )
+             }),
+  tar_target(ungadm_sdid_baseline_gate_candidate,
+             assert_sdid_migration_validation(
+               ungadm_sdid_baseline_validation_candidate,
+               ungadm_sdid_baseline_validation_names()
+             )),
+  tar_target(ungadm_sdid_output_files_candidate,
+             {
+               ungadm_sdid_baseline_gate_candidate
+               write_ungadm_tables_candidate(
+                 list(
+                   sdid_comparison_table = ungadm_sdid_outputs_candidate$comparison,
+                   sdid_dm_main_summary = ungadm_sdid_outputs_candidate$main_summary,
+                   sdid_dm_missing_outcome_rows = ungadm_sdid_panel_bundle_candidate$missing,
+                   sdid_dm_placebo_distribution = ungadm_sdid_outputs_candidate$placebo_distribution,
+                   sdid_dm_rank_inference = ungadm_sdid_outputs_candidate$rank_inference,
+                   sdid_dm_rank_inference_harmonized = ungadm_sdid_outputs_candidate$rank_inference_harmonized,
+                   sdid_dm_unit_weights = ungadm_sdid_outputs_candidate$unit_weights,
+                   sdid_unit_weights_bsv_vs_dm = ungadm_sdid_outputs_candidate$unit_weights_bsv_vs_dm,
+                   sdid_dm_time_weights = ungadm_sdid_outputs_candidate$time_weights,
+                   sdid_dm_balance = ungadm_sdid_outputs_candidate$balance,
+                   sdid_inference_notes = ungadm_sdid_outputs_candidate$inference_notes,
+                   dm_rows_without_iso3c_mapping = ungadm_unmapped_rows_candidate,
+                   validation = ungadm_sdid_baseline_validation_candidate
+                 ),
+                 file.path(
+                   "data", "processed", "targets_migration", "ungadm",
+                   "sdid"
+                 )
+               )
+             },
+             format = "file"),
+  tar_target(ungadm_sdid_placebo_figure_candidate,
+             {
+               ungadm_sdid_baseline_gate_candidate
+               write_ungadm_placebo_figure_candidate(
+                 ungadm_sdid_outputs_candidate$placebo_distribution,
+                 file.path(
+                   "images", "targets_migration", "ungadm",
+                   "sdid_dm_placebo_distribution.png"
+                 )
+               )
+             },
+             format = "file"),
+  tar_target(ungadm_common_window_bundle_candidate,
+             {
+               ungadm_master_join_gate_candidate
+               build_ungadm_common_window_bundle(
+                 china_top_m2_goods_full_union_status_row_audit,
+                 china_top_m2_goods_full_union_master_ungadm_candidate,
+                 common_max_year = 2020L
+               )
+             }),
+  tar_target(ungadm_common_window_validation_candidate,
+             validate_ungadm_common_window_bundle(
+               ungadm_common_window_bundle_candidate
+             )),
+  tar_target(ungadm_common_window_gate_candidate,
+             assert_ungadm_validation(
+               ungadm_common_window_validation_candidate,
+               ungadm_common_window_validation_names()
+             )),
+  tar_target(ungadm_ife_bsv_common_fit_candidate,
+             {
+               ungadm_common_window_gate_candidate
+               run_ungadm_fect_cv_candidate(
+                 ungadm_common_window_bundle_candidate$panel_bsv,
+                 nboots = 10000L
+               )
+             }),
+  tar_target(ungadm_ife_dm_common_fit_candidate,
+             {
+               ungadm_common_window_gate_candidate
+               run_ungadm_fect_cv_candidate(
+                 ungadm_common_window_bundle_candidate$panel_dm,
+                 nboots = 10000L
+               )
+             }),
+  tar_target(ungadm_ife_comparison_candidate,
+             build_ungadm_ife_comparison_candidate(
+               china_top_m2_goods_full_union_status_model_results,
+               ungadm_ife_bsv_common_fit_candidate,
+               ungadm_ife_dm_common_fit_candidate,
+               ungadm_common_window_bundle_candidate,
+               nboots = 10000L
+             )),
+  tar_target(ungadm_ife_dynamic_candidate,
+             build_ungadm_ife_dynamic_candidate(
+               ungadm_ife_bsv_common_fit_candidate,
+               ungadm_ife_dm_common_fit_candidate
+             )),
+  tar_target(ungadm_ife_bsv_r1_fit_candidate,
+             run_ungadm_fect_fixed_r_candidate(
+               ungadm_common_window_bundle_candidate$panel_bsv,
+               r_fixed = 1L,
+               nboots = 10000L
+             )),
+  tar_target(ungadm_ife_bsv_r2_fit_candidate,
+             run_ungadm_fect_fixed_r_candidate(
+               ungadm_common_window_bundle_candidate$panel_bsv,
+               r_fixed = 2L,
+               nboots = 10000L
+             )),
+  tar_target(ungadm_ife_dm_r1_fit_candidate,
+             run_ungadm_fect_fixed_r_candidate(
+               ungadm_common_window_bundle_candidate$panel_dm,
+               r_fixed = 1L,
+               nboots = 10000L
+             )),
+  tar_target(ungadm_ife_dm_r2_fit_candidate,
+             run_ungadm_fect_fixed_r_candidate(
+               ungadm_common_window_bundle_candidate$panel_dm,
+               r_fixed = 2L,
+               nboots = 10000L
+             )),
+  tar_target(ungadm_ife_fixed_fits_candidate,
+             list(
+               bsv_r1 = ungadm_ife_bsv_r1_fit_candidate,
+               bsv_r2 = ungadm_ife_bsv_r2_fit_candidate,
+               dm_r1 = ungadm_ife_dm_r1_fit_candidate,
+               dm_r2 = ungadm_ife_dm_r2_fit_candidate
+             )),
+  tar_target(ungadm_ife_fixed_grid_candidate,
+             build_ungadm_ife_fixed_grid_candidate(
+               ungadm_ife_fixed_fits_candidate,
+               ungadm_common_window_bundle_candidate,
+               ungadm_ife_bsv_common_fit_candidate,
+               ungadm_ife_dm_common_fit_candidate,
+               nboots = 10000L
+             )),
+  tar_target(ungadm_ife_paired_bootstrap_draws_candidate,
+             run_ungadm_paired_bootstrap_candidate(
+               ungadm_common_window_bundle_candidate$common_rows,
+               B = 1000L,
+               boot_seed = 20260823L,
+               checkpoint_block = "ungadm_ife_paired",
+               core_cap = 12L
+             )),
+  tar_target(ungadm_ife_paired_bootstrap_summary_candidate,
+             build_ungadm_paired_bootstrap_summary_candidate(
+               ungadm_ife_paired_bootstrap_draws_candidate,
+               ungadm_ife_fixed_grid_candidate,
+               B = 1000L
+             )),
+  tar_target(ungadm_series_diagnostics_candidate,
+             build_ungadm_series_diagnostics_candidate(
+               ungadm_common_window_bundle_candidate$common_rows
+             )),
+  tar_target(ungadm_ife_validation_candidate,
+             validate_ungadm_ife_outputs(
+               ungadm_ife_comparison_candidate,
+               ungadm_ife_dynamic_candidate,
+               ungadm_ife_fixed_grid_candidate,
+               ungadm_ife_paired_bootstrap_draws_candidate,
+               ungadm_ife_paired_bootstrap_summary_candidate,
+               ungadm_series_diagnostics_candidate,
+               ungadm_common_window_bundle_candidate,
+               B = 1000L
+             )),
+  tar_target(ungadm_ife_validation_gate_candidate,
+             assert_ungadm_validation(
+               ungadm_ife_validation_candidate,
+               ungadm_ife_validation_names()
+             )),
+  tar_target(ungadm_ife_output_files_candidate,
+             {
+               ungadm_ife_validation_gate_candidate
+               write_ungadm_tables_candidate(
+                 list(
+                   ife_common_window_dropped_rows = ungadm_common_window_bundle_candidate$dropped_rows,
+                   ife_comparison_table = ungadm_ife_comparison_candidate,
+                   ife_common_window_dynamic = ungadm_ife_dynamic_candidate,
+                   ife_2x2_fixed_r = ungadm_ife_fixed_grid_candidate,
+                   ife_paired_bootstrap_draws = ungadm_ife_paired_bootstrap_draws_candidate,
+                   ife_paired_bootstrap_summary = ungadm_ife_paired_bootstrap_summary_candidate,
+                   series_divergence_by_country = ungadm_series_diagnostics_candidate$divergence,
+                   group_mean_series_bsv_vs_dm = ungadm_series_diagnostics_candidate$group_means,
+                   m2_pretrend_f_test_summary = tibble::as_tibble(
+                     china_top_m2_goods_full_union_min5_recent_pretrend_f_test$summary
+                   ),
+                   m2_pretrend_f_test_periods = tibble::as_tibble(
+                     china_top_m2_goods_full_union_min5_recent_pretrend_f_test$selected_periods
+                   ),
+                   common_window_validation = ungadm_common_window_validation_candidate,
+                   ife_validation = ungadm_ife_validation_candidate
+                 ),
+                 file.path(
+                   "data", "processed", "targets_migration", "ungadm",
+                   "ife"
+                 )
+               )
+             },
+             format = "file"),
+  tar_target(ungadm_fect_equivalence_figure_candidate,
+             {
+               ungadm_ife_validation_gate_candidate
+               write_ungadm_equivalence_plot_candidate(
+                 fect_ife_china_top_m2_goods_full_union_min5_risk_set,
+                 file.path(
+                   "images", "targets_migration", "ungadm",
+                   "m2_fect_equiv_plot.png"
                  )
                )
              },
