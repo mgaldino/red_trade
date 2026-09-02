@@ -27,14 +27,34 @@ if (length(script_argument) != 1L) {
 script_path <- normalizePath(sub("^--file=", "", script_argument), mustWork = TRUE)
 repo_root <- normalizePath(file.path(dirname(script_path), "..", ".."), mustWork = TRUE)
 
-input_dir <- file.path(
-  repo_root,
-  "data", "processed", "diagnostics", "brazil_sdid_dose_response_placebo"
-)
-donor_path <- file.path(input_dir, "dose_response_donor_doses.csv")
-summary_path <- file.path(input_dir, "dose_response_summary.csv")
-output_pdf <- file.path(repo_root, "images", "figure_brazil_sdid_dose_response_panel.pdf")
-output_png <- file.path(repo_root, "images", "figure_brazil_sdid_dose_response_panel.png")
+runtime_arguments <- commandArgs(trailingOnly = TRUE)
+if (length(runtime_arguments) == 0L) {
+  input_dir <- file.path(
+    repo_root,
+    "data", "processed", "diagnostics", "brazil_sdid_dose_response_placebo"
+  )
+  donor_path <- file.path(input_dir, "dose_response_donor_doses.csv")
+  summary_path <- file.path(input_dir, "dose_response_summary.csv")
+  output_pdf <- file.path(
+    repo_root, "images", "figure_brazil_sdid_dose_response_panel.pdf"
+  )
+  output_png <- file.path(
+    repo_root, "images", "figure_brazil_sdid_dose_response_panel.png"
+  )
+} else if (length(runtime_arguments) == 4L) {
+  donor_path <- runtime_arguments[[1L]]
+  summary_path <- runtime_arguments[[2L]]
+  output_pdf <- runtime_arguments[[3L]]
+  output_png <- runtime_arguments[[4L]]
+} else {
+  stop(
+    paste0(
+      "Usage: Rscript plot_brazil_sdid_dose_response_panel.R ",
+      "[donor.csv summary.csv output.pdf output.png]"
+    ),
+    call. = FALSE
+  )
+}
 
 assert_true <- function(condition, message) {
   if (!isTRUE(condition)) {

@@ -25,6 +25,7 @@ tar_source("scripts/diagnostics/sdid_placebo_helpers.R")
 tar_source("scripts/functions_sdid_targets_migration.R")
 tar_source("scripts/functions_ungadm_targets_migration.R")
 tar_source("scripts/functions_status_evidence_targets_migration.R")
+tar_source("scripts/functions_manuscript_targets_migration.R")
 # tar_source("other_functions.R") # Source other scripts as needed.
 
 # Replace the target list below with your own:
@@ -1110,6 +1111,27 @@ list(
                     "dose_response_donor_doses.csv")
              ),
              format = "file"),
+  tar_target(brazil_sdid_dose_response_panel_script_candidate,
+             here(
+               "scripts", "diagnostics",
+               "plot_brazil_sdid_dose_response_panel.R"
+             ),
+             format = "file"),
+  tar_target(brazil_sdid_dose_response_panel_files_candidate,
+             run_brazil_sdid_dose_response_panel_candidate(
+               brazil_sdid_dose_response_panel_script_candidate,
+               brazil_sdid_dose_placebo_donors_file,
+               brazil_sdid_dose_placebo_summary_file,
+               file.path(
+                 "images", "targets_migration",
+                 "figure_brazil_sdid_dose_response_panel.pdf"
+               ),
+               file.path(
+                 "images", "targets_migration",
+                 "figure_brazil_sdid_dose_response_panel.png"
+               )
+             ),
+             format = "file"),
   # The ggplot is built inside these file targets instead of being stored as its
   # own target. A ggplot object captures plot_env, and serializing that
   # environment is session-dependent: bit-identical inputs produced two
@@ -1244,6 +1266,12 @@ list(
              china_top_m2_goods_full_union_status_panel_bundle$treatment_unit_summary),
   tar_target(china_top_m2_goods_full_union_status_period_summary,
              china_top_m2_goods_full_union_status_panel_bundle$period_summary),
+  tar_target(china_top_m2_goods_full_union_country_audit_candidate,
+             build_full_union_country_audit_candidate(
+               china_top_m2_goods_full_union_treatment_unit_summary,
+               china_top_m2_goods_full_union_status_period_summary,
+               min_entry_year = 2000L
+             )),
   tar_target(china_top_m2_goods_full_union_status_row_audit,
              china_top_m2_goods_full_union_status_panel_bundle$row_audit),
   tar_target(china_top_m2_goods_full_union_status_validation,
@@ -1272,6 +1300,21 @@ list(
              china_top_m2_goods_full_union_status_model_bundle$model_results),
   tar_target(china_top_m2_goods_full_union_status_dynamic_results,
              china_top_m2_goods_full_union_status_model_bundle$dynamic_results),
+  tar_target(china_top_m2_goods_full_union_dynamic_pooled_figure_candidate,
+             {
+               stopifnot(all(
+                 china_top_m2_goods_full_union_status_validation_gate$passed
+               ))
+               write_cross_country_dynamic_with_pooled_att_candidate(
+                 china_top_m2_goods_full_union_status_dynamic_results,
+                 china_top_m2_goods_full_union_status_model_results,
+                 file.path(
+                   "images", "targets_migration",
+                   "figure6_cross_country_dynamic_with_pooled_att.png"
+                 )
+               )
+             },
+             format = "file"),
   tar_target(fect_ife_china_top_m2_goods_full_union_min5_risk_set,
              china_top_m2_goods_full_union_status_model_bundle$main_fit),
   tar_target(china_top_m2_goods_full_union_min5_recent_pretrend_f_test,

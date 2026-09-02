@@ -59,21 +59,9 @@ word_count_text <- function(input = knitr::current_input(), subtract_n = 20L) {
 Word count: `r word_count_text()`
 
 ```{r basic-num, include = FALSE}
-paper_sdid_dir <- file.path(
-  "data", "processed", "diagnostics",
-  "paper_v4_brazil_sdid_no_covariates"
-)
-paper_sdid_audit_dir <- file.path(
-  "data", "processed", "diagnostics",
-  "brazil_sdid_commodity_no_covariates"
-)
-paper_sdid_figure_dir <- file.path(
-  "quality_reports", "china_demand_shock_rank_threshold"
-)
-sdid_main_summary <- readr::read_csv(
-  file.path(paper_sdid_dir, "main_summary.csv"), show_col_types = FALSE
-) %>%
-  dplyr::slice_head(n = 1)
+paper_sdid_outputs <- tar_read(brazil_sdid_paper_outputs_candidate)
+sdid_main_summary <- paper_sdid_outputs$main_summary %>%
+  dplyr::slice_head(n = 1L)
 estimate <- sdid_main_summary$estimate
 se_estimate <- sdid_main_summary$se_placebo
 ci_low <- sdid_main_summary$ci_95_low
@@ -105,7 +93,7 @@ sample_size_countries <- tar_read(synth_data) %>%
   dplyr::summarise(num_countries = dplyr::n_distinct(iso3c)) %>%
   dplyr::pull(num_countries)
 cross_country_results_intro <- tar_read(
-  china_top_m2_goods_status_current_model_results
+  china_top_m2_goods_full_union_status_model_results
 )
 panel_main_intro <- cross_country_results_intro %>%
   dplyr::filter(
@@ -323,50 +311,25 @@ Figure \@ref(fig:plot-sdid) presents the preferred SDiD fit, estimated without c
 The placebo-based SE is `r sprintf('%1.3f', se_estimate)`, and the conventional two-sided normal-approximation p-value is `r sprintf('%.3f', p_estimate)` with a 95 percent interval [`r sprintf('%.3f', ci_low)`, `r sprintf('%.3f', ci_high)`]. Because the theory predicts convergence, the directionally aligned placebo-in-space rank is `r sprintf('%d/%d', sdid_main_summary$rank_one_sided_negative, sdid_main_summary$rank_denominator)` (p = `r sprintf('%.3f', p_rank_directional)`); the conservative two-sided absolute rank is `r sprintf('%d/%d', sdid_main_summary$rank_two_sided_absolute, sdid_main_summary$rank_denominator)` (p = `r sprintf('%.3f', p_rank_bilateral)`). I report both rather than treating either convention as the sole inferential benchmark. Interpreting these finite-sample ranks as p-values requires placebo assignments to be sufficiently comparable to Brazil; the appendix therefore discloses donor exposure and pre-fit sensitivity. Relative to Brazil's pre-treatment mean distance (`r sprintf('%.3f', mean_br)`), the ATT corresponds to a `r sprintf('%.1f', perc_change)` percent reduction. Appendix Figure \@ref(fig:appendix-brazil-china-ideal-points) shows that China is comparatively stable, so most of the reduction in absolute distance comes from movement in Brazil's position.
 
 ```{r plot-sdid, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Preferred SDiD fit for Brazil and its synthetic comparison, estimated without covariates. Lower values indicate convergence toward China; the post-treatment gap is the average post-2009 reduced-form estimate. ", caption_note(unit = "Absolute UNGA ideal-point distance to China", se = "placebo-based SE with 20,000 replications; p-values reported in the text and table", window = "1997-2015 annual Brazil series")), fig.pos="H", out.width="95%"}
-knitr::include_graphics(file.path(
-  "quality_reports", "china_demand_shock_rank_threshold",
-  "figure_brazil_sdid_predetermined_core_fit.png"
-))
+knitr::include_graphics(tar_read(brazil_sdid_main_fit_figure_candidate))
 ```
 
 ```{r brazil-sdid-diagnostic-inputs, include=FALSE}
-sdid_unit_weights <- readr::read_csv(
-  file.path(paper_sdid_dir, "unit_weights.csv"), show_col_types = FALSE
-)
-sdid_time_weights <- readr::read_csv(
-  file.path(paper_sdid_dir, "time_weights.csv"), show_col_types = FALSE
-)
+sdid_unit_weights <- paper_sdid_outputs$unit_weights
+sdid_time_weights <- paper_sdid_outputs$time_weights
 sdid_fit_summary <- sdid_main_summary
-sdid_balance <- readr::read_csv(
-  file.path(paper_sdid_dir, "balance.csv"), show_col_types = FALSE
-)
-sdid_rank_inference <- readr::read_csv(
-  file.path(paper_sdid_dir, "rank_inference.csv"), show_col_types = FALSE
-)
-sdid_placebo_distribution <- readr::read_csv(
-  file.path(paper_sdid_dir, "placebo_distribution.csv"), show_col_types = FALSE
-)
-sdid_donor_sensitivity <- readr::read_csv(
-  file.path(paper_sdid_dir, "donor_sensitivity.csv"), show_col_types = FALSE
-)
-sdid_window_sensitivity <- readr::read_csv(
-  file.path(paper_sdid_dir, "window_sensitivity.csv"), show_col_types = FALSE
-)
-sdid_donor_china_exposure <- readr::read_csv(
-  file.path(paper_sdid_dir, "donor_china_exposure.csv"), show_col_types = FALSE
-)
-sdid_high_weight_exposure_summary <- readr::read_csv(
-  file.path(paper_sdid_dir, "donor_china_exposure_summary.csv"),
-  show_col_types = FALSE
-) %>% dplyr::slice_head(n = 1)
-sdid_timing_placebos <- readr::read_csv(
-  file.path(paper_sdid_dir, "timing_placebos.csv"), show_col_types = FALSE
-)
-sdid_latam_core_summary <- readr::read_csv(
-  file.path(paper_sdid_dir, "latam_core_summary.csv"),
-  show_col_types = FALSE
-) %>%
-  dplyr::slice_head(n = 1)
+sdid_balance <- paper_sdid_outputs$balance
+sdid_rank_inference <- paper_sdid_outputs$rank_inference
+sdid_placebo_distribution <- paper_sdid_outputs$placebo_distribution
+sdid_donor_sensitivity <- paper_sdid_outputs$donor_sensitivity
+sdid_window_sensitivity <- paper_sdid_outputs$window_sensitivity
+sdid_donor_china_exposure <- paper_sdid_outputs$donor_china_exposure
+sdid_high_weight_exposure_summary <-
+  paper_sdid_outputs$donor_china_exposure_summary %>%
+  dplyr::slice_head(n = 1L)
+sdid_timing_placebos <- paper_sdid_outputs$timing_placebos
+sdid_latam_core_summary <- paper_sdid_outputs$latam_core_summary %>%
+  dplyr::slice_head(n = 1L)
 
 sdid_top_donors_text <- sdid_unit_weights %>%
   dplyr::slice_head(n = 5) %>%
@@ -652,13 +615,7 @@ knitr::kable(
 ```
 
 ```{r china-demand-sdid-numbers, include=FALSE}
-china_demand_sdid_results <- readr::read_csv(
-  file.path(
-    paper_sdid_audit_dir,
-    "table_5_sdid_specification_results.csv"
-  ),
-  show_col_types = FALSE
-)
+china_demand_sdid_results <- tar_read(brazil_sdid_commodity_table_candidate)
 china_demand_specs <- c(
   "current_baseline", "no_covariates", "primary_gfc_2008_2009",
   "agriculture_mining_gfc", "weighted_price_gfc", "pre_china_gfc"
@@ -686,7 +643,14 @@ To assess this possibility, I relate each donor country's placebo-in-space pseud
 Figure \@ref(fig:rival-hypothesis) provides little support for the continuous-exposure account. Panel A measures exposure using goods trade, matching the sectoral definition used to assign treatment, while Panel B uses all-sector trade, including both goods and services. The relationship is essentially flat under both measures. The OLS slopes are 0.0002 and 0.0007 per percentage point, respectively, while the corresponding Spearman correlations are 0.034 and 0.037. Under either measure, Brazil's ATT is also more negative than those of 23 of the 24 donors in the highest quartile of exposure growth. These patterns do not rule out a role for continuous export dependence, nor do they identify a discontinuity at the rank threshold itself, but they make it less plausible that Brazil's result is driven simply by rising trade exposure to China.
 
 ```{r rival-hypothesis, message=FALSE, warning=FALSE, echo=FALSE, fig.cap="Trade-exposure dose and placebo-in-space pseudo-ATTs among 95 donor countries. Each donor is assigned the same 2009 pseudo-treatment, and dose is the difference between its mean annual export share directed to China in 2009--2015 and 1997--2008. Panel A measures goods trade; Panel B measures all-sector trade, including goods and services. Negative pseudo-ATTs indicate convergence toward China. Dark points identify donors in the top quartile of dose, vertical dotted lines mark the corresponding cutoffs, and black lines are descriptive OLS fits. The orange dashed horizontal line marks Brazil's ATT of -0.273; Brazil has no dose coordinate and therefore does not enter either fit. No donor had China as its largest goods-export destination during 1997--2015, so the figure shows only the dose gradient below the rank-one threshold and does not identify a discontinuity at that threshold. Donor pseudo-ATTs are estimated from overlapping pools, so no standard error is reported for either slope.", fig.pos="!htbp", out.width="100%"}
-knitr::include_graphics("images/figure_brazil_sdid_dose_response_panel.pdf")
+dose_response_panel_files <- tar_read(
+  brazil_sdid_dose_response_panel_files_candidate
+)
+dose_response_panel_pdf <- dose_response_panel_files[
+  tolower(tools::file_ext(dose_response_panel_files)) == "pdf"
+]
+stopifnot(length(dose_response_panel_pdf) == 1L)
+knitr::include_graphics(dose_response_panel_pdf)
 ```
 
 A remaining concern is that 2009 bundled the Brazilian rank reversal with other contemporaneous shocks, including the global financial crisis, the BRICS/G20 moment, and the commodity cycle. Table \@ref(tab:china-demand-sdid-diagnostics) uses a measure built from external goods exports only to address this critique. Brazil's 2004--2008 primary-goods share is 29.04 percent, composed of 11.25 percent Agriculture and 17.79 percent Mining and Energy. The preferred ATT is `r sprintf("%.3f", china_demand_main$estimate)`; adding primary composition and its 2008--2009 interaction yields `r sprintf("%.3f", china_demand_commodity$estimate)`. Composition, decomposition, global-price, and prior-China-exposure specifications remain in a narrow negative range. The 2008--2009 interactions are robustness or mechanism diagnostics, not alternative total-effect estimates, because 2009 is the first treated year and the interaction may absorb part of the mechanism. Stability across these measures does not isolate the rank cue experimentally from every 2009 political shock, but it reduces the narrower concern that the preferred estimate is an artifact of post-treatment controls or omitted pre-2009 commodity composition.
@@ -1030,10 +994,16 @@ The pooled cross-country ATT averages effects over all 440 country-years in whic
 
 ```{r fect-results, include=FALSE}
 library(dplyr)
-m2_model_results <- tar_read(china_top_m2_goods_status_current_model_results)
-m2_sector_audit <- tar_read(china_top_m2_goods_sector_audit)
-m2_unit_summary <- tar_read(china_top_m2_goods_status_current_unit_summary)
-m2_country_audit <- tar_read(china_top_m2_goods_status_current_country_audit)
+m2_model_results <- tar_read(
+  china_top_m2_goods_full_union_status_model_results
+)
+m2_sector_audit <- tar_read(china_top_m2_goods_full_union_sector_audit)
+m2_unit_summary <- tar_read(
+  china_top_m2_goods_full_union_status_unit_summary
+)
+m2_country_audit <- tar_read(
+  china_top_m2_goods_full_union_country_audit_candidate
+)
 
 main_cross_s <- m2_model_results %>%
   dplyr::filter(min_duration_years == 5L, specification == "risk_set_restricted") %>%
@@ -1156,8 +1126,8 @@ knitr::kable(
 Figure \@ref(fig:cross-country-dynamic) separates the event-time estimates from the pooled post-entry ATT for the main goods-only restricted-risk-set IFE specification. The pre-entry estimates shown in gray are centered near zero. Nineteen of the twenty post-entry point estimates are negative, with the largest reductions appearing approximately six to twelve years after entry, but most horizon-specific 95 percent intervals cross zero because each estimate uses only the countries observed at that horizon. The labels above selected horizons show how this support declines over time. The orange dashed line and band report the pooled ATT (`r fmt3(main_cross_s$att)`, 95 percent CI [`r fmt3(main_cross_s$ci_lo)`, `r fmt3(main_cross_s$ci_hi)`]) across `r main_cross_s$n_treated_country_years` treated country-years. This is a treated-period-weighted average, not a cumulative effect, which explains how the aggregate estimate can be distinguishable from zero even when most pointwise intervals are not.
 
 ```{r cross-country-dynamic, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Dynamic effects and pooled post-entry ATT from the main goods-only cross-country IFE model. Gray points and vertical bars show pre-entry diagnostics; blue points and vertical bars show post-entry event-time estimates. Vertical bars are pointwise 95 percent bootstrap confidence intervals. The orange dashed line and band show the pooled ATT and its 95 percent bootstrap confidence interval across ", main_cross_s$n_treated_country_years, " treated country-years from h = +1 to h = +20; this is a treated-period-weighted average, not a cumulative sum. The display is limited to h = -12 through h = +15, and N labels give the number of contributing treated countries at selected post-entry horizons. Negative estimates indicate reduced UNGA distance to China after entry into durable status as the top goods-export destination. ", caption_note(unit = "Effect on absolute UNGA ideal-point distance to China", se = "bootstrap confidence intervals", window = sprintf("%d--%d goods-only panel", main_cross_s$panel_min, main_cross_s$panel_max))), fig.pos="H", out.width="100%"}
-knitr::include_graphics(file.path(
-  "images", "figure6_cross_country_dynamic_with_pooled_att.png"
+knitr::include_graphics(tar_read(
+  china_top_m2_goods_full_union_dynamic_pooled_figure_candidate
 ))
 ```
 
@@ -1598,20 +1568,14 @@ knitr::kable(
 Below I also present the ten largest donor weights used in the main model as a visual summary.
 
 ```{r plot-weights, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Ten largest donor weights contributing to the synthetic control in the Brazilian SDiD model. ", caption_note(unit = "Synthetic-control unit weights, normalized over the full donor pool rather than only over the displayed donors", window = "pre-treatment period ending in 2008")), fig.pos="H", out.width="90%"}
-knitr::include_graphics(file.path(
-  paper_sdid_figure_dir,
-  "figure_brazil_sdid_predetermined_core_weights.png"
-))
+knitr::include_graphics(tar_read(brazil_sdid_weights_figure_candidate))
 ```
 
 I also fit a model for a donor pool of Latin American states (excluding Caribbean countries), which is substantively attractive because the donor countries are regionally closer to Brazil. This regional donor pool is a sensitivity check rather than the preferred specification: the main design seeks a pre-treatment synthetic counterfactual with adequate donor support and fit, while the Latin American pool is much smaller.
 
 
 ```{r plot-latam, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("SDiD fit with a Latin American donor pool, estimated without covariates. ", caption_note(unit = "Absolute UNGA ideal-point distance to China", se = paste0(sprintf("%.3f", sdid_latam_core_summary$se_placebo[[1]]), " (placebo, ", format(as.integer(sdid_latam_core_summary$se_replications[[1]]), big.mark = ",", scientific = FALSE, trim = TRUE), " replications)"), window = "1997-2015 annual series")), fig.pos="H", out.width="95%"}
-knitr::include_graphics(file.path(
-  paper_sdid_figure_dir,
-  "figure_brazil_sdid_predetermined_core_latam_fit.png"
-))
+knitr::include_graphics(tar_read(brazil_sdid_latam_fit_figure_candidate))
 b_est_main <- sdid_fit_summary$estimate[[1]]
 b_est_latam <- sdid_latam_core_summary$estimate[[1]]
 ```
@@ -1682,7 +1646,7 @@ knitr::kable(
 
 ## Cross-Country Sample Audit: Goods-Only Treatment Coding
 
-The revised rank metric excludes services before partner ranks are computed. Table \@ref(tab:cross-country-sector-table) documents the ITPD-E broad-sector filter. Table \@ref(tab:cross-country-audit-table) then summarizes how the five-year goods-only rule classifies countries in the UNGA/trade panel.
+The revised rank metric excludes services before partner ranks are computed. Table \@ref(tab:cross-country-sector-table) documents the ITPD-E broad-sector filter. Table \@ref(tab:cross-country-audit-table) then summarizes how the five-year goods-only rule classifies countries in the union of the UNGA and trade source universes before outcome availability is used for estimation.
 
 ```{r cross-country-sector-table, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 sector_tbl <- m2_sector_audit %>%
@@ -1729,6 +1693,7 @@ audit_tbl <- m2_country_audit %>%
       audit_role,
       treated_qualifying = "Qualifying treated countries",
       never_china_top_control = "Never-China-top controls",
+      excluded_no_observed_trade_rank = "Excluded: no observed goods-export rank",
       excluded_short_duration = "Excluded: short China-top periods",
       excluded_pre_2000 = "Excluded: pre-2000 China-top entry",
       excluded_no_clean_prior = "Excluded: no clean observed prior non-China-top year",
@@ -1751,7 +1716,7 @@ knitr::kable(
     font_size = 8
   ) %>%
   kableExtra::footnote(
-    general = "The audit uses the goods-only rank metric and classifies countries before the estimator-specific screen for minimum untreated support. Country counts are therefore a coding audit, not a replacement for the treated/control counts in the estimation table.",
+    general = "The audit uses the union of the UNGA and trade source universes and classifies countries from the goods-only rank metric before outcome availability or the estimator-specific screen for minimum untreated support. Countries without an observed goods-export rank remain explicit in the audit. Country counts are therefore a coding audit, not a replacement for the treated/control counts in the estimation table.",
     general_title = "Note: ",
     escape = FALSE,
     threeparttable = TRUE
@@ -1986,41 +1951,17 @@ kable(treated_tbl,
 ## Measurement Robustness: UNGA-DM Ideal Points
 
 ```{r ungadm-inputs, include=FALSE}
-ungadm_est_dir <- file.path(
-  "data", "processed", "diagnostics", "ungadm_outcome_robustness", "estimation"
-)
-ungadm_post_dir <- file.path(
-  "data", "processed", "diagnostics", "ungadm_outcome_robustness", "postreview"
-)
-
-ungadm_sdid_comparison <- readr::read_csv(
-  file.path(ungadm_est_dir, "sdid_comparison_table.csv"), show_col_types = FALSE
-)
-ungadm_dm_placebo <- readr::read_csv(
-  file.path(ungadm_est_dir, "sdid_dm_placebo_distribution.csv"), show_col_types = FALSE
-)
-ungadm_rank_criteria <- readr::read_csv(
-  file.path(ungadm_post_dir, "sdid_dm_rank_inference_harmonized.csv"),
-  show_col_types = FALSE
-)
-ungadm_weights <- readr::read_csv(
-  file.path(ungadm_est_dir, "sdid_unit_weights_bsv_vs_dm.csv"), show_col_types = FALSE
-)
-ungadm_ife_comparison <- readr::read_csv(
-  file.path(ungadm_est_dir, "ife_comparison_table.csv"), show_col_types = FALSE
-)
-ungadm_ife_2x2 <- readr::read_csv(
-  file.path(ungadm_post_dir, "ife_2x2_fixed_r.csv"), show_col_types = FALSE
-)
-ungadm_boot <- readr::read_csv(
-  file.path(ungadm_post_dir, "ife_paired_bootstrap_summary.csv"), show_col_types = FALSE
-)
-ungadm_unmapped <- readr::read_csv(
-  file.path(ungadm_est_dir, "dm_rows_without_iso3c_mapping.csv"), show_col_types = FALSE
-)
-ungadm_missing_outcome <- readr::read_csv(
-  file.path(ungadm_est_dir, "sdid_dm_missing_outcome_rows.csv"), show_col_types = FALSE
-)
+ungadm_sdid_outputs <- tar_read(ungadm_sdid_outputs_candidate)
+ungadm_sdid_panel_bundle <- tar_read(ungadm_sdid_panel_bundle_candidate)
+ungadm_sdid_comparison <- ungadm_sdid_outputs$comparison
+ungadm_dm_placebo <- ungadm_sdid_outputs$placebo_distribution
+ungadm_rank_criteria <- ungadm_sdid_outputs$rank_inference_harmonized
+ungadm_weights <- ungadm_sdid_outputs$unit_weights_bsv_vs_dm
+ungadm_ife_comparison <- tar_read(ungadm_ife_comparison_candidate)
+ungadm_ife_2x2 <- tar_read(ungadm_ife_fixed_grid_candidate)
+ungadm_boot <- tar_read(ungadm_ife_paired_bootstrap_summary_candidate)
+ungadm_unmapped <- tar_read(ungadm_unmapped_rows_candidate)
+ungadm_missing_outcome <- ungadm_sdid_panel_bundle$missing
 
 ungadm_bsv_row <- ungadm_sdid_comparison %>% dplyr::slice(1)
 ungadm_dm_row <- ungadm_sdid_comparison %>% dplyr::slice(2)

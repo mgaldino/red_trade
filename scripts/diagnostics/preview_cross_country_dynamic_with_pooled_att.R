@@ -13,10 +13,10 @@ output_path <- if (length(args) >= 1L) {
 dir.create(dirname(output_path), recursive = TRUE, showWarnings = FALSE)
 
 dynamic_results <- targets::tar_read(
-  china_top_m2_goods_status_current_dynamic_results
+  china_top_m2_goods_full_union_status_dynamic_results
 )
 model_results <- targets::tar_read(
-  china_top_m2_goods_status_current_model_results
+  china_top_m2_goods_full_union_status_model_results
 )
 
 required_dynamic <- c(

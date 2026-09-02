@@ -67,7 +67,7 @@ insumos brutos congelados, documentados e validados por hash.
 | Commodity e Tabela 5 | Tabelas derivadas por scripts de diagnóstico | Targets a montante e tabelas produzidas dentro do grafo | Implementado; revisão independente `A/PASS` |
 | UNGA-DM | Dois scripts externos produzem estimação e pós-revisão | Outcome harmonizado, SDiD, IFE, bootstrap, ranks, tabelas e figuras como targets | Implementado; revisão independente `A/PASS` em `migration/review_r_ungadm_round3.md` |
 | Evidência de status | Coletores misturam HTTP, codificação e derivações | HTTP externo; bruto e codificação congelados; derivações e tabelas dentro do grafo | Implementado; revisões independentes R e Python `A/PASS` |
-| Manuscrito | Leituras diretas de CSVs diagnósticos e imagens manuais | `tar_read()` e caminhos retornados por file targets | Pendente do fechamento dos blocos a montante |
+| Manuscrito | Leituras diretas de CSVs diagnósticos e imagens manuais | `tar_read()` e caminhos retornados por file targets | Implementado; teste estático local `PASS`; revisão independente pendente |
 
 Nenhum bloco será promovido isoladamente. A implementação pode ser organizada por
 blocos dentro da worktree, mas a integração em `main` é atômica.
