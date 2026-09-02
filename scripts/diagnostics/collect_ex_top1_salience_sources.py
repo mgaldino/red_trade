@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
-"""Collect auditable ex-Top1 trade-coverage evidence.
+"""Acquire raw HTTP evidence for the displaced-incumbent audit.
 
-This diagnostic collector builds a benchmark for the recoverability of public
-trade coverage about the export partner that was #1 immediately before China's
-entry in the cross-country China-top design.
+The source-evidence CSV is now an author-owned input. This collector validates
+the frozen ledger/archive by default and, only with ``--acquire``, fetches raw
+files that are absent. It never writes processed coding, comparisons, or
+appendix tables.
 
-Inputs are read from existing CSV outputs. The script does not run or modify
-the targets pipeline.
+Historical deterministic helper functions remain below for auditability during
+the migration, but ``main()`` does not call them. Their logic is reproduced and
+tested in ``targets``.
 """
 
 from __future__ import annotations
 
+import argparse
 import csv
 import hashlib
 import json
@@ -25,6 +28,8 @@ from dataclasses import dataclass
 from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Iterable
+
+import status_evidence_acquisition as acquisition
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -54,6 +59,7 @@ DATA_DICTIONARY = PROCESSED_DIR / "DATA_DICTIONARY.md"
 COLLECTION_LOG = REPORT_DIR / "collection_log.md"
 SEARCH_PLAN_CSV = PROCESSED_DIR / "ex_top1_search_plan.csv"
 CHECKSUMS = RAW_DIR / "checksums.sha256"
+EXPECTED_MANIFEST_ENTRIES = 48
 
 ACCESSED_AT = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 ACCESS_DATE = str(date.today())
@@ -1286,35 +1292,64 @@ def write_collection_log(
     COLLECTION_LOG.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def main() -> None:
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--acquire",
+        action="store_true",
+        help="Fetch only coded raw files that are currently absent.",
+    )
+    parser.add_argument("--timeout", type=int, default=20)
+    parser.add_argument("--retries", type=int, default=3)
+    parser.add_argument("--backoff", type=float, default=1.0)
+    return parser.parse_args()
+
+
+def main() -> int:
+    """Validate the frozen archive and, when explicit, acquire missing raw files.
+
+    The historical derivation helpers above are intentionally not called. The
+    source ledger is author-owned, and country aggregation, comparisons, and
+    appendix tables are now reconstructed by ``targets``.
+    """
+
+    args = parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
-    ensure_dirs()
-    sample = read_primary_sample()
-    incumbent_csv = latest_incumbent_csv()
-    incumbents = read_incumbents(sample, incumbent_csv)
-    sample_lookup = {row["iso3c"]: row for row in sample}
+    rows = acquisition.validate_frozen_archive(
+        root=ROOT,
+        ledger_path=EVIDENCE_CSV,
+        raw_dir=RAW_DIR,
+        manifest_path=CHECKSUMS,
+        expected_entries=EXPECTED_MANIFEST_ENTRIES,
+        allow_missing=args.acquire,
+    )
+    logging.info(
+        "Validated %d source rows and %d raw checksums",
+        len(rows),
+        EXPECTED_MANIFEST_ENTRIES,
+    )
+    if not args.acquire:
+        logging.info("Read-only check complete; pass --acquire to fetch absent raw files")
+        return 0
 
-    search_rows = search_queries(sample, incumbents)
-    write_csv(SEARCH_PLAN_CSV, search_rows, SEARCH_COLUMNS)
-    write_json(RAW_DIR / "search_logs" / "search_plan.json", search_rows)
-
-    evidence_rows: list[dict[str, str]] = []
-    fetch_meta: list[dict[str, object]] = []
-    for seed in seeds():
-        logging.info("Fetching %s", seed.source_id)
-        row, meta = fetch_evidence(seed, sample_lookup, incumbents)
-        evidence_rows.append(row)
-        fetch_meta.append(meta)
-
-    write_csv(EVIDENCE_CSV, evidence_rows, EVIDENCE_COLUMNS)
-    write_json(RAW_DIR / "fetch_log.json", fetch_meta)
-    write_sources_yaml(evidence_rows)
-    write_data_dictionary()
-    write_collection_log(sample, incumbent_csv, evidence_rows, fetch_meta, search_rows)
-    write_checksums()
-    logging.info("Wrote %s", EVIDENCE_CSV)
-    logging.info("Wrote %s", CHECKSUMS)
+    results = acquisition.acquire_missing_ledger_files(
+        root=ROOT,
+        raw_dir=RAW_DIR,
+        rows=rows,
+        user_agent=USER_AGENT,
+        timeout_seconds=args.timeout,
+        retries=args.retries,
+        backoff_seconds=args.backoff,
+    )
+    attempted = [result for result in results if not result.status.startswith("cached_")]
+    if attempted:
+        acquisition.write_json_log(RAW_DIR / "fetch_log.json", results)
+        acquisition.write_checksum_manifest(CHECKSUMS, RAW_DIR)
+        logging.info("Archived %d new acquisition result(s)", len(attempted))
+    else:
+        logging.info("All coded raw files already exist; no files were changed")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

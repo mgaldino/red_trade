@@ -24,6 +24,7 @@ tar_source("scripts/functions_targets_migration.R")
 tar_source("scripts/diagnostics/sdid_placebo_helpers.R")
 tar_source("scripts/functions_sdid_targets_migration.R")
 tar_source("scripts/functions_ungadm_targets_migration.R")
+tar_source("scripts/functions_status_evidence_targets_migration.R")
 # tar_source("other_functions.R") # Source other scripts as needed.
 
 # Replace the target list below with your own:
@@ -1362,25 +1363,232 @@ list(
                china_top_m2_goods_status_current_sample_counts
              ),
              format = "file"),
-  tar_target(ex_top1_status_comparison_file,
-             here("data", "processed", "ex_top1_salience",
-                  "status_cue_vs_ex_top1_coverage.csv"),
+  # Status-evidence acquisition remains outside targets. The graph starts from
+  # frozen raw checksum manifests and author-owned source-coding ledgers.
+  tar_target(status_cue_raw_checksums_file,
+             here("data", "raw", "status_cue_salience", "checksums.sha256"),
              format = "file"),
-  tar_target(ex_top1_country_codes_file,
-             here("data", "processed", "ex_top1_salience",
-                  "ex_top1_country_codes.csv"),
+  tar_target(status_cue_raw_paths_candidate,
+             status_evidence_raw_paths(
+               status_cue_raw_checksums_file,
+               here("data", "raw", "status_cue_salience"),
+               89L
+             )),
+  tar_target(status_cue_raw_files_candidate,
+             status_cue_raw_paths_candidate,
              format = "file"),
+  tar_target(status_cue_raw_validation_candidate,
+             validate_status_evidence_raw_archive(
+               status_cue_raw_checksums_file,
+               status_cue_raw_files_candidate,
+               here("data", "raw", "status_cue_salience"),
+               89L,
+               "9be41ee4805289fb6b32bf21cea39146363053d2a2970d26e20e9bc1aaaa0675"
+             )),
+  tar_target(ex_top1_raw_checksums_file,
+             here("data", "raw", "ex_top1_salience", "checksums.sha256"),
+             format = "file"),
+  tar_target(ex_top1_raw_paths_candidate,
+             status_evidence_raw_paths(
+               ex_top1_raw_checksums_file,
+               here("data", "raw", "ex_top1_salience"),
+               48L
+             )),
+  tar_target(ex_top1_raw_files_candidate,
+             ex_top1_raw_paths_candidate,
+             format = "file"),
+  tar_target(ex_top1_raw_validation_candidate,
+             validate_status_evidence_raw_archive(
+               ex_top1_raw_checksums_file,
+               ex_top1_raw_files_candidate,
+               here("data", "raw", "ex_top1_salience"),
+               48L,
+               "7f92a5822b396ee204e9e8eb4ea5682d791abdddecf5758134b97447ee69d8c3"
+             )),
   tar_target(ex_top1_source_evidence_file,
              here("data", "processed", "ex_top1_salience",
                   "ex_top1_source_evidence.csv"),
              format = "file"),
-  tar_target(status_cue_country_codes_file,
-             here("data", "processed", "status_cue_salience",
-                  "status_cue_country_codes.csv"),
-             format = "file"),
   tar_target(status_cue_source_evidence_file,
              here("data", "processed", "status_cue_salience",
                   "status_cue_source_evidence.csv"),
+             format = "file"),
+  tar_target(status_cue_source_evidence_candidate,
+             read_status_evidence_source_ledger(
+               status_cue_source_evidence_file,
+               "status"
+             )),
+  tar_target(ex_top1_source_evidence_candidate,
+             read_status_evidence_source_ledger(
+               ex_top1_source_evidence_file,
+               "ex_top1"
+             )),
+  tar_target(status_cue_source_validation_candidate,
+             validate_status_evidence_source_ledger(
+               status_cue_source_evidence_candidate,
+               status_cue_source_evidence_file,
+               "status",
+               status_cue_raw_files_candidate,
+               here("data", "raw", "status_cue_salience"),
+               21L
+             )),
+  tar_target(ex_top1_source_validation_candidate,
+             validate_status_evidence_source_ledger(
+               ex_top1_source_evidence_candidate,
+               ex_top1_source_evidence_file,
+               "ex_top1",
+               ex_top1_raw_files_candidate,
+               here("data", "raw", "ex_top1_salience"),
+               22L
+             )),
+  tar_target(status_cue_archive_gate_candidate,
+             assert_status_evidence_validation(
+               dplyr::bind_rows(
+                 status_cue_raw_validation_candidate,
+                 status_cue_source_validation_candidate
+               )
+             )),
+  tar_target(ex_top1_archive_gate_candidate,
+             assert_status_evidence_validation(
+               dplyr::bind_rows(
+                 ex_top1_raw_validation_candidate,
+                 ex_top1_source_validation_candidate
+               )
+             )),
+  tar_target(status_evidence_audit_universe_file,
+             here("data", "manual", "status_evidence", "audit_universe.csv"),
+             format = "file"),
+  tar_target(status_country_overrides_file,
+             here("data", "manual", "status_evidence",
+                  "status_country_overrides.csv"),
+             format = "file"),
+  tar_target(ex_top1_country_annotations_file,
+             here("data", "manual", "status_evidence",
+                  "ex_top1_country_annotations.csv"),
+             format = "file"),
+  tar_target(status_evidence_audit_universe_candidate,
+             read_status_evidence_audit_universe(
+               status_evidence_audit_universe_file
+             )),
+  tar_target(status_country_overrides_candidate,
+             read_status_country_overrides(status_country_overrides_file)),
+  tar_target(ex_top1_country_annotations_candidate,
+             read_ex_top1_country_annotations(
+               ex_top1_country_annotations_file
+             )),
+  tar_target(status_evidence_manual_validation_candidate,
+             validate_status_evidence_manual_inputs(
+               status_evidence_audit_universe_candidate,
+               status_country_overrides_candidate,
+               ex_top1_country_annotations_candidate
+             )),
+  tar_target(status_evidence_manual_gate_candidate,
+             assert_status_evidence_validation(
+               status_evidence_manual_validation_candidate
+             )),
+  tar_target(status_evidence_incumbent_file,
+             here("data", "processed", "diagnostics",
+                  "incumbent_salience_moderators_2026-05-19.csv"),
+             format = "file"),
+  tar_target(status_evidence_incumbent_validation_candidate,
+             validate_status_evidence_incumbent_file(
+               status_evidence_incumbent_file
+             )),
+  tar_target(status_evidence_incumbent_gate_candidate,
+             assert_status_evidence_validation(
+               status_evidence_incumbent_validation_candidate
+             )),
+  tar_target(status_evidence_incumbent_data_candidate,
+             {
+               status_evidence_incumbent_gate_candidate
+               readr::read_csv(
+                 status_evidence_incumbent_file,
+                 show_col_types = FALSE
+               )
+             }),
+  tar_target(status_evidence_incumbent_base_candidate,
+             build_ex_top1_incumbent_base_candidate(
+               status_evidence_audit_universe_candidate,
+               status_evidence_incumbent_data_candidate,
+               file.path(
+                 "data", "processed", "diagnostics",
+                 "incumbent_salience_moderators_2026-05-19.csv"
+               )
+             )),
+  tar_target(status_cue_country_codes_candidate,
+             {
+               status_cue_archive_gate_candidate
+               status_evidence_manual_gate_candidate
+               build_status_cue_country_codes_candidate(
+                 status_evidence_audit_universe_candidate,
+                 status_cue_source_evidence_candidate,
+                 status_country_overrides_candidate
+               )
+             }),
+  tar_target(ex_top1_country_codes_candidate,
+             {
+               ex_top1_archive_gate_candidate
+               status_evidence_manual_gate_candidate
+               status_evidence_incumbent_gate_candidate
+               build_ex_top1_country_codes_candidate(
+                 status_evidence_audit_universe_candidate,
+                 ex_top1_source_evidence_candidate,
+                 status_evidence_incumbent_base_candidate,
+                 ex_top1_country_annotations_candidate
+               )
+             }),
+  tar_target(ex_top1_status_comparison_candidate,
+             build_status_ex_top1_comparison_candidate(
+               ex_top1_country_codes_candidate,
+               status_cue_country_codes_candidate
+             )),
+  tar_target(status_evidence_derivation_validation_candidate,
+             validate_status_evidence_derivations(
+               status_cue_country_codes_candidate,
+               ex_top1_country_codes_candidate,
+               ex_top1_status_comparison_candidate,
+               status_evidence_audit_universe_candidate,
+               status_evidence_incumbent_base_candidate,
+               ex_top1_source_evidence_candidate
+             )),
+  tar_target(status_evidence_derivation_gate_candidate,
+             assert_status_evidence_validation(
+               dplyr::bind_rows(
+                 status_evidence_manual_validation_candidate,
+                 status_evidence_derivation_validation_candidate
+               ),
+               status_evidence_validation_names()
+             )),
+  tar_target(status_cue_country_codes_file,
+             {
+               status_evidence_derivation_gate_candidate
+               write_status_evidence_csv_candidate(
+                 status_cue_country_codes_candidate,
+                 here("data", "processed", "status_cue_salience",
+                      "status_cue_country_codes.csv"),
+                 lowercase_logical = TRUE
+               )
+             },
+             format = "file"),
+  tar_target(ex_top1_country_codes_file,
+             {
+               status_evidence_derivation_gate_candidate
+               write_status_evidence_csv_candidate(
+                 ex_top1_country_codes_candidate,
+                 here("data", "processed", "ex_top1_salience",
+                      "ex_top1_country_codes.csv")
+               )
+             },
+             format = "file"),
+  tar_target(ex_top1_status_comparison_file,
+             {
+               status_evidence_derivation_gate_candidate
+               write_status_evidence_csv_candidate(
+                 ex_top1_status_comparison_candidate,
+                 here("data", "processed", "ex_top1_salience",
+                      "status_cue_vs_ex_top1_coverage.csv")
+               )
+             },
              format = "file"),
   tar_target(ex_top1_salience_input_validation,
              validate_ex_top1_salience_inputs(
