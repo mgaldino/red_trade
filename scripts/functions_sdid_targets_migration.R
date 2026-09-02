@@ -32,7 +32,9 @@ sdid_nan_to_na <- function(x) {
 validate_sdid_commodity_share_bounds <- function(exposure,
                                                  tolerance = 1e-12) {
   share_columns <- grep("share|coverage", names(exposure), value = TRUE)
-  share_values <- unlist(exposure[share_columns], use.names = FALSE)
+  share_values <- exposure |>
+    dplyr::select(dplyr::all_of(share_columns)) |>
+    unlist(use.names = FALSE)
   if (any(is.nan(share_values)) ||
       any(!is.finite(share_values[!is.na(share_values)])) ||
       any(
@@ -69,7 +71,9 @@ validate_sdid_commodity_structural_missingness <- function(exposure) {
       call. = FALSE
     )
   }
-  numeric_values <- unlist(exposure[required], use.names = FALSE)
+  numeric_values <- exposure |>
+    dplyr::select(dplyr::all_of(required)) |>
+    unlist(use.names = FALSE)
   if (any(is.nan(numeric_values))) {
     stop("Commodity exposure must represent undefined values as NA, not NaN.",
          call. = FALSE)
@@ -82,7 +86,10 @@ validate_sdid_commodity_structural_missingness <- function(exposure) {
   }
 
   zero_goods <- exposure$pre_goods_exports == 0
-  share_missing <- as.data.frame(is.na(exposure[goods_share_columns]))
+  share_missing <- exposure |>
+    dplyr::select(dplyr::all_of(goods_share_columns)) |>
+    is.na() |>
+    as.data.frame()
   if (any(zero_goods & rowSums(!share_missing) > 0L) ||
       any(!zero_goods & rowSums(share_missing) > 0L)) {
     stop(
@@ -330,9 +337,11 @@ read_sdid_pink_sheet_indices <- function(pink_sheet_path,
     ) |>
     dplyr::filter(!is.na(year), year >= start_year, year <= end_year)
   abort_if_duplicate_keys(indices, "year", "candidate Pink Sheet indices")
-  if (anyNA(indices) ||
-      any(!is.finite(unlist(indices[-1], use.names = FALSE))) ||
-      any(unlist(indices[-1], use.names = FALSE) <= 0)) {
+  index_values <- indices |>
+    dplyr::select(-year) |>
+    unlist(use.names = FALSE)
+  if (anyNA(indices) || any(!is.finite(index_values)) ||
+      any(index_values <= 0)) {
     stop("Pink Sheet indices must be complete, finite, and positive.", call. = FALSE)
   }
 
@@ -413,9 +422,13 @@ compare_sdid_candidate_frame <- function(candidate,
   same_keys <- nrow(candidate_sorted) == nrow(reference_sorted) &&
     all(vapply(keys, compare_key, logical(1)))
 
+  candidate_common <- candidate |>
+    dplyr::select(dplyr::all_of(common))
+  reference_common <- reference |>
+    dplyr::select(dplyr::all_of(common))
   numeric_columns <- common[
-    vapply(candidate[common], is.numeric, logical(1)) &
-      vapply(reference[common], is.numeric, logical(1))
+    vapply(candidate_common, is.numeric, logical(1)) &
+      vapply(reference_common, is.numeric, logical(1))
   ]
   numeric_equal <- same_keys
   max_abs_diff <- 0
@@ -479,6 +492,34 @@ compare_sdid_candidate_frame <- function(candidate,
   )
 }
 
+sdid_frame_validation_names <- function(labels) {
+  suffixes <- c("_same_columns", "_same_keys", "_numeric_equal",
+                "_nonnumeric_equal")
+  unlist(
+    lapply(labels, function(label) paste0(label, suffixes)),
+    use.names = FALSE
+  )
+}
+
+sdid_commodity_manual_validation_names <- function() {
+  c(
+    "commodity_exposure_unique_iso3c",
+    "commodity_exposure_window_2004_2008",
+    "commodity_exposure_global_coverage_1_to_5_years",
+    "commodity_exposure_analytic_universe_present",
+    "commodity_exposure_analytic_five_observed_years",
+    "pink_sheet_window_1997_2016",
+    "pink_sheet_2007_log_changes_zero"
+  )
+}
+
+sdid_commodity_derivation_validation_names <- function() {
+  c(
+    sdid_frame_validation_names(c("commodity_exposure", "pink_sheet_indices")),
+    sdid_commodity_manual_validation_names()
+  )
+}
+
 validate_sdid_commodity_derivations <- function(
     exposure,
     prices,
@@ -493,6 +534,7 @@ validate_sdid_commodity_derivations <- function(
   }
   analytic_exposure <- exposure |>
     dplyr::filter(.data$iso3c %in% analytic_iso3c)
+  manual_validation_names <- sdid_commodity_manual_validation_names()
   dplyr::bind_rows(
     compare_sdid_candidate_frame(
       exposure,
@@ -509,15 +551,7 @@ validate_sdid_commodity_derivations <- function(
       tolerance
     ),
     tibble::tibble(
-      validation = c(
-        "commodity_exposure_unique_iso3c",
-        "commodity_exposure_window_2004_2008",
-        "commodity_exposure_global_coverage_1_to_5_years",
-        "commodity_exposure_analytic_universe_present",
-        "commodity_exposure_analytic_five_observed_years",
-        "pink_sheet_window_1997_2016",
-        "pink_sheet_2007_log_changes_zero"
-      ),
+      validation = manual_validation_names,
       passed = c(
         anyDuplicated(exposure$iso3c) == 0L,
         all(exposure$pre_window_start == 2004L) &&
@@ -530,10 +564,10 @@ validate_sdid_commodity_derivations <- function(
           all(analytic_exposure$observed_years == 5L),
         identical(prices$year, 1997:2016),
         all(
-          unlist(
-            prices[prices$year == 2007L, grep("_log_change_2007", names(prices))],
-            use.names = FALSE
-          ) == 0
+          prices |>
+            dplyr::filter(.data$year == 2007L) |>
+            dplyr::select(dplyr::ends_with("_log_change_2007")) |>
+            unlist(use.names = FALSE) == 0
         )
       ),
       detail = c(
@@ -553,10 +587,26 @@ validate_sdid_commodity_derivations <- function(
   )
 }
 
-assert_sdid_migration_validation <- function(validation) {
+assert_sdid_migration_validation <- function(validation,
+                                             expected_validations) {
+  expected_valid <- is.character(expected_validations) &&
+    length(expected_validations) > 0L &&
+    !anyNA(expected_validations) &&
+    all(nzchar(expected_validations)) &&
+    !anyDuplicated(expected_validations)
+  if (!expected_valid) {
+    stop("Expected SDiD validation names must be nonempty and unique.",
+         call. = FALSE)
+  }
   if (!is.data.frame(validation) ||
       !all(c("validation", "passed") %in% names(validation)) ||
-      !is.logical(validation$passed)) {
+      !is.character(validation$validation) ||
+      !is.logical(validation$passed) ||
+      nrow(validation) == 0L ||
+      anyNA(validation$validation) ||
+      any(!nzchar(validation$validation)) ||
+      anyDuplicated(validation$validation) ||
+      !setequal(validation$validation, expected_validations)) {
     stop("SDiD migration validation has an invalid schema.", call. = FALSE)
   }
   failed <- validation |>
@@ -1310,7 +1360,20 @@ validate_paper_sdid_outputs_candidate <- function(
     bundle,
     reference_directory,
     tolerance = 1e-12) {
-  keys <- list(
+  keys <- paper_sdid_output_keys()
+  dplyr::bind_rows(lapply(names(keys), function(name) {
+    compare_sdid_candidate_frame(
+      bundle[[name]],
+      file.path(reference_directory, paste0(name, ".csv")),
+      keys[[name]],
+      paste0("paper_sdid_", name),
+      tolerance
+    )
+  }))
+}
+
+paper_sdid_output_keys <- function() {
+  list(
     main_summary = "specification",
     unit_weights = "weight_rank",
     time_weights = "year",
@@ -1324,15 +1387,12 @@ validate_paper_sdid_outputs_candidate <- function(
     timing_placebos = "nominal_treatment_year",
     latam_core_summary = "specification"
   )
-  dplyr::bind_rows(lapply(names(keys), function(name) {
-    compare_sdid_candidate_frame(
-      bundle[[name]],
-      file.path(reference_directory, paste0(name, ".csv")),
-      keys[[name]],
-      paste0("paper_sdid_", name),
-      tolerance
-    )
-  }))
+}
+
+paper_sdid_output_validation_names <- function() {
+  sdid_frame_validation_names(
+    paste0("paper_sdid_", names(paper_sdid_output_keys()))
+  )
 }
 
 write_paper_sdid_outputs_candidate <- function(bundle, output_directory) {

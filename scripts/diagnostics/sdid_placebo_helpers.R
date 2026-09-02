@@ -209,6 +209,7 @@ sdid_fit_summary_row <- function(fit, specification, se_value = NA_real_) {
       deparse(body(sdid_placebo_estimates)),
       deparse(body(sdid_sum_normalize)),
       deparse(body(sdid_fit_spec)),
+      deparse(body(sdid_fit_summary_row)),
       deparse(body(sdid_rank_distribution)),
       as.character(utils::packageVersion("synthdid"))
     ),
@@ -360,6 +361,7 @@ sdid_rank_checkpoint_valid <- function(distribution, units) {
   error <- candidate$status == "error"
   all(is.finite(candidate$estimate[estimated])) &&
     all(is.finite(candidate$rmspe_pre[estimated])) &&
+    all(candidate$rmspe_pre[estimated] >= 0) &&
     all(candidate$error[estimated] == "") &&
     all(is.na(candidate$estimate[error])) &&
     all(is.na(candidate$rmspe_pre[error])) &&
@@ -409,6 +411,7 @@ sdid_rank_distribution <- function(data, covariate_cols = character(0),
     if (cache_valid) {
       distribution <- cached$distribution |>
         dplyr::select(dplyr::all_of(required_checkpoint_columns)) |>
+        dplyr::filter(.data$status == "estimated") |>
         dplyr::arrange(match(iso3c, units))
     }
     if (cache_valid && setequal(distribution$iso3c, units)) {
@@ -501,6 +504,15 @@ sdid_rank_distribution <- function(data, covariate_cols = character(0),
   }
   stopifnot(nrow(distribution) == length(units),
             setequal(distribution$iso3c, units))
+  failed <- distribution |>
+    dplyr::filter(.data$status != "estimated")
+  if (nrow(failed) > 0L) {
+    stop(
+      "Rank placebo failed for ", paste(failed$iso3c, collapse = ", "),
+      ". Error rows remain checkpointed and will be retried on the next run.",
+      call. = FALSE
+    )
+  }
   distribution
 }
 

@@ -118,9 +118,31 @@ expect_error(
 
 expect_error(
   assert_sdid_migration_validation(
-    tibble::tibble(validation = c("known", "unknown"), passed = c(TRUE, NA))
+    tibble::tibble(validation = c("known", "unknown"), passed = c(TRUE, NA)),
+    expected_validations = c("known", "unknown")
   ),
   "aggregate validation fails closed on NA"
+)
+expect_error(
+  assert_sdid_migration_validation(
+    tibble::tibble(validation = character(), passed = logical()),
+    expected_validations = "required"
+  ),
+  "aggregate validation rejects an empty table"
+)
+expect_error(
+  assert_sdid_migration_validation(
+    tibble::tibble(validation = "known", passed = TRUE),
+    expected_validations = c("known", "required")
+  ),
+  "aggregate validation rejects a missing required check"
+)
+expect_error(
+  assert_sdid_migration_validation(
+    tibble::tibble(validation = c("known", "known"), passed = c(TRUE, TRUE)),
+    expected_validations = "known"
+  ),
+  "aggregate validation rejects duplicate checks"
 )
 
 checkpoint_directory <- tempfile(pattern = "sdid-checkpoint-")
@@ -202,6 +224,25 @@ rank_third <- sdid_rank_distribution(
 )
 expect_true(nrow(rank_third) == 3L, "invalid rank checkpoint is rebuilt")
 expect_true(.rank_test_calls == 3L, "invalid rank checkpoint reuses no rows")
+
+# A syntactically valid error row records an interrupted/failed assignment, not
+# completed work. The next run must retain good rows and retry the error unit.
+rank_cache <- sdid_read_checkpoint(rank_checkpoint_path)
+rank_cache$distribution$status[[1]] <- "error"
+rank_cache$distribution$estimate[[1]] <- NA_real_
+rank_cache$distribution$rmspe_pre[[1]] <- NA_real_
+rank_cache$distribution$error[[1]] <- "transient test failure"
+sdid_atomic_save_rds(rank_cache, rank_checkpoint_path)
+.rank_test_calls <- 0L
+rank_fourth <- sdid_rank_distribution(
+  rank_fixture,
+  label = "resume_test",
+  cores = 1L,
+  checkpoint_dir = rank_checkpoint_directory,
+  batch_size = 1L
+)
+expect_true(nrow(rank_fourth) == 3L, "rank error row retried to completion")
+expect_true(.rank_test_calls == 1L, "rank retry preserves successful rows")
 sdid_fit_spec <- original_fit_spec
 sdid_fit_summary_row <- original_summary_row
 
@@ -293,7 +334,10 @@ derivation_validation <- validate_sdid_commodity_derivations(
   analytic_iso3c = "BRA"
 )
 expect_true(
-  all(assert_sdid_migration_validation(derivation_validation)$passed),
+  all(assert_sdid_migration_validation(
+    derivation_validation,
+    sdid_commodity_derivation_validation_names()
+  )$passed),
   "full derivation gate accepts global partial coverage outside analytic universe"
 )
 partial_analytic_validation <- validate_sdid_commodity_derivations(
@@ -304,7 +348,10 @@ partial_analytic_validation <- validate_sdid_commodity_derivations(
   analytic_iso3c = c("BRA", "GUF")
 )
 expect_error(
-  assert_sdid_migration_validation(partial_analytic_validation),
+  assert_sdid_migration_validation(
+    partial_analytic_validation,
+    sdid_commodity_derivation_validation_names()
+  ),
   "full derivation gate rejects partial coverage inside analytic universe"
 )
 

@@ -293,7 +293,8 @@ list(
              }),
   tar_target(brazil_sdid_paper_outputs_validation_gate_candidate,
              assert_sdid_migration_validation(
-               brazil_sdid_paper_outputs_validation_candidate
+               brazil_sdid_paper_outputs_validation_candidate,
+               paper_sdid_output_validation_names()
              )),
   tar_target(brazil_sdid_paper_output_files_candidate,
              {
@@ -390,7 +391,8 @@ list(
              )),
   tar_target(brazil_sdid_commodity_derivation_gate_candidate,
              assert_sdid_migration_validation(
-               brazil_sdid_commodity_derivation_validation_candidate
+               brazil_sdid_commodity_derivation_validation_candidate,
+               sdid_commodity_derivation_validation_names()
              )),
   tar_target(brazil_sdid_commodity_exposure_file_candidate,
              {
@@ -544,7 +546,8 @@ list(
              )),
   tar_target(brazil_sdid_commodity_table_validation_gate_candidate,
              assert_sdid_migration_validation(
-               brazil_sdid_commodity_table_validation_candidate
+               brazil_sdid_commodity_table_validation_candidate,
+               sdid_frame_validation_names("commodity_table_5")
              )),
   tar_target(brazil_sdid_commodity_table_file_candidate,
              {
