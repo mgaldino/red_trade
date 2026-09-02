@@ -37,6 +37,10 @@ Foram confirmados:
   aliases, colisões entre staged e outputs, containers inválidos e caminhos `NA`;
 - remoção verificada dos backups depois de sucesso e rollback e preservação dos
   backups quando uma falha injetada impede o próprio rollback;
+- detecção por tamanho e MD5 de corrupção injetada depois da movimentação, com
+  rollback integral;
+- rejeição de FIFO antes da cópia e relato explícito de backup residual quando a
+  criação parcial de backups e a limpeza falham simultaneamente;
 - store configurado localmente, DAG acíclico e ancestralidade explícita dos inputs,
   gates, scripts e file targets novos.
 

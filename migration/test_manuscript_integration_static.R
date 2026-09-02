@@ -438,7 +438,7 @@ dir.create(output_paths[[1L]])
 expect_error(
   publish_manuscript_file_set_transactionally(stage_paths, output_paths),
   "two-file publication rejects a final path that is a directory",
-  pattern = "directories or symbolic links"
+  pattern = "Existing final artifact paths must be regular files"
 )
 expect_true(
   file.info(output_paths[[1L]])$isdir &&
@@ -456,7 +456,7 @@ expect_true(
 expect_error(
   publish_manuscript_file_set_transactionally(stage_paths, output_paths),
   "two-file publication rejects a valid output symlink",
-  pattern = "directories or symbolic links"
+  pattern = "Existing final artifact paths must be regular files"
 )
 expect_true(
   nzchar(Sys.readlink(output_paths[[1L]])) &&
@@ -476,7 +476,7 @@ expect_true(
 expect_error(
   publish_manuscript_file_set_transactionally(stage_paths, output_paths),
   "two-file publication rejects a dangling output symlink",
-  pattern = "directories or symbolic links"
+  pattern = "Existing final artifact paths must be regular files"
 )
 expect_true(
   nzchar(Sys.readlink(output_paths[[1L]])) &&
@@ -589,6 +589,126 @@ expect_true(
     all(file.info(preserved_backups)$size > 0L),
   "verified backups are preserved when rollback cannot restore every output"
 )
+
+reset_publish_fixture()
+write_stage_files("new")
+writeLines("old-pdf", output_paths[[1L]])
+writeLines("old-png", output_paths[[2L]])
+move_calls <- 0L
+corrupt_same_size <- function(from, to) {
+  move_calls <<- move_calls + 1L
+  moved <- file.rename(from, to)
+  if (move_calls == 1L && moved) writeLines("bad-pdf", to)
+  moved
+}
+expect_error(
+  publish_manuscript_file_set_transactionally(
+    stage_paths,
+    output_paths,
+    move_file = corrupt_same_size
+  ),
+  "same-size corruption is rejected by the MD5 postcondition",
+  pattern = "does not match its staged file"
+)
+expect_true(
+  identical(readLines(output_paths[[1L]]), "old-pdf") &&
+    identical(readLines(output_paths[[2L]]), "old-png") &&
+    length(backup_paths()) == 0L,
+  "MD5 corruption rolls both outputs back and removes backups"
+)
+
+reset_publish_fixture()
+write_stage_files("size")
+writeLines("old-pdf", output_paths[[1L]])
+writeLines("old-png", output_paths[[2L]])
+move_calls <- 0L
+corrupt_size <- function(from, to) {
+  move_calls <<- move_calls + 1L
+  moved <- file.rename(from, to)
+  if (move_calls == 1L && moved) writeLines("longer-pdf-payload", to)
+  moved
+}
+expect_error(
+  publish_manuscript_file_set_transactionally(
+    stage_paths,
+    output_paths,
+    move_file = corrupt_size
+  ),
+  "size corruption is rejected by the size postcondition",
+  pattern = "does not match its staged file"
+)
+expect_true(
+  identical(readLines(output_paths[[1L]]), "old-pdf") &&
+    identical(readLines(output_paths[[2L]]), "old-png") &&
+    length(backup_paths()) == 0L,
+  "size corruption rolls both outputs back and removes backups"
+)
+
+reset_publish_fixture()
+write_stage_files("backup-setup")
+writeLines("old-pdf", output_paths[[1L]])
+writeLines("old-png", output_paths[[2L]])
+copy_calls <- 0L
+fail_second_backup <- function(from, to, ...) {
+  copy_calls <<- copy_calls + 1L
+  if (copy_calls == 2L) return(FALSE)
+  file.copy(from, to, ...)
+}
+fail_backup_removal <- function(path) {
+  if (grepl("manuscript-artifact-backup-", basename(path), fixed = TRUE)) {
+    return(1L)
+  }
+  unlink(path, force = TRUE)
+}
+backup_setup_error <- tryCatch(
+  publish_manuscript_file_set_transactionally(
+    stage_paths,
+    output_paths,
+    copy_file = fail_second_backup,
+    remove_file = fail_backup_removal
+  ),
+  error = identity
+)
+expect_true(
+  inherits(backup_setup_error, "error") &&
+    grepl(
+      "Backup setup cleanup also failed; preserved at",
+      conditionMessage(backup_setup_error),
+      fixed = TRUE
+    ),
+  "partial backup setup plus cleanup failure is surfaced explicitly"
+)
+preserved_setup_backups <- backup_paths()
+expect_true(
+  identical(readLines(output_paths[[1L]]), "old-pdf") &&
+    identical(readLines(output_paths[[2L]]), "old-png") &&
+    length(preserved_setup_backups) == 1L &&
+    grepl(
+      preserved_setup_backups[[1L]],
+      conditionMessage(backup_setup_error),
+      fixed = TRUE
+    ),
+  "partial backup failure preserves originals and reports the residual backup"
+)
+
+if (nzchar(Sys.which("mkfifo"))) {
+  reset_publish_fixture()
+  write_stage_files("fifo")
+  fifo_status <- system2("mkfifo", output_paths[[1L]])
+  expect_true(fifo_status == 0L, "FIFO output fixture is available")
+  expect_error(
+    publish_manuscript_file_set_transactionally(stage_paths, output_paths),
+    "two-file publication rejects an existing FIFO before backup copying",
+    pattern = "Existing final artifact paths must be regular files"
+  )
+  expect_true(
+    identical(as.character(fs::file_info(output_paths[[1L]])$type), "FIFO") &&
+      !file.exists(output_paths[[2L]]) && length(backup_paths()) == 0L,
+    "FIFO rejection occurs before publication or backup creation"
+  )
+} else {
+  message("SKIP: mkfifo is unavailable; FIFO guard not exercised")
+}
 
 static_store <- tempfile("manuscript_integration_targets_static_store_")
 on.exit(unlink(static_store, recursive = TRUE, force = TRUE), add = TRUE)

@@ -164,9 +164,10 @@ publish_manuscript_file_set_transactionally <- function(
     )
   }
 
-  staged_info <- file.info(staged)
-  if (any(!file.exists(staged)) || anyNA(staged_info$isdir) ||
-      any(staged_info$isdir) ||
+  staged_info <- fs::file_info(staged)
+  staged_types <- as.character(staged_info$type)
+  if (any(!file.exists(staged)) || anyNA(staged_types) ||
+      any(staged_types != "file") ||
       any(path_is_link(staged)) ||
       anyNA(staged_info$size) || any(staged_info$size <= 0L)) {
     stop("Every staged artifact must be a nonempty regular file.",
@@ -174,11 +175,13 @@ publish_manuscript_file_set_transactionally <- function(
   }
 
   output_exists <- path_exists_or_link(outputs)
-  output_info <- file.info(outputs)
+  output_info <- fs::file_info(outputs)
+  output_types <- as.character(output_info$type)
   if (any(path_is_link(outputs)) ||
       any(output_exists &
-          (is.na(output_info$isdir) | output_info$isdir))) {
-    stop("Final artifact paths cannot be directories or symbolic links.",
+          (is.na(output_types) | output_types != "file"))) {
+    stop("Existing final artifact paths must be regular files, not ",
+         "directories, symbolic links, or special files.",
          call. = FALSE)
   }
 
@@ -211,26 +214,49 @@ publish_manuscript_file_set_transactionally <- function(
     }
   }, add = TRUE)
 
-  for (index in which(output_exists)) {
-    backups[[index]] <- tempfile(
-      "manuscript-artifact-backup-",
-      tmpdir = dirname(outputs[[index]]),
-      fileext = paste0(".", tools::file_ext(outputs[[index]]))
-    )
-    copied <- copy_file(
-      outputs[[index]],
-      backups[[index]],
-      overwrite = FALSE,
-      copy.mode = TRUE,
-      copy.date = TRUE
-    )
-    if (!isTRUE(copied) || !file.exists(backups[[index]]) ||
-        file.info(backups[[index]])$isdir ||
-        unname(tools::md5sum(backups[[index]])) !=
-          unname(tools::md5sum(outputs[[index]]))) {
-      stop("Could not create a verified backup before publishing artifacts.",
-           call. = FALSE)
+  backup_error <- tryCatch(
+    {
+      for (index in which(output_exists)) {
+        backups[[index]] <- tempfile(
+          "manuscript-artifact-backup-",
+          tmpdir = dirname(outputs[[index]]),
+          fileext = paste0(".", tools::file_ext(outputs[[index]]))
+        )
+        copied <- copy_file(
+          outputs[[index]],
+          backups[[index]],
+          overwrite = FALSE,
+          copy.mode = TRUE,
+          copy.date = TRUE
+        )
+        backup_type <- as.character(fs::file_info(backups[[index]])$type)
+        if (!isTRUE(copied) || !file.exists(backups[[index]]) ||
+            is.na(backup_type) || backup_type != "file" ||
+            unname(tools::md5sum(backups[[index]])) !=
+              unname(tools::md5sum(outputs[[index]]))) {
+          stop("Could not create a verified backup before publishing artifacts.",
+               call. = FALSE)
+        }
+      }
+      NULL
+    },
+    error = identity
+  )
+  if (inherits(backup_error, "error")) {
+    backups_cleaned <- remove_paths_checked(backups)
+    if (!backups_cleaned) {
+      preserve_backups <- TRUE
+      residual_backups <- backups[
+        !is.na(backups) & path_exists_or_link(backups)
+      ]
+      stop(
+        conditionMessage(backup_error),
+        " Backup setup cleanup also failed; preserved at: ",
+        paste(residual_backups, collapse = ", "),
+        call. = FALSE
+      )
     }
+    stop(conditionMessage(backup_error), call. = FALSE)
   }
 
   publish_error <- tryCatch(
@@ -241,9 +267,10 @@ publish_manuscript_file_set_transactionally <- function(
           stop("Could not atomically publish artifact ", index, ".",
                call. = FALSE)
         }
-        published_info <- file.info(outputs[[index]])
+        published_info <- fs::file_info(outputs[[index]])
+        published_type <- as.character(published_info$type)
         if (!file.exists(outputs[[index]]) ||
-            is.na(published_info$isdir) || published_info$isdir ||
+            is.na(published_type) || published_type != "file" ||
             path_is_link(outputs[[index]]) ||
             is.na(published_info$size) ||
             published_info$size != staged_size[[index]] ||
@@ -262,7 +289,10 @@ publish_manuscript_file_set_transactionally <- function(
     for (index in seq_along(outputs)) {
       if (output_exists[[index]]) {
         if (file.exists(outputs[[index]]) &&
-            !isTRUE(file.info(outputs[[index]])$isdir)) {
+            identical(
+              as.character(fs::file_info(outputs[[index]])$type),
+              "file"
+            )) {
           remove_file(outputs[[index]])
         }
         restored <- !file.exists(outputs[[index]]) &&
@@ -271,12 +301,18 @@ publish_manuscript_file_set_transactionally <- function(
                            copy.date = TRUE))
         rollback_ok[[index]] <- restored &&
           file.exists(outputs[[index]]) &&
-          !isTRUE(file.info(outputs[[index]])$isdir) &&
+          identical(
+            as.character(fs::file_info(outputs[[index]])$type),
+            "file"
+          ) &&
           unname(tools::md5sum(outputs[[index]])) ==
             unname(tools::md5sum(backups[[index]]))
       } else {
         if (path_exists_or_link(outputs[[index]]) &&
-            !isTRUE(file.info(outputs[[index]])$isdir)) {
+            !identical(
+              as.character(fs::file_info(outputs[[index]])$type),
+              "directory"
+            )) {
           remove_file(outputs[[index]])
         }
         rollback_ok[[index]] <- !path_exists_or_link(outputs[[index]])
