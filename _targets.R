@@ -443,10 +443,48 @@ list(
              china_top_m2_goods_full_union_status_panel_bundle$treatment_unit_summary),
   tar_target(china_top_m2_goods_full_union_status_period_summary,
              china_top_m2_goods_full_union_status_panel_bundle$period_summary),
+  tar_target(china_top_m2_goods_full_union_status_row_audit,
+             china_top_m2_goods_full_union_status_panel_bundle$row_audit),
   tar_target(china_top_m2_goods_full_union_status_validation,
              validate_full_union_status_bundle(
                china_top_m2_goods_full_union_master_panel,
                china_top_m2_goods_full_union_status_panel_bundle
+             )),
+  tar_target(china_top_m2_goods_full_union_status_validation_gate,
+             assert_full_union_status_validation(
+               china_top_m2_goods_full_union_status_validation
+             )),
+  # Candidate estimations stay side-by-side until old/new outputs have been
+  # compared and adjudicated. Promotion later replaces the legacy production
+  # dependencies atomically; it does not happen merely because these run.
+  tar_target(china_top_m2_goods_full_union_status_model_bundle,
+             {
+               stopifnot(all(
+                 china_top_m2_goods_full_union_status_validation_gate$passed
+               ))
+               fit_status_current_fect_models(
+                 china_top_m2_goods_full_union_status_panel_bundle,
+                 nboots = 10000L
+               )
+             }),
+  tar_target(china_top_m2_goods_full_union_status_model_results,
+             china_top_m2_goods_full_union_status_model_bundle$model_results),
+  tar_target(china_top_m2_goods_full_union_status_dynamic_results,
+             china_top_m2_goods_full_union_status_model_bundle$dynamic_results),
+  tar_target(fect_ife_china_top_m2_goods_full_union_min5_risk_set,
+             china_top_m2_goods_full_union_status_model_bundle$main_fit),
+  tar_target(china_top_m2_goods_full_union_min5_recent_pretrend_f_test,
+             reconstruct_fect_recent_pretrend_f_test(
+               fect_ife_china_top_m2_goods_full_union_min5_risk_set,
+               model = "M2 goods-only full-union risk set: fect IFE",
+               max_recent_periods = 12L,
+               max_event_time = -1L
+             )),
+  tar_target(plot_china_top_m2_goods_full_union_dynamic,
+             plot_status_current_dynamic(
+               china_top_m2_goods_full_union_status_dynamic_results,
+               min_duration_years = 5L,
+               specification = "risk_set_restricted"
              )),
   tar_target(china_top_m2_goods_panel,
              build_china_top_partner_panel(

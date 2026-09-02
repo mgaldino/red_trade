@@ -46,6 +46,26 @@ aggregate_itpde_goods_exports_all_exporters <- function(
   )) |>
     tibble::as_tibble()
 
+  goods_sector_audit <- sector_audit |>
+    dplyr::filter(broad_sector %in% goods_sector_values)
+  missing_goods_sectors <- setdiff(
+    goods_sector_values,
+    goods_sector_audit$broad_sector
+  )
+  if (length(missing_goods_sectors) > 0L) {
+    stop(
+      "Expected goods sectors are absent from ITPD-E: ",
+      paste(missing_goods_sectors, collapse = ", "),
+      call. = FALSE
+    )
+  }
+  if (sum(goods_sector_audit$missing_or_parse_fail_trade, na.rm = TRUE) > 0L) {
+    stop(
+      "ITPD-E contains missing or unparseable trade values in the goods scope.",
+      call. = FALSE
+    )
+  }
+
   goods_exports <- DBI::dbGetQuery(con, paste0(
     "SELECT try_cast(year AS INTEGER) AS year, ",
     "upper(exporter_iso3) AS exporter_iso3, ",
@@ -336,7 +356,8 @@ build_full_union_status_period_data <- function(master_panel,
   required_cols <- c(
     "iso3c", "country_name", "year", "china_top_status",
     "previous_china_top_status", "china_top_period_id",
-    "trade_rank_observed", "outcome_observed", "abs_distance_china"
+    "trade_rank_observed", "unga_row_present", "outcome_observed",
+    "abs_distance_china"
   )
   missing_cols <- setdiff(required_cols, names(master_panel))
   if (length(missing_cols) > 0L) {
@@ -370,7 +391,6 @@ build_full_union_status_period_data <- function(master_panel,
       .groups = "drop"
     ) |>
     dplyr::mutate(
-      qualifies_min5 = qualifies_min_duration,
       consecutive_calendar_years = duration_years == calendar_span_years
     ) |>
     dplyr::arrange(iso3c, period_entry_year)
@@ -433,8 +453,16 @@ build_full_union_status_period_data <- function(master_panel,
       trade_rank_years = sum(trade_rank_observed, na.rm = TRUE),
       outcome_years = sum(outcome_observed, na.rm = TRUE),
       ever_china_top_observed = any(china_top_status %in% 1L),
-      first_observed_year = min(year),
-      last_observed_year = max(year),
+      grid_min_year = min(year),
+      grid_max_year = max(year),
+      first_source_observed_year = min_int_or_na(
+        year[trade_rank_observed | unga_row_present]
+      ),
+      last_source_observed_year = ifelse(
+        any(trade_rank_observed | unga_row_present),
+        max(year[trade_rank_observed | unga_row_present]),
+        NA_integer_
+      ),
       unknown_trade_rank_years = sum(is.na(china_top_status)),
       .groups = "drop"
     ) |>
@@ -461,12 +489,6 @@ build_full_union_status_period_data <- function(master_panel,
         !ever_china_top_observed ~ "never_observed_china_top_control",
         TRUE ~ "excluded_nonqualifying_china_top"
       ),
-      cs_role_min5 = dplyr::case_when(
-        treatment_role == "treated_qualifying" ~ "treated_min5",
-        treatment_role == "never_observed_china_top_control" ~
-          "never_treated",
-        TRUE ~ "excluded_short_or_ineligible"
-      ),
       first_treat = dplyr::if_else(
         treatment_role == "treated_qualifying",
         as.numeric(first_qualifying_entry),
@@ -483,26 +505,13 @@ build_full_union_status_period_data <- function(master_panel,
   )
 }
 
-make_full_union_status_panel <- function(period_data,
-                                         specification = c(
-                                           "risk_set_restricted",
-                                           "clean_single_spell",
-                                           "switching_allowed"
-                                         ),
-                                         min_untreated_observations = 5L) {
-  specification <- match.arg(specification)
-  if (is.na(min_untreated_observations) ||
-      min_untreated_observations < 1L) {
-    stop("min_untreated_observations must be positive.", call. = FALSE)
-  }
-
-  panel <- period_data$period_panel |>
+join_full_union_status_metadata <- function(period_data) {
+  period_data$period_panel |>
     dplyr::left_join(
       period_data$unit_summary |>
         dplyr::select(
           iso3c,
           treatment_role,
-          cs_role_min5,
           first_treat,
           first_qualifying_entry,
           eligible_periods,
@@ -516,77 +525,85 @@ make_full_union_status_panel <- function(period_data,
       by = "iso3c",
       relationship = "many-to-one"
     )
+}
 
-  if (specification == "clean_single_spell") {
-    panel <- panel |>
-      dplyr::filter(
-        treatment_role == "never_observed_china_top_control" |
-          (
-            treatment_role == "treated_qualifying" &
-              n_observed_china_top_periods == 1L &
-              qualifying_periods == 1L
-          )
-      )
-  } else {
-    panel <- panel |>
-      dplyr::filter(
+build_full_union_risk_set_audit <- function(
+    period_data,
+    clean_single_entry = FALSE,
+    min_untreated_observations = 5L) {
+  if (is.na(min_untreated_observations) ||
+      min_untreated_observations < 1L) {
+    stop("min_untreated_observations must be positive.", call. = FALSE)
+  }
+
+  annotated <- join_full_union_status_metadata(period_data) |>
+    dplyr::mutate(
+      # Preserve the pre-migration robustness contract during comparison:
+      # exactly one eligible period and exactly one qualifying period. A
+      # stricter "one observed period of any kind" rule would be a substantive
+      # change and therefore requires separate adjudication.
+      clean_single_entry_unit = dplyr::case_when(
+        treatment_role == "never_observed_china_top_control" ~ TRUE,
+        treatment_role == "treated_qualifying" ~
+          eligible_periods == 1L & qualifying_periods == 1L,
+        TRUE ~ FALSE
+      ),
+      specification_unit_eligible =
         treatment_role %in% c(
           "treated_qualifying",
           "never_observed_china_top_control"
-        )
-      )
-  }
+        ) &
+        (!clean_single_entry | clean_single_entry_unit),
+      risk_set_eligible = specification_unit_eligible &
+        dplyr::case_when(
+          treatment_role == "never_observed_china_top_control" ~
+            china_top_status %in% 0L,
+          treatment_role == "treated_qualifying" ~
+            qualifying_period |
+              (year < first_qualifying_entry & china_top_status %in% 0L),
+          TRUE ~ FALSE
+        ),
+      estimation_candidate = risk_set_eligible &
+        outcome_observed &
+        !is.na(abs_distance_china) &
+        !is.na(china_top)
+    )
 
-  if (specification %in% c("risk_set_restricted", "clean_single_spell")) {
-    panel <- panel |>
-      dplyr::filter(
-        (
-          treatment_role == "never_observed_china_top_control" &
-            china_top_status %in% 0L
-        ) |
-          (
-            treatment_role == "treated_qualifying" &
-              (
-                qualifying_period |
-                  (year < first_qualifying_entry & china_top_status %in% 0L)
-              )
-          )
-      )
-  } else {
-    panel <- panel |>
-      dplyr::filter(!is.na(china_top_status))
-  }
-
-  panel <- panel |>
-    dplyr::filter(outcome_observed, !is.na(abs_distance_china), !is.na(china_top))
-
-  if (specification == "switching_allowed") {
-    maximum_observed_years <- panel |>
-      dplyr::count(iso3c, name = "n_years") |>
-      dplyr::summarise(max_years = max(n_years)) |>
-      dplyr::pull(max_years)
-    panel <- panel |>
-      dplyr::group_by(iso3c) |>
-      dplyr::filter(dplyr::n() == maximum_observed_years) |>
-      dplyr::ungroup()
-  }
-
-  panel <- panel |>
+  estimator_support <- annotated |>
+    dplyr::filter(estimation_candidate) |>
     dplyr::group_by(iso3c) |>
-    dplyr::mutate(
+    dplyr::summarise(
       untreated_observations = sum(china_top == 0L),
-      treated_observations = sum(china_top == 1L)
-    ) |>
-    dplyr::ungroup() |>
-    dplyr::filter(untreated_observations >= min_untreated_observations)
+      treated_observations = sum(china_top == 1L),
+      .groups = "drop"
+    )
 
-  if (nrow(panel) == 0L) {
-    stop("No observations remain in the requested status-current panel.",
+  annotated <- annotated |>
+    dplyr::left_join(
+      estimator_support,
+      by = "iso3c",
+      relationship = "many-to-one"
+    ) |>
+    dplyr::mutate(
+      untreated_observations = dplyr::coalesce(
+        untreated_observations,
+        0L
+      ),
+      treated_observations = dplyr::coalesce(treated_observations, 0L)
+    )
+
+  candidate_with_support <- annotated |>
+    dplyr::filter(
+      estimation_candidate,
+      untreated_observations >= min_untreated_observations
+    )
+  if (nrow(candidate_with_support) == 0L) {
+    stop("No observations remain after the risk-set support rule.",
          call. = FALSE)
   }
 
-  panel_max <- max(panel$year, na.rm = TRUE)
-  estimable_treated <- panel |>
+  panel_max <- max(candidate_with_support$year, na.rm = TRUE)
+  estimable_treated <- candidate_with_support |>
     dplyr::filter(
       treatment_role == "treated_qualifying",
       first_treat > 0,
@@ -596,11 +613,142 @@ make_full_union_status_panel <- function(period_data,
     dplyr::distinct(iso3c) |>
     dplyr::pull(iso3c)
 
-  estimation_panel <- panel |>
-    dplyr::filter(
-      treatment_role == "never_observed_china_top_control" |
-        iso3c %in% estimable_treated
+  annotated |>
+    dplyr::mutate(
+      estimation_included = estimation_candidate &
+        untreated_observations >= min_untreated_observations &
+        (
+          treatment_role == "never_observed_china_top_control" |
+            iso3c %in% estimable_treated
+        ),
+      row_status = dplyr::case_when(
+        estimation_included ~ "included_estimation",
+        estimation_candidate &
+          untreated_observations < min_untreated_observations ~
+          "excluded_insufficient_untreated_outcomes",
+        risk_set_eligible & !outcome_observed ~ "risk_set_missing_outcome",
+        !specification_unit_eligible ~ "unit_outside_specification",
+        is.na(china_top_status) ~ "unknown_trade_rank",
+        treatment_role == "treated_qualifying" &
+          china_top_status == 1L &
+          !qualifying_period ~ "nonqualifying_china_top_period",
+        treatment_role == "treated_qualifying" &
+          year >= first_qualifying_entry &
+          china_top_status == 0L ~ "post_entry_off_status",
+        TRUE ~ "outside_risk_set"
+      )
     ) |>
+    dplyr::arrange(iso3c, year)
+}
+
+filter_modal_common_year_grid <- function(panel) {
+  unit_grids <- panel |>
+    dplyr::group_by(iso3c) |>
+    dplyr::summarise(
+      n_years = dplyr::n_distinct(year),
+      year_signature = paste(sort(unique(year)), collapse = ","),
+      .groups = "drop"
+    )
+  selected_grid <- unit_grids |>
+    dplyr::count(n_years, year_signature, name = "n_units") |>
+    dplyr::arrange(
+      dplyr::desc(n_years),
+      dplyr::desc(n_units),
+      year_signature
+    ) |>
+    dplyr::slice(1L)
+  selected_units <- unit_grids |>
+    dplyr::filter(
+      n_years == selected_grid$n_years,
+      year_signature == selected_grid$year_signature
+    ) |>
+    dplyr::pull(iso3c)
+
+  common_panel <- panel |>
+    dplyr::filter(iso3c %in% selected_units)
+  common_years <- sort(unique(common_panel$year))
+  has_common_grid <- common_panel |>
+    dplyr::group_by(iso3c) |>
+    dplyr::summarise(
+      valid = setequal(year, common_years) &
+        dplyr::n_distinct(year) == length(common_years),
+      .groups = "drop"
+    ) |>
+    dplyr::pull(valid)
+  if (!all(has_common_grid)) {
+    stop("switching_allowed does not have an exact common year grid.",
+         call. = FALSE)
+  }
+  common_panel
+}
+
+make_full_union_status_panel <- function(period_data,
+                                         specification = c(
+                                           "risk_set_restricted",
+                                           "clean_single_spell",
+                                           "switching_allowed"
+                                         ),
+                                         min_untreated_observations = 5L) {
+  specification <- match.arg(specification)
+  if (is.na(min_untreated_observations) ||
+      min_untreated_observations < 1L) {
+    stop("min_untreated_observations must be positive.", call. = FALSE)
+  }
+
+  if (specification %in% c("risk_set_restricted", "clean_single_spell")) {
+    panel <- build_full_union_risk_set_audit(
+      period_data,
+      clean_single_entry = specification == "clean_single_spell",
+      min_untreated_observations = min_untreated_observations
+    ) |>
+      dplyr::filter(estimation_included)
+  } else {
+    panel <- join_full_union_status_metadata(period_data) |>
+      dplyr::filter(
+        treatment_role %in% c(
+          "treated_qualifying",
+          "never_observed_china_top_control"
+        ),
+        !is.na(china_top_status),
+        outcome_observed,
+        !is.na(abs_distance_china),
+        !is.na(china_top)
+      ) |>
+      filter_modal_common_year_grid() |>
+      dplyr::group_by(iso3c) |>
+      dplyr::mutate(
+        untreated_observations = sum(china_top == 0L),
+        treated_observations = sum(china_top == 1L)
+      ) |>
+      dplyr::ungroup() |>
+      dplyr::filter(untreated_observations >= min_untreated_observations)
+
+    if (nrow(panel) == 0L) {
+      stop("No observations remain in switching_allowed.", call. = FALSE)
+    }
+    panel_max <- max(panel$year, na.rm = TRUE)
+    estimable_treated <- panel |>
+      dplyr::filter(
+        treatment_role == "treated_qualifying",
+        first_treat > 0,
+        first_treat < panel_max,
+        china_top == 1L
+      ) |>
+      dplyr::distinct(iso3c) |>
+      dplyr::pull(iso3c)
+    panel <- panel |>
+      dplyr::filter(
+        treatment_role == "never_observed_china_top_control" |
+          iso3c %in% estimable_treated
+      )
+  }
+
+  if (nrow(panel) == 0L) {
+    stop("No observations remain in the requested status-current panel.",
+         call. = FALSE)
+  }
+
+  estimation_panel <- panel |>
     dplyr::mutate(
       country_id = as.integer(as.factor(iso3c)),
       id = country_id
@@ -623,6 +771,26 @@ make_full_union_status_panel <- function(period_data,
   estimation_panel
 }
 
+summarize_full_union_status_units <- function(panel, label) {
+  panel |>
+    dplyr::group_by(iso3c, country_name, treatment_role) |>
+    dplyr::summarise(
+      sample = label,
+      ever_treated = any(china_top == 1L),
+      treated_years = sum(china_top == 1L),
+      untreated_years = sum(china_top == 0L),
+      first_treat = ifelse(
+        any(china_top == 1L),
+        min(year[china_top == 1L]),
+        NA_integer_
+      ),
+      first_year_in_panel = min(year),
+      last_year_in_panel = max(year),
+      .groups = "drop"
+    ) |>
+    dplyr::relocate(sample)
+}
+
 make_full_union_status_panel_bundle <- function(
     master_panel,
     duration_thresholds = c(3L, 5L, 7L),
@@ -638,6 +806,7 @@ make_full_union_status_panel_bundle <- function(
   all_units <- list()
   all_treatment_units <- list()
   all_periods <- list()
+  all_row_audits <- list()
 
   for (duration_years in duration_thresholds) {
     period_data <- build_full_union_status_period_data(
@@ -682,15 +851,15 @@ make_full_union_status_panel_bundle <- function(
       dplyr::mutate(min_duration_years = duration_years, .before = sample)
 
     all_units[[duration_key]] <- dplyr::bind_rows(
-      summarize_status_current_units(
+      summarize_full_union_status_units(
         duration_panels$switching_allowed,
         "switching_allowed"
       ),
-      summarize_status_current_units(
+      summarize_full_union_status_units(
         duration_panels$risk_set_restricted,
         "risk_set_restricted"
       ),
-      summarize_status_current_units(
+      summarize_full_union_status_units(
         duration_panels$clean_single_spell,
         "clean_single_spell"
       )
@@ -700,6 +869,12 @@ make_full_union_status_panel_bundle <- function(
     all_treatment_units[[duration_key]] <- period_data$unit_summary |>
       dplyr::mutate(min_duration_years = duration_years, .before = iso3c)
     all_periods[[duration_key]] <- period_data$period_summary |>
+      dplyr::mutate(min_duration_years = duration_years, .before = iso3c)
+    all_row_audits[[duration_key]] <- build_full_union_risk_set_audit(
+      period_data,
+      clean_single_entry = FALSE,
+      min_untreated_observations = min_untreated_observations
+    ) |>
       dplyr::mutate(min_duration_years = duration_years, .before = iso3c)
   }
 
@@ -712,58 +887,96 @@ make_full_union_status_panel_bundle <- function(
     treatment_unit_summary = dplyr::bind_rows(all_treatment_units) |>
       dplyr::arrange(min_duration_years, treatment_role, iso3c),
     period_summary = dplyr::bind_rows(all_periods) |>
-      dplyr::arrange(min_duration_years, iso3c, china_top_period_id)
+      dplyr::arrange(min_duration_years, iso3c, china_top_period_id),
+    row_audit = dplyr::bind_rows(all_row_audits) |>
+      dplyr::arrange(min_duration_years, iso3c, year)
   )
 }
 
 validate_full_union_status_bundle <- function(master_panel,
                                                panel_bundle,
-                                               expected_cod_year = 2021L) {
-  grid_counts <- master_panel |>
-    dplyr::group_by(iso3c) |>
-    dplyr::summarise(
-      n_years = dplyr::n(),
-      min_year = min(year),
-      max_year = max(year),
-      .groups = "drop"
-    )
+                                               expected_min_year = 1990L,
+                                               expected_max_year = 2023L,
+                                               expected_cod_year = 2021L,
+                                               expected_main_observations = 5002L,
+                                               expected_main_countries = 160L,
+                                               expected_treated_periods = 440L) {
+  expected_years <- seq.int(expected_min_year, expected_max_year)
+  grid_exact <- vapply(
+    split(master_panel$year, master_panel$iso3c),
+    function(x) identical(sort(as.integer(x)), expected_years),
+    logical(1)
+  )
 
-  cod_row <- master_panel |>
+  main_row_audit <- panel_bundle$row_audit |>
+    dplyr::filter(min_duration_years == 5L)
+  cod_row <- main_row_audit |>
     dplyr::filter(iso3c == "COD", year == expected_cod_year)
   cod_gate_available <- nrow(cod_row) == 1L
   cod_trade_treated <- cod_gate_available &&
     identical(cod_row$china_top_status, 1L)
+  cod_treatment_qualified <- cod_gate_available &&
+    identical(cod_row$china_top, 1L) &&
+    isTRUE(cod_row$qualifying_period)
+  cod_risk_set_eligible <- cod_gate_available &&
+    isTRUE(cod_row$risk_set_eligible)
   cod_outcome_missing <- cod_gate_available &&
     is.na(cod_row$abs_distance_china)
+  cod_excluded_at_outcome_stage <- cod_gate_available &&
+    !isTRUE(cod_row$estimation_candidate) &&
+    !isTRUE(cod_row$estimation_included) &&
+    identical(cod_row$row_status, "risk_set_missing_outcome")
 
   main_panel <- panel_bundle$panels[["5"]][["risk_set_restricted"]]
-  tibble::tibble(
+  tie_rows <- which(master_panel$n_top_ties > 1L)
+  validation <- tibble::tibble(
     validation = c(
       "unique_master_country_year_keys",
-      "complete_common_year_grid",
+      "complete_1990_2023_country_year_grid",
       "treatment_missingness_follows_trade_status",
       "top_rank_ties_have_unknown_treatment_status",
       "main_estimation_outcomes_complete",
       "main_estimation_treatment_binary",
       "cod_2021_trade_status_is_treated",
+      "cod_2021_treatment_period_is_qualified",
+      "cod_2021_remains_in_risk_set",
       "cod_2021_outcome_remains_missing",
-      "cod_2021_excluded_only_from_estimation"
+      "cod_2021_excluded_at_outcome_stage",
+      "main_sample_matches_corrected_observation_count",
+      "main_sample_matches_corrected_country_count",
+      "main_sample_matches_corrected_treated_period_count"
     ),
     passed = c(
-      !anyDuplicated(master_panel[c("iso3c", "year")]),
-      dplyr::n_distinct(grid_counts$n_years) == 1L &&
-        dplyr::n_distinct(grid_counts$min_year) == 1L &&
-        dplyr::n_distinct(grid_counts$max_year) == 1L,
+      anyDuplicated(master_panel[c("iso3c", "year")]) == 0L,
+      all(grid_exact),
       all(is.na(master_panel$china_top_status) ==
             !master_panel$trade_rank_observed),
-      all(is.na(master_panel$china_top_status[master_panel$n_top_ties > 1L])),
+      all(is.na(master_panel$china_top_status[tie_rows])),
       !anyNA(main_panel$abs_distance_china),
       all(main_panel$china_top %in% c(0L, 1L)),
       cod_trade_treated,
+      cod_treatment_qualified,
+      cod_risk_set_eligible,
       cod_outcome_missing,
-      cod_gate_available && !any(
-        main_panel$iso3c == "COD" & main_panel$year == expected_cod_year
-      )
+      cod_excluded_at_outcome_stage,
+      nrow(main_panel) == expected_main_observations,
+      dplyr::n_distinct(main_panel$iso3c) == expected_main_countries,
+      sum(main_panel$china_top == 1L) == expected_treated_periods
     )
   )
+  validation
+}
+
+assert_full_union_status_validation <- function(validation) {
+  failed <- validation |>
+    dplyr::filter(!passed) |>
+    dplyr::pull(validation)
+  if (length(failed) > 0L) {
+    stop(
+      "Full-union status validation failed: ",
+      paste(failed, collapse = ", "),
+      call. = FALSE
+    )
+  }
+  validation
 }
