@@ -60,14 +60,14 @@ insumos brutos congelados, documentados e validados por hash.
 
 ## Escopo da migração
 
-| Bloco | Estado de origem | Destino |
-|---|---|---|
-| Painel mestre e tratamento cross-country | Correção `full_join` ainda externa ao pipeline de produção | União das fontes, grade país × ano 1990–2023, tratamento independente do outcome e testes de adjacência calendária |
-| SDiD Brasil | Parte dos diagnósticos e figuras vem de scripts externos | Bundles e file targets dependentes dos alvos de estimação vigentes |
-| Commodity e Tabela 5 | Tabelas derivadas por scripts de diagnóstico | Targets a montante e tabelas produzidas dentro do grafo |
-| UNGA-DM | Dois scripts externos produzem estimação e pós-revisão | Outcome harmonizado, SDiD, IFE, bootstrap, ranks, tabelas e figuras como targets |
-| Evidência de status | Coletores misturam HTTP, codificação e derivações | HTTP externo; bruto e codificação congelados; derivações e tabelas dentro do grafo |
-| Manuscrito | Leituras diretas de CSVs diagnósticos e imagens manuais | `tar_read()` e caminhos retornados por file targets |
+| Bloco | Estado de origem | Destino | Gate nesta branch |
+|---|---|---|---|
+| Painel mestre e tratamento cross-country | Correção `full_join` ainda externa ao pipeline de produção | União das fontes, grade país × ano 1990–2023, tratamento independente do outcome e testes de adjacência calendária | Implementado; revisão independente `A/PASS` |
+| SDiD Brasil | Parte dos diagnósticos e figuras vem de scripts externos | Bundles e file targets dependentes dos alvos de estimação vigentes | Implementado; revisão independente `A/PASS` |
+| Commodity e Tabela 5 | Tabelas derivadas por scripts de diagnóstico | Targets a montante e tabelas produzidas dentro do grafo | Implementado; revisão independente `A/PASS` |
+| UNGA-DM | Dois scripts externos produzem estimação e pós-revisão | Outcome harmonizado, SDiD, IFE, bootstrap, ranks, tabelas e figuras como targets | Implementado; revisão independente `A/PASS` em `migration/review_r_ungadm_round3.md` |
+| Evidência de status | Coletores misturam HTTP, codificação e derivações | HTTP externo; bruto e codificação congelados; derivações e tabelas dentro do grafo | Contrato congelado; implementação em andamento |
+| Manuscrito | Leituras diretas de CSVs diagnósticos e imagens manuais | `tar_read()` e caminhos retornados por file targets | Pendente do fechamento dos blocos a montante |
 
 Nenhum bloco será promovido isoladamente. A implementação pode ser organizada por
 blocos dentro da worktree, mas a integração em `main` é atômica.
