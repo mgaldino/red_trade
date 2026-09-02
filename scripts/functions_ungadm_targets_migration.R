@@ -1117,6 +1117,25 @@ build_ungadm_common_window_bundle <- function(
     full_union_row_audit,
     augmented_master,
     common_max_year = 2020L) {
+  ungadm_require_columns(
+    full_union_row_audit,
+    c(
+      "iso3c", "year", "min_duration_years",
+      "specification_unit_eligible", "risk_set_eligible",
+      "outcome_observed", "abs_distance_china", "china_top",
+      "china_top_status", "treatment_role", "qualifying_period",
+      "first_treat"
+    ),
+    "full-union row audit for the common window"
+  )
+  ungadm_require_columns(
+    augmented_master,
+    c(
+      "iso3c", "year", "abs_distance_china_dm",
+      "ungadm_outcome_observed"
+    ),
+    "UNGA-DM-augmented master for the common window"
+  )
   structural_rows <- full_union_row_audit |>
     dplyr::filter(
       min_duration_years == 5L,
@@ -1169,7 +1188,8 @@ build_ungadm_common_window_bundle <- function(
   complete_outcomes <- joined |>
     dplyr::filter(
       year <= common_max_year,
-      ungadm_outcome_observed,
+      dplyr::coalesce(outcome_observed, FALSE),
+      dplyr::coalesce(ungadm_outcome_observed, FALSE),
       !is.na(abs_distance_china),
       !is.na(abs_distance_china_dm)
     ) |>
@@ -1236,7 +1256,12 @@ validate_ungadm_common_window_bundle <- function(common_bundle) {
     "china_top", "china_top_status", "treatment_role",
     "qualifying_period", "first_treat", "country_id", "id"
   )
-  required <- c(key_columns, metadata_columns, "abs_distance_china")
+  required <- c(
+    key_columns,
+    metadata_columns,
+    "outcome_observed",
+    "abs_distance_china"
+  )
   ungadm_require_columns(
     bsv,
     required,
@@ -1246,6 +1271,14 @@ validate_ungadm_common_window_bundle <- function(common_bundle) {
     dm,
     required,
     "UNGA-DM common-window panel"
+  )
+  ungadm_require_columns(
+    common_bundle$common_rows,
+    c(
+      "iso3c", "year", "outcome_observed", "ungadm_outcome_observed",
+      "abs_distance_china", "abs_distance_china_dm"
+    ),
+    "common-window shared rows"
   )
   tibble::tibble(
     validation = c(
@@ -1267,8 +1300,10 @@ validate_ungadm_common_window_bundle <- function(common_bundle) {
         dplyr::select(bsv, dplyr::all_of(c(key_columns, metadata_columns))),
         dplyr::select(dm, dplyr::all_of(c(key_columns, metadata_columns)))
       ),
-      !anyNA(bsv$abs_distance_china) &&
-        !anyNA(dm$abs_distance_china),
+      all(is.finite(bsv$abs_distance_china)) &&
+        all(is.finite(dm$abs_distance_china)) &&
+        all(common_bundle$common_rows$outcome_observed %in% TRUE) &&
+        all(common_bundle$common_rows$ungadm_outcome_observed %in% TRUE),
       all(bsv$china_top %in% c(0L, 1L)) &&
         identical(bsv$china_top, dm$china_top),
       max(bsv$year) <= common_bundle$common_max_year &&
@@ -1661,14 +1696,17 @@ ungadm_paired_checkpoint_valid <- function(distribution,
   }, logical(1)))
 }
 
-ungadm_paired_code_fingerprint <- function(fit_function) {
+ungadm_paired_code_fingerprint <- function(fit_function, runner_function) {
+  if (!is.function(fit_function) || !is.function(runner_function)) {
+    stop("Paired-bootstrap fingerprint inputs must be functions.",
+         call. = FALSE)
+  }
   digest::digest(
     list(
-      deparse(body(run_ungadm_paired_bootstrap_candidate)),
+      deparse(body(runner_function)),
       deparse(body(ungadm_paired_bootstrap_one)),
       deparse(body(ungadm_paired_checkpoint_valid)),
       deparse(body(ungadm_paired_bootstrap_columns)),
-      deparse(body(ungadm_paired_code_fingerprint)),
       deparse(body(sdid_read_checkpoint)),
       deparse(body(sdid_atomic_save_rds)),
       deparse(body(sdid_mclapply_checked)),
@@ -1737,7 +1775,10 @@ run_ungadm_paired_bootstrap_candidate <- function(
   })
   fingerprint <- digest::digest(
     list(
-      code = ungadm_paired_code_fingerprint(fit_function),
+      code = ungadm_paired_code_fingerprint(
+        fit_function,
+        sys.function()
+      ),
       B = B,
       boot_seed = boot_seed,
       bsv_selected_r = bsv_selected_r,

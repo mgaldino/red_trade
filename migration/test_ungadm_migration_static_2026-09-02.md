@@ -31,6 +31,8 @@ Rscript -e "m <- targets::tar_manifest(callr_function = NULL); \
 - painéis BSV/UNGA-DM comuns têm linhas e tratamento idênticos: `PASS`;
 - ausência de coluna contratual de tratamento/metadado é rejeitada: `PASS`;
 - auditoria distingue ausência de outcome BSV e UNGA-DM: `PASS`;
+- flags falsas de observação BSV/UNGA-DM excluem valores finitos
+  contraditórios: `PASS`;
 - painel SDiD conserva chaves e tratamento: `PASS`;
 - gates rejeitam linhas ausentes, duplicadas e `passed = NA`: `PASS`;
 - checkpoint pareado completo é reutilizado: `PASS`;
@@ -39,6 +41,9 @@ Rscript -e "m <- targets::tar_manifest(callr_function = NULL); \
 - seleção CV arbitrária em `r = 0:3` é propagada ao bootstrap: `PASS`;
 - rótulo e contraste usam os fatores efetivamente selecionados: `PASS`;
 - o fingerprint inclui o orquestrador do bootstrap: `PASS`;
+- o fingerprint UNGA-DM não cria autorreferência nem dependência global mútua:
+  `PASS`;
+- gate do painel precede ranks SDiD e hashes precedem fit, SE e ranks: `PASS`;
 - parse de `_targets.R` e do novo arquivo de funções: `PASS`;
 - `git diff --check`: `PASS`;
 - manifesto estático: `STATIC_MANIFEST_PASS targets=336`.
@@ -53,3 +58,9 @@ O manifesto exigiu restaurar `renv`, `targets`, `here` e `tarchetypes` a partir
 do lockfile/cache no ambiente isolado do worktree. Isso não alterou o lockfile.
 Nesta rodada, o carregamento de `processx` foi bloqueado no sandbox; a leitura
 estática do manifesto foi repetida fora dele. Nenhum alvo foi construído.
+
+O DAG dos 336 targets e `targets::tar_validate()` passam. A visualização padrão
+que inclui todas as funções globais ainda encontra um ciclo preexistente e fora
+do bloco UNGA-DM entre `.sdid_code_fingerprint`, `sdid_rank_distribution` e
+`sdid_placebo_estimates`. A decomposição por componentes fortemente conexos
+confirmou que nenhuma função `ungadm_*` pertence ao ciclo remanescente.

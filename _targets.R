@@ -659,6 +659,9 @@ list(
              )),
   tar_target(ungadm_sdid_panel_bundle_candidate,
              {
+               stopifnot(
+                 all(ungadm_sdid_reference_validation_candidate$passed)
+               )
                ungadm_master_join_gate_candidate
                build_ungadm_sdid_panel_bundle(
                  synth_data,
@@ -700,12 +703,15 @@ list(
                )
              )),
   tar_target(ungadm_sdid_rank_distribution_candidate,
-             run_sdid_rank_distribution_candidate(
-               ungadm_sdid_panel_bundle_candidate$panel,
-               covariate_cols = character(0),
-               label = "ungadm_no_covariates",
-               checkpoint_block = "ungadm_sdid"
-             )),
+             {
+               ungadm_sdid_panel_gate_candidate
+               run_sdid_rank_distribution_candidate(
+                 ungadm_sdid_panel_bundle_candidate$panel,
+                 covariate_cols = character(0),
+                 label = "ungadm_no_covariates",
+                 checkpoint_block = "ungadm_sdid"
+               )
+             }),
   tar_target(ungadm_sdid_outputs_candidate,
              build_ungadm_sdid_outputs_candidate(
                ungadm_sdid_panel_bundle_candidate$panel,

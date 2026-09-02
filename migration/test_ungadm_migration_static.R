@@ -249,11 +249,6 @@ row_audit_missing_bsv <- row_audit |>
       iso3c == "BBB" & year == 2000L,
       FALSE,
       outcome_observed
-    ),
-    abs_distance_china = dplyr::if_else(
-      iso3c == "BBB" & year == 2000L,
-      NA_real_,
-      abs_distance_china
     )
   )
 common_missing_bsv <- build_ungadm_common_window_bundle(
@@ -261,8 +256,38 @@ common_missing_bsv <- build_ungadm_common_window_bundle(
   augmented
 )
 expect_true(
-  any(common_missing_bsv$dropped_rows$reason == "BSV outcome missing"),
-  "common-window row audit distinguishes missing BSV outcomes"
+  any(common_missing_bsv$dropped_rows$reason == "BSV outcome missing") &&
+    !any(
+      common_missing_bsv$common_rows$iso3c == "BBB" &
+        common_missing_bsv$common_rows$year == 2000L
+    ),
+  paste0(
+    "a false BSV observation flag is audited and excluded even when the ",
+    "value is finite"
+  )
+)
+augmented_missing_dm_flag <- augmented |>
+  dplyr::mutate(
+    ungadm_outcome_observed = dplyr::if_else(
+      iso3c == "BBB" & year == 2001L,
+      FALSE,
+      ungadm_outcome_observed
+    )
+  )
+common_missing_dm_flag <- build_ungadm_common_window_bundle(
+  row_audit,
+  augmented_missing_dm_flag
+)
+expect_true(
+  any(common_missing_dm_flag$dropped_rows$reason == "UNGA-DM outcome missing") &&
+    !any(
+      common_missing_dm_flag$common_rows$iso3c == "BBB" &
+        common_missing_dm_flag$common_rows$year == 2001L
+    ),
+  paste0(
+    "a false UNGA-DM observation flag is audited and excluded even when ",
+    "the value is finite"
+  )
 )
 
 sdid_fixture <- tidyr::expand_grid(
@@ -445,13 +470,32 @@ expect_true(
     isTRUE(all.equal(dynamic_summary$observed_diff[[1]], 3.1)),
   "paired-bootstrap summary labels and contrasts the selected factors"
 )
+runner_fixture_a <- function() TRUE
+runner_fixture_b <- function() {
+  fingerprint_test_marker <- TRUE
+  fingerprint_test_marker
+}
+fingerprint_a <- ungadm_paired_code_fingerprint(
+  stub_fit,
+  runner_fixture_a
+)
+fingerprint_b <- ungadm_paired_code_fingerprint(
+  stub_fit,
+  runner_fixture_b
+)
+fingerprint_globals <- codetools::findGlobals(
+  ungadm_paired_code_fingerprint,
+  merge = FALSE
+)
 expect_true(
-  grepl(
-    "run_ungadm_paired_bootstrap_candidate",
-    paste(deparse(body(ungadm_paired_code_fingerprint)), collapse = " "),
-    fixed = TRUE
-  ),
-  "checkpoint fingerprint covers the bootstrap orchestrator"
+  !identical(fingerprint_a, fingerprint_b),
+  "checkpoint fingerprint covers the supplied bootstrap orchestrator"
+)
+expect_true(
+  !"run_ungadm_paired_bootstrap_candidate" %in%
+    fingerprint_globals$variables &&
+    !"ungadm_paired_code_fingerprint" %in% fingerprint_globals$variables,
+  "checkpoint fingerprint introduces no global-function cycle"
 )
 
 unlink(checkpoint_directory, recursive = TRUE)
