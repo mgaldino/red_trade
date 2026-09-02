@@ -18,6 +18,12 @@ Cobertura:
 - reprovação de divergência além da tolerância;
 - reprovação de `Inf`;
 - reprovação de chave divergente;
+- aceitação de overshoot de ponto flutuante em share a precisão de máquina;
+- reprovação de violação material dos limites de share;
+- gate agregado fail-closed quando `passed` é `NA`;
+- escrita/leitura atômica de checkpoint e descarte seguro de RDS corrompido;
+- retomada de rank placebo parcial, computando apenas unidades faltantes com
+  um fit falso barato, sem modelo estatístico;
 - fixture ITPD-E 2004–2008 processada em DuckDB;
 - exclusão de serviços e fluxos domésticos do denominador de bens;
 - cálculo da participação chinesa sobre bens;
@@ -28,7 +34,7 @@ Também passaram:
 
 - parse de `_targets.R` e `scripts/functions_sdid_targets_migration.R`;
 - `git diff --check`;
-- manifesto estático com 286 targets.
+- manifesto estático com 288 targets.
 
 Não foram executados `tar_make()`, modelos, placebos, bootstrap nem o scan do
 ITPD-E real de 7,8 GB.

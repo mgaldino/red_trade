@@ -43,10 +43,17 @@ Esses arquivos serão usados apenas na etapa de comparação.
 4. Montar o painel de interações da Tabela 5 dentro do grafo.
 5. Separar targets caros — SEs placebo e distribuições por reatribuição — das
    transformações determinísticas.
+   O target de produção já existente `se_synth_no_time_varying_covariates`
+   mantém nome e valor, mas sua implementação na branch passa pelo wrapper
+   canônico com limite de BLAS e checkpoint retomável. O store original segue
+   preservado no checkout principal para a comparação.
 6. Produzir tabelas como objetos e materializá-las por file targets.
+   Isso inclui a exposição commodity e os índices anuais do Pink Sheet.
 7. Produzir cada figura por file target a partir do fit ou dos pesos que a
    determinam.
 8. Manter nomes candidatos distintos dos nomes de produção até a adjudicação.
+9. Gravar checkpoints por lotes e com substituição atômica; RDS ilegível nunca
+   pode ser aceito como cache válido.
 
 ## Invariantes
 

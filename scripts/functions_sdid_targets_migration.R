@@ -22,6 +22,23 @@ sdid_migration_scale_vec <- function(x) {
   as.numeric((x - mean(x, na.rm = TRUE)) / scale_sd)
 }
 
+validate_sdid_commodity_share_bounds <- function(exposure,
+                                                 tolerance = 1e-12) {
+  share_columns <- grep("share|coverage", names(exposure), value = TRUE)
+  share_values <- unlist(exposure[share_columns], use.names = FALSE)
+  if (any(!is.finite(share_values[!is.na(share_values)])) ||
+      any(
+        share_values < -tolerance | share_values > 1 + tolerance,
+        na.rm = TRUE
+      )) {
+    stop(
+      "Commodity shares must be finite and lie in [0, 1] within tolerance.",
+      call. = FALSE
+    )
+  }
+  invisible(exposure)
+}
+
 build_sdid_commodity_exposure_from_itpde <- function(
     itpd_path,
     start_year = 2004L,
@@ -212,16 +229,7 @@ build_sdid_commodity_exposure_from_itpde <- function(
     "candidate pre-2009 commodity exposure"
   )
 
-  share_columns <- grep(
-    "share|coverage",
-    names(exposure),
-    value = TRUE
-  )
-  share_values <- unlist(exposure[share_columns], use.names = FALSE)
-  if (any(!is.finite(share_values[!is.na(share_values)])) ||
-      any(share_values < 0 | share_values > 1, na.rm = TRUE)) {
-    stop("Commodity shares must be finite and lie in [0, 1].", call. = FALSE)
-  }
+  validate_sdid_commodity_share_bounds(exposure)
 
   list(
     exposure = exposure,
@@ -459,8 +467,13 @@ validate_sdid_commodity_derivations <- function(
 }
 
 assert_sdid_migration_validation <- function(validation) {
+  if (!is.data.frame(validation) ||
+      !all(c("validation", "passed") %in% names(validation)) ||
+      !is.logical(validation$passed)) {
+    stop("SDiD migration validation has an invalid schema.", call. = FALSE)
+  }
   failed <- validation |>
-    dplyr::filter(!passed) |>
+    dplyr::filter(!(.data$passed %in% TRUE)) |>
     dplyr::pull(validation)
   if (length(failed) > 0L) {
     stop(

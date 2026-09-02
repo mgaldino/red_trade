@@ -74,6 +74,35 @@ sdid_mclapply_checked <- function(items, fun, cores, what = "task") {
   vals
 }
 
+sdid_read_checkpoint <- function(path) {
+  tryCatch(
+    readRDS(path),
+    error = function(error) {
+      warning(
+        "Ignoring unreadable SDiD checkpoint ", path, ": ",
+        conditionMessage(error),
+        call. = FALSE
+      )
+      NULL
+    }
+  )
+}
+
+sdid_atomic_save_rds <- function(object, path) {
+  dir.create(dirname(path), recursive = TRUE, showWarnings = FALSE)
+  temporary <- tempfile(
+    pattern = paste0(".", basename(path), "-"),
+    tmpdir = dirname(path)
+  )
+  on.exit(if (file.exists(temporary)) unlink(temporary), add = TRUE)
+  saveRDS(object, temporary)
+  if (!file.rename(temporary, path)) {
+    stop("Could not atomically replace SDiD checkpoint: ", path,
+         call. = FALSE)
+  }
+  invisible(path)
+}
+
 sdid_build_covariate_array <- function(data, covariate_cols) {
   unit_levels <- unique(data$iso3c)
   time_levels <- sort(unique(data$year))
@@ -212,8 +241,9 @@ sdid_placebo_estimates <- function(fit, replications, seed, cores,
   )
   estimates <- rep(NA_real_, replications)
   if (!is.null(checkpoint_path) && file.exists(checkpoint_path)) {
-    cached <- readRDS(checkpoint_path)
-    cache_valid <- identical(cached$fingerprint, fingerprint) &&
+    cached <- sdid_read_checkpoint(checkpoint_path)
+    cache_valid <- is.list(cached) &&
+      identical(cached$fingerprint, fingerprint) &&
       is.numeric(cached$estimates) &&
       length(cached$estimates) == replications
     if (cache_valid) {
@@ -271,9 +301,17 @@ sdid_placebo_estimates <- function(fit, replications, seed, cores,
       partial_se <- if (all(is.finite(estimates))) {
         sqrt((replications - 1) / replications) * stats::sd(estimates)
       } else NA_real_
-      saveRDS(list(label = label, replications = replications, seed = seed,
-                   fingerprint = fingerprint, se = partial_se,
-                   estimates = estimates), checkpoint_path)
+      sdid_atomic_save_rds(
+        list(
+          label = label,
+          replications = replications,
+          seed = seed,
+          fingerprint = fingerprint,
+          se = partial_se,
+          estimates = estimates
+        ),
+        checkpoint_path
+      )
     }
   }
   if (any(!is.finite(estimates))) {
@@ -304,8 +342,13 @@ sdid_rank_distribution <- function(data, covariate_cols = character(0),
                                    year_start = 1997L, year_end = 2015L,
                                    treat_year = 2009L,
                                    cores = sdid_available_cores(),
-                                   checkpoint_dir = NULL) {
+                                   checkpoint_dir = NULL,
+                                   batch_size = 12L) {
   units <- sort(unique(data$iso3c))
+  batch_size <- as.integer(batch_size)
+  if (length(batch_size) != 1L || is.na(batch_size) || batch_size < 1L) {
+    stop("Rank-placebo batch_size must be a positive integer.", call. = FALSE)
+  }
   fingerprint <- digest::digest(
     list(code = .sdid_code_fingerprint(), label = label,
          covariate_cols = covariate_cols, units = units,
@@ -319,40 +362,119 @@ sdid_rank_distribution <- function(data, covariate_cols = character(0),
   )
   checkpoint_path <- if (is.null(checkpoint_dir)) NULL else
     file.path(checkpoint_dir, sprintf("rank_placebos_%s.rds", label))
+  required_checkpoint_columns <- c(
+    "iso3c", "estimate", "rmspe_pre", "status", "error"
+  )
+  distribution <- tibble::tibble(
+    iso3c = character(),
+    estimate = numeric(),
+    rmspe_pre = numeric(),
+    status = character(),
+    error = character()
+  )
   if (!is.null(checkpoint_path) && file.exists(checkpoint_path)) {
-    cached <- readRDS(checkpoint_path)
-    if (identical(cached$fingerprint, fingerprint) &&
+    cached <- sdid_read_checkpoint(checkpoint_path)
+    cache_valid <- is.list(cached) &&
+      identical(cached$fingerprint, fingerprint) &&
         is.data.frame(cached$distribution) &&
-        nrow(cached$distribution) == length(units) &&
-        setequal(cached$distribution$iso3c, units)) {
+      all(required_checkpoint_columns %in% names(cached$distribution)) &&
+      !anyDuplicated(cached$distribution$iso3c) &&
+      all(cached$distribution$iso3c %in% units)
+    if (cache_valid) {
+      distribution <- cached$distribution |>
+        dplyr::select(dplyr::all_of(required_checkpoint_columns)) |>
+        dplyr::arrange(match(iso3c, units))
+    }
+    if (cache_valid && setequal(distribution$iso3c, units)) {
       message("    Reusing rank-placebo checkpoint: ", basename(checkpoint_path))
-      return(cached$distribution)
+      return(distribution)
+    }
+    if (cache_valid && nrow(distribution) > 0L) {
+      message(
+        "    Resuming rank-placebo checkpoint with ", nrow(distribution),
+        "/", length(units), " assignments."
+      )
     }
   }
-  vals <- sdid_mclapply_checked(units, function(u) {
+
+  remaining_units <- setdiff(units, distribution$iso3c)
+  batches <- split(
+    remaining_units,
+    ceiling(seq_along(remaining_units) / batch_size)
+  )
+  fit_unit <- function(unit) {
     fit <- tryCatch(
-      sdid_fit_spec(data, covariate_cols, treated_iso3c = u,
-                    year_start = year_start, year_end = year_end,
-                    treat_year = treat_year),
-      error = function(e) e
+      sdid_fit_spec(
+        data,
+        covariate_cols,
+        treated_iso3c = unit,
+        year_start = year_start,
+        year_end = year_end,
+        treat_year = treat_year
+      ),
+      error = function(error) error
     )
     if (inherits(fit, "error")) {
-      return(tibble::tibble(iso3c = u, estimate = NA_real_,
-                            rmspe_pre = NA_real_, status = "error",
-                            error = conditionMessage(fit)))
+      return(tibble::tibble(
+        iso3c = unit,
+        estimate = NA_real_,
+        rmspe_pre = NA_real_,
+        status = "error",
+        error = conditionMessage(fit)
+      ))
     }
     row <- sdid_fit_summary_row(fit, label)
-    tibble::tibble(iso3c = u, estimate = row$estimate,
-                   rmspe_pre = row$rmspe_pre, status = "estimated", error = "")
-  }, cores, what = "rank placebo")
-  distribution <- dplyr::bind_rows(vals)
+    tibble::tibble(
+      iso3c = unit,
+      estimate = row$estimate,
+      rmspe_pre = row$rmspe_pre,
+      status = "estimated",
+      error = ""
+    )
+  }
+  for (batch_index in seq_along(batches)) {
+    batch <- batches[[batch_index]]
+    if (length(batches) > 1L) {
+      message(
+        "    Rank-placebo batch ", batch_index, "/", length(batches),
+        " (", length(batch), " assignments; ", cores, " cores)."
+      )
+    }
+    values <- sdid_mclapply_checked(
+      batch,
+      fit_unit,
+      cores,
+      what = "rank placebo"
+    )
+    valid_values <- vapply(
+      seq_along(values),
+      function(index) {
+        value <- values[[index]]
+        is.data.frame(value) && nrow(value) == 1L &&
+          all(required_checkpoint_columns %in% names(value)) &&
+          identical(as.character(value$iso3c), as.character(batch[[index]]))
+      },
+      logical(1)
+    )
+    if (!all(valid_values)) {
+      stop("Invalid rank-placebo result in batch ", batch_index, ".",
+           call. = FALSE)
+    }
+    distribution <- dplyr::bind_rows(distribution, values) |>
+      dplyr::arrange(match(iso3c, units))
+    if (!is.null(checkpoint_path)) {
+      sdid_atomic_save_rds(
+        list(
+          fingerprint = fingerprint,
+          distribution = distribution,
+          updated_at = format(Sys.time(), "%Y-%m-%d %H:%M:%S %Z")
+        ),
+        checkpoint_path
+      )
+    }
+  }
   stopifnot(nrow(distribution) == length(units),
             setequal(distribution$iso3c, units))
-  if (!is.null(checkpoint_path)) {
-    saveRDS(list(fingerprint = fingerprint, distribution = distribution,
-                 completed_at = format(Sys.time(), "%Y-%m-%d %H:%M:%S %Z")),
-            checkpoint_path)
-  }
   distribution
 }
 

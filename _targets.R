@@ -170,7 +170,15 @@ list(
   tar_target(se_synth_baseline, se_sdid(synth_fit_baseline, replications = 5000L)),
   tar_target(synth_fit_no_time_varying_covariates, simple_fit_no_time_varying_covariates(synth_data)),
   # preferred column: no covariates makes replications cheap (~4 min); 20k pins the SE to +-0.001
-  tar_target(se_synth_no_time_varying_covariates, se_sdid(synth_fit_no_time_varying_covariates, replications = 20000L)),
+  tar_target(se_synth_no_time_varying_covariates,
+             run_sdid_placebo_se_candidate(
+               synth_fit_no_time_varying_covariates,
+               replications = 20000L,
+               label = "no_covariates",
+               checkpoint_block = "paper_sdid_preferred",
+               seed = SDID_PLACEBO_SEED,
+               core_cap = 12L
+             )),
   tar_target(brazil_sdid_spec_table,
              make_brazil_sdid_spec_table(
                synth_fit,
@@ -197,8 +205,9 @@ list(
                trade_data_cleaned
              )),
   # Candidate migration of every Brazil SDiD CSV/figure currently read by the
-  # paper. Expensive placebo targets stay separate and none of these names
-  # replace production before the side-by-side comparison passes.
+  # paper. Expensive placebo targets stay separate and no paper-output file is
+  # replaced before the side-by-side comparison passes. The existing preferred
+  # SE target above keeps its public name but now has resumable computation.
   tar_target(brazil_sdid_preferred_se_info_candidate,
              reuse_sdid_preferred_se_candidate(
                synth_fit_no_time_varying_covariates,
@@ -382,9 +391,37 @@ list(
              assert_sdid_migration_validation(
                brazil_sdid_commodity_derivation_validation_candidate
              )),
+  tar_target(brazil_sdid_commodity_exposure_file_candidate,
+             {
+               brazil_sdid_commodity_derivation_gate_candidate
+               write_sdid_table_candidate(
+                 brazil_sdid_commodity_exposure_candidate,
+                 file.path(
+                   "data", "processed", "targets_migration",
+                   "brazil_sdid_predetermined_commodity_controls",
+                   "table_2_pre2009_commodity_exposure_by_country.csv"
+                 )
+               )
+             },
+             format = "file"),
+  tar_target(brazil_sdid_pink_sheet_indices_file_candidate,
+             {
+               brazil_sdid_commodity_derivation_gate_candidate
+               write_sdid_table_candidate(
+                 brazil_sdid_pink_sheet_indices_candidate,
+                 file.path(
+                   "data", "processed", "targets_migration",
+                   "brazil_sdid_predetermined_commodity_controls",
+                   "table_3_world_bank_commodity_price_indices.csv"
+                 )
+               )
+             },
+             format = "file"),
   tar_target(brazil_sdid_commodity_panel_candidate,
              {
                brazil_sdid_commodity_derivation_gate_candidate
+               brazil_sdid_commodity_exposure_file_candidate
+               brazil_sdid_pink_sheet_indices_file_candidate
                build_sdid_commodity_panel_candidate(
                  synth_data,
                  brazil_sdid_commodity_exposure_candidate,
