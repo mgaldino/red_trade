@@ -39,12 +39,18 @@ Gates confirmados:
   congelado;
 - status HTTP de arquivos existentes é recuperado do sidecar, não inferido pelo
   nome;
-- URLs não HTTP(S), opções inválidas (inclusive backoff não finito), missing não
-  recuperável e tentativas de overwrite exclusivo são rejeitados;
+- URLs não HTTP(S), componentes URI inválidos, IPv6, opções inválidas (inclusive
+  backoff não finito), missing não recuperável e tentativas de overwrite exclusivo
+  são rejeitados;
+- cada redirecionamento é revalidado e destinos fora de HTTP(S), inclusive `ftp:`,
+  são bloqueados antes de serem abertos;
 - os dois entrypoints percorrem o ramo `--acquire` ponta a ponta com HTTP
   substituído por fixture local, incluindo promoção, log e manifest de staging;
-- promoção e publicação usam candidatos completos e criação exclusiva; falhas
-  preservam arquivos concorrentes e deixam somente partials auditáveis no staging.
+- promoção e publicação usam candidatos completos e criação exclusiva; sucesso
+  concorrente, conflito e erro interno são classificados separadamente;
+- toda execução que cria staging termina com `fetch_log.json` e manifest próprios,
+  inclusive em conflito ou falha inesperada de uma linha; arquivos concorrentes são
+  preservados e o destino contratado nunca é removido.
 
 ## R e DAG
 
@@ -66,8 +72,11 @@ Gates confirmados:
   coincidem com os manifests;
 - os hashes e schemas dos ledgers autorais coincidem com o contrato;
 - booleanos inválidos, ponteiros inseguros e chaves duplicadas são rejeitados;
-- anos fracionários, datas impossíveis, hostnames/portas/caminhos inválidos e
-  `archive_url` não vazio sem HTTP(S) válido são rejeitados;
+- anos fracionários, datas impossíveis, timestamps RFC 3339 inválidos,
+  hostnames/portas/componentes URI inválidos e `archive_url` não vazio sem HTTP(S)
+  válido são rejeitados;
+- timestamps RFC 3339 válidos com fração de segundo, `t`/`z` minúsculos e segundo
+  intercalar no fim de junho/dezembro são aceitos;
 - o universo deve coincidir exatamente com os 14 pares autorais de código, nome e
   ano; substituições preservando 14 linhas falham;
 - o input congelado de identificação do incumbente coincide com o SHA-256

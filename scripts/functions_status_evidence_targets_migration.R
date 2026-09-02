@@ -64,32 +64,51 @@ status_evidence_valid_rfc3339 <- function(x) {
     }
     matched <- regexec(
       paste0(
-        "^([0-9]{4}-[0-9]{2}-[0-9]{2})T",
+        "^([0-9]{4}-[0-9]{2}-[0-9]{2})[Tt]",
         "([0-9]{2}):([0-9]{2}):([0-9]{2})",
-        "(Z|[+-]([0-9]{2}):([0-9]{2}))$"
+        "(\\.[0-9]+)?([Zz]|([+-])([0-9]{2}):([0-9]{2}))$"
       ),
       timestamp,
       perl = TRUE
     )
     fields <- regmatches(timestamp, matched)[[1L]]
-    if (length(fields) != 8L ||
+    if (length(fields) != 10L ||
         !status_evidence_valid_iso_date(fields[[2L]])) {
       return(FALSE)
     }
     hour <- as.integer(fields[[3L]])
     minute <- as.integer(fields[[4L]])
     second <- as.integer(fields[[5L]])
-    if (hour > 23L || minute > 59L || second > 59L) {
+    if (hour > 23L || minute > 59L || second > 60L) {
       return(FALSE)
     }
-    if (identical(fields[[6L]], "Z")) {
+    zone <- fields[[7L]]
+    if (tolower(zone) == "z") {
+      offset_seconds <- 0
+    } else {
+      offset_hour <- as.integer(fields[[9L]])
+      offset_minute <- as.integer(fields[[10L]])
+      if (offset_minute > 59L || offset_hour > 14L ||
+          (offset_hour == 14L && offset_minute != 0L)) {
+        return(FALSE)
+      }
+      direction <- if (identical(fields[[8L]], "+")) 1 else -1
+      offset_seconds <- direction * (3600 * offset_hour + 60 * offset_minute)
+    }
+    if (second < 60L) {
       return(TRUE)
     }
-    offset_hour <- as.integer(fields[[7L]])
-    offset_minute <- as.integer(fields[[8L]])
-    offset_minute <= 59L &&
-      (offset_hour < 14L ||
-         (offset_hour == 14L && offset_minute == 0L))
+    if (minute != 59L) {
+      return(FALSE)
+    }
+    local_end <- as.POSIXct(
+      paste(fields[[2L]], sprintf("%02d:%02d:59", hour, minute)),
+      format = "%Y-%m-%d %H:%M:%S",
+      tz = "UTC"
+    )
+    utc_end <- local_end - offset_seconds
+    format(utc_end, "%m-%d %H:%M", tz = "UTC") %in%
+      c("06-30 23:59", "12-31 23:59")
   }, logical(1), USE.NAMES = FALSE)
 }
 
@@ -103,16 +122,27 @@ status_evidence_valid_http_url <- function(x) {
       return(FALSE)
     }
     match <- regexec(
-      "^(https?)://([^/?#]+)(.*)$",
+      paste0(
+        "^(https?)://([^/?#]+)([^?#]*)",
+        "(?:\\?([^#]*))?(?:#(.*))?$"
+      ),
       url,
       ignore.case = TRUE,
       perl = TRUE
     )
     fields <- regmatches(url, match)[[1L]]
-    if (length(fields) != 4L) {
+    if (length(fields) != 6L) {
       return(FALSE)
     }
     authority <- fields[[3L]]
+    path <- fields[[4L]]
+    query <- fields[[5L]]
+    fragment <- fields[[6L]]
+    if (!grepl("^[A-Za-z0-9._~!$&'()*+,;=:@/%-]*$", path, perl = TRUE) ||
+        !grepl("^[A-Za-z0-9._~!$&'()*+,;=:@/?%-]*$", query, perl = TRUE) ||
+        !grepl("^[A-Za-z0-9._~!$&'()*+,;=:@/?%-]*$", fragment, perl = TRUE)) {
+      return(FALSE)
+    }
     if (grepl("@", authority, fixed = TRUE)) {
       return(FALSE)
     }
@@ -136,9 +166,11 @@ status_evidence_valid_http_url <- function(x) {
         return(FALSE)
       }
       if (grepl("^[0-9]+(?:\\.[0-9]+){3}$", host, perl = TRUE)) {
-        octets <- suppressWarnings(as.integer(strsplit(host, ".", fixed = TRUE)[[1L]]))
+        octet_text <- strsplit(host, ".", fixed = TRUE)[[1L]]
+        octets <- suppressWarnings(as.integer(octet_text))
         if (length(octets) != 4L || anyNA(octets) ||
-            any(octets < 0L | octets > 255L)) {
+            any(octets < 0L | octets > 255L) ||
+            !identical(as.character(octets), octet_text)) {
           return(FALSE)
         }
       } else {

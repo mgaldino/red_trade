@@ -140,6 +140,10 @@ casos pesquisados, não como cobertura completa da amostra tratada atual.
 11. A promoção de uma recuperação congelada deve vincular verificação e cópia aos
     mesmos bytes, revalidar o destino e nunca remover por pathname um arquivo que
     possa ter sido criado ou substituído concorrentemente.
+12. Cada redirecionamento deve permanecer em HTTP(S). Toda execução que crie staging
+    deve terminar com log e manifest próprios, inclusive quando uma linha falhar ou
+    encontrar um destino concorrente; conflitos são bloqueantes e nunca apagam o
+    arquivo concorrente.
 
 ## Testes autorizados antes do build
 

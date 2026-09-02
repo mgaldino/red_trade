@@ -1350,21 +1350,10 @@ def main() -> int:
         if not result.status.startswith("cached_")
     ]
     if batch.staging_dir is not None:
-        acquisition.write_json_log(
-            batch.staging_dir / "fetch_log.json",
-            batch.results,
-        )
-        acquisition.write_staging_manifest(batch.staging_dir)
         logging.info("Archived %d new acquisition result(s)", len(attempted))
     else:
         logging.info("All coded raw files already exist; no files were changed")
-    blocking = [
-        result
-        for result in attempted
-        if result.status.startswith("hash_mismatch_")
-        or result.status.endswith("_http_error")
-        or result.status.endswith("_error")
-    ]
+    blocking = list(filter(acquisition.acquisition_result_is_blocking, attempted))
     return 2 if blocking else 0
 
 

@@ -12,6 +12,8 @@ import json
 import math
 import sys
 import tempfile
+import urllib.request
+from email.message import Message
 from pathlib import Path
 
 
@@ -330,13 +332,11 @@ def run_fixture_tests() -> None:
             any(batch.staging_dir.rglob("missing.metadata.json")),
             "new acquisition archives metadata only in staging",
         )
-        acquisition.write_json_log(
-            batch.staging_dir / "fetch_log.json",
-            batch.results,
-        )
-        staging_manifest = acquisition.write_staging_manifest(batch.staging_dir)
+        staging_manifest = batch.staging_dir / "checksums.sha256"
         expect(
-            staging_manifest.is_file() and manifest.read_bytes() == frozen_manifest,
+            (batch.staging_dir / "fetch_log.json").is_file()
+            and staging_manifest.is_file()
+            and manifest.read_bytes() == frozen_manifest,
             "run log and staging manifest leave the frozen manifest immutable",
         )
         rows = acquisition.validate_frozen_archive(
@@ -452,6 +452,91 @@ def run_staging_failure_tests() -> None:
         )
 
 
+def run_batch_finalization_failure_tests() -> None:
+    """Keep a complete audit record for conflicts and unexpected row failures."""
+
+    with tempfile.TemporaryDirectory(prefix="status_evidence_finalization_") as temp:
+        fixture_root = Path(temp)
+        for case in ("destination_conflict", "internal_error"):
+            root = fixture_root / case
+            raw_dir = root / "data" / "raw" / "fixture"
+            raw_dir.mkdir(parents=True)
+            raw_path = raw_dir / "missing.html"
+            manifest = raw_dir / "checksums.sha256"
+            manifest.write_text(
+                f"{sha256_bytes(b'expected')}  missing.html\n",
+                encoding="utf-8",
+            )
+            ledger = root / "ledger.csv"
+            write_fixture_ledger(ledger, "data/raw/fixture/missing.html")
+            rows = acquisition.validate_frozen_archive(
+                root=root,
+                ledger_path=ledger,
+                raw_dir=raw_dir,
+                manifest_path=manifest,
+                expected_entries=1,
+                allow_missing=True,
+            )
+            original_request = acquisition.request_missing_url
+
+            def fake_request(**kwargs):
+                if case == "internal_error":
+                    raise RuntimeError("fixture row failure")
+                kwargs["output_path"].parent.mkdir(parents=True, exist_ok=True)
+                kwargs["output_path"].write_bytes(b"expected")
+                raw_path.write_bytes(b"competing")
+                return acquisition.AcquisitionResult(
+                    source_id="",
+                    url=kwargs["url"],
+                    status="ok",
+                    status_code=200,
+                    content_type="text/html",
+                    raw_file="",
+                    size_bytes=8,
+                    error="",
+                    accessed_at="2026-09-02T00:00:00+00:00",
+                )
+
+            acquisition.request_missing_url = fake_request
+            try:
+                batch = acquisition.acquire_missing_ledger_files(
+                    root=root,
+                    raw_dir=raw_dir,
+                    rows=rows,
+                    user_agent="fixture/1.0",
+                    timeout_seconds=1,
+                    retries=1,
+                    backoff_seconds=0,
+                    frozen_entries=acquisition.read_checksum_manifest(
+                        manifest,
+                        raw_dir,
+                    ),
+                )
+            finally:
+                acquisition.request_missing_url = original_request
+            result = batch.results[0]
+            expect(
+                batch.staging_dir is not None
+                and (batch.staging_dir / "fetch_log.json").is_file()
+                and (batch.staging_dir / "checksums.sha256").is_file(),
+                f"{case} finalizes the immutable staging log and manifest",
+            )
+            if case == "destination_conflict":
+                expect(
+                    result.status == "destination_conflict_staged_ok"
+                    and acquisition.acquisition_result_is_blocking(result)
+                    and raw_path.read_bytes() == b"competing",
+                    "competing unexpected destination is classified and preserved",
+                )
+            else:
+                expect(
+                    result.status == "internal_error"
+                    and acquisition.acquisition_result_is_blocking(result)
+                    and not raw_path.exists(),
+                    "unexpected row failure is blocking and publishes no raw file",
+                )
+
+
 def run_validation_edge_tests() -> None:
     with tempfile.TemporaryDirectory(prefix="status_evidence_edges_") as temp:
         root = Path(temp)
@@ -531,11 +616,47 @@ def run_validation_edge_tests() -> None:
             "https://example.com/\x80",
             "https://example.com/<",
             "https://example.com/é",
+            "https://example.com/[raw]",
+            "https://example.com/?q=[raw]",
+            "https://example.com/#a#b",
+            "http://[::1]/source",
         ):
             expect_error(
                 lambda value=invalid_url: acquisition.validate_http_url(value),
                 f"invalid acquisition URL is rejected: {invalid_url}",
             )
+        expect(
+            acquisition.validate_http_url(
+                "https://example.com/a%5Bb%5D?x=1/2?3#valid/fragment?"
+            )
+            == "https://example.com/a%5Bb%5D?x=1/2?3#valid/fragment?",
+            "component-valid percent-encoded HTTP URI is accepted",
+        )
+        redirect_handler = acquisition.HttpOnlyRedirectHandler()
+        redirect_request = urllib.request.Request("https://example.com/start")
+        expect_error(
+            lambda: redirect_handler.redirect_request(
+                redirect_request,
+                None,
+                302,
+                "Found",
+                Message(),
+                "ftp://example.com/file",
+            ),
+            "redirects outside HTTP(S) are rejected before opening",
+        )
+        redirected = redirect_handler.redirect_request(
+            redirect_request,
+            None,
+            302,
+            "Found",
+            Message(),
+            "https://example.com/next",
+        )
+        expect(
+            redirected.full_url == "https://example.com/next",
+            "valid HTTPS redirects remain available",
+        )
         expect_error(
             lambda: acquisition.validate_acquisition_options(
                 timeout_seconds=0,
@@ -637,13 +758,26 @@ def run_validation_edge_tests() -> None:
         )
         mismatch_target = root / "mismatch.raw"
         expect(
-            not acquisition._copy_verified_exclusive(
+            acquisition._copy_verified_exclusive(
                 copy_source,
                 mismatch_target,
                 sha256_bytes(b"different"),
             )
+            == "hash_mismatch"
             and not mismatch_target.exists(),
             "hash-mismatched bytes are never published to the frozen path",
+        )
+        concurrent_match = root / "concurrent_match.raw"
+        concurrent_match.write_bytes(b"candidate")
+        expect(
+            acquisition._copy_verified_exclusive(
+                copy_source,
+                concurrent_match,
+                sha256_bytes(b"candidate"),
+            )
+            == "concurrent_match"
+            and concurrent_match.read_bytes() == b"candidate",
+            "matching concurrent publication is classified and preserved",
         )
 
 
@@ -715,5 +849,6 @@ if __name__ == "__main__":
     run_entrypoint_acquisition_fixture_tests()
     run_fixture_tests()
     run_staging_failure_tests()
+    run_batch_finalization_failure_tests()
     run_validation_edge_tests()
     print("ALL_STATIC_STATUS_EVIDENCE_PYTHON_TESTS_PASSED")
