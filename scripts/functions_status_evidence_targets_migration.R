@@ -56,11 +56,49 @@ status_evidence_valid_iso_date <- function(x) {
   lexically_valid & !is.na(parsed) & format(parsed, "%Y-%m-%d") == value
 }
 
+status_evidence_valid_rfc3339 <- function(x) {
+  value <- as.character(x)
+  vapply(value, function(timestamp) {
+    if (is.na(timestamp)) {
+      return(FALSE)
+    }
+    matched <- regexec(
+      paste0(
+        "^([0-9]{4}-[0-9]{2}-[0-9]{2})T",
+        "([0-9]{2}):([0-9]{2}):([0-9]{2})",
+        "(Z|[+-]([0-9]{2}):([0-9]{2}))$"
+      ),
+      timestamp,
+      perl = TRUE
+    )
+    fields <- regmatches(timestamp, matched)[[1L]]
+    if (length(fields) != 8L ||
+        !status_evidence_valid_iso_date(fields[[2L]])) {
+      return(FALSE)
+    }
+    hour <- as.integer(fields[[3L]])
+    minute <- as.integer(fields[[4L]])
+    second <- as.integer(fields[[5L]])
+    if (hour > 23L || minute > 59L || second > 59L) {
+      return(FALSE)
+    }
+    if (identical(fields[[6L]], "Z")) {
+      return(TRUE)
+    }
+    offset_hour <- as.integer(fields[[7L]])
+    offset_minute <- as.integer(fields[[8L]])
+    offset_minute <= 59L &&
+      (offset_hour < 14L ||
+         (offset_hour == 14L && offset_minute == 0L))
+  }, logical(1), USE.NAMES = FALSE)
+}
+
 status_evidence_valid_http_url <- function(x) {
   value <- as.character(x)
   vapply(value, function(url) {
     if (is.na(url) || !nzchar(url) ||
         grepl("[[:space:][:cntrl:]\\\\]", url, perl = TRUE) ||
+        grepl("[^A-Za-z0-9:/?#\\[\\]@!$&'()*+,;=._~%-]", url, perl = TRUE) ||
         grepl("%(?![0-9A-Fa-f]{2})", url, perl = TRUE)) {
       return(FALSE)
     }
@@ -79,17 +117,9 @@ status_evidence_valid_http_url <- function(x) {
       return(FALSE)
     }
     if (startsWith(authority, "[")) {
-      host_match <- regexec(
-        "^\\[([0-9A-Fa-f:.]+)\\](?::([0-9]+))?$",
-        authority,
-        perl = TRUE
-      )
-      host_fields <- regmatches(authority, host_match)[[1L]]
-      if (length(host_fields) == 0L ||
-          !grepl(":", host_fields[[2L]], fixed = TRUE)) {
-        return(FALSE)
-      }
-      port <- if (length(host_fields) >= 3L) host_fields[[3L]] else ""
+      # The frozen ledgers use DNS names or IPv4 only. Reject every bracketed
+      # literal rather than implementing an incomplete IPv6 parser in base R.
+      return(FALSE)
     } else {
       host_match <- regexec(
         "^([^:]+)(?::([0-9]+))?$",
@@ -377,6 +407,9 @@ validate_status_evidence_source_ledger <- function(source,
     all(entry_year >= 1990L & entry_year <= 2023L) &&
     all(evidence_year >= 1990L & evidence_year <= 2023L)
   dates_valid <- all(status_evidence_valid_iso_date(source$publication_date))
+  access_timestamps_valid <- all(
+    status_evidence_valid_rfc3339(source$accessed_at)
+  )
   urls_valid <- all(status_evidence_valid_http_url(source$url))
   archive_url_present <- !is.na(source$archive_url) & nzchar(source$archive_url)
   archive_urls_valid <- all(
@@ -391,6 +424,7 @@ validate_status_evidence_source_ledger <- function(source,
       "ledger_country_codes_valid",
       "ledger_years_valid",
       "ledger_publication_dates_valid",
+      "ledger_access_timestamps_valid",
       "ledger_urls_valid",
       "ledger_archive_urls_valid",
       "ledger_booleans_valid",
@@ -406,6 +440,7 @@ validate_status_evidence_source_ledger <- function(source,
       !anyNA(source$iso3c) && all(grepl("^[A-Z]{3}$", source$iso3c)),
       years_valid,
       dates_valid,
+      access_timestamps_valid,
       urls_valid,
       archive_urls_valid,
       all(bool_valid),
@@ -424,6 +459,12 @@ validate_status_evidence_source_ledger <- function(source,
       paste0("valid_dates=", sum(status_evidence_valid_iso_date(
         source$publication_date
       )), "/", nrow(source)),
+      paste0(
+        "valid_access_timestamps=",
+        sum(status_evidence_valid_rfc3339(source$accessed_at)),
+        "/",
+        nrow(source)
+      ),
       paste0("valid_urls=", sum(status_evidence_valid_http_url(source$url)),
              "/", nrow(source)),
       paste0(

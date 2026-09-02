@@ -527,6 +527,10 @@ def run_validation_edge_tests() -> None:
             "https://example.com:bad",
             "https://example.com/ bad",
             "https://example.com/%zz",
+            "https://example.com/\x7f",
+            "https://example.com/\x80",
+            "https://example.com/<",
+            "https://example.com/é",
         ):
             expect_error(
                 lambda value=invalid_url: acquisition.validate_http_url(value),

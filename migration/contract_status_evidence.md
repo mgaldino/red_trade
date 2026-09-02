@@ -121,8 +121,9 @@ casos pesquisados, não como cobertura completa da amostra tratada atual.
 3. Os ledgers têm 21 e 22 chaves-fonte únicas e coincidem com os hashes congelados.
 4. Todos os `raw_file` não vazios pertencem ao diretório bruto correto, existem e
    constam do manifest correspondente. `url` e todo `archive_url` não vazio devem
-   ser HTTP(S) sintaticamente válidos, com hostname e porta válidos, sem espaços,
-   controles ou escapes percentuais malformados.
+   ser URIs ASCII HTTP(S) sintaticamente válidas, com hostname DNS ou IPv4 e porta
+   válidos, sem caracteres crus fora da gramática URI ou escapes percentuais
+   malformados. `accessed_at` deve ser um timestamp RFC 3339 válido.
 5. O universo coincide exatamente, em código ISO3, nome e ano de entrada, com os 14
    casos contratados; anos fracionários, códigos inválidos ou substituições são erro.
 6. Os códigos usam somente os vocabulários contratuais; flags booleanas não admitem

@@ -30,6 +30,13 @@ from typing import BinaryIO, Iterable
 
 LOGGER = logging.getLogger(__name__)
 
+URI_ASCII_CHARACTERS = frozenset(
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    "abcdefghijklmnopqrstuvwxyz"
+    "0123456789"
+    "-._~:/?#[]@!$&'()*+,;=%"
+)
+
 
 @dataclass(frozen=True)
 class AcquisitionResult:
@@ -78,13 +85,12 @@ def read_csv_rows(path: Path) -> list[dict[str, str]]:
 
 
 def validate_http_url(value: str) -> str:
-    """Return a normalized HTTP(S) URL or reject unsupported locations."""
+    """Return an ASCII HTTP(S) URI or reject unsupported locations."""
 
     if (
         not isinstance(value, str)
         or not value
-        or "\\" in value
-        or any(character.isspace() or ord(character) < 32 for character in value)
+        or any(character not in URI_ASCII_CHARACTERS for character in value)
         or re.search(r"%(?![0-9A-Fa-f]{2})", value)
     ):
         raise ValueError(f"Invalid HTTP(S) URL: {value!r}")

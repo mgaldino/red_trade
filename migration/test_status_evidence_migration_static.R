@@ -160,13 +160,52 @@ expect_validation_false(
   "invalid ISO publication date is rejected"
 )
 
+invalid_access_timestamp <- status_source
+invalid_access_timestamp$accessed_at[[1]] <- "not-a-date"
+expect_validation_false(
+  validate_status_evidence_source_ledger(
+    invalid_access_timestamp,
+    status_source_file,
+    "status",
+    status_raw_files,
+    status_raw_directory,
+    21L
+  ),
+  "ledger_access_timestamps_valid",
+  "invalid access timestamp is rejected"
+)
+expect(
+  all(status_evidence_valid_rfc3339(c(
+    "2026-09-02T05:41:39Z",
+    "2026-09-02T05:41:39+00:00",
+    "2024-02-29T23:59:59-14:00"
+  ))),
+  "valid RFC 3339 access timestamps are accepted"
+)
+expect(
+  !any(status_evidence_valid_rfc3339(c(
+    "2023-02-29T00:00:00Z",
+    "2026-09-02T24:00:00Z",
+    "2026-09-02T00:60:00Z",
+    "2026-09-02T00:00:60Z",
+    "2026-09-02T00:00:00+14:01",
+    "2026-09-02T00:00:00+00:60"
+  ))),
+  "invalid RFC 3339 components are rejected"
+)
+
 invalid_urls <- c(
   "file:///tmp/source",
   "https://-",
   "http://user@",
   "https://example.com:bad",
   "https://example.com/ bad",
-  "https://example.com/%zz"
+  "https://example.com/%zz",
+  "https://[::1]/x",
+  "https://[::::]/x",
+  "https://[1:2:3:4:5:6:7:8:9]/x",
+  "https://example.com/<",
+  "https://example.com/é"
 )
 for (bad_url in invalid_urls) {
   invalid_url <- status_source
@@ -185,20 +224,22 @@ for (bad_url in invalid_urls) {
   )
 }
 
-invalid_archive_url <- status_source
-invalid_archive_url$archive_url[[1]] <- "file:///tmp/archive"
-expect_validation_false(
-  validate_status_evidence_source_ledger(
-    invalid_archive_url,
-    status_source_file,
-    "status",
-    status_raw_files,
-    status_raw_directory,
-    21L
-  ),
-  "ledger_archive_urls_valid",
-  "nonblank invalid archive URL is rejected"
-)
+for (bad_archive_url in c("file:///tmp/archive", "https://[::::]/archive")) {
+  invalid_archive_url <- status_source
+  invalid_archive_url$archive_url[[1]] <- bad_archive_url
+  expect_validation_false(
+    validate_status_evidence_source_ledger(
+      invalid_archive_url,
+      status_source_file,
+      "status",
+      status_raw_files,
+      status_raw_directory,
+      21L
+    ),
+    "ledger_archive_urls_valid",
+    paste0("nonblank invalid archive URL is rejected: ", bad_archive_url)
+  )
+}
 
 invalid_pointer <- status_source
 invalid_pointer$raw_file[[1]] <- "data/raw/status_cue_salience/../escape.html"
