@@ -18,15 +18,21 @@ expect_true <- function(value, label) {
   message("PASS: ", label)
 }
 
-expect_error <- function(expression, label) {
-  failed <- tryCatch(
+expect_error <- function(expression, label, pattern = NULL) {
+  observed_error <- tryCatch(
     {
       force(expression)
-      FALSE
+      NULL
     },
-    error = function(error) TRUE
+    error = identity
   )
-  expect_true(failed, label)
+  matched <- inherits(observed_error, "error") &&
+    (is.null(pattern) || grepl(
+      pattern,
+      conditionMessage(observed_error),
+      fixed = TRUE
+    ))
+  expect_true(matched, label)
 }
 
 file_text <- function(path) {
@@ -313,8 +319,58 @@ dir.create(publish_fixture)
 on.exit(unlink(publish_fixture, recursive = TRUE, force = TRUE), add = TRUE)
 stage_paths <- file.path(publish_fixture, c("stage.pdf", "stage.png"))
 output_paths <- file.path(publish_fixture, c("output.pdf", "output.png"))
-writeLines(c("new-pdf", "new-pdf-2"), stage_paths[[1L]])
-writeLines(c("new-png", "new-png-2"), stage_paths[[2L]])
+link_target <- file.path(publish_fixture, "link-target.txt")
+backup_paths <- function() {
+  list.files(
+    publish_fixture,
+    pattern = "^manuscript-artifact-backup-",
+    full.names = TRUE,
+    all.files = TRUE
+  )
+}
+reset_publish_fixture <- function() {
+  unlink(
+    c(stage_paths, output_paths, link_target, backup_paths()),
+    recursive = TRUE,
+    force = TRUE
+  )
+}
+write_stage_files <- function(prefix = "new") {
+  writeLines(paste0(prefix, "-pdf"), stage_paths[[1L]])
+  writeLines(paste0(prefix, "-png"), stage_paths[[2L]])
+}
+
+reset_publish_fixture()
+write_stage_files("fresh")
+published <- publish_manuscript_file_set_transactionally(
+  stage_paths,
+  output_paths
+)
+expect_true(
+  identical(published, output_paths) &&
+    identical(readLines(output_paths[[1L]]), "fresh-pdf") &&
+    identical(readLines(output_paths[[2L]]), "fresh-png") &&
+    length(backup_paths()) == 0L,
+  "successful publication without prior outputs leaves both artifacts and no backups"
+)
+
+reset_publish_fixture()
+write_stage_files("replacement")
+writeLines("old-pdf", output_paths[[1L]])
+writeLines("old-png", output_paths[[2L]])
+invisible(publish_manuscript_file_set_transactionally(
+  stage_paths,
+  output_paths
+))
+expect_true(
+  identical(readLines(output_paths[[1L]]), "replacement-pdf") &&
+    identical(readLines(output_paths[[2L]]), "replacement-png") &&
+    length(backup_paths()) == 0L,
+  "successful replacement publishes both artifacts and removes verified backups"
+)
+
+reset_publish_fixture()
+write_stage_files("failed")
 writeLines("old-pdf", output_paths[[1L]])
 writeLines("old-png", output_paths[[2L]])
 move_calls <- 0L
@@ -329,17 +385,19 @@ expect_error(
     output_paths,
     move_file = fail_second_move
   ),
-  "two-file publication fails closed when the second atomic move fails"
+  "two-file publication fails closed when the second atomic move fails",
+  pattern = "All final paths were rolled back"
 )
 expect_true(
   identical(readLines(output_paths[[1L]]), "old-pdf") &&
-    identical(readLines(output_paths[[2L]]), "old-png"),
-  "failed two-file publication restores both previous artifacts"
+    identical(readLines(output_paths[[2L]]), "old-png") &&
+    length(backup_paths()) == 0L,
+  "failed two-file publication restores both previous artifacts and removes backups"
 )
 
-writeLines("fresh-pdf", stage_paths[[1L]])
-writeLines("fresh-png", stage_paths[[2L]])
-unlink(output_paths, force = TRUE)
+reset_publish_fixture()
+write_stage_files("mixed")
+writeLines("old-pdf", output_paths[[1L]])
 move_calls <- 0L
 expect_error(
   publish_manuscript_file_set_transactionally(
@@ -347,24 +405,189 @@ expect_error(
     output_paths,
     move_file = fail_second_move
   ),
-  "failed publication with no prior artifacts raises an error"
+  "failed publication rolls back a mixed prior-output state",
+  pattern = "All final paths were rolled back"
 )
 expect_true(
-  !any(file.exists(output_paths)),
-  "failed publication with no prior artifacts leaves neither final path"
+  identical(readLines(output_paths[[1L]]), "old-pdf") &&
+    !file.exists(output_paths[[2L]]) &&
+    length(backup_paths()) == 0L,
+  "mixed rollback restores the old artifact and leaves the other path absent"
 )
 
-writeLines("directory-guard-pdf", stage_paths[[1L]])
-writeLines("directory-guard-png", stage_paths[[2L]])
+reset_publish_fixture()
+write_stage_files("absent")
+move_calls <- 0L
+expect_error(
+  publish_manuscript_file_set_transactionally(
+    stage_paths,
+    output_paths,
+    move_file = fail_second_move
+  ),
+  "failed publication with no prior artifacts raises the rollback error",
+  pattern = "All final paths were rolled back"
+)
+expect_true(
+  !any(file.exists(output_paths)) && length(backup_paths()) == 0L,
+  "failed publication with no prior artifacts leaves no finals or backups"
+)
+
+reset_publish_fixture()
+write_stage_files("directory-guard")
 dir.create(output_paths[[1L]])
 expect_error(
   publish_manuscript_file_set_transactionally(stage_paths, output_paths),
-  "two-file publication rejects a final path that is a directory"
+  "two-file publication rejects a final path that is a directory",
+  pattern = "directories or symbolic links"
 )
 expect_true(
   file.info(output_paths[[1L]])$isdir &&
     !file.exists(output_paths[[2L]]),
   "directory rejection occurs before either final artifact is published"
+)
+
+reset_publish_fixture()
+write_stage_files("valid-link-guard")
+writeLines("link-target", link_target)
+expect_true(
+  isTRUE(file.symlink(link_target, output_paths[[1L]])),
+  "valid output symlink fixture is available"
+)
+expect_error(
+  publish_manuscript_file_set_transactionally(stage_paths, output_paths),
+  "two-file publication rejects a valid output symlink",
+  pattern = "directories or symbolic links"
+)
+expect_true(
+  nzchar(Sys.readlink(output_paths[[1L]])) &&
+    !file.exists(output_paths[[2L]]),
+  "valid output symlink rejection occurs before publication"
+)
+
+reset_publish_fixture()
+write_stage_files("dangling-link-guard")
+expect_true(
+  isTRUE(file.symlink(
+    file.path(publish_fixture, "missing-target"),
+    output_paths[[1L]]
+  )),
+  "dangling output symlink fixture is available"
+)
+expect_error(
+  publish_manuscript_file_set_transactionally(stage_paths, output_paths),
+  "two-file publication rejects a dangling output symlink",
+  pattern = "directories or symbolic links"
+)
+expect_true(
+  nzchar(Sys.readlink(output_paths[[1L]])) &&
+    !file.exists(output_paths[[2L]]),
+  "dangling output symlink rejection occurs before publication"
+)
+
+reset_publish_fixture()
+writeLines("staged-link-target", link_target)
+expect_true(
+  isTRUE(file.symlink(link_target, stage_paths[[1L]])),
+  "valid staged symlink fixture is available"
+)
+writeLines("regular-stage", stage_paths[[2L]])
+expect_error(
+  publish_manuscript_file_set_transactionally(stage_paths, output_paths),
+  "two-file publication rejects a valid staged symlink",
+  pattern = "regular file"
+)
+
+reset_publish_fixture()
+expect_true(
+  isTRUE(file.symlink(
+    file.path(publish_fixture, "missing-stage-target"),
+    stage_paths[[1L]]
+  )),
+  "dangling staged symlink fixture is available"
+)
+writeLines("regular-stage", stage_paths[[2L]])
+expect_error(
+  publish_manuscript_file_set_transactionally(stage_paths, output_paths),
+  "two-file publication rejects a dangling staged symlink",
+  pattern = "regular file"
+)
+
+reset_publish_fixture()
+write_stage_files("alias")
+expect_error(
+  publish_manuscript_file_set_transactionally(
+    stage_paths,
+    c(
+      output_paths[[1L]],
+      file.path(publish_fixture, ".", basename(output_paths[[1L]]))
+    )
+  ),
+  "two-file publication rejects aliased final paths",
+  pattern = "after path normalization"
+)
+expect_error(
+  publish_manuscript_file_set_transactionally(
+    c(
+      stage_paths[[1L]],
+      file.path(publish_fixture, ".", basename(stage_paths[[1L]]))
+    ),
+    output_paths
+  ),
+  "two-file publication rejects aliased staged paths",
+  pattern = "after path normalization"
+)
+expect_error(
+  publish_manuscript_file_set_transactionally(
+    stage_paths,
+    c(stage_paths[[1L]], output_paths[[2L]])
+  ),
+  "two-file publication rejects intersection between staged and final paths",
+  pattern = "after path normalization"
+)
+expect_error(
+  publish_manuscript_file_set_transactionally(
+    as.list(stage_paths),
+    output_paths
+  ),
+  "two-file publication rejects non-character path containers",
+  pattern = "character vectors"
+)
+expect_error(
+  publish_manuscript_file_set_transactionally(
+    stage_paths,
+    c(output_paths[[1L]], NA_character_)
+  ),
+  "two-file publication rejects missing final paths",
+  pattern = "one-to-one file set"
+)
+
+reset_publish_fixture()
+write_stage_files("rollback-failure")
+writeLines("old-pdf", output_paths[[1L]])
+writeLines("old-png", output_paths[[2L]])
+move_calls <- 0L
+copy_calls <- 0L
+fail_first_restore <- function(from, to, ...) {
+  copy_calls <<- copy_calls + 1L
+  if (copy_calls == 3L) return(FALSE)
+  file.copy(from, to, ...)
+}
+expect_error(
+  publish_manuscript_file_set_transactionally(
+    stage_paths,
+    output_paths,
+    move_file = fail_second_move,
+    copy_file = fail_first_restore
+  ),
+  "rollback failure is surfaced explicitly",
+  pattern = "Rollback also failed; preserved backups at"
+)
+preserved_backups <- backup_paths()
+expect_true(
+  length(preserved_backups) == 2L &&
+    all(file.exists(preserved_backups)) &&
+    all(file.info(preserved_backups)$size > 0L),
+  "verified backups are preserved when rollback cannot restore every output"
 )
 
 static_store <- tempfile("manuscript_integration_targets_static_store_")

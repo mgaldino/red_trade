@@ -120,41 +120,94 @@ build_full_union_country_audit_candidate <- function(
 publish_manuscript_file_set_transactionally <- function(
     staged,
     outputs,
-    move_file = file.rename) {
+    move_file = file.rename,
+    copy_file = file.copy,
+    remove_file = function(path) unlink(path, force = TRUE)) {
+  if (!is.character(staged) || !is.character(outputs) ||
+      !is.function(move_file) || !is.function(copy_file) ||
+      !is.function(remove_file)) {
+    stop("Paths must be character vectors and filesystem operations functions.",
+         call. = FALSE)
+  }
   if (length(staged) == 0L || length(staged) != length(outputs) ||
       anyNA(staged) || anyNA(outputs) || any(staged == "") ||
-      any(outputs == "") || anyDuplicated(outputs)) {
+      any(outputs == "")) {
     stop("Staged and final paths must form a nonempty one-to-one file set.",
          call. = FALSE)
   }
 
+  path_is_link <- function(paths) {
+    links <- Sys.readlink(paths)
+    !is.na(links) & nzchar(links)
+  }
+  path_exists_or_link <- function(paths) {
+    file.exists(paths) | path_is_link(paths)
+  }
+  path_identity <- function(paths) {
+    parents <- dirname(paths)
+    if (any(!dir.exists(parents))) {
+      stop("Every artifact parent directory must already exist.",
+           call. = FALSE)
+    }
+    file.path(
+      normalizePath(parents, winslash = "/", mustWork = TRUE),
+      basename(paths)
+    )
+  }
+  staged_identity <- path_identity(staged)
+  output_identity <- path_identity(outputs)
+  if (anyDuplicated(staged_identity) || anyDuplicated(output_identity) ||
+      length(intersect(staged_identity, output_identity)) > 0L) {
+    stop(
+      "Staged and final paths must remain distinct after path normalization.",
+      call. = FALSE
+    )
+  }
+
   staged_info <- file.info(staged)
-  staged_links <- Sys.readlink(staged)
   if (any(!file.exists(staged)) || anyNA(staged_info$isdir) ||
       any(staged_info$isdir) ||
-      any(!is.na(staged_links) & nzchar(staged_links)) ||
+      any(path_is_link(staged)) ||
       anyNA(staged_info$size) || any(staged_info$size <= 0L)) {
     stop("Every staged artifact must be a nonempty regular file.",
          call. = FALSE)
   }
 
-  output_exists <- file.exists(outputs)
+  output_exists <- path_exists_or_link(outputs)
   output_info <- file.info(outputs)
-  output_links <- Sys.readlink(outputs)
-  if (any(output_exists &
-          (is.na(output_info$isdir) | output_info$isdir)) ||
-      any(output_exists & !is.na(output_links) & nzchar(output_links))) {
+  if (any(path_is_link(outputs)) ||
+      any(output_exists &
+          (is.na(output_info$isdir) | output_info$isdir))) {
     stop("Final artifact paths cannot be directories or symbolic links.",
          call. = FALSE)
   }
 
   staged_size <- staged_info$size
   staged_md5 <- unname(tools::md5sum(staged))
+  if (anyNA(staged_md5)) {
+    stop("Could not hash every staged artifact.", call. = FALSE)
+  }
   backups <- rep(NA_character_, length(outputs))
-  cleanup_backups <- TRUE
+  preserve_backups <- FALSE
+  backups_cleaned <- FALSE
+  remove_paths_checked <- function(paths) {
+    paths <- paths[!is.na(paths)]
+    if (length(paths) == 0L) return(TRUE)
+    status <- vapply(
+      paths,
+      function(path) {
+        if (!path_exists_or_link(path)) return(0L)
+        result <- tryCatch(remove_file(path), error = function(error) 1L)
+        if (length(result) != 1L || is.na(result)) return(1L)
+        as.integer(result)
+      },
+      integer(1)
+    )
+    all(status == 0L) && !any(path_exists_or_link(paths))
+  }
   on.exit({
-    if (cleanup_backups) {
-      unlink(backups[!is.na(backups)], force = TRUE)
+    if (!preserve_backups && !backups_cleaned) {
+      invisible(remove_paths_checked(backups))
     }
   }, add = TRUE)
 
@@ -164,7 +217,7 @@ publish_manuscript_file_set_transactionally <- function(
       tmpdir = dirname(outputs[[index]]),
       fileext = paste0(".", tools::file_ext(outputs[[index]]))
     )
-    copied <- file.copy(
+    copied <- copy_file(
       outputs[[index]],
       backups[[index]],
       overwrite = FALSE,
@@ -189,10 +242,9 @@ publish_manuscript_file_set_transactionally <- function(
                call. = FALSE)
         }
         published_info <- file.info(outputs[[index]])
-        published_link <- Sys.readlink(outputs[[index]])
         if (!file.exists(outputs[[index]]) ||
             is.na(published_info$isdir) || published_info$isdir ||
-            (!is.na(published_link) && nzchar(published_link)) ||
+            path_is_link(outputs[[index]]) ||
             is.na(published_info$size) ||
             published_info$size != staged_size[[index]] ||
             unname(tools::md5sum(outputs[[index]])) != staged_md5[[index]]) {
@@ -211,10 +263,10 @@ publish_manuscript_file_set_transactionally <- function(
       if (output_exists[[index]]) {
         if (file.exists(outputs[[index]]) &&
             !isTRUE(file.info(outputs[[index]])$isdir)) {
-          unlink(outputs[[index]], force = TRUE)
+          remove_file(outputs[[index]])
         }
         restored <- !file.exists(outputs[[index]]) &&
-          isTRUE(file.copy(backups[[index]], outputs[[index]],
+          isTRUE(copy_file(backups[[index]], outputs[[index]],
                            overwrite = FALSE, copy.mode = TRUE,
                            copy.date = TRUE))
         rollback_ok[[index]] <- restored &&
@@ -223,18 +275,28 @@ publish_manuscript_file_set_transactionally <- function(
           unname(tools::md5sum(outputs[[index]])) ==
             unname(tools::md5sum(backups[[index]]))
       } else {
-        if (file.exists(outputs[[index]]) &&
+        if (path_exists_or_link(outputs[[index]]) &&
             !isTRUE(file.info(outputs[[index]])$isdir)) {
-          unlink(outputs[[index]], force = TRUE)
+          remove_file(outputs[[index]])
         }
-        rollback_ok[[index]] <- !file.exists(outputs[[index]])
+        rollback_ok[[index]] <- !path_exists_or_link(outputs[[index]])
       }
     }
     if (!all(rollback_ok)) {
-      cleanup_backups <- FALSE
+      preserve_backups <- TRUE
       stop(
         conditionMessage(publish_error),
         " Rollback also failed; preserved backups at: ",
+        paste(backups[!is.na(backups)], collapse = ", "),
+        call. = FALSE
+      )
+    }
+    backups_cleaned <- remove_paths_checked(backups)
+    if (!backups_cleaned) {
+      preserve_backups <- TRUE
+      stop(
+        conditionMessage(publish_error),
+        " Rollback succeeded, but backup cleanup failed; preserved at: ",
         paste(backups[!is.na(backups)], collapse = ", "),
         call. = FALSE
       )
@@ -243,6 +305,16 @@ publish_manuscript_file_set_transactionally <- function(
          " All final paths were rolled back.", call. = FALSE)
   }
 
+  backups_cleaned <- remove_paths_checked(backups)
+  if (!backups_cleaned) {
+    preserve_backups <- TRUE
+    stop(
+      "Artifacts were published, but verified backup cleanup failed; ",
+      "preserved at: ",
+      paste(backups[!is.na(backups)], collapse = ", "),
+      call. = FALSE
+    )
+  }
   outputs
 }
 

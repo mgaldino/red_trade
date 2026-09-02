@@ -30,6 +30,13 @@ Foram confirmados:
   incompatível e ATT agregado não reproduzido;
 - falha fechada do wrapper de dose–resposta diante de extensões de saída inválidas,
   sem invocar `Rscript`;
+- publicação transacional dos dois artefatos com e sem arquivos finais prévios;
+- rollback integral quando a segunda movimentação falha, inclusive no estado misto
+  em que somente um output existia;
+- rejeição anterior à publicação de diretórios, links simbólicos válidos ou quebrados,
+  aliases, colisões entre staged e outputs, containers inválidos e caminhos `NA`;
+- remoção verificada dos backups depois de sucesso e rollback e preservação dos
+  backups quando uma falha injetada impede o próprio rollback;
 - store configurado localmente, DAG acíclico e ancestralidade explícita dos inputs,
   gates, scripts e file targets novos.
 
