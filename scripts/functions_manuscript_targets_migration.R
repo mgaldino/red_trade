@@ -117,6 +117,135 @@ build_full_union_country_audit_candidate <- function(
   audit
 }
 
+publish_manuscript_file_set_transactionally <- function(
+    staged,
+    outputs,
+    move_file = file.rename) {
+  if (length(staged) == 0L || length(staged) != length(outputs) ||
+      anyNA(staged) || anyNA(outputs) || any(staged == "") ||
+      any(outputs == "") || anyDuplicated(outputs)) {
+    stop("Staged and final paths must form a nonempty one-to-one file set.",
+         call. = FALSE)
+  }
+
+  staged_info <- file.info(staged)
+  staged_links <- Sys.readlink(staged)
+  if (any(!file.exists(staged)) || anyNA(staged_info$isdir) ||
+      any(staged_info$isdir) ||
+      any(!is.na(staged_links) & nzchar(staged_links)) ||
+      anyNA(staged_info$size) || any(staged_info$size <= 0L)) {
+    stop("Every staged artifact must be a nonempty regular file.",
+         call. = FALSE)
+  }
+
+  output_exists <- file.exists(outputs)
+  output_info <- file.info(outputs)
+  output_links <- Sys.readlink(outputs)
+  if (any(output_exists &
+          (is.na(output_info$isdir) | output_info$isdir)) ||
+      any(output_exists & !is.na(output_links) & nzchar(output_links))) {
+    stop("Final artifact paths cannot be directories or symbolic links.",
+         call. = FALSE)
+  }
+
+  staged_size <- staged_info$size
+  staged_md5 <- unname(tools::md5sum(staged))
+  backups <- rep(NA_character_, length(outputs))
+  cleanup_backups <- TRUE
+  on.exit({
+    if (cleanup_backups) {
+      unlink(backups[!is.na(backups)], force = TRUE)
+    }
+  }, add = TRUE)
+
+  for (index in which(output_exists)) {
+    backups[[index]] <- tempfile(
+      "manuscript-artifact-backup-",
+      tmpdir = dirname(outputs[[index]]),
+      fileext = paste0(".", tools::file_ext(outputs[[index]]))
+    )
+    copied <- file.copy(
+      outputs[[index]],
+      backups[[index]],
+      overwrite = FALSE,
+      copy.mode = TRUE,
+      copy.date = TRUE
+    )
+    if (!isTRUE(copied) || !file.exists(backups[[index]]) ||
+        file.info(backups[[index]])$isdir ||
+        unname(tools::md5sum(backups[[index]])) !=
+          unname(tools::md5sum(outputs[[index]]))) {
+      stop("Could not create a verified backup before publishing artifacts.",
+           call. = FALSE)
+    }
+  }
+
+  publish_error <- tryCatch(
+    {
+      for (index in seq_along(outputs)) {
+        moved <- move_file(staged[[index]], outputs[[index]])
+        if (!isTRUE(moved)) {
+          stop("Could not atomically publish artifact ", index, ".",
+               call. = FALSE)
+        }
+        published_info <- file.info(outputs[[index]])
+        published_link <- Sys.readlink(outputs[[index]])
+        if (!file.exists(outputs[[index]]) ||
+            is.na(published_info$isdir) || published_info$isdir ||
+            (!is.na(published_link) && nzchar(published_link)) ||
+            is.na(published_info$size) ||
+            published_info$size != staged_size[[index]] ||
+            unname(tools::md5sum(outputs[[index]])) != staged_md5[[index]]) {
+          stop("Published artifact ", index,
+               " does not match its staged file.", call. = FALSE)
+        }
+      }
+      NULL
+    },
+    error = identity
+  )
+
+  if (inherits(publish_error, "error")) {
+    rollback_ok <- logical(length(outputs))
+    for (index in seq_along(outputs)) {
+      if (output_exists[[index]]) {
+        if (file.exists(outputs[[index]]) &&
+            !isTRUE(file.info(outputs[[index]])$isdir)) {
+          unlink(outputs[[index]], force = TRUE)
+        }
+        restored <- !file.exists(outputs[[index]]) &&
+          isTRUE(file.copy(backups[[index]], outputs[[index]],
+                           overwrite = FALSE, copy.mode = TRUE,
+                           copy.date = TRUE))
+        rollback_ok[[index]] <- restored &&
+          file.exists(outputs[[index]]) &&
+          !isTRUE(file.info(outputs[[index]])$isdir) &&
+          unname(tools::md5sum(outputs[[index]])) ==
+            unname(tools::md5sum(backups[[index]]))
+      } else {
+        if (file.exists(outputs[[index]]) &&
+            !isTRUE(file.info(outputs[[index]])$isdir)) {
+          unlink(outputs[[index]], force = TRUE)
+        }
+        rollback_ok[[index]] <- !file.exists(outputs[[index]])
+      }
+    }
+    if (!all(rollback_ok)) {
+      cleanup_backups <- FALSE
+      stop(
+        conditionMessage(publish_error),
+        " Rollback also failed; preserved backups at: ",
+        paste(backups[!is.na(backups)], collapse = ", "),
+        call. = FALSE
+      )
+    }
+    stop(conditionMessage(publish_error),
+         " All final paths were rolled back.", call. = FALSE)
+  }
+
+  outputs
+}
+
 run_brazil_sdid_dose_response_panel_candidate <- function(
     script_path,
     donor_path,
@@ -176,28 +305,7 @@ run_brazil_sdid_dose_response_panel_candidate <- function(
       call. = FALSE
     )
   }
-  staged_info <- file.info(staged)
-  if (anyNA(staged_info$size) || any(staged_info$size <= 0L)) {
-    stop("Dose-response panel script did not produce both nonempty files.",
-         call. = FALSE)
-  }
-
-  copied <- mapply(
-    file.copy,
-    from = staged,
-    to = outputs,
-    MoreArgs = list(overwrite = TRUE),
-    USE.NAMES = FALSE
-  )
-  if (!all(copied)) {
-    stop("Could not publish both dose-response panel files.", call. = FALSE)
-  }
-  output_info <- file.info(outputs)
-  if (anyNA(output_info$size) || any(output_info$size <= 0L)) {
-    stop("Published dose-response panel files are missing or empty.",
-         call. = FALSE)
-  }
-  outputs
+  publish_manuscript_file_set_transactionally(staged, outputs)
 }
 
 write_cross_country_dynamic_with_pooled_att_candidate <- function(

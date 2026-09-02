@@ -308,6 +308,65 @@ expect_error(
   "dose-response wrapper rejects invalid output types without running Rscript"
 )
 
+publish_fixture <- tempfile("manuscript-publish-fixture-")
+dir.create(publish_fixture)
+on.exit(unlink(publish_fixture, recursive = TRUE, force = TRUE), add = TRUE)
+stage_paths <- file.path(publish_fixture, c("stage.pdf", "stage.png"))
+output_paths <- file.path(publish_fixture, c("output.pdf", "output.png"))
+writeLines(c("new-pdf", "new-pdf-2"), stage_paths[[1L]])
+writeLines(c("new-png", "new-png-2"), stage_paths[[2L]])
+writeLines("old-pdf", output_paths[[1L]])
+writeLines("old-png", output_paths[[2L]])
+move_calls <- 0L
+fail_second_move <- function(from, to) {
+  move_calls <<- move_calls + 1L
+  if (move_calls == 2L) return(FALSE)
+  file.rename(from, to)
+}
+expect_error(
+  publish_manuscript_file_set_transactionally(
+    stage_paths,
+    output_paths,
+    move_file = fail_second_move
+  ),
+  "two-file publication fails closed when the second atomic move fails"
+)
+expect_true(
+  identical(readLines(output_paths[[1L]]), "old-pdf") &&
+    identical(readLines(output_paths[[2L]]), "old-png"),
+  "failed two-file publication restores both previous artifacts"
+)
+
+writeLines("fresh-pdf", stage_paths[[1L]])
+writeLines("fresh-png", stage_paths[[2L]])
+unlink(output_paths, force = TRUE)
+move_calls <- 0L
+expect_error(
+  publish_manuscript_file_set_transactionally(
+    stage_paths,
+    output_paths,
+    move_file = fail_second_move
+  ),
+  "failed publication with no prior artifacts raises an error"
+)
+expect_true(
+  !any(file.exists(output_paths)),
+  "failed publication with no prior artifacts leaves neither final path"
+)
+
+writeLines("directory-guard-pdf", stage_paths[[1L]])
+writeLines("directory-guard-png", stage_paths[[2L]])
+dir.create(output_paths[[1L]])
+expect_error(
+  publish_manuscript_file_set_transactionally(stage_paths, output_paths),
+  "two-file publication rejects a final path that is a directory"
+)
+expect_true(
+  file.info(output_paths[[1L]])$isdir &&
+    !file.exists(output_paths[[2L]]),
+  "directory rejection occurs before either final artifact is published"
+)
+
 static_store <- tempfile("manuscript_integration_targets_static_store_")
 on.exit(unlink(static_store, recursive = TRUE, force = TRUE), add = TRUE)
 expect_true(
