@@ -207,12 +207,11 @@ list(
                replications = 20000L
              )),
   tar_target(brazil_sdid_preferred_rank_distribution_candidate,
-             sdid_rank_distribution(
+             run_sdid_rank_distribution_candidate(
                synth_data,
                covariate_cols = character(0),
                label = "no_covariates",
-               cores = sdid_available_cores(),
-               checkpoint_dir = NULL
+               checkpoint_block = "paper_sdid_preferred"
              )),
   tar_target(brazil_sdid_latam_units_candidate,
              synth_data |>
@@ -225,24 +224,23 @@ list(
                units = union(brazil_sdid_latam_units_candidate, "BRA")
              )),
   tar_target(brazil_sdid_latam_se_candidate,
-             sdid_placebo_se(
+             run_sdid_placebo_se_candidate(
                brazil_sdid_latam_fit_candidate,
                replications = 20000L,
+               label = "latam_no_covariates",
+               checkpoint_block = "paper_sdid_latam",
                seed = SDID_PLACEBO_SEED,
-               cores = sdid_available_cores(),
-               checkpoint_dir = NULL,
-               label = "latam_no_covariates"
+               core_cap = 12L
              )),
   tar_target(brazil_sdid_latam_rank_distribution_candidate,
-             sdid_rank_distribution(
+             run_sdid_rank_distribution_candidate(
                synth_data |>
                  dplyr::filter(
                    iso3c %in% union(brazil_sdid_latam_units_candidate, "BRA")
                  ),
                covariate_cols = character(0),
                label = "latam_no_covariates",
-               cores = sdid_available_cores(),
-               checkpoint_dir = NULL
+               checkpoint_block = "paper_sdid_latam"
              )),
   tar_target(brazil_sdid_paper_outputs_candidate,
              build_paper_sdid_outputs_candidate(
@@ -461,12 +459,11 @@ list(
                replications = 5000L
              )),
   tar_target(brazil_sdid_commodity_primary_rank_distribution_candidate,
-             sdid_rank_distribution(
+             run_sdid_rank_distribution_candidate(
                brazil_sdid_commodity_panel_candidate,
                covariate_cols = "primary_x_2008_2009_z",
                label = "primary_gfc_2008_2009",
-               cores = sdid_available_cores(),
-               checkpoint_dir = NULL
+               checkpoint_block = "commodity_table_5"
              )),
   tar_target(brazil_sdid_commodity_fits_candidate,
              list(

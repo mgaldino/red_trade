@@ -33,11 +33,12 @@ build_sdid_commodity_exposure_from_itpde <- function(
     stop("start_year must not exceed end_year.", call. = FALSE)
   }
 
-  con <- DBI::dbConnect(
-    duckdb::duckdb(),
-    dbdir = tempfile(fileext = ".duckdb")
-  )
-  on.exit(DBI::dbDisconnect(con, shutdown = TRUE), add = TRUE)
+  duckdb_path <- tempfile(fileext = ".duckdb")
+  con <- DBI::dbConnect(duckdb::duckdb(), dbdir = duckdb_path)
+  on.exit({
+    try(DBI::dbDisconnect(con, shutdown = TRUE), silent = TRUE)
+    unlink(c(duckdb_path, paste0(duckdb_path, ".wal")))
+  }, add = TRUE)
   itpd_sql <- as.character(DBI::dbQuoteString(
     con,
     normalizePath(itpd_path, mustWork = TRUE)
@@ -47,19 +48,33 @@ build_sdid_commodity_exposure_from_itpde <- function(
     ", header = true, all_varchar = true, ignore_errors = false)"
   )
 
+  # Keep the aggregation deterministic and scan the 7.8 GB source only once.
+  # The materialized temporary table contains only the five-year window and
+  # only the columns needed by the commodity construction.
+  DBI::dbExecute(con, "PRAGMA threads = 1")
+  DBI::dbExecute(con, paste0(
+    "CREATE TEMP TABLE sdid_commodity_window AS ",
+    "SELECT upper(exporter_iso3) AS exporter_iso3, ",
+    "upper(importer_iso3) AS importer_iso3, ",
+    "try_cast(year AS INTEGER) AS year, ",
+    "broad_sector, try_cast(industry_id AS INTEGER) AS industry_id, ",
+    "try_cast(trade AS DOUBLE) AS trade ",
+    "FROM ", source_sql, " ",
+    "WHERE try_cast(year AS INTEGER) BETWEEN ", start_year,
+    " AND ", end_year
+  ))
+
   parse_audit <- DBI::dbGetQuery(con, paste0(
     "SELECT ",
     "count(*) AS rows_in_window, ",
-    "sum(CASE WHEN try_cast(trade AS DOUBLE) IS NULL THEN 1 ELSE 0 END) ",
+    "sum(CASE WHEN trade IS NULL THEN 1 ELSE 0 END) ",
     "AS missing_or_parse_fail_trade, ",
     "sum(CASE WHEN exporter_iso3 = importer_iso3 THEN 1 ELSE 0 END) ",
     "AS domestic_rows_excluded, ",
     "sum(CASE WHEN exporter_iso3 = importer_iso3 ",
-    "THEN coalesce(try_cast(trade AS DOUBLE), 0) ELSE 0 END) ",
+    "THEN coalesce(trade, 0) ELSE 0 END) ",
     "AS domestic_trade_excluded ",
-    "FROM ", source_sql, " ",
-    "WHERE try_cast(year AS INTEGER) BETWEEN ", start_year,
-    " AND ", end_year
+    "FROM sdid_commodity_window"
   )) |>
     tibble::as_tibble()
   if (parse_audit$missing_or_parse_fail_trade[[1]] > 0L) {
@@ -70,24 +85,21 @@ build_sdid_commodity_exposure_from_itpde <- function(
   }
 
   yearly <- DBI::dbGetQuery(con, paste0(
-    "SELECT upper(exporter_iso3) AS iso3c, ",
-    "try_cast(year AS INTEGER) AS year, ",
-    "sum(CASE WHEN broad_sector <> 'Services' THEN try_cast(trade AS DOUBLE) ELSE 0 END) AS goods_exports, ",
-    "sum(CASE WHEN broad_sector = 'Agriculture' THEN try_cast(trade AS DOUBLE) ELSE 0 END) AS agriculture_exports, ",
-    "sum(CASE WHEN broad_sector = 'Mining and Energy' THEN try_cast(trade AS DOUBLE) ELSE 0 END) AS mining_energy_exports, ",
-    "sum(CASE WHEN broad_sector <> 'Services' AND upper(importer_iso3) = 'CHN' ",
-    "THEN try_cast(trade AS DOUBLE) ELSE 0 END) AS china_goods_exports, ",
-    "sum(CASE WHEN try_cast(industry_id AS INTEGER) IN (29, 30, 31) ",
-    "THEN try_cast(trade AS DOUBLE) ELSE 0 END) AS energy_mapped_exports, ",
-    "sum(CASE WHEN try_cast(industry_id AS INTEGER) IN (32, 33) ",
-    "THEN try_cast(trade AS DOUBLE) ELSE 0 END) AS metals_mapped_exports, ",
-    "sum(CASE WHEN try_cast(industry_id AS INTEGER) IN (34, 35) ",
-    "THEN try_cast(trade AS DOUBLE) ELSE 0 END) AS mining_unmapped_exports ",
-    "FROM ", source_sql, " ",
-    "WHERE try_cast(year AS INTEGER) BETWEEN ", start_year,
-    " AND ", end_year, " ",
-    "AND exporter_iso3 IS NOT NULL AND importer_iso3 IS NOT NULL ",
-    "AND upper(exporter_iso3) <> upper(importer_iso3) ",
+    "SELECT exporter_iso3 AS iso3c, year, ",
+    "sum(CASE WHEN broad_sector <> 'Services' THEN trade ELSE 0 END) AS goods_exports, ",
+    "sum(CASE WHEN broad_sector = 'Agriculture' THEN trade ELSE 0 END) AS agriculture_exports, ",
+    "sum(CASE WHEN broad_sector = 'Mining and Energy' THEN trade ELSE 0 END) AS mining_energy_exports, ",
+    "sum(CASE WHEN broad_sector <> 'Services' AND importer_iso3 = 'CHN' ",
+    "THEN trade ELSE 0 END) AS china_goods_exports, ",
+    "sum(CASE WHEN industry_id IN (29, 30, 31) ",
+    "THEN trade ELSE 0 END) AS energy_mapped_exports, ",
+    "sum(CASE WHEN industry_id IN (32, 33) ",
+    "THEN trade ELSE 0 END) AS metals_mapped_exports, ",
+    "sum(CASE WHEN industry_id IN (34, 35) ",
+    "THEN trade ELSE 0 END) AS mining_unmapped_exports ",
+    "FROM sdid_commodity_window ",
+    "WHERE exporter_iso3 IS NOT NULL AND importer_iso3 IS NOT NULL ",
+    "AND exporter_iso3 <> importer_iso3 ",
     "GROUP BY 1, 2 ORDER BY 1, 2"
   )) |>
     tibble::as_tibble() |>
@@ -300,8 +312,32 @@ compare_sdid_candidate_frame <- function(candidate,
     dplyr::arrange(dplyr::across(dplyr::all_of(keys)))
   reference_sorted <- reference |>
     dplyr::arrange(dplyr::across(dplyr::all_of(keys)))
+  normalize_csv_text <- function(value) {
+    value <- as.character(value)
+    value[is.na(value) | value == ""] <- NA_character_
+    value
+  }
+  compare_key <- function(column) {
+    candidate_value <- candidate_sorted[[column]]
+    reference_value <- reference_sorted[[column]]
+    if (is.numeric(candidate_value) && is.numeric(reference_value)) {
+      if (!identical(is.na(candidate_value), is.na(reference_value)) ||
+          any(!is.finite(candidate_value[!is.na(candidate_value)])) ||
+          any(!is.finite(reference_value[!is.na(reference_value)]))) {
+        return(FALSE)
+      }
+      return(identical(
+        as.numeric(candidate_value),
+        as.numeric(reference_value)
+      ))
+    }
+    identical(
+      normalize_csv_text(candidate_value),
+      normalize_csv_text(reference_value)
+    )
+  }
   same_keys <- nrow(candidate_sorted) == nrow(reference_sorted) &&
-    identical(candidate_sorted[keys], reference_sorted[keys])
+    all(vapply(keys, compare_key, logical(1)))
 
   numeric_columns <- common[
     vapply(candidate[common], is.numeric, logical(1)) &
@@ -318,11 +354,25 @@ compare_sdid_candidate_frame <- function(candidate,
         max_abs_diff <- Inf
         break
       }
-      differences <- abs(candidate_value - reference_value)
-      differences <- differences[is.finite(differences)]
+      if (any(is.nan(candidate_value)) || any(is.nan(reference_value)) ||
+          any(is.infinite(candidate_value)) ||
+          any(is.infinite(reference_value))) {
+        numeric_equal <- FALSE
+        max_abs_diff <- Inf
+        break
+      }
+      comparable <- !is.na(candidate_value)
+      differences <- abs(
+        candidate_value[comparable] - reference_value[comparable]
+      )
       column_max <- if (length(differences) == 0L) 0 else max(differences)
       max_abs_diff <- max(max_abs_diff, column_max)
-      numeric_equal <- numeric_equal && column_max <= tolerance
+      scale <- pmax(
+        abs(candidate_value[comparable]),
+        abs(reference_value[comparable])
+      )
+      allowed <- tolerance + tolerance * scale
+      numeric_equal <- numeric_equal && all(differences <= allowed)
     }
   }
 
@@ -331,8 +381,8 @@ compare_sdid_candidate_frame <- function(candidate,
     nonnumeric_columns,
     function(column) {
       identical(
-        as.character(candidate_sorted[[column]]),
-        as.character(reference_sorted[[column]])
+        normalize_csv_text(candidate_sorted[[column]]),
+        normalize_csv_text(reference_sorted[[column]])
       )
     },
     logical(1)
@@ -526,21 +576,81 @@ fit_sdid_commodity_specification_candidate <- function(panel, specification) {
   sdid_fit_spec(panel, covariate_cols = covariates)
 }
 
+sdid_candidate_checkpoint_directory <- function(block) {
+  path <- file.path(
+    "data", "processed", "targets_migration", "checkpoints", block
+  )
+  dir.create(path, recursive = TRUE, showWarnings = FALSE)
+  if (!dir.exists(path)) {
+    stop("Could not create SDiD candidate checkpoint directory: ", path,
+         call. = FALSE)
+  }
+  path
+}
+
+sdid_candidate_parallel_cores <- function(cap = 12L) {
+  # This must happen in the target process immediately before any fork.
+  sdid_limit_blas_threads()
+  sdid_available_cores(cap = cap)
+}
+
+run_sdid_rank_distribution_candidate <- function(
+    data,
+    covariate_cols = character(0),
+    label,
+    checkpoint_block,
+    year_start = 1997L,
+    year_end = 2015L,
+    treat_year = 2009L,
+    core_cap = 12L) {
+  checkpoint_dir <- sdid_candidate_checkpoint_directory(checkpoint_block)
+  sdid_rank_distribution(
+    data,
+    covariate_cols = covariate_cols,
+    label = label,
+    year_start = year_start,
+    year_end = year_end,
+    treat_year = treat_year,
+    cores = sdid_candidate_parallel_cores(core_cap),
+    checkpoint_dir = checkpoint_dir
+  )
+}
+
+run_sdid_placebo_se_candidate <- function(
+    fit,
+    replications,
+    label,
+    checkpoint_block,
+    seed = SDID_PLACEBO_SEED,
+    core_cap = 12L) {
+  checkpoint_dir <- sdid_candidate_checkpoint_directory(checkpoint_block)
+  sdid_placebo_se(
+    fit,
+    replications = replications,
+    seed = seed,
+    cores = sdid_candidate_parallel_cores(core_cap),
+    checkpoint_dir = checkpoint_dir,
+    label = label
+  )
+}
+
 compute_sdid_comparison_se_candidate <- function(fit,
                                                  specification,
                                                  replications = 5000L,
                                                  seed = SDID_PLACEBO_SEED,
-                                                 cores = sdid_available_cores()) {
+                                                 checkpoint_block =
+                                                   "commodity_table_5",
+                                                 core_cap = 12L) {
   if (replications < 1000L) {
     stop("Final candidate SE requires at least 1,000 replications.", call. = FALSE)
   }
-  se <- sdid_placebo_se(
+  se <- run_sdid_placebo_se_candidate(
     fit,
     replications = replications,
+    label = specification,
+    checkpoint_block = checkpoint_block,
     seed = seed,
-    cores = cores,
-    checkpoint_dir = NULL,
-    label = specification
+    core_cap = core_cap
   )
   list(
     se = as.numeric(se),
@@ -553,14 +663,18 @@ compute_sdid_comparison_se_candidate <- function(fit,
 reuse_sdid_preferred_se_candidate <- function(fit,
                                               target_fit,
                                               target_se,
-                                              replications = 20000L) {
+                                              replications = 20000L,
+                                              checkpoint_block =
+                                                "paper_sdid_preferred") {
+  checkpoint_dir <- sdid_candidate_checkpoint_directory(checkpoint_block)
+  sdid_limit_blas_threads()
   sdid_preferred_se(
     fit,
     target_fit,
     target_se,
     target_replications = replications,
     cores = 1L,
-    checkpoint_dir = NULL,
+    checkpoint_dir = checkpoint_dir,
     label = "no_covariates"
   )
 }
