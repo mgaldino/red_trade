@@ -22,17 +22,81 @@ sdid_migration_scale_vec <- function(x) {
   as.numeric((x - mean(x, na.rm = TRUE)) / scale_sd)
 }
 
+sdid_nan_to_na <- function(x) {
+  if (is.numeric(x) && any(is.nan(x))) {
+    x[is.nan(x)] <- NA_real_
+  }
+  x
+}
+
 validate_sdid_commodity_share_bounds <- function(exposure,
                                                  tolerance = 1e-12) {
   share_columns <- grep("share|coverage", names(exposure), value = TRUE)
   share_values <- unlist(exposure[share_columns], use.names = FALSE)
-  if (any(!is.finite(share_values[!is.na(share_values)])) ||
+  if (any(is.nan(share_values)) ||
+      any(!is.finite(share_values[!is.na(share_values)])) ||
       any(
         share_values < -tolerance | share_values > 1 + tolerance,
         na.rm = TRUE
       )) {
     stop(
       "Commodity shares must be finite and lie in [0, 1] within tolerance.",
+      call. = FALSE
+    )
+  }
+  invisible(exposure)
+}
+
+validate_sdid_commodity_structural_missingness <- function(exposure) {
+  goods_share_columns <- c(
+    "pre_primary_share_mean",
+    "pre_agriculture_share_mean",
+    "pre_mining_energy_share_mean",
+    "pre_energy_mapped_share_mean",
+    "pre_metals_mapped_share_mean",
+    "pre_mining_unmapped_share_mean",
+    "pre_china_goods_share_mean",
+    "pre_primary_share_pooled",
+    "pre_agriculture_share_pooled",
+    "pre_mining_energy_share_pooled"
+  )
+  required <- c(goods_share_columns, "price_mapping_coverage", "pre_goods_exports")
+  missing_columns <- setdiff(required, names(exposure))
+  if (length(missing_columns) > 0L) {
+    stop(
+      "Commodity exposure lacks structural-missingness columns: ",
+      paste(missing_columns, collapse = ", "),
+      call. = FALSE
+    )
+  }
+  numeric_values <- unlist(exposure[required], use.names = FALSE)
+  if (any(is.nan(numeric_values))) {
+    stop("Commodity exposure must represent undefined values as NA, not NaN.",
+         call. = FALSE)
+  }
+  if (any(is.na(exposure$pre_goods_exports)) ||
+      any(!is.finite(exposure$pre_goods_exports)) ||
+      any(exposure$pre_goods_exports < 0)) {
+    stop("Commodity goods-export totals must be finite and nonnegative.",
+         call. = FALSE)
+  }
+
+  zero_goods <- exposure$pre_goods_exports == 0
+  share_missing <- as.data.frame(is.na(exposure[goods_share_columns]))
+  if (any(zero_goods & rowSums(!share_missing) > 0L) ||
+      any(!zero_goods & rowSums(share_missing) > 0L)) {
+    stop(
+      "Goods shares must be NA exactly when total goods exports equal zero.",
+      call. = FALSE
+    )
+  }
+
+  coverage_defined <- !is.na(exposure$pre_primary_share_mean) &
+    exposure$pre_primary_share_mean > 0
+  if (any(coverage_defined & is.na(exposure$price_mapping_coverage)) ||
+      any(!coverage_defined & !is.na(exposure$price_mapping_coverage))) {
+    stop(
+      "Price-mapping coverage must be NA exactly when primary share is undefined or zero.",
       call. = FALSE
     )
   }
@@ -188,6 +252,7 @@ build_sdid_commodity_exposure_from_itpde <- function(
       .groups = "drop"
     ) |>
     dplyr::mutate(
+      dplyr::across(dplyr::where(is.numeric), sdid_nan_to_na),
       price_mapping_coverage = dplyr::if_else(
         pre_primary_share_mean > 0,
         (
@@ -230,6 +295,7 @@ build_sdid_commodity_exposure_from_itpde <- function(
   )
 
   validate_sdid_commodity_share_bounds(exposure)
+  validate_sdid_commodity_structural_missingness(exposure)
 
   list(
     exposure = exposure,
@@ -418,7 +484,15 @@ validate_sdid_commodity_derivations <- function(
     prices,
     reference_exposure_file,
     reference_price_file,
+    analytic_iso3c,
     tolerance = 1e-12) {
+  if (!is.character(analytic_iso3c) || length(analytic_iso3c) == 0L ||
+      anyNA(analytic_iso3c) || anyDuplicated(analytic_iso3c)) {
+    stop("analytic_iso3c must be a nonempty unique character vector.",
+         call. = FALSE)
+  }
+  analytic_exposure <- exposure |>
+    dplyr::filter(.data$iso3c %in% analytic_iso3c)
   dplyr::bind_rows(
     compare_sdid_candidate_frame(
       exposure,
@@ -438,7 +512,9 @@ validate_sdid_commodity_derivations <- function(
       validation = c(
         "commodity_exposure_unique_iso3c",
         "commodity_exposure_window_2004_2008",
-        "commodity_exposure_five_observed_years",
+        "commodity_exposure_global_coverage_1_to_5_years",
+        "commodity_exposure_analytic_universe_present",
+        "commodity_exposure_analytic_five_observed_years",
         "pink_sheet_window_1997_2016",
         "pink_sheet_2007_log_changes_zero"
       ),
@@ -446,7 +522,12 @@ validate_sdid_commodity_derivations <- function(
         anyDuplicated(exposure$iso3c) == 0L,
         all(exposure$pre_window_start == 2004L) &&
           all(exposure$pre_window_end == 2008L),
-        all(exposure$observed_years == 5L),
+        all(!is.na(exposure$observed_years)) &&
+          all(exposure$observed_years >= 1L) &&
+          all(exposure$observed_years <= 5L),
+        setequal(analytic_exposure$iso3c, analytic_iso3c),
+        setequal(analytic_exposure$iso3c, analytic_iso3c) &&
+          all(analytic_exposure$observed_years == 5L),
         identical(prices$year, 1997:2016),
         all(
           unlist(
@@ -458,7 +539,13 @@ validate_sdid_commodity_derivations <- function(
       detail = c(
         paste0("rows=", nrow(exposure)),
         "expected 2004-2008",
-        paste(sort(unique(exposure$observed_years)), collapse = ";"),
+        paste0("observed=", paste(sort(unique(exposure$observed_years)),
+                                  collapse = ";")),
+        paste0("analytic=", length(analytic_iso3c),
+               "; matched=", nrow(analytic_exposure)),
+        paste0("analytic observed=",
+               paste(sort(unique(analytic_exposure$observed_years)),
+                     collapse = ";")),
         paste0(min(prices$year), "-", max(prices$year)),
         "expected all zero"
       )

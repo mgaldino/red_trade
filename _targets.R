@@ -385,7 +385,8 @@ list(
                brazil_sdid_commodity_exposure_candidate,
                brazil_sdid_pink_sheet_indices_candidate,
                brazil_sdid_commodity_reference_exposure_file,
-               brazil_sdid_commodity_reference_price_file
+               brazil_sdid_commodity_reference_price_file,
+               analytic_iso3c = sort(unique(synth_data$iso3c))
              )),
   tar_target(brazil_sdid_commodity_derivation_gate_candidate,
              assert_sdid_migration_validation(

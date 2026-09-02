@@ -79,6 +79,19 @@ expect_true(
   "infinite numeric value fails"
 )
 
+with_nan <- candidate
+with_nan$value <- NaN
+comparison_nan <- compare_sdid_candidate_frame(
+  with_nan,
+  reference_path,
+  "year",
+  "nan"
+)
+expect_true(
+  !validation_passed(comparison_nan, "_numeric_equal"),
+  "NaN numeric value fails"
+)
+
 wrong_key <- candidate
 wrong_key$year <- 2008L
 comparison_key <- compare_sdid_candidate_frame(
@@ -174,12 +187,28 @@ rank_second <- sdid_rank_distribution(
 expect_true(nrow(rank_first) == 3L, "rank checkpoint initial batches")
 expect_true(nrow(rank_second) == 3L, "rank checkpoint resumed result complete")
 expect_true(.rank_test_calls == 1L, "rank checkpoint resumes only missing units")
+
+# A readable checkpoint with an invalid estimated value must not be reused.
+rank_cache <- sdid_read_checkpoint(rank_checkpoint_path)
+rank_cache$distribution$estimate[[1]] <- Inf
+sdid_atomic_save_rds(rank_cache, rank_checkpoint_path)
+.rank_test_calls <- 0L
+rank_third <- sdid_rank_distribution(
+  rank_fixture,
+  label = "resume_test",
+  cores = 1L,
+  checkpoint_dir = rank_checkpoint_directory,
+  batch_size = 1L
+)
+expect_true(nrow(rank_third) == 3L, "invalid rank checkpoint is rebuilt")
+expect_true(.rank_test_calls == 3L, "invalid rank checkpoint reuses no rows")
 sdid_fit_spec <- original_fit_spec
 sdid_fit_summary_row <- original_summary_row
 
-# Small ITPD-E fixture: five years, one foreign goods flow, one service flow,
-# and one domestic flow per year. The candidate builder must exclude services
-# and domestic trade from the goods denominator while auditing the latter.
+# Small ITPD-E fixture: five complete years for Brazil, a zero-goods exporter,
+# and a partial-coverage exporter. The candidate builder must exclude services
+# and domestic trade, normalize structurally undefined shares to NA, and retain
+# partial global coverage without admitting it to the analytic universe.
 itpd_path <- tempfile(fileext = ".csv")
 fixture <- dplyr::bind_rows(lapply(2004:2008, function(year) {
   tibble::tribble(
@@ -187,9 +216,17 @@ fixture <- dplyr::bind_rows(lapply(2004:2008, function(year) {
     "BRA", "CHN", year, "Agriculture", 1L, 100,
     "BRA", "USA", year, "Services", 36L, 50,
     "BRA", "BRA", year, "Agriculture", 1L, 10,
-    "USA", "CHN", year, "Manufacturing", 20L, 200
+    "USA", "CHN", year, "Manufacturing", 20L, 200,
+    "IMN", "CHN", year, "Services", 36L, 50
   )
-}))
+}), tibble::tibble(
+  exporter_iso3 = "GUF",
+  importer_iso3 = "CHN",
+  year = 2004L,
+  broad_sector = "Agriculture",
+  industry_id = 1L,
+  trade = 25
+))
 readr::write_csv(fixture, itpd_path)
 commodity <- build_sdid_commodity_exposure_from_itpde(itpd_path)
 bra_yearly <- commodity$yearly |>
@@ -214,6 +251,68 @@ expect_true(
   "domestic rows audited"
 )
 
-unlink(c(reference_path, itpd_path))
+zero_exposure <- commodity$exposure |>
+  dplyr::filter(iso3c == "IMN")
+partial_exposure <- commodity$exposure |>
+  dplyr::filter(iso3c == "GUF")
+expect_true(
+  nrow(zero_exposure) == 1L && zero_exposure$pre_goods_exports[[1]] == 0,
+  "zero-goods exporter retained"
+)
+expect_true(
+  !any(is.nan(unlist(
+    dplyr::select(zero_exposure, dplyr::where(is.numeric)),
+    use.names = FALSE
+  ))),
+  "structural undefined values normalized from NaN to NA"
+)
+expect_true(
+  is.na(zero_exposure$pre_primary_share_mean[[1]]),
+  "zero-goods share is structural NA"
+)
+expect_true(
+  partial_exposure$observed_years[[1]] == 1L,
+  "partial global coverage retained"
+)
+
+commodity_reference_path <- tempfile(fileext = ".csv")
+price_reference_path <- tempfile(fileext = ".csv")
+price_fixture <- tibble::tibble(
+  year = 1997:2016,
+  energy_log_change_2007 = 0,
+  agriculture_log_change_2007 = 0,
+  metals_minerals_log_change_2007 = 0
+)
+readr::write_csv(commodity$exposure, commodity_reference_path)
+readr::write_csv(price_fixture, price_reference_path)
+derivation_validation <- validate_sdid_commodity_derivations(
+  commodity$exposure,
+  price_fixture,
+  commodity_reference_path,
+  price_reference_path,
+  analytic_iso3c = "BRA"
+)
+expect_true(
+  all(assert_sdid_migration_validation(derivation_validation)$passed),
+  "full derivation gate accepts global partial coverage outside analytic universe"
+)
+partial_analytic_validation <- validate_sdid_commodity_derivations(
+  commodity$exposure,
+  price_fixture,
+  commodity_reference_path,
+  price_reference_path,
+  analytic_iso3c = c("BRA", "GUF")
+)
+expect_error(
+  assert_sdid_migration_validation(partial_analytic_validation),
+  "full derivation gate rejects partial coverage inside analytic universe"
+)
+
+unlink(c(
+  reference_path,
+  itpd_path,
+  commodity_reference_path,
+  price_reference_path
+))
 unlink(checkpoint_directory, recursive = TRUE)
 message("ALL_STATIC_SDID_MIGRATION_TESTS_PASSED")

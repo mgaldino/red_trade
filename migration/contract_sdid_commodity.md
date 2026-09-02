@@ -67,7 +67,12 @@ Esses arquivos serão usados apenas na etapa de comparação.
 - Donor pool vigente inclui Singapura e exclui Malta.
 - Pesos somam 1 com tolerância `1e-10`.
 - Exposição commodity: média anual 2004–2008, denominador de bens, com
-  Agricultura e Mining and Energy como primários.
+  Agricultura e Mining and Energy como primários. A tabela global preserva
+  jurisdições com cobertura parcial; os cinco anos completos são obrigatórios
+  apenas para o universo analítico do SDiD.
+- Shares estruturalmente indefinidos por denominador zero são `NA`, nunca
+  `NaN`; shares definidos devem ser finitos e ficar em `[0, 1]` dentro da
+  tolerância numérica.
 - Domestic flows e Services não entram no denominador de bens exportados.
 - Nenhum output do paper pode ser marcado como smoke test.
 
@@ -97,8 +102,10 @@ Esses arquivos serão usados apenas na etapa de comparação.
 
 - parse e manifesto estático;
 - schemas, chaves e unicidade;
-- cobertura 2004–2008 por país;
-- shares finitos e dentro de `[0, 1]`;
+- cobertura global entre um e cinco anos, preservada linha a linha contra o
+  baseline, e cobertura completa 2004–2008 no universo analítico do SDiD;
+- shares definidos finitos e dentro de `[0, 1]`, com ausências estruturais
+  auditadas separadamente;
 - base 2007 dos log-índices igual a zero;
 - painel SDiD balanceado, sem missing nas variáveis de cada especificação;
 - comparação determinística da exposição e dos preços candidatos com os CSVs

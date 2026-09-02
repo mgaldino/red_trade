@@ -337,6 +337,35 @@ sdid_placebo_se <- function(fit, replications, seed = SDID_PLACEBO_SEED,
 # Placebo-in-space distribution: refit with each unit as the pseudo-treated.
 # Deterministic (no RNG). Completeness is enforced before any use, so a killed
 # child can never silently shrink the rank denominator.
+sdid_rank_checkpoint_valid <- function(distribution, units) {
+  required_columns <- c("iso3c", "estimate", "rmspe_pre", "status", "error")
+  if (!is.data.frame(distribution) ||
+      !all(required_columns %in% names(distribution))) {
+    return(FALSE)
+  }
+  candidate <- distribution |>
+    dplyr::select(dplyr::all_of(required_columns))
+  types_valid <- is.character(candidate$iso3c) &&
+    is.numeric(candidate$estimate) &&
+    is.numeric(candidate$rmspe_pre) &&
+    is.character(candidate$status) &&
+    is.character(candidate$error)
+  if (!types_valid || anyNA(candidate$iso3c) || anyNA(candidate$status) ||
+      anyNA(candidate$error) || anyDuplicated(candidate$iso3c) ||
+      !all(candidate$iso3c %in% units) ||
+      !all(candidate$status %in% c("estimated", "error"))) {
+    return(FALSE)
+  }
+  estimated <- candidate$status == "estimated"
+  error <- candidate$status == "error"
+  all(is.finite(candidate$estimate[estimated])) &&
+    all(is.finite(candidate$rmspe_pre[estimated])) &&
+    all(candidate$error[estimated] == "") &&
+    all(is.na(candidate$estimate[error])) &&
+    all(is.na(candidate$rmspe_pre[error])) &&
+    all(nzchar(candidate$error[error]))
+}
+
 sdid_rank_distribution <- function(data, covariate_cols = character(0),
                                    label = "spec",
                                    year_start = 1997L, year_end = 2015L,
@@ -376,10 +405,7 @@ sdid_rank_distribution <- function(data, covariate_cols = character(0),
     cached <- sdid_read_checkpoint(checkpoint_path)
     cache_valid <- is.list(cached) &&
       identical(cached$fingerprint, fingerprint) &&
-        is.data.frame(cached$distribution) &&
-      all(required_checkpoint_columns %in% names(cached$distribution)) &&
-      !anyDuplicated(cached$distribution$iso3c) &&
-      all(cached$distribution$iso3c %in% units)
+      sdid_rank_checkpoint_valid(cached$distribution, units)
     if (cache_valid) {
       distribution <- cached$distribution |>
         dplyr::select(dplyr::all_of(required_checkpoint_columns)) |>
@@ -451,7 +477,7 @@ sdid_rank_distribution <- function(data, covariate_cols = character(0),
       function(index) {
         value <- values[[index]]
         is.data.frame(value) && nrow(value) == 1L &&
-          all(required_checkpoint_columns %in% names(value)) &&
+          sdid_rank_checkpoint_valid(value, units) &&
           identical(as.character(value$iso3c), as.character(batch[[index]]))
       },
       logical(1)
