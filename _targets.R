@@ -20,6 +20,7 @@ tar_option_set(packages = c("tidyverse", "tidyr", "ggplot2", "janitor", "data.ta
 tar_source("scripts/functions.R")
 tar_source("scripts/functions_unvotes.R")
 tar_source("scripts/functions_sdid_dose_placebo.R")
+tar_source("scripts/functions_targets_migration.R")
 # tar_source("other_functions.R") # Source other scripts as needed.
 
 # Replace the target list below with your own:
@@ -401,6 +402,52 @@ list(
              china_top_m2_goods_trade_aggregation$goods_exports),
   tar_target(china_top_m2_goods_sector_audit,
              china_top_m2_goods_trade_aggregation$sector_audit),
+  # Side-by-side corrected construction for the migration gate. Unlike the
+  # legacy branch above, this branch ranks every raw-source exporter, forms the
+  # union with UNGA, and defines treatment before filtering missing outcomes.
+  tar_target(china_top_m2_goods_full_union_trade_aggregation,
+             aggregate_itpde_goods_exports_all_exporters(
+               trade_file,
+               start_year = 1990L,
+               end_year = 2023L,
+               goods_sector_values = c("Agriculture", "Mining and Energy",
+                                        "Manufacturing")
+             )),
+  tar_target(china_top_m2_goods_full_union_exports,
+             china_top_m2_goods_full_union_trade_aggregation$goods_exports),
+  tar_target(china_top_m2_goods_full_union_sector_audit,
+             china_top_m2_goods_full_union_trade_aggregation$sector_audit),
+  tar_target(china_top_m2_goods_full_union_trade_rank,
+             rank_itpde_goods_export_destinations(
+               china_top_m2_goods_full_union_exports
+             )),
+  tar_target(china_top_m2_goods_full_union_master_panel,
+             build_country_year_full_union_master(
+               china_top_m2_goods_full_union_trade_rank,
+               unga_data,
+               min_year = 1990L,
+               max_year = 2023L
+             )),
+  tar_target(china_top_m2_goods_full_union_status_panel_bundle,
+             make_full_union_status_panel_bundle(
+               china_top_m2_goods_full_union_master_panel,
+               duration_thresholds = c(3L, 5L, 7L),
+               min_entry_year = 2000L,
+               min_untreated_observations = 5L
+             )),
+  tar_target(china_top_m2_goods_full_union_status_sample_counts,
+             china_top_m2_goods_full_union_status_panel_bundle$sample_counts),
+  tar_target(china_top_m2_goods_full_union_status_unit_summary,
+             china_top_m2_goods_full_union_status_panel_bundle$unit_summary),
+  tar_target(china_top_m2_goods_full_union_treatment_unit_summary,
+             china_top_m2_goods_full_union_status_panel_bundle$treatment_unit_summary),
+  tar_target(china_top_m2_goods_full_union_status_period_summary,
+             china_top_m2_goods_full_union_status_panel_bundle$period_summary),
+  tar_target(china_top_m2_goods_full_union_status_validation,
+             validate_full_union_status_bundle(
+               china_top_m2_goods_full_union_master_panel,
+               china_top_m2_goods_full_union_status_panel_bundle
+             )),
   tar_target(china_top_m2_goods_panel,
              build_china_top_partner_panel(
                china_top_m2_goods_exports,
