@@ -290,7 +290,7 @@ Notwithstanding my best effort to address potential rival explanations for the o
 
 This approach, however, faces some challenged that must be addressed or at least recoginized. The conceptual treatment, as mentioned, is status, not the rank. However, for each country what matters is not necessarily being the top trade destination in goods exports. Elsewhere the the status cue may track aggregate flows, services exports or even imports. It all depends on what each country consider more important. It is understandable that a service oriented country like Malta will weight service trade more than a country like Brazil, where goods exports is what matters.
 
-To better understand variation in the media coverage on this, a supplemental source audit in the appendix uses displaced-incumbent coverage to check evidence of coverage in other countries. Australia illustrates the point. The *Australian Financial Review* reported in 2009 that China was Australia's largest aggregate trading partner, combining exports and imports of goods and services, before Australia meets the paper's stricter goods-export-destination treatment criterion. As a result, in the panel regression with other treated countries besides Brazil, there is error in the measurement of the treatment, which will attenuate the estimate toward zero.
+To better understand variation in the media coverage on this, a supplemental source audit in the appendix uses displaced-incumbent coverage to check evidence of coverage in other countries. Australia illustrates a metric distinction. The *Australian Financial Review* reported on 9 November 2009 that China was Australia's largest aggregate trading partner, combining exports and imports of goods and services. The current goods-only annual panel codes Australia's first qualifying China-top goods-export year as 2009, after Japan held the top goods-export rank in 2008. The AFR item therefore documents broad-metric salience during the same annual treatment window; it does not establish that a strict goods-export cue preceded the 2009 treatment. As a result, in the panel regression with other treated countries besides Brazil, there is error in the measurement of the treatment, which will attenuate the estimate toward zero.
 
 For the cross-country evidence beyond Brazil, the treated sample is restricted to what we call "durable periods" where China is the top export-destination. We call a "durable period" where China is the largest goods export destination and that China-top period lasts at least five consecutive observed years, after an observed prior year in which China was not number one. Since I am interested in  a rising power becoming number 1, specifically China, I restrict the treatment to years in or after 2000, when it is more plausible that China was seen as a rising power and the status cue would trigger a foreign policy change. 
 
@@ -504,6 +504,8 @@ sdid_diag_summary <- tibble::tribble(
   )
 )
 
+cat("\\begingroup\\singlespacing\n")
+
 knitr::kable(
   sdid_diag_summary,
   format = "latex",
@@ -513,7 +515,7 @@ knitr::kable(
 ) %>%
   kableExtra::kable_styling(
     latex_options = c("HOLD_position"),
-    font_size = 9
+    font_size = 10
   ) %>%
   kableExtra::column_spec(1, width = "3.3cm", bold = TRUE) %>%
   kableExtra::column_spec(2, width = "11.0cm") %>%
@@ -528,6 +530,8 @@ knitr::kable(
     threeparttable = TRUE
   ) %>%
   kableExtra::collapse_rows(columns = 1, valign = "top")
+
+cat("\\endgroup\n")
 ```
 
 Table \@ref(tab:outcome-robustness-table) reports the preferred Brazil SDiD estimate alongside four comparisons. Column (1) uses no covariates and is preferred because it avoids conditioning the counterfactual on variables observed after 2009. Column (2) restores the full contemporaneous covariate matrix; column (3) removes institutional variables but retains the other contemporaneous measures; column (4) changes the donor pool to Latin America using the contemporaneous matrix; and column (5) applies the preferred no-covariate specification to that regional pool, which makes it the column comparable with (1). All five estimates are negative, but columns (2)--(4) are sensitivity checks rather than alternative candidates for the main specification.
@@ -639,7 +643,7 @@ knitr::kable(
   kableExtra::footnote(
     general = paste0(
       "The outcome is absolute UNGA ideal-point distance to China; ATT is the estimated average causal effect on Brazil after 2009, so negative values mean convergence. ",
-      "ATTs are reported with three decimals. Placebo-based SEs are in parentheses (20,000 replications for the preferred column; 5,000 for the comparison columns). ",
+      "ATTs are reported with three decimals. Placebo-based SEs are in parentheses (20,000 replications for columns (1) and (5), which use the preferred no-covariate specification; 5,000 for comparison columns (2)-(4)). ",
       "Stars use two-sided normal-approximation p-values based on placebo SEs: * p < 0.10; ** p < 0.05; *** p < 0.01. ",
       "Checkmarks show included covariate groups. Donor counts exclude Brazil. ",
       "Column (1) uses no covariates, so its covariate cells are left blank. ",
@@ -841,7 +845,10 @@ knitr::kable(
 
 ```{r selective-unga-diagnostic-numbers, include=FALSE}
 selective_vote_models <- tar_read(selective_china_alignment_vote_level_models)
-selective_ddd_models <- tar_read(selective_china_alignment_ddd_hr_nonhr_models)
+# Separate-script output authorized for this revision; targets migration patch is archived.
+ddd_revision <- readRDS("data/processed/diagnostics/RIO_20260905_ddd/corrected_ddd_bundle.rds")
+selective_ddd_models <- ddd_revision$ddd_models
+selective_ddd_country_placebo <- ddd_revision$country_placebo_summary
 selective_country_placebo <- tar_read(selective_china_alignment_country_placebo_summary)
 
 hr_china_us_diff <- selective_vote_models %>%
@@ -873,9 +880,18 @@ ddd_hr_increment <- selective_ddd_models %>%
   ) %>%
   dplyr::slice_head(n = 1)
 
-distance_placebo <- selective_country_placebo %>%
+hr_only_distance_placebo <- selective_country_placebo %>%
   dplyr::filter(outcome == "distance_china_minus_usa") %>%
   dplyr::slice_head(n = 1)
+
+ddd_distance_placebo <- selective_ddd_country_placebo %>%
+  dplyr::filter(outcome == "distance_china_minus_usa") %>%
+  dplyr::slice_head(n = 1)
+stopifnot(
+  nrow(ddd_hr_increment) == 1L,
+  nrow(ddd_distance_placebo) == 1L,
+  abs(ddd_hr_increment$estimate - ddd_distance_placebo$brazil_estimate) < 1e-10
+)
 ```
 
 The aggregate ideal-point estimate raises a substantive question: in what kinds of votes did Brazil move closer to China? Resolution-level diagnostics suggest that the post-2009 convergence was selective rather than uniform. Figure \@ref(fig:plot-brazil-china-unvotes-issue-year) disaggregates the convergence rate by year and substantive issue family. In several issue areas Brazil and China already voted together at high rates before treatment, leaving little room for additional convergence. The more informative domain is human rights, where pre-treatment agreement was lower and where movement toward China carried greater reputational costs for Brazil, given the domestic and international implications of Brazil's human-rights foreign policy [@milani2015humanrights].
@@ -892,10 +908,17 @@ This descriptive increase does not by itself establish China-specific alignment,
 
 The results show that Brazil moves closer to China after 2009 relative to the donor pool. The Brazil-by-post-2009 coefficient is `r sprintf("%.3f", hr_china_us_diff$estimate)` for distance to China minus distance to the United States (model-based SE = `r sprintf("%.3f", hr_china_us_diff$se)`), and `r sprintf("%.3f", hr_china_us_strong_diff$estimate)` when the sample is restricted to strong yes/no China-US disagreements (model-based SE = `r sprintf("%.3f", hr_china_us_strong_diff$se)`). The corresponding non-human-rights estimate is smaller (`r sprintf("%.3f", nonhr_china_us_diff$estimate)`, model-based SE = `r sprintf("%.3f", nonhr_china_us_diff$se)`). These are not causal estimates, given the usual selection and omitted-variable concerns.
 
-However, restricting attention to a single issue domain opens a design that ideal points computed over all votes cannot support: a triple difference. Ideal points compress every resolution in a session into one score, leaving no contrast between issue domains to exploit, whereas vote-level data preserve it. Thus, I can not only compare the difference between Brazil and other untreated countries before and after (traditional DiD), but also include a third difference: across domains within the same country and year, comparing Brazil with the donor pool, before and after 2009, in human-rights votes relative to every other vote.  Identification here asks for more than parallel trends between treated and control units: whatever bias a non-parallel trend introduces must be the same in the two issue domains, so that it cancels in the third difference [@olden_moen2022]. Appendix Figure \@ref(fig:plot-ddd-pretrends) shows that Brazil's distance from the donor pool moves in parallel across the two domains before 2009 and separates afterwards. 
+However, restricting attention to a single issue domain opens a design that ideal points computed over all votes cannot support: a triple difference. Ideal points compress every resolution in a session into one score, leaving no contrast between issue domains to exploit, whereas vote-level data preserve it. Thus, I can not only compare the difference between Brazil and other untreated countries before and after (traditional DiD), but also include a third difference: across domains within the same country and year, comparing Brazil with the donor pool, before and after 2009, in human-rights votes relative to every other vote.  Identification here asks for more than parallel trends between treated and control units: whatever bias a non-parallel trend introduces must be the same in the two issue domains, so that it cancels in the third difference [@olden_moen2022]. Appendix Figure \@ref(fig:plot-ddd-pretrends) displays the pre- and post-2009 Brazil-donor gaps in both domains; this descriptive comparison does not establish the identifying restriction.
 
-Using DDD, the model estimates an additional human-rights increment of `r sprintf("%.3f", ddd_hr_increment$estimate)` (model-based SE = `r sprintf("%.3f", ddd_hr_increment$se)`).
-Because Brazil is the single treated country in this diagnostic, I also use country placebos as an alternative inferential benchmark: Brazil ranks `r sprintf("%.0f", distance_placebo$brazil_rank_expected_direction)` out of `r sprintf("%.0f", distance_placebo$n_placebo_units)` units in the China-specific direction (directional p = `r sprintf("%.3f", distance_placebo$randomization_p_directional)`; strict donor-only p = `r sprintf("%.3f", distance_placebo$randomization_p_directional_strict_donor)`).
+Let $B_i$ identify Brazil, $P_r$ indicate 2009--2012, and $H_r$ identify a human-rights resolution. The vote-level specification is
+\[
+Y_{ir}=\alpha_i+\lambda_r+\beta(B_iP_r)+\gamma(B_iH_r)+\delta(B_iP_rH_r)+\varepsilon_{ir}.
+\]
+Country and resolution fixed effects absorb the remaining lower-order terms. The Brazil-by-domain interaction allows Brazil's pre-existing gap relative to donors to differ between human-rights and other resolutions. The coefficient $\delta$ measures the additional post-2009 human-rights shift. The sample contains `r format(ddd_hr_increment$n_obs, big.mark = ",")` observed votes by `r ddd_hr_increment$n_countries` countries on `r ddd_hr_increment$n_resolutions` China-US divergent resolutions in 2005--2012. Any human-rights tag places a resolution in the human-rights group; all remaining resolutions form the non-human-rights group. Each observed country-resolution vote receives equal weight. The specification does not absorb a separate domain intercept for each donor country; interpretation also requires changes in donor vote availability not to generate the differential shift across domains.
+
+The DDD estimate is `r sprintf("%.3f", ddd_hr_increment$estimate)` for distance to China minus distance to the United States (country-clustered model-based SE = `r sprintf("%.3f", ddd_hr_increment$se)`). Its negative sign indicates a larger shift toward China in human-rights votes. With Brazil as the single treated country, I also reassign the treated-country role to each country, rebuilding all three interactions and retaining the same sample and fixed effects. In this DDD-specific distribution, Brazil ranks `r sprintf("%.0f", ddd_distance_placebo$brazil_rank_expected_direction)` of `r sprintf("%.0f", ddd_distance_placebo$n_placebo_units)` in the predicted direction (inclusive directional tail share = `r sprintf("%.3f", ddd_distance_placebo$randomization_p_directional)`; strict donor-only share = `r sprintf("%.3f", ddd_distance_placebo$randomization_p_directional_strict_donor)`; two-sided absolute share = `r sprintf("%.3f", ddd_distance_placebo$randomization_p_two_sided)`). These are descriptive reassignment benchmarks; interpreting them as randomization inference requires exchangeability of country assignment.
+
+The separate human-rights-only DiD estimate of `r sprintf("%.3f", hr_only_distance_placebo$brazil_estimate)` ranks `r sprintf("%.0f", hr_only_distance_placebo$brazil_rank_expected_direction)` of `r sprintf("%.0f", hr_only_distance_placebo$n_placebo_units)` in its own country-placebo distribution (inclusive directional share = `r sprintf("%.3f", hr_only_distance_placebo$randomization_p_directional)`; strict donor-only share = `r sprintf("%.3f", hr_only_distance_placebo$randomization_p_directional_strict_donor)`). This benchmark evaluates the within-domain post-2009 contrast, whereas the DDD benchmark evaluates the additional shift across domains.
 
 ```{r issue-area-prepost-table, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 issue_order <- c(
@@ -969,7 +992,7 @@ knitr::kable(
   )
 ```
 
-The DDD comparison shows that the human-rights shift is larger than the analogous non-human-rights shift. Country placebos counsel against language implying that Brazil is unique. The Brazil evidence therefore supports a cautious claim of selective UNGA adjustment toward China in politically visible domains, rather than a claim that the issue-area table alone proves selective convergence.
+The DDD estimate indicates a larger human-rights shift than the analogous non-human-rights shift. Its country-placebo distribution provides moderate evidence for that additional shift and counsels against language implying that Brazil is unique. The Brazil evidence therefore supports a cautious claim of selective UNGA adjustment toward China in politically visible domains, rather than a claim that the issue-area table alone proves selective convergence.
 
 # Brazilian Media Salience
 
@@ -1764,7 +1787,8 @@ In order to assess how closely the empirical treatment used in the panel regress
 
 
 ```{r ex-top1-recoverability-audit, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
-ex_top1_tables <- tar_read(ex_top1_salience_appendix_tables)
+australia_revision <- readRDS("data/processed/diagnostics/RIO_20260905_australia/australia_appendix_tables_patch.rds")
+ex_top1_tables <- australia_revision$tables
 recoverability_tbl <- ex_top1_tables$recoverability_table
 
 knitr::kable(
@@ -1790,6 +1814,7 @@ knitr::kable(
   kableExtra::footnote(
     general = paste0(
       "The table is built from the supplemental former-incumbent audit tables. ",
+      "Australia's entry year follows the current goods-only annual panel (2009); source publication dates retain their original values. ",
       "The former-incumbent benchmark asks whether the export partner displaced by China was covered in recoverable local or official sources. ",
       "It is a recoverability diagnostic, not a rule for coding China salience as absent."
     ),
@@ -1801,7 +1826,7 @@ knitr::kable(
 
 ```{r ex-top1-australia-afr-context, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 if (!exists("ex_top1_tables")) {
-  ex_top1_tables <- tar_read(ex_top1_salience_appendix_tables)
+  ex_top1_tables <- readRDS("data/processed/diagnostics/RIO_20260905_australia/australia_appendix_tables_patch.rds")$tables
 }
 afr_context_tbl <- ex_top1_tables$afr_context_table
 
@@ -1843,7 +1868,7 @@ knitr::kable(
   kableExtra::column_spec(1, bold = TRUE, width = "4.6cm") %>%
   kableExtra::column_spec(2, width = "10.0cm") %>%
   kableExtra::footnote(
-    general = "The AFR item documents a broad aggregate-trading-partner cue. It is retained as context for metric mismatch and prior salience, not as evidence of newspaper uptake of the strict export-destination treatment.",
+    general = "The AFR item documents a broad aggregate-trading-partner cue. It documents broad-metric salience during the 2009 annual treatment window. The publication date does not establish that a strict goods-export cue preceded treatment.",
     general_title = "Note: ",
     escape = FALSE,
     threeparttable = TRUE
@@ -1856,11 +1881,22 @@ knitr::kable(
 
 Below is the coded instruction to the ChatGPT API to classify the subjects of the headlines.
 
-```{r code-chatgpt, echo=TRUE, eval=FALSE}
+\begingroup\singlespacing
+
+```{r code-chatgpt, echo=TRUE, eval=FALSE, size="small"}
 system_block <- paste(
-  'You are a Brazilian expert in International Relations and the political',
-  'economy of China–Brazil relations.  Classify the subject of EACH headline',
-  'when I say EACH, I mean all of them, even if repetitive or similar. Do classify **all** of them',
+  paste0(
+    'You are a Brazilian expert in International Relations and ',
+    'the political'
+  ),
+  paste0(
+    'economy of China–Brazil relations.  Classify the subject ',
+    'of EACH headline'
+  ),
+  paste0(
+    'when I say EACH, I mean all of them, even if repetitive or ',
+    'similar. Do classify **all** of them'
+  ),
   'using **one** label from this list exactly as written:',
   '"diplomacy", "chinese economy", "china-brasil relations",',
   '"disaster and accidents", "chinese politics and policy",',
@@ -1868,30 +1904,73 @@ system_block <- paste(
   '"china-brazil trade", "health".\n\n',
   # 13 static few-shot examples — leave them unchanged!
   'Examples:\n',
-  '1. Presidente chinês visita o Brasil e participa de reunião com FHC -> china-brasil relations\n',
-  '2. Ministro chinês de Defesa faz visita oficial ao Brasil -> china-brasil relations\n',
-  '3. Para governo, novo câmbio chinês só beneficia Brasil no médio prazo -> china-brazil trade\n',
-  '4. China ultrapassa EUA como maior parceiro comercial do Brasil -> china-brazil trade\n',
-  '5. China vai controlar preços de alimentos e combustíveis -> chinese economy\n',
-  '6. Vendas de automóveis na China desaceleram em junho -> chinese economy\n',
-  '7. China quer devolução das relíquias Yin, patrimônio da Unesco -> sports, science, culture, other\n',
-  '8. Dinossauro encontrado na China esclarece origem das aves -> sports, science, culture, other\n',
-  '9. OMS confirma mais de 4.600 casos de gripe suína; China registra 2º caso -> health\n',
-  '10. Marinha chinesa busca "cansar" barcos japoneses em águas disputadas -> diplomacy\n',
-  '11. Acidente após casamento deixa 16 mortos na China -> disaster and accidents\n',
-  '12. Jornal chinês sai das bancas por foto da praça Tiananmen -> human rights\n',
-  '13. China é parceira estratégica contra crise econômica, diz UE -> chinese economy',
-  'return as in the examples, a string with the headline and the classification'
+  paste0(
+    '1. Presidente chinês visita o Brasil e participa de ',
+    'reunião com FHC -> china-brasil relations\n'
+  ),
+  paste0(
+    '2. Ministro chinês de Defesa faz visita oficial ao Brasil ',
+    '-> china-brasil relations\n'
+  ),
+  paste0(
+    '3. Para governo, novo câmbio chinês só beneficia Brasil no ',
+    'médio prazo -> china-brazil trade\n'
+  ),
+  paste0(
+    '4. China ultrapassa EUA como maior parceiro comercial do ',
+    'Brasil -> china-brazil trade\n'
+  ),
+  paste0(
+    '5. China vai controlar preços de alimentos e combustíveis ',
+    '-> chinese economy\n'
+  ),
+  paste0(
+    '6. Vendas de automóveis na China desaceleram em junho -> ',
+    'chinese economy\n'
+  ),
+  paste0(
+    '7. China quer devolução das relíquias Yin, patrimônio da ',
+    'Unesco -> sports, science, culture, other\n'
+  ),
+  paste0(
+    '8. Dinossauro encontrado na China esclarece origem das ',
+    'aves -> sports, science, culture, other\n'
+  ),
+  paste0(
+    '9. OMS confirma mais de 4.600 casos de gripe suína; China ',
+    'registra 2º caso -> health\n'
+  ),
+  paste0(
+    '10. Marinha chinesa busca "cansar" barcos japoneses em ',
+    'águas disputadas -> diplomacy\n'
+  ),
+  paste0(
+    '11. Acidente após casamento deixa 16 mortos na China -> ',
+    'disaster and accidents\n'
+  ),
+  paste0(
+    '12. Jornal chinês sai das bancas por foto da praça ',
+    'Tiananmen -> human rights\n'
+  ),
+  paste0(
+    '13. China é parceira estratégica contra crise econômica, ',
+    'diz UE -> chinese economy'
+  ),
+  paste0(
+    'return as in the examples, a string with the headline and ',
+    'the classification'
+  )
 )
-
 ```
+
+\endgroup
 
 The classified headline file is treated as an archived derived dataset rather than regenerated during manuscript rendering. This choice reflects the practical behavior of LLM-based coding: early runs sometimes returned incomplete classifications, altered original headlines, or used slightly inconsistent labels, which made exact matching back to the archive difficult. I therefore fixed the prompt, normalized labels, preserved the resulting classified file, and validate the coding below against an independently coded sample. The evidence in the main text is used as a headline-level salience diagnostic.
 
-Below I provide a random sample of the headlines and the classification provided by ChatGPT.
+Below I reproduce the 14 archived headline examples and their ChatGPT classifications.
 
-```{r sample-chatgpt, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Random sample of China-related Folha de S.Paulo headlines and ChatGPT classifications. ", caption_note(unit = "headline text and category labels", window = "sample drawn from the 2000-2014 corpus")), fig.pos="H", out.width="\\linewidth"}
-knitr::include_graphics(tar_read(sample_headlines_image_file))
+```{r sample-chatgpt, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Fourteen archived examples of China-related Folha de S.Paulo headlines and ChatGPT classifications. ", caption_note(unit = "headline text and category labels", window = "sample drawn from the 2000-2014 corpus")), fig.pos="H", out.width="\\linewidth"}
+knitr::include_graphics("images/RIO_20260905_table1_headlines_14.pdf")
 ```
 
 ### Validation of ChatGPT Classification
@@ -2049,7 +2128,7 @@ ungadm_fmt_rank <- function(rank_value, denom, p_value) {
 }
 ```
 
-The main estimations in the paper used the classic ideal-point measurement by BSV [@bailey_etal2017] as the response variable. However, according to @fjelstul_etal2026, the set of resolutions included in the BSV dataset is not complete. They provided a broader dataset, along with re-estimations of ideal points based on the new data. To assess whether the results of the paper change with this new measurement, I reran the main estimations with this new response variable. To make the comparisons fair, I used exactly the same specifications as far as possible, so that any change in the results is driven by the new measurement, not by a different model, different covariates, or different seeds. The only differences are the series, since the time window is smaller for the @fjelstul_etal2026 data, and the time weights in the SDiD, which the algorithm recomputes and which I do not control. It is also important to note that `r nrow(ungadm_unmapped)` country-session rows had no ISO3c match and `r nrow(ungadm_missing_outcome)` SDiD rows had no outcome in the alternative measurement.
+The main estimations in the paper used the classic ideal-point measurement by BSV [@bailey_etal2017] as the response variable. However, according to @fjelstul_etal2026, the set of resolutions included in the BSV dataset is not complete. They provided a broader dataset, along with re-estimations of ideal points based on the new data. To assess whether the results of the paper change with this new measurement, I reran the main estimations with this new response variable. To make the comparisons fair, I used exactly the same specifications as far as possible, so that any change in the results is driven by the new measurement, not by a different model, different covariates, or different seeds. The only differences are the series, since the time window is smaller for the @fjelstul_etal2026 data, and the unit and time weights in the SDiD, which the algorithm recomputes and which I do not control. It is also important to note that `r nrow(ungadm_unmapped)` country-session rows had no ISO3c match and `r nrow(ungadm_missing_outcome)` SDiD rows had no outcome in the alternative measurement.
 
 The results are consistent with the main estimation. Table \@ref(tab:ungadm-sdid-comparison) shows the comparison. Under UNGA-DM, the point estimate is nominally higher than the original in absolute terms (`r sprintf("%.3f", ungadm_dm_row$estimate)` versus `r sprintf("%.3f", ungadm_bsv_row$estimate)`), with a lower p-value of `r sprintf("%.3f", ungadm_dm_row$p_normal_two_sided)`. The directional rank is the same in both measurements (`r ungadm_fmt_rank(ungadm_dm_row$rank_one_sided, ungadm_dm_row$rank_denominator, ungadm_dm_row$p_rank_one_sided)`). The bilateral rank improves from `r ungadm_fmt_rank(ungadm_bsv_row$rank_two_sided, ungadm_bsv_row$rank_denominator, ungadm_bsv_row$p_rank_two_sided)` to `r ungadm_fmt_rank(ungadm_dm_row$rank_two_sided, ungadm_dm_row$rank_denominator, ungadm_dm_row$p_rank_two_sided)`. It is noteworthy that the pre-treatment averages are different (`r sprintf("%.3f", ungadm_bsv_row$brazil_pre_mean)` against
 `r sprintf("%.3f", ungadm_dm_row$brazil_pre_mean)`) in the original estimation. But the effect measured as a percentage of the pre-treatment average is similar: `r sprintf("%.1f", ungadm_bsv_row$estimate_pct_pre_mean)` and `r sprintf("%.1f", ungadm_dm_row$estimate_pct_pre_mean)` percent.
@@ -2123,7 +2202,7 @@ knitr::kable(
   )
 ```
 
-Figure \@ref(fig:ungadm-placebo-distribution) reports the placebo-in-space distribution for the UNGA-DM SDiD fit. It is close to the distribution obtained under the original outcome, and the placebo ranks are unchanged under the alternative measure. Table \@ref(tab:ungadm-rank-criteria) shows that Brazil holds the same position under both metrics.
+Figure \@ref(fig:ungadm-placebo-distribution) reports the placebo-in-space distribution for the UNGA-DM SDiD fit. It is close to the distribution obtained under the original outcome. The directional placebo rank is unchanged under the alternative measure (`r ungadm_fmt_rank(ungadm_bsv_row$rank_one_sided, ungadm_bsv_row$rank_denominator, ungadm_bsv_row$p_rank_one_sided)` in both columns), while the bilateral absolute rank improves from `r ungadm_fmt_rank(ungadm_bsv_row$rank_two_sided, ungadm_bsv_row$rank_denominator, ungadm_bsv_row$p_rank_two_sided)` to `r ungadm_fmt_rank(ungadm_dm_row$rank_two_sided, ungadm_dm_row$rank_denominator, ungadm_dm_row$p_rank_two_sided)`. Table \@ref(tab:ungadm-sdid-comparison) reports this cross-measure comparison, and Table \@ref(tab:ungadm-rank-criteria) reports the donor-exclusion checks under UNGA-DM.
 
 ```{r ungadm-placebo-distribution, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Placebo-in-space distribution under the UNGA-DM outcome, with Brazil marked. Brazil's estimate is the ", scales::ordinal(ungadm_dm_row$rank_one_sided), " most negative of ", ungadm_dm_row$rank_denominator, " assignments (directional p = ", sprintf("%.3f", ungadm_dm_row$p_rank_one_sided), "); the two-sided absolute rank is ", ungadm_dm_row$rank_two_sided, "/", ungadm_dm_row$rank_denominator, " (p = ", sprintf("%.3f", ungadm_dm_row$p_rank_two_sided), "). Negative values indicate convergence toward China. ", caption_note(unit = "Estimated post-2009 gap in absolute UNGA ideal-point distance to China, UNGA-DM measure", window = "1997-2015 annual SDiD panel")), fig.pos="H", fig.width=7, fig.asp=0.5}
 ungadm_placebo_valid <- ungadm_dm_placebo %>%

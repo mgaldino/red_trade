@@ -704,9 +704,12 @@ fit_ddd_model <- function(data, outcome, vcov_formula, vcov_label) {
   fit_data <- data |>
     dplyr::mutate(
       human_rights_binary = as.integer(issue_domain == "Human rights"),
+      brazil_hr = as.integer(iso3c == "BRA") * human_rights_binary,
       brazil_post_hr = brazil_post_2009 * human_rights_binary
     )
-  fml <- stats::as.formula(paste0(outcome, " ~ brazil_post_2009 + brazil_post_hr | iso3c + rcid"))
+  # Brazil x domain absorbs the persistent domain-specific Brazil-control gap.
+  # Resolution FE absorb common period, domain, and period x domain components.
+  fml <- stats::as.formula(paste0(outcome, " ~ brazil_post_2009 + brazil_hr + brazil_post_hr | iso3c + rcid"))
   fit <- tryCatch(
     fixest::feols(fml, data = fit_data, vcov = vcov_formula, notes = FALSE),
     error = function(e) e
@@ -751,7 +754,7 @@ fit_ddd_model <- function(data, outcome, vcov_formula, vcov_label) {
     n_resolutions = dplyr::n_distinct(fit_data$rcid),
     inference_status = paste0(
       "Model-based ", vcov_label,
-      ". The interaction term tests whether the Brazil post-2009 shift is stronger in human-rights than non-human-rights divergent votes."
+      ". The triple interaction controls for Brazil x human rights and tests the additional post-2009 human-rights shift. One treated country limits model-based inference; HR-only placebos do not test this DDD."
     ),
     error = ""
   )

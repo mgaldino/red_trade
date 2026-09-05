@@ -1,0 +1,31 @@
+{
+  "source": "Archived unvotes-derived vote panel in existing targets cache; no new acquisition",
+  "accessed_at_utc": "2026-09-05 21:22:15",
+  "years": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012],
+  "n_obs": 55190,
+  "n_countries": 95,
+  "n_resolutions": 612,
+  "missingness": "Only originally observed yes/no/abstain votes; no imputation; original selection unchanged",
+  "domain": "Any human-rights issue tag -> HR; all remaining resolutions -> non-HR, mutually exclusive",
+  "outcome_encoding": "yes=1, abstain=0, no=-1; relative distance in [-2,2], relative agreement in [-1,1]",
+  "weighting": "Unweighted OLS: each observed country-resolution row has weight 1; no SDiD donor weights; exact FWL contrast weights exported",
+  "corrected_formula": "outcome ~ brazil_post_2009 + brazil_hr + brazil_post_hr | iso3c + rcid",
+  "original_formula": "outcome ~ brazil_post_2009 + brazil_post_hr | iso3c + rcid",
+  "lower_order_components": "country FE absorb B; resolution FE absorb P,H,PH; BP and BH explicitly controlled",
+  "covariance": ["~iso3c", "~iso3c + rcid"],
+  "fixest_version": "0.12.1",
+  "small_sample_correction": {
+    "adj": true,
+    "fixef.K": "nested",
+    "cluster.adj": true,
+    "cluster.df": "min",
+    "t.df": "min",
+    "fixef.force_exact": false
+  },
+  "n_threads": 1,
+  "placebo_seconds": 3.414,
+  "elapsed_seconds": 8.407,
+  "tests": ["original point estimates/SE/p/CI/n match archived cache within 1e-10", "both DDD helpers agree", "same rows in every fit", "two algebraic toy contrasts", "FWL contrast equals corrected coefficient", "Brazil reassignment equals actual DDD", "95 of 95 placebo units estimated in each outcome", "DDD-only production helper matches direct fits and placebo summary"],
+  "implementation_status": "Executed; independent review pending",
+  "targets_store_modified": false
+}

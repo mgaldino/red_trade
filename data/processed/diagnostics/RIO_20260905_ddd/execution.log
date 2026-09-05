@@ -1,0 +1,28 @@
+Started: 2026-09-05 21:22:06 UTC
+# A tibble: 8 × 12
+  outcome     specification covariance term  estimate      se  p_value ci_95_low
+  <chr>       <chr>         <chr>      <chr>    <dbl>   <dbl>    <dbl>     <dbl>
+1 distance_c… original_res… country    braz…  -0.264  0.0548  5.53e- 6   -0.373 
+2 distance_c… corrected_ddd country    braz…  -0.222  0.0145  2.11e-27   -0.251 
+3 distance_c… original_res… country_r… braz…  -0.264  0.0543  4.62e- 6   -0.372 
+4 distance_c… corrected_ddd country_r… braz…  -0.222  0.0144  1.81e-27   -0.251 
+5 agreement_… original_res… country    braz…   0.0885 0.0255  7.80e- 4    0.0379
+6 agreement_… corrected_ddd country    braz…   0.0522 0.00746 3.87e-10    0.0374
+7 agreement_… original_res… country_r… braz…   0.0885 0.0254  7.49e- 4    0.0381
+8 agreement_… corrected_ddd country_r… braz…   0.0522 0.00822 7.76e- 9    0.0358
+# ℹ 4 more variables: ci_95_high <dbl>, n_obs <int>, n_countries <int>,
+#   n_resolutions <int>
+# A tibble: 2 × 16
+  outcome   brazil_estimate expected_direction n_placebo_units n_donors n_failed
+  <chr>               <dbl> <chr>                        <int>    <int>    <int>
+1 distance…         -0.222  negative                        95       94        0
+2 agreemen…          0.0522 positive                        95       94        0
+# ℹ 10 more variables: brazil_rank_expected_direction <int>,
+#   directional_ge_count <int>, directional_gt_donor_count <int>,
+#   ties_including_brazil <int>, randomization_p_directional <dbl>,
+#   randomization_p_directional_strict_donor <dbl>,
+#   randomization_p_two_sided <dbl>,
+#   randomization_p_two_sided_strict_donor <dbl>, tie_tolerance <dbl>,
+#   interpretation <chr>
+DDD placebo seconds: 3.414 
+Completed: 2026-09-05 21:22:15 UTC; independent review pending

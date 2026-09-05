@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0",
+  "revision_id": "RIO_20260905",
+  "purpose": "Deterministic Figure 12 illustration with the 14 rows visible in the frozen PDF",
+  "input": {
+    "path": "data/folha_classificado.rds",
+    "rows_selected": 14,
+    "source_role": "archived classified headline dataset"
+  },
+  "outputs": {
+    "image": "images/RIO_20260905_table1_headlines_14.png",
+    "vector_pdf": "images/RIO_20260905_table1_headlines_14.pdf",
+    "csv": "data/processed/diagnostics/RIO_20260905_figure12/table1_headlines_14.csv"
+  },
+  "validation": {
+    "exact_headline_date_matches": 14,
+    "label_matches": 14,
+    "empty_categories_shown": false,
+    "validation_sample_n": 100,
+    "validation_sample_unchanged": true
+  },
+  "source_rows": [
+    {
+      "display_order": 1,
+      "headline": "Disputa com Brasil é 'conflito menor' para China, dizem analistas",
+      "classification": "china-brazil relations",
+      "date": "2005-10-05"
+    },
+    {
+      "display_order": 2,
+      "headline": "Lula vai se encontrar com presidente da China na segunda",
+      "classification": "china-brazil relations",
+      "date": "2004-05-23"
+    },
+    {
+      "display_order": 3,
+      "headline": "China lidera as aquisições de empresas brasileiras",
+      "classification": "china-brazil trade",
+      "date": "2013-03-01"
+    },
+    {
+      "display_order": 4,
+      "headline": "China aceita nova regra brasileira e suspende embargo à soja",
+      "classification": "china-brazil trade",
+      "date": "2004-06-21"
+    },
+    {
+      "display_order": 5,
+      "headline": "PIB da China dobra participação no total mundial em 5 anos",
+      "classification": "chinese economy",
+      "date": "2011-03-25"
+    },
+    {
+      "display_order": 6,
+      "headline": "BHP prevê produção recorde de minério de ferro e aposta na China",
+      "classification": "chinese economy",
+      "date": "2012-01-18"
+    },
+    {
+      "display_order": 7,
+      "headline": "China ameaça Google com \"consequências\" caso empresa largue autocensura",
+      "classification": "chinese politics and policy",
+      "date": "2010-03-12"
+    },
+    {
+      "display_order": 8,
+      "headline": "China anuncia fechamento de 700 websites",
+      "classification": "chinese politics and policy",
+      "date": "2004-08-01"
+    },
+    {
+      "display_order": 9,
+      "headline": "China não quer interferência dos EUA na questão do Tibete",
+      "classification": "diplomacy",
+      "date": "2011-09-28"
+    },
+    {
+      "display_order": 10,
+      "headline": "Chega a Taiwan primeiro vôo direto da China em quase 60 anos",
+      "classification": "diplomacy",
+      "date": "2008-07-04"
+    },
+    {
+      "display_order": 11,
+      "headline": "Incêndio em prédio residencial deixa 12 mortos na China",
+      "classification": "disaster and accidents",
+      "date": "2010-07-19"
+    },
+    {
+      "display_order": 12,
+      "headline": "China detona barragens e prédios danificados; veja vídeo",
+      "classification": "disaster and accidents",
+      "date": "2008-06-06"
+    },
+    {
+      "display_order": 13,
+      "headline": "Uma em três chinesas da zona rural se mata por ano",
+      "classification": "health",
+      "date": "2002-11-29"
+    },
+    {
+      "display_order": 14,
+      "headline": "China suspende viagens ao Tibete para controlar Sars",
+      "classification": "health",
+      "date": "2003-05-13"
+    }
+  ]
+}

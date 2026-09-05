@@ -6908,9 +6908,12 @@ selective_unga_fit_ddd_model <- function(data, outcome, vcov_formula, vcov_label
   fit_data <- data |>
     dplyr::mutate(
       human_rights_binary = as.integer(issue_domain == "Human rights"),
+      brazil_hr = as.integer(iso3c == "BRA") * human_rights_binary,
       brazil_post_hr = brazil_post_2009 * human_rights_binary
     )
-  fml <- stats::as.formula(paste0(outcome, " ~ brazil_post_2009 + brazil_post_hr | iso3c + rcid"))
+  # Brazil x domain absorbs the persistent domain-specific Brazil-control gap.
+  # Resolution FE absorb common period, domain, and period x domain components.
+  fml <- stats::as.formula(paste0(outcome, " ~ brazil_post_2009 + brazil_hr + brazil_post_hr | iso3c + rcid"))
   fit <- tryCatch(
     fixest::feols(fml, data = fit_data, vcov = vcov_formula, notes = FALSE),
     error = function(e) e
@@ -6956,10 +6959,78 @@ selective_unga_fit_ddd_model <- function(data, outcome, vcov_formula, vcov_label
     inference_status = paste0(
       "Model-based ",
       vcov_label,
-      ". The interaction term tests whether the Brazil post-2009 shift is stronger in human-rights than non-human-rights divergent votes."
+      ". The triple interaction controls for Brazil x human rights and tests the additional post-2009 human-rights shift. One treated country limits model-based inference; HR-only placebos do not test this DDD."
     ),
     error = ""
   )
+}
+
+build_selective_unga_corrected_ddd <- function(vote_panel) {
+  # Separate DDD-only producer: consumes the cached vote panel, not SDiD/IFE fits.
+  d <- vote_panel |>
+    dplyr::filter(china_usa_divergent) |>
+    dplyr::mutate(human_rights_binary = as.integer(issue_domain == "Human rights"))
+  outcomes <- c("distance_china_minus_usa", "agreement_china_minus_usa")
+  vcovs <- list(~iso3c, ~iso3c + rcid)
+  labels <- c("country-clustered SE", "two-way clustered SE by country and resolution")
+  models <- dplyr::bind_rows(lapply(outcomes, function(outcome) {
+    dplyr::bind_rows(lapply(seq_along(vcovs), function(j) {
+      selective_unga_fit_ddd_model(d, outcome, vcovs[[j]], labels[j])
+    }))
+  })) |>
+    dplyr::mutate(
+      expected_direction = dplyr::case_when(
+        outcome == "distance_china_minus_usa" & term == "brazil_post_hr" ~ "negative incremental HR effect",
+        outcome == "agreement_china_minus_usa" & term == "brazil_post_hr" ~ "positive incremental HR effect",
+        term == "brazil_post_2009" ~ "non-HR Brazil post component", TRUE ~ "diagnostic"),
+      direction_matches_expected = dplyr::case_when(
+        expected_direction == "negative incremental HR effect" ~ estimate < 0,
+        expected_direction == "positive incremental HR effect" ~ estimate > 0, TRUE ~ NA))
+  units <- sort(unique(d$iso3c))
+  placebos <- dplyr::bind_rows(lapply(units, function(unit) {
+    pd <- d |>
+      dplyr::mutate(placebo_post = as.integer(iso3c == unit) * post_2009,
+                    placebo_hr = as.integer(iso3c == unit) * human_rights_binary,
+                    placebo_post_hr = placebo_post * human_rights_binary)
+    dplyr::bind_rows(lapply(outcomes, function(outcome) {
+      fit <- fixest::feols(stats::as.formula(paste0(outcome,
+        " ~ placebo_post + placebo_hr + placebo_post_hr | iso3c + rcid")),
+        data = pd, vcov = ~iso3c, notes = FALSE)
+      term <- "placebo_post_hr"
+      if (stats::nobs(fit) != nrow(d) || !term %in% names(stats::coef(fit))) {
+        stop("DDD placebo changed sample or omitted the triple interaction: ", unit)
+      }
+      ci <- stats::confint(fit, parm = term)
+      tibble::tibble(placebo_unit = unit, outcome = outcome, term = term,
+        estimate = unname(stats::coef(fit)[term]), se = unname(fixest::se(fit)[term]),
+        p_value = unname(fixest::pvalue(fit)[term]), ci_95_low = ci[1, 1], ci_95_high = ci[1, 2],
+        n_obs = stats::nobs(fit), n_countries = length(units), n_resolutions = dplyr::n_distinct(d$rcid))
+    }))
+  }))
+  summary <- dplyr::bind_rows(lapply(outcomes, function(outcome) {
+    p <- placebos |> dplyr::filter(.data$outcome == .env$outcome)
+    b <- p$estimate[p$placebo_unit == "BRA"]
+    if (length(b) != 1L || anyNA(p$estimate)) stop("Incomplete DDD placebo distribution")
+    direction <- if (outcome == "distance_china_minus_usa") -1 else 1
+    score <- direction * p$estimate
+    bscore <- direction * b
+    donor <- p$placebo_unit != "BRA"
+    tol <- 1e-10
+    tibble::tibble(outcome = outcome, brazil_estimate = b,
+      expected_direction = ifelse(direction == -1, "negative", "positive"),
+      n_placebo_units = nrow(p), n_donors = sum(donor), n_failed = 0L,
+      brazil_rank_expected_direction = 1L + sum(score > bscore + tol),
+      directional_ge_count = sum(score >= bscore - tol),
+      directional_gt_donor_count = sum(score[donor] > bscore + tol),
+      ties_including_brazil = sum(abs(score - bscore) <= tol),
+      randomization_p_directional = mean(score >= bscore - tol),
+      randomization_p_directional_strict_donor = mean(score[donor] > bscore + tol),
+      randomization_p_two_sided = mean(abs(p$estimate) >= abs(b) - tol),
+      randomization_p_two_sided_strict_donor = mean(abs(p$estimate[donor]) > abs(b) + tol),
+      tie_tolerance = tol,
+      interpretation = "Descriptive reassignment benchmark; causal randomization inference additionally requires exchangeability of country assignment.")
+  }))
+  list(ddd_models = models, country_placebos = placebos, country_placebo_summary = summary)
 }
 
 build_selective_china_alignment_unga_targets <- function(synth_data,
