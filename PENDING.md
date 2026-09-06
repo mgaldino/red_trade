@@ -685,18 +685,15 @@ inference" da Table 2 e reduzir o conteúdo restante.
 
 ### C17: imagem de headlines promete 20 itens
 
-**Status**: Pendente deliberado
-**Prioridade**: BAIXA
+**Status**: Resolvido em 2026-09-05
+**Prioridade**: CONCLUÍDA
 
-O caption do `paper_v4.Rmd` já foi suavizado, mas a imagem
-`images/table1_headlines.png` ainda contém o subtítulo "Random sample of 20
-headlines with ChatGPT-assigned topic". O PDF atual ainda extrai essa frase da
-imagem. O item continua visual/transparência, não causal.
-
-Ação futura, apenas se o autor pedir ou antes de circulação final:
-
-1. regenerar a imagem para mostrar efetivamente os 20 headlines completos; ou
-2. alterar o subtítulo dentro da imagem para não prometer 20 itens.
+`images/table1_headlines.png` foi substituída pela versão corrigida com 14
+exemplos arquivados, sem a promessa de uma amostra aleatória de 20 headlines.
+O produtor legado `scripts/chagpt_figures_tables.R` também usa uma legenda
+compatível com o número efetivamente exibido. O PDF canônico foi regenerado e
+passou a auditoria mecânica e o gate independente. Evidência e backups:
+`quality_reports/revisions/paper_v4/20260905_RIO003_C17/`.
 
 ### Rank-label frequency explícita
 

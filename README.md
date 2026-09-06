@@ -81,12 +81,14 @@ repository root, and the manuscript is `paper_v4.Rmd`. See "Reproduction" below.
 **Q2a. What is the active development manuscript?**
 `/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd`
 
-As of 2026-05-25, `paper_v4.Rmd` is the source of truth for the active
-development manuscript. The PDF was rendered as `paper_v4.pdf` on 2026-05-25
-17:31 (-03). The local `coarse-review` minor-comment pass is mostly resolved:
-comments C01-C16 and C18-C26 are implemented or resolved; C17 remains
-deliberately deferred because the headline-sample image still promises 20
-headlines. The tracking files are:
+`paper_v4.Rmd` is the source of truth for the active development manuscript.
+The local `coarse-review` minor-comment pass now includes C17: comments
+C01-C16 and C18-C26 were already implemented or resolved, and the
+headline-sample image was corrected on 2026-09-05 to show its 14 archived
+examples without promising 20 headlines. The current canonical PDF was
+rendered on 2026-09-05; the revision record and gate are in
+`quality_reports/revisions/paper_v4/20260905_RIO003_C17/`.
+The tracking files are:
 
 - `quality_reports/coarse_review/plan_minor_comments_coarse_review_2026-05-20.md`
 - `quality_reports/coarse_review/pendencias_minor_comments_coarse_review_2026-05-20.md`

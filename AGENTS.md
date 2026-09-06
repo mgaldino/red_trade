@@ -50,9 +50,9 @@ Pendências reais remanescentes:
   ficou pequena demais e praticamente ilegível. Revisar antes de nova
   circulação, preferencialmente quebrando em tabelas menores ou convertendo
   parte do conteúdo em bullets no texto.
-- C17: a imagem `images/table1_headlines.png` ainda promete "20 headlines" no
-  subtítulo interno; o caption do Rmd foi suavizado, mas a imagem/PDF ainda
-  carregam a promessa. É pendência visual de baixa prioridade.
+- C17 foi resolvido em 2026-09-05: `images/table1_headlines.png` agora mostra
+  14 exemplos arquivados, sem a promessa de 20 headlines; o produtor legado
+  também foi ajustado. Ver `quality_reports/revisions/paper_v4/20260905_RIO003_C17/`.
 - Opcional: medir frequência normalizada de labels explícitos de rank
   (`largest`, `number one`, `principal partner`) na cobertura.
 - Opcional: adicionar tabela país-a-país da codificação cross-country com
