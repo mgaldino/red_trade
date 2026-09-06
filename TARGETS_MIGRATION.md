@@ -72,6 +72,44 @@ insumos brutos congelados, documentados e validados por hash.
 Nenhum bloco será promovido isoladamente. A implementação pode ser organizada por
 blocos dentro da worktree, mas a integração em `main` é atômica.
 
+## Inventário operacional de scripts ainda fora do grafo
+
+**Atualizado em 2026-09-05**, contra `main` no commit `6750a9e`, o
+`paper_v4.Rmd`, `_targets.R` e `scripts/run_rebuild_batch.sh`. Um script entra
+nesta lista quando produz um número, tabela ou figura que o manuscrito atual lê
+diretamente. A branch isolada `codex/targets-migration` contém uma integração
+estática anterior, mas ela ainda não foi promovida para `main`; por isso os itens
+abaixo permanecem pendentes nesta base.
+
+| Prioridade | Script produtor | Saída ainda consumida diretamente pelo manuscrito | Destino da migração |
+|---|---|---|---|
+| P0 | `scripts/diagnostics/reestimate_corrected_ddd_RIO_20260905.R` | `data/processed/diagnostics/RIO_20260905_ddd/corrected_ddd_bundle.rds` | Criar targets para o bundle DDD corrigido e para o placebo por país; substituir os `readRDS()` do bloco de evidência por `tar_read()`. |
+| P0 | `scripts/diagnostics/prepare_australia_appendix_bundle_patch.R` | `data/processed/diagnostics/RIO_20260905_australia/australia_appendix_tables_patch.rds` | Incorporar o ano de entrada atual ao produtor do apêndice e expor as tabelas corrigidas por target; preservar a proveniência histórica das fontes. |
+| P0 | `scripts/diagnostics/rebuild_figure12_sample_RIO_20260905.R` | `images/RIO_20260905_table1_headlines_14.pdf` | Encapsular a seleção determinística como produtor e publicar o PDF vetorial como `format = "file"`; conservar o manifesto das 14 manchetes. |
+| P1 | `scripts/diagnostics/audit_brazil_sdid_no_covariates.R` | CSVs em `data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/` usados pelos blocos de números e diagnósticos SDiD | Consolidar no bundle de diagnósticos SDiD já previsto no grafo, preservando seed, placebo distribution, ranks, pesos, balance, sensibilidades, timing e exposição dos doadores. |
+| P1 | `scripts/diagnostics/prepare_paper_v4_brazil_sdid_predetermined_core_outputs.R` | Figuras em `quality_reports/china_demand_shock_rank_threshold/` | Produzir as figuras de ajuste, pesos e pool latino-americano como file targets em diretório versionável; remover a dependência do caminho gitignored. |
+| P1 | `scripts/diagnostics/audit_brazil_sdid_commodity_no_covariates.R` | `table_5_sdid_specification_results.csv` em `data/processed/diagnostics/brazil_sdid_commodity_no_covariates/` | Incorporar a exposição de commodities e a Tabela 5 ao grafo, incluindo os dois CSVs congelados a montante e seus checks. |
+| P1 | `scripts/diagnostics/audit_ungadm_outcome_robustness.R` | Tabelas de estimação em `data/processed/diagnostics/ungadm_outcome_robustness/estimation/` | Criar o painel UNGA-DM harmonizado e o bundle SDiD/IFE como targets; manter os arquivos brutos e o codebook como file targets sem chamada de rede. |
+| P1 | `scripts/diagnostics/audit_ungadm_postreview_diagnostics.R` | Tabelas de pós-revisão em `data/processed/diagnostics/ungadm_outcome_robustness/postreview/` | Mover ranks harmonizados, grade 2×2, bootstrap pareado e diagnósticos de divergência para targets/file targets dependentes do bundle UNGA-DM. |
+| P1 | `scripts/diagnostics/preview_cross_country_dynamic_with_pooled_att.R` | `images/figure6_cross_country_dynamic_with_pooled_att.png` | Fazer o produtor da figura ser um target explícito dependente do modelo dinâmico e do ATT pooled; substituir o `include_graphics()` manual. |
+| P1 | `scripts/diagnostics/plot_brazil_sdid_dose_response_panel.R` | `images/figure_brazil_sdid_dose_response_panel.pdf` | Expor a figura de dose–resposta como file target e declarar seus dados de entrada no grafo. |
+
+### Não entram nesta lista de produtores analíticos
+
+- `scripts/diagnostics/render_paper_v4_RIO_20260905.R` apenas encapsula a renderização e
+  deve continuar como ferramenta de execução, não como target analítico.
+- `scripts/run_rebuild_batch.sh`, `scripts/run_rebuild_targets.R` e os checks de
+  cobertura/frescor orquestram ou verificam o pipeline; não produzem conteúdo do
+  manuscrito. Os invariantes substantivos de donor pool e consistência do erro-padrão
+  podem virar asserts no grafo, conforme o protocolo já registrado.
+- Coletores externos, como `collect_ex_top1_salience_sources.py`, permanecem na
+  fronteira de aquisição: os dados congelados devem ser declarados e validados como
+  file targets, enquanto suas derivações que alimentam o paper entram no grafo.
+
+Nenhum item acima deve ser marcado como concluído apenas por uma revisão estática ou
+por um patch preparado. A conclusão exige build controlado em store limpo, comparação
+com o gabarito, renderização/QA e revisão independente antes de promoção para `main`.
+
 ## Protocolo para alterar scripts
 
 1. Documentar a mudança proposta e o contrato de equivalência antes de editar.
