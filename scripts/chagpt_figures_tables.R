@@ -139,7 +139,7 @@ tbl_headlines <-
   gt() %>% 
   tab_header(
     title    = md("**TABLE 3 — Examples of Classified Headlines**"),
-    subtitle = md("Random sample of 20 headlines with ChatGPT‐assigned topic")
+    subtitle = md("Archived headline examples with ChatGPT-assigned topic")
   ) %>% 
   cols_width(
     Headline       ~ pct(50),            # wider text column
