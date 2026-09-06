@@ -1594,7 +1594,7 @@ knitr::kable(
   sdid_donor_china_exposure_table,
   format = "latex",
   booktabs = TRUE,
-  caption = "High-weight donor exposure to China's export expansion.",
+  caption = "High-weight donor exposure to China in exports of goods and services.",
   align = "rllrrrrl"
 ) %>%
   kableExtra::kable_styling(
@@ -1604,9 +1604,13 @@ knitr::kable(
   kableExtra::footnote(
     general = paste0(
       "High-weight donors are the ten donors with the largest SDiD unit weights. ",
-      "Among them, ",
+      "China shares and destination ranks in this table include goods and services. ",
+      "Pre and post refer to 1997--2008 and 2009--2015, respectively; shares are annual averages within each window. ",
+      "Best post rank is China's highest export-destination position attained during 2009--2015. ",
+      "Donor eligibility instead uses goods-only ranks: no donor had China as its largest goods-export destination during 1997--2015. ",
+      "Among these high-weight donors, ",
       sdid_high_weight_exposure_summary$n_high_weight_top_china_post,
-      " were cases where China was the top export destination after 2009 and ",
+      " had China as the top export destination in goods and services during 2009--2015 and ",
       sdid_high_weight_exposure_summary$n_high_weight_top_two_china_post,
       " were cases where China ranked in the top two, accounting for ",
       sprintf("%.1f", 100 * sdid_high_weight_exposure_summary$weighted_share_high_weight_top_two_china_post),
