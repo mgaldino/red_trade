@@ -1,7 +1,7 @@
 # RDD Trade — Foreign Policy Impact of Trade Status Gains
 
 ## Projeto
-Paper: "The Foreign Policy Impact of Trade-Based Status Gains: When China Overtakes the US as Top Trade Partner". Em Revise & Resubmit. Tambem submetido ao Simposio FGV-USP em 2026-04-10 (versao anonimizada: `paper_v4_anonymous.Rmd` / `output/paper_v4_anonymous.pdf`, folha de rosto apenas com titulo e abstract de 139 palavras).
+Paper: "The Foreign Policy Impact of Trade-Based Status Gains: When China Overtakes the US as Top Trade Partner". Rejeitado na ISQ (informado pelo autor em 2026-09-06); sem submissao ativa. Proximo alvo EM AVALIACAO (2026-09-06, nao decidido): Journal of Chinese Political Science (JCPS) ou Chinese Political Science Review (CPSR), ambas Springer, duplo-cegas; a special issue da JCPS sobre competicao EUA-China foi descartada por exigir reenquadramento grande. Pareceres da ISQ em `reports/isq_2025_08_0517_decision_reviews.md`. Tambem submetido ao Simposio FGV-USP em 2026-04-10 (versao anonimizada: `paper_v4_anonymous.Rmd` / `output/paper_v4_anonymous.pdf`, folha de rosto apenas com titulo e abstract de 139 palavras).
 
 SDiD principal (SEM covariáveis, decisão do autor 2026-08-23; arrays fixos eram colineares com os efeitos fixos de unidade): ATT=-0.273 (valor exato -0.27277; SE placebo 0.131 com 20.000 replicações, seed 20260520), p normal bilateral=0.037, IC95 [-0.529, -0.017]; rank placebo direcional 3/96 (p=0.031), rank absoluto bilateral 7/96 (p=0.073) — ranks idênticos à spec antiga; SEs do pipeline agora via se_sdid() paralela/determinística (20k preferida, 5k comparações). ATENÇÃO (gate de abstract 2026-08-28): usar SEMPRE o arredondamento -0.273/0.131/[-0.529, -0.017] — versões antigas destes docs traziam -0.272/0.130/[-0.527, -0.017] por truncamento e isso vazou para número digitado no manuscrito (corrigido). Cross-country IFE goods-only status-current (5 anos, restricted risk set): ATT=-0.101 (SE 0.039), p=0.010; robusto em 3/5/7 anos e clean sample (p 0.003-0.019). Fonte: `data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/` e targets `china_top_m2_goods_status_current_*`. Rebuild de reprodutibilidade CONCLUÍDO em 2026-08-26 (12/12 lotes OK, ~9h25): estes números vêm do store reconstruído sob o screen de doadores baseado em bens.
 
@@ -76,7 +76,7 @@ red_trade/
   red_trade.Rproj              # Projeto R
   _targets.R / _targets.yaml   # Pipeline targets
   renv/ + renv.lock            # Dependencias travadas
-  paper_v4.Rmd                 # Paper atual (R&R)
+  paper_v4.Rmd                 # Paper atual (pos-rejeicao ISQ; proximo alvo em avaliacao)
   paper.Rmd ... paper_v3.Rmd   # Versoes anteriores (.Rmd sources)
   synth-trade-china.bib        # Bibliografia
   scripts/                     # Scripts R de analise
