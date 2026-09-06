@@ -442,94 +442,90 @@ ggplot2::ggplot(placebo_valid, ggplot2::aes(x = estimate, fill = is_brazil)) +
 Table \@ref(tab:brazil-sdid-diagnostic-summary) summarizes the diagnostic package behind the preferred Brazil SDiD estimate. The top five donors are `r sdid_top_donors_text`, and the complete donor pool, along with pre-treatment time weights and sensitivity diagnostics based on donor-deletion and window tests, appears in Appendix Tables \@ref(tab:sdid-unit-weights-complete), \@ref(tab:sdid-time-weights), \@ref(tab:sdid-donor-sensitivity), and \@ref(tab:sdid-window-sensitivity).
 
 ```{r brazil-sdid-diagnostic-summary, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
+# Presentation only: all values come from the existing diagnostic inputs above.
+# One measure per row avoids dense prose and keeps the result column scannable.
 sdid_diag_summary <- tibble::tribble(
-  ~Diagnostic, ~Result,
-  "Weights",
-  paste0(
-    nrow(sdid_unit_weights), " donors; largest weight = ",
-    sprintf("%.1f%%", 100 * max(sdid_unit_weights$unit_weight)),
-    "; top five = ",
-    sprintf("%.1f%%", 100 * sum(sdid_unit_weights$unit_weight[1:5])),
-    " of total weight. Highest time weights: ", sdid_high_time_weights_text,
-    "."
-  ),
-  "Fit",
-  paste0(
-    "Intercept-adjusted pre-treatment RMSPE = ",
-    sprintf("%.3f", sdid_fit_summary$rmspe_pre[1]),
-    "; post/pre adjusted RMSPE ratio = ",
-    sprintf("%.3f", sdid_fit_summary$rmspe_ratio[1]),
-    "; Brazil pre-treatment outcome mean = ",
-    sprintf("%.3f", sdid_outcome_balance$brazil_pre_mean), "."
-  ),
-  "Placebo inference",
-  paste0(
-    "Directional rank = ", sdid_all_rank$rank_one_sided_negative,
-    "/", sdid_all_rank$denominator,
-    " (p = ", sprintf("%.3f", sdid_all_rank$p_rank_one_sided_negative),
-    "); bilateral absolute rank = ", sdid_all_rank$rank_two_sided_absolute,
-    "/", sdid_all_rank$denominator,
-    " (p = ", sprintf("%.3f", sdid_all_rank$p_rank_two_sided_absolute), ")."
-  ),
-  "Donor sensitivity",
-  paste0(
-    "Largest leave-one-donor change = ",
-    sprintf("%.1f%%", sdid_max_single_donor_change),
-    "; top-ten donor deletion estimate = ",
-    sprintf(
-      "%.3f",
-      sdid_donor_sensitivity$estimate[
-        sdid_donor_sensitivity$specification ==
-          "Drop top 10 donors by weight"
-      ]
-    ),
-    ". High-weight donors with China in the post-2009 top two carry ",
-    sprintf(
-      "%.1f%%",
-      100 * sdid_high_weight_exposure_summary$
-        weighted_share_high_weight_top_two_china_post
-    ),
-    " of total weight."
-  ),
-  "Windows and timing",
-  paste0(
-    sdid_window_summary$n_negative, "/", sdid_window_summary$n_windows,
-    " window estimates are negative (range ",
-    sprintf("%.3f", sdid_window_summary$min_estimate), " to ",
-    sprintf("%.3f", sdid_window_summary$max_estimate),
-    "). China rank-2 timing estimate in 2004 = ",
-    sprintf("%.3f", sdid_rank2_placebo$estimate),
-    "; actual 2009 timing estimate = ",
-    sprintf("%.3f", sdid_actual_timing$estimate), "."
-  )
+  ~Measure, ~Result,
+  "Number of donors", as.character(nrow(sdid_unit_weights)),
+  "Largest donor weight", sprintf("%.1f%%", 100 * max(sdid_unit_weights$unit_weight)),
+  "Combined weight of the five largest donors",
+  sprintf("%.1f%%", 100 * sum(sort(sdid_unit_weights$unit_weight, decreasing = TRUE)[1:5])),
+  "Pre-treatment prediction error (RMSPE)",
+  sprintf("%.3f", sdid_fit_summary$rmspe_pre[1]),
+  "Post-treatment / pre-treatment RMSPE",
+  sprintf("%.2f", sdid_fit_summary$rmspe_ratio[1]),
+  "Brazil's pre-treatment mean distance to China",
+  sprintf("%.3f", sdid_outcome_balance$brazil_pre_mean),
+  "Directional rank (convergence toward China)",
+  sprintf("%d/%d (p = %.3f)", sdid_all_rank$rank_one_sided_negative,
+          sdid_all_rank$denominator, sdid_all_rank$p_rank_one_sided_negative),
+  "Two-sided rank (absolute effect size)",
+  sprintf("%d/%d (p = %.3f)", sdid_all_rank$rank_two_sided_absolute,
+          sdid_all_rank$denominator, sdid_all_rank$p_rank_two_sided_absolute),
+  "Largest change when dropping one of the top ten donors",
+  sprintf("%.1f%%", sdid_max_single_donor_change),
+  "Estimate after dropping all ten highest-weight donors",
+  sprintf("%.3f", sdid_donor_sensitivity$estimate[
+    sdid_donor_sensitivity$specification == "Drop top 10 donors by weight"]),
+  "Weight on high-weight donors with China in their top two",
+  sprintf("%.1f%%", 100 * sdid_high_weight_exposure_summary$
+            weighted_share_high_weight_top_two_china_post),
+  "Windows with a negative estimate (including preferred)",
+  sprintf("%d of %d", sdid_window_summary$n_negative, sdid_window_summary$n_windows),
+  "Range of estimates across windows",
+  sprintf("%.3f to %.3f", sdid_window_summary$min_estimate,
+          sdid_window_summary$max_estimate),
+  "2004 onset: China rank 2 (post-period: 2004--2008)",
+  sprintf("%.3f", sdid_rank2_placebo$estimate),
+  "2009 onset: China rank 1 (post-period: 2009--2015)",
+  sprintf("%.3f", sdid_actual_timing$estimate)
 )
 
 cat("\\begingroup\\singlespacing\n")
+cat("\\renewcommand{\\arraystretch}{1.12}\n")
 
 knitr::kable(
   sdid_diag_summary,
   format = "latex",
   booktabs = TRUE,
-  caption = "Compact diagnostic summary for the Brazil SDiD estimate.",
-  align = "ll"
+  linesep = "",
+  caption = paste0(
+    "Brazil SDiD diagnostics: fit, placebo inference, and sensitivity. ",
+    "Preferred estimate: ", sprintf("%.3f", sdid_actual_timing$estimate),
+    " ideal-point units (1997--2015; treatment begins in 2009)."
+  ),
+  align = c("l", "r")
 ) %>%
-  kableExtra::kable_styling(
-    latex_options = c("HOLD_position"),
-    font_size = 10
-  ) %>%
-  kableExtra::column_spec(1, width = "3.3cm", bold = TRUE) %>%
-  kableExtra::column_spec(2, width = "11.0cm") %>%
+  kableExtra::kable_styling(latex_options = "HOLD_position", font_size = 11) %>%
+  kableExtra::column_spec(1, width = "10.6cm") %>%
+  kableExtra::column_spec(2, width = "3.7cm") %>%
   kableExtra::row_spec(0, bold = TRUE) %>%
+  kableExtra::pack_rows("A. Donor weights: concentration of the comparison group", 1, 3,
+                        latex_gap_space = "0.7em") %>%
+  kableExtra::pack_rows("B. Pre-treatment fit: prediction error after adjusting levels", 4, 6,
+                        latex_gap_space = "0.7em") %>%
+  kableExtra::pack_rows("C. Placebo inference: Brazil's rank among all assignments", 7, 8,
+                        latex_gap_space = "0.7em") %>%
+  kableExtra::pack_rows("D. Donor sensitivity: exclusions and exposure to China", 9, 11,
+                        latex_gap_space = "0.7em") %>%
+  kableExtra::pack_rows("E. Windows and timing: stability of the point estimate", 12, 15,
+                        latex_gap_space = "0.7em") %>%
   kableExtra::footnote(
     general = paste0(
-      "The preferred fit and its placebo SE come from the targets pipeline; a separate diagnostic script regenerates the tables from those targets. ",
-      "RMSPE diagnostics are intercept-adjusted. Negative estimates mean reduced absolute UNGA ideal-point distance to China. Donor-deletion, timing, and alternative-window rows are point-estimate diagnostics unless inference is explicitly reported."
+      "SDiD = synthetic difference-in-differences; preferred specification has no covariates. ",
+      "Estimates and root mean squared prediction error (RMSPE) are in absolute UNGA ",
+      "ideal-point distance to China; negative estimates indicate convergence. ",
+      "RMSPE removes the mean pre-treatment gap. Placebo ranks include Brazil and ",
+      "95 donor assignments; their p-value interpretation requires comparable assignments. ",
+      "In D, changes are relative to the preferred estimate; high-weight donors are the top ten, ",
+      "and exposure means China is a top-two export destination in at least one year during 2009--2015 (share of total donor weight). ",
+      "D--E report point estimates, without recomputed inference. Full donor and time weights ",
+      "and all sensitivity results appear in the appendix."
     ),
     general_title = "Note: ",
-    escape = FALSE,
+    escape = TRUE,
     threeparttable = TRUE
-  ) %>%
-  kableExtra::collapse_rows(columns = 1, valign = "top")
+  )
 
 cat("\\endgroup\n")
 ```
