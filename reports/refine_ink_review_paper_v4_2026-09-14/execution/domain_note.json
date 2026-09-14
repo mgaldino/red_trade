@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "paper_v4:9c6b03ed3d37:item25-understanding",
+  "scope": "Item25 ONLY UNDERSTANDING; Portuguese author-facing explanation; no implementation or replacements.",
+  "source": {
+    "reviewed_artifact": "paper_v4.Rmd",
+    "sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+    "artifact_intact": true,
+    "pdf": "output/paper_v4.pdf",
+    "pdf_sha256": "da7b84fd44a1071953c5c2941be53aefb75f2b249476cc2d6e065e5f8463e312",
+    "frozen_baseline": "reports/refine_ink_review_paper_v4_2026-09-14/execution/baseline/paper_v4.Rmd",
+    "identity_limitation": "Local Rmd and PDF equal frozen baseline; quotation verified on PDF p.26. Full external-service upload bytes not independently certified."
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "contract_scope_reason": "Bounded methodological understanding of one local specification; no global argument review or transformative editing.",
+  "review_sources": [
+    {
+      "review_id": "REFINE-20260914",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md",
+      "sha256": "eb7dc9488e3b6726cee0ddf232250be18f09291797e2a85470b67637af58b88a"
+    }
+  ],
+  "findings": [
+    {
+      "item": 25,
+      "finding_id": "Item25",
+      "source_review": "REFINE-20260914",
+      "quoted_finding": "The DDD estimate may be sensitive to the omission of country-by-domain effects. If donor countries differ systematically in their baseline human-rights voting and their vote availability changes across periods or domains, the estimated differential shift could partly reflect changes in donor composition. The stated assumption is adequate only if such availability changes are ignorable; otherwise, donor-specific domain heterogeneity remains a potential confounder.",
+      "type": "method",
+      "severity": "minor",
+      "scientific_dimension": "identification and regression weighting",
+      "held_decision": true,
+      "status": "PARTIAL",
+      "source_locations": [
+        "reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md:30",
+        "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:434-442",
+        "paper_v4.Rmd:904-910",
+        "paper_v4.Rmd:969-979",
+        "paper_v4.Rmd:1330-1341",
+        "output/paper_v4.pdf:p.26",
+        "scripts/functions.R:6555-6561,6590-6676,6908-6918,6968-7008",
+        "_targets.R:99-110",
+        "scripts/diagnostics/reestimate_corrected_ddd_RIO_20260905.R:67-113,196-201",
+        "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/check_ddd.R:5-49",
+        "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/sensitivity.csv:3-5",
+        "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/donor_domain_restriction.csv:2"
+      ],
+      "defect_evidence": [
+        "A fórmula vigente contém iso3c + rcid e Brasil × domínio, mas não interceptos temáticos separados para os doadores (scripts/functions.R:6908-6918). Isso deixa uma restrição adicional real de composição.",
+        "O diagnóstico arquivado sobre a estrutura real de observações e um resultado sintético persistente retorna 0.031791903613 no modelo vigente e zero com país × domínio. O código escolhe os sinais dos offsets a partir dos pesos; demonstra vulnerabilidade algébrica, não viés estimado dos votos reais."
+      ],
+      "refuting_evidence": [
+        "paper_v4.Rmd:975 e PDF p.26 já declaram explicitamente a restrição; a interação Brasil × domínio não está omitida.",
+        "sensitivity.csv, mesmas 55190 linhas: distância relativa passa de -0.22233340176221164 para -0.22573122755000188 com país × domínio; variação absoluta -0.00339782578779024, aproximadamente 1.53% do módulo. Restringe a leitura de grande fragilidade empírica, sem refutar o alerta condicional do parecer.",
+        "Efeitos fixos de resolução já absorvem período, domínio, período × domínio e componentes aditivos comuns a cada resolução. Não é correto analisar a regressão como se fossem apenas médias brutas."
+      ],
+      "mechanical_checks": [
+        {
+          "kind": "static_inspection",
+          "result": "Verified local equation, consumed RDS path, producer formula, old diagnostic formulas and PDF quotation. No full-paper review."
+        },
+        {
+          "kind": "computed_verification",
+          "script": "reports/refine_ink_review_paper_v4_2026-09-14/execution/domain_note_verify.R",
+          "log": "reports/refine_ink_review_paper_v4_2026-09-14/execution/domain_note_verification.log",
+          "result": "PASS. Existing RDS coefficient equals archived sensitivity baseline; archived sample dimensions/key/required fields checked; stored FWL identity and arithmetic checked. No fitting."
+        },
+        {
+          "kind": "computed_verification",
+          "evidence": "reports/refine_ink_review_paper_v4_2026-09-14/execution/domain_note_evidence_manifest.json",
+          "result": "Active/frozen Rmd and PDF hashes equal; current producer/helper/bundle and selected outputs match historical manifests."
+        },
+        {
+          "kind": "existing_analysis_inspected",
+          "result": "Sensitivity regressions and synthetic counterexample were executed in September 5 review, not this task."
+        }
+      ],
+      "reasoning": "PARTIAL como pendência de correção: o alerta condicional está correto e a restrição existe, mas já está documentada e sua relevância empírica observada é pequena na sensibilidade arquivada. Não atribuímos ao parecer uma alegação categórica de viés. País × domínio acrescenta um contraste temático fixo para cada doador, torna Brasil × domínio redundante e zera somas dos pesos da regressão por país–domínio. Resolução FE não absorve heterogeneidade entre países na mesma resolução. A contribuição de offsets omitidos é sum_i eta_i sum_{r:H=1} w_ir, com w definido após residualizar todos os controles atuais. Desbalanceamento por si não prova viés; seleção e choques temáticos variáveis no tempo continuam possíveis sob a extensão. O tamanho de eventual viés causal não é identificado pelos diagnósticos examinados.",
+      "proposed_fix_assessment": "needs_design",
+      "disposition": "Entregar entendimento e alternativas. Nenhuma substituição ou mudança de especificação autorizada. Eventual evidência nova para o paper exige desenho target-first, revisão independente e autorização da fase.",
+      "minimal_prose_proposal": null
+    }
+  ],
+  "replacements": [],
+  "summary": {
+    "total": 1,
+    "confirmed": 0,
+    "partial": 1,
+    "refuted": 0,
+    "unresolved": 0,
+    "held_decisions": 1
+  },
+  "adjudication": {
+    "verdict": "BLOCKED",
+    "checked_at": "2026-09-14T16:42:29.809882+00:00",
+    "reasons": [
+      "Encaminhamento para implementação bloqueado: escopo exclusivo de entendimento; decisão sobre extensão e novos outputs reservada ao autor.",
+      "Não há falha de integridade local. Limitação metodológica reconhecida, pequena sensibilidade arquivada e viés causal não demonstrado; nenhuma correção implementável foi definida."
+    ]
+  },
+  "author_note": "reports/refine_ink_review_paper_v4_2026-09-14/execution/domain_note.md",
+  "future_target_first_design": {
+    "status": "PROPOSAL_ONLY_NOT_AUTHORIZED_NOT_EXECUTED",
+    "targets_proposed": [
+      "selective_unga_domain_fe_spec",
+      "selective_unga_domain_fe_sample",
+      "selective_unga_domain_fe_support",
+      "selective_unga_domain_fe_models",
+      "selective_unga_domain_fe_weights",
+      "selective_unga_domain_fe_placebos",
+      "selective_unga_domain_fe_table",
+      "selective_unga_domain_fe_files"
+    ],
+    "input": "selective_china_alignment_unga_targets_bundle$vote_panel; no silent upstream rebuilding",
+    "sample": "2005:2012; China-US divergent; same (iso3c,rcid) keys, outcomes and rows across specifications; observed vote weight=1; historical reference 55190 rows/95 countries/612 resolutions.",
+    "baseline_formula": "distance_china_minus_usa ~ brazil_post_2009 + brazil_hr + brazil_post_hr | iso3c + rcid",
+    "country_domain_formula": "distance_china_minus_usa ~ brazil_post_2009 + brazil_post_hr | iso3c^human_rights_binary + rcid",
+    "optional_country_year_formula": "distance_china_minus_usa ~ brazil_post_hr | iso3c^human_rights_binary + iso3c^year + rcid",
+    "inference": "Country-clustered model-based precision; any reported reassignment benchmarks must refit designated-country interactions under each FE design on identical rows and document failures, ties, denominator, inclusive directional, strict donor-only and absolute two-sided shares. Do not reuse current ranks.",
+    "support_requirement": "Eligible country-resolution grid before observed-country-vote filter for availability denominator; country-year-domain and country-domain-period counts, common resolution support and residualized weights.",
+    "validation": "Compare current-spec line to frozen bundle, identical sample, no dropped treatment term/rows, FWL identity, zero sums within country-domain for extended design; independent implementation review before manuscript consumption.",
+    "details": "reports/refine_ink_review_paper_v4_2026-09-14/execution/domain_note.md sections 5-6"
+  },
+  "limitations": [
+    "No new regressions, fixed effects estimation, causal identification analysis, placebos, targets execution, data changes, APIs, commits, signals or external communication.",
+    "Historical sensitivity numerical results inspected and arithmetically verified, not reestimated.",
+    "No new empirical availability analysis; no causal-bias magnitude identified.",
+    "No new PDF rendered: explicit delivery scope is domain_note.md/.json and domain_note evidence files.",
+    "R startup locale warnings fell back to C; numeric checks passed; artifacts written UTF-8."
+  ]
+}

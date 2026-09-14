@@ -1,0 +1,9 @@
+Itens **11 e 22: CONFIRMED**. Entreguei a adjudicação com **12 substituições exatas**, cobrindo as ocorrências selecionadas e as notas das tabelas, preservando os resultados numéricos.
+
+- [Relatório e propostas OLD/NEW](reports/refine_ink_review_paper_v4_2026-09-14/execution/comparability.md)
+- [JSON validado](reports/refine_ink_review_paper_v4_2026-09-14/execution/comparability.json)
+- [Verificação dos resultados existentes](reports/refine_ink_review_paper_v4_2026-09-14/execution/comparability_verification.txt)
+
+A Tabela 4 sustenta interpretação temporal sugestiva, sem estimando comum entre linhas. O 2×2 sustenta contrastes condicionais dentro de cada medida, sem decomposição única ou invariável à escala; não rejeição não estabelece equivalência.
+
+Verifiquei amostras, produtores e os 1.000 draws existentes do bootstrap. Não executei reestimação, nova padronização ou operações de `targets`, nem alterei o manuscrito. A conferência do PDF foi textual, sem auditoria visual de layout.

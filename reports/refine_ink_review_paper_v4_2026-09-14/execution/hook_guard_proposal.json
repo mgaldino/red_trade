@@ -1,0 +1,8 @@
+{
+  "path": "/Users/manoelgaldino/.codex/hooks/auto_commit_push.py",
+  "original_sha256": "63cbd226a6972ceb5e0621dd5cb2e49d140b638d44bac60245068b9be818b7f4",
+  "proposal_sha256": "8a99a97100d667c4a6ecedcb6d51c78cd2428357960bff1d3dfb5c95f4ce4941",
+  "status": "awaiting_explicit_user_authorization",
+  "marker": ".codex-no-auto-checkpoint",
+  "effect": "Skip automatic commits and pushes in repositories containing this marker; leave other hooks and repositories unchanged."
+}

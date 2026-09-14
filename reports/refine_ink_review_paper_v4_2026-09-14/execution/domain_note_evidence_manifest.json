@@ -1,0 +1,84 @@
+{
+  "access_date": "2026-09-14",
+  "sha256": {
+    "AGENTS.md": "641ccd2b4070dffbb17374d7071b5f4792671317b7677fc1fa26c4a2b4d90c88",
+    "CLAUDE.md": "4d14193b7f62190b8d6f30397c80b87b84b71433ce9b93218540a11bfc186b6b",
+    "paper_v4.Rmd": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+    "output/paper_v4.pdf": "da7b84fd44a1071953c5c2941be53aefb75f2b249476cc2d6e065e5f8463e312",
+    "_targets.R": "bbdec9b6a20a2524e39472aac1c5f9a0d85f5fd7469a178c3ccd22c6013ef7c1",
+    "scripts/functions.R": "84e25bbf23209b14694b54a2258f4ccf5872a9a7a9450068790c156fdfd0ba3a",
+    "scripts/diagnostics/reestimate_corrected_ddd_RIO_20260905.R": "e4daf4d3f1947f11468f9a74f06467bdcad8229fb71491fceb6362ebf345bb6a",
+    "reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md": "d0220df748585215fc3ce14786e555546134d1e25534470ee153b1872437ea25",
+    "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md": "eb7dc9488e3b6726cee0ddf232250be18f09291797e2a85470b67637af58b88a",
+    "reports/refine_ink_review_paper_v4_2026-09-14/execution/packets/domain_note.txt": "00eb311eaa9ba79467d261ffbcbb23743cba53bae380145a7717d1ade5c7caf0",
+    "reports/refine_ink_review_paper_v4_2026-09-14/execution/baseline_manifest.json": "6425e9647dddc9418d6834e7d3b42f03697e289c445f25aac21cbf7023befd1e",
+    "reports/refine_ink_review_paper_v4_2026-09-14/execution/baseline/paper_v4.Rmd": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+    "reports/refine_ink_review_paper_v4_2026-09-14/execution/baseline/paper_v4.pdf": "da7b84fd44a1071953c5c2941be53aefb75f2b249476cc2d6e065e5f8463e312",
+    "data/processed/diagnostics/RIO_20260905_ddd/corrected_ddd_bundle.rds": "3f16f202a8aac1d6ca6d73acd5d5c45c3a0090358cc646744da2f7f5677de188",
+    "data/processed/diagnostics/RIO_20260905_ddd/estimation_sample.rds": "8848f992a10216274b819e1dc455424ba02bca4ab14e66d5910bf62299f8d2c1",
+    "data/processed/diagnostics/RIO_20260905_ddd/corrected_ddd_models.csv": "0e29f21a9c00520087c008a5cf80cc6ae3ddb427fe2f544880da4daed00754b7",
+    "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/check_ddd.R": "931cb7d29cac380f317ae49312f5c4657043efb5f8f060dbc81c6e988fed889a",
+    "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/sensitivity.csv": "50bd4c23b03edc9d22b40e78fd213ccf9d496150124ff6ed031aea14763e2753",
+    "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/donor_domain_restriction.csv": "9bb73822a46178a32c68bd27eb3f78dd5d6f9ac0fbafbdaf978b69f6d5695040",
+    "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/country_domain_weights.csv": "e23ea49fdee6691feb58403a12c93a97cdae4ab875cb4d22f1ac939bcfdd78aa",
+    "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/fwl.csv": "dfd981e6a448e7b9253c2749487ea36007f8ea80f251691c9cc1d3e90f0a0d40",
+    "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/reviewed_manifest.csv": "0816f263cfadcb426d3a60986705f23f2a8d44ef951065166b998870aa0ea1ee",
+    "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_review.md": "d723c2c848abd25c8dfe73c7bd93571c6f1570a7b465d62a4469048c00e7b020"
+  },
+  "historical_manifest_checks": [
+    {
+      "manifest": "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/reviewed_manifest.csv",
+      "path": "scripts/functions.R",
+      "matches": true,
+      "expected": "84e25bbf23209b14694b54a2258f4ccf5872a9a7a9450068790c156fdfd0ba3a",
+      "actual": "84e25bbf23209b14694b54a2258f4ccf5872a9a7a9450068790c156fdfd0ba3a"
+    },
+    {
+      "manifest": "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/reviewed_manifest.csv",
+      "path": "scripts/diagnostics/reestimate_corrected_ddd_RIO_20260905.R",
+      "matches": true,
+      "expected": "e4daf4d3f1947f11468f9a74f06467bdcad8229fb71491fceb6362ebf345bb6a",
+      "actual": "e4daf4d3f1947f11468f9a74f06467bdcad8229fb71491fceb6362ebf345bb6a"
+    },
+    {
+      "manifest": "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/reviewed_manifest.csv",
+      "path": "data/processed/diagnostics/RIO_20260905_ddd/corrected_ddd_bundle.rds",
+      "matches": true,
+      "expected": "3f16f202a8aac1d6ca6d73acd5d5c45c3a0090358cc646744da2f7f5677de188",
+      "actual": "3f16f202a8aac1d6ca6d73acd5d5c45c3a0090358cc646744da2f7f5677de188"
+    },
+    {
+      "manifest": "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/reviewed_manifest.csv",
+      "path": "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/check_ddd.R",
+      "matches": true,
+      "expected": "931cb7d29cac380f317ae49312f5c4657043efb5f8f060dbc81c6e988fed889a",
+      "actual": "931cb7d29cac380f317ae49312f5c4657043efb5f8f060dbc81c6e988fed889a"
+    },
+    {
+      "manifest": "data/processed/diagnostics/RIO_20260905_ddd/output_manifest.csv",
+      "path": "data/processed/diagnostics/RIO_20260905_ddd/corrected_ddd_bundle.rds",
+      "matches": true,
+      "expected": "3f16f202a8aac1d6ca6d73acd5d5c45c3a0090358cc646744da2f7f5677de188",
+      "actual": "3f16f202a8aac1d6ca6d73acd5d5c45c3a0090358cc646744da2f7f5677de188"
+    },
+    {
+      "manifest": "data/processed/diagnostics/RIO_20260905_ddd/output_manifest.csv",
+      "path": "data/processed/diagnostics/RIO_20260905_ddd/corrected_ddd_models.csv",
+      "matches": true,
+      "expected": "0e29f21a9c00520087c008a5cf80cc6ae3ddb427fe2f544880da4daed00754b7",
+      "actual": "0e29f21a9c00520087c008a5cf80cc6ae3ddb427fe2f544880da4daed00754b7"
+    },
+    {
+      "manifest": "data/processed/diagnostics/RIO_20260905_ddd/output_manifest.csv",
+      "path": "data/processed/diagnostics/RIO_20260905_ddd/estimation_sample.rds",
+      "matches": true,
+      "expected": "8848f992a10216274b819e1dc455424ba02bca4ab14e66d5910bf62299f8d2c1",
+      "actual": "8848f992a10216274b819e1dc455424ba02bca4ab14e66d5910bf62299f8d2c1"
+    }
+  ],
+  "active_equals_baseline": {
+    "rmd": true,
+    "pdf": true
+  },
+  "checks": "Hashes only; no producer or model execution."
+}

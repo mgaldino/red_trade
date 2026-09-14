@@ -1,0 +1,14 @@
+--- /Users/manoelgaldino/.codex/hooks/auto_commit_push.py
++++ /Users/manoelgaldino/.codex/hooks/auto_commit_push.py
+@@ -206,6 +206,11 @@
+     if root is None:
+         return 0
+ 
++    # Repository-local opt-out for work that explicitly prohibits checkpoints.
++    if (root / ".codex-no-auto-checkpoint").is_file():
++        eprint(f"{root}: checkpoint automatico desativado por marcador local.")
++        return 0
++
+     remotes = github_push_remotes(root)
+     if not remotes:
+         return 0
