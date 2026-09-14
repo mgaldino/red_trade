@@ -1,0 +1,292 @@
+{
+  "dry_run": "1",
+  "hash_checks": [
+    {
+      "prior_manifest": "review_methods.json",
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/baseline/paper_v4.Rmd",
+      "prior_sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+      "current_sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+      "matches": true
+    },
+    {
+      "prior_manifest": "review_methods.json",
+      "path": "/private/tmp/refine-review-20260914/paper_v4.Rmd",
+      "prior_sha256": "798665c291ac21733adfe219d2b9b9a9968626a356f71d4909cd2ea3cdf789a6",
+      "current_sha256": "82c811def270d266f8ef4541d6fc8afecb6adfe980cda6260d84439714bb340c",
+      "matches": false
+    },
+    {
+      "prior_manifest": "review_methods.json",
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/domain_note.md",
+      "prior_sha256": "78356d0b657d1c1730e2607f92ecff3e8b6c36a6b46b21335023da92ab07ee4f",
+      "current_sha256": "78356d0b657d1c1730e2607f92ecff3e8b6c36a6b46b21335023da92ab07ee4f",
+      "matches": true
+    },
+    {
+      "prior_manifest": "review_methods.json",
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/orchestrator_decisions.md",
+      "prior_sha256": "d10d14c5bfe5a80d214d2b5106e39d089b1cc7f76e663f717d099084f2fdd3d6",
+      "current_sha256": "aebf4acbfcd4158b2d459df06fa5f652d18c74f549a9d55a219891a18c94618d",
+      "matches": false
+    },
+    {
+      "prior_manifest": "review_methods.json",
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/sdid.md",
+      "prior_sha256": "9eb993b12bd79f11ac53bac7bcb97ab7569cf8e633dcfe4bf1b46ad7f57c564d",
+      "current_sha256": "9eb993b12bd79f11ac53bac7bcb97ab7569cf8e633dcfe4bf1b46ad7f57c564d",
+      "matches": true
+    },
+    {
+      "prior_manifest": "review_methods.json",
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/comparability.md",
+      "prior_sha256": "656502c86a054076ef08b1568b5c19ec766886ed6f02951599fe5fd541a20302",
+      "current_sha256": "656502c86a054076ef08b1568b5c19ec766886ed6f02951599fe5fd541a20302",
+      "matches": true
+    },
+    {
+      "prior_manifest": "review_methods.json",
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/cross_country.md",
+      "prior_sha256": "4250ce76b8970652f2f40c9aec9b51aa6d4fb7b5f9b0d62b90aa3494530d077b",
+      "current_sha256": "4250ce76b8970652f2f40c9aec9b51aa6d4fb7b5f9b0d62b90aa3494530d077b",
+      "matches": true
+    },
+    {
+      "prior_manifest": "review_methods.json",
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/corpus_pipeline.md",
+      "prior_sha256": "628863f98d2548a2a3bccf09c965e146acc3bfa02cbd589fda1deee49fba8973",
+      "current_sha256": "628863f98d2548a2a3bccf09c965e146acc3bfa02cbd589fda1deee49fba8973",
+      "matches": true
+    },
+    {
+      "prior_manifest": "review_methods.json",
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/corpus_votes_bibliography.md",
+      "prior_sha256": "6435a577cb2561910fe7e0ed7ab8369582895382aa535f8710b819cd12ed00e8",
+      "current_sha256": "6435a577cb2561910fe7e0ed7ab8369582895382aa535f8710b819cd12ed00e8",
+      "matches": true
+    },
+    {
+      "prior_manifest": "review_methods.json",
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/verify_power_identity.R",
+      "prior_sha256": "0fa816337ee64226f4b1f394e7a5e3602c04309ff50bae8604e6a668a43a9c8f",
+      "current_sha256": "0fa816337ee64226f4b1f394e7a5e3602c04309ff50bae8604e6a668a43a9c8f",
+      "matches": true
+    },
+    {
+      "prior_manifest": "review_methods.json",
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/verify_power_identity.log",
+      "prior_sha256": "2a465b2fcca85d91dd68dab075b6646fba2a39452acadd6dc40926eea1a9dd20",
+      "current_sha256": "2a465b2fcca85d91dd68dab075b6646fba2a39452acadd6dc40926eea1a9dd20",
+      "matches": true
+    },
+    {
+      "prior_manifest": "review_methods.json",
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/domain_note_verify.R",
+      "prior_sha256": "a5a86cf7f625306fee4656242ea8cda4b00d81294810efd1651f8d9768ffe686",
+      "current_sha256": "a5a86cf7f625306fee4656242ea8cda4b00d81294810efd1651f8d9768ffe686",
+      "matches": true
+    },
+    {
+      "prior_manifest": "review_methods.json",
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/comparability_verify.R",
+      "prior_sha256": "6db08c1842a48b8e64bc121034892a001ce80666d0fa192d23157db6b9f7bd01",
+      "current_sha256": "6db08c1842a48b8e64bc121034892a001ce80666d0fa192d23157db6b9f7bd01",
+      "matches": true
+    },
+    {
+      "prior_manifest": "review_methods.json",
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/scripts/functions.R",
+      "prior_sha256": "84e25bbf23209b14694b54a2258f4ccf5872a9a7a9450068790c156fdfd0ba3a",
+      "current_sha256": "84e25bbf23209b14694b54a2258f4ccf5872a9a7a9450068790c156fdfd0ba3a",
+      "matches": true
+    },
+    {
+      "prior_manifest": "review_methods.json",
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/scripts/diagnostics/audit_brazil_sdid_commodity_no_covariates.R",
+      "prior_sha256": "1365bbf84b17d9af83ab3afd4a8ca15ee500b8a37eb437d8df7fba0b3ec66a4b",
+      "current_sha256": "1365bbf84b17d9af83ab3afd4a8ca15ee500b8a37eb437d8df7fba0b3ec66a4b",
+      "matches": true
+    },
+    {
+      "prior_manifest": "review_methods.json",
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/scripts/diagnostics/sdid_placebo_helpers.R",
+      "prior_sha256": "6d7cd66cde191c2748e9310359506ce1398cb8897a606803647cb0a46e2261f7",
+      "current_sha256": "6d7cd66cde191c2748e9310359506ce1398cb8897a606803647cb0a46e2261f7",
+      "matches": true
+    },
+    {
+      "prior_manifest": "review_methods.json",
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/scripts/chatgpt_api.R",
+      "prior_sha256": "a9f6b1943d2ef14de2f63a51e5b4ec2b9b943bb2dc185ffe766a8299ffcb1026",
+      "current_sha256": "a9f6b1943d2ef14de2f63a51e5b4ec2b9b943bb2dc185ffe766a8299ffcb1026",
+      "matches": true
+    },
+    {
+      "prior_manifest": "review_methods.json",
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/RIO_20260905_ddd/corrected_ddd_bundle.rds",
+      "prior_sha256": "3f16f202a8aac1d6ca6d73acd5d5c45c3a0090358cc646744da2f7f5677de188",
+      "current_sha256": "3f16f202a8aac1d6ca6d73acd5d5c45c3a0090358cc646744da2f7f5677de188",
+      "matches": true
+    },
+    {
+      "prior_manifest": "domain_note_evidence_manifest.json",
+      "path": "AGENTS.md",
+      "prior_sha256": "641ccd2b4070dffbb17374d7071b5f4792671317b7677fc1fa26c4a2b4d90c88",
+      "current_sha256": "641ccd2b4070dffbb17374d7071b5f4792671317b7677fc1fa26c4a2b4d90c88",
+      "matches": true
+    },
+    {
+      "prior_manifest": "domain_note_evidence_manifest.json",
+      "path": "CLAUDE.md",
+      "prior_sha256": "4d14193b7f62190b8d6f30397c80b87b84b71433ce9b93218540a11bfc186b6b",
+      "current_sha256": "4d14193b7f62190b8d6f30397c80b87b84b71433ce9b93218540a11bfc186b6b",
+      "matches": true
+    },
+    {
+      "prior_manifest": "domain_note_evidence_manifest.json",
+      "path": "paper_v4.Rmd",
+      "prior_sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+      "current_sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+      "matches": true
+    },
+    {
+      "prior_manifest": "domain_note_evidence_manifest.json",
+      "path": "output/paper_v4.pdf",
+      "prior_sha256": "da7b84fd44a1071953c5c2941be53aefb75f2b249476cc2d6e065e5f8463e312",
+      "current_sha256": "da7b84fd44a1071953c5c2941be53aefb75f2b249476cc2d6e065e5f8463e312",
+      "matches": true
+    },
+    {
+      "prior_manifest": "domain_note_evidence_manifest.json",
+      "path": "_targets.R",
+      "prior_sha256": "bbdec9b6a20a2524e39472aac1c5f9a0d85f5fd7469a178c3ccd22c6013ef7c1",
+      "current_sha256": "bbdec9b6a20a2524e39472aac1c5f9a0d85f5fd7469a178c3ccd22c6013ef7c1",
+      "matches": true
+    },
+    {
+      "prior_manifest": "domain_note_evidence_manifest.json",
+      "path": "scripts/functions.R",
+      "prior_sha256": "84e25bbf23209b14694b54a2258f4ccf5872a9a7a9450068790c156fdfd0ba3a",
+      "current_sha256": "84e25bbf23209b14694b54a2258f4ccf5872a9a7a9450068790c156fdfd0ba3a",
+      "matches": true
+    },
+    {
+      "prior_manifest": "domain_note_evidence_manifest.json",
+      "path": "scripts/diagnostics/reestimate_corrected_ddd_RIO_20260905.R",
+      "prior_sha256": "e4daf4d3f1947f11468f9a74f06467bdcad8229fb71491fceb6362ebf345bb6a",
+      "current_sha256": "e4daf4d3f1947f11468f9a74f06467bdcad8229fb71491fceb6362ebf345bb6a",
+      "matches": true
+    },
+    {
+      "prior_manifest": "domain_note_evidence_manifest.json",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md",
+      "prior_sha256": "d0220df748585215fc3ce14786e555546134d1e25534470ee153b1872437ea25",
+      "current_sha256": "d0220df748585215fc3ce14786e555546134d1e25534470ee153b1872437ea25",
+      "matches": true
+    },
+    {
+      "prior_manifest": "domain_note_evidence_manifest.json",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md",
+      "prior_sha256": "eb7dc9488e3b6726cee0ddf232250be18f09291797e2a85470b67637af58b88a",
+      "current_sha256": "eb7dc9488e3b6726cee0ddf232250be18f09291797e2a85470b67637af58b88a",
+      "matches": true
+    },
+    {
+      "prior_manifest": "domain_note_evidence_manifest.json",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/execution/packets/domain_note.txt",
+      "prior_sha256": "00eb311eaa9ba79467d261ffbcbb23743cba53bae380145a7717d1ade5c7caf0",
+      "current_sha256": "00eb311eaa9ba79467d261ffbcbb23743cba53bae380145a7717d1ade5c7caf0",
+      "matches": true
+    },
+    {
+      "prior_manifest": "domain_note_evidence_manifest.json",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/execution/baseline_manifest.json",
+      "prior_sha256": "6425e9647dddc9418d6834e7d3b42f03697e289c445f25aac21cbf7023befd1e",
+      "current_sha256": "6425e9647dddc9418d6834e7d3b42f03697e289c445f25aac21cbf7023befd1e",
+      "matches": true
+    },
+    {
+      "prior_manifest": "domain_note_evidence_manifest.json",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/execution/baseline/paper_v4.Rmd",
+      "prior_sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+      "current_sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+      "matches": true
+    },
+    {
+      "prior_manifest": "domain_note_evidence_manifest.json",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/execution/baseline/paper_v4.pdf",
+      "prior_sha256": "da7b84fd44a1071953c5c2941be53aefb75f2b249476cc2d6e065e5f8463e312",
+      "current_sha256": "da7b84fd44a1071953c5c2941be53aefb75f2b249476cc2d6e065e5f8463e312",
+      "matches": true
+    },
+    {
+      "prior_manifest": "domain_note_evidence_manifest.json",
+      "path": "data/processed/diagnostics/RIO_20260905_ddd/corrected_ddd_bundle.rds",
+      "prior_sha256": "3f16f202a8aac1d6ca6d73acd5d5c45c3a0090358cc646744da2f7f5677de188",
+      "current_sha256": "3f16f202a8aac1d6ca6d73acd5d5c45c3a0090358cc646744da2f7f5677de188",
+      "matches": true
+    },
+    {
+      "prior_manifest": "domain_note_evidence_manifest.json",
+      "path": "data/processed/diagnostics/RIO_20260905_ddd/estimation_sample.rds",
+      "prior_sha256": "8848f992a10216274b819e1dc455424ba02bca4ab14e66d5910bf62299f8d2c1",
+      "current_sha256": "8848f992a10216274b819e1dc455424ba02bca4ab14e66d5910bf62299f8d2c1",
+      "matches": true
+    },
+    {
+      "prior_manifest": "domain_note_evidence_manifest.json",
+      "path": "data/processed/diagnostics/RIO_20260905_ddd/corrected_ddd_models.csv",
+      "prior_sha256": "0e29f21a9c00520087c008a5cf80cc6ae3ddb427fe2f544880da4daed00754b7",
+      "current_sha256": "0e29f21a9c00520087c008a5cf80cc6ae3ddb427fe2f544880da4daed00754b7",
+      "matches": true
+    },
+    {
+      "prior_manifest": "domain_note_evidence_manifest.json",
+      "path": "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/check_ddd.R",
+      "prior_sha256": "931cb7d29cac380f317ae49312f5c4657043efb5f8f060dbc81c6e988fed889a",
+      "current_sha256": "931cb7d29cac380f317ae49312f5c4657043efb5f8f060dbc81c6e988fed889a",
+      "matches": true
+    },
+    {
+      "prior_manifest": "domain_note_evidence_manifest.json",
+      "path": "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/sensitivity.csv",
+      "prior_sha256": "50bd4c23b03edc9d22b40e78fd213ccf9d496150124ff6ed031aea14763e2753",
+      "current_sha256": "50bd4c23b03edc9d22b40e78fd213ccf9d496150124ff6ed031aea14763e2753",
+      "matches": true
+    },
+    {
+      "prior_manifest": "domain_note_evidence_manifest.json",
+      "path": "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/donor_domain_restriction.csv",
+      "prior_sha256": "9bb73822a46178a32c68bd27eb3f78dd5d6f9ac0fbafbdaf978b69f6d5695040",
+      "current_sha256": "9bb73822a46178a32c68bd27eb3f78dd5d6f9ac0fbafbdaf978b69f6d5695040",
+      "matches": true
+    },
+    {
+      "prior_manifest": "domain_note_evidence_manifest.json",
+      "path": "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/country_domain_weights.csv",
+      "prior_sha256": "e23ea49fdee6691feb58403a12c93a97cdae4ab875cb4d22f1ac939bcfdd78aa",
+      "current_sha256": "e23ea49fdee6691feb58403a12c93a97cdae4ab875cb4d22f1ac939bcfdd78aa",
+      "matches": true
+    },
+    {
+      "prior_manifest": "domain_note_evidence_manifest.json",
+      "path": "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/fwl.csv",
+      "prior_sha256": "dfd981e6a448e7b9253c2749487ea36007f8ea80f251691c9cc1d3e90f0a0d40",
+      "current_sha256": "dfd981e6a448e7b9253c2749487ea36007f8ea80f251691c9cc1d3e90f0a0d40",
+      "matches": true
+    },
+    {
+      "prior_manifest": "domain_note_evidence_manifest.json",
+      "path": "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/reviewed_manifest.csv",
+      "prior_sha256": "0816f263cfadcb426d3a60986705f23f2a8d44ef951065166b998870aa0ea1ee",
+      "current_sha256": "0816f263cfadcb426d3a60986705f23f2a8d44ef951065166b998870aa0ea1ee",
+      "matches": true
+    },
+    {
+      "prior_manifest": "domain_note_evidence_manifest.json",
+      "path": "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_review.md",
+      "prior_sha256": "d723c2c848abd25c8dfe73c7bd93571c6f1570a7b465d62a4469048c00e7b020",
+      "current_sha256": "d723c2c848abd25c8dfe73c7bd93571c6f1570a7b465d62a4469048c00e7b020",
+      "matches": true
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+Integrated the confirmed fixes into the isolated candidate only.
+
+Files:
+
+- [Candidate paper_v4.Rmd](/private/tmp/refine-review-20260914/paper_v4.Rmd)
+- [Exact unified diff](/private/tmp/refine-review-20260914/reports/refine_ink_review_paper_v4_2026-09-14/execution/integration.patch)
+- [Per-item integration report](/private/tmp/refine-review-20260914/reports/refine_ink_review_paper_v4_2026-09-14/execution/integration.md)
+- [Machine-readable record](/private/tmp/refine-review-20260914/reports/refine_ink_review_paper_v4_2026-09-14/execution/integration.json)
+
+Candidate SHA-256:
+
+`82c811def270d266f8ef4541d6fc8afecb6adfe980cda6260d84439714bb340c`
+
+Verification passed:
+
+- All 52 R chunks parse without evaluation.
+- All 52 chunk labels are unique.
+- All 47 literal figure/table cross-references resolve.
+- All 144 inline R expressions are unchanged from the baseline.
+- The patch reconstructs the candidate byte-for-byte.
+- No diff whitespace errors.
+- The abstract’s 42% equals the rounded existing calculation: 42.1739% of the pre-treatment mean.
+- Canonical `paper_v4.Rmd` and `output/paper_v4.pdf` remain unchanged.
+
+Items 15 and the new item-8 calculations remain explicitly deferred; item 25 received no manuscript change; item 37 was refuted and retained. Item 31 follows the orchestrator’s corrected identity finding and remains flagged for independent methodological review before promotion.
+
+No rendering, `targets` activity, reestimation, API call, data edit, commit, push, signal, or hook/configuration change was performed.

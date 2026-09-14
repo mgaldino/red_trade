@@ -1,0 +1,143 @@
+{
+  "created_at": "2026-09-14T14:38:49.031664-03:00",
+  "canonical_promotion": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada.",
+  "manuscript": {
+    "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+    "sha256": "fa40c4395abea8a7b94f5539eb4fc60bde5dcf8e4e4a7825edd4043ea32093f0"
+  },
+  "paper_pdf": {
+    "path": "/private/tmp/refine-review-20260914/build/paper_v4.pdf",
+    "sha256": "7ab3f9d4b85452a78fb7109847190e885d0500091eebb9095562be3bed8f5c69",
+    "pages": 72
+  },
+  "item25_source": {
+    "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/domain_note.md",
+    "sha256": "78356d0b657d1c1730e2607f92ecff3e8b6c36a6b46b21335023da92ab07ee4f"
+  },
+  "item25_pdf": {
+    "path": "/private/tmp/refine-review-20260914/build/item25.pdf",
+    "sha256": "818560fabdcc7c4059721d4d895fb6ccd3a48e7fb083b62db8b738ae9818eba4",
+    "pages": 6
+  },
+  "baseline_manuscript": {
+    "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/baseline/paper_v4.Rmd",
+    "sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4"
+  },
+  "baseline_pdf": {
+    "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/baseline/paper_v4.pdf",
+    "sha256": "da7b84fd44a1071953c5c2941be53aefb75f2b249476cc2d6e065e5f8463e312",
+    "pages": 69
+  },
+  "canonical_manuscript": {
+    "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
+    "sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4"
+  },
+  "canonical_pdf": {
+    "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf",
+    "sha256": "da7b84fd44a1071953c5c2941be53aefb75f2b249476cc2d6e065e5f8463e312"
+  },
+  "independent_reviews": {
+    "review_methods_final_candidate": {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/review_methods_final_candidate.json",
+      "sha256": "eadf0e44b37b90c65f5f448b880f273d45e4e69df2932d1954382a532b5e7d3d",
+      "verdict": "NO_CONFIRMED_DEFECTS"
+    },
+    "review_documentation": {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/review_documentation.json",
+      "sha256": "bcae054b3421f1f483c59d202a66f0a19d990aa6dbbca5ed77d2a747e255162b",
+      "verdict": "NO_CONFIRMED_DEFECTS"
+    },
+    "review_documentation_delta": {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/review_documentation_delta.json",
+      "sha256": "930ea79fb9a0a193f724044e7f0cbe694d369f64b5677c132b3c3323474b6c41",
+      "verdict": "NO_CONFIRMED_DEFECTS"
+    },
+    "review_abstract": {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/review_abstract.json",
+      "sha256": "906f9c6e22c1dbb24de156419501ad6756140d2548652ca9db4537eff0d85628",
+      "verdict": "NO_CONFIRMED_DEFECTS"
+    }
+  },
+  "scope_items": [
+    2,
+    4,
+    6,
+    7,
+    8,
+    11,
+    15,
+    18,
+    20,
+    21,
+    22,
+    25,
+    27,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38
+  ],
+  "completion_groups": {
+    "textual_corrections_complete_in_candidate": [
+      2,
+      6,
+      11,
+      18,
+      20,
+      21,
+      22,
+      27,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      38
+    ],
+    "documentation_corrected_additional_audit_pending": [
+      4,
+      7,
+      8
+    ],
+    "new_targets_specified_not_implemented": [
+      15
+    ],
+    "understanding_only_delivered": [
+      25
+    ],
+    "refuted_no_edit": [
+      37
+    ]
+  },
+  "verification": [
+    "mechanical_checks.json",
+    "numeric_gate_final_projection.json",
+    "visual_qa_final.json",
+    "integration_round2.json"
+  ],
+  "reproduction": [
+    "render_isolated.R",
+    "render_item25.py",
+    "note_layout.lua",
+    "baseline_to_final.patch"
+  ],
+  "pending_authorizations": "pending_authorizations.md",
+  "operational_incidents": [
+    "automatic_checkpoint_incident.json",
+    "targets_config_incident.json"
+  ],
+  "pipeline_or_estimation_executed": false,
+  "classification_api_called": false,
+  "protected_hashes_restored_and_verified": true,
+  "current_git_head": "3bd630afdeac3ddbb9911f2ea4bf78e50d13cc4d",
+  "all_requested_independent_reviews_finished": true
+}

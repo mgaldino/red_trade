@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "paper_v4-abstract:82c811def270:round1",
+  "source": {
+    "reviewed_artifact": "/private/tmp/refine-review-20260914/paper_v4.Rmd",
+    "sha256": "82c811def270d266f8ef4541d6fc8afecb6adfe980cda6260d84439714bb340c",
+    "artifact_intact": true
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "review_sources": [
+    {
+      "review_id": "REFINE-033",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/execution/local_fixes.json",
+      "sha256": "d532eb282b4b75a6059a31f82cb007503355f5ed0663868c294c5e3dd2582260"
+    },
+    {
+      "review_id": "ORCHESTRATOR-DECISIONS",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/execution/orchestrator_decisions.md",
+      "sha256": "d10d14c5bfe5a80d214d2b5106e39d089b1cc7f76e663f717d099084f2fdd3d6"
+    },
+    {
+      "review_id": "FROZEN-BASELINE",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/execution/baseline/paper_v4.Rmd",
+      "sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4"
+    },
+    {
+      "review_id": "BSV-MAIN-SUMMARY",
+      "path": "data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/main_summary.csv",
+      "sha256": "29afbe934bc650fe79f8214cfc8050646d404420a160c4d34b6386d87643f711"
+    },
+    {
+      "review_id": "CROSS-COUNTRY-SAMPLE-COUNTS",
+      "path": "data/processed/diagnostics/china_top_m2_goods_status_current_min5/m2_goods_status_current_min_duration_sample_counts_2026-05-20.csv",
+      "sha256": "fc06a07153721bf426b155230438db48d64726b888739c486cdd1338a98b59fd"
+    },
+    {
+      "review_id": "TARGET-STORE-META",
+      "path": "_targets/meta/meta",
+      "sha256": "e869bf119fa3d72f5a5ef659f8d7f589b9bd3da8dfdb3fb50bd5e5a6a504677d"
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "REFINE-033",
+      "source_review": "REFINE-033",
+      "quoted_finding": "The abstract refers to 42 percent of the median distance before 2009, while the body and Table 24 calculate 42.2 percent from the pre-treatment mean 0.647.",
+      "type": "false_statement",
+      "severity": "minor",
+      "scientific_dimension": "reproducibility",
+      "held_decision": false,
+      "status": "REFUTED",
+      "source_locations": [
+        "reports/refine_ink_review_paper_v4_2026-09-14/execution/baseline/paper_v4.Rmd:20",
+        "/private/tmp/refine-review-20260914/paper_v4.Rmd:20",
+        "/private/tmp/refine-review-20260914/paper_v4.Rmd:83-92",
+        "/private/tmp/refine-review-20260914/paper_v4.Rmd:149",
+        "/private/tmp/refine-review-20260914/paper_v4.Rmd:338",
+        "/private/tmp/refine-review-20260914/paper_v4.Rmd:1287",
+        "data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/main_summary.csv:1-2",
+        "data/processed/diagnostics/china_top_m2_goods_status_current_min5/m2_goods_status_current_min_duration_sample_counts_2026-05-20.csv:1-10"
+      ],
+      "defect_evidence": [
+        "The frozen baseline at paper_v4.Rmd:20 still said 42% of the median; this records the historical defect described by the selected comment, not a remaining defect in the candidate."
+      ],
+      "refuting_evidence": [
+        "The candidate at :20 says 42% of the pre-treatment mean distance before 2009, while the baseline at :20 says median.",
+        "The candidate defines mean_br as mean(abs_distance_china) for BRA with year < 2009 at :83-86 and defines perc_change as abs(estimate) / mean_br * 100 at :91.",
+        "The read-only R check gives 12 pre-treatment years 1997-2008, mean 0.646777890583333, median 0.620922368500000, stored ATT -0.272771407583060, mean-based absolute ratio 42.173891772497932%, and median-based absolute ratio 43.930033997971528%.",
+        "The body computes the detailed percentage from perc_change at :149 and :338; the manually typed conclusion value 0.273 at :1287 equals round(abs(-0.272771407583060), 3).",
+        "The rank target has rank 2 in 2008, rank 1 in 2009, and first China rank 1 in 2009. The main cross-country target sample has panel years 1990-2022 and treated entry years 2000-2018, supporting the abstract's date context."
+      ],
+      "mechanical_checks": [
+        "sha256sum: candidate 82c811def270d266f8ef4541d6fc8afecb6adfe980cda6260d84439714bb340c; frozen baseline 9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4.",
+        "Candidate abstract line hash including LF: 9accf3cbd103cffc29f82136030266d70f13900f6b01d4085a0962ea43a7ef2f; baseline abstract line hash including LF: 35e3a8b4b5313bcb3d77cc12b7c3892c47ec7b0716aa3355fc57f90035b6eb77.",
+        "Candidate body ratio line hash: 3eda74013d86b8ad41f35290f11754d6d6564ad2ceae61e81554e9eed0e3d44d; body detail line hash: a2347ab570ca4cff0346eaa8991c36b979c4c50b1241244df2d0249b17a29b52; conclusion line hash: 8568ff0a6d63f22208b2425593e4953a412c79a51fd3576bbd9908075d25f5af. These body/conclusion line hashes match the corresponding baseline lines.",
+        "Rscript --vanilla read-only target/CSV arithmetic and date assertions: CHECKS=PASS.",
+        "Final check: reports/refine_ink_review_paper_v4_2026-09-14/execution/integration_final.txt was present and its item-33 arithmetic assertion agreed with the independent R check. No rendering, targets execution, reestimation, API call, data edit, commit, push, signal, or configuration change was performed."
+      ],
+      "reasoning": "The selected finding was confirmed for the frozen baseline but is refuted as a current-candidate defect: the candidate now labels the denominator as the pre-treatment mean, and the stored ATT divided by the existing pre-treatment mean gives 42.1739%, which rounds to the abstract's 42%. The median would give 43.9300%. The candidate's 2009, 2000, and 2022 date references are supported by the existing rank and cross-country targets. The conclusion's manually typed 0.273 is also consistent with the stored ATT. The review is bounded to these numeric checks and does not certify other candidate edits.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Close item 33 for this candidate. No further abstract or numeric-conclusion edit is indicated by this gate."
+    }
+  ],
+  "summary": {
+    "total": 1,
+    "confirmed": 0,
+    "partial": 0,
+    "refuted": 1,
+    "unresolved": 0,
+    "held_decisions": 0
+  },
+  "adjudication": {
+    "verdict": "NO_CONFIRMED_DEFECTS",
+    "checked_at": "2026-09-14T14:18:15-03:00",
+    "reasons": [
+      "The only selected finding, REFINE-033, is corrected in the candidate and is therefore refuted as a current-candidate defect.",
+      "The candidate's abstract, body projections, manually typed conclusion number, and relevant date contexts pass the bounded existing-data checks.",
+      "This is not a whole-manuscript scientific certification; unselected comments and non-numeric dimensions were not reopened."
+    ]
+  }
+}

@@ -1,0 +1,713 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "reviewed_artifact": "reports/refine_ink_review_paper_v4_2026-09-14/execution/baseline/paper_v4.Rmd",
+    "sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+    "artifact_intact": true
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "review_sources": [
+    {
+      "review_id": "REFINE",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md",
+      "sha256": "eb7dc9488e3b6726cee0ddf232250be18f09291797e2a85470b67637af58b88a"
+    }
+  ],
+  "adjudication_id": "adjudication_safe_text:9c6b03ed3d37:round1",
+  "findings": [
+    {
+      "finding_id": "REFINE-002",
+      "item": 2,
+      "source_review": "REFINE",
+      "quoted_finding": "### 2. Incomplete reporting of cross-country audit\n\n**Status**: [Pending]\n\n**Quote**:\n> In order to assess how closely the empirical treatment used in the panel regression - China becoming a country's largest destination for goods exports - maps onto the theorized treatment (a publicly salient change in status), I conducted a cross-country audit of news media and official sources. The audit examines whether explicit rank language can be recovered around the time of treatment entry and whether source coverage is sufficiently complete for non-recovery to count as informative silence. Table 20 therefore distinguishes among observed status cues concerning China, the recoverability of the displaced incumbent, and caveats about the underlying trade metric.\n\n**Feedback**:\nThe scope of the cross-country audit appears incompletely reported. The treatment audit lists 35 qualifying countries, but the public-cue table covers only nine and does not explain whether the remaining 26 were searched, excluded by a stated sampling rule, or reported elsewhere. Additionally, all nine China-cue entries are \"unknown,\" and the \"medium\" benchmark category is not defined. Without that information, the audit cannot distinguish an intentionally limited case study from a broader search yielding positive cues, uninformative non-recovery, or informative silence.\n\n---",
+      "type": "exposition",
+      "severity": "minor",
+      "scientific_dimension": "exposition",
+      "held_decision": false,
+      "status": "PARTIAL",
+      "source_locations": [
+        "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:104-112",
+        "paper_v4.Rmd:1882-1923",
+        "scripts/diagnostics/analyze_ex_top1_salience.R:46-87",
+        "scripts/diagnostics/analyze_ex_top1_salience.R:206-216",
+        "scripts/functions.R:2213-2261",
+        "scripts/diagnostics/prepare_australia_appendix_bundle_patch.R:75-125"
+      ],
+      "defect_evidence": [
+        "The manuscript calls this a cross-country audit without disclosing that its underlying matrix has 14 legacy-sample countries rather than the 35 current treated countries.",
+        "Only 13 audited countries overlap the current treated sample; Qatar is audit-only and 22 current treated countries were never in this source audit.",
+        "The table note does not disclose the display filter or define medium.",
+        "Chile and Saudi Arabia retain legacy source-audit entry years that differ from the current treatment target; only Australia was patched."
+      ],
+      "refuting_evidence": [
+        "The producer explicitly filters the 14-country matrix to cases without an observed China cue, retaining Australia regardless; the resulting table has nine rows.",
+        "Five audited cases are hidden because their China cues were recovered: Chile, Brazil, Uruguay, Saudi Arabia, and Qatar.",
+        "Among the 26 current treated countries not displayed, four were audited and hidden by the filter and 22 were not audited; they are not a single group of omitted audit cases."
+      ],
+      "mechanical_checks": [
+        "SHA-256 of Rmd, PDF, review, scripts, and target objects",
+        "pdftotext -layout inspection of Tables 20 and 23",
+        "read-only deserialization of existing RDS and target objects",
+        "35 treated versus 14 audited versus 9 displayed set comparison",
+        "inspection of producer filter and medium coding rules",
+        "inspection of status-current restricted-risk-set row filter",
+        "inspection of period and unit summaries"
+      ],
+      "reasoning": "The reporting defect exists, but the review overstates the relationship between the 35-country treatment table and the nine-row display. The source audit is a 14-case legacy subset, and the display is a filtered nine-case diagnostic. Accurate disclosure resolves the present reporting problem without inventing searches for the 22 unaudited current cases.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "See specialist dossier. See orchestrator_decisions.md for the authorized bounded component."
+    },
+    {
+      "finding_id": "REFINE-004",
+      "item": 4,
+      "source_review": "REFINE",
+      "quoted_finding": "### 4. Section 5 leaves the headline corpus undefined\n\n**Status**: [Pending]\n\n**Quote**:\n> Headlines are the appropriate unit for this trade-topic diagnostic because they are tractable in large archives and operate as attention-directing cues (Zhang and Yu 2024). The relevant question is whether Folha increasingly foregrounded China as a trade relationship after the rank reversal. Headlines are the most visible textual cue in the archive and the part of coverage most likely to be scanned by broad audiences. Full article texts would be useful for a different exercise - for example, measuring tone or detailed argumentation - but the salience claim here is about which China-related themes were made visible at the headline level. This diagnostic does not measure the frequency of explicit rank labels.\n\nI therefore classify China-related headlines into substantive categories and then collapse them into four analytically relevant groups: China-Brazil trade, China's domestic economy, diplomacy and bilateral relations, and non-economic coverage. The classification uses a fixed label set with examples, and the appendix reports the exact prompt and validation procedure.\n\n**Feedback**:\nThe construction of the Folha headline corpus is not specified. The classification prompt and validation assess labels conditional on inclusion, but without the retrieval rule, archive coverage, and treatment of duplicate or missing records, the annual counts underlying Figure 6 cannot be fully evaluated as a salience measure.\n\n---",
+      "type": "reproducibility",
+      "severity": "major",
+      "scientific_dimension": "corpus provenance and measurement",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "paper_v4.Rmd:1057-1085",
+        "paper_v4.Rmd:1978-2070",
+        "_targets.R:62-67",
+        "_targets.R:752-759",
+        "scripts/functions.R:20-50",
+        "scripts/functions.R:5598-5620",
+        "scripts/chatgpt_api.R:40-98",
+        "data/raw/network_caches/folha_scrape_cache.rds",
+        "data/raw/network_caches/df_classifcation.rds",
+        "data/folha_classificado.rds",
+        "reports/refine_ink_review_paper_v4_2026-09-14/execution/corpus_pipeline.md"
+      ],
+      "defect_evidence": [
+        "The manuscript does not state the preserved retrieval query, ordering, page range, exact archived dates, duplicate treatment, missingness, or observed title-join losses.",
+        "The archived cache starts on 2000-05-14 and ends on 2014-07-28, so both boundary years are partial.",
+        "The stored cache is already exact-title unique; it cannot identify the number of duplicates removed before storage.",
+        "No raw page-response archive, page-level failure or empty-page log, search-engine result total, or historical collection date was located in the bounded evidence.",
+        "The current classification loop omits a final incomplete 89-row block, so current code alone is not sufficient provenance for the complete archived classification; items 7 and 8 separately govern this classification-provenance defect."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "Existing retrieval cache: 14589 rows, 14589 distinct titles, zero exact duplicate rows, zero missing title/timestamp/date, all titles matching the preserved China-title filter.",
+        "Existing classification and final files: 14589 distinct titles each.",
+        "Title-set differences and exact-title join losses among existing cache, classification, and final files: zero.",
+        "Timestamp/date disagreements after exact-title join: zero."
+      ],
+      "reasoning": "The existing files permit a bounded audit of the stored corpus but not a historical completeness audit of Folha search results. The review finding is therefore confirmed. Stored-file facts may be disclosed only with explicit limits; missing raw responses and collection metadata must not be replaced by historical claims.",
+      "proposed_fix_assessment": "needs_design",
+      "disposition": "Specify a file-tracked target that emits source hashes, rows, date support, missingness, exact duplicates, title-set differences, exact-join losses, and unavailable provenance fields. After that target reproduces the figures, insert the proposed bounded disclosure without altering the item 7/8 classification-provenance correction. See orchestrator_decisions.md for the authorized bounded component."
+    },
+    {
+      "finding_id": "REFINE-006",
+      "item": 6,
+      "source_review": "REFINE",
+      "quoted_finding": "### 6. Table 5 interaction diagnostics remain underdefined\n\n**Status**: [Pending]\n\n**Quote**:\n> Table 5: Brazil SDiD estimates under corrected predetermined commodity and Chinademand diagnostics.\n| Specification | ATT | Placebo SE | Normal p | Rank p (dir./bilat.) |\n| :--- | :--- | :--- | :--- | :--- |\n| Current covariates | -0.268 | 0.143 | 0.061 | Not computed |\n| Preferred: no covariates | -0.273 | 0.131 | 0.037 | 0.031 / 0.073 |\n| Primary share x 2008-2009 | -0.285 | 0.129 | 0.027 | 0.031 / 0.073 |\n| Agriculture/mining x 2008-2009 | -0.284 | 0.128 | 0.026 | Not computed |\n| Price exposure x 2008-2009 | -0.277 | 0.130 | 0.034 | Not computed |\n| Prior China share x 2008-2009 | -0.284 | 0.130 | 0.029 | Not computed |\n\n**Feedback**:\nIt is difficult to determine what the four Table 5 interaction specifications adjust for because the exposure variables, baseline periods, meaning of “x 2008-2009,” and treatment of lower-order terms are not fully defined. Since the interaction includes the first treated year, these details are necessary to interpret the adjusted ATTs and assess how effectively the diagnostics address commodity-cycle or China-demand confounding.\n\n---",
+      "type": "exposition",
+      "severity": "unspecified",
+      "scientific_dimension": "fidelity of implementation",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "paper_v4.Rmd:754",
+        "paper_v4.Rmd:805",
+        "paper_v4.Rmd:867",
+        "output/paper_v4.pdf:p.23, Table 5 and preceding paragraph"
+      ],
+      "defect_evidence": [
+        "The Table 5 labels say only Primary share, Agriculture/mining, Price exposure, and Prior China share x 2008-2009; the note says only that the measures use external goods exports and that the interaction includes the first treated year.",
+        "The active producer defines country means over 2004-2008 for primary goods, agriculture, mining and energy, and China's goods-export share; the manuscript does not report those definitions.",
+        "The active producer includes only standardized time-varying interactions in the four diagnostic fits. Fixed exposure levels are omitted because they are absorbed by unit effects, and the common 2008-2009 indicator is absorbed by time effects; this lower-order-term logic is absent from the paper.",
+        "The price row is a distinct construction: 2004-2008 export-composition weights multiply World Bank Pink Sheet log-price changes relative to 2007 before the 2008-2009 activation and standardization."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "Inspected scripts/diagnostics/audit_brazil_sdid_commodity_no_covariates.R:97-151 and the upstream construction at scripts/diagnostics/audit_brazil_sdid_predetermined_commodity_controls.R:190-257,293-326.",
+        "Matched all six rows and values to data/processed/diagnostics/brazil_sdid_commodity_no_covariates/table_5_sdid_specification_results.csv; smoke_test is FALSE.",
+        "Confirmed the producer uses no lower-order exposure levels in specifications at lines 121-127."
+      ],
+      "reasoning": "The diagnostics are implemented coherently, but the rendered table cannot be interpreted from the manuscript alone. This is a bounded reporting defect; it does not require re-estimation.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Add the exact 2004-2008 exposure definitions, the 2008-2009 activation rule, the price-index construction, standardization, and the absorbed lower-order-term explanation to the paragraph/note. Keep the main covariate-free specification and all estimates unchanged. See orchestrator_decisions.md for the authorized bounded component."
+    },
+    {
+      "finding_id": "REFINE-007",
+      "item": 7,
+      "source_review": "REFINE",
+      "quoted_finding": "### 7. Section 8.8 omits the full coding pipeline\n\n**Status**: [Pending]\n\n**Quote**:\n> The classified headline file is treated as an archived derived dataset rather than regenerated during manuscript rendering. This choice reflects the practical behavior of LLM-based coding: early runs sometimes returned incomplete classifications, altered original headlines, or used slightly inconsistent labels, which made exact matching back to the archive\ndifficult. I therefore fixed the prompt, normalized labels, preserved the resulting classified file, and validated the coding below against an independently coded sample. The evidence in the main text is used as a headline-level salience diagnostic.\n\n**Feedback**:\nThe classifier documentation does not provide a fully auditable path from the headline corpus to the archived labels underlying Figure 6. The model or snapshot, generation settings, user-message and batching procedure, response parsing, rerun rules, and label-normalization rules are not reported. These details are consequential given the acknowledged incomplete and inconsistent outputs, including the unexplained normalization from `china-brasil relations` in the prompt to `china-brazil relations` in the archive.\n\n---",
+      "type": "artifact",
+      "severity": "major",
+      "scientific_dimension": "reproducibility",
+      "held_decision": false,
+      "status": "PARTIAL",
+      "source_locations": [
+        "paper_v4.Rmd:1978-2066",
+        "scripts/chatgpt_api.R:40-98",
+        "_targets.R:752-759",
+        "data/folha_classificado.rds",
+        "data/df_classifcation.rds",
+        "data/china_headlines_batch.json"
+      ],
+      "defect_evidence": [
+        "The appendix displays only the system prompt and an archive disclosure; it omits the preserved API-call, slicing, parsing, join, and normalization code.",
+        "No immutable gpt-4.1-mini snapshot, complete raw request/response archive, batch-to-row manifest, rerun history, or non-temperature generation-parameter record was found for the 14589-row corpus.",
+        "No manifest binds a specific producer hash and source-corpus hash to the archived classified RDS bytes.",
+        "The five-response gpt-4o-mini-2024-07-18 batch file is not linked to the gpt-4.1-mini corpus and cannot serve as its run log."
+      ],
+      "refuting_evidence": [
+        "scripts/chatgpt_api.R records the active model alias gpt-4.1-mini and temperature 0.",
+        "The tracked producer records the headline filter, 500-row slicing, chat call, newline and arrow parsing, trimming, exact-title join, and deduplication.",
+        "The alleged unexplained normalization is present at scripts/chatgpt_api.R:95 as gsub(\"brasil\", \"brazil\", subject).",
+        "Both archived RDS files contain 14589 rows and consistently store the string gpt-4.1-mini, though that string is assigned by code rather than preserved provider metadata."
+      ],
+      "mechanical_checks": [
+        "Traced the displayed prompt to the current producer and archived RDS inputs.",
+        "Inspected the unique model-string values and row counts in both archived RDS files.",
+        "Inspected the five-response batch JSON and found no preserved link to the corpus-wide archive.",
+        "Verified the manuscript and relevant input hashes."
+      ],
+      "reasoning": "The paper-facing record is incomplete and exact historical re-execution is impossible, but the repository preserves much of the code configuration and processing path. The correction must distinguish configuration from historical run evidence and disclose unavailable fields rather than invent them.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Add the verified configuration and explicit historical-limit disclosure; do not claim an immutable snapshot or treat the five-response gpt-4o-mini batch as corpus provenance. See orchestrator_decisions.md for the authorized bounded component."
+    },
+    {
+      "finding_id": "REFINE-008",
+      "item": 8,
+      "source_review": "REFINE",
+      "quoted_finding": "### 8. Validation does not establish trade-category accuracy\n\n**Status**: [Pending]\n\n**Quote**:\n> To assess the reliability of the automated classification, I independently coded a stratified random sample of 100 headlines (with a minimum of 5 per category). Table 22 reports the agreement rate between the ChatGPT labels and the manual coding.\n\nTable 22: Validation of ChatGPT classification against manual coding $(\\mathrm{N}=100)$. Overall accuracy: 88.0 percent.\n\n**Feedback**:\nTable 22’s 88 percent agreement appears to be an unweighted result from a category-stratified sample and therefore may not estimate corpus-wide accuracy. Moreover, the six concordant `china-brazil trade` cases identify only one side of class performance unless the stratification basis and full confusion matrix are reported; they do not establish both precision and recall or rule out time-varying misclassification in the category trend underlying Figure 6.\n\n---",
+      "type": "method",
+      "severity": "major",
+      "scientific_dimension": "measurement",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "paper_v4.Rmd:2074-2119",
+        "scripts/functions.R:5623-5688",
+        "_targets.R:756-759",
+        "data/folha_validation_sample_annotated.csv"
+      ],
+      "defect_evidence": [
+        "The 88 percent result is the unweighted mean of exact matches in the 100-row validation file; no target applies sampling weights.",
+        "No validation-sample producer, random seed, complete allocation rule, or inclusion probabilities were found, so corpus-wide accuracy is not identified.",
+        "Category rows group by automated label, making them agreement conditional on the prediction rather than simultaneous precision and recall estimates.",
+        "The archived trade cells are TP=6, FP=0, FN=1; Table 22 exposes the six predicted-trade cases but not the false negative required for recall.",
+        "The sample has 55 rows from 2001-2008 and 45 from 2009-2014, omits 2000, was not temporally stratified, and has too little category-by-period support to rule out time-varying error."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "Recomputed the exact-match count from the archived 100-row validation file.",
+        "Reconstructed the complete 9-by-9 confusion matrix read-only and verified trade TP=6, FP=0, FN=1.",
+        "Counted 55 validation observations in 2001-2008 and 45 in 2009-2014 and confirmed that 2000 is absent.",
+        "Traced Table 22 to its unweighted group-by-predicted-label target function.",
+        "Searched the current graph and code for a sample producer, seed, allocation rule, and inclusion probabilities."
+      ],
+      "reasoning": "The table correctly reports arithmetic agreement in its archived sample but labels and interprets that value too broadly. Missing design probabilities preclude a corpus-wide accuracy estimate, and the displayed trade row gives only one conditioning direction. Temporal stability is untested.",
+      "proposed_fix_assessment": "needs_design",
+      "disposition": "Relabel the current result as unweighted validation-sample agreement and narrow the trade and temporal claims; add new metrics only through an authorized targets-first design. See orchestrator_decisions.md for the authorized bounded component."
+    },
+    {
+      "finding_id": "REFINE-011",
+      "item": 11,
+      "source_review": "REFINE",
+      "quoted_finding": "### 11. Table 4 timing contrasts lack a common estimand\n\n**Status**: [Pending]\n\n**Quote**:\n> Table 4: Brazil SDiD rank-versus-volume timing diagnostics without covariates.\n| Timing year | Test role | China rank | Export share (\\%) | Margin (USD bn) | ATT | Inference |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 2003 | Growth/lower-rank promotion | 3 | 6.7 | -12.9 | -0.064 | Point estimate only; no covariates |\n| 2004 | China rank-2 threshold | 2 | 7.4 | -14.2 | -0.109 | Point estimate only; no covariates |\n| 2005 | Rapid growth without rank 1 | 3 | 7.2 | -16.7 | -0.099 | Point estimate only; no covariates |\n| 2009 | Actual rank-1 reversal | 1 | 15.1 | 4.1 | -0.273 | Point estimate only; no covariates |\n| 2012 | Later-break falsification | 1 | 18.8 | 14.9 | -0.100 | Point estimate only; no covariates |\n\n**Feedback**:\nThe timing rows appear to estimate averages over different calendar periods, post-onset horizons, and fitted SDiD counterfactuals. Because no uncertainty is reported for the differences between rows, their ordering provides suggestive timing evidence but does not establish that the 2009 effect differs statistically from the earlier pseudo-onsets or the later break.\n\n---",
+      "type": "scope_or_consistency",
+      "severity": "moderate",
+      "scientific_dimension": "estimand and inference",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "paper_v4.Rmd:693-695",
+        "paper_v4.Rmd:526-541",
+        "paper_v4.Rmd:756-783",
+        "scripts/diagnostics/audit_brazil_sdid_no_covariates.R:247-280",
+        "scripts/diagnostics/sdid_placebo_helpers.R:107-146",
+        "data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/timing_placebos.csv:2-6",
+        "output/paper_v4.pdf:23, Table 4"
+      ],
+      "defect_evidence": [
+        "Post-onset horizons are 6, 5, 4, 7, and 5 years. The helper constructs a new treatment vector and calls synthdid_estimate separately for each row; no shared fitted counterfactual or cross-row contrast inference is supplied.",
+        "Table 4 note calls all rows estimated causal effects after nominal onset; text uses early magnitudes against the Lula account and describes stability across timing tests. The later-break nominal pre-period includes actual treated years 2009-2011."
+      ],
+      "refuting_evidence": [
+        "The manuscript already calls the rows point-estimate diagnostics, notes early truncation and later extension, and supplies preferred 2009 inference elsewhere. The donor identities are common, so sample membership differences are not the source of incomparability."
+      ],
+      "mechanical_checks": [
+        "comparability_verify.R: five existing input slices checked for balance, duplicates, missing outcomes, dates and country counts; no fits run.",
+        "PDF Table 4 rows agree with timing_placebos.csv after rounding."
+      ],
+      "reasoning": "The reviewer correctly limits the ordering to suggestive timing evidence. Identical donor identities do not equate calendar periods, horizons, treatment histories or fitted SDiD weights. Matching horizons and adding individual SEs alone would still not define a common causal estimand or valid inference for between-row differences.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Use localized diagnostic language and complete table notes; retain every numeric output. Change the overlapping Lula paragraph only to remove the selected cross-window comparability inference, without adjudicating item 12. See orchestrator_decisions.md for the authorized bounded component."
+    },
+    {
+      "finding_id": "REFINE-018",
+      "item": 18,
+      "source_review": "REFINE",
+      "quoted_finding": "### 18. Uncertainty procedure conflicts with reported SE\n\n**Status**: [Pending]\n\n**Quote**:\n> To compute the uncertainty of estimates, I use a one-sided placebo-in-space rank of the Brazil estimate within the distribution of placebo estimates obtained by reassigning treatment to each unit from the donor pool. For robustness, I also report the standard error calculated from the normal approximation native to the SDiD estimator. I use a one-sided hypothesis test, since the theory is directional (a treated unit should move its ideal point\ntoward China), and report the two-sided test as a conservative sensitivity assessment.\n\n**Feedback**:\nThe uncertainty description misstates the source of the reported standard error. The results identify the standard error as placebo-based and then apply a normal approximation to obtain the conventional p-value and confidence interval; the placebo assignment rank is a separate inferential quantity. These three steps are presently conflated in the design discussion.\n\n---",
+      "type": "method",
+      "severity": "unspecified",
+      "scientific_dimension": "inference",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "paper_v4.Rmd:308-310",
+        "paper_v4.Rmd:338",
+        "paper_v4.Rmd:654-661",
+        "output/paper_v4.pdf:p.11"
+      ],
+      "defect_evidence": [
+        "Line 308 incorrectly calls the standard error a normal-approximation quantity and describes the directional rank as the procedure used to compute uncertainty.",
+        "The reported SE is instead a synthdid placebo SE: se_sdid takes the finite-population standard deviation of 20,000 seeded placebo resamples for the preferred fit.",
+        "The conventional two-sided p-value and 95 percent interval are then calculated from the estimate and placebo SE with a normal approximation.",
+        "The rank is a separate, deterministic placebo-in-space exercise: every one of 96 units is treated once, yielding directional rank 3/96 and absolute bilateral rank 7/96."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "Inspected scripts/functions.R:1072-1151 and scripts/diagnostics/sdid_placebo_helpers.R:230-297 for the 20,000-resample placebo SE algorithm.",
+        "Inspected scripts/diagnostics/sdid_placebo_helpers.R:299-380 and rank_inference.csv for the exhaustive, no-RNG rank procedure.",
+        "Confirmed main_summary.csv records estimate -0.2727714076, placebo SE 0.1306079433, normal p 0.0367550198, directional rank 3/96, bilateral rank 7/96, seed 20260520, and 20,000 SE replications."
+      ],
+      "reasoning": "The numerical outputs and result-table labels already distinguish the quantities, but the design paragraph assigns the wrong source to the standard error and merges three logically separate inferential summaries.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Replace the uncertainty paragraph with an explicit three-step account. Do not change estimates, SEs, ranks, or the held convention that the directional rank is theory-aligned and the absolute rank is a conservative sensitivity assessment. See orchestrator_decisions.md for the authorized bounded component."
+    },
+    {
+      "finding_id": "REFINE-020",
+      "item": 20,
+      "source_review": "REFINE",
+      "quoted_finding": "### 20. Weight definitions leave the SDiD ATT unidentified\n\n**Status**: [Pending]\n\n**Quote**:\n> Here $\\hat{w}_{i}^{\\text {SCM }}$ is the donor-unit weight assigned to unit $i$. SCM uses these donor weights to match the treated unit's pre-treatment outcome path, and effects are then read from post-treatment treated-minus-synthetic gaps. SCM can approximate stable unit differences through donor weights when the treated unit lies in the donor convex hull, but it does not add unit fixed effects or time weights. SDiD combines unit weights (like SCM) with unit fixed effects (like DiD) and time weights (unique to SDiD), addressing the limitations of both. The basic SDiD estimating equation is:\n\n$$\n\\left(\\hat{\\tau}_{A T T}^{\\mathrm{SDiD}}, \\hat{\\mu}, \\hat{\\alpha}, \\hat{\\beta}\\right)=\\underset{\\tau_{A T T}, \\mu, \\beta, \\alpha}{\\arg \\min } \\sum_{i=1}^{N} \\sum_{t=1}^{T} \\hat{w}_{i}^{\\mathrm{SDiD}} \\hat{\\lambda}_{t}^{\\mathrm{SDiD}}\\left(Y_{i t}-\\mu-\\alpha_{i}-\\beta_{t}-D_{i t} \\tau_{A T T}\\right)^{2}\n$$\n\nNote that SDiD retains unit fixed effects $\\alpha_{i}$ (like DiD) while also assigning unit weights $\\hat{w}_{i}^{\\text {SDiD }}$ (like SCM) and time weights $\\hat{\\lambda}_{t}^{\\text {SDiD }}$ (unique to SDiD).\n\n**Feedback**:\nThe displayed SCM and SDiD objectives do not define the positive weights assigned to treated units and post-treatment periods. Because the surrounding text and Tables 9–10 describe only donor-unit and pre-treatment weights, a literal reading gives no positive-weight treated-post cells, causing $D_{it}$ and hence $\\tau_{ATT}$ to drop out of the objective. This is a defect in the estimator exposition, not evidence that the reported software estimates themselves are unidentified.\n\n---",
+      "type": "method",
+      "severity": "unspecified",
+      "scientific_dimension": "fidelity of implementation",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "paper_v4.Rmd:1426-1448",
+        "output/paper_v4.pdf:pp.46-47"
+      ],
+      "defect_evidence": [
+        "The text defines only donor-unit weights and reports only pre-treatment time weights, but the objective sums over every unit-period cell without defining full-sample weights.",
+        "Without fixed positive weights on treated units and post-treatment periods, the displayed notation does not show how treated-post cells enter and identify the ATT."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "Inspected the installed synthdid 0.0.9 implementation of synthdid_estimate: the estimator uses c(-omega, rep(1/N1,N1)) and c(-lambda, rep(1/T1,T1)).",
+        "Confirmed the active preferred target is a synthdid_estimate with N0=95, T0=12 and no covariate array; no implementation failure was found."
+      ],
+      "reasoning": "The defect is in exposition only. The software gives donor controls optimized weights, treated units uniform weight 1/N1, pre-treatment periods optimized weights, and post-treatment periods uniform weight 1/T1. The current equation becomes complete once those full vectors are defined.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Define N0, N1, T0, and T1 and the full unit/time weight vectors immediately before the objectives. State that treated and post-treatment cells receive positive uniform weights. See orchestrator_decisions.md for the authorized bounded component."
+    },
+    {
+      "finding_id": "REFINE-021",
+      "item": 21,
+      "source_review": "REFINE",
+      "quoted_finding": "### 21. Vote-level outcome is undefined in Section 4.1\n\n**Status**: [Pending]\n\n**Quote**:\n> Let $B_{i}$ identify Brazil, $P_{r}$ indicate 2009-2012, and $H_{r}$ identify a human-rights resolution. The vote-level specification is\n\n$$\nY_{i r}=\\alpha_{i}+\\lambda_{r}+\\beta\\left(B_{i} P_{r}\\right)+\\gamma\\left(B_{i} H_{r}\\right)+\\delta\\left(B_{i} P_{r} H_{r}\\right)+\\varepsilon_{i r} .\n$$\n\nCountry and resolution fixed effects absorb the remaining lower-order terms. The Brazilby-domain interaction allows Brazil's pre-existing gap relative to donors to differ between human-rights and other resolutions. The coefficient $\\delta$ measures the additional post-2009 human-rights shift. The sample contains 55,190 observed votes by 95 countries on 612 China-US divergent resolutions in 2005-2012. Any human-rights tag places a resolution in the human-rights group; all remaining resolutions form the non-human-rights group. Each observed country-resolution vote receives equal weight.\n\n**Feedback**:\nThe vote-level dependent variable $Y_{ir}$ is not operationally defined. The manuscript should specify how yes, no, and abstention votes are converted into distances from China and the United States, as well as how absences and nonparticipation are handled. These choices can change observation-level values in the full sample of China–U.S. disagreements and are necessary to interpret and reproduce the reported coefficients.\n\n---",
+      "type": "measurement",
+      "severity": "major",
+      "scientific_dimension": "outcome definition and sample inclusion",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "paper_v4.Rmd:971-977",
+        "scripts/functions.R:6555-6561",
+        "scripts/functions.R:6634-6675"
+      ],
+      "defect_evidence": [
+        "The manuscript does not give the -1/0/1 vote coding or the exact signed distance formula.",
+        "The manuscript does not state that unrecorded country-resolution pairs are omitted rather than coded as abstentions.",
+        "The manuscript does not state that both China and the United States must have recorded and different votes for a roll call to enter the divergent-vote sample."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "Producer code maps no to -1, abstain to 0, and yes to 1.",
+        "Producer code calculates abs(country_score - china_score) - abs(country_score - usa_score).",
+        "The inspected un_votes object exposes only yes, no, and abstain as observed vote levels; absence and nonparticipation are not explicit vote categories."
+      ],
+      "reasoning": "The code supplies an exact, stable operational definition that is absent from the prose. Adding it clarifies the sign, treatment of abstentions, and exclusion of unrecorded votes without changing the analysis.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Replace the two sample-description sentences with the exact proposal in replacements. See orchestrator_decisions.md for the authorized bounded component."
+    },
+    {
+      "finding_id": "REFINE-022",
+      "item": 22,
+      "source_review": "REFINE",
+      "quoted_finding": "### 22. Appendix 8.10 does not isolate factor effects\n\n**Status**: [Pending]\n\n**Quote**:\n> Table 28 holds the common window and country-year panel fixed and crosses the two outcome sources with one and two latent factors. This 2 × 2 design isolates the factor-count component of the comparison. Holding the outcome fixed, moving from one to two factors makes the ATT more negative (larger in absolute value): from -0.036 to -0.095 under BSV, and from -0.027 to -0.065 under UNGA-DM. Cross-validation selects 2 factors under BSV and 1 under UNGA-DM. The one-factor UNGA-DM fit selected by cross-validation has the same negative sign and substantially overlapping uncertainty with the fixed-two-factor fit, although its point estimate is less negative; factor selection therefore changes magnitude without reversing the qualitative pattern. Holding the factor count at two still leaves a smaller UNGA-DM estimate (-0.065) than the BSV estimate (-0.095), so the outcome source remains relevant after the factor-count component is isolated.\n\n**Feedback**:\nThe 2 × 2 comparison does not uniquely isolate factor-count and outcome-source components. The factor-count contrast differs across outcomes, indicating an interaction, while the two ideal-point measures may have different absolute scales. The table supports conditional sensitivity comparisons, but the raw cross-outcome ATT differences and paired bootstrap do not by themselves identify a scale-invariant outcome-source contribution beyond factor selection.\n\n---",
+      "type": "overclaim",
+      "severity": "moderate",
+      "scientific_dimension": "measurement and conditional specification sensitivity",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "paper_v4.Rmd:2239-2240",
+        "paper_v4.Rmd:2417-2454",
+        "paper_v4.Rmd:2461-2507",
+        "scripts/diagnostics/audit_ungadm_postreview_diagnostics.R:214-285",
+        "scripts/diagnostics/audit_ungadm_postreview_diagnostics.R:287-381",
+        "data/processed/diagnostics/ungadm_outcome_robustness/postreview/ife_2x2_fixed_r.csv:2-5",
+        "data/processed/diagnostics/ungadm_outcome_robustness/postreview/ife_paired_bootstrap_summary.csv:2-3",
+        "output/paper_v4.pdf:68-69, Tables 27-28"
+      ],
+      "defect_evidence": [
+        "The factor contrast r2-r1 is -0.059345646431 under BSV and -0.038020234148 under UNGA-DM. Their descriptive difference is 0.021325412283 in the original numerical scales; no interaction test was found in the traced outputs.",
+        "Repeated text says isolates/assessed separately/outcome metric contributes beyond factor selection. Paired differences are unstandardized UNGA-DM minus BSV, not a scale-invariant decomposition. Counts are fixed within bootstrap replicates, not reselected."
+      ],
+      "refuting_evidence": [
+        "The 2x2 genuinely holds the common panel fixed at 4,727 observations, 161 countries (35 treated, 126 controls), 1990-2020, and permits conditional within-measure factor comparisons.",
+        "The final paragraph already explicitly says non-rejection does not establish equivalence. Table 28 reports both factor counts rather than hiding sensitivity. All displayed numerical results match the existing CSVs."
+      ],
+      "mechanical_checks": [
+        "comparability_verify.R: recomputed only arithmetic and summaries of 1,000 saved paired draws; maximum absolute discrepancy 1.11e-16.",
+        "Point estimates, SEs and p-values in PDF Table 28 checked against the existing 2x2 CSV."
+      ],
+      "reasoning": "The design supports conditional sensitivity statements, not a unique additive attribution. Nonadditivity is descriptive and scale-dependent, not established statistically by the saved bootstrap. A common panel and fixed factor count do not harmonize outcome units. Paired non-rejection neither proves equivalence nor identifies an outcome-source contribution.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Replace all isolation/decomposition occurrences and associated notes with conditional within-measure comparisons, explicit scale limits and non-equivalence. Preserve numbers and unrelated Brazil robustness statements, including wording reserved to unselected comments. See orchestrator_decisions.md for the authorized bounded component."
+    },
+    {
+      "finding_id": "REFINE-027",
+      "item": 27,
+      "source_review": "REFINE",
+      "quoted_finding": "### 27. Contradiction between Figure 8 and text regarding China's stability\n\n**Status**: [Pending]\n\n**Quote**:\n> Figure 8 plots the separate UNGA ideal-point series for Brazil and China. This diagnostic clarifies the interpretation of the absolute-distance outcome used in the main SDiD design: China remains comparatively stable, while Brazil accounts for most of the movement in the Brazil-China distance.\n\n**Feedback**:\nThere seems to be an issue with the characterization of Figure 8: China is comparatively stable in its average position around the treatment period but displays considerably greater year-to-year volatility than the text acknowledges. The figure supports a sustained post-2009 movement in Brazil’s position, but not an unqualified claim that China is stable or that Brazil accounts for most annual variation in the bilateral distance.\n\n---",
+      "type": "interpretation",
+      "severity": "moderate",
+      "scientific_dimension": "descriptive interpretation",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "paper_v4.Rmd:1304-1328",
+        "output/paper_v4.pdf:44",
+        "raw data/dataverse_files-2/IdealpointestimatesAll_Jun2024.csv"
+      ],
+      "defect_evidence": [
+        "Figure 8 shows sizable year-to-year movement in China's ideal-point series, so unqualified comparative stability is misleading.",
+        "Neither the figure nor the inspected producer performs an attribution or decomposition showing that Brazil accounts for most movement in bilateral distance."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "Brazil mean ideal point: -0.156 in 2005-2008 and -0.481 in 2009-2012.",
+        "China mean ideal point: -0.704 in 2005-2008 and -0.769 in 2009-2012.",
+        "Mean absolute annual change in 2005-2012: China 0.121, Brazil 0.073.",
+        "No variance attribution was computed."
+      ],
+      "reasoning": "The source series supports small movement in China's period average and sustained post-2009 movement in Brazil, while also showing annual volatility in China. It does not support assigning most bilateral-distance variation to Brazil. The narrower visual description resolves both issues.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Replace only the second Figure 8 interpretation sentence with the exact proposal in replacements. See orchestrator_decisions.md for the authorized bounded component."
+    },
+    {
+      "finding_id": "REFINE-029",
+      "item": 29,
+      "source_review": "REFINE",
+      "quoted_finding": "### 29. Figure 2 blurs the raw gap and SDiD ATT\n\n**Status**: [Pending]\n\n**Quote**:\n> ![](/documents/c44419d6-e784-4221-b6f0-7150c9c2a64a/images/image_002.jpg)\nFigure 2: Preferred SDiD fit for Brazil and its synthetic comparison, estimated without covariates. Lower values indicate convergence toward China; the post-treatment gap is the average post-2009 reduced-form estimate. Note: Absolute UNGA ideal-point distance to China. SE: placebo-based SE with 20,000 replications; p-values reported in the text and table. Window: 1997-2015 annual Brazil series.\n\n**Feedback**:\nFigure 2 plots an unshifted weighted donor path that retains a pre-treatment level gap from Brazil. Consequently, the caption's reference to “the post-treatment gap” is ambiguous: the -0.273 ATT is the level-adjusted post-treatment contrast—equivalently, the post-treatment gap net of the SDiD-weighted pre-treatment gap—not the raw vertical distance between the two series. The figure's arrow appears to depict the adjusted -0.273 contrast correctly, so the issue is limited to the caption's terminology rather than the estimator or visual annotation.\n\n---",
+      "type": "exposition",
+      "severity": "minor",
+      "scientific_dimension": "fidelity of implementation",
+      "held_decision": false,
+      "status": "PARTIAL",
+      "source_locations": [
+        "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:482-491",
+        "reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md:32",
+        "paper_v4.Rmd:340-345",
+        "output/paper_v4.pdf:p.16",
+        "reports/refine_ink_review_paper_v4_2026-09-14/execution/sdid.json:item29_caption_prerequisites",
+        "quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_fit.png"
+      ],
+      "defect_evidence": [
+        "The caption uses the unqualified phrase post-treatment gap and equates it with the average post-2009 reduced-form estimate, without stating that the SDiD ATT nets the weighted pre-treatment contrast.",
+        "Because the donor trajectory is unshifted, a reader could mistake the raw vertical separation of the two trajectories for the reported ATT."
+      ],
+      "refuting_evidence": [
+        "The review itself says the arrow appears to depict the adjusted contrast correctly.",
+        "Visual inspection shows a separate arrow/diagram in addition to the observed and donor trajectories, and the prerequisite states that the arrow is supplied by synthdid_plot rather than a raw-gap annotation.",
+        "No evidence was found that the stored estimator, ATT, or visual annotation is incorrect; the defect is localized to caption terminology."
+      ],
+      "mechanical_checks": [
+        "[static] The active Rmd includes the stored figure and the caption text at paper_v4.Rmd:340-345.",
+        "[static] The Figure 2 page is p.16 in baseline_page_map.json and the active PDF hash equals the frozen PDF hash.",
+        "[visual] The producer PNG was inspected; the raw lines and separate adjustment arrow are distinguishable.",
+        "[new analysis] No model rerun or new figure was produced."
+      ],
+      "reasoning": "The caption can blur two different quantities, but the supplied evidence limits the problem to exposition. The safest correction names the arrow as the level-adjusted SDiD ATT and explicitly nets the weighted pre-treatment contrast while preserving the figure and all results.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Replace only the caption clause identified in replacements; leave the image, estimator, ATT, SE, and window unchanged. See orchestrator_decisions.md for the authorized bounded component."
+    },
+    {
+      "finding_id": "REFINE-030",
+      "item": 30,
+      "source_review": "REFINE",
+      "quoted_finding": "### 30. Identification statement reverses the trade hierarchy\n\n**Status**: [Pending]\n\n**Quote**:\n> ### 3.2 Identification Strategy\n\nI want to estimate the causal effect of a country's rise in China's trade hierarchy on its foreign policy. The main direct challenge to causal identification is differentiating it from a continuous foreign-policy approximation as exposure to trade with China increases over\ntime. Besides that, countries may move closer to China due to changes in domestic political coalitions or foreign-policy doctrine reorientation that coincide in timing with the treatment, because governments already inclined toward China deepen commercial ties before the rank reversal occurs, or due to any other confounding variable.\n\n**Feedback**:\nThe opening sentence reverses the treatment hierarchy: the design estimates the effect of China rising to first place among a country's export destinations, not of that country rising within China's trade hierarchy. Although the subsequent definitions and empirical implementation use the intended treatment, this sentence states a different estimand.\n\n---",
+      "type": "scope_or_consistency",
+      "severity": "minor",
+      "scientific_dimension": "scope",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:495-506",
+        "reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md:33",
+        "paper_v4.Rmd:298-304",
+        "paper_v4.Rmd:314,320-324,328-330",
+        "output/paper_v4.pdf:p.10"
+      ],
+      "defect_evidence": [
+        "The phrase a country's rise in China's trade hierarchy assigns the direction of the hierarchy change to the country, not to China.",
+        "The later design description and Brazil section identify the intended event as China becoming or entering the top export-destination position."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "[static] The opening sentence and the later treatment definitions were compared in the active Rmd and frozen PDF text.",
+        "[new analysis] No treatment variable, target, or estimate was changed."
+      ],
+      "reasoning": "The local sentence states a different estimand even though the subsequent implementation is aligned with the intended treatment. A one-sentence replacement corrects the hierarchy direction without broadening the design.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Use the exact local sentence replacement in the record. See orchestrator_decisions.md for the authorized bounded component."
+    },
+    {
+      "finding_id": "REFINE-031",
+      "item": 31,
+      "source_review": "REFINE",
+      "quoted_finding": "### 31. Collinearity of covariates with fixed effects\n\n**Status**: [Pending]\n\n**Quote**:\n> The preferred specification uses no covariates because time-varying post-2009 values may induce post-treatment bias. A model specification with time-varying variables uses trade, power, ideology, macroeconomic stress, and institutional variables to control for potential confounding.\n\n**Feedback**:\nThe covariate comparison may include terms that are not separately identified under the stated fixed-effects specification. If geographic distance to the United States is time-invariant, unit fixed effects absorb it; if power gap equals the country power index minus the annual U.S. index, it is collinear with the country power index and time effects. It is therefore unclear whether these variables were dropped, transformed, or used in a separate weighting or residualization step.\n\n---",
+      "type": "scope_or_consistency",
+      "severity": "unspecified",
+      "scientific_dimension": "fidelity of implementation",
+      "held_decision": false,
+      "status": "PARTIAL",
+      "source_locations": [
+        "paper_v4.Rmd:225-227",
+        "paper_v4.Rmd:306",
+        "paper_v4.Rmd:548-661, Table 3",
+        "output/paper_v4.pdf:pp.11,18",
+        "scripts/functions.R:180-210",
+        "scripts/functions.R:681-721"
+      ],
+      "defect_evidence": [
+        "The input uses abs(US-country), yet on all observed stored comparison-panel keys US>=country and the signed identity holds exactly; original specialist inference from abs and nonzero beta was rejected. Covariate processing is insufficiently explained."
+      ],
+      "refuting_evidence": [
+        "The source defines an absolute rather than primitively signed gap; the preferred fit has no covariates and is unaffected. A fitted nuisance coefficient alone is not proof of separate identification."
+      ],
+      "mechanical_checks": [
+        "Read get_gpi_data at scripts/functions.R:180-210 and cov_matrix/simple_fit at scripts/functions.R:681-755.",
+        "Read the stored targets synth_fit and synth_fit_no_time_varying_covariates without rebuilding them; the former has 13 beta coefficients and the latter has zero covariates.",
+        "Verified distance_us beta 7.959e-19 and us_power_gap beta -8.069e-03 in the stored comparison fit."
+      ],
+      "reasoning": "A descrição das covariáveis é insuficiente. O código usa abs(US-country), mas no suporte observado US>=country e o diferencial coincide com a diferença assinada. A inferência inicial do especialista sobre ausência de colinearidade foi rejeitada. O papel da residualização synthdid é objeto da revisão independente. A principal não usa covariáveis.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Clarify that distance remains in the comparison array but is absorbed/inert, define the power gap as the absolute annual GPI difference, and reiterate that the covariate-adjusted model is only a comparison. Leave the preferred no-covariate fit unchanged. See orchestrator_decisions.md for the authorized bounded component."
+    },
+    {
+      "finding_id": "REFINE-032",
+      "item": 32,
+      "source_review": "REFINE",
+      "quoted_finding": "### 32. Mischaracterization of SDiD time weights\n\n**Status**: [Pending]\n\n**Quote**:\n> While SDiD assigns larger weights to control units more similar to the treated unit and to time periods more comparable to the pre-treatment period, classic DiD does not use any weights at all.\n\n**Feedback**:\nThe description reverses the comparison implemented by SDiD time weights. The optimized weights are placed on pre-treatment periods so that their weighted control-unit outcomes approximate the average post-treatment control outcomes; they are not selected to make periods comparable to the pre-treatment period. Additionally, the text conflates the information used for unit and time weights, incorrectly implying both are constructed solely from pre-treatment information. This is a local methodological misstatement rather than evidence that the estimator was implemented incorrectly.\n\n---",
+      "type": "method",
+      "severity": "unspecified",
+      "scientific_dimension": "fidelity of implementation",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "paper_v4.Rmd:223",
+        "paper_v4.Rmd:302",
+        "paper_v4.Rmd:1424",
+        "output/paper_v4.pdf:pp.8,11,46"
+      ],
+      "defect_evidence": [
+        "Line 1424 says time periods are weighted for comparability to the pre-treatment period; the implemented lambda optimization has the opposite target.",
+        "Lines 223 and 302 imply that both unit and time weights are constructed from pre-treatment information or from generic pre/post comparability.",
+        "In synthdid 0.0.9, optimized lambda lies on pre-treatment periods and targets the vector of control units' average post-treatment outcomes."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "Inspected synthdid_estimate, collapsed.form, sc.weight.fw, and sc.weight.fw.covariates in the installed synthdid 0.0.9 namespace.",
+        "Confirmed collapsed.form replaces the post-treatment block by each control unit's post-period mean before lambda optimization.",
+        "Confirmed Table 10 correctly reports only the optimized pre-treatment lambda vector; the defect is the verbal description, not the stored weights."
+      ],
+      "reasoning": "Unit weights use pre-treatment outcome histories to approximate the treated unit. Time weights use control outcomes from both sides of onset: weighted pre-treatment control outcomes approximate the controls' average post-treatment outcomes. The manuscript currently merges these operations.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Correct the three local descriptions and use uniform-weight language for classic DiD. Coordinate the definitions with item 20 so the appendix does not repeat or contradict itself. See orchestrator_decisions.md for the authorized bounded component."
+    },
+    {
+      "finding_id": "REFINE-033",
+      "item": 33,
+      "source_review": "REFINE",
+      "quoted_finding": "### 33. Inconsistency on mean vs. median across the manuscript\n\n**Status**: [Pending]\n\n**Quote**:\n> The paper shows evidence that Brazilian policymakers invoked China's new position to justify greater proximity between the countries, converging voting particularly on human rights issues. Relative to the counterfactual, the estimated reduction in bilateral voting distance is equivalent to 42\\% of the median distance before 2009.\n\n**Feedback**:\nThe abstract describes the 42\\% reduction relative to the pre-2009 median, but the body (including the Introduction and Section 4), Table 11, and the appendix calculate 42.2\\% relative to the pre-treatment mean of $0.647$. The stated baseline is therefore inconsistent with the reported calculation.\n\n---",
+      "type": "false_statement",
+      "severity": "minor",
+      "scientific_dimension": "reproducibility",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:534-542",
+        "reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md:36",
+        "paper_v4.Rmd:20",
+        "paper_v4.Rmd:83-92",
+        "paper_v4.Rmd:149",
+        "paper_v4.Rmd:2239-2240",
+        "paper_v4.Rmd:2251-2268",
+        "output/paper_v4.pdf:p.1 and p.65",
+        "data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/main_summary.csv:1-2",
+        "data/processed/diagnostics/ungadm_outcome_robustness/estimation/sdid_comparison_table.csv:1-3"
+      ],
+      "defect_evidence": [
+        "The abstract says median, but the active Rmd defines mean_br with mean(abs_distance_china) for Brazil in years before 2009 and uses it to compute perc_change.",
+        "R verification gives mean 0.646777890583333 and median 0.620922368500000 for the 12 years 1997-2008.",
+        "With the stored ATT -0.272771407583060, the absolute ratio is 42.173891772497932 percent over the mean but 43.930033997971528 percent over the median."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "[computed in R] The stored target object and existing main_summary.csv reproduce the mean and ATT identity; see local_fixes_r_checks.txt.",
+        "[computed in R] The existing comparison CSV reproduces the BSV percentage and the body/table convention.",
+        "[new analysis] No estimate or paper-facing output was generated."
+      ],
+      "reasoning": "The baseline descriptor in the abstract is inconsistent with the calculation used by the body and stored results. Changing median to pre-treatment mean preserves the rounded 42 percent communication and aligns the abstract with the 42.2 percent detailed result.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Change only the abstract baseline descriptor; retain the ATT and all detailed results. See orchestrator_decisions.md for the authorized bounded component."
+    },
+    {
+      "finding_id": "REFINE-034",
+      "item": 34,
+      "source_review": "REFINE",
+      "quoted_finding": "### 34. Incorrect attribution of pretreatment averages\n\n**Status**: [Pending]\n\n**Quote**:\n> It is noteworthy that the pretreatment averages are different (0.647 against 0.837) in the original estimation. But the effect measured as a percentage of the pre-treatment average is similar: -42.2 and -39.5 percent.\n\n**Feedback**:\nThe phrase “in the original estimation” misattributes the two pretreatment means: Table 24 appears to report 0.647 for the BSV outcome and 0.837 for the UNGA-DM outcome. The comparison and relative-effect calculations are otherwise internally consistent.\n\n---",
+      "type": "scope_or_consistency",
+      "severity": "minor",
+      "scientific_dimension": "measurement",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:546-554",
+        "reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md:37",
+        "paper_v4.Rmd:2239-2240",
+        "paper_v4.Rmd:2242-2283",
+        "output/paper_v4.pdf:p.65",
+        "data/processed/diagnostics/ungadm_outcome_robustness/estimation/sdid_comparison_table.csv:1-3",
+        "data/processed/diagnostics/ungadm_outcome_robustness/estimation/sdid_dm_main_summary.csv:1-2"
+      ],
+      "defect_evidence": [
+        "The sentence says the two means differ in the original estimation, while the source table has one row for BSV and one row for UNGA-DM.",
+        "The existing comparison CSV identifies 0.646777890583333 as BSV and 0.836545155415565 as UNGA-DM; the alternative-outcome summary independently confirms the latter."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "[computed in R] Both pre-treatment means and both relative percentages were reproduced from existing CSV values; see local_fixes_r_checks.txt.",
+        "[static] The Table 24 construction reads brazil_pre_mean from the outcome-specific comparison rows.",
+        "[new analysis] No result was regenerated."
+      ],
+      "reasoning": "The numerical comparison is sound, but the phrase original estimation fails to identify which outcome generates each mean. Naming BSV and UNGA-DM is a local attribution repair and does not change the comparison.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Replace the attribution clause with outcome-specific labels and preserve the existing percentages. See orchestrator_decisions.md for the authorized bounded component."
+    },
+    {
+      "finding_id": "REFINE-035",
+      "item": 35,
+      "source_review": "REFINE",
+      "quoted_finding": "### 35. Urdinez et al. (2016) does not study only trade flows\n\n**Status**: [Pending]\n\n**Quote**:\n> Most of the literature on the effects of interdependence implicitly or explicitly assumes this hyperrationalist perspective and studies only the effects of trade flows (Flores-Macías and Kreps 2013; Urdinez et al. 2016; Kastner and Pearson 2021).\n\n**Feedback**:\nThe submission cites Urdinez et al. (2016) as an example of literature that \"studies only the effects of trade flows.\" However, the cited study explicitly analyzes the effects of China's foreign direct investment (FDI) and bank loans in addition to trade, contradicting the claim that it restricts its focus to trade flows.\n\n---",
+      "type": "citation_accuracy",
+      "severity": "moderate",
+      "scientific_dimension": "literature characterization",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "paper_v4.Rmd:133",
+        "references.bib:1319-1334",
+        "https://onlinelibrary.wiley.com/doi/pdf/10.1111/laps.12000:article page 3"
+      ],
+      "defect_evidence": [
+        "The primary-source abstract explicitly analyzes foreign direct investment, bank loans, and international trade and reports results for investment, loans, and exports."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "The DOI in the local bibliography matches the publisher article checked: 10.1111/laps.12000."
+      ],
+      "reasoning": "Because the article studies multiple economic channels, the phrase 'only the effects of trade flows' is factually wrong for this citation. The shared items 35/36 replacement broadens the description without disturbing the surrounding rationality argument.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Apply the single shared sentence replacement listed for items 35/36. See orchestrator_decisions.md for the authorized bounded component."
+    },
+    {
+      "finding_id": "REFINE-036",
+      "item": 36,
+      "source_review": "REFINE",
+      "quoted_finding": "### 36. Kastner and Pearson (2021) does not study only trade flows\n\n**Status**: [Pending]\n\n**Quote**:\n> Most of the literature on the effects of interdependence implicitly or explicitly assumes this hyperrationalist perspective and studies only the effects of trade flows (Flores-Macías and Kreps 2013; Urdinez et al. 2016; Kastner and Pearson 2021).\n\n**Feedback**:\nThe submission cites Kastner and Pearson (2021) to argue that the literature \"studies only the effects of trade flows.\" However, Kastner and Pearson's article explicitly explores a wide range of economic mechanisms beyond trade, including foreign aid, foreign direct investment, state-owned enterprises, and sanctions.\n\n---",
+      "type": "citation_accuracy",
+      "severity": "moderate",
+      "scientific_dimension": "literature characterization",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "paper_v4.Rmd:133",
+        "references.bib:799-811",
+        "https://link.springer.com/article/10.1007/s12116-021-09318-9:article pages 18-44",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7934344/:publisher-version full text, article pages 18, 24-35"
+      ],
+      "defect_evidence": [
+        "The primary article covers trade, investment, aid, sanctions, foreign direct investment, state-owned enterprises, and firms as state agents."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "The DOI in the local bibliography matches the publisher article checked: 10.1007/s12116-021-09318-9."
+      ],
+      "reasoning": "Because the article explicitly develops several economic instruments and mechanisms beyond trade flows, the current characterization is inaccurate. The same sentence correction resolves items 35 and 36 coherently.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Apply the single shared sentence replacement listed for items 35/36. See orchestrator_decisions.md for the authorized bounded component."
+    },
+    {
+      "finding_id": "REFINE-038",
+      "item": 38,
+      "source_review": "REFINE",
+      "quoted_finding": "### 38. MacDonald and Parent (2021) reject the cited definition of status\n\n**Status**: [Pending]\n\n**Quote**:\n> The argument builds on research that treats status as socially recognized standing within international hierarchies, clubs, and local status orders (Paul, Larson, and Wohlforth 2014; Wolf 2011, 2019; Duque 2018; Renshon 2017; Götz 2021; MacDonald and Parent 2021; Røren 2024, 2025).\n\n**Feedback**:\nThe submission cites MacDonald and Parent (2021) as an example of research that \"treats status as socially recognized standing.\" However, the authors explicitly reject this relational view. In their article's abstract, they acknowledge that recent scholarship has converged on a relational definition, but state that they \"take issue with this new conventional wisdom\" and explicitly \"argue that status is an attribute, not a relation.\" Including them in a list of proponents for the relational definition is a material misattribution.\n\n---",
+      "type": "scope_or_consistency",
+      "severity": "minor",
+      "scientific_dimension": "citation_fidelity",
+      "held_decision": false,
+      "status": "PARTIAL",
+      "source_locations": [
+        "paper_v4.Rmd:139",
+        "output/paper_v4.pdf:physical page 3",
+        "synth-trade-china.bib:877-890",
+        "Cambridge University Press publication record and abstract, accessed 2026-09-14: https://www.cambridge.org/core/journals/world-politics/article/abs/status-of-status-in-world-politics/BF85C05AAB728662D3CA526CDF69DA60",
+        "Author-affiliated Notre Dame conceptual summary, accessed 2026-09-14: https://ondisc.nd.edu/news-media/news/the-status-of-status-in-world-politics/",
+        "Paul K. MacDonald publication list, accessed 2026-09-14: https://sites.google.com/a/wellesley.edu/paul-k-macdonald/publications"
+      ],
+      "defect_evidence": [
+        "The compact citation cluster can be read as presenting MacDonald and Parent as unqualified proponents of the manuscript's definition.",
+        "The official abstract instead frames the article as a critical stocktaking and says the consensus definition conceals tensions between standing and membership."
+      ],
+      "refuting_evidence": [
+        "The two phrases attributed to the abstract by the reviewer do not appear in the official publisher abstract.",
+        "The publisher abstract and author-affiliated summary identify the dispute as standing versus membership, not attribute versus relation.",
+        "The source discusses valued attributes, positions, and rights and responsibilities; it does not supply the categorical rejection alleged by the reviewer.",
+        "The BibTeX title, authors, year, journal, volume, issue, pages, and DOI 10.1017/S0043887120000301 match the publisher record."
+      ],
+      "mechanical_checks": [
+        "SHA-256 of frozen and current Rmd matched: 9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4.",
+        "Localized pdftotext extraction confirmed the citation cluster in the rendered PDF.",
+        "Publisher and author-affiliated records independently confirmed the exact publication identity and actual abstract.",
+        "Static BibTeX inspection confirmed DOI and publication metadata."
+      ],
+      "reasoning": "The review's evidence and strong theoretical characterization are false, but its narrower citation-fidelity concern is valid: a critical review should not be left inside an undifferentiated cluster that may imply endorsement. Removing only the citation preserves the author's relational definition without importing the reviewer's fabricated opposition.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Forward only the exact citation-cluster replacement listed below. See orchestrator_decisions.md for the authorized bounded component."
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "confirmed": 15,
+    "partial": 5,
+    "refuted": 0,
+    "unresolved": 0,
+    "held_decisions": 0
+  },
+  "adjudication": {
+    "verdict": "READY_FOR_IMPLEMENTATION",
+    "checked_at": "2026-09-14T13:57:09.177233",
+    "reasons": [
+      "Global record preserves the deferred targets-first components and author-only item25. Safe-text subset authorizes only documentary/equation/caption corrections specified in orchestrator_decisions.md; no new analytical outputs. Global parent: adjudication_global.json."
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+**Final verdict: NO_CONFIRMED_DEFECTS within the requested methods, inference, and claim-reach scope.** This is not a whole-paper PASS.
+
+Delivered:
+
+- [Final methods review](</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/review_methods_final_candidate.md>)
+- [Validated JSON record](</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/review_methods_final_candidate.json>)
+
+The final review followed the completion marker and examined the full baseline-to-final diff. Item 6 now correctly documents both standardization windows; item 27 consistently distinguishes annual volatility from changes in period averages. Item 31 retains the source-supported identification qualification. The item 25 note persists unchanged and clearly labels its comparisons as archived results.
+
+**Candidate SHA-256:** `fa40c4395abea8a7b94f5539eb4fc60bde5dcf8e4e4a7825edd4043ea32093f0`  
+**Note SHA-256:** `78356d0b657d1c1730e2607f92ecff3e8b6c36a6b46b21335023da92ab07ee4f`
+
+The records document reused source checks, matching hashes, fresh stored-output verification, and all final dispositions. No manuscript edits, estimation, targets operations, APIs, or delegation occurred. `CODEX_AUTO_COMMIT_PUSH_DRY_RUN=1` remained set. Final PDF visual QA remains with the orchestrator.
+

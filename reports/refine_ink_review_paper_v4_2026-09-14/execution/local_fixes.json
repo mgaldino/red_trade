@@ -1,0 +1,368 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "paper-v4-local-fixes:9c6b03ed3d37:round1",
+  "review_configuration": {
+    "model": "Luna",
+    "effort": "xhigh",
+    "agents_spawned": 0
+  },
+  "source": {
+    "reviewed_artifact": "paper_v4.Rmd; PDF cross-check output/paper_v4.pdf",
+    "sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+    "artifact_intact": true,
+    "pdf_path": "output/paper_v4.pdf",
+    "pdf_sha256": "da7b84fd44a1071953c5c2941be53aefb75f2b249476cc2d6e065e5f8463e312",
+    "baseline_rmd_sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+    "baseline_pdf_sha256": "da7b84fd44a1071953c5c2941be53aefb75f2b249476cc2d6e065e5f8463e312"
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "review_sources": [
+    {
+      "review_id": "REFINE",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md",
+      "sha256": "eb7dc9488e3b6726cee0ddf232250be18f09291797e2a85470b67637af58b88a"
+    },
+    {
+      "review_id": "SELECTION",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md",
+      "sha256": "d0220df748585215fc3ce14786e555546134d1e25534470ee153b1872437ea25"
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "REFINE-015",
+      "item": 15,
+      "source_review": "REFINE",
+      "quoted_finding": "Table 23 appears insufficient to audit the retained treatment spells because the first qualifying year and aggregate observation counts do not identify treated, off-status, or omitted country-years.",
+      "type": "exposition",
+      "severity": "moderate",
+      "scientific_dimension": "reproducibility",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:289-306",
+        "reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md:25",
+        "paper_v4.Rmd:2121-2160",
+        "output/paper_v4.pdf:p.63",
+        "_targets.R:411-422",
+        "scripts/functions.R:4119-4264",
+        "scripts/functions.R:4268-4364",
+        "scripts/functions.R:4407-4521",
+        "reports/refine_ink_review_paper_v4_2026-09-14/execution/cross_country.json:item15_target_design"
+      ],
+      "defect_evidence": [
+        "The current table chunk selects only country, ISO3c, first treatment year, treated and untreated counts, and panel bounds.",
+        "The status-current restricted-risk-set producer retains clean pre-entry non-China-top years and qualifying treated years while excluding post-entry off-status years and short China-top episodes; these omitted years cannot be reconstructed from the displayed aggregates.",
+        "The current target graph exposes unit and period summaries but does not expose a paper-facing country-year audit with omission reasons."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "[static] The current Rmd fields at paper_v4.Rmd:2128-2142 were compared with the status-current producer and target declarations.",
+        "[static] execution/cross_country.json:item15_target_design was read and supplies the four target names, fields, row-status values, and validation contract.",
+        "[new analysis] No country-year table or factual rows were computed outside targets."
+      ],
+      "reasoning": "The review identifies a real auditability gap. The stored design ingredients do not make the retained and omitted years visible in Table 23. A safe remedy must be a target-first transformation that preserves the current treatment rule and is validated before becoming the table consumer.",
+      "proposed_fix_assessment": "needs_design",
+      "disposition": "Forward the target-first schema and validation contract below. Defer implementation, target execution, and replacement of the table until separately authorized and validated."
+    },
+    {
+      "finding_id": "REFINE-029",
+      "item": 29,
+      "source_review": "REFINE",
+      "quoted_finding": "The Figure 2 caption calls the post-treatment gap the average post-2009 reduced-form estimate even though the plotted donor path is unshifted and the ATT nets the weighted pre-treatment gap.",
+      "type": "exposition",
+      "severity": "minor",
+      "scientific_dimension": "fidelity of implementation",
+      "held_decision": false,
+      "status": "PARTIAL",
+      "source_locations": [
+        "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:482-491",
+        "reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md:32",
+        "paper_v4.Rmd:340-345",
+        "output/paper_v4.pdf:p.16",
+        "reports/refine_ink_review_paper_v4_2026-09-14/execution/sdid.json:item29_caption_prerequisites",
+        "quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_fit.png"
+      ],
+      "defect_evidence": [
+        "The caption uses the unqualified phrase post-treatment gap and equates it with the average post-2009 reduced-form estimate, without stating that the SDiD ATT nets the weighted pre-treatment contrast.",
+        "Because the donor trajectory is unshifted, a reader could mistake the raw vertical separation of the two trajectories for the reported ATT."
+      ],
+      "refuting_evidence": [
+        "The review itself says the arrow appears to depict the adjusted contrast correctly.",
+        "Visual inspection shows a separate arrow/diagram in addition to the observed and donor trajectories, and the prerequisite states that the arrow is supplied by synthdid_plot rather than a raw-gap annotation.",
+        "No evidence was found that the stored estimator, ATT, or visual annotation is incorrect; the defect is localized to caption terminology."
+      ],
+      "mechanical_checks": [
+        "[static] The active Rmd includes the stored figure and the caption text at paper_v4.Rmd:340-345.",
+        "[static] The Figure 2 page is p.16 in baseline_page_map.json and the active PDF hash equals the frozen PDF hash.",
+        "[visual] The producer PNG was inspected; the raw lines and separate adjustment arrow are distinguishable.",
+        "[new analysis] No model rerun or new figure was produced."
+      ],
+      "reasoning": "The caption can blur two different quantities, but the supplied evidence limits the problem to exposition. The safest correction names the arrow as the level-adjusted SDiD ATT and explicitly nets the weighted pre-treatment contrast while preserving the figure and all results.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Replace only the caption clause identified in replacements; leave the image, estimator, ATT, SE, and window unchanged."
+    },
+    {
+      "finding_id": "REFINE-030",
+      "item": 30,
+      "source_review": "REFINE",
+      "quoted_finding": "The opening identification sentence describes a country's rise in China's trade hierarchy rather than China's rise to first place among the country's export destinations.",
+      "type": "scope_or_consistency",
+      "severity": "minor",
+      "scientific_dimension": "scope",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:495-506",
+        "reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md:33",
+        "paper_v4.Rmd:298-304",
+        "paper_v4.Rmd:314,320-324,328-330",
+        "output/paper_v4.pdf:p.10"
+      ],
+      "defect_evidence": [
+        "The phrase a country's rise in China's trade hierarchy assigns the direction of the hierarchy change to the country, not to China.",
+        "The later design description and Brazil section identify the intended event as China becoming or entering the top export-destination position."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "[static] The opening sentence and the later treatment definitions were compared in the active Rmd and frozen PDF text.",
+        "[new analysis] No treatment variable, target, or estimate was changed."
+      ],
+      "reasoning": "The local sentence states a different estimand even though the subsequent implementation is aligned with the intended treatment. A one-sentence replacement corrects the hierarchy direction without broadening the design.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Use the exact local sentence replacement in the record."
+    },
+    {
+      "finding_id": "REFINE-033",
+      "item": 33,
+      "source_review": "REFINE",
+      "quoted_finding": "The abstract refers to 42 percent of the median distance before 2009, while the body and Table 24 calculate 42.2 percent from the pre-treatment mean 0.647.",
+      "type": "false_statement",
+      "severity": "minor",
+      "scientific_dimension": "reproducibility",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:534-542",
+        "reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md:36",
+        "paper_v4.Rmd:20",
+        "paper_v4.Rmd:83-92",
+        "paper_v4.Rmd:149",
+        "paper_v4.Rmd:2239-2240",
+        "paper_v4.Rmd:2251-2268",
+        "output/paper_v4.pdf:p.1 and p.65",
+        "data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/main_summary.csv:1-2",
+        "data/processed/diagnostics/ungadm_outcome_robustness/estimation/sdid_comparison_table.csv:1-3"
+      ],
+      "defect_evidence": [
+        "The abstract says median, but the active Rmd defines mean_br with mean(abs_distance_china) for Brazil in years before 2009 and uses it to compute perc_change.",
+        "R verification gives mean 0.646777890583333 and median 0.620922368500000 for the 12 years 1997-2008.",
+        "With the stored ATT -0.272771407583060, the absolute ratio is 42.173891772497932 percent over the mean but 43.930033997971528 percent over the median."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "[computed in R] The stored target object and existing main_summary.csv reproduce the mean and ATT identity; see local_fixes_r_checks.txt.",
+        "[computed in R] The existing comparison CSV reproduces the BSV percentage and the body/table convention.",
+        "[new analysis] No estimate or paper-facing output was generated."
+      ],
+      "reasoning": "The baseline descriptor in the abstract is inconsistent with the calculation used by the body and stored results. Changing median to pre-treatment mean preserves the rounded 42 percent communication and aligns the abstract with the 42.2 percent detailed result.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Change only the abstract baseline descriptor; retain the ATT and all detailed results."
+    },
+    {
+      "finding_id": "REFINE-034",
+      "item": 34,
+      "source_review": "REFINE",
+      "quoted_finding": "The phrase in the original estimation misattributes the two pre-treatment means, although the comparison and relative-effect calculations are internally consistent.",
+      "type": "scope_or_consistency",
+      "severity": "minor",
+      "scientific_dimension": "measurement",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:546-554",
+        "reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md:37",
+        "paper_v4.Rmd:2239-2240",
+        "paper_v4.Rmd:2242-2283",
+        "output/paper_v4.pdf:p.65",
+        "data/processed/diagnostics/ungadm_outcome_robustness/estimation/sdid_comparison_table.csv:1-3",
+        "data/processed/diagnostics/ungadm_outcome_robustness/estimation/sdid_dm_main_summary.csv:1-2"
+      ],
+      "defect_evidence": [
+        "The sentence says the two means differ in the original estimation, while the source table has one row for BSV and one row for UNGA-DM.",
+        "The existing comparison CSV identifies 0.646777890583333 as BSV and 0.836545155415565 as UNGA-DM; the alternative-outcome summary independently confirms the latter."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "[computed in R] Both pre-treatment means and both relative percentages were reproduced from existing CSV values; see local_fixes_r_checks.txt.",
+        "[static] The Table 24 construction reads brazil_pre_mean from the outcome-specific comparison rows.",
+        "[new analysis] No result was regenerated."
+      ],
+      "reasoning": "The numerical comparison is sound, but the phrase original estimation fails to identify which outcome generates each mean. Naming BSV and UNGA-DM is a local attribution repair and does not change the comparison.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Replace the attribution clause with outcome-specific labels and preserve the existing percentages."
+    }
+  ],
+  "replacements": [
+    {
+      "old": "Table 23 describes the 35 treated countries in the main goods-only restricted-risk-set specification. For each country, the table reports the first qualifying China-top goods-export year and the number of treated and untreated country-years retained in the estimation panel.",
+      "new": "Table 23 provides a country-level audit of the 35 treated countries in the main goods-only restricted-risk-set specification. It reports every qualifying entry and exit, the observed years in excluded short China-top periods, the treated years retained by the estimator, and the post-entry off-status years omitted by the restricted risk set. Year ranges are compressed only across consecutive observed calendar years; gaps remain explicit.",
+      "item": 15,
+      "implementation_status": "deferred_until_targets_exist_and_validate"
+    },
+    {
+      "old": "Treated countries in the main goods-only restricted-risk-set cross-country specification.",
+      "new": "Country-level audit of retained and omitted years in the main goods-only status-current restricted-risk-set specification.",
+      "item": 15,
+      "implementation_status": "deferred_until_targets_exist_and_validate"
+    },
+    {
+      "old": "the post-treatment gap is the average post-2009 reduced-form estimate.",
+      "new": "the arrow shows the level-adjusted SDiD ATT, equal to the average post-2009 contrast net of the SDiD-weighted pre-treatment contrast; it is not the raw vertical distance between the trajectories.",
+      "item": 29,
+      "implementation_status": "ready_for_authorized_integration"
+    },
+    {
+      "old": "I want to estimate the causal effect of a country's rise in China's trade hierarchy on its foreign policy.",
+      "new": "I want to estimate the causal effect of China rising to first place among a country's export destinations on its foreign policy.",
+      "item": 30,
+      "implementation_status": "ready_for_authorized_integration"
+    },
+    {
+      "old": "Relative to the counterfactual, the estimated reduction in bilateral voting distance is equivalent to 42% of the median distance before 2009.",
+      "new": "Relative to the counterfactual, the estimated reduction in bilateral voting distance is equivalent to 42% of the pre-treatment mean distance before 2009.",
+      "item": 33,
+      "implementation_status": "ready_for_authorized_integration"
+    },
+    {
+      "old": "It is noteworthy that the pre-treatment averages are different (0.647 against 0.837) in the original estimation.",
+      "new": "It is noteworthy that the pre-treatment means differ (0.647 under BSV versus 0.837 under UNGA-DM).",
+      "item": 34,
+      "implementation_status": "ready_for_authorized_integration"
+    }
+  ],
+  "item15_target_design": {
+    "status": "PENDING_IMPLEMENTATION_AND_AUTHORIZED_EXECUTION",
+    "no_treatment_rule_change": true,
+    "targets": [
+      "china_top_m2_goods_status_current_min5_audit_bundle",
+      "china_top_m2_goods_status_current_min5_country_year_audit",
+      "china_top_m2_goods_status_current_min5_treated_country_table",
+      "china_top_m2_goods_status_current_min5_audit_validation"
+    ],
+    "inputs": [
+      "china_top_m2_goods_panel",
+      "china_top_m2_goods_status_current_panel_bundle",
+      "china_top_m2_goods_status_current_period_summary",
+      "china_top_m2_goods_status_current_unit_summary"
+    ],
+    "country_year_fields": [
+      "specification",
+      "min_duration_years",
+      "iso3c",
+      "country_name",
+      "year",
+      "observed_china_top",
+      "status_current_period_id",
+      "period_entry_year",
+      "period_exit_year",
+      "period_duration_observed_years",
+      "period_calendar_span_years",
+      "period_qualifies_min5",
+      "retained_in_risk_set",
+      "treatment_indicator_retained",
+      "row_status"
+    ],
+    "row_status_values": [
+      "retained_pre_entry_control",
+      "retained_qualifying_treated",
+      "omitted_missing_required_input",
+      "omitted_pre_entry_nonqualifying_china_top",
+      "omitted_post_entry_short_china_top_period",
+      "omitted_between_qualifying_periods_off_status",
+      "omitted_post_final_qualifying_exit_off_status",
+      "omitted_other_nonretained"
+    ],
+    "display_fields": [
+      "Country",
+      "ISO3c",
+      "Qualifying entries and exits",
+      "Excluded short periods",
+      "Retained treated years",
+      "Omitted off-status years",
+      "Treated N",
+      "Untreated N",
+      "Omitted N"
+    ],
+    "required_checks": [
+      "unique iso3c-year keys and exhaustive exclusive row_status",
+      "retained keys exactly match the risk_set_restricted panel for the 35 treated countries",
+      "retained treatment indicator equals one iff the retained row is in a qualifying current China-top period",
+      "period boundaries durations and qualification match period_summary",
+      "treated and untreated counts match unit_summary by country",
+      "display has exactly the 35 current treated ISO3c values",
+      "compacted year strings round-trip to actual observed years without filling gaps",
+      "omitted_other_nonretained count equals zero"
+    ],
+    "integration_proposal": {
+      "graph_location": "Add the four targets after the existing status-current panel bundle and summaries.",
+      "paper_consumer": "Make the table-treated-appendix chunk consume only the target-produced treated country table.",
+      "release_gate": "Replace the current prose/table only after the audit validation target passes.",
+      "no_synthetic_rows": true,
+      "no_external_execution_in_this_record": true
+    }
+  },
+  "verification_scope": {
+    "static_inspection": [
+      "SHA-256 identity of active and frozen Rmd/PDF",
+      "Selected review passages and active Rmd/PDF locations",
+      "Status-current target declarations and producer functions",
+      "Figure 2 producer reference and visual PNG",
+      "Existing BSV and UNGA-DM CSV schemas and rows",
+      "Required cross_country.json and sdid.json prerequisite blocks"
+    ],
+    "computed_verification": [
+      "R-only calculation of the Brazil pre-treatment mean and median",
+      "R-only reconstruction of BSV and UNGA-DM percentage identities from existing CSV/target values",
+      "R stopifnot checks passed; no estimation or target execution"
+    ],
+    "new_analysis": [],
+    "not_run": [
+      "targets::tar_make() or any target execution",
+      "model, placebo, bootstrap, or reestimation",
+      "manuscript render or new PDF",
+      "classification API or external source search"
+    ]
+  },
+  "evidence_files": [
+    "reports/refine_ink_review_paper_v4_2026-09-14/execution/local_fixes.md",
+    "reports/refine_ink_review_paper_v4_2026-09-14/execution/local_fixes_evidence.md",
+    "reports/refine_ink_review_paper_v4_2026-09-14/execution/local_fixes_r_checks.txt"
+  ],
+  "summary": {
+    "total": 5,
+    "confirmed": 4,
+    "partial": 1,
+    "refuted": 0,
+    "unresolved": 0,
+    "held_decisions": 0
+  },
+  "adjudication": {
+    "verdict": "READY_FOR_IMPLEMENTATION",
+    "checked_at": "2026-09-14T13:48:08-03:00",
+    "reasons": [
+      "The active manuscript and PDF match the frozen baseline by SHA-256.",
+      "Items 15, 30, 33, and 34 contain localized confirmed defects; item 29 is a localized partial caption defect.",
+      "Safe prose patches are bounded and do not change estimands or numerical results.",
+      "Item 15 has a concrete target-first schema and validation contract, but implementation and execution remain explicitly deferred."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+Completed the bounded round-2 integration. The canonical manuscript and PDF remain untouched.
+
+- Final source: [candidate_v2.Rmd](/private/tmp/refine-review-20260914/candidate_v2.Rmd)
+  - Before SHA-256: `82c811def270d266f8ef4541d6fc8afecb6adfe980cda6260d84439714bb340c`
+  - Final SHA-256: `fa40c4395abea8a7b94f5539eb4fc60bde5dcf8e4e4a7825edd4043ea32093f0`
+
+- Frozen copy: [candidate_v1.Rmd](</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/candidate_v1.Rmd>)
+- Integration report: [integration_round2.md](</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/integration_round2.md>)
+- Machine-readable report: [integration_round2.json](</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/integration_round2.json>)
+- Exact v1-to-v2 diff: [integration_round2.patch](</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/integration_round2.patch>)
+
+Only two final lines changed:
+
+- Line 338 now distinguishes China’s limited change in the period average despite annual volatility from Brazil’s more sustained movement toward China. The preceding percentage sentence and all inline R expressions remain byte-identical.
+- Line 756 now states that both exposure and Pink Sheet price interactions were standardized over the stored 1997–2016 input panel before restriction to the 1997–2015 estimation window.
+
+Validation passed:
+
+- 52 R chunks parsed without evaluation; labels were nonempty and unique.
+- All 144 inline expressions remained in identical order.
+- Abstract and conclusion projections were byte-identical between v1 and v2.
+- The patch reconstructs `candidate_v2.Rmd` exactly.
+- Round-2 footprint: 2 insertions, 2 deletions, 2 hunks.
+- Baseline-to-final footprint: 56 insertions, 49 deletions, 30 context-3 hunks.
+- Canonical `paper_v4.Rmd` remains at `9c6b03…13b4`; `output/paper_v4.pdf` remains at `da7b84…3e312`.
+- `CODEX_AUTO_COMMIT_PUSH_DRY_RUN=1` remained set.
+
+`RM-GATE` remains flagged without a manuscript edit: it is the pending independent final-source review/render gate for the new v2 artifact. I did not render, run or alter `targets`, call models/APIs, edit data/configuration/hooks/reviewer records, commit, push, or signal any process.
+

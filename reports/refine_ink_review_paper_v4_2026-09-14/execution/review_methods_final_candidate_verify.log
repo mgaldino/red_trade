@@ -1,0 +1,47 @@
+During startup - Warning messages:
+1: Setting LC_CTYPE failed, using "C" 
+2: Setting LC_COLLATE failed, using "C" 
+3: Setting LC_TIME failed, using "C" 
+4: Setting LC_MESSAGES failed, using "C" 
+5: Setting LC_MONETARY failed, using "C" 
+Archived sample: 55190 rows, 95 countries, 612 resolutions; keys unique; required fields complete.
+distance_china_minus_usa: archived current -0.222333401762; country-domain -0.225731227550; difference -0.003397825788; relative absolute change 1.528257%; matches consumed RDS.
+agreement_china_minus_usa: archived current 0.052162562485; country-domain 0.053812495176; difference 0.001649932690; relative absolute change 3.163059%; matches consumed RDS.
+Archived FWL identity max discrepancy 1.57827390046e-10; archived absolute HR country-weight sum 0.031791903443; synthetic counterexample 0.031791903613.
+PASS: read-only arithmetic and integrity checks; no regression, new FE, placebo, targets execution, or data writes.
+onset=2003 window=1997-2008 pre=1997-2002 post=2003-2008 horizon=6 units=96 donors=95 rows=1152
+onset=2004 window=1997-2008 pre=1997-2003 post=2004-2008 horizon=5 units=96 donors=95 rows=1152
+onset=2005 window=1997-2008 pre=1997-2004 post=2005-2008 horizon=4 units=96 donors=95 rows=1152
+onset=2009 window=1997-2015 pre=1997-2008 post=2009-2015 horizon=7 units=96 donors=95 rows=1824
+onset=2012 window=1997-2016 pre=1997-2011 post=2012-2016 horizon=5 units=96 donors=95 rows=1920
+Existing 2x2 arithmetic: BSV r2-r1=-0.059345646431; DM r2-r1=-0.038020234148; difference of these contrasts=0.021325412283 (descriptive, no interaction test)
+paired row 1 PASS max discrepancy 2.78e-17; diff 0.068502972602; percentile p 0.134
+paired row 2 PASS max discrepancy 1.11e-16; diff 0.030482738453; percentile p 0.356
+PASS: verification only; no model fits, resampling, standardization, data writes, or targets operations.
+Item31: all 1824 fitting rows, 96 countries, 1997-2015 satisfy signed identity; main X=96x19x0.
+[1] "iso3c"     "estimate"  "rmspe_pre" "status"    "error"    
+ATT= -0.2727714  SE= 0.1306079  Normal p= 0.03675502  rank= 3 / 96  absolute= 7 / 96 
+PASS: all computations verification only.
+     iso3c year ideal_point_all
+998    BRA 2005      -0.1303146
+999    BRA 2006      -0.1006262
+1000   BRA 2007      -0.1909890
+1001   BRA 2008      -0.1945460
+1002   BRA 2009      -0.3580490
+1003   BRA 2010      -0.4732068
+1004   BRA 2011      -0.5331509
+1005   BRA 2012      -0.5851793
+5145   CHN 2005      -0.7163930
+5146   CHN 2006      -0.8567819
+5147   CHN 2007      -0.6105129
+5148   CHN 2008      -0.6522359
+5149   CHN 2009      -0.6232676
+5150   CHN 2010      -0.8507479
+5151   CHN 2011      -0.7475436
+5152   CHN 2012      -0.8598154
+[1] "en_US.UTF-8"
+[1] "headline"      "year"          "chatgpt_label" "manual_label" 
+Validation rows 100 
+Final stored rank and corpus check PASS
+Item2 audit 35 current /14 archived /13 common /22 unaudited /QAT noncurrent /9 displayed: PASS
+Item8 unweighted validation agreement 0.88: PASS

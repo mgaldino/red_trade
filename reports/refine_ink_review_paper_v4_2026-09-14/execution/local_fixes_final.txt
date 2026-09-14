@@ -1,0 +1,17 @@
+Adjudicação concluída para os itens 15, 29, 30, 33 e 34.
+
+- Item 15: `CONFIRMED`; esquema target-first e contrato de validação entregues, sem linhas sintéticas ou execução.
+- Item 29: `PARTIAL`; problema restrito à caption da Figura 2.
+- Itens 30, 33 e 34: `CONFIRMED`; propostas locais e mínimas.
+- Veredicto técnico: `READY_FOR_IMPLEMENTATION`, com o item 15 explicitamente condicionado à implementação e execução autorizadas dos novos alvos.
+
+Artefatos:
+
+- [local_fixes.md](/Users/manoelgaldino/Documents/DCP/Papers/RDD%20Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/local_fixes.md)
+- [local_fixes.json](/Users/manoelgaldino/Documents/DCP/Papers/RDD%20Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/local_fixes.json)
+- [local_fixes_evidence.md](/Users/manoelgaldino/Documents/DCP/Papers/RDD%20Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/local_fixes_evidence.md)
+- [local_fixes_r_checks.txt](/Users/manoelgaldino/Documents/DCP/Papers/RDD%20Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/local_fixes_r_checks.txt)
+
+Verificações: JSON validado pela `adjudicate-review`; hashes do Rmd/PDF ativos iguais aos da baseline; checagem R passou. A média BSV pré-2009 é `0.6467778906`, a mediana é `0.6209223685`, e o ATT corresponde a `42.1739%` da média, mas `43.9300%` da mediana.
+
+Não alterei manuscrito, `targets`, dados, estimativas, PDF ou arquivos compartilhados. Não executei `tar_make()`, reestimações, renderização ou APIs.

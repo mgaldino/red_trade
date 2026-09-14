@@ -1,0 +1,15 @@
+2026-09-14T17:05:38.396301Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-09-14T17:05:38.396402Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-09-14T17:05:38.431309Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-09-14T17:05:38.446058Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-09-14T17:05:38.457639Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-09-14T17:05:38.469326Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-09-14T17:05:38.521286Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-09-14T17:05:38.536387Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-09-14T17:05:38.550316Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-09-14T17:05:38.865685Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-09-14T17:05:38.865710Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-09-14T17:11:21.034489Z ERROR codex_core::tools::router: error=exec_command failed: CreateProcess { message: "Rejected(\"Failed to create unified exec process: No such file or directory (os error 2)\")" }
+2026-09-14T17:17:22.160581Z ERROR codex_core::tools::router: error=apply_patch verification failed: Failed to find expected lines in /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/review_abstract.json:
+        "Candidate abstract line hash including LF: 9accf3cbd103cff29f82136030266d70f13941b01d4085a0962ea43a7ef2f; baseline abstract line hash including LF: 35e3a8b4b5313bcb3d77cc12b7c3892c47ec7b0716aa3355fc57f90035b6eb77.",
+        "Candidate body ratio line hash: 3eda74013d86b8ad41f35290f11754d6d6564ad2ce61e81554e9eed0e3d44d; body detail line hash: a2347ab570ca4cff0346eaa8991c36b979c4c50b1241244df2d0249b17a29b52; conclusion line hash: 8568ff0a6d63f22208b2425593e4953a412c79a51fd3576bbd9908075d25f5af. These body/conclusion line hashes match the corresponding baseline lines.",

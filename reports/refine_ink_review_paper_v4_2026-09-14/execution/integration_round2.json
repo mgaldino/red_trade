@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0",
+  "record_type": "bounded_manuscript_integration_round2",
+  "date": "2026-09-14",
+  "role": "manuscript_integrator",
+  "scientific_review_performed": false,
+  "delegated": false,
+  "scope_items": [6, 27],
+  "artifacts": {
+    "immutable_v1_source": {
+      "path": "/private/tmp/refine-review-20260914/paper_v4.Rmd",
+      "sha256": "82c811def270d266f8ef4541d6fc8afecb6adfe980cda6260d84439714bb340c"
+    },
+    "candidate_v1_byte_copy": {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/candidate_v1.Rmd",
+      "sha256": "82c811def270d266f8ef4541d6fc8afecb6adfe980cda6260d84439714bb340c",
+      "copied_before_changes": true,
+      "byte_identical_to_immutable_v1": true
+    },
+    "candidate_v2": {
+      "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+      "sha256": "fa40c4395abea8a7b94f5539eb4fc60bde5dcf8e4e4a7825edd4043ea32093f0",
+      "lines": 2514,
+      "bytes": 174862
+    },
+    "round2_patch": {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/integration_round2.patch",
+      "sha256": "14208cb02fa2744750594b6c94825fd36a3378737b14dfa325ee969e50c1c1c4",
+      "lines": 20,
+      "bytes": 7346,
+      "reconstructs_candidate_v2": true
+    },
+    "baseline": {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/baseline/paper_v4.Rmd",
+      "sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4"
+    },
+    "canonical_rmd": {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
+      "sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+      "unchanged": true,
+      "byte_identical_to_baseline": true
+    },
+    "canonical_pdf": {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf",
+      "sha256": "da7b84fd44a1071953c5c2941be53aefb75f2b249476cc2d6e065e5f8463e312",
+      "unchanged": true,
+      "rendered_in_round2": false,
+      "root_level_paper_v4_pdf_exists": false
+    }
+  },
+  "edits": [
+    {
+      "item": 27,
+      "final_line": 338,
+      "before": "Appendix Figure \\@ref(fig:appendix-brazil-china-ideal-points) shows that China is comparatively stable, so most of the reduction in absolute distance comes from movement in Brazil's position.",
+      "after": "Appendix Figure \\@ref(fig:appendix-brazil-china-ideal-points) shows that China's period average changes little around 2009 despite year-to-year volatility, while Brazil shows a more sustained movement toward China.",
+      "preceding_percentage_sentence_byte_identical": true,
+      "inline_r_expressions_preserved": true,
+      "new_numeric_comparison": false,
+      "variance_decomposition_added": false
+    },
+    {
+      "item": 6,
+      "final_line": 756,
+      "exposure_before": "then standardized over the estimation panel.",
+      "exposure_after": "then standardized over the stored 1997--2016 input panel before restriction to the 1997--2015 estimation window.",
+      "price_before": "activates that index in 2008--2009, and standardizes it.",
+      "price_after": "activates that index in 2008--2009, and standardizes it over the same stored 1997--2016 input panel before the 1997--2015 estimation-window restriction.",
+      "same_standardization_population_for_exposure_and_price": true,
+      "result_changes": false
+    }
+  ],
+  "diffs": {
+    "v1_to_v2": {
+      "insertions": 2,
+      "deletions": 2,
+      "context3_hunks": 2,
+      "changed_final_lines": [338, 756],
+      "whitespace_error_diagnostics": 0
+    },
+    "baseline_to_final": {
+      "baseline_sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+      "final_sha256": "fa40c4395abea8a7b94f5539eb4fc60bde5dcf8e4e4a7825edd4043ea32093f0",
+      "insertions": 56,
+      "deletions": 49,
+      "context3_hunks": 30,
+      "zero_context_changed_groups": 44,
+      "whitespace_error_diagnostics": 0,
+      "patch_chain": [
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/integration.patch",
+          "role": "baseline_to_v1",
+          "sha256": "64058bc13bdc76d02cd924e0721e36188c29f2458edbf3d92f4958b4a8bc2240"
+        },
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/integration_round2.patch",
+          "role": "v1_to_v2",
+          "sha256": "14208cb02fa2744750594b6c94825fd36a3378737b14dfa325ee969e50c1c1c4"
+        }
+      ]
+    }
+  },
+  "validation": {
+    "r_chunks_parsed_without_evaluation": 52,
+    "chunk_labels_nonempty_and_unique": true,
+    "inline_r_ordered_sequence_identical_v1_v2": true,
+    "inline_r_expression_count": 144,
+    "abstract_projection_byte_identical_v1_v2": true,
+    "abstract_projection_lines": 1,
+    "conclusion_projection_byte_identical_v1_v2": true,
+    "conclusion_projection_lines": 12,
+    "conclusion_projection_bounds": "1285-1296",
+    "line338_prefix_through_percentage_sentence_byte_identical": true,
+    "dry_run_environment": "CODEX_AUTO_COMMIT_PUSH_DRY_RUN=1"
+  },
+  "review_inputs": [
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/orchestrator_decisions.md",
+      "sha256": "aebf4acbfcd4158b2d459df06fa5f652d18c74f549a9d55a219891a18c94618d"
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/review_documentation.md",
+      "sha256": "37044a151c8c6d431f2f1cf8779a5899f116af5c7cd140e96cd8276e8dc57a82"
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/review_documentation.json",
+      "sha256": "bcae054b3421f1f483c59d202a66f0a19d990aa6dbbca5ed77d2a747e255162b"
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/review_methods.json",
+      "sha256": "77a8306cc27f233c3bd25b064fcce578030a11bbd4e98606726fa883d0e3cd65"
+    }
+  ],
+  "reviewer_dispositions": [
+    {
+      "finding_id": "RM-S006",
+      "status": "CONFIRMED",
+      "round2_disposition": "implemented_exactly_as_root_adjudicated"
+    },
+    {
+      "finding_id": "RM-S031",
+      "status": "REFUTED",
+      "round2_disposition": "no_change_root_rejection_preserved"
+    },
+    {
+      "finding_id": "RM-GATE",
+      "status": "UNRESOLVED",
+      "round2_disposition": "flagged_without_editing; root final-source review and render gate remain",
+      "manuscript_defect": false
+    }
+  ],
+  "execution_boundary": {
+    "performed": [
+      "exact bounded text substitutions",
+      "hash and byte-identity checks",
+      "v1-to-v2 and baseline-to-final diff checks",
+      "R chunk parsing without evaluation",
+      "inline-expression and abstract/conclusion projection comparisons"
+    ],
+    "not_performed": [
+      "rendering or PDF writes",
+      "targets or pipeline actions",
+      "tar_config_set",
+      "model or API calls",
+      "estimation or resampling",
+      "data, configuration, or hook edits",
+      "reviewer or specialist record edits",
+      "canonical manuscript edits",
+      "git commits or pushes",
+      "process signals or lock operations"
+    ]
+  }
+}

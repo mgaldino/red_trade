@@ -1,0 +1,23 @@
+Adjudication completed. All five selected comments are `CONFIRMED`.
+
+Artifacts:
+
+- [Localized evidence and prose proposals](</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/corpus_votes_bibliography.md>)
+- [Machine-readable adjudication](</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/corpus_votes_bibliography.json>)
+
+Key results:
+
+- Item 4: confirmed reporting defect. The archive supports stored-file counts, dates, missingness, duplicates, and zero observed join losses. It does not support claims about historical retrieval completeness, collection date, page failures, or duplicates removed before storage. Paper-facing numerical disclosure remains gated behind the specified target-first audit.
+- Item 21: confirmed. The proposal defines the exact `-1/0/1` vote coding, signed distance formula, divergent-vote restriction, and exclusion of unrecorded country-resolution pairs.
+- Item 27: confirmed. The correction distinguishes China’s relatively stable period average from its annual volatility and removes the unsupported attribution of most bilateral-distance movement to Brazil.
+- Items 35/36: confirmed by the [Urdinez et al. publisher article](https://onlinelibrary.wiley.com/doi/pdf/10.1111/laps.12000) and the [Kastner–Pearson publisher article](https://link.springer.com/article/10.1007/s12116-021-09318-9), with [publisher-version full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC7934344/). One shared sentence correction covers both while leaving comment 3’s broader argument untouched.
+
+Verification passed:
+
+- JSON passed the `adjudicate-review` schema validator and Python JSON parsing.
+- Each proposed `old` string occurs exactly once in `paper_v4.Rmd`.
+- Manuscript and PDF remain byte-identical to their frozen baselines.
+- No targets execution/change, reestimation, classification API, data change, manuscript edit, commit, signal, or external communication occurred.
+- Static inspection, computed verification, and the absence of new analysis are separately documented.
+
+Figure 8 was visually checked in the frozen PDF: :codex-file-citation{path="/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf" purpose="source"}

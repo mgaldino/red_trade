@@ -1,0 +1,26 @@
+{
+  "baseline_head": "a04548104383e3cdbe9ceefc18015a7c475ce668",
+  "head": "3bd630afdeac3ddbb9911f2ea4bf78e50d13cc4d",
+  "automatic_commits": [
+    "d8eae931b618249c8503e63df8636fd69969300c 2026-09-14T13:32:12-03:00 chore: codex checkpoint (session-stop)",
+    "1c1463592724a666b16b39abf53c06f0ae6dd68c 2026-09-14T13:40:55-03:00 chore: codex checkpoint (session-stop)",
+    "8591feabd0d177e31a6f60d7dfbed23b2f517c63 2026-09-14T13:42:53-03:00 chore: codex checkpoint (session-stop)",
+    "3bd630afdeac3ddbb9911f2ea4bf78e50d13cc4d 2026-09-14T13:51:20-03:00 chore: codex checkpoint (session-stop)"
+  ],
+  "push_evidence_reflog": [
+    "3bd630afdeac3ddbb9911f2ea4bf78e50d13cc4d refs/remotes/origin/main@{0} update by push",
+    "8591feabd0d177e31a6f60d7dfbed23b2f517c63 refs/remotes/origin/main@{1} update by push",
+    "1c1463592724a666b16b39abf53c06f0ae6dd68c refs/remotes/origin/main@{2} update by push",
+    "d8eae931b618249c8503e63df8636fd69969300c refs/remotes/origin/main@{3} update by push",
+    "a04548104383e3cdbe9ceefc18015a7c475ce668 refs/remotes/origin/main@{4} update by push",
+    "0c6c0eb50d0323617b4ac7aa42634a75cb71e589 refs/remotes/origin/main@{5} update by push",
+    "523a30b354be261a21445e08b268f541df513675 refs/remotes/origin/main@{6} update by push",
+    "e392a8ee06f33d2342e75089a9e16811f17e9079 refs/remotes/origin/main@{7} update by push"
+  ],
+  "cause": "Global Stop hook auto_commit_push.py invokes checkpoints regardless of current task no-commit/no-push instruction",
+  "explicit_git_commit_or_push_invoked_by_orchestrator": false,
+  "hook_path": "/Users/manoelgaldino/.codex/hooks/auto_commit_push.py",
+  "response": "New CLI workers use CODEX_AUTO_COMMIT_PUSH_DRY_RUN=1; manuscript edits and PDF renders isolated under /private/tmp; no history rewriting; explicit user permission pending for global hook opt-out",
+  "canonical_manuscript_sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+  "canonical_pdf_sha256": "da7b84fd44a1071953c5c2941be53aefb75f2b249476cc2d6e065e5f8463e312"
+}

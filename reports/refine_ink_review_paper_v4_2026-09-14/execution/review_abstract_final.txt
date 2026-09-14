@@ -1,0 +1,29 @@
+Independent numeric review completed.
+
+- Verdict: `NO_CONFIRMED_DEFECTS`
+- Selected finding `REFINE-033`: `REFUTED` for the current candidate. The frozen baseline incorrectly said “median”; the candidate correctly says “pre-treatment mean.”
+- Candidate SHA-256: `82c811def270d266f8ef4541d6fc8afecb6adfe980cda6260d84439714bb340c`
+- Frozen baseline SHA-256: `9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4`
+
+Read-only R checks reproduced:
+
+- Pre-treatment years: 1997–2008, `n = 12`
+- Mean: `0.646777890583333`
+- Median: `0.620922368500000`
+- Stored ATT: `-0.272771407583060`
+- Absolute ATT / mean: `42.173891772497932%`
+- Absolute ATT / median: `43.930033997971528%`
+- Brazil rank: 2 in 2008, 1 in 2009
+- Cross-country treated-entry range: 2000–2018; main panel endpoint: 2022
+- Manually typed conclusion value `0.273`: consistent with the rounded absolute ATT
+
+The adjudication JSON passed the skill validator:
+
+`VALID: .../review_abstract.json`
+
+Reports:
+
+- [review_abstract.md](/Users/manoelgaldino/Documents/DCP/Papers/RDD%20Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/review_abstract.md)
+- [review_abstract.json](/Users/manoelgaldino/Documents/DCP/Papers/RDD%20Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/review_abstract.json)
+
+`integration_final.txt` was present and checked. I did not edit the manuscript, data, scripts, targets, or other reports; no estimation, pipeline execution, rendering, API call, commit, push, or signal was performed.

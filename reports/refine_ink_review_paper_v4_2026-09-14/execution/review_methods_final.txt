@@ -1,0 +1,14 @@
+**Preliminary source findings recorded; final candidate verdict deferred.**
+
+- **Item 6 — minor documentation defect:** the producer standardizes interactions over the stored **1997–2016** panel, then restricts estimation to **1997–2015**. “Standardized over the estimation panel” is inaccurate. A text correction suffices.
+- **Item 31 — the rejected noncollinearity argument is refuted.** All **1,824 fitted country-years** satisfy the signed power-gap identity. The dependence survives affine scaling and the actual `synthdid` weight objectives, with residuals below \(10^{-15}\). A nonzero gap coefficient does not establish an independent effect. The preferred fit remains covariate-free; its stored-weight ATT reconstruction matches exactly.
+- **Item 25 — no confirmed defect in the bounded explanatory checks.** Archived sensitivity and FWL arithmetic reconcile. The note properly distinguishes its illustrative example, synthetic counterexample and observed FE results.
+
+`execution/integration_final.txt` remained absent after the brief wait and final check. **No final full-diff review or candidate pass was issued.**
+
+Reports: [review_methods.md](/Users/manoelgaldino/Documents/DCP/Papers/RDD%20Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/review_methods.md) and [review_methods.json](/Users/manoelgaldino/Documents/DCP/Papers/RDD%20Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/review_methods.json). The schema validator passed against the frozen baseline.
+
+- **Provisional candidate SHA-256:** `798665c291ac21733adfe219d2b9b9a9968626a356f71d4909cd2ea3cdf789a6`
+- **Reviewed domain-note SHA-256:** `78356d0b657d1c1730e2607f92ecff3e8b6c36a6b46b21335023da92ab07ee4f`
+
+Only the two authorized review files were written. No reestimation or pipeline execution occurred; `CODEX_AUTO_COMMIT_PUSH_DRY_RUN=1` was preserved.

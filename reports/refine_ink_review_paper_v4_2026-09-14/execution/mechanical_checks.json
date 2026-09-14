@@ -1,0 +1,15 @@
+{
+  "checks": {
+    "protected_files_unchanged": true,
+    "git_diff_check": true,
+    "candidate_whitespace_check": true,
+    "chunk_labels_unique": true,
+    "cross_references_resolve_to_chunks": true,
+    "bibliographic_keys_resolve": true
+  },
+  "missing_bibliographic_keys": [],
+  "abstract_changed_requires_independent_numerical_gate": true,
+  "source_path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+  "source_sha256": "fa40c4395abea8a7b94f5539eb4fc60bde5dcf8e4e4a7825edd4043ea32093f0",
+  "scope": "Mechanical source/diff/reference checks only; scientific and visual reviews are separate."
+}

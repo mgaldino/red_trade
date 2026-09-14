@@ -1,0 +1,616 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "review-methods-final:fa40c4395abe:20260914",
+  "source": {
+    "reviewed_artifact": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+    "sha256": "fa40c4395abea8a7b94f5539eb4fc60bde5dcf8e4e4a7825edd4043ea32093f0",
+    "artifact_intact": true
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "review_sources": [
+    {
+      "review_id": "PRIOR_AND_SPECIALISTS",
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/review_methods.json",
+      "sha256": "77a8306cc27f233c3bd25b064fcce578030a11bbd4e98606726fa883d0e3cd65"
+    }
+  ],
+  "reviewer": {
+    "identity": "Independent final methods reviewer; distinct from specialist and integrator",
+    "requested_model": "Astra",
+    "requested_reasoning": "high",
+    "delegated": false
+  },
+  "review_stage": "FINAL_CANDIDATE_SUBSTANTIVE_METHODS",
+  "scope": {
+    "selected_comment_universe": [
+      2,
+      4,
+      6,
+      7,
+      8,
+      11,
+      15,
+      18,
+      20,
+      21,
+      22,
+      25,
+      27,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38
+    ],
+    "methods_changed_items": [
+      2,
+      4,
+      6,
+      7,
+      8,
+      11,
+      18,
+      20,
+      21,
+      22,
+      27,
+      29,
+      31,
+      32
+    ],
+    "item25": "understanding note only",
+    "item15": "proposed schema only",
+    "other_selected_dimensions": "Not adjudicated by this reviewer",
+    "unselected": "Not reopened"
+  },
+  "note": {
+    "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/domain_note.md",
+    "sha256": "78356d0b657d1c1730e2607f92ecff3e8b6c36a6b46b21335023da92ab07ee4f",
+    "persistent": true,
+    "bounded_verdict": "NO_CONFIRMED_DEFECTS",
+    "archived_comparisons_not_new_estimation": true
+  },
+  "findings": [
+    {
+      "finding_id": "RMF-002",
+      "source_review": "PRIOR_AND_SPECIALISTS",
+      "quoted_finding": "The final public-cue disclosure still confuses the current treated population with the legacy audit or interprets non-recovery as absence.",
+      "type": "method",
+      "severity": "major",
+      "scientific_dimension": "scope",
+      "held_decision": false,
+      "status": "REFUTED",
+      "source_locations": [
+        "/private/tmp/refine-review-20260914/candidate_v2.Rmd:1888–1891,1903,1919–1920",
+        "cross_country.md; scripts/diagnostics/analyze_ex_top1_salience.R:100–125,206–219; scripts/diagnostics/collect_status_cue_salience_sources.py:490–521"
+      ],
+      "defect_evidence": [],
+      "refuting_evidence": [
+        "The final text distinguishes 35 current treated countries, 14 audited, 13 overlapping, Qatar outside the current set, 22 unaudited, and nine displayed unknown-China-cue cases. It defines medium separately for China and the incumbent and preserves legacy entry windows except Australia. Current RDS reconciliation passes; original China-cue and incumbent coding branches were inspected."
+      ],
+      "mechanical_checks": [
+        "See bounded verification script/log, provenance hashes, and baseline-to-final diff log."
+      ],
+      "reasoning": "This is a final-candidate persistence check. REFUTED applies to the normalized allegation above, not retroactively to the original baseline finding.",
+      "proposed_fix_assessment": "not_provided",
+      "disposition": "No final-candidate correction required in this bounded component."
+    },
+    {
+      "finding_id": "RMF-004",
+      "source_review": "PRIOR_AND_SPECIALISTS",
+      "quoted_finding": "The new corpus disclosure claims an exhaustive historical search or invents missing-record coverage.",
+      "type": "method",
+      "severity": "major",
+      "scientific_dimension": "measurement",
+      "held_decision": false,
+      "status": "REFUTED",
+      "source_locations": [
+        "/private/tmp/refine-review-20260914/candidate_v2.Rmd:1062",
+        "corpus_votes_bibliography.md; prior source verification; scripts/chatgpt_api.R:40–42"
+      ],
+      "defect_evidence": [],
+      "refuting_evidence": [
+        "The paragraph describes the preserved retrieval code, the frozen archive, unavailable historical page logs and incomplete boundary-year coverage. It does not claim exhaustive retrieval or introduce newly computed losses/population metrics."
+      ],
+      "mechanical_checks": [
+        "See bounded verification script/log, provenance hashes, and baseline-to-final diff log."
+      ],
+      "reasoning": "This is a final-candidate persistence check. REFUTED applies to the normalized allegation above, not retroactively to the original baseline finding.",
+      "proposed_fix_assessment": "not_provided",
+      "disposition": "No final-candidate correction required in this bounded component."
+    },
+    {
+      "finding_id": "RMF-006",
+      "source_review": "PRIOR_AND_SPECIALISTS",
+      "quoted_finding": "The final item6 still describes standardization over the estimation panel or leaves exposures and lower-order terms undefined.",
+      "type": "method",
+      "severity": "minor",
+      "scientific_dimension": "implementation_fidelity",
+      "held_decision": false,
+      "status": "REFUTED",
+      "source_locations": [
+        "/private/tmp/refine-review-20260914/candidate_v2.Rmd:756,758,875–885",
+        "scripts/diagnostics/audit_brazil_sdid_commodity_no_covariates.R:72–119; scripts/diagnostics/sdid_placebo_helpers.R:109–116; prior precision_checks"
+      ],
+      "defect_evidence": [],
+      "refuting_evidence": [
+        "Line756 now explicitly states 1997–2016 stored-panel standardization before the 1997–2015 fit restriction for BOTH exposure and price interactions. Country means 2004–2008, the 2008–2009 indicator, 2007 log-price base and fixed-share weighting match producers. Only the time-varying products enter; fixed shares and common indicators are absorbed. The first treated year is still disclosed as a mechanism-diagnostic limitation. RM-S006 is resolved in final bytes."
+      ],
+      "mechanical_checks": [
+        "See bounded verification script/log, provenance hashes, and baseline-to-final diff log."
+      ],
+      "reasoning": "This is a final-candidate persistence check. REFUTED applies to the normalized allegation above, not retroactively to the original baseline finding.",
+      "proposed_fix_assessment": "not_provided",
+      "disposition": "No final-candidate correction required in this bounded component."
+    },
+    {
+      "finding_id": "RMF-007",
+      "source_review": "PRIOR_AND_SPECIALISTS",
+      "quoted_finding": "The classifier disclosure presents preserved settings as a verified historical run.",
+      "type": "method",
+      "severity": "major",
+      "scientific_dimension": "reproducibility",
+      "held_decision": false,
+      "status": "REFUTED",
+      "source_locations": [
+        "/private/tmp/refine-review-20260914/candidate_v2.Rmd:2069",
+        "scripts/chatgpt_api.R:40–98; corpus_pipeline.md"
+      ],
+      "defect_evidence": [],
+      "refuting_evidence": [
+        "The final text uses specifies and explicitly distinguishes code configuration from the execution that produced every row. Alias, temperature, slicing, parser, exact-title join and label normalization match the preserved producer. Missing snapshot, requests/responses and rerun history remain missing; unrelated batch logs are not substituted."
+      ],
+      "mechanical_checks": [
+        "See bounded verification script/log, provenance hashes, and baseline-to-final diff log."
+      ],
+      "reasoning": "This is a final-candidate persistence check. REFUTED applies to the normalized allegation above, not retroactively to the original baseline finding.",
+      "proposed_fix_assessment": "not_provided",
+      "disposition": "No final-candidate correction required in this bounded component."
+    },
+    {
+      "finding_id": "RMF-008",
+      "source_review": "PRIOR_AND_SPECIALISTS",
+      "quoted_finding": "The final validation prose still implies corpus-wide accuracy, recall, or temporally stable classification error.",
+      "type": "method",
+      "severity": "major",
+      "scientific_dimension": "measurement",
+      "held_decision": false,
+      "status": "REFUTED",
+      "source_locations": [
+        "/private/tmp/refine-review-20260914/candidate_v2.Rmd:2079,2101–2102,2113–2123",
+        "scripts/functions.R:5623–5688; data/folha_validation_sample_annotated.csv; corpus_pipeline.md"
+      ],
+      "defect_evidence": [],
+      "refuting_evidence": [
+        "The table and prose consistently describe unweighted agreement conditional on archived predicted labels in a category-enriched sample. They disclose absent allocation/inclusion metadata and do not claim historical non-stratification as known. All original inline metrics persist; no new confusion-matrix, precision/recall or temporal numbers enter. Current CSV check confirms 100 rows and 0.88 agreement."
+      ],
+      "mechanical_checks": [
+        "See bounded verification script/log, provenance hashes, and baseline-to-final diff log."
+      ],
+      "reasoning": "This is a final-candidate persistence check. REFUTED applies to the normalized allegation above, not retroactively to the original baseline finding.",
+      "proposed_fix_assessment": "not_provided",
+      "disposition": "No final-candidate correction required in this bounded component."
+    },
+    {
+      "finding_id": "RMF-011",
+      "source_review": "PRIOR_AND_SPECIALISTS",
+      "quoted_finding": "Timing rows are still used as estimates of a common estimand or as a tested difference between effects.",
+      "type": "method",
+      "severity": "major",
+      "scientific_dimension": "inference",
+      "held_decision": false,
+      "status": "REFUTED",
+      "source_locations": [
+        "/private/tmp/refine-review-20260914/candidate_v2.Rmd:526,539–541,695–697,760,782–787",
+        "comparability.md; comparability_verify.R; timing_placebos.csv"
+      ],
+      "defect_evidence": [],
+      "refuting_evidence": [
+        "Different windows, post horizons 6/5/4/7/5, separate counterfactual fits, common 95 donors and already-treated 2009–2011 years in the 2012 nominal pre-period are explicit. The ordering is suggestive; no uncertainty for between-row contrasts is asserted. The selected Lula-comparison sentence allows gradual or delayed shifts. Existing timing outputs were reconciled without fits."
+      ],
+      "mechanical_checks": [
+        "See bounded verification script/log, provenance hashes, and baseline-to-final diff log."
+      ],
+      "reasoning": "This is a final-candidate persistence check. REFUTED applies to the normalized allegation above, not retroactively to the original baseline finding.",
+      "proposed_fix_assessment": "not_provided",
+      "disposition": "No final-candidate correction required in this bounded component."
+    },
+    {
+      "finding_id": "RMF-018",
+      "source_review": "PRIOR_AND_SPECIALISTS",
+      "quoted_finding": "The final prose still conflates placebo SE, assignment ranks and the normal approximation.",
+      "type": "method",
+      "severity": "major",
+      "scientific_dimension": "inference",
+      "held_decision": false,
+      "status": "REFUTED",
+      "source_locations": [
+        "/private/tmp/refine-review-20260914/candidate_v2.Rmd:308,338,875–885",
+        "scripts/functions.R:1072–1152; _targets/objects/se_synth_no_time_varying_covariates; main_summary.csv; placebo_distribution.csv"
+      ],
+      "defect_evidence": [],
+      "refuting_evidence": [
+        "Three objects are explicitly separated: finite-population SD of 20,000 seeded placebo resamples; normal p/CI using that SE; exhaustive directional and absolute assignment ranks. Current stored SE=0.13060794328219072, ATT=-0.27277140758306007, normal p=0.0367550198; independent arithmetic recovers 3/96 and 7/96. The comparability condition for rank interpretation remains."
+      ],
+      "mechanical_checks": [
+        "See bounded verification script/log, provenance hashes, and baseline-to-final diff log."
+      ],
+      "reasoning": "This is a final-candidate persistence check. REFUTED applies to the normalized allegation above, not retroactively to the original baseline finding.",
+      "proposed_fix_assessment": "not_provided",
+      "disposition": "No final-candidate correction required in this bounded component."
+    },
+    {
+      "finding_id": "RMF-020",
+      "source_review": "PRIOR_AND_SPECIALISTS",
+      "quoted_finding": "The full weighted objectives still leave treated/post cells with undefined or zero weights.",
+      "type": "method",
+      "severity": "major",
+      "scientific_dimension": "implementation_fidelity",
+      "held_decision": false,
+      "status": "REFUTED",
+      "source_locations": [
+        "/private/tmp/refine-review-20260914/candidate_v2.Rmd:1428–1449",
+        "prior installed synthdid source and r_checks; current stored main fit; review_methods_final_candidate_verify.log"
+      ],
+      "defect_evidence": [],
+      "refuting_evidence": [
+        "N0,N1,T0,T1 are defined. Control/pre weights are nonnegative and normalized in each block; treated units receive 1/N1 and post periods 1/T1. Thus treated-post cells enter positively. The main fit gives treated weight1 and each post weight1/7; direct fixed-weight contrast exactly reproduces the stored ATT."
+      ],
+      "mechanical_checks": [
+        "See bounded verification script/log, provenance hashes, and baseline-to-final diff log."
+      ],
+      "reasoning": "This is a final-candidate persistence check. REFUTED applies to the normalized allegation above, not retroactively to the original baseline finding.",
+      "proposed_fix_assessment": "not_provided",
+      "disposition": "No final-candidate correction required in this bounded component."
+    },
+    {
+      "finding_id": "RMF-021",
+      "source_review": "PRIOR_AND_SPECIALISTS",
+      "quoted_finding": "Vote coding, absence rules or fixed effects are still incorrectly documented.",
+      "type": "method",
+      "severity": "major",
+      "scientific_dimension": "measurement",
+      "held_decision": false,
+      "status": "REFUTED",
+      "source_locations": [
+        "/private/tmp/refine-review-20260914/candidate_v2.Rmd:973–979",
+        "scripts/functions.R:6555–6561,6590–6676,6908–6918; corrected_ddd_bundle.rds; domain_note.md"
+      ],
+      "defect_evidence": [],
+      "refuting_evidence": [
+        "The added score -1/0/+1 and absolute distance to China minus that to USA match the producer. Invalid or absent own votes are excluded; both reference votes must be valid and divergent. Country+resolution FE and Brazil-post/domain/triple terms remain, as do equal observed-vote weights and the country-domain availability caveat. No year/issue FE substitution was made."
+      ],
+      "mechanical_checks": [
+        "See bounded verification script/log, provenance hashes, and baseline-to-final diff log."
+      ],
+      "reasoning": "This is a final-candidate persistence check. REFUTED applies to the normalized allegation above, not retroactively to the original baseline finding.",
+      "proposed_fix_assessment": "not_provided",
+      "disposition": "No final-candidate correction required in this bounded component."
+    },
+    {
+      "finding_id": "RMF-022",
+      "source_review": "PRIOR_AND_SPECIALISTS",
+      "quoted_finding": "The final 2x2 discussion uniquely attributes attenuation to outcome source/factors or treats non-rejection as equivalence.",
+      "type": "method",
+      "severity": "major",
+      "scientific_dimension": "inference",
+      "held_decision": false,
+      "status": "REFUTED",
+      "source_locations": [
+        "/private/tmp/refine-review-20260914/candidate_v2.Rmd:2243,2420–2422,2454–2457,2465,2496–2506,2514",
+        "scripts/diagnostics/audit_ungadm_postreview_diagnostics.R:239–255,287–346; comparability_verify.R; ife_2x2_fixed_r.csv; ife_paired_bootstrap_draws.csv"
+      ],
+      "defect_evidence": [],
+      "refuting_evidence": [
+        "Final text makes conditional within-measure comparisons, calls the nonadditivity descriptive and untested, states original outcome scales and disclaims scale-invariant decomposition. The paired-bootstrap note states shared stratified country draws and fixed original CV-selected counts; factors are not reselected. Non-rejection and overlapping intervals do not establish equivalence. Current archived 4,727-row cells and 1,000 paired draws reconcile; source confirms CV=FALSE and fixed r."
+      ],
+      "mechanical_checks": [
+        "See bounded verification script/log, provenance hashes, and baseline-to-final diff log."
+      ],
+      "reasoning": "This is a final-candidate persistence check. REFUTED applies to the normalized allegation above, not retroactively to the original baseline finding.",
+      "proposed_fix_assessment": "not_provided",
+      "disposition": "No final-candidate correction required in this bounded component."
+    },
+    {
+      "finding_id": "RMF-027",
+      "source_review": "PRIOR_AND_SPECIALISTS",
+      "quoted_finding": "The final main-text/appendix remissions still assert low annual Chinese volatility or quantitatively assign most bilateral change to Brazil.",
+      "type": "method",
+      "severity": "minor",
+      "scientific_dimension": "scope",
+      "held_decision": false,
+      "status": "REFUTED",
+      "source_locations": [
+        "/private/tmp/refine-review-20260914/candidate_v2.Rmd:338,1310",
+        "_targets/objects/unga_data; prior other_checks; integration_round2.md"
+      ],
+      "defect_evidence": [],
+      "refuting_evidence": [
+        "Both final passages now distinguish little change in China period average around2009 from annual volatility and sustained Brazilian movement toward China. The actual 2005–2012 annual series were reread and support this bounded description. No variance decomposition or numerical attribution is asserted. Round2 only changes the remissive sentence and preserves preceding inline results."
+      ],
+      "mechanical_checks": [
+        "See bounded verification script/log, provenance hashes, and baseline-to-final diff log."
+      ],
+      "reasoning": "This is a final-candidate persistence check. REFUTED applies to the normalized allegation above, not retroactively to the original baseline finding.",
+      "proposed_fix_assessment": "not_provided",
+      "disposition": "No final-candidate correction required in this bounded component."
+    },
+    {
+      "finding_id": "RMF-029",
+      "source_review": "PRIOR_AND_SPECIALISTS",
+      "quoted_finding": "The Figure2 caption still equates raw vertical distance with the SDiD ATT.",
+      "type": "method",
+      "severity": "major",
+      "scientific_dimension": "implementation_fidelity",
+      "held_decision": false,
+      "status": "REFUTED",
+      "source_locations": [
+        "/private/tmp/refine-review-20260914/candidate_v2.Rmd:340–344",
+        "sdid.md Figure2 source evidence; _targets/objects/synth_fit_no_time_varying_covariates; review_methods_final_candidate_verify.log"
+      ],
+      "defect_evidence": [],
+      "refuting_evidence": [
+        "The caption calls the arrow the level-adjusted ATT: the average post contrast net of the SDiD-weighted pre contrast. It expressly separates the raw vertical distance. The included figure path/fit consumer is unchanged, and the stored contrast identity is verified."
+      ],
+      "mechanical_checks": [
+        "See bounded verification script/log, provenance hashes, and baseline-to-final diff log."
+      ],
+      "reasoning": "This is a final-candidate persistence check. REFUTED applies to the normalized allegation above, not retroactively to the original baseline finding.",
+      "proposed_fix_assessment": "not_provided",
+      "disposition": "No final-candidate correction required in this bounded component."
+    },
+    {
+      "finding_id": "RMF-031",
+      "source_review": "PRIOR_AND_SPECIALISTS",
+      "quoted_finding": "The final covariate disclosure treats abs() or separate scaling as independent identification of the power gap.",
+      "type": "method",
+      "severity": "major",
+      "scientific_dimension": "identification",
+      "held_decision": false,
+      "status": "REFUTED",
+      "source_locations": [
+        "/private/tmp/refine-review-20260914/candidate_v2.Rmd:306",
+        "scripts/functions.R:208–210,683–756; prior review_methods.json precision/source/r_checks; current synth_data,gpi_data,main fit"
+      ],
+      "defect_evidence": [],
+      "refuting_evidence": [
+        "The text correctly states the signed identity on observed support, separate affine scaling, nuisance coefficients and no separate identification from a nonzero gap coefficient. Current verification covers all1824 fitting rows,96countries,1997–2015. Prior actual lambda/omega-objective checks give null-direction residuals4.88e-16/3.61e-16 and remain source-supported; their computation is reused rather than refit. Geographic distance is time-invariant and supplies no separate adjustment. Main X96x19x0 remains untouched."
+      ],
+      "mechanical_checks": [
+        "See bounded verification script/log, provenance hashes, and baseline-to-final diff log."
+      ],
+      "reasoning": "This is a final-candidate persistence check. REFUTED applies to the normalized allegation above, not retroactively to the original baseline finding.",
+      "proposed_fix_assessment": "not_provided",
+      "disposition": "No final-candidate correction required in this bounded component."
+    },
+    {
+      "finding_id": "RMF-032",
+      "source_review": "PRIOR_AND_SPECIALISTS",
+      "quoted_finding": "The final description still assigns time weights using treated post outcomes or targets pre outcomes instead of control post means.",
+      "type": "method",
+      "severity": "major",
+      "scientific_dimension": "implementation_fidelity",
+      "held_decision": false,
+      "status": "REFUTED",
+      "source_locations": [
+        "/private/tmp/refine-review-20260914/candidate_v2.Rmd:223,302,1428",
+        "prior installed synthdid source: collapsed.form,synthdid_estimate,sc.weight.fw.covariates; scripts/functions.R; review_methods.json"
+      ],
+      "defect_evidence": [],
+      "refuting_evidence": [
+        "Unit weights are learned from pre-treatment paths; pre-period lambda uses controls before onset and their post-period means. This matches collapsed.form and the actual lambda/omega objectives inspected in the prior review. The final main-text and appendix descriptions agree."
+      ],
+      "mechanical_checks": [
+        "See bounded verification script/log, provenance hashes, and baseline-to-final diff log."
+      ],
+      "reasoning": "This is a final-candidate persistence check. REFUTED applies to the normalized allegation above, not retroactively to the original baseline finding.",
+      "proposed_fix_assessment": "not_provided",
+      "disposition": "No final-candidate correction required in this bounded component."
+    },
+    {
+      "finding_id": "RMF-025",
+      "source_review": "PRIOR_AND_SPECIALISTS",
+      "quoted_finding": "The persisted understanding note conflates its algebra/synthetic example with observed bias or calls archived comparisons newly estimated.",
+      "type": "method",
+      "severity": "major",
+      "scientific_dimension": "identification",
+      "held_decision": true,
+      "status": "REFUTED",
+      "source_locations": [
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/domain_note.md:sections2–6",
+        "domain_note.md; domain_note_verify.R; domain_note_evidence_manifest.json; sensitivity.csv; donor_domain_restriction.csv"
+      ],
+      "defect_evidence": [],
+      "refuting_evidence": [
+        "The exact note hash persists. FWL weights and donor-domain orthogonality are correctly distinguished from causal bias; the raw-means example(-1) is not claimed to reproduce resolution FE. The archived synthetic coefficient(+0.0317919036) is neither observed bias nor a universal bound. The current/country-domain estimates(-0.2223334018/-0.2257312276) are expressly archived September5 comparisons, not newly estimated. RDS/sample/FWL arithmetic passes again. Own inference is required for a future extension; current ranks are not transferred."
+      ],
+      "mechanical_checks": [
+        "See bounded verification script/log, provenance hashes, and baseline-to-final diff log."
+      ],
+      "reasoning": "This is a final-candidate persistence check. REFUTED applies to the normalized allegation above, not retroactively to the original baseline finding.",
+      "proposed_fix_assessment": "owner_decision",
+      "disposition": "Preserve the understanding/design-only boundary; no new implementation or estimation required."
+    },
+    {
+      "finding_id": "RMF-015",
+      "source_review": "PRIOR_AND_SPECIALISTS",
+      "quoted_finding": "The proposed audit schema silently invents missing years or is presented in the candidate as an executed expanded table.",
+      "type": "method",
+      "severity": "major",
+      "scientific_dimension": "reproducibility",
+      "held_decision": true,
+      "status": "REFUTED",
+      "source_locations": [
+        "/private/tmp/refine-review-20260914/candidate_v2.Rmd:cross_country.md:92–165; candidate2125 onward",
+        "cross_country.md:92–165; candidate/baseline section equality"
+      ],
+      "defect_evidence": [],
+      "refuting_evidence": [
+        "The proposed four targets preserve actual-year lists, observed duration versus calendar span, exact key reconciliation to the restricted risk set and round-trip checks that cannot fill gaps. The candidate section remains byte-identical to baseline and does not announce the unbuilt table. This is a bounded design review only, not proof of implementation or complete missingness capture. New targets and results remain a separate authorized phase."
+      ],
+      "mechanical_checks": [
+        "See bounded verification script/log, provenance hashes, and baseline-to-final diff log."
+      ],
+      "reasoning": "This is a final-candidate persistence check. REFUTED applies to the normalized allegation above, not retroactively to the original baseline finding.",
+      "proposed_fix_assessment": "needs_design",
+      "disposition": "Preserve the understanding/design-only boundary; no new implementation or estimation required."
+    },
+    {
+      "finding_id": "RMF-GATE",
+      "source_review": "PRIOR_AND_SPECIALISTS",
+      "quoted_finding": "The final methods verdict remains blocked because the integration completion marker and fixed final artifact are absent.",
+      "type": "artifact",
+      "severity": "major",
+      "scientific_dimension": "reproducibility",
+      "held_decision": false,
+      "status": "REFUTED",
+      "source_locations": [
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/integration_round2_final.txt",
+        "/private/tmp/refine-review-20260914/candidate_v2.Rmd"
+      ],
+      "defect_evidence": [],
+      "refuting_evidence": [
+        "Completion marker present before first final-candidate read/hash; final hash matches integrator. Full baseline-to-final diff read in bounded slices, relevant final contexts inspected, hash rechecked at report generation."
+      ],
+      "mechanical_checks": [
+        "SHA256 and diff checks"
+      ],
+      "reasoning": "Closes the prior artifact-identity gate for substantive methods review only. Rendering and visual QA remain with root.",
+      "proposed_fix_assessment": "not_provided",
+      "disposition": "Final bounded methods verdict may be issued."
+    }
+  ],
+  "summary": {
+    "total": 17,
+    "confirmed": 0,
+    "partial": 0,
+    "refuted": 17,
+    "unresolved": 0,
+    "held_decisions": 2
+  },
+  "adjudication": {
+    "verdict": "NO_CONFIRMED_DEFECTS",
+    "checked_at": "2026-09-14T14:35:30.377870-03:00",
+    "reasons": [
+      "No confirmed or partial defect remains in the requested final methods/claim-reach slice.",
+      "RM-S006 resolved; item27 harmonized; source-supported item31 correction retained.",
+      "Item15 and item25 remain bounded design/understanding deliverables. This is not whole-paper PASS."
+    ]
+  },
+  "prior_evidence_reuse": {
+    "provenance_file": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/review_methods_final_candidate_provenance.json",
+    "matched": 39,
+    "total": 41,
+    "exceptions": [
+      "Prior provisional v1 candidate changed; never reused as final verdict.",
+      "Orchestrator decisions expanded; current version reread."
+    ],
+    "reused": [
+      "Actual synthdid two weight-objective null-direction arithmetic and installed source exposition from prior review_methods.json; source producer hashes match and all current fitting rows/main fit independently reconfirmed.",
+      "Localized producer/source checks for exposure construction, classification, cue audit and weights; hashes match where recorded.",
+      "Item25 source/evidence manifests: all entries match."
+    ],
+    "fresh": [
+      "Final-candidate hash after completion marker; entire baseline-final diff and relevant final contexts.",
+      "ReadRDS/current arithmetic: main fit, signed identity on1824 rows, SE/normal/ranks, timing windows, four2x2 cells and1000 paired draws, note sample/FWL/comparisons, cue populations, validation and classification archive, actual annual BRA/CHN series.",
+      "Direct source inspection of commodity standardization/filter order, vote scoring/FE, original classification parser, cue-code definitions and fixed-CV bootstrap producer."
+    ]
+  },
+  "evidence_hashes": {
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/RIO_20260905_ddd/corrected_ddd_bundle.rds": "3f16f202a8aac1d6ca6d73acd5d5c45c3a0090358cc646744da2f7f5677de188",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/baseline/paper_v4.Rmd": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/comparability.md": "656502c86a054076ef08b1568b5c19ec766886ed6f02951599fe5fd541a20302",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/comparability_verify.R": "6db08c1842a48b8e64bc121034892a001ce80666d0fa192d23157db6b9f7bd01",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/corpus_pipeline.md": "628863f98d2548a2a3bccf09c965e146acc3bfa02cbd589fda1deee49fba8973",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/corpus_votes_bibliography.md": "6435a577cb2561910fe7e0ed7ab8369582895382aa535f8710b819cd12ed00e8",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/cross_country.md": "4250ce76b8970652f2f40c9aec9b51aa6d4fb7b5f9b0d62b90aa3494530d077b",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/domain_note.md": "78356d0b657d1c1730e2607f92ecff3e8b6c36a6b46b21335023da92ab07ee4f",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/domain_note_verify.R": "a5a86cf7f625306fee4656242ea8cda4b00d81294810efd1651f8d9768ffe686",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/integration_round2.json": "802841264f5733c54463f917b5d9fb393f516a5c9f42cadf468cc593f3d0ec5f",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/integration_round2.md": "192837489b319f52209e115a1c82c7ac1a6536b048574391b81d3e9ee729666a",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/integration_round2_final.txt": "1fb285c422c419dc34950f621e2d4ea07d8b207517b36bc4ada19a514452d422",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/orchestrator_decisions.md": "aebf4acbfcd4158b2d459df06fa5f652d18c74f549a9d55a219891a18c94618d",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/review_methods.json": "77a8306cc27f233c3bd25b064fcce578030a11bbd4e98606726fa883d0e3cd65",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/review_methods.md": "e03c7891ba6773bc9d2d2c1b0ed15e093632532a6b9f3ccbaad909c336815190",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/review_methods_final_candidate_diff.log": "9bc7426ecd00876cd175ad6083c2c865bfa0b61625a42a756a16088817b6faa6",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/review_methods_final_candidate_verify.R": "3dfc48d429f1fa40bf404eb9d275f84ccc1155e17b47d60c5c40d3244cc1ae12",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/review_methods_final_candidate_verify.log": "14efa0c81cb09a56739e631d12e705136fa357e08552274a5deb88a9f5b4d0b4",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/sdid.md": "9eb993b12bd79f11ac53bac7bcb97ab7569cf8e633dcfe4bf1b46ad7f57c564d",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/verify_power_identity.R": "0fa816337ee64226f4b1f394e7a5e3602c04309ff50bae8604e6a668a43a9c8f",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/verify_power_identity.log": "2a465b2fcca85d91dd68dab075b6646fba2a39452acadd6dc40926eea1a9dd20",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/scripts/chatgpt_api.R": "a9f6b1943d2ef14de2f63a51e5b4ec2b9b943bb2dc185ffe766a8299ffcb1026",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/scripts/diagnostics/audit_brazil_sdid_commodity_no_covariates.R": "1365bbf84b17d9af83ab3afd4a8ca15ee500b8a37eb437d8df7fba0b3ec66a4b",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/scripts/diagnostics/sdid_placebo_helpers.R": "6d7cd66cde191c2748e9310359506ce1398cb8897a606803647cb0a46e2261f7",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/scripts/functions.R": "84e25bbf23209b14694b54a2258f4ccf5872a9a7a9450068790c156fdfd0ba3a",
+    "/private/tmp/refine-review-20260914/paper_v4.Rmd": "82c811def270d266f8ef4541d6fc8afecb6adfe980cda6260d84439714bb340c",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_targets/objects/china_top_m2_goods_status_current_unit_summary": "a5797a2b4d2b68e912b38ffd997fe44e4ad9b6bd5b1fbfa8931b512c7355236c",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_targets/objects/gpi_data": "5eb0b303e85dc70ed7cf0190e9e1fdab3ac3fe66503943ad68c82f0905393719",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_targets/objects/se_synth_no_time_varying_covariates": "e859849a109d29dbd9b5e5913b25374c7150641be7b3633cf5617dea596615a9",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_targets/objects/synth_data": "c71d3257d125888808119eb9ef20118b78fa1b3bde341742de5a28a503becbc4",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_targets/objects/synth_fit": "6fc2a9b68ffd8b907fbaa4982dc46d3042d7d2b61e5f2f301c2fa0ca665613ec",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_targets/objects/synth_fit_no_time_varying_covariates": "e0e719649438429b94dedd32a6a0d8e68cbc18def9d57188a27883bf5e0cf639",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/_targets/objects/unga_data": "9b7aacb0388269830d1698a06dd5d781e4b785dff43d1b88a4ed02d500aee789",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/folha_classificado.rds": "c21af36ce78aa96bf3e8305debf48a8adbffbe5b6aa01f06b6cd7cca8a54b746",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/folha_validation_sample_annotated.csv": "344b6fd5d38faebdeb59fd8f94bb5aec060d61a6769f1d225b39ba000c886f90",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/RIO_20260905_australia/australia_appendix_tables_patch.rds": "862c6097f72ccc2fc381c002071346e19e978bd75d6f285bc46e626c8007abc5",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/balance.csv": "c727005319084cdd09faa6e1303e255843b62e9bad49456c9d877a9de9795487",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/donor_china_exposure.csv": "00b6e970537a70734f02009fb37ff1e7bfae8aba122fb5c66dd3db796efeb6b4",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/donor_china_exposure_summary.csv": "ebd1b62bfd70c5d407ce02fd9b421869dc5ea35786768584dfe9e0ba4997cf02",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/donor_sensitivity.csv": "c598ba8214935cc9c6eb4c2e52be72ce94c2d41f79c59101d5f08e400d7a9909",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/latam_core_summary.csv": "82e52c98ff9ade96f75233644d1ca2dc720b9a425878f49b4f1708704458cee2",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/latam_placebo_distribution.csv": "2d42fb8079b27af2a4fd97a34df0a331d9043ddd65deebfb725c706c1e5c8222",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/main_summary.csv": "29afbe934bc650fe79f8214cfc8050646d404420a160c4d34b6386d87643f711",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/placebo_distribution.csv": "f885b90f58b2b1d07ecf7b4a0f10feb33dca399ec23d4b3cce8b73f6bbd52bcc",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/rank_inference.csv": "0847bab67f97c83374979f3b77463d338ce4f552254c39f44b84b8964b81037d",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/run_manifest.csv": "805d710d020b9188ee21b0572f9e0252241e5c6686da5bf97af2f0c5fb287ee5",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/time_weights.csv": "5430bbbd48851f8e9b597ea0dd02a20b2c547a4127221eb66fa2be75ba184009",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/timing_placebos.csv": "eb72e430b59960259ab2824f3d8afb56f4274cfcf7b8d4953d928435f501c272",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/unit_weights.csv": "63ebed2b1020e2ab680a486190cd6c1a3cb06ae672142fda1747c135c1a29ee6",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/window_sensitivity.csv": "a3f96766a5b52f1aa5686b94bc6ed420eafe9fb543e1c404a35513b90f0b0d81",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/ungadm_outcome_robustness/postreview/group_mean_series_bsv_vs_dm.csv": "2419c071103039603a3fc154b604c9c6cb95b2a2a24e1f182f60c693e3407909",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/ungadm_outcome_robustness/postreview/ife_2x2_fixed_r.csv": "ce4eb407408ade1f06b52dffa58c648459dfd77d7d852a55a850d48c96577021",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/ungadm_outcome_robustness/postreview/ife_paired_bootstrap_draws.csv": "0679f2271f295720effa7535767c5f83c4c32ba5c2ec383c30db98eb7b4a5a94",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/ungadm_outcome_robustness/postreview/ife_paired_bootstrap_summary.csv": "a21155abc05e374856bef67408be5eefcc174b31dd421fde7c6548ef16287cfe",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/ungadm_outcome_robustness/postreview/run_manifest.csv": "7e67ef1d0e013c4c08eb8ce31b6e82ac3dc0a2f7b829181522c5e74178d10c0e",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/ungadm_outcome_robustness/postreview/sdid_dm_balance.csv": "82e048dfce0ccd9393f63b1d06ed7ce9d283be248b6fd121b6168472745adc7c",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/ungadm_outcome_robustness/postreview/sdid_dm_rank_inference_harmonized.csv": "ee03666e2ab09b2cfc5d39ac93e2bab645b94d925cf041906f9a081798fd1814",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/ungadm_outcome_robustness/postreview/sdid_dm_time_weights.csv": "fd4bffca8b1ea61b6db5d82ae5c3470e773984928c6a3686374272bc83b92674",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/ungadm_outcome_robustness/postreview/sdid_inference_notes.csv": "22da2cddc57e222ab5a1c631f41d56876453d029f939f70fbd7d15dfe7bf6595",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/data/processed/diagnostics/ungadm_outcome_robustness/postreview/series_divergence_by_country.csv": "638a57410a83d31710d95607c23b64dc8210c28a262cd60de7caf5cb6672bd31",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/scripts/diagnostics/analyze_ex_top1_salience.R": "e012515c64f2e264488889faf7f0a00548a44db42ba12056b14adb56e120d3bc",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/scripts/diagnostics/audit_ungadm_postreview_diagnostics.R": "777ab865be9c4a55ec05aa554b7ce2afc858a36350a41f5341ac4c5b4ddec497",
+    "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/scripts/diagnostics/collect_status_cue_salience_sources.py": "ee2676d54a77a3065ccce0e3718106b9398724d55df61ea290f230d92f86cb4c"
+  },
+  "execution_boundary": {
+    "dry_run": "1",
+    "writes": "Only own review_methods_final_candidate* records, bounded script and logs in E.",
+    "no_manuscript_edits": true,
+    "no_other_records_edited": true,
+    "no_targets_calls_or_configuration": true,
+    "no_estimators_resampling_apis_signals_commits_push": true,
+    "arithmetic": "Verification only; no new paper-destined numeric result.",
+    "limitations": [
+      "No final PDF existed at completion of substantive checks; candidate_v2.knit.md indicated rendering in progress. No waiting for rendering; root owns visual QA.",
+      "No rebuild freshness certificate, whole-paper causal/identification approval, historical API provenance reconstruction, or execution approval.",
+      "Initial auxiliary validation CSV reads failed from locale/delimiter; final own script uses explicit semicolon and UTF-8 locale, reads100rows, and completes successfully. Initial R locale startup warnings do not affect completed checks."
+    ]
+  },
+  "validation": {
+    "schema_validator": "VALID against exact final candidate",
+    "candidate_sha256_rechecked_at_delivery": true,
+    "note_sha256_rechecked_at_delivery": true
+  }
+}

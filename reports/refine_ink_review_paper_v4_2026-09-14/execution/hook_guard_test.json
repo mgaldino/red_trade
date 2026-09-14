@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "marker_skips_all_mutating_actions": true,
+  "unmarked_repo_preserves_original_branch": true,
+  "global_hook_changed": false,
+  "git_actions_executed": false,
+  "test_scope": "In-memory proposed source; mocked repository discovery and all Git actions"
+}

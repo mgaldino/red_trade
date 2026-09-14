@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "abstract_byte_identical": true,
+    "abstract_sha_matches_review": true,
+    "inline_R_expressions_identical": true,
+    "Figure2_numeric_prefix_identical": true,
+    "reviewed_sources_unchanged": true,
+    "numeric_conclusion_paragraph_identical": true
+  },
+  "source_checks": {
+    "data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/main_summary.csv": true,
+    "data/processed/diagnostics/china_top_m2_goods_status_current_min5/m2_goods_status_current_min_duration_sample_counts_2026-05-20.csv": true,
+    "_targets/meta/meta": true
+  },
+  "candidate_sha256": "fa40c4395abea8a7b94f5539eb4fc60bde5dcf8e4e4a7825edd4043ea32093f0",
+  "reviewed_v1_sha256": "82c811def270d266f8ef4541d6fc8afecb6adfe980cda6260d84439714bb340c",
+  "scope": "Carry-forward of independent numeric gate: item27 changes the prose suffix of the body detail line but leaves its numeric prefix, abstract, conclusion, every inline R expression and source inputs unchanged. No arithmetic repeated."
+}

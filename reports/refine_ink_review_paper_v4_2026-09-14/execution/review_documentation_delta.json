@@ -1,0 +1,275 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "paper_v4-documentation-delta:fa40c4395abe:round2",
+  "reviewer_role": "Independent documentation reviewer, distinct from round-2 integration",
+  "source": {
+    "reviewed_artifact": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+    "sha256": "fa40c4395abea8a7b94f5539eb4fc60bde5dcf8e4e4a7825edd4043ea32093f0",
+    "artifact_intact": true,
+    "prior_artifact": "reports/refine_ink_review_paper_v4_2026-09-14/execution/candidate_v1.Rmd",
+    "prior_sha256": "82c811def270d266f8ef4541d6fc8afecb6adfe980cda6260d84439714bb340c"
+  },
+  "completion_gate": {
+    "path": "reports/refine_ink_review_paper_v4_2026-09-14/execution/integration_round2_final.txt",
+    "sha256": "1fb285c422c419dc34950f621e2d4ea07d8b207517b36bc4ada19a514452d422",
+    "observed_before_final_candidate_read": true
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "review_sources": [
+    {
+      "review_id": "prior-documentation-review-md",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/execution/review_documentation.md",
+      "sha256": "37044a151c8c6d431f2f1cf8779a5899f116af5c7cd140e96cd8276e8dc57a82"
+    },
+    {
+      "review_id": "prior-documentation-review-json",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/execution/review_documentation.json",
+      "sha256": "bcae054b3421f1f483c59d202a66f0a19d990aa6dbbca5ed77d2a747e255162b"
+    },
+    {
+      "review_id": "root-decisions",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/execution/orchestrator_decisions.md",
+      "sha256": "aebf4acbfcd4158b2d459df06fa5f652d18c74f549a9d55a219891a18c94618d"
+    },
+    {
+      "review_id": "prior-methods-review",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/execution/review_methods.json",
+      "sha256": "77a8306cc27f233c3bd25b064fcce578030a11bbd4e98606726fa883d0e3cd65"
+    },
+    {
+      "review_id": "prior-abstract-review",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/execution/review_abstract.json",
+      "sha256": "906f9c6e22c1dbb24de156419501ad6756140d2548652ca9db4537eff0d85628"
+    },
+    {
+      "review_id": "round2-integration-md",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/execution/integration_round2.md",
+      "sha256": "192837489b319f52209e115a1c82c7ac1a6536b048574391b81d3e9ee729666a"
+    },
+    {
+      "review_id": "round2-integration-json",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/execution/integration_round2.json",
+      "sha256": "802841264f5733c54463f917b5d9fb393f516a5c9f42cadf468cc593f3d0ec5f"
+    },
+    {
+      "review_id": "round2-exact-patch",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/execution/integration_round2.patch",
+      "sha256": "14208cb02fa2744750594b6c94825fd36a3378737b14dfa325ee969e50c1c1c4"
+    },
+    {
+      "review_id": "item6-active-producer",
+      "path": "scripts/diagnostics/audit_brazil_sdid_commodity_no_covariates.R",
+      "sha256": "1365bbf84b17d9af83ab3afd4a8ca15ee500b8a37eb437d8df7fba0b3ec66a4b"
+    },
+    {
+      "review_id": "item6-fit-helper",
+      "path": "scripts/diagnostics/sdid_placebo_helpers.R",
+      "sha256": "6d7cd66cde191c2748e9310359506ce1398cb8897a606803647cb0a46e2261f7"
+    },
+    {
+      "review_id": "shared-data-producer",
+      "path": "scripts/functions.R",
+      "sha256": "84e25bbf23209b14694b54a2258f4ccf5872a9a7a9450068790c156fdfd0ba3a"
+    },
+    {
+      "review_id": "item27-raw-series",
+      "path": "raw data/dataverse_files-2/IdealpointestimatesAll_Jun2024.csv",
+      "sha256": "94ce7440bdba9252b2f4294333291585748dfe84dbaf56fe9f26e1af38f66198"
+    },
+    {
+      "review_id": "item27-prior-specialist-record",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/execution/corpus_votes_bibliography.json",
+      "sha256": "145621c936f7296b8b7c466ea7d9417e6b4e1eb025039ef360e6e51ada1f55c8"
+    },
+    {
+      "review_id": "item27-prior-specialist-events",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/execution/corpus_votes_bibliography_events.jsonl",
+      "sha256": "504bff2b3503c96525173b9f059b2f9dbd55e7d6d92bffd75f4a949afed94d1a"
+    },
+    {
+      "review_id": "bibliography-continuity",
+      "path": "synth-trade-china.bib",
+      "sha256": "de4b7417fce821483e520ebe8c97f9be1ec706c2ab5136be62e06ffb53ca82bc"
+    }
+  ],
+  "scope": {
+    "type": "bounded_post_correction_documentation_delta",
+    "items": [6, 27],
+    "final_lines": [338, 756],
+    "whole_manuscript_review_repeated": false,
+    "bibliography_primary_source_review_repeated": false,
+    "pdf_reviewed": false
+  },
+  "diff_verification": {
+    "v1_lines": 2514,
+    "v2_lines": 2514,
+    "replacement_hunks": 2,
+    "insertions": 2,
+    "deletions": 2,
+    "changed_final_lines": [338, 756],
+    "direct_context3_diff_sha256": "14208cb02fa2744750594b6c94825fd36a3378737b14dfa325ee969e50c1c1c4",
+    "archived_patch_sha256": "14208cb02fa2744750594b6c94825fd36a3378737b14dfa325ee969e50c1c1c4",
+    "direct_diff_matches_archived_patch": true,
+    "all_other_bytes_match_v1": true,
+    "prior_documentation_review_remains_applicable_to_unaffected_bytes": true
+  },
+  "affected_components": [
+    {
+      "item": 6,
+      "finding_id": "RM-S006",
+      "verdict": "PASS_CORRECTED",
+      "candidate_location": "/private/tmp/refine-review-20260914/candidate_v2.Rmd:756",
+      "source_locations": [
+        "scripts/functions.R:628-666",
+        "scripts/diagnostics/audit_brazil_sdid_commodity_no_covariates.R:97-119",
+        "scripts/diagnostics/audit_brazil_sdid_commodity_no_covariates.R:158-164",
+        "scripts/diagnostics/sdid_placebo_helpers.R:107-113",
+        "reports/refine_ink_review_paper_v4_2026-09-14/execution/review_methods.json:84-107"
+      ],
+      "evidence": [
+        "The stored input support is 1997-2016 under clean_synth_data's default year_end = 2017; the prior methods review independently records 1,920 stored rows over that support.",
+        "The active producer constructs and standardizes exposure and Pink Sheet interactions before calling sdid_fit_spec.",
+        "The helper then restricts the fit to 1997-2015.",
+        "Final line 756 states the same population and order for both interaction types without changing any value or result."
+      ]
+    },
+    {
+      "item": 27,
+      "finding_id": "ROOT-I027-MAIN-TEXT",
+      "verdict": "PASS_CORRECTED",
+      "candidate_location": "/private/tmp/refine-review-20260914/candidate_v2.Rmd:338",
+      "source_locations": [
+        "/private/tmp/refine-review-20260914/candidate_v2.Rmd:1310-1330",
+        "scripts/functions.R:313-326",
+        "raw data/dataverse_files-2/IdealpointestimatesAll_Jun2024.csv:sessions 60-67, BRA and CHN",
+        "reports/refine_ink_review_paper_v4_2026-09-14/execution/corpus_votes_bibliography.json:132-159",
+        "reports/refine_ink_review_paper_v4_2026-09-14/execution/review_methods.json:226-232"
+      ],
+      "evidence": [
+        "Final line 338 now matches the calibrated appendix distinction between period-average change and annual volatility.",
+        "On the IdealPointAll series actually selected by the Figure 8 chunk, 2005-2008 and 2009-2012 means are approximately -0.154 and -0.487 for Brazil and -0.709 and -0.770 for China.",
+        "On that plotted series, mean absolute annual change over 2005-2012 is approximately 0.073 for Brazil and 0.129 for China.",
+        "The corrected sentence makes no variance attribution and no longer states that Brazil accounts for most of the bilateral-distance reduction."
+      ]
+    }
+  ],
+  "evidence_notes": [
+    {
+      "note_id": "EVIDENCE-I027-COLUMN",
+      "status": "CONFIRMED_NON_CANDIDATE_RECORD_IMPRECISION",
+      "subject": "Column used for the prior item-27 descriptive summaries",
+      "evidence": [
+        "The Figure 8 chunk selects ideal_point_all, which get_unga_data maps from the raw IdealPointAll column.",
+        "The command preserved in corpus_votes_bibliography_events.jsonl computed the reported -0.156/-0.481, -0.704/-0.769, and 0.121/0.073 summaries from Q50.All instead.",
+        "Independent read-only arithmetic on the plotted IdealPointAll column yields -0.154/-0.487 for Brazil, -0.709/-0.770 for China, and mean absolute annual changes 0.073/0.129."
+      ],
+      "candidate_effect": "none",
+      "reasoning": "The prior record's numerical column label is imprecise, but the actually plotted series supports the same qualitative period-average versus annual-volatility distinction in final line 338.",
+      "disposition": "Record the evidence distinction here; do not edit the prior reviewer files or the candidate."
+    }
+  ],
+  "abstract_projection": {
+    "v1_v2_byte_identical": true,
+    "line_sha256_including_lf": "9accf3cbd103cffc29f82136030266d70f13900f6b01d4085a0962ea43a7ef2f",
+    "matches_review_abstract_json": true,
+    "arithmetic_repeated": false
+  },
+  "bibliography_continuity": {
+    "candidate_bibliography_paragraphs_changed_in_round2": false,
+    "bib_sha256_matches_prior_review": true,
+    "primary_source_checks_repeated": false,
+    "reason": "The round-2 diff is limited to items 6 and 27, and the bibliography file hash is unchanged."
+  },
+  "findings": [
+    {
+      "finding_id": "RM-S006",
+      "source_review": "review_methods.json and orchestrator_decisions.md",
+      "quoted_finding": "The v1 wording incorrectly said that the interactions were standardized over the estimation panel.",
+      "type": "false_statement",
+      "severity": "minor",
+      "scientific_dimension": "implementation fidelity",
+      "held_decision": false,
+      "status": "REFUTED",
+      "source_locations": [
+        "/private/tmp/refine-review-20260914/candidate_v2.Rmd:756",
+        "scripts/diagnostics/audit_brazil_sdid_commodity_no_covariates.R:97-119,158-164",
+        "scripts/diagnostics/sdid_placebo_helpers.R:107-113"
+      ],
+      "defect_evidence": [],
+      "refuting_evidence": [
+        "The v2 sentence identifies the stored 1997-2016 input panel and the subsequent 1997-2015 estimation restriction for both exposure and price interactions.",
+        "The wording matches the unchanged active producer and helper."
+      ],
+      "mechanical_checks": [
+        "Direct v1-to-v2 diff localizes the only item-6 change to final line 756.",
+        "Relevant producer and helper hashes match those recorded by the prior methods review."
+      ],
+      "reasoning": "The historical defect is present in v1 but not in the reviewed v2 artifact. It is therefore refuted as a current-candidate defect.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Close RM-S006 for candidate_v2; no further item-6 edit is indicated."
+    },
+    {
+      "finding_id": "ROOT-I027-MAIN-TEXT",
+      "source_review": "orchestrator_decisions.md",
+      "quoted_finding": "The paragraph beside Figure 2 still characterized China as comparatively stable and attributed most of the reduction to Brazil without distinguishing period averages from annual volatility.",
+      "type": "scope_or_consistency",
+      "severity": "minor",
+      "scientific_dimension": "descriptive interpretation",
+      "held_decision": false,
+      "status": "REFUTED",
+      "source_locations": [
+        "/private/tmp/refine-review-20260914/candidate_v2.Rmd:338",
+        "/private/tmp/refine-review-20260914/candidate_v2.Rmd:1310-1330",
+        "raw data/dataverse_files-2/IdealpointestimatesAll_Jun2024.csv:sessions 60-67, BRA and CHN"
+      ],
+      "defect_evidence": [],
+      "refuting_evidence": [
+        "The v2 sentence distinguishes limited period-average change from annual volatility and describes Brazil's movement as more sustained.",
+        "The sentence matches the appendix and the unchanged cited raw series and contains no variance-attribution claim."
+      ],
+      "mechanical_checks": [
+        "Direct v1-to-v2 diff localizes the only item-27 change to final line 338.",
+        "Read-only descriptive checks on cited rows reproduce the prior reviewer evidence."
+      ],
+      "reasoning": "The residual v1 inconsistency is absent from v2, and the replacement is supported by the same source series used in the appendix.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Close the item-27 main-text harmonization for candidate_v2; no further edit is indicated."
+    }
+  ],
+  "summary": {
+    "total": 2,
+    "confirmed": 0,
+    "partial": 0,
+    "refuted": 2,
+    "unresolved": 0,
+    "held_decisions": 0,
+    "new_findings": 0
+  },
+  "adjudication": {
+    "verdict": "NO_CONFIRMED_DEFECTS",
+    "checked_at": "2026-09-14T14:36:49-03:00",
+    "reasons": [
+      "The final artifact was reviewed only after the required completion marker appeared and its SHA-256 was fixed.",
+      "The exact v1-to-v2 diff contains only the two root-authorized corrections and matches the archived patch byte-for-byte.",
+      "Both replacements are faithful to the unchanged original producer/data and close the prior documentation issues without introducing new claims or computations.",
+      "All unaffected bytes inherit the prior bounded documentation review, and the abstract projection retains the hash recorded by the independent abstract review."
+    ]
+  },
+  "execution_limits": {
+    "dry_run_environment": "CODEX_AUTO_COMMIT_PUSH_DRY_RUN=1 preserved",
+    "writes": [
+      "reports/refine_ink_review_paper_v4_2026-09-14/execution/review_documentation_delta.md",
+      "reports/refine_ink_review_paper_v4_2026-09-14/execution/review_documentation_delta.json"
+    ],
+    "performed": "Read-only hash and byte-diff checks, localized source and record inspection, and static descriptive arithmetic on the cited existing rows.",
+    "not_performed": "No manuscript or candidate edit, PDF rendering, targets or configuration execution/mutation, estimation or resampling, API call, commit, push, process signal, or lock operation."
+  }
+}

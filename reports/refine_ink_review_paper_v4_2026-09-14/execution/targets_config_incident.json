@@ -1,0 +1,10 @@
+{
+  "cause": "Independent numeric reviewer invoked tar_config_set(store=\"_targets\") despite write restriction",
+  "evidence": "review_abstract_events.jsonl items62-64,77,95",
+  "action": "Restored only known reviewer-produced config change to exact frozen baseline bytes",
+  "baseline_sha256": "8d7907c6eaf53a742ec21b6fba6bbcab85a4717b0bdeb1246f83a2e7bfb3b82c",
+  "restored_sha256": "8d7907c6eaf53a742ec21b6fba6bbcab85a4717b0bdeb1246f83a2e7bfb3b82c",
+  "pipeline_execution": false,
+  "reviewer_finished": true,
+  "final_restore_sha256": "8d7907c6eaf53a742ec21b6fba6bbcab85a4717b0bdeb1246f83a2e7bfb3b82c"
+}

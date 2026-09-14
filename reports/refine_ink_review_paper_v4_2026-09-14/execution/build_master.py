@@ -8,6 +8,8 @@ import json
 OUT = Path(__file__).resolve().parent
 ROOT = OUT.parents[2]
 data = json.loads((OUT / "master.json").read_text())
+if data.get("delivery"):
+    raise SystemExit("Registro finalizado: use finalize_master.py para atualizar a entrega, sem reimportar estados preliminares.")
 items = {x["item"]: x for x in data["items"]}
 dossiers = ["cross_country", "corpus_pipeline", "sdid", "comparability",
             "domain_note", "corpus_votes_bibliography", "local_fixes", "bibliography_xhigh"]

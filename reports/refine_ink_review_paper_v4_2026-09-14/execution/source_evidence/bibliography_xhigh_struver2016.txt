@@ -1,0 +1,1508 @@
+Strüver, Georg
+
+
+
+Working Paper
+What Friends Are Made Of: Bilateral Linkages and
+Domestic Drivers of Foreign Policy Alignment with
+China
+
+GIGA Working Papers, No. 209
+
+
+Provided in Cooperation with:
+GIGA German Institute of Global and Area Studies
+
+
+
+
+Suggested Citation: Strüver, Georg (2012) : What Friends Are Made Of: Bilateral Linkages
+and Domestic Drivers of Foreign Policy Alignment with China, GIGA Working Papers, No. 209,
+German Institute of Global and Area Studies (GIGA), Hamburg
+
+
+
+
+This Version is available at:
+http://hdl.handle.net/10419/66850
+
+Standard-Nutzungsbedingungen:                                          Terms of use:
+
+Die Dokumente auf EconStor dürfen zu eigenen wissenschaftlichen        Documents in EconStor may be saved and copied for your
+Zwecken und zum Privatgebrauch gespeichert und kopiert werden.         personal and scholarly purposes.
+
+Sie dürfen die Dokumente nicht für öffentliche oder kommerzielle       You are not to copy documents for public or commercial
+Zwecke vervielfältigen, öffentlich ausstellen, öffentlich zugänglich   purposes, to exhibit the documents publicly, to make them
+machen, vertreiben oder anderweitig nutzen.                            publicly available on the internet, or to distribute or otherwise
+                                                                       use the documents in public.
+Sofern die Verfasser die Dokumente unter Open-Content-Lizenzen
+(insbesondere CC-Lizenzen) zur Verfügung gestellt haben sollten,       If the documents have been made available under an Open
+gelten abweichend von diesen Nutzungsbedingungen die in der dort       Content Licence (especially Creative Commons Licences), you
+genannten Lizenz gewährten Nutzungsrechte.                             may exercise further usage rights as specified in the indicated
+                                                                       licence.
+GIGA Working Papers serve to disseminate the research results of work in progress prior to publicaton to encourage the exchange of ideas and academic debate.
+Inclusion of a paper in the Working Papers series does not constitute publication and should not limit publication in any other venue. Copyright remains with the authors.
+                                                                                                                                                                                  November 2012
+                                                    GIGA Research Programme:
+
+                                                                                                                               What Friends Are Made Of:
+                                                                                          ___________________________
+                                                                                                                        Bilateral Linkages and Domestic Drivers   Georg Strüver
+                                                                                                                                                                                                  www.giga-hamburg.de/workingpapers
+                                        Power, Norms and Governance in International Relations
+                                                                                                                        of Foreign Policy Alignment with China
+                                                                                                                                                                                  No 209
+GIGA Working Papers                                                                209/2012
+
+
+Edited by the
+GIGA German Institute of Global and Area Studies
+Leibniz‐Institut für Globale und Regionale Studien
+
+
+The GIGA Working Papers series serves to disseminate the research results of work in
+progress prior to publication in order to encourage the exchange of ideas and academic
+debate. An objective of the series is to get the findings out quickly, even if the presenta‐
+tions are less than fully polished. Inclusion of a paper in the GIGA Working Papers series
+does not constitute publication and should not limit publication in any other venue. Copy‐
+right remains with the authors. When working papers are eventually accepted by or pub‐
+lished in a journal or book, the correct citation reference and, if possible, the corresponding
+link will then be included on the GIGA Working Papers website at
+<www.giga‐hamburg.de/workingpapers>.
+
+
+GIGA Research Programme “Power, Norms and Governance in International Relations”
+Copyright for this issue: © Georg Strüver
+WP Coordination and English‐language Copy Editing: Melissa Nelson
+Editorial Assistance and Production: Silvia Bücke
+
+
+All GIGA Working Papers are available online and free of charge on the website
+<www.giga‐hamburg.de/workingpapers>.
+For any requests please contact:
+E‐mail: <workingpapers@giga‐hamburg.de>
+
+
+The GIGA German Institute of Global and Area Studies cannot be held responsible for
+errors or any consequences arising from the use of information contained in this Working
+Paper; the views and opinions expressed are solely those of the author or authors and do
+not necessarily reflect those of the Institute.
+
+
+GIGA German Institute of Global and Area Studies
+Leibniz‐Institut für Globale und Regionale Studien
+Neuer Jungfernstieg 21
+20354 Hamburg
+Germany
+E‐mail: <info@giga‐hamburg.de>
+Website: <www.giga‐hamburg.de>
+
+
+
+
+GIGA Working Papers                                                                       209/2012
+                       What Friends Are Made Of:
+                Bilateral Linkages and Domestic Drivers
+                of Foreign Policy Alignment with China
+
+
+Abstract
+
+With China’s emergence as a global economic and political power, it is commonly as‐
+sumed that its leadership’s influence in international politics has increased considerably.
+However, systematic studies of China’s impact on the foreign policy behavior of other
+states are rare and generally limited to questions regarding economic capabilities and the
+use of coercive power. This paper seeks to contribute to the literature on China’s global
+political rise by taking a broader perspective. Drawing on voting data from the UN Gen‐
+eral Assembly for the last two decades, it explores the plausibility of different explanations
+for foreign policy similarity: economic, diplomatic and military linkages; domestic institu‐
+tional similarities; and parallel problem‐solving processes. The logistic regression analyses
+find that high similarity levels correlate with shared regime characteristics and compara‐
+ble patterns of sociopolitical globalization. The results further indicate that foreign aid and
+arms trading seem to help buy support in global politics.
+
+Keywords: China, foreign policy similarity, UN General Assembly, voting, panel data
+
+
+
+
+Georg Strüver
+is a researcher within the project “Contested Leadership in International Relations: Power
+Politics in South America, South Asia, and Sub‐Saharan Africa,” which is financed by the
+Volkswagen Foundation, and a doctoral student at the University of Hamburg.
+Contact:    <georg.struever@giga‐hamburg.de>
+Website:    <http://staff.en.giga‐hamburg.de/struever>
+
+
+
+
+209/2012                                                                        GIGA Working Papers
+                              What Friends Are Made Of:
+                      Bilateral Linkages and Domestic Drivers of
+                         Foreign Policy Alignment with China
+
+                                               Georg Strüver
+
+
+
+
+Article Outline
+1 Introduction
+2 China’s Political Sway: Existing Research
+3 Drivers of Foreign Policy Similarity
+4 Research Design
+5 Quantitative Findings
+6 Conclusion
+Bibliography
+
+
+
+
+1 Introduction
+
+The People’s Republic of China (PRC) is emerging as a key player at the center of world poli‐
+tics. Regardless of whether the years 2004 and 2005 are cited as a “turning point in Chinese
+diplomacy” (Lam 2006: 160) or whether the first evidence of the state leadership’s “growing
+                                                                                                   1
+assertiveness” in global politics is dated back to 2006 (Medeiros 2009: 187–188), Beijing is
+reaping the rewards of three decades of an economic rise and of foreign policy adjustments
+
+
+1   An earlier draft of this paper was presented within the GIGA research team entitled Foreign Policy Strategies
+    in the Multipolar System. The author thanks the research team’s members, as well as Anja Jetschke, for their
+    very useful and valuable comments. The research for this article has been funded by the Volkswagen Founda‐
+    tion as part of the “Contested Leadership in International Relations: Power Politics in South America, South
+    Asia, and Sub‐Saharan Africa” project.
+
+WP 209/2012                                                                                  GIGA Working Papers
+Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China                      5
+
+
+
+in the 1990s, both of which laid the foundation for “increased international activism” (Gold‐
+stein 2005: 119) and the country’s “emergence as an active player in the international arena”
+(Medeiros and Fravel 2003: 22). Be it through the world climate talks, the reform of the global
+economic and financial system or international security challenges, the country’s leadership
+is seizing its chances to contribute to the building of a multipolar international system and to
+protect and pursue its interests in global politics.
+     In advancing its objectives, China’s leadership does not operate by itself. A central feature
+of the country’s rise in international affairs has been its ability to align and cooperate with
+other states. In recent years Beijing has coordinated policy positions and jointly enhanced dip‐
+lomatic leverage by drawing on intergovernmental clubs with (re)emerging powers in the con‐
+text of BRICS and BASIC, and with Russia and its Central Asian neighbors through the
+Shanghai Cooperation Organization (SCO) – although with varying degrees of success. Within
+the BRICS group, for instance, China finds rhetorical support for its commitment to multilat‐
+eral diplomacy and the foreign policy principles of nonaggression and noninterference in
+domestic affairs. In 2011, Brazil, Russia, India and China abstained from the vote on the “No‐
+Fly Zone” resolution in the United Nations Security Council (UNSC), claiming that the Libyan
+                                                                2
+crisis should be ended using diplomatic means. Although this consensus crumbled in early
+2012 when the council began voting on Syria, the BRICS members still managed to insist that
+                                                                                                      3
+any solutions to the crises in Syria and Iran should be based on political dialogue.
+     However, support for Chinese foreign policy objectives does not just stem from other
+(re)emerging powers. Besides Russia, more than a quarter of the UN member states reflected
+China’s position on Syria by not attending the respective UN General Assembly’s (UNGA)
+plenary meeting in February 2012, by abstaining from the vote, or by voting against the Arab‐
+backed resolution. In Latin America, for instance, the member states of the Alianza Bolivari‐
+ana (ALBA), with the exception of Antigua and Barbuda, demonstrated their disagreement
+
+
+2   Although it initially voted in favor of the UNSC resolution, South Africa later adopted the BRIC members’ po‐
+    sition. See Security Council (2011), Security Council Approves ‘No‐Fly Zone’ over Libya, Department of Public In‐
+    formation, News and Media Division, New York, online: <www.un.org/News/Press/docs/2011/sc10200.doc.
+    htm> (12 September 2011), and Muni, S. D. (2011), BRICS as a Block, South Asian Sonundings, online: <http://
+    blog.nus.edu.sg/southasiansoundings/2011/04/23/brics‐as‐a‐block/> (12 September 2011). For the formal agree‐
+    ment on the principles, see People’s Daily Online (2011), “Sanya Declaration of the BRICS Leaders Meeting,”
+    online: <http://english.people.com.cn/90001/90776/90883/7351064.html> (12 September 2011).
+3   See BRICS Partnership for Global Stability, Security and Prosperity (2012), Fourth BRICS Summit’s Delhi Declara‐
+    tion, New Delhi, online: <www.bricsindia.in/delhi‐declaration.html> (29 March 2012), and The Washington Post
+    (2012), “BRICS summit: Emerging economies condemn military threats against Iran, Syria,” online: <www.wash‐
+    ingtonpost.com/world/asia_pacific/brics‐summit‐emerging‐economies‐condemn‐military‐threats‐against‐iran‐
+    syria/2012/03/29/gIQA48JuiS_story.html> (29 March 2012). For the UN voting records, consult the UNGA’s
+    resolution, Department of Public Information, News and Media Division (2011),The situation in the Syrian Arab
+    Republic, New York, online: <www.un.org/News/Press/docs//2012/ga11207.doc.htm> (6 April 2012), and the
+    UNSC’s negotiations on The United Nations Security Council (2012), The Situation in the Middle East, online:
+    <www.un.org/ga/search/view_doc.asp?symbol=S/PV.6711> (7 August 2012).
+
+GIGA Working Papers                                                                                       WP 209/2012
+6                          Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China
+
+
+
+
+with the UN resolution in one way or another. Half of the Southern African Development
+Community’s (SADC) members did the same.
+    For China, a helping hand in pursuing core interests has not been restricted to global high
+politics. When China boycotted the Nobel Peace Prize Ceremony in 2010, another 16 states
+joined in. Not only were the usual suspects – such as Russia, Pakistan, Cuba and Sudan – ab‐
+sent, but Argentina and Colombia also expressed sympathy with Beijing’s position by sending
+only low‐ranking representatives and not their ambassadors to Oslo’s City Hall.4 In addition,
+since the early years of this century an increasing number of states, especially in the Global
+South, have been granting China full market economic status within the World Trade Organi‐
+zation – a core interest of the Chinese leadership not only for status reasons but also because it
+cushions against the penalties of WTO dispute settlements (Medeiros 2009: 64, 85).
+    The time in which China was “bereft of friends,” “a beacon to no one – and, indeed, an
+ally to no one” is thus certainly over (Segal 1999: 33; see also Sutter 2003). Although this
+claim faces only limited objections in the academic and political debates and has attracted
+substantial attention within the “China rise” literature, little systematic research exists on
+why other states align with China. The few studies that do exist not only come to contradic‐
+tory conclusions but also merely focus, narrowly, on the question of whether or not China’s
+economic power is translated into direct political influence. They treat alternative causes, if at
+all, as secondary.
+    This paper contributes to the literature on China’s international rise by asking what fac‐
+tors most often explain the similarities between other states’ foreign policy choices and Chi‐
+na’s diplomatic interests. It argues that bilateral foreign policy similarity can be driven by
+economic, diplomatic and military linkages; institutional, socioeconomic and cultural affini‐
+ties; and parallel problem‐solving processes. To test the plausibility of the different explana‐
+tions, I employ logistic regression estimations on a large panel of countries using available
+observations for the period from 1990 to 2008. To measure the dependent variable, I draw on
+UNGA voting data compiled by Strezhnev and Voeten (2012) and calculate a novel chance‐
+corrected similarity measure that has been proposed by Häge (2011).
+    The paper proceeds as follows: First, I review the literature on China’s economic and po‐
+litical rise, focusing on studies that assess the country’s regional and global influence and
+relevant diplomatic strategies. Second, I discuss different explanations for foreign policy sim‐
+ilarity, drawing mainly on literature on vote buying in the UN and on policy convergence,
+and formulate corresponding hypotheses. In the third section I present the research design
+and provide a more detailed description of the dependent variable, foreign policy similarity
+with China, and its development over the period from 1990 to 2011. In the fourth section, I
+
+
+4   See The Norwegian Nobel Committee (2010), Embassies represented at the Nobel Prize Ceremony on December 10,
+    online: <http://nobelpeaceprize.org/en_GB/embassies‐2010/> (13 September 2011), and The Wall Street Journal
+    (2012), Empty Chair Emphasizes Nobel Schism, online: <http://online.wsj.com/article/SB100014240527487044
+    57604576011132100260582.html> (13 September 2011).
+
+GIGA Working Papers                                                                                         WP 209/2012
+Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China                  7
+
+
+
+present and discuss the quantitative results. The conclusion summarizes the paper’s findings
+and points out further areas of research.
+
+
+
+2 China’s Political Sway: Existing Research
+
+Studies within the “China rise” literature address Beijing’s ability to win other countries’
+support for its own political objectives in global and regional affairs mainly as a consequence
+of its trade and financial power. Lampton (2008) identifies five economic dimensions of Chi‐
+na’s growing international heft: the “power of the buyer, the seller, the investor, the develop‐
+ment assistance provider, and the innovator” (ibid.: 88, italics in original). According to Zhu
+(2010: 2), the country’s economic resilience and its stockpile of foreign exchange reserves
+make “it possible for China to expand trade and investment and enhance its political influ‐
+ence in every corner of the world.” Due to its trade relations with weak and fragile states,
+China is in a particularly beneficial position to use its economic leverage to influence such
+countries (Hart and Jones 2010). In Africa, both trade and largely untied foreign aid (except
+for the One‐China policy) translate into political power as they “help to cultivate the good‐
+will of African leaders who provide Beijing with diplomatic support and valuable contracts
+as a matter of reciprocity” (Tull 2006: 476, 468). In other regions, however, the payoff of such
+economic strategies seems less obvious. As Jenkins (2010: 830) has observed, except for in the
+smaller countries in Central America and the Caribbean, “there are limited opportunities in
+Latin America for China to increase its influence through grants and concessionary loans”
+(see also Breslin 2011; Drezner 2009).
+     If we take a closer look, we see that even in Asia evidence of China’s economic leverage is
+less conclusive than is often assumed. After conducting several case studies on Chinese at‐
+tempts to exert power in Southeast Asia, Goh (2011: 24) finds that “the most notable elements
+of China’s growing power – its economic strength and integration into the world economy –
+are manifested in structural, and often unintentional, ways” and stresses that “China does not
+thus far have a significant record of managing to get its smaller Southeast Asian neighbors to
+do what they would not otherwise have done.”5 Medeiros et al. (2008: 239) conclude that
+“China does not appear to have had much success in translating economic interactions into po‐
+litical influence” in six Asian‐Pacific countries. Finally, the only large‐N cross‐national study on
+this topic equally calls into question a straightforward link between China’s growing economic
+might and its political influence. Drawing on states’ dependence on Chinese in‐ and outbound
+foreign investments and exports to the PRC in 2007 as key explanatory variables, Kastner
+(2010) finds no systematic and significant relation between these economic ties and a state’s
+
+
+5   Goh (2011) assesses Beijing’s power as a multiplier (promoting economic regionalism), as well as its power to
+    persuade (countering the “China threat” discourse) and its power to prevail (Taiwan status, South China Sea
+    disputes) vis‐à‐vis ten Southeast Asian states.
+
+GIGA Working Papers                                                                                  WP 209/2012
+8                             Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China
+
+
+
+
+propensity to meet Beijing’s interests with regard to the referendum on Taiwan’s UN participa‐
+tion in 2008, Beijing’s Tibet policy, and the recognition of China’s status as a market economy.
+     Outside the economic realm, China’s rise in international affairs and its ability to win polit‐
+ical support has been related to the Communist leadership’s embracing of soft‐power strate‐
+gies and its appeal as a development model, particularly to authoritarian countries in less de‐
+veloped world regions (Lampton 2008: 141–142). For instance, with the exception of Singapore
+and Vietnam, the Southeast Asian countries did not approve Tokyo’s bid for a permanent seat
+on the UNSC and thus gave in to Beijing’s diplomatic campaigns (Yoshimatsu 2008: 15). Soft
+power is further believed to have helped China’s leadership gain influence both in Asian and
+African countries, and to a lesser degree also in Latin American countries (Ellis 2011b; Kur‐
+lantzick 2007, 2009; Sutter 2003).6 However, one has to bear in mind that soft power from a
+Chinese perspective entails “anything outside the military and security realm, including not
+only popular culture and public diplomacy but also more coercive economic and diplomatic
+levers like aid and investment and participation in multilateral organizations” (Kurlantzick
+2007: 6; see also Glaser and Dooley 2009).
+     For other authors, China’s emergence as an influential power in international politics has
+been facilitated by a general shift from a “responsive” to a “proactive diplomacy,” state and
+public diplomacy, and attempts to reshape regional orders (Zhang 2010: 41; Zhu 2010: 6–7).
+One important aspect of this shift has been the establishment of comprehensive and strategic
+partnerships with individual countries, which serve as diplomatic instruments for China to
+expand international influence and “generate bargaining leverage in its bilateral interac‐
+tions” (Medeiros 2009: 86; see also Cheng and Zhang 2002). This logic is also translated to the
+multilateral context, where it takes the form of “forum diplomacy,” through which Beijing
+has been able to engage large groups of countries and facilitate Chinese influence in the re‐
+spective regions (Medeiros 2009; Su 2009; Zhang 2010).
+
+
+
+3 Drivers of Foreign Policy Similarity
+
+The above‐cited works provide a great deal of knowledge on China’s use of diplomacy and
+economic statecraft to achieve its foreign policy objectives. Nevertheless, the empirical evi‐
+dence supporting these assumptions is often anecdotal and, with regard to the more system‐
+atic studies, the results are not only ambiguous but also restricted to tools of economic state‐
+craft as the main explanatory factors.
+     This paper argues that a better understanding of the similarities in the foreign policy in‐
+terests of China and other states is gained by taking a step back and considering the Chinese
+
+
+6   Other authors, in contrast, argue that generally and despite the importance the Chinese leadership attaches to
+    soft power and public diplomacy, the soft‐power strategy has so far had only limited success (Gill and Huang
+    2006: 26; Li 2009: 16).
+
+GIGA Working Papers                                                                                            WP 209/2012
+Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China                      9
+
+
+
+government’s ability to coerce other states into accommodating its interests as just one of
+several explanatory factors. According to this broader perspective, similar interests may de‐
+velop on the basis of shared institutional and socioeconomic characteristics in domestic and
+international affairs as well as through strong bilateral relations (or linkages).
+
+
+3.1 Shared Institutional and Socioeconomic Attributes
+
+Influence through bilateral linkages is regarded as an important driving force behind foreign
+policy similarity. However, the likelihood of influence transmission within bilateral relations
+depends on country‐specific conditions: Studies on policy convergence, for instance, cite
+shared institutional characteristics, similar socioeconomic structures, and cultural likeness as
+factors which further facilitate cross‐national policy transfers (Knill 2005). In addition, coun‐
+tries facing parallel problems are expected to choose similar solutions (Holzinger and Knill
+2005). Countries integrated in comparable ways in global political and economic processes
+and exposed to similar problems, for instance, should be more likely to formulate parallel
+policy responses, especially in a context of shared institutional, socioeconomic and cultural
+attributes.
+     That said, foreign policy similarity may exist independently from bilateral linkages and
+China’s diplomatic strategies. Politically like‐minded countries may vote the same as China
+due to domestic interests. Empirical studies on voting behavior in the UNGA demonstrate
+that democratic governments are more inclined to vote with the US and other G7 countries
+because of shared principles (Dreher, Nunnenkamp, and Thiele 2008; Voeten 2000).7 Taking
+the reverse of this argument, it can be assumed that countries characterized by nondemocratic
+principles and values such as restrictions on freedom of expression, limited possibilities to
+participate in the political process, low competitiveness of representation and weak rule of
+law tend to vote the same as China – independently of the intensity of economic, military or
+diplomatic ties. Many politically “like‐minded” countries, for instance, voted together with
+China against the UNGA resolution on the human rights situation in Myanmar in 2010.8
+With its concern that “information transmitted via the Internet could threaten the ‘stability’
+of states,” China figures among several other authoritarian countries in the list of states
+which have co‐sponsored Russian resolutions on cyber security in the UNGA (Gjelten 2010).
+     The arguments made above lead to an initial set of hypotheses:
+
+
+7   Wang (1999: 205) argues that “developing countries with higher levels of democracy would vote more frequently
+    with the U.S. in the UN General Assembly than less democratic countries” because they “share such principles as
+    free speech, private property, elected representation, and other political interests.” See Kim and Russett (1996:
+    648) for further evidence that more democratic countries support resolutions on human and political rights
+    whereas less democratic countries are more inclined to favor self‐determination. These findings are corroborated
+    by research on government ideology in OECD countries and voting alignment with the US (Potrafke 2009).
+8   See the results of the UNGA vote on the “Situation of human rights in Myanmar” resolution, online:
+    <www.un.org/News/Press/docs//2010/ga11043.doc.htm> (9 April 2012).
+
+GIGA Working Papers                                                                                      WP 209/2012
+10                           Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China
+
+
+
+
+     Hypothesis 1a: “Like‐minded” countries tend to align more often with China’s foreign
+     policy interests independently of the existence of bilateral linkages due to shared insti‐
+     tutional characteristics.
+
+     Hypothesis 1b: Pressure from parallel problems induces similar foreign policy choices
+     independently of the existence of bilateral linkages.
+
+
+3.2 Economic, Military, and Diplomatic Linkages
+
+For the transmission of influence, bilateral linkage, understood as dense ties between China
+and other states, is nevertheless a precondition (Way and Levitsky 2007: 53, 54). It is antici‐
+pated that influence transmitted through bilateral ties is not limited to the direct imposition
+of policies but also operates on more indirect terms through the facilitation of anticipatory
+obedience as well as lesson‐drawing, transnational policy coordination and political coopera‐
+tion (Bennett 1991; Holzinger and Knill 2005).
+     Economic linkages not only facilitate denser bilateral contacts but also enable the Chinese
+government to use tools of economic statecraft (for example, control of imports, facilitation of
+trade, and direct investment, as well as the granting of aid) to exert influence over the policy
+decisions of its economically weaker partners (Baldwin 1985; Deibel 2007; Mastanduno 2008).
+High levels of foreign policy alignment should thus be expected in less developed countries
+where China has a significant presence as a buyer of natural resources, a provider of foreign
+investment or a donor of untied aid. In the run‐up to the 2005 World Summit, for instance,
+the Chinese government demonstrated how its economic power may have contributed to
+convincing African states not to support India’s bid for a permanent seat on the Security
+Council (Hart and Jones 2010: 73).
+     Quantitative studies on the influence of US aid disbursements and UNGA voting corrob‐
+orate this mechanism: increased levels of development assistance and the provision of aid
+(general budget support, grants) indeed buys votes in the UNGA (Dreher, Nunnenkamp and
+Thiele 2008; Wang 1999).9 In addition, trade dependence increases the responsiveness to ex‐
+ternal demands, including unspoken ones, due to fears of losing market access and other
+economic benefits, and causes the economically weaker states to accommodate the foreign
+policy interests of the more powerful one (Dreher , Nunnenkamp, and Thiele 2008; Keohane
+and Nye 1977).
+     Similar mechanisms should function through military trade. Sullivan, Tessman and Li
+(2011: 279) argue theoretically that controlling arms transfers enables the more powerful state
+in a dyad to impose foreign policy choices on the (weaker) recipient state according to the
+
+
+9    For a comparative study analyzing the effects of US and Soviet aid, see Rai (1980); on Soviet aid and trade, see
+     Roeder (1985) and Imai (1992). To the best of my knowledge, no similar analysis exists for the Chinese case.
+     Studies dealing directly with China in the UN concentrate on the identification of patterns of voting affinity
+     with China in the UNGA (Chai 1979) or with China’s general UN policy (Kim 1979).
+
+GIGA Working Papers                                                                                           WP 209/2012
+Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China                   11
+
+
+
+former’s core interests.10 The link between arms trade and foreign policy alignment should,
+thus, be observable in “small, poor countries (mainly in Africa) who cannot afford more ad‐
+vanced systems, and countries such as Burma and Sudan whose access to the global arms
+market is restricted” (Medeiros 2009: 91–92). In addition, in those cases where China’s arms
+trade is associated with further military activities such as high‐level official visits and ex‐
+change programs, foreign policy similarity becomes even more likely due to the increased
+level of bilateral exchange (Ellis 2011a: 5–6).
+    Finally, strong political ties potentially further increase foreign policy similarity. The
+availability of manifold diplomatic links enables the exchange of nonmaterial goods such as
+knowledge and information, which may also facilitate bilateral policy coordination (Hafner‐
+Burton, Kahler, and Montgomery 2009; Holzinger and Knill 2005). Additionally, in the con‐
+text of an asymmetrical distribution of political power, the mechanisms operating through
+political ties are not restricted to transnational communication but can include political con‐
+ditionality and coercion as well.
+    The assumptions made above lead to the following expectations regarding bilateral link‐
+ages and foreign policy similarity with China:
+
+   Hypothesis 2a: States with a high degree of trade and aid dependence on China tend to
+   exhibit higher levels of foreign policy similarity.
+
+   Hypothesis 2b: States with strong military linkages with China through arms trade
+   and regular military contacts tend to align more frequently with Chinese foreign policy
+   interests.
+
+   Hypothesis 2c: Strong political linkages with China induce higher levels of bilateral
+   foreign policy similarity.
+
+
+
+4 Research Design
+
+The data set used to test these assumptions includes annual observations on the voting practic‐
+es of all UN member states except China for the period from 1990 to 2011.11 The sample period
+accounts, on the one hand, for the dissolution of the former Soviet Union and changing align‐
+ment patterns in the post‐Cold War international system (Kim and Russett 1996; Voeten 2000).
+On the other hand, it also includes the period during which China’s external relations entered
+a phase of normalization and adjustment (in the 1990s) and Beijing began to promote its dip‐
+
+
+
+10 However, the authors fail to prove this link in their statistical analysis (Sullivan, Tessman, and Li 2011: 290).
+   Derouen and Heo (2004: 467) also find only limited support for the strategic use of military assistance by the
+   US to induce the accommodation of US foreign policy interests.
+11 The population of the data set was generated using the EUGene software and has a total of 4,067 observations
+   (Version 3.204) (Bennett and Stam 2000).
+
+GIGA Working Papers                                                                                     WP 209/2012
+12                          Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China
+
+
+
+
+lomatic interests by entering into the first special partnerships with individual countries as
+well as by stepping up bilateral and multilateral cooperation in general (Goldstein 2005).
+
+
+4.1 Dependent Variable: Foreign Policy Similarity
+
+The study’s dependent variable measures foreign policy similarity with China on the basis of
+UNGA voting records. It is based on a similarity score ranging from ‐1 (least similar interests)
+to 1 (most similar interests) using the three main categories of UN voting data (approval, dis‐
+approval, abstentions). Drawing on this similarity score, I have created three binary depend‐
+ent variables: The first two measure high and very high levels of foreign policy similarity and
+take a value of one for all countries belonging to the group of nations in the 75th and 90th per‐
+centiles, respectively. A third variable controls for foreign policy dissimilarity and takes a value
+of one if a country belongs to the group of countries in the 25th percentile.12
+     For the calculation of the similarity score, I draw on chance‐corrected agreement indices
+(Häge 2011). The procedure addresses the question of affinity in the same way as the widely
+used S score by measuring distances between state positions and then converting the dissimi‐
+larity into a similarity score (Signorino and Ritter 1999). Häge, however, follows a different ap‐
+proach with regard to the standardization of dissimilarity values: for the “case where foreign
+policy ties are cheap” (for example, UNGA voting), he takes into account the fact that some dif‐
+ferences between two countries’ policy positions are “‘harder’ to achieve in the face of symmet‐
+rically unbalanced distributions (i.e., prevalence) than in the face of balanced marginal distri‐
+butions” and, thus, corrects dissimilarity proportions upwards (Häge 2011: 294–295, 302). A
+major consequence of the correction is that agreement indices are on average lower than the
+S score, do not concentrate at high levels of similarity, and, thus, are expected to provide a
+more realistic and conservative depiction of foreign policy similarity with China.
+     Using UNGA votes to calculate the similarity of states’ foreign policy positions with Chi‐
+na offers the advantage that data is available for all states in the international system, and for
+a long time period. Although the votes in the General Assembly are often criticized as being
+purely symbolic, the data comes with a further advantage: It is precisely because of the more
+symbolic nature of UNGA resolutions that voting in the General Assembly exhibits a higher
+level of variance than other foreign policy decisions (for example, a country’s choice of alli‐
+ance partners) and thus contains more information on a nation’s foreign policy interests
+(Gartzke 2006; Voeten 2000). However, one has to bear in mind that the resolutions’ topics
+concentrate on international security, humanitarian and other political issues. Resolutions
+falling within the purview of the UNGA’s Economic and Financial Committee account for
+only a small fraction of votes. Thus, the data has little meaning in terms of foreign policy
+similarity in this policy field.
+
+
+
+12 Table A‐1 of the Appendix provides a country list for the 75th and 90th percentile in 1991, 2001 and 2011.
+
+GIGA Working Papers                                                                                          WP 209/2012
+Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China                     13
+
+
+
+      Figure 1 illustrates the development of the similarity score from the 44th/45th through the
+65th/66th UNGA sessions. The graph indicates that countries’ foreign policy similarity with
+China basically corresponds with their voting on social and humanitarian issues and on reso‐
+lutions regarding disarmament and international security.
+
+Figure 1: Foreign Policy Similarity with China, measured by Votes in the UNGA,
+          1990–2011
+
+                 .4
+
+
+
+
+    Foreign Policy Similarity
+
+
+
+
+      -.2      0        .2
+
+
+                 -.4
+                                1990   1995                  2000                   2005            2010
+                                                               Year
+                                              All votes
+                                              Plenary meetings
+                                              Disarmament and International Security (1st Cttee.)
+                                              Social and Humanitarian Issues (3rd Cttee.)
+                                              Politics and Decolonization (4th Cttee.)
+
+
+
+Source: Author’s own compilation.
+
+With regard to the regional distribution of the similarity score in the recent past, the data re‐
+veals that a high degree of affinity is found mainly in Southeast Asia and South Asia, as well
+as in Central Asian countries and North, South, and West African states (see Table A‐2 in the
+Appendix). The findings also show that the Chinese government is receiving growing sup‐
+port for its foreign policy positions: particularly in the Caribbean, South America, Central
+and Western Asia, the proportion of shared votes has risen considerably in the last two dec‐
+ades. In contrast, very low (and decreasing) levels of similarity exist with the United States
+and Canada, as well as with European and Oceanian states.
+
+
+4.2 Independent Variables
+
+With regard to explanatory factors, the study contains two variables measuring shared insti‐
+tutional and socioeconomic characteristics in domestic and international affairs and a num‐
+ber of indicators for different dimensions of diplomatic, economic and military linkages with
+
+
+GIGA Working Papers                                                                                        WP 209/2012
+14                           Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China
+
+
+
+
+China.13 Due to limitations in data availability, however, I was not able to include China’s
+outgoing foreign direct investments and other proxies for military linkage besides bilateral
+arms trade.
+      Regime Similarity. Countries that have political norms and values resembling those of
+China are more likely to pursue similar interests in international affairs and have less incen‐
+tive to regard Chinese influence attempts as a normative threat. I have constructed an ordinal
+variable on the basis of Freedom House’s average ratings of civil liberties and political rights
+and compared each country’s score with China’s (Teorell et al. 2011). The resulting variable
+ranges from zero (totally opposing political beliefs) to six (very close match in shared politi‐
+cal norms and values).
+      Global Involvement. To compare a country’s involvement in international politics and
+society with China’s enmeshment, I have drawn on the KOF Index of Globalization (Dreher
+2006).14 The resulting ordinal variable combines the political and social dimension and ranges
+from one (low equivalence) to seven (high equivalence). Economic globalization is excluded
+because UNGA votes hardly touch on topics of international trade and finance.
+      Diplomatic Exchange. Turning to bilateral political relations, I control whether a country
+maintains diplomatic relations with Beijing at the level of chargé dʹaffaires, ministers, ambas‐
+sadors or not at all.15 As this constitutes a very weak indicator of dense diplomatic ties, the
+effects are expected to be very low.
+      Shared IGO Membership. This variable measures dense political ties through joint
+membership in international governmental organizations and draws on data collected by
+Pevehouse, Nordstrom and Warnke (2004) and Wallace and Singer (1970).16 The ordinal four‐
+point scale takes a value of one for weak diplomatic ties (0–15 joint memberships) and four if
+ties are strong (46–64 joint memberships).
+      Special Partnership. Special partners are defined as countries which maintain a coopera‐
+tive, comprehensive or strategic partnership with China. Particularly since the early years of
+this century, Beijing has been intensifying its bilateral relations with countries in the Middle
+East, Latin America, Southeast Asia, and Central Asia (Goldstein 2005: 130–135; Zhu 2010: 9).
+The binary variable has been coded on the basis of information from the Chinese Ministry of
+Foreign Affairs’ webpage, newspaper articles and secondary literature (Medeiros 2009: 79–81,
+83–85).
+      Trade Dependence. With regard to economic linkages, I measure trade dependence on
+China assessing the volume of trade with China as a proportion of a country’s total external
+trade. To test for Beijing’s power as a buyer and seller, similar measures are calculated for a
+
+
+13 Descriptive statistics are reported in Table A‐3 of the Appendix.
+14 This paper draws on the version of the ETH (2011), KOF Index of Globalization, Zürich, online: <http://globali‐
+     zation. kof.ethz.ch/> (24 February 2012).
+15 Bayer (2006), Diplomatic Exchange Data Set (v2006.1), online: <http://correlatesofwar.org> (26 September 2011).
+16 International Governmental Organization Data (v2.3), online: <http://correlatesofwar.org> (26 September 2011).
+
+GIGA Working Papers                                                                                           WP 209/2012
+Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China                        15
+
+
+
+state’s export and import dependence. The raw trade data has been obtained from the UN
+International Merchandise Trade Statistics.17
+    Aid Projects. To examine whether or not Chinese aid functions as a channel for the
+transmission of influence, I include a binary variable that takes the value of one if a country
+received funding for any Chinese aid projects in a given year. As foreign aid is expected to be
+used to influence foreign policy behavior on the part of recipient states ex ante as well as to
+reward or punish partner countries ex post, I have added a variable measuring the two‐year
+moving average of the number of Chinese aid projects reported by AidDATA.18
+    Arms Trade. Arms trade includes transfers of major conventional weapons from China to
+a country as reported in the SIPRI Arms Transfers Database. Following the coding and rea‐
+soning regarding aid projects, I have included a binary variable that takes the value of one if
+a country received any amount of major conventional weapons from China. I have further
+calculated a variable measuring the two‐year moving average of the estimated value of a
+country’s arms imports from China in US dollars.19
+    National Capabilities. Various studies suggest that more resourceful states experience
+less difficulty than weaker states in resisting influence attempts by third parties (Bueno de
+Mesquita and Smith 2007; Dreher, Nunnenkamp and Thiele 2008; Sullivan, Tessman and Li
+2011). To differentiate between the effects of different dimensions of national capabilities, I
+use a disaggregated index containing three categories for measuring a state’s industrial re‐
+source consumption, demographic attributes and military power, respectively (Singer 1988;
+Singer, Bremer and Stuckey 1972).20
+
+
+4.3 Empirical Strategy
+
+The study employs logistic regression estimation with robust standard errors to test the hy‐
+potheses. The basic assumption is that the effects of the explanatory variables on the outcome
+become stronger among the group of countries with (very) high levels of foreign policy similar‐
+ity and insignificant and/or negative in the case of foreign policy dissimilarity. Furthermore, I
+separately estimate dynamic logistic models to test whether the explanatory variables affect
+the onset of foreign policy similarity, its duration or both.
+    The model’s independent variables are all measured with a temporal lag of one year as it
+is assumed that the existence of interstate linkages and similarity in state attributes has to
+
+
+17 United Nations Commodity Trade Statistics Database, online: <http://comtrade.un.org/db/> (26 September 2011).
+18 AidData collected project‐level aid data reported by the Chinese Ministry of Commerce for the period from
+   1990 to 2005 (excluding 2002), online: <www.aiddata.org/research/china> (7 September 2011).
+19 See Stockholm International Peace Research Institute’s (SIPRI) (2011), Arms Transfers Database, trade register and im‐
+   porter/exporter TIV tables, online: <www.sipri.org/databases/armstransfers> (5 September 2011).
+20 The Composite Index of National Capability (CINC, v4.0) score combines data on military personnel and ex‐
+   penditure, total and urban population, iron and steel production, and energy consumption, online: <http://cor
+   relatesofwar.org> (6 January 2012).
+
+GIGA Working Papers                                                                                         WP 209/2012
+16                            Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China
+
+
+
+
+precede the outcome of interest.21 Further, I expect voting coincidence in the UNGA to have a
+high level of duration dependence. Under normal circumstances, states do not change their
+foreign policy priorities overnight. To minimize the problem of temporal dependence, I in‐
+clude a variable that counts the years from the previous time a country had a positive out‐
+come on the dependent variable. In addition, the regressions apply different approaches to
+temporal splines (Beck, Katz, and Tucker 1998; Carter and Signorino 2010).
+
+
+
+5 Quantitative Findings
+
+To what extent do shared institutional and socioeconomic characteristics in domestic and in‐
+ternational affairs and the presence of strong diplomatic, economic and military linkages
+help to explain foreign policy similarity? Tables 1 to 3 present the results of the empirical
+analysis on this question.
+      The statistical evidence strongly supports the assumption that much of the foreign policy
+similarity is related to shared political attributes and similar levels of sociopolitical globaliza‐
+tion (Hypothesis 1a, 1b). The two respective variables’ coefficients are positive and highly sig‐
+nificant throughout models 1 to 5. The findings are corroborated by Model 6: when we choose
+foreign policy dissimilarity as the dependent variable, the coefficients of regime similarity and
+global involvement change numerical signs to become negative (Model 6 in Table 1). Expressed
+in odds ratios, a one‐unit increase in regime similarity and global involvement reduces the chance
+of dissimilar foreign policy portfolios by approximately 16 and 14 percent, respectively,
+whereas it increases the probability of foreign policy similarity (p75) by 50 and 27 percent.22
+      The control variables operate largely in line with the findings of previous studies. Ac‐
+cording to the expectations, foreign policy similarity exhibits high temporal dependence.
+Each year that a country did not reach a high level of foreign policy similarity reduces the like‐
+lihood of future alignment significantly. Natural cubic splines generally support this claim.
+Also, resourceful countries share, on average, Chinese foreign policy positions less often.
+This effect, however, is restricted to industrial resources (capabilities (resources)). A large pop‐
+ulation, in fact, increases the likelihood of foreign policy similarity.23
+
+
+
+
+21 This assumption will be relaxed by testing the two‐year moving averages of aid and arms trade to account for
+     the fact that both can be made an instrument for ex ante inducement and ex post reward or punishment.
+22 The coefficients and odds ratios of all models are summarized in Table A‐4 of the Appendix. In addition, I
+     have conducted an in‐sample validation of the predictive power, as suggested by Ward, Greenhill and Bakke
+     (2010), of the models in tables 1 and 2. It confirms in general that the coefficients’ levels of statistical signifi‐
+     cance are positively associated with their predictive power. Only in the case of export dependence is a low level
+     of statistical significance combined with a substantial impact on predictive power.
+23 The military dimension of national capabilities is not included due to its high correlation with capabilities (re‐
+     sources). Furthermore, when tested in a separate model, it was not significant at conventional statistical levels.
+
+GIGA Working Papers                                                                                            WP 209/2012
+Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China          17
+
+
+
+    Turning to the impact of political linkages, the statistical evidence provides only limited
+support for hypothesis 1c. The inclusion of measurements for diplomatic ties and co‐
+membership in intergovernmental organizations (IGOs) does not add much explanatory
+power to Model 1. Diplomatic recognition of the PRC, which ultimately entails the ac‐
+ceptance of the one‐China principle, seems to be only partially correlated with foreign policy
+similarity (models 2 and 3). Diplomatic exchange fails to have an impact when the model is
+reestimated for the years after 1999. Rather surprisingly, specialized relations (special partner‐
+ships) between a country and China also generally do not increase the chance of foreign policy
+similarity (Model 5).
+    If we take a closer look, the data even indicates that maintaining a specialized partnership
+with China increases the chance of foreign policy dissimilarity on the one hand. On the other
+hand, special partnerships also help to explain very high levels of foreign policy similarity (p90)
+(Model 6 and Table A‐4). Identifying influential observations within these models sheds light
+on this, at a first glance, contradictory result. With regard to foreign policy dissimilarity the re‐
+sults are driven by observations of democratic European countries such as Greece, Poland, Por‐
+tugal, Romania, Spain, and the United Kingdom. On the other hand, Algeria, Egypt, Indonesia,
+Pakistan, Sri Lanka, and Venezuela account for the influential observations regarding very
+high levels of foreign policy similarity (p90). The successful implementation of a partnership’s
+objectives – such as “coordination in international affairs,” “adopting common foreign policy
+positions,” “cooperation on nontraditional security issues” and “promoting China’s concepts
+of ‘democracy and equality in international relations’” (Medeiros 2009: 86) – seems to be lim‐
+ited to countries in the Global South with medium to high levels of regime similarity.
+    The only diplomatic linkage observed that is fully in line with the assumptions is that of
+shared IGO membership (Model 4). A one‐unit increase in the variable increases the likelihood
+of a country’s foreign policy similarity with China by 85 percent.
+    Table 2 reports the results for economic and military linkages. With regard to trade rela‐
+tions, Model 7 and Model 8 indicate that China’s influence stems less from its position as a
+major export destination in bilateral relations and more from its power as a seller (Lampton
+2008). Only in the case of countries showing very high similarity levels (p90) does export de‐
+pendence become statistically significant and, expressed in odds ratios, make it 14 times more
+likely that countries will demonstrate a high level of foreign policy similarity (Table A‐4). In
+general, economic influence seems to function better through a country’s general trade de‐
+pendence on China and the PRC’s position as a seller in particular. Typical country cases for
+the latter observation include Cuba, Egypt, India, Indonesia, Myanmar, Nigeria, Pakistan,
+Sudan, United Arab Emirates and Vietnam.
+
+
+
+
+GIGA Working Papers                                                                             WP 209/2012
+Table 1: Foreign Policy Similarity: Shared Attributes and Political Linkages
+                   Model 1                    Model 2                     Model 3                     Model 4                 Model 5                  Model 6
+                                                                           (p75)
+                     (p75)                     (p75)                        year                        (p75)                   (p75)                    (p25)
+                                                                           >1999
+Diplomatic
+                                              0.606***       (0.223)        0.363        (0.326)
+exchange t‐1
+Shared IGO
+                                                                                                      0.614****    (0.121)
+membership t‐1
+Special part‐
+                                                                                                                                0.361       (0.365)     0.686**      (0.283)
+nership t‐1
+Regime simi‐
+                   0.408****    (0.0447)      0.404****     (0.0490)      0.421****     (0.0734)      0.458****   (0.0525)    0.409****    (0.0447)    ‐0.165****   (0.0400)
+larity t‐1
+Global in‐
+                   0.238****    (0.0474)      0.227****     (0.0514)      0.329****     (0.0819)      0.216****   (0.0509)    0.235****    (0.0473)    ‐0.164****   (0.0467)
+volvement t‐1
+Capabilities
+                    26.21**      (10.26)      29.32***       (11.38)      17.71***       (6.365)      24.80***     (8.699)    26.25***      (9.617)     ‐51.41*      (27.19)
+(population) t‐1
+Capabilities
+                   ‐34.90**      (16.16)      ‐41.53**       (19.26)      ‐24.14**       (11.95)      ‐55.78**     (24.19)    ‐39.23**      (17.07)     31.51***     (10.67)
+(resources) t‐1
+Years              ‐1.424****    (0.189)     ‐1.149****      (0.196)     ‐1.654****      (0.294)     ‐1.193****    (0.192)    ‐1.422****    (0.189)    ‐1.623****    (0.181)
+Spline1            ‐0.162***    (0.0588)      ‐0.0890       (0.0652)      ‐0.226**      (0.0930)       ‐0.109*    (0.0630)    ‐0.161***    (0.0587)    ‐0.268****   (0.0551)
+Spline3             0.0432*     (0.0258)       0.0133       (0.0290)       0.0710*      (0.0414)       0.0216     (0.0281)     0.0429*     (0.0257)    0.0924****   (0.0242)
+Spline7             0.00449     (0.00310)    0.00710**      (0.00356)     0.00164       (0.00530)     0.00643*    (0.00356)    0.00453     (0.00310)   ‐0.00136     (0.00295)
+_cons              ‐1.916****    (0.285)     ‐2.454****      (0.389)     ‐2.333****      (0.639)     ‐3.686****    (0.501)    ‐1.912****    (0.284)    1.569****     (0.212)
+N                    3308                       2877                        1418                        2959                    3308                     3308
+McKelvey &
+                     0.592                     0.615                        0.628                       0.634                   0.598                    0.551
+Zavoinaʹs R2
+Wald chi2           499.24                     470.08                      313.49                      474.88                  498.89                   594.26
+pseudo R   2         0.430                     0.435                        0.500                       0.442                   0.430                    0.370
+
+Source: Author’s own compilation.
+Notes: Robust standard errors clustered by country in parentheses. * p<.1, ** p<.05, *** p<.01, **** p<.001.
+Table 2: Foreign Policy Similarity: Economic and Military Linkages
+                               Model 7                  Model 8                   Model 9                      Model 10                 Model 11                 Model 12
+                                 (p75)                    (p75)                     (p75)                        (p75)                    (p75)                    (p75)
+Export dependence t‐1            1.860       (1.271)
+Import dependence t‐1                                    5.059**      (2.006)
+Aid projects (binary) t‐1                                                           0.201       (0.207)
+Aid projects (average) t‐1                                                                                     0.372***      (0.138)
+Arms trade (binary) t‐1                                                                                                                 0.864****     (0.217)
+Arms trade (average) t‐1                                                                                                                                         0.00876***   (0.00292)
+Regime similarity t‐1          0.437****    (0.0560)    0.406****    (0.0511)     0.450****    (0.0533)        0.448****    (0.0521)    0.403****    (0.0447)    0.403****    (0.0449)
+Global involvement t‐1         0.189***     (0.0668)    0.193***     (0.0589)     0.268****    (0.0541)        0.264****    (0.0537)    0.238****    (0.0464)    0.236****    (0.0460)
+Capabilities (population) t‐
+                               20.21***      (6.706)    20.79***      (6.638)      30.19**      (13.40)         30.95**      (14.02)    23.52****     (7.145)     23.13***     (7.167)
+1
+
+Capabilities (resources) t‐1    ‐33.76*      (18.15)     ‐35.46*      (18.85)     ‐38.73**      (17.87)        ‐37.21**      (16.52)    ‐32.97**      (15.99)     ‐32.38**     (14.89)
+Years                          ‐1.324****    (0.222)    ‐1.169****    (0.219)    ‐1.582****     (0.209)        ‐1.526****    (0.211)    ‐1.381****    (0.190)    ‐1.404****    (0.189)
+Spline1                         ‐0.142*     (0.0730)     ‐0.103      (0.0712)     ‐0.202***    (0.0670)        ‐0.194***    (0.0670)    ‐0.153***    (0.0592)    ‐0.159***    (0.0591)
+Spline3                         0.0399      (0.0322)     0.0232      (0.0314)     0.0599**     (0.0298)         0.0574*     (0.0297)     0.0397      (0.0260)     0.0423      (0.0260)
+Spline7                         0.00273     (0.00385)    0.00456     (0.00374)    0.00304      (0.00371)        0.00300     (0.00363)    0.00477     (0.00312)    0.00450     (0.00311)
+_cons                          ‐1.529****    (0.386)    ‐1.696****    (0.347)    ‐2.179****     (0.377)        ‐2.249****    (0.358)    ‐1.992****    (0.283)    ‐1.938****    (0.282)
+N                                2122                     2338                      2809                         2835                     3308                     3308
+McKelvey & Zavoinaʹs
+                                 0.659                    0.636                     0.632                        0.629                    0.595                    0.594
+R2
+Wald chi2                       476.89                   475.80                    458.01                       439.65                   531.60                   542.85
+pseudo R   2                     0.500                    0.477                     0.465                        0.457                    0.435                    0.433
+
+Source: Author’s own compilation.
+Notes: Robust standard errors clustered by country in parentheses. * p<.1, ** p<.05, *** p<.01, **** p<.001.
+20                           Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China
+
+
+
+
+A positive effect of foreign aid disbursements on foreign policy similarity, as reported in the
+cited studies on US aid and voting in the UNGA, also seems to be valid in the China case.
+Receiving funding for any number of aid projects from China makes bilateral foreign policy
+similarity more feasible. Although the coefficient for the binary aid variable does not reach
+significance at conventional statistical levels, it points in the right direction (Model 9). This
+link is demonstrated instead by the two‐year moving average of the number of Chinese aid
+projects, which strongly correlates with the recipients’ foreign policy similarity (Model 10).
+This effect may be driven by the fact that for many aid projects there is a considerable time
+lapse between the first agreement and the project’s realization. Moreover, it may indicate
+that more aid buys more support.
+      The contrary may be true for arms trade. The fact that a country has received major con‐
+ventional weapons from China is more important in encouraging governments to align with
+China’s foreign policy choices than the actual size of these deals (models 11 and 12). Taken
+together, the results on China’s economic and military linkages provide general support for
+the plausibility of hypotheses 2b and 2c.
+      Finally, the results from estimating a combined model containing indicators for political,
+economic and military linkages are presented in Table 3. Model 13 confirms the previous
+findings. The coefficients of the explanatory variables point in the same direction as in the
+separate estimations and, by and large, reach the 10 percent confidence level or better. Only
+aid disbursements reach a considerably lower confidence level of 21 percent.24
+With regard to the question of whether the different explanatory factors are more likely to
+transmit influence in the form of ex ante inducements or ex post rewards, Table 3 further pre‐
+sents the separate estimations of dynamic logistic models.
+      The results of models 14 and 15 suggest that the explanatory variables can be divided in‐
+to three groups with different effects on foreign policy similarity: First, initial evidence is
+provided that political ties through shared membership in a large number of intergovern‐
+mental organizations as well as significant trade dependence on China are less a prerequisite
+of foreign policy similarity than a consequence and help to maintain it. Second, shared regime
+characteristics and comparable patterns of sociopolitical involvement in the international sys‐
+tem seem to be important facilitating factors for foreign policy similarity, independently from
+the focus on onset or duration. The respective coefficients throughout the models in Table 3 are
+all positive and statistically significant. Third, some evidence is provided that only the imple‐
+mentation of aid projects and the supply of major conventional weapons by China induce for‐
+eign policy similarity.
+
+
+24 As a nonrandom pattern of missing observations in time‐series cross‐sections may distort the results, I reesti‐
+     mated Model 13 after imputing the missing data. The reestimation yields qualitatively similar results. The
+     multiple imputation was executed with the program Amelia II (version 1.6.1). See King, Gary (2012), Amelia II:
+     A Program for Missing Data, online: <http://gking.harvard.edu/amelia/> (12 April 2012), and Honaker and King
+     (2010). The results are available upon request.
+
+GIGA Working Papers                                                                                           WP 209/2012
+Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China                        21
+
+
+
+Table 3: Foreign Policy Similarity: Onset and Duration
+                                   Model 13                       Model 14                      Model 15
+                                      (p75)                          (p75)                        (p75)
+                                                                    in t1=0                      in t1=1
+Diplomatic exchange t‐1              ‐0.316         (0.355)         0.519          (0.577)       ‐0.945*        (0.536)
+Shared IGO membership t‐1           0.598****       (0.174)         0.335          (0.257)      0.869****       (0.252)
+Trade dependence t‐1                 4.605*         (2.521)         ‐1.004         (3.554)       9.804*         (5.151)
+Aid projects (average) t‐1            0.218         (0.173)        0.765***        (0.259)       ‐0.218         (0.258)
+Arms trade (average) t‐1            0.00750*       (0.00398)       0.0141**       (0.00673)      0.00375       (0.00643)
+Regime similarity t‐1               0.519****       (0.0826)       0.665****      (0.0969)      0.623****       (0.122)
+Global involvement t‐1              0.195***        (0.0748)       0.194**        (0.0959)       0.209**        (0.105)
+Capabilities (population) t‐1       17.69***        (5.392)        65.09**         (26.13)      13.20***        (5.035)
+Capabilities (resources) t‐1        ‐44.39**        (17.31)         ‐75.15         (56.70)      ‐53.30****      (11.92)
+Years                              ‐1.269****       (0.259)
+Spline1                              ‐0.140*        (0.0848)
+Spline3                              0.0407         (0.0373)
+Spline7                             0.00210        (0.00441)
+_cons                              ‐3.432****       (0.885)       ‐6.660****       (1.154)      ‐4.043****      (1.201)
+N                                     1748                           1288                          460
+McKelvey & Zavoinaʹs R2               0.707                         0.540                         0.300
+Wald chi   2                         492.77                         115.78                        54.15
+pseudo R2                             0.542                         0.237                         0.165
+
+Source: Author’s own compilation.
+Notes: Robust standard errors clustered by country in parentheses. * p<.1, ** p<.05, *** p<.01, **** p<.001.
+
+
+5.1 Discussion of Results
+
+The results have two major implications for the study of China’s impact on global affairs and
+of the sources of the country’s political clout. First, the statistical analysis provides evidence
+of the importance of shared regime characteristics and comparable patterns of global socio‐
+political involvement in explaining the incidence as well as the onset and duration of foreign
+policy similarity. This emphasizes the need to disentangle the impact of bilateral linkages as
+transmitters of different types of influence from the effects of domestic regime characteristics
+and parallel problem‐solving processes. The two latter factors function independently of in‐
+direct influence and the possible imposition by a dyad’s more powerful actor of policies
+through the exploitation of asymmetrically distributed economic or political capabilities. As
+outlined in the theory section, regime characteristics and parallel problem‐solving processes
+are regarded as facilitating factors for policy imposition as well as cooperation and policy
+coordination through transnational communication. Future analyses of China’s ability to
+translate economic power into political influence should thus consider including interac‐
+tions, with controls for country‐related factors.
+     Second, this study provides initial statistical evidence for the concurrence of economic
+linkages and foreign policy similarity. On the one hand, aid projects and the supplying of
+arms enable China to buy influence from recipient countries. This stands in contrast to find‐
+
+GIGA Working Papers                                                                                          WP 209/2012
+22                           Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China
+
+
+
+
+ings “that at least the US tend to use aid more often as an reward for a country’s prior voting
+alignment than as an ex ante inducement” (Derouen and Heo 2004: 468) and points to the di‐
+verse use of tools of economic statecraft in different political cultures. As prior studies have
+found that at least in Latin America the opportunity to employ economic statecraft is limited,
+with the exception of smaller countries in Central America and the Caribbean (Jenkins 2010:
+830), future research could investigate whether the effects of aid disbursements are contin‐
+gent upon the recipient country’s size and developmental stage.
+     On the other hand, it seems that China’s economic influence is not based on its power as
+a buyer. Rather, the results indicate that a good political understanding is conducive to high
+levels of economic exchange with China. Thus, contrary to common wisdom, the assumption
+that economic interdependence provides a source of direct political influence in asymmet‐
+rical relations, which goes back to Hirschman’s (1980 [1945]) work on state power and inter‐
+national trade patterns, may be only one side of the story (Wagner 1988: 472). If we extend
+the liberal peace argument, we can expect that trade interdependence leads to converging
+foreign policy interests in the long run because it eases interstate cooperation (Dreher, Nun‐
+nenkamp, and Thiele 2008: 155; Oneal, Russett, and Berbaum 2003: 374).25 This argument
+may be translated to the political dimension, as the results on shared membership in inter‐
+governmental organizations suggest.
+
+
+6 Conclusion
+
+The primary aim of this paper has been to assess the plausibility of different theoretical ex‐
+planations for similarities between a state’s foreign policy choices and China’s diplomatic in‐
+terests. It has been argued that a better understanding of China’s rise in international affairs
+and of the underlying patterns of international support is gained by taking a step back and
+considering the Chinese government’s ability to coerce other states into accommodating its
+interests as just one of several explanatory factors. Thus, in addition to China’s economic re‐
+lations with other countries, I have included diplomatic and military linkages as well as
+shared institutional and sociopolitical characteristics in domestic and international affairs in
+the investigation.
+     The paper’s findings support the claim that China’s exertion of direct influence over oth‐
+er states’ diplomatic choices is only one possible explanation for general foreign policy simi‐
+larity. Important prerequisites for foreign policy alignment are also rooted in shared regime
+characteristics and comparable levels of socioeconomic globalization. Dense trade linkages
+and co‐membership in intergovernmental networks result from shared interests and help to
+explain the duration of high levels of foreign policy affinity.
+
+
+25 In a classical realist’s world, this is especially likely since “economic relations between states strengthened
+     ‘like‐minded’ groups at the expense of others, and influenced the trajectory of how the national interest was
+     defined” (Kirshner 2012: 69).
+
+GIGA Working Papers                                                                                           WP 209/2012
+Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China          23
+
+
+
+    Despite statistical evidence in support of the main theoretical explanations, the results
+should not be overinterpreted, nor should the analysis be regarded as a definite test of specific
+causal channels. A causal link between foreign policy similarity and the study’s explanatory
+factors has not been established. The main contribution of this study can be seen as the pro‐
+vision of a broader perspective on possible explanations for foreign policy similarity with
+China and of initial plausibility tests. More quantitative and qualitative work is needed to
+better understand the nature of China’s political clout in international relations. It should al‐
+so be highlighted that the present study is concerned with general patterns of support for
+China’s political interests and principles in international politics and less with incidences of
+China’s exertion of direct power over other states.
+    With regard to future comparative small‐N studies on China’s (in)direct influence on the
+foreign policy behavior of other states and its ability to spread political values and principles,
+the data provided in this paper could serve as starting point and help to identify cases for in‐
+depth study.
+    In addition to a more detailed analysis of the mechanisms at hand, there are many inter‐
+esting directions for future research. With regard to China’s bilateral political relations, on
+the one hand, the scope of the analysis could be broadened by considering data on the travel
+of China’s leadership, as Kastner and Saunders (2012) have done, or by introducing alterna‐
+tive and updated measurements for diplomatic linkages. Future analyses should also test the
+robustness of this paper’s results by drawing on different measurements of the dependent
+variable, such as key votes and resolutions that have been proposed or sponsored by China.
+    On the other hand, Beijing has also stepped up efforts to engage states in multilateral in‐
+stitutional settings, not only in Asia but also in Africa, Latin America and the Middle East. To
+date, this has resulted in the establishment of the Shanghai Five/SCO in 1996/2001, the Forum
+on China–Africa Cooperation in 2000 and the China–Arab Cooperation Forum in 2004,
+among other organizations. China has further increased its presence in regional organiza‐
+tions in recent years, for example, in Latin America. Such “forum diplomacy” allows Beijing
+to engage large groups of countries and facilitates China’s influence globally and in the re‐
+spective regions (Medeiros 2009: 77–78, 159–160; Zhang 2010: 40). Thus far, little systematic
+research has been done on the PRC’s ability to exert influence over political outcomes in
+global affairs through such forums and as a result of its position in intergovernmental net‐
+works (Hafner‐Burton, Kahler, and Montgomery 2009).
+    Finally, future studies on China’s rise and the country’s perceived growing influence in
+international relations should abandon the rigid concentration on economic statecraft. In‐
+stead, they should focus on China’s ability to mobilize supporters among “like‐minded”
+countries in order to achieve its goals in international politics, and on its establishment of in‐
+tergovernmental foreign policy networks in order to ease policy coordination and coopera‐
+tion with major countries in the Global South. This paper’s findings further suggest that over
+the course of its economic and political rise China has indeed become a “friend” or “beacon”
+to many leaders of developing countries in the Global South.
+
+GIGA Working Papers                                                                             WP 209/2012
+24                        Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China
+
+
+
+
+Bibliography
+
+Baldwin, David A. (1985), Economic Statecraft, Princeton, N.J.: Princeton University Press.
+Beck, Nathaniel, Jonathan N. Katz, and Richard Tucker (1998), Taking Time Seriously: Time‐
+     Series‐Cross‐Section Analysis With a Binary Dependent Variable, in: American Journal of
+     Political Science, 42, 4, 1260–1288.
+Bennett, Colin J. (1991), What Is Policy Convergence and What Causes It, in: British Journal of
+     Political Science, 21, 215–233.
+Bennett, D. Scott, and Allan Stam (2000), EUGene: A Conceptual Manual, in: International In‐
+     teractions, 26, 2, 179–204.
+Breslin, Shaun (2011), China and the Crisis: Global Power, Domestic Caution and Local Initia‐
+     tive, in: Contemporary Politics, 17, 2, 185–200.
+Bueno de Mesquita, Bruce, and Alastair Smith (2007), Foreign Aid and Policy Concessions, in:
+     Journal of Conflict Resolution, 51, 2, 251–284.
+Carter, David B., and Curtis S. Signorino (2010), Back to the Future: Modeling Time Depend‐
+     ence in Binary Data, in: Political Analysis, 18, 3, 271–292.
+Chai, Trong R. (1979), Chinese Policy Toward the Third World and the Superpowers in the
+     UN General Assembly 1971–1977: A Voting Analysis, in: International Organization, 33, 3,
+     391–403.
+Cheng, Joseph Y. S., and Wankun Zhang (2002), Patterns and Dynamics of China’s Interna‐
+     tional Strategic Behaviour, in: Journal of Contemporary China, 11, 31, 235–260.
+Deibel, Terry L. (2007), Foreign Affairs Strategy: Logic for American Statecraft, New York: Cam‐
+     bridge University Press.
+Derouen, Karl, and UK Heo (2004), Reward, Punishment or Inducement? US Economic and
+     Military Aid, 1946‒1996, in: Defence and Peace Economics, 15, 5, 453–470.
+Dreher, Axel (2006), Does Globalization Affect Growth? Evidence from a New Index of Glob‐
+     alization, in: Applied Economics, 38, 10, 1091–1110.
+Dreher, Axel, Peter Nunnenkamp, and Rainer Thiele (2008), Does US Aid Buy UN General
+     Assembly Votes? A Disaggregated Analysis, in: Public Choice, 136, 1‒2, 139–164.
+Drezner, Daniel W. (2009), Bad Debts: Assessing China’s Financial Influence in Great Power
+     Politics, in: International Security, 34, 2, 7–45.
+Ellis, R. Evan (2011a), China‐Latin America Military Engagement: Good Will, Good Business, and
+     Strategic Position, Carlisle: Strategic Studies Institute of the U.S. Army War College, online:
+     <www.strategicstudiesinstitute.army.mil/pdffiles/PUB1077.pdf> (26 August 2011).
+Ellis, R. Evan (2011b), Chinese Soft Power in Latin America: A Case Study, in: Joint Forces
+     Quarterly, 60, 1, 85–91.
+
+
+
+GIGA Working Papers                                                                                        WP 209/2012
+Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China          25
+
+
+
+Gartzke, Erik (2006), The Affinity of Nations Index, 1946‐2002, online: <http://dss.ucsd.edu/
+     ~egartzke/datasets.htm> (11 April 2011).
+Gill, Bates, and Yanzhong Huang (2006), Sources and Limits of Chinese “Soft Power”, in: Sur‐
+     vival, 48, 2, 17–36.
+Gjelten, Tom (2010), Shadow Wars: Debating Cyber “Disarmament”, in: World Affairs Journal,
+     November/December, online: <www.worldaffairsjournal.org/article/shadow‐wars‐debat
+     ing‐cyber‐disarmament> (10 April 2012).
+Glaser, Bonnie S., and Benjamin Dooley (2009), China’s 11th Ambassadorial Conference Sig‐
+     nals Continuity and Change in Foreign Policy, in: China Brief, 9, 22, 8–12.
+Goh, Evelyn (2011), Rising Power ... To Do What? Evaluating China’s Power in Southeast Asia,
+     RSIS Working Paper, Singapore: S. Rajaratnam School of International Studies.
+Goldstein, Avery (2005), Rising to the Challenge: China’s Grand Strategy and International Security,
+     Stanford, C.A.: Stanford University Press.
+Hafner‐Burton, Emilie, M. Miles Kahler, and Alexander H. Montgomery (2009), Network
+     Analysis for International Relations, in: International Organization, 63, 3, 559–592.
+Häge, Frank M. (2011), Choice or Circumstance? Adjusting Measures of Foreign Policy Simi‐
+     larity for Chance Agreement, in: Political Analysis, 19, 3, 287–305.
+Hart, Andrew F., and Bruce D. Jones (2010), How Do Rising Powers Rise?, in: Survival, 52, 6,
+     63–88.
+Hirschman, Albert O. (1980), National Power and the Structure of Foreign Trade, Berkely: Univer‐
+     sity of California Press.
+Holzinger, Katharina, and Christoph Knill (2005), Causes and Conditions of Cross‐National
+     Policy Convergence, in: Journal of European Public Policy, 12, 5, 775–796.
+Honaker, James, and Gary King (2010), What to Do about Missing Values in Time‐Series
+     Cross‐Section Data, in: American Journal of Political Science, 54, 2, 561–581.
+Imai, Kunihiko (1992), Strategic Tools of Influencing Third‐World Attitudes – The Case of So‐
+     viet‐United‐States Rivalry, in: Comparative Strategy, 11, 4, 409–430.
+Jenkins, Rhys (2010), China’s Global Expansion and Latin America, in: Journal of Latin Ameri‐
+     can Studies, 42, 4, 809–837.
+Kastner, Scott L. (2010), Buying Influence? Assessing the Political Effects of China’s International
+     Economic Ties, Paper presented at the American Political Science Association Annual
+     Meeting, Washington, D.C., September, online: <http://sites.google.com/site/scottlkast‐
+     ner/> (15 September 2011).
+Kastner, Scott L., and Phillip C. Saunders (2012), Is China a Status Quo or Revisionist State?
+     Leadership Travel as an Empirical Indicator of Foreign Policy Priorities1, in: International
+     Studies Quarterly, 56, 1, 163–177.
+
+
+GIGA Working Papers                                                                             WP 209/2012
+26                       Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China
+
+
+
+
+Keohane, Robert O., and Joseph S. Nye (1977), Power and Interdependence, Boston: Little, Brown
+     and Co.
+Kim, Samuel S. (1979), China, the United Nations, and World Order, Princeton, N.J.: Princeton
+     University Press.
+Kim, Soo Yeon, and Bruce Russett (1996), The New Politics of Voting Alignments in the United
+     Nations General Assembly, in: International Organization, 50, 4, 629–652.
+Kirshner, Jonathan (2012), The Tragedy of Offensive Realism: Classical Realism and the Rise
+     of China, in: European Journal of International Relations, 18, 1, 53–75.
+Knill, Christoph (2005), Introduction: Cross‐national Policy Convergence: Concepts, Ap‐
+     proaches and Explanatory Factors, in: Journal of European Public Policy, 12, 5, 764–774.
+Kurlantzick, Joshua (2007), Charm Offensive: How China’s Soft Power is Transforming the World,
+     New Haven: Yale University Press.
+Kurlantzick, Joshua (2009), China’s Soft Power in Africa, in: Mingjiang Li (ed.), Soft Power:
+     China’s Emerging Strategy in International Politics, Lanham: Lexington Books, 165–184.
+Lam, Willy Wo‐Lap (2006), Chinese Politics in the Hu Jintao Era: New Leaders, New Challenges,
+     Armonk, N.Y.: M.E. Sharpe.
+Lampton, David (2008), The Three Faces of Chinese power: Might, Money, and Minds, Berkeley:
+     University of California Press.
+Li, Mingjiang (2009), Soft Power: Nurture not Nature, in: Mingjiang Li (ed.), Soft power: China’s
+     Emerging Strategy in International Politics, Lanham: Lexington Books, 1–18.
+Mastanduno, Michael (2008), Economic Statecraft, in: Steve Smith (ed.), Foreign Policy: Theories,
+     Actors, Cases, Oxford, New York: Oxford University Press, 171–187.
+Medeiros, Evan S. (2009), China’s International Behavior. Activism, Opportunism, and Diversifica‐
+     tion, Santa Monica, C.A.: RAND Corporation, online: <www.rand.org/pubs/monographs/
+     MG850.html> (12 September 2011).
+Medeiros, Evan S. et al. (2008), Pacific Currents. The Responses of U.S. Allies and Security Partners
+     in East Asia to China’s Rise, Santa Monica, C.A.: RAND Corporation, online: <www.rand.
+     org/pubs/monographs/MG736.html> (21 August 2011).
+Medeiros, Evan S., and M. Taylor Fravel (2003), China’s New Diplomacy, in: Foreign Affairs,
+     82, 6, 22–35.
+Oneal, John R., Bruce Russett, and Michael L. Berbaum (2003), Causes of Peace: Democracy,
+     Interdependence, and International Organizations, 1885–1992, in: International Studies
+     Quarterly, 47, 3, 371–393.
+Pevehouse, Jon C., Timothy Nordstrom, and Kevin Warnke (2004), The COW‐2 International
+     Organizations Dataset Version 2.0, in: Conflict Management and Peace Science, 21, 2, 101–119.
+
+
+
+
+GIGA Working Papers                                                                                       WP 209/2012
+Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China          27
+
+
+
+Potrafke, Niklas (2009), Does Government Ideology Influence Political Alignment With the
+     US? An Empirical Analysis of Voting in the UN General Assembly, in: Review of Interna‐
+     tional Organizations, 4, 3, 245–268.
+Rai, Kul B. (1980), Foreign Aid and Voting in the UN General Assembly, 1967–1976, in: Journal
+     of Peace Research, 17, 3, 269–277.
+Roeder, Philip G. (1985), The Ties that Bind – Aid, Trade, and Political Compliance in Soviet
+     Third‐World Relations, in: International Studies Quarterly, 29, 2, 191–216.
+Segal, Gerald (1999), Does China Matter?, in: Foreign Affairs, 78, 5, 24–36.
+Signorino, Curtis S., and Jeffrey M. Ritter (1999), Tau‐b or Not Tau‐b: Measuring the Similarity
+     of Foreign Policy Positions, in: International Studies Quarterly, 43, 1, 115–144.
+Singer, David J. (1988), Reconstructing the Correlates of War Dataset on Material Capabilities
+     of States, 1816‒1985, in: International Interactions, 14, 2, 115–132.
+Singer, David J., Stuart Bremer, and John Stuckey (1972), Capability Distribution, Uncertainty,
+     and Major Power War, 1820‒1965, in: Bruce Russett (ed.), Peace, War, and Numbers, Beverly
+     Hills: Sage, 19–48, online: <www.correlatesofwar.org/> (7 Juli 2011).
+Strezhnev, Anton, and Erik Voeten (2012), United Nations General Assembly Voting Data V3,
+     online:<http://dvn.iq.harvard.edu/dvn/dv/Voeten/faces/study/StudyPage.xhtml?studyId=
+     38311&studyListingIndex=0_dee53f12c760141b21c251525332> (21 August 2012).
+Su, Hao (2009), Harmonious World: The Conceived International Order in Framework of
+     China’s Foreign Affairs, in: Masafumi Iida (ed.), China’s Shift. Global Strategy of the Rising
+     Power, Tokyo: The National Institute for Defense Studies, 29–55.
+Sullivan, Patricia L., Brock F. Tessman, and Xiaojun Li (2011), US Military Aid and Recipient
+     State Cooperation, in: Foreign Policy Analysis, 7, 3, 275–294.
+Sutter, Robert (2003), Why Does China Matter?, in: The Washington Quarterly, 27, 1, 75–89.
+Teorell, Jan, Marcus Samanni, Sören Holmberg, and Bo Rothstein (2011), The QoG Social Policy
+     Dataset, version 6Apr11, University of Gothenburg: The Quality of Government Institute,
+     online: <www.qog.pol.gu.se> (30 August 2011).
+Tull, Denis M. (2006), China’s Engagement in Africa: Scope, Significance and Consequences,
+     in: The Journal of Modern African Studies, 44, 3, 459–479.
+Voeten, Erik (2000), Clashes in the Assembly, in: International Organization, 54, 2, 185–215.
+Wagner, R. Harrison (1988), Economic Interdependence, Bargaining Power, and Political In‐
+     fluence, in: International Organization, 42, 3, 461–483.
+Wallace, Michael, and J. David Singer (1970), Intergovernmental Organization in the Global Sys‐
+     tem, 1815‒1964: A Quantitative Description, in: International Organization, 24, 2, 239–287.
+Wang, T. Y. (1999), U.S. Foreign Aid and UN Voting: An Analysis of Important Issues, in: In‐
+     ternational Studies Quarterly, 43, 1, 199–210.
+
+
+GIGA Working Papers                                                                             WP 209/2012
+28                       Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China
+
+
+
+
+Ward, Michael D., Brian D. Greenhill, and Kristin M. Bakke (2010), The Perils of Policy by P‐va‐
+     lue: Predicting Civil Conflicts, in: Journal of Peace Research, 47, 4, 363–375.
+Way, Lucan A., and Steven Levitsky (2007), Linkage, Leverage, and the Post‐Communist Di‐
+     vide, in: East European Politics and Societies, 21, 1, 48–66.
+Yoshimatsu, Hidetaka (2008), China, Japan, and ASEAN in East Asian Regionalism: Diverse Ap‐
+     proaches to Regional Integration, Paper presented at the annual meeting of the ISA’s 49th
+     Annual Convention, Bridging Multiple Divides, San Francisco, 26 March.
+Zhang, Baohui (2010), Chinese Foreign Policy in Transition: Trends and Implications, in: Jour‐
+     nal of Current Chinese Affairs, 39, 2, 39–68.
+Zhu, Zhiqun (2010), China’s New Diplomacy: Rationale, Strategies and Significance, Farnham, Bur‐
+     lington, V.T.: Ashgate.
+
+
+
+
+GIGA Working Papers                                                                                       WP 209/2012
+Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China                              29
+
+
+
+Appendix
+Table A‐1: Countries’ Level of Foreign Policy Similarity with China
+Foreign Policy
+                                               1991                      2001                            2011
+  Similarity
+                                    Cuba                       Myanmar                   Vietnam
+                                    Zimbabwe                   Egypt                     Brunei, Bangladesh
+                                    Vietnam, Libya             Libya                     Sri Lanka
+                                    Iran                       Lebanon                   Algeria
+                                    Sri Lanka, Brunei          Syria                     Singapore
+                                     Darussalam                 Oman, Algeria             Oman
+                                    Malaysia                   Jordan, Bahrain           Laos
+
+
+
+
+                Very high (>p90)
+                                    Tunisia                    Vietnam, Pakistan,        Iran
+                                    Myanmar, Laos               Laos, Cuba                Sudan
+                                    Indonesia                  Malaysia                  Belarus
+                                    Iraq                       Iran                      Cuba
+                                    Uganda                     Morocco                   Russia
+                                    Syria                      Tunisia                   Uzbekistan
+                                    Saudi Arabia, Pakistan,    Indonesia                 Zimbabwe
+                                     Namibia                    Saudi Arabia              Nepal
+                                                                                           Malaysia
+                                                                                           Egypt
+                                                                                           Syria
+                                                                                           Pakistan
+
+                                    Mauritania, Bangladesh     Qatar                     Ecuador
+
+
+  High (>p75)
+                                    Jordan, Algeria            Sudan                     Cambodia
+                                    Mexico, Kuwait, Guinea     Djibouti                  Nicaragua
+                                    Yemen                      Sri Lanka                 Mali
+                                    Guatemala                  Kuwait, Brunei            Venezuela
+                                    Tanzania, Philippines,     Togo, Bangladesh          India
+                                     Morocco, Djibouti          Tanzania, Burkina Faso    Qatar
+                                    United Arab Emirates,      Azerbaijan                Brazil
+                                     Qatar                      North Korea               Saint Vincent and the Grenadines,
+                                    Somalia                    United Arab Emirates       Indonesia, Guyana
+                                    North Korea                Mauritania                Myanmar
+                                    Mali                       Senegal                   Kenya
+                                    Comoros                    Yemen                     Tajikistan
+                                    Lebanon                    Zambia, Thailand,         Yemen, Guinea, Burkina Faso
+                                    Afghanistan                 Nepal, Ghana              Mozambique
+                                    Sudan                      India                     Zambia
+                                    Belize                     Mali                      North Korea
+                                    Chile                      Philippines, Nigeria,     Turkmenistan
+                                                                 Cambodia                  Congo
+                                                                Singapore                 Lesotho
+                                                                Russia                    Bolivia
+                                                                Comoros                   South Africa
+                                                                                           Trinidad and Tobago
+                                                                                           Chad
+                                                                                           Azerbaijan
+
+Source: Author’s own compilation.
+Notes: The countries are displayed in descending order of foreign policy similarity score. Countries separated
+       with a comma have identical similarity measures.
+
+
+
+
+GIGA Working Papers                                                                                               WP 209/2012
+30                         Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China
+
+
+
+
+Table A‐2: Foreign Policy Similarity with China by Subregion
+
+Region             Subregion              1990–1995     1996–2001     2002–2006     2007–2011
+
+Africa     Eastern Africa                    0.132         0.170         0.339         0.318
+           Middle Africa                     0.002         0.053         0.081         0.104
+           Northern Africa                   0.375         0.607         0.770         0.606
+           Southern Africa                   0.072         0.135         0.367         0.411
+           Western Africa                    0.231         0.306         0.380         0.359
+Americas   Caribbean                        ‐0.009         0.064         0.254         0.382
+           Central America                  ‐0.019         0.004         0.030         0.142
+           Northern America                 ‐0.435        ‐0.384        ‐0.482        ‐0.517
+           South America                     0.062         0.050         0.198         0.316
+Asia       Central Asia                     ‐0.187        ‐0.113         0.325         0.476
+           Eastern Asia                      0.093         0.117         0.184         0.218
+           South‐Eastern Asia                0.373         0.540         0.579         0.586
+           Southern Asia                    0.348         0.491         0.558         0.538
+           Western Asia                      0.189         0.286         0.425         0.380
+Europe     Eastern Europe                   ‐0.140        ‐0.021         0.006         0.011
+           Northern Europe                  ‐0.232        ‐0.157        ‐0.158        ‐0.159
+           Southern Europe                  ‐0.194        ‐0.149        ‐0.163        ‐0.120
+           Western Europe                   ‐0.234        ‐0.158        ‐0.173        ‐0.157
+Oceania    Australia and New Zealand        ‐0.169        ‐0.105        ‐0.192        ‐0.196
+           Melanesia                        ‐0.064        ‐0.004        ‐0.051         0.064
+           Micronesia                       ‐0.260        ‐0.480        ‐0.518        ‐0.549
+           Polynesia                        ‐0.131        ‐0.276        ‐0.109        ‐0.041
+Total                                        0.053         0.110         0.190         0.210
+
+Source: Author’s own compilation.
+Notes: The table displays the mean of foreign policy similarity scores by UN geographical subregion.
+
+
+
+
+GIGA Working Papers                                                                                         WP 209/2012
+Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China                   31
+
+
+
+Table A‐3: Descriptive Statistics
+
+               Variable                     Observations            Min.           Max.         Mean     Std. Dev.
+
+Country code                                      4067                2             990          461.8     261.3
+Year                                              4067              1990           2011         2000.7     6.286
+Foreign policy similarity (p25)                   4067                0              1           0.254     0.435
+Foreign policy similarity (p75)                   4067                0              1           0.254     0.435
+Foreign policy similarity (p90)                   4067                0              1           0.105     0.306
+Regime similarity                                 3830                0              6           3.028     1.930
+Global involvement                                3570                1              7           4.087     1.488
+Diplomatic exchange                               2972                0              1           0.815     0.389
+Shared IGO membership                             3069                1              4           2.621     0.795
+Special partnership                               4029                0              1           0.062     0.241
+Trade dependence                                  2505            9.14e‐06         0.546         0.038     0.047
+Export dependence                                 2533            1.53e‐07         0.847         0.027     0.069
+Import dependence                                 2764            9.18e‐06         0.342         0.042     0.042
+Aid projects (binary)                             2919                0              1           0.126     0.332
+Aid projects (average)                            2945                0              5           0.167     0.396
+Arms trade (binary)                               4029                0              1           0.062     0.240
+Arms trade (average)                              4029                0             818          3.831     28.516
+National capabilities                             3451            2.43e‐07         0.153         0.005     0.014
+Capabilities (population)                         3448            7.22e‐07         0.131         0.004     0.012
+Capabilities (resources)                          3385                0            0.193         0.005     0.017
+Capabilities (military)                           3192                0            0.266         0.005     0.020
+Years (p25)                                       4067                0             33           8.625     9.229
+Years (p75)                                       4067                0             33           8.722     9.064
+Years (p90)                                       4067                0             33          13.677     9.772
+
+Source: Author’s own compilation.
+
+
+
+
+GIGA Working Papers                                                                                      WP 209/2012
+32                           Georg Strüver: Bilateral Linkages and Domestic Drivers of Foreign Policy Alignment with China
+
+
+
+
+Table A‐4: Summary of Effects of Explanatory Variables
+
+Model             Variable                                  Foreign Policy Similarity
+
+                                              (p25)                  (p75)                   (p90)
+
+                                         Coeff.        OR       Coeff.       OR         Coeff.        OR
+
+     1   Regime similarity t‐1         ‐0.169****      0.844   0.408****     1.504    0.556****       1.744
+         Global involvement t‐1         ‐0.159***      0.853   0.238****     1.269    0.210***        1.234
+    2    Diplomatic exchange t‐1           ‐0.030      0.970   0.606***      1.833    1.515***        4.551
+    3    Diplomatic exchange t‐1            0.176      1.193     0.363       1.438     1.804**        6.072
+    4    Shared IGO membership t‐1          0.029      1.030   0.614****     1.848    0.616****       1.851
+ 5, 6    Special partnership t‐1          0.686**      1.985     0.361       1.435    1.118***        3.058
+    7    Export dependence t‐1           ‐7.999**      0.000     1.860       6.422     2.682**       14.620
+    8    Import dependence t‐1             ‐3.310     0.0365    5.059**      157.4   10.625****      41144
+    9    Aid projects (binary) t‐1        ‐0.402*      0.669     0.201       1.223     ‐0.099         0.906
+  10     Aid projects (average) t‐1      ‐0.534**      0.587   0.372***      1.451      0.049         1.051
+  11     Arms trade (binary) t‐1           ‐0.814      0.443   0.864****     2.373    0.957****       2.603
+  12     Arms trade (average) t‐1          ‐0.005      0.995   0.009***      1.009    0.007****       1.007
+
+Notes: OR = Odds ratios. For details, see tables 1 to 3. * p<0.10, ** p<0.05, *** p<0.01, **** p<0.001.
+Source: Author’s own compilation.
+
+
+
+
+GIGA Working Papers                                                                                           WP 209/2012
+Recent Issues
+
+No 209 Georg Strüver: What Friends Are Made Of: Bilateral Linkages and Domestic Drivers of
+       Foreign Policy Alignment with China, November 2012
+No 208 Jörg Balsiger, Miriam Prys and Niko Steinhoff: The Nature and Role of Regional Agreements
+       in International Environmental Politics: Mapping Agreements, Outlining Future Research,
+       October 2012
+No 207 Daniel Flemes and Leslie Wehner: Drivers of Strategic Contestation in South America,
+       October 2012
+No 206 Hannes Ebert, Daniel Flemes and Georg Strüver: The Politics of Contestation in Asia: How
+       Japan and Pakistan Deal with their Rising Neighbors, September 2012
+No 205 Carlo Koos and Matthias Basedau: Does Uranium Mining Increase Civil Conflict Risk?
+       Evidence from a Spatiotemporal Analysis of Africa from 1945 to 2010, September 2012
+No 204 Martin Beck and Simone Hüser: Political Change in the Middle East: An Attempt to
+       Analyze the “Arab Spring”, August 2012
+No 203 Martin Beck and Simone Hüser: Political Change in the Middle East: An Attempt to
+       Analyze the “Arab Spring”, August 2012
+No 202 Sandra Destradi and Johannes Vüllers: The Consequences of Failed Mediation in Civil
+       Wars: Assessing the Sri Lankan Case, August 2012
+No 201 David Shim: Seeing from Above: The Geopolitics of Satellite Vision and North Korea,
+       August 2012
+No 200 David Shim and Patrick Flamm: Rising South Korea – A Minor Player or a Regional
+       Power?, July 2012
+No 199 Sabine Kurtenbach: Postwar Youth Violence: A Mirror of the Relationship between Youth
+       and Adult Society, July 2012
+No 198 Jann Lay, Janosch Ondraczek and Jana Stoever: Renewables in the Energy Transition:
+       Evidence on Solar Home Systems and Lighting-Fuel Choice in Kenya, July 2012
+No 197 Alexander Stroh, Sebastian Elischer and Gero Erdmann: Origins and Outcomes of Electoral
+       Institutions in African Hybrid Regimes: A Comparative Perspective, June 2012
+No 196 Daniel Neff, Kunal Sen and Veronika Kling: The Puzzling Decline in Rural Women’s Labor
+       Force Participation in India: A Reexamination, May 2012
+
+
+
+
+All GIGA Working Papers are available free of charge at <www.giga-hamburg.de/workingpapers>.
+For any requests please contact: <workingpapers@giga-hamburg.de>.
+WP Coordinator: Melissa Nelson
+
+  GIGA German Institute of Global and Area Studies / Leibniz-Institut für Globale und Regionale Studien
+                           Neuer Jungfernstieg 21 • 20354 Hamburg • Germany
+                 E-mail: <info@giga-hamburg.de> • Website: <www.giga-hamburg.de>
+

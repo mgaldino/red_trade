@@ -1,0 +1,231 @@
+{
+  "schema_version": "1.0",
+  "record_type": "isolated_manuscript_integration",
+  "date": "2026-09-14",
+  "role": "sole_manuscript_integrator",
+  "scientific_review_performed": false,
+  "delegated": false,
+  "scope_items": [2, 4, 6, 7, 8, 11, 15, 18, 20, 21, 22, 25, 27, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38],
+  "artifacts": {
+    "baseline": {
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/execution/baseline/paper_v4.Rmd",
+      "sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4"
+    },
+    "candidate": {
+      "path": "/private/tmp/refine-review-20260914/paper_v4.Rmd",
+      "sha256": "82c811def270d266f8ef4541d6fc8afecb6adfe980cda6260d84439714bb340c",
+      "lines": 2514,
+      "bytes": 174675
+    },
+    "patch": {
+      "path": "/private/tmp/refine-review-20260914/reports/refine_ink_review_paper_v4_2026-09-14/execution/integration.patch",
+      "sha256": "64058bc13bdc76d02cd924e0721e36188c29f2458edbf3d92f4958b4a8bc2240",
+      "lines": 338,
+      "bytes": 68268,
+      "insertions": 55,
+      "deletions": 48
+    },
+    "canonical_rmd_unchanged": true,
+    "canonical_rmd_sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+    "canonical_pdf_unchanged": true,
+    "canonical_pdf_sha256": "da7b84fd44a1071953c5c2941be53aefb75f2b249476cc2d6e065e5f8463e312"
+  },
+  "items": [
+    {
+      "item": 2,
+      "status": "applied",
+      "change": "Disclosed the 14-country legacy source-audit frame, current-sample overlap, nine-row unresolved display filter, coding definitions, and legacy entry windows; shortened the table note.",
+      "evidence": ["cross_country.json:item2", "orchestrator_decisions.md"],
+      "dependencies": ["No new searches", "22 current treated countries remain outside the audit", "Chile and Saudi Arabia retain legacy windows"]
+    },
+    {
+      "item": 4,
+      "status": "applied_bounded",
+      "change": "Added qualitative documentation of the preserved Folha retrieval procedure, frozen classified input, missing historical logs, and partial boundary years.",
+      "evidence": ["corpus_votes_bibliography.json:item4", "orchestrator_decisions.md:additional Sol-high adjudication"],
+      "deferred": ["Numeric corpus counts", "Exact archived dates", "Join-loss accounting", "Annual coverage report", "Targets-first provenance output"]
+    },
+    {
+      "item": 6,
+      "status": "applied",
+      "change": "Defined Table 5 exposures, baseline years, activation, Pink Sheet price construction, standardization, and absorbed lower-order terms in adjacent prose; shortened note.",
+      "evidence": ["sdid.json:item6"],
+      "dependencies": ["Values unchanged", "Separate targets-migration debt remains"]
+    },
+    {
+      "item": 7,
+      "status": "applied_bounded",
+      "change": "Documented code-specified model alias, temperature, batching, parsing, exact-title join, and normalization while separating configuration from historical execution.",
+      "evidence": ["corpus_pipeline.json:item7", "orchestrator_decisions.md"],
+      "dependencies": ["No immutable snapshot", "No complete request-response log", "No exact rerun history", "No exact historical re-execution claim"]
+    },
+    {
+      "item": 8,
+      "status": "applied_bounded",
+      "change": "Relabeled the existing 100-headline and category rates as unweighted agreement within a category-enriched predicted-label sample and stated population, recall, and temporal limits.",
+      "evidence": ["corpus_pipeline.json:item8", "orchestrator_decisions.md"],
+      "deferred": ["Confusion matrix", "Precision", "Recall calculation", "Temporal metrics", "Design weighting", "All TP-FP-FN values"]
+    },
+    {
+      "item": 11,
+      "status": "applied",
+      "change": "Reframed timing rows as different-window, separately refitted point-estimate diagnostics without cross-row contrast inference.",
+      "evidence": ["comparability.json:item11"],
+      "dependencies": ["Numeric rows and preferred 2009 inference unchanged"]
+    },
+    {
+      "item": 15,
+      "status": "deferred_no_manuscript_change",
+      "change": "None; existing Table 23 and surrounding claims retained.",
+      "evidence": ["cross_country.json:item15", "local_fixes.json:item15", "orchestrator_decisions.md"],
+      "deferred": ["Four audit targets", "Validation", "Authorized graph execution", "Expanded table and caption"]
+    },
+    {
+      "item": 18,
+      "status": "applied",
+      "change": "Separated the placebo standard error, normal approximation, and deterministic placebo-in-space ranks.",
+      "evidence": ["sdid.json:item18"],
+      "dependencies": ["All numerical outputs unchanged"]
+    },
+    {
+      "item": 20,
+      "status": "applied",
+      "change": "Defined N0, N1, T0, T1 and positive uniform treated and post-period weights before the SCM and SDiD objectives.",
+      "evidence": ["sdid.json:item20"],
+      "dependencies": ["No estimator or result change"]
+    },
+    {
+      "item": 21,
+      "status": "applied",
+      "change": "Defined vote scores, signed China-minus-US distance, observed-vote exclusions, and divergent-resolution inclusion.",
+      "evidence": ["corpus_votes_bibliography.json:item21", "orchestrator_decisions.md"],
+      "dependencies": ["Country and resolution fixed effects unchanged", "Item 25 caveat preserved"]
+    },
+    {
+      "item": 22,
+      "status": "applied",
+      "change": "Replaced unique-decomposition claims with conditional within-measure factor-count sensitivity and original-scale limits; clarified the paired bootstrap.",
+      "evidence": ["comparability.json:item22"],
+      "dependencies": ["No interaction test", "No equivalence claim", "Cross-outcome differences remain scale-dependent"]
+    },
+    {
+      "item": 25,
+      "status": "explanation_only_no_item_change",
+      "change": "None to the item-25 specification or caveat.",
+      "evidence": ["domain_note.json", "domain_note.md"],
+      "deferred": ["Country-by-domain extension", "All new target-first diagnostics"]
+    },
+    {
+      "item": 27,
+      "status": "applied",
+      "change": "Narrowed Figure 8 interpretation to observed China volatility and sustained Brazilian movement.",
+      "evidence": ["corpus_votes_bibliography.json:item27"],
+      "dependencies": ["Figure and data unchanged"]
+    },
+    {
+      "item": 29,
+      "status": "applied",
+      "change": "Defined the Figure 2 arrow as the level-adjusted SDiD ATT rather than the raw post-treatment gap.",
+      "evidence": ["local_fixes.json:item29", "sdid.json:item29_caption_prerequisites"],
+      "dependencies": ["Visual verification at orchestrator render gate"]
+    },
+    {
+      "item": 30,
+      "status": "applied",
+      "change": "Corrected the hierarchy direction in the opening identification sentence.",
+      "evidence": ["local_fixes.json:item30"],
+      "dependencies": ["Treatment code and estimand unchanged"]
+    },
+    {
+      "item": 31,
+      "status": "applied_orchestrator_corrected",
+      "change": "Explained input rescaling, inert geographic distance, exact power-gap identity on stored support, nuisance residualization, and why a nonzero nuisance coefficient is not identification evidence.",
+      "evidence": ["orchestrator_decisions.md:item31", "verify_power_identity.R", "verify_power_identity.log"],
+      "dependencies": ["Preferred no-covariate fit unchanged", "Independent methodological review required before promotion"],
+      "rejected_specialist_claim": "Absolute value breaks the power identity"
+    },
+    {
+      "item": 32,
+      "status": "applied",
+      "change": "Corrected selected descriptions of time-weight construction and described classic DiD as uniform weighting.",
+      "evidence": ["sdid.json:item32"],
+      "dependencies": ["Stored weights unchanged"]
+    },
+    {
+      "item": 33,
+      "status": "applied",
+      "change": "Changed median to pre-treatment mean in the abstract while retaining 42 percent.",
+      "evidence": ["local_fixes.json:item33", "sdid_comparison_table.csv:BSV row"],
+      "verification": "abs(-0.27277140758306007) / 0.6467778905833333 * 100 = 42.17389177249793",
+      "dependencies": ["No delegated abstract-number gate because the user explicitly prohibited delegation", "No independent scientific review claimed"]
+    },
+    {
+      "item": 34,
+      "status": "applied_merged_with_22",
+      "change": "Attributed the preserved pre-treatment means to BSV and UNGA-DM in the item-22 paragraph.",
+      "evidence": ["local_fixes.json:item34"],
+      "dependencies": ["Inline values and percentage expressions preserved"]
+    },
+    {
+      "item": 35,
+      "status": "applied_shared_with_36",
+      "change": "Broadened the cited economic mechanisms beyond trade flows.",
+      "evidence": ["corpus_votes_bibliography.json:item35", "orchestrator_decisions.md"],
+      "dependencies": ["Other rationality prose unchanged", "synth-trade-china.bib retained"]
+    },
+    {
+      "item": 36,
+      "status": "applied_shared_with_35",
+      "change": "Same shared economic-mechanism sentence correction.",
+      "evidence": ["corpus_votes_bibliography.json:item36"],
+      "dependencies": ["No bibliography edit"]
+    },
+    {
+      "item": 37,
+      "status": "refuted_no_change",
+      "change": "Retained the Struver reverse-causality sentence and citation.",
+      "evidence": ["bibliography_xhigh.json:item37"],
+      "dependencies": []
+    },
+    {
+      "item": 38,
+      "status": "applied",
+      "change": "Removed only macdonald_parent2021 from the relational-status citation cluster.",
+      "evidence": ["bibliography_xhigh.json:item38"],
+      "dependencies": ["Prose and BibTeX entry retained"]
+    }
+  ],
+  "validation": {
+    "r_chunks_parsed_without_evaluation": 52,
+    "chunk_labels_unique": true,
+    "chunk_label_count": 52,
+    "literal_figure_table_crossrefs_checked": 47,
+    "missing_crossrefs": 0,
+    "inline_r_expressions_preserved": true,
+    "inline_r_expression_count": 144,
+    "diff_whitespace_errors": 0,
+    "added_manuscript_spell_jargon": false,
+    "new_confusion_matrix_or_tp_fp_fn_values": false,
+    "table_23_unchanged": true,
+    "item_25_caveat_preserved": true,
+    "item_37_sentence_preserved": true,
+    "abstract_42_percent_mean_check": "pass",
+    "rendered": false
+  },
+  "forbidden_or_unperformed": [
+    "targets changes",
+    "targets execution",
+    "reestimation",
+    "classification API calls",
+    "raw data edits",
+    "new analytical outputs",
+    "PDF rendering",
+    "canonical manuscript edits",
+    "git commit",
+    "git push",
+    "process signals",
+    "lock operations",
+    "global hook or configuration edits"
+  ],
+  "handoff": "Candidate is ready for independent methodological review of item 31 and orchestrator rendering; promotion is not performed by this integration task."
+}

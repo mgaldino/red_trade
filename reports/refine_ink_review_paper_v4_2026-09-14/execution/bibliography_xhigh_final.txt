@@ -1,0 +1,11 @@
+Adjudicação concluída:
+
+- **Item 37 — `REFUTED`:** Strüver (2016) não identifica causalmente comércio → alinhamento. O estudo relata associações, considera afinidade política → intercâmbio econômico e declara que não estabeleceu canais causais. A citação sustenta a preocupação com causalidade reversa. [Registro da publicação](https://academic.oup.com/fpa/article-abstract/12/2/170/2367626).
+- **Item 38 — `PARTIAL`:** as frases atribuídas pelo parecerista ao abstract não aparecem no [resumo oficial](https://www.cambridge.org/core/journals/world-politics/article/abs/status-of-status-in-world-politics/BF85C05AAB728662D3CA526CDF69DA60). Contudo, MacDonald e Parent fazem uma revisão crítica da definição consensual; incluí-los numa lista afirmativa pode sugerir endosso irrestrito. A proposta mínima remove apenas `@macdonald_parent2021`, preservando integralmente a definição relacional. O título e DOI `10.1017/S0043887120000301` estão corretos. A [síntese institucional dos autores](https://ondisc.nd.edu/news-media/news/the-status-of-status-in-world-politics/) confirma que a controvérsia é sobre *standing* versus *membership*, não “atributo versus relação”.
+
+Artefatos:
+
+- [bibliography_xhigh.md](</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/bibliography_xhigh.md>)
+- [bibliography_xhigh.json](</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/bibliography_xhigh.json>)
+
+O JSON passou no validador da skill; a substituição proposta corresponde exatamente uma vez ao baseline. Manuscrito atual e baseline permanecem byte-idênticos. Não alterei manuscrito, bibliografia, dados, `targets` ou arquivos compartilhados, nem executei nova análise. Limitação registrada: o texto integral, paywalled, de MacDonald–Parent não foi baixado; foram verificados o abstract oficial, a síntese conceitual institucional e os metadados bibliográficos.

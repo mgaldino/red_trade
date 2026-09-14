@@ -1,0 +1,289 @@
+{
+  "maximum_active_workers": 3,
+  "selection_basis": "Explicit user configuration; heuristic, not empirical success probability.",
+  "workers": [
+    {
+      "name": "cross_country",
+      "model_requested": "gpt-5.6-sol",
+      "effort_requested": "xhigh",
+      "mechanism": "native",
+      "items": [
+        2,
+        15
+      ],
+      "retrospective_model_change": false,
+      "role": "specialist",
+      "identity": "/root/cross_country",
+      "state": "completed"
+    },
+    {
+      "name": "corpus_pipeline",
+      "model_requested": "gpt-5.6-sol",
+      "effort_requested": "xhigh",
+      "mechanism": "native",
+      "items": [
+        7,
+        8
+      ],
+      "retrospective_model_change": false,
+      "role": "specialist",
+      "identity": "/root/corpus_pipeline",
+      "state": "completed"
+    },
+    {
+      "name": "sdid",
+      "model_requested": "gpt-5.6-sol",
+      "effort_requested": "xhigh",
+      "mechanism": "native",
+      "items": [
+        6,
+        18,
+        20,
+        31,
+        32
+      ],
+      "retrospective_model_change": false,
+      "role": "specialist",
+      "identity": "/root/sdid",
+      "state": "completed"
+    },
+    {
+      "name": "corpus_votes_bibliography",
+      "model_requested": "gpt-5.6-sol",
+      "effort_requested": "high",
+      "mechanism": "CLI 0.144.1",
+      "items": [
+        4,
+        21,
+        27,
+        35,
+        36
+      ],
+      "retrospective_model_change": false,
+      "role": "specialist",
+      "identity": "01a0a0c4-d0b7-76a0-8589-77ba2b7bb9b7",
+      "state": "turn.completed",
+      "usage": {
+        "input_tokens": 6212615,
+        "cached_input_tokens": 5926784,
+        "output_tokens": 34075,
+        "reasoning_output_tokens": 11621
+      }
+    },
+    {
+      "name": "comparability",
+      "model_requested": "gpt-6-astra",
+      "effort_requested": "medium",
+      "mechanism": "CLI 0.154.0-alpha.6.2",
+      "items": [
+        11,
+        22
+      ],
+      "retrospective_model_change": false,
+      "role": "specialist",
+      "identity": "01a0a0c6-1b82-7051-96d9-43e7cfe6f224",
+      "state": "turn.completed",
+      "usage": {
+        "input_tokens": 869514,
+        "cached_input_tokens": 784512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 9452,
+        "reasoning_output_tokens": 399
+      }
+    },
+    {
+      "name": "domain_note",
+      "model_requested": "gpt-6-astra",
+      "effort_requested": "high",
+      "mechanism": "CLI 0.154.0-alpha.6.2",
+      "items": [
+        25
+      ],
+      "retrospective_model_change": false,
+      "role": "specialist",
+      "identity": "01a0a0c6-2e07-74d2-850e-6c6d1bc35a03",
+      "state": "turn.completed",
+      "usage": {
+        "input_tokens": 824664,
+        "cached_input_tokens": 741248,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 13064,
+        "reasoning_output_tokens": 1023
+      }
+    },
+    {
+      "name": "local_fixes",
+      "model_requested": "gpt-5.6-luna",
+      "effort_requested": "xhigh",
+      "mechanism": "CLI 0.154.0-alpha.6.2",
+      "items": [
+        15,
+        29,
+        30,
+        33,
+        34
+      ],
+      "retrospective_model_change": false,
+      "role": "specialist",
+      "identity": "01a0a0cb-a330-7393-8049-09e969986f97",
+      "state": "turn.completed",
+      "usage": {
+        "input_tokens": 3864483,
+        "cached_input_tokens": 3656960,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 37016,
+        "reasoning_output_tokens": 15225
+      }
+    },
+    {
+      "name": "bibliography_xhigh",
+      "model_requested": "gpt-5.6-sol",
+      "effort_requested": "xhigh",
+      "mechanism": "CLI 0.154.0-alpha.6.2",
+      "items": [
+        37,
+        38
+      ],
+      "retrospective_model_change": false,
+      "role": "specialist",
+      "identity": "01a0a0cd-89f7-7022-a930-bd74eef996aa",
+      "state": "turn.completed",
+      "usage": {
+        "input_tokens": 4353056,
+        "cached_input_tokens": 4172160,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 21642,
+        "reasoning_output_tokens": 8878
+      }
+    },
+    {
+      "name": "integration",
+      "model_requested": "gpt-5.6-sol",
+      "effort_requested": "xhigh",
+      "mechanism": "CLI 0.154.0-alpha.6.2",
+      "items": [],
+      "retrospective_model_change": false,
+      "role": "integrator",
+      "identity": "01a0a0d5-5895-7ef1-b96c-0eb38a02ca20",
+      "state": "turn.completed",
+      "usage": {
+        "input_tokens": 7723470,
+        "cached_input_tokens": 7501568,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 47285,
+        "reasoning_output_tokens": 16027
+      }
+    },
+    {
+      "name": "review_methods",
+      "model_requested": "gpt-6-astra",
+      "effort_requested": "high",
+      "mechanism": "CLI 0.154.0-alpha.6.2",
+      "items": [],
+      "retrospective_model_change": false,
+      "role": "reviewer",
+      "identity": "01a0a0d7-cd54-7c33-8a0e-efc0b9a6c757",
+      "state": "turn.completed",
+      "usage": {
+        "input_tokens": 2586751,
+        "cached_input_tokens": 2453632,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 15676,
+        "reasoning_output_tokens": 2183
+      }
+    },
+    {
+      "name": "review_documentation",
+      "model_requested": "gpt-5.6-sol",
+      "effort_requested": "xhigh",
+      "mechanism": "CLI 0.154.0-alpha.6.2",
+      "items": [],
+      "retrospective_model_change": false,
+      "role": "reviewer",
+      "identity": "01a0a0d7-e21f-70d2-867e-81a9f68f068e",
+      "state": "turn.completed",
+      "usage": {
+        "input_tokens": 13261434,
+        "cached_input_tokens": 12854784,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 48989,
+        "reasoning_output_tokens": 15952
+      }
+    },
+    {
+      "name": "review_abstract",
+      "model_requested": "gpt-5.6-luna",
+      "effort_requested": "xhigh",
+      "mechanism": "CLI 0.154.0-alpha.6.2",
+      "items": [
+        33
+      ],
+      "retrospective_model_change": false,
+      "role": "reviewer",
+      "identity": "01a0a0e1-a848-7402-b17d-8b3568d6642f",
+      "state": "turn.completed",
+      "usage": {
+        "input_tokens": 3962395,
+        "cached_input_tokens": 3752960,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 40758,
+        "reasoning_output_tokens": 17551
+      }
+    },
+    {
+      "name": "integration_round2",
+      "model_requested": "gpt-5.6-sol",
+      "effort_requested": "xhigh",
+      "mechanism": "CLI 0.154.0-alpha.6.2",
+      "role": "integrator",
+      "retrospective_model_change": false,
+      "checkpoint_environment": "CODEX_AUTO_COMMIT_PUSH_DRY_RUN=1",
+      "identity": "01a0a0ef-6c7b-7842-a958-50121604e871",
+      "state": "turn.completed",
+      "usage": {
+        "input_tokens": 1604728,
+        "cached_input_tokens": 1499008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 29189,
+        "reasoning_output_tokens": 10785
+      }
+    },
+    {
+      "name": "review_methods_final_candidate",
+      "model_requested": "gpt-6-astra",
+      "effort_requested": "high",
+      "mechanism": "CLI 0.154.0-alpha.6.2",
+      "role": "independent_reviewer",
+      "retrospective_model_change": false,
+      "checkpoint_environment": "CODEX_AUTO_COMMIT_PUSH_DRY_RUN=1",
+      "identity": "01a0a0f0-ef1f-79a2-86ef-3c6297138fd5",
+      "state": "turn.completed",
+      "usage": {
+        "input_tokens": 4897400,
+        "cached_input_tokens": 4743040,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 15782,
+        "reasoning_output_tokens": 1804
+      }
+    },
+    {
+      "name": "review_documentation_delta",
+      "model_requested": "gpt-5.6-sol",
+      "effort_requested": "xhigh",
+      "mechanism": "CLI 0.154.0-alpha.6.2",
+      "role": "independent_reviewer",
+      "retrospective_model_change": false,
+      "checkpoint_environment": "CODEX_AUTO_COMMIT_PUSH_DRY_RUN=1",
+      "identity": "01a0a0f2-25f8-76d2-8b02-aaeddefaab44",
+      "state": "turn.completed",
+      "usage": {
+        "input_tokens": 5649747,
+        "cached_input_tokens": 5475456,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 29003,
+        "reasoning_output_tokens": 11756
+      }
+    }
+  ],
+  "separation_note": "Integrator identities edit manuscripts; review identities do not edit manuscripts. Numeric reviewer violated configuration write boundary through tar_config_set; exact config restored and incident recorded separately."
+}
