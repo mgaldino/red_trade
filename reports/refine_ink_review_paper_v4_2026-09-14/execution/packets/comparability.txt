@@ -1,0 +1,193 @@
+# Trechos da referência congelada
+
+669: ```{r china-demand-sdid-numbers, include=FALSE}
+670: china_demand_sdid_results <- readr::read_csv(
+671:   file.path(
+672:     paper_sdid_audit_dir,
+673:     "table_5_sdid_specification_results.csv"
+674:   ),
+675:   show_col_types = FALSE
+676: )
+677: china_demand_specs <- c(
+678:   "current_baseline", "no_covariates", "primary_gfc_2008_2009",
+679:   "agriculture_mining_gfc", "weighted_price_gfc", "pre_china_gfc"
+680: )
+681: stopifnot(setequal(
+682:   intersect(china_demand_specs, china_demand_sdid_results$specification),
+683:   china_demand_specs
+684: ))
+685: china_demand_main <- china_demand_sdid_results %>%
+686:   dplyr::filter(specification == "no_covariates")
+687: china_demand_commodity <- china_demand_sdid_results %>%
+688:   dplyr::filter(specification == "primary_gfc_2008_2009")
+689: stopifnot(nrow(china_demand_main) == 1L, nrow(china_demand_commodity) == 1L)
+690: stopifnot(!any(china_demand_sdid_results$smoke_test %in% TRUE))
+691: ```
+692: 
+693: The rank interpretation requires more than showing that trade with China was increasing. Brazil's exports to China grew before 2009, including years in which China rose in the export hierarchy but did not become number one. Table \@ref(tab:table-placebo) therefore reports outcome-path timing falsifications without covariates: using no covariates prevents variables measured after the early pseudo-onsets from entering those comparisons. The 2003, 2004, and 2005 estimates are smaller than the 2009 rank-one estimate; 2004 is especially useful because China first reaches rank 2 but is still not Brazil's largest export destination. The 2012 row probes a later break after China had already become the top destination. These are point-estimate diagnostics rather than additional tests with separately recomputed placebo inference.
+694: 
+695: The same timing logic addresses the main Brazilian political confounder. President Lula da Silva took office in 2003 and pursued a more explicit South-South foreign-policy agenda, a shift emphasized in work on Brazilian autonomy, presidential foreign policy, and international engagement [@neto2011; @mouron_urdinez2014; @neto_malamud2015; @rodrigues2019measuring; @schenoniMythsMultipolaritySources2022]. If that ideological shift were sufficient to explain Brazil-China UNGA convergence, the pseudo-treatment years in 2003 or 2005 should already show comparable movement. They do not. The cross-country panel also estimates the rank-threshold pattern across countries with different political systems and leadership profiles, which reduces the concern that the Brazil estimate is only a Lula-period artifact.
+696: 
+697: The main rival explanation for the proposed effect of a discrete status change is that Brazil's estimated convergence simply reflects a continuous increase in its export dependence on China. Under this account, UNGA alignment should respond smoothly to the degree of trade exposure to China. The pattern shown in Figure \@ref(fig:brazil-rank-volume) is compatible with this possibility: Brazil's export exposure increased well before 2009, raising the concern that nothing distinctive occurred at the rank-one threshold and that the estimated effect instead reflects Brazil's growing commercial ties with China.
+698: 
+699: To assess this possibility, I relate each donor country's placebo-in-space pseudo-ATT to the change in its export share directed to China. By construction, the donor pool excludes countries in which China became the largest goods-export destination during the 1997--2015 estimation window. These countries therefore provide variation in trade exposure below the rank-one threshold. If continuous exposure drives alignment, donors experiencing larger increases in exposure should exhibit more negative pseudo-ATTs -- that is, greater convergence toward China. A flat or positive relationship would instead weaken this rival explanation, although it would not by itself establish that status is the operative mechanism.
+700: 
+701: ```{r dose-response-numbers, include=FALSE}
+
+754: A remaining concern is that 2009 bundled the Brazilian rank reversal with other contemporaneous shocks, including the global financial crisis, the BRICS/G20 moment, and the commodity cycle. Table \@ref(tab:china-demand-sdid-diagnostics) uses a measure built from external goods exports only to address this critique. Brazil's 2004--2008 primary-goods share is `r sprintf('%.2f', commodity_primary_pct)` percent, composed of `r sprintf('%.2f', commodity_agriculture_pct)` percent Agriculture and `r sprintf('%.2f', commodity_mining_pct)` percent Mining and Energy. The preferred ATT is `r sprintf("%.3f", china_demand_main$estimate)`; adding primary composition and its 2008--2009 interaction yields `r sprintf("%.3f", china_demand_commodity$estimate)`. Composition, decomposition, global-price, and prior-China-exposure specifications remain in a narrow negative range. The 2008--2009 interactions are robustness or mechanism diagnostics, not alternative total-effect estimates, because 2009 is the first treated year and the interaction may absorb part of the mechanism. Stability across these measures does not isolate the rank cue experimentally from every 2009 political shock, but it reduces the narrower concern that the preferred estimate is an artifact of post-treatment controls or omitted pre-2009 commodity composition.
+755: 
+756: The cross-country panel below is a broader scope check, not the main answer to the Brazil-specific demand-shock critique. Brazil is included in the goods-only cross-country sample, but the panel aligns countries by their own China-top goods-export entry years. A Brazil-specific 2009 confounder cannot mechanically generate an average event-time effect across countries treated in different calendar years. For such an explanation to account for both the Brazil estimate and the cross-country result, the omitted force would need to coincide with durable China-top entry across countries, affect UNGA distance to China in the same direction, and remain outside the latent factors captured by the interactive fixed-effects specification. It would also need to be strongly enough associated with both treatment timing and the outcome to overturn estimates that are stable across the Brazil timing tests, donor-pool checks, and the cross-country duration and risk-set checks.
+757: 
+758: ```{r table-placebo, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
+759: rank_tests <- sdid_timing_placebos %>%
+760:   dplyr::mutate(
+761:     `Timing year` = nominal_treatment_year,
+762:     `Test role` = test_role,
+763:     `China rank` = china_rank,
+764:     `Export share (\\%)` = sprintf("%.1f", china_share_pct),
+765:     `Margin (USD bn)` = sprintf("%.1f", china_margin_vs_competitor_usd_billion),
+766:     ATT = sprintf("%.3f", estimate),
+767:     Inference = inference
+768:   ) %>%
+769:   dplyr::select(
+770:     `Timing year`, `Test role`, `China rank`,
+771:     `Export share (\\%)`, `Margin (USD bn)`, ATT, Inference
+772:   )
+773: rank_tests_note <- paste0(
+774:   sub(
+775:     "^Note: ",
+776:     "",
+777:       caption_note(
+778:       unit = "Outcome is absolute UNGA ideal-point distance to China; ATT is the estimated causal effect on Brazil after the nominal onset, so negative values mean convergence; export margins are current USD billions",
+779:       window = "2003-2005 timing tests end in 2008; 2012 is a later-break falsification using data through 2016"
+780:     )
+781:   ),
+782:   " All rows are no-covariate point-estimate diagnostics. The preferred 2009 estimate and its inference are reported separately in the main specification."
+783: )
+784: 
+785: knitr::kable(
+786:   rank_tests,
+787:   format = "latex",
+788:   booktabs = TRUE,
+789:   escape = FALSE,
+790:   caption = "Brazil SDiD rank-versus-volume timing diagnostics without covariates.",
+791:   align = "clccccl"
+792: ) %>%
+793:   kableExtra::kable_styling(
+794:     latex_options = c("HOLD_position", "scale_down"),
+795:     font_size = 8
+796:   ) %>%
+797:   kableExtra::footnote(
+798:     general = rank_tests_note,
+799:     general_title = "Note: ",
+800:     escape = FALSE,
+801:     threeparttable = TRUE
+802:   )
+803: ```
+804: 
+
+2238: 
+2239: The two outcome measures preserve the negative direction of the Brazilian SDiD estimate, but they do not support a blanket claim of robustness across the Brazilian and cross-country designs. Table \@ref(tab:ungadm-sdid-comparison) shows the comparison. Under UNGA-DM, the point estimate is nominally higher than the original in absolute terms (`r sprintf("%.3f", ungadm_dm_row$estimate)` versus `r sprintf("%.3f", ungadm_bsv_row$estimate)`), with a lower p-value of `r sprintf("%.3f", ungadm_dm_row$p_normal_two_sided)`. The directional rank is the same in both measurements (`r ungadm_fmt_rank(ungadm_dm_row$rank_one_sided, ungadm_dm_row$rank_denominator, ungadm_dm_row$p_rank_one_sided)`). The bilateral rank improves from `r ungadm_fmt_rank(ungadm_bsv_row$rank_two_sided, ungadm_bsv_row$rank_denominator, ungadm_bsv_row$p_rank_two_sided)` to `r ungadm_fmt_rank(ungadm_dm_row$rank_two_sided, ungadm_dm_row$rank_denominator, ungadm_dm_row$p_rank_two_sided)`. It is noteworthy that the pre-treatment averages are different (`r sprintf("%.3f", ungadm_bsv_row$brazil_pre_mean)` against
+2240: `r sprintf("%.3f", ungadm_dm_row$brazil_pre_mean)`) in the original estimation. But the effect measured as a percentage of the pre-treatment average is similar: `r sprintf("%.1f", ungadm_bsv_row$estimate_pct_pre_mean)` and `r sprintf("%.1f", ungadm_dm_row$estimate_pct_pre_mean)` percent. The Brazilian result therefore retains its direction and inferential support under the alternative measure, with a similar relative magnitude. The cross-country comparison below is more sensitive to the outcome source: its IFE estimate is materially smaller and less precise under UNGA-DM. The $2\times2$ comparison below holds the common window and country-year panel fixed while varying the outcome source and factor count, so the contribution of factor selection can be assessed separately from the outcome-source difference.
+2241: 
+2242: ```{r ungadm-sdid-comparison, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
+
+2374: ```{r ungadm-donor-weights, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
+2375: ungadm_weights_tbl <- ungadm_weights %>%
+2376:   dplyr::arrange(dplyr::desc(unit_weight_dm)) %>%
+2377:   dplyr::slice_head(n = 10) %>%
+2378:   dplyr::transmute(
+2379:     iso3c,
+2380:     dm = sprintf("%.3f", unit_weight_dm),
+2381:     bsv = sprintf("%.3f", unit_weight_bsv)
+2382:   )
+2383: 
+2384: ungadm_top10_dm <- ungadm_weights %>%
+2385:   dplyr::arrange(dplyr::desc(unit_weight_dm)) %>%
+2386:   dplyr::slice_head(n = 10) %>%
+2387:   dplyr::summarise(total = sum(unit_weight_dm)) %>%
+2388:   dplyr::pull(total)
+2389: 
+2390: knitr::kable(
+2391:   ungadm_weights_tbl,
+2392:   format = "latex",
+2393:   booktabs = TRUE,
+2394:   caption = "Ten largest synthetic-control donor weights under the UNGA-DM fit, with the weight the same donor receives under the main outcome.",
+2395:   col.names = c("Donor", "UNGA-DM weight", "BSV weight"),
+2396:   align = "lcc"
+2397: ) %>%
+2398:   kableExtra::kable_styling(
+2399:     latex_options = c("HOLD_position"), font_size = 9
+2400:   ) %>%
+2401:   kableExtra::footnote(
+2402:     general = paste0(
+2403:       "Weights are normalized over the full donor pool of ",
+2404:       nrow(ungadm_weights), " units rather than over the displayed donors. ",
+2405:       "The ten donors shown carry ", sprintf("%.1f", 100 * ungadm_top10_dm),
+2406:       " percent of total weight under the UNGA-DM fit. ",
+2407:       "Across all donors, the correlation between the two weight vectors is ",
+2408:       sprintf("%.3f", ungadm_weight_cor), ", and ", ungadm_top10_overlap,
+2409:       " of the ten largest donors are shared by the two fits."
+2410:     ),
+2411:     general_title = "Note: ",
+2412:     escape = FALSE,
+2413:     threeparttable = TRUE
+2414:   )
+2415: ```
+2416: 
+2417: Regarding the panel regression, Table \@ref(tab:ungadm-ife-window) shows the IFE estimation in the same time window for both outcomes, and the original estimation with the larger time window. The estimate retains the negative sign but is smaller and less precise under UNGA-DM:
+2418: `r sprintf("%.3f", ungadm_ife_dm_common$att)` with p =
+2419: `r sprintf("%.3f", ungadm_ife_dm_common$p)`. However, the models are not the same, since the number of latent factors chosen by cross-validation is different: `r ungadm_ife_bsv_common$r_cv` under BSV and `r ungadm_ife_dm_common$r_cv` under UNGA-DM. The $2\times2$ comparison below holds the common window and country-year panel fixed while crossing the outcome source with one versus two latent factors, allowing the factor-count component to be assessed separately.
+2420: 
+2421: ```{r ungadm-ife-window, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
+2422: ungadm_ife_tbl <- ungadm_ife_comparison %>%
+2423:   dplyr::transmute(
+2424:     specification = variant,
+2425:     att = sprintf("%.3f", att),
+2426:     se = sprintf("%.3f", se),
+2427:     ci = ungadm_fmt_ci(ci_lo, ci_hi),
+2428:     p = sprintf("%.3f", p),
+2429:     r_cv = as.integer(r_cv),
+2430:     n_obs = format(n_obs, big.mark = ",")
+2431:   )
+2432: 
+2433: knitr::kable(
+2434:   ungadm_ife_tbl,
+2435:   format = "latex",
+2436:   booktabs = TRUE,
+2437:   caption = "Cross-country interactive fixed-effects panel under the two outcome sources, in a common window with identical rows.",
+2438:   col.names = c("Specification", "ATT", "SE", "95 percent CI", "p",
+2439:                 "Factors (CV)", "Country-years"),
+2440:   align = "lccccc"
+2441: ) %>%
+2442:   kableExtra::kable_styling(
+2443:     latex_options = c("HOLD_position", "scale_down"), font_size = 9
+2444:   ) %>%
+2445:   kableExtra::column_spec(1, width = "5.2cm") %>%
+2446:   kableExtra::footnote(
+2447:     general = paste0(
+2448:       "All rows use the goods-only status-current restricted risk set with ",
+2449:       ungadm_ife_bsv_common$n_treated, " treated and ",
+2450:       ungadm_ife_bsv_common$n_control, " control countries. ",
+2451:       "The common-window rows keep exactly the same country-years in both outcome sources. ",
+2452:       "Confidence intervals come from ", format(ungadm_ife_bsv_common$nboots, big.mark = ","),
+2453:       " bootstrap replications."
+2454:     ),
+2455:     general_title = "Note: ",
+2456:     escape = FALSE,
+2457:     threeparttable = TRUE
+2458:   )
+2459: ```
+2460: 
+2461: Table \@ref(tab:ungadm-ife-2x2) holds the common window and country-year panel fixed and crosses the two outcome sources with one and two latent factors. This $2\times2$ design isolates the factor-count component of the comparison. Holding the outcome fixed, moving from one to two factors makes the ATT more negative (larger in absolute value): from `r sprintf("%.3f", ungadm_ife_bsv_r1$att)` to `r sprintf("%.3f", ungadm_ife_bsv_r2$att)` under BSV, and from `r sprintf("%.3f", ungadm_ife_dm_r1$att)` to `r sprintf("%.3f", ungadm_ife_dm_r2$att)` under UNGA-DM. Cross-validation selects `r ungadm_ife_bsv_common$r_cv` factors under BSV and `r ungadm_ife_dm_common$r_cv` under UNGA-DM. The one-factor UNGA-DM fit selected by cross-validation has the same negative sign and substantially overlapping uncertainty with the fixed-two-factor fit, although its point estimate is less negative; factor selection therefore changes magnitude without reversing the qualitative pattern. Holding the factor count at two still leaves a smaller UNGA-DM estimate (`r sprintf("%.3f", ungadm_ife_dm_r2$att)`) than the BSV estimate (`r sprintf("%.3f", ungadm_ife_bsv_r2$att)`), so the outcome source remains relevant after the factor-count component is isolated.
+2462: 
+2463: ```{r ungadm-ife-2x2, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
+2464: ungadm_2x2_tbl <- ungadm_ife_2x2 %>%
+2465:   dplyr::arrange(r_fixed, outcome) %>%
+2466:   dplyr::transmute(
+2467:     outcome,
+2468:     r_fixed = as.integer(r_fixed),
+
+2506: 
+2507: To sum up, the Brazilian SDiD result retains its negative direction and inferential support across the two outcome measurements, with similar relative magnitude but a different absolute scale. The $2\times2$ IFE comparison shows that two factors produce a more negative ATT under either outcome, while the one-factor choice selected by cross-validation for UNGA-DM remains qualitatively close to the two-factor fit, with the same sign and overlapping uncertainty. Even with two factors held fixed, the UNGA-DM estimate remains smaller than the BSV estimate, so the outcome metric contributes beyond factor selection. The paired test does not detect a statistically significant difference between the ATTs, but this non-rejection does not establish equivalence and may reflect uncertainty.
+

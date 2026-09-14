@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0",
+  "record_type": "bounded_adjudication_and_proposal",
+  "adjudication_id": "paper_v4:9c6b03ed3d37:refine-items-7-8:2026-09-14",
+  "scope": {
+    "items": [7, 8],
+    "role": "adjudicator_and_proposal_specialist",
+    "manuscript_edited": false,
+    "targets_modified": false,
+    "targets_executed": false,
+    "api_calls_made": false,
+    "new_paper_metrics_created": false
+  },
+  "source": {
+    "reviewed_artifact": "paper_v4.Rmd",
+    "sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+    "artifact_intact": true,
+    "rendered_artifact": "output/paper_v4.pdf",
+    "rendered_sha256": "da7b84fd44a1071953c5c2941be53aefb75f2b249476cc2d6e065e5f8463e312",
+    "rendered_pages": 69,
+    "git_head": "a045481"
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "review_sources": [
+    {
+      "review_id": "REFINE-2026-09-14",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md",
+      "sha256": "eb7dc9488e3b6726cee0ddf232250be18f09291797e2a85470b67637af58b88a"
+    },
+    {
+      "review_id": "SELECTION-2026-09-14",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md",
+      "sha256": "d0220df748585215fc3ce14786e555546134d1e25534470ee153b1872437ea25"
+    }
+  ],
+  "findings": [
+    {
+      "item": 7,
+      "finding_id": "REFINE-F007",
+      "source_review": "REFINE-2026-09-14",
+      "quoted_finding": "The classifier documentation does not provide a fully auditable path from the headline corpus to the archived labels underlying Figure 6. The model or snapshot, generation settings, user-message and batching procedure, response parsing, rerun rules, and label-normalization rules are not reported.",
+      "type": "artifact",
+      "severity": "major",
+      "scientific_dimension": "reproducibility",
+      "held_decision": false,
+      "status": "PARTIAL",
+      "source_locations": [
+        "paper_v4.Rmd:1978-2066",
+        "scripts/chatgpt_api.R:40-98",
+        "_targets.R:752-759",
+        "data/folha_classificado.rds",
+        "data/df_classifcation.rds",
+        "data/china_headlines_batch.json"
+      ],
+      "defect_evidence": [
+        "The appendix displays only the system prompt and an archive disclosure; it omits the preserved API-call, slicing, parsing, join, and normalization code.",
+        "No immutable gpt-4.1-mini snapshot, complete raw request/response archive, batch-to-row manifest, rerun history, or non-temperature generation-parameter record was found for the 14589-row corpus.",
+        "No manifest binds a specific producer hash and source-corpus hash to the archived classified RDS bytes.",
+        "The five-response gpt-4o-mini-2024-07-18 batch file is not linked to the gpt-4.1-mini corpus and cannot serve as its run log."
+      ],
+      "refuting_evidence": [
+        "scripts/chatgpt_api.R records the active model alias gpt-4.1-mini and temperature 0.",
+        "The tracked producer records the headline filter, 500-row slicing, chat call, newline and arrow parsing, trimming, exact-title join, and deduplication.",
+        "The alleged unexplained normalization is present at scripts/chatgpt_api.R:95 as gsub(\"brasil\", \"brazil\", subject).",
+        "Both archived RDS files contain 14589 rows and consistently store the string gpt-4.1-mini, though that string is assigned by code rather than preserved provider metadata."
+      ],
+      "mechanical_checks": [
+        "Traced the displayed prompt to the current producer and archived RDS inputs.",
+        "Inspected the unique model-string values and row counts in both archived RDS files.",
+        "Inspected the five-response batch JSON and found no preserved link to the corpus-wide archive.",
+        "Verified the manuscript and relevant input hashes."
+      ],
+      "reasoning": "The paper-facing record is incomplete and exact historical re-execution is impossible, but the repository preserves much of the code configuration and processing path. The correction must distinguish configuration from historical run evidence and disclose unavailable fields rather than invent them.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Add the verified configuration and explicit historical-limit disclosure; do not claim an immutable snapshot or treat the five-response gpt-4o-mini batch as corpus provenance."
+    },
+    {
+      "item": 8,
+      "finding_id": "REFINE-F008",
+      "source_review": "REFINE-2026-09-14",
+      "quoted_finding": "Table 22's 88 percent agreement appears to be an unweighted result from a category-stratified sample and therefore may not estimate corpus-wide accuracy. The six concordant china-brazil trade cases identify only one side of class performance unless the stratification basis and full confusion matrix are reported; they do not establish both precision and recall or rule out time-varying misclassification.",
+      "type": "method",
+      "severity": "major",
+      "scientific_dimension": "measurement",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "paper_v4.Rmd:2074-2119",
+        "scripts/functions.R:5623-5688",
+        "_targets.R:756-759",
+        "data/folha_validation_sample_annotated.csv"
+      ],
+      "defect_evidence": [
+        "The 88 percent result is the unweighted mean of exact matches in the 100-row validation file; no target applies sampling weights.",
+        "No validation-sample producer, random seed, complete allocation rule, or inclusion probabilities were found, so corpus-wide accuracy is not identified.",
+        "Category rows group by automated label, making them agreement conditional on the prediction rather than simultaneous precision and recall estimates.",
+        "The archived trade cells are TP=6, FP=0, FN=1; Table 22 exposes the six predicted-trade cases but not the false negative required for recall.",
+        "The sample has 55 rows from 2001-2008 and 45 from 2009-2014, omits 2000, was not temporally stratified, and has too little category-by-period support to rule out time-varying error."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "Recomputed the exact-match count from the archived 100-row validation file.",
+        "Reconstructed the complete 9-by-9 confusion matrix read-only and verified trade TP=6, FP=0, FN=1.",
+        "Counted 55 validation observations in 2001-2008 and 45 in 2009-2014 and confirmed that 2000 is absent.",
+        "Traced Table 22 to its unweighted group-by-predicted-label target function.",
+        "Searched the current graph and code for a sample producer, seed, allocation rule, and inclusion probabilities."
+      ],
+      "reasoning": "The table correctly reports arithmetic agreement in its archived sample but labels and interprets that value too broadly. Missing design probabilities preclude a corpus-wide accuracy estimate, and the displayed trade row gives only one conditioning direction. Temporal stability is untested.",
+      "proposed_fix_assessment": "needs_design",
+      "disposition": "Relabel the current result as unweighted validation-sample agreement and narrow the trade and temporal claims; add new metrics only through an authorized targets-first design."
+    }
+  ],
+  "replacements": [
+    {
+      "item": 7,
+      "old": "The classified headline file is treated as an archived derived dataset rather than regenerated during manuscript rendering. This choice reflects the practical behavior of LLM-based coding: early runs sometimes returned incomplete classifications, altered original headlines, or used slightly inconsistent labels, which made exact matching back to the archive difficult. I therefore fixed the prompt, normalized labels, preserved the resulting classified file, and validated the coding below against an independently coded sample. The evidence in the main text is used as a headline-level salience diagnostic.",
+      "new": "The classified headline file is an archived derived dataset and is not regenerated during manuscript rendering. The preserved producer used the OpenAI API model alias `gpt-4.1-mini` with temperature set to zero. It deduplicated the retrieved headlines, retained titles containing ‘China,’ ‘chinês,’ or ‘chinesa,’ submitted code-defined 500-row slices through a new chat object for each slice, split returned text by line and `->`, removed numeric prefixes, joined results back by exact headline text, and normalized the label string `china-brasil relations` to `china-brazil relations`. The archived file contains 14,589 matched unique headlines and records the model alias for every row. The archive does not preserve an immutable model snapshot, a complete request-and-response log, the exact history or rules of manual reruns, or values for generation parameters left at provider defaults. It therefore permits auditing of the stored corpus and the preserved code configuration, but not exact re-execution of the historical API calls. The evidence in the main text is used as a headline-level salience diagnostic."
+    },
+    {
+      "item": 8,
+      "old": "To assess the reliability of the automated classification, I independently coded a stratified random sample of 100 headlines (with a minimum of 5 per category). Table \\@ref(tab:chatgpt-validation) reports the agreement rate between the ChatGPT labels and the manual coding.",
+      "new": "To assess the archived classification, I manually coded a 100-headline validation sample selected with a minimum of five cases from each automated-label category. The archived materials do not preserve the random seed, the allocation rule beyond that minimum, or headline-level inclusion probabilities. Table \\@ref(tab:chatgpt-validation) therefore reports unweighted agreement within this category-enriched validation sample, not an estimate of corpus-wide accuracy."
+    },
+    {
+      "item": 8,
+      "old": "Validation of ChatGPT classification against manual coding (N = 100). Overall accuracy: 88.0 percent.",
+      "new": "Agreement between archived model labels and manual coding in the category-enriched validation sample (N = 100). Overall unweighted sample agreement: 88.0 percent; this is not a design-weighted estimate of corpus-wide accuracy."
+    },
+    {
+      "item": 8,
+      "old": "Accuracy (%)",
+      "new": "Agreement within predicted-label sample (%)"
+    },
+    {
+      "item": 8,
+      "old": "The overall accuracy is `r sprintf(\"%.1f\", overall_acc)` percent. The lowest agreement is in the \"`r lowest_category`\" category (`r sprintf(\"%.1f\", lowest_acc)` percent), where several headlines were manually reclassified as \"diplomacy.\" The category most central to the mechanism, \"china-brazil trade,\" achieved `r sprintf(\"%.1f\", trade_acc)` percent agreement. Related bilateral categories had lower but still usable agreement: `r sprintf(\"%.1f\", relations_acc)` percent for \"china-brazil relations\" and `r sprintf(\"%.1f\", diplomacy_acc)` percent for \"diplomacy.\"",
+      "new": "Overall unweighted agreement in the validation sample is 88.0 percent. Because the rows are defined by the archived model label, each category row reports agreement conditional on that predicted label. The `china-brazil trade` row contains six true positives and no false positives in the validation sample; the full confusion matrix also contains one manually coded trade headline assigned to another category. These small cells do not support a strong population claim about trade precision or recall. The sample was not stratified by time and is too small to test whether classification error changed over 2000-2014. Figure \\@ref(fig:plot-media-counterfactual) should therefore be read as a descriptive summary of the archived labels subject to unmeasured classification error."
+    }
+  ],
+  "targets_first_specification": [
+    {
+      "target": "headline_classification_provenance_file",
+      "purpose": "Track a static JSON manifest with hashes for source corpus, producer, exact prompt, archived RDS files, and validation file; unknown historical fields must be null with reasons.",
+      "requires_authorization": true
+    },
+    {
+      "target": "headline_classification_provenance_validation",
+      "purpose": "Fail on hash, row-count, label-set, or stored-model-string drift without making an API call.",
+      "requires_authorization": true
+    },
+    {
+      "target": "headline_validation_design_file",
+      "purpose": "Record sampling frame, strata, allocation, seed, and inclusion probabilities; for the existing sample, mark probabilities unavailable unless documentary evidence is found.",
+      "requires_authorization": true
+    },
+    {
+      "target": "chatgpt_validation_confusion_matrix",
+      "purpose": "Produce the complete predicted-by-manual 9-by-9 matrix and cell supports from validation_file.",
+      "requires_authorization": true
+    },
+    {
+      "target": "chatgpt_validation_class_metrics",
+      "purpose": "Compute precision, recall, F1, numerators, denominators, and uncertainty intervals from the confusion matrix.",
+      "requires_authorization": true
+    },
+    {
+      "target": "chatgpt_validation_sample_agreement",
+      "purpose": "Retain the existing 88 percent as explicitly unweighted validation-sample agreement.",
+      "requires_authorization": true
+    },
+    {
+      "target": "chatgpt_validation_corpus_weighted_accuracy",
+      "purpose": "Compute a design-weighted corpus estimate only if justified inclusion probabilities are present; otherwise return unavailable and a reason.",
+      "requires_authorization": true
+    },
+    {
+      "target": "chatgpt_validation_temporal_metrics",
+      "purpose": "After an authorized preregistered category-by-period manual validation sample, report cell sizes, interval estimates, and the predeclared temporal test; emit insufficient_support when cells are inadequate.",
+      "requires_authorization": true
+    }
+  ],
+  "checks": [
+    "SHA-256 verification of source, PDF, reviews, producer, and archived data inputs",
+    "PDF text location and 69-page count verification",
+    "Read-only RDS structure, row uniqueness, label distribution, and model-string inspection",
+    "Read-only 9-by-9 confusion-matrix reconstruction",
+    "Bounded current-code search for validation sampling producer, seed, and inclusion probabilities",
+    "Static trace through _targets.R, scripts/functions.R, and scripts/chatgpt_api.R"
+  ],
+  "limitations": [
+    "No exact historical model snapshot or provider-default settings are preserved.",
+    "No complete raw API request/response archive or corpus-wide rerun log was found.",
+    "The five-response gpt-4o-mini batch is unrelated by preserved provenance to the 14589-row gpt-4.1-mini corpus.",
+    "No validation-sample producer, seed, complete allocation rule, or inclusion probabilities were found.",
+    "Read-only diagnostic cell counts are adjudication evidence, not new paper-facing metrics.",
+    "No target, model, API, classification, manuscript, or rendered artifact was changed or executed."
+  ],
+  "summary": {
+    "total": 2,
+    "confirmed": 1,
+    "partial": 1,
+    "refuted": 0,
+    "unresolved": 0,
+    "held_decisions": 0
+  },
+  "adjudication": {
+    "verdict": "READY_FOR_IMPLEMENTATION",
+    "checked_at": "2026-09-14T00:00:00-03:00",
+    "reasons": [
+      "Safe disclosure and interpretation corrections are fully specified for items 7 and 8.",
+      "New weighted, class-specific, and temporal calculations remain gated behind authorized targets-first implementation and execution."
+    ]
+  }
+}

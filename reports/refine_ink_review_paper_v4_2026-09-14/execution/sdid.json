@@ -1,0 +1,289 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "paper-v4-sdid:da7b84fd44a1:refine-20260914",
+  "source": {
+    "reviewed_artifact": "output/paper_v4.pdf",
+    "sha256": "da7b84fd44a1071953c5c2941be53aefb75f2b249476cc2d6e065e5f8463e312",
+    "artifact_intact": true,
+    "source_rmd": "paper_v4.Rmd",
+    "source_rmd_sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+    "baseline_manifest": "reports/refine_ink_review_paper_v4_2026-09-14/execution/baseline_manifest.json",
+    "identity_note": "The active Rmd and PDF are byte-identical to the frozen baseline copies, and the five quoted passages occur in both source and rendered PDF."
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "review_sources": [
+    {
+      "review_id": "REFINE",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md",
+      "sha256": "eb7dc9488e3b6726cee0ddf232250be18f09291797e2a85470b67637af58b88a"
+    },
+    {
+      "review_id": "SELECTION",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md",
+      "sha256": "d0220df748585215fc3ce14786e555546134d1e25534470ee153b1872437ea25"
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "REFINE-006",
+      "item": 6,
+      "source_review": "REFINE",
+      "quoted_finding": "Table 5 does not fully define the exposure variables, baseline periods, the meaning of x 2008-2009, or the treatment of lower-order terms.",
+      "type": "exposition",
+      "severity": "unspecified",
+      "scientific_dimension": "fidelity of implementation",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "paper_v4.Rmd:754",
+        "paper_v4.Rmd:805",
+        "paper_v4.Rmd:867",
+        "output/paper_v4.pdf:p.23, Table 5 and preceding paragraph"
+      ],
+      "defect_evidence": [
+        "The Table 5 labels say only Primary share, Agriculture/mining, Price exposure, and Prior China share x 2008-2009; the note says only that the measures use external goods exports and that the interaction includes the first treated year.",
+        "The active producer defines country means over 2004-2008 for primary goods, agriculture, mining and energy, and China's goods-export share; the manuscript does not report those definitions.",
+        "The active producer includes only standardized time-varying interactions in the four diagnostic fits. Fixed exposure levels are omitted because they are absorbed by unit effects, and the common 2008-2009 indicator is absorbed by time effects; this lower-order-term logic is absent from the paper.",
+        "The price row is a distinct construction: 2004-2008 export-composition weights multiply World Bank Pink Sheet log-price changes relative to 2007 before the 2008-2009 activation and standardization."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "Inspected scripts/diagnostics/audit_brazil_sdid_commodity_no_covariates.R:97-151 and the upstream construction at scripts/diagnostics/audit_brazil_sdid_predetermined_commodity_controls.R:190-257,293-326.",
+        "Matched all six rows and values to data/processed/diagnostics/brazil_sdid_commodity_no_covariates/table_5_sdid_specification_results.csv; smoke_test is FALSE.",
+        "Confirmed the producer uses no lower-order exposure levels in specifications at lines 121-127."
+      ],
+      "reasoning": "The diagnostics are implemented coherently, but the rendered table cannot be interpreted from the manuscript alone. This is a bounded reporting defect; it does not require re-estimation.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Add the exact 2004-2008 exposure definitions, the 2008-2009 activation rule, the price-index construction, standardization, and the absorbed lower-order-term explanation to the paragraph/note. Keep the main covariate-free specification and all estimates unchanged."
+    },
+    {
+      "finding_id": "REFINE-018",
+      "item": 18,
+      "source_review": "REFINE",
+      "quoted_finding": "The uncertainty discussion conflates the placebo-based standard error, the exhaustive placebo-in-space rank, and the normal approximation used for p-values and confidence intervals.",
+      "type": "method",
+      "severity": "unspecified",
+      "scientific_dimension": "inference",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "paper_v4.Rmd:308-310",
+        "paper_v4.Rmd:338",
+        "paper_v4.Rmd:654-661",
+        "output/paper_v4.pdf:p.11"
+      ],
+      "defect_evidence": [
+        "Line 308 incorrectly calls the standard error a normal-approximation quantity and describes the directional rank as the procedure used to compute uncertainty.",
+        "The reported SE is instead a synthdid placebo SE: se_sdid takes the finite-population standard deviation of 20,000 seeded placebo resamples for the preferred fit.",
+        "The conventional two-sided p-value and 95 percent interval are then calculated from the estimate and placebo SE with a normal approximation.",
+        "The rank is a separate, deterministic placebo-in-space exercise: every one of 96 units is treated once, yielding directional rank 3/96 and absolute bilateral rank 7/96."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "Inspected scripts/functions.R:1072-1151 and scripts/diagnostics/sdid_placebo_helpers.R:230-297 for the 20,000-resample placebo SE algorithm.",
+        "Inspected scripts/diagnostics/sdid_placebo_helpers.R:299-380 and rank_inference.csv for the exhaustive, no-RNG rank procedure.",
+        "Confirmed main_summary.csv records estimate -0.2727714076, placebo SE 0.1306079433, normal p 0.0367550198, directional rank 3/96, bilateral rank 7/96, seed 20260520, and 20,000 SE replications."
+      ],
+      "reasoning": "The numerical outputs and result-table labels already distinguish the quantities, but the design paragraph assigns the wrong source to the standard error and merges three logically separate inferential summaries.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Replace the uncertainty paragraph with an explicit three-step account. Do not change estimates, SEs, ranks, or the held convention that the directional rank is theory-aligned and the absolute rank is a conservative sensitivity assessment."
+    },
+    {
+      "finding_id": "REFINE-020",
+      "item": 20,
+      "source_review": "REFINE",
+      "quoted_finding": "The displayed SCM and SDiD objectives omit definitions of the positive weights on treated units and post-treatment periods, so a literal reading makes the treatment term disappear.",
+      "type": "method",
+      "severity": "unspecified",
+      "scientific_dimension": "fidelity of implementation",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "paper_v4.Rmd:1426-1448",
+        "output/paper_v4.pdf:pp.46-47"
+      ],
+      "defect_evidence": [
+        "The text defines only donor-unit weights and reports only pre-treatment time weights, but the objective sums over every unit-period cell without defining full-sample weights.",
+        "Without fixed positive weights on treated units and post-treatment periods, the displayed notation does not show how treated-post cells enter and identify the ATT."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "Inspected the installed synthdid 0.0.9 implementation of synthdid_estimate: the estimator uses c(-omega, rep(1/N1,N1)) and c(-lambda, rep(1/T1,T1)).",
+        "Confirmed the active preferred target is a synthdid_estimate with N0=95, T0=12 and no covariate array; no implementation failure was found."
+      ],
+      "reasoning": "The defect is in exposition only. The software gives donor controls optimized weights, treated units uniform weight 1/N1, pre-treatment periods optimized weights, and post-treatment periods uniform weight 1/T1. The current equation becomes complete once those full vectors are defined.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Define N0, N1, T0, and T1 and the full unit/time weight vectors immediately before the objectives. State that treated and post-treatment cells receive positive uniform weights."
+    },
+    {
+      "finding_id": "REFINE-031",
+      "item": 31,
+      "source_review": "REFINE",
+      "quoted_finding": "The covariate comparison may contain a time-invariant geographic-distance term absorbed by unit effects and a power-gap term collinear with country power and time effects.",
+      "type": "scope_or_consistency",
+      "severity": "unspecified",
+      "scientific_dimension": "fidelity of implementation",
+      "held_decision": false,
+      "status": "PARTIAL",
+      "source_locations": [
+        "paper_v4.Rmd:225-227",
+        "paper_v4.Rmd:306",
+        "paper_v4.Rmd:548-661, Table 3",
+        "output/paper_v4.pdf:pp.11,18",
+        "scripts/functions.R:180-210",
+        "scripts/functions.R:681-721"
+      ],
+      "defect_evidence": [
+        "Geographic distance to the United States is time-invariant, remains in the 13-variable synthdid covariate array, and its stored coefficient is 7.96e-19. It supplies no separate adjustment under the unit-effect parametrization even though Table 3 marks it as included.",
+        "The manuscript does not say whether this variable was absorbed, dropped, or transformed."
+      ],
+      "refuting_evidence": [
+        "The actual power variable is us_power_gap = abs(us_power - gpi), not the signed difference assumed by the reviewer.",
+        "The absolute value breaks the alleged exact linear identity with country GPI and annual U.S. power/time effects. The stored current-covariate fit gives us_power_gap coefficient -0.008069, rather than zero.",
+        "The preferred fit has a 96 x 19 x 0 covariate array; this issue cannot alter the main covariate-free ATT."
+      ],
+      "mechanical_checks": [
+        "Read get_gpi_data at scripts/functions.R:180-210 and cov_matrix/simple_fit at scripts/functions.R:681-755.",
+        "Read the stored targets synth_fit and synth_fit_no_time_varying_covariates without rebuilding them; the former has 13 beta coefficients and the latter has zero covariates.",
+        "Verified distance_us beta 7.959e-19 and us_power_gap beta -8.069e-03 in the stored comparison fit."
+      ],
+      "reasoning": "The distance part is correct and underreported. The signed-power-gap collinearity claim does not match the implemented absolute differential and is refuted. The paper should clarify both facts without implying that the covariate comparison validates the main estimate.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Clarify that distance remains in the comparison array but is absorbed/inert, define the power gap as the absolute annual GPI difference, and reiterate that the covariate-adjusted model is only a comparison. Leave the preferred no-covariate fit unchanged."
+    },
+    {
+      "finding_id": "REFINE-032",
+      "item": 32,
+      "source_review": "REFINE",
+      "quoted_finding": "The paper reverses the role of SDiD time weights and implies that unit and time weights are constructed from the same pre-treatment information.",
+      "type": "method",
+      "severity": "unspecified",
+      "scientific_dimension": "fidelity of implementation",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "paper_v4.Rmd:223",
+        "paper_v4.Rmd:302",
+        "paper_v4.Rmd:1424",
+        "output/paper_v4.pdf:pp.8,11,46"
+      ],
+      "defect_evidence": [
+        "Line 1424 says time periods are weighted for comparability to the pre-treatment period; the implemented lambda optimization has the opposite target.",
+        "Lines 223 and 302 imply that both unit and time weights are constructed from pre-treatment information or from generic pre/post comparability.",
+        "In synthdid 0.0.9, optimized lambda lies on pre-treatment periods and targets the vector of control units' average post-treatment outcomes."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "Inspected synthdid_estimate, collapsed.form, sc.weight.fw, and sc.weight.fw.covariates in the installed synthdid 0.0.9 namespace.",
+        "Confirmed collapsed.form replaces the post-treatment block by each control unit's post-period mean before lambda optimization.",
+        "Confirmed Table 10 correctly reports only the optimized pre-treatment lambda vector; the defect is the verbal description, not the stored weights."
+      ],
+      "reasoning": "Unit weights use pre-treatment outcome histories to approximate the treated unit. Time weights use control outcomes from both sides of onset: weighted pre-treatment control outcomes approximate the controls' average post-treatment outcomes. The manuscript currently merges these operations.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Correct the three local descriptions and use uniform-weight language for classic DiD. Coordinate the definitions with item 20 so the appendix does not repeat or contradict itself."
+    }
+  ],
+  "replacements": [
+    {
+      "item": 6,
+      "location": "paper_v4.Rmd:867-879, Table 5 note",
+      "old": "Primary-goods measures use external goods exports only. The 2008-2009 interactions include the first treated year and are mechanism robustness checks, not preferred total-effect specifications.",
+      "new": "The exposure baselines are country means over 2004--2008: primary goods as a share of external goods exports, its Agriculture and Mining and Energy components, and China as a share of external goods exports. `x 2008--2009` means that the fixed 2004--2008 exposure is multiplied by an indicator for 2008 and 2009 and then standardized over the estimation panel. The price diagnostic instead weights World Bank Pink Sheet log-price changes relative to 2007 by the country's 2004--2008 Agriculture, Energy, and Metals and Minerals export shares, activates that index in 2008--2009, and standardizes it. Only these time-varying interactions enter the four diagnostic specifications: exposure levels are time-invariant and absorbed by unit effects, while the common 2008--2009 indicator is absorbed by time effects. Because 2009 is the first treated year, these are mechanism robustness checks rather than preferred total-effect specifications."
+    },
+    {
+      "item": 18,
+      "location": "paper_v4.Rmd:308-310",
+      "old": "To compute the uncertainty of estimates, I use a one-sided placebo-in-space rank of the Brazil estimate within the distribution of placebo estimates obtained by reassigning treatment to each unit from the donor pool. For robustness, I also report the standard error calculated from the normal approximation native to the SDiD estimator. I use a one-sided hypothesis test, since the theory is directional (a treated unit should move its ideal point toward China), and report the two-sided test as a conservative sensitivity assessment.",
+      "new": "I report three distinct inferential summaries for the preferred Brazil estimate. First, the placebo-based standard error is the finite-population standard deviation of 20,000 seeded synthdid placebo resamples. Second, I combine that placebo standard error with a two-sided normal approximation to report the conventional p-value and 95 percent confidence interval. Third, I report deterministic placebo-in-space ranks obtained by reassigning treatment once to Brazil and to every donor: the directional rank counts estimates at least as negative as Brazil's, while the bilateral rank compares absolute magnitudes. The directional rank follows the theory's prediction of convergence; the bilateral rank is a conservative sensitivity assessment."
+    },
+    {
+      "item": 20,
+      "location": "paper_v4.Rmd:1437, before the SDiD objective",
+      "old": "SDiD combines unit weights (like SCM) with unit fixed effects (like DiD) and time weights (unique to SDiD), addressing the limitations of both. The basic SDiD estimating equation is:",
+      "new": "SDiD combines unit weights (like SCM) with unit fixed effects (like DiD) and time weights. Let N_0 and N_1 denote the numbers of control and treated units and T_0 and T_1 the numbers of pre- and post-treatment periods. In the full unit-weight vector, controls receive the optimized nonnegative donor weights, which sum to one, and each treated unit receives the fixed positive weight 1/N_1. In the full time-weight vector, pre-treatment periods receive optimized nonnegative weights, which sum to one, and each post-treatment period receives the fixed positive weight 1/T_1. Thus treated-post cells enter the objective with positive weight. The basic SDiD estimating equation is:"
+    },
+    {
+      "item": 20,
+      "location": "paper_v4.Rmd:1437, SCM definition",
+      "old": "Here $\\hat{w}^{\\text{SCM}}_i$ is the donor-unit weight assigned to unit $i$.",
+      "new": "Here $\\hat{w}^{\\text{SCM}}_i$ denotes the full unit-weight vector: an optimized nonnegative weight for each control unit and the fixed positive weight $1/N_1$ for each treated unit."
+    },
+    {
+      "item": 31,
+      "location": "paper_v4.Rmd:306",
+      "old": "The preferred specification uses no covariates because time-varying post-2009 values may induce post-treatment bias. A model specification with time-varying variables uses trade, power, ideology, macroeconomic stress, and institutional variables to control for potential confounding. The similarity of the estimates indicates low sensitivity to post-treatment adjustment, suggesting the results are not driven by the covariates. Commodity composition and price interactions are also treated as robustness or mechanism diagnostics, especially because the 2008--2009 interaction includes the first treated year.",
+      "new": "The preferred specification uses no covariates because time-varying post-2009 values may induce post-treatment bias. The current-covariate comparison passes the country-year variables listed in Table 3 to synthdid. Geographic distance to the United States is time-invariant: it remains in that comparison array but is absorbed by the unit-effect parametrization and supplies no separate adjustment. The power gap is the absolute annual difference between the U.S. and country Global Power Index values, rather than a signed difference, so it is not mechanically collinear with country power and time effects. This covariate-adjusted model is retained only as a sensitivity comparison; the preferred specification remains covariate-free. Commodity composition and price interactions are separate robustness or mechanism diagnostics, especially because the 2008--2009 interaction includes the first treated year."
+    },
+    {
+      "item": 32,
+      "location": "paper_v4.Rmd:223",
+      "old": "SDiD estimates Brazil's average post-2009 gap relative to a weighted synthetic counterfactual, using pre-treatment information to construct unit and time weights [@arkhangelsky_etal2021].",
+      "new": "SDiD estimates Brazil's average post-2009 gap relative to a weighted synthetic counterfactual. Unit weights are learned from pre-treatment outcome histories, whereas the optimized pre-treatment time weights use control outcomes before onset and the controls' average outcome after onset [@arkhangelsky_etal2021]."
+    },
+    {
+      "item": 32,
+      "location": "paper_v4.Rmd:302",
+      "old": "And, unique to the method, it weights the time periods, choosing the ones most comparable pre- and post-treatment.",
+      "new": "It also weights pre-treatment periods so that the controls' weighted pre-treatment outcomes approximate their average post-treatment outcomes."
+    },
+    {
+      "item": 32,
+      "location": "paper_v4.Rmd:1424",
+      "old": "While SDiD assigns larger weights to control units more similar to the treated unit and to time periods more comparable to the pre-treatment period, classic DiD does not use any weights at all.",
+      "new": "SDiD assigns larger unit weights to control units whose pre-treatment outcome paths help reproduce the treated unit. Separately, it assigns optimized weights to pre-treatment periods so that their weighted control-unit outcomes approximate the controls' average post-treatment outcomes. Unit weights therefore use pre-treatment outcome histories, whereas time weights use control outcomes from both sides of treatment onset. Classic DiD corresponds to uniform weighting in this comparison."
+    }
+  ],
+  "item29_caption_prerequisites": {
+    "purpose": "Methodological prerequisites for the later Figure 2 caption correction; item 29 is not adjudicated in this record.",
+    "current_figure": "The PNG is generated from the stored no-covariate synthdid fit by plot.synthdid_estimate. It plots the unshifted Brazil and weighted-donor trajectories and overlays synthdid's difference-in-differences diagram; the arrow denotes the estimator.",
+    "estimand_identity": "With one treated unit and no covariates, ATT = [Brazil post mean - donor-weighted post mean] - [lambda-weighted Brazil pre outcome - donor-and-lambda-weighted pre outcome]. The raw vertical separation of the two plotted trajectories in any post year, or even their post-period average separation, is not generally the ATT because the lambda-weighted pre level gap must be netted out.",
+    "caption_requirements": [
+      "Call the two lines observed Brazil and the unshifted weighted donor trajectory.",
+      "Describe the arrow as the level-adjusted SDiD ATT, equal to the average post-treatment contrast net of the SDiD lambda-weighted pre-treatment contrast.",
+      "Do not call the raw post-treatment vertical distance between the paths the ATT.",
+      "Keep the no-covariate specification, 1997-2015 window, 20,000-replication placebo SE, and existing ATT unchanged."
+    ],
+    "verification_after_edit": [
+      "Confirm the figure still comes from synth_fit_no_time_varying_covariates and that the plotted arrow is supplied by synthdid_plot rather than a raw-gap annotation.",
+      "Render and inspect the Figure 2 page, checking that caption wording clearly distinguishes the raw trajectories from the adjusted arrow.",
+      "Compare the displayed ATT and SE against main_summary.csv; no model rerun is needed for a caption-only change."
+    ]
+  },
+  "implementation_checks": [
+    "Apply only the replacement text; do not change numerical values, estimands, covariate sets, targets, or output producers.",
+    "Run a source search to ensure the superseded descriptions of the SE and time weights no longer remain elsewhere in the manuscript.",
+    "Render the manuscript and inspect the pages containing the identification paragraph, Table 5, and the SDiD appendix equations.",
+    "Confirm inline values remain -0.273, 0.131, [-0.529, -0.017], 3/96, and 7/96 and Table 5 values remain byte-for-byte numerically unchanged.",
+    "If any new estimate, diagnostic, or paper-facing data transformation becomes necessary, specify it as a target/file target first. The current Table 5 producer remains listed as P1 outside the graph in TARGETS_MIGRATION.md."
+  ],
+  "unresolved_limits": [
+    "No model, placebo, bootstrap, target, or manuscript render was executed in this adjudication.",
+    "The local synthdid 0.0.9 implementation and stored target objects were inspected; this record does not assess behavior under a future package version.",
+    "Table 5's paper-facing CSV still comes from a producer outside the current targets graph. The proposed prose correction relies only on existing frozen outputs and does not cure that separate migration debt."
+  ],
+  "summary": {
+    "total": 5,
+    "confirmed": 4,
+    "partial": 1,
+    "refuted": 0,
+    "unresolved": 0,
+    "held_decisions": 0
+  },
+  "adjudication": {
+    "verdict": "READY_FOR_IMPLEMENTATION",
+    "checked_at": "2026-09-14T13:28:25-03:00",
+    "reasons": [
+      "All five items are resolved against the exact frozen artifact and active implementation.",
+      "The fixes are bounded manuscript-exposition changes and require no re-estimation.",
+      "The preferred covariate-free SDiD specification and all reported numerical results remain unchanged."
+    ]
+  }
+}

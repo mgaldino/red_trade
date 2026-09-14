@@ -1,0 +1,183 @@
+{
+  "schema_version": "cross_country_adjudication_v1",
+  "artifact": {
+    "source_path": "paper_v4.Rmd",
+    "source_sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+    "pdf_path": "output/paper_v4.pdf",
+    "pdf_sha256": "da7b84fd44a1071953c5c2941be53aefb75f2b249476cc2d6e065e5f8463e312",
+    "artifact_intact": true,
+    "contract_required": false
+  },
+  "review_source": {
+    "path": "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md",
+    "sha256": "eb7dc9488e3b6726cee0ddf232250be18f09291797e2a85470b67637af58b88a"
+  },
+  "findings": [
+    {
+      "item": 2,
+      "status": "PARTIAL",
+      "source_locations": [
+        "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:104-112",
+        "paper_v4.Rmd:1882-1923",
+        "scripts/diagnostics/analyze_ex_top1_salience.R:46-87",
+        "scripts/diagnostics/analyze_ex_top1_salience.R:206-216",
+        "scripts/functions.R:2213-2261",
+        "scripts/diagnostics/prepare_australia_appendix_bundle_patch.R:75-125"
+      ],
+      "defect_evidence": [
+        "The manuscript calls this a cross-country audit without disclosing that its underlying matrix has 14 legacy-sample countries rather than the 35 current treated countries.",
+        "Only 13 audited countries overlap the current treated sample; Qatar is audit-only and 22 current treated countries were never in this source audit.",
+        "The table note does not disclose the display filter or define medium.",
+        "Chile and Saudi Arabia retain legacy source-audit entry years that differ from the current treatment target; only Australia was patched."
+      ],
+      "refuting_evidence": [
+        "The producer explicitly filters the 14-country matrix to cases without an observed China cue, retaining Australia regardless; the resulting table has nine rows.",
+        "Five audited cases are hidden because their China cues were recovered: Chile, Brazil, Uruguay, Saudi Arabia, and Qatar.",
+        "Among the 26 current treated countries not displayed, four were audited and hidden by the filter and 22 were not audited; they are not a single group of omitted audit cases."
+      ],
+      "reasoning": "The reporting defect exists, but the review overstates the relationship between the 35-country treatment table and the nine-row display. The source audit is a 14-case legacy subset, and the display is a filtered nine-case diagnostic. Accurate disclosure resolves the present reporting problem without inventing searches for the 22 unaudited current cases.",
+      "proposed_fix_assessment": "safe",
+      "implementation_scope": "Text, caption, and note only; do not change treatment rules or salience codes."
+    },
+    {
+      "item": 15,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:289-306",
+        "paper_v4.Rmd:2121-2161",
+        "scripts/functions.R:4268-4364",
+        "scripts/functions.R:4407-4424",
+        "scripts/functions.R:4427-4521"
+      ],
+      "defect_evidence": [
+        "Table 23 consumes a country-level summary containing only first treatment year, aggregate treated and untreated counts, and panel bounds.",
+        "The restricted risk-set producer removes post-entry off-status years and nonqualifying China-top periods, so omitted years cannot be inferred from the displayed aggregates.",
+        "The existing store contains 36 qualifying periods among 35 treated countries and 14 short excluded periods across nine of those countries, but Table 23 does not expose them.",
+        "Calendar entry-exit bounds cannot safely substitute for observed year lists because some observed periods contain calendar gaps."
+      ],
+      "refuting_evidence": [],
+      "reasoning": "The review accurately identifies a reproducibility and exposition gap. Existing target objects supply the ingredients, but producing auditable year lists and omission reasons is a new paper-facing transformation and must be implemented as targets from inception.",
+      "proposed_fix_assessment": "needs_design",
+      "implementation_scope": "Targets-first audit outputs; no treatment-rule change; retain current table until targets exist and validate."
+    }
+  ],
+  "replacements": [
+    {
+      "item": 2,
+      "old": "The paragraph at paper_v4.Rmd:1884 that presents an unqualified cross-country audit.",
+      "new": "To assess the recoverability of public rank language, I use a source audit originally constructed for 14 countries in an earlier no-covariate treated sample. This is not a census of the 35 countries treated in the current goods-only restricted-risk-set specification: 13 audited countries remain in the current treated sample, Qatar does not, and 22 current treated countries were not included in the source audit. The underlying matrix records both recovered and unrecovered China cues. Table 20 is a diagnostic subset: it displays the nine cases in which the China cue is currently coded as unknown; five audited cases with recovered cues are omitted by the display filter. The table distinguishes weak observation from cases in which public rank language about the displaced incumbent is recoverable. Non-recovery is not coded as evidence that a cue was absent because contemporaneous local or official records may be inaccessible or inconsistent with the trade-rank series. Except for Australia, whose displayed year has been reconciled to the current 2009 entry, the table retains the entry windows used in the legacy source audit. Table 21 reports Australia's broad-trade source separately.",
+      "implementation_status": "ready"
+    },
+    {
+      "item": 2,
+      "old": "Recoverability and metric caveats in the former-incumbent salience audit.",
+      "new": "Selected unresolved cases from a 14-country legacy source audit of public rank-language recoverability and metric caveats.",
+      "implementation_status": "ready"
+    },
+    {
+      "item": 2,
+      "old": "The current Table 20 note, which does not disclose the 14-to-9 filter or define medium.",
+      "new": "The source audit covers 14 countries from an earlier no-covariate treated sample and is not a census of the 35 countries treated in the current goods-only restricted-risk-set specification. Thirteen audited countries remain in the current treated sample; Qatar does not. The table displays the nine cases for which the China cue is coded as unknown; Chile, Brazil, Uruguay, Saudi Arabia, and Qatar have recovered China cues and are omitted from this diagnostic display. For the China cue, `medium` means one countable strong or moderate first-window source with explicit rank language. For the former-incumbent benchmark, `medium` means either one countable source with explicit incumbent-rank or displacement language, or at least two countable trade-coverage records from at least one independent source without a clear top-rank label. Countable sources must be eligible, fall within one year of the source-audit entry year, be coded strong or moderate, enter the benchmark, and not be marked `DO_NOT_COUNT`. `Unknown` means that the incumbent was not identified or that no countable benchmark source was recovered; no case is currently coded `low`. Australia's displayed entry year follows the current annual goods-only panel; other entry years retain the legacy source-audit windows.",
+      "implementation_status": "ready"
+    },
+    {
+      "item": 15,
+      "old": "Table 23 describes the 35 treated countries in the main goods-only restricted-risk-set specification. For each country, the table reports the first qualifying China-top goods-export year and the number of treated and untreated country-years retained in the estimation panel.",
+      "new": "Table 23 provides a country-level audit of the 35 treated countries in the main goods-only restricted-risk-set specification. It reports every qualifying entry and exit, the observed years in excluded short China-top periods, the treated years retained by the estimator, and the post-entry off-status years omitted by the restricted risk set. Year ranges are compressed only across consecutive observed calendar years; gaps remain explicit.",
+      "implementation_status": "deferred_until_targets_exist_and_validate"
+    },
+    {
+      "item": 15,
+      "old": "Treated countries in the main goods-only restricted-risk-set cross-country specification.",
+      "new": "Country-level audit of retained and omitted years in the main goods-only status-current restricted-risk-set specification.",
+      "implementation_status": "deferred_until_targets_exist_and_validate"
+    }
+  ],
+  "item15_target_design": {
+    "status": "PENDING_IMPLEMENTATION_AND_AUTHORIZED_EXECUTION",
+    "no_treatment_rule_change": true,
+    "targets": [
+      "china_top_m2_goods_status_current_min5_audit_bundle",
+      "china_top_m2_goods_status_current_min5_country_year_audit",
+      "china_top_m2_goods_status_current_min5_treated_country_table",
+      "china_top_m2_goods_status_current_min5_audit_validation"
+    ],
+    "inputs": [
+      "china_top_m2_goods_panel",
+      "china_top_m2_goods_status_current_panel_bundle",
+      "china_top_m2_goods_status_current_period_summary",
+      "china_top_m2_goods_status_current_unit_summary"
+    ],
+    "country_year_fields": [
+      "specification",
+      "min_duration_years",
+      "iso3c",
+      "country_name",
+      "year",
+      "observed_china_top",
+      "status_current_period_id",
+      "period_entry_year",
+      "period_exit_year",
+      "period_duration_observed_years",
+      "period_calendar_span_years",
+      "period_qualifies_min5",
+      "retained_in_risk_set",
+      "treatment_indicator_retained",
+      "row_status"
+    ],
+    "row_status_values": [
+      "retained_pre_entry_control",
+      "retained_qualifying_treated",
+      "omitted_missing_required_input",
+      "omitted_pre_entry_nonqualifying_china_top",
+      "omitted_post_entry_short_china_top_period",
+      "omitted_between_qualifying_periods_off_status",
+      "omitted_post_final_qualifying_exit_off_status",
+      "omitted_other_nonretained"
+    ],
+    "display_fields": [
+      "Country",
+      "ISO3c",
+      "Qualifying entries and exits",
+      "Excluded short periods",
+      "Retained treated years",
+      "Omitted off-status years",
+      "Treated N",
+      "Untreated N",
+      "Omitted N"
+    ],
+    "required_checks": [
+      "unique iso3c-year keys and exhaustive exclusive row_status",
+      "retained keys exactly match the risk_set_restricted panel for the 35 treated countries",
+      "retained treatment indicator equals one iff the retained row is in a qualifying current China-top period",
+      "period boundaries durations and qualification match period_summary",
+      "treated and untreated counts match unit_summary by country",
+      "display has exactly the 35 current treated ISO3c values",
+      "compacted year strings round-trip to actual observed years without filling gaps",
+      "omitted_other_nonretained count equals zero"
+    ]
+  },
+  "checks_performed": [
+    "SHA-256 of Rmd, PDF, review, scripts, and target objects",
+    "pdftotext -layout inspection of Tables 20 and 23",
+    "read-only deserialization of existing RDS and target objects",
+    "35 treated versus 14 audited versus 9 displayed set comparison",
+    "inspection of producer filter and medium coding rules",
+    "inspection of status-current restricted-risk-set row filter",
+    "inspection of period and unit summaries"
+  ],
+  "limitations": [
+    "No targets rebuild or freshness validation was run.",
+    "No new source searches were performed; 22 current treated countries remain outside the source audit.",
+    "Item 2 text does not synchronize legacy Chile or Saudi Arabia search windows or remove Qatar from the historical audit.",
+    "Item 15 requires authorized edits to scripts/functions.R, _targets.R, and paper_v4.Rmd, followed by target execution and validation."
+  ],
+  "summary": {
+    "total": 2,
+    "confirmed": 1,
+    "partial": 1,
+    "refuted": 0,
+    "unresolved": 0,
+    "verdict": "READY_FOR_IMPLEMENTATION"
+  }
+}

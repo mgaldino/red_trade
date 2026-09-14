@@ -1,0 +1,55 @@
+# Trechos da referência congelada
+
+959: ```
+960: 
+961: In that domain, Brazil-China identical voting increased by `r sprintf("%.1f", human_rights_vote_change)` percentage points after 2009. This pattern is consistent with the proposed mechanism because it locates the clearest movement in a visible multilateral arena where Brazil had previously maintained more distance. It does not, however, show that the trade-rank cue itself caused the selective shift or that policymakers relied on it in particular decisions.
+962: 
+963: The strongest support comes from human-rights resolutions in which China and the United States diverged, where Brazil moves closer to China relative to comparable donor countries after 2009.
+964: 
+965: This descriptive increase does not by itself establish China-specific alignment, because annual issue-area shares can reflect agenda composition and do not compare Brazil with donor countries. To address such issues, I ran regressions with country and resolution fixed effects, restricted to human-rights votes where China and the United States cast different votes.
+966: 
+967: The results show that Brazil moves closer to China after 2009 relative to the donor pool. The Brazil-by-post-2009 coefficient is `r sprintf("%.3f", hr_china_us_diff$estimate)` for distance to China minus distance to the United States (model-based SE = `r sprintf("%.3f", hr_china_us_diff$se)`), and `r sprintf("%.3f", hr_china_us_strong_diff$estimate)` when the sample is restricted to strong yes/no China-US disagreements (model-based SE = `r sprintf("%.3f", hr_china_us_strong_diff$se)`). The corresponding non-human-rights estimate is smaller (`r sprintf("%.3f", nonhr_china_us_diff$estimate)`, model-based SE = `r sprintf("%.3f", nonhr_china_us_diff$se)`). These are not causal estimates, given the usual selection and omitted-variable concerns.
+968: 
+969: However, restricting attention to a single issue domain opens a design that ideal points computed over all votes cannot support: a triple difference. Ideal points compress every resolution in a session into one score, leaving no contrast between issue domains to exploit, whereas vote-level data preserve it. Thus, I can not only compare the difference between Brazil and other untreated countries before and after (traditional DiD), but also include a third difference: across domains within the same country and year, comparing Brazil with the donor pool, before and after 2009, in human-rights votes relative to every other vote. Identification here asks for more than parallel trends between treated and control units: whatever bias a non-parallel trend introduces must be the same in the two issue domains, so that it cancels in the third difference [@olden_moen2022]. Appendix Figure \@ref(fig:plot-ddd-pretrends) displays the pre- and post-2009 Brazil-donor gaps in both domains; this descriptive comparison does not establish the identifying restriction.
+970: 
+971: Let $B_i$ identify Brazil, $P_r$ indicate 2009--2012, and $H_r$ identify a human-rights resolution. The vote-level specification is
+972: \[
+973: Y_{ir}=\alpha_i+\lambda_r+\beta(B_iP_r)+\gamma(B_iH_r)+\delta(B_iP_rH_r)+\varepsilon_{ir}.
+974: \]
+975: Country and resolution fixed effects absorb the remaining lower-order terms. The Brazil-by-domain interaction allows Brazil's pre-existing gap relative to donors to differ between human-rights and other resolutions. The coefficient $\delta$ measures the additional post-2009 human-rights shift. The sample contains `r format(ddd_hr_increment$n_obs, big.mark = ",")` observed votes by `r ddd_hr_increment$n_countries` countries on `r ddd_hr_increment$n_resolutions` China-US divergent resolutions in 2005--2012. Any human-rights tag places a resolution in the human-rights group; all remaining resolutions form the non-human-rights group. Each observed country-resolution vote receives equal weight. The specification does not absorb a separate domain intercept for each donor country; interpretation also requires changes in donor vote availability not to generate the differential shift across domains.
+976: 
+977: The DDD estimate is `r sprintf("%.3f", ddd_hr_increment$estimate)` for distance to China minus distance to the United States (country-clustered model-based SE = `r sprintf("%.3f", ddd_hr_increment$se)`). Its negative sign indicates a larger shift toward China in human-rights votes. With Brazil as the single treated country, I also reassign the treated-country role to each country, rebuilding all three interactions and retaining the same sample and fixed effects. In this DDD-specific distribution, Brazil ranks `r sprintf("%.0f", ddd_distance_placebo$brazil_rank_expected_direction)` of `r sprintf("%.0f", ddd_distance_placebo$n_placebo_units)` in the predicted direction (inclusive directional tail share = `r sprintf("%.3f", ddd_distance_placebo$randomization_p_directional)`; strict donor-only share = `r sprintf("%.3f", ddd_distance_placebo$randomization_p_directional_strict_donor)`; two-sided absolute share = `r sprintf("%.3f", ddd_distance_placebo$randomization_p_two_sided)`). These are descriptive reassignment benchmarks; interpreting them as randomization inference requires exchangeability of country assignment.
+978: 
+979: The separate human-rights-only DiD estimate of `r sprintf("%.3f", hr_only_distance_placebo$brazil_estimate)` ranks `r sprintf("%.0f", hr_only_distance_placebo$brazil_rank_expected_direction)` of `r sprintf("%.0f", hr_only_distance_placebo$n_placebo_units)` in its own country-placebo distribution (inclusive directional share = `r sprintf("%.3f", hr_only_distance_placebo$randomization_p_directional)`; strict donor-only share = `r sprintf("%.3f", hr_only_distance_placebo$randomization_p_directional_strict_donor)`). This benchmark evaluates the within-domain post-2009 contrast, whereas the DDD benchmark evaluates the additional shift across domains.
+980: 
+
+1330: ## Triple-Difference Pre-Trends
+1331: 
+1332: Figure \@ref(fig:plot-ddd-pretrends) reports the input to the identification assumption behind the triple difference. Each series is Brazil's average distance to China minus its distance to the United States, net of the donor-pool average in the same year, computed separately for human-rights votes and for every other vote where China and the United States voted differently. What the triple difference requires is that these two series move together before treatment, so that any common drift cancels when one domain is differenced against the other.
+1333: 
+1334: ```{r plot-ddd-pretrends, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Brazil's distance from the donor pool in China-US divergent votes, by issue domain. Each point is Brazil's mean vote-level distance to China minus its distance to the United States, minus the donor-pool mean in the same year; more negative values mean Brazil sits closer to China than the donors do. The dashed line marks 2009. The two domains track each other before 2009 and separate afterward, which is the pattern the triple difference assumes and then estimates. ", caption_note(unit = "Vote-level distance to China minus distance to the United States, relative to the donor-pool mean", window = "2005-2012 roll-call votes where China and the United States voted differently")), fig.pos="H", fig.width=7, fig.asp=0.55}
+1335: ddd_panel <- tar_read(selective_china_alignment_unga_targets_bundle)$vote_panel %>%
+1336:   dplyr::filter(china_usa_divergent) %>%
+1337:   dplyr::mutate(group = dplyr::if_else(iso3c == "BRA", "Brazil", "Donors")) %>%
+1338:   dplyr::group_by(year, issue_domain, group) %>%
+1339:   dplyr::summarise(mean_distance = mean(distance_china_minus_usa), .groups = "drop") %>%
+1340:   tidyr::pivot_wider(names_from = group, values_from = mean_distance) %>%
+1341:   dplyr::mutate(gap = Brazil - Donors)
+1342: 
+1343: ggplot2::ggplot(ddd_panel, ggplot2::aes(x = year, y = gap,
+1344:                                         colour = issue_domain,
+1345:                                         shape = issue_domain)) +
+1346:   ggplot2::geom_vline(xintercept = 2008.5, linetype = "dashed",
+1347:                       colour = "grey40", linewidth = 0.5) +
+1348:   ggplot2::geom_line(linewidth = 0.7) +
+1349:   ggplot2::geom_point(size = 2.1) +
+1350:   ggplot2::scale_colour_manual(values = c(`Human rights` = "#b2182b",
+1351:                                           `Non-human rights` = "#2166ac")) +
+1352:   ggplot2::scale_x_continuous(breaks = sort(unique(ddd_panel$year))) +
+1353:   ggplot2::labs(x = "Year", y = "Brazil minus donor pool", colour = NULL, shape = NULL) +
+1354:   ggplot2::theme_minimal(base_size = 11) +
+1355:   ggplot2::theme(legend.position = "bottom",
+1356:                  panel.grid.minor = ggplot2::element_blank())
+1357: ```
+1358: 
+

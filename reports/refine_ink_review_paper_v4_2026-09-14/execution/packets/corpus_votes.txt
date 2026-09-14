@@ -1,0 +1,200 @@
+# Trechos da referência congelada
+
+953: ```
+954: 
+955: The aggregate ideal-point estimate raises a substantive question: in what kinds of votes did Brazil move closer to China? Resolution-level diagnostics suggest that the post-2009 convergence was selective rather than uniform. Figure \@ref(fig:plot-brazil-china-unvotes-issue-year) disaggregates the convergence rate by year and substantive issue family. In several issue areas Brazil and China already voted together at high rates before treatment, leaving little room for additional convergence. The more informative domain is human rights, where pre-treatment agreement was lower and where movement toward China carried greater reputational costs for Brazil, given the domestic and international implications of Brazil's human-rights foreign policy [@milani2015humanrights].
+956: 
+957: ```{r plot-brazil-china-unvotes-issue-year, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Brazil-China identical UNGA votes by issue area, 2005-2012. Points report annual shares; the vertical line marks 2009. The clearest pattern expected by the mechanism is selective convergence in human rights. ", caption_note(unit = "Percentage of roll-call resolutions with identical Brazil-China votes", window = "2005-2012 annual series; multi-coded resolutions enter each issue family")), fig.pos="H", fig.width=11, fig.height=8}
+958: tar_read(plot_brazil_china_unvotes_similarity_by_issue_year_2005_2012)
+959: ```
+960: 
+961: In that domain, Brazil-China identical voting increased by `r sprintf("%.1f", human_rights_vote_change)` percentage points after 2009. This pattern is consistent with the proposed mechanism because it locates the clearest movement in a visible multilateral arena where Brazil had previously maintained more distance. It does not, however, show that the trade-rank cue itself caused the selective shift or that policymakers relied on it in particular decisions.
+962: 
+963: The strongest support comes from human-rights resolutions in which China and the United States diverged, where Brazil moves closer to China relative to comparable donor countries after 2009.
+964: 
+965: This descriptive increase does not by itself establish China-specific alignment, because annual issue-area shares can reflect agenda composition and do not compare Brazil with donor countries. To address such issues, I ran regressions with country and resolution fixed effects, restricted to human-rights votes where China and the United States cast different votes.
+966: 
+967: The results show that Brazil moves closer to China after 2009 relative to the donor pool. The Brazil-by-post-2009 coefficient is `r sprintf("%.3f", hr_china_us_diff$estimate)` for distance to China minus distance to the United States (model-based SE = `r sprintf("%.3f", hr_china_us_diff$se)`), and `r sprintf("%.3f", hr_china_us_strong_diff$estimate)` when the sample is restricted to strong yes/no China-US disagreements (model-based SE = `r sprintf("%.3f", hr_china_us_strong_diff$se)`). The corresponding non-human-rights estimate is smaller (`r sprintf("%.3f", nonhr_china_us_diff$estimate)`, model-based SE = `r sprintf("%.3f", nonhr_china_us_diff$se)`). These are not causal estimates, given the usual selection and omitted-variable concerns.
+968: 
+969: However, restricting attention to a single issue domain opens a design that ideal points computed over all votes cannot support: a triple difference. Ideal points compress every resolution in a session into one score, leaving no contrast between issue domains to exploit, whereas vote-level data preserve it. Thus, I can not only compare the difference between Brazil and other untreated countries before and after (traditional DiD), but also include a third difference: across domains within the same country and year, comparing Brazil with the donor pool, before and after 2009, in human-rights votes relative to every other vote. Identification here asks for more than parallel trends between treated and control units: whatever bias a non-parallel trend introduces must be the same in the two issue domains, so that it cancels in the third difference [@olden_moen2022]. Appendix Figure \@ref(fig:plot-ddd-pretrends) displays the pre- and post-2009 Brazil-donor gaps in both domains; this descriptive comparison does not establish the identifying restriction.
+970: 
+971: Let $B_i$ identify Brazil, $P_r$ indicate 2009--2012, and $H_r$ identify a human-rights resolution. The vote-level specification is
+972: \[
+973: Y_{ir}=\alpha_i+\lambda_r+\beta(B_iP_r)+\gamma(B_iH_r)+\delta(B_iP_rH_r)+\varepsilon_{ir}.
+974: \]
+975: Country and resolution fixed effects absorb the remaining lower-order terms. The Brazil-by-domain interaction allows Brazil's pre-existing gap relative to donors to differ between human-rights and other resolutions. The coefficient $\delta$ measures the additional post-2009 human-rights shift. The sample contains `r format(ddd_hr_increment$n_obs, big.mark = ",")` observed votes by `r ddd_hr_increment$n_countries` countries on `r ddd_hr_increment$n_resolutions` China-US divergent resolutions in 2005--2012. Any human-rights tag places a resolution in the human-rights group; all remaining resolutions form the non-human-rights group. Each observed country-resolution vote receives equal weight. The specification does not absorb a separate domain intercept for each donor country; interpretation also requires changes in donor vote availability not to generate the differential shift across domains.
+976: 
+977: The DDD estimate is `r sprintf("%.3f", ddd_hr_increment$estimate)` for distance to China minus distance to the United States (country-clustered model-based SE = `r sprintf("%.3f", ddd_hr_increment$se)`). Its negative sign indicates a larger shift toward China in human-rights votes. With Brazil as the single treated country, I also reassign the treated-country role to each country, rebuilding all three interactions and retaining the same sample and fixed effects. In this DDD-specific distribution, Brazil ranks `r sprintf("%.0f", ddd_distance_placebo$brazil_rank_expected_direction)` of `r sprintf("%.0f", ddd_distance_placebo$n_placebo_units)` in the predicted direction (inclusive directional tail share = `r sprintf("%.3f", ddd_distance_placebo$randomization_p_directional)`; strict donor-only share = `r sprintf("%.3f", ddd_distance_placebo$randomization_p_directional_strict_donor)`; two-sided absolute share = `r sprintf("%.3f", ddd_distance_placebo$randomization_p_two_sided)`). These are descriptive reassignment benchmarks; interpreting them as randomization inference requires exchangeability of country assignment.
+978: 
+979: The separate human-rights-only DiD estimate of `r sprintf("%.3f", hr_only_distance_placebo$brazil_estimate)` ranks `r sprintf("%.0f", hr_only_distance_placebo$brazil_rank_expected_direction)` of `r sprintf("%.0f", hr_only_distance_placebo$n_placebo_units)` in its own country-placebo distribution (inclusive directional share = `r sprintf("%.3f", hr_only_distance_placebo$randomization_p_directional)`; strict donor-only share = `r sprintf("%.3f", hr_only_distance_placebo$randomization_p_directional_strict_donor)`). This benchmark evaluates the within-domain post-2009 contrast, whereas the DDD benchmark evaluates the additional shift across domains.
+980: 
+981: ```{r issue-area-prepost-table, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
+
+1055: # Brazilian Media Salience
+1056: 
+1057: To assess whether trade-topic salience increased around the rank reversal, I examine coverage of China in Folha de S.Paulo, Brazil's widest-circulation newspaper [@folha2016], from 2000 to 2014. Salience matters because the rank-threshold argument requires the top-rank cue to become politically usable. A change in export hierarchy can shape elite and public attention when it appears in a prominent national newspaper as a simple signal of China's commercial importance, consistent with work on media, agenda setting, and foreign policy [@soroka2003; @baum_potter2008; @walgraveContingencyMassMedias2006].
+1058: 
+1059: Headlines are the appropriate unit for this trade-topic diagnostic because they are tractable in large archives and operate as attention-directing cues [@zhang_yu2024_chinese_dream]. The relevant question is whether Folha increasingly foregrounded China as a trade relationship after the rank reversal. Headlines are the most visible textual cue in the archive and the part of coverage most likely to be scanned by broad audiences. Full article texts would be useful for a different exercise -- for example, measuring tone or detailed argumentation -- but the salience claim here is about which China-related themes were made visible at the headline level. This diagnostic does not measure the frequency of explicit rank labels.
+1060: 
+1061: ```{r media-salience-numbers, include=FALSE}
+1062: media_counts <- tar_read(media_counterfactual)
+1063: media_window_mean <- function(category, first_year, last_year) {
+1064:   media_counts %>%
+1065:     dplyr::filter(
+1066:       broad_category == category, year >= first_year, year <= last_year
+1067:     ) %>%
+1068:     dplyr::summarise(mean_n = mean(n)) %>%
+1069:     dplyr::pull(mean_n)
+1070: }
+1071: media_trade_pre <- media_window_mean("China-Brazil Trade", 2000, 2008)
+1072: media_trade_post <- media_window_mean("China-Brazil Trade", 2009, 2014)
+1073: media_econ_pre <- media_window_mean("Chinese Economy", 2000, 2008)
+1074: media_econ_post <- media_window_mean("Chinese Economy", 2009, 2014)
+1075: media_trade_pct <- 100 * (media_trade_post / media_trade_pre - 1)
+1076: media_econ_pct <- 100 * (media_econ_post / media_econ_pre - 1)
+1077: stopifnot(
+1078:   is.finite(media_trade_pre), is.finite(media_trade_post),
+1079:   is.finite(media_econ_pre), is.finite(media_econ_post)
+1080: )
+1081: ```
+1082: 
+1083: I therefore classify China-related headlines into substantive categories and then collapse them into four analytically relevant groups: China-Brazil trade, China's domestic economy, diplomacy and bilateral relations, and non-economic coverage. The classification uses a fixed label set with examples, and the appendix reports the exact prompt and validation procedure. Figure \@ref(fig:plot-media-counterfactual) compares 2000--2008 with 2009--2014 and shows a substantial increase in China-Brazil trade coverage, from an average of `r sprintf('%.0f', media_trade_pre)` to `r sprintf('%.0f', media_trade_post)` headlines per year (about `r sprintf('%.0f', media_trade_pct)` percent), alongside a larger increase in coverage of the Chinese economy, from `r sprintf('%.0f', media_econ_pre)` to `r sprintf('%.0f', media_econ_post)` headlines per year (about `r sprintf('%.0f', media_econ_pct)` percent). Together, these patterns are consistent with increased media attention to China's economic importance for Brazil, as the proposed mechanism predicts. The figure supports the trade-topic-salience step, but it does not by itself establish the public availability of an explicit rank cue. The separate contemporary sources below provide evidence about rank language.
+1084: 
+1085: ```{r plot-media-counterfactual, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Brazilian media salience: disaggregated China headlines in Folha de S.Paulo by category. From 2000--2008 to 2009--2014, China-Brazil trade coverage increases substantially and coverage of the Chinese economy increases even more; together, the changes are consistent with heightened attention to China's economic importance for Brazil. ", caption_note(unit = "Headlines per category per year", window = "2000-2014 annual series")), fig.pos="H", fig.asp = 0.7, fig.width = 8}
+1086: mc <- tar_read(media_counterfactual)
+1087: ggplot(mc, aes(x = year, y = n, fill = broad_category)) +
+1088:   geom_area(alpha = 0.7) +
+1089:   geom_vline(xintercept = 2009, linetype = "dashed", colour = "grey30") +
+1090:   annotate("text", x = 2009.3, y = max(mc$total) * 0.95, label = "Rank reversal",
+1091:            hjust = 0, size = 3, colour = "grey30") +
+1092:   scale_x_continuous(breaks = seq(2000, 2014, by = 2)) +
+1093:   scale_fill_manual(values = c(
+1094:     "China-Brazil Trade" = "#d95f02",
+1095:     "Chinese Economy" = "#7570b3",
+1096:     "Diplomacy & Relations" = "#1b9e77",
+1097:     "Non-economic (sports, health, disasters, etc.)" = "#999999"
+1098:   ),
+1099:   labels = c(
+1100:     "China-Brazil Trade" = "China-Brazil trade",
+1101:     "Chinese Economy" = "Chinese economy",
+1102:     "Diplomacy & Relations" = "Diplomacy/relations",
+1103:     "Non-economic (sports, health, disasters, etc.)" = "Other non-economic"
+1104:   )) +
+1105:   labs(x = "Year", y = "Number of headlines", fill = "Category") +
+1106:   guides(fill = guide_legend(nrow = 2, byrow = TRUE)) +
+1107:   theme_minimal() +
+1108:   theme(
+1109:     legend.position = "bottom",
+1110:     legend.text = element_text(size = 8),
+1111:     legend.title = element_text(size = 8)
+1112:   )
+1113: ```
+1114: 
+1115: \clearpage
+
+1299: 
+1300: # Appendix
+1301: 
+1302: The appendix reports the supporting diagnostics referenced in the main text: outcome and pre-trend series, resolution-level vote diagnostics, SDiD weights and donor-pool checks, the cross-country duration and sample audits, the ChatGPT classification and its validation, and the UNGA-DM measurement robustness.
+1303: 
+1304: ## Brazil and China Ideal-Point Series
+1305: 
+1306: Figure \@ref(fig:appendix-brazil-china-ideal-points) plots the separate UNGA ideal-point series for Brazil and China. This diagnostic clarifies the interpretation of the absolute-distance outcome used in the main SDiD design: China remains comparatively stable, while Brazil accounts for most of the movement in the Brazil-China distance.
+1307: 
+1308: ```{r appendix-brazil-china-ideal-points, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Brazil and China UNGA ideal-point series. The dashed line marks 2009. The figure separates the two series behind the absolute-distance outcome used in the main SDiD analysis. ", caption_note(unit = "UNGA ideal-point score (Bailey et al. scale)", window = "1990-2022 annual series")), fig.pos="H", fig.width=7, fig.asp=0.55}
+1309: ideal_series_brazil_china <- tar_read(unga_data) %>%
+1310:   dplyr::filter(iso3c %in% c("BRA", "CHN")) %>%
+1311:   dplyr::mutate(
+1312:     country = dplyr::case_when(
+1313:       iso3c == "BRA" ~ "Brazil",
+1314:       iso3c == "CHN" ~ "China",
+1315:       TRUE ~ iso3c
+1316:     )
+1317:   ) %>%
+1318:   dplyr::select(year, country, ideal_point_all)
+1319: 
+1320: ggplot(ideal_series_brazil_china, aes(x = year, y = ideal_point_all, colour = country)) +
+1321:   geom_line(linewidth = 0.6) +
+1322:   geom_point(size = 1.6) +
+1323:   geom_vline(xintercept = 2009, linetype = "dashed", colour = "grey35") +
+1324:   scale_colour_manual(values = c("Brazil" = "darkgreen", "China" = "firebrick")) +
+1325:   labs(x = "Year", y = "UNGA ideal point", colour = NULL) +
+1326:   theme_minimal() +
+1327:   theme(legend.position = "bottom")
+1328: ```
+1329: 
+1330: ## Triple-Difference Pre-Trends
+
+1976: \clearpage
+1977: 
+1978: ## ChatGPT Classification
+1979: 
+1980: Below is the coded instruction to the ChatGPT API to classify the subjects of the headlines.
+1981: 
+1982: \begingroup\singlespacing
+1983: 
+1984: ```{r code-chatgpt, echo=TRUE, eval=FALSE, size="small"}
+1985: system_block <- paste(
+1986:   paste0(
+
+2062: ```
+2063: 
+2064: \endgroup
+2065: 
+2066: The classified headline file is treated as an archived derived dataset rather than regenerated during manuscript rendering. This choice reflects the practical behavior of LLM-based coding: early runs sometimes returned incomplete classifications, altered original headlines, or used slightly inconsistent labels, which made exact matching back to the archive difficult. I therefore fixed the prompt, normalized labels, preserved the resulting classified file, and validated the coding below against an independently coded sample. The evidence in the main text is used as a headline-level salience diagnostic.
+2067: 
+2068: Below I reproduce the 14 archived headline examples and their ChatGPT classifications.
+2069: 
+2070: ```{r sample-chatgpt, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Fourteen archived examples of China-related Folha de S.Paulo headlines and ChatGPT classifications. ", caption_note(unit = "headline text and category labels", window = "sample drawn from the 2000-2014 corpus")), fig.pos="H", out.width="\\linewidth"}
+2071: knitr::include_graphics("images/RIO_20260905_table1_headlines_14.pdf")
+2072: ```
+2073: 
+2074: ### Validation of ChatGPT Classification
+2075: 
+2076: To assess the reliability of the automated classification, I independently coded a stratified random sample of 100 headlines (with a minimum of 5 per category). Table \@ref(tab:chatgpt-validation) reports the agreement rate between the ChatGPT labels and the manual coding.
+2077: 
+2078: ```{r chatgpt-validation, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
+2079: library(knitr)
+2080: library(dplyr)
+2081: 
+2082: validation_summary <- tar_read(chatgpt_validation_summary)
+2083: val_tbl <- validation_summary$table
+2084: overall_acc <- validation_summary$overall$accuracy_pct
+2085: validation_n <- validation_summary$overall$N
+2086: lowest_category <- validation_summary$lowest$category
+2087: lowest_acc <- validation_summary$lowest$accuracy_pct
+2088: category_acc <- validation_summary$category_accuracy
+2089: trade_acc <- category_acc$accuracy_pct[category_acc$category == "china-brazil trade"]
+2090: relations_acc <- category_acc$accuracy_pct[category_acc$category == "china-brazil relations"]
+2091: diplomacy_acc <- category_acc$accuracy_pct[category_acc$category == "diplomacy"]
+2092: 
+2093: kable(
+2094:   val_tbl,
+2095:   format = "latex",
+2096:   booktabs = TRUE,
+2097:   caption = paste0("Validation of ChatGPT classification against manual coding (N = ", validation_n, "). Overall accuracy: ", sprintf("%.1f", overall_acc), " percent."),
+2098:   align = "lccc"
+2099: ) %>%
+2100:   kableExtra::kable_styling(
+2101:     latex_options = c("HOLD_position", "scale_down"),
+2102:     font_size = 9
+2103:   ) %>%
+2104:   kableExtra::footnote(
+2105:     general = sub(
+2106:       "^Note: ",
+2107:       "",
+2108:       caption_note(
+2109:         unit = "headline-level counts and accuracy (percent) by category",
+2110:         window = "stratified validation sample from the 2000-2014 headline corpus"
+2111:       )
+2112:     ),
+2113:     general_title = "Note: ",
+2114:     escape = FALSE,
+2115:     threeparttable = TRUE
+2116:   )
+2117: ```
+2118: 
+2119: The overall accuracy is `r sprintf("%.1f", overall_acc)` percent. The lowest agreement is in the "`r lowest_category`" category (`r sprintf("%.1f", lowest_acc)` percent), where several headlines were manually reclassified as "diplomacy." The category most central to the mechanism, "china-brazil trade," achieved `r sprintf("%.1f", trade_acc)` percent agreement. Related bilateral categories had lower but still usable agreement: `r sprintf("%.1f", relations_acc)` percent for "china-brazil relations" and `r sprintf("%.1f", diplomacy_acc)` percent for "diplomacy."
+2120: 
+2121: ## Cross-Country: Goods-Only Treated Countries
+
