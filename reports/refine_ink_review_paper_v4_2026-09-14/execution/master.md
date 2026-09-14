@@ -2,7 +2,7 @@
 
 A classificação se refere ao diagnóstico sobre a referência congelada. O estado descreve o que foi concluído na versão revisada e o que continua pendente. A seleção do comentário não implicou sua aceitação.
 
-**Entrega canônica:** Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada.
+**Entrega canônica:** Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado.
 
 | Item | Diagnóstico | Resultado e estado |
 |---:|---|---|
@@ -50,7 +50,7 @@ The scope of the cross-country audit appears incompletely reported. The treatmen
 
 **Solução:** Documentados universo de 14 casos, sobreposição com a amostra atual, filtro dos nove casos exibidos e categorias.
 
-**Localização atual:** [{'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 1886, 'excerpt': '## Public Cue and Recoverability Audit', 'baseline_location': 'paper_v4.Rmd:1882-1923', 'mapping': 'equal line'}]
+**Localização atual:** [{'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 1886, 'excerpt': '## Public Cue and Recoverability Audit', 'baseline_location': 'paper_v4.Rmd:1882-1923', 'mapping': 'equal line'}]
 
 **Evidências na referência congelada e produtores:** reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:104-112; paper_v4.Rmd:1882-1923; scripts/diagnostics/analyze_ex_top1_salience.R:46-87; scripts/diagnostics/analyze_ex_top1_salience.R:206-216; scripts/functions.R:2213-2261; scripts/diagnostics/prepare_australia_appendix_bundle_patch.R:75-125
 
@@ -58,7 +58,7 @@ The scope of the cross-country audit appears incompletely reported. The treatmen
 
 **Revisão independente:** review_documentation.md, review_methods_final_candidate.md; decisões em orchestrator_decisions.md.
 
-**Arquivos:** ['/private/tmp/refine-review-20260914/candidate_v2.Rmd', '/private/tmp/refine-review-20260914/build/paper_v4.pdf']
+**Arquivos:** ['/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf']
 
 **Dependências e autorização:** []
 
@@ -86,7 +86,7 @@ The construction of the Folha headline corpus is not specified. The classificati
 
 **Solução:** Documentado procedimento preservado de recuperação; auditoria numérica completa proposta como targets.
 
-**Localização atual:** [{'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 1059, 'excerpt': "To assess whether trade-topic salience increased around the rank reversal, I examine coverage of China in Folha de S.Paulo, Brazil's widest-circulation newspaper [@folha2016], from 2000 to 2014. Salience matters because ", 'baseline_location': 'paper_v4.Rmd:1057-1085', 'mapping': 'equal line'}, {'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 1981, 'excerpt': '## ChatGPT Classification', 'baseline_location': 'paper_v4.Rmd:1978-2070', 'mapping': 'equal line'}]
+**Localização atual:** [{'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 1059, 'excerpt': "To assess whether trade-topic salience increased around the rank reversal, I examine coverage of China in Folha de S.Paulo, Brazil's widest-circulation newspaper [@folha2016], from 2000 to 2014. Salience matters because ", 'baseline_location': 'paper_v4.Rmd:1057-1085', 'mapping': 'equal line'}, {'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 1981, 'excerpt': '## ChatGPT Classification', 'baseline_location': 'paper_v4.Rmd:1978-2070', 'mapping': 'equal line'}]
 
 **Evidências na referência congelada e produtores:** paper_v4.Rmd:1057-1085; paper_v4.Rmd:1978-2070; _targets.R:62-67; _targets.R:752-759; scripts/functions.R:20-50; scripts/functions.R:5598-5620; scripts/chatgpt_api.R:40-98; data/raw/network_caches/folha_scrape_cache.rds; data/raw/network_caches/df_classifcation.rds; data/folha_classificado.rds; reports/refine_ink_review_paper_v4_2026-09-14/execution/corpus_pipeline.md
 
@@ -94,7 +94,7 @@ The construction of the Folha headline corpus is not specified. The classificati
 
 **Revisão independente:** review_documentation.md, review_methods_final_candidate.md; decisões em orchestrator_decisions.md.
 
-**Arquivos:** ['/private/tmp/refine-review-20260914/candidate_v2.Rmd', '/private/tmp/refine-review-20260914/build/paper_v4.pdf']
+**Arquivos:** ['/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf']
 
 **Dependências e autorização:** ['Implementar e executar somente os targets de auditoria especificados em pending_authorizations.md; nova codificação humana exige decisão separada.']
 
@@ -128,7 +128,7 @@ It is difficult to determine what the four Table 5 interaction specifications ad
 
 **Solução:** Explicitados baselines, interações, padronização e absorção dos termos inferiores.
 
-**Localização atual:** [{'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 756, 'excerpt': 'A remaining concern is that 2009 bundled the Brazilian rank reversal with other contemporaneous shocks, including the global financial crisis, the BRICS/G20 moment, and the commodity cycle. Table \\@ref(tab:china-demand-s', 'baseline_location': 'paper_v4.Rmd:754', 'mapping': 'changed block start'}, {'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 809, 'excerpt': "```{r china-demand-sdid-diagnostics, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}", 'baseline_location': 'paper_v4.Rmd:805', 'mapping': 'equal line'}, {'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 871, 'excerpt': 'china_demand_note <- paste0(', 'baseline_location': 'paper_v4.Rmd:867', 'mapping': 'equal line'}]
+**Localização atual:** [{'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 756, 'excerpt': 'A remaining concern is that 2009 bundled the Brazilian rank reversal with other contemporaneous shocks, including the global financial crisis, the BRICS/G20 moment, and the commodity cycle. Table \\@ref(tab:china-demand-s', 'baseline_location': 'paper_v4.Rmd:754', 'mapping': 'changed block start'}, {'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 809, 'excerpt': "```{r china-demand-sdid-diagnostics, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}", 'baseline_location': 'paper_v4.Rmd:805', 'mapping': 'equal line'}, {'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 871, 'excerpt': 'china_demand_note <- paste0(', 'baseline_location': 'paper_v4.Rmd:867', 'mapping': 'equal line'}]
 
 **Evidências na referência congelada e produtores:** paper_v4.Rmd:754; paper_v4.Rmd:805; paper_v4.Rmd:867; output/paper_v4.pdf:p.23, Table 5 and preceding paragraph
 
@@ -136,7 +136,7 @@ It is difficult to determine what the four Table 5 interaction specifications ad
 
 **Revisão independente:** review_documentation.md, review_methods_final_candidate.md, review_documentation_delta.md; decisões em orchestrator_decisions.md.
 
-**Arquivos:** ['/private/tmp/refine-review-20260914/candidate_v2.Rmd', '/private/tmp/refine-review-20260914/build/paper_v4.pdf']
+**Arquivos:** ['/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf']
 
 **Dependências e autorização:** []
 
@@ -163,7 +163,7 @@ The classifier documentation does not provide a fully auditable path from the he
 
 **Solução:** Separada configuração observável no código da proveniência histórica não preservada.
 
-**Localização atual:** [{'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 1981, 'excerpt': '## ChatGPT Classification', 'baseline_location': 'paper_v4.Rmd:1978-2066', 'mapping': 'equal line'}]
+**Localização atual:** [{'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 1981, 'excerpt': '## ChatGPT Classification', 'baseline_location': 'paper_v4.Rmd:1978-2066', 'mapping': 'equal line'}]
 
 **Evidências na referência congelada e produtores:** paper_v4.Rmd:1978-2066; scripts/chatgpt_api.R:40-98; _targets.R:752-759; data/folha_classificado.rds; data/df_classifcation.rds; data/china_headlines_batch.json
 
@@ -171,7 +171,7 @@ The classifier documentation does not provide a fully auditable path from the he
 
 **Revisão independente:** review_documentation.md, review_methods_final_candidate.md; decisões em orchestrator_decisions.md.
 
-**Arquivos:** ['/private/tmp/refine-review-20260914/candidate_v2.Rmd', '/private/tmp/refine-review-20260914/build/paper_v4.pdf']
+**Arquivos:** ['/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf']
 
 **Dependências e autorização:** ['Implementar e executar somente os targets de auditoria especificados em pending_authorizations.md; nova codificação humana exige decisão separada.']
 
@@ -199,7 +199,7 @@ Table 22’s 88 percent agreement appears to be an unweighted result from a cate
 
 **Solução:** 88% identificado como concordância amostral não ponderada; precisão, recall e representatividade não confundidos.
 
-**Localização atual:** [{'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 2077, 'excerpt': '### Validation of ChatGPT Classification', 'baseline_location': 'paper_v4.Rmd:2074-2119', 'mapping': 'equal line'}]
+**Localização atual:** [{'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 2077, 'excerpt': '### Validation of ChatGPT Classification', 'baseline_location': 'paper_v4.Rmd:2074-2119', 'mapping': 'equal line'}]
 
 **Evidências na referência congelada e produtores:** paper_v4.Rmd:2074-2119; scripts/functions.R:5623-5688; _targets.R:756-759; data/folha_validation_sample_annotated.csv
 
@@ -207,7 +207,7 @@ Table 22’s 88 percent agreement appears to be an unweighted result from a cate
 
 **Revisão independente:** review_documentation.md, review_methods_final_candidate.md; decisões em orchestrator_decisions.md.
 
-**Arquivos:** ['/private/tmp/refine-review-20260914/candidate_v2.Rmd', '/private/tmp/refine-review-20260914/build/paper_v4.pdf']
+**Arquivos:** ['/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf']
 
 **Dependências e autorização:** ['Implementar e executar somente os targets de auditoria especificados em pending_authorizations.md; nova codificação humana exige decisão separada.']
 
@@ -240,7 +240,7 @@ The timing rows appear to estimate averages over different calendar periods, pos
 
 **Solução:** Explicitados janelas, horizontes, contrafactuais e caráter sugestivo dos contrastes temporais.
 
-**Localização atual:** [{'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 695, 'excerpt': "The rank interpretation requires more than showing that trade with China was increasing. Brazil's exports to China grew before 2009, including years in which China rose in the export hierarchy but did not become number o", 'baseline_location': 'paper_v4.Rmd:693-695', 'mapping': 'changed block start'}, {'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 526, 'excerpt': '  kableExtra::pack_rows("E. Windows and timing: point-estimate diagnostics", 12, 15,', 'baseline_location': 'paper_v4.Rmd:526-541', 'mapping': 'changed block start'}, {'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 758, 'excerpt': "Brazil's 2004--2008 primary-goods share is `r sprintf('%.2f', commodity_primary_pct)` percent, composed of `r sprintf('%.2f', commodity_agriculture_pct)` percent Agriculture and `r sprintf('%.2f', commodity_mining_pct)` ", 'baseline_location': 'paper_v4.Rmd:756-783', 'mapping': 'changed block start'}]
+**Localização atual:** [{'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 695, 'excerpt': "The rank interpretation requires more than showing that trade with China was increasing. Brazil's exports to China grew before 2009, including years in which China rose in the export hierarchy but did not become number o", 'baseline_location': 'paper_v4.Rmd:693-695', 'mapping': 'changed block start'}, {'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 526, 'excerpt': '  kableExtra::pack_rows("E. Windows and timing: point-estimate diagnostics", 12, 15,', 'baseline_location': 'paper_v4.Rmd:526-541', 'mapping': 'changed block start'}, {'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 758, 'excerpt': "Brazil's 2004--2008 primary-goods share is `r sprintf('%.2f', commodity_primary_pct)` percent, composed of `r sprintf('%.2f', commodity_agriculture_pct)` percent Agriculture and `r sprintf('%.2f', commodity_mining_pct)` ", 'baseline_location': 'paper_v4.Rmd:756-783', 'mapping': 'changed block start'}]
 
 **Evidências na referência congelada e produtores:** paper_v4.Rmd:693-695; paper_v4.Rmd:526-541; paper_v4.Rmd:756-783; scripts/diagnostics/audit_brazil_sdid_no_covariates.R:247-280; scripts/diagnostics/sdid_placebo_helpers.R:107-146; data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/timing_placebos.csv:2-6; output/paper_v4.pdf:23, Table 4
 
@@ -248,7 +248,7 @@ The timing rows appear to estimate averages over different calendar periods, pos
 
 **Revisão independente:** review_documentation.md, review_methods_final_candidate.md; decisões em orchestrator_decisions.md.
 
-**Arquivos:** ['/private/tmp/refine-review-20260914/candidate_v2.Rmd', '/private/tmp/refine-review-20260914/build/paper_v4.pdf']
+**Arquivos:** ['/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf']
 
 **Dependências e autorização:** []
 
@@ -283,7 +283,7 @@ Table 23 appears insufficient to audit the retained treatment spells. Because th
 
 **Solução:** Especificado quadro auditável país–ano e quatro targets; sem produzir nova tabela.
 
-**Localização atual:** [{'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 2125, 'excerpt': '## Cross-Country: Goods-Only Treated Countries', 'baseline_location': 'paper_v4.Rmd:2121-2160', 'mapping': 'equal line'}]
+**Localização atual:** [{'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 2125, 'excerpt': '## Cross-Country: Goods-Only Treated Countries', 'baseline_location': 'paper_v4.Rmd:2121-2160', 'mapping': 'equal line'}]
 
 **Evidências na referência congelada e produtores:** reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:289-306; reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md:25; paper_v4.Rmd:2121-2160; output/paper_v4.pdf:p.63; _targets.R:411-422; scripts/functions.R:4119-4264; scripts/functions.R:4268-4364; scripts/functions.R:4407-4521; reports/refine_ink_review_paper_v4_2026-09-14/execution/cross_country.json:item15_target_design
 
@@ -318,7 +318,7 @@ The uncertainty description misstates the source of the reported standard error.
 
 **Solução:** Separados erro-padrão placebo, ranks exaustivos e aproximação normal.
 
-**Localização atual:** [{'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 308, 'excerpt': 'I report three distinct inferential summaries for the preferred Brazil estimate. First, the placebo-based standard error is the finite-population standard deviation of 20,000 seeded `synthdid` placebo resamples. Second, ', 'baseline_location': 'paper_v4.Rmd:308-310', 'mapping': 'changed block start'}, {'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 338, 'excerpt': "The placebo-based SE is `r sprintf('%1.3f', se_estimate)`, and the conventional two-sided normal-approximation p-value is `r sprintf('%.3f', p_estimate)` with a 95 percent interval [`r sprintf('%.3f', ci_low)`, `r sprint", 'baseline_location': 'paper_v4.Rmd:338', 'mapping': 'changed block start'}, {'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 656, 'excerpt': '  kableExtra::footnote(', 'baseline_location': 'paper_v4.Rmd:654-661', 'mapping': 'equal line'}]
+**Localização atual:** [{'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 308, 'excerpt': 'I report three distinct inferential summaries for the preferred Brazil estimate. First, the placebo-based standard error is the finite-population standard deviation of 20,000 seeded `synthdid` placebo resamples. Second, ', 'baseline_location': 'paper_v4.Rmd:308-310', 'mapping': 'changed block start'}, {'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 338, 'excerpt': "The placebo-based SE is `r sprintf('%1.3f', se_estimate)`, and the conventional two-sided normal-approximation p-value is `r sprintf('%.3f', p_estimate)` with a 95 percent interval [`r sprintf('%.3f', ci_low)`, `r sprint", 'baseline_location': 'paper_v4.Rmd:338', 'mapping': 'changed block start'}, {'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 656, 'excerpt': '  kableExtra::footnote(', 'baseline_location': 'paper_v4.Rmd:654-661', 'mapping': 'equal line'}]
 
 **Evidências na referência congelada e produtores:** paper_v4.Rmd:308-310; paper_v4.Rmd:338; paper_v4.Rmd:654-661; output/paper_v4.pdf:p.11
 
@@ -326,7 +326,7 @@ The uncertainty description misstates the source of the reported standard error.
 
 **Revisão independente:** review_documentation.md, review_methods_final_candidate.md; decisões em orchestrator_decisions.md.
 
-**Arquivos:** ['/private/tmp/refine-review-20260914/candidate_v2.Rmd', '/private/tmp/refine-review-20260914/build/paper_v4.pdf']
+**Arquivos:** ['/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf']
 
 **Dependências e autorização:** []
 
@@ -358,7 +358,7 @@ The displayed SCM and SDiD objectives do not define the positive weights assigne
 
 **Solução:** Definidos pesos positivos das unidades tratadas e períodos posteriores.
 
-**Localização atual:** [{'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 1430, 'excerpt': 'The SCM model can be written as follows:', 'baseline_location': 'paper_v4.Rmd:1426-1448', 'mapping': 'equal line'}]
+**Localização atual:** [{'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 1430, 'excerpt': 'The SCM model can be written as follows:', 'baseline_location': 'paper_v4.Rmd:1426-1448', 'mapping': 'equal line'}]
 
 **Evidências na referência congelada e produtores:** paper_v4.Rmd:1426-1448; output/paper_v4.pdf:pp.46-47
 
@@ -366,7 +366,7 @@ The displayed SCM and SDiD objectives do not define the positive weights assigne
 
 **Revisão independente:** review_documentation.md, review_methods_final_candidate.md; decisões em orchestrator_decisions.md.
 
-**Arquivos:** ['/private/tmp/refine-review-20260914/candidate_v2.Rmd', '/private/tmp/refine-review-20260914/build/paper_v4.pdf']
+**Arquivos:** ['/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf']
 
 **Dependências e autorização:** []
 
@@ -398,7 +398,7 @@ The vote-level dependent variable $Y_{ir}$ is not operationally defined. The man
 
 **Solução:** Definidos votos, distâncias, abstenções e exclusões; preservados efeitos fixos existentes.
 
-**Localização atual:** [{'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 973, 'excerpt': 'Let $B_i$ identify Brazil, $P_r$ indicate 2009--2012, and $H_r$ identify a human-rights resolution. The vote-level specification is', 'baseline_location': 'paper_v4.Rmd:971-977', 'mapping': 'equal line'}]
+**Localização atual:** [{'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 973, 'excerpt': 'Let $B_i$ identify Brazil, $P_r$ indicate 2009--2012, and $H_r$ identify a human-rights resolution. The vote-level specification is', 'baseline_location': 'paper_v4.Rmd:971-977', 'mapping': 'equal line'}]
 
 **Evidências na referência congelada e produtores:** paper_v4.Rmd:971-977; scripts/functions.R:6555-6561; scripts/functions.R:6634-6675
 
@@ -406,7 +406,7 @@ The vote-level dependent variable $Y_{ir}$ is not operationally defined. The man
 
 **Revisão independente:** review_documentation.md, review_methods_final_candidate.md; decisões em orchestrator_decisions.md.
 
-**Arquivos:** ['/private/tmp/refine-review-20260914/candidate_v2.Rmd', '/private/tmp/refine-review-20260914/build/paper_v4.pdf']
+**Arquivos:** ['/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf']
 
 **Dependências e autorização:** []
 
@@ -432,7 +432,7 @@ The 2 × 2 comparison does not uniquely isolate factor-count and outcome-source 
 
 **Solução:** Explicitadas interação, escala e natureza condicional da comparação 2 × 2; não rejeição não é equivalência.
 
-**Localização atual:** [{'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 2243, 'excerpt': 'The two outcome measures preserve the negative direction of the Brazilian SDiD estimate, but they do not support a blanket claim of robustness across the Brazilian and cross-country designs. Table \\@ref(tab:ungadm-sdid-c', 'baseline_location': 'paper_v4.Rmd:2239-2240', 'mapping': 'changed block start'}, {'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 2420, 'excerpt': 'Regarding the panel regression, Table \\@ref(tab:ungadm-ife-window) shows the IFE estimation in the same time window for both outcomes, and the original estimation with the larger time window. The estimate retains the neg', 'baseline_location': 'paper_v4.Rmd:2417-2454', 'mapping': 'changed block start'}, {'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 2465, 'excerpt': 'Table \\@ref(tab:ungadm-ife-2x2) holds the common window and country-year panel fixed and crosses the two outcome sources with one and two latent factors. This $2\\times2$ comparison describes sensitivity to factor count c', 'baseline_location': 'paper_v4.Rmd:2461-2507', 'mapping': 'changed block start'}]
+**Localização atual:** [{'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 2243, 'excerpt': 'The two outcome measures preserve the negative direction of the Brazilian SDiD estimate, but they do not support a blanket claim of robustness across the Brazilian and cross-country designs. Table \\@ref(tab:ungadm-sdid-c', 'baseline_location': 'paper_v4.Rmd:2239-2240', 'mapping': 'changed block start'}, {'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 2420, 'excerpt': 'Regarding the panel regression, Table \\@ref(tab:ungadm-ife-window) shows the IFE estimation in the same time window for both outcomes, and the original estimation with the larger time window. The estimate retains the neg', 'baseline_location': 'paper_v4.Rmd:2417-2454', 'mapping': 'changed block start'}, {'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 2465, 'excerpt': 'Table \\@ref(tab:ungadm-ife-2x2) holds the common window and country-year panel fixed and crosses the two outcome sources with one and two latent factors. This $2\\times2$ comparison describes sensitivity to factor count c', 'baseline_location': 'paper_v4.Rmd:2461-2507', 'mapping': 'changed block start'}]
 
 **Evidências na referência congelada e produtores:** paper_v4.Rmd:2239-2240; paper_v4.Rmd:2417-2454; paper_v4.Rmd:2461-2507; scripts/diagnostics/audit_ungadm_postreview_diagnostics.R:214-285; scripts/diagnostics/audit_ungadm_postreview_diagnostics.R:287-381; data/processed/diagnostics/ungadm_outcome_robustness/postreview/ife_2x2_fixed_r.csv:2-5; data/processed/diagnostics/ungadm_outcome_robustness/postreview/ife_paired_bootstrap_summary.csv:2-3; output/paper_v4.pdf:68-69, Tables 27-28
 
@@ -440,7 +440,7 @@ The 2 × 2 comparison does not uniquely isolate factor-count and outcome-source 
 
 **Revisão independente:** review_documentation.md, review_methods_final_candidate.md; decisões em orchestrator_decisions.md.
 
-**Arquivos:** ['/private/tmp/refine-review-20260914/candidate_v2.Rmd', '/private/tmp/refine-review-20260914/build/paper_v4.pdf']
+**Arquivos:** ['/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf']
 
 **Dependências e autorização:** []
 
@@ -466,7 +466,7 @@ The DDD estimate may be sensitive to the omission of country-by-domain effects. 
 
 **Solução:** Nota de entendimento com álgebra, exemplo conceitual, evidência arquivada e alternativas; nenhuma especificação modificada.
 
-**Localização atual:** [{'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 906, 'excerpt': '```{r selective-unga-diagnostic-numbers, include=FALSE}', 'baseline_location': 'paper_v4.Rmd:904-910', 'mapping': 'equal line'}, {'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 971, 'excerpt': 'However, restricting attention to a single issue domain opens a design that ideal points computed over all votes cannot support: a triple difference. Ideal points compress every resolution in a session into one score, le', 'baseline_location': 'paper_v4.Rmd:969-979', 'mapping': 'equal line'}, {'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 1334, 'excerpt': '## Triple-Difference Pre-Trends', 'baseline_location': 'paper_v4.Rmd:1330-1341', 'mapping': 'equal line'}]
+**Localização atual:** [{'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 906, 'excerpt': '```{r selective-unga-diagnostic-numbers, include=FALSE}', 'baseline_location': 'paper_v4.Rmd:904-910', 'mapping': 'equal line'}, {'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 971, 'excerpt': 'However, restricting attention to a single issue domain opens a design that ideal points computed over all votes cannot support: a triple difference. Ideal points compress every resolution in a session into one score, le', 'baseline_location': 'paper_v4.Rmd:969-979', 'mapping': 'equal line'}, {'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 1334, 'excerpt': '## Triple-Difference Pre-Trends', 'baseline_location': 'paper_v4.Rmd:1330-1341', 'mapping': 'equal line'}]
 
 **Evidências na referência congelada e produtores:** reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md:30; reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:434-442; paper_v4.Rmd:904-910; paper_v4.Rmd:969-979; paper_v4.Rmd:1330-1341; output/paper_v4.pdf:p.26; scripts/functions.R:6555-6561,6590-6676,6908-6918,6968-7008; _targets.R:99-110; scripts/diagnostics/reestimate_corrected_ddd_RIO_20260905.R:67-113,196-201; quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/check_ddd.R:5-49; quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/sensitivity.csv:3-5; quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/donor_domain_restriction.csv:2
 
@@ -500,7 +500,7 @@ There seems to be an issue with the characterization of Figure 8: China is compa
 
 **Solução:** Distintas mudança da média, volatilidade anual e aproximação brasileira.
 
-**Localização atual:** [{'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 1308, 'excerpt': '## Brazil and China Ideal-Point Series', 'baseline_location': 'paper_v4.Rmd:1304-1328', 'mapping': 'equal line'}]
+**Localização atual:** [{'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 1308, 'excerpt': '## Brazil and China Ideal-Point Series', 'baseline_location': 'paper_v4.Rmd:1304-1328', 'mapping': 'equal line'}]
 
 **Evidências na referência congelada e produtores:** paper_v4.Rmd:1304-1328; output/paper_v4.pdf:44; raw data/dataverse_files-2/IdealpointestimatesAll_Jun2024.csv
 
@@ -508,7 +508,7 @@ There seems to be an issue with the characterization of Figure 8: China is compa
 
 **Revisão independente:** review_documentation.md, review_methods_final_candidate.md, review_documentation_delta.md; decisões em orchestrator_decisions.md.
 
-**Arquivos:** ['/private/tmp/refine-review-20260914/candidate_v2.Rmd', '/private/tmp/refine-review-20260914/build/paper_v4.pdf']
+**Arquivos:** ['/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf']
 
 **Dependências e autorização:** []
 
@@ -535,7 +535,7 @@ Figure 2 plots an unshifted weighted donor path that retains a pre-treatment lev
 
 **Solução:** Caption identifica ATT ajustado e seu contraste pré-tratamento ponderado.
 
-**Localização atual:** [{'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 340, 'excerpt': '```{r plot-sdid, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Preferred SDiD fit for Brazil and its synthetic comparison, estimated without covariates. Lower values indicate convergence toward China; the arr', 'baseline_location': 'paper_v4.Rmd:340-345', 'mapping': 'changed block start'}]
+**Localização atual:** [{'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 340, 'excerpt': '```{r plot-sdid, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Preferred SDiD fit for Brazil and its synthetic comparison, estimated without covariates. Lower values indicate convergence toward China; the arr', 'baseline_location': 'paper_v4.Rmd:340-345', 'mapping': 'changed block start'}]
 
 **Evidências na referência congelada e produtores:** reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:482-491; reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md:32; paper_v4.Rmd:340-345; output/paper_v4.pdf:p.16; reports/refine_ink_review_paper_v4_2026-09-14/execution/sdid.json:item29_caption_prerequisites; quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_fit.png
 
@@ -543,7 +543,7 @@ Figure 2 plots an unshifted weighted donor path that retains a pre-treatment lev
 
 **Revisão independente:** review_documentation.md, review_methods_final_candidate.md; decisões em orchestrator_decisions.md.
 
-**Arquivos:** ['/private/tmp/refine-review-20260914/candidate_v2.Rmd', '/private/tmp/refine-review-20260914/build/paper_v4.pdf']
+**Arquivos:** ['/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf']
 
 **Dependências e autorização:** []
 
@@ -572,7 +572,7 @@ The opening sentence reverses the treatment hierarchy: the design estimates the 
 
 **Solução:** Corrigida a direção da hierarquia dos destinos de exportação.
 
-**Localização atual:** [{'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 298, 'excerpt': '## Identification Strategy', 'baseline_location': 'paper_v4.Rmd:298-304', 'mapping': 'equal line'}, {'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 314, 'excerpt': 'Notwithstanding my best effort to address potential rival explanations for the observed reduced-form causal effect of the change in 2009, there is only so much one can do with a single treated case. Thus, I also consider', 'baseline_location': 'paper_v4.Rmd:314,320-324,328-330', 'mapping': 'equal line'}]
+**Localização atual:** [{'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 298, 'excerpt': '## Identification Strategy', 'baseline_location': 'paper_v4.Rmd:298-304', 'mapping': 'equal line'}, {'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 314, 'excerpt': 'Notwithstanding my best effort to address potential rival explanations for the observed reduced-form causal effect of the change in 2009, there is only so much one can do with a single treated case. Thus, I also consider', 'baseline_location': 'paper_v4.Rmd:314,320-324,328-330', 'mapping': 'equal line'}]
 
 **Evidências na referência congelada e produtores:** reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:495-506; reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md:33; paper_v4.Rmd:298-304; paper_v4.Rmd:314,320-324,328-330; output/paper_v4.pdf:p.10
 
@@ -580,7 +580,7 @@ The opening sentence reverses the treatment hierarchy: the design estimates the 
 
 **Revisão independente:** review_documentation.md; decisões em orchestrator_decisions.md.
 
-**Arquivos:** ['/private/tmp/refine-review-20260914/candidate_v2.Rmd', '/private/tmp/refine-review-20260914/build/paper_v4.pdf']
+**Arquivos:** ['/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf']
 
 **Dependências e autorização:** []
 
@@ -606,7 +606,7 @@ The covariate comparison may include terms that are not separately identified un
 
 **Solução:** Esclarecidos valor absoluto, suporte empírico e dependência entre covariáveis; principal sem covariáveis preservada.
 
-**Localização atual:** [{'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 225, 'excerpt': 'The SDiD panel combines UNGA ideal points with trade, macroeconomic, power, geographic, institutional, and trade-agreement variables. The complete panel covers `r num_countries` countries and `r num_years` Brazil years f', 'baseline_location': 'paper_v4.Rmd:225-227', 'mapping': 'equal line'}, {'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 306, 'excerpt': 'The preferred specification uses no covariates because time-varying post-2009 values may induce post-treatment bias. The current-covariate comparison passes the country-year variables listed in Table \\@ref(tab:outcome-ro', 'baseline_location': 'paper_v4.Rmd:306', 'mapping': 'changed block start'}, {'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 550, 'excerpt': 'Table \\@ref(tab:outcome-robustness-table) reports the preferred Brazil SDiD estimate alongside four comparisons. Column (1) uses no covariates and is preferred because it avoids conditioning the counterfactual on variabl', 'baseline_location': 'paper_v4.Rmd:548-661, Table 3', 'mapping': 'equal line'}]
+**Localização atual:** [{'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 225, 'excerpt': 'The SDiD panel combines UNGA ideal points with trade, macroeconomic, power, geographic, institutional, and trade-agreement variables. The complete panel covers `r num_countries` countries and `r num_years` Brazil years f', 'baseline_location': 'paper_v4.Rmd:225-227', 'mapping': 'equal line'}, {'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 306, 'excerpt': 'The preferred specification uses no covariates because time-varying post-2009 values may induce post-treatment bias. The current-covariate comparison passes the country-year variables listed in Table \\@ref(tab:outcome-ro', 'baseline_location': 'paper_v4.Rmd:306', 'mapping': 'changed block start'}, {'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 550, 'excerpt': 'Table \\@ref(tab:outcome-robustness-table) reports the preferred Brazil SDiD estimate alongside four comparisons. Column (1) uses no covariates and is preferred because it avoids conditioning the counterfactual on variabl', 'baseline_location': 'paper_v4.Rmd:548-661, Table 3', 'mapping': 'equal line'}]
 
 **Evidências na referência congelada e produtores:** paper_v4.Rmd:225-227; paper_v4.Rmd:306; paper_v4.Rmd:548-661, Table 3; output/paper_v4.pdf:pp.11,18; scripts/functions.R:180-210; scripts/functions.R:681-721
 
@@ -614,7 +614,7 @@ The covariate comparison may include terms that are not separately identified un
 
 **Revisão independente:** review_documentation.md, review_methods_final_candidate.md; decisões em orchestrator_decisions.md.
 
-**Arquivos:** ['/private/tmp/refine-review-20260914/candidate_v2.Rmd', '/private/tmp/refine-review-20260914/build/paper_v4.pdf']
+**Arquivos:** ['/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf']
 
 **Dependências e autorização:** []
 
@@ -640,7 +640,7 @@ The description reverses the comparison implemented by SDiD time weights. The op
 
 **Solução:** Esclarecidos objetivo dos pesos temporais e uso de resultados dos controles no pré e pós.
 
-**Localização atual:** [{'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 223, 'excerpt': "For Brazil, the treatment indicator equals one from 2009 onward, the first year China became Brazil's largest export destination. SDiD estimates Brazil's average post-2009 gap relative to a weighted synthetic counterfact", 'baseline_location': 'paper_v4.Rmd:223', 'mapping': 'changed block start'}, {'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 302, 'excerpt': 'To address these issues, I use Synthetic Difference-in-Differences (SDiD). Like the Synthetic Control Method (SCM), it constructs a weighted counterfactual from a donor pool to estimate the causal effect, using weights t', 'baseline_location': 'paper_v4.Rmd:302', 'mapping': 'changed block start'}, {'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 1428, 'excerpt': 'Let $N_0$ and $N_1$ denote the numbers of control and treated units, and let $T_0$ and $T_1$ denote the numbers of pre- and post-treatment periods. Classic DiD corresponds to uniform weighting in this comparison. SDiD in', 'baseline_location': 'paper_v4.Rmd:1424', 'mapping': 'changed block start'}]
+**Localização atual:** [{'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 223, 'excerpt': "For Brazil, the treatment indicator equals one from 2009 onward, the first year China became Brazil's largest export destination. SDiD estimates Brazil's average post-2009 gap relative to a weighted synthetic counterfact", 'baseline_location': 'paper_v4.Rmd:223', 'mapping': 'changed block start'}, {'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 302, 'excerpt': 'To address these issues, I use Synthetic Difference-in-Differences (SDiD). Like the Synthetic Control Method (SCM), it constructs a weighted counterfactual from a donor pool to estimate the causal effect, using weights t', 'baseline_location': 'paper_v4.Rmd:302', 'mapping': 'changed block start'}, {'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 1428, 'excerpt': 'Let $N_0$ and $N_1$ denote the numbers of control and treated units, and let $T_0$ and $T_1$ denote the numbers of pre- and post-treatment periods. Classic DiD corresponds to uniform weighting in this comparison. SDiD in', 'baseline_location': 'paper_v4.Rmd:1424', 'mapping': 'changed block start'}]
 
 **Evidências na referência congelada e produtores:** paper_v4.Rmd:223; paper_v4.Rmd:302; paper_v4.Rmd:1424; output/paper_v4.pdf:pp.8,11,46
 
@@ -648,7 +648,7 @@ The description reverses the comparison implemented by SDiD time weights. The op
 
 **Revisão independente:** review_documentation.md, review_methods_final_candidate.md; decisões em orchestrator_decisions.md.
 
-**Arquivos:** ['/private/tmp/refine-review-20260914/candidate_v2.Rmd', '/private/tmp/refine-review-20260914/build/paper_v4.pdf']
+**Arquivos:** ['/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf']
 
 **Dependências e autorização:** []
 
@@ -674,7 +674,7 @@ The abstract describes the 42\% reduction relative to the pre-2009 median, but t
 
 **Solução:** Denominador corrigido de mediana para média; 42% conferido independentemente.
 
-**Localização atual:** [{'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 20, 'excerpt': 'abstract: "\\\\singlespacing  How do countries adjust their foreign policy when a rising power becomes their leading trading partner? We argue that a sufficiently salient and lasting change in trade rankings can shape dipl', 'baseline_location': 'paper_v4.Rmd:20', 'mapping': 'changed block start'}, {'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 83, 'excerpt': 'mean_br <- tar_read(synth_data) %>%', 'baseline_location': 'paper_v4.Rmd:83-92', 'mapping': 'equal line'}, {'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 149, 'excerpt': "In the preferred specification, the estimated reduced-form effect of entry into the new trade-rank condition is a reduction of `r sprintf('%.3f', abs(estimate))` ideal-point units in Brazil's distance to China relative t", 'baseline_location': 'paper_v4.Rmd:149', 'mapping': 'equal line'}, {'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 2243, 'excerpt': 'The two outcome measures preserve the negative direction of the Brazilian SDiD estimate, but they do not support a blanket claim of robustness across the Brazilian and cross-country designs. Table \\@ref(tab:ungadm-sdid-c', 'baseline_location': 'paper_v4.Rmd:2239-2240', 'mapping': 'changed block start'}, {'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 2254, 'excerpt': '    "Intercept-adjusted pre-treatment RMSPE",', 'baseline_location': 'paper_v4.Rmd:2251-2268', 'mapping': 'equal line'}]
+**Localização atual:** [{'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 20, 'excerpt': 'abstract: "\\\\singlespacing  How do countries adjust their foreign policy when a rising power becomes their leading trading partner? We argue that a sufficiently salient and lasting change in trade rankings can shape dipl', 'baseline_location': 'paper_v4.Rmd:20', 'mapping': 'changed block start'}, {'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 83, 'excerpt': 'mean_br <- tar_read(synth_data) %>%', 'baseline_location': 'paper_v4.Rmd:83-92', 'mapping': 'equal line'}, {'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 149, 'excerpt': "In the preferred specification, the estimated reduced-form effect of entry into the new trade-rank condition is a reduction of `r sprintf('%.3f', abs(estimate))` ideal-point units in Brazil's distance to China relative t", 'baseline_location': 'paper_v4.Rmd:149', 'mapping': 'equal line'}, {'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 2243, 'excerpt': 'The two outcome measures preserve the negative direction of the Brazilian SDiD estimate, but they do not support a blanket claim of robustness across the Brazilian and cross-country designs. Table \\@ref(tab:ungadm-sdid-c', 'baseline_location': 'paper_v4.Rmd:2239-2240', 'mapping': 'changed block start'}, {'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 2254, 'excerpt': '    "Intercept-adjusted pre-treatment RMSPE",', 'baseline_location': 'paper_v4.Rmd:2251-2268', 'mapping': 'equal line'}]
 
 **Evidências na referência congelada e produtores:** reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:534-542; reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md:36; paper_v4.Rmd:20; paper_v4.Rmd:83-92; paper_v4.Rmd:149; paper_v4.Rmd:2239-2240; paper_v4.Rmd:2251-2268; output/paper_v4.pdf:p.1 and p.65; data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/main_summary.csv:1-2; data/processed/diagnostics/ungadm_outcome_robustness/estimation/sdid_comparison_table.csv:1-3
 
@@ -682,7 +682,7 @@ The abstract describes the 42\% reduction relative to the pre-2009 median, but t
 
 **Revisão independente:** review_documentation.md, review_abstract.md; decisões em orchestrator_decisions.md.
 
-**Arquivos:** ['/private/tmp/refine-review-20260914/candidate_v2.Rmd', '/private/tmp/refine-review-20260914/build/paper_v4.pdf']
+**Arquivos:** ['/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf']
 
 **Dependências e autorização:** []
 
@@ -708,7 +708,7 @@ The phrase “in the original estimation” misattributes the two pretreatment m
 
 **Solução:** Médias BSV e UNGA-DM atribuídas corretamente.
 
-**Localização atual:** [{'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 2243, 'excerpt': 'The two outcome measures preserve the negative direction of the Brazilian SDiD estimate, but they do not support a blanket claim of robustness across the Brazilian and cross-country designs. Table \\@ref(tab:ungadm-sdid-c', 'baseline_location': 'paper_v4.Rmd:2239-2240', 'mapping': 'changed block start'}, {'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 2245, 'excerpt': "```{r ungadm-sdid-comparison, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}", 'baseline_location': 'paper_v4.Rmd:2242-2283', 'mapping': 'equal line'}]
+**Localização atual:** [{'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 2243, 'excerpt': 'The two outcome measures preserve the negative direction of the Brazilian SDiD estimate, but they do not support a blanket claim of robustness across the Brazilian and cross-country designs. Table \\@ref(tab:ungadm-sdid-c', 'baseline_location': 'paper_v4.Rmd:2239-2240', 'mapping': 'changed block start'}, {'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 2245, 'excerpt': "```{r ungadm-sdid-comparison, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}", 'baseline_location': 'paper_v4.Rmd:2242-2283', 'mapping': 'equal line'}]
 
 **Evidências na referência congelada e produtores:** reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:546-554; reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md:37; paper_v4.Rmd:2239-2240; paper_v4.Rmd:2242-2283; output/paper_v4.pdf:p.65; data/processed/diagnostics/ungadm_outcome_robustness/estimation/sdid_comparison_table.csv:1-3; data/processed/diagnostics/ungadm_outcome_robustness/estimation/sdid_dm_main_summary.csv:1-2
 
@@ -716,7 +716,7 @@ The phrase “in the original estimation” misattributes the two pretreatment m
 
 **Revisão independente:** review_documentation.md, review_abstract.md; decisões em orchestrator_decisions.md.
 
-**Arquivos:** ['/private/tmp/refine-review-20260914/candidate_v2.Rmd', '/private/tmp/refine-review-20260914/build/paper_v4.pdf']
+**Arquivos:** ['/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf']
 
 **Dependências e autorização:** []
 
@@ -742,7 +742,7 @@ The submission cites Urdinez et al. (2016) as an example of literature that "stu
 
 **Solução:** Atribuição bibliográfica compartilhada corrigida com base em fontes primárias.
 
-**Localização atual:** [{'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 133, 'excerpt': 'If everyone is perfectly rational, redundant information should not matter. Most of the literature on the effects of interdependence implicitly or explicitly assumes this hyperrationalist perspective and studies how trad', 'baseline_location': 'paper_v4.Rmd:133', 'mapping': 'changed block start'}]
+**Localização atual:** [{'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 133, 'excerpt': 'If everyone is perfectly rational, redundant information should not matter. Most of the literature on the effects of interdependence implicitly or explicitly assumes this hyperrationalist perspective and studies how trad', 'baseline_location': 'paper_v4.Rmd:133', 'mapping': 'changed block start'}]
 
 **Evidências na referência congelada e produtores:** paper_v4.Rmd:133; references.bib:1319-1334; https://onlinelibrary.wiley.com/doi/pdf/10.1111/laps.12000:article page 3
 
@@ -750,7 +750,7 @@ The submission cites Urdinez et al. (2016) as an example of literature that "stu
 
 **Revisão independente:** review_documentation.md; decisões em orchestrator_decisions.md.
 
-**Arquivos:** ['/private/tmp/refine-review-20260914/candidate_v2.Rmd', '/private/tmp/refine-review-20260914/build/paper_v4.pdf']
+**Arquivos:** ['/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf']
 
 **Dependências e autorização:** []
 
@@ -776,7 +776,7 @@ The submission cites Kastner and Pearson (2021) to argue that the literature "st
 
 **Solução:** Atribuição bibliográfica compartilhada corrigida com base em fontes primárias.
 
-**Localização atual:** [{'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 133, 'excerpt': 'If everyone is perfectly rational, redundant information should not matter. Most of the literature on the effects of interdependence implicitly or explicitly assumes this hyperrationalist perspective and studies how trad', 'baseline_location': 'paper_v4.Rmd:133', 'mapping': 'changed block start'}]
+**Localização atual:** [{'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 133, 'excerpt': 'If everyone is perfectly rational, redundant information should not matter. Most of the literature on the effects of interdependence implicitly or explicitly assumes this hyperrationalist perspective and studies how trad', 'baseline_location': 'paper_v4.Rmd:133', 'mapping': 'changed block start'}]
 
 **Evidências na referência congelada e produtores:** paper_v4.Rmd:133; references.bib:799-811; https://link.springer.com/article/10.1007/s12116-021-09318-9:article pages 18-44; https://pmc.ncbi.nlm.nih.gov/articles/PMC7934344/:publisher-version full text, article pages 18, 24-35
 
@@ -784,7 +784,7 @@ The submission cites Kastner and Pearson (2021) to argue that the literature "st
 
 **Revisão independente:** review_documentation.md; decisões em orchestrator_decisions.md.
 
-**Arquivos:** ['/private/tmp/refine-review-20260914/candidate_v2.Rmd', '/private/tmp/refine-review-20260914/build/paper_v4.pdf']
+**Arquivos:** ['/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf']
 
 **Dependências e autorização:** []
 
@@ -810,7 +810,7 @@ The submission cites Strüver (2016) for the concern of 'reverse causality'—th
 
 **Solução:** Diagnóstico não sustentado; citação de Strüver mantida.
 
-**Localização atual:** [{'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 137, 'excerpt': "A different concern for the study of the effect of status change is reverse causality, since politically aligned countries may deepen economic ties with one another, making China's rise in the trade hierarchy a consequen", 'baseline_location': 'paper_v4.Rmd:137', 'mapping': 'equal line'}, {'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 147, 'excerpt': "To estimate the Brazilian foreign-policy alignment pattern, I use synthetic difference-in-differences (SDiD) on annual UNGA ideal-point distance to China, with 2009 marking China's rise to the largest Brazilian export de", 'baseline_location': 'paper_v4.Rmd:147', 'mapping': 'equal line'}]
+**Localização atual:** [{'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 137, 'excerpt': "A different concern for the study of the effect of status change is reverse causality, since politically aligned countries may deepen economic ties with one another, making China's rise in the trade hierarchy a consequen", 'baseline_location': 'paper_v4.Rmd:137', 'mapping': 'equal line'}, {'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 147, 'excerpt': "To estimate the Brazilian foreign-policy alignment pattern, I use synthetic difference-in-differences (SDiD) on annual UNGA ideal-point distance to China, with 2009 marking China's rise to the largest Brazilian export de", 'baseline_location': 'paper_v4.Rmd:147', 'mapping': 'equal line'}]
 
 **Evidências na referência congelada e produtores:** paper_v4.Rmd:137; paper_v4.Rmd:147; output/paper_v4.pdf:physical pages 2-3; Strüver GIGA Working Paper 209/2012:physical page 21 (printed 20), physical page 23 (printed 22), physical page 24 (printed 23); Oxford Academic final publication record and abstract, accessed 2026-09-14: https://academic.oup.com/fpa/article-abstract/12/2/170/2367626
 
@@ -844,7 +844,7 @@ The submission cites MacDonald and Parent (2021) as an example of research that 
 
 **Solução:** Removida somente a atribuição ambígua a MacDonald e Parent; definição teórica preservada.
 
-**Localização atual:** [{'path': '/private/tmp/refine-review-20260914/candidate_v2.Rmd', 'line': 139, 'excerpt': 'I argue that such milestones matter because they mark trade-based status gains. The argument builds on research that treats status as socially recognized standing within international hierarchies, clubs, and local status', 'baseline_location': 'paper_v4.Rmd:139', 'mapping': 'changed block start'}]
+**Localização atual:** [{'path': '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', 'line': 139, 'excerpt': 'I argue that such milestones matter because they mark trade-based status gains. The argument builds on research that treats status as socially recognized standing within international hierarchies, clubs, and local status', 'baseline_location': 'paper_v4.Rmd:139', 'mapping': 'changed block start'}]
 
 **Evidências na referência congelada e produtores:** paper_v4.Rmd:139; output/paper_v4.pdf:physical page 3; synth-trade-china.bib:877-890; Cambridge University Press publication record and abstract, accessed 2026-09-14: https://www.cambridge.org/core/journals/world-politics/article/abs/status-of-status-in-world-politics/BF85C05AAB728662D3CA526CDF69DA60; Author-affiliated Notre Dame conceptual summary, accessed 2026-09-14: https://ondisc.nd.edu/news-media/news/the-status-of-status-in-world-politics/; Paul K. MacDonald publication list, accessed 2026-09-14: https://sites.google.com/a/wellesley.edu/paul-k-macdonald/publications
 
@@ -852,7 +852,7 @@ The submission cites MacDonald and Parent (2021) as an example of research that 
 
 **Revisão independente:** review_documentation.md; decisões em orchestrator_decisions.md.
 
-**Arquivos:** ['/private/tmp/refine-review-20260914/candidate_v2.Rmd', '/private/tmp/refine-review-20260914/build/paper_v4.pdf']
+**Arquivos:** ['/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd', '/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf']
 
 **Dependências e autorização:** []
 

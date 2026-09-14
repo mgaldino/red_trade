@@ -2,12 +2,14 @@
 
 A adjudicação está fechada: 16 comentários procedentes, seis parcialmente procedentes e um não sustentado. O candidato revisado tem 17 correções encerradas, três correções documentais com auditorias adicionais pendentes (4, 7, 8), uma proposta de novos targets (15), uma nota exclusivamente explicativa (25) e uma citação preservada após refutação (37).
 
-**A promoção aos arquivos canônicos está pendente.** O hook global de encerramento executou quatro checkpoints com commit/push, contrariando a instrução atual. O manuscrito e o PDF revisados foram mantidos isolados. A proposta de exceção no hook foi preparada e testada em memória, sem alterar o arquivo global. Sua autorização permanece pendente. Os processos posteriores usaram `CODEX_AUTO_COMMIT_PUSH_DRY_RUN=1`. Não houve reescrita do histórico.
+**Versão revisada instalada nos arquivos canônicos.** Após a autorização do usuário para commit, `paper_v4.Rmd` e `output/paper_v4.pdf` receberam exatamente os bytes já revisados. A nota do item25 foi preservada em `delivery/item25.pdf`, sem alteração de conteúdo. O commit local está autorizado; push não está autorizado.
+
+O hook global de encerramento havia executado checkpoints com commit/push antes da autorização. A proposta de exceção foi testada em memória. A tentativa de aplicá-la neste turno foi rejeitada pela revisão automática por exigir autorização inequívoca para o arquivo global; uma pergunta específica permanece pendente. Ver `hook_approval_block.json`.
 
 ## Entregas e registros
 
 - `master.md` / `master.json`: matriz dos 23 itens, evidências na referência, localização atual, responsáveis/configurações, decisões, verificações, revisões e pendências.
-- `delivery_manifest.json`: caminhos absolutos, hashes e estados dos artefatos. Candidato: `/private/tmp/refine-review-20260914/candidate_v2.Rmd`; PDF do paper: `/private/tmp/refine-review-20260914/build/paper_v4.pdf` (72 páginas); nota: `/private/tmp/refine-review-20260914/build/item25.pdf` (seis páginas).
+- `delivery_manifest.json`: caminhos absolutos, hashes e estados dos artefatos. Manuscrito: `paper_v4.Rmd`; PDF canônico: `output/paper_v4.pdf` (72 páginas); nota preservada: `delivery/item25.pdf` (seis páginas).
 - `baseline/`: Rmd, PDF de 69 páginas e extração congelados; nenhuma evidência foi tomada do antigo cache de extração.
 - `orchestrator_decisions.md`: adjudicação das propostas e achados; prevalece sobre propostas rejeitadas ou números auxiliares corrigidos nos dossiês.
 - `integration.json` e `integration_round2.json`: integração por agente Sol xhigh; `baseline_to_final.patch` recompõe o Rmd final a partir da referência congelada.
@@ -30,7 +32,7 @@ LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 OMP_NUM_THREADS=1 Rscript --vanilla reports/
 
 `render_item25.py <diretório-de-build>` reproduz a nota por Pandoc/XeLaTeX; acrescenta apenas a separação Markdown necessária a uma lista e usa `note_layout.lua` para quebrar caminhos/hashes longos. O conteúdo científico permanece em `domain_note.md`. A inspeção visual está em `visual_qa_final.json`, com imagens nas pastas temporárias de QA. Os logs e `session_info.txt` da renderização ficam no build isolado. A advertência observada foi a depreciação de `xfun::attr()`.
 
-Os artefatos temporários podem ser removidos pelo sistema futuramente; a referência congelada, o patch completo, os fontes da nota e os renderizadores ficam preservados neste diretório para reconstrução. Não aplique o patch ao canônico antes de resolver o hook se ainda vigorar a proibição de checkpoint/publicação.
+Os artefatos temporários podem ser removidos pelo sistema futuramente; a referência congelada, o patch completo, os fontes da nota e os renderizadores ficam preservados neste diretório para reconstrução. O patch já foi aplicado ao canônico com a autorização atual; a autorização para commit não equivale a autorização de push.
 
 ## Incidentes operacionais
 

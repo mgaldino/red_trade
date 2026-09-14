@@ -28,8 +28,8 @@
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [
-        "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
-        "/private/tmp/refine-review-20260914/build/paper_v4.pdf"
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf"
       ],
       "checks": [
         "SHA-256 of Rmd, PDF, review, scripts, and target objects",
@@ -80,7 +80,7 @@
       },
       "current_locations": [
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 1886,
           "excerpt": "## Public Cue and Recoverability Audit",
           "baseline_location": "paper_v4.Rmd:1882-1923",
@@ -102,7 +102,7 @@
           "Chile and Saudi Arabia retain legacy windows"
         ]
       },
-      "promotion_status": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada."
+      "promotion_status": "Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado."
     },
     {
       "item": 4,
@@ -130,8 +130,8 @@
         "Implementar e executar somente os targets de auditoria especificados em pending_authorizations.md; nova codificação humana exige decisão separada."
       ],
       "changed_files": [
-        "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
-        "/private/tmp/refine-review-20260914/build/paper_v4.pdf"
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf"
       ],
       "checks": [
         "Existing retrieval cache: 14589 rows, 14589 distinct titles, zero exact duplicate rows, zero missing title/timestamp/date, all titles matching the preserved China-title filter.",
@@ -194,14 +194,14 @@
       },
       "current_locations": [
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 1059,
           "excerpt": "To assess whether trade-topic salience increased around the rank reversal, I examine coverage of China in Folha de S.Paulo, Brazil's widest-circulation newspaper [@folha2016], from 2000 to 2014. Salience matters because ",
           "baseline_location": "paper_v4.Rmd:1057-1085",
           "mapping": "equal line"
         },
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 1981,
           "excerpt": "## ChatGPT Classification",
           "baseline_location": "paper_v4.Rmd:1978-2070",
@@ -225,7 +225,7 @@
           "Targets-first provenance output"
         ]
       },
-      "promotion_status": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada."
+      "promotion_status": "Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado."
     },
     {
       "item": 6,
@@ -244,8 +244,8 @@
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [
-        "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
-        "/private/tmp/refine-review-20260914/build/paper_v4.pdf"
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf"
       ],
       "checks": [
         "Inspected scripts/diagnostics/audit_brazil_sdid_commodity_no_covariates.R:97-151 and the upstream construction at scripts/diagnostics/audit_brazil_sdid_predetermined_commodity_controls.R:190-257,293-326.",
@@ -299,21 +299,21 @@
       },
       "current_locations": [
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 756,
           "excerpt": "A remaining concern is that 2009 bundled the Brazilian rank reversal with other contemporaneous shocks, including the global financial crisis, the BRICS/G20 moment, and the commodity cycle. Table \\@ref(tab:china-demand-s",
           "baseline_location": "paper_v4.Rmd:754",
           "mapping": "changed block start"
         },
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 809,
           "excerpt": "```{r china-demand-sdid-diagnostics, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}",
           "baseline_location": "paper_v4.Rmd:805",
           "mapping": "equal line"
         },
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 871,
           "excerpt": "china_demand_note <- paste0(",
           "baseline_location": "paper_v4.Rmd:867",
@@ -333,7 +333,7 @@
           "Separate targets-migration debt remains"
         ]
       },
-      "promotion_status": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada."
+      "promotion_status": "Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado."
     },
     {
       "item": 7,
@@ -356,8 +356,8 @@
         "Implementar e executar somente os targets de auditoria especificados em pending_authorizations.md; nova codificação humana exige decisão separada."
       ],
       "changed_files": [
-        "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
-        "/private/tmp/refine-review-20260914/build/paper_v4.pdf"
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf"
       ],
       "checks": [
         "Traced the displayed prompt to the current producer and archived RDS inputs.",
@@ -419,7 +419,7 @@
       },
       "current_locations": [
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 1981,
           "excerpt": "## ChatGPT Classification",
           "baseline_location": "paper_v4.Rmd:1978-2066",
@@ -442,7 +442,7 @@
           "No exact historical re-execution claim"
         ]
       },
-      "promotion_status": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada."
+      "promotion_status": "Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado."
     },
     {
       "item": 8,
@@ -463,8 +463,8 @@
         "Implementar e executar somente os targets de auditoria especificados em pending_authorizations.md; nova codificação humana exige decisão separada."
       ],
       "changed_files": [
-        "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
-        "/private/tmp/refine-review-20260914/build/paper_v4.pdf"
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf"
       ],
       "checks": [
         "Recomputed the exact-match count from the archived 100-row validation file.",
@@ -522,7 +522,7 @@
       },
       "current_locations": [
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 2077,
           "excerpt": "### Validation of ChatGPT Classification",
           "baseline_location": "paper_v4.Rmd:2074-2119",
@@ -547,7 +547,7 @@
           "All TP-FP-FN values"
         ]
       },
-      "promotion_status": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada."
+      "promotion_status": "Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado."
     },
     {
       "item": 11,
@@ -569,8 +569,8 @@
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [
-        "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
-        "/private/tmp/refine-review-20260914/build/paper_v4.pdf"
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf"
       ],
       "checks": [
         "comparability_verify.R: five existing input slices checked for balance, duplicates, missing outcomes, dates and country counts; no fits run.",
@@ -624,21 +624,21 @@
       },
       "current_locations": [
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 695,
           "excerpt": "The rank interpretation requires more than showing that trade with China was increasing. Brazil's exports to China grew before 2009, including years in which China rose in the export hierarchy but did not become number o",
           "baseline_location": "paper_v4.Rmd:693-695",
           "mapping": "changed block start"
         },
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 526,
           "excerpt": "  kableExtra::pack_rows(\"E. Windows and timing: point-estimate diagnostics\", 12, 15,",
           "baseline_location": "paper_v4.Rmd:526-541",
           "mapping": "changed block start"
         },
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 758,
           "excerpt": "Brazil's 2004--2008 primary-goods share is `r sprintf('%.2f', commodity_primary_pct)` percent, composed of `r sprintf('%.2f', commodity_agriculture_pct)` percent Agriculture and `r sprintf('%.2f', commodity_mining_pct)` ",
           "baseline_location": "paper_v4.Rmd:756-783",
@@ -657,7 +657,7 @@
           "Numeric rows and preferred 2009 inference unchanged"
         ]
       },
-      "promotion_status": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada."
+      "promotion_status": "Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado."
     },
     {
       "item": 15,
@@ -741,7 +741,7 @@
       },
       "current_locations": [
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 2125,
           "excerpt": "## Cross-Country: Goods-Only Treated Countries",
           "baseline_location": "paper_v4.Rmd:2121-2160",
@@ -770,7 +770,7 @@
           "Expanded table and caption"
         ]
       },
-      "promotion_status": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada."
+      "promotion_status": "Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado."
     },
     {
       "item": 18,
@@ -789,8 +789,8 @@
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [
-        "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
-        "/private/tmp/refine-review-20260914/build/paper_v4.pdf"
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf"
       ],
       "checks": [
         "Inspected scripts/functions.R:1072-1151 and scripts/diagnostics/sdid_placebo_helpers.R:230-297 for the 20,000-resample placebo SE algorithm.",
@@ -843,21 +843,21 @@
       },
       "current_locations": [
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 308,
           "excerpt": "I report three distinct inferential summaries for the preferred Brazil estimate. First, the placebo-based standard error is the finite-population standard deviation of 20,000 seeded `synthdid` placebo resamples. Second, ",
           "baseline_location": "paper_v4.Rmd:308-310",
           "mapping": "changed block start"
         },
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 338,
           "excerpt": "The placebo-based SE is `r sprintf('%1.3f', se_estimate)`, and the conventional two-sided normal-approximation p-value is `r sprintf('%.3f', p_estimate)` with a 95 percent interval [`r sprintf('%.3f', ci_low)`, `r sprint",
           "baseline_location": "paper_v4.Rmd:338",
           "mapping": "changed block start"
         },
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 656,
           "excerpt": "  kableExtra::footnote(",
           "baseline_location": "paper_v4.Rmd:654-661",
@@ -876,7 +876,7 @@
           "All numerical outputs unchanged"
         ]
       },
-      "promotion_status": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada."
+      "promotion_status": "Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado."
     },
     {
       "item": 20,
@@ -893,8 +893,8 @@
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [
-        "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
-        "/private/tmp/refine-review-20260914/build/paper_v4.pdf"
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf"
       ],
       "checks": [
         "Inspected the installed synthdid 0.0.9 implementation of synthdid_estimate: the estimator uses c(-omega, rep(1/N1,N1)) and c(-lambda, rep(1/T1,T1)).",
@@ -941,7 +941,7 @@
       },
       "current_locations": [
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 1430,
           "excerpt": "The SCM model can be written as follows:",
           "baseline_location": "paper_v4.Rmd:1426-1448",
@@ -960,7 +960,7 @@
           "No estimator or result change"
         ]
       },
-      "promotion_status": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada."
+      "promotion_status": "Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado."
     },
     {
       "item": 21,
@@ -978,8 +978,8 @@
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [
-        "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
-        "/private/tmp/refine-review-20260914/build/paper_v4.pdf"
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf"
       ],
       "checks": [
         "Producer code maps no to -1, abstain to 0, and yes to 1.",
@@ -1030,7 +1030,7 @@
       },
       "current_locations": [
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 973,
           "excerpt": "Let $B_i$ identify Brazil, $P_r$ indicate 2009--2012, and $H_r$ identify a human-rights resolution. The vote-level specification is",
           "baseline_location": "paper_v4.Rmd:971-977",
@@ -1051,7 +1051,7 @@
           "Item 25 caveat preserved"
         ]
       },
-      "promotion_status": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada."
+      "promotion_status": "Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado."
     },
     {
       "item": 22,
@@ -1074,8 +1074,8 @@
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [
-        "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
-        "/private/tmp/refine-review-20260914/build/paper_v4.pdf"
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf"
       ],
       "checks": [
         "comparability_verify.R: recomputed only arithmetic and summaries of 1,000 saved paired draws; maximum absolute discrepancy 1.11e-16.",
@@ -1131,21 +1131,21 @@
       },
       "current_locations": [
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 2243,
           "excerpt": "The two outcome measures preserve the negative direction of the Brazilian SDiD estimate, but they do not support a blanket claim of robustness across the Brazilian and cross-country designs. Table \\@ref(tab:ungadm-sdid-c",
           "baseline_location": "paper_v4.Rmd:2239-2240",
           "mapping": "changed block start"
         },
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 2420,
           "excerpt": "Regarding the panel regression, Table \\@ref(tab:ungadm-ife-window) shows the IFE estimation in the same time window for both outcomes, and the original estimation with the larger time window. The estimate retains the neg",
           "baseline_location": "paper_v4.Rmd:2417-2454",
           "mapping": "changed block start"
         },
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 2465,
           "excerpt": "Table \\@ref(tab:ungadm-ife-2x2) holds the common window and country-year panel fixed and crosses the two outcome sources with one and two latent factors. This $2\\times2$ comparison describes sensitivity to factor count c",
           "baseline_location": "paper_v4.Rmd:2461-2507",
@@ -1166,7 +1166,7 @@
           "Cross-outcome differences remain scale-dependent"
         ]
       },
-      "promotion_status": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada."
+      "promotion_status": "Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado."
     },
     {
       "item": 25,
@@ -1292,21 +1292,21 @@
       },
       "current_locations": [
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 906,
           "excerpt": "```{r selective-unga-diagnostic-numbers, include=FALSE}",
           "baseline_location": "paper_v4.Rmd:904-910",
           "mapping": "equal line"
         },
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 971,
           "excerpt": "However, restricting attention to a single issue domain opens a design that ideal points computed over all votes cannot support: a triple difference. Ideal points compress every resolution in a session into one score, le",
           "baseline_location": "paper_v4.Rmd:969-979",
           "mapping": "equal line"
         },
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 1334,
           "excerpt": "## Triple-Difference Pre-Trends",
           "baseline_location": "paper_v4.Rmd:1330-1341",
@@ -1327,7 +1327,7 @@
           "All new target-first diagnostics"
         ]
       },
-      "promotion_status": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada."
+      "promotion_status": "Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado."
     },
     {
       "item": 27,
@@ -1345,8 +1345,8 @@
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [
-        "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
-        "/private/tmp/refine-review-20260914/build/paper_v4.pdf"
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf"
       ],
       "checks": [
         "Brazil mean ideal point: -0.156 in 2005-2008 and -0.481 in 2009-2012.",
@@ -1399,7 +1399,7 @@
       },
       "current_locations": [
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 1308,
           "excerpt": "## Brazil and China Ideal-Point Series",
           "baseline_location": "paper_v4.Rmd:1304-1328",
@@ -1418,7 +1418,7 @@
           "Figure and data unchanged"
         ]
       },
-      "promotion_status": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada."
+      "promotion_status": "Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado."
     },
     {
       "item": 29,
@@ -1439,8 +1439,8 @@
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [
-        "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
-        "/private/tmp/refine-review-20260914/build/paper_v4.pdf"
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf"
       ],
       "checks": [
         "[static] The active Rmd includes the stored figure and the caption text at paper_v4.Rmd:340-345.",
@@ -1499,7 +1499,7 @@
       },
       "current_locations": [
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 340,
           "excerpt": "```{r plot-sdid, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0(\"Preferred SDiD fit for Brazil and its synthetic comparison, estimated without covariates. Lower values indicate convergence toward China; the arr",
           "baseline_location": "paper_v4.Rmd:340-345",
@@ -1519,7 +1519,7 @@
           "Visual verification at orchestrator render gate"
         ]
       },
-      "promotion_status": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada."
+      "promotion_status": "Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado."
     },
     {
       "item": 30,
@@ -1539,8 +1539,8 @@
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [
-        "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
-        "/private/tmp/refine-review-20260914/build/paper_v4.pdf"
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf"
       ],
       "checks": [
         "[static] The opening sentence and the later treatment definitions were compared in the active Rmd and frozen PDF text.",
@@ -1589,14 +1589,14 @@
       },
       "current_locations": [
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 298,
           "excerpt": "## Identification Strategy",
           "baseline_location": "paper_v4.Rmd:298-304",
           "mapping": "equal line"
         },
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 314,
           "excerpt": "Notwithstanding my best effort to address potential rival explanations for the observed reduced-form causal effect of the change in 2009, there is only so much one can do with a single treated case. Thus, I also consider",
           "baseline_location": "paper_v4.Rmd:314,320-324,328-330",
@@ -1615,7 +1615,7 @@
           "Treatment code and estimand unchanged"
         ]
       },
-      "promotion_status": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada."
+      "promotion_status": "Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado."
     },
     {
       "item": 31,
@@ -1636,8 +1636,8 @@
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [
-        "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
-        "/private/tmp/refine-review-20260914/build/paper_v4.pdf"
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf"
       ],
       "checks": [
         "Read get_gpi_data at scripts/functions.R:180-210 and cov_matrix/simple_fit at scripts/functions.R:681-755.",
@@ -1695,21 +1695,21 @@
       "orchestrator_override": "orchestrator_decisions.md; verify_power_identity.R; verify_power_identity.log",
       "current_locations": [
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 225,
           "excerpt": "The SDiD panel combines UNGA ideal points with trade, macroeconomic, power, geographic, institutional, and trade-agreement variables. The complete panel covers `r num_countries` countries and `r num_years` Brazil years f",
           "baseline_location": "paper_v4.Rmd:225-227",
           "mapping": "equal line"
         },
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 306,
           "excerpt": "The preferred specification uses no covariates because time-varying post-2009 values may induce post-treatment bias. The current-covariate comparison passes the country-year variables listed in Table \\@ref(tab:outcome-ro",
           "baseline_location": "paper_v4.Rmd:306",
           "mapping": "changed block start"
         },
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 550,
           "excerpt": "Table \\@ref(tab:outcome-robustness-table) reports the preferred Brazil SDiD estimate alongside four comparisons. Column (1) uses no covariates and is preferred because it avoids conditioning the counterfactual on variabl",
           "baseline_location": "paper_v4.Rmd:548-661, Table 3",
@@ -1732,7 +1732,7 @@
         ],
         "rejected_specialist_claim": "Absolute value breaks the power identity"
       },
-      "promotion_status": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada."
+      "promotion_status": "Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado."
     },
     {
       "item": 32,
@@ -1751,8 +1751,8 @@
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [
-        "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
-        "/private/tmp/refine-review-20260914/build/paper_v4.pdf"
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf"
       ],
       "checks": [
         "Inspected synthdid_estimate, collapsed.form, sc.weight.fw, and sc.weight.fw.covariates in the installed synthdid 0.0.9 namespace.",
@@ -1804,21 +1804,21 @@
       },
       "current_locations": [
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 223,
           "excerpt": "For Brazil, the treatment indicator equals one from 2009 onward, the first year China became Brazil's largest export destination. SDiD estimates Brazil's average post-2009 gap relative to a weighted synthetic counterfact",
           "baseline_location": "paper_v4.Rmd:223",
           "mapping": "changed block start"
         },
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 302,
           "excerpt": "To address these issues, I use Synthetic Difference-in-Differences (SDiD). Like the Synthetic Control Method (SCM), it constructs a weighted counterfactual from a donor pool to estimate the causal effect, using weights t",
           "baseline_location": "paper_v4.Rmd:302",
           "mapping": "changed block start"
         },
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 1428,
           "excerpt": "Let $N_0$ and $N_1$ denote the numbers of control and treated units, and let $T_0$ and $T_1$ denote the numbers of pre- and post-treatment periods. Classic DiD corresponds to uniform weighting in this comparison. SDiD in",
           "baseline_location": "paper_v4.Rmd:1424",
@@ -1837,7 +1837,7 @@
           "Stored weights unchanged"
         ]
       },
-      "promotion_status": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada."
+      "promotion_status": "Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado."
     },
     {
       "item": 33,
@@ -1862,8 +1862,8 @@
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [
-        "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
-        "/private/tmp/refine-review-20260914/build/paper_v4.pdf"
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf"
       ],
       "checks": [
         "[computed in R] The stored target object and existing main_summary.csv reproduce the mean and ATT identity; see local_fixes_r_checks.txt.",
@@ -1921,35 +1921,35 @@
       },
       "current_locations": [
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 20,
           "excerpt": "abstract: \"\\\\singlespacing  How do countries adjust their foreign policy when a rising power becomes their leading trading partner? We argue that a sufficiently salient and lasting change in trade rankings can shape dipl",
           "baseline_location": "paper_v4.Rmd:20",
           "mapping": "changed block start"
         },
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 83,
           "excerpt": "mean_br <- tar_read(synth_data) %>%",
           "baseline_location": "paper_v4.Rmd:83-92",
           "mapping": "equal line"
         },
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 149,
           "excerpt": "In the preferred specification, the estimated reduced-form effect of entry into the new trade-rank condition is a reduction of `r sprintf('%.3f', abs(estimate))` ideal-point units in Brazil's distance to China relative t",
           "baseline_location": "paper_v4.Rmd:149",
           "mapping": "equal line"
         },
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 2243,
           "excerpt": "The two outcome measures preserve the negative direction of the Brazilian SDiD estimate, but they do not support a blanket claim of robustness across the Brazilian and cross-country designs. Table \\@ref(tab:ungadm-sdid-c",
           "baseline_location": "paper_v4.Rmd:2239-2240",
           "mapping": "changed block start"
         },
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 2254,
           "excerpt": "    \"Intercept-adjusted pre-treatment RMSPE\",",
           "baseline_location": "paper_v4.Rmd:2251-2268",
@@ -1971,7 +1971,7 @@
           "No independent scientific review claimed"
         ]
       },
-      "promotion_status": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada."
+      "promotion_status": "Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado."
     },
     {
       "item": 34,
@@ -1993,8 +1993,8 @@
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [
-        "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
-        "/private/tmp/refine-review-20260914/build/paper_v4.pdf"
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf"
       ],
       "checks": [
         "[computed in R] Both pre-treatment means and both relative percentages were reproduced from existing CSV values; see local_fixes_r_checks.txt.",
@@ -2048,14 +2048,14 @@
       },
       "current_locations": [
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 2243,
           "excerpt": "The two outcome measures preserve the negative direction of the Brazilian SDiD estimate, but they do not support a blanket claim of robustness across the Brazilian and cross-country designs. Table \\@ref(tab:ungadm-sdid-c",
           "baseline_location": "paper_v4.Rmd:2239-2240",
           "mapping": "changed block start"
         },
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 2245,
           "excerpt": "```{r ungadm-sdid-comparison, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}",
           "baseline_location": "paper_v4.Rmd:2242-2283",
@@ -2074,7 +2074,7 @@
           "Inline values and percentage expressions preserved"
         ]
       },
-      "promotion_status": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada."
+      "promotion_status": "Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado."
     },
     {
       "item": 35,
@@ -2092,8 +2092,8 @@
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [
-        "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
-        "/private/tmp/refine-review-20260914/build/paper_v4.pdf"
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf"
       ],
       "checks": [
         "The DOI in the local bibliography matches the publisher article checked: 10.1111/laps.12000.",
@@ -2137,7 +2137,7 @@
       },
       "current_locations": [
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 133,
           "excerpt": "If everyone is perfectly rational, redundant information should not matter. Most of the literature on the effects of interdependence implicitly or explicitly assumes this hyperrationalist perspective and studies how trad",
           "baseline_location": "paper_v4.Rmd:133",
@@ -2158,7 +2158,7 @@
           "synth-trade-china.bib retained"
         ]
       },
-      "promotion_status": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada."
+      "promotion_status": "Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado."
     },
     {
       "item": 36,
@@ -2177,8 +2177,8 @@
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [
-        "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
-        "/private/tmp/refine-review-20260914/build/paper_v4.pdf"
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf"
       ],
       "checks": [
         "The DOI in the local bibliography matches the publisher article checked: 10.1007/s12116-021-09318-9.",
@@ -2223,7 +2223,7 @@
       },
       "current_locations": [
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 133,
           "excerpt": "If everyone is perfectly rational, redundant information should not matter. Most of the literature on the effects of interdependence implicitly or explicitly assumes this hyperrationalist perspective and studies how trad",
           "baseline_location": "paper_v4.Rmd:133",
@@ -2242,7 +2242,7 @@
           "No bibliography edit"
         ]
       },
-      "promotion_status": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada."
+      "promotion_status": "Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado."
     },
     {
       "item": 37,
@@ -2316,14 +2316,14 @@
       },
       "current_locations": [
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 137,
           "excerpt": "A different concern for the study of the effect of status change is reverse causality, since politically aligned countries may deepen economic ties with one another, making China's rise in the trade hierarchy a consequen",
           "baseline_location": "paper_v4.Rmd:137",
           "mapping": "equal line"
         },
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 147,
           "excerpt": "To estimate the Brazilian foreign-policy alignment pattern, I use synthetic difference-in-differences (SDiD) on annual UNGA ideal-point distance to China, with 2009 marking China's rise to the largest Brazilian export de",
           "baseline_location": "paper_v4.Rmd:147",
@@ -2340,7 +2340,7 @@
         ],
         "dependencies": []
       },
-      "promotion_status": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada."
+      "promotion_status": "Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado."
     },
     {
       "item": 38,
@@ -2361,8 +2361,8 @@
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [
-        "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
-        "/private/tmp/refine-review-20260914/build/paper_v4.pdf"
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
+        "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf"
       ],
       "checks": [
         "SHA-256 of frozen and current Rmd matched: 9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4.",
@@ -2422,7 +2422,7 @@
       },
       "current_locations": [
         {
-          "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
           "line": 139,
           "excerpt": "I argue that such milestones matter because they mark trade-based status gains. The argument builds on research that treats status as socially recognized standing within international hierarchies, clubs, and local status",
           "baseline_location": "paper_v4.Rmd:139",
@@ -2441,7 +2441,7 @@
           "Prose and BibTeX entry retained"
         ]
       },
-      "promotion_status": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada."
+      "promotion_status": "Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado."
     }
   ],
   "adjudication_counts": {
@@ -2452,13 +2452,13 @@
   "orchestrator_decisions": "orchestrator_decisions.md",
   "delivery": {
     "created_at": "2026-09-14T14:38:49.031664-03:00",
-    "canonical_promotion": "Pendente: exceção no hook global ainda não autorizada. Rmd e PDF canônicos permanecem nos bytes da referência congelada.",
+    "canonical_promotion": "Concluída após autorização do usuário para commit; bytes idênticos aos artefatos revisados. Push não autorizado.",
     "manuscript": {
-      "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
       "sha256": "fa40c4395abea8a7b94f5539eb4fc60bde5dcf8e4e4a7825edd4043ea32093f0"
     },
     "paper_pdf": {
-      "path": "/private/tmp/refine-review-20260914/build/paper_v4.pdf",
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf",
       "sha256": "7ab3f9d4b85452a78fb7109847190e885d0500091eebb9095562be3bed8f5c69",
       "pages": 72
     },
@@ -2467,7 +2467,7 @@
       "sha256": "78356d0b657d1c1730e2607f92ecff3e8b6c36a6b46b21335023da92ab07ee4f"
     },
     "item25_pdf": {
-      "path": "/private/tmp/refine-review-20260914/build/item25.pdf",
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/delivery/item25.pdf",
       "sha256": "818560fabdcc7c4059721d4d895fb6ccd3a48e7fb083b62db8b738ae9818eba4",
       "pages": 6
     },
@@ -2482,11 +2482,12 @@
     },
     "canonical_manuscript": {
       "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
-      "sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4"
+      "sha256": "fa40c4395abea8a7b94f5539eb4fc60bde5dcf8e4e4a7825edd4043ea32093f0"
     },
     "canonical_pdf": {
       "path": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4.pdf",
-      "sha256": "da7b84fd44a1071953c5c2941be53aefb75f2b249476cc2d6e065e5f8463e312"
+      "sha256": "7ab3f9d4b85452a78fb7109847190e885d0500091eebb9095562be3bed8f5c69",
+      "pages": 72
     },
     "independent_reviews": {
       "review_methods_final_candidate": {
@@ -2590,7 +2591,18 @@
     "pipeline_or_estimation_executed": false,
     "classification_api_called": false,
     "protected_hashes_restored_and_verified": true,
-    "current_git_head": "3bd630afdeac3ddbb9911f2ea4bf78e50d13cc4d",
-    "all_requested_independent_reviews_finished": true
+    "all_requested_independent_reviews_finished": true,
+    "isolated_manuscript_reviewed": {
+      "path": "/private/tmp/refine-review-20260914/candidate_v2.Rmd",
+      "sha256": "fa40c4395abea8a7b94f5539eb4fc60bde5dcf8e4e4a7825edd4043ea32093f0"
+    },
+    "isolated_paper_pdf_reviewed": {
+      "path": "/private/tmp/refine-review-20260914/build/paper_v4.pdf",
+      "sha256": "7ab3f9d4b85452a78fb7109847190e885d0500091eebb9095562be3bed8f5c69",
+      "pages": 72
+    },
+    "hook_guard": "Blocked by automatic approval review; awaiting explicit global-hook authorization.",
+    "head_at_review_completion": "3bd630afdeac3ddbb9911f2ea4bf78e50d13cc4d",
+    "head_before_delivery_commit": "1d6e7213a6662a0aca808907354fdcaecd038dc5"
   }
 }

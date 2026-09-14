@@ -1,12 +1,10 @@
 # Ações concretas ainda dependentes de autorização
 
-## 1. Impedir checkpoints automáticos e promover a versão revisada
+## 1. Hook global: autorização específica pendente
 
-O hook global criou commits/pushes durante o encerramento de agentes. A cópia revisada está em `/private/tmp/refine-review-20260914/`; o Rmd e PDF canônicos permanecem congelados. A autorização de edição/render do paper já existe. O que falta para promovê-los sem publicação automática é a exceção no arquivo global do hook, fora do repositório.
+O usuário autorizou o commit local e a promoção dos artefatos revisados foi concluída. A revisão automática rejeitou a alteração global em `auto_commit_push.py`, por não considerar a autorização de commit suficiente para modificar esse arquivo. Foi solicitada autorização explícita para o hook e o marcador `.codex-no-auto-checkpoint`. O patch e o teste simulado continuam prontos; nenhum deles foi aplicado.
 
-Proposta pronta: `hook_guard_proposal.patch` e `hook_guard_proposal.json`. A alteração faz o hook respeitar um marcador `.codex-no-auto-checkpoint` na raiz do repositório. Quando esse marcador existir, retorna antes de add/commit/push. A exceção não altera outros repositórios. A configuração permanece explícita até a remoção autorizada do marcador. Não se propõe reescrever o histórico nem desfazer os checkpoints automaticamente.
-
-Após autorização: conferir SHA do hook, aplicar o guard, criar marcador no repositório, testar com diretórios simulados e sem comandos de commit/push, promover os bytes revisados e conferidos, verificar diff/hash. Os próximos processos desta revisão já usam CODEX_AUTO_COMMIT_PUSH_DRY_RUN=1.
+O hook ainda pode fazer push automaticamente ao encerrar a tarefa. Push não está autorizado. A alteração proposta retorna antes dos comandos Git quando existir o marcador local; os demais repositórios não são afetados. Ver `hook_guard_proposal.patch`, `hook_guard_test.json` e `hook_approval_block.json`.
 
 ## 2. Corpus e validação: itens 4, 7 e 8
 

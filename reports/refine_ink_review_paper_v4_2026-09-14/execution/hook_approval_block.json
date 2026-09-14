@@ -1,0 +1,7 @@
+{
+  "action": "Apply prepared global hook opt-out and repository marker",
+  "status": "rejected_by_automatic_approval_review",
+  "reason": "User explicitly authorized commit, but global hook modification was not considered unequivocally authorized.",
+  "mutation_occurred": false,
+  "specific_authorization_requested": true
+}
