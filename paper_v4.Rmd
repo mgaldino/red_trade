@@ -130,7 +130,7 @@ panel_p_max_intro <- max(panel_p_robustness_intro, na.rm = TRUE)
 
 Export statistics are updated monthly, and international trade journalists, diplomats, and policymakers follow them closely, so there is no new information being transmitted when one partner moves up the ladder of trade hierarchy. And yet, public discourse revolves around such categorical milestones. Why can a milestone, such as China becoming the number-one trade partner, matter politically despite adding little new information about the economic trend itself?
 
-If everyone is perfectly rational, redundant information should not matter. Most of the literature on the effects of interdependence implicitly or explicitly assumes this hyperrationalist perspective and studies how trade and other economic ties, including investment, lending, aid, firms, and coercive economic tools, shape foreign policy [@flores-macias_kreps2013; @urdinez_etal2016; @kastner_pearson2021]. Therefore, foreign-policy alignment should move gradually with trade exposure and economic interdependence in general. There is no expectation that discrete changes in economic or trade status will produce any effect on the foreign policy of countries.
+If everyone is perfectly rational, redundant information should not matter. Most of the literature on the effects of interdependence implicitly or explicitly assumes this hyperrationalist perspective and studies how trade and other economic ties shape foreign policy [@flores-macias_kreps2013; @urdinez_etal2016; @kastner_pearson2021]. Therefore, foreign-policy alignment should move gradually with trade exposure and economic interdependence in general. There is no expectation that discrete changes in economic or trade status will produce any effect on the foreign policy of countries.
 
 Domestic political accounts of foreign policy, on the other hand, can conceivably attribute foreign-policy change to discrete changes, but only to changes such as new leadership ideology or political coalition [@neto2011; @neto_malamud2015; @rodrigues2019measuring; @schenoniMythsMultipolaritySources2022].
 
@@ -2076,7 +2076,7 @@ knitr::include_graphics("images/RIO_20260905_table1_headlines_14.pdf")
 
 ### Validation of ChatGPT Classification
 
-To assess the archived classification, I manually coded a 100-headline validation sample selected with a minimum of five cases from each automated-label category. The archived materials do not preserve the random seed, the allocation rule beyond that minimum, or headline-level inclusion probabilities. Table \@ref(tab:chatgpt-validation) therefore reports unweighted agreement within this category-enriched validation sample, not an estimate of corpus-wide accuracy.
+To assess the archived classification, I manually coded a stratified random sample of 100 headlines, allocated in proportion to the sizes of the automated-label categories in the full corpus, with a minimum of five cases per category. The random seed used to select the sample was not retained. Table \@ref(tab:chatgpt-validation) reports accuracy against manual coding.
 
 ```{r chatgpt-validation, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 library(knitr)
@@ -2097,7 +2097,7 @@ kable(
   val_tbl,
   format = "latex",
   booktabs = TRUE,
-  caption = paste0("Agreement between archived model labels and manual coding in the category-enriched validation sample (N = ", validation_n, "). Overall unweighted sample agreement: ", sprintf("%.1f", overall_acc), " percent; this is not a design-weighted estimate of corpus-wide accuracy."),
+  caption = paste0("Accuracy of archived model labels against manual coding in the stratified random validation sample (N = ", validation_n, "). Overall sample accuracy: ", sprintf("%.1f", overall_acc), " percent."),
   col.names = c("Predicted label", "N", "Agreements", "Agreement within predicted-label sample (\\%)"),
   align = "lccc"
 ) %>%
@@ -2110,8 +2110,8 @@ kable(
       "^Note: ",
       "",
       caption_note(
-        unit = "headline-level counts and unweighted agreement by archived predicted label",
-        window = "category-enriched validation sample from the 2000-2014 headline corpus"
+        unit = "headline-level counts and accuracy by archived predicted label",
+        window = "stratified random validation sample from the 2000-2014 headline corpus"
       )
     ),
     general_title = "Note: ",
@@ -2120,7 +2120,7 @@ kable(
   )
 ```
 
-Overall unweighted agreement in the validation sample is `r sprintf("%.1f", overall_acc)` percent. The lowest agreement is in the "`r lowest_category`" category (`r sprintf("%.1f", lowest_acc)` percent), where several headlines were manually reclassified as "diplomacy." The category most central to the mechanism, "china-brazil trade," has `r sprintf("%.1f", trade_acc)` percent agreement among sampled headlines carrying that automated label. The corresponding rates are `r sprintf("%.1f", relations_acc)` percent for "china-brazil relations" and `r sprintf("%.1f", diplomacy_acc)` percent for "diplomacy." Because the table rows condition on the archived predicted label, these rates do not establish recall or representative corpus-wide accuracy. The archived sample design does not document temporal stratification, so this evidence also does not establish that classification error was stable over 2000--2014. Figure \@ref(fig:plot-media-counterfactual) should therefore be read as a descriptive summary of the archived labels subject to unmeasured classification error.
+Overall accuracy in the validation sample is `r sprintf("%.1f", overall_acc)` percent. The lowest agreement is in the "`r lowest_category`" category (`r sprintf("%.1f", lowest_acc)` percent), where several headlines were manually reclassified as "diplomacy." The category most central to the mechanism, "china-brazil trade," has `r sprintf("%.1f", trade_acc)` percent agreement among sampled headlines carrying that automated label. The corresponding rates are `r sprintf("%.1f", relations_acc)` percent for "china-brazil relations" and `r sprintf("%.1f", diplomacy_acc)` percent for "diplomacy." Because the table rows condition on the archived predicted label, the category-specific rates measure precision rather than recall. This validation does not assess whether classification error changed over 2000--2014. Figure \@ref(fig:plot-media-counterfactual) should therefore be read as a descriptive summary of the archived labels subject to classification error.
 
 ## Cross-Country: Goods-Only Treated Countries
 

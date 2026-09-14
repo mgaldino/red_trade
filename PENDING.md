@@ -17,6 +17,14 @@ Não use `PENDING.md`, `README.md`, relatórios antigos de revisão ou
 `paper_v4.extraction_cache.json` como fonte de verdade sem conferir o Rmd/PDF
 atuais. O cache de extração pode conter texto de versões anteriores.
 
+## TODO — retirar covariáveis colineares das estimações (Refine 31; autor, 2026-09-14)
+
+- [ ] Auditar as matrizes efetivamente usadas nas especificações com covariáveis e retirar todas as redundâncias exatas, inclusive as colineares com efeitos de unidade ou tempo. Manter um conjunto de regressores de posto completo, sem eliminar indiscriminadamente todas as variáveis que participam de uma dependência.
+- [ ] Na comparação SDiD com covariáveis correntes, retirar `distance_us`, absorvida pelos efeitos de unidade, e a redundância de `us_power_gap` em relação a `gpi` e aos efeitos anuais. A identidade `us_power_gap = us_power - gpi` foi confirmada no suporte observado. Verificar também as demais colunas e transformações no ajuste efetivo.
+- [ ] Implementar a correção nos produtores/targets pertinentes, reestimar as comparações afetadas e atualizar seus resultados, tabelas e descrições. Verificar posto após considerar os efeitos fixos e comparar os resultados anteriores e novos.
+
+**Estado:** tarefa registrada por solicitação expressa do autor; nenhuma covariável foi removida e nenhuma estimação foi executada nesta rodada. A especificação principal já não inclui covariáveis. A alteração e a execução do pipeline continuam como etapa futura, sujeita à autorização específica prevista nas regras do projeto.
+
 ## TAREFA PRIORITÁRIA Nº 1 — migrar para o `targets` TUDO que entra no paper
 
 **Status**: ABERTA, é a próxima tarefa de código do projeto (decisão do autor, 2026-08-26)

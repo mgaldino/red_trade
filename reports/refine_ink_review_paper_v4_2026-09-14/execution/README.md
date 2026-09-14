@@ -39,3 +39,5 @@ Os artefatos temporários podem ser removidos pelo sistema futuramente; a refer�
 `automatic_checkpoint_incident.json` registra os quatro commits e a evidência de push do hook. `targets_config_incident.json` registra a alteração indevida de configuração pelo revisor numérico via `tar_config_set()` e a restauração exclusiva dessa mudança aos bytes congelados. A afirmação de ausência de mudança de configuração no parecer numérico é corrigida pelo registro do orquestrador. Ao término dos checks, `_targets.R`, `_targets.yaml`, metadados protegidos e bibliografia tinham seus hashes originais; nenhum modelo foi reestimado, classificador chamado por API ou processo encerrado.
 
 As revisões finais não encontraram defeitos confirmados nos componentes examinados. Isso não equivale a validação geral do paper, de sua identificação causal ou das etapas ainda pendentes.
+
+Atualização posterior: `author_followup_20260914.md` registra a confirmação do desenho amostral pelo autor (item 8), o TODO de colinearidade (31) e a redação exata dos itens 35/36; prevalece nesses pontos sobre os pareceres anteriores.

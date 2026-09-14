@@ -1,0 +1,36 @@
+{
+  "date": "2026-09-14",
+  "scope": [
+    8,
+    31,
+    35,
+    36
+  ],
+  "source": "author confirmation and exact requested wording",
+  "sha256": {
+    "paper_v4.Rmd": "4b1fab9abe80914690c58f06707f487430848e76051ed2bdc30d5da8b07970ba",
+    "output/paper_v4.pdf": "9d64cf90a107fe547e1b0aa81b6798a2165ac3285a1903f0747963dbd2b45fe7",
+    "PENDING.md": "9c85e0cd94e6c87663e06192c645a70e59dd511146898c093cf2b87918151e2e"
+  },
+  "validation": {
+    "independent_source_review": "PASS including final sentence shortening",
+    "yaml_and_abstract_unchanged": true,
+    "all_inline_expressions_unchanged": true,
+    "protected_files_unchanged": true,
+    "visual_pages": [
+      2,
+      64,
+      65
+    ],
+    "reestimation": false,
+    "targets_execution": false
+  },
+  "render_script": "reports/refine_ink_review_paper_v4_2026-09-14/execution/render_isolated.R",
+  "render_directory": "/private/tmp/refine-author-followup-20260914/build",
+  "warnings": [
+    "'xfun::attr()' is deprecated.",
+    "Use 'xfun::attr2()' instead.",
+    "See help(\"Deprecated\")",
+    "LaTeX Warning: `!h' float specifier changed to `!ht'."
+  ]
+}
