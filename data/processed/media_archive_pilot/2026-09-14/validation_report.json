@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "overall": "PASS",
+  "checks_passed": 12,
+  "checks_total": 12,
+  "downloads_repeated": false,
+  "deterministic_files_compared": [
+    "records.csv",
+    "diagnostics.csv",
+    "fidelity_sample.csv",
+    "request_manifest.csv",
+    "source_manifest.csv"
+  ],
+  "checks": [
+    {
+      "check": "diagnostic_shape",
+      "result": "PASS",
+      "detail": "rows=20; unique_pairs=20"
+    },
+    {
+      "check": "record_scope",
+      "result": "PASS",
+      "detail": "rows=1682"
+    },
+    {
+      "check": "record_required_fields",
+      "result": "PASS",
+      "detail": "title, URL and publication date are non-empty"
+    },
+    {
+      "check": "title_only_dictionary",
+      "result": "PASS",
+      "detail": "mention flags are stored only with title_original"
+    },
+    {
+      "check": "mention_dictionary_recomputed",
+      "result": "PASS",
+      "detail": "errors=0; scope=title_original"
+    },
+    {
+      "check": "diagnostic_counts",
+      "result": "PASS",
+      "detail": "before/after counts reconcile"
+    },
+    {
+      "check": "deduplication_rules",
+      "result": "PASS",
+      "detail": "errors=0"
+    },
+    {
+      "check": "failures_not_zero",
+      "result": "PASS",
+      "detail": "failed acquisitions use blank counts"
+    },
+    {
+      "check": "classification_domain",
+      "result": "PASS",
+      "detail": "all 20 tests are classified with justification"
+    },
+    {
+      "check": "adequate_has_complete_enumeration",
+      "result": "PASS",
+      "detail": "all adequate tests reached an explicit endpoint"
+    },
+    {
+      "check": "fidelity_saved_sources",
+      "result": "PASS",
+      "detail": "sample_rows=8; failures=0"
+    },
+    {
+      "check": "raw_only_reprocessing",
+      "result": "PASS",
+      "detail": "all deterministic outputs are byte-identical"
+    }
+  ]
+}

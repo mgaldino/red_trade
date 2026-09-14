@@ -1,0 +1,21 @@
+# Production crawler rules
+User-agent: *
+Disallow: /cp/
+Disallow: /login
+Disallow: /register
+Disallow: /profils
+Disallow: /api/
+
+Sitemap: https://diena.lv/sitemap.xml
+Sitemap: https://diena.lv/sitemap-news.xml
+
+# AI training crawlers are not permitted (content-licensing decision pending with
+# Dienas mediji). Search and answer-engine crawlers — Bingbot, DuckDuckBot,
+# OAI-SearchBot, ChatGPT-User, PerplexityBot — stay allowed. Mirrors the edge
+# user-agent filter in docker/prod/edge-nginx.conf.
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: CCBot
+User-agent: Bytespider
+Disallow: /

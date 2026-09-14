@@ -1,0 +1,12 @@
+check,result,detail
+diagnostic_shape,PASS,rows=20; unique_pairs=20
+record_scope,PASS,rows=1682
+record_required_fields,PASS,"title, URL and publication date are non-empty"
+title_only_dictionary,PASS,mention flags are stored only with title_original
+diagnostic_counts,PASS,before/after counts reconcile
+deduplication_rules,PASS,errors=0
+failures_not_zero,PASS,failed acquisitions use blank counts
+classification_domain,PASS,all 20 tests are classified with justification
+adequate_has_complete_enumeration,PASS,all adequate tests reached an explicit endpoint
+fidelity_saved_sources,PASS,sample_rows=8; failures=0
+raw_only_reprocessing,PASS,all deterministic outputs are byte-identical

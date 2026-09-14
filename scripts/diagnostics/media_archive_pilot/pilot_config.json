@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0.0",
+  "run_date": "2026-09-14",
+  "execution_timezone": "America/Sao_Paulo",
+  "fixed_dates": [
+    "2000-06-15",
+    "2009-06-15",
+    "2014-06-15",
+    "2026-08-15"
+  ],
+  "http": {
+    "user_agent": "red_trade-media-archive-pilot/0.1 (academic metadata pilot; no article bodies)",
+    "timeout_seconds": 30,
+    "pause_seconds": 1.0,
+    "max_attempts": 2,
+    "page_cap": 100
+  },
+  "sources": [
+    {
+      "source_id": "civil_georgia",
+      "newspaper": "Civil Georgia",
+      "country": "Georgia",
+      "iso3": "GEO",
+      "language": "English",
+      "donor_rank": 1,
+      "donor_weight": 0.03133023266048371,
+      "mechanism": "WordPress REST API plus daily HTML reconciliation",
+      "observation_unit": "web article/post",
+      "robots_url": "https://civil.ge/robots.txt",
+      "conditions_url": "https://civil.ge/",
+      "api_template": "https://civil.ge/wp-json/wp/v2/posts",
+      "daily_template": "https://civil.ge/archives/date/{year}/{month}/{day}",
+      "known_restrictions": "The online archive begins in 2001; current and legacy platforms coexist. The pilot requests metadata fields only.",
+      "parser": "wordpress_api"
+    },
+    {
+      "source_id": "cyprus_mail",
+      "newspaper": "Cyprus Mail",
+      "country": "Cyprus",
+      "iso3": "CYP",
+      "language": "English",
+      "donor_rank": 17,
+      "donor_weight": 0.016808283824562096,
+      "mechanism": "WordPress REST API plus daily HTML reconciliation",
+      "observation_unit": "web article/post",
+      "robots_url": "https://archive.cyprus-mail.com/robots.txt",
+      "conditions_url": "https://archive.cyprus-mail.com/",
+      "api_template": "https://archive.cyprus-mail.com/wp-json/wp/v2/posts",
+      "daily_template": "https://archive.cyprus-mail.com/{year}/{month}/{day}/",
+      "known_restrictions": "The archive declares monthly coverage from 1998. Article bodies can be paywalled; the pilot requests metadata only.",
+      "parser": "wordpress_api"
+    },
+    {
+      "source_id": "diena",
+      "newspaper": "Diena",
+      "country": "Latvia",
+      "iso3": "LVA",
+      "language": "Latvian",
+      "donor_rank": 40,
+      "donor_weight": 0.011435572855189126,
+      "mechanism": "monthly chronological index plus daily HTML page",
+      "observation_unit": "web article listing",
+      "robots_url": "https://diena.lv/robots.txt",
+      "conditions_url": "https://diena.lv/lietosanas-noteikumi",
+      "month_template": "https://diena.lv/arhivs/{year}/{month}",
+      "daily_template": "https://diena.lv/arhivs/{year}/{month}/{day}",
+      "known_restrictions": "The observed archive is sparse before 2007. A monthly index is the minimum additional unit used to obtain the source-provided day count.",
+      "parser": "diena_html"
+    },
+    {
+      "source_id": "elpais",
+      "newspaper": "El País",
+      "country": "Spain",
+      "iso3": "ESP",
+      "language": "Spanish",
+      "donor_rank": 41,
+      "donor_weight": 0.011065822082288557,
+      "mechanism": "paginated daily HTML archive",
+      "observation_unit": "web article listing",
+      "robots_url": "https://elpais.com/robots.txt",
+      "conditions_url": "https://elpais.com/estaticos/aviso-legal/",
+      "daily_template": "https://elpais.com/hemeroteca/{date}/",
+      "known_restrictions": "Full text may require subscription. The pilot follows only daily archive pagination and does not request article bodies except for manual fidelity checks.",
+      "parser": "elpais_html"
+    },
+    {
+      "source_id": "mbl",
+      "newspaper": "Morgunblaðið / mbl.is",
+      "country": "Iceland",
+      "iso3": "ISL",
+      "language": "Icelandic",
+      "donor_rank": 20,
+      "donor_weight": 0.016213816498132118,
+      "mechanism": "daily HTML archive; browser-only diagnostic when HTTP is challenged",
+      "observation_unit": "web article listing",
+      "robots_url": "https://www.mbl.is/robots.txt",
+      "conditions_url": "https://www.mbl.is/greinasafn/",
+      "daily_template": "https://www.mbl.is/greinasafn/dagur/{year}/{month}/{day}/",
+      "known_restrictions": "Article bodies can require subscription. Direct HTTP and a separate headless-browser attempt encountered an anti-bot challenge; no barrier is bypassed.",
+      "parser": "mbl_http_diagnostic"
+    }
+  ],
+  "mention_dictionaries": {
+    "civil_georgia": {
+      "china": [
+        {"label": "China", "regex": "(?iu)\\bchina\\b", "ambiguous": false},
+        {"label": "Chinese", "regex": "(?iu)\\bchinese\\b", "ambiguous": false},
+        {"label": "People's Republic of China", "regex": "(?iu)people[’']s republic of china", "ambiguous": false},
+        {"label": "PRC", "regex": "(?u)\\bPRC\\b", "ambiguous": true}
+      ],
+      "usa": [
+        {"label": "United States", "regex": "(?iu)\\bunited states\\b", "ambiguous": false},
+        {"label": "U.S.", "regex": "(?iu)(?<!\\w)U\\.?S\\.?(?!\\w)", "ambiguous": false},
+        {"label": "USA", "regex": "(?iu)\\bUSA\\b", "ambiguous": false},
+        {"label": "American", "regex": "(?iu)\\bamericans?\\b", "ambiguous": true}
+      ]
+    },
+    "cyprus_mail": {
+      "inherits": "civil_georgia"
+    },
+    "diena": {
+      "china": [
+        {"label": "Ķīna/Ķīnas", "regex": "(?iu)\\bķīna(?:s)?\\b", "ambiguous": false},
+        {"label": "ķīniešu/ķīniet-", "regex": "(?iu)\\bķīni(?:ešu|et\\w*)\\b", "ambiguous": false}
+      ],
+      "usa": [
+        {"label": "ASV", "regex": "(?u)\\bASV\\b", "ambiguous": false},
+        {"label": "Amerikas Savienotās Valstis", "regex": "(?iu)\\bamerikas savienotās valstis\\b", "ambiguous": false},
+        {"label": "amerikāņu", "regex": "(?iu)\\bamerikāņ\\w*\\b", "ambiguous": false},
+        {"label": "Amerika", "regex": "(?iu)\\bamerika(?:s)?\\b", "ambiguous": true}
+      ]
+    },
+    "elpais": {
+      "china": [
+        {"label": "China", "regex": "(?iu)\\bchina\\b", "ambiguous": false},
+        {"label": "chino/a", "regex": "(?iu)\\bchin(?:o|a|os|as)\\b", "ambiguous": false},
+        {"label": "República Popular China", "regex": "(?iu)\\brepública popular china\\b", "ambiguous": false}
+      ],
+      "usa": [
+        {"label": "Estados Unidos", "regex": "(?iu)\\bestados unidos\\b", "ambiguous": false},
+        {"label": "EE. UU.", "regex": "(?iu)(?<!\\w)EE\\.?\\s?UU\\.?(?!\\w)", "ambiguous": false},
+        {"label": "estadounidense", "regex": "(?iu)\\bestadounidenses?\\b", "ambiguous": false},
+        {"label": "americano/a", "regex": "(?iu)\\bamerican(?:o|a|os|as)\\b", "ambiguous": true}
+      ]
+    },
+    "mbl": {
+      "china": [
+        {"label": "Kína", "regex": "(?iu)\\bkína\\b", "ambiguous": false},
+        {"label": "kínversk-", "regex": "(?iu)\\bkínversk\\w*\\b", "ambiguous": false}
+      ],
+      "usa": [
+        {"label": "Bandaríkin", "regex": "(?iu)\\bbandarík\\w*\\b", "ambiguous": false},
+        {"label": "USA", "regex": "(?iu)\\bUSA\\b", "ambiguous": false}
+      ]
+    }
+  }
+}

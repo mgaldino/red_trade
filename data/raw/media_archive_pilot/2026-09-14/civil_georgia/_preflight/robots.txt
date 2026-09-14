@@ -1,0 +1,22 @@
+# allow facebook crawling
+User-agent: facebookexternalhit
+User-agent: twitterbot
+User-agent: linkedinbot
+User-agent: googlebot
+User-agent: googlebot-news
+Allow: /
+Disallow: /wp-admin/
+Disallow: /wp-content/plugins/
+
+# Block everything by default
+User-agent: *
+Disallow: /
+
+
+Sitemap: https://civil.ge/sitemap.xml
+Sitemap: https://civil.ge/news-sitemap.xml
+
+
+#WP Import Export Rule
+User-agent: *
+Disallow: /wp-content/uploads/wp-import-export-lite/

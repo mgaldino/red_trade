@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "run_date": "2026-09-14",
+  "execution_timezone": "America/Sao_Paulo",
+  "fixed_dates": [
+    "2000-06-15",
+    "2009-06-15",
+    "2014-06-15",
+    "2026-08-15"
+  ],
+  "source_ids": [
+    "civil_georgia",
+    "cyprus_mail",
+    "diena",
+    "elpais",
+    "mbl"
+  ],
+  "diagnostic_rows": 20,
+  "extracted_record_rows_before_dedup": 1682,
+  "extracted_record_rows_after_dedup": 1679,
+  "raw_directory": "data/raw/media_archive_pilot/2026-09-14",
+  "processed_directory": "data/processed/media_archive_pilot/2026-09-14",
+  "mention_scope": "title_original only",
+  "translations_or_llm_topics": false,
+  "article_bodies_downloaded": false,
+  "processing_config_sha256": "555b78117b964975e274e1d46727f03b6b0588c1f20402864be282a5bd37ad58"
+}

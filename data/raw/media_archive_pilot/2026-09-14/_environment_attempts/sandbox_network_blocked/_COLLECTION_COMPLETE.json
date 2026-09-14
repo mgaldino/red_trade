@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "started_at_utc": "2026-09-14T22:05:33+00:00",
+  "completed_at_utc": "2026-09-14T22:07:03+00:00",
+  "run_date": "2026-09-14",
+  "fixed_dates": [
+    "2000-06-15",
+    "2009-06-15",
+    "2014-06-15",
+    "2026-08-15"
+  ],
+  "source_ids": [
+    "civil_georgia",
+    "cyprus_mail",
+    "diena",
+    "elpais",
+    "mbl"
+  ],
+  "request_rows": 42,
+  "config_sha256": "555b78117b964975e274e1d46727f03b6b0588c1f20402864be282a5bd37ad58"
+}
