@@ -1,0 +1,28 @@
+R calculation check — local_fixes — 2026-09-14
+
+Scope: read existing targets/CSV only; no estimates, no targets execution, no writes.
+
+R operations:
+  d <- targets::tar_read(synth_data)
+  keep <- d$iso3c == "BRA" & d$year < 2009
+  b <- d$abs_distance_china[keep]
+  b <- b[is.finite(b)]
+  main <- read.csv("data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/main_summary.csv")
+  comp <- read.csv("data/processed/diagnostics/ungadm_outcome_robustness/estimation/sdid_comparison_table.csv")
+  calculate mean(), median(), and absolute estimate / baseline * 100
+  verify stored identities with stopifnot()
+
+Output:
+BRA pre years: 1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008
+n: 12 mean: 0.646777890583333 median: 0.620922368500000
+main estimate: -0.272771407583060 stored pre mean: 0.646777890583333 stored pct: -42.173891772497932
+ratio using mean (absolute): 42.173891772497932 ratio using median (absolute): 43.930033997971528
+comparison rows:
+                                              outcome_source   estimate brazil_pre_mean estimate_pct_pre_mean
+                    BSV Jun/2024 (paper main, no covariates) -0.2727714       0.6467779             -42.17389
+ UNGA-DM all resolution-related votes (Fjelstul et al. 2026) -0.3305529       0.8365452             -39.51405
+BSV ratio recomputed: 42.173891772497932
+DM ratio recomputed: 39.514054175898416
+CHECKS: PASS
+
+Interpretation: the body/table calculation is based on the pre-treatment mean, not the median. The rounded abstract value 42% is compatible with 42.1739% only after changing the baseline label from median to mean.

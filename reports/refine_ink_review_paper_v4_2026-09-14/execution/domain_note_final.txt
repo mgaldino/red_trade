@@ -1,0 +1,7 @@
+Entreguei a [nota em português](</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/domain_note.md>) e o [registro JSON validado](</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/domain_note.json>).
+
+**Item 25: PARTIAL como pendência de correção.** A restrição existe, mas já está explicitada no manuscrito. A sensibilidade arquivada com país × domínio altera o coeficiente de −0,2223 para −0,2257, aproximadamente 1,53%. O contraexemplo sintético demonstra o mecanismo possível, sem estimar viés nos votos reais.
+
+A nota explica a álgebra, o papel dos efeitos fixos de resolução, um exemplo de composição dos doadores e as alternativas com desenho *target-first* para eventual autorização.
+
+Conferi hashes, correspondência com o RDS consumido pelo manuscrito e aritmética dos diagnósticos existentes. **Nenhuma reestimação ou alteração do manuscrito foi realizada; `replacements` está vazio.**

@@ -49,3 +49,22 @@
 2026-09-14T16:39:53.380512Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 133 column 5
 2026-09-14T16:40:04.418690Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 133 column 5
 2026-09-14T16:41:43.871714Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 133 column 5
+2026-09-14T16:44:57.464808Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 133 column 5
+2026-09-14T16:45:06.380755Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 133 column 5
+2026-09-14T16:45:11.821238Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 133 column 5
+2026-09-14T16:45:21.282049Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 133 column 5
+2026-09-14T16:45:25.656968Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 133 column 5
+2026-09-14T16:48:31.391145Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 133 column 5
+2026-09-14T16:48:48.086424Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 133 column 5
+2026-09-14T16:48:52.764567Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 133 column 5
+2026-09-14T16:48:56.796605Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 133 column 5
+2026-09-14T16:49:34.280430Z ERROR codex_core::tools::router: error=apply_patch verification failed: Failed to find expected lines in /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/reports/refine_ink_review_paper_v4_2026-09-14/execution/corpus_votes_bibliography.md:
+**Exact minimal replacement.** Replace the two sentences beginning “The sample contains 55,190...” at `paper_v4.Rmd:975` with:
+
+> The sample contains 55,190 country-resolution observations across 95 countries and 612 roll calls. Votes are scored -1 for no, 0 for abstain, and 1 for yes. The outcome is \(Y_{ir}=|s_{ir}-s_{Cr}|-|s_{ir}-s_{Ur}|\), where \(s_{Cr}\) and \(s_{Ur}\) are China's and the United States' scores; negative values indicate a vote closer to China. Country-resolution pairs without a recorded yes, no, or abstain vote -- whether because of absence, nonparticipation, or another reason -- do not enter the observed-vote sample. A resolution enters the China-U.S. divergent sample only when both China and the United States have recorded votes and their scores differ. Each observed vote is weighted equally, and the models include year fixed effects, country fixed effects, and issue-area fixed effects.
+2026-09-14T16:49:34.314018Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 133 column 5
+2026-09-14T16:49:39.114964Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 133 column 5
+2026-09-14T16:50:11.144498Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 133 column 5
+2026-09-14T16:50:26.441830Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 133 column 5
+2026-09-14T16:50:57.424583Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 133 column 5
+2026-09-14T16:51:02.687560Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 133 column 5

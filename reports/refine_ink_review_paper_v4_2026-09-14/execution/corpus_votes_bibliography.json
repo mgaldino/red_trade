@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "paper_v4-2026-09-14-corpus-votes-bibliography",
+  "source": {
+    "reviewed_artifact": "paper_v4.Rmd",
+    "sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+    "artifact_intact": true,
+    "frozen_baseline": "reports/refine_ink_review_paper_v4_2026-09-14/execution/baseline/paper_v4.Rmd",
+    "frozen_baseline_byte_identical": true,
+    "reviewed_pdf": "output/paper_v4.pdf",
+    "reviewed_pdf_sha256": "da7b84fd44a1071953c5c2941be53aefb75f2b249476cc2d6e065e5f8463e312",
+    "frozen_pdf_byte_identical": true,
+    "git_commit_inspected": "8591fea"
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "review_sources": [
+    {
+      "review_id": "selected-items",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md",
+      "sha256": "d0220df748585215fc3ce14786e555546134d1e25534470ee153b1872437ea25"
+    },
+    {
+      "review_id": "refine-ink-full-report",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md",
+      "sha256": "eb7dc9488e3b6726cee0ddf232250be18f09291797e2a85470b67637af58b88a"
+    }
+  ],
+  "methods": {
+    "static_inspection": [
+      "Localized manuscript passages and Figure 8 producer chunk",
+      "Bounded corpus_votes.txt and bibliography.txt packets",
+      "Preserved Folha retrieval, classification, join, and media-counterfactual code",
+      "Preserved UN vote coding and outcome-construction code",
+      "Publisher or publisher-version primary sources for Urdinez et al. and Kastner and Pearson"
+    ],
+    "computed_verification": [
+      "Read-only row-count, date-range, missingness, duplicate, title-set, and exact-join checks on existing Folha RDS files outside targets",
+      "Read-only inspection of observed vote levels in the existing un_votes object",
+      "Read-only descriptive comparison of existing Brazil and China ideal-point values around 2009; no variance attribution"
+    ],
+    "new_analysis": [],
+    "forbidden_or_unperformed": [
+      "No targets change or execution",
+      "No reestimation",
+      "No classification API",
+      "No data change",
+      "No manuscript edit",
+      "No commit, process signal, or external communication"
+    ]
+  },
+  "findings": [
+    {
+      "item": 4,
+      "finding_id": "item-4-folha-corpus-provenance",
+      "source_review": "refine-ink-full-report",
+      "quoted_finding": "The Folha corpus is not specified well enough to assess selection and measurement error.",
+      "type": "reproducibility",
+      "severity": "major",
+      "scientific_dimension": "corpus provenance and measurement",
+      "held_decision": true,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "paper_v4.Rmd:1057-1085",
+        "paper_v4.Rmd:1978-2070",
+        "_targets.R:62-67",
+        "_targets.R:752-759",
+        "scripts/functions.R:20-50",
+        "scripts/functions.R:5598-5620",
+        "scripts/chatgpt_api.R:40-98",
+        "data/raw/network_caches/folha_scrape_cache.rds",
+        "data/raw/network_caches/df_classifcation.rds",
+        "data/folha_classificado.rds",
+        "reports/refine_ink_review_paper_v4_2026-09-14/execution/corpus_pipeline.md"
+      ],
+      "defect_evidence": [
+        "The manuscript does not state the preserved retrieval query, ordering, page range, exact archived dates, duplicate treatment, missingness, or observed title-join losses.",
+        "The archived cache starts on 2000-05-14 and ends on 2014-07-28, so both boundary years are partial.",
+        "The stored cache is already exact-title unique; it cannot identify the number of duplicates removed before storage.",
+        "No raw page-response archive, page-level failure or empty-page log, search-engine result total, or historical collection date was located in the bounded evidence.",
+        "The current classification loop omits a final incomplete 89-row block, so current code alone is not sufficient provenance for the complete archived classification; items 7 and 8 separately govern this classification-provenance defect."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "Existing retrieval cache: 14589 rows, 14589 distinct titles, zero exact duplicate rows, zero missing title/timestamp/date, all titles matching the preserved China-title filter.",
+        "Existing classification and final files: 14589 distinct titles each.",
+        "Title-set differences and exact-title join losses among existing cache, classification, and final files: zero.",
+        "Timestamp/date disagreements after exact-title join: zero."
+      ],
+      "reasoning": "The existing files permit a bounded audit of the stored corpus but not a historical completeness audit of Folha search results. The review finding is therefore confirmed. Stored-file facts may be disclosed only with explicit limits; missing raw responses and collection metadata must not be replaced by historical claims.",
+      "proposed_fix_assessment": "needs_design",
+      "disposition": "Specify a file-tracked target that emits source hashes, rows, date support, missingness, exact duplicates, title-set differences, exact-join losses, and unavailable provenance fields. After that target reproduces the figures, insert the proposed bounded disclosure without altering the item 7/8 classification-provenance correction."
+    },
+    {
+      "item": 21,
+      "finding_id": "item-21-vote-distance-definition",
+      "source_review": "refine-ink-full-report",
+      "quoted_finding": "The UNGA outcome is not operationally defined.",
+      "type": "measurement",
+      "severity": "major",
+      "scientific_dimension": "outcome definition and sample inclusion",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "paper_v4.Rmd:971-977",
+        "scripts/functions.R:6555-6561",
+        "scripts/functions.R:6634-6675"
+      ],
+      "defect_evidence": [
+        "The manuscript does not give the -1/0/1 vote coding or the exact signed distance formula.",
+        "The manuscript does not state that unrecorded country-resolution pairs are omitted rather than coded as abstentions.",
+        "The manuscript does not state that both China and the United States must have recorded and different votes for a roll call to enter the divergent-vote sample."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "Producer code maps no to -1, abstain to 0, and yes to 1.",
+        "Producer code calculates abs(country_score - china_score) - abs(country_score - usa_score).",
+        "The inspected un_votes object exposes only yes, no, and abstain as observed vote levels; absence and nonparticipation are not explicit vote categories."
+      ],
+      "reasoning": "The code supplies an exact, stable operational definition that is absent from the prose. Adding it clarifies the sign, treatment of abstentions, and exclusion of unrecorded votes without changing the analysis.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Replace the two sample-description sentences with the exact proposal in replacements."
+    },
+    {
+      "item": 27,
+      "finding_id": "item-27-figure-8-interpretation",
+      "source_review": "refine-ink-full-report",
+      "quoted_finding": "The Appendix interpretation of Figure 8 overstates what the figure shows.",
+      "type": "interpretation",
+      "severity": "moderate",
+      "scientific_dimension": "descriptive interpretation",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "paper_v4.Rmd:1304-1328",
+        "output/paper_v4.pdf:44",
+        "raw data/dataverse_files-2/IdealpointestimatesAll_Jun2024.csv"
+      ],
+      "defect_evidence": [
+        "Figure 8 shows sizable year-to-year movement in China's ideal-point series, so unqualified comparative stability is misleading.",
+        "Neither the figure nor the inspected producer performs an attribution or decomposition showing that Brazil accounts for most movement in bilateral distance."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "Brazil mean ideal point: -0.156 in 2005-2008 and -0.481 in 2009-2012.",
+        "China mean ideal point: -0.704 in 2005-2008 and -0.769 in 2009-2012.",
+        "Mean absolute annual change in 2005-2012: China 0.121, Brazil 0.073.",
+        "No variance attribution was computed."
+      ],
+      "reasoning": "The source series supports small movement in China's period average and sustained post-2009 movement in Brazil, while also showing annual volatility in China. It does not support assigning most bilateral-distance variation to Brazil. The narrower visual description resolves both issues.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Replace only the second Figure 8 interpretation sentence with the exact proposal in replacements."
+    },
+    {
+      "item": 35,
+      "finding_id": "item-35-urdinez-scope",
+      "source_review": "refine-ink-full-report",
+      "quoted_finding": "The manuscript mischaracterizes Urdinez et al. (2016) as studying only trade flows.",
+      "type": "citation_accuracy",
+      "severity": "moderate",
+      "scientific_dimension": "literature characterization",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "paper_v4.Rmd:133",
+        "references.bib:1319-1334",
+        "https://onlinelibrary.wiley.com/doi/pdf/10.1111/laps.12000:article page 3"
+      ],
+      "defect_evidence": [
+        "The primary-source abstract explicitly analyzes foreign direct investment, bank loans, and international trade and reports results for investment, loans, and exports."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "The DOI in the local bibliography matches the publisher article checked: 10.1111/laps.12000."
+      ],
+      "reasoning": "Because the article studies multiple economic channels, the phrase 'only the effects of trade flows' is factually wrong for this citation. The shared items 35/36 replacement broadens the description without disturbing the surrounding rationality argument.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Apply the single shared sentence replacement listed for items 35/36."
+    },
+    {
+      "item": 36,
+      "finding_id": "item-36-kastner-pearson-scope",
+      "source_review": "refine-ink-full-report",
+      "quoted_finding": "The manuscript mischaracterizes Kastner and Pearson (2021) as studying only trade flows.",
+      "type": "citation_accuracy",
+      "severity": "moderate",
+      "scientific_dimension": "literature characterization",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "paper_v4.Rmd:133",
+        "references.bib:799-811",
+        "https://link.springer.com/article/10.1007/s12116-021-09318-9:article pages 18-44",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7934344/:publisher-version full text, article pages 18, 24-35"
+      ],
+      "defect_evidence": [
+        "The primary article covers trade, investment, aid, sanctions, foreign direct investment, state-owned enterprises, and firms as state agents."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "The DOI in the local bibliography matches the publisher article checked: 10.1007/s12116-021-09318-9."
+      ],
+      "reasoning": "Because the article explicitly develops several economic instruments and mechanisms beyond trade flows, the current characterization is inaccurate. The same sentence correction resolves items 35 and 36 coherently.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Apply the single shared sentence replacement listed for items 35/36."
+    }
+  ],
+  "replacements": [
+    {
+      "item": 4,
+      "old": "This diagnostic does not measure the frequency of explicit rank labels.",
+      "new": "This diagnostic does not measure the frequency of explicit rank labels. The archived retrieval cache contains 14,589 unique search-result headlines dated May 14, 2000 through July 28, 2014. The preserved retrieval code queries Folha's site search for `china`, sorts results from oldest to newest, requests 2,000 pages in five 400-page blocks, and extracts each displayed headline and timestamp. Before classification, the preserved producer retains one record per exact headline and keeps titles containing `China`, `chinês`, or `chinesa`. In the archived files, titles and dates are complete, no exact duplicate rows remain, and all 14,589 cached titles match both a classified title and the final analysis file. The archive does not preserve the pre-deduplication page responses, page-level failures or empty-page checks, the search engine's result total, or the collection date, so duplicate removals and archive-level omissions cannot be quantified. The 2000 and 2014 counts cover only May--December and January--July, respectively."
+    },
+    {
+      "item": 21,
+      "old": "Any human-rights tag places a resolution in the human-rights group; all remaining resolutions form the non-human-rights group.",
+      "new": "Votes are scored -1 for no, 0 for abstain, and 1 for yes. The outcome is $Y_{ir}=|s_{ir}-s_{Cr}|-|s_{ir}-s_{Ur}|$, where $s_{Cr}$ and $s_{Ur}$ are China's and the United States' scores; negative values indicate a vote closer to China. Country-resolution pairs without a recorded yes, no, or abstain vote -- whether because of absence, nonparticipation, or another reason -- do not enter the observed-vote sample. A resolution enters the China-U.S. divergent sample only when both China and the United States have recorded votes and their scores differ. Any human-rights tag places a resolution in the human-rights group; all remaining resolutions form the non-human-rights group."
+    },
+    {
+      "item": 27,
+      "old": "This diagnostic clarifies the interpretation of the absolute-distance outcome used in the main SDiD design: China remains comparatively stable, while Brazil accounts for most of the movement in the Brazil-China distance.",
+      "new": "This diagnostic clarifies the interpretation of the absolute-distance outcome used in the main SDiD design: China's average position changes little around 2009 despite sizable year-to-year volatility, while Brazil shows a sustained post-2009 movement toward China."
+    },
+    {
+      "item": "35/36",
+      "old": "Most of the literature on the effects of interdependence implicitly or explicitly assumes this hyperrationalist perspective and studies only the effects of trade flows [@flores-macias_kreps2013; @urdinez_etal2016; @kastner_pearson2021].",
+      "new": "Most of the literature on the effects of interdependence implicitly or explicitly assumes this hyperrationalist perspective and studies how trade and other economic ties, including investment, lending, aid, firms, and coercive economic tools, shape foreign policy [@flores-macias_kreps2013; @urdinez_etal2016; @kastner_pearson2021]."
+    }
+  ],
+  "summary": {
+    "total": 5,
+    "confirmed": 5,
+    "partial": 0,
+    "refuted": 0,
+    "unresolved": 0,
+    "held_decisions": 1
+  },
+  "adjudication": {
+    "verdict": "READY_FOR_IMPLEMENTATION",
+    "checked_at": "2026-09-14T13:47:00-03:00",
+    "reasons": [
+      "All five selected review findings are supported by localized evidence.",
+      "Items 21, 27, and the shared items 35/36 sentence have evidence-preserving prose fixes.",
+      "Item 4 has a bounded disclosure and explicit unavailable fields, but paper-facing computed figures remain held behind a target-first audit.",
+      "The reviewed manuscript and PDF remain byte-identical to their frozen baselines."
+    ]
+  }
+}

@@ -11,20 +11,66 @@
   "items": [
     {
       "item": 2,
-      "status": "em adjudicacao",
-      "diagnosis": null,
-      "evidence": [],
+      "status": "Adjudicado; integração/revisão pendente",
+      "diagnosis": "PARTIAL",
+      "evidence": [
+        "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:104-112",
+        "paper_v4.Rmd:1882-1923",
+        "scripts/diagnostics/analyze_ex_top1_salience.R:46-87",
+        "scripts/diagnostics/analyze_ex_top1_salience.R:206-216",
+        "scripts/functions.R:2213-2261",
+        "scripts/diagnostics/prepare_australia_appendix_bundle_patch.R:75-125"
+      ],
       "owner": "cross_country",
       "model": "gpt-5.6-sol",
       "effort": "xhigh",
-      "solution": null,
+      "solution": "See specialist dossier.",
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [],
-      "checks": [],
+      "checks": [
+        "SHA-256 of Rmd, PDF, review, scripts, and target objects",
+        "pdftotext -layout inspection of Tables 20 and 23",
+        "read-only deserialization of existing RDS and target objects",
+        "35 treated versus 14 audited versus 9 displayed set comparison",
+        "inspection of producer filter and medium coding rules",
+        "inspection of status-current restricted-risk-set row filter",
+        "inspection of period and unit summaries"
+      ],
       "independent_review": null,
       "limitation": null,
-      "comment": "### 2. Incomplete reporting of cross-country audit\n\n**Status**: [Pending]\n\n**Quote**:\n> In order to assess how closely the empirical treatment used in the panel regression - China becoming a country's largest destination for goods exports - maps onto the theorized treatment (a publicly salient change in status), I conducted a cross-country audit of news media and official sources. The audit examines whether explicit rank language can be recovered around the time of treatment entry and whether source coverage is sufficiently complete for non-recovery to count as informative silence. Table 20 therefore distinguishes among observed status cues concerning China, the recoverability of the displaced incumbent, and caveats about the underlying trade metric.\n\n**Feedback**:\nThe scope of the cross-country audit appears incompletely reported. The treatment audit lists 35 qualifying countries, but the public-cue table covers only nine and does not explain whether the remaining 26 were searched, excluded by a stated sampling rule, or reported elsewhere. Additionally, all nine China-cue entries are \"unknown,\" and the \"medium\" benchmark category is not defined. Without that information, the audit cannot distinguish an intentionally limited case study from a broader search yielding positive cues, uninformative non-recovery, or informative silence.\n\n---"
+      "comment": "### 2. Incomplete reporting of cross-country audit\n\n**Status**: [Pending]\n\n**Quote**:\n> In order to assess how closely the empirical treatment used in the panel regression - China becoming a country's largest destination for goods exports - maps onto the theorized treatment (a publicly salient change in status), I conducted a cross-country audit of news media and official sources. The audit examines whether explicit rank language can be recovered around the time of treatment entry and whether source coverage is sufficiently complete for non-recovery to count as informative silence. Table 20 therefore distinguishes among observed status cues concerning China, the recoverability of the displaced incumbent, and caveats about the underlying trade metric.\n\n**Feedback**:\nThe scope of the cross-country audit appears incompletely reported. The treatment audit lists 35 qualifying countries, but the public-cue table covers only nine and does not explain whether the remaining 26 were searched, excluded by a stated sampling rule, or reported elsewhere. Additionally, all nine China-cue entries are \"unknown,\" and the \"medium\" benchmark category is not defined. Without that information, the audit cannot distinguish an intentionally limited case study from a broader search yielding positive cues, uninformative non-recovery, or informative silence.\n\n---",
+      "reasoning": "The reporting defect exists, but the review overstates the relationship between the 35-country treatment table and the nine-row display. The source audit is a 14-case legacy subset, and the display is a filtered nine-case diagnostic. Accurate disclosure resolves the present reporting problem without inventing searches for the 22 unaudited current cases.",
+      "fix_assessment": "safe",
+      "dossiers": [
+        "cross_country"
+      ],
+      "specialist_finding": {
+        "item": 2,
+        "status": "PARTIAL",
+        "source_locations": [
+          "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:104-112",
+          "paper_v4.Rmd:1882-1923",
+          "scripts/diagnostics/analyze_ex_top1_salience.R:46-87",
+          "scripts/diagnostics/analyze_ex_top1_salience.R:206-216",
+          "scripts/functions.R:2213-2261",
+          "scripts/diagnostics/prepare_australia_appendix_bundle_patch.R:75-125"
+        ],
+        "defect_evidence": [
+          "The manuscript calls this a cross-country audit without disclosing that its underlying matrix has 14 legacy-sample countries rather than the 35 current treated countries.",
+          "Only 13 audited countries overlap the current treated sample; Qatar is audit-only and 22 current treated countries were never in this source audit.",
+          "The table note does not disclose the display filter or define medium.",
+          "Chile and Saudi Arabia retain legacy source-audit entry years that differ from the current treatment target; only Australia was patched."
+        ],
+        "refuting_evidence": [
+          "The producer explicitly filters the 14-country matrix to cases without an observed China cue, retaining Australia regardless; the resulting table has nine rows.",
+          "Five audited cases are hidden because their China cues were recovered: Chile, Brazil, Uruguay, Saudi Arabia, and Qatar.",
+          "Among the 26 current treated countries not displayed, four were audited and hidden by the filter and 22 were not audited; they are not a single group of omitted audit cases."
+        ],
+        "reasoning": "The reporting defect exists, but the review overstates the relationship between the 35-country treatment table and the nine-row display. The source audit is a 14-case legacy subset, and the display is a filtered nine-case diagnostic. Accurate disclosure resolves the present reporting problem without inventing searches for the 22 unaudited current cases.",
+        "proposed_fix_assessment": "safe",
+        "implementation_scope": "Text, caption, and note only; do not change treatment rules or salience codes."
+      }
     },
     {
       "item": 4,
@@ -45,122 +91,452 @@
     },
     {
       "item": 6,
-      "status": "em adjudicacao",
-      "diagnosis": null,
-      "evidence": [],
+      "status": "Adjudicado; integração/revisão pendente",
+      "diagnosis": "CONFIRMED",
+      "evidence": [
+        "paper_v4.Rmd:754",
+        "paper_v4.Rmd:805",
+        "paper_v4.Rmd:867",
+        "output/paper_v4.pdf:p.23, Table 5 and preceding paragraph"
+      ],
       "owner": "sdid",
       "model": "gpt-5.6-sol",
       "effort": "xhigh",
-      "solution": null,
+      "solution": "Add the exact 2004-2008 exposure definitions, the 2008-2009 activation rule, the price-index construction, standardization, and the absorbed lower-order-term explanation to the paragraph/note. Keep the main covariate-free specification and all estimates unchanged.",
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [],
-      "checks": [],
+      "checks": [
+        "Inspected scripts/diagnostics/audit_brazil_sdid_commodity_no_covariates.R:97-151 and the upstream construction at scripts/diagnostics/audit_brazil_sdid_predetermined_commodity_controls.R:190-257,293-326.",
+        "Matched all six rows and values to data/processed/diagnostics/brazil_sdid_commodity_no_covariates/table_5_sdid_specification_results.csv; smoke_test is FALSE.",
+        "Confirmed the producer uses no lower-order exposure levels in specifications at lines 121-127."
+      ],
       "independent_review": null,
       "limitation": null,
-      "comment": "### 6. Table 5 interaction diagnostics remain underdefined\n\n**Status**: [Pending]\n\n**Quote**:\n> Table 5: Brazil SDiD estimates under corrected predetermined commodity and Chinademand diagnostics.\n| Specification | ATT | Placebo SE | Normal p | Rank p (dir./bilat.) |\n| :--- | :--- | :--- | :--- | :--- |\n| Current covariates | -0.268 | 0.143 | 0.061 | Not computed |\n| Preferred: no covariates | -0.273 | 0.131 | 0.037 | 0.031 / 0.073 |\n| Primary share x 2008-2009 | -0.285 | 0.129 | 0.027 | 0.031 / 0.073 |\n| Agriculture/mining x 2008-2009 | -0.284 | 0.128 | 0.026 | Not computed |\n| Price exposure x 2008-2009 | -0.277 | 0.130 | 0.034 | Not computed |\n| Prior China share x 2008-2009 | -0.284 | 0.130 | 0.029 | Not computed |\n\n**Feedback**:\nIt is difficult to determine what the four Table 5 interaction specifications adjust for because the exposure variables, baseline periods, meaning of “x 2008-2009,” and treatment of lower-order terms are not fully defined. Since the interaction includes the first treated year, these details are necessary to interpret the adjusted ATTs and assess how effectively the diagnostics address commodity-cycle or China-demand confounding.\n\n---"
+      "comment": "### 6. Table 5 interaction diagnostics remain underdefined\n\n**Status**: [Pending]\n\n**Quote**:\n> Table 5: Brazil SDiD estimates under corrected predetermined commodity and Chinademand diagnostics.\n| Specification | ATT | Placebo SE | Normal p | Rank p (dir./bilat.) |\n| :--- | :--- | :--- | :--- | :--- |\n| Current covariates | -0.268 | 0.143 | 0.061 | Not computed |\n| Preferred: no covariates | -0.273 | 0.131 | 0.037 | 0.031 / 0.073 |\n| Primary share x 2008-2009 | -0.285 | 0.129 | 0.027 | 0.031 / 0.073 |\n| Agriculture/mining x 2008-2009 | -0.284 | 0.128 | 0.026 | Not computed |\n| Price exposure x 2008-2009 | -0.277 | 0.130 | 0.034 | Not computed |\n| Prior China share x 2008-2009 | -0.284 | 0.130 | 0.029 | Not computed |\n\n**Feedback**:\nIt is difficult to determine what the four Table 5 interaction specifications adjust for because the exposure variables, baseline periods, meaning of “x 2008-2009,” and treatment of lower-order terms are not fully defined. Since the interaction includes the first treated year, these details are necessary to interpret the adjusted ATTs and assess how effectively the diagnostics address commodity-cycle or China-demand confounding.\n\n---",
+      "reasoning": "The diagnostics are implemented coherently, but the rendered table cannot be interpreted from the manuscript alone. This is a bounded reporting defect; it does not require re-estimation.",
+      "fix_assessment": "safe",
+      "dossiers": [
+        "sdid"
+      ],
+      "specialist_finding": {
+        "finding_id": "REFINE-006",
+        "item": 6,
+        "source_review": "REFINE",
+        "quoted_finding": "Table 5 does not fully define the exposure variables, baseline periods, the meaning of x 2008-2009, or the treatment of lower-order terms.",
+        "type": "exposition",
+        "severity": "unspecified",
+        "scientific_dimension": "fidelity of implementation",
+        "held_decision": false,
+        "status": "CONFIRMED",
+        "source_locations": [
+          "paper_v4.Rmd:754",
+          "paper_v4.Rmd:805",
+          "paper_v4.Rmd:867",
+          "output/paper_v4.pdf:p.23, Table 5 and preceding paragraph"
+        ],
+        "defect_evidence": [
+          "The Table 5 labels say only Primary share, Agriculture/mining, Price exposure, and Prior China share x 2008-2009; the note says only that the measures use external goods exports and that the interaction includes the first treated year.",
+          "The active producer defines country means over 2004-2008 for primary goods, agriculture, mining and energy, and China's goods-export share; the manuscript does not report those definitions.",
+          "The active producer includes only standardized time-varying interactions in the four diagnostic fits. Fixed exposure levels are omitted because they are absorbed by unit effects, and the common 2008-2009 indicator is absorbed by time effects; this lower-order-term logic is absent from the paper.",
+          "The price row is a distinct construction: 2004-2008 export-composition weights multiply World Bank Pink Sheet log-price changes relative to 2007 before the 2008-2009 activation and standardization."
+        ],
+        "refuting_evidence": [],
+        "mechanical_checks": [
+          "Inspected scripts/diagnostics/audit_brazil_sdid_commodity_no_covariates.R:97-151 and the upstream construction at scripts/diagnostics/audit_brazil_sdid_predetermined_commodity_controls.R:190-257,293-326.",
+          "Matched all six rows and values to data/processed/diagnostics/brazil_sdid_commodity_no_covariates/table_5_sdid_specification_results.csv; smoke_test is FALSE.",
+          "Confirmed the producer uses no lower-order exposure levels in specifications at lines 121-127."
+        ],
+        "reasoning": "The diagnostics are implemented coherently, but the rendered table cannot be interpreted from the manuscript alone. This is a bounded reporting defect; it does not require re-estimation.",
+        "proposed_fix_assessment": "safe",
+        "disposition": "Add the exact 2004-2008 exposure definitions, the 2008-2009 activation rule, the price-index construction, standardization, and the absorbed lower-order-term explanation to the paragraph/note. Keep the main covariate-free specification and all estimates unchanged."
+      }
     },
     {
       "item": 7,
-      "status": "em adjudicacao",
-      "diagnosis": null,
-      "evidence": [],
+      "status": "Adjudicado; integração/revisão pendente",
+      "diagnosis": "PARTIAL",
+      "evidence": [
+        "paper_v4.Rmd:1978-2066",
+        "scripts/chatgpt_api.R:40-98",
+        "_targets.R:752-759",
+        "data/folha_classificado.rds",
+        "data/df_classifcation.rds",
+        "data/china_headlines_batch.json"
+      ],
       "owner": "corpus_pipeline",
       "model": "gpt-5.6-sol",
       "effort": "xhigh",
-      "solution": null,
+      "solution": "Add the verified configuration and explicit historical-limit disclosure; do not claim an immutable snapshot or treat the five-response gpt-4o-mini batch as corpus provenance.",
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [],
-      "checks": [],
+      "checks": [
+        "Traced the displayed prompt to the current producer and archived RDS inputs.",
+        "Inspected the unique model-string values and row counts in both archived RDS files.",
+        "Inspected the five-response batch JSON and found no preserved link to the corpus-wide archive.",
+        "Verified the manuscript and relevant input hashes."
+      ],
       "independent_review": null,
       "limitation": null,
-      "comment": "### 7. Section 8.8 omits the full coding pipeline\n\n**Status**: [Pending]\n\n**Quote**:\n> The classified headline file is treated as an archived derived dataset rather than regenerated during manuscript rendering. This choice reflects the practical behavior of LLM-based coding: early runs sometimes returned incomplete classifications, altered original headlines, or used slightly inconsistent labels, which made exact matching back to the archive\ndifficult. I therefore fixed the prompt, normalized labels, preserved the resulting classified file, and validated the coding below against an independently coded sample. The evidence in the main text is used as a headline-level salience diagnostic.\n\n**Feedback**:\nThe classifier documentation does not provide a fully auditable path from the headline corpus to the archived labels underlying Figure 6. The model or snapshot, generation settings, user-message and batching procedure, response parsing, rerun rules, and label-normalization rules are not reported. These details are consequential given the acknowledged incomplete and inconsistent outputs, including the unexplained normalization from `china-brasil relations` in the prompt to `china-brazil relations` in the archive.\n\n---"
+      "comment": "### 7. Section 8.8 omits the full coding pipeline\n\n**Status**: [Pending]\n\n**Quote**:\n> The classified headline file is treated as an archived derived dataset rather than regenerated during manuscript rendering. This choice reflects the practical behavior of LLM-based coding: early runs sometimes returned incomplete classifications, altered original headlines, or used slightly inconsistent labels, which made exact matching back to the archive\ndifficult. I therefore fixed the prompt, normalized labels, preserved the resulting classified file, and validated the coding below against an independently coded sample. The evidence in the main text is used as a headline-level salience diagnostic.\n\n**Feedback**:\nThe classifier documentation does not provide a fully auditable path from the headline corpus to the archived labels underlying Figure 6. The model or snapshot, generation settings, user-message and batching procedure, response parsing, rerun rules, and label-normalization rules are not reported. These details are consequential given the acknowledged incomplete and inconsistent outputs, including the unexplained normalization from `china-brasil relations` in the prompt to `china-brazil relations` in the archive.\n\n---",
+      "reasoning": "The paper-facing record is incomplete and exact historical re-execution is impossible, but the repository preserves much of the code configuration and processing path. The correction must distinguish configuration from historical run evidence and disclose unavailable fields rather than invent them.",
+      "fix_assessment": "safe",
+      "dossiers": [
+        "corpus_pipeline"
+      ],
+      "specialist_finding": {
+        "item": 7,
+        "finding_id": "REFINE-F007",
+        "source_review": "REFINE-2026-09-14",
+        "quoted_finding": "The classifier documentation does not provide a fully auditable path from the headline corpus to the archived labels underlying Figure 6. The model or snapshot, generation settings, user-message and batching procedure, response parsing, rerun rules, and label-normalization rules are not reported.",
+        "type": "artifact",
+        "severity": "major",
+        "scientific_dimension": "reproducibility",
+        "held_decision": false,
+        "status": "PARTIAL",
+        "source_locations": [
+          "paper_v4.Rmd:1978-2066",
+          "scripts/chatgpt_api.R:40-98",
+          "_targets.R:752-759",
+          "data/folha_classificado.rds",
+          "data/df_classifcation.rds",
+          "data/china_headlines_batch.json"
+        ],
+        "defect_evidence": [
+          "The appendix displays only the system prompt and an archive disclosure; it omits the preserved API-call, slicing, parsing, join, and normalization code.",
+          "No immutable gpt-4.1-mini snapshot, complete raw request/response archive, batch-to-row manifest, rerun history, or non-temperature generation-parameter record was found for the 14589-row corpus.",
+          "No manifest binds a specific producer hash and source-corpus hash to the archived classified RDS bytes.",
+          "The five-response gpt-4o-mini-2024-07-18 batch file is not linked to the gpt-4.1-mini corpus and cannot serve as its run log."
+        ],
+        "refuting_evidence": [
+          "scripts/chatgpt_api.R records the active model alias gpt-4.1-mini and temperature 0.",
+          "The tracked producer records the headline filter, 500-row slicing, chat call, newline and arrow parsing, trimming, exact-title join, and deduplication.",
+          "The alleged unexplained normalization is present at scripts/chatgpt_api.R:95 as gsub(\"brasil\", \"brazil\", subject).",
+          "Both archived RDS files contain 14589 rows and consistently store the string gpt-4.1-mini, though that string is assigned by code rather than preserved provider metadata."
+        ],
+        "mechanical_checks": [
+          "Traced the displayed prompt to the current producer and archived RDS inputs.",
+          "Inspected the unique model-string values and row counts in both archived RDS files.",
+          "Inspected the five-response batch JSON and found no preserved link to the corpus-wide archive.",
+          "Verified the manuscript and relevant input hashes."
+        ],
+        "reasoning": "The paper-facing record is incomplete and exact historical re-execution is impossible, but the repository preserves much of the code configuration and processing path. The correction must distinguish configuration from historical run evidence and disclose unavailable fields rather than invent them.",
+        "proposed_fix_assessment": "safe",
+        "disposition": "Add the verified configuration and explicit historical-limit disclosure; do not claim an immutable snapshot or treat the five-response gpt-4o-mini batch as corpus provenance."
+      }
     },
     {
       "item": 8,
-      "status": "em adjudicacao",
-      "diagnosis": null,
-      "evidence": [],
+      "status": "Adjudicado; integração/revisão pendente",
+      "diagnosis": "CONFIRMED",
+      "evidence": [
+        "paper_v4.Rmd:2074-2119",
+        "scripts/functions.R:5623-5688",
+        "_targets.R:756-759",
+        "data/folha_validation_sample_annotated.csv"
+      ],
       "owner": "corpus_pipeline",
       "model": "gpt-5.6-sol",
       "effort": "xhigh",
-      "solution": null,
+      "solution": "Relabel the current result as unweighted validation-sample agreement and narrow the trade and temporal claims; add new metrics only through an authorized targets-first design.",
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [],
-      "checks": [],
+      "checks": [
+        "Recomputed the exact-match count from the archived 100-row validation file.",
+        "Reconstructed the complete 9-by-9 confusion matrix read-only and verified trade TP=6, FP=0, FN=1.",
+        "Counted 55 validation observations in 2001-2008 and 45 in 2009-2014 and confirmed that 2000 is absent.",
+        "Traced Table 22 to its unweighted group-by-predicted-label target function.",
+        "Searched the current graph and code for a sample producer, seed, allocation rule, and inclusion probabilities."
+      ],
       "independent_review": null,
       "limitation": null,
-      "comment": "### 8. Validation does not establish trade-category accuracy\n\n**Status**: [Pending]\n\n**Quote**:\n> To assess the reliability of the automated classification, I independently coded a stratified random sample of 100 headlines (with a minimum of 5 per category). Table 22 reports the agreement rate between the ChatGPT labels and the manual coding.\n\nTable 22: Validation of ChatGPT classification against manual coding $(\\mathrm{N}=100)$. Overall accuracy: 88.0 percent.\n\n**Feedback**:\nTable 22’s 88 percent agreement appears to be an unweighted result from a category-stratified sample and therefore may not estimate corpus-wide accuracy. Moreover, the six concordant `china-brazil trade` cases identify only one side of class performance unless the stratification basis and full confusion matrix are reported; they do not establish both precision and recall or rule out time-varying misclassification in the category trend underlying Figure 6.\n\n---"
+      "comment": "### 8. Validation does not establish trade-category accuracy\n\n**Status**: [Pending]\n\n**Quote**:\n> To assess the reliability of the automated classification, I independently coded a stratified random sample of 100 headlines (with a minimum of 5 per category). Table 22 reports the agreement rate between the ChatGPT labels and the manual coding.\n\nTable 22: Validation of ChatGPT classification against manual coding $(\\mathrm{N}=100)$. Overall accuracy: 88.0 percent.\n\n**Feedback**:\nTable 22’s 88 percent agreement appears to be an unweighted result from a category-stratified sample and therefore may not estimate corpus-wide accuracy. Moreover, the six concordant `china-brazil trade` cases identify only one side of class performance unless the stratification basis and full confusion matrix are reported; they do not establish both precision and recall or rule out time-varying misclassification in the category trend underlying Figure 6.\n\n---",
+      "reasoning": "The table correctly reports arithmetic agreement in its archived sample but labels and interprets that value too broadly. Missing design probabilities preclude a corpus-wide accuracy estimate, and the displayed trade row gives only one conditioning direction. Temporal stability is untested.",
+      "fix_assessment": "needs_design",
+      "dossiers": [
+        "corpus_pipeline"
+      ],
+      "specialist_finding": {
+        "item": 8,
+        "finding_id": "REFINE-F008",
+        "source_review": "REFINE-2026-09-14",
+        "quoted_finding": "Table 22's 88 percent agreement appears to be an unweighted result from a category-stratified sample and therefore may not estimate corpus-wide accuracy. The six concordant china-brazil trade cases identify only one side of class performance unless the stratification basis and full confusion matrix are reported; they do not establish both precision and recall or rule out time-varying misclassification.",
+        "type": "method",
+        "severity": "major",
+        "scientific_dimension": "measurement",
+        "held_decision": false,
+        "status": "CONFIRMED",
+        "source_locations": [
+          "paper_v4.Rmd:2074-2119",
+          "scripts/functions.R:5623-5688",
+          "_targets.R:756-759",
+          "data/folha_validation_sample_annotated.csv"
+        ],
+        "defect_evidence": [
+          "The 88 percent result is the unweighted mean of exact matches in the 100-row validation file; no target applies sampling weights.",
+          "No validation-sample producer, random seed, complete allocation rule, or inclusion probabilities were found, so corpus-wide accuracy is not identified.",
+          "Category rows group by automated label, making them agreement conditional on the prediction rather than simultaneous precision and recall estimates.",
+          "The archived trade cells are TP=6, FP=0, FN=1; Table 22 exposes the six predicted-trade cases but not the false negative required for recall.",
+          "The sample has 55 rows from 2001-2008 and 45 from 2009-2014, omits 2000, was not temporally stratified, and has too little category-by-period support to rule out time-varying error."
+        ],
+        "refuting_evidence": [],
+        "mechanical_checks": [
+          "Recomputed the exact-match count from the archived 100-row validation file.",
+          "Reconstructed the complete 9-by-9 confusion matrix read-only and verified trade TP=6, FP=0, FN=1.",
+          "Counted 55 validation observations in 2001-2008 and 45 in 2009-2014 and confirmed that 2000 is absent.",
+          "Traced Table 22 to its unweighted group-by-predicted-label target function.",
+          "Searched the current graph and code for a sample producer, seed, allocation rule, and inclusion probabilities."
+        ],
+        "reasoning": "The table correctly reports arithmetic agreement in its archived sample but labels and interprets that value too broadly. Missing design probabilities preclude a corpus-wide accuracy estimate, and the displayed trade row gives only one conditioning direction. Temporal stability is untested.",
+        "proposed_fix_assessment": "needs_design",
+        "disposition": "Relabel the current result as unweighted validation-sample agreement and narrow the trade and temporal claims; add new metrics only through an authorized targets-first design."
+      }
     },
     {
       "item": 11,
-      "status": "aguardando vaga/dependencia",
-      "diagnosis": null,
-      "evidence": [],
+      "status": "Adjudicado; integração/revisão pendente",
+      "diagnosis": "CONFIRMED",
+      "evidence": [
+        "paper_v4.Rmd:693-695",
+        "paper_v4.Rmd:526-541",
+        "paper_v4.Rmd:756-783",
+        "scripts/diagnostics/audit_brazil_sdid_no_covariates.R:247-280",
+        "scripts/diagnostics/sdid_placebo_helpers.R:107-146",
+        "data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/timing_placebos.csv:2-6",
+        "output/paper_v4.pdf:23, Table 4"
+      ],
       "owner": "comparability",
       "model": "gpt-6-astra",
       "effort": "medium",
-      "solution": null,
+      "solution": "Use localized diagnostic language and complete table notes; retain every numeric output. Change the overlapping Lula paragraph only to remove the selected cross-window comparability inference, without adjudicating item 12.",
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [],
-      "checks": [],
+      "checks": [
+        "comparability_verify.R: five existing input slices checked for balance, duplicates, missing outcomes, dates and country counts; no fits run.",
+        "PDF Table 4 rows agree with timing_placebos.csv after rounding."
+      ],
       "independent_review": null,
       "limitation": null,
-      "comment": "### 11. Table 4 timing contrasts lack a common estimand\n\n**Status**: [Pending]\n\n**Quote**:\n> Table 4: Brazil SDiD rank-versus-volume timing diagnostics without covariates.\n| Timing year | Test role | China rank | Export share (\\%) | Margin (USD bn) | ATT | Inference |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 2003 | Growth/lower-rank promotion | 3 | 6.7 | -12.9 | -0.064 | Point estimate only; no covariates |\n| 2004 | China rank-2 threshold | 2 | 7.4 | -14.2 | -0.109 | Point estimate only; no covariates |\n| 2005 | Rapid growth without rank 1 | 3 | 7.2 | -16.7 | -0.099 | Point estimate only; no covariates |\n| 2009 | Actual rank-1 reversal | 1 | 15.1 | 4.1 | -0.273 | Point estimate only; no covariates |\n| 2012 | Later-break falsification | 1 | 18.8 | 14.9 | -0.100 | Point estimate only; no covariates |\n\n**Feedback**:\nThe timing rows appear to estimate averages over different calendar periods, post-onset horizons, and fitted SDiD counterfactuals. Because no uncertainty is reported for the differences between rows, their ordering provides suggestive timing evidence but does not establish that the 2009 effect differs statistically from the earlier pseudo-onsets or the later break.\n\n---"
+      "comment": "### 11. Table 4 timing contrasts lack a common estimand\n\n**Status**: [Pending]\n\n**Quote**:\n> Table 4: Brazil SDiD rank-versus-volume timing diagnostics without covariates.\n| Timing year | Test role | China rank | Export share (\\%) | Margin (USD bn) | ATT | Inference |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 2003 | Growth/lower-rank promotion | 3 | 6.7 | -12.9 | -0.064 | Point estimate only; no covariates |\n| 2004 | China rank-2 threshold | 2 | 7.4 | -14.2 | -0.109 | Point estimate only; no covariates |\n| 2005 | Rapid growth without rank 1 | 3 | 7.2 | -16.7 | -0.099 | Point estimate only; no covariates |\n| 2009 | Actual rank-1 reversal | 1 | 15.1 | 4.1 | -0.273 | Point estimate only; no covariates |\n| 2012 | Later-break falsification | 1 | 18.8 | 14.9 | -0.100 | Point estimate only; no covariates |\n\n**Feedback**:\nThe timing rows appear to estimate averages over different calendar periods, post-onset horizons, and fitted SDiD counterfactuals. Because no uncertainty is reported for the differences between rows, their ordering provides suggestive timing evidence but does not establish that the 2009 effect differs statistically from the earlier pseudo-onsets or the later break.\n\n---",
+      "reasoning": "The reviewer correctly limits the ordering to suggestive timing evidence. Identical donor identities do not equate calendar periods, horizons, treatment histories or fitted SDiD weights. Matching horizons and adding individual SEs alone would still not define a common causal estimand or valid inference for between-row differences.",
+      "fix_assessment": "safe",
+      "dossiers": [
+        "comparability"
+      ],
+      "specialist_finding": {
+        "item": 11,
+        "finding_id": "R1-11",
+        "source_review": "R1",
+        "quoted_finding": "The timing rows appear to estimate averages over different calendar periods, post-onset horizons, and fitted SDiD counterfactuals. Because no uncertainty is reported for the differences between rows, their ordering provides suggestive timing evidence but does not establish that the 2009 effect differs statistically from the earlier pseudo-onsets or the later break.",
+        "type": "scope_or_consistency",
+        "severity": "moderate",
+        "scientific_dimension": "estimand and inference",
+        "held_decision": false,
+        "status": "CONFIRMED",
+        "source_locations": [
+          "paper_v4.Rmd:693-695",
+          "paper_v4.Rmd:526-541",
+          "paper_v4.Rmd:756-783",
+          "scripts/diagnostics/audit_brazil_sdid_no_covariates.R:247-280",
+          "scripts/diagnostics/sdid_placebo_helpers.R:107-146",
+          "data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/timing_placebos.csv:2-6",
+          "output/paper_v4.pdf:23, Table 4"
+        ],
+        "defect_evidence": [
+          "Post-onset horizons are 6, 5, 4, 7, and 5 years. The helper constructs a new treatment vector and calls synthdid_estimate separately for each row; no shared fitted counterfactual or cross-row contrast inference is supplied.",
+          "Table 4 note calls all rows estimated causal effects after nominal onset; text uses early magnitudes against the Lula account and describes stability across timing tests. The later-break nominal pre-period includes actual treated years 2009-2011."
+        ],
+        "refuting_evidence": [
+          "The manuscript already calls the rows point-estimate diagnostics, notes early truncation and later extension, and supplies preferred 2009 inference elsewhere. The donor identities are common, so sample membership differences are not the source of incomparability."
+        ],
+        "mechanical_checks": [
+          "comparability_verify.R: five existing input slices checked for balance, duplicates, missing outcomes, dates and country counts; no fits run.",
+          "PDF Table 4 rows agree with timing_placebos.csv after rounding."
+        ],
+        "reasoning": "The reviewer correctly limits the ordering to suggestive timing evidence. Identical donor identities do not equate calendar periods, horizons, treatment histories or fitted SDiD weights. Matching horizons and adding individual SEs alone would still not define a common causal estimand or valid inference for between-row differences.",
+        "proposed_fix_assessment": "safe",
+        "disposition": "Use localized diagnostic language and complete table notes; retain every numeric output. Change the overlapping Lula paragraph only to remove the selected cross-window comparability inference, without adjudicating item 12."
+      }
     },
     {
       "item": 15,
-      "status": "aguardando vaga/dependencia",
-      "diagnosis": null,
-      "evidence": [],
+      "status": "Pendente: autorizar implementação e execução de novos targets",
+      "diagnosis": "CONFIRMED",
+      "evidence": [
+        "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:289-306",
+        "paper_v4.Rmd:2121-2161",
+        "scripts/functions.R:4268-4364",
+        "scripts/functions.R:4407-4424",
+        "scripts/functions.R:4427-4521"
+      ],
       "owner": "audit_table",
       "model": "gpt-5.6-luna",
       "effort": "xhigh",
-      "solution": null,
+      "solution": "See specialist dossier.",
       "dependencies": [],
-      "authorization_needed": [],
+      "authorization_needed": [
+        "Implementar e executar o quadro país-ano no grafo targets, sem reestimar modelos."
+      ],
       "changed_files": [],
-      "checks": [],
+      "checks": [
+        "SHA-256 of Rmd, PDF, review, scripts, and target objects",
+        "pdftotext -layout inspection of Tables 20 and 23",
+        "read-only deserialization of existing RDS and target objects",
+        "35 treated versus 14 audited versus 9 displayed set comparison",
+        "inspection of producer filter and medium coding rules",
+        "inspection of status-current restricted-risk-set row filter",
+        "inspection of period and unit summaries"
+      ],
       "independent_review": null,
       "limitation": null,
-      "comment": "### 15. Table 23 does not expose retained treatment spells\n\n**Status**: [Pending]\n\n**Quote**:\n> Table 23 describes the 35 treated countries in the main goods-only restricted-risk-set specification. For each country, the table reports the first qualifying China-top goods-export year and the number of treated and untreated country-years retained in the estimation panel.\n\nTable 23: Treated countries in the main goods-only restricted-risk-set cross-country specification.\n| Country | ISO3c | Treatment year | Treated years | Pre/other untreated years | First panel year | Last panel year |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Sudan | SDN | 2000 | 6 | 10 | 1990 | 2005 |\n| Solomon Islands | SLB | 2003 | 20 | 13 | 1990 | 2022 |\n| South Korea | KOR | 2003 | 20 | 12 | 1991 | 2022 |\n| Cuba | CUB | 2004 | 18 | 14 | 1990 | 2022 |\n| Oman | OMN | 2004 | 19 | 13 | 1990 | 2022 |\n\n**Feedback**:\nTable 23 appears insufficient to audit the retained treatment spells. Because the status-current design permits exits, multiple qualifying periods, and excluded short episodes, the first qualifying year and aggregate observation counts do not identify which country-years are treated, off-status, or omitted. This limits verification of the pooled ATT and event-time support from the table alone.\n\n---"
+      "comment": "### 15. Table 23 does not expose retained treatment spells\n\n**Status**: [Pending]\n\n**Quote**:\n> Table 23 describes the 35 treated countries in the main goods-only restricted-risk-set specification. For each country, the table reports the first qualifying China-top goods-export year and the number of treated and untreated country-years retained in the estimation panel.\n\nTable 23: Treated countries in the main goods-only restricted-risk-set cross-country specification.\n| Country | ISO3c | Treatment year | Treated years | Pre/other untreated years | First panel year | Last panel year |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Sudan | SDN | 2000 | 6 | 10 | 1990 | 2005 |\n| Solomon Islands | SLB | 2003 | 20 | 13 | 1990 | 2022 |\n| South Korea | KOR | 2003 | 20 | 12 | 1991 | 2022 |\n| Cuba | CUB | 2004 | 18 | 14 | 1990 | 2022 |\n| Oman | OMN | 2004 | 19 | 13 | 1990 | 2022 |\n\n**Feedback**:\nTable 23 appears insufficient to audit the retained treatment spells. Because the status-current design permits exits, multiple qualifying periods, and excluded short episodes, the first qualifying year and aggregate observation counts do not identify which country-years are treated, off-status, or omitted. This limits verification of the pooled ATT and event-time support from the table alone.\n\n---",
+      "reasoning": "The review accurately identifies a reproducibility and exposition gap. Existing target objects supply the ingredients, but producing auditable year lists and omission reasons is a new paper-facing transformation and must be implemented as targets from inception.",
+      "fix_assessment": "needs_design",
+      "dossiers": [
+        "cross_country"
+      ],
+      "specialist_finding": {
+        "item": 15,
+        "status": "CONFIRMED",
+        "source_locations": [
+          "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:289-306",
+          "paper_v4.Rmd:2121-2161",
+          "scripts/functions.R:4268-4364",
+          "scripts/functions.R:4407-4424",
+          "scripts/functions.R:4427-4521"
+        ],
+        "defect_evidence": [
+          "Table 23 consumes a country-level summary containing only first treatment year, aggregate treated and untreated counts, and panel bounds.",
+          "The restricted risk-set producer removes post-entry off-status years and nonqualifying China-top periods, so omitted years cannot be inferred from the displayed aggregates.",
+          "The existing store contains 36 qualifying periods among 35 treated countries and 14 short excluded periods across nine of those countries, but Table 23 does not expose them.",
+          "Calendar entry-exit bounds cannot safely substitute for observed year lists because some observed periods contain calendar gaps."
+        ],
+        "refuting_evidence": [],
+        "reasoning": "The review accurately identifies a reproducibility and exposition gap. Existing target objects supply the ingredients, but producing auditable year lists and omission reasons is a new paper-facing transformation and must be implemented as targets from inception.",
+        "proposed_fix_assessment": "needs_design",
+        "implementation_scope": "Targets-first audit outputs; no treatment-rule change; retain current table until targets exist and validate."
+      }
     },
     {
       "item": 18,
-      "status": "em adjudicacao",
-      "diagnosis": null,
-      "evidence": [],
+      "status": "Adjudicado; integração/revisão pendente",
+      "diagnosis": "CONFIRMED",
+      "evidence": [
+        "paper_v4.Rmd:308-310",
+        "paper_v4.Rmd:338",
+        "paper_v4.Rmd:654-661",
+        "output/paper_v4.pdf:p.11"
+      ],
       "owner": "sdid",
       "model": "gpt-5.6-sol",
       "effort": "xhigh",
-      "solution": null,
+      "solution": "Replace the uncertainty paragraph with an explicit three-step account. Do not change estimates, SEs, ranks, or the held convention that the directional rank is theory-aligned and the absolute rank is a conservative sensitivity assessment.",
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [],
-      "checks": [],
+      "checks": [
+        "Inspected scripts/functions.R:1072-1151 and scripts/diagnostics/sdid_placebo_helpers.R:230-297 for the 20,000-resample placebo SE algorithm.",
+        "Inspected scripts/diagnostics/sdid_placebo_helpers.R:299-380 and rank_inference.csv for the exhaustive, no-RNG rank procedure.",
+        "Confirmed main_summary.csv records estimate -0.2727714076, placebo SE 0.1306079433, normal p 0.0367550198, directional rank 3/96, bilateral rank 7/96, seed 20260520, and 20,000 SE replications."
+      ],
       "independent_review": null,
       "limitation": null,
-      "comment": "### 18. Uncertainty procedure conflicts with reported SE\n\n**Status**: [Pending]\n\n**Quote**:\n> To compute the uncertainty of estimates, I use a one-sided placebo-in-space rank of the Brazil estimate within the distribution of placebo estimates obtained by reassigning treatment to each unit from the donor pool. For robustness, I also report the standard error calculated from the normal approximation native to the SDiD estimator. I use a one-sided hypothesis test, since the theory is directional (a treated unit should move its ideal point\ntoward China), and report the two-sided test as a conservative sensitivity assessment.\n\n**Feedback**:\nThe uncertainty description misstates the source of the reported standard error. The results identify the standard error as placebo-based and then apply a normal approximation to obtain the conventional p-value and confidence interval; the placebo assignment rank is a separate inferential quantity. These three steps are presently conflated in the design discussion.\n\n---"
+      "comment": "### 18. Uncertainty procedure conflicts with reported SE\n\n**Status**: [Pending]\n\n**Quote**:\n> To compute the uncertainty of estimates, I use a one-sided placebo-in-space rank of the Brazil estimate within the distribution of placebo estimates obtained by reassigning treatment to each unit from the donor pool. For robustness, I also report the standard error calculated from the normal approximation native to the SDiD estimator. I use a one-sided hypothesis test, since the theory is directional (a treated unit should move its ideal point\ntoward China), and report the two-sided test as a conservative sensitivity assessment.\n\n**Feedback**:\nThe uncertainty description misstates the source of the reported standard error. The results identify the standard error as placebo-based and then apply a normal approximation to obtain the conventional p-value and confidence interval; the placebo assignment rank is a separate inferential quantity. These three steps are presently conflated in the design discussion.\n\n---",
+      "reasoning": "The numerical outputs and result-table labels already distinguish the quantities, but the design paragraph assigns the wrong source to the standard error and merges three logically separate inferential summaries.",
+      "fix_assessment": "safe",
+      "dossiers": [
+        "sdid"
+      ],
+      "specialist_finding": {
+        "finding_id": "REFINE-018",
+        "item": 18,
+        "source_review": "REFINE",
+        "quoted_finding": "The uncertainty discussion conflates the placebo-based standard error, the exhaustive placebo-in-space rank, and the normal approximation used for p-values and confidence intervals.",
+        "type": "method",
+        "severity": "unspecified",
+        "scientific_dimension": "inference",
+        "held_decision": false,
+        "status": "CONFIRMED",
+        "source_locations": [
+          "paper_v4.Rmd:308-310",
+          "paper_v4.Rmd:338",
+          "paper_v4.Rmd:654-661",
+          "output/paper_v4.pdf:p.11"
+        ],
+        "defect_evidence": [
+          "Line 308 incorrectly calls the standard error a normal-approximation quantity and describes the directional rank as the procedure used to compute uncertainty.",
+          "The reported SE is instead a synthdid placebo SE: se_sdid takes the finite-population standard deviation of 20,000 seeded placebo resamples for the preferred fit.",
+          "The conventional two-sided p-value and 95 percent interval are then calculated from the estimate and placebo SE with a normal approximation.",
+          "The rank is a separate, deterministic placebo-in-space exercise: every one of 96 units is treated once, yielding directional rank 3/96 and absolute bilateral rank 7/96."
+        ],
+        "refuting_evidence": [],
+        "mechanical_checks": [
+          "Inspected scripts/functions.R:1072-1151 and scripts/diagnostics/sdid_placebo_helpers.R:230-297 for the 20,000-resample placebo SE algorithm.",
+          "Inspected scripts/diagnostics/sdid_placebo_helpers.R:299-380 and rank_inference.csv for the exhaustive, no-RNG rank procedure.",
+          "Confirmed main_summary.csv records estimate -0.2727714076, placebo SE 0.1306079433, normal p 0.0367550198, directional rank 3/96, bilateral rank 7/96, seed 20260520, and 20,000 SE replications."
+        ],
+        "reasoning": "The numerical outputs and result-table labels already distinguish the quantities, but the design paragraph assigns the wrong source to the standard error and merges three logically separate inferential summaries.",
+        "proposed_fix_assessment": "safe",
+        "disposition": "Replace the uncertainty paragraph with an explicit three-step account. Do not change estimates, SEs, ranks, or the held convention that the directional rank is theory-aligned and the absolute rank is a conservative sensitivity assessment."
+      }
     },
     {
       "item": 20,
-      "status": "em adjudicacao",
-      "diagnosis": null,
-      "evidence": [],
+      "status": "Adjudicado; integração/revisão pendente",
+      "diagnosis": "CONFIRMED",
+      "evidence": [
+        "paper_v4.Rmd:1426-1448",
+        "output/paper_v4.pdf:pp.46-47"
+      ],
       "owner": "sdid",
       "model": "gpt-5.6-sol",
       "effort": "xhigh",
-      "solution": null,
+      "solution": "Define N0, N1, T0, and T1 and the full unit/time weight vectors immediately before the objectives. State that treated and post-treatment cells receive positive uniform weights.",
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [],
-      "checks": [],
+      "checks": [
+        "Inspected the installed synthdid 0.0.9 implementation of synthdid_estimate: the estimator uses c(-omega, rep(1/N1,N1)) and c(-lambda, rep(1/T1,T1)).",
+        "Confirmed the active preferred target is a synthdid_estimate with N0=95, T0=12 and no covariate array; no implementation failure was found."
+      ],
       "independent_review": null,
       "limitation": null,
-      "comment": "### 20. Weight definitions leave the SDiD ATT unidentified\n\n**Status**: [Pending]\n\n**Quote**:\n> Here $\\hat{w}_{i}^{\\text {SCM }}$ is the donor-unit weight assigned to unit $i$. SCM uses these donor weights to match the treated unit's pre-treatment outcome path, and effects are then read from post-treatment treated-minus-synthetic gaps. SCM can approximate stable unit differences through donor weights when the treated unit lies in the donor convex hull, but it does not add unit fixed effects or time weights. SDiD combines unit weights (like SCM) with unit fixed effects (like DiD) and time weights (unique to SDiD), addressing the limitations of both. The basic SDiD estimating equation is:\n\n$$\n\\left(\\hat{\\tau}_{A T T}^{\\mathrm{SDiD}}, \\hat{\\mu}, \\hat{\\alpha}, \\hat{\\beta}\\right)=\\underset{\\tau_{A T T}, \\mu, \\beta, \\alpha}{\\arg \\min } \\sum_{i=1}^{N} \\sum_{t=1}^{T} \\hat{w}_{i}^{\\mathrm{SDiD}} \\hat{\\lambda}_{t}^{\\mathrm{SDiD}}\\left(Y_{i t}-\\mu-\\alpha_{i}-\\beta_{t}-D_{i t} \\tau_{A T T}\\right)^{2}\n$$\n\nNote that SDiD retains unit fixed effects $\\alpha_{i}$ (like DiD) while also assigning unit weights $\\hat{w}_{i}^{\\text {SDiD }}$ (like SCM) and time weights $\\hat{\\lambda}_{t}^{\\text {SDiD }}$ (unique to SDiD).\n\n**Feedback**:\nThe displayed SCM and SDiD objectives do not define the positive weights assigned to treated units and post-treatment periods. Because the surrounding text and Tables 9–10 describe only donor-unit and pre-treatment weights, a literal reading gives no positive-weight treated-post cells, causing $D_{it}$ and hence $\\tau_{ATT}$ to drop out of the objective. This is a defect in the estimator exposition, not evidence that the reported software estimates themselves are unidentified.\n\n---"
+      "comment": "### 20. Weight definitions leave the SDiD ATT unidentified\n\n**Status**: [Pending]\n\n**Quote**:\n> Here $\\hat{w}_{i}^{\\text {SCM }}$ is the donor-unit weight assigned to unit $i$. SCM uses these donor weights to match the treated unit's pre-treatment outcome path, and effects are then read from post-treatment treated-minus-synthetic gaps. SCM can approximate stable unit differences through donor weights when the treated unit lies in the donor convex hull, but it does not add unit fixed effects or time weights. SDiD combines unit weights (like SCM) with unit fixed effects (like DiD) and time weights (unique to SDiD), addressing the limitations of both. The basic SDiD estimating equation is:\n\n$$\n\\left(\\hat{\\tau}_{A T T}^{\\mathrm{SDiD}}, \\hat{\\mu}, \\hat{\\alpha}, \\hat{\\beta}\\right)=\\underset{\\tau_{A T T}, \\mu, \\beta, \\alpha}{\\arg \\min } \\sum_{i=1}^{N} \\sum_{t=1}^{T} \\hat{w}_{i}^{\\mathrm{SDiD}} \\hat{\\lambda}_{t}^{\\mathrm{SDiD}}\\left(Y_{i t}-\\mu-\\alpha_{i}-\\beta_{t}-D_{i t} \\tau_{A T T}\\right)^{2}\n$$\n\nNote that SDiD retains unit fixed effects $\\alpha_{i}$ (like DiD) while also assigning unit weights $\\hat{w}_{i}^{\\text {SDiD }}$ (like SCM) and time weights $\\hat{\\lambda}_{t}^{\\text {SDiD }}$ (unique to SDiD).\n\n**Feedback**:\nThe displayed SCM and SDiD objectives do not define the positive weights assigned to treated units and post-treatment periods. Because the surrounding text and Tables 9–10 describe only donor-unit and pre-treatment weights, a literal reading gives no positive-weight treated-post cells, causing $D_{it}$ and hence $\\tau_{ATT}$ to drop out of the objective. This is a defect in the estimator exposition, not evidence that the reported software estimates themselves are unidentified.\n\n---",
+      "reasoning": "The defect is in exposition only. The software gives donor controls optimized weights, treated units uniform weight 1/N1, pre-treatment periods optimized weights, and post-treatment periods uniform weight 1/T1. The current equation becomes complete once those full vectors are defined.",
+      "fix_assessment": "safe",
+      "dossiers": [
+        "sdid"
+      ],
+      "specialist_finding": {
+        "finding_id": "REFINE-020",
+        "item": 20,
+        "source_review": "REFINE",
+        "quoted_finding": "The displayed SCM and SDiD objectives omit definitions of the positive weights on treated units and post-treatment periods, so a literal reading makes the treatment term disappear.",
+        "type": "method",
+        "severity": "unspecified",
+        "scientific_dimension": "fidelity of implementation",
+        "held_decision": false,
+        "status": "CONFIRMED",
+        "source_locations": [
+          "paper_v4.Rmd:1426-1448",
+          "output/paper_v4.pdf:pp.46-47"
+        ],
+        "defect_evidence": [
+          "The text defines only donor-unit weights and reports only pre-treatment time weights, but the objective sums over every unit-period cell without defining full-sample weights.",
+          "Without fixed positive weights on treated units and post-treatment periods, the displayed notation does not show how treated-post cells enter and identify the ATT."
+        ],
+        "refuting_evidence": [],
+        "mechanical_checks": [
+          "Inspected the installed synthdid 0.0.9 implementation of synthdid_estimate: the estimator uses c(-omega, rep(1/N1,N1)) and c(-lambda, rep(1/T1,T1)).",
+          "Confirmed the active preferred target is a synthdid_estimate with N0=95, T0=12 and no covariate array; no implementation failure was found."
+        ],
+        "reasoning": "The defect is in exposition only. The software gives donor controls optimized weights, treated units uniform weight 1/N1, pre-treatment periods optimized weights, and post-treatment periods uniform weight 1/T1. The current equation becomes complete once those full vectors are defined.",
+        "proposed_fix_assessment": "safe",
+        "disposition": "Define N0, N1, T0, and T1 and the full unit/time weight vectors immediately before the objectives. State that treated and post-treatment cells receive positive uniform weights."
+      }
     },
     {
       "item": 21,
@@ -181,37 +557,190 @@
     },
     {
       "item": 22,
-      "status": "aguardando vaga/dependencia",
-      "diagnosis": null,
-      "evidence": [],
+      "status": "Adjudicado; integração/revisão pendente",
+      "diagnosis": "CONFIRMED",
+      "evidence": [
+        "paper_v4.Rmd:2239-2240",
+        "paper_v4.Rmd:2417-2454",
+        "paper_v4.Rmd:2461-2507",
+        "scripts/diagnostics/audit_ungadm_postreview_diagnostics.R:214-285",
+        "scripts/diagnostics/audit_ungadm_postreview_diagnostics.R:287-381",
+        "data/processed/diagnostics/ungadm_outcome_robustness/postreview/ife_2x2_fixed_r.csv:2-5",
+        "data/processed/diagnostics/ungadm_outcome_robustness/postreview/ife_paired_bootstrap_summary.csv:2-3",
+        "output/paper_v4.pdf:68-69, Tables 27-28"
+      ],
       "owner": "comparability",
       "model": "gpt-6-astra",
       "effort": "medium",
-      "solution": null,
+      "solution": "Replace all isolation/decomposition occurrences and associated notes with conditional within-measure comparisons, explicit scale limits and non-equivalence. Preserve numbers and unrelated Brazil robustness statements, including wording reserved to unselected comments.",
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [],
-      "checks": [],
+      "checks": [
+        "comparability_verify.R: recomputed only arithmetic and summaries of 1,000 saved paired draws; maximum absolute discrepancy 1.11e-16.",
+        "Point estimates, SEs and p-values in PDF Table 28 checked against the existing 2x2 CSV."
+      ],
       "independent_review": null,
       "limitation": null,
-      "comment": "### 22. Appendix 8.10 does not isolate factor effects\n\n**Status**: [Pending]\n\n**Quote**:\n> Table 28 holds the common window and country-year panel fixed and crosses the two outcome sources with one and two latent factors. This 2 × 2 design isolates the factor-count component of the comparison. Holding the outcome fixed, moving from one to two factors makes the ATT more negative (larger in absolute value): from -0.036 to -0.095 under BSV, and from -0.027 to -0.065 under UNGA-DM. Cross-validation selects 2 factors under BSV and 1 under UNGA-DM. The one-factor UNGA-DM fit selected by cross-validation has the same negative sign and substantially overlapping uncertainty with the fixed-two-factor fit, although its point estimate is less negative; factor selection therefore changes magnitude without reversing the qualitative pattern. Holding the factor count at two still leaves a smaller UNGA-DM estimate (-0.065) than the BSV estimate (-0.095), so the outcome source remains relevant after the factor-count component is isolated.\n\n**Feedback**:\nThe 2 × 2 comparison does not uniquely isolate factor-count and outcome-source components. The factor-count contrast differs across outcomes, indicating an interaction, while the two ideal-point measures may have different absolute scales. The table supports conditional sensitivity comparisons, but the raw cross-outcome ATT differences and paired bootstrap do not by themselves identify a scale-invariant outcome-source contribution beyond factor selection.\n\n---"
+      "comment": "### 22. Appendix 8.10 does not isolate factor effects\n\n**Status**: [Pending]\n\n**Quote**:\n> Table 28 holds the common window and country-year panel fixed and crosses the two outcome sources with one and two latent factors. This 2 × 2 design isolates the factor-count component of the comparison. Holding the outcome fixed, moving from one to two factors makes the ATT more negative (larger in absolute value): from -0.036 to -0.095 under BSV, and from -0.027 to -0.065 under UNGA-DM. Cross-validation selects 2 factors under BSV and 1 under UNGA-DM. The one-factor UNGA-DM fit selected by cross-validation has the same negative sign and substantially overlapping uncertainty with the fixed-two-factor fit, although its point estimate is less negative; factor selection therefore changes magnitude without reversing the qualitative pattern. Holding the factor count at two still leaves a smaller UNGA-DM estimate (-0.065) than the BSV estimate (-0.095), so the outcome source remains relevant after the factor-count component is isolated.\n\n**Feedback**:\nThe 2 × 2 comparison does not uniquely isolate factor-count and outcome-source components. The factor-count contrast differs across outcomes, indicating an interaction, while the two ideal-point measures may have different absolute scales. The table supports conditional sensitivity comparisons, but the raw cross-outcome ATT differences and paired bootstrap do not by themselves identify a scale-invariant outcome-source contribution beyond factor selection.\n\n---",
+      "reasoning": "The design supports conditional sensitivity statements, not a unique additive attribution. Nonadditivity is descriptive and scale-dependent, not established statistically by the saved bootstrap. A common panel and fixed factor count do not harmonize outcome units. Paired non-rejection neither proves equivalence nor identifies an outcome-source contribution.",
+      "fix_assessment": "safe",
+      "dossiers": [
+        "comparability"
+      ],
+      "specialist_finding": {
+        "item": 22,
+        "finding_id": "R1-22",
+        "source_review": "R1",
+        "quoted_finding": "The 2 × 2 comparison does not uniquely isolate factor-count and outcome-source components. The factor-count contrast differs across outcomes, indicating an interaction, while the two ideal-point measures may have different absolute scales. The table supports conditional sensitivity comparisons, but the raw cross-outcome ATT differences and paired bootstrap do not by themselves identify a scale-invariant outcome-source contribution beyond factor selection.",
+        "type": "overclaim",
+        "severity": "moderate",
+        "scientific_dimension": "measurement and conditional specification sensitivity",
+        "held_decision": false,
+        "status": "CONFIRMED",
+        "source_locations": [
+          "paper_v4.Rmd:2239-2240",
+          "paper_v4.Rmd:2417-2454",
+          "paper_v4.Rmd:2461-2507",
+          "scripts/diagnostics/audit_ungadm_postreview_diagnostics.R:214-285",
+          "scripts/diagnostics/audit_ungadm_postreview_diagnostics.R:287-381",
+          "data/processed/diagnostics/ungadm_outcome_robustness/postreview/ife_2x2_fixed_r.csv:2-5",
+          "data/processed/diagnostics/ungadm_outcome_robustness/postreview/ife_paired_bootstrap_summary.csv:2-3",
+          "output/paper_v4.pdf:68-69, Tables 27-28"
+        ],
+        "defect_evidence": [
+          "The factor contrast r2-r1 is -0.059345646431 under BSV and -0.038020234148 under UNGA-DM. Their descriptive difference is 0.021325412283 in the original numerical scales; no interaction test was found in the traced outputs.",
+          "Repeated text says isolates/assessed separately/outcome metric contributes beyond factor selection. Paired differences are unstandardized UNGA-DM minus BSV, not a scale-invariant decomposition. Counts are fixed within bootstrap replicates, not reselected."
+        ],
+        "refuting_evidence": [
+          "The 2x2 genuinely holds the common panel fixed at 4,727 observations, 161 countries (35 treated, 126 controls), 1990-2020, and permits conditional within-measure factor comparisons.",
+          "The final paragraph already explicitly says non-rejection does not establish equivalence. Table 28 reports both factor counts rather than hiding sensitivity. All displayed numerical results match the existing CSVs."
+        ],
+        "mechanical_checks": [
+          "comparability_verify.R: recomputed only arithmetic and summaries of 1,000 saved paired draws; maximum absolute discrepancy 1.11e-16.",
+          "Point estimates, SEs and p-values in PDF Table 28 checked against the existing 2x2 CSV."
+        ],
+        "reasoning": "The design supports conditional sensitivity statements, not a unique additive attribution. Nonadditivity is descriptive and scale-dependent, not established statistically by the saved bootstrap. A common panel and fixed factor count do not harmonize outcome units. Paired non-rejection neither proves equivalence nor identifies an outcome-source contribution.",
+        "proposed_fix_assessment": "safe",
+        "disposition": "Replace all isolation/decomposition occurrences and associated notes with conditional within-measure comparisons, explicit scale limits and non-equivalence. Preserve numbers and unrelated Brazil robustness statements, including wording reserved to unselected comments."
+      }
     },
     {
       "item": 25,
-      "status": "aguardando vaga/dependencia",
-      "diagnosis": null,
-      "evidence": [],
+      "status": "Nota explicativa entregue; decisão substantiva reservada ao autor",
+      "diagnosis": "PARTIAL",
+      "evidence": [
+        "reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md:30",
+        "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:434-442",
+        "paper_v4.Rmd:904-910",
+        "paper_v4.Rmd:969-979",
+        "paper_v4.Rmd:1330-1341",
+        "output/paper_v4.pdf:p.26",
+        "scripts/functions.R:6555-6561,6590-6676,6908-6918,6968-7008",
+        "_targets.R:99-110",
+        "scripts/diagnostics/reestimate_corrected_ddd_RIO_20260905.R:67-113,196-201",
+        "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/check_ddd.R:5-49",
+        "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/sensitivity.csv:3-5",
+        "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/donor_domain_restriction.csv:2"
+      ],
       "owner": "domain_note",
       "model": "gpt-6-astra",
       "effort": "high",
-      "solution": null,
+      "solution": "Entregar entendimento e alternativas. Nenhuma substituição ou mudança de especificação autorizada. Eventual evidência nova para o paper exige desenho target-first, revisão independente e autorização da fase.",
       "dependencies": [],
       "authorization_needed": [],
-      "changed_files": [],
-      "checks": [],
+      "changed_files": [
+        "domain_note.md",
+        "domain_note.json"
+      ],
+      "checks": [
+        {
+          "kind": "static_inspection",
+          "result": "Verified local equation, consumed RDS path, producer formula, old diagnostic formulas and PDF quotation. No full-paper review."
+        },
+        {
+          "kind": "computed_verification",
+          "script": "reports/refine_ink_review_paper_v4_2026-09-14/execution/domain_note_verify.R",
+          "log": "reports/refine_ink_review_paper_v4_2026-09-14/execution/domain_note_verification.log",
+          "result": "PASS. Existing RDS coefficient equals archived sensitivity baseline; archived sample dimensions/key/required fields checked; stored FWL identity and arithmetic checked. No fitting."
+        },
+        {
+          "kind": "computed_verification",
+          "evidence": "reports/refine_ink_review_paper_v4_2026-09-14/execution/domain_note_evidence_manifest.json",
+          "result": "Active/frozen Rmd and PDF hashes equal; current producer/helper/bundle and selected outputs match historical manifests."
+        },
+        {
+          "kind": "existing_analysis_inspected",
+          "result": "Sensitivity regressions and synthetic counterexample were executed in September 5 review, not this task."
+        }
+      ],
       "independent_review": null,
       "limitation": null,
-      "comment": "### 25. Omission of donor-specific domain fixed effects\n\n**Status**: [Pending]\n\n**Quote**:\n> The specification does not absorb a separate domain intercept for each donor country; interpretation also requires changes in donor vote availability not to generate the differential shift across domains.\n\n**Feedback**:\nThe DDD estimate may be sensitive to the omission of country-by-domain effects. If donor countries differ systematically in their baseline human-rights voting and their vote availability changes across periods or domains, the estimated differential shift could partly reflect changes in donor composition. The stated assumption is adequate only if such availability changes are ignorable; otherwise, donor-specific domain heterogeneity remains a potential confounder.\n\n---"
+      "comment": "### 25. Omission of donor-specific domain fixed effects\n\n**Status**: [Pending]\n\n**Quote**:\n> The specification does not absorb a separate domain intercept for each donor country; interpretation also requires changes in donor vote availability not to generate the differential shift across domains.\n\n**Feedback**:\nThe DDD estimate may be sensitive to the omission of country-by-domain effects. If donor countries differ systematically in their baseline human-rights voting and their vote availability changes across periods or domains, the estimated differential shift could partly reflect changes in donor composition. The stated assumption is adequate only if such availability changes are ignorable; otherwise, donor-specific domain heterogeneity remains a potential confounder.\n\n---",
+      "reasoning": "PARTIAL como pendência de correção: o alerta condicional está correto e a restrição existe, mas já está documentada e sua relevância empírica observada é pequena na sensibilidade arquivada. Não atribuímos ao parecer uma alegação categórica de viés. País × domínio acrescenta um contraste temático fixo para cada doador, torna Brasil × domínio redundante e zera somas dos pesos da regressão por país–domínio. Resolução FE não absorve heterogeneidade entre países na mesma resolução. A contribuição de offsets omitidos é sum_i eta_i sum_{r:H=1} w_ir, com w definido após residualizar todos os controles atuais. Desbalanceamento por si não prova viés; seleção e choques temáticos variáveis no tempo continuam possíveis sob a extensão. O tamanho de eventual viés causal não é identificado pelos diagnósticos examinados.",
+      "fix_assessment": "needs_design",
+      "dossiers": [
+        "domain_note"
+      ],
+      "specialist_finding": {
+        "item": 25,
+        "finding_id": "Item25",
+        "source_review": "REFINE-20260914",
+        "quoted_finding": "The DDD estimate may be sensitive to the omission of country-by-domain effects. If donor countries differ systematically in their baseline human-rights voting and their vote availability changes across periods or domains, the estimated differential shift could partly reflect changes in donor composition. The stated assumption is adequate only if such availability changes are ignorable; otherwise, donor-specific domain heterogeneity remains a potential confounder.",
+        "type": "method",
+        "severity": "minor",
+        "scientific_dimension": "identification and regression weighting",
+        "held_decision": true,
+        "status": "PARTIAL",
+        "source_locations": [
+          "reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md:30",
+          "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md:434-442",
+          "paper_v4.Rmd:904-910",
+          "paper_v4.Rmd:969-979",
+          "paper_v4.Rmd:1330-1341",
+          "output/paper_v4.pdf:p.26",
+          "scripts/functions.R:6555-6561,6590-6676,6908-6918,6968-7008",
+          "_targets.R:99-110",
+          "scripts/diagnostics/reestimate_corrected_ddd_RIO_20260905.R:67-113,196-201",
+          "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/check_ddd.R:5-49",
+          "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/sensitivity.csv:3-5",
+          "quality_reports/revisions/paper_v4/20260905_RIO_selected_fixes/independent_ddd_checks/donor_domain_restriction.csv:2"
+        ],
+        "defect_evidence": [
+          "A fórmula vigente contém iso3c + rcid e Brasil × domínio, mas não interceptos temáticos separados para os doadores (scripts/functions.R:6908-6918). Isso deixa uma restrição adicional real de composição.",
+          "O diagnóstico arquivado sobre a estrutura real de observações e um resultado sintético persistente retorna 0.031791903613 no modelo vigente e zero com país × domínio. O código escolhe os sinais dos offsets a partir dos pesos; demonstra vulnerabilidade algébrica, não viés estimado dos votos reais."
+        ],
+        "refuting_evidence": [
+          "paper_v4.Rmd:975 e PDF p.26 já declaram explicitamente a restrição; a interação Brasil × domínio não está omitida.",
+          "sensitivity.csv, mesmas 55190 linhas: distância relativa passa de -0.22233340176221164 para -0.22573122755000188 com país × domínio; variação absoluta -0.00339782578779024, aproximadamente 1.53% do módulo. Restringe a leitura de grande fragilidade empírica, sem refutar o alerta condicional do parecer.",
+          "Efeitos fixos de resolução já absorvem período, domínio, período × domínio e componentes aditivos comuns a cada resolução. Não é correto analisar a regressão como se fossem apenas médias brutas."
+        ],
+        "mechanical_checks": [
+          {
+            "kind": "static_inspection",
+            "result": "Verified local equation, consumed RDS path, producer formula, old diagnostic formulas and PDF quotation. No full-paper review."
+          },
+          {
+            "kind": "computed_verification",
+            "script": "reports/refine_ink_review_paper_v4_2026-09-14/execution/domain_note_verify.R",
+            "log": "reports/refine_ink_review_paper_v4_2026-09-14/execution/domain_note_verification.log",
+            "result": "PASS. Existing RDS coefficient equals archived sensitivity baseline; archived sample dimensions/key/required fields checked; stored FWL identity and arithmetic checked. No fitting."
+          },
+          {
+            "kind": "computed_verification",
+            "evidence": "reports/refine_ink_review_paper_v4_2026-09-14/execution/domain_note_evidence_manifest.json",
+            "result": "Active/frozen Rmd and PDF hashes equal; current producer/helper/bundle and selected outputs match historical manifests."
+          },
+          {
+            "kind": "existing_analysis_inspected",
+            "result": "Sensitivity regressions and synthetic counterexample were executed in September 5 review, not this task."
+          }
+        ],
+        "reasoning": "PARTIAL como pendência de correção: o alerta condicional está correto e a restrição existe, mas já está documentada e sua relevância empírica observada é pequena na sensibilidade arquivada. Não atribuímos ao parecer uma alegação categórica de viés. País × domínio acrescenta um contraste temático fixo para cada doador, torna Brasil × domínio redundante e zera somas dos pesos da regressão por país–domínio. Resolução FE não absorve heterogeneidade entre países na mesma resolução. A contribuição de offsets omitidos é sum_i eta_i sum_{r:H=1} w_ir, com w definido após residualizar todos os controles atuais. Desbalanceamento por si não prova viés; seleção e choques temáticos variáveis no tempo continuam possíveis sob a extensão. O tamanho de eventual viés causal não é identificado pelos diagnósticos examinados.",
+        "proposed_fix_assessment": "needs_design",
+        "disposition": "Entregar entendimento e alternativas. Nenhuma substituição ou mudança de especificação autorizada. Eventual evidência nova para o paper exige desenho target-first, revisão independente e autorização da fase.",
+        "minimal_prose_proposal": null
+      }
     },
     {
       "item": 27,
@@ -266,37 +795,135 @@
     },
     {
       "item": 31,
-      "status": "em adjudicacao",
-      "diagnosis": null,
-      "evidence": [],
+      "status": "Adjudicado; integração/revisão pendente",
+      "diagnosis": "PARTIAL",
+      "evidence": [
+        "paper_v4.Rmd:225-227",
+        "paper_v4.Rmd:306",
+        "paper_v4.Rmd:548-661, Table 3",
+        "output/paper_v4.pdf:pp.11,18",
+        "scripts/functions.R:180-210",
+        "scripts/functions.R:681-721"
+      ],
       "owner": "sdid",
       "model": "gpt-5.6-sol",
       "effort": "xhigh",
-      "solution": null,
+      "solution": "Clarify that distance remains in the comparison array but is absorbed/inert, define the power gap as the absolute annual GPI difference, and reiterate that the covariate-adjusted model is only a comparison. Leave the preferred no-covariate fit unchanged.",
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [],
-      "checks": [],
+      "checks": [
+        "Read get_gpi_data at scripts/functions.R:180-210 and cov_matrix/simple_fit at scripts/functions.R:681-755.",
+        "Read the stored targets synth_fit and synth_fit_no_time_varying_covariates without rebuilding them; the former has 13 beta coefficients and the latter has zero covariates.",
+        "Verified distance_us beta 7.959e-19 and us_power_gap beta -8.069e-03 in the stored comparison fit."
+      ],
       "independent_review": null,
       "limitation": null,
-      "comment": "### 31. Collinearity of covariates with fixed effects\n\n**Status**: [Pending]\n\n**Quote**:\n> The preferred specification uses no covariates because time-varying post-2009 values may induce post-treatment bias. A model specification with time-varying variables uses trade, power, ideology, macroeconomic stress, and institutional variables to control for potential confounding.\n\n**Feedback**:\nThe covariate comparison may include terms that are not separately identified under the stated fixed-effects specification. If geographic distance to the United States is time-invariant, unit fixed effects absorb it; if power gap equals the country power index minus the annual U.S. index, it is collinear with the country power index and time effects. It is therefore unclear whether these variables were dropped, transformed, or used in a separate weighting or residualization step.\n\n---"
+      "comment": "### 31. Collinearity of covariates with fixed effects\n\n**Status**: [Pending]\n\n**Quote**:\n> The preferred specification uses no covariates because time-varying post-2009 values may induce post-treatment bias. A model specification with time-varying variables uses trade, power, ideology, macroeconomic stress, and institutional variables to control for potential confounding.\n\n**Feedback**:\nThe covariate comparison may include terms that are not separately identified under the stated fixed-effects specification. If geographic distance to the United States is time-invariant, unit fixed effects absorb it; if power gap equals the country power index minus the annual U.S. index, it is collinear with the country power index and time effects. It is therefore unclear whether these variables were dropped, transformed, or used in a separate weighting or residualization step.\n\n---",
+      "reasoning": "A descrição das covariáveis é insuficiente. O código usa abs(US-country), mas no suporte observado US>=country e o diferencial coincide com a diferença assinada. A inferência inicial do especialista sobre ausência de colinearidade foi rejeitada. O papel da residualização synthdid é objeto da revisão independente. A principal não usa covariáveis.",
+      "fix_assessment": "safe",
+      "dossiers": [
+        "sdid"
+      ],
+      "specialist_finding": {
+        "finding_id": "REFINE-031",
+        "item": 31,
+        "source_review": "REFINE",
+        "quoted_finding": "The covariate comparison may contain a time-invariant geographic-distance term absorbed by unit effects and a power-gap term collinear with country power and time effects.",
+        "type": "scope_or_consistency",
+        "severity": "unspecified",
+        "scientific_dimension": "fidelity of implementation",
+        "held_decision": false,
+        "status": "PARTIAL",
+        "source_locations": [
+          "paper_v4.Rmd:225-227",
+          "paper_v4.Rmd:306",
+          "paper_v4.Rmd:548-661, Table 3",
+          "output/paper_v4.pdf:pp.11,18",
+          "scripts/functions.R:180-210",
+          "scripts/functions.R:681-721"
+        ],
+        "defect_evidence": [
+          "Geographic distance to the United States is time-invariant, remains in the 13-variable synthdid covariate array, and its stored coefficient is 7.96e-19. It supplies no separate adjustment under the unit-effect parametrization even though Table 3 marks it as included.",
+          "The manuscript does not say whether this variable was absorbed, dropped, or transformed."
+        ],
+        "refuting_evidence": [
+          "The actual power variable is us_power_gap = abs(us_power - gpi), not the signed difference assumed by the reviewer.",
+          "The absolute value breaks the alleged exact linear identity with country GPI and annual U.S. power/time effects. The stored current-covariate fit gives us_power_gap coefficient -0.008069, rather than zero.",
+          "The preferred fit has a 96 x 19 x 0 covariate array; this issue cannot alter the main covariate-free ATT."
+        ],
+        "mechanical_checks": [
+          "Read get_gpi_data at scripts/functions.R:180-210 and cov_matrix/simple_fit at scripts/functions.R:681-755.",
+          "Read the stored targets synth_fit and synth_fit_no_time_varying_covariates without rebuilding them; the former has 13 beta coefficients and the latter has zero covariates.",
+          "Verified distance_us beta 7.959e-19 and us_power_gap beta -8.069e-03 in the stored comparison fit."
+        ],
+        "reasoning": "The distance part is correct and underreported. The signed-power-gap collinearity claim does not match the implemented absolute differential and is refuted. The paper should clarify both facts without implying that the covariate comparison validates the main estimate.",
+        "proposed_fix_assessment": "safe",
+        "disposition": "Clarify that distance remains in the comparison array but is absorbed/inert, define the power gap as the absolute annual GPI difference, and reiterate that the covariate-adjusted model is only a comparison. Leave the preferred no-covariate fit unchanged."
+      },
+      "orchestrator_override": "orchestrator_decisions.md; verify_power_identity.R; verify_power_identity.log"
     },
     {
       "item": 32,
-      "status": "em adjudicacao",
-      "diagnosis": null,
-      "evidence": [],
+      "status": "Adjudicado; integração/revisão pendente",
+      "diagnosis": "CONFIRMED",
+      "evidence": [
+        "paper_v4.Rmd:223",
+        "paper_v4.Rmd:302",
+        "paper_v4.Rmd:1424",
+        "output/paper_v4.pdf:pp.8,11,46"
+      ],
       "owner": "sdid",
       "model": "gpt-5.6-sol",
       "effort": "xhigh",
-      "solution": null,
+      "solution": "Correct the three local descriptions and use uniform-weight language for classic DiD. Coordinate the definitions with item 20 so the appendix does not repeat or contradict itself.",
       "dependencies": [],
       "authorization_needed": [],
       "changed_files": [],
-      "checks": [],
+      "checks": [
+        "Inspected synthdid_estimate, collapsed.form, sc.weight.fw, and sc.weight.fw.covariates in the installed synthdid 0.0.9 namespace.",
+        "Confirmed collapsed.form replaces the post-treatment block by each control unit's post-period mean before lambda optimization.",
+        "Confirmed Table 10 correctly reports only the optimized pre-treatment lambda vector; the defect is the verbal description, not the stored weights."
+      ],
       "independent_review": null,
       "limitation": null,
-      "comment": "### 32. Mischaracterization of SDiD time weights\n\n**Status**: [Pending]\n\n**Quote**:\n> While SDiD assigns larger weights to control units more similar to the treated unit and to time periods more comparable to the pre-treatment period, classic DiD does not use any weights at all.\n\n**Feedback**:\nThe description reverses the comparison implemented by SDiD time weights. The optimized weights are placed on pre-treatment periods so that their weighted control-unit outcomes approximate the average post-treatment control outcomes; they are not selected to make periods comparable to the pre-treatment period. Additionally, the text conflates the information used for unit and time weights, incorrectly implying both are constructed solely from pre-treatment information. This is a local methodological misstatement rather than evidence that the estimator was implemented incorrectly.\n\n---"
+      "comment": "### 32. Mischaracterization of SDiD time weights\n\n**Status**: [Pending]\n\n**Quote**:\n> While SDiD assigns larger weights to control units more similar to the treated unit and to time periods more comparable to the pre-treatment period, classic DiD does not use any weights at all.\n\n**Feedback**:\nThe description reverses the comparison implemented by SDiD time weights. The optimized weights are placed on pre-treatment periods so that their weighted control-unit outcomes approximate the average post-treatment control outcomes; they are not selected to make periods comparable to the pre-treatment period. Additionally, the text conflates the information used for unit and time weights, incorrectly implying both are constructed solely from pre-treatment information. This is a local methodological misstatement rather than evidence that the estimator was implemented incorrectly.\n\n---",
+      "reasoning": "Unit weights use pre-treatment outcome histories to approximate the treated unit. Time weights use control outcomes from both sides of onset: weighted pre-treatment control outcomes approximate the controls' average post-treatment outcomes. The manuscript currently merges these operations.",
+      "fix_assessment": "safe",
+      "dossiers": [
+        "sdid"
+      ],
+      "specialist_finding": {
+        "finding_id": "REFINE-032",
+        "item": 32,
+        "source_review": "REFINE",
+        "quoted_finding": "The paper reverses the role of SDiD time weights and implies that unit and time weights are constructed from the same pre-treatment information.",
+        "type": "method",
+        "severity": "unspecified",
+        "scientific_dimension": "fidelity of implementation",
+        "held_decision": false,
+        "status": "CONFIRMED",
+        "source_locations": [
+          "paper_v4.Rmd:223",
+          "paper_v4.Rmd:302",
+          "paper_v4.Rmd:1424",
+          "output/paper_v4.pdf:pp.8,11,46"
+        ],
+        "defect_evidence": [
+          "Line 1424 says time periods are weighted for comparability to the pre-treatment period; the implemented lambda optimization has the opposite target.",
+          "Lines 223 and 302 imply that both unit and time weights are constructed from pre-treatment information or from generic pre/post comparability.",
+          "In synthdid 0.0.9, optimized lambda lies on pre-treatment periods and targets the vector of control units' average post-treatment outcomes."
+        ],
+        "refuting_evidence": [],
+        "mechanical_checks": [
+          "Inspected synthdid_estimate, collapsed.form, sc.weight.fw, and sc.weight.fw.covariates in the installed synthdid 0.0.9 namespace.",
+          "Confirmed collapsed.form replaces the post-treatment block by each control unit's post-period mean before lambda optimization.",
+          "Confirmed Table 10 correctly reports only the optimized pre-treatment lambda vector; the defect is the verbal description, not the stored weights."
+        ],
+        "reasoning": "Unit weights use pre-treatment outcome histories to approximate the treated unit. Time weights use control outcomes from both sides of onset: weighted pre-treatment control outcomes approximate the controls' average post-treatment outcomes. The manuscript currently merges these operations.",
+        "proposed_fix_assessment": "safe",
+        "disposition": "Correct the three local descriptions and use uniform-weight language for classic DiD. Coordinate the definitions with item 20 so the appendix does not repeat or contradict itself."
+      }
     },
     {
       "item": 33,
@@ -400,5 +1027,11 @@
       "limitation": null,
       "comment": "### 38. MacDonald and Parent (2021) reject the cited definition of status\n\n**Status**: [Pending]\n\n**Quote**:\n> The argument builds on research that treats status as socially recognized standing within international hierarchies, clubs, and local status orders (Paul, Larson, and Wohlforth 2014; Wolf 2011, 2019; Duque 2018; Renshon 2017; Götz 2021; MacDonald and Parent 2021; Røren 2024, 2025).\n\n**Feedback**:\nThe submission cites MacDonald and Parent (2021) as an example of research that \"treats status as socially recognized standing.\" However, the authors explicitly reject this relational view. In their article's abstract, they acknowledge that recent scholarship has converged on a relational definition, but state that they \"take issue with this new conventional wisdom\" and explicitly \"argue that status is an attribute, not a relation.\" Including them in a list of proponents for the relational definition is a material misattribution.\n\n---"
     }
-  ]
+  ],
+  "adjudication_counts": {
+    "PARTIAL": 4,
+    "PENDING": 11,
+    "CONFIRMED": 8
+  },
+  "orchestrator_decisions": "orchestrator_decisions.md"
 }

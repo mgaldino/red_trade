@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "bibliography-items37-38:9c6b03ed3d37:round1",
+  "source": {
+    "reviewed_artifact": "reports/refine_ink_review_paper_v4_2026-09-14/execution/baseline/paper_v4.Rmd",
+    "sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+    "artifact_intact": true,
+    "current_artifact": "paper_v4.Rmd",
+    "current_sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+    "rendered_pdf": "output/paper_v4.pdf",
+    "rendered_pdf_sha256": "da7b84fd44a1071953c5c2941be53aefb75f2b249476cc2d6e065e5f8463e312"
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "review_sources": [
+    {
+      "review_id": "SELECTION",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/items_to_address.md",
+      "sha256": "d0220df748585215fc3ce14786e555546134d1e25534470ee153b1872437ea25"
+    },
+    {
+      "review_id": "REFINE",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md",
+      "sha256": "eb7dc9488e3b6726cee0ddf232250be18f09291797e2a85470b67637af58b88a"
+    },
+    {
+      "review_id": "PACKET",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/execution/packets/bibliography.txt",
+      "sha256": "8fa1347b46ba5764a70c469ebad894403c32e56db035c86c25df2edd98727703"
+    }
+  ],
+  "findings": [
+    {
+      "item": 37,
+      "finding_id": "REFINE-F037",
+      "source_review": "REFINE",
+      "quoted_finding": "Strüver (2016) explicitly argues that economic interests and trade cause diplomatic affinity and therefore contradicts the manuscript's reverse-causality concern.",
+      "type": "false_statement",
+      "severity": "major",
+      "scientific_dimension": "identification",
+      "held_decision": false,
+      "status": "REFUTED",
+      "source_locations": [
+        "paper_v4.Rmd:137",
+        "paper_v4.Rmd:147",
+        "output/paper_v4.pdf:physical pages 2-3",
+        "Strüver GIGA Working Paper 209/2012:physical page 21 (printed 20), physical page 23 (printed 22), physical page 24 (printed 23)",
+        "Oxford Academic final publication record and abstract, accessed 2026-09-14: https://academic.oup.com/fpa/article-abstract/12/2/170/2367626"
+      ],
+      "defect_evidence": [],
+      "refuting_evidence": [
+        "The official abstract reports exploratory logistic regressions and correlations, not a trade-identified causal effect.",
+        "The relevant results distinguish trade dependence from aid and arms and indicate that trade dependence is more plausibly a consequence that helps maintain similarity than a prerequisite for onset.",
+        "The discussion says political understanding is conducive to economic exchange, which is compatible with the manuscript's reverse-causality concern.",
+        "The conclusion explicitly says no causal link between foreign-policy similarity and the explanatory factors has been established."
+      ],
+      "mechanical_checks": [
+        "SHA-256 of frozen and current Rmd matched: 9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4.",
+        "cmp current versus frozen Rmd returned exit status 0.",
+        "Localized pdftotext extraction confirmed the sentence in the rendered paper and the relevant Strüver passages.",
+        "Publisher record verified title, journal, volume, issue, pages, and DOI 10.1111/fpa.12050."
+      ],
+      "reasoning": "The reviewer conflates the article's theoretical mechanisms and observed associations with causal identification. Strüver does not demonstrate the claimed trade-to-alignment causal direction and explicitly discusses the reverse direction that motivates the manuscript's concern.",
+      "proposed_fix_assessment": "unsafe",
+      "proposed_fix_detail": "Do not rewrite the sentence to claim that Strüver establishes trade as the primary cause of diplomatic alignment.",
+      "disposition": "Retain the sentence and Strüver citation; no replacement."
+    },
+    {
+      "item": 38,
+      "finding_id": "REFINE-F038",
+      "source_review": "REFINE",
+      "quoted_finding": "MacDonald and Parent (2021) reject the relational definition and state in their abstract that status is an attribute, not a relation, so their inclusion is a material misattribution.",
+      "type": "scope_or_consistency",
+      "severity": "minor",
+      "scientific_dimension": "citation_fidelity",
+      "held_decision": false,
+      "status": "PARTIAL",
+      "source_locations": [
+        "paper_v4.Rmd:139",
+        "output/paper_v4.pdf:physical page 3",
+        "synth-trade-china.bib:877-890",
+        "Cambridge University Press publication record and abstract, accessed 2026-09-14: https://www.cambridge.org/core/journals/world-politics/article/abs/status-of-status-in-world-politics/BF85C05AAB728662D3CA526CDF69DA60",
+        "Author-affiliated Notre Dame conceptual summary, accessed 2026-09-14: https://ondisc.nd.edu/news-media/news/the-status-of-status-in-world-politics/",
+        "Paul K. MacDonald publication list, accessed 2026-09-14: https://sites.google.com/a/wellesley.edu/paul-k-macdonald/publications"
+      ],
+      "defect_evidence": [
+        "The compact citation cluster can be read as presenting MacDonald and Parent as unqualified proponents of the manuscript's definition.",
+        "The official abstract instead frames the article as a critical stocktaking and says the consensus definition conceals tensions between standing and membership."
+      ],
+      "refuting_evidence": [
+        "The two phrases attributed to the abstract by the reviewer do not appear in the official publisher abstract.",
+        "The publisher abstract and author-affiliated summary identify the dispute as standing versus membership, not attribute versus relation.",
+        "The source discusses valued attributes, positions, and rights and responsibilities; it does not supply the categorical rejection alleged by the reviewer.",
+        "The BibTeX title, authors, year, journal, volume, issue, pages, and DOI 10.1017/S0043887120000301 match the publisher record."
+      ],
+      "mechanical_checks": [
+        "SHA-256 of frozen and current Rmd matched: 9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4.",
+        "Localized pdftotext extraction confirmed the citation cluster in the rendered PDF.",
+        "Publisher and author-affiliated records independently confirmed the exact publication identity and actual abstract.",
+        "Static BibTeX inspection confirmed DOI and publication metadata."
+      ],
+      "reasoning": "The review's evidence and strong theoretical characterization are false, but its narrower citation-fidelity concern is valid: a critical review should not be left inside an undifferentiated cluster that may imply endorsement. Removing only the citation preserves the author's relational definition without importing the reviewer's fabricated opposition.",
+      "proposed_fix_assessment": "safe",
+      "proposed_fix_detail": "Remove only @macdonald_parent2021 from the citation cluster at paper_v4.Rmd:139; retain the prose and BibTeX entry.",
+      "disposition": "Forward only the exact citation-cluster replacement listed below."
+    }
+  ],
+  "replacements": [
+    {
+      "old": "[@paul_larson_wohlforth2014; @wolfRespectDisrespect2011; @duque_2018; @renshon2017; @gotz_2021; @macdonald_parent2021; @roren_2024; @roren2025_power_recognition; @wolfTakingInteractionSeriously2019]",
+      "new": "[@paul_larson_wohlforth2014; @wolfRespectDisrespect2011; @duque_2018; @renshon2017; @gotz_2021; @roren_2024; @roren2025_power_recognition; @wolfTakingInteractionSeriously2019]",
+      "item": 38
+    }
+  ],
+  "verification_boundary": {
+    "static_inspection": [
+      "Bounded packet and selected review items 37-38",
+      "Localized manuscript, frozen baseline, rendered PDF, and BibTeX records",
+      "Localized primary-source abstracts and relevant Strüver working-paper sections"
+    ],
+    "computed_verification": [
+      "SHA-256 hashes",
+      "Byte comparison of current and frozen Rmd",
+      "PDF metadata and localized text extraction"
+    ],
+    "new_analysis": [],
+    "gated_work_not_run": [
+      "targets execution or changes",
+      "reestimation",
+      "data changes",
+      "classification APIs",
+      "new analytical paper outputs"
+    ],
+    "limitation": "The paywalled full text of MacDonald and Parent was not downloaded; the decision uses the official publisher abstract, author-affiliated conceptual summary, and verified bibliographic record."
+  },
+  "summary": {
+    "total": 2,
+    "confirmed": 0,
+    "partial": 1,
+    "refuted": 1,
+    "unresolved": 0,
+    "held_decisions": 0
+  },
+  "adjudication": {
+    "verdict": "READY_FOR_IMPLEMENTATION",
+    "checked_at": "2026-09-14T13:49:11-03:00",
+    "reasons": [
+      "Item 37 is refuted by the source's explicit separation of association from causal identification.",
+      "The narrow citation-fidelity part of item 38 is partial and has a bounded safe replacement.",
+      "No material item remains unresolved within the authorized scope."
+    ]
+  }
+}
