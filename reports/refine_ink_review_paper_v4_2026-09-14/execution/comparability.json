@@ -1,0 +1,204 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "comparability:9c6b03ed3d37:round1",
+  "source": {
+    "reviewed_artifact": "paper_v4.Rmd",
+    "sha256": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+    "artifact_intact": true
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "review_sources": [
+    {
+      "review_id": "R1",
+      "path": "reports/refine_ink_review_paper_v4_2026-09-14/feedback-the-foreign-policy-impact-of-trade-based-status-ga-2026-09-14.md",
+      "sha256": "eb7dc9488e3b6726cee0ddf232250be18f09291797e2a85470b67637af58b88a"
+    }
+  ],
+  "findings": [
+    {
+      "item": 11,
+      "finding_id": "R1-11",
+      "source_review": "R1",
+      "quoted_finding": "The timing rows appear to estimate averages over different calendar periods, post-onset horizons, and fitted SDiD counterfactuals. Because no uncertainty is reported for the differences between rows, their ordering provides suggestive timing evidence but does not establish that the 2009 effect differs statistically from the earlier pseudo-onsets or the later break.",
+      "type": "scope_or_consistency",
+      "severity": "moderate",
+      "scientific_dimension": "estimand and inference",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "paper_v4.Rmd:693-695",
+        "paper_v4.Rmd:526-541",
+        "paper_v4.Rmd:756-783",
+        "scripts/diagnostics/audit_brazil_sdid_no_covariates.R:247-280",
+        "scripts/diagnostics/sdid_placebo_helpers.R:107-146",
+        "data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/timing_placebos.csv:2-6",
+        "output/paper_v4.pdf:23, Table 4"
+      ],
+      "defect_evidence": [
+        "Post-onset horizons are 6, 5, 4, 7, and 5 years. The helper constructs a new treatment vector and calls synthdid_estimate separately for each row; no shared fitted counterfactual or cross-row contrast inference is supplied.",
+        "Table 4 note calls all rows estimated causal effects after nominal onset; text uses early magnitudes against the Lula account and describes stability across timing tests. The later-break nominal pre-period includes actual treated years 2009-2011."
+      ],
+      "refuting_evidence": [
+        "The manuscript already calls the rows point-estimate diagnostics, notes early truncation and later extension, and supplies preferred 2009 inference elsewhere. The donor identities are common, so sample membership differences are not the source of incomparability."
+      ],
+      "mechanical_checks": [
+        "comparability_verify.R: five existing input slices checked for balance, duplicates, missing outcomes, dates and country counts; no fits run.",
+        "PDF Table 4 rows agree with timing_placebos.csv after rounding."
+      ],
+      "reasoning": "The reviewer correctly limits the ordering to suggestive timing evidence. Identical donor identities do not equate calendar periods, horizons, treatment histories or fitted SDiD weights. Matching horizons and adding individual SEs alone would still not define a common causal estimand or valid inference for between-row differences.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Use localized diagnostic language and complete table notes; retain every numeric output. Change the overlapping Lula paragraph only to remove the selected cross-window comparability inference, without adjudicating item 12."
+    },
+    {
+      "item": 22,
+      "finding_id": "R1-22",
+      "source_review": "R1",
+      "quoted_finding": "The 2 × 2 comparison does not uniquely isolate factor-count and outcome-source components. The factor-count contrast differs across outcomes, indicating an interaction, while the two ideal-point measures may have different absolute scales. The table supports conditional sensitivity comparisons, but the raw cross-outcome ATT differences and paired bootstrap do not by themselves identify a scale-invariant outcome-source contribution beyond factor selection.",
+      "type": "overclaim",
+      "severity": "moderate",
+      "scientific_dimension": "measurement and conditional specification sensitivity",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "paper_v4.Rmd:2239-2240",
+        "paper_v4.Rmd:2417-2454",
+        "paper_v4.Rmd:2461-2507",
+        "scripts/diagnostics/audit_ungadm_postreview_diagnostics.R:214-285",
+        "scripts/diagnostics/audit_ungadm_postreview_diagnostics.R:287-381",
+        "data/processed/diagnostics/ungadm_outcome_robustness/postreview/ife_2x2_fixed_r.csv:2-5",
+        "data/processed/diagnostics/ungadm_outcome_robustness/postreview/ife_paired_bootstrap_summary.csv:2-3",
+        "output/paper_v4.pdf:68-69, Tables 27-28"
+      ],
+      "defect_evidence": [
+        "The factor contrast r2-r1 is -0.059345646431 under BSV and -0.038020234148 under UNGA-DM. Their descriptive difference is 0.021325412283 in the original numerical scales; no interaction test was found in the traced outputs.",
+        "Repeated text says isolates/assessed separately/outcome metric contributes beyond factor selection. Paired differences are unstandardized UNGA-DM minus BSV, not a scale-invariant decomposition. Counts are fixed within bootstrap replicates, not reselected."
+      ],
+      "refuting_evidence": [
+        "The 2x2 genuinely holds the common panel fixed at 4,727 observations, 161 countries (35 treated, 126 controls), 1990-2020, and permits conditional within-measure factor comparisons.",
+        "The final paragraph already explicitly says non-rejection does not establish equivalence. Table 28 reports both factor counts rather than hiding sensitivity. All displayed numerical results match the existing CSVs."
+      ],
+      "mechanical_checks": [
+        "comparability_verify.R: recomputed only arithmetic and summaries of 1,000 saved paired draws; maximum absolute discrepancy 1.11e-16.",
+        "Point estimates, SEs and p-values in PDF Table 28 checked against the existing 2x2 CSV."
+      ],
+      "reasoning": "The design supports conditional sensitivity statements, not a unique additive attribution. Nonadditivity is descriptive and scale-dependent, not established statistically by the saved bootstrap. A common panel and fixed factor count do not harmonize outcome units. Paired non-rejection neither proves equivalence nor identifies an outcome-source contribution.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Replace all isolation/decomposition occurrences and associated notes with conditional within-measure comparisons, explicit scale limits and non-equivalence. Preserve numbers and unrelated Brazil robustness statements, including wording reserved to unselected comments."
+    }
+  ],
+  "replacements": [
+    {
+      "old": "The rank interpretation requires more than showing that trade with China was increasing. Brazil's exports to China grew before 2009, including years in which China rose in the export hierarchy but did not become number one. Table \\@ref(tab:table-placebo) therefore reports outcome-path timing falsifications without covariates: using no covariates prevents variables measured after the early pseudo-onsets from entering those comparisons. The 2003, 2004, and 2005 estimates are smaller than the 2009 rank-one estimate; 2004 is especially useful because China first reaches rank 2 but is still not Brazil's largest export destination. The 2012 row probes a later break after China had already become the top destination. These are point-estimate diagnostics rather than additional tests with separately recomputed placebo inference.",
+      "new": "The rank interpretation requires more than showing that trade with China was increasing. Brazil's exports to China grew before 2009, including years in which China rose in the export hierarchy but did not become number one. Table \\@ref(tab:table-placebo) therefore reports outcome-path timing falsifications without covariates: using no covariates prevents variables measured after the early pseudo-onsets from entering those comparisons. The 2003, 2004, and 2005 estimates are smaller in absolute value than the 2009 rank-one estimate; 2004 is especially useful because China first reaches rank 2 but is still not Brazil's largest export destination. The 2012 row probes a later break after China had already become the top destination. Each row refits the SDiD counterfactual over a different pre- or post-onset window. The early estimates average 2003--2008, 2004--2008, and 2005--2008, compared with 2009--2015 for the preferred estimate and 2012--2016 for the later break. Their ordering is suggestive timing evidence, not a comparison of a common estimand or a test that the effects differ. No uncertainty for differences between rows is reported, and the 2012 fit uses already-treated years in its nominal pre-period.",
+      "item": 11,
+      "source_location": "paper_v4.Rmd:693-693"
+    },
+    {
+      "old": "The same timing logic addresses the main Brazilian political confounder. President Lula da Silva took office in 2003 and pursued a more explicit South-South foreign-policy agenda, a shift emphasized in work on Brazilian autonomy, presidential foreign policy, and international engagement [@neto2011; @mouron_urdinez2014; @neto_malamud2015; @rodrigues2019measuring; @schenoniMythsMultipolaritySources2022]. If that ideological shift were sufficient to explain Brazil-China UNGA convergence, the pseudo-treatment years in 2003 or 2005 should already show comparable movement. They do not. The cross-country panel also estimates the rank-threshold pattern across countries with different political systems and leadership profiles, which reduces the concern that the Brazil estimate is only a Lula-period artifact.",
+      "new": "The same timing logic addresses the main Brazilian political confounder. President Lula da Silva took office in 2003 and pursued a more explicit South-South foreign-policy agenda, a shift emphasized in work on Brazilian autonomy, presidential foreign policy, and international engagement [@neto2011; @mouron_urdinez2014; @neto_malamud2015; @rodrigues2019measuring; @schenoniMythsMultipolaritySources2022]. The 2003 and 2005 pseudo-onsets yield smaller point estimates in absolute value, providing suggestive evidence against an immediate large break. Because these estimates cover different periods and refit the counterfactual, they do not establish that the early and 2009 effects differ or exclude a gradual or delayed Lula-era shift. The cross-country panel also estimates the rank-threshold pattern across countries with different political systems and leadership profiles, which reduces the concern that the Brazil estimate is only a Lula-period artifact.",
+      "item": 11,
+      "source_location": "paper_v4.Rmd:695-695"
+    },
+    {
+      "old": "The cross-country panel below is a broader scope check, not the main answer to the Brazil-specific demand-shock critique. Brazil is included in the goods-only cross-country sample, but the panel aligns countries by their own China-top goods-export entry years. A Brazil-specific 2009 confounder cannot mechanically generate an average event-time effect across countries treated in different calendar years. For such an explanation to account for both the Brazil estimate and the cross-country result, the omitted force would need to coincide with durable China-top entry across countries, affect UNGA distance to China in the same direction, and remain outside the latent factors captured by the interactive fixed-effects specification. It would also need to be strongly enough associated with both treatment timing and the outcome to overturn estimates that are stable across the Brazil timing tests, donor-pool checks, and the cross-country duration and risk-set checks.",
+      "new": "The cross-country panel below is a broader scope check, not the main answer to the Brazil-specific demand-shock critique. Brazil is included in the goods-only cross-country sample, but the panel aligns countries by their own China-top goods-export entry years. A Brazil-specific 2009 confounder cannot mechanically generate an average event-time effect across countries treated in different calendar years. For such an explanation to account for both the Brazil estimate and the cross-country result, the omitted force would need to coincide with durable China-top entry across countries, affect UNGA distance to China in the same direction, and remain outside the latent factors captured by the interactive fixed-effects specification. It would also need to be strongly enough associated with both treatment timing and the outcome to overturn estimates that are stable across the donor-pool checks and the cross-country duration and risk-set checks, alongside the suggestive Brazil timing diagnostics.",
+      "item": 11,
+      "source_location": "paper_v4.Rmd:756-756"
+    },
+    {
+      "old": "  kableExtra::pack_rows(\"E. Windows and timing: stability of the point estimate\", 12, 15,",
+      "new": "  kableExtra::pack_rows(\"E. Windows and timing: point-estimate diagnostics\", 12, 15,",
+      "item": 11,
+      "source_location": "paper_v4.Rmd:526-526"
+    },
+    {
+      "old": "      \"SDiD = synthetic difference-in-differences; preferred specification has no covariates. \",\n      \"Estimates and root mean squared prediction error (RMSPE) are in absolute UNGA \",\n      \"ideal-point distance to China; negative estimates indicate convergence. \",\n      \"RMSPE removes the mean pre-treatment gap. Placebo ranks include Brazil and \",\n      \"95 donor assignments; their p-value interpretation requires comparable assignments. \",\n      \"In D, changes are relative to the preferred estimate; high-weight donors are the top ten, \",\n      \"and exposure means China is a top-two export destination in at least one year during 2009--2015 (share of total donor weight). \",\n      \"D--E report point estimates, without recomputed inference. Full donor and time weights \",\n      \"and all sensitivity results appear in the appendix.\"\n    ),\n    general_title = \"Note: \",\n    escape = TRUE,",
+      "new": "      \"SDiD = synthetic difference-in-differences; preferred specification has no covariates. \",\n      \"Estimates and root mean squared prediction error (RMSPE) are in absolute UNGA \",\n      \"ideal-point distance to China; negative estimates indicate convergence. \",\n      \"RMSPE removes the mean pre-treatment gap. Placebo ranks include Brazil and \",\n      \"95 donor assignments; their p-value interpretation requires comparable assignments. \",\n      \"In D, changes are relative to the preferred estimate; high-weight donors are the top ten, \",\n      \"and exposure means China is a top-two export destination in at least one year during 2009--2015 (share of total donor weight). \",\n      \"D--E report point estimates, without recomputed inference. Full donor and time weights \",\n      \"and all sensitivity results appear in the appendix. The 2004 and 2009 onset rows use different \",\n      \"pre- and post-onset periods and separately fitted counterfactuals; their ordering is suggestive \",\n      \"and does not establish a statistically significant difference between effects.\"\n    ),\n    general_title = \"Note: \",\n    escape = TRUE,",
+      "item": 11,
+      "source_location": "paper_v4.Rmd:530-541"
+    },
+    {
+      "old": "rank_tests_note <- paste0(\n  sub(\n    \"^Note: \",\n    \"\",\n      caption_note(\n      unit = \"Outcome is absolute UNGA ideal-point distance to China; ATT is the estimated causal effect on Brazil after the nominal onset, so negative values mean convergence; export margins are current USD billions\",\n      window = \"2003-2005 timing tests end in 2008; 2012 is a later-break falsification using data through 2016\"\n    )\n  ),\n  \" All rows are no-covariate point-estimate diagnostics. The preferred 2009 estimate and its inference are reported separately in the main specification.\"\n)",
+      "new": "rank_tests_note <- paste0(\n  sub(\n    \"^Note: \",\n    \"\",\n      caption_note(\n      unit = \"Outcome is absolute UNGA ideal-point distance to China; ATT denotes the SDiD estimate for Brazil after each nominal onset; negative values indicate convergence; export margins are current USD billions\",\n      window = \"all windows begin in 1997. Post-onset periods are 2003-2008, 2004-2008, 2005-2008, 2009-2015, and 2012-2016 (6, 5, 4, 7, and 5 years)\"\n    )\n  ),\n  \" All rows use Brazil and the same 95 donors, without covariates, but refit unit and time weights for each window and onset. These are suggestive diagnostics with different estimands, not tests of differences between effects; no uncertainty for the cross-row contrasts is reported. The 2012 nominal pre-period includes already-treated years. The preferred 2009 estimate and its inference are reported separately in the main specification.\"\n)",
+      "item": 11,
+      "source_location": "paper_v4.Rmd:773-783"
+    },
+    {
+      "old": "The two outcome measures preserve the negative direction of the Brazilian SDiD estimate, but they do not support a blanket claim of robustness across the Brazilian and cross-country designs. Table \\@ref(tab:ungadm-sdid-comparison) shows the comparison. Under UNGA-DM, the point estimate is nominally higher than the original in absolute terms (`r sprintf(\"%.3f\", ungadm_dm_row$estimate)` versus `r sprintf(\"%.3f\", ungadm_bsv_row$estimate)`), with a lower p-value of `r sprintf(\"%.3f\", ungadm_dm_row$p_normal_two_sided)`. The directional rank is the same in both measurements (`r ungadm_fmt_rank(ungadm_dm_row$rank_one_sided, ungadm_dm_row$rank_denominator, ungadm_dm_row$p_rank_one_sided)`). The bilateral rank improves from `r ungadm_fmt_rank(ungadm_bsv_row$rank_two_sided, ungadm_bsv_row$rank_denominator, ungadm_bsv_row$p_rank_two_sided)` to `r ungadm_fmt_rank(ungadm_dm_row$rank_two_sided, ungadm_dm_row$rank_denominator, ungadm_dm_row$p_rank_two_sided)`. It is noteworthy that the pre-treatment averages are different (`r sprintf(\"%.3f\", ungadm_bsv_row$brazil_pre_mean)` against\n`r sprintf(\"%.3f\", ungadm_dm_row$brazil_pre_mean)`) in the original estimation. But the effect measured as a percentage of the pre-treatment average is similar: `r sprintf(\"%.1f\", ungadm_bsv_row$estimate_pct_pre_mean)` and `r sprintf(\"%.1f\", ungadm_dm_row$estimate_pct_pre_mean)` percent. The Brazilian result therefore retains its direction and inferential support under the alternative measure, with a similar relative magnitude. The cross-country comparison below is more sensitive to the outcome source: its IFE estimate is materially smaller and less precise under UNGA-DM. The $2\\times2$ comparison below holds the common window and country-year panel fixed while varying the outcome source and factor count, so the contribution of factor selection can be assessed separately from the outcome-source difference.",
+      "new": "The two outcome measures preserve the negative direction of the Brazilian SDiD estimate, but they do not support a blanket claim of robustness across the Brazilian and cross-country designs. Table \\@ref(tab:ungadm-sdid-comparison) shows the comparison. Under UNGA-DM, the point estimate is nominally higher than the original in absolute terms (`r sprintf(\"%.3f\", ungadm_dm_row$estimate)` versus `r sprintf(\"%.3f\", ungadm_bsv_row$estimate)`), with a lower p-value of `r sprintf(\"%.3f\", ungadm_dm_row$p_normal_two_sided)`. The directional rank is the same in both measurements (`r ungadm_fmt_rank(ungadm_dm_row$rank_one_sided, ungadm_dm_row$rank_denominator, ungadm_dm_row$p_rank_one_sided)`). The bilateral rank improves from `r ungadm_fmt_rank(ungadm_bsv_row$rank_two_sided, ungadm_bsv_row$rank_denominator, ungadm_bsv_row$p_rank_two_sided)` to `r ungadm_fmt_rank(ungadm_dm_row$rank_two_sided, ungadm_dm_row$rank_denominator, ungadm_dm_row$p_rank_two_sided)`. It is noteworthy that the pre-treatment averages are different (`r sprintf(\"%.3f\", ungadm_bsv_row$brazil_pre_mean)` against\n`r sprintf(\"%.3f\", ungadm_dm_row$brazil_pre_mean)`) in the original estimation. But the effect measured as a percentage of the pre-treatment average is similar: `r sprintf(\"%.1f\", ungadm_bsv_row$estimate_pct_pre_mean)` and `r sprintf(\"%.1f\", ungadm_dm_row$estimate_pct_pre_mean)` percent. The Brazilian result therefore retains its direction and inferential support under the alternative measure, with a similar relative magnitude. The cross-country comparison below is more sensitive to the outcome source: its IFE point estimate is closer to zero on the UNGA-DM scale and its uncertainty interval includes zero. The $2\\times2$ comparison below holds the common window and country-year panel fixed while varying the outcome source and factor count, allowing conditional factor-count comparisons within each measure. It does not provide a unique, scale-invariant decomposition of the difference between outcomes.",
+      "item": 22,
+      "source_location": "paper_v4.Rmd:2239-2240"
+    },
+    {
+      "old": "Regarding the panel regression, Table \\@ref(tab:ungadm-ife-window) shows the IFE estimation in the same time window for both outcomes, and the original estimation with the larger time window. The estimate retains the negative sign but is smaller and less precise under UNGA-DM:\n`r sprintf(\"%.3f\", ungadm_ife_dm_common$att)` with p =\n`r sprintf(\"%.3f\", ungadm_ife_dm_common$p)`. However, the models are not the same, since the number of latent factors chosen by cross-validation is different: `r ungadm_ife_bsv_common$r_cv` under BSV and `r ungadm_ife_dm_common$r_cv` under UNGA-DM. The $2\\times2$ comparison below holds the common window and country-year panel fixed while crossing the outcome source with one versus two latent factors, allowing the factor-count component to be assessed separately.",
+      "new": "Regarding the panel regression, Table \\@ref(tab:ungadm-ife-window) shows the IFE estimation in the same time window for both outcomes, and the original estimation with the larger time window. The estimate retains the negative sign but is closer to zero on the UNGA-DM scale, with an uncertainty interval that includes zero:\n`r sprintf(\"%.3f\", ungadm_ife_dm_common$att)` with p =\n`r sprintf(\"%.3f\", ungadm_ife_dm_common$p)`. However, the models are not the same, since the number of latent factors chosen by cross-validation is different: `r ungadm_ife_bsv_common$r_cv` under BSV and `r ungadm_ife_dm_common$r_cv` under UNGA-DM. The $2\\times2$ comparison below holds the common window and country-year panel fixed while crossing the outcome source with one versus two latent factors, allowing the sensitivity to factor count to be assessed within each outcome measure, rather than uniquely decomposing the cross-outcome difference.",
+      "item": 22,
+      "source_location": "paper_v4.Rmd:2417-2419"
+    },
+    {
+      "old": "Table \\@ref(tab:ungadm-ife-2x2) holds the common window and country-year panel fixed and crosses the two outcome sources with one and two latent factors. This $2\\times2$ design isolates the factor-count component of the comparison. Holding the outcome fixed, moving from one to two factors makes the ATT more negative (larger in absolute value): from `r sprintf(\"%.3f\", ungadm_ife_bsv_r1$att)` to `r sprintf(\"%.3f\", ungadm_ife_bsv_r2$att)` under BSV, and from `r sprintf(\"%.3f\", ungadm_ife_dm_r1$att)` to `r sprintf(\"%.3f\", ungadm_ife_dm_r2$att)` under UNGA-DM. Cross-validation selects `r ungadm_ife_bsv_common$r_cv` factors under BSV and `r ungadm_ife_dm_common$r_cv` under UNGA-DM. The one-factor UNGA-DM fit selected by cross-validation has the same negative sign and substantially overlapping uncertainty with the fixed-two-factor fit, although its point estimate is less negative; factor selection therefore changes magnitude without reversing the qualitative pattern. Holding the factor count at two still leaves a smaller UNGA-DM estimate (`r sprintf(\"%.3f\", ungadm_ife_dm_r2$att)`) than the BSV estimate (`r sprintf(\"%.3f\", ungadm_ife_bsv_r2$att)`), so the outcome source remains relevant after the factor-count component is isolated.",
+      "new": "Table \\@ref(tab:ungadm-ife-2x2) holds the common window and country-year panel fixed and crosses the two outcome sources with one and two latent factors. This $2\\times2$ comparison describes sensitivity to factor count conditional on the outcome measure. Holding the outcome fixed, moving from one to two factors makes the ATT more negative (larger in absolute value): from `r sprintf(\"%.3f\", ungadm_ife_bsv_r1$att)` to `r sprintf(\"%.3f\", ungadm_ife_bsv_r2$att)` under BSV, and from `r sprintf(\"%.3f\", ungadm_ife_dm_r1$att)` to `r sprintf(\"%.3f\", ungadm_ife_dm_r2$att)` under UNGA-DM. Cross-validation selects `r ungadm_ife_bsv_common$r_cv` factors under BSV and `r ungadm_ife_dm_common$r_cv` under UNGA-DM. The change from one to two factors differs across the two measures, indicating a descriptive interaction between outcome source and factor count rather than a unique additive decomposition. This comparison does not test the interaction. Both UNGA-DM fits have negative point estimates and uncertainty intervals that include zero; overlapping intervals do not establish equivalence. Holding the factor count at two still leaves a smaller UNGA-DM estimate (`r sprintf(\"%.3f\", ungadm_ife_dm_r2$att)`) than the BSV estimate (`r sprintf(\"%.3f\", ungadm_ife_bsv_r2$att)`), but these raw estimates are expressed on different outcome scales. Their difference is a conditional sensitivity comparison, not a scale-invariant contribution attributable to outcome source.",
+      "item": 22,
+      "source_location": "paper_v4.Rmd:2461-2461"
+    },
+    {
+      "old": "    general = paste0(\n      \"All rows use the goods-only status-current restricted risk set with \",\n      ungadm_ife_bsv_common$n_treated, \" treated and \",\n      ungadm_ife_bsv_common$n_control, \" control countries. \",\n      \"The common-window rows keep exactly the same country-years in both outcome sources. \",\n      \"Confidence intervals come from \", format(ungadm_ife_bsv_common$nboots, big.mark = \",\"),\n      \" bootstrap replications.\"\n    ),",
+      "new": "    general = paste0(\n      \"All rows use the goods-only status-current restricted risk set with \",\n      ungadm_ife_bsv_common$n_treated, \" treated and \",\n      ungadm_ife_bsv_common$n_control, \" control countries. \",\n      \"The common-window rows keep exactly the same country-years in both outcome sources. \",\n      \"Confidence intervals come from \", format(ungadm_ife_bsv_common$nboots, big.mark = \",\"),\n      \" bootstrap replications. ATTs and intervals are expressed on each outcome's original scale; \",\n      \"raw cross-outcome differences do not identify a scale-invariant measurement contribution.\"\n    ),",
+      "item": 22,
+      "source_location": "paper_v4.Rmd:2447-2454"
+    },
+    {
+      "old": "    general = paste0(\n      \"Same common window and identical rows as the previous table. \",\n      \"Paired bootstrap on the difference between the two ATTs, \",\n      format(ungadm_boot_selected$n_valid, big.mark = \",\"),\n      \" replications and no failures: \",\n      sprintf(\"%.3f\", ungadm_boot_selected$observed_diff),\n      \" (percentile p = \", sprintf(\"%.3f\", ungadm_boot_selected$p_two_sided_percentile),\n      \") under procedure-selected factor counts, and \",\n      sprintf(\"%.3f\", ungadm_boot_common$observed_diff),\n      \" (percentile p = \", sprintf(\"%.3f\", ungadm_boot_common$p_two_sided_percentile),\n      \") with common factors.\"\n    ),",
+      "new": "    general = paste0(\n      \"Same common window and identical rows as the previous table. \",\n      \"Paired bootstrap on UNGA-DM minus BSV in their original outcome units, \",\n      format(ungadm_boot_selected$n_valid, big.mark = \",\"),\n      \" replications and no failures: \",\n      sprintf(\"%.3f\", ungadm_boot_selected$observed_diff),\n      \" (percentile p = \", sprintf(\"%.3f\", ungadm_boot_selected$p_two_sided_percentile),\n      \") with the original CV-selected counts held fixed (BSV: two; UNGA-DM: one), and \",\n      sprintf(\"%.3f\", ungadm_boot_common$observed_diff),\n      \" (percentile p = \", sprintf(\"%.3f\", ungadm_boot_common$p_two_sided_percentile),\n      \") with two factors for both outcomes. The same stratified country draws are used for both \",\n      \"measures; factor counts are not reselected within replications. These are scale-dependent \",\n      \"contrasts, not a unique decomposition of factor and outcome-source components. \",\n      \"Non-rejection does not establish equivalence.\"\n    ),",
+      "item": 22,
+      "source_location": "paper_v4.Rmd:2489-2500"
+    },
+    {
+      "old": "To sum up, the Brazilian SDiD result retains its negative direction and inferential support across the two outcome measurements, with similar relative magnitude but a different absolute scale. The $2\\times2$ IFE comparison shows that two factors produce a more negative ATT under either outcome, while the one-factor choice selected by cross-validation for UNGA-DM remains qualitatively close to the two-factor fit, with the same sign and overlapping uncertainty. Even with two factors held fixed, the UNGA-DM estimate remains smaller than the BSV estimate, so the outcome metric contributes beyond factor selection. The paired test does not detect a statistically significant difference between the ATTs, but this non-rejection does not establish equivalence and may reflect uncertainty.",
+      "new": "To sum up, the Brazilian SDiD result retains its negative direction and inferential support across the two outcome measurements, with similar relative magnitude but a different absolute scale. The $2\\times2$ IFE comparison shows that two factors produce a more negative ATT under either outcome, with a different within-measure change under BSV and UNGA-DM. Both UNGA-DM fits have negative point estimates and uncertainty intervals that include zero; this does not establish equivalence between them. Even with two factors held fixed, the raw UNGA-DM estimate is closer to zero than the BSV estimate on its own scale. This conditional comparison does not isolate a scale-invariant outcome-source contribution beyond factor selection. The paired test does not detect a statistically significant difference between the ATTs, but this non-rejection does not establish equivalence and may reflect uncertainty.",
+      "item": 22,
+      "source_location": "paper_v4.Rmd:2507-2507"
+    }
+  ],
+  "summary": {
+    "total": 2,
+    "confirmed": 2,
+    "partial": 0,
+    "refuted": 0,
+    "unresolved": 0,
+    "held_decisions": 0
+  },
+  "adjudication": {
+    "verdict": "READY_FOR_IMPLEMENTATION",
+    "checked_at": "2026-09-14T13:40:19.444986-03:00",
+    "reasons": [
+      "Two bounded claims verified against source, baseline, PDF text, producers and existing results; prose-only proposals ready for separate authorized implementation."
+    ]
+  },
+  "verification": {
+    "static_inspection": "Bounded manuscript occurrences, selected PDF pages, producer functions and CSV consumers. No full-paper substantive review or PDF visual/layout audit.",
+    "computed_verification": "Existing sample counts; arithmetic and saved-bootstrap summary reconciliation; source hashes; exact replacement matching. No statistical reestimation.",
+    "new_analysis": "None. No new standardization, resampling or interaction test.",
+    "limitations": [
+      "No model fitting, pipeline execution, targets API calls, or new paper outputs. Direct readRDS of the stored synth_data file was used only for counts and integrity checks.",
+      "No argument contract supplied or required for these two source-bound statistical interpretation comments. No claim to full reviewer upload provenance; selected review quotations were matched to current source and PDF.",
+      "Exact model weights for all timing rows were not regenerated or numerically compared; independent fitting is established by the producer.",
+      "R startup emitted locale fallback warnings; all data verification assertions passed."
+    ],
+    "record_validation": "VALID: official adjudicate-review validator against paper_v4.Rmd; 12 unique OLD matches; all inline R expressions retained. Unrelated sdid.json working-tree changes were observed and not touched."
+  },
+  "identity": {
+    "paper_v4.Rmd": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+    "reports/refine_ink_review_paper_v4_2026-09-14/execution/baseline/paper_v4.Rmd": "9c6b03ed3d3703e4a76eb6f35c43201afb08f0479266a1c08b60008e34ff13b4",
+    "output/paper_v4.pdf": "da7b84fd44a1071953c5c2941be53aefb75f2b249476cc2d6e065e5f8463e312",
+    "reports/refine_ink_review_paper_v4_2026-09-14/execution/packets/comparability.txt": "52a648ba35a9dcf48dbe2965a97445bc66228053092ae4fbbeaaebc062d9e12e"
+  }
+}

@@ -1,0 +1,129 @@
+PDF physical page 23
+      Table 4: Brazil SDiD rank-versus-volume timing diagnostics without covariates.
+
+ Timing year   Test role                       China rank    Export share (%)    Margin (USD bn)        ATT       Inference
+
+    2003       Growth/lower-rank promotion          3                6.7                -12.9          -0.064     Point estimate only; no covariates
+    2004       China rank-2 threshold               2                7.4                -14.2          -0.109     Point estimate only; no covariates
+    2005       Rapid growth without rank 1          3                7.2                -16.7          -0.099     Point estimate only; no covariates
+    2009       Actual rank-1 reversal               1                15.1               4.1            -0.273     Point estimate only; no covariates
+    2012       Later-break falsification            1                18.8               14.9           -0.100     Point estimate only; no covariates
+
+  Note:
+  Outcome is absolute UNGA ideal-point distance to China; ATT is the estimated causal effect on Brazil after the nominal onset, so negative values
+  mean convergence; export margins are current USD billions. Window: 2003-2005 timing tests end in 2008; 2012 is a later-break falsification using
+  data through 2016. All rows are no-covariate point-estimate diagnostics. The preferred 2009 estimate and its inference are reported separately in
+  the main specification.
+
+
+
+
+Table 5: Brazil SDiD estimates under corrected predetermined commodity and China-
+demand diagnostics.
+
+                 Specification                               ATT           Placebo SE     Normal p        Rank p (dir./bilat.)
+
+                 Current covariates                         -0.268           0.143             0.061          Not computed
+                 Preferred: no covariates                   -0.273           0.131             0.037            0.031 / 0.073
+                 Primary share x 2008-2009                  -0.285           0.129             0.027            0.031 / 0.073
+                 Agriculture/mining x 2008-2009             -0.284           0.128             0.026          Not computed
+                 Price exposure x 2008-2009                 -0.277           0.130             0.034          Not computed
+
+                 Prior China share x 2008-2009              -0.284           0.130             0.029          Not computed
+
+                   Note:
+                   Outcome is absolute UNGA ideal-point distance to China; ATT is the estimated average
+                   causal effect on Brazil after 2009, so negative values mean convergence. SE: synthdid
+                   placebo SE with 5,000 replications. Window: 1997-2015 annual SDiD panel. All rows
+                   keep the binary 2009 China number-one treatment onset. Comparison rows use 5,000-
+                   replication placebo SEs with a common permutation seed; the preferred row reuses the
+                   pipeline standard error (20,000 replications). The preferred row uses no covariates; the
+                   current-covariates row is a comparison. Primary-goods measures use external goods
+                   exports only. The 2008-2009 interactions include the first treated year and are mech-
+                   anism robustness checks, not preferred total-effect specifications. Rank inference was
+                   computed for the preferred specification and the primary-share x 2008-2009 interaction;
+                   ’Not computed’ does not denote a failed test.
+
+
+
+
+                                                                       23
+
+
+PDF physical page 68
+with p = 0.573. However, the models are not the same, since the number of latent fac-
+tors chosen by cross-validation is different: 2 under BSV and 1 under UNGA-DM. The
+2 × 2 comparison below holds the common window and country-year panel fixed while
+crossing the outcome source with one versus two latent factors, allowing the factor-count
+component to be assessed separately.
+
+
+Table 27: Cross-country interactive fixed-effects panel under the two outcome sources, in
+a common window with identical rows.
+
+
+ Specification                             ATT      SE          95 percent CI    p      Factors (CV)    Country-years
+
+ BSV full window 1990-2022 (paper        -0.101    0.039    [-0.177, -0.024]    0.010        2          5,037
+ main, stored target)
+ BSV common window (<= 2020,             -0.095    0.040    [-0.173, -0.018]    0.016        2          4,727
+ identical rows)
+ UNGA-DM common window (<=               -0.027    0.048    [-0.120, 0.066]     0.573        1          4,727
+ 2020, identical rows)
+
+   Note:
+   All rows use the goods-only status-current restricted risk set with 35 treated and 126 control countries. The common-
+   window rows keep exactly the same country-years in both outcome sources. Confidence intervals come from 10,000
+   bootstrap replications.
+
+
+
+Table 28 holds the common window and country-year panel fixed and crosses the two out-
+come sources with one and two latent factors. This 2 × 2 design isolates the factor-count
+component of the comparison. Holding the outcome fixed, moving from one to two factors
+makes the ATT more negative (larger in absolute value): from -0.036 to -0.095 under BSV,
+and from -0.027 to -0.065 under UNGA-DM. Cross-validation selects 2 factors under BSV
+and 1 under UNGA-DM. The one-factor UNGA-DM fit selected by cross-validation has
+the same negative sign and substantially overlapping uncertainty with the fixed-two-factor
+fit, although its point estimate is less negative; factor selection therefore changes magni-
+tude without reversing the qualitative pattern. Holding the factor count at two still leaves
+a smaller UNGA-DM estimate (-0.065) than the BSV estimate (-0.095), so the outcome
+source remains relevant after the factor-count component is isolated.
+
+
+                                                           68
+
+
+PDF physical page 69
+     Table 28: Outcome source by number of latent factors, holding the panel fixed.
+
+
+          Outcome      Factors (fixed)   Selected by CV     ATT       SE      95 percent CI       p
+
+          BSV                 1                No          -0.036    0.037    [-0.109, 0.037]   0.336
+          UNGA-DM             1                Yes         -0.027    0.048    [-0.120, 0.066]   0.573
+          BSV                 2                Yes         -0.095    0.040   [-0.173, -0.018]   0.016
+          UNGA-DM             2                No          -0.065    0.055    [-0.172, 0.043]   0.238
+
+            Note:
+            Same common window and identical rows as the previous table. Paired bootstrap on the
+            difference between the two ATTs, 1,000 replications and no failures: 0.069 (percentile p =
+            0.134) under procedure-selected factor counts, and 0.030 (percentile p = 0.356) with common
+            factors.
+
+
+
+To sum up, the Brazilian SDiD result retains its negative direction and inferential support
+across the two outcome measurements, with similar relative magnitude but a different ab-
+solute scale. The 2 × 2 IFE comparison shows that two factors produce a more negative
+ATT under either outcome, while the one-factor choice selected by cross-validation for
+UNGA-DM remains qualitatively close to the two-factor fit, with the same sign and over-
+lapping uncertainty. Even with two factors held fixed, the UNGA-DM estimate remains
+smaller than the BSV estimate, so the outcome metric contributes beyond factor selection.
+The paired test does not detect a statistically significant difference between the ATTs, but
+this non-rejection does not establish equivalence and may reflect uncertainty.
+
+
+
+
+                                                     69

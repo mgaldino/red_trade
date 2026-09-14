@@ -1,0 +1,9 @@
+onset=2003 window=1997-2008 pre=1997-2002 post=2003-2008 horizon=6 units=96 donors=95 rows=1152
+onset=2004 window=1997-2008 pre=1997-2003 post=2004-2008 horizon=5 units=96 donors=95 rows=1152
+onset=2005 window=1997-2008 pre=1997-2004 post=2005-2008 horizon=4 units=96 donors=95 rows=1152
+onset=2009 window=1997-2015 pre=1997-2008 post=2009-2015 horizon=7 units=96 donors=95 rows=1824
+onset=2012 window=1997-2016 pre=1997-2011 post=2012-2016 horizon=5 units=96 donors=95 rows=1920
+Existing 2x2 arithmetic: BSV r2-r1=-0.059345646431; DM r2-r1=-0.038020234148; difference of these contrasts=0.021325412283 (descriptive, no interaction test)
+paired row 1 PASS max discrepancy 2.78e-17; diff 0.068502972602; percentile p 0.134
+paired row 2 PASS max discrepancy 1.11e-16; diff 0.030482738453; percentile p 0.356
+PASS: verification only; no model fits, resampling, standardization, data writes, or targets operations.

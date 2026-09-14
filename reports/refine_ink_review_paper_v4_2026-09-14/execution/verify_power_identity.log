@@ -1,0 +1,8 @@
+Stored comparison panel rows: 1920 
+Country power above US: 0 
+Maximum absolute residual of signed identity: 0 
+Country-years violating signed identity:
+# A tibble: 0 × 5
+# ℹ 5 variables: iso3c <chr>, year <dbl>, gpi <dbl>, us_power <dbl>,
+#   us_power_gap <dbl>
+This check does not estimate the separate partial effect of any covariate.

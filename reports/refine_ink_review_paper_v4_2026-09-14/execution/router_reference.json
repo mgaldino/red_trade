@@ -1,0 +1,74 @@
+{
+  "policy_version": "0.1.0",
+  "objective_order": [
+    "quality",
+    "speed",
+    "token_or_credit_use"
+  ],
+  "escalation_order": [
+    "repair_failed_component",
+    "increase_reasoning_effort",
+    "upgrade_model",
+    "add_independent_review",
+    "use_ultra_if_decomposable"
+  ],
+  "task": "Revisão delimitada de paper, com modelos explicitamente determinados pelo autor e revisores independentes.",
+  "inputs": {
+    "task_type": "review",
+    "stage": "final",
+    "ambiguity": "medium",
+    "stakes": "medium",
+    "scope": "small",
+    "decomposable": false,
+    "urgent": false
+  },
+  "model": "gpt-5.6-sol",
+  "effort": "high",
+  "speed_requested": "standard",
+  "speed_effective": "not-observed",
+  "speed_support_status": "not-requested",
+  "orchestration": "single-agent-plus-independent-review",
+  "quality_floor": {
+    "critical_errors_allowed": 0,
+    "all_mandatory_gates_must_pass": true,
+    "rubric_mean_min_5": 4.5,
+    "essential_dimension_min_5": 4.0,
+    "independent_review": true,
+    "adversarial_review": false,
+    "gate_profile": "papers-reports-and-reviews"
+  },
+  "routing_confidence": 0.95,
+  "benchmark_status": "uncalibrated",
+  "optimization_status": "conservative-heuristic-not-empirical-optimum",
+  "prompt_delivery": "stdin",
+  "assumptions": [
+    "Task class supplied explicitly."
+  ],
+  "reasons": [
+    "Ambiguity, stakes, or substantive judgment requires Sol.",
+    "Final work requires a separate reviewer even without parallel decomposition.",
+    "Model-specific escalation target: increase effort up to max, then add independent review or Ultra if decomposable."
+  ],
+  "orchestration_plan": {
+    "implementation": {
+      "model": "gpt-5.6-sol",
+      "effort": "high"
+    },
+    "review": {
+      "model": "gpt-5.6-sol",
+      "effort": "high",
+      "must_be_independent": true,
+      "review_mode": "independent"
+    }
+  },
+  "codex_command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--model",
+    "gpt-5.6-sol",
+    "-c",
+    "model_reasoning_effort=\"high\"",
+    "-"
+  ]
+}

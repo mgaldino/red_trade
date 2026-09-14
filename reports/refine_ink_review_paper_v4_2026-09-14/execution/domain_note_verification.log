@@ -1,0 +1,5 @@
+Archived sample: 55190 rows, 95 countries, 612 resolutions; keys unique; required fields complete.
+distance_china_minus_usa: archived current -0.222333401762; country-domain -0.225731227550; difference -0.003397825788; relative absolute change 1.528257%; matches consumed RDS.
+agreement_china_minus_usa: archived current 0.052162562485; country-domain 0.053812495176; difference 0.001649932690; relative absolute change 3.163059%; matches consumed RDS.
+Archived FWL identity max discrepancy 1.57827390046e-10; archived absolute HR country-weight sum 0.031791903443; synthetic counterexample 0.031791903613.
+PASS: read-only arithmetic and integrity checks; no regression, new FE, placebo, targets execution, or data writes.
