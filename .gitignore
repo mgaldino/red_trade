@@ -75,3 +75,7 @@ data/processed/diagnostics/*/checkpoints/placebo_se_*_[0-9][0-9].rds
 # A versioned STATE.tsv makes a replicator skip the renv restore and the donor
 # pool gate, because run_rebuild_batch.sh reads it as "already done".
 output/rebuild_batches/
+
+# PDF na raiz: o render (scripts/render_paper_v4.sh) move o arquivo para output/,
+# entao uma copia na raiz e sempre residuo. O PDF versionado e output/paper_v4.pdf.
+/paper_v4.pdf

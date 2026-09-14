@@ -38,9 +38,9 @@ Os trailers foram removidos dos commits locais em 2026-08-26 (`git filter-branch
 `origin/main..HEAD`, árvore verificada idêntica). Restam 11 commits **já pushados** com o
 trailer; limpá-los exige `git push --force`, decisão pendente do autor.
 
-## REGRA — verificação do abstract a cada novo PDF (autor, 2026-08-26)
+## REGRA — verificação do abstract quando o abstract muda (autor, 2026-09-07)
 
-**Sempre que uma nova versão do PDF for gerada**, chamar um subagente que lê os números do
+**Quando o texto do abstract for alterado**, chamar um subagente que lê os números do
 abstract e verifica duas coisas:
 
 1. **Consistência interna**: cada número do abstract bate com o mesmo número no corpo do
@@ -49,8 +49,24 @@ abstract e verifica duas coisas:
 
 Motivo: os números do abstract são digitados à mão (não são `r inline`, porque o abstract
 mora no YAML header) — decisão do autor de mantê-los assim e conferir antes de submeter.
-Sem esse gate, todo rebuild é uma chance de o abstract divergir do corpo sem nada falhar.
 O mesmo vale para os números digitados na conclusão.
+
+**Gatilho**: mudança no bloco `abstract:` do YAML de `paper_v4.Rmd`. Checar com
+`git diff paper_v4.Rmd | grep '^[+-].*abstract:'`. NÃO rodar a cada compilação — a versão
+anterior desta regra disparava em todo PDF novo, e o autor a estreitou em 2026-09-07 por
+gasto de recurso sem contrapartida.
+
+Ponto cego assumido: o abstract também envelhece sem ser tocado, se um rebuild mudar os
+números sob ele. Esse caso sai do gate automático e fica com a conferência manual antes de
+submeter.
+
+**Escopo do gate: NÚMEROS, não registro (autor, 2026-09-07).** O abstract é peça de
+comunicação para público amplo. Linguagem genérica de comércio ali — "top trading partner",
+"largest trade partner" — é DELIBERADA e não é erro, mesmo quando o tratamento é rank 1 em
+exportação de bens (Services excluído, ≥5 anos). Ninguém lê o abstract pela nuance entre
+bens, bens+serviços ou exportação+importação; a precisão mora na seção de desenho, e é lá
+que ela tem de estar correta. O autor pretende deixar a frase do Brasil mais genérica
+também, não mais específica. NÃO reportar isso como divergência.
 
 ## TAREFA PRIORITÁRIA Nº 1 (2026-08-26)
 
