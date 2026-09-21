@@ -1,0 +1,44 @@
+{
+  "date": "2026-09-21",
+  "scope": "Faithful English translation of the author-supplied shortened model; separate preliminary insertion assessment. No manuscript edits or mathematical audit.",
+  "pdf_pages": 4,
+  "verification": [
+    "Independent full textual fidelity check",
+    "Duplicate-block identity and result-count checks",
+    "Successful standalone R Markdown and XeLaTeX rendering",
+    "Visual inspection of all four PDF pages",
+    "UTF-8 and trailing-whitespace checks"
+  ],
+  "files": [
+    {
+      "path": "reports/toy_model_status_cue/short_version_author_2026-09-21.txt",
+      "bytes": 7793,
+      "sha256": "f8439dc7c2fce8a74fd1b5299125a335eb3edf6c61274b5940cb6209eb06f8b1"
+    },
+    {
+      "path": "reports/toy_model_status_cue/toy_model_status_cue_short_en.Rmd",
+      "bytes": 7427,
+      "sha256": "a37b8bd2c3a5055fb3bb38007bce9315acc7aef2b126aaa05775d7d5face0ba1"
+    },
+    {
+      "path": "output/pdf/toy_model_status_cue_short_en.tex",
+      "bytes": 10244,
+      "sha256": "20ea9020b0cafd4af36a08be48a9605565e3a45ade516e60498891c8a0963c46"
+    },
+    {
+      "path": "output/pdf/toy_model_status_cue_short_en.pdf",
+      "bytes": 41513,
+      "sha256": "c933314171ef5efa7b01a9e91735e1cef520e492b0f09344080696f87608c90e"
+    },
+    {
+      "path": "scripts/render_toy_model_status_cue_short_en.sh",
+      "bytes": 488,
+      "sha256": "cfd19d3c469b25020cbef4fade666f0319bbd6c2362f316b653f12a7dcf17481"
+    },
+    {
+      "path": "reports/toy_model_status_cue/translation_notes_2026-09-21.md",
+      "bytes": 6214,
+      "sha256": "9727b13b93990a9b994bbc6eddeecb15c0e219c16d6d96eae08055222cc6bffa"
+    }
+  ]
+}

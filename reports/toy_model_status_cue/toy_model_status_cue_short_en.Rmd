@@ -1,0 +1,204 @@
+---
+title: "A simple model of public status cues"
+subtitle: "English translation of the author's shortened version"
+author: ""
+date: "21 September 2026"
+documentclass: article
+fontsize: 11pt
+geometry: margin=1in
+output:
+  pdf_document:
+    latex_engine: xelatex
+    keep_tex: true
+    number_sections: false
+    toc: false
+header-includes:
+  - \usepackage{amsmath,amssymb,amsthm}
+  - \setlength{\parindent}{0pt}
+  - \setlength{\parskip}{0.5em}
+  - \theoremstyle{definition}
+  - \newtheorem{proposition}{Proposition}
+  - \newtheorem{corollary}{Corollary}
+  - \newtheorem{lemma}{Lemma}
+  - \newcommand{\pospart}[1]{\left[#1\right]_{+}}
+---
+
+Let $R\in\{0,1\}$ indicate whether a revisionist power occupies the top position in the relevant trade hierarchy for a given country. Let $P\in\{0,1\}$ indicate whether that position has become publicly visible, for example, through press coverage using explicit ranking language.
+
+I assume that policymakers' attention is sparse [cite Gabaix]. This means that a change in the new power's status competes for attention with other events in the world and does not automatically produce a change in foreign policy. I call the product $q=RP\in\{0,1\}$ a political cue. It captures a situation in which the emerging power not only attains its new rank but also has that rank explicitly brought to public attention by the media or public officials. Let salience $s(q)$ satisfy $s(1)>s(0)$. In words, becoming the new number one and receiving public recognition makes the emerging power more salient to policymakers, bringing it to their attention.
+
+# Valence
+
+Let:
+
+- $G\geq0$: the perceived value of moving closer to the new great power;
+- $D\geq0$: the perceived cost of increased dependence on the emerging power;
+- $\iota\in\mathbb{R}$: the foreign policy leader's ideology, where
+
+\[
+\begin{cases}
+\iota>0 & \text{indicates a favorable view of the emerging power;}\\
+\iota=0 & \text{indicates neutrality;}\\
+\iota<0 & \text{indicates an unfavorable view of the emerging power.}
+\end{cases}
+\]
+
+I define the net value of strengthening ties with China as
+
+\[
+\theta=G-D+\iota.
+\]
+
+When $\theta>0$, the leadership prefers to shift its foreign policy toward the emerging power; otherwise, it prefers to avoid moving closer or to move further away.
+
+# Players, actions, and information
+
+There are two players:
+
+1. The political leadership, $L$, chooses a policy directive $d\in\mathbb{R}$. Positive values indicate movement toward China; negative values indicate hedging or distancing.
+2. The diplomatic bureaucracy, $B$, observes the directive and chooses $e\in\{0,1\}$, where $e=1$ means implementation.
+
+The realized policy is
+
+\[
+y=ed.
+\]
+
+The baseline model assumes complete information: $q$, $G$, $D$, $\iota$, and the costs are common knowledge.
+
+# Timing and payoffs
+
+The game proceeds in the following order:
+
+1. The leadership chooses the directive $d$.
+2. The bureaucracy observes $d$ and chooses $e$.
+3. The policy $y=ed$ is realized, and payoffs are received.
+
+The leadership's payoff is
+
+\[
+u_L(d,e;q)
+=
+e\left[s(q)\theta d-\frac{d^2}{2}\right]
+-c_L|d|,
+\tag{1}
+\]
+
+where $c_L>0$ represents inertia, reputational costs, and the effort required to formulate and defend a change. The quadratic term prevents unbounded adjustments.
+
+The bureaucracy's payoff is
+
+\[
+u_B(e,d;q)
+=
+e\,\mathbf{1}\{d\neq0\}\,[K(q)-c_B],
+\tag{2}
+\]
+
+where $c_B>0$ is the organizational cost of changing routines and $K(q)$ is the value to the bureaucracy of implementing a clear and coordinated priority. Assume that
+
+\[
+K(1)>K(0).
+\]
+
+The bureaucracy in the baseline model is directionally neutral. It derives no utility from moving closer to China or to the United States. Its decision depends on priority, clarity, and implementation costs.
+
+# Equilibrium
+
+The solution concept is subgame-perfect equilibrium, obtained by backward induction.
+
+\begin{lemma}[Bureaucratic response]
+For any directive $d\neq0$, the bureaucracy implements if and only if $K(q)>c_B$. In the event of equality, the conservative tie-breaking rule $e=0$ applies.
+\end{lemma}
+
+\textit{Proof.} If $d\neq0$, implementation yields $K(q)-c_B$, whereas non-implementation yields zero. Comparing the two directly gives the condition. If $d=0$, there is no policy to implement, and $e=0$ is adopted. $\square$
+
+\begin{proposition}[Equilibrium with a directionally neutral cue]
+The subgame-perfect equilibrium is
+
+\[
+y^*(q)=
+\mathbf{1}\{K(q)>c_B\}
+\operatorname{sign}(\theta)
+\pospart{s(q)|\theta|-c_L}.
+\tag{3}
+\]
+
+In particular, the cue can change whether a response occurs and how strong it is, but it does not determine its sign.
+\end{proposition}
+
+\textit{Proof.} If $K(q)\leq c_B$, the bureaucracy does not implement nonzero directives. Since the leadership pays $c_L|d|$ even for a directive that is not implemented, its optimal choice is $d=0$, and therefore $y=0$.
+
+If $K(q)>c_B$, every nonzero directive is implemented. The leadership solves
+
+\[
+\max_d\left\{s(q)\theta d-\frac{d^2}{2}-c_L|d|\right\}.
+\]
+
+For $d>0$, the first-order condition is $d=s(q)\theta-c_L$; this solution is positive only when $s(q)\theta>c_L$. For $d<0$, the condition is $d=s(q)\theta+c_L$; it is negative only when $s(q)\theta<-c_L$. In all other cases, the subgradient condition is satisfied at $d=0$. Combining the three regions yields (3). $\square$
+
+## Immediate implications
+
+\begin{corollary}[The cue has no intrinsic valence]
+Whenever $y^*(q)\neq0$,
+
+\[
+\operatorname{sign}\bigl(y^*(q)\bigr)=\operatorname{sign}(\theta).
+\]
+
+Thus, $\theta>0$ produces accommodation, whereas $\theta<0$ produces hedging.
+\end{corollary}
+
+\begin{corollary}[Activation through attention or coordination]
+The cue activates a previously absent response when both post-cue conditions hold,
+
+\[
+K(1)>c_B
+\quad\text{and}\quad
+s(1)|\theta|>c_L,
+\]
+
+and at least one of them failed to hold before the cue:
+
+\[
+K(0)\leq c_B
+\quad\text{or}\quad
+s(0)|\theta|\leq c_L.
+\]
+\end{corollary}
+
+\begin{corollary}[Benchmark with unchanged information and coordination]
+If $s(1)=s(0)$ and $K(1)=K(0)$, the cue does not change the equilibrium policy. This is the benchmark in which the public label changes neither attention nor the capacity for coordination.
+\end{corollary}
+
+The general result therefore concerns magnitude:
+
+\[
+|y^*(1)|\geq|y^*(0)|
+\]
+
+when the cue weakly increases $s$ and $K$. The direction depends on $\theta$.
+
+# Extensions
+
+## Issue-specific costs
+
+To capture selective convergence, let $c_L=c_{Lk}$ for each issue $k$. The cue changes only those issues that cross the threshold:
+
+\[
+s(0)|\theta_k|\leq c_{Lk}<s(1)|\theta_k|.
+\]
+
+Issues on which policy has already adjusted do not change; excessively costly issues remain unchanged. The composition of the response across issues depends on the distribution of costs and does not follow automatically from an issue being classified as human rights or belonging to any other substantive area.
+
+## Persistence and incumbent prominence
+
+Let $\rho$ denote the expected persistence of the new hierarchy and $h$ the prominence of the displaced partner. A simple extension allows
+
+\[
+\frac{\partial s(1;\rho,h)}{\partial\rho}>0,
+\qquad
+\frac{\partial s(1;\rho,h)}{\partial h}>0,
+\]
+
+with analogous relationships for $K$. A persistent ranking provides a more stable basis for adaptation; displacing a prominent incumbent makes the reclassification more visible. Neither condition determines the valence of $\theta$.

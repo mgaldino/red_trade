@@ -1,0 +1,271 @@
+Let $R \in \{0,1\}$ be an indicator that a revisionist power occupies the first position in the relevant trade hierarchy for a given country. Let $P \in \{0,1\}$ be an indicator that that position became publicly visible, for example, through press coverage with explicit ranking language.
+
+I assume policymakers attention is sparse [citar gabaix]. It means that changing the status of the new power competes with other things happening in the world and will not automatically produce foreign policy change.  I call a political cue the product $q = RP  \in \{0,1\}$. It can be understood as the situation in which the new ranking status by the emerging power not only happens but it is explicitly brought into attention to the public by the media or public officials. Let the salience $s(q)$ be such that $s(1) /gt s(0)$. In words, becoming the new number one with public recognition makes it more salient for policymakers, i/e, it is brought to their attention.
+
+
+Valence
+Let:
+
+
+- $G\geq 0$: perceived value of moving toward the new great power;
+- $D\geq 0$: perceived cost of increased dependency toward the emerging power;
+- $\iota\in\mathbb{R}$: foreign policy leader ideology, in which
+
+\[ \iota \begin{cases} >0 & \text{favorability toward emerging power}\\ =0 & \text{neutral;}\\ <0 & \text{unfavorability toward the emerging power.} \end{cases} \]
+
+I define the net value of increasing ties with China as
+
+ \[
+\theta=G-D+\iota.
+\]
+
+Whenever \theta>0 \quad\Rightarrow\quad the leadership prefers to change its foreign policy toward the emerging power and otherwise prefers to avoid it or move further away.
+
+
+## Jogadores, ações e informação
+
+
+Há dois jogadores:
+1. A liderança política, $L$, que escolhe uma diretriz $d\in\mathbb{R}$. Valores positivos indicam movimento em direção à China; valores negativos indicam hedging ou distanciamento.
+2. A burocracia diplomática, $B$, que observa a diretriz e escolhe $e\in\{0,1\}$, onde $e=1$ significa implementar.
+A política realizada é
+\[
+y=ed.
+\]
+
+
+
+
+O modelo básico assume informação completa: $q$, $G$, $D$, $\iota$ e os custos são conhecimento comum.
+
+
+
+
+# Timing e payoffs
+O jogo ocorre na seguinte ordem:
+1. A liderança escolhe a diretriz $d$.
+2. A burocracia observa $d$ e escolhe $e$.
+3. A política $y=ed$ é realizada e os payoffs são recebidos.
+
+
+O payoff da liderança é
+\[
+u_L(d,e;q)
+=
+e\left[s(q)\theta d-\frac{d^2}{2}\right]
+-c_L|d|,
+\tag{1}
+\]
+onde $c_L>0$ representa inércia, custo reputacional e o esforço necessário para formular e defender uma mudança. O termo quadrático impede ajustes ilimitados.
+O payoff da burocracia é
+\[
+u_B(e,d;q)
+=
+e\,\mathbf{1}\{d\neq0\}\,[K(q)-c_B],
+\tag{2}
+\]
+
+
+
+
+onde $c_B>0$ é o custo organizacional de alterar rotinas e $K(q)$ é o valor burocrático de implementar uma prioridade clara e coordenada. Assume-se
+\[
+K(1)>K(0).
+\]
+A burocracia do modelo básico é direcionalmente neutra. Ela não recebe utilidade por aproximar-se da China ou dos Estados Unidos. Sua decisão depende de prioridade, clareza e custo de implementação.
+
+
+
+
+
+
+# Solução do jogo
+
+
+O conceito de solução é equilíbrio perfeito em subjogos, obtido por indução retroativa.
+
+
+\begin{lemma}[Resposta burocrática]
+Para qualquer diretriz $d\neq0$, a burocracia implementa se, e somente se, $K(q)>c_B$. Em caso de igualdade, adota-se a regra de desempate conservadora $e=0$.
+\end{lemma}
+
+
+\textit{Demonstração.} Se $d\neq0$, implementar produz $K(q)-c_B$ e não implementar produz zero. A comparação fornece diretamente a condição. Se $d=0$, não há política a implementar e toma-se $e=0$. $\square$
+
+
+\begin{proposition}[Equilíbrio com cue direcionalmente neutro]
+O equilíbrio perfeito em subjogos é
+
+
+\[
+y^*(q)=
+\mathbf{1}\{K(q)>c_B\}
+\operatorname{sign}(\theta)
+\pospart{s(q)|\theta|-c_L}.
+\tag{3}
+\]
+
+
+Em particular, o cue pode alterar a existência e a intensidade da resposta, mas não determina seu sinal.
+\end{proposition}
+
+
+\textit{Demonstração.} Se $K(q)\leq c_B$, a burocracia não implementa diretrizes não nulas. Como a liderança paga $c_L|d|$ mesmo por uma diretriz não implementada, sua escolha ótima é $d=0$, e portanto $y=0$.
+
+
+Se $K(q)>c_B$, toda diretriz não nula é implementada. A liderança resolve
+
+
+\[
+\max_d\left\{s(q)\theta d-\frac{d^2}{2}-c_L|d|\right\}.
+\]
+
+
+Para $d>0$, a condição de primeira ordem é $d=s(q)\theta-c_L$; essa solução é positiva apenas quando $s(q)\theta>c_L$. Para $d<0$, a condição é $d=s(q)\theta+c_L$; ela é negativa apenas quando $s(q)\theta<-c_L$. Nos demais casos, a condição de subgradiente é satisfeita por $d=0$. A combinação das três regiões gera (3). $\square$
+
+
+## Consequências imediatas
+
+
+\begin{corollary}[O cue não possui valência intrínseca]
+Sempre que $y^*(q)\neq0$,
+
+
+\[
+\operatorname{sign}\bigl(y^*(q)\bigr)=\operatorname{sign}(\theta).
+\]
+
+
+Logo, $\theta>0$ produz acomodação e $\theta<0$ produz hedging.
+\end{corollary}
+
+
+\begin{corollary}[Ativação por atenção ou coordenação]
+O cue ativa uma resposta anteriormente inexistente quando as duas condições pós-cue são satisfeitas,
+
+
+\[
+K(1)>c_B
+\quad\text{e}\quad
+s(1)|\theta|>c_L,
+\]
+
+
+e ao menos uma delas falhava antes do cue:
+
+
+\[
+K(0)\leq c_B
+\quad\text{ou}\quad
+s(0)|\theta|\leq c_L.
+\]
+\end{corollary}
+
+
+\begin{corollary}[Benchmark de informação e coordenação invariantes]
+Se $s(1)=s(0)$ e $K(1)=K(0)$, o cue não altera a política de equilíbrio. Esse é o benchmark no qual o rótulo público não muda atenção nem capacidade de coordenação.
+\end{corollary}
+
+
+O resultado geral é, portanto, sobre magnitude:
+
+
+\[
+|y^*(1)|\geq |y^*(0)|
+\]
+
+
+quando o cue aumenta fracamente $s$ e $K$. A direção depende de $\theta$.
+
+
+
+
+
+
+
+
+## Consequências imediatas
+
+
+\begin{corollary}[O cue não possui valência intrínseca]
+Sempre que $y^*(q)\neq0$,
+
+
+\[
+\operatorname{sign}\bigl(y^*(q)\bigr)=\operatorname{sign}(\theta).
+\]
+
+
+Logo, $\theta>0$ produz acomodação e $\theta<0$ produz hedging.
+\end{corollary}
+
+
+\begin{corollary}[Ativação por atenção ou coordenação]
+O cue ativa uma resposta anteriormente inexistente quando as duas condições pós-cue são satisfeitas,
+
+
+\[
+K(1)>c_B
+\quad\text{e}\quad
+s(1)|\theta|>c_L,
+\]
+
+
+e ao menos uma delas falhava antes do cue:
+
+
+\[
+K(0)\leq c_B
+\quad\text{ou}\quad
+s(0)|\theta|\leq c_L.
+\]
+\end{corollary}
+
+
+\begin{corollary}[Benchmark de informação e coordenação invariantes]
+Se $s(1)=s(0)$ e $K(1)=K(0)$, o cue não altera a política de equilíbrio. Esse é o benchmark no qual o rótulo público não muda atenção nem capacidade de coordenação.
+\end{corollary}
+
+
+O resultado geral é, portanto, sobre magnitude:
+
+
+\[
+|y^*(1)|\geq |y^*(0)|
+\]
+
+
+quando o cue aumenta fracamente $s$ e $K$. A direção depende de $\theta$.
+
+
+# Extensões
+
+
+## Custos específicos por tema
+
+
+Para capturar convergência seletiva, faça $c_L=c_{Lk}$ para cada tema $k$. O cue altera apenas os temas que atravessam o limiar:
+
+
+\[
+s(0)|\theta_k|\leq c_{Lk}<s(1)|\theta_k|.
+\]
+
+
+Temas já ajustados não mudam; temas excessivamente custosos continuam inalterados. A composição temática da resposta depende da distribuição dos custos, e não decorre automaticamente do rótulo de direitos humanos ou de qualquer área substantiva específica.
+
+
+## Persistência e proeminência do incumbente
+
+
+Seja $\rho$ a persistência esperada da nova hierarquia e $h$ a proeminência do parceiro deslocado. Uma extensão simples admite
+
+
+\[
+\frac{\partial s(1;\rho,h)}{\partial \rho}>0,
+\qquad
+\frac{\partial s(1;\rho,h)}{\partial h}>0,
+\]
+
+
+e relações análogas para $K$. Um rank durável oferece uma base mais estável para adaptação; deslocar um incumbente proeminente torna a reclassificação mais visível. Nenhuma dessas condições determina a valência de $\theta$.
