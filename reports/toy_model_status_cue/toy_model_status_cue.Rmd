@@ -1,0 +1,460 @@
+---
+title: "Um cue público de status pode induzir acomodação ou hedging?"
+subtitle: "Toy model de atenção esparsa, interpretação política e coordenação burocrática"
+author: "Nota de trabalho"
+date: "21 de setembro de 2026"
+lang: pt-BR
+bibliography: ../../synth-trade-china.bib
+link-citations: true
+documentclass: article
+fontsize: 11pt
+geometry: margin=0.95in
+output:
+  pdf_document:
+    latex_engine: xelatex
+    keep_tex: true
+    number_sections: true
+    toc: true
+    toc_depth: 2
+header-includes:
+  - \usepackage{amsmath,amssymb}
+  - \usepackage{booktabs}
+  - \usepackage{xcolor}
+  - \usepackage{hyperref}
+  - \usepackage{tikz}
+  - \usetikzlibrary{arrows.meta,positioning}
+  - \definecolor{deepblue}{HTML}{17365D}
+  - \definecolor{softblue}{HTML}{EAF1F8}
+  - \definecolor{darkgray}{HTML}{404040}
+  - \hypersetup{colorlinks=true,linkcolor=deepblue,citecolor=deepblue,urlcolor=deepblue}
+  - \setlength{\parindent}{0pt}
+  - \setlength{\parskip}{0.55em}
+  - \newtheorem{proposition}{Proposição}
+  - \newtheorem{corollary}{Corolário}
+  - \newtheorem{lemma}{Lema}
+  - \newcommand{\pospart}[1]{\left[#1\right]_{+}}
+---
+
+\begin{center}
+\small\color{darkgray}
+\textbf{Status:} formalização exploratória. Este documento não altera o manuscrito, não estima parâmetros e não apresenta o mecanismo como empiricamente identificado.
+\end{center}
+
+\begin{abstract}
+Este documento formaliza um mecanismo no qual a ascensão pública de um país ao primeiro lugar de uma hierarquia comercial aumenta a atenção dedicada à relação e facilita coordenação dentro do governo, mas não determina a direção da resposta. A liderança política pode interpretar a mesma centralidade como oportunidade econômica ou como dependência vulnerável. Essa avaliação, influenciada por interesses materiais e pela disposição político-ideológica das elites, determina se a resposta consiste em acomodação, hedging ou ausência de mudança. Uma burocracia direcionalmente neutra decide se implementa a diretriz política em função da clareza, prioridade e custo organizacional. O equilíbrio separa, portanto, três objetos: saliência, valência e implementação. O modelo gera uma previsão geral sobre a magnitude da resposta, previsões condicionais sobre seu sinal e implicações observáveis para o caso brasileiro e para a heterogeneidade cross-country.
+\end{abstract}
+
+\begin{quote}
+\small
+\textbf{Resultado central.} O cue ``China tornou-se o parceiro número um'' torna a relação focal, mas não contém uma recomendação política intrínseca. Ele pode ativar aproximação quando as elites enxergam oportunidade e pode ativar hedging quando enxergam vulnerabilidade. Em notação compacta, o cue aumenta $|y|$; o sinal de $y$ é determinado por uma avaliação política separada.
+\end{quote}
+
+# Puzzle e contribuição do toy model
+
+Dados comerciais mudam continuamente, enquanto a linguagem política frequentemente se organiza em categorias simples: maior mercado, principal parceiro, destino número um. Um marco de ranking pode ser redundante para um ator que já processa integralmente todos os fluxos, mas ainda assim funcionar como informação comprimida, publicamente reconhecida e cognitivamente acessível. Essa interpretação é compatível com trabalhos sobre saliência, atenção e categorias grosseiras [@bordalo_etal2022; @conlon2023; @graeber_etal2025] e com a função de pontos focais na coordenação [@schelling1960].
+
+O problema direcional é distinto. Reconhecer que a China se tornou central pode sustentar duas leituras:
+
+1. **Oportunidade:** a centralidade comercial aumenta o valor de cooperação, acomodação e aproximação diplomática.
+2. **Vulnerabilidade:** a centralidade revela dependência excessiva e aumenta o valor de diversificação, hedging ou aproximação com os Estados Unidos.
+
+Uma teoria na qual o cue eleva diretamente o benefício de acomodar a China pressupõe a primeira leitura. O objetivo deste modelo é derivar as duas possibilidades a partir de primitivas explícitas.
+
+O mecanismo proposto tem três etapas conceitualmente separadas:
+
+\begin{center}
+\resizebox{0.98\textwidth}{!}{%
+\begin{tikzpicture}[
+  node distance=0.52cm,
+  every node/.style={font=\small, align=center},
+  box/.style={draw=deepblue, rounded corners=2pt, fill=softblue, inner sep=6pt, minimum height=1.05cm},
+  arr/.style={-{Latex[length=2mm]}, thick, draw=deepblue}
+]
+\node[box] (cue) {Cue público\\de status};
+\node[box, right=of cue] (val) {Interpretação\\oportunidade ou vulnerabilidade};
+\node[box, right=of val] (dir) {Diretriz política\\assinada};
+\node[box, right=of dir] (bur) {Coordenação e\\implementação burocrática};
+\node[box, right=of bur] (pol) {Ajuste de\\política externa};
+\draw[arr] (cue) -- (val);
+\draw[arr] (val) -- (dir);
+\draw[arr] (dir) -- (bur);
+\draw[arr] (bur) -- (pol);
+\end{tikzpicture}
+}
+\end{center}
+
+O cue torna a relação focal. A política doméstica atribui valência. A burocracia transforma, ou não, a diretriz em ação.
+
+# Ambiente e primitivas
+
+## A mudança pública de status
+
+Seja $R\in\{0,1\}$ um indicador de que a China ocupa a primeira posição na hierarquia comercial relevante. Seja $P\in\{0,1\}$ um indicador de que essa posição se tornou publicamente legível, por exemplo, mediante cobertura com linguagem explícita de ranking e reconhecimento oficial. O cue político é
+
+\[
+q=RP\in\{0,1\}.
+\]
+
+O cue não é uma mensagem estratégica enviada pela China e não revela um tipo privado de um emissor. Condicional ao vetor completo de comércio, ele pode ser estatisticamente redundante. Sua função é resumir a relação em uma categoria pública e tornar comum o conhecimento de que outros atores também podem reconhecê-la.
+
+Seja $s(q)>0$ o peso decisório atribuído à relação com a China, com
+
+\[
+s(1)>s(0).
+\]
+
+Essa é uma representação reduzida de atenção esparsa ou atenuada. O modelo não deriva $s(q)$ de uma escolha ótima de atenção e, portanto, não deve ser apresentado como uma aplicação completa de um modelo específico de atenção endógena.
+
+## A valência da relação
+
+Sejam:
+
+- $G\geq 0$: valor percebido das oportunidades associadas à acomodação da China;
+- $D\geq 0$: custo percebido de dependência, vulnerabilidade ou risco estratégico;
+- $\iota\in\mathbb{R}$: disposição político-ideológica da liderança.
+
+A avaliação líquida da liderança é
+
+\[
+\theta=G-D+\iota.
+\]
+
+O parâmetro $\theta$ é assinado:
+
+\[
+\theta>0 \quad\Rightarrow\quad \text{predisposição à acomodação},
+\]
+
+\[
+\theta<0 \quad\Rightarrow\quad \text{predisposição ao hedging ou distanciamento}.
+\]
+
+A ideologia pode representar afinidade ou desconfiança em relação à China, preferência por autonomia frente aos Estados Unidos, compromisso com uma aliança de segurança ou uma doutrina mais ampla de política externa. Ela não precisa coincidir com uma medida genérica de esquerda e direita.
+
+## Jogadores, ações e informação
+
+Há dois jogadores:
+
+1. A liderança política, $L$, que escolhe uma diretriz $d\in\mathbb{R}$. Valores positivos indicam movimento em direção à China; valores negativos indicam hedging ou distanciamento.
+2. A burocracia diplomática, $B$, que observa a diretriz e escolhe $e\in\{0,1\}$, onde $e=1$ significa implementar.
+
+A política realizada é
+
+\[
+y=ed.
+\]
+
+O modelo básico assume informação completa: $q$, $G$, $D$, $\iota$ e os custos são conhecimento comum. Essa hipótese mantém o toy model mínimo. Uma extensão pode tornar $\iota$ ou $D$ privados.
+
+# Timing e payoffs
+
+O jogo ocorre na seguinte ordem:
+
+1. Natureza determina $(G,D,\iota,q)$.
+2. Todos observam essas variáveis.
+3. A liderança escolhe a diretriz $d$.
+4. A burocracia observa $d$ e escolhe $e$.
+5. A política $y=ed$ é realizada e os payoffs são recebidos.
+
+O payoff da liderança é
+
+\[
+u_L(d,e;q)
+=
+e\left[s(q)\theta d-\frac{d^2}{2}\right]
+-c_L|d|,
+\tag{1}
+\]
+
+onde $c_L>0$ representa inércia, custo reputacional e o esforço necessário para formular e defender uma mudança. O termo quadrático impede ajustes ilimitados.
+
+O payoff da burocracia é
+
+\[
+u_B(e,d;q)
+=
+e\,\mathbf{1}\{d\neq0\}\,[K(q)-c_B],
+\tag{2}
+\]
+
+onde $c_B>0$ é o custo organizacional de alterar rotinas e $K(q)$ é o valor burocrático de implementar uma prioridade clara e coordenada. Assume-se
+
+\[
+K(1)>K(0).
+\]
+
+A burocracia do modelo básico é direcionalmente neutra. Ela não recebe utilidade por aproximar-se da China ou dos Estados Unidos. Sua decisão depende de prioridade, clareza e custo de implementação.
+
+# Solução do jogo
+
+O conceito de solução é equilíbrio perfeito em subjogos, obtido por indução retroativa.
+
+\begin{lemma}[Resposta burocrática]
+Para qualquer diretriz $d\neq0$, a burocracia implementa se, e somente se, $K(q)>c_B$. Em caso de igualdade, adota-se a regra de desempate conservadora $e=0$.
+\end{lemma}
+
+\textit{Demonstração.} Se $d\neq0$, implementar produz $K(q)-c_B$ e não implementar produz zero. A comparação fornece diretamente a condição. Se $d=0$, não há política a implementar e toma-se $e=0$. $\square$
+
+\begin{proposition}[Equilíbrio com cue direcionalmente neutro]
+O equilíbrio perfeito em subjogos é
+
+\[
+y^*(q)=
+\mathbf{1}\{K(q)>c_B\}
+\operatorname{sign}(\theta)
+\pospart{s(q)|\theta|-c_L}.
+\tag{3}
+\]
+
+Em particular, o cue pode alterar a existência e a intensidade da resposta, mas não determina seu sinal.
+\end{proposition}
+
+\textit{Demonstração.} Se $K(q)\leq c_B$, a burocracia não implementa diretrizes não nulas. Como a liderança paga $c_L|d|$ mesmo por uma diretriz não implementada, sua escolha ótima é $d=0$, e portanto $y=0$.
+
+Se $K(q)>c_B$, toda diretriz não nula é implementada. A liderança resolve
+
+\[
+\max_d\left\{s(q)\theta d-\frac{d^2}{2}-c_L|d|\right\}.
+\]
+
+Para $d>0$, a condição de primeira ordem é $d=s(q)\theta-c_L$; essa solução é positiva apenas quando $s(q)\theta>c_L$. Para $d<0$, a condição é $d=s(q)\theta+c_L$; ela é negativa apenas quando $s(q)\theta<-c_L$. Nos demais casos, a condição de subgradiente é satisfeita por $d=0$. A combinação das três regiões gera (3). $\square$
+
+## Consequências imediatas
+
+\begin{corollary}[O cue não possui valência intrínseca]
+Sempre que $y^*(q)\neq0$,
+
+\[
+\operatorname{sign}\bigl(y^*(q)\bigr)=\operatorname{sign}(\theta).
+\]
+
+Logo, $\theta>0$ produz acomodação e $\theta<0$ produz hedging.
+\end{corollary}
+
+\begin{corollary}[Ativação por atenção ou coordenação]
+O cue ativa uma resposta anteriormente inexistente quando as duas condições pós-cue são satisfeitas,
+
+\[
+K(1)>c_B
+\quad\text{e}\quad
+s(1)|\theta|>c_L,
+\]
+
+e ao menos uma delas falhava antes do cue:
+
+\[
+K(0)\leq c_B
+\quad\text{ou}\quad
+s(0)|\theta|\leq c_L.
+\]
+\end{corollary}
+
+\begin{corollary}[Benchmark de informação e coordenação invariantes]
+Se $s(1)=s(0)$ e $K(1)=K(0)$, o cue não altera a política de equilíbrio. Esse é o benchmark no qual o rótulo público não muda atenção nem capacidade de coordenação.
+\end{corollary}
+
+O resultado geral é, portanto, sobre magnitude:
+
+\[
+|y^*(1)|\geq |y^*(0)|
+\]
+
+quando o cue aumenta fracamente $s$ e $K$. A direção depende de $\theta$.
+
+# Exemplo numérico
+
+Considere
+
+\[
+s(0)=0{,}4,\qquad s(1)=1,
+\]
+
+\[
+K(0)=0{,}2,\qquad K(1)=0{,}8,
+\]
+
+e custos $c_L=c_B=0{,}5$. Antes do cue, a burocracia não implementa. Depois do cue, ela implementa e a política depende da avaliação da liderança.
+
+| Tipo de liderança | $\theta$ | $y^*(0)$ | $y^*(1)$ | Interpretação |
+|:--|--:|--:|--:|:--|
+| Acomodacionista | $0{,}8$ | $0$ | $0{,}3$ | Aproximação com a China |
+| Hedging | $-0{,}8$ | $0$ | $-0{,}3$ | Diversificação ou distanciamento |
+| Ambivalente | $0{,}3$ | $0$ | $0$ | Atenção sem mudança de política |
+
+O mesmo marco comercial ativa respostas opostas para os dois primeiros tipos. O terceiro tipo pode falar mais sobre a China e mobilizar atenção administrativa sem ultrapassar o custo de uma mudança efetiva.
+
+# Extensões
+
+## Burocracia tecnocrática, mas não ideológica
+
+Neutralidade ideológica não implica indiferença substantiva. Uma burocracia pode avaliar oportunidades e vulnerabilidades sem possuir a disposição partidária da liderança. Defina
+
+\[
+\theta_L=G-D+\iota,
+\qquad
+\theta_B=G-D.
+\]
+
+Se a política resulta de uma agregação interna com peso político $\omega\in[0,1]$, a avaliação governamental é
+
+\[
+\Theta
+=
+\omega\theta_L+(1-\omega)\theta_B
+=
+G-D+\omega\iota.
+\tag{4}
+\]
+
+Substituir $\theta$ por $\Theta$ na equação (3) produz uma versão na qual a burocracia pode reforçar ou moderar a direção escolhida pelos políticos. Maior autonomia burocrática equivale a menor $\omega$. Se a burocracia for de fato direcionalmente indiferente, pode-se definir $\theta_B=0$; ela afeta implementação e intensidade, mas não o sinal determinado pela liderança.
+
+## Custos específicos por tema
+
+Para capturar convergência seletiva, faça $c_L=c_{Lk}$ para cada tema $k$. O cue altera apenas os temas que atravessam o limiar:
+
+\[
+s(0)|\theta_k|\leq c_{Lk}<s(1)|\theta_k|.
+\]
+
+Temas já ajustados não mudam; temas excessivamente custosos continuam inalterados. A composição temática da resposta depende da distribuição dos custos, e não decorre automaticamente do rótulo de direitos humanos ou de qualquer área substantiva específica.
+
+## Persistência e proeminência do incumbente
+
+Seja $\rho$ a persistência esperada da nova hierarquia e $h$ a proeminência do parceiro deslocado. Uma extensão simples admite
+
+\[
+\frac{\partial s(1;\rho,h)}{\partial \rho}>0,
+\qquad
+\frac{\partial s(1;\rho,h)}{\partial h}>0,
+\]
+
+e relações análogas para $K$. Um rank durável oferece uma base mais estável para adaptação; deslocar um incumbente proeminente torna a reclassificação mais visível. Nenhuma dessas condições determina a valência de $\theta$.
+
+## Tipos privados e framing político
+
+Se $\iota$ for informação privada da liderança, sua diretriz pode revelar se ela interpreta a centralidade chinesa como oportunidade ou vulnerabilidade. A burocracia atualiza suas crenças após observar $d$. Essa extensão exige um equilíbrio bayesiano e crenças fora do caminho. O modelo básico evita essa complexidade ao tratar a disposição política como publicamente conhecida antes do cue.
+
+## Movimentos simultâneos
+
+Em uma versão simultânea, cada ator pode escolher $a_i\in\{-1,0,1\}$ e receber
+
+\[
+u_i(a_i,a_j)
+=
+s(q)\theta_i a_i-c_i|a_i|
++\kappa\mathbf{1}\{a_i=a_j\neq0\}.
+\]
+
+Quando os atores compartilham o sinal de $\theta_i$, o cue pode selecionar coordenação nessa direção. Quando discordam, podem surgir status quo, barganha ou múltiplos equilíbrios. A forma sequencial é preferível para o toy model principal porque atribui à liderança a escolha de direção e à burocracia a implementação.
+
+# Estática comparativa e heterogeneidade
+
+## Ideologia e dependência
+
+Da equação $\theta=G-D+\iota$ seguem três limiares:
+
+\[
+\iota>D-G
+\quad\Rightarrow\quad
+\theta>0,
+\]
+
+\[
+\iota<D-G
+\quad\Rightarrow\quad
+\theta<0,
+\]
+
+\[
+\iota=D-G
+\quad\Rightarrow\quad
+\theta=0.
+\]
+
+O cue pode, portanto, produzir respostas diferentes em dois países com a mesma exposição comercial. A diferença pode vir da avaliação de vulnerabilidade, da orientação das elites ou das instituições que agregam preferências políticas e burocráticas.
+
+## Efeito médio cross-country
+
+Para uma distribuição de países $j$, o efeito médio é
+
+\[
+\mathbb{E}[\Delta y_j]
+=
+\mathbb{E}\!\left[
+y_j^*(1)-y_j^*(0)
+\right].
+\]
+
+Seu sinal não é determinado sem hipóteses sobre a distribuição de $\theta_j$, os custos e a capacidade de implementação. Um efeito médio próximo de zero pode combinar acomodação, ausência de resposta e hedging. Um efeito médio em direção à China requer que os casos com $\theta_j>0$ predominem em frequência ou magnitude.
+
+Esse resultado impede transformar uma associação média negativa em uma lei universal de convergência. Também impede usar heterogeneidade não observada para racionalizar qualquer resultado: os moderadores que compõem $\theta$ devem ser definidos e medidos independentemente do efeito pós-tratamento.
+
+# Implicações observáveis
+
+O modelo produz hipóteses separadas para atenção, direção e implementação.
+
+**H1. Atenção.** Uma mudança de rank publicamente reconhecida aumenta a atenção dedicada à relação, independentemente da direção posterior da política.
+
+**H2a. Acomodação condicional.** Quando $G-D+\iota>0$, o cue aumenta a probabilidade ou intensidade de movimento em direção à China.
+
+**H2b. Hedging condicional.** Quando $G-D+\iota<0$, o mesmo cue aumenta a probabilidade ou intensidade de diversificação, distanciamento da China ou aproximação com uma alternativa estratégica.
+
+**H3. Implementação.** O efeito sobre política é maior quando a diretriz é clara e a burocracia possui capacidade e incentivos para coordenar a implementação.
+
+**H4. Durabilidade e incumbente.** O efeito absoluto é maior quando a nova hierarquia é percebida como persistente e quando o parceiro deslocado é politicamente proeminente.
+
+| Objeto teórico | Evidência ou proxy possível | Cuidado de interpretação |
+|:--|:--|:--|
+| $q$ e $s(q)$ | Linguagem explícita de rank, cobertura e reconhecimento oficial | Rank observado não garante publicidade |
+| $G$ | Interesse exportador, investimento, cooperação e ganhos esperados | Fluxo comercial pode ser causa, mediador ou outcome |
+| $D$ | Concentração, discurso de dependência, risco de coerção e segurança | Não inferir vulnerabilidade apenas de um share alto |
+| $\iota$ | Doutrina e retórica pré-tratamento sobre China, EUA e autonomia | Esquerda-direita genérica pode ser uma proxy fraca |
+| $K(q)$ | Diretriz presidencial, plano de ação, força-tarefa e coordenação interministerial | Uptake não demonstra que o cue causou a política |
+| $y$ | Votos multilaterais ou outras escolhas de política externa | O sinal pode variar por arena e por custo temático |
+
+# Ponte para o paper
+
+O argumento mais geral sugerido pelo modelo é:
+
+\begin{quote}
+Mudanças públicas de rank tornam uma relação externa focal. A política doméstica determina a direção da resposta, e a organização estatal determina se essa resposta será implementada.
+\end{quote}
+
+O caso brasileiro corresponde à ramificação $\theta>0$ se, antes do marco, as oportunidades percebidas e a orientação de autonomia, cooperação Sul-Sul ou multipolaridade já superavam preocupações com dependência. A mudança de 2009 poderia então aumentar atenção, oferecer uma linguagem pública de prioridade e facilitar coordenação em torno de uma predisposição anterior. Essa interpretação transforma a orientação política do governo em possível moderador do sinal, sem deixar de tratá-la como potencial explicação rival caso sua mudança temporal coincida com o tratamento.
+
+A ponte empírica precisa permanecer calibrada:
+
+- O desenho SDiD estima o efeito reduzido da entrada na condição de rank sobre a distância à China. Ele não identifica separadamente $s(q)$, $\theta$ e $K(q)$.
+- Cobertura e documentos oficiais podem mostrar disponibilidade, framing e uptake do cue. Sua coocorrência com convergência não identifica uma cadeia de mediação.
+- A extensão cross-country usa rank de exportações de bens. Sem medidas comparáveis de publicidade e interpretação política, ela estima um padrão médio da condição comercial, não o mecanismo público completo.
+- A disposição das elites deve ser medida antes do tratamento ou por fontes independentes. Classificá-la a partir do sinal do efeito observado tornaria a teoria circular.
+- Um resultado médio menor fora do Brasil é compatível com heterogeneidade de sinal, mas não demonstra que sinais opostos estejam presentes.
+
+# Robustez conceitual
+
+Três alterações preservam o resultado central:
+
+1. **Ordem dos movimentos.** Em movimentos simultâneos, a coordenação pode gerar multiplicidade, mas o cue continua sem determinar a direção sem uma hipótese sobre $\theta_i$.
+2. **Informação incompleta.** Com ideologia privada, a diretriz da liderança pode sinalizar valência. A atenção continua separada do sinal político da resposta.
+3. **Forma dos custos.** Com custo fixo, a resposta é discreta; com custo quadrático puro, ela é contínua; com custo absoluto, surge a região de inação da equação (3). Em todos os casos, o sinal da resposta depende de $\theta$.
+
+# Limitações
+
+O toy model não estabelece que atenção seja escolhida otimamente, que o cue seja causalmente isolado ou que a burocracia seja empiricamente neutra. Ele também não representa barganha internacional, reação da China, resposta dos Estados Unidos, alternância de governos ou aprendizado ao longo de decisões repetidas.
+
+A principal disciplina teórica é impedir duas inferências automáticas:
+
+1. centralidade econômica não implica afinidade;
+2. maior atenção não implica acomodação.
+
+Uma teoria direcional precisa explicitar a condição $\theta>0$. Uma teoria geral pode prever aumento do ajuste em valor absoluto, com o sinal condicionado à interpretação das elites e às instituições domésticas.
+
+# Conclusão
+
+O marco de primeiro lugar funciona como um cue público porque comprime informação, concentra atenção e torna a relação um objeto comum de coordenação. Sua contribuição causal teórica é aumentar a probabilidade de que o governo responda à nova centralidade. A direção da resposta vem de outra margem: a comparação entre oportunidade e vulnerabilidade, mediada pela disposição política das elites. A burocracia pode ser modelada como implementadora neutra ou como avaliadora tecnocrática; nenhuma opção exige atribuir ao cue uma valência positiva intrínseca.
+
+Essa separação fortalece a teoria. Ela explica por que o mesmo tipo de mudança comercial pode gerar acomodação em um país, hedging em outro e apenas retórica em um terceiro, ao mesmo tempo em que preserva uma expectativa direcional específica para casos nos quais a interpretação pré-tratamento é favorável à aproximação.
+
+\small
+
+# Referências {-}
