@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "scope": "Faithful English translation of the author-supplied shortened model; separate preliminary insertion assessment. No manuscript edits or mathematical audit.",
+  "scope": "Faithful English translation of the author-supplied shortened model, including the requested Gabaix (2014) citation; separate preliminary insertion assessment. No manuscript edits or mathematical audit.",
   "pdf_pages": 4,
   "verification": [
     "Independent full textual fidelity check",
@@ -17,18 +17,18 @@
     },
     {
       "path": "reports/toy_model_status_cue/toy_model_status_cue_short_en.Rmd",
-      "bytes": 7427,
-      "sha256": "a37b8bd2c3a5055fb3bb38007bce9315acc7aef2b126aaa05775d7d5face0ba1"
+      "bytes": 7508,
+      "sha256": "4477e3fabfbb45393d0ce9b9cc0ba1e591ed0a1c399a85622706f8ae6804ab9a"
     },
     {
       "path": "output/pdf/toy_model_status_cue_short_en.tex",
-      "bytes": 10244,
-      "sha256": "20ea9020b0cafd4af36a08be48a9605565e3a45ade516e60498891c8a0963c46"
+      "bytes": 11873,
+      "sha256": "4ef10dd4debfbdff76732508f9347b08dbf695076acff756ae60e046d08e8653"
     },
     {
       "path": "output/pdf/toy_model_status_cue_short_en.pdf",
-      "bytes": 41513,
-      "sha256": "c933314171ef5efa7b01a9e91735e1cef520e492b0f09344080696f87608c90e"
+      "bytes": 45327,
+      "sha256": "059e2c5f9ea4a4cc593a3636bf570aa545d446bbed04c6a5c702648d6c4dfc51"
     },
     {
       "path": "scripts/render_toy_model_status_cue_short_en.sh",
@@ -37,8 +37,27 @@
     },
     {
       "path": "reports/toy_model_status_cue/translation_notes_2026-09-21.md",
-      "bytes": 6214,
-      "sha256": "9727b13b93990a9b994bbc6eddeecb15c0e219c16d6d96eae08055222cc6bffa"
+      "bytes": 6896,
+      "sha256": "44413143d7e6baae3ba81afa796e0659e5d2ae7aec46d9d999ad10eea683e174"
+    },
+    {
+      "path": "synth-trade-china.bib",
+      "bytes": 89927,
+      "sha256": "799303d21427bce352f53fbe688099ac83d47ad8c69c73d41fd5c6c47f129ab4"
     }
-  ]
+  ],
+  "citation_update": {
+    "date": "2026-09-21",
+    "key": "gabaix2014",
+    "doi": "10.1093/qje/qju024",
+    "local_source": "/Users/manoelgaldino/Documents/DCP/Papers/cognitive polisci/sources/gabaix_2014_sparsity_based_model_bounded_rationality.pdf",
+    "publisher_metadata": "https://academic.oup.com/qje/article-abstract/129/4/1661/1854039",
+    "checks": [
+      "Parsed BibLaTeX metadata and unique key/DOI",
+      "All citations in translated model resolve",
+      "Model body unchanged except requested citation and references heading",
+      "Rendered author-year citation and full reference present",
+      "All four revised PDF pages visually inspected"
+    ]
+  }
 }

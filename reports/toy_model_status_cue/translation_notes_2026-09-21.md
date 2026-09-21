@@ -20,7 +20,9 @@ SHA-256 da fonte do autor: `f8439dc7c2fce8a74fd1b5299125a335eb3edf6c61274b5940cb
 - Correção de `/gt` para `>` e da composição LaTeX do bloco que interpreta os sinais de `iota`.
 - Definição da macro de apresentação `\pospart{x}` como `[x]_+`, conforme a notação usada no original e na nota longa preexistente.
 - Título e metadados acrescentados somente para o documento independente.
-- Preservação das afirmações, hipóteses, fórmulas e provas, sem revisão substantiva. A referência `[citar gabaix]` foi traduzida para `[cite Gabaix]` e continua pendente.
+- Preservação das afirmações, hipóteses, fórmulas e provas, sem revisão substantiva. A referência `[citar gabaix]` foi inicialmente traduzida para `[cite Gabaix]`; a pedido do autor, o marcador foi depois substituído por `[@gabaix2014]`, com entrada na bibliografia compartilhada e referência ao final do PDF.
+
+Referência inserida: Xavier Gabaix (2014), “A Sparsity-Based Model of Bounded Rationality”, *The Quarterly Journal of Economics*, 129(4), 1661–1710, DOI `10.1093/qje/qju024`. Título, autor, ano, páginas e DOI conferidos na primeira página do PDF local `/Users/manoelgaldino/Documents/DCP/Papers/cognitive polisci/sources/gabaix_2014_sparsity_based_model_bounded_rationality.pdf`; volume e número confirmados na [página da editora](https://academic.oup.com/qje/article-abstract/129/4/1661/1854039). Consulta: 21 de setembro de 2026.
 
 A conferência independente de fidelidade cobriu integralmente a fonte e a tradução. Não encontrou omissões nem alterações materiais de sentido. O refinamento idiomático “A persistent ranking”, sugerido nessa conferência, foi incorporado. Essa verificação foi textual; não constitui auditoria matemática.
 
@@ -43,6 +45,6 @@ Estes pontos foram preservados na tradução para não transformar a tarefa em a
 
 - **Domínio da saliência:** a versão reduzida escreve `s(1)>s(0)`, mas não explicita `s(q)>=0`. Sem essa restrição, a relação entre o sinal de `theta` e o sinal da política não vale em geral. A nota longa preexistente explicitava `s(q)>0`; reinseri-la exige uma decisão sobre o texto, não uma correção de tradução.
 - **Ativação versus intensidade por tema:** “Issues on which policy has already adjusted do not change” não decorre da equação (3). Com implementação ativa e resposta já positiva em módulo, aumentar `s` também aumenta a intensidade. A desigualdade da extensão identifica temas recém-ativados pelo canal da atenção, condicional à implementação; não enumera todos os temas cuja política pode mudar.
-- **Notação e referência:** definir `[x]_+=max{x,0}` para o leitor e completar a referência a Gabaix. O peso `s(q)` é exógeno neste modelo, que não deriva uma escolha ótima de atenção.
+- **Notação:** definir `[x]_+=max{x,0}` para o leitor. A referência a Gabaix foi completada; o peso `s(q)` continua exógeno neste modelo, que não deriva uma escolha ótima de atenção.
 
 Esta avaliação localiza decisões de integração. As propostas de corte e os ajustes substantivos descritos nesta avaliação não foram aplicados ao paper ou à tradução.

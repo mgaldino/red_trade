@@ -3,6 +3,8 @@ title: "A simple model of public status cues"
 subtitle: "English translation of the author's shortened version"
 author: ""
 date: "21 September 2026"
+bibliography: ../../synth-trade-china.bib
+link-citations: true
 documentclass: article
 fontsize: 11pt
 geometry: margin=1in
@@ -25,7 +27,7 @@ header-includes:
 
 Let $R\in\{0,1\}$ indicate whether a revisionist power occupies the top position in the relevant trade hierarchy for a given country. Let $P\in\{0,1\}$ indicate whether that position has become publicly visible, for example, through press coverage using explicit ranking language.
 
-I assume that policymakers' attention is sparse [cite Gabaix]. This means that a change in the new power's status competes for attention with other events in the world and does not automatically produce a change in foreign policy. I call the product $q=RP\in\{0,1\}$ a political cue. It captures a situation in which the emerging power not only attains its new rank but also has that rank explicitly brought to public attention by the media or public officials. Let salience $s(q)$ satisfy $s(1)>s(0)$. In words, becoming the new number one and receiving public recognition makes the emerging power more salient to policymakers, bringing it to their attention.
+I assume that policymakers' attention is sparse [@gabaix2014]. This means that a change in the new power's status competes for attention with other events in the world and does not automatically produce a change in foreign policy. I call the product $q=RP\in\{0,1\}$ a political cue. It captures a situation in which the emerging power not only attains its new rank but also has that rank explicitly brought to public attention by the media or public officials. Let salience $s(q)$ satisfy $s(1)>s(0)$. In words, becoming the new number one and receiving public recognition makes the emerging power more salient to policymakers, bringing it to their attention.
 
 # Valence
 
@@ -202,3 +204,5 @@ Let $\rho$ denote the expected persistence of the new hierarchy and $h$ the prom
 \]
 
 with analogous relationships for $K$. A persistent ranking provides a more stable basis for adaptation; displacing a prominent incumbent makes the reclassification more visible. Neither condition determines the valence of $\theta$.
+
+# References {-}
