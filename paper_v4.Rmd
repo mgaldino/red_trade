@@ -16,6 +16,18 @@ header-includes:
 - \setlength{\parindent}{0pt}
 - \usepackage{float}
 - \usepackage{longtable}
+- \usepackage{amsmath,amssymb,amsthm}
+- \theoremstyle{definition}
+- \newtheorem{modelproposition}{Proposition}
+- \newtheorem{modelcorollary}{Corollary}
+- \newtheorem{modellemma}{Lemma}
+- \let\proposition\modelproposition
+- \let\endproposition\endmodelproposition
+- \let\corollary\modelcorollary
+- \let\endcorollary\endmodelcorollary
+- \let\lemma\modellemma
+- \let\endlemma\endmodellemma
+- \newcommand{\pospart}[1]{\left[#1\right]_{+}}
 fontsize: 12pt
 abstract: "\\singlespacing  How do countries adjust their foreign policy when a rising power becomes their leading trading partner? We argue that a sufficiently salient and lasting change in trade rankings can shape diplomatic positioning in politically relevant fora, such as the United Nations General Assembly. To study the phenomenon, we focus on Brazil and China's 2009 ranking shift, when China surpassed the United States as Brazil’s largest export destination, using synthetic Difference-in-Differences to estimate the causal effect of the change on Brazil’s voting at the UNGA. The paper shows evidence that Brazilian policymakers invoked China’s new position to justify greater proximity between the countries, converging voting particularly on human rights issues. Relative to the counterfactual, the estimated reduction in bilateral voting distance is equivalent to 42% of the pre-treatment mean distance before 2009. To assess whether this pattern extends beyond Brazil, we estimate a latent factor model using data from a panel of countries where China became the leading trading partner between 2000 and 2022. The estimates point in the same direction, although the effects are smaller. These findings suggest that publicly acknowledged changes in economic rank can support diplomatic adjustments in multilateral institutions, with implications for U.S.–China rivalry as their relative commercial positions change."
 geometry: margin=2.5cm
@@ -165,9 +177,199 @@ This attribution of symbolic status between two countries is a standard movement
 
 In order to discipline the theoretchial discussion, I present a simple formal model that capture the basis ideas for the mechanism and theory advance in the present work.
 
-## Beggining Formal Model
+## A simple model of public status cues
 
-## End Formal model
+I model how political leadership chooses a policy directive and a diplomatic bureaucracy decides whether to implement it following a publicized change at the top of a country's trade ranking. Public recognition raises attention to the relationship and the bureaucracy's benefit from implementation. The leadership's evaluation of the relationship determines the direction of any policy response.
+
+Let $R\in\{0,1\}$ indicate whether a revisionist power occupies the top position in the relevant trade hierarchy for a given country. Let $P\in\{0,1\}$ indicate whether that position has become publicly visible, for example, through press coverage using explicit ranking language.
+
+I assume that policymakers' attention is sparse [@gabaix2014]. This means that a change in the new power's status competes for attention with other events in the world and does not automatically produce a change in foreign policy. I call the product $q=RP\in\{0,1\}$ a political cue. It captures a situation in which the emerging power not only attains its new rank but also has that rank explicitly brought to public attention by the media or public officials. Let salience $s(q)\geq0$ satisfy $s(1)>s(0)$. In words, becoming the new number one and receiving public recognition makes the emerging power more salient to policymakers, bringing it to their attention. The function $s(q)$ represents this attention as an exogenous decision weight.
+
+### Valence
+
+Let:
+
+- $G\geq0$: the baseline perceived gains from moving closer to the new great power;
+- $D\geq0$: the baseline perceived costs of increased dependence on the emerging power;
+- $\iota\in[-1,1]$: the leadership's ideological orientation toward the emerging power, where
+
+\[
+\begin{cases}
+\iota>0 & \text{indicates a favorable view of the emerging power;}\\
+\iota=0 & \text{indicates neutrality;}\\
+\iota<0 & \text{indicates an unfavorable view of the emerging power.}
+\end{cases}
+\]
+
+The quantities $G$ and $D$ are evaluated on a common utility scale before ideological weighting. Ideology affects how much importance the leadership assigns to each component. I define the net marginal value of strengthening ties with China as
+
+\[
+\theta=(1+\iota)G-(1-\iota)D
+      =(G-D)+\iota(G+D).
+\]
+
+An ideologically neutral leadership, $\iota=0$, evaluates the relationship according to $G-D$. A favorable orientation increases the weight on gains and reduces the weight on dependence costs; an unfavorable orientation does the reverse. Both weights are nonnegative and sum to two. At the endpoints, $\iota=1$ places zero weight on dependence costs and $\iota=-1$ places zero weight on gains. Thus ideology operates through the evaluation of the relationship: if $G=D=0$, then $\theta=0$ for every ideological orientation.
+
+Positive $\theta$ makes movement toward China attractive before adjustment costs; negative $\theta$ favors hedging or distancing. When $G+D>0$, the evaluation equals zero at $\iota_0=(D-G)/(G+D)$. For example, with $G=2$ and $D=5$, an orientation of $\iota=0.5$ yields $\theta=0.5$, whereas $\iota=-0.5$ yields $\theta=-6.5$. Whether either evaluation produces an actual policy change also depends on the costs and implementation conditions specified below. The comparison between $q=0$ and $q=1$ holds $G$, $D$, and $\iota$ fixed.
+
+### Players, actions, and information
+
+There are two players:
+
+1. The political leadership, $L$, chooses a policy directive $d\in\mathbb{R}$, measured as a normalized adjustment relative to the existing policy. Positive values indicate movement toward China; negative values indicate hedging or distancing. A directive of $d=0$ preserves the existing policy.
+
+2. The diplomatic bureaucracy, $B$, observes the directive and chooses $e\in\{0,1\}$, where $e=1$ means implementation.
+
+The realized policy is
+
+\[
+y=ed.
+\]
+
+The baseline model assumes complete information: $q$, $G$, $D$, $\iota$, the salience and implementation-benefit functions, and the costs are common knowledge.
+
+### Timing and payoffs
+
+The game proceeds in the following order:
+
+1. The leadership chooses the directive $d$.
+
+2. The bureaucracy observes $d$ and chooses $e$.
+
+3. The policy $y=ed$ is realized, and payoffs are received.
+
+The leadership values policy changes that move the relationship in its preferred direction, but must weigh that return against the costs of departure from existing policy. Its payoff, normalized to zero when it issues no directive, is
+
+\[
+u_L(d,e;q)
+=
+e\left[s(q)\theta d-\frac{d^2}{2}\right]
+-c_L|d|,
+\tag{1}
+\]
+
+The term $s(q)\theta d$ captures the perceived return from the direction and extent of an implemented adjustment. For positive salience, movement toward China yields a positive return when $\theta>0$; when $\theta<0$, a negative directive yields a positive return by moving away from a relationship the leadership evaluates unfavorably. Salience determines the weight this evaluation receives in the policy decision. A public cue can therefore increase the incentive to act in either direction while leaving the underlying evaluation $\theta$ unchanged.
+
+The quadratic term $d^2/2$ captures the increasing marginal cost of larger implemented departures from existing policy, such as the disruption involved in revising established commitments. Its curvature is normalized to one for simplicity. This term limits the preferred extent of adjustment even when the leadership strongly favors a particular direction. The factor $e$ multiplies both this cost and the directional return because they arise only when the bureaucracy carries out the directive.
+
+By contrast, $c_L|d|$, with $c_L>0$, captures the political effort and reputational exposure involved in formulating and defending a directive, whether or not it is implemented. For example, proposing a change in diplomatic voting instructions requires articulating and defending the new position even if the bureaucracy subsequently leaves voting practice unchanged. This cost rises with the size of the proposed departure and applies to both directions. Conditional on implementation, it creates a region of inaction: the leadership issues a nonzero directive only when the initial marginal return $s(q)|\theta|$ exceeds $c_L$.
+
+The bureaucracy's payoff, with $c_B>0$, is
+
+\[
+u_B(e,d;q)
+=
+e\,\mathbf{1}\{d\neq0\}\,[K(q)-c_B],
+\tag{2}
+\]
+
+The bureaucracy derives no utility from moving closer to China or to the United States, $K(q)$ represents the benefits of implementing a given policy, and $c_B$ the costs. When deriving the equilibrium, I also assume that $K(1)>K(0)$, which means that implementing a public policy generates higher benefits than a policy without a public cue.
+
+### Equilibrium
+
+The solution concept is subgame-perfect equilibrium, obtained by backward induction.
+
+\begin{lemma}[Bureaucratic response]
+For any directive $d\neq0$, the bureaucracy implements if and only if $K(q)>c_B$. In the event of equality, the conservative tie-breaking rule $e=0$ applies.
+\end{lemma}
+
+\textit{Proof.} If $d\neq0$, implementation yields $K(q)-c_B$, whereas non-implementation yields zero. Comparing the two directly gives the condition. If $d=0$, there is no policy to implement, and $e=0$ is adopted. $\square$
+
+\begin{proposition}[Equilibrium with a directionally neutral cue]
+The policy outcome in the subgame-perfect equilibrium is
+
+\[
+y^*(q)=
+\mathbf{1}\{K(q)>c_B\}
+\operatorname{sign}(\theta)
+\pospart{s(q)|\theta|-c_L}.
+\tag{3}
+\]
+
+where $\pospart{x}=\max\{x,0\}$. The leadership chooses $d^*(q)=y^*(q)$, anticipating the bureaucratic response specified in Lemma 1.
+
+In particular, the cue can change whether a response occurs and how strong it is, but it does not determine its sign.
+\end{proposition}
+
+\textit{Proof.} If $K(q)\leq c_B$, the bureaucracy does not implement nonzero directives. Since the leadership pays $c_L|d|$ even for a directive that is not implemented, its optimal choice is $d=0$, and therefore $y=0$.
+
+\begin{minipage}{\linewidth}
+If $K(q)>c_B$, every nonzero directive is implemented. The leadership solves
+
+\[
+\max_d\left\{s(q)\theta d-\frac{d^2}{2}-c_L|d|\right\}.
+\]
+\end{minipage}
+
+For $d>0$, the first-order condition is $d=s(q)\theta-c_L$; this solution is positive only when $s(q)\theta>c_L$. For $d<0$, the condition is $d=s(q)\theta+c_L$; it is negative only when $s(q)\theta<-c_L$. In all other cases, the subgradient condition is satisfied at $d=0$. Combining the three regions yields (3). $\square$
+
+To complete the earlier example, take $G=2$, $D=5$, and $\iota=0.5$, so $\theta=0.5$. Let $s(0)=0.5$, $s(1)=1$, $c_L=0.4$, $K(0)=2$, $K(1)=3$, and $c_B=1$. These are hypothetical normalized values without empirical calibration. The bureaucracy would implement a nonzero directive in either state. Before the cue, $s(0)|\theta|=0.25\leq0.4$, so $y^*(0)=0$; after the cue, $s(1)|\theta|=0.5>0.4$, so $y^*(1)=0.5-0.4=0.1$.
+
+#### Immediate implications
+
+\begin{corollary}[The cue has no intrinsic valence]
+Whenever $y^*(q)\neq0$,
+
+\[
+\operatorname{sign}\bigl(y^*(q)\bigr)=\operatorname{sign}(\theta).
+\]
+
+A nonzero response moves toward China when $\theta>0$ and away from China when $\theta<0$; the latter may represent hedging or distancing.
+\end{corollary}
+
+\begin{corollary}[Activation through attention or implementation incentives]
+The cue activates a previously absent response when both post-cue conditions hold,
+
+\[
+K(1)>c_B
+\quad\text{and}\quad
+s(1)|\theta|>c_L,
+\]
+
+and at least one of them failed to hold before the cue:
+
+\[
+K(0)\leq c_B
+\quad\text{or}\quad
+s(0)|\theta|\leq c_L.
+\]
+\end{corollary}
+
+\begin{corollary}[Benchmark with unchanged attention and implementation benefits]
+For this comparison, relax the strict assumptions $s(1)>s(0)$ and $K(1)>K(0)$ by setting $s(1)=s(0)$ and $K(1)=K(0)$. When the public label changes neither attention nor implementation benefits, the equilibrium policy remains unchanged.
+\end{corollary}
+
+The general result therefore concerns magnitude:
+
+\[
+|y^*(1)|\geq|y^*(0)|
+\]
+
+when the cue weakly increases $s$ and $K$. The direction depends on $\theta$.
+
+### Extensions
+
+#### Issue-specific costs
+
+To capture selective adjustment, let $c_L=c_{Lk}$ and $\theta_k=(1+\iota)G_k-(1-\iota)D_k$ for each issue $k$, where $G_k$ and $D_k$ are the baseline gains and dependence costs relevant to that issue. Conditional on implementation being available both before and after the cue, the attention channel activates a previously absent response on issues satisfying
+
+\[
+s(0)|\theta_k|\leq c_{Lk}<s(1)|\theta_k|.
+\]
+
+Issues with an already active response can also adjust further as salience increases; issues whose costs remain above the post-cue threshold remain unchanged. If the cue instead makes implementation available for the first time, the activation conditions in Corollary 2 apply issue by issue. The composition of the response depends on the distribution of valuations and costs and does not follow automatically from an issue being classified as human rights or belonging to any other substantive area.
+
+#### Persistence and incumbent prominence
+
+Let $\rho$ denote the expected persistence of the new hierarchy and $h$ the prominence of the displaced partner. A simple extension allows
+
+\[
+\frac{\partial s(1;\rho,h)}{\partial\rho}>0,
+\qquad
+\frac{\partial s(1;\rho,h)}{\partial h}>0,
+\]
+
+with analogous relationships for $K$. A persistent ranking provides a more stable basis for adaptation; displacing a prominent incumbent makes the reclassification more visible. Neither condition determines the valence of $\theta$. Holding the leadership's evaluation and both players' costs fixed, increases in persistence or incumbent prominence that raise salience and implementation benefits weakly increase the absolute value of the post-cue policy response, subject to the same thresholds.
 
 ## Interpretation
 
