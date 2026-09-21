@@ -2,7 +2,7 @@
 
 Data: 21 de setembro de 2026.
 
-O trabalho começou com a tradução fiel do texto colado pelo autor. A versão atual incorpora a alteração posteriormente autorizada para ponderação ideológica de ganhos e custos e a ampliação da interpretação do payoff da liderança, conforme registrado abaixo. A nota longa preexistente `toy_model_status_cue.Rmd` não foi usada para substituir escolhas da versão reduzida. O manuscrito `paper_v4.Rmd` não foi editado por esta tarefa.
+O trabalho começou com a tradução fiel do texto colado pelo autor. A versão atual incorpora a alteração posteriormente autorizada para ponderação ideológica de ganhos e custos, a ampliação da interpretação do payoff da liderança e o parágrafo fornecido pelo autor para interpretar o payoff da burocracia, conforme registrado abaixo. A nota longa preexistente `toy_model_status_cue.Rmd` não foi usada para substituir escolhas da versão reduzida. O manuscrito `paper_v4.Rmd` não foi editado por esta tarefa.
 
 ## Arquivos
 
@@ -63,8 +63,14 @@ Estes pontos foram inicialmente preservados por fidelidade à tradução e agora
 
 As propostas de corte na seção “Avaliação inicial de inserção e cortes” não foram aplicadas ao paper. A revisão autorizada foi implementada somente no arquivo reduzido em inglês e em seus derivados; o texto original colado pelo autor permanece preservado byte a byte.
 
-## Verificação da entrega revisada
+## Verificação da revisão de ideologia e payoff da liderança
 
-A fonte final tem SHA-256 `d77cb16fb3019bd4f0d2159fdc47583f37b129a8732e952c9ca80daa545ed8e3`. A auditoria analítica conferiu a solução por indução retroativa, as condições de ativação, a monotonicidade, os casos de fronteira e o exemplo numérico. As conferências incrementais registram a resolução dos dois achados de prosa e a preservação do conteúdo matemático no ajuste final de composição.
+A fonte ao final dessa revisão tinha SHA-256 `d77cb16fb3019bd4f0d2159fdc47583f37b129a8732e952c9ca80daa545ed8e3`. A auditoria analítica conferiu a solução por indução retroativa, as condições de ativação, a monotonicidade, os casos de fronteira e o exemplo numérico. As conferências incrementais registram a resolução dos dois achados de prosa e a preservação do conteúdo matemático no ajuste final de composição.
 
 O PDF final foi compilado com sucesso e suas cinco páginas foram inspecionadas visualmente, incluindo equações, referência e continuidade das provas. A fonte contém um lema, uma proposição e três corolários. A checagem do diff não apontou problemas de espaços em branco. A verificação foi analítica, textual e de apresentação; não foram executadas estimações, simulações ou etapas de `targets`.
+
+## Substituição autorizada: interpretação do payoff da burocracia
+
+O autor forneceu a redação substituta para o trecho após a equação (2), definindo `K(q)` como os benefícios de implementar uma política e `c_B` como os custos, e interpretando a hipótese `K(1)>K(0)`. O parágrafo foi inserido integralmente, com os delimitadores matemáticos adaptados ao R Markdown. A condição preexistente `c_B>0` foi deslocada para a frase que apresenta o payoff, preservando o domínio do parâmetro.
+
+A fonte desta edição tem SHA-256 `d168a0442f2d0dd9fe06aeea1795997b06559e2d79115e9f77b637888f10bccf`. A comparação mecânica com a versão anterior confirmou somente a substituição solicitada e o deslocamento da condição de positividade. Payoffs, estratégias, enunciados e provas foram preservados. O PDF foi recompilado e suas cinco páginas foram inspecionadas visualmente; o novo parágrafo aparece integralmente na página 3. A auditoria independente anterior continua vinculada ao hash daquela revisão; esta edição recebeu conferência textual, compilação e verificação visual, sem nova auditoria analítica ou execução empírica.

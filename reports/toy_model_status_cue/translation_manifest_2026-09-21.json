@@ -1,13 +1,13 @@
 {
   "date": "2026-09-21",
-  "scope": "Author-approved revision of the shortened English model: ideology weights perceived gains and dependence costs; expanded leadership utility motivation and interpretation. Includes the previously requested Gabaix (2014) citation. Standalone model and derivatives only; no manuscript integration or empirical re-estimation.",
+  "scope": "Author-approved revision of the shortened English model: ideology weights perceived gains and dependence costs; expanded leadership utility motivation and interpretation. Includes the previously requested Gabaix (2014) citation. Standalone model and derivatives only; no manuscript integration or empirical re-estimation. Subsequent author-supplied replacement of the bureaucracy payoff interpretation, with the existing positive cost assumption preserved.",
   "pdf_pages": 5,
   "verification": [
-    "Independent analytical review of backward induction, activation conditions, monotonicity, parameter boundaries and illustrative arithmetic",
-    "Two confirmed minor prose findings corrected; independently verified on the revised source",
-    "Final layout-only change independently verified against the reviewed source",
-    "Successful standalone R Markdown and XeLaTeX rendering",
-    "Visual inspection of all five pages of the final PDF",
+    "Earlier independent analytical review and incremental verifications remain bound to the source hashes recorded under revision",
+    "Exact author-supplied bureaucracy paragraph inserted; existing c_B>0 condition moved to the payoff introduction",
+    "Mechanical comparison with the preceding source confirms no other model changes",
+    "Successful standalone R Markdown and XeLaTeX rendering of the current source",
+    "Visual inspection of all five pages of the current PDF; replacement paragraph complete on page 3",
     "Original author attachment preserved byte for byte",
     "One lemma, one proposition and three corollaries retained",
     "UTF-8 and git diff whitespace checks"
@@ -20,18 +20,18 @@
     },
     {
       "path": "reports/toy_model_status_cue/toy_model_status_cue_short_en.Rmd",
-      "bytes": 11273,
-      "sha256": "d77cb16fb3019bd4f0d2159fdc47583f37b129a8732e952c9ca80daa545ed8e3"
+      "bytes": 11237,
+      "sha256": "d168a0442f2d0dd9fe06aeea1795997b06559e2d79115e9f77b637888f10bccf"
     },
     {
       "path": "output/pdf/toy_model_status_cue_short_en.tex",
-      "bytes": 15721,
-      "sha256": "f9244dd5e057c186cf2a0920167ed18b21ea25e52b6046d329d478ecbaaf05e4"
+      "bytes": 15689,
+      "sha256": "a861ae85d2948402660cc7c1a0165b55d512f3edf922eeeb063934995e5a1ad7"
     },
     {
       "path": "output/pdf/toy_model_status_cue_short_en.pdf",
-      "bytes": 50323,
-      "sha256": "cd65bda840e2965a672d5d3ff16edc35abf12ffafd5c41dad00df6aeeb50c1bb"
+      "bytes": 50219,
+      "sha256": "d0b6bd4f3d00339664fa20c8969b694175951c64ba96288659b83104653a01ec"
     },
     {
       "path": "scripts/render_toy_model_status_cue_short_en.sh",
@@ -40,8 +40,8 @@
     },
     {
       "path": "reports/toy_model_status_cue/translation_notes_2026-09-21.md",
-      "bytes": 9846,
-      "sha256": "9b8401e8b71e273f9cd46075c9436776cbfcc331a8934b6c6b617653cc59bf5c"
+      "bytes": 11126,
+      "sha256": "9529da662b4298c58dc64b4794546da44356366c33e5e56e2a8d548b49ea5d9d"
     },
     {
       "path": "synth-trade-china.bib",
@@ -115,6 +115,15 @@
       "F002: positive directional return requires positive salience"
     ],
     "validation_scope": "Analytical, textual and visual; no empirical validation, simulations or targets execution.",
-    "citation_update_note": "The citation_update object records the earlier four-page translation stage; the current revised PDF has five pages."
+    "citation_update_note": "The citation_update object records the earlier four-page translation stage; the current revised PDF has five pages.",
+    "record_scope": "Historical record of the ideology and leadership payoff revision, before the later author-supplied bureaucracy paragraph."
+  },
+  "bureaucracy_prose_update": {
+    "date": "2026-09-21",
+    "previous_source_sha256": "d77cb16fb3019bd4f0d2159fdc47583f37b129a8732e952c9ca80daa545ed8e3",
+    "final_source_sha256": "d168a0442f2d0dd9fe06aeea1795997b06559e2d79115e9f77b637888f10bccf",
+    "change": "Replace the prose following equation (2) with the exact author-supplied paragraph; relocate the existing c_B>0 condition to the payoff introduction.",
+    "pdf_pages": 5,
+    "validation_scope": "Mechanical source comparison, PDF text extraction, successful compilation and visual inspection. No new independent analytical review, empirical analysis, simulations or targets execution."
   }
 }
