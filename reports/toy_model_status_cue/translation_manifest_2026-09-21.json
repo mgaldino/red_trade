@@ -1,13 +1,16 @@
 {
   "date": "2026-09-21",
-  "scope": "Faithful English translation of the author-supplied shortened model, including the requested Gabaix (2014) citation; separate preliminary insertion assessment. No manuscript edits or mathematical audit.",
-  "pdf_pages": 4,
+  "scope": "Author-approved revision of the shortened English model: ideology weights perceived gains and dependence costs; expanded leadership utility motivation and interpretation. Includes the previously requested Gabaix (2014) citation. Standalone model and derivatives only; no manuscript integration or empirical re-estimation.",
+  "pdf_pages": 5,
   "verification": [
-    "Independent full textual fidelity check",
-    "Duplicate-block identity and result-count checks",
+    "Independent analytical review of backward induction, activation conditions, monotonicity, parameter boundaries and illustrative arithmetic",
+    "Two confirmed minor prose findings corrected; independently verified on the revised source",
+    "Final layout-only change independently verified against the reviewed source",
     "Successful standalone R Markdown and XeLaTeX rendering",
-    "Visual inspection of all four PDF pages",
-    "UTF-8 and trailing-whitespace checks"
+    "Visual inspection of all five pages of the final PDF",
+    "Original author attachment preserved byte for byte",
+    "One lemma, one proposition and three corollaries retained",
+    "UTF-8 and git diff whitespace checks"
   ],
   "files": [
     {
@@ -17,33 +20,68 @@
     },
     {
       "path": "reports/toy_model_status_cue/toy_model_status_cue_short_en.Rmd",
-      "bytes": 7508,
-      "sha256": "4477e3fabfbb45393d0ce9b9cc0ba1e591ed0a1c399a85622706f8ae6804ab9a"
+      "bytes": 11273,
+      "sha256": "d77cb16fb3019bd4f0d2159fdc47583f37b129a8732e952c9ca80daa545ed8e3"
     },
     {
       "path": "output/pdf/toy_model_status_cue_short_en.tex",
-      "bytes": 11873,
-      "sha256": "4ef10dd4debfbdff76732508f9347b08dbf695076acff756ae60e046d08e8653"
+      "bytes": 15721,
+      "sha256": "f9244dd5e057c186cf2a0920167ed18b21ea25e52b6046d329d478ecbaaf05e4"
     },
     {
       "path": "output/pdf/toy_model_status_cue_short_en.pdf",
-      "bytes": 45327,
-      "sha256": "059e2c5f9ea4a4cc593a3636bf570aa545d446bbed04c6a5c702648d6c4dfc51"
+      "bytes": 50323,
+      "sha256": "cd65bda840e2965a672d5d3ff16edc35abf12ffafd5c41dad00df6aeeb50c1bb"
     },
     {
       "path": "scripts/render_toy_model_status_cue_short_en.sh",
-      "bytes": 488,
-      "sha256": "cfd19d3c469b25020cbef4fade666f0319bbd6c2362f316b653f12a7dcf17481"
+      "bytes": 482,
+      "sha256": "ef83a0f082cecea9859917414ac52020fde6e07d50f086ae899e2fbecda6445b"
     },
     {
       "path": "reports/toy_model_status_cue/translation_notes_2026-09-21.md",
-      "bytes": 6896,
-      "sha256": "44413143d7e6baae3ba81afa796e0659e5d2ae7aec46d9d999ad10eea683e174"
+      "bytes": 9846,
+      "sha256": "9b8401e8b71e273f9cd46075c9436776cbfcc331a8934b6c6b617653cc59bf5c"
     },
     {
       "path": "synth-trade-china.bib",
       "bytes": 89927,
       "sha256": "799303d21427bce352f53fbe688099ac83d47ad8c69c73d41fd5c6c47f129ab4"
+    },
+    {
+      "path": "quality_reports/2026-09-21_game-theory-audit_status_cue_ideology.md",
+      "bytes": 14130,
+      "sha256": "1e8eccd2fd6b7c4af197cab4ba2e28919bad8628837e1d5c8e732f4815ffa2e2"
+    },
+    {
+      "path": "quality_reports/adjudication/status_cue_ideology/dd552c49a82f/source_reviewed.Rmd",
+      "bytes": 11208,
+      "sha256": "dd552c49a82f6163e5a0b4a091b2061fe8e01c6c02811604bd4b13b37001241d"
+    },
+    {
+      "path": "quality_reports/adjudication/status_cue_ideology/dd552c49a82f/adjudication_round1.json",
+      "bytes": 4387,
+      "sha256": "52ba4893616b87debfb86fa749da11b9cd3f483c0ac77fcb188cb5c897a6b0f3"
+    },
+    {
+      "path": "quality_reports/adjudication/status_cue_ideology/dd552c49a82f/adjudication_round1.md",
+      "bytes": 4444,
+      "sha256": "90ec28e74ad88deb5cd4944fd1f7af6340d48eae89a164305db3b7543a169ebe"
+    },
+    {
+      "path": "quality_reports/adjudication/status_cue_ideology/529e34017ac5/source_reviewed.Rmd",
+      "bytes": 11261,
+      "sha256": "529e34017ac51079f5749fb5be227ee959cc534942bc10f66d9c1100377bd9d3"
+    },
+    {
+      "path": "quality_reports/adjudication/status_cue_ideology/529e34017ac5/final_verification.md",
+      "bytes": 2574,
+      "sha256": "3542d04f0cf3bc2297a475845ea993afdec285f0611343e9cd414ba83177443e"
+    },
+    {
+      "path": "quality_reports/adjudication/status_cue_ideology/d77cb16fb301/final_verification.md",
+      "bytes": 1438,
+      "sha256": "36b2f1890249715973c233c9d07ab15fe57f19771a1474f011820546dd53e27f"
     }
   ],
   "citation_update": {
@@ -59,5 +97,24 @@
       "Rendered author-year citation and full reference present",
       "All four revised PDF pages visually inspected"
     ]
+  },
+  "revision": {
+    "date": "2026-09-21",
+    "theta": "(1+iota)*G-(1-iota)*D",
+    "iota_domain": "[-1,1]",
+    "final_source_sha256": "d77cb16fb3019bd4f0d2159fdc47583f37b129a8732e952c9ca80daa545ed8e3",
+    "initial_reviewed_source_sha256": "dd552c49a82f6163e5a0b4a091b2061fe8e01c6c02811604bd4b13b37001241d",
+    "independent_review": "quality_reports/2026-09-21_game-theory-audit_status_cue_ideology.md",
+    "adjudication": "quality_reports/adjudication/status_cue_ideology/dd552c49a82f/adjudication_round1.json",
+    "incremental_verifications": [
+      "quality_reports/adjudication/status_cue_ideology/529e34017ac5/final_verification.md",
+      "quality_reports/adjudication/status_cue_ideology/d77cb16fb301/final_verification.md"
+    ],
+    "resolved_findings": [
+      "F001: evaluation equals zero at the ideological root, including boundary roots",
+      "F002: positive directional return requires positive salience"
+    ],
+    "validation_scope": "Analytical, textual and visual; no empirical validation, simulations or targets execution.",
+    "citation_update_note": "The citation_update object records the earlier four-page translation stage; the current revised PDF has five pages."
   }
 }
