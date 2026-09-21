@@ -169,13 +169,7 @@ The next section develops the status-threshold argument and derives observable i
 
 # Theory and Hypotheses
 
-A trade-based status shift differs from smooth growth in economic interdependence because it changes the category through which a foreign power is understood. Although actors can observe trade shares, political attention rarely follows continuous movements one percentage point at a time and it organizes around coarse public labels such as main trade partner. They simplify complex economic relationships and help journalists, politicians, organized interests, and diplomats coordinate attention [@bordalo_etal2022; @conlon2023; @enke2024; @graeber_etal2025]. It works as a focal point [@schelling1960].
-
-The cue should matter most when the new status also displaces a politically prominent incumbent. If a rising major power overtakes a minor partner, the event may remain a commercial fact with limited political resonance. If it overtakes the hegemonic incumbent, the same threshold takes on broader political meaning. It can be read as a visible loss of standing for the incumbent and as a public marker of the challenger's rise. Brazil falls squarely inside this high-salience condition: China became Brazil's largest export destination in 2009, displaced the United States, and contemporary coverage frequently described the event in broader top-partner language.
-
-This attribution of symbolic status between two countries is a standard movement in foreign policy. Leaders in Canada refers to themselves as middle powers [@chapnick1999]. Churchil famously called the US-UK relationship a special one [@reynolds1985]. Mitterrand used "couple franco-allemand" to promote the Europe Union [@krotz_schild2013]. My argument is that trade status works in a similar fashion. The number-one threshold matters because it can reclassify a rising power from one important commercial partner among several into the country's central economic partner.
-
-In order to discipline the theoretchial discussion, I present a simple formal model that capture the basis ideas for the mechanism and theory advance in the present work.
+To explain the proposed mechanism and hypothesis, I present a simple formal model of sparse attention of policymakers [@gabaix2014]. I use sparsity to induce a symbolic cue effect that works as a public cue for foreign policy change.
 
 ## A simple model of public status cues
 
@@ -373,18 +367,21 @@ with analogous relationships for $K$. A persistent ranking provides a more stabl
 
 ## Interpretation
 
+A trade-based status shift differs from smooth growth in economic interdependence because it changes the category through which a foreign power is understood. Although actors can observe trade shares, political attention rarely follows continuous movements one percentage point at a time and it organizes around coarse public labels such as main trade partner. They simplify complex economic relationships and help journalists, politicians, organized interests, and diplomats coordinate attention [@bordalo_etal2022; @conlon2023; @enke2024; @graeber_etal2025], and works as a focal point [@schelling1960].
+
+
+
+This attribution of symbolic status between two countries is a standard movement in foreign policy. Leaders in Canada refers to themselves as middle powers [@chapnick1999]. Churchil famously called the US-UK relationship a special one [@reynolds1985]. Mitterrand used "couple franco-allemand" to promote the Europe Union [@krotz_schild2013]. My argument is that trade status works in a similar fashion. The number-one threshold matters because it can reclassify a rising power from one important commercial partner among several into the country's central economic partner.
+
 As the model makes clear, approximation to the revisionist power depends on its valence by the political leadership. A number-one status may create anxiety among political elites and prompt a decision to move further away from China instead of the expected approximation because the perceived costs increase more than the benefits. It all depends on the value of $\iota$ in the model, which measures policymakers' favorability toward a foreign policy closer to China. In the paper, for the case of Brazil, with a leftist government fond of all south-south cooperation, that is not a problem. For other countries, the paper's assumption that they will view China favorably is plausible (though not certain) until the mid-2010s, when the US-China rivalry wasn't as intense as it became by the end of the decade. It makes clear assumptions baked into the statistical model and not directly observed or conditioned upon.
 
 The mechanism has two steps. Firstly, the status cue should increase attention. Media coverage should make the challenger and the bilateral trade relationship more visible after the threshold is crossed.
 
 Secondly, the cue should affect policy through justification. Once that power is publicly understood as a central economic partner, executives and diplomats can frame limited movement toward it as pragmatic recognition of the country's economic hierarchy rather than as ideological concession or opportunistic bandwagoning.
 
-
-
-The status change is a step function. However,the actual foreign policy change can be gradual because UNGA positions are embedded in prior votes, bureaucratic routines, coalition commitments, and reputational constraints. 
-
 The justification mechanism also implies a durability condition. The rank reversal is not expected to reshape foreign policy through a single decision at the moment China becomes number one. Rather, it creates a public category that officials can invoke repeatedly across a sequence of selective adjustments. When China remains the largest export destination, presidents, ministers, diplomats, and organized interests can treat its centrality as a stable fact of the national economic hierarchy and use it to justify incremental diplomatic movement. A one-year China-top episode may attract attention, but it is a weaker treatment regime: it does not provide a durable basis for repeated public justification, bureaucratic recalibration, or cumulative foreign-policy adaptation.
 
+The cue should matter most when the new status also displaces a politically prominent incumbent. If a rising major power overtakes a minor partner, the event may remain a commercial fact with limited political resonance. If it overtakes the hegemonic incumbent, the same threshold takes on broader political meaning. It can be read as a visible loss of standing for the incumbent and as a public marker of the challenger's rise. Brazil falls squarely inside this high-salience condition: China became Brazil's largest export destination in 2009, displaced the United States, and contemporary coverage frequently described the event in broader top-partner language.
 ## From Attention to Selective Diplomatic Alignment
 
 Trade-based status changes the terms on which selective accommodation can be justified. Some foreign-policy arenas are especially suitable for this kind of adjustment: they are visible to foreign governments and diplomatic audiences, materially less costly than treaties or trade policy, and still capable of generating reputational exposure. In such arenas, governments can signal movement toward a newly central partner while preserving flexibility.
