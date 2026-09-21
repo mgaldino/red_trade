@@ -25,6 +25,8 @@ header-includes:
   - \newcommand{\pospart}[1]{\left[#1\right]_{+}}
 ---
 
+I model how political leadership chooses a policy directive and a diplomatic bureaucracy decides whether to implement it following a publicized change at the top of a country's trade ranking. Public recognition raises attention to the relationship and the bureaucracy's benefit from implementation. The leadership's evaluation of the relationship determines the direction of any policy response.
+
 Let $R\in\{0,1\}$ indicate whether a revisionist power occupies the top position in the relevant trade hierarchy for a given country. Let $P\in\{0,1\}$ indicate whether that position has become publicly visible, for example, through press coverage using explicit ranking language.
 
 I assume that policymakers' attention is sparse [@gabaix2014]. This means that a change in the new power's status competes for attention with other events in the world and does not automatically produce a change in foreign policy. I call the product $q=RP\in\{0,1\}$ a political cue. It captures a situation in which the emerging power not only attains its new rank but also has that rank explicitly brought to public attention by the media or public officials. Let salience $s(q)\geq0$ satisfy $s(1)>s(0)$. In words, becoming the new number one and receiving public recognition makes the emerging power more salient to policymakers, bringing it to their attention. The function $s(q)$ represents this attention as an exogenous decision weight.
@@ -69,7 +71,7 @@ The realized policy is
 y=ed.
 \]
 
-The baseline model assumes complete information: $q$, $G$, $D$, $\iota$, the salience and priority functions, and the costs are common knowledge.
+The baseline model assumes complete information: $q$, $G$, $D$, $\iota$, the salience and implementation-benefit functions, and the costs are common knowledge.
 
 # Timing and payoffs
 
@@ -144,6 +146,8 @@ If $K(q)>c_B$, every nonzero directive is implemented. The leadership solves
 
 For $d>0$, the first-order condition is $d=s(q)\theta-c_L$; this solution is positive only when $s(q)\theta>c_L$. For $d<0$, the condition is $d=s(q)\theta+c_L$; it is negative only when $s(q)\theta<-c_L$. In all other cases, the subgradient condition is satisfied at $d=0$. Combining the three regions yields (3). $\square$
 
+To complete the earlier example, take $G=2$, $D=5$, and $\iota=0.5$, so $\theta=0.5$. Let $s(0)=0.5$, $s(1)=1$, $c_L=0.4$, $K(0)=2$, $K(1)=3$, and $c_B=1$. These are hypothetical normalized values without empirical calibration. The bureaucracy would implement a nonzero directive in either state. Before the cue, $s(0)|\theta|=0.25\leq0.4$, so $y^*(0)=0$; after the cue, $s(1)|\theta|=0.5>0.4$, so $y^*(1)=0.5-0.4=0.1$.
+
 ## Immediate implications
 
 \begin{corollary}[The cue has no intrinsic valence]
@@ -153,10 +157,10 @@ Whenever $y^*(q)\neq0$,
 \operatorname{sign}\bigl(y^*(q)\bigr)=\operatorname{sign}(\theta).
 \]
 
-Thus, $\theta>0$ produces accommodation, whereas $\theta<0$ produces hedging.
+A nonzero response moves toward China when $\theta>0$ and away from China when $\theta<0$; the latter may represent hedging or distancing.
 \end{corollary}
 
-\begin{corollary}[Activation through attention or coordination]
+\begin{corollary}[Activation through attention or implementation incentives]
 The cue activates a previously absent response when both post-cue conditions hold,
 
 \[
@@ -174,8 +178,8 @@ s(0)|\theta|\leq c_L.
 \]
 \end{corollary}
 
-\begin{corollary}[Benchmark with unchanged information and coordination]
-If $s(1)=s(0)$ and $K(1)=K(0)$, the cue does not change the equilibrium policy. This is the benchmark in which the public label changes neither attention nor the capacity for coordination.
+\begin{corollary}[Benchmark with unchanged attention and implementation benefits]
+For this comparison, relax the strict assumptions $s(1)>s(0)$ and $K(1)>K(0)$ by setting $s(1)=s(0)$ and $K(1)=K(0)$. When the public label changes neither attention nor implementation benefits, the equilibrium policy remains unchanged.
 \end{corollary}
 
 The general result therefore concerns magnitude:
@@ -208,6 +212,6 @@ Let $\rho$ denote the expected persistence of the new hierarchy and $h$ the prom
 \frac{\partial s(1;\rho,h)}{\partial h}>0,
 \]
 
-with analogous relationships for $K$. A persistent ranking provides a more stable basis for adaptation; displacing a prominent incumbent makes the reclassification more visible. Neither condition determines the valence of $\theta$.
+with analogous relationships for $K$. A persistent ranking provides a more stable basis for adaptation; displacing a prominent incumbent makes the reclassification more visible. Neither condition determines the valence of $\theta$. Holding the leadership's evaluation and both players' costs fixed, increases in persistence or incumbent prominence that raise salience and implementation benefits weakly increase the absolute value of the post-cue policy response, subject to the same thresholds.
 
 # References {-}
