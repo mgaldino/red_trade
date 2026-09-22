@@ -1,0 +1,50 @@
+{
+  "https://www.alriyadh.com": {
+    "url": "https://www.alriyadh.com/robots.txt",
+    "accessed_at": "2026-09-22T02:50:56+00:00",
+    "raw_file": "",
+    "sha256": "",
+    "fetch_status": "network_error",
+    "error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))"
+  },
+  "https://www.spa.gov.sa": {
+    "url": "https://www.spa.gov.sa/robots.txt",
+    "accessed_at": "2026-09-22T02:50:56+00:00",
+    "raw_file": "",
+    "sha256": "",
+    "fetch_status": "network_error",
+    "error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))"
+  },
+  "https://www.arabnews.com": {
+    "url": "https://www.arabnews.com/robots.txt",
+    "accessed_at": "2026-09-22T02:50:56+00:00",
+    "raw_file": "",
+    "sha256": "",
+    "fetch_status": "network_error",
+    "error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))"
+  },
+  "https://directinfosgabon.com": {
+    "url": "https://directinfosgabon.com/robots.txt",
+    "accessed_at": "2026-09-22T02:50:56+00:00",
+    "raw_file": "",
+    "sha256": "",
+    "fetch_status": "network_error",
+    "error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))"
+  },
+  "https://www.gabonreview.com": {
+    "url": "https://www.gabonreview.com/robots.txt",
+    "accessed_at": "2026-09-22T02:50:56+00:00",
+    "raw_file": "",
+    "sha256": "",
+    "fetch_status": "network_error",
+    "error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))"
+  },
+  "https://lunion-archives.org": {
+    "url": "https://lunion-archives.org/robots.txt",
+    "accessed_at": "2026-09-22T02:50:56+00:00",
+    "raw_file": "",
+    "sha256": "",
+    "fetch_status": "network_error",
+    "error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))"
+  }
+}

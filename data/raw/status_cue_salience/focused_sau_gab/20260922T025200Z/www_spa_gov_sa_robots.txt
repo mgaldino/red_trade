@@ -1,0 +1,48 @@
+# Robots.txt for Saudi Press Agency
+# Generated at build time
+
+User-agent: *
+Allow: /
+Allow: *.css
+Allow: *.js
+Disallow: /admin
+Disallow: /private
+Disallow: /api
+Disallow: /_next
+Disallow: /404
+Disallow: /500
+Disallow: /profile
+Disallow: /settings
+Disallow: /login
+Disallow: /notifications
+
+# Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# AI/LLM Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Host
+Host: https://www.spa.gov.sa
+
+# Main Sitemap Index
+Sitemap: https://www.spa.gov.sa/sitemap.xml
+
+# Language-Specific Sitemaps 
+Sitemap: https://www.spa.gov.sa/ar/sitemap.xml
+Sitemap: https://www.spa.gov.sa/en/sitemap.xml
+Sitemap: https://www.spa.gov.sa/fa/sitemap.xml
+Sitemap: https://www.spa.gov.sa/fr/sitemap.xml
+Sitemap: https://www.spa.gov.sa/ru/sitemap.xml
+Sitemap: https://www.spa.gov.sa/zh/sitemap.xml
