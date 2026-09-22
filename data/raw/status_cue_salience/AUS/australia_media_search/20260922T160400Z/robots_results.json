@@ -1,0 +1,31 @@
+{
+  "https://www.abc.net.au": {
+    "url": "https://www.abc.net.au/robots.txt",
+    "accessed_at": "2026-09-22T16:04:16+00:00",
+    "raw_file": "data/raw/status_cue_salience/AUS/australia_media_search/20260922T160400Z/www_abc_net_au_robots.txt",
+    "sha256": "751e4ba61018eed5ae3379dc5d244909782b50b21b03a9b307dd746670b7c573",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "final_url": "https://www.abc.net.au/robots.txt",
+    "fetch_status": "ok",
+    "size_bytes": 2311
+  },
+  "https://www.rba.gov.au": {
+    "url": "https://www.rba.gov.au/robots.txt",
+    "accessed_at": "2026-09-22T16:04:16+00:00",
+    "raw_file": "data/raw/status_cue_salience/AUS/australia_media_search/20260922T160400Z/www_rba_gov_au_robots.txt",
+    "sha256": "6099f8a7a7fc4a511bf60657a2bb8ecd3aa77a4932904fcd6bf44c59bb8feca3",
+    "fetch_status": "http_error",
+    "status_code": 403,
+    "error": "HTTP Error 403: Forbidden",
+    "size_bytes": 382
+  },
+  "https://www.dfat.gov.au": {
+    "url": "https://www.dfat.gov.au/robots.txt",
+    "accessed_at": "2026-09-22T16:04:16+00:00",
+    "raw_file": "",
+    "sha256": "",
+    "fetch_status": "network_error",
+    "error": "TimeoutError('The read operation timed out')"
+  }
+}

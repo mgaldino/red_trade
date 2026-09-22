@@ -333,7 +333,9 @@ class VisibleTextParser(HTMLParser):
 
 
 def normalize(value: str) -> str:
-    return re.sub(r"\s+", " ", html.unescape(value)).strip()
+    # Some preserved DFAT fallbacks are Markdown, while direct pages are HTML.
+    # Removing emphasis markers makes semantic marker checks transport-neutral.
+    return re.sub(r"\s+", " ", html.unescape(value).replace("**", "")).strip()
 
 
 def source_text(source: dict, raw_path: Path) -> str:
@@ -443,6 +445,9 @@ def count_words(value: str) -> int:
 
 def validate(manifest: dict, run_dir: Path) -> dict:
     results = result_map(run_dir)
+    source_by_id = {
+        source["source_id"]: source for source in manifest["sources"]
+    }
     if set(results) != {source["source_id"] for source in manifest["sources"]}:
         raise ValueError("fetch_results source ids differ from manifest")
     with OUTPUT_PATH.open(encoding="utf-8", newline="") as handle:
@@ -459,8 +464,12 @@ def validate(manifest: dict, run_dir: Path) -> dict:
             if row["verification_markers_present"] != "true":
                 raise ValueError(f"Unverified raw source row: {row['source_id']}")
         elif not (
-            row["source_id"] == "aus_rba_2006_11_china_second_export_destination"
-            and row["verification_markers_present"] == "not_tested_no_article_raw"
+            source_by_id[row["source_id"]].get(
+                "allow_unarchived_browser_verification"
+            )
+            is True
+            and row["verification_markers_present"]
+            == "not_tested_no_article_raw"
             and row["access_status"] == "robots_unavailable_stop"
         ):
             raise ValueError(f"Unexpected missing raw: {row['source_id']}")

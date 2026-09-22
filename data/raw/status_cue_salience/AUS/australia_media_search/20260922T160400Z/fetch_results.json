@@ -1,0 +1,103 @@
+[
+  {
+    "url": "https://www.abc.net.au/news/2006-06-28/pm-hails-25b-china-gas-supply-deal/1788414",
+    "accessed_at": "2026-09-22T16:04:16+00:00",
+    "raw_file": "data/raw/status_cue_salience/AUS/australia_media_search/20260922T160400Z/aus_abc_news_2006_06_28_china_second_partner.html",
+    "sha256": "d3a75ff56482a287ee92347d70a6b22d4ac0c57aef96264cdf5210c9b53e5ced",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "final_url": "https://www.abc.net.au/news/2006-06-28/pm-hails-25b-china-gas-supply-deal/1788414",
+    "fetch_status": "ok",
+    "size_bytes": 326581,
+    "source_id": "aus_abc_news_2006_06_28_china_second_partner",
+    "robots_status": "allowed",
+    "robots_file": "data/raw/status_cue_salience/AUS/australia_media_search/20260922T160400Z/www_abc_net_au_robots.txt"
+  },
+  {
+    "url": "https://www.rba.gov.au/publications/smp/2006/nov/box-a.html",
+    "fetch_status": "robots_unavailable_stop",
+    "accessed_at": "2026-09-22T16:04:16+00:00",
+    "raw_file": "",
+    "sha256": "",
+    "source_id": "aus_rba_2006_11_china_second_export_destination",
+    "robots_status": "robots_unavailable_stop",
+    "robots_file": "data/raw/status_cue_salience/AUS/australia_media_search/20260922T160400Z/www_rba_gov_au_robots.txt"
+  },
+  {
+    "url": "https://www.abc.net.au/news/2007-05-04/china-overtakes-japan-in-trade-with-aust/2540062",
+    "accessed_at": "2026-09-22T16:04:16+00:00",
+    "raw_file": "data/raw/status_cue_salience/AUS/australia_media_search/20260922T160400Z/aus_abc_news_2007_05_04_china_overtakes_japan.html",
+    "sha256": "493bf97b16218be6dfc89b779db773a8d949eb103ce8c959809896a4395b511c",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "final_url": "https://www.abc.net.au/news/2007-05-04/china-overtakes-japan-in-trade-with-aust/2540062",
+    "fetch_status": "ok",
+    "size_bytes": 309938,
+    "source_id": "aus_abc_news_2007_05_04_china_overtakes_japan",
+    "robots_status": "allowed",
+    "robots_file": "data/raw/status_cue_salience/AUS/australia_media_search/20260922T160400Z/www_abc_net_au_robots.txt"
+  },
+  {
+    "url": "https://www.abc.net.au/news/2007-09-01/china-unseats-japan-as-australias-largest-trade/656322",
+    "accessed_at": "2026-09-22T16:04:16+00:00",
+    "raw_file": "data/raw/status_cue_salience/AUS/australia_media_search/20260922T160400Z/aus_abc_news_2007_09_01_china_unseats_japan.html",
+    "sha256": "e8463b8dbb06e5c66fec74fbc9abd2416169cb5e97b3548a213cf18d22c85820",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "final_url": "https://www.abc.net.au/news/2007-09-01/china-unseats-japan-as-australias-largest-trade/656322",
+    "fetch_status": "ok",
+    "size_bytes": 311371,
+    "source_id": "aus_abc_news_2007_09_01_china_unseats_japan",
+    "robots_status": "allowed",
+    "robots_file": "data/raw/status_cue_salience/AUS/australia_media_search/20260922T160400Z/www_abc_net_au_robots.txt"
+  },
+  {
+    "url": "https://www.dfat.gov.au/news/media/Pages/australia-s-composition-of-trade-2007",
+    "fetch_status": "robots_unavailable_stop",
+    "accessed_at": "2026-09-22T16:04:16+00:00",
+    "raw_file": "",
+    "sha256": "",
+    "source_id": "aus_dfat_composition_trade_2007",
+    "robots_status": "robots_unavailable_stop",
+    "robots_file": ""
+  },
+  {
+    "source_id": "aus_dfat_composition_trade_2008",
+    "url": "https://www.dfat.gov.au/news/media/Pages/australia-s-composition-of-trade-2008",
+    "fetch_status": "existing_raw_verified",
+    "status_code": 200,
+    "content_type": "preserved_local_raw",
+    "accessed_at": "2026-05-23T22:04:48+00:00",
+    "raw_file": "data/raw/ex_top1_salience/AUS/2009/australian_department_of_foreign_affairs_and_trade/aus_dfat_composition_trade_2008.html",
+    "sha256": "df87cfea72e61e4914ab3482c808697be3e5c0706d3834120f50eab1a37b1e7c",
+    "size_bytes": 32247,
+    "robots_status": "not_applicable_existing_raw",
+    "robots_file": ""
+  },
+  {
+    "source_id": "aus_afr_china_trading_partner_2009",
+    "url": "https://www.afr.com/markets/china-hits-the-spot-as-trading-partner-20091109-iwhtx",
+    "fetch_status": "existing_raw_verified",
+    "status_code": 200,
+    "content_type": "preserved_local_raw",
+    "accessed_at": "2026-05-23T22:04:48+00:00",
+    "raw_file": "data/raw/ex_top1_salience/AUS/2009/australian_financial_review/aus_afr_china_trading_partner_2009.html",
+    "sha256": "7fc8a7aca3f57fd1fa294614722789cc2a70b87e26a2cb83d5135cefe0f99953",
+    "size_bytes": 200711,
+    "robots_status": "not_applicable_existing_raw",
+    "robots_file": ""
+  },
+  {
+    "source_id": "aus_dfat_composition_trade_2008_09",
+    "url": "https://www.dfat.gov.au/news/media/Pages/australia-s-composition-of-trade-2008-09",
+    "fetch_status": "existing_raw_verified",
+    "status_code": 200,
+    "content_type": "preserved_local_raw",
+    "accessed_at": "2026-05-23T22:04:48+00:00",
+    "raw_file": "data/raw/ex_top1_salience/AUS/2009/australian_department_of_foreign_affairs_and_trade/aus_dfat_composition_trade_2008_09.html",
+    "sha256": "057f0e3d448aef88459447fcbfb195e4e35d4e90f2ddf3f1e9667a29c1e97533",
+    "size_bytes": 31779,
+    "robots_status": "not_applicable_existing_raw",
+    "robots_file": ""
+  }
+]

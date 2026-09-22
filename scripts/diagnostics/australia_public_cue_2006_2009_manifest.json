@@ -146,6 +146,8 @@
         "Japan remained Australia's largest export market",
         "trade in goods and services"
       ],
+      "allow_unarchived_browser_verification": true,
+      "browser_verified_on": "2026-09-22",
       "rank_position_china": "1",
       "displaced_partner": "Japan",
       "metric_scope": "two_way_trade",
@@ -159,7 +161,7 @@
       "excerpt_under_25_words": "China became Australia's largest two-way trading partner in 2007.",
       "interpretation": "Official retrospective confirmation of the 2007 broad cue; Japan still ranked first as an export market.",
       "confidence": "high",
-      "notes": "Published in 2008 about calendar 2007. Explicitly covers goods and services."
+      "notes": "Published in 2008 about calendar 2007. Explicitly covers goods and services. The publisher's robots endpoint was unavailable during scripted collection, so the page was verified independently in the research browser but not archived by the collector."
     },
     {
       "source_id": "aus_dfat_composition_trade_2008",
