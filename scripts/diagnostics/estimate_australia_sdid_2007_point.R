@@ -1,7 +1,8 @@
 #!/usr/bin/env Rscript
 
 # Point estimate for an Australia-only synthetic difference-in-differences
-# specification with treatment beginning in 2007.
+# specification. Treatment begins in 2007 by default and can be changed with
+# the environment variable `AUSTRALIA_SDID_TREATMENT_YEAR`.
 #
 # This diagnostic deliberately stays outside the targets pipeline. It reads the
 # stored `china_top_m2_goods_panel` object, uses the same 1997-2022 window and
@@ -22,7 +23,18 @@ if (!requireNamespace("synthdid", quietly = TRUE)) {
 
 year_start <- 1997L
 year_end <- 2022L
-treatment_year <- 2007L
+treatment_year <- suppressWarnings(as.integer(Sys.getenv(
+  "AUSTRALIA_SDID_TREATMENT_YEAR",
+  unset = "2007"
+)))
+if (length(treatment_year) != 1L || is.na(treatment_year) ||
+    treatment_year <= year_start || treatment_year > year_end) {
+  stop(
+    "AUSTRALIA_SDID_TREATMENT_YEAR must be one year in ",
+    year_start + 1L, "-", year_end, ".",
+    call. = FALSE
+  )
+}
 treated_iso3c <- "AUS"
 expected_years <- seq.int(year_start, year_end)
 
@@ -132,7 +144,7 @@ fit <- synthdid::synthdid_estimate(
 )
 
 result <- tibble::tibble(
-  fit_id = "aus_timing_2007_point",
+  fit_id = paste0("aus_timing_", treatment_year, "_point"),
   iso3c = treated_iso3c,
   country_name = "Australia",
   treatment_year = treatment_year,
@@ -148,7 +160,7 @@ result <- tibble::tibble(
 
 output_path <- file.path(
   "data", "processed", "diagnostics", "selected_public_cue_sdid_fect",
-  "australia_sdid_2007_point.csv"
+  paste0("australia_sdid_", treatment_year, "_point.csv")
 )
 dir.create(dirname(output_path), recursive = TRUE, showWarnings = FALSE)
 readr::write_csv(result, output_path)
