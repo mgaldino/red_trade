@@ -1,0 +1,581 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+  brazilian,
+  11pt,
+]{article}
+\usepackage{xcolor}
+\usepackage[margin=0.88in]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\ifLuaTeX
+\usepackage[bidi=basic,shorthands=off,]{babel}
+\else
+\usepackage[bidi=default,shorthands=off,]{babel}
+\fi
+\ifLuaTeX
+  \usepackage{selnolig} % disable illegal ligatures
+\fi
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{caption}
+\definecolor{deepblue}{HTML}{17365D}
+\definecolor{softblue}{HTML}{EAF1F8}
+\definecolor{darkgray}{HTML}{404040}
+\hypersetup{colorlinks=true,linkcolor=deepblue,citecolor=deepblue,urlcolor=deepblue}
+\Urlmuskip=0mu plus 1mu\relax
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.48em}
+\captionsetup{font=small,labelfont=bf}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Public cues, SDiD individuais e modelos de fatores latentes},
+  pdfauthor={Nota diagnóstica},
+  pdflang={pt-BR},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Public cues, SDiD individuais e modelos de fatores latentes}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Chile, Uruguai, Gabão, Catar, Austrália e a sensibilidade com
+Brasil}
+\author{Nota diagnóstica}
+\date{22 de setembro de 2026}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\begin{center}
+\small\color{darkgray}
+\textbf{Status:} análise diagnóstica fora do pipeline \texttt{targets}. O relatório importa resultados já estimados; sua compilação não reestima modelos.
+\end{center}
+
+\begin{abstract}
+Este relatório apresenta seis estimativas individuais de synthetic difference-in-differences (SDiD) e quatro modelos pooled de fatores latentes para avaliar mudanças na distância dos votos na Assembleia Geral das Nações Unidas em relação à China após cues públicos de posição comercial. Os SDiD individuais para Chile, Uruguai, Gabão, Catar e Austrália são imprecisos e todos os intervalos de 95\% incluem zero. Nos modelos pooled com os cinco casos, as estimativas também ficam próximas de zero. Quando Gabão e Catar são excluídos e o Brasil é incluído, o ATT torna-se mais negativo. A especificação em que controles entram e saem do conjunto de comparação produz ATT de -0,1359, erro-padrão bootstrap de 0,0657 e intervalo de 95\% [-0,2646; -0,0073]. Esse resultado é sugestivo de aproximação à China, mas a inferência permanece frágil porque há somente quatro países tratados.
+\end{abstract}
+
+\section{Resultado principal}\label{resultado-principal}
+
+O padrão empírico é simples. As estimativas individuais e os modelos
+pooled com os cinco casos não oferecem evidência precisa de mudança. A
+sensibilidade que mantém Austrália, Brasil, Chile e Uruguai como casos
+tratados produz estimativas mais negativas:
+
+\begin{itemize}
+\tightlist
+\item
+  com controles limpos, ATT = -0,1158, IC 95\% {[}-0,2441; 0,0124{]},
+  \(p=\) 0,077;
+\item
+  com controles entrando e saindo do conjunto de comparação, ATT =
+  -0,1359, IC 95\% {[}-0,2646; -0,0073{]}, \(p=\) 0,038.
+\end{itemize}
+
+Como o outcome é a distância absoluta à China, valores negativos indicam
+aproximação. A diferença entre as especificações de cinco e quatro casos
+mostra que Gabão e Catar alteram substantivamente o resultado pooled.
+Ela não identifica, por si só, qual caso gera a mudança nem transforma a
+análise em evidência causal definitiva.
+
+\section{Desenho da análise}\label{desenho-da-anuxe1lise}
+
+\subsection{Unidade, período e
+outcome}\label{unidade-peruxedodo-e-outcome}
+
+A unidade é o país-ano. A janela comum vai de 1997 a 2022. O outcome é a
+distância absoluta entre o ponto ideal do país e o ponto ideal da China
+nas votações da Assembleia Geral das Nações Unidas. A análise termina em
+2022 porque esse é o último ano com a medida de ranking comercial usada
+para determinar a elegibilidade dos controles.
+
+O input empírico é o target armazenado
+\texttt{china\_top\_m2\_goods\_panel}, hash \texttt{7907d353f7750752},
+produzido em 2026-05-24 16:31:38.188157. O relatório e os scripts
+diagnósticos apenas leram esse objeto. Nenhum comando
+\texttt{targets::tar\_make()} foi executado.
+
+\subsection{Casos tratados e timing}\label{casos-tratados-e-timing}
+
+O conjunto original contém cinco casos com cue público codificado:
+
+\begin{itemize}
+\tightlist
+\item
+  Chile: 2008;
+\item
+  Uruguai: 2013;
+\item
+  Gabão: 2017;
+\item
+  Catar: 2021;
+\item
+  Austrália: 2009.
+\end{itemize}
+
+Para a Austrália, o SDiD também é estimado com início em 2010, conforme
+a alternativa substantiva solicitada. A sensibilidade pooled sem Gabão e
+Catar inclui o Brasil, tratado a partir de 2009. Assim, o grupo reduzido
+é Austrália, Brasil, Chile e Uruguai.
+
+Nos modelos de fatores latentes, o tratamento é
+
+\[
+D_{it}
+=
+\mathbf{1}\{i\text{ é caso focal}\}
+\mathbf{1}\{t\geq \text{cue}_i\}
+\mathbf{1}\{\text{China é top 1}_{it}\}.
+\]
+
+Países não focais nunca recebem \(D_{it}=1\).
+
+\subsection{Duas regras para o conjunto de
+comparação}\label{duas-regras-para-o-conjunto-de-comparauxe7uxe3o}
+
+Cada grupo focal é estimado sob duas regras:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Controles limpos.} O donor pool contém 105 países com painel
+  completo que nunca têm a China como maior destino de exportações em
+  1997--2022.
+\item
+  \textbf{Controles que entram e saem.} O modelo começa com os 159
+  painéis completos. Para países não focais, anos China-top são
+  mascarados e não entram como observações de controle. Quando a China
+  deixa de ser top 1, o país volta ao conjunto de comparação. Esses
+  países não são tratados adicionais.
+\end{enumerate}
+
+A Mongólia ilustra a diferença. Ela recebe \(D_{it}=0\) em todos os
+anos, mas tem a China como top 1 durante toda a janela. Seus 26
+país-anos são, portanto, inelegíveis como controle. Como não resta
+observação utilizável, o \texttt{fect} a remove do ajuste; ela não entra
+no ATT focal.
+
+\section{Estimadores e inferência}\label{estimadores-e-inferuxeancia}
+
+\subsection{SDiD individuais}\label{sdid-individuais}
+
+Cada SDiD contém um país tratado e os mesmos 105 controles limpos. O
+estimador combina ponderação de unidades e de períodos para construir o
+contrafactual (\citeproc{ref-arkhangelsky_etal2021}{Arkhangelsky et al.
+2021}). Os erros-padrão placebo usam 5000 reestimações por ajuste e seed
+20260520. Os \(p\)-valores apresentados são aproximações normais
+baseadas nesses erros-padrão, não \(p\)-valores exatos de randomização.
+
+\subsection{Fatores latentes pooled}\label{fatores-latentes-pooled}
+
+Os modelos pooled usam o estimador de efeitos fixos interativos do
+pacote \texttt{fect 2.4.5}, com efeitos fixos bidirecionais e seleção do
+número de fatores por validação cruzada entre \(r=0,1,2,3\)
+(\citeproc{ref-xu2017gsynth}{Xu 2017};
+\citeproc{ref-liu2024practical}{Liu, Wang, e Xu 2024}). Cada ajuste usa
+1000 repetições de bootstrap por unidade, seed 42 e \texttt{min.T0 = 1}.
+Nos modelos com controles que entram e saem, células inelegíveis são
+tratadas como outcomes não observados e estimadas pelo procedimento de
+painel incompleto do \texttt{fect}.
+
+\section{Resultados dos fatores
+latentes}\label{resultados-dos-fatores-latentes}
+
+\begin{table}[!h]
+\centering
+\caption{\label{tab:table-ife-main}Modelos pooled de fatores latentes para a distância ideal à China.}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\fontsize{8.5}{10.5}\selectfont
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{6.0cm}rrcrrc}
+\toprule
+Especificação & ATT & EP bootstrap & IC 95\% & p-valor & Fatores (r) & N tratados/controles\\
+\midrule
+Cinco casos + controles limpos & -0,0236 & 0,0750 & {}[-0,1706; 0,1234] & 0,753 & 1 & 5/105\\
+Cinco casos + controles que entram/saem & -0,0213 & 0,0618 & {}[-0,1425; 0,1000] & 0,731 & 1 & 5/153\\
+Austrália, Brasil, Chile e Uruguai + controles limpos & -0,1158 & 0,0654 & {}[-0,2441; 0,0124] & 0,077 & 0 & 4/105\\
+Austrália, Brasil, Chile e Uruguai + controles que entram/saem & -0,1359 & 0,0657 & {}[-0,2646; -0,0073] & 0,038 & 0 & 4/152\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\textit{Nota:} ATT negativo indica redução da distância à China. Os
+intervalos usam a aproximação normal com erro-padrão obtido por
+bootstrap de unidades. O número de fatores é selecionado pela regra de
+um erro-padrão da validação cruzada.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.96\linewidth]{/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/quality_reports/selected_public_cue_sdid_fect/report_assets/figure_1_ife_estimates} 
+
+}
+
+\caption{Estimativas pooled de fatores latentes. As barras mostram intervalos de 95\%. A linha tracejada marca efeito zero. Em todos os modelos, somente os casos focais recebem tratamento; na alternativa ampliada, países não focais entram e saem apenas do conjunto de comparação.}\label{fig:figure-ife}
+\end{figure}
+
+Os dois modelos com cinco casos produzem praticamente o mesmo ATT:
+-0,0236 com controles limpos e -0,0213 com controles que entram e saem.
+Ambos selecionam um fator latente e têm intervalos amplos em torno de
+zero.
+
+Nos modelos sem Gabão e Catar, com inclusão do Brasil, a validação
+cruzada seleciona \(r=0\). A estimativa com controles limpos é negativa,
+mas seu intervalo ainda alcança zero. Ao permitir que controles
+contaminados saiam apenas durante seus anos China-top, a estimativa é
+-0,1359 e o limite superior do intervalo é -0,0073.
+
+\begin{table}[!h]
+\centering
+\caption{\label{tab:table-ife-composition}Composição dos grupos focais e alternância do conjunto de comparação.}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\fontsize{8.5}{10.5}\selectfont
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{5.2cm}lrr}
+\toprule
+Especificação & Casos focais & Controles que alternam & País-anos mascarados\\
+\midrule
+Cinco casos + controles limpos & AUS, CHL, GAB, QAT, URY & 0 & 0\\
+Cinco casos + controles que entram/saem & AUS, CHL, GAB, QAT, URY & 48 & 448\\
+Austrália, Brasil, Chile e Uruguai + controles limpos & AUS, BRA, CHL, URY & 0 & 0\\
+Austrália, Brasil, Chile e Uruguai + controles que entram/saem & AUS, BRA, CHL, URY & 47 & 434\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+No modelo ampliado de cinco casos, 48 controles alternam sua
+elegibilidade e 448 país-anos são mascarados. Na versão com quatro
+casos, são 47 controles e 434 país-anos. Essas células não geram ATTs
+adicionais.
+
+\section{Resultados dos SDiD
+individuais}\label{resultados-dos-sdid-individuais}
+
+\begin{table}[!h]
+\centering
+\caption{\label{tab:table-sdid}SDiD individuais com erros-padrão placebo.}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\fontsize{8.2}{10.2}\selectfont
+\begin{tabular}[t]{llrrcrcr}
+\toprule
+País & Timing & ATT & EP placebo & IC 95\% & p-valor & Pré/Pós & Doadores\\
+\midrule
+Chile & Cue público em 2008 & -0,1301 & 0,1545 & {}[-0,4328; 0,1726] & 0,400 & 11/15 & 105\\
+Uruguai & Cue público em 2013 & -0,0682 & 0,1514 & {}[-0,3649; 0,2285] & 0,652 & 16/10 & 105\\
+Gabão & Cue público em 2017 & -0,0429 & 0,1175 & {}[-0,2732; 0,1874] & 0,715 & 20/6 & 105\\
+Catar & Cue público em 2021 & 0,1263 & 0,1221 & {}[-0,1131; 0,3657] & 0,301 & 24/2 & 105\\
+Austrália & Cue público em 2009 & 0,0420 & 0,1545 & {}[-0,2608; 0,3449] & 0,786 & 12/14 & 105\\
+\addlinespace
+Austrália & Timing alternativo em 2010 & 0,0900 & 0,1468 & {}[-0,1978; 0,3778] & 0,540 & 13/13 & 105\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.96\linewidth]{/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/quality_reports/selected_public_cue_sdid_fect/report_assets/figure_2_sdid_estimates} 
+
+}
+
+\caption{Estimativas SDiD individuais. As barras mostram intervalos de 95\% construídos com erros-padrão placebo de 5.000 reestimações. O ajuste australiano de 2010 é uma alternativa de timing; os demais marcam o cue público selecionado.}\label{fig:figure-sdid}
+\end{figure}
+
+Chile, Uruguai e Gabão têm estimativas negativas; Catar e os dois
+timings australianos têm estimativas positivas. Nenhum intervalo
+individual exclui zero. O resultado do Catar deve ser interpretado com
+cautela adicional porque dispõe de apenas dois anos pós-tratamento.
+
+\begin{table}[!h]
+\centering
+\caption{\label{tab:table-sdid-fit}Diagnósticos de ajuste pré e pós-tratamento dos SDiD.}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\fontsize{8.5}{10.5}\selectfont
+\begin{tabular}[t]{lrrrrr}
+\toprule
+Ajuste & RMSPE pré & RMSPE pós & Razão pós/pré & Anos pré & Anos pós\\
+\midrule
+Chile, 2008 & 0,0799 & 0,1843 & 2,306 & 11 & 15\\
+Uruguai, 2013 & 0,1161 & 0,1705 & 1,468 & 16 & 10\\
+Gabão, 2017 & 0,1108 & 0,1268 & 1,145 & 20 & 6\\
+Catar, 2021 & 0,1311 & 0,1675 & 1,278 & 24 & 2\\
+Austrália, 2009 & 0,1546 & 0,1210 & 0,783 & 12 & 14\\
+\addlinespace
+Austrália, 2010 & 0,1511 & 0,1474 & 0,976 & 13 & 13\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+A razão RMSPE pós/pré é maior que um para Chile, Uruguai, Gabão e Catar,
+mas a precisão placebo permanece baixa. Na Austrália, a razão é inferior
+a um em 2009 e próxima de um em 2010, consistente com a ausência de uma
+separação pós-tratamento clara.
+
+\section{Auditoria do timing e do
+tratamento}\label{auditoria-do-timing-e-do-tratamento}
+
+\begin{table}[!h]
+\centering
+\caption{\label{tab:table-timing}Timing e duração do tratamento nos modelos pooled.}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\fontsize{7.3}{9.3}\selectfont
+\begin{tabular}[t]{llrrrrrrr}
+\toprule
+Escopo & País & Ano do cue & Primeiro ano tratado & Último ano tratado & Períodos tratados & Entradas & Saídas & Anos China-top antes do cue\\
+\midrule
+Cinco casos & Chile & 2008 & 2008 & 2022 & 15 & 1 & 0 & 1\\
+Cinco casos & Austrália & 2009 & 2009 & 2022 & 14 & 1 & 0 & 0\\
+Cinco casos & Uruguai & 2013 & 2013 & 2022 & 10 & 1 & 0 & 0\\
+Cinco casos & Gabão & 2017 & 2017 & 2022 & 6 & 1 & 0 & 0\\
+Cinco casos & Catar & 2021 & 2021 & 2022 & 2 & 1 & 0 & 0\\
+\addlinespace
+Quatro casos sem Gabão/Catar, com Brasil & Chile & 2008 & 2008 & 2022 & 15 & 1 & 0 & 1\\
+Quatro casos sem Gabão/Catar, com Brasil & Austrália & 2009 & 2009 & 2022 & 14 & 1 & 0 & 0\\
+Quatro casos sem Gabão/Catar, com Brasil & Brasil & 2009 & 2009 & 2022 & 14 & 1 & 0 & 0\\
+Quatro casos sem Gabão/Catar, com Brasil & Uruguai & 2013 & 2013 & 2022 & 10 & 1 & 0 & 0\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+Todos os casos focais têm uma entrada e nenhuma saída entre 1997 e 2022.
+O Chile possui um ano China-top anterior ao cue codificado; esse ano
+permanece não tratado, pois o tratamento exige simultaneamente status
+China-top e cue público. A ausência de saídas entre os focais significa
+que a alternância no segundo donor pool ocorre somente entre controles.
+
+\section{Interpretação e limites}\label{interpretauxe7uxe3o-e-limites}
+
+Quatro conclusões são sustentadas pelos resultados:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Os SDiD individuais são imprecisos.} Nenhum dos seis
+  intervalos exclui zero, inclusive os dois timings australianos.
+\item
+  \textbf{O pooled de cinco casos é próximo de zero.} A ampliação do
+  conjunto de comparação reduz o erro-padrão, mas não muda a conclusão
+  substantiva.
+\item
+  \textbf{A exclusão de Gabão e Catar é substantiva.} Com Brasil,
+  Austrália, Chile e Uruguai, os dois ATTs tornam-se mais negativos. O
+  modelo com controles entrando e saindo tem intervalo que não inclui
+  zero sob a aproximação bootstrap utilizada.
+\item
+  \textbf{A inferência dos quatro casos é frágil.} O \texttt{fect} não
+  calculou o teste F por insuficiência de unidades tratadas. Um
+  \(p\)-valor abaixo de 0,05 em uma especificação não elimina a
+  sensibilidade a composição, timing e poucos clusters tratados.
+\end{enumerate}
+
+O relatório também tem limites de desenho. A codificação de cues
+públicos é selecionada e não constitui um levantamento multinacional
+exaustivo. Os modelos são outcome-only e não incluem covariáveis
+adicionais. O uso de outcomes mascarados para controlar contaminação
+depende da capacidade do modelo de fatores latentes de recuperar a
+estrutura comum a partir das células observadas. Por fim, a Austrália
+exige transparência sobre a distinção entre o cue em 2009 e o timing
+alternativo de 2010.
+
+\section{Reprodutibilidade e scripts
+usados}\label{reprodutibilidade-e-scripts-usados}
+
+\begin{table}[!h]
+\centering
+\caption{\label{tab:table-scripts}Scripts e fontes usados na produção da análise e do relatório.}
+\centering
+\fontsize{8.5}{10.5}\selectfont
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{3.2cm}>{\raggedright\arraybackslash}p{10.7cm}}
+\toprule
+Componente & Função\\
+\midrule
+Estimação & Estima os seis SDiD e os quatro modelos IFE; grava auditorias e manifests.\\
+Placebos SDiD & Implementa os placebos SDiD determinísticos e checkpointados.\\
+Assets do relatório & Prepara as tabelas, figuras e metadados deste relatório; não reestima modelos.\\
+Fonte do relatório & Importa os assets e apresenta método, resultados, limitações e proveniência.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Os arquivos usados são:
+
+\begin{itemize}
+\item \nolinkurl{scripts/diagnostics/estimate_selected_public_cue_sdid_fect.R}
+\item \nolinkurl{scripts/diagnostics/sdid_placebo_helpers.R}
+\item \nolinkurl{scripts/diagnostics/build_selected_public_cue_report_assets.R}
+\item \nolinkurl{reports/selected_public_cue_sdid_fect/relatorio_sdid_fatores_latentes.Rmd}
+\end{itemize}
+
+O script de estimação lê o target armazenado
+\texttt{china\_top\_m2\_goods\_panel}; ele não executa o pipeline. O
+helper de placebos implementa as 5000 reestimações checkpointadas de
+cada SDiD. O script de assets lê somente CSVs e manifests concluídos e
+produz as tabelas e figuras deste documento. Os hashes SHA-256 completos
+constam do CSV de proveniência:
+
+\nolinkurl{quality_reports/selected_public_cue_sdid_fect/report_assets/table_5_scripts.csv}
+
+As versões centrais registradas na execução são \texttt{fect 2.4.5} e
+\texttt{synthdid 0.0.9}. Os quatro modelos IFE usam 1000 bootstraps e os
+seis SDiD usam, ao todo, 30000 reestimações placebo verificadas.
+
+\section{Arquivos produzidos}\label{arquivos-produzidos}
+
+Os outputs centrais são:
+
+\begin{itemize}
+\tightlist
+\item
+  \nolinkurl{data/processed/diagnostics/selected_public_cue_sdid_fect/fect_results.csv};
+\item
+  \nolinkurl{data/processed/diagnostics/selected_public_cue_sdid_fect/sdid_results.csv};
+\item
+  \nolinkurl{data/processed/diagnostics/selected_public_cue_sdid_fect/fect_treatment_audit.csv};
+\item
+  \nolinkurl{data/processed/diagnostics/selected_public_cue_sdid_fect/output_manifest.csv};
+\item
+  \nolinkurl{quality_reports/selected_public_cue_sdid_fect/report_assets/report_asset_manifest.csv}.
+\end{itemize}
+
+O relatório documenta a execução concluída em 22 de setembro de 2026.
+Ele não altera o manuscrito, os targets ou os dados brutos.
+
+\section{Referências}\label{referuxeancias}
+
+\small
+
+\protect\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-arkhangelsky_etal2021}
+Arkhangelsky, Dmitry, Susan Athey, David A. Hirshberg, Guido W. Imbens,
+e Stefan Wager. 2021. {``Synthetic {Difference-in-Differences}''}.
+\emph{American Economic Review} 111 (12): 4088--118.
+\url{https://doi.org/10.1257/aer.20190159}.
+
+\bibitem[\citeproctext]{ref-liu2024practical}
+Liu, Licheng, Ye Wang, e Yiqing Xu. 2024. {``A Practical Guide to
+Counterfactual Estimators for Causal Inference with Time-Series
+Cross-Sectional Data''}. \emph{American Journal of Political Science} 68
+(1): 160--76.
+
+\bibitem[\citeproctext]{ref-xu2017gsynth}
+Xu, Yiqing. 2017. {``Generalized Synthetic Control Method: Causal
+Inference with Interactive Fixed Effects Models''}. \emph{Political
+Analysis} 25 (1): 57--76. \url{https://doi.org/10.1017/pan.2016.2}.
+
+\end{CSLReferences}
+
+\end{document}

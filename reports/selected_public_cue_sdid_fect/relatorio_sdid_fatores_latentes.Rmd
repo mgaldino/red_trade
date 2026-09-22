@@ -1,0 +1,387 @@
+---
+title: "Public cues, SDiD individuais e modelos de fatores latentes"
+subtitle: "Chile, Uruguai, Gabão, Catar, Austrália e a sensibilidade com Brasil"
+author: "Nota diagnóstica"
+date: "22 de setembro de 2026"
+lang: pt-BR
+bibliography: ../../synth-trade-china.bib
+link-citations: true
+documentclass: article
+fontsize: 11pt
+geometry: margin=0.88in
+output:
+  pdf_document:
+    latex_engine: xelatex
+    keep_tex: true
+    number_sections: true
+    toc: true
+    toc_depth: 2
+    fig_caption: true
+header-includes:
+  - \usepackage{booktabs}
+  - \usepackage{longtable}
+  - \usepackage{array}
+  - \usepackage{float}
+  - \usepackage{xcolor}
+  - \usepackage{hyperref}
+  - \usepackage{caption}
+  - \definecolor{deepblue}{HTML}{17365D}
+  - \definecolor{softblue}{HTML}{EAF1F8}
+  - \definecolor{darkgray}{HTML}{404040}
+  - \hypersetup{colorlinks=true,linkcolor=deepblue,citecolor=deepblue,urlcolor=deepblue}
+  - \Urlmuskip=0mu plus 1mu\relax
+  - \setlength{\parindent}{0pt}
+  - \setlength{\parskip}{0.48em}
+  - \captionsetup{font=small,labelfont=bf}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  fig.align = "center",
+  out.width = "96%"
+)
+
+suppressWarnings(Sys.setlocale("LC_CTYPE", "pt_BR.UTF-8"))
+
+suppressPackageStartupMessages({
+  library(dplyr)
+  library(readr)
+  library(kableExtra)
+})
+
+assets_dir <- normalizePath(
+  file.path(
+    "quality_reports", "selected_public_cue_sdid_fect", "report_assets"
+  ),
+  winslash = "/",
+  mustWork = TRUE
+)
+analysis_dir <- normalizePath(
+  file.path(
+    "data", "processed", "diagnostics", "selected_public_cue_sdid_fect"
+  ),
+  winslash = "/",
+  mustWork = TRUE
+)
+
+numbers <- readRDS(file.path(assets_dir, "report_numbers.rds"))
+run_manifest <- jsonlite::read_json(
+  file.path(analysis_dir, "run_manifest.json"),
+  simplifyVector = TRUE
+)
+ife_table <- readr::read_csv(
+  file.path(assets_dir, "table_1_ife_results.csv"),
+  col_types = readr::cols(.default = readr::col_character()),
+  show_col_types = FALSE
+)
+sdid_table <- readr::read_csv(
+  file.path(assets_dir, "table_2_sdid_results.csv"),
+  col_types = readr::cols(.default = readr::col_character()),
+  show_col_types = FALSE
+)
+sdid_fit_table <- readr::read_csv(
+  file.path(assets_dir, "table_3_sdid_fit_diagnostics.csv"),
+  col_types = readr::cols(.default = readr::col_character()),
+  show_col_types = FALSE
+)
+focal_timing_table <- readr::read_csv(
+  file.path(assets_dir, "table_4_focal_timing.csv"),
+  col_types = readr::cols(.default = readr::col_character()),
+  show_col_types = FALSE
+)
+script_table <- readr::read_csv(
+  file.path(assets_dir, "table_5_scripts.csv"),
+  col_types = readr::cols(.default = readr::col_character()),
+  show_col_types = FALSE
+)
+
+ife_value <- function(model_id, field) {
+  numbers$fect[[model_id]][[field]][[1L]]
+}
+sdid_value <- function(fit_id, field) {
+  numbers$sdid[[fit_id]][[field]][[1L]]
+}
+fmt_num <- function(x, digits = 4L) {
+  formatC(x, digits = digits, format = "f", decimal.mark = ",")
+}
+fmt_p <- function(x) {
+  if (is.na(x)) return("NA")
+  if (x < 0.001) return("< 0,001")
+  fmt_num(x, 3L)
+}
+```
+
+\begin{center}
+\small\color{darkgray}
+\textbf{Status:} análise diagnóstica fora do pipeline \texttt{targets}. O relatório importa resultados já estimados; sua compilação não reestima modelos.
+\end{center}
+
+\begin{abstract}
+Este relatório apresenta seis estimativas individuais de synthetic difference-in-differences (SDiD) e quatro modelos pooled de fatores latentes para avaliar mudanças na distância dos votos na Assembleia Geral das Nações Unidas em relação à China após cues públicos de posição comercial. Os SDiD individuais para Chile, Uruguai, Gabão, Catar e Austrália são imprecisos e todos os intervalos de 95\% incluem zero. Nos modelos pooled com os cinco casos, as estimativas também ficam próximas de zero. Quando Gabão e Catar são excluídos e o Brasil é incluído, o ATT torna-se mais negativo. A especificação em que controles entram e saem do conjunto de comparação produz ATT de `r fmt_num(ife_value("full_switching_without_gab_qat", "estimate"))`, erro-padrão bootstrap de `r fmt_num(ife_value("full_switching_without_gab_qat", "se_bootstrap"))` e intervalo de 95\% [`r fmt_num(ife_value("full_switching_without_gab_qat", "ci_95_low"))`; `r fmt_num(ife_value("full_switching_without_gab_qat", "ci_95_high"))`]. Esse resultado é sugestivo de aproximação à China, mas a inferência permanece frágil porque há somente quatro países tratados.
+\end{abstract}
+
+# Resultado principal
+
+O padrão empírico é simples. As estimativas individuais e os modelos pooled com os cinco casos não oferecem evidência precisa de mudança. A sensibilidade que mantém Austrália, Brasil, Chile e Uruguai como casos tratados produz estimativas mais negativas:
+
+- com controles limpos, ATT = `r fmt_num(ife_value("clean_controls_without_gab_qat", "estimate"))`, IC 95\% [`r fmt_num(ife_value("clean_controls_without_gab_qat", "ci_95_low"))`; `r fmt_num(ife_value("clean_controls_without_gab_qat", "ci_95_high"))`], $p=$ `r fmt_p(ife_value("clean_controls_without_gab_qat", "p_normal_two_sided"))`;
+- com controles entrando e saindo do conjunto de comparação, ATT = `r fmt_num(ife_value("full_switching_without_gab_qat", "estimate"))`, IC 95\% [`r fmt_num(ife_value("full_switching_without_gab_qat", "ci_95_low"))`; `r fmt_num(ife_value("full_switching_without_gab_qat", "ci_95_high"))`], $p=$ `r fmt_p(ife_value("full_switching_without_gab_qat", "p_normal_two_sided"))`.
+
+Como o outcome é a distância absoluta à China, valores negativos indicam aproximação. A diferença entre as especificações de cinco e quatro casos mostra que Gabão e Catar alteram substantivamente o resultado pooled. Ela não identifica, por si só, qual caso gera a mudança nem transforma a análise em evidência causal definitiva.
+
+# Desenho da análise
+
+## Unidade, período e outcome
+
+A unidade é o país-ano. A janela comum vai de `r numbers$year_start` a `r numbers$year_end`. O outcome é a distância absoluta entre o ponto ideal do país e o ponto ideal da China nas votações da Assembleia Geral das Nações Unidas. A análise termina em 2022 porque esse é o último ano com a medida de ranking comercial usada para determinar a elegibilidade dos controles.
+
+O input empírico é o target armazenado \texttt{china\_top\_m2\_goods\_panel}, hash \texttt{`r numbers$target_hash`}, produzido em `r numbers$target_time`. O relatório e os scripts diagnósticos apenas leram esse objeto. Nenhum comando \texttt{targets::tar\_make()} foi executado.
+
+## Casos tratados e timing
+
+O conjunto original contém cinco casos com cue público codificado:
+
+- Chile: 2008;
+- Uruguai: 2013;
+- Gabão: 2017;
+- Catar: 2021;
+- Austrália: 2009.
+
+Para a Austrália, o SDiD também é estimado com início em 2010, conforme a alternativa substantiva solicitada. A sensibilidade pooled sem Gabão e Catar inclui o Brasil, tratado a partir de 2009. Assim, o grupo reduzido é Austrália, Brasil, Chile e Uruguai.
+
+Nos modelos de fatores latentes, o tratamento é
+
+\[
+D_{it}
+=
+\mathbf{1}\{i\text{ é caso focal}\}
+\mathbf{1}\{t\geq \text{cue}_i\}
+\mathbf{1}\{\text{China é top 1}_{it}\}.
+\]
+
+Países não focais nunca recebem $D_{it}=1$.
+
+## Duas regras para o conjunto de comparação
+
+Cada grupo focal é estimado sob duas regras:
+
+1. **Controles limpos.** O donor pool contém `r numbers$clean_donor_count` países com painel completo que nunca têm a China como maior destino de exportações em 1997--2022.
+2. **Controles que entram e saem.** O modelo começa com os `r numbers$complete_panel_unit_count` painéis completos. Para países não focais, anos China-top são mascarados e não entram como observações de controle. Quando a China deixa de ser top 1, o país volta ao conjunto de comparação. Esses países não são tratados adicionais.
+
+A Mongólia ilustra a diferença. Ela recebe $D_{it}=0$ em todos os anos, mas tem a China como top 1 durante toda a janela. Seus 26 país-anos são, portanto, inelegíveis como controle. Como não resta observação utilizável, o \texttt{fect} a remove do ajuste; ela não entra no ATT focal.
+
+# Estimadores e inferência
+
+## SDiD individuais
+
+Cada SDiD contém um país tratado e os mesmos `r numbers$clean_donor_count` controles limpos. O estimador combina ponderação de unidades e de períodos para construir o contrafactual [@arkhangelsky_etal2021]. Os erros-padrão placebo usam `r numbers$placebo_replications` reestimações por ajuste e seed `r numbers$placebo_seed`. Os $p$-valores apresentados são aproximações normais baseadas nesses erros-padrão, não $p$-valores exatos de randomização.
+
+## Fatores latentes pooled
+
+Os modelos pooled usam o estimador de efeitos fixos interativos do pacote \texttt{fect 2.4.5}, com efeitos fixos bidirecionais e seleção do número de fatores por validação cruzada entre $r=0,1,2,3$ [@xu2017gsynth; @liu2024practical]. Cada ajuste usa `r numbers$fect_bootstraps` repetições de bootstrap por unidade, seed `r numbers$fect_seed` e \texttt{min.T0 = `r numbers$fect_min_untreated_periods`}. Nos modelos com controles que entram e saem, células inelegíveis são tratadas como outcomes não observados e estimadas pelo procedimento de painel incompleto do \texttt{fect}.
+
+# Resultados dos fatores latentes
+
+```{r table-ife-main, results='asis'}
+ife_main <- ife_table |>
+  dplyr::select(
+    Especificação, ATT, `EP bootstrap`, `IC 95%`, `p-valor`,
+    `Fatores (r)`, `N tratados/controles`
+  )
+
+kableExtra::kbl(
+  ife_main,
+  format = "latex",
+  booktabs = TRUE,
+  caption = paste0(
+    "Modelos pooled de fatores latentes para a distância ideal à China."
+  ),
+  align = c("l", "r", "r", "c", "r", "r", "c"),
+  escape = TRUE
+) |>
+  kableExtra::kable_styling(
+    latex_options = c("hold_position", "scale_down"),
+    font_size = 8.5,
+    position = "center"
+  ) |>
+  kableExtra::column_spec(1, width = "6.0cm")
+```
+
+\textit{Nota:} ATT negativo indica redução da distância à China. Os intervalos usam a aproximação normal com erro-padrão obtido por bootstrap de unidades. O número de fatores é selecionado pela regra de um erro-padrão da validação cruzada.
+
+```{r figure-ife, fig.cap="Estimativas pooled de fatores latentes. As barras mostram intervalos de 95%. A linha tracejada marca efeito zero. Em todos os modelos, somente os casos focais recebem tratamento; na alternativa ampliada, países não focais entram e saem apenas do conjunto de comparação."}
+knitr::include_graphics(
+  file.path(assets_dir, "figure_1_ife_estimates.png"),
+  rel_path = FALSE
+)
+```
+
+Os dois modelos com cinco casos produzem praticamente o mesmo ATT: `r fmt_num(ife_value("clean_controls", "estimate"))` com controles limpos e `r fmt_num(ife_value("full_switching", "estimate"))` com controles que entram e saem. Ambos selecionam um fator latente e têm intervalos amplos em torno de zero.
+
+Nos modelos sem Gabão e Catar, com inclusão do Brasil, a validação cruzada seleciona $r=0$. A estimativa com controles limpos é negativa, mas seu intervalo ainda alcança zero. Ao permitir que controles contaminados saiam apenas durante seus anos China-top, a estimativa é `r fmt_num(ife_value("full_switching_without_gab_qat", "estimate"))` e o limite superior do intervalo é `r fmt_num(ife_value("full_switching_without_gab_qat", "ci_95_high"))`.
+
+```{r table-ife-composition, results='asis'}
+ife_composition <- ife_table |>
+  dplyr::select(
+    Especificação, `Casos focais`, `Controles que alternam`,
+    `País-anos mascarados`
+  )
+
+kableExtra::kbl(
+  ife_composition,
+  format = "latex",
+  booktabs = TRUE,
+  caption = "Composição dos grupos focais e alternância do conjunto de comparação.",
+  align = c("l", "l", "r", "r"),
+  escape = TRUE
+) |>
+  kableExtra::kable_styling(
+    latex_options = c("hold_position", "scale_down"),
+    font_size = 8.5,
+    position = "center"
+  ) |>
+  kableExtra::column_spec(1, width = "5.2cm")
+```
+
+No modelo ampliado de cinco casos, 48 controles alternam sua elegibilidade e 448 país-anos são mascarados. Na versão com quatro casos, são 47 controles e 434 país-anos. Essas células não geram ATTs adicionais.
+
+# Resultados dos SDiD individuais
+
+```{r table-sdid, results='asis'}
+kableExtra::kbl(
+  sdid_table,
+  format = "latex",
+  booktabs = TRUE,
+  caption = "SDiD individuais com erros-padrão placebo.",
+  align = c("l", "l", "r", "r", "c", "r", "c", "r"),
+  escape = TRUE
+) |>
+  kableExtra::kable_styling(
+    latex_options = c("hold_position", "scale_down"),
+    font_size = 8.2,
+    position = "center"
+  )
+```
+
+```{r figure-sdid, fig.cap="Estimativas SDiD individuais. As barras mostram intervalos de 95% construídos com erros-padrão placebo de 5.000 reestimações. O ajuste australiano de 2010 é uma alternativa de timing; os demais marcam o cue público selecionado."}
+knitr::include_graphics(
+  file.path(assets_dir, "figure_2_sdid_estimates.png"),
+  rel_path = FALSE
+)
+```
+
+Chile, Uruguai e Gabão têm estimativas negativas; Catar e os dois timings australianos têm estimativas positivas. Nenhum intervalo individual exclui zero. O resultado do Catar deve ser interpretado com cautela adicional porque dispõe de apenas dois anos pós-tratamento.
+
+```{r table-sdid-fit, results='asis'}
+kableExtra::kbl(
+  sdid_fit_table,
+  format = "latex",
+  booktabs = TRUE,
+  caption = "Diagnósticos de ajuste pré e pós-tratamento dos SDiD.",
+  align = c("l", "r", "r", "r", "r", "r"),
+  escape = TRUE
+) |>
+  kableExtra::kable_styling(
+    latex_options = c("hold_position", "scale_down"),
+    font_size = 8.5,
+    position = "center"
+  )
+```
+
+A razão RMSPE pós/pré é maior que um para Chile, Uruguai, Gabão e Catar, mas a precisão placebo permanece baixa. Na Austrália, a razão é inferior a um em 2009 e próxima de um em 2010, consistente com a ausência de uma separação pós-tratamento clara.
+
+# Auditoria do timing e do tratamento
+
+```{r table-timing, results='asis'}
+kableExtra::kbl(
+  focal_timing_table,
+  format = "latex",
+  booktabs = TRUE,
+  caption = "Timing e duração do tratamento nos modelos pooled.",
+  align = c("l", "l", "r", "r", "r", "r", "r", "r", "r"),
+  escape = TRUE
+) |>
+  kableExtra::kable_styling(
+    latex_options = c("hold_position", "scale_down"),
+    font_size = 7.3,
+    position = "center"
+  )
+```
+
+Todos os casos focais têm uma entrada e nenhuma saída entre 1997 e 2022. O Chile possui um ano China-top anterior ao cue codificado; esse ano permanece não tratado, pois o tratamento exige simultaneamente status China-top e cue público. A ausência de saídas entre os focais significa que a alternância no segundo donor pool ocorre somente entre controles.
+
+# Interpretação e limites
+
+Quatro conclusões são sustentadas pelos resultados:
+
+1. **Os SDiD individuais são imprecisos.** Nenhum dos seis intervalos exclui zero, inclusive os dois timings australianos.
+2. **O pooled de cinco casos é próximo de zero.** A ampliação do conjunto de comparação reduz o erro-padrão, mas não muda a conclusão substantiva.
+3. **A exclusão de Gabão e Catar é substantiva.** Com Brasil, Austrália, Chile e Uruguai, os dois ATTs tornam-se mais negativos. O modelo com controles entrando e saindo tem intervalo que não inclui zero sob a aproximação bootstrap utilizada.
+4. **A inferência dos quatro casos é frágil.** O \texttt{fect} não calculou o teste F por insuficiência de unidades tratadas. Um $p$-valor abaixo de 0,05 em uma especificação não elimina a sensibilidade a composição, timing e poucos clusters tratados.
+
+O relatório também tem limites de desenho. A codificação de cues públicos é selecionada e não constitui um levantamento multinacional exaustivo. Os modelos são outcome-only e não incluem covariáveis adicionais. O uso de outcomes mascarados para controlar contaminação depende da capacidade do modelo de fatores latentes de recuperar a estrutura comum a partir das células observadas. Por fim, a Austrália exige transparência sobre a distinção entre o cue em 2009 e o timing alternativo de 2010.
+
+# Reprodutibilidade e scripts usados
+
+```{r table-scripts, results='asis'}
+scripts_display <- script_table |>
+  dplyr::mutate(
+    Componente = c(
+      "Estimação",
+      "Placebos SDiD",
+      "Assets do relatório",
+      "Fonte do relatório"
+    )
+  ) |>
+  dplyr::select(Componente, Função)
+
+kableExtra::kbl(
+  scripts_display,
+  format = "latex",
+  booktabs = TRUE,
+  caption = "Scripts e fontes usados na produção da análise e do relatório.",
+  align = c("l", "l"),
+  escape = TRUE
+) |>
+  kableExtra::kable_styling(
+    latex_options = c("hold_position"),
+    font_size = 8.5,
+    position = "center"
+  ) |>
+  kableExtra::column_spec(1, width = "3.2cm") |>
+  kableExtra::column_spec(2, width = "10.7cm")
+```
+
+Os arquivos usados são:
+
+\begin{itemize}
+\item \nolinkurl{scripts/diagnostics/estimate_selected_public_cue_sdid_fect.R}
+\item \nolinkurl{scripts/diagnostics/sdid_placebo_helpers.R}
+\item \nolinkurl{scripts/diagnostics/build_selected_public_cue_report_assets.R}
+\item \nolinkurl{reports/selected_public_cue_sdid_fect/relatorio_sdid_fatores_latentes.Rmd}
+\end{itemize}
+
+O script de estimação lê o target armazenado \texttt{china\_top\_m2\_goods\_panel}; ele não executa o pipeline. O helper de placebos implementa as `r numbers$placebo_replications` reestimações checkpointadas de cada SDiD. O script de assets lê somente CSVs e manifests concluídos e produz as tabelas e figuras deste documento. Os hashes SHA-256 completos constam do CSV de proveniência:
+
+\nolinkurl{quality_reports/selected_public_cue_sdid_fect/report_assets/table_5_scripts.csv}
+
+As versões centrais registradas na execução são \texttt{fect `r run_manifest$package_versions$fect`} e \texttt{synthdid `r run_manifest$package_versions$synthdid`}. Os quatro modelos IFE usam `r numbers$fect_bootstraps` bootstraps e os seis SDiD usam, ao todo, `r 6L * numbers$placebo_replications` reestimações placebo verificadas.
+
+# Arquivos produzidos
+
+Os outputs centrais são:
+
+- \nolinkurl{data/processed/diagnostics/selected_public_cue_sdid_fect/fect_results.csv};
+- \nolinkurl{data/processed/diagnostics/selected_public_cue_sdid_fect/sdid_results.csv};
+- \nolinkurl{data/processed/diagnostics/selected_public_cue_sdid_fect/fect_treatment_audit.csv};
+- \nolinkurl{data/processed/diagnostics/selected_public_cue_sdid_fect/output_manifest.csv};
+- \nolinkurl{quality_reports/selected_public_cue_sdid_fect/report_assets/report_asset_manifest.csv}.
+
+O relatório documenta a execução concluída em 22 de setembro de 2026. Ele não altera o manuscrito, os targets ou os dados brutos.
+
+# Referências
+
+\small
