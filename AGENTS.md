@@ -60,6 +60,37 @@ Pendências reais remanescentes:
 - Opcional: adicionar baseline formal de interdependência contínua no mesmo
   sample.
 
+## Estado recente: public cue da Austrália, 2006–2009
+
+Em 2026-09-22 foi concluída uma busca focal, separada do paper e do pipeline
+`targets`, sobre a cronologia da pista pública australiana. A primeira pista
+nacional positiva diretamente recuperada é da ABC em 04/05/2007, repetida em
+01/09/2007: a China superou o Japão no comércio bilateral agregado. As fontes
+recuperadas de 2006 ainda colocam a China em segundo lugar.
+
+O artigo do Australian Financial Review de 09/11/2009 usa anos fiscais: o
+“terceiro ano consecutivo” corresponde a 2006–07, 2007–08 e 2008–09, não a três
+anos-calendário. O DFAT põe o Japão novamente em primeiro no ano-calendário de
+2008, confirmando essa distinção. Nenhuma das oito fontes fornece evidência
+estritamente alinhada a exportações de bens; portanto, a pista ampla de 2007
+não autoriza recodificar automaticamente o tratamento goods-only de 2009.
+
+Arquivos canônicos:
+
+- `reports/status_cue_salience/australia_public_cue_2006_2009.md`
+- `output/pdf/australia_public_cue_2006_2009.pdf`
+- `data/processed/status_cue_salience/australia_public_cue_media_2006_2009.csv`
+- `scripts/diagnostics/australia_public_cue_2006_2009_manifest.json`
+- `scripts/diagnostics/australia_public_cue_2006_2009_search_log.json`
+- `scripts/diagnostics/collect_australia_public_cue_2006_2009.py`
+- `quality_reports/status_cue_salience/australia_public_cue_2006_2009_independent_review.md`
+
+Não trate a ausência de matéria recuperada em AFR, Sydney Morning Herald ou
+The Age em 2006–2007 como evidência de ausência de cobertura. O RBA e o DFAT
+2007 foram verificados no navegador, mas a coleta automatizada dos artigos
+parou quando os endpoints de `robots.txt` ficaram indisponíveis; consulte as
+colunas de acesso e verificação do CSV antes de afirmar preservação de raw.
+
 ## Estado recente: votos Brasil-China na AGNU
 
 Em 2026-05-17 foi produzida uma análise diagnóstica separada do pipeline `targets` sobre a dinâmica relacional dos votos Brasil-China na Assembleia Geral da ONU, 2005-2012.

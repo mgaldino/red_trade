@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0",
+  "search_date": "2026-09-22",
+  "scope": "National Australian news and official documents published in or around 2006-2009 that publicly ranked China in Australia's trade hierarchy.",
+  "interpretation_rule": "A query with no verifiable recovered document records a retrieval gap only; it is never coded as evidence that coverage did not exist.",
+  "queries": [
+    {
+      "query_id": "Q01",
+      "query": "site:afr.com China largest trading partner 2006",
+      "purpose": "Locate contemporaneous Australian Financial Review coverage in 2006.",
+      "result_status": "no_verifiable_2006_article_recovered",
+      "selected_source_ids": [],
+      "notes": "The 2009 AFR article was recovered separately; no directly verifiable 2006 AFR article was found in this round."
+    },
+    {
+      "query_id": "Q02",
+      "query": "site:afr.com China largest trading partner 2007",
+      "purpose": "Locate contemporaneous Australian Financial Review coverage in 2007.",
+      "result_status": "no_verifiable_2007_article_recovered",
+      "selected_source_ids": [],
+      "notes": "Non-recovery may reflect indexing or paywall limits."
+    },
+    {
+      "query_id": "Q03",
+      "query": "China Australia biggest trading partner 2006",
+      "purpose": "Find national coverage before the positive 2007 cue.",
+      "result_status": "contrary_rank_source_recovered",
+      "selected_source_ids": [
+        "aus_abc_news_2006_06_28_china_second_partner"
+      ],
+      "notes": "Recovered ABC national coverage placing China second."
+    },
+    {
+      "query_id": "Q04",
+      "query": "China Australia biggest trading partner 2007",
+      "purpose": "Find the earliest directly dated national positive cue.",
+      "result_status": "positive_sources_recovered",
+      "selected_source_ids": [
+        "aus_abc_news_2007_05_04_china_overtakes_japan",
+        "aus_abc_news_2007_09_01_china_unseats_japan"
+      ],
+      "notes": "Both ABC documents concern combined imports and exports; neither resolves goods versus goods and services."
+    },
+    {
+      "query_id": "Q05",
+      "query": "site:rba.gov.au 2006 China second-largest export destination Australia Japan",
+      "purpose": "Separate export-destination rank from two-way partner rank in 2006.",
+      "result_status": "official_contrary_rank_source_recovered",
+      "selected_source_ids": [
+        "aus_rba_2006_11_china_second_export_destination"
+      ],
+      "notes": "The RBA box was published in November 2006 but its rank refers to calendar 2005."
+    },
+    {
+      "query_id": "Q06",
+      "query": "Australia's Composition of Trade 2007 2008 2008-09 China largest two-way trading partner",
+      "purpose": "Distinguish calendar-year and fiscal-year official rankings.",
+      "result_status": "three_official_releases_recovered",
+      "selected_source_ids": [
+        "aus_dfat_composition_trade_2007",
+        "aus_dfat_composition_trade_2008",
+        "aus_dfat_composition_trade_2008_09"
+      ],
+      "notes": "Calendar 2007 has China first, calendar 2008 has Japan first, and fiscal 2008-09 has China first in two-way goods-and-services trade."
+    },
+    {
+      "query_id": "Q07",
+      "query": "China 2006-07 71 million Australia trading partner",
+      "purpose": "Verify the time basis of the AFR third-consecutive-year statement.",
+      "result_status": "fiscal_year_source_recovered",
+      "selected_source_ids": [
+        "aus_afr_china_trading_partner_2009"
+      ],
+      "notes": "The article explicitly places onset in 2006-07 and the current observation in 2008-09."
+    },
+    {
+      "query_id": "Q08",
+      "query": "site:smh.com.au OR site:theage.com.au China Australia largest trading partner 2006 2007",
+      "purpose": "Seek an independently published national newspaper cue in 2006-2007.",
+      "result_status": "no_verifiable_article_recovered",
+      "selected_source_ids": [],
+      "notes": "No verifiable SMH or The Age document was recovered; this is a retrieval gap, not negative coverage evidence."
+    }
+  ],
+  "excluded_or_corroborating_candidates": [
+    {
+      "candidate_id": "aus_act_hansard_2007_06_06",
+      "title": "ACT Legislative Assembly Hansard, 6 June 2007",
+      "url": "https://www.hansard.act.gov.au/hansard/6th-assembly/2007/PDF/20070606.pdf",
+      "status": "corroborating_not_in_core_table",
+      "reason": "A search extract indicated a national Australia-China rank statement, but internal PDF navigation failed; the two directly verifiable ABC stories provide stronger core coverage evidence."
+    },
+    {
+      "candidate_id": "aus_dfat_trade_through_time_retrospective",
+      "title": "DFAT Trade Through Time",
+      "url": "https://www.dfat.gov.au/publications/minisite/tradethroughtimegovau/site/index.html",
+      "status": "excluded_from_onset_dating",
+      "reason": "Retrospective rather than contemporaneous and internally inconsistent between 2006 and 2007 references."
+    }
+  ],
+  "publisher_coverage_summary": [
+    {
+      "publisher": "ABC News",
+      "outcome": "three verifiable documents recovered and archived"
+    },
+    {
+      "publisher": "Australian Financial Review",
+      "outcome": "2009 article recovered; no verifiable 2006-2007 article recovered"
+    },
+    {
+      "publisher": "Sydney Morning Herald",
+      "outcome": "no verifiable 2006-2007 article recovered"
+    },
+    {
+      "publisher": "The Age",
+      "outcome": "no verifiable 2006-2007 article recovered"
+    },
+    {
+      "publisher": "Reserve Bank of Australia",
+      "outcome": "2006 analytical box verified in browser; article raw not archived after robots stop"
+    },
+    {
+      "publisher": "Department of Foreign Affairs and Trade",
+      "outcome": "2007, 2008 and 2008-09 releases verified; two older raws reused by hash"
+    }
+  ]
+}

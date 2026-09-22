@@ -443,47 +443,149 @@ def count_words(value: str) -> int:
     return len(re.findall(r"\b[\w$.-]+\b", value, flags=re.UNICODE))
 
 
-def validate(manifest: dict, run_dir: Path) -> dict:
-    results = result_map(run_dir)
+def validate_coded_rows(
+    rows: list[dict[str, str]], manifest: dict, results: dict[str, dict]
+) -> dict:
+    """Check coded fields against the manifest and central time/metric claims."""
     source_by_id = {
         source["source_id"]: source for source in manifest["sources"]
     }
-    if set(results) != {source["source_id"] for source in manifest["sources"]}:
-        raise ValueError("fetch_results source ids differ from manifest")
-    with OUTPUT_PATH.open(encoding="utf-8", newline="") as handle:
-        rows = list(csv.DictReader(handle))
     if len(rows) != 8:
         raise ValueError(f"Expected 8 CSV rows, found {len(rows)}")
-    if list(rows[0]) != CSV_COLUMNS:
-        raise ValueError("Unexpected CSV schema")
+    expected_order = [source["source_id"] for source in manifest["sources"]]
+    observed_order = [row["source_id"] for row in rows]
+    if len(observed_order) != len(set(observed_order)):
+        raise ValueError("Duplicate source_id in CSV")
+    if observed_order != expected_order:
+        raise ValueError("CSV row order or source ids differ from manifest")
     for row in rows:
-        if row["raw_file"]:
-            raw_path = ROOT / row["raw_file"]
-            if sha256(raw_path) != row["raw_sha256"]:
-                raise ValueError(f"CSV hash mismatch for {row['source_id']}")
-            if row["verification_markers_present"] != "true":
-                raise ValueError(f"Unverified raw source row: {row['source_id']}")
-        elif not (
-            source_by_id[row["source_id"]].get(
-                "allow_unarchived_browser_verification"
-            )
-            is True
-            and row["verification_markers_present"]
-            == "not_tested_no_article_raw"
-            and row["access_status"] == "robots_unavailable_stop"
-        ):
-            raise ValueError(f"Unexpected missing raw: {row['source_id']}")
+        source = source_by_id[row["source_id"]]
+        result = results[row["source_id"]]
+        for column in CSV_COLUMNS:
+            if column not in source:
+                continue
+            value = source[column]
+            expected = str(value).lower() if isinstance(value, bool) else str(value)
+            if row[column] != expected:
+                raise ValueError(
+                    f"CSV/manifest mismatch for {row['source_id']} field "
+                    f"{column}: {row[column]!r} != {expected!r}"
+                )
+        if row["access_status"] != result["fetch_status"]:
+            raise ValueError(f"CSV/result status mismatch for {row['source_id']}")
+        if row["robots_status"] != result["robots_status"]:
+            raise ValueError(f"CSV/result robots mismatch for {row['source_id']}")
         if count_words(row["excerpt_under_25_words"]) > 25:
             raise ValueError(f"Excerpt exceeds 25 words: {row['source_id']}")
         if row["strict_m2_goods_only"] != "false":
             raise ValueError(
                 f"Unexpected strict-M2 claim for {row['source_id']}"
             )
+    by_id = {row["source_id"]: row for row in rows}
+    semantic_invariants = {
+        "aus_abc_news_2006_06_28_china_second_partner": (
+            "2",
+            "false",
+            "current_statement",
+        ),
+        "aus_abc_news_2007_05_04_china_overtakes_japan": (
+            "1",
+            "true",
+            "rolling_12_months",
+        ),
+        "aus_dfat_composition_trade_2008": ("2", "false", "calendar_year"),
+        "aus_afr_china_trading_partner_2009": ("1", "true", "fiscal_year"),
+        "aus_dfat_composition_trade_2008_09": ("1", "true", "fiscal_year"),
+    }
+    for source_id, expected in semantic_invariants.items():
+        observed = (
+            by_id[source_id]["rank_position_china"],
+            by_id[source_id]["positive_broad_cue"],
+            by_id[source_id]["reference_period_type"],
+        )
+        if observed != expected:
+            raise ValueError(
+                f"Semantic invariant failed for {source_id}: "
+                f"{observed} != {expected}"
+            )
+    if "2006-07" not in by_id["aus_afr_china_trading_partner_2009"][
+        "reference_period"
+    ]:
+        raise ValueError("AFR fiscal onset 2006-07 is missing")
     earliest_positive = min(
         row["publication_date"] for row in rows if row["positive_broad_cue"] == "true"
     )
     if earliest_positive != "2007-05-04":
         raise ValueError(f"Unexpected earliest positive cue: {earliest_positive}")
+
+    positive_count = sum(row["positive_broad_cue"] == "true" for row in rows)
+    strict_count = sum(row["strict_m2_goods_only"] == "true" for row in rows)
+    if positive_count != 5 or strict_count != 0:
+        raise ValueError(
+            f"Unexpected cue totals: broad={positive_count}, strict_m2={strict_count}"
+        )
+    return {
+        "source_by_id": source_by_id,
+        "positive_count": positive_count,
+        "strict_count": strict_count,
+        "earliest_positive": earliest_positive,
+    }
+
+
+def validate(manifest: dict, run_dir: Path) -> dict:
+    results = result_map(run_dir)
+    if set(results) != {source["source_id"] for source in manifest["sources"]}:
+        raise ValueError("fetch_results source ids differ from manifest")
+    with OUTPUT_PATH.open(encoding="utf-8", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    if not rows or list(rows[0]) != CSV_COLUMNS:
+        raise ValueError("Unexpected CSV schema")
+    coding = validate_coded_rows(rows, manifest, results)
+    source_by_id = coding["source_by_id"]
+
+    for row in rows:
+        source = source_by_id[row["source_id"]]
+        result = results[row["source_id"]]
+        if row["raw_file"]:
+            raw_path = ROOT / row["raw_file"]
+            if sha256(raw_path) != row["raw_sha256"]:
+                raise ValueError(f"CSV hash mismatch for {row['source_id']}")
+            if row["raw_file"] != result["raw_file"]:
+                raise ValueError(f"CSV/result raw path mismatch for {row['source_id']}")
+            if row["raw_sha256"] != result["sha256"]:
+                raise ValueError(f"CSV/result raw hash mismatch for {row['source_id']}")
+            if row["verification_markers_present"] != "true":
+                raise ValueError(f"Unverified raw source row: {row['source_id']}")
+            if not markers_present(source, raw_path):
+                raise ValueError(
+                    f"Current raw marker verification failed: {row['source_id']}"
+                )
+        elif not (
+            source.get("allow_unarchived_browser_verification") is True
+            and row["verification_markers_present"]
+            == "not_tested_no_article_raw"
+            and row["access_status"] == "robots_unavailable_stop"
+        ):
+            raise ValueError(f"Unexpected missing raw: {row['source_id']}")
+
+    adversarial_rows = [dict(row) for row in rows]
+    adversarial_afr = next(
+        row
+        for row in adversarial_rows
+        if row["source_id"] == "aus_afr_china_trading_partner_2009"
+    )
+    adversarial_afr.update(
+        rank_position_china="2",
+        positive_broad_cue="false",
+        reference_period_type="calendar_year",
+        reference_period="2009",
+    )
+    try:
+        validate_coded_rows(adversarial_rows, manifest, results)
+    except ValueError:
+        adversarial_rejected = True
+    else:
+        raise ValueError("Adversarial AFR fiscal-year mutation was not rejected")
 
     listed = {}
     for line in CHECKSUM_PATH.read_text(encoding="utf-8").splitlines():
@@ -506,13 +608,10 @@ def validate(manifest: dict, run_dir: Path) -> dict:
     return {
         "status": "PASS",
         "sources": len(rows),
-        "positive_broad_cue_sources": sum(
-            row["positive_broad_cue"] == "true" for row in rows
-        ),
-        "strict_m2_goods_only_sources": sum(
-            row["strict_m2_goods_only"] == "true" for row in rows
-        ),
-        "earliest_positive_publication_date": earliest_positive,
+        "positive_broad_cue_sources": coding["positive_count"],
+        "strict_m2_goods_only_sources": coding["strict_count"],
+        "earliest_positive_publication_date": coding["earliest_positive"],
+        "adversarial_fiscal_mutation_rejected": adversarial_rejected,
         "raw_files_covered_by_checksums": len(actual_files),
         "output": relative(OUTPUT_PATH),
         "run_dir": relative(run_dir),

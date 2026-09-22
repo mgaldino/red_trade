@@ -1,0 +1,69 @@
+{
+  "journal": "Chinese Political Science Review",
+  "journal_code": "CPSR",
+  "article_type": "Original Research Article",
+  "editor_in_chief": "Professor Sujian Guo",
+  "submission_date_iso": "2026-09-22",
+  "submission_date_long": "22 September 2026",
+  "source_date_epoch": 1790078400,
+  "title": "The Foreign Policy Impact of Trade-Based Status Gains: When China Overtakes the US as Top Export Destination",
+  "short_title": "Trade-Based Status Gains and Foreign Policy",
+  "author": {
+    "given": "Manoel",
+    "family": "Galdino",
+    "department": "Department of Political Science",
+    "institution": "University of Sao Paulo",
+    "city": "Sao Paulo",
+    "state": "SP",
+    "country": "Brazil",
+    "email": "mgaldino@usp.br",
+    "orcid": "0000-0002-8384-1491"
+  },
+  "abstract": {
+    "Purpose": "How do countries adjust their foreign policy when a rising power becomes their leading trading partner? I develop a formal model in which public recognition increases the salience of a new trade rank, and political leadership's cost-benefit analysis of foreign-policy alignment with the rising power determines its direction of change.",
+    "Methods": "To test the hypothesis derived from the model, I leverage the timing of China's surpassing the United States as Brazil's largest export destination and fit a synthetic difference-in-differences model to estimate the effect of the status change on Brazil's voting at the United Nations General Assembly. To assess whether the pattern extends beyond Brazil, I estimate a latent factor model using a cross-country panel for 2000-2022.",
+    "Results": "Brazilian policymakers invoked China's new position to justify greater proximity between the countries, with voting convergence particularly visible on human rights issues. Relative to the counterfactual, the estimated reduction in bilateral voting distance is equivalent to 42 percent of the pre-treatment mean distance. The cross-country estimates point in the same direction, although the effects are smaller.",
+    "Conclusion": "Publicly acknowledged changes in economic rank can support diplomatic adjustments in multilateral institutions, with implications for U.S.-China rivalry as their relative commercial positions change."
+  },
+  "keywords": [
+    "China",
+    "foreign policy alignment",
+    "international political economy",
+    "trade-based status",
+    "synthetic difference-in-differences",
+    "United Nations General Assembly"
+  ],
+  "funding": "This research was supported by the University of Sao Paulo through the Programa de Apoio a Novos Docentes (Support Program for Research by Newly Hired Professors), process number 22.1.09345.01.2.",
+  "acknowledgments": "I thank Natalia Paiva for comments on earlier versions of this paper.",
+  "competing_interests": "The author has no relevant financial or non-financial interests to disclose.",
+  "ethics": "Not applicable. The study uses country-level observational data and publicly available documents and does not involve human participants or animals.",
+  "data_code_availability": "An anonymized replication archive can be supplied during peer review. The final data and code availability statement, including a stable repository link, will be updated before publication.",
+  "author_contributions": "The sole author was responsible for conceptualization, methodology, formal analysis, investigation, data curation, visualization, software, and writing.",
+  "preprint": {
+    "title": "The rank effect of trade on Brazil's foreign policy political alignment with China",
+    "repository": "SocArXiv",
+    "doi": "https://doi.org/10.31235/osf.io/25zgv_v1"
+  },
+  "public_supplement_url": "",
+  "anonymous_online_resource_label": "Online Resource 1, supplied as a separate anonymized PDF with the submission",
+  "appendix_sections": [
+    "Brazil and China Ideal-Point Series",
+    "Triple-Difference Pre-Trends",
+    "Resolution-Level UNGA Vote Diagnostics",
+    "SDiD",
+    "Cross-Country Robustness: Duration Thresholds",
+    "Cross-Country Sample Audit: Goods-Only Treatment Coding",
+    "Public Cue and Recoverability Audit",
+    "ChatGPT Classification",
+    "Cross-Country: Goods-Only Treated Countries",
+    "Measurement Robustness: UNGA-DM Ideal Points"
+  ],
+  "short_appendix_sections": [
+    "Brazil and China Ideal-Point Series",
+    "Triple-Difference Pre-Trends",
+    "Cross-Country Robustness: Duration Thresholds",
+    "Cross-Country Sample Audit: Goods-Only Treatment Coding",
+    "Public Cue and Recoverability Audit",
+    "Measurement Robustness: UNGA-DM Ideal Points"
+  ]
+}

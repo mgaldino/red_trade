@@ -64,6 +64,12 @@ incompletamente indexados. Um registro de Hansard do Australian Capital
 Territory foi localizado como possível corroboração de 2007, mas não entrou na
 tabela porque a navegação interna do PDF falhou.
 
+As consultas executadas, resultados sem recuperação e candidatos excluídos
+estão registrados em
+`scripts/diagnostics/australia_public_cue_2006_2009_search_log.json`. O log
+inclui as URLs do Hansard e do retrospectivo *Trade Through Time*, bem como o
+motivo para não tratá-los como evidência-base de datação.
+
 O retrospectivo oficial *Trade Through Time* também não foi usado para datar a
 pista: ele é posterior aos eventos e apresenta referências internas divergentes
 a 2006 e 2007. A tabela privilegia documentos contemporâneos cuja métrica e base
@@ -76,12 +82,16 @@ temporal puderam ser distinguidas.
 - Cadastro de fontes: `data/processed/status_cue_salience/SOURCES.yaml`.
 - Manifesto versionado:
   `scripts/diagnostics/australia_public_cue_2006_2009_manifest.json`.
+- Log estruturado da busca:
+  `scripts/diagnostics/australia_public_cue_2006_2009_search_log.json`.
 - Coletor e validador:
   `scripts/diagnostics/collect_australia_public_cue_2006_2009.py`.
 - Execução principal:
   `data/raw/status_cue_salience/AUS/australia_media_search/20260922T160400Z`.
 - Integridade dos arquivos sob o diretório raw:
   `data/raw/status_cue_salience/checksums.sha256`.
+- Revisão independente final:
+  `quality_reports/status_cue_salience/australia_public_cue_2006_2009_independent_review.md`.
 
 Reprodução offline da tabela e das verificações:
 
@@ -98,6 +108,11 @@ respostas de `robots.txt`, metadados e tentativas interrompidas foram preservado
 e incluídos no arquivo de checksums. O RBA e o DFAT 2007 permaneceram sem raw do
 artigo porque a coleta automatizada parou no controle de robots; as páginas
 foram verificadas separadamente no navegador de pesquisa.
+
+Uma revisão independente somente leitura repetiu testes adversariais e aprovou
+o fechamento. O validador rejeita mudança do AFR de ano fiscal para
+ano-calendário, ID duplicado e alteração de rank, além de recalcular os
+marcadores nos raws preservados.
 
 ## Implicação operacional
 
