@@ -613,8 +613,6 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen271
 \c@nlinenum=\count339
 \TeXr@lab=\toks43
-) (/Users/manoelgaldino/Library/TinyTeX/texmf-dist/tex/latex/parskip/parskip.sty
-Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
 ) (/Users/manoelgaldino/Library/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2025/07/28 4.6 verbatim text (tvz,hv)
 \FV@CodeLineNo=\count340
@@ -694,24 +692,24 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 ) (output/submission/cpsr/raw/cpsr_full_supplement_anonymous.aux)
 \openout1 = `cpsr_full_supplement_anonymous.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -754,42 +752,34 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/Users/manoelgaldino/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Info: Redefining \S on input line 147.
-LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 147.
+LaTeX Info: Redefining \S on input line 144.
+LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 144.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `normal'
-(Font)                  U/msa/m/n --> U/msa/m/n on input line 147.
+(Font)                  U/msa/m/n --> U/msa/m/n on input line 144.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `bold'
-(Font)                  U/msa/m/n --> U/msa/m/n on input line 147.
-Package hyperref Info: Link coloring OFF on input line 147.
-
-Couldn't patch \deferred@thm@head!
+(Font)                  U/msa/m/n --> U/msa/m/n on input line 144.
+Package hyperref Info: Link coloring OFF on input line 144.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1
 
 {/Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 166.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 166.
+LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 163.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 163.
  (/Users/manoelgaldino/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 166.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 163.
  (/Users/manoelgaldino/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4]
@@ -811,6 +801,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10]
+Overfull \hbox (15.05255pt too wide) in paragraph at lines 329--336
+[]$[]$ 
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
@@ -831,235 +826,204 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [16]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [17]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [18
+ [17
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.500 
+l.497 
       ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
+ [18]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [21]
-</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/brazil-rank-volume-1.pdf, id=331, 519.9425pt x 519.9425pt>
+</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/brazil-rank-volume-1.pdf, id=324, 519.9425pt x 519.9425pt>
 File: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/brazil-rank-volume-1.pdf Graphic file (type pdf)
 <use /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/brazil-rank-volume-1.pdf>
-Package pdftex.def Info: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/brazil-rank-volume-1.pdf  used on input line 531.
+Package pdftex.def Info: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/brazil-rank-volume-1.pdf  used on input line 528.
 (pdftex.def)             Requested size: 519.94124pt x 519.94124pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [22]
-<quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_fit.pdf, id=341, 505.89pt x 346.29375pt>
+<quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_fit.pdf, id=327, 505.89pt x 346.29375pt>
 File: quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_fit.pdf Graphic file (type pdf)
 <use quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_fit.pdf>
-Package pdftex.def Info: quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_fit.pdf  used on input line 540.
+Package pdftex.def Info: quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_fit.pdf  used on input line 537.
 (pdftex.def)             Requested size: 353.39886pt x 241.91255pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [23
+ [21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.542 
+l.539 
        </Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/brazil-rank-volume-1.pdf>]
-</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-placebo-distribution-1.pdf, id=354, 505.89pt x 252.945pt>
+</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-placebo-distribution-1.pdf, id=347, 505.89pt x 252.945pt>
 File: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-placebo-distribution-1.pdf Graphic file (type pdf)
 <use /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-placebo-distribution-1.pdf>
-Package pdftex.def Info: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-placebo-distribution-1.pdf  used on input line 547.
+Package pdftex.def Info: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-placebo-distribution-1.pdf  used on input line 544.
 (pdftex.def)             Requested size: 505.88875pt x 252.94438pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24
+ [23
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.553 \clearpage
+l.550 \clearpage
                  </Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_fit.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25
+ [24
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.553 \clearpage
+l.550 \clearpage
                  </Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-placebo-distribution-1.pdf>]
-Overfull \hbox (58.87448pt too wide) in paragraph at lines 563--599
+Overfull \hbox (58.87448pt too wide) in paragraph at lines 560--596
  [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [26
+ [25
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.604 
+l.601 
       ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
+ [26]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [28
+ [27
 pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.651 
+l.648 
       ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29]
-<images/figure_brazil_sdid_dose_response_panel.pdf, id=427, 519.9425pt x 317.185pt>
+ [28]
+<images/figure_brazil_sdid_dose_response_panel.pdf, id=420, 519.9425pt x 317.185pt>
 File: images/figure_brazil_sdid_dose_response_panel.pdf Graphic file (type pdf)
 <use images/figure_brazil_sdid_dose_response_panel.pdf>
-Package pdftex.def Info: images/figure_brazil_sdid_dose_response_panel.pdf  used on input line 661.
+Package pdftex.def Info: images/figure_brazil_sdid_dose_response_panel.pdf  used on input line 658.
 (pdftex.def)             Requested size: 372.0pt x 226.93558pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [30]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [31
+ [29
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.669 
+l.662 
        </Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/images/figure_brazil_sdid_dose_response_panel.pdf>]
-Overfull \hbox (5.71947pt too wide) in paragraph at lines 701--719
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30]
+Overfull \hbox (5.71947pt too wide) in paragraph at lines 698--716
  [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [32
+ [31
 pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.720 
+l.717 
       ]
-</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-brazil-china-unvotes-issue-year-1.pdf, id=457, 794.97pt x 578.16pt>
+</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-brazil-china-unvotes-issue-year-1.pdf, id=450, 794.97pt x 578.16pt>
 File: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-brazil-china-unvotes-issue-year-1.pdf Graphic file (type pdf)
 <use /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-brazil-china-unvotes-issue-year-1.pdf>
-Package pdftex.def Info: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-brazil-china-unvotes-issue-year-1.pdf  used on input line 727.
+Package pdftex.def Info: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-brazil-china-unvotes-issue-year-1.pdf  used on input line 724.
 (pdftex.def)             Requested size: 794.96806pt x 578.15858pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [33
+ [32
 pdfTeX warning (ext4): destination with the same identifier (name{table.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.732 
+l.729 
       ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [34
+ [33
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.737 T
+l.734 T
        he results show that Brazil moves closer to China after 2009 relative... </Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-brazil-china-unvotes-issue-year-1.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [35]
+ [34]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [36]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [37
+ [35
 pdfTeX warning (ext4): destination with the same identifier (name{table.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.785 
+l.776 
       ]
-</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-media-counterfactual-1.pdf, id=515, 578.16pt x 404.51125pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [36]
+</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-media-counterfactual-1.pdf, id=507, 578.16pt x 404.51125pt>
 File: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-media-counterfactual-1.pdf Graphic file (type pdf)
 <use /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-media-counterfactual-1.pdf>
-Package pdftex.def Info: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-media-counterfactual-1.pdf  used on input line 792.
+Package pdftex.def Info: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-media-counterfactual-1.pdf  used on input line 789.
 (pdftex.def)             Requested size: 578.15858pt x 404.51025pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [38]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [39
+ [37
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.796 \clearpage
+l.793 \clearpage
                  </Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-media-counterfactual-1.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [40
+ [38
 
 ]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [40]
+LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 838.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [41]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42]
-LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 841.
-
+ [42
+pdfTeX warning (ext4): destination with the same identifier (name{table.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.852 
+      ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [43]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [44
-pdfTeX warning (ext4): destination with the same identifier (name{table.7}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.854 F
-       uture research can extend the results in at least three directions. F...]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [45]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [46] (output/submission/cpsr/raw/cpsr_full_supplement_anonymous.bbl
+ [44] (output/submission/cpsr/raw/cpsr_full_supplement_anonymous.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 10--11
 \T1/cmr/m/n/10.03749 2009 -[] 05 -[] 04 / china -[] supera -[] estados -[] unidos -[] e -[] torna -[] se -[] maior -[] parceiro -[] comercial -[] do -[]
  []
@@ -1067,10 +1031,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [47
+ [45
 
 ]
 Underfull \hbox (badness 4001) in paragraph at lines 37--38
@@ -1080,10 +1041,7 @@ Underfull \hbox (badness 4001) in paragraph at lines 37--38
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [48]
+ [46]
 Underfull \hbox (badness 10000) in paragraph at lines 64--65
 []\T1/cmr/m/n/10.03749 Folha de S.Paulo (2016) Alcance total dos jor-nais.
  []
@@ -1106,22 +1064,13 @@ Underfull \hbox (badness 4940) in paragraph at lines 79--80
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [47]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [48]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [49]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [50]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [51]
 Underfull \hbox (badness 10000) in paragraph at lines 142--143
 \T1/cmr/m/n/10.03749 artigos-e-entrevistas/presidente-da-republica/presidente-da-republica-federativa-
  []
@@ -1139,16 +1088,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
+ [50]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [52]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [53]
+ [51]
 Underfull \hbox (badness 10000) in paragraph at lines 184--185
 []$\T1/cmr/m/n/10.03749 https : / / www . abc . net . au / listen / programs / am / budget -[] doesnt -[] pass -[] future -[] test -[]
  []
@@ -1156,121 +1099,118 @@ Underfull \hbox (badness 10000) in paragraph at lines 184--185
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
+ [52])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [54])
+ [53]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [55]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [56
+ [54
 
 ]
-</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/appendix-brazil-china-ideal-points-1.pdf, id=734, 505.89pt x 278.03876pt>
+</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/appendix-brazil-china-ideal-points-1.pdf, id=721, 505.89pt x 278.03876pt>
 File: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/appendix-brazil-china-ideal-points-1.pdf Graphic file (type pdf)
 <use /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/appendix-brazil-china-ideal-points-1.pdf>
-Package pdftex.def Info: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/appendix-brazil-china-ideal-points-1.pdf  used on input line 911.
+Package pdftex.def Info: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/appendix-brazil-china-ideal-points-1.pdf  used on input line 908.
 (pdftex.def)             Requested size: 505.88875pt x 278.03807pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.912 \caption
+l.909 \caption
               {\label{fig:appendix-brazil-china-ideal-points}Brazil and Chin...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.912 ...scale). Window: 1990-2022 annual series.}
+l.909 ...scale). Window: 1990-2022 annual series.}
                                                   
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [57
+ [55
 
  </Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/appendix-brazil-china-ideal-points-1.pdf>]
-</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-ddd-pretrends-1.pdf, id=746, 505.89pt x 278.03876pt>
+</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-ddd-pretrends-1.pdf, id=735, 505.89pt x 278.03876pt>
 File: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-ddd-pretrends-1.pdf Graphic file (type pdf)
 <use /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-ddd-pretrends-1.pdf>
-Package pdftex.def Info: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-ddd-pretrends-1.pdf  used on input line 924.
+Package pdftex.def Info: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-ddd-pretrends-1.pdf  used on input line 921.
 (pdftex.def)             Requested size: 505.88875pt x 278.03807pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.925 \caption
+l.922 \caption
               {\label{fig:plot-ddd-pretrends}Brazil's distance from the dono...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.925 ...and the United States voted differently.}
+l.922 ...and the United States voted differently.}
                                                   
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [58
+ [56
 
  </Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/plot-ddd-pretrends-1.pdf>]
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.937 \caption
+l.934 \caption
               {\label{tab:table-brazil-china-unvotes-year}Brazil-China ident...
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.937 ...identical UNGA votes by year, 2005-2012.}
+l.934 ...identical UNGA votes by year, 2005-2012.}
                                                   
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [59
+ [57
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [60
+ [58
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1138 \end{longtable}
+l.1135 \end{longtable}
                       
 ignored error: Infinite glue shrinkage found in box being split
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [59]
+ignored error: Infinite glue shrinkage found in box being split
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [60]
+ignored error: Infinite glue shrinkage found in box being split
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [61]
-ignored error: Infinite glue shrinkage found in box being split
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [62]
-ignored error: Infinite glue shrinkage found in box being split
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [63]
 pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1144 \caption
+l.1141 \caption
                {\label{tab:sdid-time-weights}SDiD pre-treatment time weights...
 pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1144 ...for the preferred Brazil specification.}
+l.1141 ...for the preferred Brazil specification.}
                                                   
 pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1177 \caption
+l.1174 \caption
                {\label{tab:sdid-prefit-summary}Intercept-adjusted pre-treatm...
 pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1177 ...he preferred Brazil SDiD specification.}
+l.1174 ...he preferred Brazil SDiD specification.}
                                                   
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [64]
-Overfull \hbox (35.0529pt too wide) in alignment at lines 1203--1211
+ [62]
+Overfull \hbox (35.0529pt too wide) in alignment at lines 1200--1208
  [] [] [] [] [] [] 
  []
 
@@ -1278,19 +1218,19 @@ Overfull \hbox (35.0529pt too wide) in alignment at lines 1203--1211
 pdfTeX warning (ext4): destination with the same identifier (name{table.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1211 \end{longtable}
+l.1208 \end{longtable}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{table.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1217 \caption
+l.1214 \caption
                {\label{tab:sdid-placebo-rank}Directional and bilateral place...
 pdfTeX warning (ext4): destination with the same identifier (name{table.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1217 ...for the preferred Brazil SDiD estimate.}
+l.1214 ...for the preferred Brazil SDiD estimate.}
                                                   
-Overfull \hbox (216.96419pt too wide) in alignment at lines 1244--1265
+Overfull \hbox (216.96419pt too wide) in alignment at lines 1241--1262
  [] [] [] [] [] [] [] 
  []
 
@@ -1298,305 +1238,268 @@ Overfull \hbox (216.96419pt too wide) in alignment at lines 1244--1265
 pdfTeX warning (ext4): destination with the same identifier (name{table.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1265 \end{longtable}
+l.1262 \end{longtable}
                       
 ignored error: Infinite glue shrinkage found in box being split
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [65]
+ [63]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [66
+ [64
 pdfTeX warning (ext4): destination with the same identifier (name{table.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1327 
+l.1324 
        ]
-<quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_weights.pdf, id=802, 505.89pt x 346.29375pt>
+<quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_weights.pdf, id=791, 505.89pt x 346.29375pt>
 File: quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_weights.pdf Graphic file (type pdf)
 <use quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_weights.pdf>
-Package pdftex.def Info: quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_weights.pdf  used on input line 1331.
+Package pdftex.def Info: quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_weights.pdf  used on input line 1328.
 (pdftex.def)             Requested size: 334.79773pt x 229.17809pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1331 ...did_predetermined_core_weights} \caption
+l.1328 ...did_predetermined_core_weights} \caption
                                                   {Ten largest donor weights...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1331 ...w: pre-treatment period ending in 2008.}
+l.1328 ...w: pre-treatment period ending in 2008.}
                                                   \label{fig:plot-weights}
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [67
+ [65
 pdfTeX warning (ext4): destination with the same identifier (name{table.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1333 
+l.1330 
        ]
-<quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_latam_fit.pdf, id=808, 505.89pt x 346.29375pt>
+<quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_latam_fit.pdf, id=796, 505.89pt x 346.29375pt>
 File: quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_latam_fit.pdf Graphic file (type pdf)
 <use quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_latam_fit.pdf>
-Package pdftex.def Info: quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_latam_fit.pdf  used on input line 1337.
+Package pdftex.def Info: quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_latam_fit.pdf  used on input line 1334.
 (pdftex.def)             Requested size: 353.39886pt x 241.91255pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1337 ...d_predetermined_core_latam_fit} \caption
+l.1334 ...d_predetermined_core_latam_fit} \caption
                                                   {SDiD fit with a Latin Ame...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1337 ...ions). Window: 1997-2015 annual series.}
+l.1334 ...ions). Window: 1997-2015 annual series.}
                                                   \label{fig:plot-latam}
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
+ [66 </Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_weights.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [68 </Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_weights.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [69 </Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_latam_fit.pdf>]
-<quality_reports/revisions/paper_v4/20260922_cross_country_public_cue_preview/assets/figure_pre_cue_distance_focal_cases.png, id=835, 520.344pt x 303.534pt>
+ [67 </Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_latam_fit.pdf>]
+<quality_reports/revisions/paper_v4/20260922_cross_country_public_cue_preview/assets/figure_pre_cue_distance_focal_cases.png, id=824, 520.344pt x 303.534pt>
 File: quality_reports/revisions/paper_v4/20260922_cross_country_public_cue_preview/assets/figure_pre_cue_distance_focal_cases.png Graphic file (type png)
 <use quality_reports/revisions/paper_v4/20260922_cross_country_public_cue_preview/assets/figure_pre_cue_distance_focal_cases.png>
-Package pdftex.def Info: quality_reports/revisions/paper_v4/20260922_cross_country_public_cue_preview/assets/figure_pre_cue_distance_focal_cases.png  used on input line 1352.
+Package pdftex.def Info: quality_reports/revisions/paper_v4/20260922_cross_country_public_cue_preview/assets/figure_pre_cue_distance_focal_cases.png  used on input line 1349.
 (pdftex.def)             Requested size: 353.39886pt x 206.15953pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1352 ...e_pre_cue_distance_focal_cases} \caption
+l.1349 ...e_pre_cue_distance_focal_cases} \caption
                                                   {Pre-cue UNGA ideal-point ...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1352 ...ues indicate positions closer to China.}
+l.1349 ...ues indicate positions closer to China.}
                                                   \label{fig:public-cue-pre-...
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [70
+ [68
 
  </Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/quality_reports/revisions/paper_v4/20260922_cross_country_public_cue_preview/assets/figure_pre_cue_distance_focal_cases.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [71
+ [69
 pdfTeX warning (ext4): destination with the same identifier (name{table.10}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1381 \clearpage
+l.1378 \clearpage
                  ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [72
+ [70
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{table.11}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1415 \clearpage
+l.1412 \clearpage
                  ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [73
+ [71
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{table.12}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1463 \clearpage
+l.1460 \clearpage
                  
 pdfTeX warning (ext4): destination with the same identifier (name{table.13}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1463 \clearpage
+l.1460 \clearpage
                  ]
-Overfull \hbox (135.31178pt too wide) in alignment at lines 1479--1495
+Overfull \hbox (135.31178pt too wide) in alignment at lines 1476--1492
  [] [] [] [] [] [] 
  []
 
 ignored error: Infinite glue shrinkage found in box being split
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [74
+ [72
 
 ]
-Overfull \hbox (67.4104pt too wide) in paragraph at lines 1505--1520
+Overfull \hbox (67.4104pt too wide) in paragraph at lines 1502--1517
  [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
+ [73]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [75]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [76
+ [74
 pdfTeX warning (ext4): destination with the same identifier (name{table.15}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1522 \clearpage
+l.1519 \clearpage
                  ]
 
 LaTeX Font Warning: Font shape `T1/cmtt/bx/n' in size <9> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 1535.
-
-
-Underfull \vbox (badness 10000) detected at line 1613
- []
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 1532.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [77
+ [75
 
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [78]
-<images/RIO_20260905_table1_headlines_14.pdf, id=892, 578.16pt x 529.98pt>
+ [76]
+<images/RIO_20260905_table1_headlines_14.pdf, id=881, 578.16pt x 529.98pt>
 File: images/RIO_20260905_table1_headlines_14.pdf Graphic file (type pdf)
 <use images/RIO_20260905_table1_headlines_14.pdf>
-Package pdftex.def Info: images/RIO_20260905_table1_headlines_14.pdf  used on input line 1622.
+Package pdftex.def Info: images/RIO_20260905_table1_headlines_14.pdf  used on input line 1619.
 (pdftex.def)             Requested size: 372.0pt x 340.99748pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1622 ...O_20260905_table1_headlines_14} \caption
+l.1619 ...O_20260905_table1_headlines_14} \caption
                                                   {Fourteen archived example...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1622 ...sample drawn from the 2000-2014 corpus.}
+l.1619 ...sample drawn from the 2000-2014 corpus.}
                                                   \label{fig:sample-chatgpt}
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [79 </Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/images/RIO_20260905_table1_headlines_14.pdf>]
+ [77 </Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/images/RIO_20260905_table1_headlines_14.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [80
+ [78
 pdfTeX warning (ext4): destination with the same identifier (name{table.16}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1662 \clearpage
+l.1659 \clearpage
                  ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [81]
+ [79]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [82
+ [80
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{table.17}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1730 \clearpage
+l.1727 \clearpage
                  ]
-Overfull \hbox (47.86986pt too wide) in paragraph at lines 1745--1766
+Overfull \hbox (47.86986pt too wide) in paragraph at lines 1742--1763
  [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [83
+ [81
 
 ]
-</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/ungadm-placebo-distribution-1.pdf, id=938, 505.89pt x 252.945pt>
+</Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/ungadm-placebo-distribution-1.pdf, id=927, 505.89pt x 252.945pt>
 File: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/ungadm-placebo-distribution-1.pdf Graphic file (type pdf)
 <use /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/ungadm-placebo-distribution-1.pdf>
-Package pdftex.def Info: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/ungadm-placebo-distribution-1.pdf  used on input line 1772.
+Package pdftex.def Info: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/ungadm-placebo-distribution-1.pdf  used on input line 1769.
 (pdftex.def)             Requested size: 505.88875pt x 252.94438pt.
 
-Overfull \hbox (37.24956pt too wide) in paragraph at lines 1782--1796
+Overfull \hbox (37.24956pt too wide) in paragraph at lines 1779--1793
  [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [84
+ [82
 pdfTeX warning (ext4): destination with the same identifier (name{table.18}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1797 
+l.1794 
        ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [85
+ [83
 pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1799 
+l.1796 
        
 pdfTeX warning (ext4): destination with the same identifier (name{table.19}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1799 
+l.1796 
         </Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/submission/cpsr/raw/cpsr_full_supplement_anonymous_files/figure-latex/ungadm-placebo-distribution-1.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
+ [84]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [86]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [87
+ [85
 pdfTeX warning (ext4): destination with the same identifier (name{table.20}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1833 
+l.1830 
        ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [88
+ [86
 pdfTeX warning (ext4): destination with the same identifier (name{table.21}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1881 \end{table}
+l.1878 \end{table}
                   ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [89
+ [87
 pdfTeX warning (ext4): destination with the same identifier (name{table.22}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1887 \end{document}
+l.1884 \end{document}
                      ] (output/submission/cpsr/raw/cpsr_full_supplement_anonymous.aux)
  ***********
 LaTeX2e <2025-11-01>
@@ -1604,18 +1507,18 @@ L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 15339 strings out of 469494
- 254577 string characters out of 5467435
- 706598 words of memory out of 5000000
- 43479 multiletter control sequences out of 15000+600000
+ 15299 strings out of 469494
+ 253603 string characters out of 5467435
+ 704773 words of memory out of 5000000
+ 43444 multiletter control sequences out of 15000+600000
  670010 words of font info for 147 fonts, out of 8000000 for 9000
  26 hyphenation exceptions out of 8191
- 90i,19n,93p,1743b,719s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,19n,93p,1743b,725s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecit0900.600pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tctt0900.600pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0700.600pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0700.600pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0800.637pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.637pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0500.600pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.602pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.602pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0800.600pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0800.600pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0900.600pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0900.600pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0900.600pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.602pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.660pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.602pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.703pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0800.600pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.602pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.602pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0900.600pk> </Users/manoelgaldino/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.592pk></Users/manoelgaldino/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/manoelgaldino/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></Users/manoelgaldino/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/manoelgaldino/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></Users/manoelgaldino/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/manoelgaldino/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></Users/manoelgaldino/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></Users/manoelgaldino/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></Users/manoelgaldino/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/manoelgaldino/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></Users/manoelgaldino/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></Users/manoelgaldino/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/manoelgaldino/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></Users/manoelgaldino/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></Users/manoelgaldino/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></Users/manoelgaldino/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on output/submission/cpsr/raw/cpsr_full_supplement_anonymous.pdf (89 pages, 762959 bytes).
+Output written on output/submission/cpsr/raw/cpsr_full_supplement_anonymous.pdf (87 pages, 762566 bytes).
 PDF statistics:
- 2309 PDF objects out of 2487 (max. 8388607)
- 1148 compressed objects within 12 object streams
- 241 named destinations out of 1000 (max. 500000)
+ 2297 PDF objects out of 2487 (max. 8388607)
+ 1138 compressed objects within 12 object streams
+ 239 named destinations out of 1000 (max. 500000)
  386 words of extra memory for PDF output out of 10000 (max. 10000000)
 

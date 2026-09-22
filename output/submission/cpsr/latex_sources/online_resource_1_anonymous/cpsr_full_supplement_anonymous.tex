@@ -32,16 +32,6 @@
 
 \setcounter{secnumdepth}{3}
 
-\makeatletter
-\@ifundefined{KOMAClassName}{% if non-KOMA class
-  \IfFileExists{parskip.sty}{%
-    \usepackage{parskip}
-  }{% else
-    \setlength{\parindent}{0pt}
-    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
-}{% if KOMA class
-  \KOMAoptions{parskip=half}}
-\makeatother
 \usepackage{color}
 \usepackage{fancyvrb}
 \newcommand{\VerbBar}{|}
@@ -143,6 +133,13 @@
   pdfkeywords={China, foreign policy alignment, international political economy, trade-based status, synthetic difference-in-differences, United Nations General Assembly},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
+
+% Keep paragraph spacing stable in the double-spaced referee layout. The
+% Springer class's flush-bottom setting can otherwise stretch vertical glue
+% dramatically on pages with floats or short final paragraphs.
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0pt}
+\raggedbottom
 
 \begin{document}
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.2.19)  22 SEP 2026 14:45
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.2.19)  22 SEP 2026 15:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1106,14 +1106,18 @@ LaTeX Font Info:    Font shape `TU/Arial(1)/b/n' will be
 (Font)              scaled to size 6.0pt on input line 339.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
 (Font)              scaled to size 12.0pt on input line 353.
-[9]
 LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
 (Font)              scaled to size 12.0pt on input line 361.
 LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
 (Font)              scaled to size 8.4pt on input line 361.
 LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
 (Font)              scaled to size 6.0pt on input line 361.
-[10] [11] [12] [13] [14] [15]
+
+Overfull \hbox (18.0pt too wide) in paragraph at lines 373--380
+[]$[]$ 
+ []
+
+[9] [10] [11] [12] [13] [14]
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
 (Font)              scaled to size 8.0pt on input line 531.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
@@ -1138,15 +1142,15 @@ LaTeX Font Info:    Font shape `TU/Arial(1)/b/n' will be
 (Font)              scaled to size 5.0pt on input line 531.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
 (Font)              scaled to size 8.0pt on input line 531.
-[16] [17] [18] [19] [20]
+[15] [16] [17] [18] [19]
 File: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4_files/figure-latex/brazil-rank-volume-1.pdf Graphic file (type pdf)
 <use /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4_files/figure-latex/brazil-rank-volume-1.pdf>
 File: quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_fit.pdf Graphic file (type pdf)
 <use quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_fit.pdf>
-[21] [22]
+[20] [21]
 File: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4_files/figure-latex/plot-placebo-distribution-1.pdf Graphic file (type pdf)
 <use /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4_files/figure-latex/plot-placebo-distribution-1.pdf>
-[23] [24]
+[22] [23]
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
 (Font)              scaled to size 10.0pt on input line 598.
 LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
@@ -1163,7 +1167,7 @@ LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
 (Font)              scaled to size 7.0pt on input line 632.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
 (Font)              scaled to size 10.0pt on input line 632.
-[25
+[24
 
 ]
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
@@ -1180,18 +1184,18 @@ LaTeX Font Info:    Font shape `TU/Arial(1)/b/n' will be
 (Font)              scaled to size 9.0pt on input line 684.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
 (Font)              scaled to size 9.0pt on input line 684.
-[26] [27] [28]
+[25] [26] [27]
 File: images/figure_brazil_sdid_dose_response_panel.pdf Graphic file (type pdf)
 <use images/figure_brazil_sdid_dose_response_panel.pdf>
-[29] [30] [31] [32]
+[28] [29] [30]
 File: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4_files/figure-latex/plot-brazil-china-unvotes-issue-year-1.pdf Graphic file (type pdf)
 <use /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4_files/figure-latex/plot-brazil-china-unvotes-issue-year-1.pdf>
-[33] [34] [35] [36] [37]
+[31] [32] [33] [34] [35]
 File: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4_files/figure-latex/plot-media-counterfactual-1.pdf Graphic file (type pdf)
 <use /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4_files/figure-latex/plot-media-counterfactual-1.pdf>
-[38] [39
+[36] [37] [38
 
-] [40] [41]
+] [39] [40]
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
 (Font)              scaled to size 8.5pt on input line 878.
 LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 878.
@@ -1229,7 +1233,7 @@ LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
 (Font)              scaled to size 5.94997pt on input line 878.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
 (Font)              scaled to size 8.5pt on input line 878.
-[42] [43] [44]
+[41] [42] [43]
 Underfull \hbox (badness 10000) in paragraph at lines 901--902
 [][][][] [][] [][] [][] [][] [] [][][][][] [][] [][][][][][] [][] [][][][][][][] [][] [][][][][][] [][] [] [][] [][][][][] [][] [][] [][] [][][][][] [][] [][][][][][][][] [][] [][][][][][][][][] [][] [][] [][]
  []
@@ -1239,7 +1243,7 @@ Underfull \hbox (badness 1062) in paragraph at lines 928--929
 []\TU/Arial(0)/m/n/12 Conlon, John J. 2025. “Attention, Information, and Persuasion.” Working paper.
  []
 
-[45
+[44
 
 ]
 Underfull \hbox (badness 1308) in paragraph at lines 952--953
@@ -1251,7 +1255,7 @@ Overfull \hbox (40.89847pt too wide) in paragraph at lines 955--956
 []\TU/Arial(0)/m/n/12 Folha de S.Paulo. 2016. “Alcance total dos jornais.” https://arte.folha.uol.com.br/graficos/QcVNh/. 
  []
 
-[46] [47]
+[45] [46]
 Underfull \hbox (badness 2302) in paragraph at lines 1009--1010
 \TU/Arial(0)/m/n/12 Foreign Policy Drivers Towards the USA: Comment on Amorim Neto (2011).”
  []
@@ -1261,7 +1265,7 @@ Underfull \hbox (badness 1117) in paragraph at lines 1009--1010
 \TU/Arial(0)/m/it/12 Brazilian Political Science Review \TU/Arial(0)/m/n/12 8 (2): 94–115. []$[][][][][] [] [] [] [][][] [] [][][] [] [][] [] [][][][] [] [][][][] [][]
  []
 
-[48]
+[47]
 Underfull \hbox (badness 10000) in paragraph at lines 1033--1034
 \TU/Arial(0)/m/n/12 https://www.gov.br/mre/pt-br/centrais-de-conteudo/publicacoes/discursos-artigos-
  []
@@ -1281,62 +1285,62 @@ Underfull \hbox (badness 10000) in paragraph at lines 1033--1034
 \TU/Arial(0)/m/n/12 luiz-inacio-lula-da-silva-por-ocasiao-do-seminario-brasil-china-novas-oportunidades-
  []
 
-[49] [50] [51]
+[48] [49] [50]
 File: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4_files/figure-latex/appendix-brazil-china-ideal-points-1.pdf Graphic file (type pdf)
 <use /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4_files/figure-latex/appendix-brazil-china-ideal-points-1.pdf>
-[52
+[51
 
 ]
 File: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4_files/figure-latex/plot-ddd-pretrends-1.pdf Graphic file (type pdf)
 <use /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4_files/figure-latex/plot-ddd-pretrends-1.pdf>
-[53] [54]
+[52] [53]
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
 (Font)              scaled to size 5.0pt on input line 1329.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
 (Font)              scaled to size 7.0pt on input line 1329.
-[55]
-ignored error: Infinite glue shrinkage found in box being split [56]
-ignored error: Infinite glue shrinkage found in box being split [57] [58]
+[54]
+ignored error: Infinite glue shrinkage found in box being split [55]
+ignored error: Infinite glue shrinkage found in box being split [56] [57]
 Overfull \hbox (57.98405pt too wide) in alignment at lines 1436--1457
  [] [] [] [] [] [] [] 
  []
 
-ignored error: Infinite glue shrinkage found in box being split [59] [60]
+ignored error: Infinite glue shrinkage found in box being split [58] [59]
 File: quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_weights.pdf Graphic file (type pdf)
 <use quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_weights.pdf>
 File: quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_latam_fit.pdf Graphic file (type pdf)
 <use quality_reports/china_demand_shock_rank_threshold/figure_brazil_sdid_predetermined_core_latam_fit.pdf>
-[61] [62]
+[60] [61]
 File: quality_reports/revisions/paper_v4/20260922_cross_country_public_cue_preview/assets/figure_pre_cue_distance_focal_cases.png Graphic file (type bmp)
 <quality_reports/revisions/paper_v4/20260922_cross_country_public_cue_preview/assets/figure_pre_cue_distance_focal_cases.png>
-[63] [64] [65] [66]
+[62] [63] [64] [65]
 Overfull \hbox (7.95656pt too wide) in alignment at lines 1659--1675
  [] [] [] [] [] [] 
  []
 
-ignored error: Infinite glue shrinkage found in box being split [67]
+ignored error: Infinite glue shrinkage found in box being split [66]
 LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
 (Font)              scaled to size 9.0pt on input line 1687.
-[68]
+[67]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1712.
 
 Underfull \vbox (badness 10000) detected at line 1790
  []
 
-[69
+[68
 
-] [70]
+] [69]
 File: images/RIO_20260905_table1_headlines_14.pdf Graphic file (type pdf)
 <use images/RIO_20260905_table1_headlines_14.pdf>
-[71] [72]
+[70] [71]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[73] [74] [75]
+[72] [73] [74]
 File: /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4_files/figure-latex/ungadm-placebo-distribution-1.pdf Graphic file (type pdf)
 <use /Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/output/paper_v4_files/figure-latex/ungadm-placebo-distribution-1.pdf>
-[76] [77] [78] [79] [80] (./paper_v4.aux)
+[75] [76] [77] [78] [79] (./paper_v4.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -1345,10 +1349,10 @@ L3 programming layer <2026-01-19>
 Here is how much of TeX's memory you used:
  19719 strings out of 470174
  373954 string characters out of 5476653
- 963583 words of memory out of 5000000
+ 958583 words of memory out of 5000000
  47938 multiletter control sequences out of 15000+600000
  640464 words of font info for 181 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 90i,14n,116p,2119b,582s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,14n,116p,2119b,580s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on paper_v4.pdf (80 pages).
+Output written on paper_v4.pdf (79 pages).

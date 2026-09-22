@@ -83,6 +83,10 @@ def build_yaml(config: dict, variant: str) -> str:
             'bibliography: "cpsr_references.bib"',
             'biblio-style: "sn-basic"',
             "link-citations: true",
+            # Preserve Springer's indented paragraph style. Without this flag,
+            # Pandoc loads parskip.sty, whose stretchable glue can become very
+            # large when combined with the class's flush-bottom pagination.
+            "indent: true",
             "header-includes:",
             # Use Springer's normal-body theorem style. Pandoc/bookdown emits
             # these theorem environments as direct macros rather than

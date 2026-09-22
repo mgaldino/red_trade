@@ -234,12 +234,31 @@ def main() -> None:
 
     for source in build.glob("*_anonymous.Rmd"):
         source_text = source.read_text(encoding="utf-8")
+        require(
+            "indent: true" in source_text,
+            f"{source.name} requests indented paragraphs",
+            checks,
+        )
         for label, pattern in identity_patterns.items():
             require(
                 re.search(pattern, source_text, flags=re.IGNORECASE) is None,
                 f"{source.name} contains no {label}",
                 checks,
             )
+
+    template_text = (
+        ROOT / "submission" / "cpsr" / "template" / "cpsr-sn-pandoc.tex"
+    ).read_text(encoding="utf-8")
+    require(
+        r"\setlength{\parskip}{0pt}" in template_text,
+        "Springer template disables extra paragraph spacing",
+        checks,
+    )
+    require(
+        r"\raggedbottom" in template_text,
+        "Springer template prevents vertical glue stretching",
+        checks,
+    )
 
     page_counts = {
         name: len(PdfReader(path).pages) for name, path in expected.items()

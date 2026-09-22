@@ -3,19 +3,19 @@
   "variants": {
     "manuscript_anonymous": {
       "tex": "cpsr_manuscript_anonymous.tex",
-      "expected_pages": 55,
+      "expected_pages": 53,
       "graphics": 6,
       "verified_isolated_compile": true
     },
     "manuscript_with_full_appendix_anonymous": {
       "tex": "cpsr_full_inline_anonymous.tex",
-      "expected_pages": 89,
+      "expected_pages": 87,
       "graphics": 13,
       "verified_isolated_compile": true
     },
     "online_resource_1_anonymous": {
       "tex": "cpsr_full_supplement_anonymous.tex",
-      "expected_pages": 89,
+      "expected_pages": 87,
       "graphics": 13,
       "verified_isolated_compile": true
     }

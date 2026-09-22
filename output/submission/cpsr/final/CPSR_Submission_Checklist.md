@@ -85,21 +85,26 @@ Generated from `paper_v4.Rmd` on 2026-09-22. The build reads existing project ou
 - [x] online PDF contains no author email
 - [x] online PDF contains no author ORCID
 - [x] online PDF contains no preprint DOI
+- [x] cpsr_full_supplement_anonymous.Rmd requests indented paragraphs
 - [x] cpsr_full_supplement_anonymous.Rmd contains no author given name
 - [x] cpsr_full_supplement_anonymous.Rmd contains no author family name
 - [x] cpsr_full_supplement_anonymous.Rmd contains no author email
 - [x] cpsr_full_supplement_anonymous.Rmd contains no author ORCID
 - [x] cpsr_full_supplement_anonymous.Rmd contains no preprint DOI
+- [x] cpsr_full_inline_anonymous.Rmd requests indented paragraphs
 - [x] cpsr_full_inline_anonymous.Rmd contains no author given name
 - [x] cpsr_full_inline_anonymous.Rmd contains no author family name
 - [x] cpsr_full_inline_anonymous.Rmd contains no author email
 - [x] cpsr_full_inline_anonymous.Rmd contains no author ORCID
 - [x] cpsr_full_inline_anonymous.Rmd contains no preprint DOI
+- [x] cpsr_manuscript_anonymous.Rmd requests indented paragraphs
 - [x] cpsr_manuscript_anonymous.Rmd contains no author given name
 - [x] cpsr_manuscript_anonymous.Rmd contains no author family name
 - [x] cpsr_manuscript_anonymous.Rmd contains no author email
 - [x] cpsr_manuscript_anonymous.Rmd contains no author ORCID
 - [x] cpsr_manuscript_anonymous.Rmd contains no preprint DOI
+- [x] Springer template disables extra paragraph spacing
+- [x] Springer template prevents vertical glue stretching
 - [x] body-only PDF is shorter than full inline PDF
 - [x] condensed appendix is shorter than full appendix
 
@@ -117,8 +122,8 @@ Generated from `paper_v4.Rmd` on 2026-09-22. The build reads existing project ou
 
 ## PDF inventory
 
-- `CPSR_Manuscript_Anonymous.pdf`: 55 pages
-- `CPSR_Manuscript_with_Full_Appendix_Anonymous.pdf`: 89 pages
+- `CPSR_Manuscript_Anonymous.pdf`: 53 pages
+- `CPSR_Manuscript_with_Full_Appendix_Anonymous.pdf`: 87 pages
 - `CPSR_Appendix_Full_Anonymous.pdf`: 34 pages
 - `CPSR_Appendix_Short_Anonymous.pdf`: 15 pages
 - `CPSR_Online_Resource_1_Anonymous.pdf`: 34 pages

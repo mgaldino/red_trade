@@ -11,9 +11,9 @@ output:
 header-includes:
 - \usepackage{setspace}\doublespacing
 - \setstretch{1.5}
-- \usepackage{parskip}
-- \setlength{\parskip}{6pt}
-- \setlength{\parindent}{0pt}
+- \setlength{\parskip}{0pt}
+- \setlength{\parindent}{1.5em}
+- \raggedbottom
 - \usepackage{float}
 - \usepackage{longtable}
 - \usepackage{amsmath,amssymb,amsthm}

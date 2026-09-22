@@ -27,6 +27,7 @@ keywords:
 bibliography: "cpsr_references.bib"
 biblio-style: "sn-basic"
 link-citations: true
+indent: true
 header-includes:
   - \theoremstyle{thmstylethree}
   - \newtheorem{modelproposition}{Proposition}
