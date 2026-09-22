@@ -1,0 +1,536 @@
+model_id,iso3c,country_name,focal_country,cue_group,public_cue_year,first_year,last_year,current_china_top_years,china_top_years_before_cue,treated_years,untreated_years,observed_model_years,masked_model_years,eligible_control_years,control_pool_entries,control_pool_exits,entries,exits,first_treated_year,last_treated_year,off_years_after_first_entry,model_role
+clean_controls,AUS,Australia,TRUE,selected_public_cue,2009,1997,2022,14,0,14,12,26,0,0,0,0,1,0,2009,2022,0,focal_public_cue_case
+clean_controls,CHL,Chile,TRUE,selected_public_cue,2008,1997,2022,16,1,15,11,26,0,0,0,0,1,0,2008,2022,0,focal_public_cue_case
+clean_controls,GAB,Gabon,TRUE,selected_public_cue,2017,1997,2022,6,0,6,20,26,0,0,0,0,1,0,2017,2022,0,focal_public_cue_case
+clean_controls,QAT,Qatar,TRUE,selected_public_cue,2021,1997,2022,2,0,2,24,26,0,0,0,0,1,0,2021,2022,0,focal_public_cue_case
+clean_controls,URY,Uruguay,TRUE,selected_public_cue,2013,1997,2022,10,0,10,16,26,0,0,0,0,1,0,2013,2022,0,focal_public_cue_case
+clean_controls,AFG,Afghanistan,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,ALB,Albania,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,AND,Andorra,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,ARE,United Arab Emirates,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,ARG,Argentina,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,ATG,Antigua & Barbuda,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,AUT,Austria,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,AZE,Azerbaijan,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,BGD,Bangladesh,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,BGR,Bulgaria,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,BHR,Bahrain,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,BHS,Bahamas,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,BLR,Belarus,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,BLZ,Belize,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,BOL,Bolivia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,BRB,Barbados,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,BRN,Brunei,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,BTN,Bhutan,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,BWA,Botswana,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,CAN,Canada,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,CIV,Côte d’Ivoire,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,COL,Colombia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,COM,Comoros,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,CPV,Cape Verde,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,CRI,Costa Rica,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,CYP,Cyprus,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,CZE,Czechia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,DEU,Germany,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,DJI,Djibouti,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,DMA,Dominica,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,DNK,Denmark,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,DOM,Dominican Republic,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,DZA,Algeria,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,ECU,Ecuador,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,EGY,Egypt,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,ESP,Spain,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,EST,Estonia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,FIN,Finland,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,FJI,Fiji,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,FRA,France,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,FSM,Micronesia (Federated States of),FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,GBR,United Kingdom,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,GEO,Georgia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,GRC,Greece,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,GRD,Grenada,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,GTM,Guatemala,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,GUY,Guyana,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,HND,Honduras,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,HRV,Croatia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,HTI,Haiti,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,HUN,Hungary,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,IND,India,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,IRL,Ireland,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,ISL,Iceland,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,ISR,Israel,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,ITA,Italy,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,JAM,Jamaica,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,JOR,Jordan,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,KEN,Kenya,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,KNA,St. Kitts & Nevis,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,LBN,Lebanon,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,LBY,Libya,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,LCA,St. Lucia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,LKA,Sri Lanka,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,LSO,Lesotho,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,LTU,Lithuania,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,LVA,Latvia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,MAR,Morocco,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,MDA,Moldova,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,MDG,Madagascar,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,MDV,Maldives,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,MEX,Mexico,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,MHL,Marshall Islands,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,MKD,North Macedonia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,MUS,Mauritius,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,MWI,Malawi,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,NAM,Namibia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,NGA,Nigeria,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,NIC,Nicaragua,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,NLD,Netherlands,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,NOR,Norway,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,NPL,Nepal,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,PAK,Pakistan,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,POL,Poland,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,PRT,Portugal,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,PRY,Paraguay,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,ROU,Romania,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,RWA,Rwanda,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,SEN,Senegal,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,SGP,Singapore,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,SLV,El Salvador,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,SUR,Suriname,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,SVK,Slovakia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,SVN,Slovenia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,SWE,Sweden,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,SWZ,Eswatini,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,SYR,Syria,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,TGO,Togo,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,TTO,Trinidad & Tobago,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,TUN,Tunisia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,TUR,Turkey,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,UGA,Uganda,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,USA,United States,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,VCT,St. Vincent & Grenadines,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls,WSM,Samoa,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,AUS,Australia,TRUE,selected_public_cue,2009,1997,2022,14,0,14,12,26,0,0,0,0,1,0,2009,2022,0,focal_public_cue_case
+full_switching,CHL,Chile,TRUE,selected_public_cue,2008,1997,2022,16,1,15,11,26,0,0,0,0,1,0,2008,2022,0,focal_public_cue_case
+full_switching,GAB,Gabon,TRUE,selected_public_cue,2017,1997,2022,6,0,6,20,26,0,0,0,0,1,0,2017,2022,0,focal_public_cue_case
+full_switching,QAT,Qatar,TRUE,selected_public_cue,2021,1997,2022,2,0,2,24,26,0,0,0,0,1,0,2021,2022,0,focal_public_cue_case
+full_switching,URY,Uruguay,TRUE,selected_public_cue,2013,1997,2022,10,0,10,16,26,0,0,0,0,1,0,2013,2022,0,focal_public_cue_case
+full_switching,AFG,Afghanistan,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,AGO,Angola,FALSE,other_countries,NA,1997,2022,16,NA,0,26,10,16,10,0,1,0,0,NA,NA,0,switching_control
+full_switching,ALB,Albania,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,AND,Andorra,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,ARE,United Arab Emirates,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,ARG,Argentina,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,ARM,Armenia,FALSE,other_countries,NA,1997,2022,3,NA,0,26,23,3,23,2,2,0,0,NA,NA,0,switching_control
+full_switching,ATG,Antigua & Barbuda,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,AUT,Austria,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,AZE,Azerbaijan,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,BEN,Benin,FALSE,other_countries,NA,1997,2022,4,NA,0,26,22,4,22,3,3,0,0,NA,NA,0,switching_control
+full_switching,BFA,Burkina Faso,FALSE,other_countries,NA,1997,2022,3,NA,0,26,23,3,23,1,1,0,0,NA,NA,0,switching_control
+full_switching,BGD,Bangladesh,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,BGR,Bulgaria,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,BHR,Bahrain,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,BHS,Bahamas,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,BLR,Belarus,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,BLZ,Belize,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,BOL,Bolivia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,BRA,Brazil,FALSE,other_countries,NA,1997,2022,14,NA,0,26,12,14,12,0,1,0,0,NA,NA,0,switching_control
+full_switching,BRB,Barbados,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,BRN,Brunei,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,BTN,Bhutan,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,BWA,Botswana,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,CAN,Canada,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,CIV,Côte d’Ivoire,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,CMR,Cameroon,FALSE,other_countries,NA,1997,2022,6,NA,0,26,20,6,20,4,4,0,0,NA,NA,0,switching_control
+full_switching,COG,Congo - Brazzaville,FALSE,other_countries,NA,1997,2022,15,NA,0,26,11,15,11,1,2,0,0,NA,NA,0,switching_control
+full_switching,COL,Colombia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,COM,Comoros,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,CPV,Cape Verde,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,CRI,Costa Rica,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,CUB,Cuba,FALSE,other_countries,NA,1997,2022,18,NA,0,26,8,18,8,1,2,0,0,NA,NA,0,switching_control
+full_switching,CYP,Cyprus,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,CZE,Czechia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,DEU,Germany,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,DJI,Djibouti,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,DMA,Dominica,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,DNK,Denmark,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,DOM,Dominican Republic,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,DZA,Algeria,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,ECU,Ecuador,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,EGY,Egypt,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,ERI,Eritrea,FALSE,other_countries,NA,1997,2022,9,NA,0,26,17,9,17,0,1,0,0,NA,NA,0,switching_control
+full_switching,ESP,Spain,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,EST,Estonia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,ETH,Ethiopia,FALSE,other_countries,NA,1997,2022,5,NA,0,26,21,5,21,3,3,0,0,NA,NA,0,switching_control
+full_switching,FIN,Finland,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,FJI,Fiji,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,FRA,France,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,FSM,Micronesia (Federated States of),FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,GBR,United Kingdom,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,GEO,Georgia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,GHA,Ghana,FALSE,other_countries,NA,1997,2022,1,NA,0,26,25,1,25,1,1,0,0,NA,NA,0,switching_control
+full_switching,GIN,Guinea,FALSE,other_countries,NA,1997,2022,2,NA,0,26,24,2,24,1,2,0,0,NA,NA,0,switching_control
+full_switching,GMB,Gambia,FALSE,other_countries,NA,1997,2022,7,NA,0,26,19,7,19,3,3,0,0,NA,NA,0,switching_control
+full_switching,GNQ,Equatorial Guinea,FALSE,other_countries,NA,1997,2022,10,NA,0,26,16,10,16,2,3,0,0,NA,NA,0,switching_control
+full_switching,GRC,Greece,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,GRD,Grenada,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,GTM,Guatemala,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,GUY,Guyana,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,HND,Honduras,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,HRV,Croatia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,HTI,Haiti,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,HUN,Hungary,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,IDN,Indonesia,FALSE,other_countries,NA,1997,2022,8,NA,0,26,18,8,18,1,2,0,0,NA,NA,0,switching_control
+full_switching,IND,India,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,IRL,Ireland,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,IRN,Iran,FALSE,other_countries,NA,1997,2022,14,NA,0,26,12,14,12,1,2,0,0,NA,NA,0,switching_control
+full_switching,ISL,Iceland,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,ISR,Israel,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,ITA,Italy,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,JAM,Jamaica,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,JOR,Jordan,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,JPN,Japan,FALSE,other_countries,NA,1997,2022,15,NA,0,26,11,15,11,0,1,0,0,NA,NA,0,switching_control
+full_switching,KAZ,Kazakhstan,FALSE,other_countries,NA,1997,2022,16,NA,0,26,10,16,10,0,1,0,0,NA,NA,0,switching_control
+full_switching,KEN,Kenya,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,KNA,St. Kitts & Nevis,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,KOR,South Korea,FALSE,other_countries,NA,1997,2022,20,NA,0,26,6,20,6,0,1,0,0,NA,NA,0,switching_control
+full_switching,KWT,Kuwait,FALSE,other_countries,NA,1997,2022,5,NA,0,26,21,5,21,0,1,0,0,NA,NA,0,switching_control
+full_switching,LAO,Laos,FALSE,other_countries,NA,1997,2022,2,NA,0,26,24,2,24,2,2,0,0,NA,NA,0,switching_control
+full_switching,LBN,Lebanon,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,LBY,Libya,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,LCA,St. Lucia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,LKA,Sri Lanka,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,LSO,Lesotho,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,LTU,Lithuania,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,LVA,Latvia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,MAR,Morocco,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,MDA,Moldova,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,MDG,Madagascar,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,MDV,Maldives,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,MEX,Mexico,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,MHL,Marshall Islands,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,MKD,North Macedonia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,MLI,Mali,FALSE,other_countries,NA,1997,2022,2,NA,0,26,24,2,24,2,2,0,0,NA,NA,0,switching_control
+full_switching,MLT,Malta,FALSE,other_countries,NA,1997,2022,4,NA,0,26,22,4,22,1,2,0,0,NA,NA,0,switching_control
+full_switching,MMR,Myanmar (Burma),FALSE,other_countries,NA,1997,2022,9,NA,0,26,17,9,17,0,1,0,0,NA,NA,0,switching_control
+full_switching,MNG,Mongolia,FALSE,other_countries,NA,1997,2022,26,NA,0,26,0,26,0,0,0,0,0,NA,NA,0,never_eligible_as_control
+full_switching,MOZ,Mozambique,FALSE,other_countries,NA,1997,2022,1,NA,0,26,25,1,25,1,1,0,0,NA,NA,0,switching_control
+full_switching,MUS,Mauritius,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,MWI,Malawi,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,MYS,Malaysia,FALSE,other_countries,NA,1997,2022,14,NA,0,26,12,14,12,0,1,0,0,NA,NA,0,switching_control
+full_switching,NAM,Namibia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,NGA,Nigeria,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,NIC,Nicaragua,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,NLD,Netherlands,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,NOR,Norway,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,NPL,Nepal,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,NZL,New Zealand,FALSE,other_countries,NA,1997,2022,10,NA,0,26,16,10,16,0,1,0,0,NA,NA,0,switching_control
+full_switching,OMN,Oman,FALSE,other_countries,NA,1997,2022,20,NA,0,26,6,20,6,1,2,0,0,NA,NA,0,switching_control
+full_switching,PAK,Pakistan,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,PAN,Panama,FALSE,other_countries,NA,1997,2022,2,NA,0,26,24,2,24,0,1,0,0,NA,NA,0,switching_control
+full_switching,PER,Peru,FALSE,other_countries,NA,1997,2022,13,NA,0,26,13,13,13,0,1,0,0,NA,NA,0,switching_control
+full_switching,PHL,Philippines,FALSE,other_countries,NA,1997,2022,18,NA,0,26,8,18,8,0,1,0,0,NA,NA,0,switching_control
+full_switching,PNG,Papua New Guinea,FALSE,other_countries,NA,1997,2022,2,NA,0,26,24,2,24,1,1,0,0,NA,NA,0,switching_control
+full_switching,POL,Poland,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,PRK,North Korea,FALSE,other_countries,NA,1997,2022,17,NA,0,26,9,17,9,2,3,0,0,NA,NA,0,switching_control
+full_switching,PRT,Portugal,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,PRY,Paraguay,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,ROU,Romania,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,RUS,Russia,FALSE,other_countries,NA,1997,2022,11,NA,0,26,15,11,15,0,1,0,0,NA,NA,0,switching_control
+full_switching,RWA,Rwanda,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,SAU,Saudi Arabia,FALSE,other_countries,NA,1997,2022,10,NA,0,26,16,10,16,0,1,0,0,NA,NA,0,switching_control
+full_switching,SDN,Sudan,FALSE,other_countries,NA,1997,2022,11,NA,0,26,15,11,15,3,3,0,0,NA,NA,0,switching_control
+full_switching,SEN,Senegal,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,SGP,Singapore,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,SLB,Solomon Islands,FALSE,other_countries,NA,1997,2022,20,NA,0,26,6,20,6,0,1,0,0,NA,NA,0,switching_control
+full_switching,SLE,Sierra Leone,FALSE,other_countries,NA,1997,2022,11,NA,0,26,15,11,15,0,1,0,0,NA,NA,0,switching_control
+full_switching,SLV,El Salvador,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,SUR,Suriname,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,SVK,Slovakia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,SVN,Slovenia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,SWE,Sweden,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,SWZ,Eswatini,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,SYR,Syria,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,TCD,Chad,FALSE,other_countries,NA,1997,2022,2,NA,0,26,24,2,24,1,1,0,0,NA,NA,0,switching_control
+full_switching,TGO,Togo,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,THA,Thailand,FALSE,other_countries,NA,1997,2022,14,NA,0,26,12,14,12,1,1,0,0,NA,NA,0,switching_control
+full_switching,TKM,Turkmenistan,FALSE,other_countries,NA,1997,2022,13,NA,0,26,13,13,13,0,1,0,0,NA,NA,0,switching_control
+full_switching,TTO,Trinidad & Tobago,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,TUN,Tunisia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,TUR,Turkey,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,TZA,Tanzania,FALSE,other_countries,NA,1997,2022,1,NA,0,26,25,1,25,1,1,0,0,NA,NA,0,switching_control
+full_switching,UGA,Uganda,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,UKR,Ukraine,FALSE,other_countries,NA,1997,2022,2,NA,0,26,24,2,24,1,1,0,0,NA,NA,0,switching_control
+full_switching,USA,United States,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,VCT,St. Vincent & Grenadines,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,VNM,Vietnam,FALSE,other_countries,NA,1997,2022,1,NA,0,26,25,1,25,1,1,0,0,NA,NA,0,switching_control
+full_switching,WSM,Samoa,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching,YEM,Yemen,FALSE,other_countries,NA,1997,2022,19,NA,0,26,7,19,7,4,4,0,0,NA,NA,0,switching_control
+full_switching,ZAF,South Africa,FALSE,other_countries,NA,1997,2022,14,NA,0,26,12,14,12,0,1,0,0,NA,NA,0,switching_control
+full_switching,ZMB,Zambia,FALSE,other_countries,NA,1997,2022,6,NA,0,26,20,6,20,3,4,0,0,NA,NA,0,switching_control
+full_switching,ZWE,Zimbabwe,FALSE,other_countries,NA,1997,2022,8,NA,0,26,18,8,18,2,2,0,0,NA,NA,0,switching_control
+clean_controls_without_gab_qat,AUS,Australia,TRUE,selected_public_cue,2009,1997,2022,14,0,14,12,26,0,0,0,0,1,0,2009,2022,0,focal_public_cue_case
+clean_controls_without_gab_qat,BRA,Brazil,TRUE,selected_public_cue,2009,1997,2022,14,0,14,12,26,0,0,0,0,1,0,2009,2022,0,focal_public_cue_case
+clean_controls_without_gab_qat,CHL,Chile,TRUE,selected_public_cue,2008,1997,2022,16,1,15,11,26,0,0,0,0,1,0,2008,2022,0,focal_public_cue_case
+clean_controls_without_gab_qat,URY,Uruguay,TRUE,selected_public_cue,2013,1997,2022,10,0,10,16,26,0,0,0,0,1,0,2013,2022,0,focal_public_cue_case
+clean_controls_without_gab_qat,AFG,Afghanistan,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,ALB,Albania,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,AND,Andorra,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,ARE,United Arab Emirates,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,ARG,Argentina,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,ATG,Antigua & Barbuda,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,AUT,Austria,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,AZE,Azerbaijan,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,BGD,Bangladesh,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,BGR,Bulgaria,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,BHR,Bahrain,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,BHS,Bahamas,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,BLR,Belarus,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,BLZ,Belize,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,BOL,Bolivia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,BRB,Barbados,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,BRN,Brunei,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,BTN,Bhutan,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,BWA,Botswana,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,CAN,Canada,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,CIV,Côte d’Ivoire,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,COL,Colombia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,COM,Comoros,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,CPV,Cape Verde,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,CRI,Costa Rica,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,CYP,Cyprus,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,CZE,Czechia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,DEU,Germany,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,DJI,Djibouti,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,DMA,Dominica,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,DNK,Denmark,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,DOM,Dominican Republic,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,DZA,Algeria,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,ECU,Ecuador,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,EGY,Egypt,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,ESP,Spain,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,EST,Estonia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,FIN,Finland,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,FJI,Fiji,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,FRA,France,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,FSM,Micronesia (Federated States of),FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,GBR,United Kingdom,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,GEO,Georgia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,GRC,Greece,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,GRD,Grenada,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,GTM,Guatemala,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,GUY,Guyana,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,HND,Honduras,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,HRV,Croatia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,HTI,Haiti,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,HUN,Hungary,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,IND,India,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,IRL,Ireland,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,ISL,Iceland,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,ISR,Israel,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,ITA,Italy,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,JAM,Jamaica,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,JOR,Jordan,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,KEN,Kenya,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,KNA,St. Kitts & Nevis,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,LBN,Lebanon,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,LBY,Libya,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,LCA,St. Lucia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,LKA,Sri Lanka,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,LSO,Lesotho,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,LTU,Lithuania,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,LVA,Latvia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,MAR,Morocco,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,MDA,Moldova,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,MDG,Madagascar,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,MDV,Maldives,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,MEX,Mexico,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,MHL,Marshall Islands,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,MKD,North Macedonia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,MUS,Mauritius,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,MWI,Malawi,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,NAM,Namibia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,NGA,Nigeria,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,NIC,Nicaragua,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,NLD,Netherlands,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,NOR,Norway,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,NPL,Nepal,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,PAK,Pakistan,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,POL,Poland,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,PRT,Portugal,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,PRY,Paraguay,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,ROU,Romania,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,RWA,Rwanda,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,SEN,Senegal,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,SGP,Singapore,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,SLV,El Salvador,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,SUR,Suriname,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,SVK,Slovakia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,SVN,Slovenia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,SWE,Sweden,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,SWZ,Eswatini,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,SYR,Syria,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,TGO,Togo,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,TTO,Trinidad & Tobago,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,TUN,Tunisia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,TUR,Turkey,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,UGA,Uganda,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,USA,United States,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,VCT,St. Vincent & Grenadines,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+clean_controls_without_gab_qat,WSM,Samoa,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,AUS,Australia,TRUE,selected_public_cue,2009,1997,2022,14,0,14,12,26,0,0,0,0,1,0,2009,2022,0,focal_public_cue_case
+full_switching_without_gab_qat,BRA,Brazil,TRUE,selected_public_cue,2009,1997,2022,14,0,14,12,26,0,0,0,0,1,0,2009,2022,0,focal_public_cue_case
+full_switching_without_gab_qat,CHL,Chile,TRUE,selected_public_cue,2008,1997,2022,16,1,15,11,26,0,0,0,0,1,0,2008,2022,0,focal_public_cue_case
+full_switching_without_gab_qat,URY,Uruguay,TRUE,selected_public_cue,2013,1997,2022,10,0,10,16,26,0,0,0,0,1,0,2013,2022,0,focal_public_cue_case
+full_switching_without_gab_qat,AFG,Afghanistan,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,AGO,Angola,FALSE,other_countries,NA,1997,2022,16,NA,0,26,10,16,10,0,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,ALB,Albania,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,AND,Andorra,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,ARE,United Arab Emirates,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,ARG,Argentina,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,ARM,Armenia,FALSE,other_countries,NA,1997,2022,3,NA,0,26,23,3,23,2,2,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,ATG,Antigua & Barbuda,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,AUT,Austria,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,AZE,Azerbaijan,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,BEN,Benin,FALSE,other_countries,NA,1997,2022,4,NA,0,26,22,4,22,3,3,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,BFA,Burkina Faso,FALSE,other_countries,NA,1997,2022,3,NA,0,26,23,3,23,1,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,BGD,Bangladesh,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,BGR,Bulgaria,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,BHR,Bahrain,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,BHS,Bahamas,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,BLR,Belarus,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,BLZ,Belize,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,BOL,Bolivia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,BRB,Barbados,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,BRN,Brunei,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,BTN,Bhutan,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,BWA,Botswana,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,CAN,Canada,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,CIV,Côte d’Ivoire,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,CMR,Cameroon,FALSE,other_countries,NA,1997,2022,6,NA,0,26,20,6,20,4,4,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,COG,Congo - Brazzaville,FALSE,other_countries,NA,1997,2022,15,NA,0,26,11,15,11,1,2,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,COL,Colombia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,COM,Comoros,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,CPV,Cape Verde,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,CRI,Costa Rica,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,CUB,Cuba,FALSE,other_countries,NA,1997,2022,18,NA,0,26,8,18,8,1,2,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,CYP,Cyprus,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,CZE,Czechia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,DEU,Germany,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,DJI,Djibouti,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,DMA,Dominica,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,DNK,Denmark,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,DOM,Dominican Republic,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,DZA,Algeria,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,ECU,Ecuador,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,EGY,Egypt,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,ERI,Eritrea,FALSE,other_countries,NA,1997,2022,9,NA,0,26,17,9,17,0,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,ESP,Spain,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,EST,Estonia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,ETH,Ethiopia,FALSE,other_countries,NA,1997,2022,5,NA,0,26,21,5,21,3,3,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,FIN,Finland,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,FJI,Fiji,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,FRA,France,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,FSM,Micronesia (Federated States of),FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,GBR,United Kingdom,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,GEO,Georgia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,GHA,Ghana,FALSE,other_countries,NA,1997,2022,1,NA,0,26,25,1,25,1,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,GIN,Guinea,FALSE,other_countries,NA,1997,2022,2,NA,0,26,24,2,24,1,2,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,GMB,Gambia,FALSE,other_countries,NA,1997,2022,7,NA,0,26,19,7,19,3,3,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,GNQ,Equatorial Guinea,FALSE,other_countries,NA,1997,2022,10,NA,0,26,16,10,16,2,3,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,GRC,Greece,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,GRD,Grenada,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,GTM,Guatemala,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,GUY,Guyana,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,HND,Honduras,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,HRV,Croatia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,HTI,Haiti,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,HUN,Hungary,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,IDN,Indonesia,FALSE,other_countries,NA,1997,2022,8,NA,0,26,18,8,18,1,2,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,IND,India,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,IRL,Ireland,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,IRN,Iran,FALSE,other_countries,NA,1997,2022,14,NA,0,26,12,14,12,1,2,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,ISL,Iceland,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,ISR,Israel,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,ITA,Italy,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,JAM,Jamaica,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,JOR,Jordan,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,JPN,Japan,FALSE,other_countries,NA,1997,2022,15,NA,0,26,11,15,11,0,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,KAZ,Kazakhstan,FALSE,other_countries,NA,1997,2022,16,NA,0,26,10,16,10,0,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,KEN,Kenya,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,KNA,St. Kitts & Nevis,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,KOR,South Korea,FALSE,other_countries,NA,1997,2022,20,NA,0,26,6,20,6,0,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,KWT,Kuwait,FALSE,other_countries,NA,1997,2022,5,NA,0,26,21,5,21,0,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,LAO,Laos,FALSE,other_countries,NA,1997,2022,2,NA,0,26,24,2,24,2,2,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,LBN,Lebanon,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,LBY,Libya,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,LCA,St. Lucia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,LKA,Sri Lanka,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,LSO,Lesotho,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,LTU,Lithuania,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,LVA,Latvia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,MAR,Morocco,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,MDA,Moldova,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,MDG,Madagascar,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,MDV,Maldives,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,MEX,Mexico,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,MHL,Marshall Islands,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,MKD,North Macedonia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,MLI,Mali,FALSE,other_countries,NA,1997,2022,2,NA,0,26,24,2,24,2,2,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,MLT,Malta,FALSE,other_countries,NA,1997,2022,4,NA,0,26,22,4,22,1,2,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,MMR,Myanmar (Burma),FALSE,other_countries,NA,1997,2022,9,NA,0,26,17,9,17,0,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,MNG,Mongolia,FALSE,other_countries,NA,1997,2022,26,NA,0,26,0,26,0,0,0,0,0,NA,NA,0,never_eligible_as_control
+full_switching_without_gab_qat,MOZ,Mozambique,FALSE,other_countries,NA,1997,2022,1,NA,0,26,25,1,25,1,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,MUS,Mauritius,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,MWI,Malawi,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,MYS,Malaysia,FALSE,other_countries,NA,1997,2022,14,NA,0,26,12,14,12,0,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,NAM,Namibia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,NGA,Nigeria,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,NIC,Nicaragua,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,NLD,Netherlands,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,NOR,Norway,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,NPL,Nepal,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,NZL,New Zealand,FALSE,other_countries,NA,1997,2022,10,NA,0,26,16,10,16,0,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,OMN,Oman,FALSE,other_countries,NA,1997,2022,20,NA,0,26,6,20,6,1,2,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,PAK,Pakistan,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,PAN,Panama,FALSE,other_countries,NA,1997,2022,2,NA,0,26,24,2,24,0,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,PER,Peru,FALSE,other_countries,NA,1997,2022,13,NA,0,26,13,13,13,0,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,PHL,Philippines,FALSE,other_countries,NA,1997,2022,18,NA,0,26,8,18,8,0,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,PNG,Papua New Guinea,FALSE,other_countries,NA,1997,2022,2,NA,0,26,24,2,24,1,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,POL,Poland,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,PRK,North Korea,FALSE,other_countries,NA,1997,2022,17,NA,0,26,9,17,9,2,3,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,PRT,Portugal,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,PRY,Paraguay,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,ROU,Romania,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,RUS,Russia,FALSE,other_countries,NA,1997,2022,11,NA,0,26,15,11,15,0,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,RWA,Rwanda,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,SAU,Saudi Arabia,FALSE,other_countries,NA,1997,2022,10,NA,0,26,16,10,16,0,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,SDN,Sudan,FALSE,other_countries,NA,1997,2022,11,NA,0,26,15,11,15,3,3,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,SEN,Senegal,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,SGP,Singapore,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,SLB,Solomon Islands,FALSE,other_countries,NA,1997,2022,20,NA,0,26,6,20,6,0,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,SLE,Sierra Leone,FALSE,other_countries,NA,1997,2022,11,NA,0,26,15,11,15,0,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,SLV,El Salvador,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,SUR,Suriname,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,SVK,Slovakia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,SVN,Slovenia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,SWE,Sweden,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,SWZ,Eswatini,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,SYR,Syria,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,TCD,Chad,FALSE,other_countries,NA,1997,2022,2,NA,0,26,24,2,24,1,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,TGO,Togo,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,THA,Thailand,FALSE,other_countries,NA,1997,2022,14,NA,0,26,12,14,12,1,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,TKM,Turkmenistan,FALSE,other_countries,NA,1997,2022,13,NA,0,26,13,13,13,0,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,TTO,Trinidad & Tobago,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,TUN,Tunisia,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,TUR,Turkey,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,TZA,Tanzania,FALSE,other_countries,NA,1997,2022,1,NA,0,26,25,1,25,1,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,UGA,Uganda,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,UKR,Ukraine,FALSE,other_countries,NA,1997,2022,2,NA,0,26,24,2,24,1,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,USA,United States,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,VCT,St. Vincent & Grenadines,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,VNM,Vietnam,FALSE,other_countries,NA,1997,2022,1,NA,0,26,25,1,25,1,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,WSM,Samoa,FALSE,other_countries,NA,1997,2022,0,NA,0,26,26,0,26,0,0,0,0,NA,NA,0,clean_control
+full_switching_without_gab_qat,YEM,Yemen,FALSE,other_countries,NA,1997,2022,19,NA,0,26,7,19,7,4,4,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,ZAF,South Africa,FALSE,other_countries,NA,1997,2022,14,NA,0,26,12,14,12,0,1,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,ZMB,Zambia,FALSE,other_countries,NA,1997,2022,6,NA,0,26,20,6,20,3,4,0,0,NA,NA,0,switching_control
+full_switching_without_gab_qat,ZWE,Zimbabwe,FALSE,other_countries,NA,1997,2022,8,NA,0,26,18,8,18,2,2,0,0,NA,NA,0,switching_control

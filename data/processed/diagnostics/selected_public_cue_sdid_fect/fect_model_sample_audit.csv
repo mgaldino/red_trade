@@ -1,0 +1,536 @@
+model_id,country_id,iso3c,country_name,focal_country,cue_group,observed_model_periods,masked_model_periods,eligible_control_periods,treated_periods,included_by_fect,ever_treated_in_model
+clean_controls,7,AUS,Australia,TRUE,selected_public_cue,26,0,0,14,TRUE,TRUE
+clean_controls,22,CHL,Chile,TRUE,selected_public_cue,26,0,0,15,TRUE,TRUE
+clean_controls,44,GAB,Gabon,TRUE,selected_public_cue,26,0,0,6,TRUE,TRUE
+clean_controls,90,QAT,Qatar,TRUE,selected_public_cue,26,0,0,2,TRUE,TRUE
+clean_controls,107,URY,Uruguay,TRUE,selected_public_cue,26,0,0,10,TRUE,TRUE
+clean_controls,1,AFG,Afghanistan,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,2,ALB,Albania,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,3,AND,Andorra,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,4,ARE,United Arab Emirates,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,5,ARG,Argentina,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,6,ATG,Antigua & Barbuda,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,8,AUT,Austria,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,9,AZE,Azerbaijan,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,10,BGD,Bangladesh,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,11,BGR,Bulgaria,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,12,BHR,Bahrain,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,13,BHS,Bahamas,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,14,BLR,Belarus,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,15,BLZ,Belize,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,16,BOL,Bolivia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,17,BRB,Barbados,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,18,BRN,Brunei,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,19,BTN,Bhutan,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,20,BWA,Botswana,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,21,CAN,Canada,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,23,CIV,Côte d’Ivoire,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,24,COL,Colombia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,25,COM,Comoros,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,26,CPV,Cape Verde,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,27,CRI,Costa Rica,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,28,CYP,Cyprus,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,29,CZE,Czechia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,30,DEU,Germany,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,31,DJI,Djibouti,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,32,DMA,Dominica,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,33,DNK,Denmark,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,34,DOM,Dominican Republic,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,35,DZA,Algeria,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,36,ECU,Ecuador,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,37,EGY,Egypt,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,38,ESP,Spain,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,39,EST,Estonia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,40,FIN,Finland,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,41,FJI,Fiji,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,42,FRA,France,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,43,FSM,Micronesia (Federated States of),FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,45,GBR,United Kingdom,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,46,GEO,Georgia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,47,GRC,Greece,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,48,GRD,Grenada,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,49,GTM,Guatemala,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,50,GUY,Guyana,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,51,HND,Honduras,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,52,HRV,Croatia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,53,HTI,Haiti,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,54,HUN,Hungary,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,55,IND,India,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,56,IRL,Ireland,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,57,ISL,Iceland,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,58,ISR,Israel,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,59,ITA,Italy,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,60,JAM,Jamaica,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,61,JOR,Jordan,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,62,KEN,Kenya,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,63,KNA,St. Kitts & Nevis,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,64,LBN,Lebanon,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,65,LBY,Libya,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,66,LCA,St. Lucia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,67,LKA,Sri Lanka,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,68,LSO,Lesotho,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,69,LTU,Lithuania,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,70,LVA,Latvia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,71,MAR,Morocco,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,72,MDA,Moldova,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,73,MDG,Madagascar,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,74,MDV,Maldives,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,75,MEX,Mexico,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,76,MHL,Marshall Islands,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,77,MKD,North Macedonia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,78,MUS,Mauritius,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,79,MWI,Malawi,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,80,NAM,Namibia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,81,NGA,Nigeria,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,82,NIC,Nicaragua,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,83,NLD,Netherlands,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,84,NOR,Norway,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,85,NPL,Nepal,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,86,PAK,Pakistan,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,87,POL,Poland,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,88,PRT,Portugal,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,89,PRY,Paraguay,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,91,ROU,Romania,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,92,RWA,Rwanda,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,93,SEN,Senegal,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,94,SGP,Singapore,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,95,SLV,El Salvador,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,96,SUR,Suriname,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,97,SVK,Slovakia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,98,SVN,Slovenia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,99,SWE,Sweden,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,100,SWZ,Eswatini,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,101,SYR,Syria,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,102,TGO,Togo,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,103,TTO,Trinidad & Tobago,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,104,TUN,Tunisia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,105,TUR,Turkey,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,106,UGA,Uganda,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,108,USA,United States,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,109,VCT,St. Vincent & Grenadines,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls,110,WSM,Samoa,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,9,AUS,Australia,TRUE,selected_public_cue,26,0,0,14,TRUE,TRUE
+full_switching,27,CHL,Chile,TRUE,selected_public_cue,26,0,0,15,TRUE,TRUE
+full_switching,54,GAB,Gabon,TRUE,selected_public_cue,26,0,0,6,TRUE,TRUE
+full_switching,124,QAT,Qatar,TRUE,selected_public_cue,26,0,0,2,TRUE,TRUE
+full_switching,151,URY,Uruguay,TRUE,selected_public_cue,26,0,0,10,TRUE,TRUE
+full_switching,1,AFG,Afghanistan,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,2,AGO,Angola,FALSE,other_countries,10,16,10,0,TRUE,FALSE
+full_switching,3,ALB,Albania,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,4,AND,Andorra,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,5,ARE,United Arab Emirates,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,6,ARG,Argentina,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,7,ARM,Armenia,FALSE,other_countries,23,3,23,0,TRUE,FALSE
+full_switching,8,ATG,Antigua & Barbuda,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,10,AUT,Austria,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,11,AZE,Azerbaijan,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,12,BEN,Benin,FALSE,other_countries,22,4,22,0,TRUE,FALSE
+full_switching,13,BFA,Burkina Faso,FALSE,other_countries,23,3,23,0,TRUE,FALSE
+full_switching,14,BGD,Bangladesh,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,15,BGR,Bulgaria,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,16,BHR,Bahrain,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,17,BHS,Bahamas,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,18,BLR,Belarus,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,19,BLZ,Belize,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,20,BOL,Bolivia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,21,BRA,Brazil,FALSE,other_countries,12,14,12,0,TRUE,FALSE
+full_switching,22,BRB,Barbados,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,23,BRN,Brunei,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,24,BTN,Bhutan,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,25,BWA,Botswana,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,26,CAN,Canada,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,28,CIV,Côte d’Ivoire,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,29,CMR,Cameroon,FALSE,other_countries,20,6,20,0,TRUE,FALSE
+full_switching,30,COG,Congo - Brazzaville,FALSE,other_countries,11,15,11,0,TRUE,FALSE
+full_switching,31,COL,Colombia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,32,COM,Comoros,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,33,CPV,Cape Verde,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,34,CRI,Costa Rica,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,35,CUB,Cuba,FALSE,other_countries,8,18,8,0,TRUE,FALSE
+full_switching,36,CYP,Cyprus,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,37,CZE,Czechia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,38,DEU,Germany,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,39,DJI,Djibouti,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,40,DMA,Dominica,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,41,DNK,Denmark,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,42,DOM,Dominican Republic,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,43,DZA,Algeria,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,44,ECU,Ecuador,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,45,EGY,Egypt,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,46,ERI,Eritrea,FALSE,other_countries,17,9,17,0,TRUE,FALSE
+full_switching,47,ESP,Spain,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,48,EST,Estonia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,49,ETH,Ethiopia,FALSE,other_countries,21,5,21,0,TRUE,FALSE
+full_switching,50,FIN,Finland,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,51,FJI,Fiji,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,52,FRA,France,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,53,FSM,Micronesia (Federated States of),FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,55,GBR,United Kingdom,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,56,GEO,Georgia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,57,GHA,Ghana,FALSE,other_countries,25,1,25,0,TRUE,FALSE
+full_switching,58,GIN,Guinea,FALSE,other_countries,24,2,24,0,TRUE,FALSE
+full_switching,59,GMB,Gambia,FALSE,other_countries,19,7,19,0,TRUE,FALSE
+full_switching,60,GNQ,Equatorial Guinea,FALSE,other_countries,16,10,16,0,TRUE,FALSE
+full_switching,61,GRC,Greece,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,62,GRD,Grenada,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,63,GTM,Guatemala,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,64,GUY,Guyana,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,65,HND,Honduras,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,66,HRV,Croatia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,67,HTI,Haiti,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,68,HUN,Hungary,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,69,IDN,Indonesia,FALSE,other_countries,18,8,18,0,TRUE,FALSE
+full_switching,70,IND,India,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,71,IRL,Ireland,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,72,IRN,Iran,FALSE,other_countries,12,14,12,0,TRUE,FALSE
+full_switching,73,ISL,Iceland,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,74,ISR,Israel,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,75,ITA,Italy,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,76,JAM,Jamaica,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,77,JOR,Jordan,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,78,JPN,Japan,FALSE,other_countries,11,15,11,0,TRUE,FALSE
+full_switching,79,KAZ,Kazakhstan,FALSE,other_countries,10,16,10,0,TRUE,FALSE
+full_switching,80,KEN,Kenya,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,81,KNA,St. Kitts & Nevis,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,82,KOR,South Korea,FALSE,other_countries,6,20,6,0,TRUE,FALSE
+full_switching,83,KWT,Kuwait,FALSE,other_countries,21,5,21,0,TRUE,FALSE
+full_switching,84,LAO,Laos,FALSE,other_countries,24,2,24,0,TRUE,FALSE
+full_switching,85,LBN,Lebanon,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,86,LBY,Libya,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,87,LCA,St. Lucia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,88,LKA,Sri Lanka,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,89,LSO,Lesotho,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,90,LTU,Lithuania,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,91,LVA,Latvia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,92,MAR,Morocco,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,93,MDA,Moldova,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,94,MDG,Madagascar,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,95,MDV,Maldives,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,96,MEX,Mexico,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,97,MHL,Marshall Islands,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,98,MKD,North Macedonia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,99,MLI,Mali,FALSE,other_countries,24,2,24,0,TRUE,FALSE
+full_switching,100,MLT,Malta,FALSE,other_countries,22,4,22,0,TRUE,FALSE
+full_switching,101,MMR,Myanmar (Burma),FALSE,other_countries,17,9,17,0,TRUE,FALSE
+full_switching,102,MNG,Mongolia,FALSE,other_countries,0,26,0,0,FALSE,FALSE
+full_switching,103,MOZ,Mozambique,FALSE,other_countries,25,1,25,0,TRUE,FALSE
+full_switching,104,MUS,Mauritius,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,105,MWI,Malawi,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,106,MYS,Malaysia,FALSE,other_countries,12,14,12,0,TRUE,FALSE
+full_switching,107,NAM,Namibia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,108,NGA,Nigeria,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,109,NIC,Nicaragua,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,110,NLD,Netherlands,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,111,NOR,Norway,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,112,NPL,Nepal,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,113,NZL,New Zealand,FALSE,other_countries,16,10,16,0,TRUE,FALSE
+full_switching,114,OMN,Oman,FALSE,other_countries,6,20,6,0,TRUE,FALSE
+full_switching,115,PAK,Pakistan,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,116,PAN,Panama,FALSE,other_countries,24,2,24,0,TRUE,FALSE
+full_switching,117,PER,Peru,FALSE,other_countries,13,13,13,0,TRUE,FALSE
+full_switching,118,PHL,Philippines,FALSE,other_countries,8,18,8,0,TRUE,FALSE
+full_switching,119,PNG,Papua New Guinea,FALSE,other_countries,24,2,24,0,TRUE,FALSE
+full_switching,120,POL,Poland,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,121,PRK,North Korea,FALSE,other_countries,9,17,9,0,TRUE,FALSE
+full_switching,122,PRT,Portugal,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,123,PRY,Paraguay,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,125,ROU,Romania,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,126,RUS,Russia,FALSE,other_countries,15,11,15,0,TRUE,FALSE
+full_switching,127,RWA,Rwanda,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,128,SAU,Saudi Arabia,FALSE,other_countries,16,10,16,0,TRUE,FALSE
+full_switching,129,SDN,Sudan,FALSE,other_countries,15,11,15,0,TRUE,FALSE
+full_switching,130,SEN,Senegal,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,131,SGP,Singapore,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,132,SLB,Solomon Islands,FALSE,other_countries,6,20,6,0,TRUE,FALSE
+full_switching,133,SLE,Sierra Leone,FALSE,other_countries,15,11,15,0,TRUE,FALSE
+full_switching,134,SLV,El Salvador,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,135,SUR,Suriname,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,136,SVK,Slovakia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,137,SVN,Slovenia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,138,SWE,Sweden,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,139,SWZ,Eswatini,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,140,SYR,Syria,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,141,TCD,Chad,FALSE,other_countries,24,2,24,0,TRUE,FALSE
+full_switching,142,TGO,Togo,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,143,THA,Thailand,FALSE,other_countries,12,14,12,0,TRUE,FALSE
+full_switching,144,TKM,Turkmenistan,FALSE,other_countries,13,13,13,0,TRUE,FALSE
+full_switching,145,TTO,Trinidad & Tobago,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,146,TUN,Tunisia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,147,TUR,Turkey,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,148,TZA,Tanzania,FALSE,other_countries,25,1,25,0,TRUE,FALSE
+full_switching,149,UGA,Uganda,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,150,UKR,Ukraine,FALSE,other_countries,24,2,24,0,TRUE,FALSE
+full_switching,152,USA,United States,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,153,VCT,St. Vincent & Grenadines,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,154,VNM,Vietnam,FALSE,other_countries,25,1,25,0,TRUE,FALSE
+full_switching,155,WSM,Samoa,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching,156,YEM,Yemen,FALSE,other_countries,7,19,7,0,TRUE,FALSE
+full_switching,157,ZAF,South Africa,FALSE,other_countries,12,14,12,0,TRUE,FALSE
+full_switching,158,ZMB,Zambia,FALSE,other_countries,20,6,20,0,TRUE,FALSE
+full_switching,159,ZWE,Zimbabwe,FALSE,other_countries,18,8,18,0,TRUE,FALSE
+clean_controls_without_gab_qat,7,AUS,Australia,TRUE,selected_public_cue,26,0,0,14,TRUE,TRUE
+clean_controls_without_gab_qat,17,BRA,Brazil,TRUE,selected_public_cue,26,0,0,14,TRUE,TRUE
+clean_controls_without_gab_qat,23,CHL,Chile,TRUE,selected_public_cue,26,0,0,15,TRUE,TRUE
+clean_controls_without_gab_qat,106,URY,Uruguay,TRUE,selected_public_cue,26,0,0,10,TRUE,TRUE
+clean_controls_without_gab_qat,1,AFG,Afghanistan,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,2,ALB,Albania,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,3,AND,Andorra,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,4,ARE,United Arab Emirates,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,5,ARG,Argentina,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,6,ATG,Antigua & Barbuda,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,8,AUT,Austria,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,9,AZE,Azerbaijan,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,10,BGD,Bangladesh,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,11,BGR,Bulgaria,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,12,BHR,Bahrain,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,13,BHS,Bahamas,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,14,BLR,Belarus,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,15,BLZ,Belize,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,16,BOL,Bolivia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,18,BRB,Barbados,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,19,BRN,Brunei,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,20,BTN,Bhutan,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,21,BWA,Botswana,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,22,CAN,Canada,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,24,CIV,Côte d’Ivoire,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,25,COL,Colombia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,26,COM,Comoros,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,27,CPV,Cape Verde,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,28,CRI,Costa Rica,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,29,CYP,Cyprus,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,30,CZE,Czechia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,31,DEU,Germany,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,32,DJI,Djibouti,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,33,DMA,Dominica,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,34,DNK,Denmark,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,35,DOM,Dominican Republic,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,36,DZA,Algeria,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,37,ECU,Ecuador,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,38,EGY,Egypt,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,39,ESP,Spain,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,40,EST,Estonia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,41,FIN,Finland,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,42,FJI,Fiji,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,43,FRA,France,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,44,FSM,Micronesia (Federated States of),FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,45,GBR,United Kingdom,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,46,GEO,Georgia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,47,GRC,Greece,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,48,GRD,Grenada,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,49,GTM,Guatemala,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,50,GUY,Guyana,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,51,HND,Honduras,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,52,HRV,Croatia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,53,HTI,Haiti,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,54,HUN,Hungary,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,55,IND,India,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,56,IRL,Ireland,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,57,ISL,Iceland,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,58,ISR,Israel,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,59,ITA,Italy,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,60,JAM,Jamaica,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,61,JOR,Jordan,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,62,KEN,Kenya,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,63,KNA,St. Kitts & Nevis,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,64,LBN,Lebanon,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,65,LBY,Libya,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,66,LCA,St. Lucia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,67,LKA,Sri Lanka,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,68,LSO,Lesotho,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,69,LTU,Lithuania,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,70,LVA,Latvia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,71,MAR,Morocco,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,72,MDA,Moldova,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,73,MDG,Madagascar,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,74,MDV,Maldives,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,75,MEX,Mexico,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,76,MHL,Marshall Islands,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,77,MKD,North Macedonia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,78,MUS,Mauritius,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,79,MWI,Malawi,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,80,NAM,Namibia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,81,NGA,Nigeria,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,82,NIC,Nicaragua,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,83,NLD,Netherlands,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,84,NOR,Norway,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,85,NPL,Nepal,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,86,PAK,Pakistan,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,87,POL,Poland,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,88,PRT,Portugal,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,89,PRY,Paraguay,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,90,ROU,Romania,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,91,RWA,Rwanda,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,92,SEN,Senegal,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,93,SGP,Singapore,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,94,SLV,El Salvador,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,95,SUR,Suriname,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,96,SVK,Slovakia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,97,SVN,Slovenia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,98,SWE,Sweden,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,99,SWZ,Eswatini,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,100,SYR,Syria,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,101,TGO,Togo,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,102,TTO,Trinidad & Tobago,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,103,TUN,Tunisia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,104,TUR,Turkey,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,105,UGA,Uganda,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,107,USA,United States,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,108,VCT,St. Vincent & Grenadines,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+clean_controls_without_gab_qat,109,WSM,Samoa,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,9,AUS,Australia,TRUE,selected_public_cue,26,0,0,14,TRUE,TRUE
+full_switching_without_gab_qat,21,BRA,Brazil,TRUE,selected_public_cue,26,0,0,14,TRUE,TRUE
+full_switching_without_gab_qat,27,CHL,Chile,TRUE,selected_public_cue,26,0,0,15,TRUE,TRUE
+full_switching_without_gab_qat,149,URY,Uruguay,TRUE,selected_public_cue,26,0,0,10,TRUE,TRUE
+full_switching_without_gab_qat,1,AFG,Afghanistan,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,2,AGO,Angola,FALSE,other_countries,10,16,10,0,TRUE,FALSE
+full_switching_without_gab_qat,3,ALB,Albania,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,4,AND,Andorra,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,5,ARE,United Arab Emirates,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,6,ARG,Argentina,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,7,ARM,Armenia,FALSE,other_countries,23,3,23,0,TRUE,FALSE
+full_switching_without_gab_qat,8,ATG,Antigua & Barbuda,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,10,AUT,Austria,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,11,AZE,Azerbaijan,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,12,BEN,Benin,FALSE,other_countries,22,4,22,0,TRUE,FALSE
+full_switching_without_gab_qat,13,BFA,Burkina Faso,FALSE,other_countries,23,3,23,0,TRUE,FALSE
+full_switching_without_gab_qat,14,BGD,Bangladesh,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,15,BGR,Bulgaria,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,16,BHR,Bahrain,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,17,BHS,Bahamas,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,18,BLR,Belarus,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,19,BLZ,Belize,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,20,BOL,Bolivia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,22,BRB,Barbados,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,23,BRN,Brunei,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,24,BTN,Bhutan,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,25,BWA,Botswana,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,26,CAN,Canada,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,28,CIV,Côte d’Ivoire,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,29,CMR,Cameroon,FALSE,other_countries,20,6,20,0,TRUE,FALSE
+full_switching_without_gab_qat,30,COG,Congo - Brazzaville,FALSE,other_countries,11,15,11,0,TRUE,FALSE
+full_switching_without_gab_qat,31,COL,Colombia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,32,COM,Comoros,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,33,CPV,Cape Verde,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,34,CRI,Costa Rica,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,35,CUB,Cuba,FALSE,other_countries,8,18,8,0,TRUE,FALSE
+full_switching_without_gab_qat,36,CYP,Cyprus,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,37,CZE,Czechia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,38,DEU,Germany,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,39,DJI,Djibouti,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,40,DMA,Dominica,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,41,DNK,Denmark,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,42,DOM,Dominican Republic,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,43,DZA,Algeria,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,44,ECU,Ecuador,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,45,EGY,Egypt,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,46,ERI,Eritrea,FALSE,other_countries,17,9,17,0,TRUE,FALSE
+full_switching_without_gab_qat,47,ESP,Spain,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,48,EST,Estonia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,49,ETH,Ethiopia,FALSE,other_countries,21,5,21,0,TRUE,FALSE
+full_switching_without_gab_qat,50,FIN,Finland,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,51,FJI,Fiji,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,52,FRA,France,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,53,FSM,Micronesia (Federated States of),FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,54,GBR,United Kingdom,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,55,GEO,Georgia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,56,GHA,Ghana,FALSE,other_countries,25,1,25,0,TRUE,FALSE
+full_switching_without_gab_qat,57,GIN,Guinea,FALSE,other_countries,24,2,24,0,TRUE,FALSE
+full_switching_without_gab_qat,58,GMB,Gambia,FALSE,other_countries,19,7,19,0,TRUE,FALSE
+full_switching_without_gab_qat,59,GNQ,Equatorial Guinea,FALSE,other_countries,16,10,16,0,TRUE,FALSE
+full_switching_without_gab_qat,60,GRC,Greece,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,61,GRD,Grenada,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,62,GTM,Guatemala,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,63,GUY,Guyana,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,64,HND,Honduras,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,65,HRV,Croatia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,66,HTI,Haiti,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,67,HUN,Hungary,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,68,IDN,Indonesia,FALSE,other_countries,18,8,18,0,TRUE,FALSE
+full_switching_without_gab_qat,69,IND,India,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,70,IRL,Ireland,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,71,IRN,Iran,FALSE,other_countries,12,14,12,0,TRUE,FALSE
+full_switching_without_gab_qat,72,ISL,Iceland,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,73,ISR,Israel,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,74,ITA,Italy,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,75,JAM,Jamaica,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,76,JOR,Jordan,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,77,JPN,Japan,FALSE,other_countries,11,15,11,0,TRUE,FALSE
+full_switching_without_gab_qat,78,KAZ,Kazakhstan,FALSE,other_countries,10,16,10,0,TRUE,FALSE
+full_switching_without_gab_qat,79,KEN,Kenya,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,80,KNA,St. Kitts & Nevis,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,81,KOR,South Korea,FALSE,other_countries,6,20,6,0,TRUE,FALSE
+full_switching_without_gab_qat,82,KWT,Kuwait,FALSE,other_countries,21,5,21,0,TRUE,FALSE
+full_switching_without_gab_qat,83,LAO,Laos,FALSE,other_countries,24,2,24,0,TRUE,FALSE
+full_switching_without_gab_qat,84,LBN,Lebanon,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,85,LBY,Libya,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,86,LCA,St. Lucia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,87,LKA,Sri Lanka,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,88,LSO,Lesotho,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,89,LTU,Lithuania,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,90,LVA,Latvia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,91,MAR,Morocco,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,92,MDA,Moldova,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,93,MDG,Madagascar,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,94,MDV,Maldives,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,95,MEX,Mexico,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,96,MHL,Marshall Islands,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,97,MKD,North Macedonia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,98,MLI,Mali,FALSE,other_countries,24,2,24,0,TRUE,FALSE
+full_switching_without_gab_qat,99,MLT,Malta,FALSE,other_countries,22,4,22,0,TRUE,FALSE
+full_switching_without_gab_qat,100,MMR,Myanmar (Burma),FALSE,other_countries,17,9,17,0,TRUE,FALSE
+full_switching_without_gab_qat,101,MNG,Mongolia,FALSE,other_countries,0,26,0,0,FALSE,FALSE
+full_switching_without_gab_qat,102,MOZ,Mozambique,FALSE,other_countries,25,1,25,0,TRUE,FALSE
+full_switching_without_gab_qat,103,MUS,Mauritius,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,104,MWI,Malawi,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,105,MYS,Malaysia,FALSE,other_countries,12,14,12,0,TRUE,FALSE
+full_switching_without_gab_qat,106,NAM,Namibia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,107,NGA,Nigeria,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,108,NIC,Nicaragua,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,109,NLD,Netherlands,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,110,NOR,Norway,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,111,NPL,Nepal,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,112,NZL,New Zealand,FALSE,other_countries,16,10,16,0,TRUE,FALSE
+full_switching_without_gab_qat,113,OMN,Oman,FALSE,other_countries,6,20,6,0,TRUE,FALSE
+full_switching_without_gab_qat,114,PAK,Pakistan,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,115,PAN,Panama,FALSE,other_countries,24,2,24,0,TRUE,FALSE
+full_switching_without_gab_qat,116,PER,Peru,FALSE,other_countries,13,13,13,0,TRUE,FALSE
+full_switching_without_gab_qat,117,PHL,Philippines,FALSE,other_countries,8,18,8,0,TRUE,FALSE
+full_switching_without_gab_qat,118,PNG,Papua New Guinea,FALSE,other_countries,24,2,24,0,TRUE,FALSE
+full_switching_without_gab_qat,119,POL,Poland,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,120,PRK,North Korea,FALSE,other_countries,9,17,9,0,TRUE,FALSE
+full_switching_without_gab_qat,121,PRT,Portugal,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,122,PRY,Paraguay,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,123,ROU,Romania,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,124,RUS,Russia,FALSE,other_countries,15,11,15,0,TRUE,FALSE
+full_switching_without_gab_qat,125,RWA,Rwanda,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,126,SAU,Saudi Arabia,FALSE,other_countries,16,10,16,0,TRUE,FALSE
+full_switching_without_gab_qat,127,SDN,Sudan,FALSE,other_countries,15,11,15,0,TRUE,FALSE
+full_switching_without_gab_qat,128,SEN,Senegal,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,129,SGP,Singapore,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,130,SLB,Solomon Islands,FALSE,other_countries,6,20,6,0,TRUE,FALSE
+full_switching_without_gab_qat,131,SLE,Sierra Leone,FALSE,other_countries,15,11,15,0,TRUE,FALSE
+full_switching_without_gab_qat,132,SLV,El Salvador,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,133,SUR,Suriname,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,134,SVK,Slovakia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,135,SVN,Slovenia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,136,SWE,Sweden,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,137,SWZ,Eswatini,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,138,SYR,Syria,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,139,TCD,Chad,FALSE,other_countries,24,2,24,0,TRUE,FALSE
+full_switching_without_gab_qat,140,TGO,Togo,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,141,THA,Thailand,FALSE,other_countries,12,14,12,0,TRUE,FALSE
+full_switching_without_gab_qat,142,TKM,Turkmenistan,FALSE,other_countries,13,13,13,0,TRUE,FALSE
+full_switching_without_gab_qat,143,TTO,Trinidad & Tobago,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,144,TUN,Tunisia,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,145,TUR,Turkey,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,146,TZA,Tanzania,FALSE,other_countries,25,1,25,0,TRUE,FALSE
+full_switching_without_gab_qat,147,UGA,Uganda,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,148,UKR,Ukraine,FALSE,other_countries,24,2,24,0,TRUE,FALSE
+full_switching_without_gab_qat,150,USA,United States,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,151,VCT,St. Vincent & Grenadines,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,152,VNM,Vietnam,FALSE,other_countries,25,1,25,0,TRUE,FALSE
+full_switching_without_gab_qat,153,WSM,Samoa,FALSE,other_countries,26,0,26,0,TRUE,FALSE
+full_switching_without_gab_qat,154,YEM,Yemen,FALSE,other_countries,7,19,7,0,TRUE,FALSE
+full_switching_without_gab_qat,155,ZAF,South Africa,FALSE,other_countries,12,14,12,0,TRUE,FALSE
+full_switching_without_gab_qat,156,ZMB,Zambia,FALSE,other_countries,20,6,20,0,TRUE,FALSE
+full_switching_without_gab_qat,157,ZWE,Zimbabwe,FALSE,other_countries,18,8,18,0,TRUE,FALSE
