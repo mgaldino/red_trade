@@ -1288,7 +1288,7 @@ The results of the SDiD estimates are mixed (see Appendix Table \@ref(tab:public
 
 When Labor's Kevin Rudd took office as prime minister by the end of 2007, he had made clear before taking office that he was concerned about when the China boom would end [@uhlmann2007rudd]. In fact, in his second term in power, in 2013, when the boom was over, he recalled saying so years earlier [@rudd2013economy]. Increased interdependence can be seen as a risk. Australia's close ties with the West, particularly the US and UK, are long and well known. Thus, I interpret Australia's negative result as consistent with the model, since Brazil represents the scenario where perceived gains exceed costs, while Australia represents the scenario where dependence costs exceed gains.
 
-To reduce dependence on any one selected case, I also report an interactive fixed-effects framework pooling the cases. Among Australia, Brazil, Chile, and Uruguay, the pooled estimates are negative under both comparison-set rules, although inference changes with the rule; cross-validation selects zero latent factors in both four-case specifications. When Gabon and Qatar are included instead of Brazil, the corresponding five-case estimates are close to zero. Appendix Table \@ref(tab:public-cue-pooled-ife) reports all four specifications. These pooled reduced forms combine the public cue with country-specific cost-benefit calculations, so the effects may be heterogeneous. The preserved pooled estimates also retain the report's 2009 Australian timing rather than re-estimating the pooled models with the new 2007 timing.
+To reduce dependence on any one selected case, I also report an interactive fixed-effects framework pooling the cases. Among Australia, Brazil, Chile, and Uruguay, the pooled estimates are negative under both comparison-set rules, although inference changes with the rule; cross-validation selects zero latent factors in both four-case specifications. When Gabon and Qatar are included instead of Brazil, the corresponding five-case estimates are close to zero. Appendix Table \@ref(tab:public-cue-pooled-ife) reports all four specifications. These pooled reduced forms combine the public cue with country-specific cost-benefit calculations, so the effects may be heterogeneous.
 
 ```{r public-cue-pooled-ife, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 public_cue_ife_tbl <- readr::read_csv(
@@ -1335,7 +1335,7 @@ knitr::kable(
     general = paste0(
       "ATT is measured in absolute UNGA ideal-point distance to China; negative values indicate convergence. ",
       "Standard errors use 1,000 unit-bootstrap replications. The factor count is selected by the one-standard-error cross-validation rule over r = 0, 1, 2, 3. ",
-      "The preserved pooled models retain 2009 as Australia's timing; the individual Australian SDiD uses the theoretically preferred 2007 public-cue timing."
+      "Australia is treated from its 2007 public cue."
     ),
     general_title = "Note: ",
     escape = FALSE,
@@ -1877,100 +1877,59 @@ knitr::kable(
   )
 ```
 
-## Public Cue and Recoverability Audit
+## Public Cue Search
 
-To assess how closely the empirical treatment used in the panel regression -- China becoming a country's largest destination for goods exports -- maps onto the theorized treatment of a publicly salient status change, I use a source audit originally constructed for 14 countries in an earlier no-covariate treated sample. This audit is not a census of the 35 countries treated in the current goods-only restricted-risk-set specification: 13 audited countries remain in the current treated sample, Qatar does not, and 22 current treated countries were not included in the source audit. The underlying matrix records both recovered and unrecovered China cues. Table \@ref(tab:ex-top1-recoverability-audit) displays the nine cases in which the China cue is currently coded as unknown; Chile, Brazil, Uruguay, Saudi Arabia, and Qatar have recovered cues and are omitted by the display filter.
+```{r public-cue-audit-inputs, include=FALSE}
+# Produced by scripts/diagnostics/build_public_cue_audit_table.R; pending migration to targets.
+public_cue_audit <- readr::read_csv(
+  file.path("data", "processed", "status_cue_salience", "public_cue_audit_table.csv"),
+  show_col_types = FALSE
+)
+```
 
-The table distinguishes weak observation from cases in which public rank language about the displaced incumbent is recoverable. For the China cue, `medium` means one countable strong or moderate first-window source with explicit rank language. For the former-incumbent benchmark, `medium` means either one countable source with explicit incumbent-rank or displacement language, or at least two countable trade-coverage records from at least one independent source without a clear top-rank label. A countable source must be eligible, fall within one year of the source-audit entry year, be coded strong or moderate, enter the benchmark, and not be marked `DO_NOT_COUNT`. `Unknown` means that the incumbent was not identified or that no countable benchmark source was recovered; no case is currently coded `low`. Non-recovery is not evidence that a cue was absent because contemporaneous local or official records may be inaccessible or inconsistent with the trade-rank series. Except for Australia, whose displayed year has been reconciled to the current 2009 entry, the table retains the entry windows used in the legacy source audit. Table \@ref(tab:ex-top1-australia-afr-context) reports Australia's broad-trade source separately.
+For Brazil, it was possible to collect data on the public cue about China directly from press and government websites for the entire period of analysis. This was not feasible for the other countries, because of language barriers, and because the historical record and the public availability of official records vary across countries and over time.
 
-```{r ex-top1-recoverability-audit, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
-australia_revision <- readRDS("data/processed/diagnostics/RIO_20260905_australia/australia_appendix_tables_patch.rds")
-ex_top1_tables <- australia_revision$tables
-recoverability_tbl <- ex_top1_tables$recoverability_table
+Since the formal model and the empirical test rely on the public cue to operationalize the treatment, I conducted a systematic search for these records in the countries most likely to have them, that is, those in which China actually rose to first position in the country's trade hierarchy.
+
+I therefore selected `r nrow(public_cue_audit)` countries (see Table \@ref(tab:public-cue-audit)) that meet the criterion of having at least one year with China as the top destination for goods exports, and adopted the following search protocol. For each country, the search window covers the year in which China became the top export destination and the following year. Eligible sources are national newspapers and local news outlets, national news agencies when newspapers were not available, and official sources such as the presidency, the ministries of foreign affairs and trade, embassies, official speeches, and bilateral communiqués. Searches were conducted in English and in the local language (Portuguese, Spanish, French, or Arabic), using the equivalents of terms such as "largest export destination," "main trading partner," "principal partner," "number one," and "first commercial partner." The GDELT news database was used only as a supplementary source, since its article search is useful only from 2017 onward. A source counts only if its full text was preserved, its publication date falls within the window, and it uses explicit rank language about China. It must also be local or official: a Chinese government statement about the country, for instance, does not count as uptake of the cue in that country. An independent AI agent then verified every counted source, checking its existence, date, translation of the rank label, and whether the quoted passage supports the coding. The AI agent classified the findings into confidence levels. High: at least two independent sources, or one news source and one official source, use explicit rank language within the window. Medium: a single source uses explicit rank language. Low: a documented broad search finds contemporaneous coverage of trade with China, but no explicit rank language. Unknown: no source could be recovered.
+
+```{r public-cue-audit, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
+public_cue_audit_tbl <- public_cue_audit %>%
+  dplyr::transmute(
+    Country = country,
+    `China top goods-export destination` = goods_entry_year,
+    `Search window` = search_window,
+    Code = as.character(code),
+    `Rank language found (source, date)` = sources
+  )
 
 knitr::kable(
-  recoverability_tbl,
+  public_cue_audit_tbl,
   format = "latex",
   booktabs = TRUE,
   longtable = TRUE,
   escape = TRUE,
-  caption = "Selected unresolved cases from a 14-country legacy source audit of public rank-language recoverability and metric caveats.",
-  align = "lrllll"
+  caption = "Public-cue search: rank language about China found in each country's search window.",
+  align = "lcccl"
 ) %>%
-  kableExtra::kable_styling(
-    font_size = 7
-  ) %>%
-  kableExtra::column_spec(
-    5,
-    width = "4.0cm"
-  ) %>%
-  kableExtra::column_spec(
-    6,
-    width = "4.2cm"
-  ) %>%
+  kableExtra::kable_styling(font_size = 8) %>%
+  kableExtra::column_spec(1, width = "2.2cm") %>%
+  kableExtra::column_spec(2, width = "2.2cm") %>%
+  kableExtra::column_spec(3, width = "1.6cm") %>%
+  kableExtra::column_spec(4, width = "1.2cm") %>%
+  kableExtra::column_spec(5, width = "7.2cm") %>%
   kableExtra::footnote(
     general = paste0(
-      "Nine unresolved cases from a 14-country legacy audit; this is not a census of the current treated sample. ",
-      "Definitions and the display filter are reported in the text. Australia's entry year follows the current goods-only annual panel; other entry windows remain those of the legacy audit."
+      "The second column gives the first year from 2000 in which China is the top destination of the country's goods exports. ",
+      "For Australia, the window covers 2006--2007, when national coverage first reports China as the largest trading partner; ",
+      "the 2006 sources still place China second. Quoted labels are from the counted sources; ",
+      "Unknown means that no eligible source was recovered in the window."
     ),
     general_title = "Note: ",
-    escape = FALSE,
+    escape = TRUE,
     threeparttable = TRUE
   )
 ```
-
-```{r ex-top1-australia-afr-context, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
-if (!exists("ex_top1_tables")) {
-  ex_top1_tables <- readRDS("data/processed/diagnostics/RIO_20260905_australia/australia_appendix_tables_patch.rds")$tables
-}
-afr_context_tbl <- ex_top1_tables$afr_context_table
-
-# A single documented source across six wide columns has to be scaled down to fit the
-# text block, which leaves it unreadable. Transposing to one field per row keeps every
-# value at full width and at a legible size.
-afr_tex_escape <- function(x) {
-  x <- gsub("\\\\", "\\\\textbackslash{}", x)
-  gsub("([&%$#_{}])", "\\\\\\1", x)
-}
-afr_tex_path <- function(x) {
-  # allow a line break after each separator so the raw-file pointer wraps in the cell
-  paste0("\\texttt{", gsub("/", "/\\\\allowbreak{}", afr_tex_escape(x)), "}")
-}
-
-afr_context_long <- tibble::tibble(
-  Field = names(afr_context_tbl),
-  Value = vapply(afr_context_tbl, function(col) as.character(col[[1]]), character(1))
-) %>%
-  dplyr::mutate(
-    Value = dplyr::if_else(Field == "Raw file", afr_tex_path(Value), afr_tex_escape(Value)),
-    Field = afr_tex_escape(Field)
-  )
-
-knitr::kable(
-  afr_context_long,
-  format = "latex",
-  booktabs = TRUE,
-  escape = FALSE,
-  col.names = NULL,
-  linesep = "",
-  caption = "Australian Financial Review context source for Australia.",
-  align = c("l", "l")
-) %>%
-  kableExtra::kable_styling(
-    latex_options = "HOLD_position",
-    font_size = 9
-  ) %>%
-  kableExtra::column_spec(1, bold = TRUE, width = "4.6cm") %>%
-  kableExtra::column_spec(2, width = "10.0cm") %>%
-  kableExtra::footnote(
-    general = "The AFR item documents a broad aggregate-trading-partner cue. It documents broad-metric salience during the 2009 annual treatment window. The publication date does not establish that a strict goods-export cue preceded treatment.",
-    general_title = "Note: ",
-    escape = FALSE,
-    threeparttable = TRUE
-  )
-```
-
-\clearpage
 
 ## ChatGPT Classification
 

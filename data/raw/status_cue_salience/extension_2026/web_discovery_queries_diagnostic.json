@@ -1,0 +1,1201 @@
+{
+  "description": "Executed follow-up diagnostic searches on rank denominators and fallback windows; each query was sent separately.",
+  "queries": [
+    {
+      "iso3c": "JPN",
+      "window": "2008-2009",
+      "language": "en",
+      "query": "Japan 2008 exports China United States largest destination 2008 calendar 2009 Ministry of Finance Japan",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:02:57.294Z",
+      "results": [
+        {
+          "title": "Statistical Handbook of Japan 2009",
+          "url": "https://www.stat.go.jp/english/data/handbook/pdf/2009all.pdf"
+        },
+        {
+          "title": "Japan Trade Summary 2008 | WITS | Text",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/JPN/Year/2008/Summarytext"
+        },
+        {
+          "title": "Statistical Handbook of Japan 2010",
+          "url": "https://www.stat.go.jp/english/data/handbook/pdf/2010all.pdf"
+        },
+        {
+          "title": "第４節　世界経済減速下の輸出と国際収支 - 内閣府",
+          "url": "https://www5.cao.go.jp/keizai3/2008/1212nk/08_0104.html"
+        },
+        {
+          "title": "Trade surplus up 37%; China No. 1 destination - The Japan Times",
+          "url": "https://www.japantimes.co.jp/news/2008/01/25/business/trade-surplus-up-37-china-no-1-destination/"
+        },
+        {
+          "title": "Statistical Handbook of Japan 2009",
+          "url": "https://dl.ndl.go.jp/view/prepareDownload?bundleNo=1&contentNo=1&itemId=info%3Andljp%2Fpid%2F10319363"
+        },
+        {
+          "title": "RIETI - China Replacing the U.S. as the Largest Overseas Market for Japan",
+          "url": "https://www.rieti.go.jp/en/china/10051902.html"
+        },
+        {
+          "title": "Press Release - Trade Statistics of Japan(Monthly and Yearly) : Trade Statistics of Japan Ministry of Finance",
+          "url": "https://www.customs.go.jp/toukei/shinbun/kako/happyou_e2.htm"
+        },
+        {
+          "title": "Japan Trade Summary 2009 | WITS | Text",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/JPN/Year/2009/Summarytext"
+        },
+        {
+          "title": "China replaces US as Japan's biggest export destination | China | The Guardian",
+          "url": "https://www.theguardian.com/business/2008/aug/21/japan.china"
+        },
+        {
+          "title": "Asia: China replaces US as Japan's biggest export market | Japan | The Guardian",
+          "url": "https://www.theguardian.com/world/2008/aug/22/japan.china"
+        },
+        {
+          "title": "Summary of a Speech Given by Hidetoshi Kamezaki, Member of the Policy Board, at a Meeting with Business Leaders in Kagawa (Recent Economic and Financial Developments in Japan) : 日本銀行 Bank of Japan",
+          "url": "https://www2.boj.or.jp/archive/en/announcements/press/koen_2008/ko0812e.htm"
+        }
+      ],
+      "error": ""
+    },
+    {
+      "iso3c": "JPN",
+      "window": "2008-2009",
+      "language": "ja",
+      "query": "2008年 日本 輸出先 中国 米国 最大 2008 輸出 国",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:02:59.876Z",
+      "results": [
+        {
+          "title": "Japan Trade Summary 2008 | WITS | Text",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/JPN/Year/2008/Summarytext"
+        },
+        {
+          "title": "⑤輸出上位20カ国（2008年）",
+          "url": "https://www.koryu.or.jp/Portals/0/resources/ez3_contents_nsf/15aef977a6d6761f49256de4002084ae/147d413a66547dff49257b160022d9c3/%24FILE/2009databook.pdf"
+        },
+        {
+          "title": "Japan Exports by country and region 2008 | WITS Data",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/JPN/Year/2008/TradeFlow/Export/Partner/all"
+        },
+        {
+          "title": "米国向け、中国向け、どちらの輸出が国内生産への影響が大きいのか！？｜その他の研究・分析レポート｜経済産業省",
+          "url": "https://www.meti.go.jp/statistics/toppage/report/minikaisetsu/hitokoto_kako/20200205hitokoto.html"
+        },
+        {
+          "title": "0202p056_064.qxd",
+          "url": "https://www.mofa.go.jp/mofaj/gaiko/bluebook/2009/pdf/pdfs/2_2.pdf"
+        },
+        {
+          "title": "第１節　2008年の日本経済 - 内閣府",
+          "url": "https://www5.cao.go.jp/keizai3/2008/1212nk/08_0101.html"
+        },
+        {
+          "title": "3カ国向けの輸出が全輸出額の4割を占めている。中でも最大の輸出相手国である米国へ向けた輸出額は、第2位の日本、第3位の中国の2倍近い規模となっている。",
+          "url": "https://www.mofa.go.jp/mofaj/gaiko/oda/shiryo/hyouka/kunibetu/gai/aft/pdfs/jk11_04_01.pdf"
+        },
+        {
+          "title": "China replaces US as Japan's biggest export destination | China | The Guardian",
+          "url": "https://www.theguardian.com/business/2008/aug/21/japan.china"
+        },
+        {
+          "title": "月報 野菜情報－需給動向－２００９年３月",
+          "url": "https://vegetable.alic.go.jp/yasaijoho/jyukyu/0903_jyukyu3.html"
+        },
+        {
+          "title": "■ 2008年のリーマンショックを契機に、日本の輸出に占める米国のシェアは1",
+          "url": "https://www.jetro.go.jp/ext_images/biz/seminar/2020/1ad6bf338225fdda/shiryo2.pdf"
+        },
+        {
+          "title": "第2節　北米（2/3） | 第2章 | 外交青書09本編",
+          "url": "https://www.mofa.go.jp/mofaj/gaiko/bluebook/2009/html/h2/h2_09.html"
+        },
+        {
+          "title": "2016 年の日中貿易",
+          "url": "https://www.jetro.go.jp/ext_images/_Reports/01/aae9c90e6aaf01db/20160133.pdf"
+        }
+      ],
+      "error": ""
+    },
+    {
+      "iso3c": "JPN",
+      "window": "2008-2009",
+      "language": "en",
+      "query": "site:reuters.com 2009 Japan China top export destination 2008 2009",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:03:01.298Z",
+      "results": [],
+      "error": ""
+    },
+    {
+      "iso3c": "JPN",
+      "window": "2008-2009",
+      "language": "ja",
+      "query": "site:customs.go.jp 2008年 輸出 米国 １位 中国 ２位 2009",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:03:03.069Z",
+      "results": [
+        {
+          "title": "輸出相手国上位10カ国の推移（年ベース）<table>",
+          "url": "https://www.customs.go.jp/toukei/suii/html/data/y4.pdf"
+        },
+        {
+          "title": "輸入相手国上位10カ国の推移（年ベース）<table>",
+          "url": "https://www.customs.go.jp/toukei/suii/html/data/y5.pdf"
+        },
+        {
+          "title": "対米国主要輸出品の推移（年ベース）",
+          "url": "https://www.customs.go.jp/toukei/suii/html/data/y6_2.pdf"
+        },
+        {
+          "title": "対中国主要輸出品の推移（年ベース）",
+          "url": "https://www.customs.go.jp/toukei/suii/html/data/y6_5.pdf"
+        }
+      ],
+      "error": ""
+    },
+    {
+      "iso3c": "JPN",
+      "window": "2008-2009",
+      "language": "ja",
+      "query": "site:jetro.go.jp 2008年 日本 輸出先 米国 中国 1位 2位",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:03:04.914Z",
+      "results": [
+        {
+          "title": "～中国経済の減速などにより総額",
+          "url": "https://www.jetro.go.jp/ext_images/jfile/report/07001218/jp-cn_trade_2012.pdf"
+        },
+        {
+          "title": "表3 中国の主要品目別輸出入",
+          "url": "https://www.jetro.go.jp/ext_images/world/gtir/2012/pdf/2012-cn.pdf"
+        },
+        {
+          "title": "7.2%、3月には8.0%にまで達するなど2009年に入り、急激に上昇した。",
+          "url": "https://www.jetro.go.jp/ext_images/world/gtir/2009/pdf/2009-ca.pdf"
+        },
+        {
+          "title": "表10　日本の対中国主要品目別輸出入",
+          "url": "https://www.jetro.go.jp/ext_images/world/gtir/2010/pdf/2010-cn.pdf"
+        },
+        {
+          "title": "2016 年の日中貿易",
+          "url": "https://www.jetro.go.jp/ext_images/_Reports/01/aae9c90e6aaf01db/20160133.pdf"
+        },
+        {
+          "title": "日本にとって最大の貿易相手に−07年の日中貿易−(中国、日本) | ビジネス短信 ―ジェトロの海外ニュース - ジェトロ",
+          "url": "https://www.jetro.go.jp/biznews/2008/02/47c77091a2691.html"
+        },
+        {
+          "title": "2013 年の日中貿易",
+          "url": "https://www.jetro.go.jp/ext_images/jfile/report/07001568/07001568b.pdf"
+        },
+        {
+          "title": "日本はアラスカ水産物の輸入で「買い負け」(米国) | ビジネス短信 ―ジェトロの海外ニュース - ジェトロ",
+          "url": "https://www.jetro.go.jp/biznews/2008/04/47f30cc5bf669.html"
+        },
+        {
+          "title": "09年の輸出額、対中国が1位に−日本向けは2位に転落−(オーストラリア) | ビジネス短信 ―ジェトロの海外ニュース - ジェトロ",
+          "url": "https://www.jetro.go.jp/biznews/2010/03/4bb2942026d18.html"
+        },
+        {
+          "title": "08年1〜5月の貿易黒字は8.6％減−対日貿易赤字が急拡大−(中国) | ビジネス短信 ―ジェトロの海外ニュース - ジェトロ",
+          "url": "https://www.jetro.go.jp/biznews/2008/06/485214604a1fc.html"
+        },
+        {
+          "title": "2019年の日中貿易 | 地域・分析レポート - 海外ビジネス情報 - ジェトロ",
+          "url": "https://www.jetro.go.jp/biz/areareports/2020/7a3c80fbbd73f456.html?_previewDate_=null&_tmpCssPreview_=0%2Fbiznews%2F%2Fevents%2F%2F%2Fbiznews%2F&revision=0&viewForce=1"
+        },
+        {
+          "title": "2023年の日中貿易（後編）日本の対中輸入、2020年以来初の減少 | 地域・分析レポート - 海外ビジネス情報 - ジェトロ",
+          "url": "https://www.jetro.go.jp/biz/areareports/2024/a6b771c572e4d9be.html"
+        }
+      ],
+      "error": ""
+    },
+    {
+      "iso3c": "JPN",
+      "window": "2008-2009",
+      "language": "en",
+      "query": "site:stat.go.jp 2008 Japan exports United States China first second trade handbook 2009",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:03:06.534Z",
+      "results": [
+        {
+          "title": "Statistical Handbook of Japan 2009",
+          "url": "https://www.stat.go.jp/english/data/handbook/pdf/2009all.pdf"
+        },
+        {
+          "title": "Statistical Handbook of Japan 2013",
+          "url": "https://www.stat.go.jp/english/data/handbook/pdf/2013all.pdf"
+        },
+        {
+          "title": "Statistical Handbook of Japan 2014",
+          "url": "https://www.stat.go.jp/english/data/handbook/pdf/2014all.pdf"
+        },
+        {
+          "title": "統計局ホームページ/企業の技術貿易-科学技術週間にちなんで-",
+          "url": "https://www.stat.go.jp/data/kagaku/kekka/topics/topics28.html"
+        },
+        {
+          "title": "統計局ホームページ/日本の統計 2009－第15章 貿易・国際収支・国際協力",
+          "url": "https://www.stat.go.jp/data/nihon/back09/15.html"
+        },
+        {
+          "title": "統計局ホームページ/Statistical Handbook of Japan/本書の内容",
+          "url": "https://www.stat.go.jp/data/handbook/notes.html"
+        },
+        {
+          "title": "Statistics Bureau Home Page/Statistical Handbook of Japan",
+          "url": "https://www.stat.go.jp/english/data/handbook/"
+        },
+        {
+          "title": "第72回 日本統計年鑑",
+          "url": "https://www.stat.go.jp/data/nenkan/72nenkan/zenbun/jp72/book/pageindices/index761.html"
+        },
+        {
+          "title": "第70回 日本統計年鑑",
+          "url": "https://www.stat.go.jp/data/nenkan/70nenkan/zenbun/jp70/book/pageindices/index751.html"
+        },
+        {
+          "title": "第71回 日本統計年鑑",
+          "url": "https://www.stat.go.jp/data/nenkan/71nenkan/zenbun/jp71/book/pageindices/index759.html"
+        },
+        {
+          "title": "第75回 日本統計年鑑",
+          "url": "https://www.stat.go.jp/data/nenkan/75nenkan/zenbun/jp75/book/pageindices/index208.html"
+        }
+      ],
+      "error": ""
+    },
+    {
+      "iso3c": "JPN",
+      "window": "2008-2009",
+      "language": "ja",
+      "query": "2009年 1月 2008年 貿易統計 日本 輸出先 米国 中国 第1位 第2位 財務省",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:03:08.163Z",
+      "results": [
+        {
+          "title": "<",
+          "url": "https://www.jetro.go.jp/ext_images/world/gtir/2009/pdf/2009-asia_oceania.pdf"
+        },
+        {
+          "title": "日中貿易状況（2009年）",
+          "url": "https://www.maff.go.jp/j/press/kanbo/hisyo/pdf/120629-25.pdf"
+        },
+        {
+          "title": "RIETI - 「付加価値」から見た中国の対外貿易の実態",
+          "url": "https://www.rieti.go.jp/users/china-tr/jp/ssqs/140108-2ssqs.html"
+        },
+        {
+          "title": "第2節　経済安全保障とサプライチェーンの強靱化：通商白書2022年版 （METI/経済産業省）",
+          "url": "https://www.meti.go.jp/report/tsuhaku2022/2022honbun/i2120000.html"
+        },
+        {
+          "title": "平成20年1月上旬分貿易統計",
+          "url": "https://www.customs.go.jp/toukei/shinbun/trade-st/2008/200801a.htm"
+        },
+        {
+          "title": "平成２１年度（2009 年度）事業報告書",
+          "url": "https://www.jc-web.or.jp/relays/download/65/94/33/0/?file=%2Ffiles%2Flibs%2F2924%2F%2F201506101833109705.pdf"
+        },
+        {
+          "title": "過去の報道発表資料（月分・年分一覧） : 財務省貿易統計　Trade Statistics of Japan",
+          "url": "https://www.customs.go.jp/toukei/shinbun/kako/happyou2.htm"
+        },
+        {
+          "title": "過去の報道発表資料（月分・年分一覧（速報概要）） : 財務省貿易統計　Trade Statistics of Japan",
+          "url": "https://www.customs.go.jp/toukei/shinbun/kako/happyou3.htm"
+        },
+        {
+          "title": "0202p056_064.qxd",
+          "url": "https://www.mofa.go.jp/mofaj/gaiko/bluebook/2009/pdf/pdfs/2_2.pdf"
+        },
+        {
+          "title": "第176回国会　予算委員会　第2号（平成22年10月12日（火曜日））",
+          "url": "https://www.shugiin.go.jp/internet/itdb_kaigirokua.nsf/html/kaigirokua/001817620101012002.htm"
+        },
+        {
+          "title": "２",
+          "url": "https://www.jef.or.jp/images/pdf/j21-2-11.pdf"
+        },
+        {
+          "title": "普通貿易統計 貿易統計_全国分 国別総額表 輸出 確定 08-01-01 2008年1月分 国別総額表 (輸出 確定値) 月次 2008年1月 | ファイル | 統計データを探す | 政府統計の総合窓口",
+          "url": "https://www.e-stat.go.jp/index.php/stat-search/files?cycle=1&layout=datalist&month=11010301&page=1&stat_infid=000002524272&tclass1=000001013189&tclass2=000001013190&tclass3val=0&toukei=00350300&tstat=000001013141&year=20080"
+        }
+      ],
+      "error": ""
+    },
+    {
+      "iso3c": "JPN",
+      "window": "2008-2009",
+      "language": "en",
+      "query": "2008 annual Japan exports United States first China second 2009 January Japanese newspaper",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:03:10.196Z",
+      "results": [
+        {
+          "title": "Trade surplus up 37%; China No. 1 destination - The Japan Times",
+          "url": "https://www.japantimes.co.jp/news/2008/01/25/business/trade-surplus-up-37-china-no-1-destination/"
+        },
+        {
+          "title": "GTA Report 3 | PDF | Protectionism | Dumping (Pricing Policy)",
+          "url": "https://www.scribd.com/document/24375932/GTA-Report-3"
+        },
+        {
+          "title": "January trade deficit worst on record - The Japan Times",
+          "url": "https://www.japantimes.co.jp/news/2009/02/26/business/january-trade-deficit-worst-on-record/"
+        },
+        {
+          "title": "RIETI - China Replacing the U.S. as the Largest Overseas Market for Japan",
+          "url": "https://www.rieti.go.jp/en/china/10051902.html"
+        },
+        {
+          "title": "World Bank Document",
+          "url": "https://documents1.worldbank.org/curated/en/545641468152713186/pdf/608100PUB0Mana10Box358332B01PUBLIC1.pdf"
+        },
+        {
+          "title": "Asia: China replaces US as Japan's biggest export market | Japan | The Guardian",
+          "url": "https://www.theguardian.com/world/2008/aug/22/japan.china"
+        },
+        {
+          "title": "RIETI - Global Financial Crisis and Asian Currencies - Update",
+          "url": "https://www.rieti.go.jp/en/rieti_report/103.html"
+        },
+        {
+          "title": "G:\\Trade_Shifts_2008\\Drafts\\Final\\Report\\Part I\\Final Part I.wpd",
+          "url": "https://www.usitc.gov/publications/332/pub4089.pdf"
+        },
+        {
+          "title": "2009 Annual Report - USCC",
+          "url": "https://www.uscc.gov/sites/default/files/annual_reports/2009-Report-to-Congress.pdf"
+        },
+        {
+          "title": "China replaces US as Japan's biggest export destination | China | The Guardian",
+          "url": "https://www.theguardian.com/business/2008/aug/21/japan.china"
+        },
+        {
+          "title": "Strategy, Policy, and Review Department",
+          "url": "https://www.imf.org/_next/data/QUjzBoI7IlSWld0ujG2VL/en/-/media/websites/imf/imported-full-text-pdf/external/pubs/ft/dp/2012/_dp1201.pdf.json"
+        },
+        {
+          "title": "Figure 8: Rise in US China Imports Share Offse",
+          "url": "https://www.govinfo.gov/content/pkg/CHRG-111shrg62791/pdf/CHRG-111shrg62791.pdf"
+        }
+      ],
+      "error": ""
+    },
+    {
+      "iso3c": "JPN",
+      "window": "2008-2009",
+      "language": "ja",
+      "query": "site:customs.go.jp/toukei/shinbun/happyou 2008年分 米国 中国 輸出 2009 pdf",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:03:11.922Z",
+      "results": [
+        {
+          "title": "過去の報道発表資料（月分・年分一覧） : 財務省貿易統計　Trade Statistics of Japan",
+          "url": "https://www.customs.go.jp/toukei/shinbun/kako/happyou2.htm"
+        },
+        {
+          "title": "過去の報道発表資料 : 財務省貿易統計　Trade Statistics of Japan",
+          "url": "https://www.customs.go.jp/toukei/shinbun/happyou.htm"
+        },
+        {
+          "title": "過去の報道発表資料（月分・年分一覧（速報概要）） : 財務省貿易統計　Trade Statistics of Japan",
+          "url": "https://www.customs.go.jp/toukei/shinbun/kako/happyou3.htm"
+        },
+        {
+          "title": "Press Release - Trade Statistics of Japan(Monthly and Yearly) : Trade Statistics of Japan Ministry of Finance",
+          "url": "https://www.customs.go.jp/toukei/shinbun/kako/happyou_e2.htm"
+        },
+        {
+          "title": "平成28年分貿易統計（速報）の概要",
+          "url": "https://www.customs.go.jp/toukei/shinbun/trade-st/gaiyo2016.pdf"
+        },
+        {
+          "title": "・本資料を引用する",
+          "url": "https://www.customs.go.jp/tokyo/content/toku2017.pdf"
+        },
+        {
+          "title": "過去の報道発表資料（旬分資料一覧（2006年～2020年）） : 財務省貿易統計　Trade Statistics of Japan",
+          "url": "https://www.customs.go.jp/toukei/shinbun/kako/happyou4.htm"
+        },
+        {
+          "title": "平成２８年　成田空港貿易概況（速報）",
+          "url": "https://www.customs.go.jp/tokyo/content/toku2812n.pdf"
+        }
+      ],
+      "error": ""
+    },
+    {
+      "iso3c": "IDN",
+      "window": "2013-2014",
+      "language": "id",
+      "query": "2013 Cina tujuan ekspor terbesar Indonesia Jepang 2013 Kemendag",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:03:13.742Z",
+      "results": [
+        {
+          "title": "Tajuk Utama",
+          "url": "https://ditjenpen.kemendag.go.id/storage/publikasi/815-1821421057081.pdf"
+        },
+        {
+          "title": "Ditjen PEN/MJL/005/2/2014 Februari",
+          "url": "https://kudagang.kemendag.go.id/repo/id/eprint/342/1/Warta%20Ekspor%2027%20Februari%202014%20.pdf"
+        },
+        {
+          "title": "Peningkatan Ekspor Bulan November Didorong oleh Peningakatan Produk Manufaktur",
+          "url": "https://bkperdag.kemendag.go.id/storage/publikasi/901-813-NL_Januari_2014_Indo.pdf"
+        },
+        {
+          "title": "Indonesia Trade Summary 2013 | WITS | Text",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/IDN/Year/2013/Summarytext"
+        },
+        {
+          "title": "Desember 2013, Ekspor Indonesia Naik 6,56 Persen dan Impor Naik 2,04 Persen - Badan Pusat Statistik Indonesia",
+          "url": "https://www.bps.go.id/id/pressrelease/2014/02/03/187/desember-2013--ekspor-indonesia-naik-6-56-persen-dan-impor-naik-2-04-persen.html"
+        },
+        {
+          "title": "Ditjen PEN/MJL/004/11/2013 Nopember",
+          "url": "https://ditjenpen.kemendag.go.id/storage/publikasi/204-5861390367717.pdf"
+        },
+        {
+          "title": "mengalami kenaikan. Ekspor yang terbesar adalah ekspor ke Singapura yang tumbuh 20,0 persen. Hanya ekspor ke negara Jepang yang mengalami penurunan sebesar -9,2 persen.",
+          "url": "https://perpustakaan.bappenas.go.id/e-library/file_upload/koleksi/migrasi-data-publikasi/file/Policy_Paper/Laporan_Triwulan_I_Tahun_2013_Deputi_Ekonomi_Bappenas.pdf"
+        },
+        {
+          "title": "Watermark - Buletin - Ekspor - Menurut - HS - Desember - 2013 PDF | PDF | tuna | Kain",
+          "url": "https://id.scribd.com/document/343168539/watermark-Buletin-Ekspor-Menurut-HS-Desember-2013-1-pdf"
+        },
+        {
+          "title": "Sekilas Info",
+          "url": "https://ditjenpen.kemendag.go.id/storage/publikasi/671-3971421058470.pdf"
+        },
+        {
+          "title": "Januari 2013, Ekspor Indonesia Turun 0.11 Persen dan Impor Turun 0.22 Persen",
+          "url": "https://www.bps.go.id/id/pressrelease/2013/03/01/964/januari-2013--ekspor-indonesia-turun-0-11-persen-dan-impor-turun-0-22-persen.html"
+        },
+        {
+          "title": "BPS: neraca perdagangan surplus tertinggi sejak 2011 - ANTARA News",
+          "url": "https://www.antaranews.com/berita/417162/bps-neraca-perdagangan-surplus-tertinggi-sejak-2011"
+        },
+        {
+          "title": "Juni 2013, Ekspor Indonesia Turun 8,63 Persen dan Impor Turun 6,44 Persen - Badan Pusat Statistik Indonesia",
+          "url": "https://www.bps.go.id/id/pressrelease/2013/08/01/103/juni-2013--ekspor-indonesia-turun-8-63-persen-dan-impor-turun-6-44-persen.html"
+        }
+      ],
+      "error": ""
+    },
+    {
+      "iso3c": "IDN",
+      "window": "2013-2014",
+      "language": "id",
+      "query": "2013 Tiongkok pasar ekspor terbesar Indonesia Jepang 2013",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:03:15.556Z",
+      "results": [
+        {
+          "title": "Indonesia Trade Summary 2013 | WITS | Text",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/IDN/Year/2013/Summarytext"
+        },
+        {
+          "title": "Indonesia Trade Summary 2013 | WITS Data",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/IDN/Year/2013/Summary"
+        },
+        {
+          "title": "Desember 2013, Ekspor Indonesia Naik 6,56 Persen dan Impor Naik 2,04 Persen - Badan Pusat Statistik Indonesia",
+          "url": "https://www.bps.go.id/id/pressrelease/2014/02/03/187/desember-2013--ekspor-indonesia-naik-6-56-persen-dan-impor-naik-2-04-persen.html"
+        },
+        {
+          "title": "Statistik Ekspor Indonesia 2014 | PDF | Pengelolaan Keuangan & Uang",
+          "url": "https://id.scribd.com/document/500605203/48765-ID-Statistik-Perdagangan-Luar-Negeri-Ekspor-2014-Jilid-i"
+        },
+        {
+          "title": "mengalami kenaikan. Ekspor yang terbesar adalah ekspor ke Singapura yang tumbuh 20,0 persen. Hanya ekspor ke negara Jepang yang mengalami penurunan sebesar -9,2 persen.",
+          "url": "https://perpustakaan.bappenas.go.id/e-library/file_upload/koleksi/migrasi-data-publikasi/file/Policy_Paper/Laporan_Triwulan_I_Tahun_2013_Deputi_Ekonomi_Bappenas.pdf"
+        },
+        {
+          "title": "Agustus 2013",
+          "url": "https://www.bi.go.id/id/publikasi/laporan/Documents/Laporan-NPI-Tw%20-IV-2016-260417.pdf"
+        },
+        {
+          "title": "8202003-JILID1.psd",
+          "url": "https://media.neliti.com/media/publications/49021-ID-statistik-perdagangan-luar-negeri-indonesia-ekspor-2013-jilid-i.pdf"
+        },
+        {
+          "title": "BPS (2021) Analisis Komoditas Ekspor | PDF | Komputer | Teknologi & Rekayasa",
+          "url": "https://id.scribd.com/document/522764487/7-BPS-2021-Analisis-Komoditas-Ekspor"
+        },
+        {
+          "title": "Indonesia Exports by country and region 2013 | WITS Data",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/IDN/Year/2013/TradeFlow/Export/Show/NMBR-XPRT-HS6-PRDCT%3BXPRT-TRD-VL%3BXPRT-PRTNR-SHR%3B/Sort/Export%20%28US%24%20Thousand%29"
+        },
+        {
+          "title": "Kebanyakan Impor Minyak, Neraca Perdagangan RI Defisit US$ 4,06 Miliar di 2013",
+          "url": "https://finance.detik.com/berita-ekonomi-bisnis/d-2485325/kebanyakan-impor-minyak-neraca-perdagangan-ri-defisit-us-4-06-miliar-di-2013"
+        },
+        {
+          "title": "Indonesia trade balance, exports, imports by country and region 2013 | WITS Data",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/IDN/Year/2013/TradeFlow/EXPIMP"
+        },
+        {
+          "title": "(PDF) ANALISIS EKSPOR IMPOR INDONESIA DENGAN NEGARA ASEAN DALAM MENGHADAPI MEA (MASYARAKAT EKONOMI ASEAN)",
+          "url": "https://www.researchgate.net/publication/391201379_ANALISIS_EKSPOR_IMPOR_INDONESIA_DENGAN_NEGARA_ASEAN_DALAM_MENGHADAPI_MEA_MASYARAKAT_EKONOMI_ASEAN"
+        }
+      ],
+      "error": ""
+    },
+    {
+      "iso3c": "IDN",
+      "window": "2013-2014",
+      "language": "id",
+      "query": "site:kemendag.go.id 2013 China negara tujuan ekspor terbesar Indonesia",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:03:17.895Z",
+      "results": [
+        {
+          "title": "Tajuk Utama",
+          "url": "https://ditjenpen.kemendag.go.id/storage/publikasi/815-1821421057081.pdf"
+        },
+        {
+          "title": "Ditjen PEN/MJL/005/2/2014 Februari",
+          "url": "https://kudagang.kemendag.go.id/repo/id/eprint/342/1/Warta%20Ekspor%2027%20Februari%202014%20.pdf"
+        },
+        {
+          "title": "Ditjen PEN/MJL/004/2/2013 Februari",
+          "url": "https://kudagang.kemendag.go.id/repo/id/eprint/329/1/Warta%20Ekspor%2028%20Februari%202013.pdf"
+        },
+        {
+          "title": "Kegiatan Ditjen PEN",
+          "url": "https://ditjenpen.kemendag.go.id/storage/publikasi/618-4651421058307.pdf"
+        },
+        {
+          "title": "Peningkatan Ekspor Bulan November Didorong oleh Peningakatan Produk Manufaktur",
+          "url": "https://bkperdag.kemendag.go.id/storage/publikasi/901-813-NL_Januari_2014_Indo.pdf"
+        },
+        {
+          "title": "Tajuk Utama",
+          "url": "https://ditjenpen.kemendag.go.id/storage/publikasi/356-6891421056900.pdf"
+        },
+        {
+          "title": "POTENSI PENINGKATAN AKSES PASAR PRODUK INDONESIA KE PEREKONOMIAN APEC UNTUK MENGANTISIPASI REALISASI FTAAP | Buletin Ilmiah Litbang Perdagangan",
+          "url": "https://jurnal.kemendag.go.id/bilp/article/view/324"
+        },
+        {
+          "title": "Beranda - Informasi Mekanisme Eskpor Impor (EXIM)",
+          "url": "https://exim.kemendag.go.id/"
+        },
+        {
+          "title": "MENGAMANKAN CUAN DAGANG RI | Kementerian Perdagangan Republik Indonesia",
+          "url": "https://www.kemendag.go.id/berita/pojok-media/mengamankan-cuan-dagang-ri"
+        },
+        {
+          "title": "ASEAN-CHINA FTA: DAMPAKNYA TERHADAP EKSPOR INDONESIA DAN CINA | Buletin Ilmiah Litbang Perdagangan",
+          "url": "https://jurnal.kemendag.go.id/index.php/bilp/article/view/97/0"
+        },
+        {
+          "title": "Kemendag Dampingi Kunjungan Kerja Komisi VI DPR RI ke Shanghai, RRT | Kementerian Perdagangan Republik Indonesia",
+          "url": "https://www.kemendag.go.id/berita/foto/kemendag-dampingi-kunjungan-kerja-komisi-vi-dpr-ri-ke-shanghai-rrt"
+        },
+        {
+          "title": "THE IMPACT OF ZERO IMPORT TARIFF POLICY AND AIR POLLUTION PREVENTION AND CONTROL ACTION PLAN ON INDONESIAN COAL EXPORT TO CHINA | Buletin Ilmiah Litbang Perdagangan",
+          "url": "https://jurnal.kemendag.go.id/bilp/article/view/263"
+        }
+      ],
+      "error": ""
+    },
+    {
+      "iso3c": "IDN",
+      "window": "2013-2014",
+      "language": "id",
+      "query": "site:bps.go.id 2013 Jepang negara tujuan ekspor terbesar Indonesia 27,08 China 22,6",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:03:24.860Z",
+      "results": [
+        {
+          "title": "8202003-JILID2.psd",
+          "url": "https://web-api.bps.go.id/download.php?f=8bzuV4RFSdELdK7DFPD7cmJXRXhqbk1DSk5mZ3M4WEdUdmtyR0tSMGZEeDlYNkVHdzFQejRlSzZ1TlRtSkJoZk0yL1U4bThmLzBwWmhwcElHVHFiTmNFZXVMSXpORWFxTHZRT0hHQmwzR2MzSm12YWNtT2xSY0lrYjViN2ZxVnlvaHJVZ3dFVjE2N2xsUlpMT1pkZkYxOE5qaldrWXM0NzUyZnFmZ2o5QTN6eG0yQ3dtQkJxb3RyN2Nhdlo0aVozTVNoRmR4QzJISFY4R0lSU2xkWUNDanZRVE82aEU5ek1qNmI3WklHd3hhVW1sbTVyM0huNEtoVGZ6bGFQeVc5bVhrNjR5SHFXa3VuQm5WeVRpd2RRY1NCU0tpWkx5UGZkOGN0YzNoYTVJVWREK1RtcS9IdHc1RUxYYXhVPQ%3D%3D"
+        },
+        {
+          "title": "Statistik Perdagangan Luar Negeri Indonesia Ekspor Menurut Kode SITC 2012-2013 - Badan Pusat Statistik Indonesia",
+          "url": "https://www.bps.go.id/id/publication/2014/06/27/2b5c4e8381fb8799666b04c7/statistik-perdagangan-luar-negeri-indonesia-ekspor-menurut-kode-sitc-2012-2013.html"
+        },
+        {
+          "title": "Desember 2013, Ekspor Indonesia Naik 6,56 Persen dan Impor Naik 2,04 Persen - Badan Pusat Statistik Indonesia",
+          "url": "https://www.bps.go.id/id/pressrelease/2014/02/03/187/desember-2013--ekspor-indonesia-naik-6-56-persen-dan-impor-naik-2-04-persen.html"
+        },
+        {
+          "title": "Statistik Perdagangan Luar Negeri Indonesia Ekspor 2013 Jilid I",
+          "url": "https://www.bps.go.id/id/publication/2014/06/26/9dc139438fb815a71497cf67/stati"
+        },
+        {
+          "title": "Statistik Perdagangan Luar Negeri Indonesia Ekspor 2013 Jilid II - Badan Pusat Statistik Indonesia",
+          "url": "https://www.bps.go.id/id/publication/2014/06/26/060b15c52697875128bfebac/statistik-perdagangan-luar-negeri-indonesia-ekspor-2013-jilid-ii.html"
+        },
+        {
+          "title": "https://www.bp",
+          "url": "https://web-api.bps.go.id/download.php?f=%2FXTiH2SgB4s%2FFenv1cdz5U52Z000MUhLenNLQnErZ3dGQUJjZHVURmhxaGpXbkhScmJrS01Sb3d6UlkvQXFSYjZmdXdYZmtUMmVXSjlyQURucGJHZ3YyVloyMmdSOGtUTi9QSGhTemw4TDNLaEtNMGY1SmczM2tSWnA4czdRWWVEU3RKUGpuOGVUbUY2eFk4djBzR0xDY0VXTlQxQ3hNQ2g5azVLUWtob3lZSE41d2daQTFrWmxOUnZ2WXhJYnJ3RU8vc0tiMG1LRHFEcGVrTG5iTlpoUGJzVkZ6MWk4OEpMbDg2ZU5JTzZoR1RzbkFKUlExUDY4OEF3UjdzS09mRENMNWo2bHliRExHb2t5NlY%3D"
+        },
+        {
+          "title": "Ekspor - Cover Depan buletin_HS_0113.psd",
+          "url": "https://web-api.bps.go.id/download.php?f=IbLA6RyLAF0UXYgrcThLYFdsTjFGKzYydXpkQ1ZzdWEvRGNaVXlHQVJvUmdoWU5OVDU1Y2Z3NVZwZlFrNmhMUC9ydmsrNVJRN0Vrd0tONHZvVUpsSE9zMFBJcmU5WWQ1dWNHTmFpa3JRVE1Yc2pSako1NlVrbHVRY3dMeTRIS2NnQTFtd1JaTzFjZ1JCVlI5REJmYnNlVkM4L1lUZThnakhwbkpTUmNMRFVieHh0Uk9FUkVuZE5hNlh5b1NNVUVhQWhPdHVwVnFDMFlIQWllQ25KSSt3SnM5ZjlrQk0wRVA0ZnFXTFdHSytnV2kyQW1kQmJQRXZLbGdZOFRsV3NMRklyNGxON2pYd0NuZHFEblVCaWFPS0hiU21zSXhwMHBGVHJyZTFxbmtlTW5BbEFiRVNqVkNvc2tXQUVqYnQyQUlzdmhoSG96UDI3ZElYZ3ho"
+        },
+        {
+          "title": "https://www.bps.go.id",
+          "url": "https://web-api.bps.go.id/download.php?f=sErspTm1mMJgF3AXtfHrgThvVURaNmo0NXNvejIyYVJtTkVnbHhCeEpGZm1mS3BvRFZmd1Qwa3pwVmRBb3RsUXFqeHorZDBGS09XSzluYit0SHllSHQ2NE1RN0RpTnhVMlVtdVJaZFRJMUw0eGR1Y1h4MVhzSVlhRysxemc4MVQ2TmRwWUFyRy90SlU0SVdzWjhmb1RHNDZNQTNGdUs0cmpUd0djSEdZUmdNRHJyNkxqZUtxWm5tbUhLZjRrTzA4YXQyblJEMU5mRVZYZWRBT2lvQnJJZTRwaExQSkxjUERhMUpMMnlQOXpMdy9HNHBHOWU0bjNiS0NDbTZsQ3FmTWZJUStnVmRlaEV4Qmg0ZjdhendvME5vdVNmcFRnbmNsWWtYNlh6Q1lCMm9XNWdKMWNRWFM2eEtGdGNrcCtOWE5wdDF2b2JqeHBuWEZmUnJJVEVhK0k5WE9zai9CQkpHc3R5V044QT09"
+        },
+        {
+          "title": "Statistik Perdagangan Luar Negeri Indonesia Ekspor Menurut Kode ISIC 2012-2013",
+          "url": "https://www.bps.go.id/id/publication/2014/08/22/2077c5e571db0ec87ca797ff/statistik-perdagangan-luar-negeri-indonesia-ekspor-menurut-kode-isic-2012-2013.html"
+        },
+        {
+          "title": "Buletin Statistik Perdagangan Luar Negeri Ekspor Menurut Kelompok Komoditi dan Negara Desember 2013",
+          "url": "https://www.bps.go.id/id/publication/2014/04/25/24480db620e2af29a1e8b4c6/buletin-statistik-perdagangan-luar-negeri-ekspor-menurut-kelompok-komoditi-dan-negara-desember-2013.html"
+        },
+        {
+          "title": "Statistik Perdagangan Luar Negeri Indonesia Ekspor 2013 Jilid II | Deep Search - AllStats Search",
+          "url": "https://searchengine.web.bps.go.id/deep?content=publication&id=060b15c52697875128bfebac&mfd=0000&page=1&q=Statistik+Perdagangan+Luar+Negeri+Indonesia+Ekspor+2013+Jilid+II"
+        }
+      ],
+      "error": ""
+    },
+    {
+      "iso3c": "IDN",
+      "window": "2013-2014",
+      "language": "id",
+      "query": "site:kemendag.go.id 2014 ekspor Indonesia 2013 Jepang 27,09 China 22,60",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:03:26.731Z",
+      "results": [
+        {
+          "title": "Kondisi Perekonomian Global Menekan Kinerja Ekspor Beberapa Negara",
+          "url": "https://bkperdag.kemendag.go.id/publikasi-unduh/newsletter-januari-2015"
+        },
+        {
+          "title": "Tajuk Utama",
+          "url": "https://ditjenpen.kemendag.go.id/storage/publikasi/815-1821421057081.pdf"
+        },
+        {
+          "title": "Ditjen PEN/MJL/005/7/2014 Juli",
+          "url": "https://kudagang.kemendag.go.id/repo/id/eprint/347/1/Warta%20Ekspor%2029%20Juli%202014.pdf"
+        },
+        {
+          "title": "Impor Bahan Baku/Penolong Januari 2014 Turun",
+          "url": "https://bkperdag.kemendag.go.id/publikasi-unduh/newsletter-maret-2014"
+        },
+        {
+          "title": "Ditjen PEN/MJL/005/2/2014 Februari",
+          "url": "https://kudagang.kemendag.go.id/repo/id/eprint/342/1/Warta%20Ekspor%2027%20Februari%202014%20.pdf"
+        },
+        {
+          "title": "Tajuk Utama",
+          "url": "https://ditjenpen.kemendag.go.id/storage/publikasi/356-6891421056900.pdf"
+        },
+        {
+          "title": "Total Ekspor Impor - Satu Data Perdagangan Kemendag RI",
+          "url": "https://satudata.kemendag.go.id/data-informasi/perdagangan-luar-negeri/ekspor-impor"
+        },
+        {
+          "title": "DAMPAK PERJANJIAN PERDAGANGAN INDONESIA - JEPANG (IJEPA) TERHADAP KINERJA PERDAGANGAN BILATERAL | Buletin Ilmiah Litbang Perdagangan",
+          "url": "https://jurnal.kemendag.go.id/bilp/article/view/5"
+        },
+        {
+          "title": "ANALISIS HUBUNGAN HARGA TIMAH BKDI DAN LME SERTA KEBIJAKAN EKSPOR TERHADAP KINERJA EKSPOR TIMAH INDONESIA | Buletin Ilmiah Litbang Perdagangan",
+          "url": "https://jurnal.kemendag.go.id/index.php/bilp/article/view/8"
+        },
+        {
+          "title": "Beranda - Informasi Mekanisme Eskpor Impor (EXIM)",
+          "url": "https://exim.kemendag.go.id/"
+        },
+        {
+          "title": "Neraca Perdagangan Indonesia - Satu Data Perdagangan Kemendag RI",
+          "url": "https://satudata.kemendag.go.id/data-informasi/perdagangan-luar-negeri/neraca-perdagangan-indonesia"
+        },
+        {
+          "title": "POTENSI PENINGKATAN AKSES PASAR PRODUK INDONESIA KE PEREKONOMIAN APEC UNTUK MENGANTISIPASI REALISASI FTAAP | Buletin Ilmiah Litbang Perdagangan",
+          "url": "https://jurnal.kemendag.go.id/bilp/article/view/324"
+        }
+      ],
+      "error": ""
+    },
+    {
+      "iso3c": "IDN",
+      "window": "2013-2014",
+      "language": "id",
+      "query": "2013 Indonesia Jepang tujuan ekspor terbesar 2014 BPS China",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:03:28.236Z",
+      "results": [
+        {
+          "title": "Desember 2013, Ekspor Indonesia Naik 6,56 Persen dan Impor Naik 2,04 Persen - Badan Pusat Statistik Indonesia",
+          "url": "https://www.bps.go.id/id/pressrelease/2014/02/03/187/desember-2013--ekspor-indonesia-naik-6-56-persen-dan-impor-naik-2-04-persen.html"
+        },
+        {
+          "title": "Januari 2014, Ekspor Indonesia Turun 14,63 Persen dan Impor Turun 3,50 Persen - Badan Pusat Statistik Indonesia",
+          "url": "https://www.bps.go.id/id/pressrelease/2014/03/03/188/januari-2014--ekspor-indonesia-turun-14-63-persen-dan-impor-turun-3-50-persen.html"
+        },
+        {
+          "title": "https://www.bp",
+          "url": "https://web-api.bps.go.id/download.php?f=cyKzcH39as+Z3rL6k9FHfGNvT0NHcnppNUJleHVGdHduZGhiT1FUcGtFaHk0Nzc0WjFXb2JsaHVPTG9mYU9PU2Y1aVFnU3lERnV6cWhMeVR4bUc2Q3RWU3VwSTcwa05iYVE4OGhXYXVNSlNBOGs5Ri84V2tMMGNOcC9aMVpwcHJXQTlmTUlYdkVSaEx3TG9zVmhQTXc1cjF4aTVrRHRTK3o2OTN3by9pZGRJemh1ZVJuUFYvWEQzR0ZRYVQ1TW5XY3BrYWxZR0dIWmJlYkJuUThzY2Jib3EvQ1hsdExKcnU1QmdCZHJuMlJQeWd3VGVlNWVyKzU3MmhwUHFIa2dndVFFZWxlSEpIVCtmQ1NLSnE%3D"
+        },
+        {
+          "title": "Statistik Perdagangan Luar Negeri Indonesia Ekspor 2013 Jilid I",
+          "url": "https://www.bps.go.id/id/publication/2014/06/26/9dc139438fb815a71497cf67/stati"
+        },
+        {
+          "title": "Statistik Ekspor Indonesia 2014 | PDF | Pengelolaan Keuangan & Uang",
+          "url": "https://id.scribd.com/document/500605203/48765-ID-Statistik-Perdagangan-Luar-Negeri-Ekspor-2014-Jilid-i"
+        },
+        {
+          "title": "Perkembangan Eksport dan Import Jawa Timur Bulan Desember 2014",
+          "url": "https://pasuruankota.bps.go.id/id/pressrelease/2015/03/18/23/perkembangan-eksport-dan-import-jawa-timur-bulan-desember-2014.html"
+        },
+        {
+          "title": "PERKEMBANGAN EKSPOR DAN IMPOR KALIMANTAN TIMUR JANUARI-SEPTEMBER 2013",
+          "url": "https://kaltim.bps.go.id/id/pressrelease/2013/12/02/653/perkembangan-ekspor-dan-impor-kalimantan-timur-januari-september-2013---.html"
+        },
+        {
+          "title": "Perkembangan Ekspor dan Impor Jawa Timur November 2014",
+          "url": "https://pasuruankota.bps.go.id/id/pressrelease/2015/03/18/15/perkembangan-ekspor-dan-impor-jawa-timur-november-2014.html"
+        },
+        {
+          "title": "Statistik Perdagangan Luar Negeri Indonesia Ekspor 2014, Jilid II - Badan Pusat Statistik Indonesia",
+          "url": "https://www.bps.go.id/id/publication/2015/06/29/d2e0afa6a3798fec88c72e40/statistik-perdagangan-luar-negeri-indonesia-ekspor-2014-jilid-ii.html"
+        },
+        {
+          "title": "BPS: neraca perdagangan surplus tertinggi sejak 2011 - ANTARA News",
+          "url": "https://www.antaranews.com/berita/417162/bps-neraca-perdagangan-surplus-tertinggi-sejak-2011"
+        },
+        {
+          "title": "Buletin Statistik Perdagangan Luar Negeri Ekspor Menurut Harmonized System Desember 2013",
+          "url": "https://www.bps.go.id/id/publication/2014/04/25/996596eb9620bfb2dbac105f/buletin-statistik-perdagangan-luar-negeri-ekspor-menurut-harmonized-system-desember-2013.html"
+        },
+        {
+          "title": "UU Minerba Diterapkan, Ekspor Januari 2014 Turun 14,63% - Kementerian Koordinator Bidang Perekonomian Republik Indonesia",
+          "url": "https://ekon.go.id/publikasi/detail/1709/uu-minerba-diterapkan-ekspor-januari-2014-turun-1463"
+        }
+      ],
+      "error": ""
+    },
+    {
+      "iso3c": "IDN",
+      "window": "2013-2014",
+      "language": "id",
+      "query": "site:bkperdag.kemendag.go.id 2013 non migas China terbesar Jepang ekspor Januari 2014",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:03:30.610Z",
+      "results": [
+        {
+          "title": "Impor Bahan Baku/Penolong Januari 2014 Turun",
+          "url": "https://bkperdag.kemendag.go.id/publikasi-unduh/newsletter-maret-2014"
+        },
+        {
+          "title": "Peningkatan Ekspor Bulan November Didorong oleh Peningakatan Produk Manufaktur",
+          "url": "https://bkperdag.kemendag.go.id/storage/publikasi/901-813-NL_Januari_2014_Indo.pdf"
+        },
+        {
+          "title": "Kondisi Perekonomian Global Menekan Kinerja Ekspor Beberapa Negara",
+          "url": "https://bkperdag.kemendag.go.id/publikasi-unduh/newsletter-januari-2015"
+        },
+        {
+          "title": "Permintaan Ekspor Komoditi Non Migas Indonesia Masih Mengalami Peningkatan",
+          "url": "https://bkperdag.kemendag.go.id/publikasi-unduh/newsletter-februari-2014"
+        },
+        {
+          "title": "Ekspor Sektor Migas dan Industri selama April 2014 Mengalami Penguatan",
+          "url": "https://bkperdag.kemendag.go.id/storage/publikasi/498-788-NL_Juni_2014_Indo.pdf"
+        },
+        {
+          "title": "Selama Januari-Februari 2015, Kinerja Ekspor Non Migas",
+          "url": "https://bkperdag.kemendag.go.id/storage/publikasi/243-893-NL_April_2015_Indo_ok.pdf"
+        }
+      ],
+      "error": ""
+    },
+    {
+      "iso3c": "IDN",
+      "window": "2013-2014",
+      "language": "id",
+      "query": "site:bps.go.id 2014 \"27 086,3\" \"22 601,5\" Jepang China",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:03:32.349Z",
+      "results": [
+        {
+          "title": "coverdalam.pmd",
+          "url": "https://web-api.bps.go.id/download.php?f=1I2fjwcLe5FLAwltCl14VTVzMTZlZmZ5MU9kOVU0eGlmZ2dOa3BTOW9oUk9Fc1dEWlJrTnhzL1hPYmpUTWxzdFlFVEtXMEJwY0g1NnJlY2FYVE0wVTJaZHVZTmV6LzRnTkhnTXJVL0dLMDJBcDlGTmF3QUhuVEYyYStGRlhvc05yNHlCSndIL2tYUjFaN2MvVUM4dmRHOUd1ZFBmSEs1MUI4akFWNG1KdzNFWW0zOHNEVjJyMWhLd05YcHlTdm84YTNtTXMzVXQ1SjVTNXdON2czdjB2ekRvWStOZTFWK3gvSFJJZjZkeXRVYjVGNGpQZEJldWY5MFgrdjdMU0pqRmgwVFZnVEpCbFRvZXhUazA%3D"
+        },
+        {
+          "title": "8202003-JILID2.psd",
+          "url": "https://web-api.bps.go.id/download.php?f=8bzuV4RFSdELdK7DFPD7cmJXRXhqbk1DSk5mZ3M4WEdUdmtyR0tSMGZEeDlYNkVHdzFQejRlSzZ1TlRtSkJoZk0yL1U4bThmLzBwWmhwcElHVHFiTmNFZXVMSXpORWFxTHZRT0hHQmwzR2MzSm12YWNtT2xSY0lrYjViN2ZxVnlvaHJVZ3dFVjE2N2xsUlpMT1pkZkYxOE5qaldrWXM0NzUyZnFmZ2o5QTN6eG0yQ3dtQkJxb3RyN2Nhdlo0aVozTVNoRmR4QzJISFY4R0lSU2xkWUNDanZRVE82aEU5ek1qNmI3WklHd3hhVW1sbTVyM0huNEtoVGZ6bGFQeVc5bVhrNjR5SHFXa3VuQm5WeVRpd2RRY1NCU0tpWkx5UGZkOGN0YzNoYTVJVWREK1RtcS9IdHc1RUxYYXhVPQ%3D%3D"
+        },
+        {
+          "title": "Katalog/Catalog: 9201001",
+          "url": "https://web-api.bps.go.id/download.php?f=VF++xYK4ir4XCyJ1YPaiiHFVTXBYaXlsa0k3Q2Y0SERsU2xzaC9wTDhteFREbm41cXhPVCt2TStwUDJFZDNsWXlwM1hBRDhYeWUwQVZZekR2ZzNIa1I2OTRzS2tIeTdwY0w3TG5YR0JneHIrajkwZmJNRUVhckQvL3FVM3ZFNnE1MmQ3Zm5odnRuUzJGMS9xL0ZFcG16NFFudUNVZ2pjY3UyZkZTaTkxR05peGtlN256cGJWazEwTjRubk1GTVZPYUJPTmU2Q3B1Y3liSVJTSmZaZ1pabFlaUjhYNVo5UWZIaldWSlg2eG9CbkY1ekNJNlhYRWhhdk1naGRTelFnM3ZTQkhMNm5TMlVSaU5EUlQ%3D"
+        },
+        {
+          "title": "coverdalam.pmd",
+          "url": "https://web-api.bps.go.id/download.php?f=FqPSvRWvggC+K1U4prRc81VoNG96ajRrcEw5K0dqQ216d0tiMnQyTy8vbTUxQkhsYitsRTJEYVR0N2tQd04vTG5GUi84MWZYZ3p5eWRqT1RiSFdwVk0reTNxdmRxckdFL1BuTk8rK25TcmtjWHlEdUViNDZJU1RJZnVHd1J6bkxtKzVidGsrMWlCQzRHSWdvSHMxcjRyM3c2TkRJNmhaQnhlY0t2cWdaWmJOZlVTVnI2OXdsbGtCai8yVmRUeGJzVlhra0VZWldKTnIrUnFvN3lVc0p4eUJiZnNpazE3K0puM2dUK3ZPbVlnSFZPSzRYS0o5L2xHMGNzVUJPT0txOGhTdFRoT3BKM0tGb281Ung%3D"
+        },
+        {
+          "title": "Katalog/Catalog: 9201001",
+          "url": "https://web-api.bps.go.id/download.php?f=ZRqAovtRzgRmPp12BUaEBlFENVNiKzA4YXVEZG1UYzlRV0RsQ0c2UVNyb0pyRTZ3eHhZZUZpUlh1M1RJcWplS3lpMU0wKzI3cWp5Vi9zZ1MwbDhpTEgwdWZ4QURibUNtdjZiYmtHZjRhT2dyaFRCb05HL1Z3WXFlV1RTSXpTVnVvQjlxV1REdHlaNVFwUHF0VjUyVDBjZnRpUUppLzgwQkY1b2ROczRROUp4dkVubHdlejhpNjdQZ3VzK3FBTTVnTkR0VFZNaGpuWnFzVWZaODY1KzljN1pJTWFJaWxXT0E5RnIvVkhLbFRLRk1VVjcvRldsUWcxREx5MDFIeDlGK2VzbnNYZlZtVHpzUnFtTSs%3D"
+        },
+        {
+          "title": "\b\b\r\b \u000e\u000b\u000f\u0010\u0005\b\u0002\u0003\u0004\u000f\u0010\u0005",
+          "url": "https://web-api.bps.go.id/download.php?f=6t3BNjyCxZknfzYeIFhkQGNQV0ZIdTM3bWdrc3VuTzVhV2ZPUFpCMEFaUDc1YlR2bGZFRkR5MDhLMlVuUE1FejNUQStMTGJ4cWxncElJczRkeC8vNzNzQzNwVXJpa0JGbDdXbEtKeWpnY2IrRDVNeDRhaDRQSlYrZW1WeTZoanIwRVN5OVpVd2ljajI3d1paaFRtRXRPS2hrVFlra0lvdG1YemlDMzU5eGF4RlVqUDNiVlUyWVROaFFCNWpMSGVXdFV4RkpNSmdmMmkzNE1GVVduYU5MZnBNRXRmbzQ2cWZBNExMUHRGZHRoYlc4Nm5xRS9hQ0JqOGVCWnphYTVjMWd0bURLNm8wZCs0aFZ6eEw%3D"
+        }
+      ],
+      "error": ""
+    },
+    {
+      "iso3c": "IDN",
+      "window": "2013-2014",
+      "language": "id",
+      "query": "site:bps.go.id \"27.086,3\" \"22.601,5\" ekspor 2013",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:03:33.957Z",
+      "results": [],
+      "error": ""
+    },
+    {
+      "iso3c": "IDN",
+      "window": "2013-2014",
+      "language": "id",
+      "query": "site:bps.go.id \"Jepang\" \"27 086,3\" \"Tiongkok\" 2013",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:03:35.595Z",
+      "results": [
+        {
+          "title": "8202003-JILID2.psd",
+          "url": "https://web-api.bps.go.id/download.php?f=8bzuV4RFSdELdK7DFPD7cmJXRXhqbk1DSk5mZ3M4WEdUdmtyR0tSMGZEeDlYNkVHdzFQejRlSzZ1TlRtSkJoZk0yL1U4bThmLzBwWmhwcElHVHFiTmNFZXVMSXpORWFxTHZRT0hHQmwzR2MzSm12YWNtT2xSY0lrYjViN2ZxVnlvaHJVZ3dFVjE2N2xsUlpMT1pkZkYxOE5qaldrWXM0NzUyZnFmZ2o5QTN6eG0yQ3dtQkJxb3RyN2Nhdlo0aVozTVNoRmR4QzJISFY4R0lSU2xkWUNDanZRVE82aEU5ek1qNmI3WklHd3hhVW1sbTVyM0huNEtoVGZ6bGFQeVc5bVhrNjR5SHFXa3VuQm5WeVRpd2RRY1NCU0tpWkx5UGZkOGN0YzNoYTVJVWREK1RtcS9IdHc1RUxYYXhVPQ%3D%3D"
+        },
+        {
+          "title": "coverdalam.pmd",
+          "url": "https://web-api.bps.go.id/download.php?f=9oZPWtRn6CfaeWMYcAdDjEZSSVluZEhkZXhUZ2k4Y2ZNVnV3S0hyR25lYzZoaFpaR1dNNzZ5a3pYNW85a3Q0em82TUZ0MHhVMDk3dE5admd0bzlqNERkNVdkNEdMOVJCTXhjSlBaaU5kbGo1ZHc0TDJPcmlNdVFVYkM1NnE5QUIwTlByMnFVMkN2czZvU0JWRERwTkVsTEg3dURiT1hza3lpV1AySUJLZFJHSlhtVkROM0llVE1ManJoNHQ0ZXdIeGJOcWRHeTIweHJkZVRCcHdLTDNDWFlWTk1IL0FUMEM3U0xoU25CTitsUHVPZHNUYXRJWmw2NW9MVjlxMCtMWlk0elVIU29pS3lQdFBiRis%3D"
+        },
+        {
+          "title": "NERACAPEMBAYARAN DAN PEMBAYARAN LUAR NEGERI",
+          "url": "https://web-api.bps.go.id/download.php?f=Hut7s2BBthdePT6+7a8NHUZ0d0Z1OTcrRUFvYjgrZWFJbXNSV0dZd3d0OHJBVUtld0xybUVMZHFRdnRZUGRBbm53a1dyWm9DQ0puMU5CWmU5dnVKRTR6V1djd1pnN0Vzb2taOUVJcWRQVk8xOHBjZk45QW9KcVkyNGtiT29KQnA2OXlPSDRHeHJ6WXZENTlMUkN6V001eExsL2lyTk1zbEFNUFhBcitCUXZoU0w4T000ZElncGVVV0t3eS83RTRIWmNCK3JoZ2ZLa2VHUjZxMk9UQmlvMXpRYUMvQmhQbStBdGZpcWp0b2IrT0pUNnE4ZlRsZDhzaUpYMlUyU1Q5TWV6OW5aM1F1RWZtT3NENnc%3D"
+        },
+        {
+          "title": "NERACAPEMBAYARAN DAN PEMBAYARAN LUAR NEGERI",
+          "url": "https://web-api.bps.go.id/download.php?f=4nBf276jYUYMe+bp0quzIlBtdDNuVlAxQURLN3lTWnMrajhnNGxGM01RbWQrdXg4eGcwb0g3aS9lRkR4aGhJR0piRWl4ZHVOK0t1RWNzSXlBQ2xuUTlhNjFEQ2FRMFdqUUtlUEYzOUxtQlBzN3RzVmQ5Q2hTTzBEa0NnL1NHV3RCNjZqVndwUDFDVW91YzlWbENrMGVkS1hXTDdELzlKMWxFSjdOTFhFNmo3THB6Vy9EdjAzMFBtMTFlenFMSmorbm9QT1h2KzAwUEJjZmdWMHNwb1FqT3loRW5VSmViWGZUUWFzNkprNXZBK2Nqc01xampEdjg3ZXpHc0haVVRHajlPTUM1VnVUMEVCRzdDMU8%3D"
+        },
+        {
+          "title": "Katalog/Catalog: 9201001",
+          "url": "https://web-api.bps.go.id/download.php?f=VF++xYK4ir4XCyJ1YPaiiHFVTXBYaXlsa0k3Q2Y0SERsU2xzaC9wTDhteFREbm41cXhPVCt2TStwUDJFZDNsWXlwM1hBRDhYeWUwQVZZekR2ZzNIa1I2OTRzS2tIeTdwY0w3TG5YR0JneHIrajkwZmJNRUVhckQvL3FVM3ZFNnE1MmQ3Zm5odnRuUzJGMS9xL0ZFcG16NFFudUNVZ2pjY3UyZkZTaTkxR05peGtlN256cGJWazEwTjRubk1GTVZPYUJPTmU2Q3B1Y3liSVJTSmZaZ1pabFlaUjhYNVo5UWZIaldWSlg2eG9CbkY1ekNJNlhYRWhhdk1naGRTelFnM3ZTQkhMNm5TMlVSaU5EUlQ%3D"
+        }
+      ],
+      "error": ""
+    },
+    {
+      "iso3c": "IDN",
+      "window": "2013-2014",
+      "language": "id",
+      "query": "\"2013\" \"Jepang\" \"China\" \"27.086,3\" site:go.id",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:03:37.188Z",
+      "results": [],
+      "error": ""
+    },
+    {
+      "iso3c": "IDN",
+      "window": "2013-2014",
+      "language": "id",
+      "query": "\"ekspor Indonesia tahun 2013\" \"paling besar\" \"Jepang\" bps",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:03:38.981Z",
+      "results": [
+        {
+          "title": "8202003-JILID2.psd",
+          "url": "https://media.neliti.com/media/publications/49020-ID-statistik-perdagangan-luar-negeri-indonesia-ekspor-2013-jilid-ii.pdf"
+        },
+        {
+          "title": "8202003-JILID1.psd",
+          "url": "https://media.neliti.com/media/publications/49021-ID-statistik-perdagangan-luar-negeri-indonesia-ekspor-2013-jilid-i.pdf"
+        },
+        {
+          "title": "BILP Kementerian Perdagangan | PDF",
+          "url": "https://www.scribd.com/document/769677545/BILP-Kementerian-Perdagangan"
+        },
+        {
+          "title": "BPS (2021) Analisis Komoditas Ekspor | PDF | Komputer | Teknologi & Rekayasa",
+          "url": "https://id.scribd.com/document/522764487/7-BPS-2021-Analisis-Komoditas-Ekspor"
+        },
+        {
+          "title": "Statistik Ekspor Indonesia 2014 | PDF | Pengelolaan Keuangan & Uang",
+          "url": "https://id.scribd.com/document/500605203/48765-ID-Statistik-Perdagangan-Luar-Negeri-Ekspor-2014-Jilid-i"
+        },
+        {
+          "title": "Buku (Bisnis Internasional Teori Dan Pemahaman) | PDF",
+          "url": "https://www.scribd.com/document/771665459/Buku-Bisnis-Internasional-Teori-Dan-Pemahaman"
+        },
+        {
+          "title": "PROSIDING SEMINAR NASIONAL & SIDANG PLENO ISEI XVI - PDF Free Download",
+          "url": "https://adoc.pub/prosiding-seminar-nasional-sidang-pleno-isei-xvi.html"
+        },
+        {
+          "title": "Rencana Kerja Pemerintah 2013 | PDF",
+          "url": "https://id.scribd.com/doc/140170265/BUKU-II-RKP-2013"
+        },
+        {
+          "title": "laporan akhir analisis cost and benefit asean – hong kong free trade",
+          "url": "https://studylibid.com/doc/1108778/laporan-akhir-analisis-cost-and-benefit-asean-%E2%80%93-hong-kong..."
+        },
+        {
+          "title": "BAB I PENDAHULUAN 1.1 Krisis Keuangan Global Yang Dipicu",
+          "url": "https://studylibid.com/doc/127625/bab-i-pendahuluan-1.1-krisis-keuangan-global-yang-dipicu"
+        },
+        {
+          "title": "rkpd papua.pdf - PDFCOFFEE.COM",
+          "url": "https://pdfcoffee.com/rkpd-papuapdf-pdf-free.html"
+        },
+        {
+          "title": "yordania dalam kerangka asean",
+          "url": "https://studylibid.com/doc/258786/yordania-dalam-kerangka-asean"
+        }
+      ],
+      "error": ""
+    },
+    {
+      "iso3c": "OMN",
+      "window": "2004-2005",
+      "language": "en",
+      "query": "Oman China largest export destination Japan 2004 2005 Oman Observer",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:03:40.616Z",
+      "results": [
+        {
+          "title": "Oman Trade Summary 2004 | WITS | Text",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/OMN/Year/2004/Summarytext"
+        },
+        {
+          "title": "Oman Trade Summary 2005 | WITS | Text",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/OMN/Year/2005/Summarytext"
+        },
+        {
+          "title": "Oman Exports by country and region 2005 | WITS Data",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/OMN/Year/2005/TradeFlow/Export"
+        },
+        {
+          "title": "Oman Trade Summary 2004 | WITS Data",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/OMN/Year/2004/Summary"
+        },
+        {
+          "title": "Oman Trade Summary 2005 | WITS Data",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/OMN/Year/2005/Summary"
+        },
+        {
+          "title": "Oman Exports by country and region 2005 | WITS Data",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/OMN/Year/2005/TradeFlow/Export/Show/NMBR-XPRT-HS6-PRDCT%3BXPRT-TRD-VL%3BXPRT-PRTNR-SHR%3B/Sort/Export%20%28US%24%20Thousand%29"
+        },
+        {
+          "title": "Oman trade balance, exports, imports by country 2005 | WITS Data",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/OMN/Year/2005/TradeFlow/EXPIMP/Partner/by-country"
+        },
+        {
+          "title": "Oman Exports to China US$000 2001 - 2005 | WITS Data",
+          "url": "https://wits.worldbank.org/CountryProfile/en/country/OMN/startyear/2001/endyear/2005/tradeflow/Export/partner/CHN/indicator/XPRT-TRD-VL"
+        },
+        {
+          "title": "China is Oman's biggest export market in 2018 - Oman Observer",
+          "url": "https://www.omanobserver.om/article/50533/LATEST%20NEWS/china-is-omans-biggest-export-market-in-2018"
+        },
+        {
+          "title": "China is Oman's biggest export market in 2018",
+          "url": "https://www.omanobserver.om/ampArticle/50533"
+        },
+        {
+          "title": "China tops Oman crude oil import | Khaleej Times",
+          "url": "https://www.khaleejtimes.com/business/china-tops-oman-crude-oil-import?amp=1"
+        },
+        {
+          "title": "Doing Business in Oman | PDF",
+          "url": "https://www.scribd.com/doc/39171805/Doing-Business-in-Oman-1"
+        }
+      ],
+      "error": ""
+    },
+    {
+      "iso3c": "SDN",
+      "window": "2007-2008",
+      "language": "en",
+      "query": "Sudan China largest export market Saudi Arabia 2007 2008 Sudan news",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:03:42.392Z",
+      "results": [
+        {
+          "title": "Fm Sudan Trade Summary 2007 | WITS | Text",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/SDN/Year/2007/Summarytext"
+        },
+        {
+          "title": "Sudan doubles crude exports to China in 2007 - Sudan Tribune",
+          "url": "https://sudantribune.com/article/25740"
+        },
+        {
+          "title": "Fm Sudan Trade Summary 2008 | WITS | Text",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/SDN/Year/2008/Summarytext"
+        },
+        {
+          "title": "Fm Sudan Trade Summary 2007 | WITS Data",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/SDN/Year/2007/Summary"
+        },
+        {
+          "title": "Fm Sudan Trade Summary 2008 | WITS Data",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/SDN/Year/2008/Summary"
+        },
+        {
+          "title": "(PDF) Economic sanctions and trade diversions in Sudan",
+          "url": "https://www.researchgate.net/publication/43126423_Economic_sanctions_and_trade_diversions_in_Sudan"
+        },
+        {
+          "title": "Ex Sudán | Resumen del comercio | 2008 | WITS Datos",
+          "url": "https://wits.worldbank.org/CountryProfile/es/Country/SDN/Year/2008/Summary"
+        },
+        {
+          "title": "Foreign trade of Sudan",
+          "url": "https://en.wikipedia.org/wiki/Foreign_trade_of_Sudan"
+        },
+        {
+          "title": "CHINA | Energy Intelligence",
+          "url": "https://www.energyintel.com/0000017b-a7b2-de4c-a17b-e7f20c0d0000"
+        },
+        {
+          "title": "Edition 2008 — Sudan — World Factbook",
+          "url": "https://www.worldfactbook.co/edition.php?country=sudan&year=2008"
+        },
+        {
+          "title": "Saudi Arabia in talks with Sudan and others to secure food needs - Sudan Tribune",
+          "url": "https://sudantribune.com/article/27517"
+        },
+        {
+          "title": "taqrir eng.indd",
+          "url": "https://cbos.gov.sd/sites/default/files/annual05_1.pdf"
+        }
+      ],
+      "error": ""
+    },
+    {
+      "iso3c": "PRK",
+      "window": "2008-2009",
+      "language": "en",
+      "query": "North Korea China largest export market Japan 2008 2009 NK official",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:03:44.264Z",
+      "results": [
+        {
+          "title": "Trade Statistics Trade Statistics Data for Japan Country by Commodity Export Monthly 2008Dec. | File | Browse Statistics | 政府統計の総合窓口",
+          "url": "https://www.e-stat.go.jp/index.php/en/stat-search/files?cycle=1&layout=datalist&month=24101212&result_back=1&tclass1=000001013186&tclass2=000001013187&tclass3val=0&toukei=00350300&tstat=000001013141&year=20080"
+        },
+        {
+          "title": "DBPIA-NURIMEDIA",
+          "url": "https://repo.kinu.or.kr/bitstream/2015.oak/8898/6/0001477332.pdf"
+        },
+        {
+          "title": "untitled",
+          "url": "https://ncnk.org/sites/default/files/content/resources/publications/CRS_Economic_Leverage_August_09_RL32493.pdf"
+        },
+        {
+          "title": "08年の北朝鮮貿易、91年以降で最大の規模に−KOTRAの推計−(北朝鮮) | ビジネス短信 ―ジェトロの海外ニュース - ジェトロ",
+          "url": "https://www.jetro.go.jp/biznews/2009/05/4a1b6f15db3d0.html"
+        },
+        {
+          "title": "North Korea: Economic Leverage and Policy",
+          "url": "https://www.nkeconwatch.com/nk-uploads/1-2010-Economic-leverage.pdf"
+        },
+        {
+          "title": "Trade Statistics Trade Statistics Data by Customs Country by Customs by Principal Commodity Export Fixed 08-12-020 2008/12. Country by Customs by Principal Commodity (Export Fixed annual) Tokyo Koukuu (Baraki) (103-104:Republic of Korea,North Korea) Monthly 2008Dec. | File | Browse Statistics | 政府統計の総合窓口",
+          "url": "https://www.e-stat.go.jp/index.php/en/stat-search/files?cycle=1&iroha=16&layout=datalist&month=24101212&page=1&result_back=1&stat_infid=000002568311&tclass1=000001013238&tclass2=000001013239&tclass3val=0&toukei=00350300&tstat=000001013143&year=20080"
+        },
+        {
+          "title": "<28BEF7B7CEB5E5BFEB2D2D2D295FBFB5B9AEC0FAB3CE5F31392D322E687770>",
+          "url": "https://repo.kinu.or.kr/bitstream/2015.oak/1580/1/0001422771.pdf"
+        },
+        {
+          "title": "UN Security Council Panel Report 2010 | PDF | Treaty On The Non Proliferation Of Nuclear Weapons | Nuclear Proliferation",
+          "url": "https://www.scribd.com/document/816895108/S-2010-571-EN"
+        },
+        {
+          "title": "NORTH KOREA NEWSLETTER NO. 73 (September 24, 2009) | Yonhap News Agency",
+          "url": "https://en.yna.co.kr/view/AEN20090923005200325"
+        },
+        {
+          "title": "China-North Korea Relations - EveryCRSReport.com",
+          "url": "https://www.everycrsreport.com/reports/R41043.html"
+        },
+        {
+          "title": "WTO | 2009 Press Releases - WTO sees 9% global trade decline in 2009 as recession strikes - Press/554",
+          "url": "https://www.wto.org/english/news_e/pres09_e/pr554_e.htm"
+        },
+        {
+          "title": "Cable: 09SEOUL1119_a",
+          "url": "https://wikileaks.org/plusd/cables/09SEOUL1119_a.html"
+        }
+      ],
+      "error": ""
+    },
+    {
+      "iso3c": "COG",
+      "window": "2011-2012",
+      "language": "en",
+      "query": "Congo China largest export destination Korea 2011 2012 Brazzaville",
+      "query_type": "diagnostic",
+      "accessed_at": "2026-09-22T23:03:45.694Z",
+      "results": [
+        {
+          "title": "Congo, Rep. Exports by country 2012 | WITS Data",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/COG/Year/2012/TradeFlow/Export/Partner/by-country"
+        },
+        {
+          "title": "THE CURRENT NATURE OF INTRA-REGIONAL",
+          "url": "https://core.ac.uk/download/pdf/323918036.pdf"
+        },
+        {
+          "title": "Congo, Rep. Exports by country and region 2011 | WITS Data",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/COG/Year/2011/TradeFlow/Export/Partner/all"
+        },
+        {
+          "title": "Rapport Annuel 2012 BCC RDC PDF | PDF | Produit intérieur brut | Banques",
+          "url": "https://ru.scribd.com/document/368783289/Rapport-annuel-2012-bcc-RDC-pdf"
+        },
+        {
+          "title": "Congo, Rep. Exports by country and region 2012 | WITS Data",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/COG/Year/2012/TradeFlow/Export/Show/NMBR-XPRT-HS6-PRDCT%3BXPRT-TRD-VL%3BXPRT-PRTNR-SHR%3B/Sort/Export%20%28US%24%20Thousand%29"
+        },
+        {
+          "title": "刚果(金) 2011年对外贸易情况浅析",
+          "url": "https://cd.mofcom.gov.cn/scdy/art/2012/art_58da3b246e37486d96081c45162e920c.html"
+        },
+        {
+          "title": "Congo, Rep. trade balance, exports, imports by country 2012 | WITS Data",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/COG/Year/2012/TradeFlow/EXPIMP/Partner/by-country"
+        },
+        {
+          "title": "Congo, Rep. Exports by country and region 2011 | WITS Data",
+          "url": "https://wits.worldbank.org/CountryProfile/en/Country/COG/Year/2011/TradeFlow/Export/Show/NMBR-XPRT-HS6-PRDCT%3BXPRT-TRD-VL%3BXPRT-PRTNR-SHR%3B/Sort/Export%20%28US%24%20Thousand%29"
+        },
+        {
+          "title": "Économie et Démographie de la RDC | PDF | République démocratique du Congo | Balance commerciale",
+          "url": "https://fr.scribd.com/document/791632692/Chapitre-2-Resfie-1"
+        },
+        {
+          "title": "Congo, Democratic Republic of the Economy 2013, CIA World Factbook",
+          "url": "https://geographic.org/world_fact_book_2013/congo_democratic_republic_of_the/congo_democratic_republic_of_the_economy.html"
+        },
+        {
+          "title": "Growth of Chinese trade and investment flows in DR Congo – blessing or curse? – ScienceOpen",
+          "url": "https://www.scienceopen.com/hosted-document?doi=10.1080%2F03056244.2015.1048794"
+        },
+        {
+          "title": "World Bank Document",
+          "url": "https://documents1.worldbank.org/curated/en/266141468197369198/pdf/WPS7700.pdf"
+        }
+      ],
+      "error": ""
+    }
+  ]
+}

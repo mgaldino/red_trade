@@ -1,0 +1,301 @@
+sitemap: https://www.laestrella.com.pa/sitemap.xml 
+sitemap: https://www.laestrella.com.pa/sitemapforgoogle.xml 
+sitemap: https://www.laestrella.com.pa/megasitemap.xml 
+User-agent: * 
+Disallow: /news-portlet/metalocator/ 
+Disallow: /news-portlet/html/teaser-viewer-portlet/teaser_page.jsp 
+Disallow: /news-portlet/html/teaser-viewer-portlet/teaser_filter.jsp 
+Disallow: /news-portlet/filterteaser/ 
+Disallow: /news-portlet/getfilteropts/ 
+Disallow: /tracking-portlet/html/ranking-viewer/ranking_details.jsp 
+Disallow: /user-portlet/login-with/ 
+Disallow: /user-portlet/edit-user-profile/ 
+Disallow: /user-portlet/reset-credentials/ 
+Disallow: /user-portlet/confirm-email/ 
+Disallow: /user-portlet/refreshuserentitlements/ 
+Disallow: /user-portlet/getEntitlements/ 
+Disallow: /group/ 
+Disallow: /user/ 
+Disallow: /web/ 
+Disallow: /image/ 
+User-agent: * 
+Disallow: /inicio-sesion/ 
+Disallow: /registro/ 
+Disallow: /editar-perfil/ 
+Disallow: /recuperar-contrasena/ 
+Disallow: /false/false/
+Disallow: /error-404
+Disallow: /error404
+Disallow: /css/
+Disallow: /img/
+Disallow: /scripts/
+Disallow: /c/
+Disallow: /busqueda/-/search/
+Disallow: /search/
+Disallow: /includes/
+Disallow: /misc/
+Disallow: /modules/
+Disallow: /profiles/
+Disallow: /scripts/
+Disallow: /themes/
+Disallow: /CHANGELOG.txt
+Disallow: /logout/
+Disallow: /node/add
+Disallow: /search/
+Disallow: /search
+Disallow: /user/register/
+Disallow: /user/register
+Disallow: /user/password/
+Disallow: /user/password
+Disallow: /user/login/
+Disallow: /user/login
+Disallow: /laboratorio/
+Disallow: /laboratorio
+
+User-Agent: The Knowledge AI
+Disallow: /
+
+User-Agent: MauiBot
+Disallow: /
+
+# Agentes nocivos conocidos
+
+User-agent: ia_archiver
+Disallow: /
+
+User-agent: UbiCrawler
+Disallow: /
+
+User-agent: DOC
+Disallow: /
+
+User-agent: Zao
+Disallow: /
+
+User-agent: sitecheck.internetseer.com
+Disallow: /
+
+User-agent: Zealbot
+Disallow: /
+
+User-agent: MSIECrawler
+Disallow: /
+
+User-agent: SiteSnagger
+Disallow: /
+
+User-agent: WebStripper
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+User-agent: Fetch
+Disallow: /
+
+User-agent: Offline Explorer
+Disallow: /
+
+User-agent: Teleport
+Disallow: /
+
+User-agent: TeleportPro
+Disallow: /
+
+User-agent: WebZIP
+Disallow: /
+ 
+User-agent: linko
+Disallow: /
+
+User-agent: HTTrack
+Disallow: /
+
+User-agent: Microsoft.URL.Control
+Disallow: /
+
+User-agent: Xenu
+Disallow: /
+
+User-agent: larbin
+Disallow: /
+
+User-agent: libwww
+Disallow: /
+
+User-agent: ZyBORG
+Disallow: /
+
+User-agent: Download Ninja
+Disallow: /
+
+User-agent: Slurp
+Disallow: /
+
+User-agent: Maxthon
+Disallow: /
+
+User-agent: CNCDialer
+Disallow: /
+
+User-agent: JoLAri
+Disallow: /
+
+
+# =====================================================================
+#  BLOQUE DE RASTREADORES SIN VALOR EDITORIAL
+#  Entorno Media Cloud USA02
+#  Motivo: estos rastreadores consumen el 23,6% del tiempo de servidor
+#  del entorno sin aportar lectores. Analisis sobre logs de los dos
+#  frontales Apache del 5 al 8 de septiembre de 2026.
+#
+#  NO se restringe ningun buscador ni red social: Googlebot, bingbot,
+#  Applebot, DuckDuckBot, facebookexternalhit, Twitterbot, WhatsApp,
+#  TelegramBot, LinkedInBot, meta-webindexer, GPTBot, ClaudeBot,
+#  OAI-SearchBot, PerplexityBot, proximic, IAS Crawler, CriteoBot y
+#  Screaming Frog siguen accediendo con normalidad.
+#
+#  AVISO: los grupos de robots.txt no heredan. Si se anade cualquier
+#  grupo nuevo que no sea "Disallow: /", hay que copiarle tambien las
+#  reglas del grupo User-agent: * o ese bot dejara de obedecerlas.
+#
+#  09-09-2026 Protecmedia Media Cloud
+# =====================================================================
+
+
+# --- Los dos que mas consumen en este entorno ---
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: ImageBot
+Disallow: /
+
+User-agent: img2dataset
+Disallow: /
+
+
+# --- Rastreadores SEO comerciales ---
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: SemrushBot-BA
+Disallow: /
+
+User-agent: SemrushBot-EO
+Disallow: /
+
+User-agent: SERankingBacklinksBot
+Disallow: /
+
+User-agent: serpstatbot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: barkrowler
+Disallow: /
+
+
+# --- Scraping masivo de contenido e imagenes ---
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: SleepBot
+Disallow: /
+
+User-agent: ExaSearchBot
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+
+# --- Buscadores sin audiencia en Panama ni Mexico ---
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: Baiduspider-render
+Disallow: /
+
+User-agent: Baiduspider-image
+Disallow: /
+
+User-agent: Sogou web spider
+Disallow: /
+
+User-agent: SeznamBot
+Disallow: /
+
+User-agent: coccocbot-web
+Disallow: /
+
+User-agent: rednote-websearch-bot
+Disallow: /
+
+User-agent: Seekport
+Disallow: /
+
+
+# --- Monitorizacion de marca y agregadores comerciales ---
+
+User-agent: AwarioSmartBot
+Disallow: /
+
+User-agent: UnzoiNewsBot
+Disallow: /
+
+User-agent: Leikibot
+Disallow: /
+
+User-agent: ZoominfoBot
+Disallow: /
+
+User-agent: MediatoolkitBot
+Disallow: /
+
+User-agent: LivelapBot
+Disallow: /
+
+User-agent: TrendictionBot
+Disallow: /
+
+
+# --- Anadidos el 10-09-2026 tras revisar el consumo del dia 9 ---
+#  Yandexbot: 48.894 s de servidor en un dia, a 3,68 s por peticion.
+#  No hay audiencia rusa en Panama ni en Mexico.
+#  Amazonbot: 173.865 s en un dia, cuarto consumidor del entorno.
+#  No aporta buscador ni previsualizaciones de enlaces.
+
+User-agent: Yandex
+Disallow: /
+
+User-agent: YandexBot
+Disallow: /
+
+User-agent: YandexImages
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+
+# --- fin del bloque Protecmedia 09-09-2026, ampliado 10-09-2026 ---
+
+

@@ -1,0 +1,11 @@
+Sitemap: https://www.prensa.com/arc/outboundfeeds/sitemap?outputType=xml
+
+Sitemap: https://www.prensa.com/arc/outboundfeeds/news-sitemap/?outputType=xml
+
+User-agent: *
+Disallow: /m/
+Disallow: /*@*
+Disallow: *%7C*
+Disallow: /preview/
+Disallow: /pf/api/v3/*
+Disallow: /buscador/*

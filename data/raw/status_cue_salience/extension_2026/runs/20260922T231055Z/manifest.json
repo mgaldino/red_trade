@@ -1,0 +1,1725 @@
+{
+  "run_at": "2026-09-22T23:10:55+00:00",
+  "inventory": "quality_reports/status_cue_salience/search_inventory_goods_rank_one_2026-09-22.csv",
+  "inventory_sha256": "a00e2df5dfadf6b892d05d10d4f3609884452f72945f4e27fa0d9cc54eeb7b32",
+  "candidate_url_sha256": "eb97ce5a735e1da0b84575ca88162eb9d9a2187e04d469c8496db9f02589807f",
+  "sources": [
+    {
+      "url": "https://koreajoongangdaily.joins.com/2003/10/24/economy/Koreas-neighbor-is-now-its-largest-export-market/2050062.html",
+      "final_url": "https://www.koreajoongangdaily.com/business/koreas-neighbor-is-now-its-largest-export-market/10682827",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Date": "Tue, 22 Sep 2026 22:47:11 GMT",
+        "x-labrador-cache-channel": "10682827",
+        "X-Labrador-Realm": "koreajoongangdaily",
+        "X-Labrador-Env": "production",
+        "x-ua-viewport": "desktop",
+        "Vary": "Accept-Encoding",
+        "X-Cache": "Miss from cloudfront",
+        "Via": "1.1 52a2b3a670e785f6c4690371c236c572.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Pop": "GRU1-P3",
+        "Alt-Svc": "h3=\":443\"; ma=86400",
+        "X-Amz-Cf-Id": "0ohNrI1ARgJ2TcjFu5iimA-LxJgB-kZi_B3qBJXIo37D3IPjAAKPDg==",
+        "Age": "0"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T224707Z/robots/www_koreajoongangdaily_com.txt",
+      "hops": [
+        {
+          "url": "https://koreajoongangdaily.joins.com/2003/10/24/economy/Koreas-neighbor-is-now-its-largest-export-market/2050062.html",
+          "status": 301
+        },
+        {
+          "url": "https://www.koreajoongangdaily.com/2003/10/24/economy/Koreas-neighbor-is-now-its-largest-export-market/2050062.html",
+          "status": 301
+        }
+      ],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/KOR/2003/kor_joongang_2003_10_24/20260922T224712Z.html",
+      "sha256": "d7a3327fc3b224243e1f62a54f2d47aec6654be3fcdf63de6d51b8fef6f9042f",
+      "size_bytes": 141161,
+      "source_id": "kor_joongang_2003_10_24",
+      "iso3c": "KOR",
+      "accessed_at": "2026-09-22T22:47:12+00:00"
+    },
+    {
+      "url": "https://www.korea.kr/briefing/policyBriefingView.do?newsId=45001912",
+      "final_url": "https://www.korea.kr/briefing/policyBriefingView.do?newsId=45001912",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:34:35 GMT",
+        "Server": "JBCS httpd",
+        "Set-Cookie": "clientid=010026084456; Path=/",
+        "Content-Language": "ko-KR",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked",
+        "Content-Type": "text/html;charset=UTF-8"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/www_korea_kr.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/KOR/2003/kor_korea_kr_2003_10_27/20260922T223437Z.html",
+      "sha256": "4de048eb3c23f681a49fb89467318fa5f767b0b23da7af9d25414071a379bc36",
+      "size_bytes": 153396,
+      "source_id": "kor_korea_kr_2003_10_27",
+      "iso3c": "KOR",
+      "accessed_at": "2026-09-22T22:34:37+00:00"
+    },
+    {
+      "url": "https://web.archive.org/web/20250910195944id_/https://www.japantimes.co.jp/news/2008/01/25/business/trade-surplus-up-37-china-no-1-destination/",
+      "final_url": "https://web.archive.org/web/20250910195944id_/https://www.japantimes.co.jp/news/2008/01/25/business/trade-surplus-up-37-china-no-1-destination/",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "Server": "nginx",
+        "Date": "Tue, 22 Sep 2026 22:47:13 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "x-archive-orig-date": "Wed, 10 Sep 2025 19:59:45 GMT",
+        "x-archive-orig-transfer-encoding": "chunked",
+        "x-archive-orig-connection": "keep-alive",
+        "x-archive-orig-cache-control": "no-cache, private",
+        "x-archive-orig-report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=K%2Fq6L1nCKcjaxp6THcIOFWOEiRN83qvhkHpUq%2BJI5PDlHWdCeKO4zK%2FwFJsDta%2BdQrKpVXuAgLHiuyPAS6p5XA4l2zmMPUlGTP%2BJ2SZJ16uOPNg%3D\"}]}",
+        "x-archive-orig-nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "x-archive-orig-server": "cloudflare",
+        "x-archive-orig-vary": "Accept-Encoding",
+        "x-archive-orig-x-cache": "Miss from cloudfront",
+        "x-archive-orig-via": "1.1 bbe7e6af7a38beb9f83532e18d310268.cloudfront.net (CloudFront)",
+        "x-archive-orig-x-amz-cf-pop": "LHR5-P6",
+        "x-archive-orig-x-amz-cf-id": "1iVKLOtJn0nWwnC5r_2vlCic9JGu9FvMRdYXNU3KGIBvWQuI4dvDhA==",
+        "x-archive-orig-cf-cache-status": "DYNAMIC",
+        "x-archive-orig-set-cookie": "device=web; HttpOnly; Secure; Path=/; Max-Age=315360000; Expires=Sat, 08 Sep 2035 19:59:44 GMT",
+        "x-archive-orig-cf-ray": "97d181ee58a3dc2c-LHR",
+        "cache-control": "private",
+        "accept-ranges": "bytes",
+        "memento-datetime": "Wed, 10 Sep 2025 19:59:44 GMT",
+        "link": "<https://www.japantimes.co.jp/news/2008/01/25/business/trade-surplus-up-37-china-no-1-destination/>; rel=\"original\", <https://web.archive.org/web/timemap/link/https://www.japantimes.co.jp/news/2008/01/25/business/trade-surplus-up-37-china-no-1-destination/>; rel=\"timemap\"; type=\"application/link-format\", <https://web.archive.org/web/https://www.japantimes.co.jp/news/2008/01/25/business/trade-surplus-up-37-china-no-1-destination/>; rel=\"timegate\", <https://web.archive.org/web/20250910195944/https://www.japantimes.co.jp/news/2008/01/25/business/trade-surplus-up-37-china-no-1-destination/>; rel=\"first memento\"; datetime=\"Wed, 10 Sep 2025 19:59:44 GMT\", <https://web.archive.org/web/20250910195944/https://www.japantimes.co.jp/news/2008/01/25/business/trade-surplus-up-37-china-no-1-destination/>; rel=\"memento\"; datetime=\"Wed, 10 Sep 2025 19:59:44 GMT\", <https://web.archive.org/web/20250910195944/https://www.japantimes.co.jp/news/2008/01/25/business/trade-surplus-up-37-china-no-1-destination/>; rel=\"last memento\"; datetime=\"Wed, 10 Sep 2025 19:59:44 GMT\"",
+        "content-security-policy": "default-src 'self' 'unsafe-eval' 'unsafe-inline' data: blob: archive.org web.archive.org web-static.archive.org wayback-api.archive.org athena.archive.org analytics.archive.org pragma.archivelab.org wwwb-events.archive.org",
+        "x-archive-src": "archiveteam_urls_20250910200047_eb5c98a0/urls_20250910200047_eb5c98a0.1757241962.megawarc.warc.zst",
+        "server-timing": "TR;dur=0,Tw;dur=0,Tc;dur=0",
+        "x-app-server": "wwwb-app245-dc8",
+        "x-ts": "200",
+        "x-tr": "533",
+        "set-cookie": "wb-p-SERVER=wwwb-app245; path=/",
+        "X-location": "All",
+        "X-AS": "27699",
+        "X-RL": "0",
+        "X-NA": "0",
+        "X-Page-Cache": "MISS",
+        "Server-Timing": "MISS",
+        "X-NID": "TELEFONICA BRASIL S.A",
+        "Referrer-Policy": "no-referrer-when-downgrade",
+        "Permissions-Policy": "interest-cohort=()",
+        "X-sd": "0"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T224707Z/robots/web_archive_org.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/JPN/2008/jpn_japantimes_2008_01_25/20260922T224714Z.html",
+      "sha256": "29d0addb156aadafb0d8d9c7d89ae9f32c90cf74e58f92bd1a36c67616cb3a7c",
+      "size_bytes": 285657,
+      "source_id": "jpn_japantimes_2008_01_25",
+      "iso3c": "JPN",
+      "accessed_at": "2026-09-22T22:47:14+00:00"
+    },
+    {
+      "url": "https://www.jetro.go.jp/biznews/2008/02/47c77091a2691.html",
+      "final_url": "https://www.jetro.go.jp/biznews/2008/02/47c77091a2691.html",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Date": "Tue, 22 Sep 2026 22:34:40 GMT",
+        "X-Publis-No-Cache": "1",
+        "Vary": "Accept-Encoding",
+        "Set-Cookie": "AWSALBCORS=xLnOithP1tZAUXj6ajVkmAgXRQnoCrWp50y52QVogFo0foxiWzMCUjhSZjV8imYvcEnf8DxZi2qdFctM0yw0ojmZjHvxapbfFfwW2AkTg2Hgzr0YAbFZtPkXIo2G; Expires=Tue, 29 Sep 2026 22:34:39 GMT; Path=/; SameSite=None; Secure",
+        "Server": "Apache",
+        "X-PUBLIS-Status": "REDIRECT TO PublisRedirectUri",
+        "X-Cache": "Miss from cloudfront",
+        "Via": "1.1 fa3099cebedb6f1d6558042e818bc9d0.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Pop": "GRU3-P11",
+        "Alt-Svc": "h3=\":443\"; ma=86400",
+        "X-Amz-Cf-Id": "qntNJS_epsuuQlIeJ01w4o-G-4eh0fNJflMqOYDkHXEhwJgKdFJyLQ=="
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/www_jetro_go_jp.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/JPN/2008/jpn_jetro_2008_02_29/20260922T223441Z.html",
+      "sha256": "08ffb2644fb23518f35d038ab1c86cc24e18a8cc2b0d4dc45ae4b845636de1b2",
+      "size_bytes": 111068,
+      "source_id": "jpn_jetro_2008_02_29",
+      "iso3c": "JPN",
+      "accessed_at": "2026-09-22T22:34:41+00:00"
+    },
+    {
+      "url": "https://mg.co.za/article/2009-12-11-its-the-rigidities-stupid/",
+      "final_url": "https://mg.co.za/2009-12-11-it-s-the-rigidities-stupid/",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:34:43 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "CF-Cache-Status": "EXPIRED",
+        "Age": "199",
+        "Cache-Control": "public, max-age=0, s-maxage=120, stale-while-revalidate=259200",
+        "Content-Language": "en",
+        "Last-Modified": "Tue, 22 Sep 2026 22:31:24 GMT",
+        "Link": "</_next/static/media/26d4368bf94c0ec4-s.p.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </_next/static/media/3359c9acc30ef440-s.p.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </_next/static/media/37786be940ec402b-s.p.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </_next/static/media/3988c35203e0830a-s.p.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </_next/static/media/91c3caac73720166-s.p.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </_next/static/media/94628ed0211a8d6c-s.p.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </_next/static/media/98e207f02528a563-s.p.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </_next/static/media/a17e6abc638602a7-s.p.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </_next/static/media/a6b5dea332871235-s.p.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </_next/static/media/aff755c8b4bb3089-s.p.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </_next/static/media/c8cad4642119b6f5-s.p.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </_next/static/media/d3ebbfd689654d3a-s.p.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </_next/static/media/db96af6b531dc71f-s.p.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </_next/static/css/7b154def618a11de.css>; rel=preload; as=\"style\", </_next/static/css/dbf7a20312081cee.css>; rel=preload; as=\"style\"",
+        "Server": "cloudflare",
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
+        "X-Edge-Route-Type": "page",
+        "CDN-Cache-Control": "public, s-maxage=120, stale-while-revalidate=259200",
+        "X-Edge-Cache-Policy": "page ttl=120 stale=259200",
+        "X-Edge-Cache": "stale",
+        "Server-Timing": "cfEdge;dur=52,cfOrigin;dur=0",
+        "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=JjTQ3PgwldYNaSWQlH06dKN0MebLvC8C3QbzghQ9OsDYuN62ofQ3MhV4roHGvn%2FK4YUezFBR%2BXgR949SVvKz09fNpfsmsT42BD0HWEDB1VPkeDVNVEaOWcw%2BEkBFxnm4bPphncB7bA%3D%3D\"}]}",
+        "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "CF-RAY": "a3f4c7581ca53e73-GRU",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/mg_co_za.txt",
+      "hops": [
+        {
+          "url": "https://mg.co.za/article/2009-12-11-its-the-rigidities-stupid/",
+          "status": 308
+        }
+      ],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/ZAF/2009/zaf_mg_2009_12_11/20260922T223443Z.html",
+      "sha256": "004a0e2d857c4a3241ed32065b9d272ac6110f2c0d129fa2c30d8df8b20141d9",
+      "size_bytes": 211358,
+      "source_id": "zaf_mg_2009_12_11",
+      "iso3c": "ZAF",
+      "accessed_at": "2026-09-22T22:34:43+00:00"
+    },
+    {
+      "url": "https://www.gov.za/news/speeches/address-south-african-minister-trade-and-industry-dr-31-mar-2010",
+      "final_url": "https://www.gov.za/news/speeches/address-south-african-minister-trade-and-industry-dr-31-mar-2010",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 21:45:32 GMT",
+        "Server": "CWAF",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Content-Length": "48568",
+        "Cache-Control": "max-age=3600, public",
+        "X-Drupal-Dynamic-Cache": "MISS",
+        "Content-language": "en",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+        "Last-Modified": "Tue, 22 Sep 2026 21:45:31 GMT",
+        "ETag": "\"1790113531\"",
+        "Vary": "Cookie,Accept-Encoding",
+        "Content-Security-Policy-Report-Only": "default-src 'self'; connect-src 'self' https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://translate.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com; font-src 'self' data:; frame-src 'self' https://static.addtoany.com https://www.google.com https://www.googletagmanager.com https://www.youtube.com; img-src 'self' data: blob: https://*.google-analytics.com https://*.analytics.google.com https://*.fbcdn.net https://translate.google.com https://translate.googleapis.com https://www.gcis.gov.za https://www.google.com https://www.google.co.za https://www.googletagmanager.com https://www.gov.za https://www.gstatic.com https://www.publicsectormanager.gov.za https://www.sanews.gov.za https://www.vukuzenzele.gov.za https://*.openstreetmap.org https://*.ytimg.com https://www.google-analytics.com; object-src 'none'; script-src 'self' 'report-sample' blob: https://*.google-analytics.com https://static.addtoany.com https://www.google.com https://www.googletagmanager.com https://www.gstatic.com; style-src 'self' 'report-sample' 'unsafe-inline' https://www.gstatic.com; worker-src 'self' blob:; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; report-uri /system/reporting/default; report-to default",
+        "Content-Security-Policy": "default-src 'self'; connect-src 'self' https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://pagesense-collect.zoho.com https://stats.g.doubleclick.net https://translate.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com; font-src 'self' data: https://fonts.gstatic.com; frame-src 'self' https://connect.facebook.net https://m.facebook.com https://maps.google.com https://maps.googleapis.com https://mobile.facebook.com https://platform.twitter.com https://static.addtoany.com https://web.facebook.com https://www.facebook.com https://www.google.com https://www.googletagmanager.com https://www.youtube.com; img-src 'self' data: blob: https://*.google-analytics.com https://*.analytics.google.com https://fonts.gstatic.com https://pagesense-collect.zoho.com https://*.fbcdn.net https://stats.g.doubleclick.net https://translate.google.com https://translate.googleapis.com https://www.gcis.gov.za https://www.google.com https://www.google.co.za https://www.googletagmanager.com https://www.gov.za https://www.gstatic.com https://www.publicsectormanager.gov.za https://www.sanews.gov.za https://www.vukuzenzele.gov.za https://*.openstreetmap.org https://*.ytimg.com https://www.google-analytics.com; object-src 'none'; script-src * 'report-sample' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'report-sample' 'unsafe-inline' https://fonts.googleapis.com https://www.gstatic.com https://platform.twitter.com; worker-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; report-uri /system/reporting/default; report-to default; upgrade-insecure-requests",
+        "Reporting-Endpoints": "default=\"/system/reporting/default\"",
+        "X-Drupal-Cache": "HIT",
+        "Strict-Transport-Security": "max-age=31536000",
+        "X-Generator": "CWAF",
+        "Connection": "close"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/www_gov_za.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/ZAF/2010/zaf_gov_davies_2010_03_31/20260922T223447Z.html",
+      "sha256": "aa56e7e921f0ebb67b82796cd58f286c5bc8f3818be8a8f82fb67c507210d036",
+      "size_bytes": 48568,
+      "source_id": "zaf_gov_davies_2010_03_31",
+      "iso3c": "ZAF",
+      "accessed_at": "2026-09-22T22:34:47+00:00"
+    },
+    {
+      "url": "https://andina.pe/agencia/noticia-exportaciones-peruanas-crecieron-311-el-2010-al-sumar-record-historico-35402-millones-340321.aspx",
+      "final_url": "https://andina.pe/agencia/noticia-exportaciones-peruanas-crecieron-311-el-2010-al-sumar-record-historico-35402-millones-340321.aspx",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "Cache-Control": "private",
+        "Content-Type": "text/html; charset=utf-8",
+        "Server": "Microsoft-IIS/10.0",
+        "X-Powered-By": "ASP.NET",
+        "X-AspNet-Version": "4.0.30319",
+        "Date": "Tue, 22 Sep 2026 22:34:48 GMT",
+        "Connection": "close",
+        "Content-Length": "192196"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/andina_pe.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/PER/2011/per_andina_2011_01_28/20260922T223449Z.html",
+      "sha256": "b8474b7e8b643efb0c49ae67fca408f4ced41bb8ab4ec01c535af4a170ad7531",
+      "size_bytes": 192196,
+      "source_id": "per_andina_2011_01_28",
+      "iso3c": "PER",
+      "accessed_at": "2026-09-22T22:34:49+00:00"
+    },
+    {
+      "url": "https://mef.gob.pe/es/notas-de-prensa-y-comunicados/2691-mef-posibilidades-de-recesion-en-peru-son-totalmente-remotas",
+      "final_url": "https://mef.gob.pe/es/notas-de-prensa-y-comunicados/2691-mef-posibilidades-de-recesion-en-peru-son-totalmente-remotas",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "text/html",
+        "Cache-Control": "no-cache, no-store",
+        "Connection": "close",
+        "Content-Length": "212",
+        "X-Iinfo": "54-54315217-0 0NNN RT(1790116489575 11) q(0 -1 -1 0) r(0 -1) B10(4,314,0) U18",
+        "Set-Cookie": "incap_ses_388_2825906=edEVJubbWi662DfUm3RiBYgCs2oAAAAA3gUp6bw7rFF1hT6zv5Ld0g==; path=/; Domain=.mef.gob.pe"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/mef_gob_pe.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/PER/2011/per_mef_2011_10_20/20260922T223449Z.html",
+      "sha256": "d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d",
+      "size_bytes": 212,
+      "source_id": "per_mef_2011_10_20",
+      "iso3c": "PER",
+      "accessed_at": "2026-09-22T22:34:49+00:00"
+    },
+    {
+      "url": "https://www.investiraucameroun.com/commerce/1312-4883-en-2011-2012-la-chine-est-devenue-le-premier-client-du-cameroun-tandis-que-le-nigeria-demeure-son-principal-fournisseur",
+      "final_url": "https://www.investiraucameroun.com/commerce/1312-4883-en-2011-2012-la-chine-est-devenue-le-premier-client-du-cameroun-tandis-que-le-nigeria-demeure-son-principal-fournisseur",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:34:50 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Server": "cloudflare",
+        "X-Logged-In": "False",
+        "X-Content-Powered-By": "K2 v2.9.0 (by JoomlaWorks)",
+        "Expires": "Wed, 17 Aug 2005 00:00:00 GMT",
+        "Cache-Control": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+        "Pragma": "no-cache",
+        "Set-Cookie": "jfbconnect_permissions_granted=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/",
+        "Last-Modified": "Tue, 22 Sep 2026 22:34:50 GMT",
+        "Vary": "Accept-Encoding",
+        "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=64y%2FGYcrvWh%2Fw6nfHFiIckb06EIuLiwzST%2BteD5%2BmI%2BnaNiX8lXkYTsvb9kHfnHlvIgIFQ2ubNzSSqgbn7c3N2QU1FFyFh4S7gBRXEyACjfUe9uuptN8OtUNKhEQMxEFK13RKh%2Fp59Q93K%2FOEy9zguoHnlt5tB7Z\"}]}",
+        "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "cf-cache-status": "DYNAMIC",
+        "CF-RAY": "a3f4c77eac8d0228-GRU"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/www_investiraucameroun_com.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/CMR/2013/cmr_investir_2013_12_13/20260922T223451Z.html",
+      "sha256": "614925b08f1ab44584b3f7be1956bc160f70a690e9b132cb483b9ffb99067783",
+      "size_bytes": 212769,
+      "source_id": "cmr_investir_2013_12_13",
+      "iso3c": "CMR",
+      "accessed_at": "2026-09-22T22:34:51+00:00"
+    },
+    {
+      "url": "https://www.scoop.co.nz/stories/BU1304/S00891/china-overtakes-australia-as-nzs-biggest-export-market.htm",
+      "final_url": "https://www.scoop.co.nz/stories/BU1304/S00891/china-overtakes-australia-as-nzs-biggest-export-market.htm",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "text/html;charset=UTF-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Date": "Tue, 22 Sep 2026 22:34:52 GMT",
+        "Server": "Apache/1.3.41 (Unix) mod_perl/1.30 mod_gzip/1.3.26.1a",
+        "Last-Modified": "Sun, 27 Aug 2023 23:13:18 GMT",
+        "Via": "1.1 www.scoop.co.nz, 1.1 5f949078d778d941acebb17f607cfb92.cloudfront.net (CloudFront)",
+        "Vary": "Accept-Encoding",
+        "X-Cache": "Miss from cloudfront",
+        "X-Amz-Cf-Pop": "GRU1-P8",
+        "X-Amz-Cf-Id": "J4l0YmnCm3bHy3skonTRVsV1AkR22RVrsd2nzvHcpsAbIas9a5S6rg=="
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/www_scoop_co_nz.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/NZL/2013/nzl_scoop_2013_04_26/20260922T223453Z.html",
+      "sha256": "c69354b61af960c9e72ef1ad79c1944d19b3cfb494cabb7ee92b4cbf8fb94772",
+      "size_bytes": 64329,
+      "source_id": "nzl_scoop_2013_04_26",
+      "iso3c": "NZL",
+      "accessed_at": "2026-09-22T22:34:53+00:00"
+    },
+    {
+      "url": "https://web.archive.org/web/20130806144320id_/http://beehive.govt.nz/speech/speech-opening-new-zealand-animal-husbandry-seminar-beijing",
+      "final_url": "https://web.archive.org/web/20130806144320id_/http://beehive.govt.nz/speech/speech-opening-new-zealand-animal-husbandry-seminar-beijing",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "Server": "nginx",
+        "Date": "Tue, 22 Sep 2026 22:47:15 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "21209",
+        "Connection": "close",
+        "x-archive-orig-server": "Apache",
+        "x-archive-orig-x-powered-by": "PHP/5.2.4-2ubuntu5.27",
+        "x-archive-orig-expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+        "x-archive-orig-cache-control": "store, no-cache, must-revalidate, post-check=0, pre-check=0",
+        "x-archive-orig-last-modified": "Tue, 06 Aug 2013 14:43:21 GMT",
+        "x-archive-orig-x-varnish-location": "akl",
+        "x-archive-orig-x-cacheable": "YES:FORCED",
+        "x-archive-orig-content-length": "21209",
+        "x-archive-orig-date": "Tue, 06 Aug 2013 14:43:21 GMT",
+        "x-archive-orig-x-varnish": "407940072",
+        "x-archive-orig-age": "0",
+        "x-archive-orig-via": "1.1 varnish",
+        "x-archive-orig-connection": "close",
+        "cache-control": "private",
+        "accept-ranges": "bytes",
+        "memento-datetime": "Tue, 06 Aug 2013 14:43:20 GMT",
+        "link": "<http://beehive.govt.nz/speech/speech-opening-new-zealand-animal-husbandry-seminar-beijing>; rel=\"original\", <https://web.archive.org/web/timemap/link/http://beehive.govt.nz/speech/speech-opening-new-zealand-animal-husbandry-seminar-beijing>; rel=\"timemap\"; type=\"application/link-format\", <https://web.archive.org/web/http://beehive.govt.nz/speech/speech-opening-new-zealand-animal-husbandry-seminar-beijing>; rel=\"timegate\", <https://web.archive.org/web/20130806144320/http://beehive.govt.nz/speech/speech-opening-new-zealand-animal-husbandry-seminar-beijing>; rel=\"first memento\"; datetime=\"Tue, 06 Aug 2013 14:43:20 GMT\", <https://web.archive.org/web/20130806144320/http://beehive.govt.nz/speech/speech-opening-new-zealand-animal-husbandry-seminar-beijing>; rel=\"memento\"; datetime=\"Tue, 06 Aug 2013 14:43:20 GMT\", <https://web.archive.org/web/20130811102626/http://beehive.govt.nz/speech/speech-opening-new-zealand-animal-husbandry-seminar-beijing>; rel=\"next memento\"; datetime=\"Sun, 11 Aug 2013 10:26:26 GMT\", <https://web.archive.org/web/20190216215419/http://www.beehive.govt.nz/speech/speech-opening-new-zealand-animal-husbandry-seminar-beijing>; rel=\"last memento\"; datetime=\"Sat, 16 Feb 2019 21:54:19 GMT\"",
+        "content-security-policy": "default-src 'self' 'unsafe-eval' 'unsafe-inline' data: blob: archive.org web.archive.org web-static.archive.org wayback-api.archive.org athena.archive.org analytics.archive.org pragma.archivelab.org wwwb-events.archive.org",
+        "x-archive-src": "WIDE-20130806135937-crawl339/WIDE-20130806141109-00161.warc.gz",
+        "server-timing": "TR;dur=0,Tw;dur=0,Tc;dur=1",
+        "x-app-server": "wwwb-app206-dc6",
+        "x-ts": "200",
+        "x-tr": "304",
+        "set-cookie": "wb-p-SERVER=wwwb-app206; path=/",
+        "X-location": "All",
+        "X-AS": "27699",
+        "X-RL": "0",
+        "X-NA": "0",
+        "X-Page-Cache": "MISS",
+        "Server-Timing": "MISS",
+        "X-NID": "TELEFONICA BRASIL S.A",
+        "Referrer-Policy": "no-referrer-when-downgrade",
+        "Permissions-Policy": "interest-cohort=()",
+        "X-sd": "0"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T224707Z/robots/web_archive_org.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/NZL/2013/nzl_beehive_2013_07_02/20260922T224715Z.html",
+      "sha256": "fc80fa48e35c3ecfe56d6790cefa7c9564e63ba7614e992745bdcec01e8f11cb",
+      "size_bytes": 21209,
+      "source_id": "nzl_beehive_2013_07_02",
+      "iso3c": "NZL",
+      "accessed_at": "2026-09-22T22:47:15+00:00"
+    },
+    {
+      "url": "https://vov.vn/kinh-te/thi-truong/trung-quoc-tro-thanh-thi-truong-xuat-khau-lon-nhat-cua-viet-nam-732106.vov",
+      "final_url": "https://vov.vn/kinh-te/thi-truong/trung-quoc-tro-thanh-thi-truong-xuat-khau-lon-nhat-cua-viet-nam-732106.vov",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:34:57 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "x-ua-compatible": "IE=edge",
+        "content-language": "vi",
+        "x-content-type-options": "nosniff",
+        "last-modified": "Tue, 22 Sep 2026 22:34:57 GMT",
+        "etag": "W/\"1790116497\"",
+        "x-dns-prefetch-control": "on",
+        "x-drupal-cache": "MISS",
+        "x-xss-protection": "1; mode=block",
+        "x-varnish": "137367328",
+        "age": "0",
+        "x-vc-cache": "MISS",
+        "accept-ranges": "bytes",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "via": "1.1 PS-HAN-04tkQ126:17 (W), 1.1 PS-HAN-04lWX46:7 (W)",
+        "X-Px": "ms PS-HAN-04lWX46HAN, ms PS-HAN-04tkQ126HAN(origin)",
+        "x-ws-request-id": "6ab30291_PS-HAN-04lWX46_23543-21141",
+        "Server": "PWS/8.3.1.0.8",
+        "X-Robots-Tag": "max-image-preview:large"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/vov_vn.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/VNM/2018/vnm_vov_2018_02/20260922T223458Z.html",
+      "sha256": "eb4ba96d445bf8268e7f26fb2647791d927136681a04c02d9eacff8e6c939b39",
+      "size_bytes": 253393,
+      "source_id": "vnm_vov_2018_02",
+      "iso3c": "VNM",
+      "accessed_at": "2026-09-22T22:34:58+00:00"
+    },
+    {
+      "url": "https://vnexpress.net/trung-quoc-thay-my-la-thi-truong-xuat-khau-lon-nhat-cua-viet-nam-3738343.html",
+      "final_url": "https://vnexpress.net/trung-quoc-thay-my-la-thi-truong-xuat-khau-lon-nhat-cua-viet-nam-3738343.html",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "date": "Tue, 22 Sep 2026 22:35:02 GMT",
+        "content-type": "text/html; charset=UTF-8",
+        "vary": "Accept-Encoding",
+        "set-cookie": "device_env_real=4; expires=Tue, 29 Sep 2026 22:35:02 GMT; Max-Age=604800; path=/; domain=vnexpress.net; secure; SameSite=None",
+        "v-cache": "INV",
+        "x-zone": "hn",
+        "x-page-speed": "1.13.35.2-0",
+        "cache-control": "max-age=0, no-cache",
+        "x-time": "724",
+        "x-proxy-cache": "MISS",
+        "nxc3": "MISS 4",
+        "server": "vne-qt-fe-lv1-other-3",
+        "x-idc": "glob",
+        "x-cache-rule": "article-old-1d",
+        "x-content-type-options": "nosniff",
+        "x-xss-protection": "1; mode=block",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "x-frame-options": "SAMEORIGIN",
+        "content-security-policy": "upgrade-insecure-requests; default-src data: 'unsafe-inline' 'unsafe-eval' https:; script-src data: 'unsafe-inline' 'unsafe-eval' https: blob: https://www.googleanalytics.com https://www.google-analytics.com https://www.googleoptimize.com https://optimize.google.com ; style-src data: 'unsafe-inline' https: https://optimize.google.com https://fonts.googleapis.com; img-src data: https: blob: android-webview-video-poster: https://www.google-analytics.com https://www.googletagmanager.com https://optimize.google.com; font-src data: https: https://fonts.gstatic.com; connect-src https: wss: blob:; media-src data: https: blob:; object-src https:; child-src https: data: blob:; form-action https:; frame-ancestors https://*.vnexpress.net https://vnexpress.net",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "connection": "close",
+        "transfer-encoding": "chunked"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/vnexpress_net.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/VNM/2018/vnm_vnexpress_2018_04_18/20260922T223504Z.html",
+      "sha256": "8057ee64ec7eebe93fea24e7c13f092e10d6a1cd13b0f80634e278722a08187f",
+      "size_bytes": 267044,
+      "source_id": "vnm_vnexpress_2018_04_18",
+      "iso3c": "VNM",
+      "accessed_at": "2026-09-22T22:35:04+00:00"
+    },
+    {
+      "url": "https://baochinhphu.vn/dn-trong-nuoc-tang-truong-xuat-khau-tich-cuc-trong-nam-2018-102249966.htm",
+      "final_url": "https://baochinhphu.vn/dn-trong-nuoc-tang-truong-xuat-khau-tich-cuc-trong-nam-2018-102249966.htm",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "date": "Tue, 22 Sep 2026 22:35:07 GMT",
+        "content-type": "text/html; charset=utf-8",
+        "transfer-encoding": "chunked",
+        "server": "Kestrel",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "servername": "22",
+        "x-xss-protection": "1; mode=block",
+        "x-frame-options": "sameorigin",
+        "content-security-policy": "script-src 'self' 'unsafe-inline' 'unsafe-eval' 'nonce-sclotusinnline' static.trunkpkg.com www.googletagmanager.com apis.google.com accounts.google.com *.mediacdn.vn *.vnpt.vn *.cdnchinhphu.vn *.cnnd.vn vscc-hosting.mediacdn.vn platform.twitter.com connect.facebook.net www.google-analytics.com cdn.syndication.twimg.com *.sohatv.vn media1.admicro.vn chinhphu.vn *.chinhphu.vn *.admicro.vn contineljs.com *.contineljs.com *.genmonet.com genmonet.com cdnstoremedia.com *.cdnstoremedia.com amcdn.com *.amcdn.com nanda.vn *.nanda.vn static.amcdn.vn deqik.com imasdk.googleapis.com *.zalo.me za.zdn.vn td.doubleclick.net instagram.com cnnd.mediacdn.vn https://www.google.com https://www.gstatic.com; child-src 'self' *.cnnd.vn *.mediacdn.vn *.vnpt.vn *.sohatv.vn sport5.vn sport5.cnnd.vn blob: *.admicro.vn *.youtube.com *.facebook.com *.twitter.com twitter.com *.youtu.be www.instagram.com instagram.com www.google-analytics.com apis.google.com accounts.google.com contineljs.com *.contineljs.com genmonet.com *.genmonet.com cdnstoremedia.com *.cdnstoremedia.com amcdn.com *.amcdn.com nanda.vn *.nanda.vn *.zalo.me za.zdn.vn td.doubleclick.net instagram.com cnnd.mediacdn.vn media1.admicro.vn *.logging.admicro.vn https://m3u8.thinhkhuat.com https://m3u8.thinhkhuat.work https://datamedia.chinhphu.vn https://www.google.com https://recaptcha.google.com; frame-src 'self' https://*.youtube.com *.youtube.com https://www.youtube.com https://m3u8.thinhkhuat.com https://m3u8.thinhkhuat.work https://datamedia.chinhphu.vn *.logging.admicro.vn cdnstoremedia.com *.cdnstoremedia.com media1.admicro.vn https://www.google.com https://recaptcha.google.com; form-action 'self' *.cnnd.vn syndication.twitter.com platform.twitter.com cnnd.mediacdn.vn; object-src 'self' cnnd.mediacdn.vn; media-src 'self' blob: *.sohatv.vn *.qltns.mediacdn.vn *.vnpt.vn *.cdnchinhphu.vn *.zalo.me za.zdn.vn td.doubleclick.net instagram.com cnnd.mediacdn.vn;",
+        "timecached": "23/09/2026 05:35:07",
+        "timeexpire": "86400",
+        "x-cache-status": "MISS",
+        "filterid": "ft",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "connection": "close"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/baochinhphu_vn.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/VNM/2018/vnm_baochinhphu_2018_12_27/20260922T223508Z.bin",
+      "sha256": "9fe8fe2601c694d86160ae3a7c24605100bcb5e94e970b5564788746a953da4a",
+      "size_bytes": 58736,
+      "source_id": "vnm_baochinhphu_2018_12_27",
+      "iso3c": "VNM",
+      "accessed_at": "2026-09-22T22:35:08+00:00"
+    },
+    {
+      "url": "https://www.ukrinform.net/rubric-economy/3165674-trade-turnover-between-ukraine-and-china-should-set-new-record-following-2020-embassy.html",
+      "final_url": "https://www.ukrinform.net/rubric-economy/3165674-trade-turnover-between-ukraine-and-china-should-set-new-record-following-2020-embassy.html",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "server": "nginx",
+        "content-type": "text/html; charset=UTF-8",
+        "vary": "Accept-Encoding",
+        "cache-control": "no-cache, private",
+        "date": "Tue, 22 Sep 2026 22:35:11 GMT",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-xss-protection": "1; mode=block",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "set-cookie": "u7m_site_session=eyJpdiI6Ik1WT1JrQkFualFKWXJTc1gxZDQ3cUE9PSIsInZhbHVlIjoieUdUbnZoYVFhbjdqM3Y4cklHN3VsYUtEblFyRmNJbE9CV2lkbHhWMWUxWlBjaWFycjhZREhjZVkvdlRPS0ZraXJaYjk0Y3dnSENzbHpFak9SNWdwZExsZ2hBSnhJek5mTnFGbi8zNTcyVHpYUlZ6N3NhTW5pd0NDUGVLTjFqM08iLCJtYWMiOiJhMDhkMGUyMzA1MmJiMTlmMTgyYzdmMGM1NDIyNzY5MzE0YTYzNTgyNTVmYTQ5MmIzMmU0Yzk5YjY1OTA1Y2M2IiwidGFnIjoiIn0%3D; path=/; httponly",
+        "strict-transport-security": "max-age=31536000",
+        "via": "1.1 google",
+        "Alt-Svc": "h3=\":443\"; ma=2592000",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/www_ukrinform_net.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/UKR/2021/ukr_ukrinform_2021_01_04/20260922T223511Z.html",
+      "sha256": "da657d9b261c708b249e5d03b165c3d1c3bf42d0830519f7ae7ad2d23c9890a3",
+      "size_bytes": 52979,
+      "source_id": "ukr_ukrinform_2021_01_04",
+      "iso3c": "UKR",
+      "accessed_at": "2026-09-22T22:35:11+00:00"
+    },
+    {
+      "url": "https://web.archive.org/web/20220124105013id_/https://www.rbc.ua/ukr/news/kakimi-stranami-torgovala-ukraina-2020-godu-1613407144.html",
+      "final_url": "https://web.archive.org/web/20220124105013id_/https://www.rbc.ua/ukr/news/kakimi-stranami-torgovala-ukraina-2020-godu-1613407144.html",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "Server": "nginx",
+        "Date": "Tue, 22 Sep 2026 22:47:16 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "x-archive-orig-server": "nginx",
+        "x-archive-orig-transfer-encoding": "chunked",
+        "x-archive-orig-connection": "keep-alive",
+        "x-archive-orig-vary": "User-Agent",
+        "x-archive-orig-strict-transport-security": "max-age=31536000; includeSubDomains",
+        "x-archive-orig-pragma": "no-cache",
+        "x-archive-orig-srvb": "app2-rbc.rbc.ua",
+        "x-archive-orig-x-cache": "MISS",
+        "x-archive-orig-access-control-allow-origin": "*",
+        "x-archive-orig-access-control-allow-methods": "GET, POST, OPTIONS, DELETE, PUT, HEAD",
+        "x-archive-orig-access-control-allow-headers": "DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range",
+        "x-archive-orig-access-control-expose-headers": "Content-Length,Content-Range",
+        "x-archive-orig-access-control-allow-credentials": "true",
+        "x-archive-orig-access-control-max-age": "86400",
+        "x-archive-orig-date": "Mon, 24 Jan 2022 10:50:13 GMT",
+        "x-archive-orig-x-page-speed": "1.13.35.2-0",
+        "x-archive-orig-cache-control": "max-age=0, no-cache, no-store",
+        "cache-control": "private",
+        "accept-ranges": "bytes",
+        "memento-datetime": "Mon, 24 Jan 2022 10:50:13 GMT",
+        "link": "<https://www.rbc.ua/ukr/news/kakimi-stranami-torgovala-ukraina-2020-godu-1613407144.html>; rel=\"original\", <https://web.archive.org/web/timemap/link/https://www.rbc.ua/ukr/news/kakimi-stranami-torgovala-ukraina-2020-godu-1613407144.html>; rel=\"timemap\"; type=\"application/link-format\", <https://web.archive.org/web/https://www.rbc.ua/ukr/news/kakimi-stranami-torgovala-ukraina-2020-godu-1613407144.html>; rel=\"timegate\", <https://web.archive.org/web/20220124105013/https://www.rbc.ua/ukr/news/kakimi-stranami-torgovala-ukraina-2020-godu-1613407144.html>; rel=\"first memento\"; datetime=\"Mon, 24 Jan 2022 10:50:13 GMT\", <https://web.archive.org/web/20220124105013/https://www.rbc.ua/ukr/news/kakimi-stranami-torgovala-ukraina-2020-godu-1613407144.html>; rel=\"memento\"; datetime=\"Mon, 24 Jan 2022 10:50:13 GMT\", <https://web.archive.org/web/20220224051551/https://www.rbc.ua/ukr/news/kakimi-stranami-torgovala-ukraina-2020-godu-1613407144.html>; rel=\"next memento\"; datetime=\"Thu, 24 Feb 2022 05:15:51 GMT\", <https://web.archive.org/web/20260412124402/https://www.rbc.ua/ukr/news/kakimi-stranami-torgovala-ukraina-2020-godu-1613407144.html>; rel=\"last memento\"; datetime=\"Sun, 12 Apr 2026 12:44:02 GMT\"",
+        "content-security-policy": "default-src 'self' 'unsafe-eval' 'unsafe-inline' data: blob: archive.org web.archive.org web-static.archive.org wayback-api.archive.org athena.archive.org analytics.archive.org pragma.archivelab.org wwwb-events.archive.org",
+        "x-archive-src": "archiveteam_archivebot_go_20220124120001/www.rbc.ua-inf-20220122-225814-k2q8d-00003.warc.gz",
+        "server-timing": "TR;dur=0,Tw;dur=0,Tc;dur=0",
+        "x-app-server": "wwwb-app253-dc8",
+        "x-ts": "200",
+        "x-tr": "376",
+        "set-cookie": "wb-p-SERVER=wwwb-app253; path=/",
+        "X-location": "All",
+        "X-AS": "27699",
+        "X-RL": "0",
+        "X-NA": "0",
+        "X-Page-Cache": "MISS",
+        "Server-Timing": "MISS",
+        "X-NID": "TELEFONICA BRASIL S.A",
+        "Referrer-Policy": "no-referrer-when-downgrade",
+        "Permissions-Policy": "interest-cohort=()",
+        "X-sd": "0"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T224707Z/robots/web_archive_org.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/UKR/2021/ukr_rbc_2021_02_15/20260922T224717Z.html",
+      "sha256": "a1c5de8702f170bf199683184fae7a21efa20259af8bcb882cc22a33c75e9c04",
+      "size_bytes": 84697,
+      "source_id": "ukr_rbc_2021_02_15",
+      "iso3c": "UKR",
+      "accessed_at": "2026-09-22T22:47:17+00:00"
+    },
+    {
+      "url": "https://www.prensa.com/impresa/economia/china-principal-destino-de-las-exportaciones/",
+      "final_url": "https://www.prensa.com/impresa/economia/china-principal-destino-de-las-exportaciones/",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:35:14 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Server": "cloudflare",
+        "x-arc-cache-tag": "fusion-corprensa-index-engine-6,fusion-did-corprensa-index-engine-1814,fusion-pt-corprensa-index-engine-template,fusion-ptid-corprensa-index-engine-tqNVnfzfdcH03Dvv,fusion-template-id-corprensa-index-tqNVnfzfdcH03Dvv,fusion-cid-corprensa-index-EBC5YZ42BNDOXPRZHWNIKNBWQY,url-corprensa-index-57af2db5,url-corprensa-la-prensa-index-57af2db5",
+        "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=VdX9NWXeG0V2bgdvm%2BpY8LsKOSKN2FZEm5b6geT2fcMtKYY05BQV%2FaypnFuz6ATx%2FsvvCD7DI87ZgErd54VTXrEqAfLExjYrKsVXPMI7f2tFvufgJC8ov14jwMhnslsJ\"}]}",
+        "x-arc-pb-mx-id": "00000000",
+        "x-arc-pb-request-id": "54df60c1-5f03-41a5-93b6-97c2eb46daa7",
+        "x-arc-pb-edge": "0",
+        "last-modified": "Tue, 22 Sep 2026 22:35:14 GMT",
+        "vary": "Accept-Encoding",
+        "x-akamai-transformed": "9 23947 0 pmb=mRUM,2",
+        "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "Cache-Control": "private, max-age=60",
+        "expires": "Tue, 22 Sep 2026 22:36:14 GMT",
+        "server-timing": "ak_p; desc=\"1790116513355_34934182_535104282_78393_14295_0_0_15\";dur=1",
+        "content-security-policy": "upgrade-insecure-requests",
+        "x-arc-ttl": "-1",
+        "x-arc-request-id": "0.a60d1502.1790116513.1fe50b1a",
+        "cf-cache-status": "DYNAMIC",
+        "CF-RAY": "a3f4c8106eb8ffa8-GRU"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/www_prensa_com.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/PAN/2021/pan_laprensa_2021_02_14/20260922T223514Z.html",
+      "sha256": "fd8cca5fa94ecf5581c8e06b84432d1f3839e330e43b5179a339ed903cbb5593",
+      "size_bytes": 99834,
+      "source_id": "pan_laprensa_2021_02_14",
+      "iso3c": "PAN",
+      "accessed_at": "2026-09-22T22:35:14+00:00"
+    },
+    {
+      "url": "https://www.laestrella.com.pa/economia/panama-registro-mas-3-500-millones-exportaciones-2021-PLLE464469",
+      "final_url": "https://www.laestrella.com.pa/economia/panama-registro-mas-3-500-millones-exportaciones-2021-PLLE464469",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "Server": "nginx/1.14.0",
+        "Date": "Tue, 22 Sep 2026 22:35:17 GMT",
+        "Content-Type": "text/html",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Cache-Control": "no-store, no-cache, must-revalidate",
+        "Set-Cookie": "ITERWEBGEO=e0BYgYBrzFestqabPJSmZh2M7caXPyY+/1gyARHq959AW7xSHLIWhDyEg0PZfrjYqC51Wb2efEOW2GxGBrvHjA==; Path= /;",
+        "Content-Security-Policy": "frame-ancestors 'none';",
+        "X-Frame-Options": "DENY",
+        "Vary": "Accept-Encoding",
+        "X-Request-ID": "usa02iterlvapache01:front:eed843379e2e59bf5cfd4288db7cc728"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/www_laestrella_com_pa.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/PAN/2022/pan_laestrella_2022_02_07/20260922T223517Z.html",
+      "sha256": "229d9016934af5eee89693e04647c90506485d9275569326af01f1a2c765a819",
+      "size_bytes": 110943,
+      "source_id": "pan_laestrella_2022_02_07",
+      "iso3c": "PAN",
+      "accessed_at": "2026-09-22T22:35:17+00:00"
+    },
+    {
+      "url": "https://www.laestrella.com.pa/panama/nacional/rosmer-jurado-grieken-hubo-crecimiento-HLLE462702",
+      "final_url": "https://www.laestrella.com.pa/panama/nacional/rosmer-jurado-grieken-hubo-crecimiento-HLLE462702",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "Server": "nginx/1.14.0",
+        "Date": "Tue, 22 Sep 2026 23:10:58 GMT",
+        "Content-Type": "text/html",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Cache-Control": "no-store, no-cache, must-revalidate",
+        "Set-Cookie": "ITERWEBGEO=e0BYgYBrzFestqabPJSmZh2M7caXPyY+/1gyARHq959AW7xSHLIWhDyEg0PZfrjY7vHyGtFHjX/htOTh1LIr9Q==; Path= /;",
+        "Content-Security-Policy": "frame-ancestors 'none';",
+        "X-Frame-Options": "DENY",
+        "Vary": "Accept-Encoding",
+        "X-Request-ID": "usa02iterlvapache01:front:7e3b0ec992c3c890799d84075a32fc39"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T231055Z/robots/www_laestrella_com_pa.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/PAN/2022/pan_laestrella_2022_01_10/20260922T231058Z.html",
+      "sha256": "b8bdc1c0b6eedcf22305620432a7750c74a8703bf8e96f613df3a15e37a5919d",
+      "size_bytes": 123201,
+      "source_id": "pan_laestrella_2022_01_10",
+      "iso3c": "PAN",
+      "accessed_at": "2026-09-22T23:10:58+00:00"
+    },
+    {
+      "url": "https://www.graphic.com.gh/news/general-news/china-true-partner-of-ghana-akufo-addo.html",
+      "final_url": "https://www.graphic.com.gh/news/general-news/china-true-partner-of-ghana-akufo-addo.html",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:35:19 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "CF-Ray": "a3f4c83079f7f16f-GRU",
+        "CF-Cache-Status": "MISS",
+        "Access-Control-Allow-Origin": "origin-list",
+        "Cache-Control": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+        "Expires": "Wed, 17 Aug 2005 00:00:00 GMT",
+        "Last-Modified": "Tue, 22 Sep 2026 22:35:19 GMT",
+        "Server": "cloudflare",
+        "Strict-Transport-Security": "max-age=15552000; includeSubDomains; preload",
+        "Vary": "Accept-Encoding,User-Agent",
+        "Pragma": "no-cache",
+        "content-security-policy-report-only": "frame-ancestors https://*.facebook.com https://*.youtube.com https://*.cleverwebserver.com https://*.graphic.com.gh https://*.x.com;",
+        "cross-origin-opener-policy": "same-origin-allow-popups",
+        "permissions-policy": "camera=(self), microphone=(self), geolocation=(\"https://*.google.com\")",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-proxy-cache": "MISS",
+        "Speculation-Rules": "\"/cdn-cgi/speculation\"",
+        "Server-Timing": "cfEdge;dur=1316,cfOrigin;dur=0",
+        "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Jrx4VKUh4xkSSRF%2BiHSGX8PjVT1piW0Al2jtzBXrDFqe%2Fbefo9n8WuaKrxO6fRuhXckya1c0ClUY%2BVbTVfvb16zYCdxiYKYzbWCloqg9GHHB4LGyf4o%2Fg6%2BFd%2FmuU8GQd3dHXdgpcfNWH%2BN72f2rmyA%3D\"}]}",
+        "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/www_graphic_com_gh.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/GHA/2019/gha_graphic_2019_11_11/20260922T223519Z.html",
+      "sha256": "d11fcfb81e05131c57d04dd7bd48256754a5697881ef2f9b96891aa19e2e5252",
+      "size_bytes": 192923,
+      "source_id": "gha_graphic_2019_11_11",
+      "iso3c": "GHA",
+      "accessed_at": "2026-09-22T22:35:19+00:00"
+    },
+    {
+      "url": "https://www.thenational.com.pg/sullivan-raises-concerns-over-chinas-influence/",
+      "final_url": "https://www.thenational.com.pg/sullivan-raises-concerns-over-chinas-influence/",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:35:22 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Server": "cloudflare",
+        "vary": "Accept-Encoding,User-Agent",
+        "cache-provider": "CLOUDWAYS-CACHE-DE",
+        "last-modified": "Tue, 22 Sep 2026 20:25:35 GMT",
+        "Age": "0",
+        "x-cache": "MISS",
+        "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "cf-cache-status": "DYNAMIC",
+        "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=snwxvFeAuRB88pnXIFmnd7spMLlbqrVUV5VLLI140Y5Xx%2BR%2Bcbv06lRv56ujzGZPnpE636V9gAqzflgFWc%2FG4JVQdHtekG7Z9D0cRcWgvulbJZuob96zPIcHYakakJ%2FVJcZqWVn9A%2BQx\"}]}",
+        "CF-RAY": "a3f4c83e8bb936f6-GRU",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/www_thenational_com_pg.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/PNG/2019/png_national_2019_06_26/20260922T223522Z.html",
+      "sha256": "08ff0bedee9d038885f157a271013a509f675a3728229b7fb13196db77d3ed15",
+      "size_bytes": 814530,
+      "source_id": "png_national_2019_06_26",
+      "iso3c": "PNG",
+      "accessed_at": "2026-09-22T22:35:22+00:00"
+    },
+    {
+      "url": "https://ditjenpen.kemendag.go.id/storage/publikasi/693-9591390367799.pdf",
+      "final_url": "https://ditjenpen.kemendag.go.id/storage/publikasi/693-9591390367799.pdf",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:32:40 GMT",
+        "Last-Modified": "Sun, 26 Nov 2023 11:48:27 GMT",
+        "ETag": "\"26aef0-60b0cc37edddb\"",
+        "Accept-Ranges": "bytes",
+        "Content-Length": "2535152",
+        "Connection": "close",
+        "Content-Type": "application/pdf",
+        "X-Frame-Options": "Sameorigin",
+        "Set-Cookie": "TS0130afa5=01cf2adc5d4796d7094394b1ed717fc6c377f18ff5afa72580b0e6320a5019fe099e51e13a8fec683e2b91b70c159e6bffaa6c08ff; Path=/; Domain=.kemendag.go.id"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/ditjenpen_kemendag_go_id.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/IDN/2013/idn_kemendag_2013_12/20260922T223540Z.pdf",
+      "sha256": "2dc385af4e8d345aa982d7c82576cf0e345438283d0ccda309ddaad5aace6b95",
+      "size_bytes": 2535152,
+      "source_id": "idn_kemendag_2013_12",
+      "iso3c": "IDN",
+      "accessed_at": "2026-09-22T22:35:40+00:00"
+    },
+    {
+      "url": "https://www.customs.go.jp/toukei/shinbun/trade-st/2008/200828f.pdf",
+      "final_url": "https://www.customs.go.jp/toukei/shinbun/trade-st/2008/200828f.pdf",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:53:50 GMT",
+        "Content-Type": "application/pdf",
+        "Content-Length": "322066",
+        "Connection": "close",
+        "Set-Cookie": "AWSALBCORS=0n+HZO5ZKEdxJXFdxb6+LNJ9N9yqzEtQVIIxganXTqMuLU8PHzMrdObO9Mh3LRx80OGtTRO9taSnmF8bdOz+WrpwWJYQQFzxD2GJMcFVyjcqEdKNul38HA3YZOkd; Expires=Tue, 29 Sep 2026 22:53:50 GMT; Path=/; SameSite=None; Secure",
+        "Server": "Apache",
+        "X-FRAME-OPTIONS": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff",
+        "Last-Modified": "Wed, 08 Sep 2021 08:06:27 GMT",
+        "Accept-Ranges": "bytes",
+        "Vary": "Accept-Encoding"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T225348Z/robots/www_customs_go_jp.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/JPN/2009/jpn_customs_2009_03_12/20260922T225351Z.pdf",
+      "sha256": "37607e438701f08246b2dd460b86f6e1815912d3ae6254219a92d2f644d80ae0",
+      "size_bytes": 322066,
+      "source_id": "jpn_customs_2009_03_12",
+      "iso3c": "JPN",
+      "accessed_at": "2026-09-22T22:53:51+00:00"
+    },
+    {
+      "url": "https://armenpress.am/en/article/1042548",
+      "final_url": "https://armenpress.am/en/article/1042548",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:53:52 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Server": "cloudflare",
+        "x-xss-protection": "1; mode=block",
+        "Cache-Control": "no-cache, private",
+        "Vary": "X-Inertia",
+        "vary": "accept-encoding",
+        "Set-Cookie": "armenpress_armenian_news_agency_session=eyJpdiI6ImZQTGlBUWxQcjBERGtPVUNNZ1hNYmc9PSIsInZhbHVlIjoiYnBsUHF2R0IxZlNFRStjdjlENGYrcmg5VGh6R1JCNm9iLzlxT1hLazFLVDBCR1hnTUNBRzc2YTA1SVREckFXUHpWS2JQUFBmRlB5dFdQN0I3c1VQNURORVFORjRyWWhDYS9hbWJOS3pLQlRkNmlNOHZselNtNDhZU1pqRXVKcjQiLCJtYWMiOiJhMGE1NGJlNWEzNDM1MTM1N2MwODRkNzc4NzliMjVhZjA3YTg5YjY0ZDY2YzkxNDE3YzgyMTc5NWJlMGZjZWUyIiwidGFnIjoiIn0%3D; expires=Wed, 23-Sep-2026 00:53:51 GMT; Max-Age=7200; path=/; secure; HttpOnly; SameSite=lax",
+        "x-frame-options": "SAMEORIGIN",
+        "cf-cache-status": "DYNAMIC",
+        "Strict-Transport-Security": "max-age=0; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "expect-ct": "max-age=86400, enforce",
+        "referrer-policy": "same-origin",
+        "CF-RAY": "a3f4e35d3c9f0a2a-GRU",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T225348Z/robots/armenpress_am.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/ARM/2021/arm_armenpress_2021_02_05/20260922T225352Z.html",
+      "sha256": "cf9195217bbbc4b9de6dfc26bd2b684ac9f117a38d5f9144d9f67497f2e9df65",
+      "size_bytes": 67070,
+      "source_id": "arm_armenpress_2021_02_05",
+      "iso3c": "ARM",
+      "accessed_at": "2026-09-22T22:53:52+00:00"
+    },
+    {
+      "url": "https://media.neliti.com/media/publications/49021-ID-statistik-perdagangan-luar-negeri-indonesia-ekspor-2013-jilid-i.pdf",
+      "final_url": "https://www.neliti.com/publications/49021/",
+      "status": "robots_http_403_stop",
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T231055Z/robots/www_neliti_com.txt",
+      "hops": [
+        {
+          "url": "https://media.neliti.com/media/publications/49021-ID-statistik-perdagangan-luar-negeri-indonesia-ekspor-2013-jilid-i.pdf",
+          "status": 302
+        }
+      ],
+      "source_id": "idn_bps_2014_06_26",
+      "iso3c": "IDN",
+      "accessed_at": "2026-09-22T23:11:00+00:00"
+    },
+    {
+      "url": "https://bkperdag.kemendag.go.id/storage/publikasi/901-813-NL_Januari_2014_Indo.pdf",
+      "final_url": "https://bkperdag.kemendag.go.id/storage/publikasi/901-813-NL_Januari_2014_Indo.pdf",
+      "status": "ok",
+      "http_status": 200,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:55:51 GMT",
+        "Last-Modified": "Tue, 13 May 2025 20:51:36 GMT",
+        "ETag": "\"2070c1-6350a99345575\"",
+        "Accept-Ranges": "bytes",
+        "Content-Length": "2126017",
+        "Connection": "close",
+        "Content-Type": "application/pdf",
+        "X-Frame-Options": "Sameorigin",
+        "Set-Cookie": "TS014f03fb=01cf2adc5dcced84d848329e51fdf01fe46b25adb636c69978ad6eacbf6753714cdfce4e34885701785c4f6b69297464f3dd294b51; Path=/; Domain=.kemendag.go.id"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T225833Z/robots/bkperdag_kemendag_go_id.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/IDN/2014/idn_kemendag_2014_01/20260922T225905Z.pdf",
+      "sha256": "bff582010c9ea8b0cdc8d16d63102360e64f0c863ab8962c0b70537c96a3b184",
+      "size_bytes": 2126017,
+      "source_id": "idn_kemendag_2014_01",
+      "iso3c": "IDN",
+      "accessed_at": "2026-09-22T22:59:05+00:00"
+    }
+  ],
+  "gdelt": [
+    {
+      "iso3c": "OMN",
+      "search_window": "2000-2001",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "OMN",
+      "search_window": "2004-2005",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "SDN",
+      "search_window": "2000-2001",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "SDN",
+      "search_window": "2007-2008",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "SDN",
+      "search_window": "2013-2014",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "PRK",
+      "search_window": "2002-2003",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "PRK",
+      "search_window": "2008-2009",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22North+Korea%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20220101000000&enddatetime=20231231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22North+Korea%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20220101000000&enddatetime=20231231235959&maxrecords=50",
+      "status": "queried",
+      "http_status": 200,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:36:00 GMT",
+        "Server": "GDELT Server",
+        "Access-Control-Allow-Origin": "*",
+        "Timing-Allow-Origin": "*",
+        "X-XSS-Protection": "1; mode=block",
+        "Cache-Control": "public, max-age=900",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked",
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/gdelt/PRK/2022-2023/20260922T223606Z.json",
+      "sha256": "5b8ffc78b0e081ba066dd4cead193a9c3d11e8ccba5992d5d2c8d1f2fd4c47c0",
+      "n_articles_returned": 50,
+      "iso3c": "PRK",
+      "search_window": "2022-2023",
+      "query": "\"China\" \"North Korea\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:36:06+00:00"
+    },
+    {
+      "iso3c": "COG",
+      "search_window": "2003-2004",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "COG",
+      "search_window": "2011-2012",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "KOR",
+      "search_window": "2003-2004",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "LAO",
+      "search_window": "2003-2004",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "LAO",
+      "search_window": "2014-2015",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "YEM",
+      "search_window": "2003-2004",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "YEM",
+      "search_window": "2005-2006",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Yemen%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20170101000000&enddatetime=20181231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Yemen%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20170101000000&enddatetime=20181231235959&maxrecords=50",
+      "status": "http_429",
+      "http_status": 429,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:36:18 GMT",
+        "Server": "GDELT Server",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "iso3c": "YEM",
+      "search_window": "2017-2018",
+      "query": "\"China\" \"Yemen\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:36:19+00:00"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Yemen%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20220101000000&enddatetime=20231231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Yemen%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20220101000000&enddatetime=20231231235959&maxrecords=50",
+      "status": "http_429",
+      "http_status": 429,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:36:30 GMT",
+        "Server": "GDELT Server",
+        "Content-Length": "444",
+        "Connection": "close"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "iso3c": "YEM",
+      "search_window": "2022-2023",
+      "query": "\"China\" \"Yemen\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:36:32+00:00"
+    },
+    {
+      "iso3c": "BEN",
+      "search_window": "2004-2005",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "BEN",
+      "search_window": "2008-2009",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "BEN",
+      "search_window": "2012-2013",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "CUB",
+      "search_window": "2004-2005",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Cuba%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20170101000000&enddatetime=20181231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Cuba%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20170101000000&enddatetime=20181231235959&maxrecords=50",
+      "status": "invalid_json",
+      "http_status": 200,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:36:42 GMT",
+        "Server": "GDELT Server",
+        "Access-Control-Allow-Origin": "*",
+        "Timing-Allow-Origin": "*",
+        "X-XSS-Protection": "1; mode=block",
+        "Cache-Control": "public, max-age=900",
+        "Content-Length": "35",
+        "Connection": "close",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/gdelt/CUB/2017-2018/20260922T223644Z.json",
+      "sha256": "08262311679bcb5d191f1374698909041dc4a026daea856e50f63c3ace0814b8",
+      "iso3c": "CUB",
+      "search_window": "2017-2018",
+      "query": "\"China\" \"Cuba\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:36:44+00:00"
+    },
+    {
+      "iso3c": "BFA",
+      "search_window": "2005-2006",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "GNQ",
+      "search_window": "2006-2007",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "GNQ",
+      "search_window": "2013-2014",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Equatorial+Guinea%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20170101000000&enddatetime=20181231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Equatorial+Guinea%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20170101000000&enddatetime=20181231235959&maxrecords=50",
+      "status": "http_429",
+      "http_status": 429,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:36:54 GMT",
+        "Server": "GDELT Server",
+        "Content-Length": "444",
+        "Connection": "close"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "iso3c": "GNQ",
+      "search_window": "2017-2018",
+      "query": "\"China\" \"Equatorial Guinea\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:36:56+00:00"
+    },
+    {
+      "iso3c": "MLI",
+      "search_window": "2006-2007",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "MLI",
+      "search_window": "2009-2010",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "MRT",
+      "search_window": "2006-2007",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "IRN",
+      "search_window": "2007-2008",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Iran%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20220101000000&enddatetime=20231231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Iran%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20220101000000&enddatetime=20231231235959&maxrecords=50",
+      "status": "http_429",
+      "http_status": 429,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:37:05 GMT",
+        "Server": "GDELT Server",
+        "Content-Length": "444",
+        "Connection": "close"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "iso3c": "IRN",
+      "search_window": "2022-2023",
+      "query": "\"China\" \"Iran\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:37:08+00:00"
+    },
+    {
+      "iso3c": "KAZ",
+      "search_window": "2007-2008",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "COD",
+      "search_window": "2008-2009",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "JPN",
+      "search_window": "2008-2009",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "THA",
+      "search_window": "2008-2009",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "ETH",
+      "search_window": "2009-2010",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "ETH",
+      "search_window": "2012-2013",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Ethiopia%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20170101000000&enddatetime=20171231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Ethiopia%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20170101000000&enddatetime=20171231235959&maxrecords=50",
+      "status": "http_429",
+      "http_status": 429,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:37:19 GMT",
+        "Server": "GDELT Server",
+        "Content-Length": "444",
+        "Connection": "close"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "iso3c": "ETH",
+      "search_window": "2016-2017",
+      "query": "\"China\" \"Ethiopia\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:37:21+00:00"
+    },
+    {
+      "iso3c": "ZAF",
+      "search_window": "2009-2010",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "PER",
+      "search_window": "2010-2011",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "TKM",
+      "search_window": "2010-2011",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "GMB",
+      "search_window": "2011-2012",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "GMB",
+      "search_window": "2015-2016",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Gambia%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20190101000000&enddatetime=20201231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Gambia%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20190101000000&enddatetime=20201231235959&maxrecords=50",
+      "status": "http_429",
+      "http_status": 429,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:37:33 GMT",
+        "Server": "GDELT Server",
+        "Content-Length": "444",
+        "Connection": "close"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "iso3c": "GMB",
+      "search_window": "2019-2020",
+      "query": "\"China\" \"Gambia\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:37:35+00:00"
+    },
+    {
+      "iso3c": "MLT",
+      "search_window": "2011-2012",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Malta%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20210101000000&enddatetime=20221231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Malta%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20210101000000&enddatetime=20221231235959&maxrecords=50",
+      "status": "http_429",
+      "http_status": 429,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:37:46 GMT",
+        "Server": "GDELT Server",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "iso3c": "MLT",
+      "search_window": "2021-2022",
+      "query": "\"China\" \"Malta\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:37:48+00:00"
+    },
+    {
+      "iso3c": "TZA",
+      "search_window": "2011-2012",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "ZWE",
+      "search_window": "2011-2012",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Zimbabwe%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20190101000000&enddatetime=20201231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Zimbabwe%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20190101000000&enddatetime=20201231235959&maxrecords=50",
+      "status": "http_429",
+      "http_status": 429,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:37:58 GMT",
+        "Server": "GDELT Server",
+        "Content-Length": "444",
+        "Connection": "close"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "iso3c": "ZWE",
+      "search_window": "2019-2020",
+      "query": "\"China\" \"Zimbabwe\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:38:01+00:00"
+    },
+    {
+      "iso3c": "CMR",
+      "search_window": "2012-2013",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "CMR",
+      "search_window": "2015-2016",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Cameroon%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20170101000000&enddatetime=20181231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Cameroon%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20170101000000&enddatetime=20181231235959&maxrecords=50",
+      "status": "http_429",
+      "http_status": 429,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:38:11 GMT",
+        "Server": "GDELT Server",
+        "Content-Length": "444",
+        "Connection": "close"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "iso3c": "CMR",
+      "search_window": "2017-2018",
+      "query": "\"China\" \"Cameroon\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:38:13+00:00"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Cameroon%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20210101000000&enddatetime=20221231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Cameroon%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20210101000000&enddatetime=20221231235959&maxrecords=50",
+      "status": "http_429",
+      "http_status": 429,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:38:23 GMT",
+        "Server": "GDELT Server",
+        "Content-Length": "444",
+        "Connection": "close"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "iso3c": "CMR",
+      "search_window": "2021-2022",
+      "query": "\"China\" \"Cameroon\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:38:25+00:00"
+    },
+    {
+      "iso3c": "LBR",
+      "search_window": "2012-2013",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "LBR",
+      "search_window": "2014-2015",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "RUS",
+      "search_window": "2012-2013",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "SSD",
+      "search_window": "2012-2013",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "ZMB",
+      "search_window": "2012-2013",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "ZMB",
+      "search_window": "2014-2015",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Zambia%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20180101000000&enddatetime=20191231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Zambia%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20180101000000&enddatetime=20191231235959&maxrecords=50",
+      "status": "http_429",
+      "http_status": 429,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:38:35 GMT",
+        "Server": "GDELT Server",
+        "Content-Length": "444",
+        "Connection": "close"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "iso3c": "ZMB",
+      "search_window": "2018-2019",
+      "query": "\"China\" \"Zambia\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:38:37+00:00"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Zambia%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20220101000000&enddatetime=20231231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Zambia%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20220101000000&enddatetime=20231231235959&maxrecords=50",
+      "status": "http_429",
+      "http_status": 429,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:38:47 GMT",
+        "Server": "GDELT Server",
+        "Content-Length": "444",
+        "Connection": "close"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "iso3c": "ZMB",
+      "search_window": "2022-2023",
+      "query": "\"China\" \"Zambia\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:38:49+00:00"
+    },
+    {
+      "iso3c": "CAF",
+      "search_window": "2013-2014",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Central+African+Republic%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20180101000000&enddatetime=20191231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Central+African+Republic%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20180101000000&enddatetime=20191231235959&maxrecords=50",
+      "status": "http_429",
+      "http_status": 429,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:38:58 GMT",
+        "Server": "GDELT Server",
+        "Content-Length": "444",
+        "Connection": "close"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "iso3c": "CAF",
+      "search_window": "2018-2019",
+      "query": "\"China\" \"Central African Republic\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:39:00+00:00"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Central+African+Republic%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20200101000000&enddatetime=20211231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Central+African+Republic%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20200101000000&enddatetime=20211231235959&maxrecords=50",
+      "status": "http_429",
+      "http_status": 429,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:39:11 GMT",
+        "Server": "GDELT Server",
+        "Content-Length": "444",
+        "Connection": "close"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "iso3c": "CAF",
+      "search_window": "2020-2021",
+      "query": "\"China\" \"Central African Republic\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:39:12+00:00"
+    },
+    {
+      "iso3c": "IDN",
+      "search_window": "2013-2014",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Indonesia%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20170101000000&enddatetime=20171231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Indonesia%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20170101000000&enddatetime=20171231235959&maxrecords=50",
+      "status": "queried",
+      "http_status": 200,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:39:23 GMT",
+        "Server": "GDELT Server",
+        "Access-Control-Allow-Origin": "*",
+        "Timing-Allow-Origin": "*",
+        "X-XSS-Protection": "1; mode=block",
+        "Cache-Control": "public, max-age=900",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked",
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/gdelt/IDN/2016-2017/20260922T223927Z.json",
+      "sha256": "a8b86828e3c185130c63f9065ad2051764eeb0b166c9b2934f0007793a9cc25d",
+      "n_articles_returned": 50,
+      "iso3c": "IDN",
+      "search_window": "2016-2017",
+      "query": "\"China\" \"Indonesia\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:39:27+00:00"
+    },
+    {
+      "iso3c": "NZL",
+      "search_window": "2013-2014",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "UZB",
+      "search_window": "2013-2014",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "ERI",
+      "search_window": "2014-2015",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "IRQ",
+      "search_window": "2014-2015",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Iraq%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20190101000000&enddatetime=20201231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Iraq%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20190101000000&enddatetime=20201231235959&maxrecords=50",
+      "status": "http_429",
+      "http_status": 429,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:39:37 GMT",
+        "Server": "GDELT Server",
+        "Content-Length": "444",
+        "Connection": "close"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "iso3c": "IRQ",
+      "search_window": "2019-2020",
+      "query": "\"China\" \"Iraq\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:39:39+00:00"
+    },
+    {
+      "iso3c": "MOZ",
+      "search_window": "2014-2015",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "iso3c": "ARM",
+      "search_window": "2015-2016",
+      "status": "pre_2017_not_covered"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Armenia%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20200101000000&enddatetime=20211231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Armenia%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20200101000000&enddatetime=20211231235959&maxrecords=50",
+      "status": "http_429",
+      "http_status": 429,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:39:50 GMT",
+        "Server": "GDELT Server",
+        "Content-Length": "444",
+        "Connection": "close"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "iso3c": "ARM",
+      "search_window": "2020-2021",
+      "query": "\"China\" \"Armenia\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:39:52+00:00"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Papua+New+Guinea%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20180101000000&enddatetime=20191231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Papua+New+Guinea%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20180101000000&enddatetime=20191231235959&maxrecords=50",
+      "status": "http_429",
+      "http_status": 429,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:40:02 GMT",
+        "Server": "GDELT Server",
+        "Content-Length": "444",
+        "Connection": "close"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "iso3c": "PNG",
+      "search_window": "2018-2019",
+      "query": "\"China\" \"Papua New Guinea\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:40:04+00:00"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Vietnam%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20180101000000&enddatetime=20191231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Vietnam%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20180101000000&enddatetime=20191231235959&maxrecords=50",
+      "status": "http_429",
+      "http_status": 429,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:40:18 GMT",
+        "Server": "GDELT Server",
+        "Content-Length": "444",
+        "Connection": "close"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "iso3c": "VNM",
+      "search_window": "2018-2019",
+      "query": "\"China\" \"Vietnam\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:40:20+00:00"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Ghana%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20190101000000&enddatetime=20201231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Ghana%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20190101000000&enddatetime=20201231235959&maxrecords=50",
+      "status": "http_429",
+      "http_status": 429,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:40:32 GMT",
+        "Server": "GDELT Server",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "iso3c": "GHA",
+      "search_window": "2019-2020",
+      "query": "\"China\" \"Ghana\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:40:33+00:00"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Guinea%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20190101000000&enddatetime=20201231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Guinea%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20190101000000&enddatetime=20201231235959&maxrecords=50",
+      "status": "queried",
+      "http_status": 200,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:40:45 GMT",
+        "Server": "GDELT Server",
+        "Access-Control-Allow-Origin": "*",
+        "Timing-Allow-Origin": "*",
+        "X-XSS-Protection": "1; mode=block",
+        "Cache-Control": "public, max-age=900",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked",
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/gdelt/GIN/2019-2020/20260922T224050Z.json",
+      "sha256": "802f66cf136bafa82e3989a225944f6a57cb3dbc680976b60e3a740ce7da8056",
+      "n_articles_returned": 27,
+      "iso3c": "GIN",
+      "search_window": "2019-2020",
+      "query": "\"China\" \"Guinea\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:40:50+00:00"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Guinea%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20220101000000&enddatetime=20231231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Guinea%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20220101000000&enddatetime=20231231235959&maxrecords=50",
+      "status": "http_429",
+      "http_status": 429,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:41:09 GMT",
+        "Server": "GDELT Server",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "iso3c": "GIN",
+      "search_window": "2022-2023",
+      "query": "\"China\" \"Guinea\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:41:10+00:00"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Chad%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20190101000000&enddatetime=20201231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Chad%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20190101000000&enddatetime=20201231235959&maxrecords=50",
+      "status": "http_429",
+      "http_status": 429,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:41:21 GMT",
+        "Server": "GDELT Server",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "iso3c": "TCD",
+      "search_window": "2019-2020",
+      "query": "\"China\" \"Chad\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:41:22+00:00"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Ukraine%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20200101000000&enddatetime=20211231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Ukraine%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20200101000000&enddatetime=20211231235959&maxrecords=50",
+      "status": "http_429",
+      "http_status": 429,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:41:34 GMT",
+        "Server": "GDELT Server",
+        "Content-Length": "444",
+        "Connection": "close"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "iso3c": "UKR",
+      "search_window": "2020-2021",
+      "query": "\"China\" \"Ukraine\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:41:35+00:00"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Panama%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20210101000000&enddatetime=20221231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Panama%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20210101000000&enddatetime=20221231235959&maxrecords=50",
+      "status": "http_429",
+      "http_status": 429,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:41:45 GMT",
+        "Server": "GDELT Server",
+        "Content-Length": "444",
+        "Connection": "close"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "iso3c": "PAN",
+      "search_window": "2021-2022",
+      "query": "\"China\" \"Panama\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:41:46+00:00"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Timor-Leste%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20210101000000&enddatetime=20221231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Timor-Leste%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20210101000000&enddatetime=20221231235959&maxrecords=50",
+      "status": "queried",
+      "http_status": 200,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:42:00 GMT",
+        "Server": "GDELT Server",
+        "Access-Control-Allow-Origin": "*",
+        "Timing-Allow-Origin": "*",
+        "X-XSS-Protection": "1; mode=block",
+        "Cache-Control": "public, max-age=900",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked",
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "raw_file": "data/raw/status_cue_salience/extension_2026/gdelt/TLS/2021-2022/20260922T224209Z.json",
+      "sha256": "da1619435fbda71adbc2a810854f51940cae92b824fa4f6d7c2f86d83dfe11dc",
+      "n_articles_returned": 1,
+      "iso3c": "TLS",
+      "search_window": "2021-2022",
+      "query": "\"China\" \"Timor-Leste\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:42:09+00:00"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Venezuela%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20210101000000&enddatetime=20221231235959&maxrecords=50",
+      "final_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22China%22+%22Venezuela%22+%28%22largest+trading+partner%22+OR+%22largest+export+market%22%29&mode=artlist&format=json&startdatetime=20210101000000&enddatetime=20221231235959&maxrecords=50",
+      "status": "http_429",
+      "http_status": 429,
+      "headers": {
+        "Date": "Tue, 22 Sep 2026 22:42:20 GMT",
+        "Server": "GDELT Server",
+        "Content-Length": "444",
+        "Connection": "close"
+      },
+      "robots_file": "data/raw/status_cue_salience/extension_2026/runs/20260922T223433Z/robots/api_gdeltproject_org.txt",
+      "hops": [],
+      "iso3c": "VEN",
+      "search_window": "2021-2022",
+      "query": "\"China\" \"Venezuela\" (\"largest trading partner\" OR \"largest export market\")",
+      "accessed_at": "2026-09-22T22:42:22+00:00"
+    }
+  ]
+}

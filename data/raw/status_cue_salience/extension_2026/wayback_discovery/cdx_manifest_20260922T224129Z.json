@@ -1,0 +1,89 @@
+[
+  {
+    "source_id": "kor_joongang_2003_10_24",
+    "cdx_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fkoreajoongangdaily.joins.com%2F2003%2F10%2F24%2Feconomy%2FKoreas-neighbor-is-now-its-largest-export-market%2F2050062.html&output=json&filter=statuscode%3A200&from=2003&to=2008&collapse=timestamp%3A4",
+    "raw_file": "data/raw/status_cue_salience/extension_2026/wayback_discovery/kor_joongang_2003_10_24_20260922T224037Z.json",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "accessed_at": "2026-09-22T22:40:37.414314+00:00",
+    "captures": []
+  },
+  {
+    "source_id": "jpn_japantimes_2008_01_25",
+    "cdx_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.japantimes.co.jp%2Fnews%2F2008%2F01%2F25%2Fbusiness%2Ftrade-surplus-up-37-china-no-1-destination%2F&output=json&filter=statuscode%3A200&from=2008&to=2013&collapse=timestamp%3A4",
+    "raw_file": "data/raw/status_cue_salience/extension_2026/wayback_discovery/jpn_japantimes_2008_01_25_20260922T224059Z.json",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "accessed_at": "2026-09-22T22:40:59.996042+00:00",
+    "captures": []
+  },
+  {
+    "source_id": "per_mef_2011_10_20",
+    "cdx_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fmef.gob.pe%2Fes%2Fnotas-de-prensa-y-comunicados%2F2691-mef-posibilidades-de-recesion-en-peru-son-totalmente-remotas&output=json&filter=statuscode%3A200&from=2011&to=2016&collapse=timestamp%3A4",
+    "raw_file": "data/raw/status_cue_salience/extension_2026/wayback_discovery/per_mef_2011_10_20_20260922T224105Z.json",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "accessed_at": "2026-09-22T22:41:05.883903+00:00",
+    "captures": []
+  },
+  {
+    "source_id": "nzl_beehive_2013_07_02",
+    "cdx_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.beehive.govt.nz%2Fspeech%2Fspeech-opening-new-zealand-animal-husbandry-seminar-beijing&output=json&filter=statuscode%3A200&from=2013&to=2018&collapse=timestamp%3A4",
+    "raw_file": "data/raw/status_cue_salience/extension_2026/wayback_discovery/nzl_beehive_2013_07_02_20260922T224109Z.json",
+    "sha256": "f806ad4974db16a821a04d2dfe387f46d972c5e8cef8c2e14b6d7e5d540a1734",
+    "accessed_at": "2026-09-22T22:41:09.639362+00:00",
+    "captures": [
+      [
+        "nz,govt,beehive)/speech/speech-opening-new-zealand-animal-husbandry-seminar-beijing",
+        "20130806144320",
+        "http://beehive.govt.nz/speech/speech-opening-new-zealand-animal-husbandry-seminar-beijing",
+        "text/html",
+        "200",
+        "Z6LMRV2T7P2PQLT3HEHU37LAXBNYY337",
+        "7336"
+      ],
+      [
+        "nz,govt,beehive)/speech/speech-opening-new-zealand-animal-husbandry-seminar-beijing",
+        "20140719232352",
+        "http://beehive.govt.nz/speech/speech-opening-new-zealand-animal-husbandry-seminar-beijing",
+        "text/html",
+        "200",
+        "MCIIBD6JVZXYL6OGU3NJX3OMAXXPILME",
+        "7406"
+      ]
+    ]
+  },
+  {
+    "source_id": "ukr_rbc_2021_02_15",
+    "cdx_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.rbc.ua%2Fukr%2Fnews%2Fkakimi-stranami-torgovala-ukraina-2020-godu-1613407144.html&output=json&filter=statuscode%3A200&from=2021&to=2026&collapse=timestamp%3A4",
+    "raw_file": "data/raw/status_cue_salience/extension_2026/wayback_discovery/ukr_rbc_2021_02_15_20260922T224128Z.json",
+    "sha256": "5650c399797069767d051bed660d4c4b0731b6a297d7fa316cb7eaf093f73a96",
+    "accessed_at": "2026-09-22T22:41:28.754752+00:00",
+    "captures": [
+      [
+        "ua,rbc)/ukr/news/kakimi-stranami-torgovala-ukraina-2020-godu-1613407144.html",
+        "20220124105013",
+        "https://www.rbc.ua/ukr/news/kakimi-stranami-torgovala-ukraina-2020-godu-1613407144.html",
+        "text/html",
+        "200",
+        "6QRS3XF3KNLKJOUERKAUKYGKWCFEHM4O",
+        "22225"
+      ],
+      [
+        "ua,rbc)/ukr/news/kakimi-stranami-torgovala-ukraina-2020-godu-1613407144.html",
+        "20240719033053",
+        "https://www.rbc.ua/ukr/news/kakimi-stranami-torgovala-ukraina-2020-godu-1613407144.html",
+        "text/html",
+        "200",
+        "2WTFZTW4RZPBNND5ISOTCJIRN6XNY5MH",
+        "25284"
+      ],
+      [
+        "ua,rbc)/ukr/news/kakimi-stranami-torgovala-ukraina-2020-godu-1613407144.html",
+        "20260412124402",
+        "https://www.rbc.ua/ukr/news/kakimi-stranami-torgovala-ukraina-2020-godu-1613407144.html",
+        "text/html",
+        "200",
+        "4K53AGVEEYQSX747XQIWGJNKH2NY353O",
+        "53379"
+      ]
+    ]
+  }
+]

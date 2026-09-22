@@ -1,0 +1,20 @@
+User-agent: *
+Crawl-delay: 20
+Allow: /
+Allow: /ads.txt
+Disallow: /core/
+Disallow: /node/
+Disallow: /profiles/
+Disallow: /admin/
+Disallow: /comment/
+Disallow: /filter/
+Disallow: /user/
+Disallow: /index.php
+Disallow: /README.txt
+Disallow: /web.config
+Disallow: /search
+Disallow: /search/
+Disallow: /search?
+
+Sitemap: https://vov.vn/sitemap.xml
+Sitemap: https://vov.vn/sitemaps/newsindex.xml

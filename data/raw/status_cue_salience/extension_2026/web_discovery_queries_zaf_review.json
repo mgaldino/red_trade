@@ -1,0 +1,49 @@
+{
+  "description": "Executed source-specific query to reproduce the Mail & Guardian lead and resolve independent provenance check.",
+  "queries": [
+    {
+      "iso3c": "ZAF",
+      "window": "2009-2010",
+      "language": "en",
+      "query": "site:mg.co.za \"trade with China\" \"largest trading partner\" 2009",
+      "source_id": "zaf_mg_2009_12_11",
+      "accessed_at": "2026-09-22T23:12:16.617Z",
+      "results": [
+        {
+          "title": "It’s the rigidities, stupid – The Mail & Guardian",
+          "url": "https://mg.co.za/article/2009-12-11-its-the-rigidities-stupid/"
+        },
+        {
+          "title": "The global sweep to mop up world’s oil resources",
+          "url": "https://mg.co.za/news/south-africa/2005-11-09-the-global-sweep-to-mop-up-world-s-oil-resources/"
+        },
+        {
+          "title": "‘Take a slow boat to China’ – The Mail & Guardian",
+          "url": "https://mg.co.za/article/2004-06-25-take-a-slow-boat-to-china/"
+        },
+        {
+          "title": "China’s boom swells the coffers of African economies – The Mail & Guardian",
+          "url": "https://mg.co.za/article/2011-05-06-chinas-boom-swells-the-coffers-of-african-economies/"
+        },
+        {
+          "title": "China tipping the trade balance in Zim – The Mail & Guardian",
+          "url": "https://mg.co.za/article/2013-02-08-china-tipping-the-trade-balance-in-zim/"
+        },
+        {
+          "title": "It gets worse: SA economy headed for troubled waters – The Mail & Guardian",
+          "url": "https://mg.co.za/article/2012-06-13-sa-economy-headed-for-troubled-waters/"
+        },
+        {
+          "title": "6 Mail & Guardian August 29 to September 4 2025",
+          "url": "https://mg.co.za/wp-content/uploads/2025/08/edition-2025-08-29.pdf"
+        },
+        {
+          "title": "UPDATED: China trade to ‘soften blow of US tariffs’",
+          "url": "https://mg.co.za/business/2025-08-25-updated-china-trade-to-soften-blow-of-us-tariffs/"
+        }
+      ],
+      "error": ""
+    }
+  ]
+}
+

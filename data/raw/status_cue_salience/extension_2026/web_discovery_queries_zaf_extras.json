@@ -1,0 +1,168 @@
+{
+  "description": "Additional executed Mail & Guardian verification searches; the keyword query in the separate ZAF review log returns the lead.",
+  "queries": [
+    {
+      "iso3c": "ZAF",
+      "window": "2009-2010",
+      "language": "en",
+      "query": "site:mg.co.za/article/2009-12-11-its-the-rigidities-stupid/",
+      "source_id": "zaf_mg_2009_12_11",
+      "accessed_at": "2026-09-22T23:12:32.420Z",
+      "results": [
+        {
+          "title": "It’s the rigidities, stupid – The Mail & Guardian",
+          "url": "https://mg.co.za/article/2009-12-11-its-the-rigidities-stupid/"
+        },
+        {
+          "title": "What are we doing wrong? – The Mail & Guardian",
+          "url": "https://mg.co.za/article/2009-12-04-what-are-we-doing-wrong/"
+        },
+        {
+          "title": "2009 – Page 50 – The Mail & Guardian",
+          "url": "https://mg.co.za/2009/page/50/"
+        },
+        {
+          "title": "The Mail & Guardian | Africa's Better Future",
+          "url": "https://mg.co.za/tags/article/"
+        },
+        {
+          "title": "16  Mail & Guardian  March 9 to 15 2012",
+          "url": "https://mg.co.za/wp-content/uploads/2023/09/Buthelezi-Archives-2010-2020-compressed.pdf"
+        },
+        {
+          "title": "Staff Reporter – Page 1948 – The Mail & Guardian",
+          "url": "https://mg.co.za/author/staff-reporter/page/1948/"
+        },
+        {
+          "title": "2009 Report Card: Part 2 – The Mail & Guardian",
+          "url": "https://mg.co.za/article/2009-12-23-2009-report-card-part-2/"
+        },
+        {
+          "title": "October 16 to 22 2009 – The Mail & Guardian",
+          "url": "https://mg.co.za/article/2009-11-12-october-16-to-22-2009/"
+        },
+        {
+          "title": "2009 – Page 164 – The Mail & Guardian",
+          "url": "https://mg.co.za/2009/page/164/"
+        },
+        {
+          "title": "The Mail & Guardian | Africa's Better Future",
+          "url": "https://mg.co.za/page/12245/"
+        },
+        {
+          "title": "So … we built a new website",
+          "url": "https://mg.co.za/2012-05-06-so-we-built-a-new-website/"
+        },
+        {
+          "title": "Report Card – The Mail & Guardian",
+          "url": "https://mg.co.za/tag/report-card/"
+        },
+        {
+          "title": "2009 – Page 151 – The Mail & Guardian",
+          "url": "https://mg.co.za/2009/page/151/"
+        },
+        {
+          "title": "Statement by the National Director of Public Prosecutions on the matter S v Zuma and",
+          "url": "https://serve.mg.co.za/uploads/2009/04/06/statement.pdf"
+        },
+        {
+          "title": "Thought Leader",
+          "url": "https://mg.co.za/wp-content/uploads/2025/09/edition-2025-09-12.pdf"
+        },
+        {
+          "title": "AFRICA’S BETTER FUTURE",
+          "url": "https://mg.co.za/wp-content/uploads/2026/06/edition-2026-06-05.pdf"
+        },
+        {
+          "title": "20 Mail & Guardian November 8 to 14 2024",
+          "url": "https://mg.co.za/wp-content/uploads/2024/11/edition-2024-11-08.pdf"
+        }
+      ],
+      "error": ""
+    },
+    {
+      "iso3c": "ZAF",
+      "window": "2009-2010",
+      "language": "en",
+      "query": "\"trade with China, now our largest trading partner\"",
+      "source_id": "zaf_mg_2009_12_11",
+      "accessed_at": "2026-09-22T23:12:34.237Z",
+      "results": [
+        {
+          "title": "The UK's Trade Strategy - GOV.UK",
+          "url": "https://www.gov.uk/government/publications/uk-trade-strategy/the-uks-trade-strategy"
+        },
+        {
+          "title": "HONG KONG LEGISLATIVE COUNCIL — 5 October 1994OFFICIAL RECORD OF PROCEEDINGSWednesday, 5 October 1994The Council met at half-past Two o'clockPRESENTTHE PRESIDENT",
+          "url": "https://www.legco.gov.hk/yr94-95/english/lc_sitg/hansard/h941005.pdf"
+        },
+        {
+          "title": "TV Interview, Afternoon Briefing with Melissa Clarke, ABC News | Minister for Trade and Tourism",
+          "url": "https://www.trademinister.gov.au/minister/don-farrell/transcript/tv-interview-afternoon-briefing-melissa-clarke-abc-news"
+        },
+        {
+          "title": "Chair",
+          "url": "https://www.isis.org.my/wp-content/uploads/2024/11/Focus-21.pdf"
+        },
+        {
+          "title": "Lowy Lecture Series: 'Securing Australia's Future Prosperity' by Prime Minister Kevin Rudd | Lowy Institute",
+          "url": "https://www.lowyinstitute.org/speeches/lowy-lecture-series-securing-australia-s-future-prosperity-prime-minister-kevin-rudd"
+        },
+        {
+          "title": "New Zealand and China: Different Worlds? - New Zealand China Council",
+          "url": "https://nzchinacouncil.org.nz/2022/04/new-zealand-and-china-different-worlds/"
+        },
+        {
+          "title": "TAKE 473 STARTS AT 14:06",
+          "url": "https://archive.parliament.gov.za/server/api/core/bitstreams/0d191418-98ec-4cb4-8513-b6e55249b212/content"
+        },
+        {
+          "title": "Hon Julie Bishop MP",
+          "url": "https://www.internationalaffairs.org.au/wp-content/uploads/2014/05/2012hon-julie-bishop-mp-transcript-rebuilding-relations.pdf"
+        },
+        {
+          "title": "Grüezi Shanghai - Newsletter of the Consulate General of Switzerland in Shanghai - N° 14 - June 2011",
+          "url": "https://www.sinoptic.ch/textes/consulats/Shanghai/2011/201106_Consulat.Shanghai_Gruezi.Shanghai_014.pdf"
+        },
+        {
+          "title": "July 27, 1999  CONGRESSIONAL RECORD — HOUSE  H6453",
+          "url": "https://www.govinfo.gov/content/pkg/CREC-1999-07-27/pdf/CREC-1999-07-27.pdf"
+        },
+        {
+          "title": "Submission to the Parliamentary Foreign Affairs, Defence and Trade Committee — New Zealand International Business Forum",
+          "url": "https://nzibf.squarespace.com/publications/submission-to-the-parliamentary-foreign-affairs-defence-and-trade-committee-2"
+        },
+        {
+          "title": "It’s the rigidities, stupid – The Mail & Guardian",
+          "url": "https://mg.co.za/article/2009-12-11-its-the-rigidities-stupid/"
+        },
+        {
+          "title": "Press Conferences of the State Council Information Office | english.scio.gov.cn",
+          "url": "https://english.scio.gov.cn/m/pressroom/node_8021725_2.html"
+        },
+        {
+          "title": "Two things can be true: China is an economic partner and a threat | The Strategist",
+          "url": "https://www.aspistrategist.org.au/two-things-can-be-true-china-is-an-economic-partner-and-a-threat/"
+        },
+        {
+          "title": "The China-Australia Free Trade Agreement (ChAFTA): Assessing outcomes a decade on",
+          "url": "https://www.uts.edu.au/events/the-china-australia-free-trade-agreement-chafta-assessing-outcomes-a-decade-on"
+        },
+        {
+          "title": "As America turns to protectionism, the world turns to China | The New Zealand Initiative",
+          "url": "https://www.nzinitiative.org.nz/reports-and-media/opinion/as-america-turns-to-protectionism-the-world-turns-to-china/"
+        },
+        {
+          "title": "Is Australia too dependent on trade with China? - ABC News",
+          "url": "https://www.abc.net.au/news/2014-11-11/is-australia-too-dependent-on-trade-with-china/5880726"
+        },
+        {
+          "title": "Trump’s gift to South Africa: Bilateral trade, not declarations",
+          "url": "https://saturdaystar.co.za/business-report/opinion/2025-11-21-trumps-gift-to-south-africa-bilateral-trade-not-declarations/"
+        }
+      ],
+      "error": ""
+    }
+  ]
+}
+

@@ -1,0 +1,8 @@
+User-agent: *
+Host: https://www.ukrinform.net
+Sitemap: sitemap.xml
+Disallow: /redirect
+Disallow: /search
+Disallow: /counter
+Sitemap: https://www.ukrinform.net/sitemap/last.xml
+Sitemap: https://www.ukrinform.net/sitemap.xml

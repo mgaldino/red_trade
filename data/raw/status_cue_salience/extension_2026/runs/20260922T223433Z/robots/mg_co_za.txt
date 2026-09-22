@@ -1,0 +1,8 @@
+User-Agent: *
+Allow: /
+Disallow: /_next/
+
+User-Agent: Google-Extended
+Allow: /
+
+Sitemap: https://mg.co.za/sitemap.xml

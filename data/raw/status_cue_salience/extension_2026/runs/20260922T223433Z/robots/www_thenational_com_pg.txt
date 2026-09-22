@@ -1,0 +1,11 @@
+Sitemap: http://www.thenational.com.pg/sitemap.xml
+Sitemap: http://www.thenational.com.pg/news-sitemap.xml
+
+User-agent: *
+Disallow: /wp-admin/
+
+User-agent: bingbot
+Disallow: /
+User-agent: ia_archiver
+Disallow: /
+
