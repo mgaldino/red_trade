@@ -6,6 +6,9 @@ cd "$(dirname "$0")/.."
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
+export OMP_NUM_THREADS=1
+
+Rscript --vanilla -e "source('renv/activate.R'); source('scripts/diagnostics/build_cross_country_public_cue_preview_assets.R')"
 
 # --vanilla isolates user-level startup files, but it also skips the project
 # .Rprofile, which is what activates renv. Activate renv explicitly so the

@@ -183,32 +183,18 @@ ife_results <- readr::read_csv(
 selected_ife <- ife_results %>%
   dplyr::filter(
     model_id %in% c(
-      "clean_controls",
-      "full_switching",
       "clean_controls_without_gab_qat",
       "full_switching_without_gab_qat"
     )
   ) %>%
   dplyr::transmute(
     model_id,
-    case_sample = dplyr::case_when(
-      model_id %in% c("clean_controls", "full_switching") ~
-        "Five cases: AUS, CHL, GAB, QAT, URY",
-      model_id %in% c(
-        "clean_controls_without_gab_qat",
-        "full_switching_without_gab_qat"
-      ) ~ "Four cases: AUS, BRA, CHL, URY",
-      TRUE ~ model_id
-    ),
+    case_sample = "Four cases: AUS, BRA, CHL, URY",
     comparison_rule = dplyr::case_when(
-      model_id %in% c(
-        "clean_controls",
-        "clean_controls_without_gab_qat"
-      ) ~ "Never-China-top controls",
-      model_id %in% c(
-        "full_switching",
-        "full_switching_without_gab_qat"
-      ) ~ "Controls enter and leave the comparison set",
+      model_id == "clean_controls_without_gab_qat" ~
+        "Never-China-top controls",
+      model_id == "full_switching_without_gab_qat" ~
+        "Controls enter and leave the comparison set",
       TRUE ~ model_id
     ),
     att = estimate,
@@ -223,8 +209,6 @@ selected_ife <- ife_results %>%
     display_order = dplyr::case_when(
       model_id == "clean_controls_without_gab_qat" ~ 1L,
       model_id == "full_switching_without_gab_qat" ~ 2L,
-      model_id == "clean_controls" ~ 3L,
-      model_id == "full_switching" ~ 4L,
       TRUE ~ 99L
     )
   ) %>%

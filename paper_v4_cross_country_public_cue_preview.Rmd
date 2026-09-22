@@ -1348,6 +1348,59 @@ When Labor's Kevin Rudd took office as prime minister by the end of 2007, he had
 
 To reduce dependence on any one selected case, I also report an interactive fixed-effects framework pooling the cases. Among Australia, Brazil, Chile, and Uruguay, the pooled estimates are negative under both comparison-set rules, although inference changes with the rule; cross-validation selects zero latent factors in both four-case specifications. When Gabon and Qatar are included instead of Brazil, the corresponding five-case estimates are close to zero. Appendix Table \@ref(tab:public-cue-pooled-ife) reports all four specifications. These pooled reduced forms combine the public cue with country-specific cost-benefit calculations, so the effects may be heterogeneous. The preserved pooled estimates also retain the report's 2009 Australian timing rather than re-estimating the pooled models with the new 2007 timing.
 
+```{r public-cue-pooled-ife, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
+public_cue_ife_tbl <- readr::read_csv(
+  file.path(
+    "quality_reports", "revisions", "paper_v4",
+    "20260922_cross_country_public_cue_preview", "assets",
+    "table_public_cue_pooled_models.csv"
+  ),
+  show_col_types = FALSE
+) %>%
+  dplyr::mutate(
+    ATT = sprintf("%.3f", att),
+    SE = sprintf("%.3f", se),
+    `95\\% CI` = paste0(
+      "[", sprintf("%.3f", ci_low), ", ", sprintf("%.3f", ci_high), "]"
+    ),
+    `p-value` = sprintf("%.3f", p_value),
+    `Units (T/C)` = paste0(n_treated, "/", n_control)
+  ) %>%
+  dplyr::select(
+    `Case sample` = case_sample,
+    `Comparison-set rule` = comparison_rule,
+    ATT,
+    SE,
+    `95\\% CI`,
+    `p-value`,
+    `Latent factors` = latent_factors,
+    `Units (T/C)`
+  )
+
+knitr::kable(
+  public_cue_ife_tbl,
+  format = "latex",
+  booktabs = TRUE,
+  escape = FALSE,
+  caption = "Pooled interactive fixed-effects estimates for Australia, Brazil, Chile, and Uruguay.",
+  align = "llcccccc"
+) %>%
+  kableExtra::kable_styling(
+    latex_options = c("HOLD_position", "scale_down"),
+    font_size = 8.5
+  ) %>%
+  kableExtra::footnote(
+    general = paste0(
+      "ATT is measured in absolute UNGA ideal-point distance to China; negative values indicate convergence. ",
+      "Standard errors use 1,000 unit-bootstrap replications. The factor count is selected by the one-standard-error cross-validation rule over r = 0, 1, 2, 3. ",
+      "The preserved pooled models retain 2009 as Australia's timing; the individual Australian SDiD uses the theoretically preferred 2007 public-cue timing."
+    ),
+    general_title = "Note: ",
+    escape = FALSE,
+    threeparttable = TRUE
+  )
+```
+
 <!-- Begin hidden superseded cross-country section (preview source only).
 
 The cross-country analysis serves two purposes. First, it examines whether a durable first position as goods export destination is followed by movement toward China beyond the Brazilian case. Second, it is an additional robustness check against explanations tied specifically to Brazil's 2009 calendar year, such as the global financial crisis, the BRICS/G20 moment, or the commodity cycle. If durable first rank status matters, countries where China enters and holds the largest export destination position should move closer to China in UNGA ideal-point space when aligned by their own treatment entry.
@@ -2035,61 +2088,6 @@ knitr::kable(
       "ATT is measured in absolute UNGA ideal-point distance to China; negative values indicate convergence. ",
       "Every row uses a placebo standard error from 5,000 re-estimations. ",
       "Confidence intervals and two-sided p-values use a normal approximation based on the placebo standard error; the p-values are not exact randomization p-values."
-    ),
-    general_title = "Note: ",
-    escape = FALSE,
-    threeparttable = TRUE
-  )
-```
-
-Table \@ref(tab:public-cue-pooled-ife) reports four pooled specifications: two comparison-set rules for Australia, Brazil, Chile, and Uruguay, and the same two rules for Australia, Chile, Gabon, Qatar, and Uruguay. Cross-validation selects zero latent factors in both four-case specifications and one factor in both five-case specifications. The four-case estimates are negative, but inference changes with the comparison-set rule; the five-case estimates are close to zero. The contrast shows sensitivity to case composition as well as comparison-set construction. These pooled estimates are reproduced from the preserved report and still use 2009 as Australia's timing. They have not been re-estimated with the theoretically preferred 2007 public-cue timing used in the individual Australian SDiD.
-
-```{r public-cue-pooled-ife, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
-public_cue_ife_tbl <- readr::read_csv(
-  file.path(
-    "quality_reports", "revisions", "paper_v4",
-    "20260922_cross_country_public_cue_preview", "assets",
-    "table_public_cue_pooled_models.csv"
-  ),
-  show_col_types = FALSE
-) %>%
-  dplyr::mutate(
-    ATT = sprintf("%.3f", att),
-    SE = sprintf("%.3f", se),
-    `95\\% CI` = paste0(
-      "[", sprintf("%.3f", ci_low), ", ", sprintf("%.3f", ci_high), "]"
-    ),
-    `p-value` = sprintf("%.3f", p_value),
-    `Units (T/C)` = paste0(n_treated, "/", n_control)
-  ) %>%
-  dplyr::select(
-    `Case sample` = case_sample,
-    `Comparison-set rule` = comparison_rule,
-    ATT,
-    SE,
-    `95\\% CI`,
-    `p-value`,
-    `Latent factors` = latent_factors,
-    `Units (T/C)`
-  )
-
-knitr::kable(
-  public_cue_ife_tbl,
-  format = "latex",
-  booktabs = TRUE,
-  escape = FALSE,
-  caption = "Pooled interactive fixed-effects estimates across four- and five-case samples.",
-  align = "llcccccc"
-) %>%
-  kableExtra::kable_styling(
-    latex_options = c("HOLD_position", "scale_down"),
-    font_size = 8.5
-  ) %>%
-  kableExtra::footnote(
-    general = paste0(
-      "ATT is measured in absolute UNGA ideal-point distance to China; negative values indicate convergence. ",
-      "Standard errors use 1,000 unit-bootstrap replications. The factor count is selected by the one-standard-error cross-validation rule over r = 0, 1, 2, 3. ",
-      "The preserved pooled models retain 2009 as Australia's timing; the individual Australian SDiD uses the theoretically preferred 2007 public-cue timing."
     ),
     general_title = "Note: ",
     escape = FALSE,
