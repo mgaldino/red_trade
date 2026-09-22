@@ -1358,6 +1358,13 @@ def copy_existing_brazil_raw_if_present() -> None:
 
 def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
+    if (PROCESSED_DIR / "status_cue_sau_gab_source_audit.csv").exists():
+        raise RuntimeError(
+            "Legacy full collector is frozen after the SAU/GAB window correction. "
+            "It uses the old absorbing sample and overwrites raw paths. "
+            "Use scripts/diagnostics/correct_status_cue_sau_gab.py --collect "
+            "and --build --run-dir PATH for the append-only focused workflow."
+        )
     ensure_dirs()
     sample = read_primary_sample()
     country_lookup = {row["iso3c"]: row for row in sample}

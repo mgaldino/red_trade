@@ -1,0 +1,63 @@
+{
+  "https://www.alriyadh.com": {
+    "url": "https://www.alriyadh.com/robots.txt",
+    "accessed_at": "2026-09-22T02:51:48+00:00",
+    "raw_file": "",
+    "sha256": "",
+    "fetch_status": "network_error",
+    "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))"
+  },
+  "https://www.spa.gov.sa": {
+    "url": "https://www.spa.gov.sa/robots.txt",
+    "accessed_at": "2026-09-22T02:51:48+00:00",
+    "raw_file": "data/raw/status_cue_salience/focused_sau_gab/20260922T025200Z/www_spa_gov_sa_robots.txt",
+    "sha256": "50d765da837b20e4ac6cd327f67b98dd91d51105d0d81c944621b3adcde0c3d2",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "final_url": "https://www.spa.gov.sa/robots.txt",
+    "fetch_status": "ok",
+    "size_bytes": 905
+  },
+  "https://www.arabnews.com": {
+    "url": "https://www.arabnews.com/robots.txt",
+    "accessed_at": "2026-09-22T02:51:48+00:00",
+    "raw_file": "data/raw/status_cue_salience/focused_sau_gab/20260922T025200Z/www_arabnews_com_robots.txt",
+    "sha256": "1ed1c61081e5cdb9e8d7c043a04ed16804596e2105baf9cf1cf2cdc7c6eb4ae2",
+    "fetch_status": "http_error",
+    "status_code": 403,
+    "error": "HTTP Error 403: Forbidden",
+    "size_bytes": 5543
+  },
+  "https://directinfosgabon.com": {
+    "url": "https://directinfosgabon.com/robots.txt",
+    "accessed_at": "2026-09-22T02:51:48+00:00",
+    "raw_file": "data/raw/status_cue_salience/focused_sau_gab/20260922T025200Z/directinfosgabon_com_robots.txt",
+    "sha256": "47a0908f2259dbe8197a666856c031037be7d58d552ecd4b9d6835b7abd55696",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "final_url": "https://directinfosgabon.com/robots.txt",
+    "fetch_status": "ok",
+    "size_bytes": 177
+  },
+  "https://www.gabonreview.com": {
+    "url": "https://www.gabonreview.com/robots.txt",
+    "accessed_at": "2026-09-22T02:51:48+00:00",
+    "raw_file": "data/raw/status_cue_salience/focused_sau_gab/20260922T025200Z/www_gabonreview_com_robots.txt",
+    "sha256": "5538a7fa4e22716b9e99f5043f00aaa6f86843d27f84027160d9b811f044c5e8",
+    "status_code": 200,
+    "content_type": "text/plain; charset=UTF-8",
+    "final_url": "https://www.gabonreview.com/robots.txt",
+    "fetch_status": "ok",
+    "size_bytes": 1019
+  },
+  "https://lunion-archives.org": {
+    "url": "https://lunion-archives.org/robots.txt",
+    "accessed_at": "2026-09-22T02:51:48+00:00",
+    "raw_file": "data/raw/status_cue_salience/focused_sau_gab/20260922T025200Z/lunion-archives_org_robots.txt",
+    "sha256": "a359a2b4bc7ad3dd2cd6d8bad4fda73f9ebd0965eecce76a230da786f896cac7",
+    "fetch_status": "http_error",
+    "status_code": 404,
+    "error": "HTTP Error 404: Not Found",
+    "size_bytes": 1029
+  }
+}

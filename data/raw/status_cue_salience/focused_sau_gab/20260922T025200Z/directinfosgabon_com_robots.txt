@@ -1,0 +1,5 @@
+Sitemap:https://directinfosgabon.com/post-sitemap2.xml
+Sitemap:https://directinfosgabon.com/post-sitemap1.xml
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php

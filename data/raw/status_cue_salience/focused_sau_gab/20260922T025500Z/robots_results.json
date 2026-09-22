@@ -1,0 +1,25 @@
+{
+  "https://www.alriyadh.com": {
+    "url": "https://www.alriyadh.com/robots.txt",
+    "accessed_at": "2026-09-22T02:54:10+00:00",
+    "raw_file": "data/raw/status_cue_salience/focused_sau_gab/20260922T025500Z/www_alriyadh_com_robots.txt",
+    "sha256": "8fd6ae1d6c46eecb2cc2272438feea405ce322ae3d59d21ff6c37e78f754faa6",
+    "fetch_status": "ok",
+    "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))",
+    "transport": "macos_curl_system_trust",
+    "status_code": 200,
+    "content_type": "text/plain",
+    "final_url": "https://www.alriyadh.com/robots.txt",
+    "size_bytes": 65
+  },
+  "https://www.arabnews.com": {
+    "url": "https://www.arabnews.com/robots.txt",
+    "accessed_at": "2026-09-22T02:54:10+00:00",
+    "raw_file": "data/raw/status_cue_salience/focused_sau_gab/20260922T025500Z/www_arabnews_com_robots.txt",
+    "sha256": "67f2bfd8eb96dd5f99f608eed2a9e65581a45a19ab9319ec378ad1cd842b64fd",
+    "fetch_status": "http_error",
+    "status_code": 403,
+    "error": "HTTP Error 403: Forbidden",
+    "size_bytes": 5543
+  }
+}

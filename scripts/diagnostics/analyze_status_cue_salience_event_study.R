@@ -5,17 +5,22 @@
 # modify the targets pipeline.
 
 options(scipen = 999)
+args <- commandArgs(trailingOnly = TRUE)
+appendix_only <- "--appendix-only" %in% args
 
 suppressPackageStartupMessages({
   library(dplyr)
   library(readr)
-  library(targets)
   library(tibble)
+  if (!appendix_only) library(targets)
 })
 
-source("scripts/functions.R")
+if (!appendix_only) source("scripts/functions.R")
 
-args <- commandArgs(trailingOnly = TRUE)
+if (file.exists("data/processed/status_cue_salience/status_cue_sau_gab_source_audit.csv") &&
+    !appendix_only) {
+  stop("SAU/GAB codes now use corrected M2/M3 windows. Legacy absorbing event/model outputs are historical; use --appendix-only. A new model design is outside this focal correction.")
+}
 run_fect <- "--run-fect" %in% args
 nboots_arg <- args[grepl("^--nboots=", args)]
 nboots <- if (length(nboots_arg) > 0L) {
@@ -147,6 +152,11 @@ appendix_table <- country_codes |>
   dplyr::arrange(entry_year, country_name)
 
 readr::write_csv(appendix_table, appendix_table_path)
+
+if (appendix_only) {
+  message("Updated appendix table only; no targets read, panels built, or models run.")
+  quit(save = "no", status = 0L)
+}
 
 message("Reading existing targets: trade_data and unga_data.")
 trade_data <- targets::tar_read(trade_data)

@@ -1,0 +1,16 @@
+{
+  "url": "https://www.alriyadh.com/933347",
+  "accessed_at": "2026-09-22T02:54:10+00:00",
+  "raw_file": "data/raw/status_cue_salience/focused_sau_gab/20260922T025500Z/sau_alriyadh_spa_2014_05_06.html",
+  "sha256": "20442f7ec469934ba9caa4f1c7de5bd4f3063d82d3b92d53bafdcdf9ee4f569e",
+  "fetch_status": "ok",
+  "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))",
+  "transport": "macos_curl_system_trust",
+  "status_code": 200,
+  "content_type": "text/html; charset=UTF-8",
+  "final_url": "https://www.alriyadh.com/933347",
+  "size_bytes": 49884,
+  "source_id": "sau_alriyadh_spa_2014_05_06",
+  "robots_status": "allowed",
+  "robots_file": "data/raw/status_cue_salience/focused_sau_gab/20260922T025500Z/www_alriyadh_com_robots.txt"
+}

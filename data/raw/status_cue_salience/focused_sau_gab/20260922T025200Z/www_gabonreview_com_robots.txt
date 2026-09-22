@@ -1,0 +1,42 @@
+    User-agent: *  
+      
+    # On empêche l'indexation des dossiers sensibles  
+    Disallow: /cgi-bin  
+    Disallow: /wp-admin  
+    Disallow: /wp-includes  
+    Disallow: /wp-content/plugins  
+    Disallow: /wp-content/themes  
+    Disallow: /trackback  
+    Disallow: /feed  
+    Disallow: /category/*/*  
+    Disallow: */trackback  
+    Disallow: /*?*  
+    Disallow: /*?
+    Disallow: /?*
+
+      
+    # On autorise l'indexation des images  
+    Allow: /wp-content/uploads  
+    Allow: /wp-content/blogs.dir
+      
+    User-agent: Googlebot  
+    # On empêche l'indexation des fichiers sensibles  
+    Disallow: /*.php$  
+    Disallow: /*.js$  
+    Disallow: /*.inc$  
+    Disallow: /*.css$  
+    Disallow: /*.gz$  
+    Disallow: /*.swf$  
+    Disallow: /*.wmv$  
+    Disallow: /*.cgi$  
+      
+    # Autoriser Google Image  
+    User-agent: Googlebot-Image  
+    Disallow:  
+    Allow: /*  
+      
+    # Autoriser Google AdSense  
+    User-agent: Mediapartners-Google*  
+    Disallow:  
+    Allow: /*  
+      
