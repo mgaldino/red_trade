@@ -1,0 +1,26 @@
+{
+  "https://www.abc.net.au": {
+    "url": "https://www.abc.net.au/robots.txt",
+    "accessed_at": "2026-09-22T16:00:37+00:00",
+    "raw_file": "",
+    "sha256": "",
+    "fetch_status": "network_error",
+    "error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))"
+  },
+  "https://www.rba.gov.au": {
+    "url": "https://www.rba.gov.au/robots.txt",
+    "accessed_at": "2026-09-22T16:00:37+00:00",
+    "raw_file": "",
+    "sha256": "",
+    "fetch_status": "network_error",
+    "error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))"
+  },
+  "https://www.dfat.gov.au": {
+    "url": "https://www.dfat.gov.au/robots.txt",
+    "accessed_at": "2026-09-22T16:00:37+00:00",
+    "raw_file": "",
+    "sha256": "",
+    "fetch_status": "network_error",
+    "error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))"
+  }
+}

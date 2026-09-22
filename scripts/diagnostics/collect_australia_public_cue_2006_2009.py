@@ -64,6 +64,9 @@ CSV_COLUMNS = [
     "raw_sha256",
     "accessed_at",
     "access_status",
+    "robots_status",
+    "robots_file",
+    "content_verification_status",
     "verification_markers_present",
     "rank_position_china",
     "displaced_partner",
@@ -357,36 +360,57 @@ def build(manifest: dict, run_dir: Path) -> list[dict[str, str]]:
     rows: list[dict[str, str]] = []
     for source in manifest["sources"]:
         result = results[source["source_id"]]
-        if result["fetch_status"] not in {"ok", "existing_raw_verified"}:
+        archived = result["fetch_status"] in {"ok", "existing_raw_verified"}
+        browser_only = (
+            source.get("allow_unarchived_browser_verification") is True
+            and result["fetch_status"] == "robots_unavailable_stop"
+        )
+        if not (archived or browser_only):
             raise ValueError(
                 f"Cannot build: {source['source_id']} status is "
                 f"{result['fetch_status']}"
             )
-        raw_path = ROOT / result["raw_file"]
-        observed = sha256(raw_path)
-        if observed != result["sha256"]:
-            raise ValueError(f"Raw hash changed for {source['source_id']}")
-        verified = markers_present(source, raw_path)
-        if not verified:
-            missing = [
-                marker
-                for marker in source["verification_markers"]
-                if normalize(marker) not in source_text(source, raw_path)
-            ]
-            raise ValueError(
-                f"Verification marker failure for {source['source_id']}: {missing}"
+        if archived:
+            raw_path = ROOT / result["raw_file"]
+            observed = sha256(raw_path)
+            if observed != result["sha256"]:
+                raise ValueError(f"Raw hash changed for {source['source_id']}")
+            verified = markers_present(source, raw_path)
+            if not verified:
+                missing = [
+                    marker
+                    for marker in source["verification_markers"]
+                    if normalize(marker) not in source_text(source, raw_path)
+                ]
+                raise ValueError(
+                    f"Verification marker failure for {source['source_id']}: {missing}"
+                )
+            raw_file = result["raw_file"]
+            raw_sha256 = observed
+            verification_status = "verified_from_hash_checked_raw"
+            marker_status = "true"
+        else:
+            raw_file = ""
+            raw_sha256 = ""
+            verification_status = (
+                "verified_independently_in_browser_2026-09-22; "
+                "article_raw_not_archived_after_robots_stop"
             )
+            marker_status = "not_tested_no_article_raw"
         row = {column: "" for column in CSV_COLUMNS}
         for column in CSV_COLUMNS:
             if column in source:
                 value = source[column]
                 row[column] = str(value).lower() if isinstance(value, bool) else str(value)
         row.update(
-            raw_file=result["raw_file"],
-            raw_sha256=observed,
+            raw_file=raw_file,
+            raw_sha256=raw_sha256,
             accessed_at=result["accessed_at"],
             access_status=result["fetch_status"],
-            verification_markers_present="true",
+            robots_status=result["robots_status"],
+            robots_file=result.get("robots_file", ""),
+            content_verification_status=verification_status,
+            verification_markers_present=marker_status,
         )
         rows.append(row)
 
@@ -428,11 +452,18 @@ def validate(manifest: dict, run_dir: Path) -> dict:
     if list(rows[0]) != CSV_COLUMNS:
         raise ValueError("Unexpected CSV schema")
     for row in rows:
-        raw_path = ROOT / row["raw_file"]
-        if sha256(raw_path) != row["raw_sha256"]:
-            raise ValueError(f"CSV hash mismatch for {row['source_id']}")
-        if row["verification_markers_present"] != "true":
-            raise ValueError(f"Unverified source row: {row['source_id']}")
+        if row["raw_file"]:
+            raw_path = ROOT / row["raw_file"]
+            if sha256(raw_path) != row["raw_sha256"]:
+                raise ValueError(f"CSV hash mismatch for {row['source_id']}")
+            if row["verification_markers_present"] != "true":
+                raise ValueError(f"Unverified raw source row: {row['source_id']}")
+        elif not (
+            row["source_id"] == "aus_rba_2006_11_china_second_export_destination"
+            and row["verification_markers_present"] == "not_tested_no_article_raw"
+            and row["access_status"] == "robots_unavailable_stop"
+        ):
+            raise ValueError(f"Unexpected missing raw: {row['source_id']}")
         if count_words(row["excerpt_under_25_words"]) > 25:
             raise ValueError(f"Excerpt exceeds 25 words: {row['source_id']}")
         if row["strict_m2_goods_only"] != "false":

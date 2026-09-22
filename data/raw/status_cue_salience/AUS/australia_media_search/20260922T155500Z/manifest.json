@@ -50,8 +50,6 @@
         "second-largest export destination in 2005",
         "Japan remains Australia's largest export destination"
       ],
-      "allow_unarchived_browser_verification": true,
-      "browser_verified_on": "2026-09-22",
       "rank_position_china": "2",
       "displaced_partner": "United States",
       "metric_scope": "export_destination",
@@ -65,7 +63,7 @@
       "excerpt_under_25_words": "China overtook the United States to become Australia's second-largest export destination in 2005.",
       "interpretation": "Official contemporaneous evidence places China second among goods-and-services export destinations, behind Japan.",
       "confidence": "high",
-      "notes": "Useful for separating export rank from two-way trading-partner rank. The publisher's robots endpoint returned an access-denied response during scripted collection, so the article was verified independently in the research browser but not archived by the collector."
+      "notes": "Useful for separating export rank from two-way trading-partner rank."
     },
     {
       "source_id": "aus_abc_news_2007_05_04_china_overtakes_japan",
