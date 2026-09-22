@@ -58,10 +58,9 @@ stopifnot(
   !anyNA(selected_codes$cue_audit_entry_year),
   setequal(
     selected_codes$iso3c[selected_codes$salience_code == "high"],
-    c("BRA", "CHL", "GAB", "URY")
+    c("AUS", "BRA", "CHL", "GAB", "URY")
   ),
-  identical(selected_codes$salience_code[selected_codes$iso3c == "QAT"], "medium"),
-  identical(selected_codes$salience_code[selected_codes$iso3c == "AUS"], "unknown")
+  identical(selected_codes$salience_code[selected_codes$iso3c == "QAT"], "medium")
 )
 
 plot_data <- readr::read_csv(panel_path, show_col_types = FALSE) |>
@@ -184,7 +183,7 @@ figure <- ggplot2::ggplot(
     subtitle = paste0(
       "Distância absoluta entre os ideal points do país e da China na AGNU, 2000–2023.\n",
       "Linha vermelha = entrada usada na auditoria de public cue. ",
-      "Brasil, Chile, Gabão e Uruguai: high; Catar: medium; Austrália: unknown."
+      "Austrália, Brasil, Chile, Gabão e Uruguai: high; Catar: medium."
     ),
     x = "Ano",
     y = "Distância absoluta do\nideal point à China",

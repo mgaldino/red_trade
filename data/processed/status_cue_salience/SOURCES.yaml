@@ -78,6 +78,38 @@ sources:
     raw_file: "data/raw/status_cue_salience/CHL/2009/subrei_prochile/chl_subrei_2009_11_30.html"
     query_used: "site:subrei.gob.cl China primer socio comercial Chile primer destino exportaciones 2009"
     notes: ""
+  - id: aus_afr_china_trading_partner_2009
+    name: "Australian Financial Review"
+    provider: "Australian Financial Review"
+    url: "https://www.afr.com/markets/china-hits-the-spot-as-trading-partner-20091109-iwhtx"
+    access_method: "web"
+    requires_credentials: false
+    license: "Original publisher terms"
+    variables_used: ["rank_label_original", "publication_date", "excerpt_under_25_words"]
+    temporal_coverage: "2009-11-09"
+    geographic_coverage: "Australia"
+    unit_of_analysis: "source document/article"
+    download_script: "scripts/diagnostics/collect_ex_top1_salience_sources.py"
+    date_accessed: "2026-05-23"
+    raw_file: "data/raw/ex_top1_salience/AUS/2009/australian_financial_review/aus_afr_china_trading_partner_2009.html"
+    query_used: "'China hits the spot as trading partner' Australia 'largest trading partner'"
+    notes: "Counts for broad public cue in the current M2 2009-2010 window. Aggregate exports and imports of goods and services; not strict M2 goods-only evidence."
+  - id: aus_dfat_china_became_largest_export_market_2010
+    name: "Australian Department of Foreign Affairs and Trade"
+    provider: "Australian Department of Foreign Affairs and Trade"
+    url: "https://www.dfat.gov.au/news/media/Pages/australian-trade-volumes-grow-despite-financial-crisis"
+    access_method: "web via preserved text fallback"
+    requires_credentials: false
+    license: "Original publisher terms"
+    variables_used: ["rank_label_original", "publication_date", "excerpt_under_25_words"]
+    temporal_coverage: "2010-06-04"
+    geographic_coverage: "Australia"
+    unit_of_analysis: "source document/article"
+    download_script: "scripts/diagnostics/collect_ex_top1_salience_sources.py"
+    date_accessed: "2026-05-23"
+    raw_file: "data/raw/ex_top1_salience/AUS/2010/australian_department_of_foreign_affairs_and_trade/aus_dfat_china_became_largest_export_market_2010.html"
+    query_used: "China became Australia's largest export market; Japan was Australia's second largest export market"
+    notes: "Counts for broad public cue in the current M2 2009-2010 window. Export measure includes goods and services; strict M2 goods-only alignment remains unresolved."
   - id: aus_australian_department_of_foreign_affairs_and_trade_2011_06_29
     name: "Australian Department of Foreign Affairs and Trade"
     provider: "Australian Department of Foreign Affairs and Trade"
@@ -93,7 +125,7 @@ sources:
     date_accessed: "2026-05-20"
     raw_file: "data/raw/status_cue_salience/AUS/2011/australian_department_of_foreign_affairs_and_trade/aus_dfat_2011_06_29.html.error.txt"
     query_used: "site:dfat.gov.au Australia China largest export market 2010 2011"
-    notes: "DO_NOT_COUNT: raw fetch status is error."
+    notes: "DO_NOT_COUNT: outside current 2009-2010 window; raw fetch status is error."
   - id: aus_abc_news_2010_05_12
     name: "ABC News"
     provider: "ABC News"

@@ -89,6 +89,7 @@ sample <- readr::read_csv(sample_path, show_col_types = FALSE) %>%
 status_country <- readr::read_csv(status_country_path, show_col_types = FALSE) %>%
   dplyr::select(
     iso3c,
+    status_cue_entry_year = entry_year,
     status_cue_salience = salience_code,
     status_cue_rationale = coding_rationale
   )
@@ -299,6 +300,11 @@ country_codes <- sample %>%
 comparison <- country_codes %>%
   dplyr::left_join(status_country, by = "iso3c") %>%
   dplyr::mutate(
+    entry_year = dplyr::if_else(
+      .data$iso3c == "AUS",
+      as.integer(.data$status_cue_entry_year),
+      as.integer(.data$entry_year)
+    ),
     implication_for_china_status_cue_absence = dplyr::case_when(
       .data$status_cue_salience == "unknown" &
         .data$ex_top1_coverage_code %in% c("high", "medium") ~
@@ -424,15 +430,15 @@ report <- c(
     "."
   ),
   "",
-  "The more-informative group should still be interpreted conservatively. For Malaysia, the benchmark shows recoverable official rank language about Singapore, but the original China status-cue file also flags rank-definition and China/Hong Kong aggregation issues. For Australia, official DFAT sources recover both Japan's incumbent rank and explicit China displacement language; the AFR item is archived separately as broad aggregate-trade context and remains excluded from the export-destination benchmark.",
+  "The more-informative group should still be interpreted conservatively. For Malaysia, the benchmark shows recoverable official rank language about Singapore, but the original China status-cue file also flags rank-definition and China/Hong Kong aggregation issues. Australia is no longer an absence case: AFR 2009 and DFAT 2010 support high broad-cue salience in the current 2009-2010 window, while strict goods-only label alignment remains unresolved.",
   "",
   "## Recommended Use",
   "",
-  "Use this benchmark as a recoverability diagnostic, not as an automatic recode of China status-cue salience. Cases where the ex-Top1 benchmark is high or medium and China status-cue salience remains unknown deserve targeted follow-up before any manuscript claim that public rank language was absent.",
+  "Use this benchmark as a recoverability diagnostic, not as an automatic recode of China status-cue salience. Cases where the ex-Top1 benchmark is high or medium and China status-cue salience remains unknown deserve targeted follow-up before any manuscript claim that public rank language was absent. Australia's separate recode rests on independently audited positive AFR and DFAT cue evidence, not on the incumbent benchmark alone.",
   "",
   "## Fact-Check Status",
   "",
-  "Independent fact-check status: `PASS` without reservations for the original ex-Top1 benchmark after a second audit round. The 2026-05-23 AFR addition for Australia is archived and coded as `DO_NOT_COUNT` broad-trade context; it has not received a separate independent fact-check and does not enter the export-destination benchmark counters."
+  "Independent fact-check status: `PASS` without reservations for the original ex-Top1 benchmark after a second audit round. The AFR item remains excluded from the strict export-destination benchmark, but its use in Australia's broad public-cue code received a focused independent audit and adjudication on 2026-09-22."
 )
 
 writeLines(report, report_path, useBytes = TRUE)

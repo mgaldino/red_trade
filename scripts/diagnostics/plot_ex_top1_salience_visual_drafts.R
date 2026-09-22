@@ -237,7 +237,7 @@ country_matrix <- comparison |>
     reading = implication_label(as.character(implication_for_china_status_cue_absence)),
     metric_note = dplyr::case_when(
       iso3c == "AUS" & n_ex_top1_broad_trade_context_sources > 0L ~
-        "Metric mismatch documented in archived AFR source: broad aggregate trading-partner cue; excluded from export-destination benchmark.",
+        "AFR counts for Australia's broad public cue but remains excluded from the strict export-destination benchmark; DFAT export evidence includes goods and services.",
       iso3c == "AUS" ~
         "Metric mismatch risk: export-destination treatment vs broader aggregate trading-partner press language in author-supplied AFR item.",
       iso3c == "MYS" ~
@@ -647,15 +647,15 @@ australia_events <- tibble::tibble(
     "Treatment entry in\nexport-rank data"
   ),
   source_note = c(
-    "AFR archived as DO_NOT_COUNT broad-trade context",
-    "AFR archived as DO_NOT_COUNT broad-trade context",
+    "AFR counts for broad public cue; not strict M2 evidence",
+    "AFR counts for broad public cue; not strict M2 evidence",
     "DFAT source family; countable ex-Top1 benchmark",
-    "DFAT source family; countable ex-Top1 benchmark",
+    "DFAT counts for broad public cue and ex-Top1 benchmark",
     "Processed treatment timing"
   ),
   evidence_status = c(
-    "archived_broad_trade_context",
-    "archived_broad_trade_context",
+    "audited_broad_public_cue",
+    "audited_broad_public_cue",
     "audited_official",
     "audited_official",
     "treatment_data"
@@ -685,7 +685,7 @@ readr::write_csv(
 )
 
 metric_palette <- c(
-  "archived_broad_trade_context" = "#7C3AED",
+  "audited_broad_public_cue" = "#7C3AED",
   "audited_official" = "#2563EB",
   "treatment_data" = "#111827"
 )
@@ -731,7 +731,7 @@ australia_timeline <- ggplot(
   scale_color_manual(
     values = metric_palette,
     labels = c(
-      "archived_broad_trade_context" = "Archived broad-trade context",
+      "audited_broad_public_cue" = "Audited broad public cue",
       "audited_official" = "Audited official source family",
       "treatment_data" = "Treatment timing"
     ),
@@ -745,7 +745,7 @@ australia_timeline <- ggplot(
     expand = expansion(mult = c(0.02, 0.06))
   ) +
   labs(
-    title = "Australia is a metric-mismatch case, not a clean absence",
+    title = "Australia has a broad public cue with a metric mismatch",
     subtitle = stringr::str_wrap(
       paste0(
         "Official export-market evidence and the archived AFR press item describe different rank concepts. ",
@@ -762,7 +762,7 @@ australia_timeline <- ggplot(
     caption = stringr::str_wrap(
       paste(
         "Data: status_cue_vs_ex_top1_coverage.csv and appendix_table_supplemental_context_sources.csv.",
-        "The AFR item is archived and coded as DO_NOT_COUNT broad-trade context, not export-destination benchmark evidence."
+        "AFR counts for broad public-cue salience but remains excluded from the strict export-destination benchmark."
       ),
       width = 125
     )
@@ -859,9 +859,9 @@ recommendations <- c(
   "",
   "## Figure 2. Australia panel",
   "",
-  "**Title:** Australia is a metric-mismatch case, not a clean absence.",
+  "**Title:** Australia has a broad public cue with a metric mismatch.",
   "",
-  "**Caption:** Timeline separating two concepts: China as Australia's largest aggregate trading partner (exports plus imports, goods plus services) and China/Japan in the export-destination metric used by the treatment. The AFR item is archived and coded as `DO_NOT_COUNT` broad-trade context: it supports press salience for a broader trade hierarchy, but it does not count as export-destination benchmark evidence. Official DFAT evidence supports recoverability for export-market rank language. Data: `status_cue_vs_ex_top1_coverage.csv` and `appendix_table_supplemental_context_sources.csv`.",
+  "**Caption:** Timeline separating two concepts: China as Australia's largest aggregate trading partner (exports plus imports, goods plus services) and China/Japan in the export-destination metric used by the treatment. The AFR item counts for broad public-cue salience in the current 2009 treatment window but remains excluded from the strict export-destination benchmark. Official DFAT evidence supports public export-market rank language while covering goods and services rather than M2 goods-only. Data: `status_cue_vs_ex_top1_coverage.csv`, `status_cue_source_evidence.csv`, and `appendix_table_supplemental_context_sources.csv`.",
   "",
   paste0("Draft file: `", sub(paste0(root, "/"), "", file.path(figure_dir, "figure_australia_metric_mismatch.pdf"), fixed = TRUE), "`."),
   "",
