@@ -164,6 +164,9 @@ output_path <- file.path(
 )
 dir.create(dirname(output_path), recursive = TRUE, showWarnings = FALSE)
 readr::write_csv(result, output_path)
+fit_output_path <- sub("\\.csv$", "_fit.rds", output_path)
+saveRDS(fit, fit_output_path)
 
 message("Point estimate written to: ", output_path)
+message("Fitted synthdid object written to: ", fit_output_path)
 print(result, n = Inf, width = Inf)
