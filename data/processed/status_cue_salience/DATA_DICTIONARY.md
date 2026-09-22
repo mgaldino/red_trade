@@ -113,6 +113,47 @@ Two rows preserve the distinction between the legacy audit window and the curren
 | strict_m2_evidence | string | Whether a public label strictly aligned with M2 goods-only was recovered. | derived | observed, unresolved |
 | source_ids | string | Semicolon-separated stable source identifiers. | SOURCES.yaml | ids or blank |
 
+## australia_public_cue_media_2006_2009.csv
+
+One row per contemporaneous national-news or official document used to
+reconstruct the Australian public-cue chronology. This table is a source audit,
+not a treatment recode. It distinguishes calendar years, fiscal years and
+rolling 12-month windows, and it never treats a two-way trading-partner label as
+strict evidence about the leading destination for exports of goods.
+
+| Variable | Type | Description | Unit / valid values |
+|---|---|---|---|
+| source_id | string | Stable document identifier; joins to `SOURCES.yaml` and the collection manifest. | unique id |
+| publication_date | date or year-month | Date printed by the source; the RBA box supplies only November 2006. | YYYY-MM-DD or YYYY-MM |
+| source_name | string | Publisher or institution. | text |
+| source_type | string | Publication channel. | national_public_broadcaster_news, national_business_newspaper, official_central_bank_analysis, official_media_release |
+| title | string | Document title. | text |
+| url | string | Canonical publisher URL. | URL |
+| archive_url | string | Separate archive URL, if available. | URL or blank |
+| raw_file | string | Preserved publisher response or pre-existing raw reused after hash verification. Blank when robots checks stopped automated collection. | repository-relative path or blank |
+| raw_sha256 | string | SHA-256 for `raw_file`. | 64 hexadecimal characters or blank |
+| accessed_at | datetime | UTC collection time; reused raws retain their original access timestamp. | ISO-8601 |
+| access_status | string | Collection result. | ok, existing_raw_verified, robots_unavailable_stop |
+| robots_status | string | Robots decision for the scripted fetch. | allowed, robots_unavailable_stop, not_applicable_existing_raw |
+| robots_file | string | Preserved robots response when available. | repository-relative path or blank |
+| content_verification_status | string | Whether the article was checked from a hash-verified raw or independently in the research browser after a robots stop. | controlled text |
+| verification_markers_present | string | Result of reproducible marker validation on archived content. Browser-only sources are explicitly `not_tested_no_article_raw`. | true, not_tested_no_article_raw |
+| rank_position_china | integer | Rank attributed to China for the stated metric and period. | 1, 2 |
+| displaced_partner | string | Partner displaced by China when the source states a transition. | Japan, United States, or blank |
+| metric_scope | string | Hierarchy measured by the source. | generic_trade_partner, export_destination, two_way_trade |
+| flow_components | string | Trade flows entering the rank. | exports, imports_plus_exports, unspecified |
+| goods_services_scope | string | Whether the source explicitly covers goods and services. | goods_and_services, unspecified_in_article |
+| reference_period_type | string | Time basis of the reported rank. | current_statement, calendar_year, fiscal_year, rolling_12_months, month_and_rolling_12_months |
+| reference_period | string | Period named by the document. | text |
+| explicit_rank_language | boolean | Source explicitly uses ordinal/top-rank language. | true/false |
+| positive_broad_cue | boolean | Source describes China as first under its own broad metric and period. | true/false |
+| strict_m2_goods_only | boolean | Source explicitly establishes China first as a destination for exports of goods only. | true/false |
+| excerpt_under_25_words | string | Short source excerpt, capped at 25 words. | text |
+| interpretation | string | Bounded analytical use of the document. | text |
+| confidence | string | Confidence in the coded scope and rank. | controlled text |
+| query_used | string | Search query or query family that recovered the document. | text |
+| notes | string | Scope, access and interpretation caveats. | text |
+
 ## status_cue_legacy_outputs_status.csv
 
 The two older numerical outputs remain immutable historical products. Their groups and entry years do not correspond to the focal correction. No re-estimation or event-profile recomputation was authorized or executed in this correction.
@@ -127,8 +168,8 @@ The two older numerical outputs remain immutable historical products. Their grou
 
 ## Reproduction and provenance
 
-Run `python3 scripts/diagnostics/correct_status_cue_sau_gab.py --build --run-dir data/raw/status_cue_salience/focused_sau_gab/20260922T025500Z` to reconstruct the SAU/GAB processed files without network. Then run `python3 scripts/diagnostics/correct_status_cue_australia.py` to verify the preserved AFR/DFAT hashes and reconstruct the Australia correction. Run `Rscript scripts/diagnostics/analyze_status_cue_salience_event_study.R --appendix-only` to rebuild the appendix. The focal Python scripts use the standard library; the SAU/GAB workflow also uses the existing `pdftotext` command. No credentials or additional packages are required for the offline correction workflows.
+Run `python3 scripts/diagnostics/correct_status_cue_sau_gab.py --build --run-dir data/raw/status_cue_salience/focused_sau_gab/20260922T025500Z` to reconstruct the SAU/GAB processed files without network. Then run `python3 scripts/diagnostics/correct_status_cue_australia.py` to verify the preserved AFR/DFAT hashes and reconstruct the Australia correction. Run `python3 scripts/diagnostics/collect_australia_public_cue_2006_2009.py --build --validate --run-dir data/raw/status_cue_salience/AUS/australia_media_search/20260922T160400Z` to rebuild and validate the separate 2006–2009 media chronology without network. Run `Rscript scripts/diagnostics/analyze_status_cue_salience_event_study.R --appendix-only` to rebuild the appendix. The focal Python scripts use the standard library; the SAU/GAB workflow also uses the existing `pdftotext` command. No credentials or additional packages are required for the offline correction workflows.
 
-For new collection, choose a new run directory with `--collect`. Each run preserves `manifest.json`, per-source metadata, `fetch_results.json`, and `robots_results.json`; `--reuse-successful-from` reuses only hash-verified successful raw files. All raw responses, including failures and robots, are covered by `data/raw/status_cue_salience/checksums.sha256`. Access and license limitations are in the focused collection report; no publisher granted a redistribution license in this audit.
+For new collection, choose a new run directory with `--collect`. Each run preserves `manifest.json`, per-source metadata, `fetch_results.json`, and `robots_results.json`; `--reuse-successful-from` in the SAU/GAB workflow reuses only hash-verified successful raw files. The Australia chronology reuses only the three pre-existing files whose expected SHA-256 values are declared in its manifest. All files under `data/raw/status_cue_salience`, including failures and robots responses, are covered by `data/raw/status_cue_salience/checksums.sha256`. The RBA and DFAT 2007 pages were independently verified in the research browser, but their scripted article downloads stopped when the corresponding robots endpoints were unavailable; their CSV rows therefore have blank `raw_file` and an explicit browser-only verification status. Access and license limitations are in the focused collection report; no publisher granted a redistribution license in this audit.
 
 Mechanical verification is reproducible with `python3 scripts/diagnostics/correct_status_cue_sau_gab.py --validate --baseline-ref 05ffb40`, which compares the three legacy CSVs outside SAU/GAB, all 89 preexisting raw-file hashes, and the two unchanged numerical outputs against the pre-correction commit. It also checks unique ids, required fields, date windows, positive-source validation, source excerpts and all current checksums. Results are saved in `quality_reports/status_cue_salience/sau_gab_integrity_checks.json`. Python syntax, YAML parsing/id uniqueness, R appendix generation and `git diff --check` also passed; R reported package-build-version warnings without errors.

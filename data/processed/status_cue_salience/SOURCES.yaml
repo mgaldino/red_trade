@@ -93,7 +93,7 @@ sources:
     date_accessed: "2026-05-23"
     raw_file: "data/raw/ex_top1_salience/AUS/2009/australian_financial_review/aus_afr_china_trading_partner_2009.html"
     query_used: "'China hits the spot as trading partner' Australia 'largest trading partner'"
-    notes: "Counts for broad public cue in the current M2 2009-2010 window. Aggregate exports and imports of goods and services; not strict M2 goods-only evidence."
+    notes: "Counts for broad public cue in the current M2 2009-2010 window. Aggregate exports and imports of goods and services; not strict M2 goods-only evidence. Its third-consecutive-year statement is explicitly fiscal: onset in 2006-07 and current reference year 2008-09."
   - id: aus_dfat_china_became_largest_export_market_2010
     name: "Australian Department of Foreign Affairs and Trade"
     provider: "Australian Department of Foreign Affairs and Trade"
@@ -390,3 +390,119 @@ sources:
   - {"id": "gab_directinfos_2016_12_04", "name": "Les échanges commerciaux entre la Chine et le Gabon ont augmenté de 34 % au 1er semestre 2016", "provider": "Direct Infos Gabon", "url": "https://directinfosgabon.com/echanges-commerciaux-entre-chine-gabon-ont-augmente-de-34-1er-semestre-2016/", "access_method": "public_web_download", "license": "Publisher copyright; no redistribution license asserted; retained for internal verification", "download_script": "scripts/diagnostics/correct_status_cue_sau_gab.py", "date_accessed": "2026-09-22", "raw_file": "data/raw/status_cue_salience/focused_sau_gab/20260922T025200Z/gab_directinfos_2016_12_04.html", "fetch_status": "ok", "source_channel": "local_digital_news", "metric_scope": "exports_unspecified_services", "publication_date": "2016-12-04", "notes": "Local journalistic uptake, citing Chinese embassy economic bureau; not Gabonese official uptake. Publication within M3 2015-2016, but services are not identified. Title says first semester whereas text says first quarter; exact export-share reference period unclear. Counted only as a public export-client cue in M3 window, never as proof of a goods-plus-services rank change."}
   - {"id": "gab_gabonreview_2017_11_24", "name": "Commerce : La Chine premier partenaire du Gabon", "provider": "Gabonreview", "url": "https://www.gabonreview.com/commerce-la-chine-premier-partenaire-du-gabon/", "access_method": "public_web_download", "license": "Publisher copyright; no redistribution license asserted; retained for internal verification", "download_script": "scripts/diagnostics/correct_status_cue_sau_gab.py", "date_accessed": "2026-09-22", "raw_file": "data/raw/status_cue_salience/focused_sau_gab/20260922T025200Z/gab_gabonreview_2017_11_24.html", "fetch_status": "ok", "source_channel": "local_digital_news", "metric_scope": "two_way_trade", "publication_date": "2017-11-24", "notes": "Explicit China-over-France cue for bilateral trade in first half 2017; metric is two-way trade, not export-destination rank. Article uses investment language for trade amounts and compares semester/quarter inconsistently; code the explicit broad rank label only."}
   - {"id": "gab_lunion_2018_06_08", "name": "Les 10 premiers clients et fournisseurs du Gabon en 2017", "provider": "L'Union", "url": "https://lunion-archives.org/web.11/dmdocuments/N12742-08-06-2018-004.pdf", "access_method": "public_web_download", "license": "Publisher copyright; no redistribution license asserted; retained for internal verification", "download_script": "scripts/diagnostics/correct_status_cue_sau_gab.py", "date_accessed": "2026-09-22", "raw_file": "data/raw/status_cue_salience/focused_sau_gab/20260922T025200Z/gab_lunion_2018_06_08.pdf", "fetch_status": "ok", "source_channel": "newspaper", "metric_scope": "goods_exports", "publication_date": "2018-06-08", "notes": "Printed page 4, dated 8 June 2018. Annual 2017 export-client ranking from DGE/PF and customs data; 893.4 billion CFA and 35.1% shown in table. Separate lower-page item concerns total-trade partnership and is not counted as a second source. News uptake of official statistics is not a separately recovered official publication."}
+
+# BEGIN AUSTRALIA_PUBLIC_CUE_2006_2009
+  - id: aus_abc_news_2006_06_28_china_second_partner
+    name: "PM hails $25b China gas supply deal"
+    provider: "ABC News"
+    url: "https://www.abc.net.au/news/2006-06-28/pm-hails-25b-china-gas-supply-deal/1788414"
+    access_method: "public web download after robots check"
+    requires_credentials: false
+    license: "Original publisher terms; retained for internal verification"
+    variables_used: ["publication_date", "rank_position_china", "metric_scope", "excerpt_under_25_words"]
+    temporal_coverage: "2006-06-28"
+    geographic_coverage: "Australia"
+    unit_of_analysis: "source document/article"
+    download_script: "scripts/diagnostics/collect_australia_public_cue_2006_2009.py"
+    date_accessed: "2026-09-22"
+    raw_file: "data/raw/status_cue_salience/AUS/australia_media_search/20260922T160400Z/aus_abc_news_2006_06_28_china_second_partner.html"
+    query_used: "site:abc.net.au 2006 China Australia second largest trading partner"
+    notes: "Contrary rank evidence: national generic trading-partner cue places China second, not first. Trade denominator is not specified."
+  - id: aus_rba_2006_11_china_second_export_destination
+    name: "The Changing Country Composition of Australia's Trade"
+    provider: "Reserve Bank of Australia"
+    url: "https://www.rba.gov.au/publications/smp/2006/nov/box-a.html"
+    access_method: "independent browser verification; scripted collection stopped because robots endpoint returned access denied"
+    requires_credentials: false
+    license: "Original publisher terms"
+    variables_used: ["publication_date", "rank_position_china", "metric_scope", "excerpt_under_25_words"]
+    temporal_coverage: "2006-11; rank reference year 2005"
+    geographic_coverage: "Australia"
+    unit_of_analysis: "official analytical document"
+    download_script: "scripts/diagnostics/collect_australia_public_cue_2006_2009.py"
+    date_accessed: "2026-09-22"
+    raw_file: ""
+    robots_file: "data/raw/status_cue_salience/AUS/australia_media_search/20260922T160400Z/www_rba_gov_au_robots.txt"
+    query_used: "site:rba.gov.au 2006 China second-largest export destination Australia Japan"
+    notes: "Contrary rank evidence: China was the second-largest goods-and-services export destination in 2005, behind Japan. No article raw was archived after the robots stop."
+  - id: aus_abc_news_2007_05_04_china_overtakes_japan
+    name: "China overtakes Japan in trade with Aust"
+    provider: "ABC News"
+    url: "https://www.abc.net.au/news/2007-05-04/china-overtakes-japan-in-trade-with-aust/2540062"
+    access_method: "public web download after robots check"
+    requires_credentials: false
+    license: "Original publisher terms; retained for internal verification"
+    variables_used: ["publication_date", "rank_position_china", "displaced_partner", "metric_scope", "excerpt_under_25_words"]
+    temporal_coverage: "2007-05-04; 12 months to March 2007"
+    geographic_coverage: "Australia"
+    unit_of_analysis: "source document/article"
+    download_script: "scripts/diagnostics/collect_australia_public_cue_2006_2009.py"
+    date_accessed: "2026-09-22"
+    raw_file: "data/raw/status_cue_salience/AUS/australia_media_search/20260922T160400Z/aus_abc_news_2007_05_04_china_overtakes_japan.html"
+    query_used: "China overtakes Japan 2007 Australia biggest trading partner ABC"
+    notes: "Earliest national positive cue directly recovered in this search. Combined imports and exports; goods versus goods and services is not resolved in the article."
+  - id: aus_abc_news_2007_09_01_china_unseats_japan
+    name: "China unseats Japan as Australia's largest trade partner"
+    provider: "ABC News"
+    url: "https://www.abc.net.au/news/2007-09-01/china-unseats-japan-as-australias-largest-trade/656322"
+    access_method: "public web download after robots check"
+    requires_credentials: false
+    license: "Original publisher terms; retained for internal verification"
+    variables_used: ["publication_date", "rank_position_china", "displaced_partner", "metric_scope", "excerpt_under_25_words"]
+    temporal_coverage: "2007-09-01; July and 12 months to July 2007"
+    geographic_coverage: "Australia"
+    unit_of_analysis: "source document/article"
+    download_script: "scripts/diagnostics/collect_australia_public_cue_2006_2009.py"
+    date_accessed: "2026-09-22"
+    raw_file: "data/raw/status_cue_salience/AUS/australia_media_search/20260922T160400Z/aus_abc_news_2007_09_01_china_unseats_japan.html"
+    query_used: "China unseats Japan Australia's largest trade partner 2007 ABC"
+    notes: "Positive national cue for combined imports and exports. Goods versus goods and services is not resolved in the article."
+  - id: aus_dfat_composition_trade_2007
+    name: "Australia's Composition of Trade 2007"
+    provider: "Australian Department of Foreign Affairs and Trade"
+    url: "https://www.dfat.gov.au/news/media/Pages/australia-s-composition-of-trade-2007"
+    access_method: "independent browser verification; scripted collection stopped because robots endpoint was unavailable"
+    requires_credentials: false
+    license: "Original publisher terms"
+    variables_used: ["publication_date", "rank_position_china", "displaced_partner", "metric_scope", "excerpt_under_25_words"]
+    temporal_coverage: "2008-05-19; calendar year 2007"
+    geographic_coverage: "Australia"
+    unit_of_analysis: "official media release"
+    download_script: "scripts/diagnostics/collect_australia_public_cue_2006_2009.py"
+    date_accessed: "2026-09-22"
+    raw_file: ""
+    query_used: "site:dfat.gov.au Australia's Composition of Trade 2007 China largest two-way trading partner"
+    notes: "Official confirmation that China ranked first in calendar-2007 two-way goods-and-services trade while Japan remained the largest export market. No article raw was archived after the robots stop."
+  - id: aus_dfat_composition_trade_2008
+    name: "Australia's Composition of Trade 2008"
+    provider: "Australian Department of Foreign Affairs and Trade"
+    url: "https://www.dfat.gov.au/news/media/Pages/australia-s-composition-of-trade-2008"
+    access_method: "preserved text fallback reused after SHA-256 verification"
+    requires_credentials: false
+    license: "Original publisher terms; retained for internal verification"
+    variables_used: ["publication_date", "rank_position_china", "metric_scope", "excerpt_under_25_words"]
+    temporal_coverage: "2009-06-17; calendar year 2008"
+    geographic_coverage: "Australia"
+    unit_of_analysis: "official media release"
+    download_script: "scripts/diagnostics/collect_australia_public_cue_2006_2009.py"
+    date_accessed: "2026-05-23"
+    raw_file: "data/raw/ex_top1_salience/AUS/2009/australian_department_of_foreign_affairs_and_trade/aus_dfat_composition_trade_2008.html"
+    query_used: "site:dfat.gov.au Australia's Composition of Trade 2008 Japan re-emerged largest trading partner"
+    notes: "Calendar-year reversal: Japan was first in 2008 and China second. This rules out reading the AFR's sequence as three consecutive calendar years."
+  - id: aus_dfat_composition_trade_2008_09
+    name: "Australia's Composition of Trade 2008-09"
+    provider: "Australian Department of Foreign Affairs and Trade"
+    url: "https://www.dfat.gov.au/news/media/Pages/australia-s-composition-of-trade-2008-09"
+    access_method: "preserved text fallback reused after SHA-256 verification"
+    requires_credentials: false
+    license: "Original publisher terms; retained for internal verification"
+    variables_used: ["publication_date", "rank_position_china", "displaced_partner", "metric_scope", "excerpt_under_25_words"]
+    temporal_coverage: "2009-11-30; fiscal year 2008-09"
+    geographic_coverage: "Australia"
+    unit_of_analysis: "official media release"
+    download_script: "scripts/diagnostics/collect_australia_public_cue_2006_2009.py"
+    date_accessed: "2026-05-23"
+    raw_file: "data/raw/ex_top1_salience/AUS/2009/australian_department_of_foreign_affairs_and_trade/aus_dfat_composition_trade_2008_09.html"
+    query_used: "site:dfat.gov.au Australia's Composition of Trade 2008-09 China top two-way trading partner"
+    notes: "Official fiscal-year confirmation: China was first in two-way trade, while Japan remained the largest export market."
+# END AUSTRALIA_PUBLIC_CUE_2006_2009
