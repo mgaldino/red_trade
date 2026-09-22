@@ -112,6 +112,8 @@
 \Urlmuskip=0mu plus 1mu\relax
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.48em}
+\widowpenalty=10000
+\clubpenalty=10000
 \captionsetup{font=small,labelfont=bf}
 \usepackage{booktabs}
 \usepackage{longtable}
@@ -153,7 +155,7 @@ Brasil}
 \maketitle
 
 {
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{1}
 \tableofcontents
 }
 \begin{center}
@@ -361,7 +363,7 @@ adicionais.
 \section{Resultados dos SDiD
 individuais}\label{resultados-dos-sdid-individuais}
 
-\begin{table}[!h]
+\begin{table}[H]
 \centering
 \caption{\label{tab:table-sdid}SDiD individuais com erros-padrão placebo.}
 \centering
@@ -382,7 +384,7 @@ Austrália & Timing alternativo em 2010 & 0,0900 & 0,1468 & {}[-0,1978; 0,3778] 
 \end{tabular}}
 \end{table}
 
-\begin{figure}
+\begin{figure}[H]
 
 {\centering \includegraphics[width=0.96\linewidth]{/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/quality_reports/selected_public_cue_sdid_fect/report_assets/figure_2_sdid_estimates} 
 
@@ -396,7 +398,7 @@ timings australianos têm estimativas positivas. Nenhum intervalo
 individual exclui zero. O resultado do Catar deve ser interpretado com
 cautela adicional porque dispõe de apenas dois anos pós-tratamento.
 
-\begin{table}[!h]
+\begin{table}[H]
 \centering
 \caption{\label{tab:table-sdid-fit}Diagnósticos de ajuste pré e pós-tratamento dos SDiD.}
 \centering
@@ -421,6 +423,82 @@ A razão RMSPE pós/pré é maior que um para Chile, Uruguai, Gabão e Catar,
 mas a precisão placebo permanece baixa. Na Austrália, a razão é inferior
 a um em 2009 e próxima de um em 2010, consistente com a ausência de uma
 separação pós-tratamento clara.
+
+\clearpage
+
+\section{Austrália: sensibilidade do SDiD a 2006, 2007 e
+2008}\label{austruxe1lia-sensibilidade-do-sdid-a-2006-2007-e-2008}
+
+Esta seção acrescenta três ajustes pontuais já estimados, com início de
+tratamento imposto em 2006, 2007 e 2008. Todos mantêm a janela
+1997--2022 e os mesmos 105 controles limpos. Essas datas são
+alternativas de sensibilidade e não substituem a codificação do cue
+público em 2009. Não foram calculados erros-padrão, intervalos de
+confiança ou testes placebo para esses três ajustes.
+
+As figuras reproduzem o método nativo
+\texttt{plot.synthdid\_estimate()}, chamado com
+\texttt{se.method = "none"}. O ATT compara a mudança da diferença entre
+Austrália e controle sintético, usando os pesos temporais do estimador;
+a diferença bruta de níveis entre as linhas não é o ATT. Alterar o
+início do tratamento modifica a divisão pré/pós e reestima os pesos de
+unidades e períodos.
+
+\subsection{Tratamento imposto em
+2006}\label{tratamento-imposto-em-2006}
+
+ATT = 0,2077, com nove anos pré-tratamento (1997--2005) e 17 anos
+tratados (2006--2022).
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=1\linewidth]{/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/quality_reports/selected_public_cue_sdid_fect/figures/australia_sdid_2006_native} 
+
+}
+
+\caption{Austrália: gráfico nativo do SDiD com início imposto em 2006. Outcome: distância absoluta do ponto ideal à China. Janela 1997--2022, 105 doadores limpos. A faixa inferior apresenta os pesos temporais; a linha vertical marca o último ano pré-tratamento. Estimativa pontual, sem inferência.}\label{fig:figure-australia-2006}
+\end{figure}
+
+\clearpage
+
+\subsection{Tratamento imposto em
+2007}\label{tratamento-imposto-em-2007}
+
+ATT = 0,1285, com dez anos pré-tratamento (1997--2006) e 16 anos
+tratados (2007--2022).
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=1\linewidth]{/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/quality_reports/selected_public_cue_sdid_fect/figures/australia_sdid_2007_native} 
+
+}
+
+\caption{Austrália: gráfico nativo do SDiD com início imposto em 2007. Outcome: distância absoluta do ponto ideal à China. Janela 1997--2022, 105 doadores limpos. A faixa inferior apresenta os pesos temporais; a linha vertical marca o último ano pré-tratamento. Estimativa pontual, sem inferência.}\label{fig:figure-australia-2007}
+\end{figure}
+
+\clearpage
+
+\subsection{Tratamento imposto em
+2008}\label{tratamento-imposto-em-2008}
+
+ATT = 0,0701, com 11 anos pré-tratamento (1997--2007) e 15 anos tratados
+(2008--2022).
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=1\linewidth]{/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/quality_reports/selected_public_cue_sdid_fect/figures/australia_sdid_2008_native} 
+
+}
+
+\caption{Austrália: gráfico nativo do SDiD com início imposto em 2008. Outcome: distância absoluta do ponto ideal à China. Janela 1997--2022, 105 doadores limpos. A faixa inferior apresenta os pesos temporais; a linha vertical marca o último ano pré-tratamento. Estimativa pontual, sem inferência.}\label{fig:figure-australia-2008}
+\end{figure}
+
+Os três ATTs são positivos, indicando maior distância à China em relação
+ao contrafactual estimado. Sem inferência para esses ajustes, os sinais
+não demonstram um efeito diferente de zero. A variação entre datas
+também não constitui três testes independentes.
+
+\clearpage
 
 \section{Auditoria do timing e do
 tratamento}\label{auditoria-do-timing-e-do-tratamento}
@@ -506,6 +584,9 @@ Estimação & Estima os seis SDiD e os quatro modelos IFE; grava auditorias e ma
 Placebos SDiD & Implementa os placebos SDiD determinísticos e checkpointados.\\
 Assets do relatório & Prepara as tabelas, figuras e metadados deste relatório; não reestima modelos.\\
 Fonte do relatório & Importa os assets e apresenta método, resultados, limitações e proveniência.\\
+Sensibilidade australiana & Estima o SDiD pontual australiano para o ano indicado, sem inferência.\\
+\addlinespace
+Gráficos nativos australianos & Exporta o gráfico nativo de cada ajuste australiano salvo, sem inferência.\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -517,7 +598,16 @@ Os arquivos usados são:
 \item \nolinkurl{scripts/diagnostics/sdid_placebo_helpers.R}
 \item \nolinkurl{scripts/diagnostics/build_selected_public_cue_report_assets.R}
 \item \nolinkurl{reports/selected_public_cue_sdid_fect/relatorio_sdid_fatores_latentes.Rmd}
+\item \nolinkurl{scripts/diagnostics/estimate_australia_sdid_2007_point.R}
+\item \nolinkurl{scripts/diagnostics/plot_australia_sdid_2006_native.R}
 \end{itemize}
+
+Os dois scripts australianos usam
+\texttt{AUSTRALIA\_SDID\_TREATMENT\_YEAR}, apesar dos anos em seus
+nomes. Para reproduzir cada alternativa, defina essa variável como 2006,
+2007 ou 2008 e execute primeiro a estimação pontual e depois a
+exportação do gráfico. Esta atualização apenas importa os resultados
+existentes.
 
 O script de estimação lê o target armazenado
 \texttt{china\_top\_m2\_goods\_panel}; ele não executa o pipeline. O
@@ -550,12 +640,23 @@ Os outputs centrais são:
   \nolinkurl{quality_reports/selected_public_cue_sdid_fect/report_assets/report_asset_manifest.csv}.
 \end{itemize}
 
+Os CSVs australianos seguem o padrão
+\texttt{australia\_sdid\_ANO\_point.csv}, para 2006, 2007 e 2008, no
+diretório dos resultados diagnósticos. Os gráficos vetoriais estão em:
+
+\nolinkurl{quality_reports/selected_public_cue_sdid_fect/figures/}
+
+Seus nomes seguem o padrão \texttt{australia\_sdid\_ANO\_native.pdf}. Os
+hashes dos três CSVs e dos três gráficos foram incluídos em
+\texttt{report\_source\_manifest.csv}, junto às fontes dos resultados
+principais.
+
 O relatório documenta a execução concluída em 22 de setembro de 2026.
 Ele não altera o manuscrito, os targets ou os dados brutos.
 
 \section{Referências}\label{referuxeancias}
 
-\small
+\footnotesize
 
 \protect\phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}

@@ -46,7 +46,8 @@ input_files <- c(
   "cue_year_validation.csv",
   "input_target_metadata.csv",
   "run_manifest.json",
-  "output_manifest.csv"
+  "output_manifest.csv",
+  paste0("australia_sdid_", 2006:2008, "_point.csv")
 )
 missing_inputs <- input_files[
   !file.exists(file.path(analysis_dir, input_files))
@@ -283,13 +284,17 @@ script_paths <- c(
   "scripts/diagnostics/estimate_selected_public_cue_sdid_fect.R",
   "scripts/diagnostics/sdid_placebo_helpers.R",
   "scripts/diagnostics/build_selected_public_cue_report_assets.R",
-  "reports/selected_public_cue_sdid_fect/relatorio_sdid_fatores_latentes.Rmd"
+  "reports/selected_public_cue_sdid_fect/relatorio_sdid_fatores_latentes.Rmd",
+  "scripts/diagnostics/estimate_australia_sdid_2007_point.R",
+  "scripts/diagnostics/plot_australia_sdid_2006_native.R"
 )
 script_roles <- c(
   "Estima os seis SDiD e os quatro modelos IFE; grava auditorias e manifests.",
   "Implementa os placebos SDiD determinísticos e checkpointados.",
   "Prepara as tabelas, figuras e metadados deste relatório; não reestima modelos.",
-  "Importa os assets e apresenta método, resultados, limitações e proveniência."
+  "Importa os assets e apresenta método, resultados, limitações e proveniência.",
+  "Estima o SDiD pontual australiano para o ano indicado, sem inferência.",
+  "Exporta o gráfico nativo de cada ajuste australiano salvo, sem inferência."
 )
 script_table <- tibble::tibble(
   Script = script_paths,
@@ -536,11 +541,19 @@ readr::write_csv(
   file.path(assets_dir, "report_asset_manifest.csv")
 )
 
+source_paths <- c(
+  file.path(analysis_dir, input_files),
+  file.path(
+    "quality_reports", "selected_public_cue_sdid_fect", "figures",
+    paste0("australia_sdid_", 2006:2008, "_native.pdf")
+  )
+)
+stopifnot(all(file.exists(source_paths)))
 source_manifest <- tibble::tibble(
-  file = file.path(analysis_dir, input_files),
-  bytes = file.info(file.path(analysis_dir, input_files))$size,
+  file = source_paths,
+  bytes = file.info(source_paths)$size,
   sha256 = vapply(
-    file.path(analysis_dir, input_files),
+    source_paths,
     digest::digest,
     character(1),
     algo = "sha256",

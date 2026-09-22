@@ -15,7 +15,7 @@ output:
     keep_tex: true
     number_sections: true
     toc: true
-    toc_depth: 2
+    toc_depth: 1
     fig_caption: true
 header-includes:
   - \usepackage{booktabs}
@@ -32,6 +32,8 @@ header-includes:
   - \Urlmuskip=0mu plus 1mu\relax
   - \setlength{\parindent}{0pt}
   - \setlength{\parskip}{0.48em}
+  - \widowpenalty=10000
+  - \clubpenalty=10000
   - \captionsetup{font=small,labelfont=bf}
 ---
 
@@ -68,6 +70,17 @@ analysis_dir <- normalizePath(
 )
 
 numbers <- readRDS(file.path(assets_dir, "report_numbers.rds"))
+australia_figures_dir <- normalizePath(
+  file.path("quality_reports", "selected_public_cue_sdid_fect", "figures"),
+  winslash = "/", mustWork = TRUE
+)
+australia_points <- lapply(2006:2008, function(year) {
+  readr::read_csv(
+    file.path(analysis_dir, paste0("australia_sdid_", year, "_point.csv")),
+    show_col_types = FALSE
+  )
+})
+names(australia_points) <- as.character(2006:2008)
 run_manifest <- jsonlite::read_json(
   file.path(analysis_dir, "run_manifest.json"),
   simplifyVector = TRUE
@@ -260,13 +273,13 @@ kableExtra::kbl(
   escape = TRUE
 ) |>
   kableExtra::kable_styling(
-    latex_options = c("hold_position", "scale_down"),
+    latex_options = c("HOLD_position", "scale_down"),
     font_size = 8.2,
     position = "center"
   )
 ```
 
-```{r figure-sdid, fig.cap="Estimativas SDiD individuais. As barras mostram intervalos de 95% construídos com erros-padrão placebo de 5.000 reestimações. O ajuste australiano de 2010 é uma alternativa de timing; os demais marcam o cue público selecionado."}
+```{r figure-sdid, fig.pos="H", fig.cap="Estimativas SDiD individuais. As barras mostram intervalos de 95% construídos com erros-padrão placebo de 5.000 reestimações. O ajuste australiano de 2010 é uma alternativa de timing; os demais marcam o cue público selecionado."}
 knitr::include_graphics(
   file.path(assets_dir, "figure_2_sdid_estimates.png"),
   rel_path = FALSE
@@ -285,13 +298,62 @@ kableExtra::kbl(
   escape = TRUE
 ) |>
   kableExtra::kable_styling(
-    latex_options = c("hold_position", "scale_down"),
+    latex_options = c("HOLD_position", "scale_down"),
     font_size = 8.5,
     position = "center"
   )
 ```
 
 A razão RMSPE pós/pré é maior que um para Chile, Uruguai, Gabão e Catar, mas a precisão placebo permanece baixa. Na Austrália, a razão é inferior a um em 2009 e próxima de um em 2010, consistente com a ausência de uma separação pós-tratamento clara.
+
+\clearpage
+
+# Austrália: sensibilidade do SDiD a 2006, 2007 e 2008
+
+Esta seção acrescenta três ajustes pontuais já estimados, com início de tratamento imposto em 2006, 2007 e 2008. Todos mantêm a janela 1997--2022 e os mesmos 105 controles limpos. Essas datas são alternativas de sensibilidade e não substituem a codificação do cue público em 2009. Não foram calculados erros-padrão, intervalos de confiança ou testes placebo para esses três ajustes.
+
+As figuras reproduzem o método nativo \texttt{plot.synthdid\_estimate()}, chamado com \texttt{se.method = "none"}. O ATT compara a mudança da diferença entre Austrália e controle sintético, usando os pesos temporais do estimador; a diferença bruta de níveis entre as linhas não é o ATT. Alterar o início do tratamento modifica a divisão pré/pós e reestima os pesos de unidades e períodos.
+
+## Tratamento imposto em 2006
+
+ATT = `r fmt_num(australia_points[["2006"]]$estimate)`, com nove anos pré-tratamento (1997--2005) e 17 anos tratados (2006--2022).
+
+```{r figure-australia-2006, out.width="100%", fig.pos="H", fig.cap="Austrália: gráfico nativo do SDiD com início imposto em 2006. Outcome: distância absoluta do ponto ideal à China. Janela 1997--2022, 105 doadores limpos. A faixa inferior apresenta os pesos temporais; a linha vertical marca o último ano pré-tratamento. Estimativa pontual, sem inferência."}
+knitr::include_graphics(
+  file.path(australia_figures_dir, "australia_sdid_2006_native.pdf"),
+  rel_path = FALSE
+)
+```
+
+\clearpage
+
+## Tratamento imposto em 2007
+
+ATT = `r fmt_num(australia_points[["2007"]]$estimate)`, com dez anos pré-tratamento (1997--2006) e 16 anos tratados (2007--2022).
+
+```{r figure-australia-2007, out.width="100%", fig.pos="H", fig.cap="Austrália: gráfico nativo do SDiD com início imposto em 2007. Outcome: distância absoluta do ponto ideal à China. Janela 1997--2022, 105 doadores limpos. A faixa inferior apresenta os pesos temporais; a linha vertical marca o último ano pré-tratamento. Estimativa pontual, sem inferência."}
+knitr::include_graphics(
+  file.path(australia_figures_dir, "australia_sdid_2007_native.pdf"),
+  rel_path = FALSE
+)
+```
+
+\clearpage
+
+## Tratamento imposto em 2008
+
+ATT = `r fmt_num(australia_points[["2008"]]$estimate)`, com 11 anos pré-tratamento (1997--2007) e 15 anos tratados (2008--2022).
+
+```{r figure-australia-2008, out.width="100%", fig.pos="H", fig.cap="Austrália: gráfico nativo do SDiD com início imposto em 2008. Outcome: distância absoluta do ponto ideal à China. Janela 1997--2022, 105 doadores limpos. A faixa inferior apresenta os pesos temporais; a linha vertical marca o último ano pré-tratamento. Estimativa pontual, sem inferência."}
+knitr::include_graphics(
+  file.path(australia_figures_dir, "australia_sdid_2008_native.pdf"),
+  rel_path = FALSE
+)
+```
+
+Os três ATTs são positivos, indicando maior distância à China em relação ao contrafactual estimado. Sem inferência para esses ajustes, os sinais não demonstram um efeito diferente de zero. A variação entre datas também não constitui três testes independentes.
+
+\clearpage
 
 # Auditoria do timing e do tratamento
 
@@ -333,7 +395,9 @@ scripts_display <- script_table |>
       "Estimação",
       "Placebos SDiD",
       "Assets do relatório",
-      "Fonte do relatório"
+      "Fonte do relatório",
+      "Sensibilidade australiana",
+      "Gráficos nativos australianos"
     )
   ) |>
   dplyr::select(Componente, Função)
@@ -362,7 +426,11 @@ Os arquivos usados são:
 \item \nolinkurl{scripts/diagnostics/sdid_placebo_helpers.R}
 \item \nolinkurl{scripts/diagnostics/build_selected_public_cue_report_assets.R}
 \item \nolinkurl{reports/selected_public_cue_sdid_fect/relatorio_sdid_fatores_latentes.Rmd}
+\item \nolinkurl{scripts/diagnostics/estimate_australia_sdid_2007_point.R}
+\item \nolinkurl{scripts/diagnostics/plot_australia_sdid_2006_native.R}
 \end{itemize}
+
+Os dois scripts australianos usam \texttt{AUSTRALIA\_SDID\_TREATMENT\_YEAR}, apesar dos anos em seus nomes. Para reproduzir cada alternativa, defina essa variável como 2006, 2007 ou 2008 e execute primeiro a estimação pontual e depois a exportação do gráfico. Esta atualização apenas importa os resultados existentes.
 
 O script de estimação lê o target armazenado \texttt{china\_top\_m2\_goods\_panel}; ele não executa o pipeline. O helper de placebos implementa as `r numbers$placebo_replications` reestimações checkpointadas de cada SDiD. O script de assets lê somente CSVs e manifests concluídos e produz as tabelas e figuras deste documento. Os hashes SHA-256 completos constam do CSV de proveniência:
 
@@ -380,8 +448,14 @@ Os outputs centrais são:
 - \nolinkurl{data/processed/diagnostics/selected_public_cue_sdid_fect/output_manifest.csv};
 - \nolinkurl{quality_reports/selected_public_cue_sdid_fect/report_assets/report_asset_manifest.csv}.
 
+Os CSVs australianos seguem o padrão \texttt{australia\_sdid\_ANO\_point.csv}, para 2006, 2007 e 2008, no diretório dos resultados diagnósticos. Os gráficos vetoriais estão em:
+
+\nolinkurl{quality_reports/selected_public_cue_sdid_fect/figures/}
+
+Seus nomes seguem o padrão \texttt{australia\_sdid\_ANO\_native.pdf}. Os hashes dos três CSVs e dos três gráficos foram incluídos em \texttt{report\_source\_manifest.csv}, junto às fontes dos resultados principais.
+
 O relatório documenta a execução concluída em 22 de setembro de 2026. Ele não altera o manuscrito, os targets ou os dados brutos.
 
 # Referências
 
-\small
+\footnotesize
