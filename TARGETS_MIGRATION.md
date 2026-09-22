@@ -74,25 +74,56 @@ blocos dentro da worktree, mas a integração em `main` é atômica.
 
 ## Inventário operacional de scripts ainda fora do grafo
 
-**Atualizado em 2026-09-05**, contra `main` no commit `6750a9e`, o
-`paper_v4.Rmd`, `_targets.R` e `scripts/run_rebuild_batch.sh`. Um script entra
-nesta lista quando produz um número, tabela ou figura que o manuscrito atual lê
-diretamente. A branch isolada `codex/targets-migration` contém uma integração
-estática anterior, mas ela ainda não foi promovida para `main`; por isso os itens
-abaixo permanecem pendentes nesta base.
+**Atualizado em 2026-09-22**, contra `main` no commit `53cf696` mais as alterações
+não commitadas do `paper_v4.Rmd`, e contra `codex/targets-migration` no commit
+`882e959`. Um script entra nesta lista quando produz um número, tabela ou figura
+que o manuscrito atual lê diretamente. O plano de execução que fecha esta lista
+está em `quality_reports/plans/2026-09-22_migracao_targets_execucao.md`.
 
-| Prioridade | Script produtor | Saída ainda consumida diretamente pelo manuscrito | Destino da migração |
+### Já coberto pela branch `codex/targets-migration` (implementado, nunca executado)
+
+A branch acrescenta 154 targets (222 → 376), cinco arquivos
+`scripts/functions_*_targets_migration.R` e seis testes estáticos em `migration/`.
+No `paper_v4.Rmd` da branch não resta nenhuma leitura direta de arquivo. Cobre:
+os 12 CSVs do SDiD sem covariáveis, as três figuras do SDiD, a Tabela 5 de
+commodity, a figura de dose–resposta, a figura 6 do painel cross-country e as
+nove tabelas UNGA-DM.
+
+Duas ressalvas que a branch deixou explicitamente em aberto:
+
+1. **Caminhos-sombra.** Todo target novo tem sufixo `_candidate` e escreve em
+   `data/processed/targets_migration/` ou `images/targets_migration/`; os
+   artefatos legados entram como arquivos de referência e há gates de igualdade
+   entre candidato e referência. A troca pelos caminhos de produção é etapa
+   separada, posterior aos gates.
+2. **Família cross-country.** No manuscrito da branch, `china_top_m2_goods_status_current_*`
+   foi substituída por `china_top_m2_goods_full_union_*`. Isso muda os números da
+   seção cross-country e ainda não foi decidido contra o texto vigente.
+
+### Ainda fora do grafo (tudo criado na `main` depois de 2026-09-01)
+
+| Prioridade | Script produtor | Saída consumida diretamente pelo manuscrito | Destino da migração |
 |---|---|---|---|
-| P0 | `scripts/diagnostics/reestimate_corrected_ddd_RIO_20260905.R` | `data/processed/diagnostics/RIO_20260905_ddd/corrected_ddd_bundle.rds` | Criar targets para o bundle DDD corrigido e para o placebo por país; substituir os `readRDS()` do bloco de evidência por `tar_read()`. |
-| P0 | `scripts/diagnostics/prepare_australia_appendix_bundle_patch.R` | `data/processed/diagnostics/RIO_20260905_australia/australia_appendix_tables_patch.rds` | Incorporar o ano de entrada atual ao produtor do apêndice e expor as tabelas corrigidas por target; preservar a proveniência histórica das fontes. |
-| P0 | `scripts/diagnostics/rebuild_figure12_sample_RIO_20260905.R` | `images/RIO_20260905_table1_headlines_14.pdf` | Encapsular a seleção determinística como produtor e publicar o PDF vetorial como `format = "file"`; conservar o manifesto das 14 manchetes. |
-| P1 | `scripts/diagnostics/audit_brazil_sdid_no_covariates.R` | CSVs em `data/processed/diagnostics/paper_v4_brazil_sdid_no_covariates/` usados pelos blocos de números e diagnósticos SDiD | Consolidar no bundle de diagnósticos SDiD já previsto no grafo, preservando seed, placebo distribution, ranks, pesos, balance, sensibilidades, timing e exposição dos doadores. |
-| P1 | `scripts/diagnostics/prepare_paper_v4_brazil_sdid_predetermined_core_outputs.R` | Figuras em `quality_reports/china_demand_shock_rank_threshold/` | Produzir as figuras de ajuste, pesos e pool latino-americano como file targets em diretório versionável; remover a dependência do caminho gitignored. |
-| P1 | `scripts/diagnostics/audit_brazil_sdid_commodity_no_covariates.R` | `table_5_sdid_specification_results.csv` em `data/processed/diagnostics/brazil_sdid_commodity_no_covariates/` | Incorporar a exposição de commodities e a Tabela 5 ao grafo, incluindo os dois CSVs congelados a montante e seus checks. |
-| P1 | `scripts/diagnostics/audit_ungadm_outcome_robustness.R` | Tabelas de estimação em `data/processed/diagnostics/ungadm_outcome_robustness/estimation/` | Criar o painel UNGA-DM harmonizado e o bundle SDiD/IFE como targets; manter os arquivos brutos e o codebook como file targets sem chamada de rede. |
-| P1 | `scripts/diagnostics/audit_ungadm_postreview_diagnostics.R` | Tabelas de pós-revisão em `data/processed/diagnostics/ungadm_outcome_robustness/postreview/` | Mover ranks harmonizados, grade 2×2, bootstrap pareado e diagnósticos de divergência para targets/file targets dependentes do bundle UNGA-DM. |
-| P1 | `scripts/diagnostics/preview_cross_country_dynamic_with_pooled_att.R` | `images/figure6_cross_country_dynamic_with_pooled_att.png` | Fazer o produtor da figura ser um target explícito dependente do modelo dinâmico e do ATT pooled; substituir o `include_graphics()` manual. |
-| P1 | `scripts/diagnostics/plot_brazil_sdid_dose_response_panel.R` | `images/figure_brazil_sdid_dose_response_panel.pdf` | Expor a figura de dose–resposta como file target e declarar seus dados de entrada no grafo. |
+| P0 | `scripts/diagnostics/estimate_selected_public_cue_sdid_fect.R` + `estimate_australia_sdid_2007_{point,placebo}.R` + `build_cross_country_public_cue_preview_assets.R` | Quatro ativos em `quality_reports/revisions/paper_v4/20260922_cross_country_public_cue_preview/assets/`: `table_public_cue_pooled_models.csv`, `table_selected_public_cue_sdid.csv`, `pre_cue_distance_summary.csv`, `figure_pre_cue_distance_focal_cases.png` | Painel de public cue, sete fits SDiD com SE placebo de 5.000 e quatro modelos `fect` com 1.000 bootstraps como targets; cue years e o uso do ano de 2007 na apresentação viram dado versionado, não literal no código; a figura vira file target em `images/`. |
+| P0 | `scripts/diagnostics/reestimate_corrected_ddd_RIO_20260905.R` | `data/processed/diagnostics/RIO_20260905_ddd/corrected_ddd_bundle.rds` | A função `build_selective_unga_corrected_ddd` já existe em `functions.R` e é órfã do grafo: basta criar os targets do bundle e dos placebos por país e trocar o `readRDS()` por `tar_read()`. |
+| P0 | `scripts/diagnostics/prepare_australia_appendix_bundle_patch.R` | `data/processed/diagnostics/RIO_20260905_australia/australia_appendix_tables_patch.rds` | Incorporar as correções ao produtor das tabelas do apêndice, em vez de remendar o target depois; preservar a proveniência histórica e o registro de mudanças. |
+| P0 | `scripts/diagnostics/rebuild_figure12_sample_RIO_20260905.R` | `images/RIO_20260905_table1_headlines_14.pdf` | A tabela das 14 manchetes vira CSV versionado de codificação autoral; a figura vira file target dependente de `folha_classified_file`. |
+| P1 | `scripts/diagnostics/audit_brazil_sdid_predetermined_commodity_controls.R` | `table_10_validation_checks.csv` | Expor os três percentuais de exposição a commodities como colunas próprias, eliminando o regex que o manuscrito faz hoje sobre uma coluna de texto livre. |
+| P1 | — (produtor já é target) | `dose_response_summary.csv` | O chunk novo `dose-response-numbers` lê por caminho um arquivo que o target `brazil_sdid_dose_placebo_summary_file` já produz; basta trocar por `tar_read()`. |
+
+### Estado que muda números
+
+- Os objetos `selective_china_alignment_*` do store da `main` são de 2026-08-25/26,
+  anteriores à mudança da especificação do DDD em `scripts/functions.R`
+  (termo `brazil_hr`, 2026-09-05). O manuscrito lê três deles. Um `tar_make()`
+  vai reconstruí-los sob a especificação vigente.
+- Sete insumos do manuscrito vivem em `quality_reports/`, que é gitignored: as
+  três figuras do SDiD e os quatro ativos do public cue. O manuscrito, hoje, não
+  compila a partir de um clone limpo.
+- Um `tar_make()` em store limpo ainda sai à rede em cinco pontos: `wb_data`,
+  `country_data`, `macro_data`, `ideology_data` (baixa `cow2iso.csv`) e
+  `folha_df_p0..p4`. Os caches resgatados estão em `data/raw/network_caches/` e
+  não estão ligados ao grafo.
 
 ### Não entram nesta lista de produtores analíticos
 

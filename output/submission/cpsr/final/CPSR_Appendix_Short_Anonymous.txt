@@ -1,0 +1,367 @@
+Supporting Appendix: Condensed Version
+The Foreign Policy Impact of Trade-Based Status Gains: When China Overtakes the US as
+Top Export Destination
+Prepared for Chinese Political Science Review
+This file contains the condensed supporting appendix. The complete diagnostics, tables, prompt
+documentation, and robustness analyses are available in Online Resource 1, supplied as a separate
+anonymized PDF with the submission.
+Included sections
+Brazil and China Ideal-Point Series
+Triple-Difference Pre-Trends
+Cross-Country Robustness: Duration Thresholds
+Cross-Country Sample Audit: Goods-Only Treatment Coding
+Public Cue and Recoverability Audit
+Measurement Robustness: UNGA-DM Ideal Points
+A vailable in Online Resource 1
+Resolution-Level UNGA Vote Diagnostics
+SDiD
+Selected Public-Cue Cross-Country Analyses
+ChatGPT Classification
+Cross-Country: Goods-Only Treated Countries
+Brazil and China Ideal-Point Series
+Figure 7 plots the separate UNGA ideal-point series for Brazil and China. This diagnostic
+clarifies the interpretation of the absolute-distance outcome used in the main SDiD design:
+China's average position changes little around 2009 despite sizable year-to-year volatility,
+while Brazil shows a sustained post-2009 movement toward China.
+−1.5
+−1.0
+−0.5
+0.0
+1990 2000 2010 2020
+Y ear
+UNGA ideal point
+Brazil China
+Fig. 7Brazil and China UNGA ideal-point series. The dashed line marks 2009. The figure separates
+the two series behind the absolute-distance outcome used in the main SDiD analysis. Note: UNGA
+ideal-point score (Bailey et al. scale). Window: 1990-2022 annual series.
+57
+Triple-Difference Pre-Trends
+Figure 8 reports the input to the identification assumption behind the triple difference. Each
+series is Brazil's average distance to China minus its distance to the United States, net
+of the donor-pool average in the same year, computed separately for human-rights votes
+and for every other vote where China and the United States voted differently. What the
+triple difference requires is that these two series move together before treatment, so that any
+common drift cancels when one domain is differenced against the other.
+−0.7
+−0.6
+−0.5
+−0.4
+−0.3
+2005 2006 2007 2008 2009 2010 2011 2012
+Y ear
+Brazil minus donor pool
+Human rights Non−human rights
+Fig. 8Brazil's distance from the donor pool in China-US divergent votes, by issue domain. Each
+point is Brazil's mean vote-level distance to China minus its distance to the United States, minus the
+donor-pool mean in the same year; more negative values mean Brazil sits closer to China than the
+donors do. The dashed line marks 2009. The two domains track each other before 2009 and separate
+afterward, which is the pattern the triple difference assumes and then estimates. Note: Vote-level
+distance to China minus distance to the United States, relative to the donor-pool mean. Window:
+2005-2012 roll-call votes where China and the United States voted differently.
+58
+Cross-Country Robustness: Duration Thresholds
+The main cross-country estimate uses a five-year durability threshold because the theory
+concerns status that persists long enough to become politically usable. Table 18 reports the
+same goods-only IFE design under three- and seven-year thresholds, along with the clean
+single-entry robustness sample. The estimates remain negative across the restricted-risk-set
+rows, though precision varies with treated-unit support.
+T able 18Duration-threshold robustness for goods-only China top export-destination status.
+Minimum duration Specification ATT SE 95% CI p-value Units (T/C) Treated periods r*
+3 Status-current, restricted risk set -0.113 0.041 [-0.193, -0.034] 0.005 39/126 477 2
+3 Clean single-entry robustness -0.121 0.041 [-0.202, -0.040] 0.003 26/126 332 2
+5 Status-current, restricted risk set -0.101 0.039 [-0.177, -0.024] 0.010 35/126 440 2
+5 Clean single-entry robustness -0.122 0.041 [-0.202, -0.042] 0.003 25/126 329 2
+7 Status-current, restricted risk set -0.094 0.040 [-0.173, -0.016] 0.019 31/126 411 2
+7 Clean single-entry robustness -0.122 0.042 [-0.205, -0.039] 0.004 23/126 318 2
+Note:
+ATT in absolute UNGA ideal-point distance to China; lower values indicate convergence toward China. SE: bootstrap with 10,000 replications.
+Window: goods-only ITPD-E rank metric. The restricted-risk-set rows retain clean pre-entry non-China-top years and qualifying treated years.
+The clean single-entry rows additionally keep only treated countries with one observed qualifying China-top period.
+72
+Cross-Country Sample Audit: Goods-Only Treatment Coding
+The revised rank metric excludes services before partner ranks are computed. Table 19 docu-
+ments the ITPD-E broad-sector filter. Table 20 then summarizes how the five-year goods-only
+rule classifies countries in the UNGA/trade panel.
+T able 19ITPD-E sector filter used to construct the goods-only China top export-destination
+metric.
+Broad sector Raw rows Positive-trade rows Included in rank metric
+Agriculture 7331458 2484549 Yes
+Manufacturing 71208330 28203707 Yes
+Mining and Energy 1205032 416413 Yes
+Services 1002558 519520 No
+T able 20Country-level sample audit for the five-year goods-only China top export-destination rule.
+Role Countries
+Excluded: no clean observed prior non-China-top year 1
+Excluded: pre-2000 China-top entry 2
+Excluded: short China-top periods 26
+Never-China-top controls 128
+Qualifying treated countries 35
+Note:
+The audit uses the goods-only rank metric and classifies countries
+before the estimator-specific screen for minimum untreated support.
+Country counts are therefore a coding audit, not a replacement for
+the treated/control counts in the estimation table.
+73
+Public Cue and Recoverability Audit
+To assess how closely the empirical treatment used in the panel regression - China becoming
+a country's largest destination for goods exports - maps onto the theorized treatment of a
+publicly salient status change, I use a source audit originally constructed for 14 countries in
+an earlier no-covariate treated sample. This audit is not a census of the 35 countries treated
+in the current goods-only restricted-risk-set specification: 13 audited countries remain in the
+current treated sample, Qatar does not, and 22 current treated countries were not included
+in the source audit. The underlying matrix records both recovered and unrecovered China
+cues. Table 21 displays the nine cases in which the China cue is currently coded as unknown;
+Chile, Brazil, Uruguay, Saudi Arabia, and Qatar have recovered cues and are omitted by the
+display filter.
+The table distinguishes weak observation from cases in which public rank language about
+the displaced incumbent is recoverable. For the China cue,mediummeans one countable
+strong or moderate first-window source with explicit rank language. For the former-incumbent
+benchmark,mediummeans either one countable source with explicit incumbent-rank or dis-
+placement language, or at least two countable trade-coverage records from at least one
+independent source without a clear top-rank label. A countable source must be eligible,
+fall within one year of the source-audit entry year, be coded strong or moderate, enter the
+benchmark, and not be markedDO_NOT_COUNT.Unknownmeans that the incumbent was not
+identified or that no countable benchmark source was recovered; no case is currently coded
+low. Non-recovery is not evidence that a cue was absent because contemporaneous local or
+official records may be inaccessible or inconsistent with the trade-rank series. Except for Aus-
+tralia, whose displayed year has been reconciled to the current 2009 entry, the table retains
+the entry windows used in the legacy source audit. Table 22 reports Australia's broad-trade
+source separately.
+T able 21: Selected unresolved cases from a 14-country legacy source audit of public
+rank-language recoverability and metric caveats.
+Country Entry year China cue Ex-#1 benchmark Interpretation Caveat
+74
+Solomon Islands 2003 unknown unknown Weak observation/recoverability
+problem
+Additional local/official archive
+work required.
+Philippines 2005 unknown unknown Weak observation/recoverability
+problem
+Treatment-rank audit issue in
+contemporaneous sources.
+Angola 2007 unknown unknown Weak observation/recoverability
+problem
+Additional local/official archive
+work required.
+Malaysia 2009 unknown medium Benchmark recoverable; follow
+up before recoding salience
+Rank-definition and China/Hong
+Kong aggregation caveat.
+Sierra Leone 2012 unknown unknown Weak observation/recoverability
+problem
+Local statistics conflict with
+Belgium-as-incumbent.
+Myanmar (Burma) 2014 unknown unknown Weak observation/recoverability
+problem
+Additional local/official archive
+work required.
+Saudi Arabia 2013 unknown unknown Weak observation/recoverability
+problem
+Corrected 2013-2014 public-cue
+window remains unresolved;
+rank-definition reconciliation is
+required.
+Kuwait 2018 unknown unknown Weak observation/recoverability
+problem
+Additional local/official archive
+work required.
+Note:
+Nine unresolved cases from a 14-country legacy audit; this is not a census of the current treated sample. Definitions and the display filter are
+reported in the text. Australia's entry year follows the current goods-only annual panel; other entry windows remain those of the legacy audit.
+75
+T able 22Australian Financial Review context source for Australia.
+SourceAustralian Financial Review
+Date2009-11-09
+MetricAustralia's largest aggregate trading partner
+Counted in export-
+destination benchmark
+No
+Raw filedata/raw/ex_top1_salience/AUS/2009/
+australian_financial_review/
+aus_afr_china_trading_partner_2009.html
+InterpretationCounts for broad public-cue salience in the current 2009 treatment
+window; remains excluded from the strict export-destination
+benchmark because the metric combines exports and imports of goods
+and services.
+Note:
+The AFR item documents a broad aggregate-trading-partner cue. It documents broad-metric salience
+during the 2009 annual treatment window. The publication date does not establish that a strict goods-
+export cue preceded treatment.
+76
+Measurement Robustness: UNGA-DM Ideal Points
+The main estimations in the paper used the classic ideal-point measurement by BSV (Bailey
+et al. 2017) as the response variable. However, according to Fjelstul et al. (2026), the set of
+resolutions included in the BSV dataset is not complete. They provided a broader dataset,
+along with re-estimations of ideal points based on the new data. To assess whether the results
+of the paper change with this new measurement, I reran the main estimations with this new
+response variable. To make the comparison as close as possible, I held the treatment definition,
+donor and risk-set rules, covariate structure, and inference conventions fixed. The UNGA-DM
+series has a shorter time window, and the SDiD unit and time weights and the IFE factor
+count are re-estimated by their algorithms in response to the outcome series. These induced
+adjustments mean that the comparison evaluates the robustness of the analysis package to
+the alternative outcome; it is not a pure measurement-only perturbation of an otherwise
+identical fitted counterfactual. It is also important to note that 28 country-session rows had
+no ISO3c match and 0 SDiD rows had no outcome in the alternative measurement.
+The two outcome measures preserve the negative direction of the Brazilian SDiD estimate,
+but they do not support a blanket claim of robustness across the Brazilian and cross-country
+designs. Table 25 shows the comparison. Under UNGA-DM, the point estimate is nominally
+higher than the original in absolute terms (-0.331 versus -0.273), with a lower p-value of 0.008.
+The directional rank is the same in both measurements (3/96 (0.031)). The bilateral rank
+improves from 7/96 (0.073) to 5/96 (0.052). The pre-treatment means differ (0.647 under
+BSV versus 0.837 under UNGA-DM). But the effect measured as a percentage of the pre-
+treatment average is similar: -42.2 and -39.5 percent. The Brazilian result therefore retains
+its direction and inferential support under the alternative measure, with a similar relative
+magnitude. The cross-country comparison below is more sensitive to the outcome source:
+its IFE point estimate is closer to zero on the UNGA-DM scale and its uncertainty interval
+includes zero. The2×2comparison below holds the common window and country-year panel
+fixed while varying the outcome source and factor count, allowing conditional factor-count
+comparisons within each measure. It does not provide a unique, scale-invariant decomposition
+of the difference between outcomes.
+83
+T able 25Brazil SDiD under two sources of UNGA ideal points. Both columns use the same panel,
+the same donor pool, and the same placebo standard error settings; the outcome series is the only
+input that differs, and the synthetic-control weights are re-estimated from it.
+Bailey, Strezhnev and Voeten Fjelstul, Hug and Kilby
+ATT -0.273 -0.331
+Placebo standard error 0.131 0.125
+95 percent confidence interval [-0.529, -0.017] [-0.576, -0.085]
+p (normal approximation, two-sided) 0.037 0.008
+Directional placebo rank (p) 3/96 (0.031) 3/96 (0.031)
+Two-sided absolute placebo rank (p) 7/96 (0.073) 5/96 (0.052)
+Intercept-adjusted pre-treatment RMSPE 0.058 0.058
+Brazil pre-treatment outcome mean 0.647 0.837
+ATT as percent of pre-treatment mean -42.2 -39.5
+Note:
+Estimates are the post-2009 gap in absolute UNGA ideal-point distance to China, 1997-2015 annual
+panel, no covariates. Placebo SEs use 20,000 replications and seed 20260520 in both columns. Placebo-
+in-space ranks involve no random draws and are exactly reproducible.
+Figure 13 reports the placebo-in-space distribution for the UNGA-DM SDiD fit. It is close
+to the distribution obtained under the original outcome. The directional placebo rank is
+unchanged under the alternative measure (3/96 (0.031) in both columns), while the bilateral
+absolute rank improves from 7/96 (0.073) to 5/96 (0.052). Table 25 reports this cross-measure
+comparison, and Table 26 reports the donor-exclusion checks under UNGA-DM.
+84
+ Brazil: −0.331
+0
+5
+10
+−0.4 −0.2 0.0 0.2 0.4
+Estimated post−2009 gap (placebo assignments)
+Number of assignments
+Fig. 13Placebo-in-space distribution under the UNGA-DM outcome, with Brazil marked. Brazil's
+estimate is the 3rd most negative of 96 assignments (directional p = 0.031); the two-sided absolute
+rank is 5/96 (p = 0.052). Negative values indicate convergence toward China. Note: Estimated post-
+2009 gap in absolute UNGA ideal-point distance to China, UNGA-DM measure. Window: 1997-2015
+annual SDiD panel.
+T able 26Placebo rank inference under the UNGA-DM outcome, by donor-exclusion criterion.
+Comparison set Excluded donors Directional rank (p) Two-sided rank (p)
+All valid assignments - 3/96 (0.031) 5/96 (0.052)
+Exclude goods-only China-top donor
+assignments (harmonized: window
+criterion)
+- 3/96 (0.031) 5/96 (0.052)
+Exclude goods-only China-top donor
+assignments (legacy 5-year qualifying
+criterion; audit only)
+GAB, KWT 3/94 (0.032) 5/94 (0.053)
+Note:
+The window criterion excludes donors observed as China-top in goods exports within 1997-2015, which is
+the criterion used elsewhere in the paper. The legacy criterion excludes countries that qualify under the
+five-year duration rule outside the analysis window, and is reported for audit only.
+85
+Donor weights are estimated separately for each fit, so they are not identical across outcomes.
+Table 27 reports how much they change. Weight is spread among donors in a similar way in
+both fits: 0.044 under UNGA-DM and 0.031 under BSV. The correlation of the donor pool
+weights is moderate (0.462), but among the top ten donors, 6 are the same. The donor mix
+therefore shifts moderately across outcomes. For Brazil, the negative estimate and similar
+relative magnitude are preserved, but the two fits do not use identical counterfactual weights;
+this comparison does not establish stability of the cross-country result.
+86
+T able 27Ten largest synthetic-control donor weights under the UNGA-DM fit, with the weight
+the same donor receives under the main outcome.
+Donor UNGA-DM weight BSV weight
+COL 0.044 0.022
+IND 0.031 0.021
+SEN 0.031 0.009
+BRB 0.029 0.015
+GTM 0.027 0.027
+GHA 0.026 0.000
+TTO 0.026 0.015
+PRY 0.026 0.027
+BOL 0.025 0.023
+SGP 0.023 0.029
+Note:
+Weights are normalized over the full donor
+pool of 95 units rather than over the dis-
+played donors. The ten donors shown carry
+28.8 percent of total weight under the
+UNGA-DM fit. Across all donors, the cor-
+relation between the two weight vectors is
+0.462, and 6 of the ten largest donors are
+shared by the two fits.
+Regarding the panel regression, Table 28 shows the IFE estimation in the same time window
+for both outcomes, and the original estimation with the larger time window. The estimate
+retains the negative sign but is closer to zero on the UNGA-DM scale, with an uncertainty
+interval that includes zero: -0.027 with p = 0.573. However, the models are not the same,
+since the number of latent factors chosen by cross-validation is different: 2 under BSV and 1
+87
+under UNGA-DM. The2×2comparison below holds the common window and country-year
+panel fixed while crossing the outcome source with one versus two latent factors, allowing
+sensitivity to factor count to be assessed within each outcome measure rather than uniquely
+decomposing the cross-outcome difference.
+T able 28Cross-country interactive fixed-effects panel under the two outcome sources, in a
+common window with identical rows.
+Specification ATT SE 95 percent CI p Factors (CV) Country-years
+BSV full window 1990-2022 (paper
+main, stored target)
+-0.101 0.039 [-0.177, -0.024] 0.010 2 5,037
+BSV common window (<= 2020,
+identical rows)
+-0.095 0.040 [-0.173, -0.018] 0.016 2 4,727
+UNGA-DM common window (<=
+2020, identical rows)
+-0.027 0.048 [-0.120, 0.066] 0.573 1 4,727
+Note:
+All rows use the goods-only status-current restricted risk set with 35 treated and 126 control countries. The
+common-window rows keep exactly the same country-years in both outcome sources. Confidence intervals come
+from 10,000 bootstrap replications. ATTs and intervals are expressed on each outcome's original scale; raw cross-
+outcome differences do not identify a scale-invariant measurement contribution.
+Table 29 holds the common window and country-year panel fixed and crosses the two outcome
+sources with one and two latent factors. This2×2comparison describes sensitivity to factor
+count conditional on the outcome measure. Holding the outcome fixed, moving from one to
+two factors makes the ATT more negative (larger in absolute value): from -0.036 to -0.095
+under BSV, and from -0.027 to -0.065 under UNGA-DM. Cross-validation selects 2 factors
+under BSV and 1 under UNGA-DM. The change from one to two factors differs across the
+two measures, indicating a descriptive interaction between outcome source and factor count
+rather than a unique additive decomposition. This comparison does not test the interaction.
+Both UNGA-DM fits have negative point estimates and uncertainty intervals that include
+zero; overlapping intervals do not establish equivalence. Holding the factor count at two still
+leaves a smaller UNGA-DM estimate (-0.065) than the BSV estimate (-0.095), but these
+88
+raw estimates are expressed on different outcome scales. Their difference is a conditional
+sensitivity comparison, not a scale-invariant contribution attributable to outcome source.
+T able 29Outcome source by number of latent factors, holding the panel fixed.
+Outcome Factors (fixed) Selected by CV ATT SE 95 percent CI p
+BSV 1 No -0.036 0.037 [-0.109, 0.037] 0.336
+UNGA-DM 1 Yes -0.027 0.048 [-0.120, 0.066] 0.573
+BSV 2 Yes -0.095 0.040 [-0.173, -0.018] 0.016
+UNGA-DM 2 No -0.065 0.055 [-0.172, 0.043] 0.238
+Note:
+Same common window and identical rows as the previous table. Paired bootstrap on
+UNGA-DM minus BSV in their original outcome units, 1,000 replications and no failures:
+0.069 (percentile p = 0.134) with the original CV-selected counts held fixed (BSV: two;
+UNGA-DM: one), and 0.030 (percentile p = 0.356) with two factors for both outcomes.
+The same stratified country draws are used for both measures; factor counts are not rese-
+lected within replications. These are scale-dependent contrasts, not a unique decomposition
+of factor and outcome-source components. Non-rejection does not establish equivalence.
+To sum up, the Brazilian SDiD result retains its negative direction and inferential support
+across the two outcome measurements, with similar relative magnitude but a different abso-
+lute scale. The2×2IFE comparison shows that two factors produce a more negative ATT
+under either outcome, with a different within-measure change under BSV and UNGA-DM.
+Both UNGA-DM fits have negative point estimates and uncertainty intervals that include
+zero; this does not establish equivalence between them. Even with two factors held fixed, the
+raw UNGA-DM estimate is closer to zero than the BSV estimate on its own scale. This con-
+ditional comparison does not isolate a scale-invariant outcome-source contribution beyond
+factor selection. The paired test does not detect a statistically significant difference between
+the ATTs, but this non-rejection does not establish equivalence and may reflect uncertainty.
+89

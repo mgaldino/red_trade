@@ -29,7 +29,16 @@ header-includes:
 - \let\endlemma\endmodellemma
 - \newcommand{\pospart}[1]{\left[#1\right]_{+}}
 fontsize: 12pt
-abstract: "\\singlespacing  How do countries adjust their foreign policy when a rising power becomes their leading trading partner? I develop a formal model in which public recognition increases the salience of a new trade rank, and political leadership's cost-benefit analysis of foreign-policy alignment with the rising power determines its direction of change. To test the hypothesis derived from the model, I leverage the timing of China's surpassing the United States as Brazil’s largest export destination and fit a Synthetic Difference-in-Differences to estimate the causal effect of the status change on Brazil’s voting at the United Nations General Assembly. The paper provides evidence that Brazilian policymakers invoked China’s new position to justify greater proximity between the countries, with voting convergence particularly visible on human rights issues. Relative to the counterfactual, the estimated reduction in bilateral voting distance is equivalent to 42% of the pre-treatment mean distance. To assess whether this pattern extends beyond Brazil, I estimate a latent factor model using data from a panel of countries where China became the leading trading partner between 2000 and 2022. The estimates point in the same direction, although the effects are smaller. These findings suggest that publicly acknowledged changes in economic rank can support diplomatic adjustments in multilateral institutions, with implications for U.S.–China rivalry as their relative commercial positions change."
+abstract: |
+  \singlespacing
+
+  **Purpose:** How do countries adjust their foreign policy when a rising power becomes their leading trading partner?
+
+  **Methods:** I develop a formal model in which public recognition increases the salience of a new trade rank, and political leadership's cost-benefit analysis of foreign-policy alignment with the rising power determines its direction of change. To test the hypothesis derived from the model, I leverage the timing of China's surpassing the United States as Brazil’s largest export destination and fit a Synthetic Difference-in-Differences to estimate the causal effect of the status change on Brazil’s voting at the United Nations General Assembly. To assess whether this pattern extends beyond Brazil, I estimate a latent factor model using data from a panel of countries where China became the leading trading partner between 2000 and 2022.
+
+  **Results:** The paper provides evidence that Brazilian policymakers invoked China’s new position to justify greater proximity between the countries, with voting convergence particularly visible on human rights issues. Relative to the counterfactual, the estimated reduction in bilateral voting distance is equivalent to 42% of the pre-treatment mean distance. The cross-country results are mixed, but interpreted as consistent with the model.
+
+  **Conclusion:** These findings suggest that publicly acknowledged changes in economic rank can support diplomatic adjustments in multilateral institutions, with implications for U.S.–China rivalry as their relative commercial positions change.
 geometry: margin=2.5cm
 spacing: double
 mainfont: Arial
@@ -662,6 +671,8 @@ ggplot2::ggplot(placebo_valid, ggplot2::aes(x = estimate, fill = is_brazil)) +
 
 Table \@ref(tab:brazil-sdid-diagnostic-summary) summarizes the diagnostic package behind the preferred Brazil SDiD estimate. The top five donors are `r sdid_top_donors_text`, and the complete donor pool, along with pre-treatment time weights and sensitivity diagnostics based on donor-deletion and window tests, appears in Appendix Tables \@ref(tab:sdid-unit-weights-complete), \@ref(tab:sdid-time-weights), \@ref(tab:sdid-donor-sensitivity), and \@ref(tab:sdid-window-sensitivity).
 
+\clearpage
+
 ```{r brazil-sdid-diagnostic-summary, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 # Presentation only: all values come from the existing diagnostic inputs above.
 # One measure per row avoids dense prose and keeps the result column scannable.
@@ -703,7 +714,7 @@ sdid_diag_summary <- tibble::tribble(
 )
 
 cat("\\begingroup\\singlespacing\n")
-cat("\\renewcommand{\\arraystretch}{1.12}\n")
+cat("\\renewcommand{\\arraystretch}{1.02}\n")
 
 knitr::kable(
   sdid_diag_summary,
@@ -717,7 +728,7 @@ knitr::kable(
   ),
   align = c("l", "r")
 ) %>%
-  kableExtra::kable_styling(latex_options = "HOLD_position", font_size = 11) %>%
+  kableExtra::kable_styling(latex_options = "hold_position", font_size = 10) %>%
   kableExtra::column_spec(1, width = "10.6cm") %>%
   kableExtra::column_spec(2, width = "3.7cm") %>%
   kableExtra::row_spec(0, bold = TRUE) %>%

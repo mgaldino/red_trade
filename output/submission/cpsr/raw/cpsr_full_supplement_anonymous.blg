@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2025)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: cpsr_full_supplement_anonymous.aux
+The style file: sn-basic.bst
+Database file #1: cpsr_references.bib
+sn-basic.bst [2024/07/19 v1.1 bibliography style]
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+You've used 66 entries,
+            3567 wiz_defined-function locations,
+            1126 strings with 18530 characters,
+and the built_in function-call counts, 46642 in all, are:
+= -- 4419
+> -- 1230
+< -- 56
++ -- 512
+- -- 358
+* -- 3783
+:= -- 6845
+add.period$ -- 100
+call.type$ -- 66
+change.case$ -- 445
+chr.to.int$ -- 65
+cite$ -- 66
+duplicate$ -- 3859
+empty$ -- 4209
+format.name$ -- 539
+if$ -- 9771
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 471
+newline$ -- 207
+num.names$ -- 267
+pop$ -- 1096
+preamble$ -- 1
+purify$ -- 383
+quote$ -- 0
+skip$ -- 1002
+stack$ -- 0
+substring$ -- 4111
+swap$ -- 1132
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 564
+warning$ -- 0
+while$ -- 315
+width$ -- 0
+write$ -- 763

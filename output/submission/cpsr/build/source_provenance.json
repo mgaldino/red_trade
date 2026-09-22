@@ -1,0 +1,21 @@
+{
+  "canonical_source": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/paper_v4.Rmd",
+  "config": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/submission/cpsr/cpsr_submission_config.json",
+  "canonical_bibliography": "/Users/manoelgaldino/Documents/DCP/Papers/RDD Trade/red_trade/synth-trade-china.bib",
+  "bibliography_duplicate_keys_removed": [
+    "liu2024practical"
+  ],
+  "generated_sources": [
+    "cpsr_full_inline_anonymous.Rmd",
+    "cpsr_full_supplement_anonymous.Rmd",
+    "cpsr_manuscript_anonymous.Rmd",
+    "cpsr_appendix_full_cover.tex",
+    "cpsr_appendix_short_cover.tex",
+    "cpsr_cover_letter.tex",
+    "cpsr_online_resource_anonymous_cover.tex",
+    "cpsr_online_supplement_public_cover.tex",
+    "cpsr_title_page.tex",
+    "cpsr_references.bib"
+  ],
+  "does_not_run_targets_pipeline": true
+}

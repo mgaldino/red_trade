@@ -1,0 +1,23 @@
+{
+  "source_date_epoch": 1790078400,
+  "variants": {
+    "manuscript_anonymous": {
+      "tex": "cpsr_manuscript_anonymous.tex",
+      "expected_pages": 55,
+      "graphics": 6,
+      "verified_isolated_compile": true
+    },
+    "manuscript_with_full_appendix_anonymous": {
+      "tex": "cpsr_full_inline_anonymous.tex",
+      "expected_pages": 89,
+      "graphics": 13,
+      "verified_isolated_compile": true
+    },
+    "online_resource_1_anonymous": {
+      "tex": "cpsr_full_supplement_anonymous.tex",
+      "expected_pages": 89,
+      "graphics": 13,
+      "verified_isolated_compile": true
+    }
+  }
+}

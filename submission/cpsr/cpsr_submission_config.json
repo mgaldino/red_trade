@@ -12,17 +12,17 @@
     "given": "Manoel",
     "family": "Galdino",
     "department": "Department of Political Science",
-    "institution": "University of Sao Paulo",
-    "city": "Sao Paulo",
+    "institution": "University of São Paulo",
+    "city": "São Paulo",
     "state": "SP",
     "country": "Brazil",
     "email": "mgaldino@usp.br",
     "orcid": "0000-0002-8384-1491"
   },
   "abstract": {
-    "Purpose": "How do countries adjust their foreign policy when a rising power becomes their leading trading partner? I develop a formal model in which public recognition increases the salience of a new trade rank, and political leadership's cost-benefit analysis of foreign-policy alignment with the rising power determines its direction of change.",
-    "Methods": "To test the hypothesis derived from the model, I leverage the timing of China's surpassing the United States as Brazil's largest export destination and fit a synthetic difference-in-differences model to estimate the effect of the status change on Brazil's voting at the United Nations General Assembly. To assess whether the pattern extends beyond Brazil, I estimate a latent factor model using a cross-country panel for 2000-2022.",
-    "Results": "Brazilian policymakers invoked China's new position to justify greater proximity between the countries, with voting convergence particularly visible on human rights issues. Relative to the counterfactual, the estimated reduction in bilateral voting distance is equivalent to 42 percent of the pre-treatment mean distance. The cross-country estimates point in the same direction, although the effects are smaller.",
+    "Purpose": "How do countries adjust their foreign policy when a rising power becomes their leading trading partner?",
+    "Methods": "I develop a formal model in which public recognition increases the salience of a new trade rank, and political leadership's cost-benefit analysis of foreign-policy alignment with the rising power determines its direction of change. To test the hypothesis derived from the model, I leverage the timing of China's surpassing the United States as Brazil's largest export destination and fit a synthetic difference-in-differences model to estimate the effect of the status change on Brazil's voting at the United Nations General Assembly. To assess whether the pattern extends beyond Brazil, I estimate a latent factor model using a cross-country panel for 2000-2022.",
+    "Results": "Brazilian policymakers invoked China's new position to justify greater proximity between the countries, with voting convergence particularly visible on human rights issues. Relative to the counterfactual, the estimated reduction in bilateral voting distance is equivalent to 42 percent of the pre-treatment mean distance. The cross-country results are mixed, but interpreted as consistent with the model.",
     "Conclusion": "Publicly acknowledged changes in economic rank can support diplomatic adjustments in multilateral institutions, with implications for U.S.-China rivalry as their relative commercial positions change."
   },
   "keywords": [
@@ -33,8 +33,8 @@
     "synthetic difference-in-differences",
     "United Nations General Assembly"
   ],
-  "funding": "This research was supported by the University of Sao Paulo through the Programa de Apoio a Novos Docentes (Support Program for Research by Newly Hired Professors), process number 22.1.09345.01.2.",
-  "acknowledgments": "I thank Natalia Paiva for comments on earlier versions of this paper.",
+  "funding": "This research was supported by the University of São Paulo through the Programa de Apoio a Novos Docentes (Support Program for Research by Newly Hired Professors), process number 22.1.09345.01.2.",
+  "acknowledgments": "I thank Natália Paiva for comments on earlier versions of this paper.",
   "competing_interests": "The author has no relevant financial or non-financial interests to disclose.",
   "ethics": "Not applicable. The study uses country-level observational data and publicly available documents and does not involve human participants or animals.",
   "data_code_availability": "An anonymized replication archive can be supplied during peer review. The final data and code availability statement, including a stable repository link, will be updated before publication.",
@@ -51,6 +51,7 @@
     "Triple-Difference Pre-Trends",
     "Resolution-Level UNGA Vote Diagnostics",
     "SDiD",
+    "Selected Public-Cue Cross-Country Analyses",
     "Cross-Country Robustness: Duration Thresholds",
     "Cross-Country Sample Audit: Goods-Only Treatment Coding",
     "Public Cue and Recoverability Audit",
