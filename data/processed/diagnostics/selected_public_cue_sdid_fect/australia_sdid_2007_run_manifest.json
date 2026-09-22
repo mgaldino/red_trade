@@ -1,8 +1,8 @@
 {
   "analysis": "australia_sdid_2007_placebo",
-  "started_at": "2026-09-22T12:36:59-0300",
-  "completed_at": "2026-09-22T12:36:59-0300",
-  "elapsed_minutes": 0.0041649500528971352,
+  "started_at": "2026-09-22T12:47:15-0300",
+  "completed_at": "2026-09-22T12:47:16-0300",
+  "elapsed_minutes": 0.0042784174283345541,
   "command": "Rscript --vanilla scripts/diagnostics/estimate_australia_sdid_2007_placebo.R",
   "script": "scripts/diagnostics/estimate_australia_sdid_2007_placebo.R",
   "shared_placebo_helper": "scripts/diagnostics/sdid_placebo_helpers.R",
@@ -39,5 +39,5 @@
   "checkpoint": "data/processed/diagnostics/selected_public_cue_sdid_fect/checkpoints/placebo_se_aus_cue_2007_5000.rds",
   "checkpoint_sha256": "0e1bc1f22507bf6ca44d7ec8ff30a5943338e1ff7185651a99772b899405db99",
   "output_manifest": "data/processed/diagnostics/selected_public_cue_sdid_fect/australia_sdid_2007_output_manifest.csv",
-  "output_manifest_sha256": "43550eb79d8982e80def395fa68d3a08595e44433ad392d82811eee209850391"
+  "output_manifest_sha256": "92ed268b0faf5d651cf9a84de14236c89a530fef373825d482dabb65ecb0257d"
 }

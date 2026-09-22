@@ -18,7 +18,14 @@ dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 panel <- readr::read_csv(
   file.path(input_dir, "fect_clean_controls_panel.csv"),
   show_col_types = FALSE
-)
+) %>%
+  dplyr::mutate(
+    public_cue_year = dplyr::if_else(
+      iso3c == "AUS",
+      2007L,
+      as.integer(public_cue_year)
+    )
+  )
 
 pre_cue_summary <- panel %>%
   dplyr::filter(focal_country, year < public_cue_year) %>%
@@ -105,7 +112,7 @@ sdid_results <- readr::read_csv(
   show_col_types = FALSE
 )
 australia_2007 <- readr::read_csv(
-  file.path(input_dir, "australia_sdid_2007_point.csv"),
+  file.path(input_dir, "australia_sdid_2007_results.csv"),
   show_col_types = FALSE
 )
 
@@ -136,17 +143,17 @@ australia_2007_row <- australia_2007 %>%
   dplyr::transmute(
     fit_id,
     country = country_name,
-    timing = "Public-cue timing sensitivity (2007)",
+    timing = "Public cue (2007)",
     treatment_year,
     att = estimate,
-    se = NA_real_,
-    ci_low = NA_real_,
-    ci_high = NA_real_,
-    p_value = NA_real_,
+    se = se_placebo,
+    ci_low = ci_95_low,
+    ci_high = ci_95_high,
+    p_value = p_normal_two_sided,
     n_pre_years,
     n_post_years,
     n_donors,
-    inference = "Point estimate only"
+    inference = "Placebo SE (5,000 re-estimations)"
   )
 
 selected_sdid <- dplyr::bind_rows(selected_sdid, australia_2007_row) %>%
@@ -154,7 +161,7 @@ selected_sdid <- dplyr::bind_rows(selected_sdid, australia_2007_row) %>%
     display_order = dplyr::case_when(
       fit_id == "chl_cue_2008" ~ 1L,
       fit_id == "ury_cue_2013" ~ 2L,
-      fit_id == "aus_timing_2007_point" ~ 3L,
+      fit_id == "aus_cue_2007" ~ 3L,
       fit_id == "aus_top1_2010" ~ 4L,
       TRUE ~ 99L
     )
@@ -176,15 +183,32 @@ ife_results <- readr::read_csv(
 selected_ife <- ife_results %>%
   dplyr::filter(
     model_id %in% c(
+      "clean_controls",
+      "full_switching",
       "clean_controls_without_gab_qat",
       "full_switching_without_gab_qat"
     )
   ) %>%
   dplyr::transmute(
     model_id,
+    case_sample = dplyr::case_when(
+      model_id %in% c("clean_controls", "full_switching") ~
+        "Five cases: AUS, CHL, GAB, QAT, URY",
+      model_id %in% c(
+        "clean_controls_without_gab_qat",
+        "full_switching_without_gab_qat"
+      ) ~ "Four cases: AUS, BRA, CHL, URY",
+      TRUE ~ model_id
+    ),
     comparison_rule = dplyr::case_when(
-      model_id == "clean_controls_without_gab_qat" ~ "Never-China-top controls",
-      model_id == "full_switching_without_gab_qat" ~ "Controls enter and leave the comparison set",
+      model_id %in% c(
+        "clean_controls",
+        "clean_controls_without_gab_qat"
+      ) ~ "Never-China-top controls",
+      model_id %in% c(
+        "full_switching",
+        "full_switching_without_gab_qat"
+      ) ~ "Controls enter and leave the comparison set",
       TRUE ~ model_id
     ),
     att = estimate,
@@ -195,12 +219,21 @@ selected_ife <- ife_results %>%
     latent_factors = selected_factors,
     n_treated = n_treated_units,
     n_control = n_never_treated_units,
-    bootstrap_replications
-  )
+    bootstrap_replications,
+    display_order = dplyr::case_when(
+      model_id == "clean_controls_without_gab_qat" ~ 1L,
+      model_id == "full_switching_without_gab_qat" ~ 2L,
+      model_id == "clean_controls" ~ 3L,
+      model_id == "full_switching" ~ 4L,
+      TRUE ~ 99L
+    )
+  ) %>%
+  dplyr::arrange(display_order) %>%
+  dplyr::select(-display_order)
 
 readr::write_csv(
   selected_ife,
-  file.path(output_dir, "table_four_case_latent_factor_models.csv")
+  file.path(output_dir, "table_public_cue_pooled_models.csv")
 )
 
 writeLines(

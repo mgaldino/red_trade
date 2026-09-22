@@ -292,10 +292,7 @@ result <- tibble::tibble(
   iso3c = treated_iso3c,
   country_name = "Australia",
   treatment_year = treatment_year,
-  timing_definition = paste0(
-    "imposed timing corresponding to the 2006-07 fiscal-year ",
-    "aggregate-trade rank change"
-  ),
+  timing_definition = "selected public-cue year based on 2007 press evidence",
   outcome = "Absolute UNGA ideal-point distance to China",
   treatment = "Absorbing post-timing indicator for the focal SDiD fit",
   donor_rule = paste0(
