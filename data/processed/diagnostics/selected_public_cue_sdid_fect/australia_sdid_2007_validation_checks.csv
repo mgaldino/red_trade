@@ -1,0 +1,12 @@
+check,passed,observed,expected
+analysis_window,TRUE,1997-2022,1997-2022
+clean_donor_count,TRUE,105,105
+pre_period_count,TRUE,10,10
+post_period_count,TRUE,16,16
+point_estimate_matches_frozen_reference,TRUE,0.12845292972554007,0.12845292972554009
+path_decomposition_matches_att,TRUE,0.12845292972554004,0.12845292972554007
+unit_weights_sum_to_one,TRUE,1.0000000000000007,1
+time_weights_sum_to_one,TRUE,1.0000000000000004,1
+checkpoint_has_5000_finite_estimates,TRUE,5000 finite,5000 finite
+checkpoint_seed,TRUE,20260520,20260520
+checkpoint_se_matches_reported_se,TRUE,0.16082081472090767,0.16082081472090767

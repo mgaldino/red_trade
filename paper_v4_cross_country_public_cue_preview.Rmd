@@ -1332,6 +1332,22 @@ These statements show official uptake of the 2009 status cue. Their co-occurrenc
 
 # Cross-Country Evidence Beyond Brazil
 
+The cross-country analysis serves two purposes. First, it examines whether a first position as a goods export destination is followed by movement toward China beyond the Brazilian case. Second, it is an additional robustness check against explanations tied specifically to Brazil's 2009 calendar year, such as the global financial crisis, the BRICS/G20 moment, or the commodity cycle.
+
+However, operationalizing the analysis with multiple countries poses several difficulties. As the formal model shows, the public cue should increase the probability of a policy shift, all else equal. Thus, with the assistance of artificial intelligence, I searched press sources for all potentially treated countries in which a public cue could have occurred. I found high-quality data only for Australia, Chile, Uruguay, Gabon, and Qatar. However, since absence of evidence is not evidence of absence, I cannot say that no public cue occurred in the other countries. Thus, because public salience is not measured directly outside Brazil, the panel does not by itself validate the top trade rank position as a proxy for public status change or extend the public cue mechanism to the larger sample.
+
+Another difficulty is that the treatment is the public cue, but the model does not distinguish which trade statistic drives it. For each country, the cue may occur when China becomes the leading destination for merchandise exports alone; in countries where services matter more, it may instead arise from goods and services combined, or even services alone; and in other cases, it may be total trade flows (exports plus imports). Thus, for each country, it is unclear which statistic is relevant for identifying a potential treatment. The Australian case is illustrative. The Australian Financial Review (AFR) headlines said "China hits the spot as trading partner", referring to imports plus exports and mentioning in the text that 2009 was the third year it was in that leading position. To complicate matters further, AFR uses the fiscal year 2006-2007, not the calendar year. Should I code the beginning of treatment in 2010 (when China became the top export destination), 2007 (when I found the public cue evidence), or perhaps 2008 (because the fiscal year ended mid-2007)? Finally, if a country is already very close to China before treatment---as is the case of Gabon; see Figure \@ref(fig:public-cue-pre-treatment-distance) in the Appendix---there are no gains from shifting its foreign-policy stance.
+
+To address these problems, I estimated a separate SDiD model for each of the countries for which I have data on the public cue and in which there was room for foreign-policy adjustment toward China: Chile, Uruguay, and Australia. I excluded Gabon, which was already very close to China before treatment, and Qatar, whose treatment occurred only in 2021, leaving too little time for the effect to emerge. For Australia, as a robustness check, I considered treatment in both 2007 and 2010, although 2007 is the theoretically more appropriate date. The corresponding estimand is the ATT on absolute UNGA ideal-point distance to China.
+
+The results point in the expected direction, but they are not statistically significant, as expected when standard errors are calculated using placebo estimates and the signal is not strong enough to overcome noise (see Appendix Table \@ref(tab:public-cue-sdid-results) for details). However, the interesting negative result, so to speak, is Australia. In fiscal year 2006-07, China became Australia's largest trading partner. The news covered it, so there was a public cue. By the end of the year, the Labor left-leaning government came to power. Yet the effect is not significant; if anything, the point estimate is in the wrong direction. Why so?
+
+When Labor's Kevin Rudd took office as prime minister by the end of 2007, he had made clear before taking office that he was concerned about when the China boom would end [@uhlmann2007rudd]. In fact, in his second term in power, in 2013, when the boom was over, he recalled saying so years earlier [@rudd2013economy]. As the formal model made clear, it all depends on the perceived benefits of alignment with China. Increased interdependence can be seen as a risk. Australia's close ties with the West, particularly the US and UK, are long and well known. This contrasts sharply with Brazil, the paper's main case. Thus, I interpret Australia's negative result as consistent with the model.
+
+To avoid the impression of cherry-picking cases, I also estimated a latent-factor model pooling the four cases (Australia, Brazil, Chile and Uruguay) to obtain an average estimate. This approach has limitations, since the reduced form (what I am estimating) combines the effect of the public cue (the treatment) with the cost-benefit calculation. In other words, the effects are heterogeneous, and I am recovering an average effect.
+
+<!-- Begin hidden superseded cross-country section (preview source only).
+
 The cross-country analysis serves two purposes. First, it examines whether a durable first position as goods export destination is followed by movement toward China beyond the Brazilian case. Second, it is an additional robustness check against explanations tied specifically to Brazil's 2009 calendar year, such as the global financial crisis, the BRICS/G20 moment, or the commodity cycle. If durable first rank status matters, countries where China enters and holds the largest export destination position should move closer to China in UNGA ideal-point space when aligned by their own treatment entry.
 
 Because public salience is not measured directly outside Brazil, the panel does not by itself validate the top trade rank position as a proxy for public status change or extend the public cue mechanism to the larger sample.
@@ -1487,6 +1503,8 @@ knitr::include_graphics(file.path(
 ```
 
 
+
+End hidden superseded cross-country section. -->
 
 # Conclusion
 
@@ -1950,6 +1968,131 @@ b_est_latam <- sdid_latam_core_summary$estimate[[1]]
 ```
 
 Estimated without covariates, the Latin America donor-pool estimate has the same sign and a somewhat larger magnitude: `r sprintf("%.3f", b_est_latam)`, compared with `r sprintf("%.3f", b_est_main)` in the global donor pool. The regional pool has only `r sdid_latam_core_summary$n_donors[[1]]` donors and a slightly higher intercept-adjusted pre-treatment RMSPE (`r sprintf("%.3f", sdid_latam_core_summary$rmspe_pre[[1]])` versus `r sprintf("%.3f", sdid_fit_summary$rmspe_pre[[1]])`). Its placebo SE is `r sprintf("%.3f", sdid_latam_core_summary$se_placebo[[1]])`, based on `r format(as.integer(sdid_latam_core_summary$se_replications[[1]]), big.mark = ",", scientific = FALSE, trim = TRUE)` replications, and the normal-approximation 95 percent interval [`r sprintf("%.3f", sdid_latam_core_summary$ci_95_low[[1]])`, `r sprintf("%.3f", sdid_latam_core_summary$ci_95_high[[1]])`] includes zero. Because the directional placebo comparison is computed within this regional pool, which contains only `r sdid_latam_core_summary$n_donors[[1]]` donor units, even Brazil being the `r scales::ordinal(sdid_latam_core_summary$rank_one_sided_negative[[1]])` most negative among all `r sdid_latam_core_summary$rank_denominator[[1]]` assignments yields a p-value of only `r sprintf("%.3f", sdid_latam_core_summary$p_rank_one_sided_negative[[1]])`. In other words, the regional donor pool does not provide enough power to estimate the effect precisely. The point estimate is nevertheless consistent with the main result and, if anything, is somewhat larger in absolute value than the estimate from the larger global donor pool.
+
+## Selected Public-Cue Cross-Country Analyses
+
+This section reports the diagnostics underlying the proposed replacement for the cross-country section. The common country-year window is 1997--2022, and the outcome is absolute UNGA ideal-point distance to China. The individual SDiD models use 105 countries that never have China as their largest goods-export destination during this window. Placebo standard errors, where available, use 5,000 re-estimations. The pooled models use the interactive fixed-effects estimator in `fect` 2.4.5, with the number of latent factors selected by cross-validation and 1,000 unit-bootstrap replications.
+
+Figure \@ref(fig:public-cue-pre-treatment-distance) compares the focal cases before their selected public-cue years. Gabon has the smallest mean pre-cue distance to China among the five cases (`r sprintf("%.3f", readr::read_csv("quality_reports/revisions/paper_v4/20260922_cross_country_public_cue_preview/assets/pre_cue_distance_summary.csv", show_col_types = FALSE) %>% dplyr::filter(iso3c == "GAB") %>% dplyr::pull(mean_pre_cue_distance))`), which motivates treating its limited room for further convergence as a scope consideration rather than interpreting its exclusion as evidence that no cue occurred.
+
+```{r public-cue-pre-treatment-distance, message=FALSE, warning=FALSE, echo=FALSE, fig.cap="Pre-cue UNGA ideal-point distance to China among the five focal public-cue cases. Solid points and labels show country-specific means; hollow points show medians; horizontal segments span the observed pre-cue range. Each pre-period runs from 1997 through the year before the selected cue, so the number of years differs across countries. Lower values indicate positions closer to China.", fig.pos="H", out.width="95%"}
+knitr::include_graphics(file.path(
+  "quality_reports", "revisions", "paper_v4",
+  "20260922_cross_country_public_cue_preview", "assets",
+  "figure_pre_cue_distance_focal_cases.png"
+))
+```
+
+Table \@ref(tab:public-cue-sdid-results) reports the individual estimates discussed in the proposed text. The report's standard Australian public-cue specification uses 2009 and provides placebo inference for 2009 and 2010. The 2007 timing requested in the proposed text is available only as a point-estimate sensitivity: no placebo standard error, confidence interval, or p-value was computed for that row. The table therefore marks its inferential quantities as unavailable rather than treating the 2007 estimate as statistically indistinguishable from zero.
+
+```{r public-cue-sdid-results, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
+public_cue_sdid_tbl <- readr::read_csv(
+  file.path(
+    "quality_reports", "revisions", "paper_v4",
+    "20260922_cross_country_public_cue_preview", "assets",
+    "table_selected_public_cue_sdid.csv"
+  ),
+  show_col_types = FALSE
+) %>%
+  dplyr::mutate(
+    ATT = sprintf("%.3f", att),
+    SE = dplyr::if_else(is.na(se), "--", sprintf("%.3f", se)),
+    `95\\% CI` = dplyr::if_else(
+      is.na(ci_low) | is.na(ci_high),
+      "--",
+      paste0("[", sprintf("%.3f", ci_low), ", ", sprintf("%.3f", ci_high), "]")
+    ),
+    `p-value` = dplyr::if_else(is.na(p_value), "--", sprintf("%.3f", p_value)),
+    `Pre/Post` = paste0(n_pre_years, "/", n_post_years)
+  ) %>%
+  dplyr::select(
+    Country = country,
+    Timing = timing,
+    ATT,
+    SE,
+    `95\\% CI`,
+    `p-value`,
+    `Pre/Post`,
+    Donors = n_donors
+  )
+
+knitr::kable(
+  public_cue_sdid_tbl,
+  format = "latex",
+  booktabs = TRUE,
+  escape = FALSE,
+  caption = "Individual SDiD estimates for the public-cue cases retained in the proposed cross-country section.",
+  align = "llcccccc"
+) %>%
+  kableExtra::kable_styling(
+    latex_options = c("HOLD_position", "scale_down"),
+    font_size = 8.5
+  ) %>%
+  kableExtra::footnote(
+    general = paste0(
+      "ATT is measured in absolute UNGA ideal-point distance to China; negative values indicate convergence. ",
+      "Chile, Uruguay, and Australia 2010 use placebo standard errors from 5,000 re-estimations and normal-approximation intervals. ",
+      "Australia 2007 is a point estimate only, so no inferential quantities are reported."
+    ),
+    general_title = "Note: ",
+    escape = FALSE,
+    threeparttable = TRUE
+  )
+```
+
+Table \@ref(tab:public-cue-four-case-ife) reports the pooled estimates for Australia, Brazil, Chile, and Uruguay. Cross-validation selects zero latent factors in both four-case specifications. The estimate is negative under both comparison-set rules, but only the specification in which non-focal countries enter and leave the comparison set has a normal-approximation 95 percent interval that excludes zero. With four treated countries, this result remains sensitive to case composition and comparison-set construction.
+
+```{r public-cue-four-case-ife, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
+public_cue_ife_tbl <- readr::read_csv(
+  file.path(
+    "quality_reports", "revisions", "paper_v4",
+    "20260922_cross_country_public_cue_preview", "assets",
+    "table_four_case_latent_factor_models.csv"
+  ),
+  show_col_types = FALSE
+) %>%
+  dplyr::mutate(
+    ATT = sprintf("%.3f", att),
+    SE = sprintf("%.3f", se),
+    `95\\% CI` = paste0(
+      "[", sprintf("%.3f", ci_low), ", ", sprintf("%.3f", ci_high), "]"
+    ),
+    `p-value` = sprintf("%.3f", p_value),
+    `Units (T/C)` = paste0(n_treated, "/", n_control)
+  ) %>%
+  dplyr::select(
+    `Comparison-set rule` = comparison_rule,
+    ATT,
+    SE,
+    `95\\% CI`,
+    `p-value`,
+    `Latent factors` = latent_factors,
+    `Units (T/C)`
+  )
+
+knitr::kable(
+  public_cue_ife_tbl,
+  format = "latex",
+  booktabs = TRUE,
+  escape = FALSE,
+  caption = "Pooled interactive fixed-effects estimates for Australia, Brazil, Chile, and Uruguay.",
+  align = "lcccccc"
+) %>%
+  kableExtra::kable_styling(
+    latex_options = c("HOLD_position", "scale_down"),
+    font_size = 8.5
+  ) %>%
+  kableExtra::footnote(
+    general = paste0(
+      "ATT is measured in absolute UNGA ideal-point distance to China; negative values indicate convergence. ",
+      "Standard errors use 1,000 unit-bootstrap replications. The factor count is selected by the one-standard-error cross-validation rule over r = 0, 1, 2, 3. ",
+      "The four focal cases are Australia, Brazil, Chile, and Uruguay."
+    ),
+    general_title = "Note: ",
+    escape = FALSE,
+    threeparttable = TRUE
+  )
+```
 
 ## Cross-Country Robustness: Duration Thresholds
 
