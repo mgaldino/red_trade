@@ -124,23 +124,6 @@ human_rights_vote_change <- tar_read(brazil_china_unvotes_resolution_2005_2012) 
 sample_size_countries <- tar_read(synth_data) %>%
   dplyr::summarise(num_countries = dplyr::n_distinct(iso3c)) %>%
   dplyr::pull(num_countries)
-cross_country_results_intro <- tar_read(
-  china_top_m2_goods_status_current_model_results
-)
-panel_main_intro <- cross_country_results_intro %>%
-  dplyr::filter(
-    min_duration_years == 5L, specification == "risk_set_restricted"
-  ) %>%
-  dplyr::slice_head(n = 1)
-panel_att_intro <- panel_main_intro$att
-panel_p_intro <- panel_main_intro$p
-panel_p_robustness_intro <- cross_country_results_intro %>%
-  dplyr::filter(
-    specification %in% c("risk_set_restricted", "clean_single_spell")
-  ) %>%
-  dplyr::pull(p)
-panel_p_min_intro <- min(panel_p_robustness_intro, na.rm = TRUE)
-panel_p_max_intro <- max(panel_p_robustness_intro, na.rm = TRUE)
 ```
 
 # Introduction
@@ -154,13 +137,13 @@ Domestic political accounts of foreign policy, by contrast, can conceivably attr
 
 A different concern for studying the effect of status change is reverse causality, since politically aligned countries may deepen economic ties with one another, making China’s rise in the trade hierarchy a consequence rather than a cause of prior diplomatic affinity [@gowa1995; @davis_pratt2021; @struver2016]. If alignment reflects only accumulated exposure, domestic political reorientation, or prior diplomatic affinity, however, no specific symbolic milestone, such as becoming a top trade partner, should matter.
 
-I argue that such milestones matter because they help policymakers focus attention on the emerging power and increase the relationship's perceived benefits. The argument builds on research that treats status as socially recognized standing within international hierarchies, clubs, and local status orders [@paul_larson_wohlforth2014; @wolfRespectDisrespect2011; @duque_2018; @renshon2017; @gotz_2021; @roren_2024; @roren2025_power_recognition; @wolfTakingInteractionSeriously2019].
+I argue that such milestones matter because they help policymakers focus attention on the rising power and increase the relationship's perceived benefits. The argument builds on research that treats status as socially recognized standing within international hierarchies [@paul_larson_wohlforth2014; @wolfRespectDisrespect2011; @duque_2018; @renshon2017; @gotz_2021; @roren_2024; @roren2025_power_recognition; @wolfTakingInteractionSeriously2019].
 
 Much of the China and rising-powers branch of this literature asks how rising states seek recognition, and how misrecognition can produce contestation or revisionism [@deng2008_status; @larson_shevchenko2010_status_seekers; @ward2017_status_challenge; @murray2018_recognition; @mukherjee2022_ascending]. My argument shifts status from the ambitions of the rising power to states' recognition practices. China’s trade-based status gain occurs when another country publicly recognizes China as a central partner.
 
 The argument links US-China competition to third countries' recognition practices. When China overtakes the United States in a national trade hierarchy, its commercial rise can become a public basis for selective diplomatic accommodation. Multilateral voting provides an arena in which countries such as Brazil can adjust their positions toward China while retaining flexibility in other areas of foreign policy. This perspective identifies one possible consequence of China’s rise for the US-led international order: changes in diplomatic support within existing institutions.
 
-I formalize the argument with a two-player model: political leadership and bureaucracy. The former chooses the foreign policy directive, and the latter decides to implement it. The leadership has sparse attention, and a public cue increases salience; as a result, it increases the weight of the costs and benefits of aligning with the emerging power. The model shows that the public cue is necessary for the new status to have an effect and that foreign policy change also depends on the ideological dispositions of political leadership.
+I formalize the argument with a two-player model: political leadership and bureaucracy. The former chooses the foreign policy directive, and the latter decides to implement it. The leadership has sparse attention, and a public cue increases salience; as a result, it increases the weight of the costs and benefits of aligning with the rising power. The model shows that the public cue is necessary for the new status to have an effect and that foreign policy change also depends on the ideological dispositions of political leadership.
 
 Brazil is the strongest case for the theory. First, China displaced the United States, a politically salient incumbent, hegemonic benchmark, and the most important trade partner of Brazil for almost 80 years. Second, the rank reversal was publicly visible. Third, the Brazilian press makes the attention implication measurable. The case is also substantively important because Lula-era Brazilian foreign policy is often described through autonomy, South-South activism, multipolarity, and Brazil’s triangular position between the United States and China [@neto2011; @neto_malamud2015; @rodrigues2019measuring; @schenoniMythsMultipolaritySources2022; @guilhon2014; @schenoni_leiva2021; @brun_covarrubias2024; @coutinho_rodriguez2024].
 
@@ -170,48 +153,25 @@ In the preferred specification, the estimated reduced-form effect of when China 
 
 To further investigate whether specific idiosyncratic factors in Brazil around 2009 explain the SDiD results, I extend the analysis to a small cross-country panel where I can document a public cue about China becoming a country's main trade partner. The pooled evidence identifies a directional pattern consistent with the Brazilian evidence.
 
-The paper’s contribution is to show that economic status matters and impacts foreign policy. Existing work usually treats trade exposure as a smooth source of influence. I argue that a public cue, along with political leadership that sees benefits in aligning foreign policy with the emerging power, drives that change. In Brazil's case, China’s rise to the top export destination made an already expanding commercial relationship available in public and official language as evidence of China’s new centrality. The mechanism evidence shows that the public cue was available and used by policymakers in their political discourse, working as a focal point.
+The paper’s contribution is to show that economic status matters and impacts foreign policy. Existing work usually treats trade exposure as a smooth source of influence. I argue that a public cue, along with political leadership that sees benefits in aligning foreign policy with the rising power, drives that change. In Brazil's case, China’s rise to the top export destination made an already expanding commercial relationship available in public and official language as evidence of China’s new centrality. The mechanism evidence shows that the public cue was available and used by policymakers in their political discourse, working as a focal point.
 
 In the next section, I develop the formal model and derive the hypothesis to be tested. I then present the Brazil SDiD results, followed by issue-area and media evidence on the mechanism. The final empirical section provides evidence that pooled estimates from a cross-country panel are consistent with the argument of the paper.
 
 # Theory and Hypotheses
 
-To explain the proposed mechanism and hypothesis, I present a simple formal model of sparse attention of policymakers [@gabaix2014]. I use sparsity to induce a symbolic cue effect that works as a public cue for foreign policy change.
+Policymakers must consider many factors when deciding to change foreign policy. These include trade statistics across many countries, GDP growth, shifts in the balance of power, new alliances and trade partnerships, new technologies, domestic politics, and more. A trade-based status shift may draw attention to a potential policy change that otherwise would not occur through smooth growth in economic interdependence. It simplifies complex economic relationships, helps elites coordinate attention [@bordalo_etal2022; @conlon2023; @enke2024; @graeber_etal2025], and serves as a focal point [@schelling1960].
+
+This attribution of symbolic status between two countries is a common feature of foreign policy. Leaders in Canada refer to their country as a middle power [@chapnick1999]. Churchill famously called the US-UK relationship a special one [@reynolds1985]. Mitterrand used “couple franco-allemand” to promote the European Union [@krotz_schild2013]. My argument is that trade status works similarly.
+
+To explain the proposed mechanism and hypothesis, I present a simple formal model. I follow the sparsity approach of @gabaix2014 when modeling the leadership's political attention. The model delivers one main result: a public cue scales the policy response to the leadership's existing evaluation of China and leaves the direction of that response unchanged.
 
 ## A simple model of public status cues
 
-I model how political leadership chooses a policy directive and a diplomatic bureaucracy decides whether to implement it following a publicized change at the top of a country's trade ranking. Public recognition raises attention to the relationship and the bureaucracy's benefit from implementation. The leadership's evaluation of the relationship determines the direction of any policy response.
+I model how political leadership chooses a policy directive and a diplomatic bureaucracy decides whether to implement it following a publicized change at the top of a country's trade ranking. Public recognition raises attention to the relationship and the bureaucracy's benefit from implementation.
 
-Let $R\in\{0,1\}$ indicate whether a revisionist power occupies the top position in the relevant trade hierarchy for a given country. Let $P\in\{0,1\}$ indicate whether that position has become publicly visible, for example, through press coverage using explicit ranking language.
+Let $R\in\{0,1\}$ indicate whether a rising power, China in the application, occupies the top position in the relevant trade hierarchy for a given country. Let $P\in\{0,1\}$ indicate whether that position has become publicly visible, for example, through press coverage using explicit ranking language.
 
-I assume that policymakers' attention is sparse [@gabaix2014]. This means that a change in the new power's status competes for attention with other events in the world and does not automatically produce a change in foreign policy. I call the product $q=RP\in\{0,1\}$ a political cue. It captures a situation in which the emerging power not only attains its new rank but also has that rank explicitly brought to public attention by the media or public officials. Let salience $s(q)\geq0$ satisfy $s(1)>s(0)$. In words, becoming the new number one and receiving public recognition makes the emerging power more salient to policymakers, bringing it to their attention. The function $s(q)$ represents this attention as an exogenous decision weight.
-
-### Valence
-
-Let:
-
-- $G\geq0$: the baseline perceived gains from moving closer to the new great power;
-- $D\geq0$: the baseline perceived costs of increased dependence on the emerging power;
-- $\iota\in[-1,1]$: the leadership's ideological orientation toward the emerging power, where
-
-\[
-\begin{cases}
-\iota>0 & \text{indicates a favorable view of the emerging power;}\\
-\iota=0 & \text{indicates neutrality;}\\
-\iota<0 & \text{indicates an unfavorable view of the emerging power.}
-\end{cases}
-\]
-
-The quantities $G$ and $D$ are evaluated on a common utility scale before ideological weighting. Ideology affects how much importance the leadership assigns to each component. I define the net marginal value of strengthening ties with China as
-
-\[
-\theta=(1+\iota)G-(1-\iota)D
-      =(G-D)+\iota(G+D).
-\]
-
-An ideologically neutral leadership, $\iota=0$, evaluates the relationship according to $G-D$. A favorable orientation increases the weight on gains and reduces the weight on dependence costs; an unfavorable orientation does the reverse. Both weights are nonnegative and sum to two. At the endpoints, $\iota=1$ places zero weight on dependence costs and $\iota=-1$ places zero weight on gains. Thus ideology operates through the evaluation of the relationship: if $G=D=0$, then $\theta=0$ for every ideological orientation.
-
-Positive $\theta$ makes movement toward China attractive before adjustment costs; negative $\theta$ favors hedging or distancing. When $G+D>0$, the evaluation equals zero at $\iota_0=(D-G)/(G+D)$. For example, with $G=2$ and $D=5$, an orientation of $\iota=0.5$ yields $\theta=0.5$, whereas $\iota=-0.5$ yields $\theta=-6.5$. Whether either evaluation produces an actual policy change also depends on the costs and implementation conditions specified below. The comparison between $q=0$ and $q=1$ holds $G$, $D$, and $\iota$ fixed.
+I assume that policymakers' attention is sparse [@gabaix2014]. A change in China's status competes for attention with other events in the world and does not automatically produce a change in foreign policy. I call the product $q=RP\in\{0,1\}$ the public cue. It captures a situation in which China not only attains its new rank but also has that rank explicitly brought to public attention by the media or public officials. Let salience $s(q)\geq0$ satisfy $s(1)>s(0)$: becoming the new number one and receiving public recognition makes China more salient to policymakers. The function $s(q)$ represents this attention as an exogenous decision weight.
 
 ### Players, actions, and information
 
@@ -219,7 +179,7 @@ There are two players:
 
 1. The political leadership, $L$, chooses a policy directive $d\in\mathbb{R}$, measured as a normalized adjustment relative to the existing policy. Positive values indicate movement toward China; negative values indicate hedging or distancing. A directive of $d=0$ preserves the existing policy.
 
-2. The diplomatic bureaucracy, $B$, observes the directive and chooses $e\in\{0,1\}$, where $e=1$ means implementation.
+2. The diplomatic bureaucracy, $B$, observes the directive and chooses $e\in\{0,1\}$, where $e=1$ means implementation. The bureaucracy has no preference over the direction of policy. Its payoff depends on whether it implements a directive, so it works as an implementation gate.
 
 The realized policy is
 
@@ -227,9 +187,9 @@ The realized policy is
 y=ed.
 \]
 
-The baseline model assumes complete information: $q$, $G$, $D$, $\iota$, the salience and implementation-benefit functions, and the costs are common knowledge.
+The baseline model assumes complete information: $q$, the leadership's evaluation, the salience and implementation-benefit functions, and the costs are common knowledge.
 
-### Timing and payoffs
+### Timing
 
 The game proceeds in the following order:
 
@@ -239,17 +199,44 @@ The game proceeds in the following order:
 
 3. The policy $y=ed$ is realized, and payoffs are received.
 
+### Payoffs
+
+The leadership's payoff depends on its evaluation of closer ties with China. Let:
+
+- $G\geq0$: the baseline perceived gains from moving closer to China;
+- $D\geq0$: the baseline perceived costs of increased dependence on China;
+- $\iota\in[-1,1]$: the leadership's ideological orientation toward China, where
+
+\[
+\begin{cases}
+\iota>0 & \text{indicates a favorable view of China;}\\
+\iota=0 & \text{indicates neutrality;}\\
+\iota<0 & \text{indicates an unfavorable view of China.}
+\end{cases}
+\]
+
+The quantities $G$ and $D$ are evaluated on a common utility scale before ideological weighting. Ideology affects how much importance the leadership assigns to each component. I define the leadership's evaluation, the net marginal value of strengthening ties with China, as
+
+\[
+\theta=(1+\iota)G-(1-\iota)D
+      =(G-D)+\iota(G+D).
+\]
+
+An ideologically neutral leadership, $\iota=0$, evaluates the relationship according to $G-D$. A favorable orientation increases the weight on gains and reduces the weight on dependence costs; an unfavorable orientation does the reverse. Both weights are nonnegative and sum to two. At the endpoints, $\iota=1$ places zero weight on dependence costs and $\iota=-1$ places zero weight on gains. If $G=D=0$, then $\theta=0$ for every ideological orientation.
+
+Positive $\theta$ makes movement toward China attractive before adjustment costs; negative $\theta$ favors hedging or distancing. When $G+D>0$, the evaluation equals zero at $\iota_0=(D-G)/(G+D)$. The comparison between $q=0$ and $q=1$ holds $G$, $D$, and $\iota$ fixed.
+
 The leadership values policy changes that move the relationship in its preferred direction, but must weigh that return against the costs of departure from existing policy. Its payoff, normalized to zero when it issues no directive, is
 
 \[
 u_L(d,e;q)
 =
 e\left[s(q)\theta d-\frac{d^2}{2}\right]
--c_L|d|,
+-c_L|d|.
 \tag{1}
 \]
 
-The term $s(q)\theta d$ captures the perceived return from the direction and extent of an implemented adjustment. For positive salience, movement toward China yields a positive return when $\theta>0$; when $\theta<0$, a negative directive yields a positive return by moving away from a relationship the leadership evaluates unfavorably. Salience determines the weight this evaluation receives in the policy decision. A public cue can therefore increase the incentive to act in either direction while leaving the underlying evaluation $\theta$ unchanged.
+The term $s(q)\theta d$ captures the perceived return from the direction and extent of an implemented adjustment. For positive salience, movement toward China yields a positive return when $\theta>0$; when $\theta<0$, a negative directive yields a positive return by moving away from a relationship the leadership evaluates unfavorably. Salience determines the weight this evaluation receives in the policy decision.
 
 The quadratic term $d^2/2$ captures the increasing marginal cost of larger implemented departures from existing policy, such as the disruption involved in revising established commitments. Its curvature is normalized to one for simplicity. This term limits the preferred extent of adjustment even when the leadership strongly favors a particular direction. The factor $e$ multiplies both this cost and the directional return because they arise only when the bureaucracy carries out the directive.
 
@@ -264,32 +251,28 @@ e\,\mathbf{1}\{d\neq0\}\,[K(q)-c_B],
 \tag{2}
 \]
 
-The bureaucracy derives no utility from moving closer to China or to the United States, $K(q)$ represents the benefits of implementing a given policy, and $c_B$ the costs. When deriving the equilibrium, I also assume that $K(1)>K(0)$, which means that implementing a public policy generates higher benefits than a policy without a public cue.
+where $K(q)$ is the bureaucracy's benefit from implementing a directive and $c_B$ its cost. I assume $K(1)>K(0)$. Because the foreign minister is typically a political appointee, going against a visible priority tends to harm a civil servant's career, so implementing the announced policy is preferable.
 
 ### Equilibrium
 
-The solution concept is subgame-perfect equilibrium, obtained by backward induction.
+The solution concept is subgame-perfect equilibrium, obtained by backward induction. Given a nonzero directive, the bureaucracy implements if and only if $K(q)>c_B$; ties are broken in favor of non-implementation. If $d=0$, there is no policy to implement, and $e=0$.
 
-\begin{lemma}[Bureaucratic response]
-For any directive $d\neq0$, the bureaucracy implements if and only if $K(q)>c_B$. In the event of equality, the conservative tie-breaking rule $e=0$ applies.
-\end{lemma}
-
-\textit{Proof.} If $d\neq0$, implementation yields $K(q)-c_B$, whereas non-implementation yields zero. Comparing the two directly gives the condition. If $d=0$, there is no policy to implement, and $e=0$ is adopted. $\square$
-
-\begin{proposition}[Equilibrium with a directionally neutral cue]
+\begin{proposition}[Public cues scale the response]
 The policy outcome in the subgame-perfect equilibrium is
 
 \[
 y^*(q)=
 \mathbf{1}\{K(q)>c_B\}
 \operatorname{sign}(\theta)
-\pospart{s(q)|\theta|-c_L}.
+\pospart{s(q)|\theta|-c_L},
 \tag{3}
 \]
 
-where $\pospart{x}=\max\{x,0\}$. The leadership chooses $d^*(q)=y^*(q)$, anticipating the bureaucratic response specified in Lemma 1.
+where $\pospart{x}=\max\{x,0\}$, and the leadership chooses $d^*(q)=y^*(q)$. Consequently:
 
-In particular, the cue can change whether a response occurs and how strong it is, but it does not determine its sign.
+(i) whenever $y^*(q)\neq0$, $\operatorname{sign}\bigl(y^*(q)\bigr)=\operatorname{sign}(\theta)$;
+
+(ii) $|y^*(1)|\geq|y^*(0)|$.
 \end{proposition}
 
 \textit{Proof.} If $K(q)\leq c_B$, the bureaucracy does not implement nonzero directives. Since the leadership pays $c_L|d|$ even for a directive that is not implemented, its optimal choice is $d=0$, and therefore $y=0$.
@@ -302,21 +285,15 @@ If $K(q)>c_B$, every nonzero directive is implemented. The leadership solves
 \]
 \end{minipage}
 
-For $d>0$, the first-order condition is $d=s(q)\theta-c_L$; this solution is positive only when $s(q)\theta>c_L$. For $d<0$, the condition is $d=s(q)\theta+c_L$; it is negative only when $s(q)\theta<-c_L$. In all other cases, the subgradient condition is satisfied at $d=0$. Combining the three regions yields (3). $\square$
+For $d>0$, the first-order condition is $d=s(q)\theta-c_L$; this solution is positive only when $s(q)\theta>c_L$. For $d<0$, the condition is $d=s(q)\theta+c_L$; it is negative only when $s(q)\theta<-c_L$. In all other cases, the subgradient condition is satisfied at $d=0$. Combining the three regions yields (3). Part (i) follows directly from (3). For part (ii), both nonnegative factors of $|y^*(q)|$, the indicator $\mathbf{1}\{K(q)>c_B\}$ and $\pospart{s(q)|\theta|-c_L}$, weakly increase from $q=0$ to $q=1$ because $K(1)>K(0)$ and $s(1)>s(0)$. $\square$
 
-To complete the earlier example, take $G=2$, $D=5$, and $\iota=0.5$, so $\theta=0.5$. Let $s(0)=0.5$, $s(1)=1$, $c_L=0.4$, $K(0)=2$, $K(1)=3$, and $c_B=1$. These are hypothetical normalized values without empirical calibration. The bureaucracy would implement a nonzero directive in either state. Before the cue, $s(0)|\theta|=0.25\leq0.4$, so $y^*(0)=0$; after the cue, $s(1)|\theta|=0.5>0.4$, so $y^*(1)=0.5-0.4=0.1$.
+Part (i) means that a nonzero response moves toward China when $\theta>0$ and away from China when $\theta<0$; the latter may represent hedging or distancing. Part (ii) means that the cue can start a response or enlarge an existing one. If the cue changed neither attention nor implementation benefits, so that $s(1)=s(0)$ and $K(1)=K(0)$, the equilibrium policy would be the same with and without it. This is the benchmark in which redundant information has no effect.
 
-#### Immediate implications
+Figure \@ref(fig:plot-model-response) plots the equilibrium response against the leadership's evaluation when the bureaucracy implements in both states. The public cue narrows the region of inaction around $\theta=0$ and steepens the response outside it, on both sides.
 
-\begin{corollary}[The cue has no intrinsic valence]
-Whenever $y^*(q)\neq0$,
-
-\[
-\operatorname{sign}\bigl(y^*(q)\bigr)=\operatorname{sign}(\theta).
-\]
-
-A nonzero response moves toward China when $\theta>0$ and away from China when $\theta<0$; the latter may represent hedging or distancing.
-\end{corollary}
+```{r plot-model-response, fig.cap="Equilibrium policy response $y^*(q)$ as a function of the leadership's evaluation $\\theta$, before ($q=0$) and after ($q=1$) the public cue. Illustrative values: $s(0)=0.5$, $s(1)=1$, $c_L=0.4$, and $K(q)>c_B$ in both states. In the dark band, neither state produces a response; in the light bands, a response occurs only after the cue.", fig.height=3.5, fig.width=6, fig.pos="H", out.width="80%", fig.align="center"}
+tar_read(model_response_plot)
+```
 
 \begin{corollary}[Activation through attention or implementation incentives]
 The cue activates a previously absent response when both post-cue conditions hold,
@@ -336,65 +313,35 @@ s(0)|\theta|\leq c_L.
 \]
 \end{corollary}
 
-\begin{corollary}[Benchmark with unchanged attention and implementation benefits]
-For this comparison, relax the strict assumptions $s(1)>s(0)$ and $K(1)>K(0)$ by setting $s(1)=s(0)$ and $K(1)=K(0)$. When the public label changes neither attention nor implementation benefits, the equilibrium policy remains unchanged.
-\end{corollary}
+The cue can therefore activate a response through either player. It can make the leadership value the change enough to pay the proposal cost, or it can make the bureaucracy willing to carry out a directive it would otherwise leave aside.
 
-The general result therefore concerns magnitude:
+As an illustration with hypothetical normalized values, let $G=2$ and $D=5$. An orientation of $\iota=0.5$ yields $\theta=0.5$, whereas $\iota=-0.5$ yields $\theta=-6.5$. Take $\iota=0.5$ and let $s(0)=0.5$, $s(1)=1$, $c_L=0.4$, $K(0)=2$, $K(1)=3$, and $c_B=1$. The bureaucracy would implement a nonzero directive in either state. Before the cue, $s(0)|\theta|=0.25\leq0.4$, so $y^*(0)=0$; after the cue, $s(1)|\theta|=0.5>0.4$, so $y^*(1)=0.5-0.4=0.1$.
 
-\[
-|y^*(1)|\geq|y^*(0)|
-\]
+### Extension: issue-specific costs
 
-when the cue weakly increases $s$ and $K$. The direction depends on $\theta$.
-
-### Extensions
-
-#### Issue-specific costs
-
-To capture selective adjustment, let $c_L=c_{Lk}$ and $\theta_k=(1+\iota)G_k-(1-\iota)D_k$ for each issue $k$, where $G_k$ and $D_k$ are the baseline gains and dependence costs relevant to that issue. Conditional on implementation being available both before and after the cue, the attention channel activates a previously absent response on issues satisfying
+To capture selective adjustment, replace $c_L$ with an issue-specific cost $c_{Lk}$ and let $\theta_k=(1+\iota)G_k-(1-\iota)D_k$ for each issue $k$, where $G_k$ and $D_k$ are the baseline gains and dependence costs relevant to that issue. Conditional on implementation being available both before and after the cue, the attention channel activates a previously absent response on issues satisfying
 
 \[
 s(0)|\theta_k|\leq c_{Lk}<s(1)|\theta_k|.
 \]
 
-Issues with an already active response can also adjust further as salience increases; issues whose costs remain above the post-cue threshold remain unchanged. If the cue instead makes implementation available for the first time, the activation conditions in Corollary 2 apply issue by issue. The composition of the response depends on the distribution of valuations and costs and does not follow automatically from an issue being classified as human rights or belonging to any other substantive area.
-
-#### Persistence and incumbent prominence
-
-Let $\rho$ denote the expected persistence of the new hierarchy and $h$ the prominence of the displaced partner. A simple extension allows
-
-\[
-\frac{\partial s(1;\rho,h)}{\partial\rho}>0,
-\qquad
-\frac{\partial s(1;\rho,h)}{\partial h}>0,
-\]
-
-with analogous relationships for $K$. A persistent ranking provides a more stable basis for adaptation; displacing a prominent incumbent makes the reclassification more visible. Neither condition determines the valence of $\theta$. Holding the leadership's evaluation and both players' costs fixed, increases in persistence or incumbent prominence that raise salience and implementation benefits weakly increase the absolute value of the post-cue policy response, subject to the same thresholds.
+Issues with an already active response can also adjust further as salience increases; issues whose costs remain above the post-cue threshold remain unchanged. If the cue instead makes implementation available for the first time, the activation conditions in Corollary 1 apply issue by issue. The composition of the response depends on the distribution of valuations and costs across issues.
 
 ## Interpretation
 
-Policymakers must consider many factors when deciding to change foreign policy. These include trade statistics across many countries, GDP growth, shifts in the balance of power, new alliances and trade partnerships, new technologies, domestic politics, and more. A trade-based status shift may draw attention to a potential policy change that otherwise would not occur through smooth growth in economic interdependence. It simplifies complex economic relationships, helps elites coordinate attention [@bordalo_etal2022; @conlon2023; @enke2024; @graeber_etal2025], and serves as a focal point [@schelling1960].
-
-This attribution of symbolic status between two countries is a common feature of foreign policy. Leaders in Canada refer to their country as a middle power [@chapnick1999]. Churchill famously called the US-UK relationship a special one [@reynolds1985]. Mitterrand used “couple franco-allemand” to promote the European Union [@krotz_schild2013]. My argument is that trade status works similarly.
-
-The mechanism has two steps. First, media coverage or official recognition of the new status makes China and the bilateral relationship more visible, increasing \(s(q)\). Second, greater attention from policymakers allows them to perceive a greater marginal net benefit, \(s(q)\theta\), of closer ties with the new major trade partner.
+The mechanism has three steps. First, media coverage or official recognition of the new status makes China and the bilateral relationship more visible, increasing \(s(q)\). Second, greater attention from policymakers allows them to perceive a greater marginal net benefit, \(s(q)\theta\), of closer ties with China. Third, the public cue makes the bureaucracy prefer to implement any policy change directed by the political leadership, which completes the mechanism.
 
 ## Hypothesis
 
-One would think that the main hypothesis would be that a public cue (by the media and/or political leadership) of a new trade status acquired by an emerging power should generate closer alignment toward that partner.
+When the perceived costs outweigh the benefits, a number-one status may create anxiety among political elites and prompt a move further away from China (Proposition 1(i)). In the model, the direction depends on the sign of $\theta$, the leadership's net evaluation of closer ties with China. A favorable orientation toward China ($\iota>0$) raises $\theta$, but $\theta$ is positive only if $\iota>\iota_0=(D-G)/(G+D)$, that is, only if the perceived gains are not outweighed by dependence costs.
 
-However, as the model makes clear, a public cue of the new status may instead induce a policy response in the opposite direction. A number-one status may create anxiety among political elites and prompt a decision to move further away from China rather than toward the expected alignment, because the perceived costs outweigh the benefits. It depends on the value of $\iota$ in the model, which measures policymakers’ favorability toward a foreign policy closer to China.
+The hypothesis tested in the paper is: All else equal, whenever a political leadership's net evaluation of closer ties with China is positive ($\theta>0$), a public cue that China has become the country's top trade partner increases the probability of closer alignment with China.
 
-As a result, the hypothesis tested in the paper is: All else equal, whenever a political leadership is favorably oriented toward China ($\iota>0$), a public cue of a new trade status by an emerging power increases the probability of closer approximation toward that partner.
+Empirically, the reduced form does not allow me to distinguish $\theta$ from $\iota$. For the Brazilian case, we know that the government was favorably disposed toward South-South cooperation [@neto2011; @schenoniMythsMultipolaritySources2022]. For other countries, the paper’s assumption that they will view China favorably is plausible (though not certain) until the mid-2010s, when the US-China rivalry was not as intense as it became by the end of the decade.
 
-For Brazil, with a leftist government interested in South-South cooperation, I argue that the assumption of $\iota>0$ is plausible. For other countries, the paper’s assumption that they will view China favorably is plausible (though not certain) until the mid-2010s, when the US-China rivalry was not as intense as it became by the end of the decade.
+The SDiD estimates the reduced-form effect of the rank change on UNGA voting and does not separate the attention channel from the implementation channel. The model also predicts no policy change from a new trade rank without a public cue. Without systematic data on the presence or absence of public cues for every country, the cross-country panel may mix cases with and without a cue, so I expect its average effect to be smaller than in the Brazil case.
 
-Since I am estimating a reduced-form model, the mechanism is not estimated directly from the model. As mentioned, an increased public cue may not induce foreign-policy alignment toward China because a new directive also depends on the leadership's ideological leanings toward China. Another important caveat that the cross-country regression makes clear is that, without a public cue, the model predicts no foreign policy change as a result of the new trade status of the emerging power. Without systematic data on the presence or absence of public cues for every country, I may be mixing cases with and without a public cue. Thus, I expect the average effect to be smaller than in the Brazil case.
-
-The model extension also implies a durability condition. The higher the persistence of the new status, the higher the salience, which should increase the likelihood of a foreign policy orientation. A one-year episode of China as the number one trade partner may attract attention, but it is a weaker treatment regime.
-
-Last but not least, trade-based status changes may impact foreign policy issues differently. Some foreign-policy arenas are especially suitable for this kind of adjustment. There are two key conditions: the country and the newly elevated partner previously differed, and the costs of movement are high enough to prevent adjustment before the cue but low enough to be overcome afterward.
+Trade-based status changes may also affect foreign-policy issues differently. By the issue-specific extension, the cue activates a response on issues that meet two conditions: the country and China previously differed, and the costs of movement are high enough to prevent adjustment before the cue but low enough to be overcome afterward.
 
 # Data and Design
 
@@ -519,20 +466,6 @@ The preferred specification uses no covariates because time-varying post-2009 va
 I report three distinct inferential summaries for the preferred Brazil estimate. First, the placebo-based standard error is the finite-population standard deviation of 20,000 seeded `synthdid` placebo resamples. Second, I combine that placebo standard error with a two-sided normal approximation to report the conventional p-value and 95 percent confidence interval. Third, I report deterministic placebo-in-space ranks obtained by reassigning treatment once to Brazil and to every donor: the directional rank counts estimates at least as negative as Brazil's, while the bilateral rank compares absolute magnitudes. The directional rank follows the theory's prediction of convergence; the bilateral rank is a conservative sensitivity assessment.
 
 Two features of rank-based inference with a single treated unit are noteworthy. First, with only `r sdid_main_summary$rank_denominator` countries, the most extreme possible result would be Brazil having the largest effect, yielding a p-value floor of approximately `r sprintf('%.3f', 1 / sdid_main_summary$rank_denominator)`. Second, the two-sided absolute rank counts large placebo effects of either sign against Brazil, including positive placebo effects that do not represent the error relevant to a directional hypothesis. I apply the same convention throughout the paper to every placebo-based diagnostic.
-
-## Cross-Country Regression
-
-Notwithstanding my best effort to address potential rival explanations for the observed reduced-form causal effect of the change in 2009, there is only so much one can do with a single treated case. Thus, I also consider a broader panel of countries in which China became the number-one export destination, estimated with a latent interactive fixed-effects regression [@liu2024practical]. Interactive fixed effects allow countries to load differently on common latent shocks. Treated countries enter China-top status in different years, so a Brazil-specific 2009 shock cannot mechanically generate the pooled result.
-
-This approach, however, faces some challenges that must be addressed or at least recognized. The conceptual treatment, as mentioned, is status, not the rank. However, for each country what matters is not necessarily being the top trade destination in goods exports. Elsewhere the status cue may track aggregate flows, services exports, or even imports. It all depends on what each country considers more important. It is understandable that a service-oriented country like Malta will weight service trade more than a country like Brazil, where goods exports are what matters.
-
-To better understand variation in the media coverage on this, a supplemental source audit in the appendix uses displaced-incumbent coverage to check evidence of coverage in other countries. Australia illustrates a metric distinction. The *Australian Financial Review* reported on 9 November 2009 that China was Australia's largest aggregate trading partner, combining exports and imports of goods and services. The current goods-only annual panel codes Australia's first qualifying China-top goods-export year as 2009, after Japan held the top goods-export rank in 2008. The AFR item therefore documents broad-metric salience during the same annual treatment window; it does not establish that a strict goods-export cue preceded the 2009 treatment. This mismatch introduces measurement error into the cross-country treatment indicator. If this error is random and nondifferential with respect to potential voting outcomes and their trends, I would expect attenuation toward zero and would therefore interpret the estimated magnitude as conservative under that assumption.
-
-For the cross-country evidence beyond Brazil, the treated sample is restricted to what I call "durable periods" of China-top status. A durable period is one in which China is the largest goods-export destination for at least five consecutive observed years, after an observed prior year in which China was not number one.
-
-Since I am interested in a rising power becoming number one, specifically China, I restrict the treatment to years in or after 2000, when it is more plausible that China was seen as a rising power and the status cue would trigger a foreign policy change.
-
-Countries that never reach China-top goods-export status remain controls. I do allow for a country to switch into and out of treatment. Such cases remain in the sample. For treated countries, the main risk set keeps clean pre-entry non-China-top years and qualifying treated years, while excluding post-exit off-status years and short China-top episodes. This operationalization matches the salience logic more closely than either a one-year entry definition or an absorbing treatment rule: the theory expects political visibility, bureaucratic learning, and diplomatic adaptation to be clearer when the new trade hierarchy persists and is currently true. I compute partner ranks from ITPD-E goods sectors only, excluding services before ranks are constructed. I estimate this panel with the `fect` implementation and refer to it as the IFE specification below. The appendix reports duration-threshold and risk-set robustness checks.
 
 # Brazil SDiD Evidence
 
@@ -970,7 +903,7 @@ A remaining concern is that 2009 bundled the Brazilian rank reversal with other 
 
 Brazil's 2004--2008 primary-goods share is `r sprintf('%.2f', commodity_primary_pct)` percent, composed of `r sprintf('%.2f', commodity_agriculture_pct)` percent Agriculture and `r sprintf('%.2f', commodity_mining_pct)` percent Mining and Energy. The preferred ATT is `r sprintf("%.3f", china_demand_main$estimate)`; adding primary composition and its 2008--2009 interaction yields `r sprintf("%.3f", china_demand_commodity$estimate)`. Composition, decomposition, global-price, and prior-China-exposure specifications remain in a narrow negative range. The 2008--2009 interactions are robustness or mechanism diagnostics, not alternative total-effect estimates, because 2009 is the first treated year and the interaction may absorb part of the mechanism. Stability across these measures does not isolate the rank cue experimentally from every 2009 political shock, but it reduces the narrower concern that the preferred estimate is an artifact of post-treatment controls or omitted pre-2009 commodity composition.
 
-The cross-country panel below is a broader scope check, not the main answer to the Brazil-specific demand-shock critique. Brazil is included in the goods-only cross-country sample, but the panel aligns countries by their own China-top goods-export entry years. A Brazil-specific 2009 confounder cannot mechanically generate an average event-time effect across countries treated in different calendar years. For such an explanation to account for both the Brazil estimate and the cross-country result, the omitted force would need to coincide with durable China-top entry across countries, affect UNGA distance to China in the same direction, and remain outside the latent factors captured by the interactive fixed-effects specification. It would also need to be strongly enough associated with both treatment timing and the outcome to overturn estimates that are stable across the donor-pool checks and the cross-country duration and risk-set checks, alongside the suggestive Brazil timing diagnostics.
+
 
 ```{r table-placebo, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 rank_tests <- sdid_timing_placebos %>%
@@ -1269,7 +1202,7 @@ The DDD estimate indicates a larger human-rights shift than the analogous non-hu
 
 # Brazilian Media Salience
 
-To assess whether trade-topic salience increased around the rank reversal, I examine coverage of China in Folha de S.Paulo, Brazil's widest-circulation newspaper [@folha2016], from 2000 to 2014. Salience matters because the rank-threshold argument requires the top-rank cue to become politically usable. A change in export hierarchy can shape elite and public attention when it appears in a prominent national newspaper as a simple signal of China's commercial importance, consistent with work on media, agenda setting, and foreign policy [@soroka2003; @baum_potter2008; @walgraveContingencyMassMedias2006].
+To assess whether trade-topic salience increased around the rank reversal, I examine coverage of China in Folha de S.Paulo, Brazil's widest-circulation newspaper [@folha2016], from 2000 to 2014. Salience matters because the argument requires that China's new rank reach the public, where politicians can invoke it. A change in export hierarchy can shape elite and public attention when it appears in a prominent national newspaper as a simple signal of China's commercial importance, consistent with work on media, agenda setting, and foreign policy [@soroka2003; @baum_potter2008; @walgraveContingencyMassMedias2006].
 
 Headlines are the appropriate unit for this trade-topic diagnostic because they are tractable in large archives and operate as attention-directing cues [@zhang_yu2024_chinese_dream]. The relevant question is whether Folha increasingly foregrounded China as a trade relationship after the rank reversal. Headlines are the most visible textual cue in the archive and the part of coverage most likely to be scanned by broad audiences. Full article texts would be useful for a different exercise -- for example, measuring tone or detailed argumentation -- but the salience claim here is about which China-related themes were made visible at the headline level. This diagnostic does not measure the frequency of explicit rank labels.
 
@@ -1297,7 +1230,7 @@ stopifnot(
 )
 ```
 
-I therefore classify China-related headlines into substantive categories and then collapse them into four analytically relevant groups: China-Brazil trade, China's domestic economy, diplomacy and bilateral relations, and non-economic coverage. The classification uses a fixed label set with examples, and the appendix reports the exact prompt and validation procedure. Figure \@ref(fig:plot-media-counterfactual) compares 2000--2008 with 2009--2014 and shows a substantial increase in China-Brazil trade coverage, from an average of `r sprintf('%.0f', media_trade_pre)` to `r sprintf('%.0f', media_trade_post)` headlines per year (about `r sprintf('%.0f', media_trade_pct)` percent), alongside a larger increase in coverage of the Chinese economy, from `r sprintf('%.0f', media_econ_pre)` to `r sprintf('%.0f', media_econ_post)` headlines per year (about `r sprintf('%.0f', media_econ_pct)` percent). Together, these patterns are consistent with increased media attention to China's economic importance for Brazil, as the proposed mechanism predicts. The figure supports the trade-topic-salience step, but it does not by itself establish the public availability of an explicit rank cue. The separate contemporary sources below provide evidence about rank language.
+I therefore classify China-related headlines into substantive categories and then collapse them into four analytically relevant groups: China-Brazil trade, China's domestic economy, diplomacy and bilateral relations, and non-economic coverage. The classification uses a fixed label set with examples, and the appendix reports the exact prompt and validation procedure. Figure \@ref(fig:plot-media-counterfactual) compares 2000--2008 with 2009--2014 and shows a substantial increase in China-Brazil trade coverage, from an average of `r sprintf('%.0f', media_trade_pre)` to `r sprintf('%.0f', media_trade_post)` headlines per year (about `r sprintf('%.0f', media_trade_pct)` percent), alongside a larger increase in coverage of the Chinese economy, from `r sprintf('%.0f', media_econ_pre)` to `r sprintf('%.0f', media_econ_post)` headlines per year (about `r sprintf('%.0f', media_econ_pct)` percent). Together, these patterns are consistent with increased media attention to China's economic importance for Brazil, as the proposed mechanism predicts. The figure supports the trade-topic-salience step, but it does not show that the rank itself was reported. The separate contemporary sources below provide evidence about rank language.
 
 ```{r plot-media-counterfactual, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Brazilian media salience: disaggregated China headlines in Folha de S.Paulo by category. From 2000--2008 to 2009--2014, China-Brazil trade coverage increases substantially and coverage of the Chinese economy increases even more; together, the changes are consistent with heightened attention to China's economic importance for Brazil. ", caption_note(unit = "Headlines per category per year", window = "2000-2014 annual series")), fig.pos="H", fig.asp = 0.7, fig.width = 8}
 mc <- tar_read(media_counterfactual)
@@ -1331,25 +1264,29 @@ ggplot(mc, aes(x = year, y = n, fill = broad_category)) +
 
 \clearpage
 
-The evidence distinguishes public availability from official uptake. The status cue became publicly available during the 2009 treatment year, before the full-year trade table was finalized. In early May, contemporary coverage of January--April trade statistics reported a historic shift in Brazil's trade hierarchy: China had become Brazil's largest trading partner and had purchased US$5.627 billion in Brazilian exports, compared with US$4.925 billion purchased by the United States [@agencia_brasil2009_china_supera]. This real-time visibility matters for the mechanism. The empirical design codes treatment annually because the outcome and comparative trade data are annual, but officials, journalists, and firms encountered the rank cue through contemporaneous monthly and year-to-date statistics. Lula's May 2009 Beijing visit then provides evidence of official uptake during the treatment year: the new rank was already available as a public category around which diplomatic priorities could be narrated. Brazilian officials subsequently invoked China's new position in Brazil's trade hierarchy when explaining diplomatic prioritization, bilateral upgrading, and institutional follow-up.
+The evidence documents two steps separately: the rank was reported publicly, and officials then used it. The rank was reported during the 2009 treatment year, before the full-year trade table was finalized. In early May, contemporary coverage of January--April trade statistics reported a historic shift in Brazil's trade hierarchy: China had become Brazil's largest trading partner and had purchased US$5.627 billion in Brazilian exports, compared with US$4.925 billion purchased by the United States [@agencia_brasil2009_china_supera]. This real-time visibility matters for the mechanism. The empirical design codes treatment annually because the outcome and comparative trade data are annual, but officials, journalists, and firms encountered the rank cue through contemporaneous monthly and year-to-date statistics. Lula's May 2009 Beijing visit then shows officials using the rank in the same year: the new rank was already available as a public category around which diplomatic priorities could be narrated. Brazilian officials subsequently invoked China's new position in Brazil's trade hierarchy when explaining diplomatic prioritization, bilateral upgrading, and institutional follow-up.
 
 In a written interview on the eve of his May 2009 visit to Beijing, President Lula described China as Brazil's leading trading partner and framed the trip as an effort to consolidate cooperation across commerce, technology, and global economic governance [@mre_funag_resenha104_2009, 323]. In Beijing three days later, Lula repeated the rank claim in speeches organized around the Brazil-China Strategic Partnership, trade diversification, investment, presidential diplomacy, and the preparation of the 2010--2014 Joint Action Plan [@mre_funag_resenha104_2009, 115, 121--122]. The cue then persisted in Itamaraty language. When announcing Hu Jintao's 2010 state visit and the signature of the Joint Action Plan, the Ministry of Foreign Affairs again invoked China's 2009 rise to the top of Brazil's trade hierarchy [@mre_funag_resenha106_2010, 356]. Dilma Rousseff and Hu Jintao's 2011 joint communiqué likewise noted that China had become Brazil's principal trading partner in 2009 and embedded that status in an agenda of intensified dialogue over trade, investment, diversification, and implementation of the Joint Action Plan [@mre_funag_resenha108_2011, 160--161]. Later that year, Foreign Minister Antonio Patriota made the institutional link explicit: in discussing China, he announced a dedicated Itamaraty task force to monitor economic-commercial relations with Brazil's principal trading partner and to propose ways to move the relationship beyond complementarity, toward diversification and higher value-added trade [@mre_funag_resenha109_2011, 47].
 
-These statements show official uptake of the 2009 status cue. Their co-occurrence with diplomatic prioritization and institutional attention is consistent with justificatory use, but it does not demonstrate that the cue caused those initiatives or particular UNGA decisions. The evidence therefore supports the availability and uptake steps directly and treats justificatory use as an inference compatible with the public mechanism implied by the theory: once China was officially recognized as central in Brazil's economic hierarchy, selective diplomatic accommodation could be presented as pragmatic recognition of national economic interests rather than as ideological concession or opportunistic bandwagoning.
+These statements show official uptake of the 2009 public cue. Their co-occurrence with diplomatic prioritization and institutional attention is consistent with justificatory use, but it does not demonstrate that the cue caused those initiatives or particular UNGA decisions. The evidence therefore supports the availability and uptake steps directly and treats justificatory use as an inference compatible with the public mechanism implied by the theory: once China was officially recognized as central in Brazil's economic hierarchy, selective diplomatic accommodation could be presented as pragmatic recognition of national economic interests rather than as ideological concession or opportunistic bandwagoning.
 
 # Cross-Country Evidence Beyond Brazil
 
-The cross-country analysis serves two purposes. First, it examines whether a first position as a goods export destination is followed by movement toward China beyond the Brazilian case. Second, it is an additional robustness check against explanations tied specifically to Brazil's 2009 calendar year, such as the global financial crisis, the BRICS/G20 moment, or the commodity cycle.
+Notwithstanding my best effort to address potential rival explanations for the observed reduced-form causal effect of the change in 2009, there is only so much one can do with a single treated case. Thus, I also consider a broader panel of countries in which China became the number-one export destination. I fitted individual SDiD models and a latent interactive fixed-effects regression [@liu2024practical]. Interactive fixed effects allow countries to load differently on common latent shocks. I compute partner ranks from ITPD-E goods sectors only, excluding services before ranks are constructed.
+
+The cross-country analysis illustrates the expected heterogeneity of behaviors from the formal model. If a public cue is coupled with an assessment that the increased interdependence is a risk or potential liability, it may not induce foreign policy change. Second, the costs of policy change, not directly modeled include other factors such as ties and alliances with the US or alignment with the West. Third, it is an additional robustness check against explanations tied specifically to Brazil's 2009 timing, such as first formal BRICS summit that happened in 2009 or the financial economic crisis in 2008.
 
 However, operationalizing the analysis with multiple countries poses several difficulties. As the formal model shows, the public cue should increase the probability of a policy shift, all else equal.^[Strictly speaking, the model is deterministic. Here, however, I treat the timing of treatment as stochastic, which allows me to speak of an increase in probability.] Thus, with the assistance of artificial intelligence, I searched press sources for all potentially treated countries in which a public cue could have occurred. I found high-quality data only for Australia, Chile, Uruguay, Gabon, and Qatar. However, since absence of evidence is not evidence of absence, I cannot say that no public cue occurred in the other countries. Thus, because public salience is not measured directly outside Brazil, the panel does not by itself validate the top trade rank position as a proxy for public status change or extend the public cue mechanism to the larger sample.
 
-Another difficulty is that the treatment is the public cue, but the model does not distinguish which trade statistic drives it. For each country, the cue may occur when China becomes the leading destination for merchandise exports alone; in countries where services matter more, it may instead arise from goods and services combined, or even services alone; and in other cases, it may be total trade flows (exports plus imports). Thus, for each country, it is unclear which statistic is relevant for identifying a potential treatment. The Australian case is illustrative. The Australian Financial Review (AFR) headlines said "China hits the spot as trading partner", referring to imports plus exports and mentioning in the text that 2009 was the third year it was in that leading position. To complicate matters further, AFR uses the fiscal year 2006-2007, not the calendar year. Should I code the beginning of treatment in 2010 (when China became the top export destination), 2007 (when I found the public cue evidence), or perhaps 2008 (because the fiscal year ended mid-2007)? Finally, if a country is already very close to China before treatment---as is the case of Gabon; see Figure \@ref(fig:public-cue-pre-treatment-distance) in the Appendix---there are no gains from shifting its foreign-policy stance.
+Another difficulty is that the treatment is the public cue, but the model does not distinguish which trade statistic drives it. For each country, the cue may occur when China becomes the leading destination for merchandise exports alone; in countries where services matter more, it may instead arise from goods and services combined, or even services alone; and in other cases, it may be total trade flows (exports plus imports). Thus, for each country, it is unclear which statistic is relevant for identifying a potential treatment.
+
+The Australian case is illustrative. The Australian Financial Review (AFR) headlines said "China hits the spot as trading partner", referring to imports plus exports and mentioning in the text that 2009 was the third year it was in that leading position. To complicate matters further, AFR uses the fiscal year 2006-2007, not the calendar year. Should I code the beginning of treatment in 2010 (when China became the top export destination), 2007 (when I found the public cue evidence), or perhaps 2008 (because the fiscal year ended mid-2007)? Finally, if a country is already very close to China before treatment---as is the case of Gabon; see Figure \@ref(fig:public-cue-pre-treatment-distance) in the Appendix---there are no gains from shifting its foreign-policy stance.
 
 To address these problems, I estimated a separate SDiD model for each of the countries for which I have data on the public cue and in which there was room for foreign-policy adjustment toward China: Chile, Uruguay, and Australia. I excluded Gabon, which was already very close to China before treatment, and Qatar, whose treatment occurred only in 2021, leaving too little time for the effect to emerge. For Australia, I use 2007 as the theoretically preferred public-cue date and retain 2010, when China became the top goods-export destination, as a robustness timing. The corresponding estimand is the ATT on absolute UNGA ideal-point distance to China.
 
-The results of the SDiD estimates are mixed (see Appendix Table \@ref(tab:public-cue-sdid-results)). Chile and Uruguay point in the expected direction, but they are not statistically significant, as expected when standard errors are calculated using placebo estimates and the signal is not strong enough to overcome noise. However, the interesting negative result, so to speak, is Australia. Its effect is positive, although also not statistically significant. In fiscal year 2006-07, China became Australia's largest trading partner. The news covered it, so there was a public cue. Similarly to Brazil, a Labor left-leaning government was in power (after 2007). Yet the effect is not significant; if anything, the point estimate is in the wrong direction. Why so?
+The results of the SDiD estimates are mixed (see Appendix Table \@ref(tab:public-cue-sdid-results)). Chile and Uruguay point in the expected direction, but they are not statistically significant, as expected when standard errors are calculated using placebo estimates and the signal is not strong enough to overcome noise. The interesting case is Australia. Its effect is positive, although also not statistically significant. In fiscal year 2006-07, China became Australia's largest trading partner. The news covered it, so there was a public cue. Similarly to Brazil, a Labor left-leaning government was in power (after 2007). Yet the effect is not significant; if anything, the point estimate is in the wrong direction. Why so?
 
-When Labor's Kevin Rudd took office as prime minister by the end of 2007, he had made clear before taking office that he was concerned about when the China boom would end [@uhlmann2007rudd]. In fact, in his second term in power, in 2013, when the boom was over, he recalled saying so years earlier [@rudd2013economy]. As the formal model made clear, it all depends on the perceived benefits of alignment with China. Increased interdependence can be seen as a risk. Australia's close ties with the West, particularly the US and UK, are long and well known. Thus, I interpret Australia's negative result as consistent with the model, since Brazil represents the scenario where perceived gains exceed costs, while Australia represents the scenario where dependence costs exceed gains.
+When Labor's Kevin Rudd took office as prime minister by the end of 2007, he had made clear before taking office that he was concerned about when the China boom would end [@uhlmann2007rudd]. In fact, in his second term in power, in 2013, when the boom was over, he recalled saying so years earlier [@rudd2013economy]. Increased interdependence can be seen as a risk. Australia's close ties with the West, particularly the US and UK, are long and well known. Thus, I interpret Australia's negative result as consistent with the model, since Brazil represents the scenario where perceived gains exceed costs, while Australia represents the scenario where dependence costs exceed gains.
 
 To reduce dependence on any one selected case, I also report an interactive fixed-effects framework pooling the cases. Among Australia, Brazil, Chile, and Uruguay, the pooled estimates are negative under both comparison-set rules, although inference changes with the rule; cross-validation selects zero latent factors in both four-case specifications. When Gabon and Qatar are included instead of Brazil, the corresponding five-case estimates are close to zero. Appendix Table \@ref(tab:public-cue-pooled-ife) reports all four specifications. These pooled reduced forms combine the public cue with country-specific cost-benefit calculations, so the effects may be heterogeneous. The preserved pooled estimates also retain the report's 2009 Australian timing rather than re-estimating the pooled models with the new 2007 timing.
 
@@ -1406,177 +1343,17 @@ knitr::kable(
   )
 ```
 
-<!-- Begin hidden superseded cross-country section.
-
-The cross-country analysis serves two purposes. First, it examines whether a durable first position as goods export destination is followed by movement toward China beyond the Brazilian case. Second, it is an additional robustness check against explanations tied specifically to Brazil's 2009 calendar year, such as the global financial crisis, the BRICS/G20 moment, or the commodity cycle. If durable first rank status matters, countries where China enters and holds the largest export destination position should move closer to China in UNGA ideal-point space when aligned by their own treatment entry.
-
-Because public salience is not measured directly outside Brazil, the panel does not by itself validate the top trade rank position as a proxy for public status change or extend the public cue mechanism to the larger sample.
-
-I estimate the same treatment using only goods (not services) to define treatment: country-years where China is rank 1 among export destinations of goods and the associated period lasts at least five observed years. Countries where China never ranked first are controls (never-treated). Shorter than five years episodes where China was the main exports destination and post-exit off-status years for treated countries are removed from the main risk set. This analysis evaluates whether the rank-threshold pattern is compatible with evidence beyond the theory-generating case while matching the durable treatment observed in Brazil. The corresponding estimand is the ATT on absolute UNGA ideal-point distance to China for country-years in qualifying China-top periods.
-
-The pooled cross-country ATT averages effects over all `r panel_main_intro$n_treated_country_years` country-years in which treatment is active. Under `fect`'s event-time convention, $h = 0$ denotes the last observed untreated year before entry and $h = +1$ the first treated year; $h = 0$ therefore serves only as a pre-entry diagnostic and is not included in the pooled ATT, which covers $h = +1$ through $h = +20$.
-
-
-```{r fect-results, include=FALSE}
-library(dplyr)
-m2_model_results <- tar_read(china_top_m2_goods_status_current_model_results)
-m2_sector_audit <- tar_read(china_top_m2_goods_sector_audit)
-m2_unit_summary <- tar_read(china_top_m2_goods_status_current_unit_summary)
-m2_country_audit <- tar_read(china_top_m2_goods_status_current_country_audit)
-
-main_cross_s <- m2_model_results %>%
-  dplyr::filter(min_duration_years == 5L, specification == "risk_set_restricted") %>%
-  dplyr::slice(1)
-clean_cross_s <- m2_model_results %>%
-  dplyr::filter(min_duration_years == 5L, specification == "clean_single_spell") %>%
-  dplyr::slice(1)
-switching_cross_s <- m2_model_results %>%
-  dplyr::filter(min_duration_years == 5L, specification == "switching_allowed") %>%
-  dplyr::slice(1)
-
-n_treated_abs <- main_cross_s$n_treated
-n_control_abs <- main_cross_s$n_control
-panel_min <- main_cross_s$panel_min
-panel_max <- main_cross_s$panel_max
-goods_sector_values <- c("Agriculture", "Mining and Energy", "Manufacturing")
-m2_bootstrap_label <- paste0(
-  format(
-    max(m2_model_results$nboots, na.rm = TRUE),
-    big.mark = ",",
-    scientific = FALSE,
-    trim = TRUE
-  ),
-  " replications"
-)
-
-format_p <- function(x) {
-  if (length(x) == 0 || is.na(x)) {
-    return("not available")
-  }
-  if (x < 0.001) {
-    return("<0.001")
-  }
-  formatC(x, format = "f", digits = 3)
-}
-fmt3 <- function(x) sprintf("%.3f", unname(x))
-fmt1 <- function(x) sprintf("%.1f", unname(x))
-fmt_num <- function(x, digits = 3L) {
-  ifelse(is.na(x), "NA", formatC(x, format = "f", digits = digits))
-}
-sig_sentence <- function(att, p) {
-  direction <- ifelse(att < 0, "in the theoretically expected negative direction", "positive")
-  if (is.na(p)) {
-    "The statistical precision of this estimate is not available in the current diagnostic output."
-  } else if (p < 0.05) {
-    paste0("The estimate is ", direction, " and statistically distinguishable from zero at the 5 percent level.")
-  } else {
-    paste0("The estimate is ", direction, ", but the confidence interval includes zero.")
-  }
-}
-# Event-time estimates behind the dynamic figure: the pooled ATT covers h = +1 to +20,
-# so the count of negative point estimates is taken over exactly that range.
-cross_dynamic <- tar_read(china_top_m2_goods_status_current_dynamic_results) %>%
-  dplyr::filter(
-    min_duration_years == 5L,
-    specification == "risk_set_restricted",
-    event_time >= 1L,
-    event_time <= 20L
-  )
-cross_dynamic_n_post <- nrow(cross_dynamic)
-cross_dynamic_n_negative <- sum(cross_dynamic$att < 0, na.rm = TRUE)
-stopifnot(cross_dynamic_n_post == 20L)
-```
-
-The preferred cross-country specification is the no-covariate IFE model on the goods-only restricted risk set. Table \@ref(tab:cross-country-table) reports it together with the clean single-entry robustness sample. The estimate is `r fmt3(main_cross_s$att)` ideal-point units (bootstrap SE = `r fmt3(main_cross_s$se)`, 95 percent CI [`r fmt3(main_cross_s$ci_lo)`, `r fmt3(main_cross_s$ci_hi)`], p = `r format_p(main_cross_s$p)`). It corresponds to about `r fmt1(main_cross_s$att_rel_pct)` percent of the pre-treatment mean distance to China, or `r fmt3(main_cross_s$att_sd_units)` standard deviations of the outcome. `r sig_sentence(main_cross_s$att, main_cross_s$p)` The clean single-entry robustness estimate is `r fmt3(clean_cross_s$att)` (p = `r format_p(clean_cross_s$p)`). Appendix Tables \@ref(tab:cross-country-duration-table) and \@ref(tab:cross-country-audit-table) report duration-threshold robustness and sample-coding audits.
-
-```{r cross-country-table, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
-cross_tbl <- m2_model_results %>%
-  dplyr::filter(
-    min_duration_years == 5L,
-    specification %in% c("risk_set_restricted", "clean_single_spell")
-  ) %>%
-  dplyr::mutate(
-    Model = specification_label,
-    Estimator = "IFE",
-    `ATT` = fmt3(att),
-    `SE` = fmt3(se),
-    `95\\% CI` = paste0("[", fmt3(ci_lo), ", ", fmt3(ci_hi), "]"),
-    `p-value` = vapply(p, format_p, character(1)),
-    `Units (T/C)` = paste0(n_treated, "/", n_control),
-    `Treated periods` = as.character(n_treated_country_years),
-    `Panel window` = paste0(panel_min, "--", panel_max)
-  ) %>%
-  dplyr::transmute(
-    Model,
-    Estimator,
-    ATT,
-    SE,
-    `95\\% CI`,
-    `p-value`,
-    `Units (T/C)`,
-    `Treated periods`,
-    `Panel window`,
-    `r*` = r_cv
-  )
-cross_note <- paste0(
-  sub(
-    "^Note: ",
-    "",
-    caption_note(
-      unit = "ATT in absolute UNGA ideal-point distance to China; lower values indicate convergence toward China",
-      se = paste("bootstrap with", m2_bootstrap_label),
-      window = sprintf("%d--%d goods-only cross-country panel", main_cross_s$panel_min, main_cross_s$panel_max)
-    )
-  ),
-  " Goods-only ranks are computed from ITPD-E Agriculture, Mining and Energy, and Manufacturing sectors; Services are excluded before ranks are constructed. ",
-  "Units (T/C) = treated/control units. ",
-  "For IFE rows, r* is the number of latent factors selected by cross-validation over r = 0:3. ",
-  "The restricted risk-set row is the main cross-country estimate. The clean single-entry row excludes treated countries with multiple China-top periods."
-)
-
-knitr::kable(
-  cross_tbl,
-  format = "latex",
-  booktabs = TRUE,
-  escape = FALSE,
-  caption = "Cross-country IFE estimates for durable China top goods-export destination status.",
-  align = "llcccccccc"
-) %>%
-  kableExtra::kable_styling(
-    latex_options = c("HOLD_position", "scale_down"),
-    font_size = 8
-  ) %>%
-  kableExtra::footnote(
-    general = cross_note,
-    general_title = "Note: ",
-    escape = FALSE,
-    threeparttable = TRUE
-)
-```
-
-Figure \@ref(fig:cross-country-dynamic) separates the event-time estimates from the pooled post-entry ATT for the main goods-only restricted-risk-set IFE specification. The pre-entry estimates shown in gray are centered near zero. `r cross_dynamic_n_negative` of the `r cross_dynamic_n_post` post-entry point estimates are negative, with the largest reductions appearing approximately six to twelve years after entry, but most horizon-specific 95 percent intervals cross zero because each estimate uses only the countries observed at that horizon. The labels above selected horizons show how this support declines over time. The orange dashed line and band report the pooled ATT (`r fmt3(main_cross_s$att)`, 95 percent CI [`r fmt3(main_cross_s$ci_lo)`, `r fmt3(main_cross_s$ci_hi)`]) across `r main_cross_s$n_treated_country_years` treated country-years. This is a treated-period-weighted average, not a cumulative effect, which explains how the aggregate estimate can be distinguishable from zero even when most pointwise intervals are not.
-
-```{r cross-country-dynamic, message=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste0("Dynamic effects and pooled post-entry ATT from the main goods-only cross-country IFE model. Gray points and vertical bars show pre-entry diagnostics; blue points and vertical bars show post-entry event-time estimates. Vertical bars are pointwise 95 percent bootstrap confidence intervals. The orange dashed line and band show the pooled ATT and its 95 percent bootstrap confidence interval across ", main_cross_s$n_treated_country_years, " treated country-years from h = +1 to h = +20; this is a treated-period-weighted average, not a cumulative sum. The display is limited to h = -12 through h = +15, and N labels give the number of contributing treated countries at selected post-entry horizons. Negative estimates indicate reduced UNGA distance to China after entry into durable status as the top goods-export destination. ", caption_note(unit = "Effect on absolute UNGA ideal-point distance to China", se = "bootstrap confidence intervals", window = sprintf("%d--%d goods-only panel", main_cross_s$panel_min, main_cross_s$panel_max))), fig.pos="H", out.width="100%"}
-knitr::include_graphics(file.path(
-  "images", "figure6_cross_country_dynamic_with_pooled_att.png"
-))
-```
-
-
-
-End hidden superseded cross-country section. -->
-
 # Conclusion
 
 China's emergence as a major world power and its growing rivalry with the US have clear implications for countries’ foreign policies toward China. A feature the literature has underappreciated concerns situations in which China’s perceived or attributed status changes publicly and policymakers mobilize it to adjust or justify changes in their countries’ foreign policies.
 
-In this paper, we show that when China replaced the US as Brazil’s top trading partner in 2009, Brazil shifted its foreign policy at the United Nations General Assembly toward China's positions. In the preferred statistical specification, the effect of entry into this trade-rank condition is a reduction of 0.273 ideal-point units in Brazil’s distance to China relative to its counterfactual.
+In this paper, I show that when China replaced the US as Brazil’s top trading partner in 2009, Brazil shifted its foreign policy at the United Nations General Assembly toward China's positions. In the preferred statistical specification, the effect of entry into this trade-rank condition is a reduction of 0.273 ideal-point units in Brazil’s distance to China relative to its counterfactual.
 
 Brazilian evidence on the mechanism suggests that public recognition of this status in the media and its mobilization by policymakers are important in producing the observed outcome. I also show that the shift is not sudden and can occur selectively in particular issue areas where it will be visible to the new main partner and where there is an opportunity for closer alignment, as was the case for Brazil on human rights. This result is consistent with findings for a broader set of countries, although the magnitude is smaller. Cross-country estimates from the goods-only IFE model show a compatible directional pattern.
 
 The paper therefore fills a gap in the literature on the effects of economic interdependence on foreign policy. Changes in rankings that are informationally redundant with trade statistics but still help coordinate expectations and justify a country’s foreign policy may have an effect on their own.
 
-Future research can extend the results in at least three directions. Firstly, research could expand to examine how the media in countries other than Brazil covered the change in ranking. The expectation is that, all else being equal, the more salient the change is in the media, the greater the adjustment in foreign policy. Second, it is necessary to connect these findings to how policymakers and political elites reacted to this change in status. It is conceivable that countries in which the reaction is negative may distance themselves from China, while those in which the reaction is positive may move closer. This is the theoretical expectation. Finally, researchers could apply a similar rank-threshold design to investment, aid, lending, or other economic ties where categorical milestones may become politically usable by the media and political elites.
+Future research can extend the results in at least three directions. Firstly, research could expand to examine how the media in countries other than Brazil covered the change in ranking. The expectation is that, all else being equal, the more salient the change is in the media, the greater the adjustment in foreign policy. Second, it is necessary to connect these findings to how policymakers and political elites reacted to this change in status. It is conceivable that countries in which the reaction is negative may distance themselves from China, while those in which the reaction is positive may move closer. This is the theoretical expectation. Finally, researchers could apply a similar rank-threshold design to investment, aid, lending, or other economic ties where categorical milestones may be reported by the media and invoked by political elites.
 
 \clearpage
 
@@ -1589,7 +1366,7 @@ Future research can extend the results in at least three directions. Firstly, re
 
 # Appendix
 
-The appendix reports the supporting diagnostics referenced in the main text: outcome and pre-trend series, resolution-level vote diagnostics, SDiD weights and donor-pool checks, the cross-country duration and sample audits, the ChatGPT classification and its validation, and the UNGA-DM measurement robustness.
+The appendix reports the supporting diagnostics referenced in the main text: outcome and pre-trend series, resolution-level vote diagnostics, SDiD weights and donor-pool checks, the selected public-cue analyses, the ChatGPT classification and its validation, and the UNGA-DM measurement robustness.
 
 ## Brazil and China Ideal-Point Series
 
@@ -2031,7 +1808,7 @@ Estimated without covariates, the Latin America donor-pool estimate has the same
 
 ## Selected Public-Cue Cross-Country Analyses
 
-This section reports the diagnostics underlying the proposed replacement for the cross-country section. The common country-year window is 1997--2022, and the outcome is absolute UNGA ideal-point distance to China. The individual SDiD models use 105 countries that never have China as their largest goods-export destination during this window. Each individual estimate uses a placebo standard error from 5,000 re-estimations. The pooled models use the interactive fixed-effects estimator in `fect` 2.4.5, with the number of latent factors selected by cross-validation and 1,000 unit-bootstrap replications.
+The common country-year window is 1997--2022, and the outcome is absolute UNGA ideal-point distance to China. The individual SDiD models use 105 countries that never have China as their largest goods-export destination during this window. Each individual estimate uses a placebo standard error from 5,000 re-estimations. The pooled models use the interactive fixed-effects estimator in `fect` 2.4.5, with the number of latent factors selected by cross-validation and 1,000 unit-bootstrap replications.
 
 Figure \@ref(fig:public-cue-pre-treatment-distance) compares the focal cases before their selected public-cue years. Gabon has the smallest mean pre-cue distance to China among the five cases (`r sprintf("%.3f", readr::read_csv("quality_reports/revisions/paper_v4/20260922_cross_country_public_cue_preview/assets/pre_cue_distance_summary.csv", show_col_types = FALSE) %>% dplyr::filter(iso3c == "GAB") %>% dplyr::pull(mean_pre_cue_distance))`), which motivates treating its limited room for further convergence as a scope consideration rather than interpreting its exclusion as evidence that no cue occurred.
 
@@ -2043,7 +1820,7 @@ knitr::include_graphics(file.path(
 ))
 ```
 
-Table \@ref(tab:public-cue-sdid-results) reports the individual estimates discussed in the proposed text. Australia 2007 is the theoretically preferred public-cue timing, while Australia 2010 is a robustness timing based on entry into the top goods-export-destination position. For every row, the p-value is the two-sided normal approximation constructed from the placebo standard error; it is not an exact randomization p-value.
+Table \@ref(tab:public-cue-sdid-results) reports the individual estimates discussed in the main text. Australia 2007 is the theoretically preferred public-cue timing, while Australia 2010 is a robustness timing based on entry into the top goods-export-destination position. For every row, the p-value is the two-sided normal approximation constructed from the placebo standard error; it is not an exact randomization p-value.
 
 ```{r public-cue-sdid-results, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 public_cue_sdid_tbl <- readr::read_csv(
@@ -2081,7 +1858,7 @@ knitr::kable(
   format = "latex",
   booktabs = TRUE,
   escape = FALSE,
-  caption = "Individual SDiD estimates for the public-cue cases retained in the proposed cross-country section.",
+  caption = "Individual SDiD estimates for the selected public-cue cases.",
   align = "llcccccc"
 ) %>%
   kableExtra::kable_styling(
@@ -2094,146 +1871,6 @@ knitr::kable(
       "Every row uses a placebo standard error from 5,000 re-estimations. ",
       "Confidence intervals and two-sided p-values use a normal approximation based on the placebo standard error; the p-values are not exact randomization p-values."
     ),
-    general_title = "Note: ",
-    escape = FALSE,
-    threeparttable = TRUE
-  )
-```
-
-## Cross-Country Robustness: Duration Thresholds
-
-The main cross-country estimate uses a five-year durability threshold because the theory concerns status that persists long enough to become politically usable. Table \@ref(tab:cross-country-duration-table) reports the same goods-only IFE design under three- and seven-year thresholds, along with the clean single-entry robustness sample. The estimates remain negative across the restricted-risk-set rows, though precision varies with treated-unit support.
-
-```{r cross-country-duration-table, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
-duration_tbl <- m2_model_results %>%
-  dplyr::filter(specification %in% c("risk_set_restricted", "clean_single_spell")) %>%
-  dplyr::mutate(
-    `Minimum duration` = as.character(min_duration_years),
-    Specification = specification_label,
-    `ATT` = fmt3(att),
-    `SE` = fmt3(se),
-    `95\\% CI` = paste0("[", fmt3(ci_lo), ", ", fmt3(ci_hi), "]"),
-    `p-value` = vapply(p, format_p, character(1)),
-    `Units (T/C)` = paste0(n_treated, "/", n_control),
-    `Treated periods` = as.character(n_treated_country_years),
-    `r*` = as.character(r_cv)
-  ) %>%
-  dplyr::transmute(
-    `Minimum duration`,
-    Specification,
-    ATT,
-    SE,
-    `95\\% CI`,
-    `p-value`,
-    `Units (T/C)`,
-    `Treated periods`,
-    `r*`
-  )
-
-knitr::kable(
-  duration_tbl,
-  format = "latex",
-  booktabs = TRUE,
-  escape = FALSE,
-  caption = "Duration-threshold robustness for goods-only China top export-destination status.",
-  align = "llccccccc"
-) %>%
-  kableExtra::kable_styling(
-    latex_options = c("HOLD_position", "scale_down"),
-    font_size = 7
-  ) %>%
-  kableExtra::footnote(
-    general = paste0(
-      sub(
-        "^Note: ",
-        "",
-        caption_note(
-          unit = "ATT in absolute UNGA ideal-point distance to China; lower values indicate convergence toward China",
-          se = paste("bootstrap with", m2_bootstrap_label),
-          window = "goods-only ITPD-E rank metric"
-        )
-      ),
-      " The restricted-risk-set rows retain clean pre-entry non-China-top years and qualifying treated years. ",
-      "The clean single-entry rows additionally keep only treated countries with one observed qualifying China-top period."
-    ),
-    general_title = "Note: ",
-    escape = FALSE,
-    threeparttable = TRUE
-  )
-```
-
-## Cross-Country Sample Audit: Goods-Only Treatment Coding
-
-The revised rank metric excludes services before partner ranks are computed. Table \@ref(tab:cross-country-sector-table) documents the ITPD-E broad-sector filter. Table \@ref(tab:cross-country-audit-table) then summarizes how the five-year goods-only rule classifies countries in the UNGA/trade panel.
-
-```{r cross-country-sector-table, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
-sector_tbl <- m2_sector_audit %>%
-  dplyr::mutate(
-    `Included in rank metric` = dplyr::if_else(
-      broad_sector %in% goods_sector_values,
-      "Yes",
-      "No"
-    )
-  ) %>%
-  dplyr::transmute(
-    `Broad sector` = broad_sector,
-    `Raw rows` = raw_rows,
-    `Positive-trade rows` = positive_trade_rows,
-    `Included in rank metric`
-  )
-
-knitr::kable(
-  sector_tbl,
-  format = "latex",
-  booktabs = TRUE,
-  escape = FALSE,
-  caption = "ITPD-E sector filter used to construct the goods-only China top export-destination metric.",
-  align = "lrrl"
-) %>%
-  kableExtra::kable_styling(
-    latex_options = c("HOLD_position"),
-    font_size = 8
-  )
-```
-
-```{r cross-country-audit-table, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
-audit_tbl <- m2_country_audit %>%
-  dplyr::filter(min_duration_years == 5L) %>%
-  dplyr::distinct(
-    iso3c, country_name, audit_role,
-    n_observed_china_top_periods, n_qualifying_periods,
-    n_short_eligible_periods, n_pre_min_entry_periods,
-    n_no_clean_prior_periods
-  ) %>%
-  dplyr::count(audit_role, name = "countries") %>%
-  dplyr::mutate(
-    Role = dplyr::recode(
-      audit_role,
-      treated_qualifying = "Qualifying treated countries",
-      never_china_top_control = "Never-China-top controls",
-      excluded_short_duration = "Excluded: short China-top periods",
-      excluded_pre_2000 = "Excluded: pre-2000 China-top entry",
-      excluded_no_clean_prior = "Excluded: no clean observed prior non-China-top year",
-      excluded_other_nonqualifying = "Excluded: other nonqualifying China-top cases",
-      .default = audit_role
-    )
-  ) %>%
-  dplyr::select(Role, Countries = countries)
-
-knitr::kable(
-  audit_tbl,
-  format = "latex",
-  booktabs = TRUE,
-  escape = FALSE,
-  caption = "Country-level sample audit for the five-year goods-only China top export-destination rule.",
-  align = "lr"
-) %>%
-  kableExtra::kable_styling(
-    latex_options = c("HOLD_position"),
-    font_size = 8
-  ) %>%
-  kableExtra::footnote(
-    general = "The audit uses the goods-only rank metric and classifies countries before the estimator-specific screen for minimum untreated support. Country counts are therefore a coding audit, not a replacement for the treated/control counts in the estimation table.",
     general_title = "Note: ",
     escape = FALSE,
     threeparttable = TRUE
@@ -2479,48 +2116,6 @@ kable(
 
 Overall accuracy in the validation sample is `r sprintf("%.1f", overall_acc)` percent. The lowest agreement is in the "`r lowest_category`" category (`r sprintf("%.1f", lowest_acc)` percent), where several headlines were manually reclassified as "diplomacy." The category most central to the mechanism, "china-brazil trade," has `r sprintf("%.1f", trade_acc)` percent agreement among sampled headlines carrying that automated label. The corresponding rates are `r sprintf("%.1f", relations_acc)` percent for "china-brazil relations" and `r sprintf("%.1f", diplomacy_acc)` percent for "diplomacy." Because the table rows condition on the archived predicted label, the category-specific rates measure precision rather than recall. This validation does not assess whether classification error changed over 2000--2014. Figure \@ref(fig:plot-media-counterfactual) should therefore be read as a descriptive summary of the archived labels subject to classification error.
 
-## Cross-Country: Goods-Only Treated Countries
-
-Table \@ref(tab:table-treated-appendix) describes the `r n_treated_abs` treated countries in the main goods-only restricted-risk-set specification. For each country, the table reports the first qualifying China-top goods-export year and the number of treated and untreated country-years retained in the estimation panel.
-
-```{r table-treated-appendix, message=FALSE, warning=FALSE, echo=FALSE}
-library(kableExtra)
-
-treated_tbl <- m2_unit_summary %>%
-  dplyr::filter(
-    min_duration_years == 5L,
-    sample == "risk_set_restricted",
-    ever_treated
-  ) %>%
-  dplyr::arrange(first_treat, country_name) %>%
-  dplyr::transmute(
-    country = country_name,
-    iso3c,
-    first_treat_year = as.integer(first_treat),
-    treated_years,
-    untreated_years,
-    first_year_in_panel,
-    last_year_in_panel
-  )
-
-kable(treated_tbl,
-      format = "latex",
-      booktabs = TRUE,
-      digits = 3,
-      caption = "Treated countries in the main goods-only restricted-risk-set cross-country specification.",
-      col.names = c("Country", "ISO3c", "Treatment year", "Treated years",
-                     "Pre/other untreated years", "First panel year", "Last panel year"),
-      align = "llccccc") %>%
-  kable_styling(latex_options = c("hold_position", "scale_down"),
-                font_size = 9) %>%
-  footnote(general = paste0("Ranks are computed from goods exports only. ",
-                            "The restricted risk set keeps clean pre-entry non-China-top years and qualifying treated years for treated countries. ",
-                            "Treatment year is the first retained year of a qualifying China-top goods-export period."),
-           general_title = "Note: ",
-           escape = FALSE,
-           threeparttable = TRUE)
-```
-
 ## Measurement Robustness: UNGA-DM Ideal Points
 
 ```{r ungadm-inputs, include=FALSE}
@@ -2543,15 +2138,6 @@ ungadm_rank_criteria <- readr::read_csv(
 )
 ungadm_weights <- readr::read_csv(
   file.path(ungadm_est_dir, "sdid_unit_weights_bsv_vs_dm.csv"), show_col_types = FALSE
-)
-ungadm_ife_comparison <- readr::read_csv(
-  file.path(ungadm_est_dir, "ife_comparison_table.csv"), show_col_types = FALSE
-)
-ungadm_ife_2x2 <- readr::read_csv(
-  file.path(ungadm_post_dir, "ife_2x2_fixed_r.csv"), show_col_types = FALSE
-)
-ungadm_boot <- readr::read_csv(
-  file.path(ungadm_post_dir, "ife_paired_bootstrap_summary.csv"), show_col_types = FALSE
 )
 ungadm_unmapped <- readr::read_csv(
   file.path(ungadm_est_dir, "dm_rows_without_iso3c_mapping.csv"), show_col_types = FALSE
@@ -2576,18 +2162,6 @@ ungadm_top_bsv <- ungadm_weights %>%
 ungadm_top10_overlap <- length(intersect(ungadm_top_dm, ungadm_top_bsv))
 ungadm_max_weight_dm <- max(ungadm_weights$unit_weight_dm)
 ungadm_max_weight_bsv <- max(ungadm_weights$unit_weight_bsv)
-ungadm_boot_selected <- ungadm_boot %>% dplyr::slice(1)
-ungadm_boot_common <- ungadm_boot %>% dplyr::slice(2)
-ungadm_ife_bsv_common <- ungadm_ife_comparison %>% dplyr::slice(2)
-ungadm_ife_dm_common <- ungadm_ife_comparison %>% dplyr::slice(3)
-ungadm_ife_bsv_r1 <- ungadm_ife_2x2 %>%
-  dplyr::filter(.data$outcome == "BSV", .data$r_fixed == 1L)
-ungadm_ife_bsv_r2 <- ungadm_ife_2x2 %>%
-  dplyr::filter(.data$outcome == "BSV", .data$r_fixed == 2L)
-ungadm_ife_dm_r1 <- ungadm_ife_2x2 %>%
-  dplyr::filter(.data$outcome == "UNGA-DM", .data$r_fixed == 1L)
-ungadm_ife_dm_r2 <- ungadm_ife_2x2 %>%
-  dplyr::filter(.data$outcome == "UNGA-DM", .data$r_fixed == 2L)
 
 ungadm_fmt_ci <- function(lo, hi) sprintf("[%.3f, %.3f]", lo, hi)
 ungadm_fmt_rank <- function(rank_value, denom, p_value) {
@@ -2595,9 +2169,9 @@ ungadm_fmt_rank <- function(rank_value, denom, p_value) {
 }
 ```
 
-The main estimations in the paper used the classic ideal-point measurement by BSV [@bailey_etal2017] as the response variable. However, according to @fjelstul_etal2026, the set of resolutions included in the BSV dataset is not complete. They provided a broader dataset, along with re-estimations of ideal points based on the new data. To assess whether the results of the paper change with this new measurement, I reran the main estimations with this new response variable. To make the comparison as close as possible, I held the treatment definition, donor and risk-set rules, covariate structure, and inference conventions fixed. The UNGA-DM series has a shorter time window, and the SDiD unit and time weights and the IFE factor count are re-estimated by their algorithms in response to the outcome series. These induced adjustments mean that the comparison evaluates the robustness of the analysis package to the alternative outcome; it is not a pure measurement-only perturbation of an otherwise identical fitted counterfactual. It is also important to note that `r nrow(ungadm_unmapped)` country-session rows had no ISO3c match and `r nrow(ungadm_missing_outcome)` SDiD rows had no outcome in the alternative measurement.
+The main estimations in the paper used the classic ideal-point measurement by BSV [@bailey_etal2017] as the response variable. However, according to @fjelstul_etal2026, the set of resolutions included in the BSV dataset is not complete. They provided a broader dataset, along with re-estimations of ideal points based on the new data. To assess whether the results of the paper change with this new measurement, I reran the main estimations with this new response variable. To make the comparison as close as possible, I held the treatment definition, donor rules, covariate structure, and inference conventions fixed. The UNGA-DM series has a shorter time window, and the SDiD unit and time weights are re-estimated by the algorithm in response to the outcome series. These induced adjustments mean that the comparison evaluates the robustness of the analysis package to the alternative outcome; it is not a pure measurement-only perturbation of an otherwise identical fitted counterfactual. It is also important to note that `r nrow(ungadm_unmapped)` country-session rows had no ISO3c match and `r nrow(ungadm_missing_outcome)` SDiD rows had no outcome in the alternative measurement.
 
-The two outcome measures preserve the negative direction of the Brazilian SDiD estimate, but they do not support a blanket claim of robustness across the Brazilian and cross-country designs. Table \@ref(tab:ungadm-sdid-comparison) shows the comparison. Under UNGA-DM, the point estimate is nominally higher than the original in absolute terms (`r sprintf("%.3f", ungadm_dm_row$estimate)` versus `r sprintf("%.3f", ungadm_bsv_row$estimate)`), with a lower p-value of `r sprintf("%.3f", ungadm_dm_row$p_normal_two_sided)`. The directional rank is the same in both measurements (`r ungadm_fmt_rank(ungadm_dm_row$rank_one_sided, ungadm_dm_row$rank_denominator, ungadm_dm_row$p_rank_one_sided)`). The bilateral rank improves from `r ungadm_fmt_rank(ungadm_bsv_row$rank_two_sided, ungadm_bsv_row$rank_denominator, ungadm_bsv_row$p_rank_two_sided)` to `r ungadm_fmt_rank(ungadm_dm_row$rank_two_sided, ungadm_dm_row$rank_denominator, ungadm_dm_row$p_rank_two_sided)`. The pre-treatment means differ (`r sprintf("%.3f", ungadm_bsv_row$brazil_pre_mean)` under BSV versus `r sprintf("%.3f", ungadm_dm_row$brazil_pre_mean)` under UNGA-DM). But the effect measured as a percentage of the pre-treatment average is similar: `r sprintf("%.1f", ungadm_bsv_row$estimate_pct_pre_mean)` and `r sprintf("%.1f", ungadm_dm_row$estimate_pct_pre_mean)` percent. The Brazilian result therefore retains its direction and inferential support under the alternative measure, with a similar relative magnitude. The cross-country comparison below is more sensitive to the outcome source: its IFE point estimate is closer to zero on the UNGA-DM scale and its uncertainty interval includes zero. The $2\times2$ comparison below holds the common window and country-year panel fixed while varying the outcome source and factor count, allowing conditional factor-count comparisons within each measure. It does not provide a unique, scale-invariant decomposition of the difference between outcomes.
+The two outcome measures preserve the negative direction of the Brazilian SDiD estimate. Table \@ref(tab:ungadm-sdid-comparison) shows the comparison. Under UNGA-DM, the point estimate is nominally higher than the original in absolute terms (`r sprintf("%.3f", ungadm_dm_row$estimate)` versus `r sprintf("%.3f", ungadm_bsv_row$estimate)`), with a lower p-value of `r sprintf("%.3f", ungadm_dm_row$p_normal_two_sided)`. The directional rank is the same in both measurements (`r ungadm_fmt_rank(ungadm_dm_row$rank_one_sided, ungadm_dm_row$rank_denominator, ungadm_dm_row$p_rank_one_sided)`). The bilateral rank improves from `r ungadm_fmt_rank(ungadm_bsv_row$rank_two_sided, ungadm_bsv_row$rank_denominator, ungadm_bsv_row$p_rank_two_sided)` to `r ungadm_fmt_rank(ungadm_dm_row$rank_two_sided, ungadm_dm_row$rank_denominator, ungadm_dm_row$p_rank_two_sided)`. The pre-treatment means differ (`r sprintf("%.3f", ungadm_bsv_row$brazil_pre_mean)` under BSV versus `r sprintf("%.3f", ungadm_dm_row$brazil_pre_mean)` under UNGA-DM). But the effect measured as a percentage of the pre-treatment average is similar: `r sprintf("%.1f", ungadm_bsv_row$estimate_pct_pre_mean)` and `r sprintf("%.1f", ungadm_dm_row$estimate_pct_pre_mean)` percent. The Brazilian result therefore retains its direction and inferential support under the alternative measure, with a similar relative magnitude.
 
 ```{r ungadm-sdid-comparison, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 ungadm_comparison_tbl <- tibble::tibble(
@@ -2774,98 +2348,4 @@ knitr::kable(
   )
 ```
 
-Regarding the panel regression, Table \@ref(tab:ungadm-ife-window) shows the IFE estimation in the same time window for both outcomes, and the original estimation with the larger time window. The estimate retains the negative sign but is closer to zero on the UNGA-DM scale, with an uncertainty interval that includes zero:
-`r sprintf("%.3f", ungadm_ife_dm_common$att)` with p =
-`r sprintf("%.3f", ungadm_ife_dm_common$p)`. However, the models are not the same, since the number of latent factors chosen by cross-validation is different: `r ungadm_ife_bsv_common$r_cv` under BSV and `r ungadm_ife_dm_common$r_cv` under UNGA-DM. The $2\times2$ comparison below holds the common window and country-year panel fixed while crossing the outcome source with one versus two latent factors, allowing sensitivity to factor count to be assessed within each outcome measure rather than uniquely decomposing the cross-outcome difference.
-
-```{r ungadm-ife-window, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
-ungadm_ife_tbl <- ungadm_ife_comparison %>%
-  dplyr::transmute(
-    specification = variant,
-    att = sprintf("%.3f", att),
-    se = sprintf("%.3f", se),
-    ci = ungadm_fmt_ci(ci_lo, ci_hi),
-    p = sprintf("%.3f", p),
-    r_cv = as.integer(r_cv),
-    n_obs = format(n_obs, big.mark = ",")
-  )
-
-knitr::kable(
-  ungadm_ife_tbl,
-  format = "latex",
-  booktabs = TRUE,
-  caption = "Cross-country interactive fixed-effects panel under the two outcome sources, in a common window with identical rows.",
-  col.names = c("Specification", "ATT", "SE", "95 percent CI", "p",
-                "Factors (CV)", "Country-years"),
-  align = "lccccc"
-) %>%
-  kableExtra::kable_styling(
-    latex_options = c("HOLD_position", "scale_down"), font_size = 9
-  ) %>%
-  kableExtra::column_spec(1, width = "5.2cm") %>%
-  kableExtra::footnote(
-    general = paste0(
-      "All rows use the goods-only status-current restricted risk set with ",
-      ungadm_ife_bsv_common$n_treated, " treated and ",
-      ungadm_ife_bsv_common$n_control, " control countries. ",
-      "The common-window rows keep exactly the same country-years in both outcome sources. ",
-      "Confidence intervals come from ", format(ungadm_ife_bsv_common$nboots, big.mark = ","),
-      " bootstrap replications. ATTs and intervals are expressed on each outcome's original scale; ",
-      "raw cross-outcome differences do not identify a scale-invariant measurement contribution."
-    ),
-    general_title = "Note: ",
-    escape = FALSE,
-    threeparttable = TRUE
-  )
-```
-
-Table \@ref(tab:ungadm-ife-2x2) holds the common window and country-year panel fixed and crosses the two outcome sources with one and two latent factors. This $2\times2$ comparison describes sensitivity to factor count conditional on the outcome measure. Holding the outcome fixed, moving from one to two factors makes the ATT more negative (larger in absolute value): from `r sprintf("%.3f", ungadm_ife_bsv_r1$att)` to `r sprintf("%.3f", ungadm_ife_bsv_r2$att)` under BSV, and from `r sprintf("%.3f", ungadm_ife_dm_r1$att)` to `r sprintf("%.3f", ungadm_ife_dm_r2$att)` under UNGA-DM. Cross-validation selects `r ungadm_ife_bsv_common$r_cv` factors under BSV and `r ungadm_ife_dm_common$r_cv` under UNGA-DM. The change from one to two factors differs across the two measures, indicating a descriptive interaction between outcome source and factor count rather than a unique additive decomposition. This comparison does not test the interaction. Both UNGA-DM fits have negative point estimates and uncertainty intervals that include zero; overlapping intervals do not establish equivalence. Holding the factor count at two still leaves a smaller UNGA-DM estimate (`r sprintf("%.3f", ungadm_ife_dm_r2$att)`) than the BSV estimate (`r sprintf("%.3f", ungadm_ife_bsv_r2$att)`), but these raw estimates are expressed on different outcome scales. Their difference is a conditional sensitivity comparison, not a scale-invariant contribution attributable to outcome source.
-
-```{r ungadm-ife-2x2, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
-ungadm_2x2_tbl <- ungadm_ife_2x2 %>%
-  dplyr::arrange(r_fixed, outcome) %>%
-  dplyr::transmute(
-    outcome,
-    r_fixed = as.integer(r_fixed),
-    cv = dplyr::if_else(cv_selected, "Yes", "No"),
-    att = sprintf("%.3f", att),
-    se = sprintf("%.3f", se),
-    ci = ungadm_fmt_ci(ci_lo, ci_hi),
-    p = sprintf("%.3f", p)
-  )
-
-knitr::kable(
-  ungadm_2x2_tbl,
-  format = "latex",
-  booktabs = TRUE,
-  caption = "Outcome source by number of latent factors, holding the panel fixed.",
-  col.names = c("Outcome", "Factors (fixed)", "Selected by CV", "ATT", "SE",
-                "95 percent CI", "p"),
-  align = "lcccccc"
-) %>%
-  kableExtra::kable_styling(
-    latex_options = c("HOLD_position", "scale_down"), font_size = 9
-  ) %>%
-  kableExtra::footnote(
-    general = paste0(
-      "Same common window and identical rows as the previous table. ",
-      "Paired bootstrap on UNGA-DM minus BSV in their original outcome units, ",
-      format(ungadm_boot_selected$n_valid, big.mark = ","),
-      " replications and no failures: ",
-      sprintf("%.3f", ungadm_boot_selected$observed_diff),
-      " (percentile p = ", sprintf("%.3f", ungadm_boot_selected$p_two_sided_percentile),
-      ") with the original CV-selected counts held fixed (BSV: two; UNGA-DM: one), and ",
-      sprintf("%.3f", ungadm_boot_common$observed_diff),
-      " (percentile p = ", sprintf("%.3f", ungadm_boot_common$p_two_sided_percentile),
-      ") with two factors for both outcomes. The same stratified country draws are used for both ",
-      "measures; factor counts are not reselected within replications. These are scale-dependent ",
-      "contrasts, not a unique decomposition of factor and outcome-source components. ",
-      "Non-rejection does not establish equivalence."
-    ),
-    general_title = "Note: ",
-    escape = FALSE,
-    threeparttable = TRUE
-  )
-```
-
-To sum up, the Brazilian SDiD result retains its negative direction and inferential support across the two outcome measurements, with similar relative magnitude but a different absolute scale. The $2\times2$ IFE comparison shows that two factors produce a more negative ATT under either outcome, with a different within-measure change under BSV and UNGA-DM. Both UNGA-DM fits have negative point estimates and uncertainty intervals that include zero; this does not establish equivalence between them. Even with two factors held fixed, the raw UNGA-DM estimate is closer to zero than the BSV estimate on its own scale. This conditional comparison does not isolate a scale-invariant outcome-source contribution beyond factor selection. The paired test does not detect a statistically significant difference between the ATTs, but this non-rejection does not establish equivalence and may reflect uncertainty.
+To sum up, the Brazilian SDiD result retains its negative direction and inferential support across the two outcome measurements, with similar relative magnitude but a different absolute scale.

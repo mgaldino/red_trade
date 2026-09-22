@@ -246,11 +246,6 @@ def replace_appendix_crossrefs_for_standalone_main(text: str) -> str:
             "Online Resource 1",
         ),
         (
-            r"Appendix Tables \\@ref\(tab:cross-country-duration-table\) and "
-            r"\\@ref\(tab:cross-country-audit-table\)",
-            "Online Resource 1",
-        ),
-        (
             r"Figure \\@ref\(fig:plot-latam\)",
             "Online Resource 1",
         ),

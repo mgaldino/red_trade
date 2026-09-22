@@ -97,8 +97,11 @@ Duas ressalvas que a branch deixou explicitamente em aberto:
    entre candidato e referência. A troca pelos caminhos de produção é etapa
    separada, posterior aos gates.
 2. **Família cross-country.** No manuscrito da branch, `china_top_m2_goods_status_current_*`
-   foi substituída por `china_top_m2_goods_full_union_*`. Isso muda os números da
-   seção cross-country e ainda não foi decidido contra o texto vigente.
+   foi substituída por `china_top_m2_goods_full_union_*`. A questão deixou de existir em
+   2026-09-22: o autor removeu do paper a regressão em painel antiga e os três apêndices
+   que dependiam dela. A evidência cross-country do corpo é o desenho do public cue. O
+   bloco full-union, a figura 6 e o IFE antigo do apêndice UNGA-DM saem do escopo desta
+   rodada; a comparação UNGA-DM será refeita para o desenho do public cue.
 
 ### Ainda fora do grafo (tudo criado na `main` depois de 2026-09-01)
 

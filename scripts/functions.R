@@ -7162,3 +7162,43 @@ build_selective_china_alignment_unga_targets <- function(synth_data,
     country_placebo_summary = country_placebo_summary
   )
 }
+
+# Equilibrium response of the formal model (Proposition 1), y*(q) = sign(theta) *
+# [s(q)|theta| - c_L]_+, drawn with the illustrative values used in the text and with
+# the bureaucracy implementing in both states. Pure illustration: no data inputs.
+plot_model_response <- function(s0 = 0.5, s1 = 1, c_l = 0.4,
+                                theta_range = c(-1.5, 1.5)) {
+  y_star <- function(theta, s) sign(theta) * pmax(s * abs(theta) - c_l, 0)
+  grid <- tibble::tibble(theta = seq(theta_range[1], theta_range[2], length.out = 601))
+  curves <- dplyr::bind_rows(
+    dplyr::mutate(grid, y = y_star(theta, s0), state = "Before the cue (q = 0)"),
+    dplyr::mutate(grid, y = y_star(theta, s1), state = "After the cue (q = 1)")
+  ) %>%
+    dplyr::mutate(state = factor(state, levels = c("Before the cue (q = 0)",
+                                                   "After the cue (q = 1)")))
+  inaction <- tibble::tibble(
+    state = factor(levels(curves$state), levels = levels(curves$state)),
+    half_width = c_l / c(s0, s1)
+  )
+
+  ggplot2::ggplot(curves, ggplot2::aes(x = theta, y = y)) +
+    ggplot2::geom_rect(
+      data = inaction,
+      ggplot2::aes(xmin = -half_width, xmax = half_width, ymin = -Inf, ymax = Inf,
+                   fill = state),
+      inherit.aes = FALSE, alpha = 0.15
+    ) +
+    ggplot2::geom_hline(yintercept = 0, colour = "grey60", linewidth = 0.3) +
+    ggplot2::geom_vline(xintercept = 0, colour = "grey60", linewidth = 0.3) +
+    ggplot2::geom_line(ggplot2::aes(linetype = state, colour = state), linewidth = 0.8) +
+    ggplot2::scale_linetype_manual(values = c("dashed", "solid")) +
+    ggplot2::scale_colour_manual(values = c("grey40", "black")) +
+    ggplot2::scale_fill_manual(values = c("grey40", "black"), guide = "none") +
+    ggplot2::labs(
+      x = expression("Leadership's evaluation " * theta),
+      y = expression("Equilibrium policy " * italic(y) * "*"),
+      linetype = NULL, colour = NULL
+    ) +
+    ggplot2::theme_minimal(base_size = 11) +
+    ggplot2::theme(legend.position = "bottom", panel.grid.minor = ggplot2::element_blank())
+}

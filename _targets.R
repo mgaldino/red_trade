@@ -756,5 +756,7 @@ list(
   # Cohen's kappa for ChatGPT validation
   tar_target(validation_file, here("data", "folha_validation_sample_annotated.csv"), format = "file"),
   tar_target(chatgpt_validation_summary, build_chatgpt_validation_summary(validation_file)),
-  tar_target(cohens_kappa, compute_cohens_kappa(validation_file))
+  tar_target(cohens_kappa, compute_cohens_kappa(validation_file)),
+  # Formal model: equilibrium response figure (Proposition 1)
+  tar_target(model_response_plot, plot_model_response())
 )
