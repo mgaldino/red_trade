@@ -1,0 +1,106 @@
+{
+  "run_at": "2026-09-23T01:09:22+00:00",
+  "inventory": "quality_reports/status_cue_salience/search_inventory_goods_rank_one_2026-09-22.csv",
+  "inventory_sha256": "a00e2df5dfadf6b892d05d10d4f3609884452f72945f4e27fa0d9cc54eeb7b32",
+  "candidate_config": "scripts/diagnostics/chile_public_cue_2007_2008_candidates.json",
+  "candidate_config_sha256": "9d555682c361feceaaebb039f8e8ec63edef0a74e91d084b588c660bb870c3e7",
+  "candidate_url_sha256": "8276c01937d56e23dc59d319f4c742d5903d99473d62a117d61384fac105b5be",
+  "query_log": "data/raw/status_cue_salience/chile_2007_2008/web_discovery_queries.json",
+  "query_log_sha256": "0cdbbfdf61764801e0a7b85254592b2e7b4c25369e12e892858c06a4d34189a1",
+  "sources": [
+    {
+      "url": "https://live.mundomaritimo.cl/noticias/china-parte-2007-como-principal-destino-de-exportaciones-chilenas",
+      "final_url": "https://live.mundomaritimo.cl/noticias/china-parte-2007-como-principal-destino-de-exportaciones-chilenas",
+      "status": "robots_unavailable_stop",
+      "robots_file": "data/raw/status_cue_salience/chile_2007_2008/runs/20260923T010922Z/robots/live_mundomaritimo_cl.txt",
+      "hops": [],
+      "robots_status": "robots_unavailable_stop",
+      "robots_sha256": "12ad7d5bb6d44c41b2c9ae63476d8ca5921ccaf418f15a76909a319341b2e00d",
+      "source_id": "chl_mundomaritimo_2007_02_19",
+      "accessed_at": "2026-09-23T01:09:22+00:00"
+    },
+    {
+      "url": "https://www.bcn.cl/observatorio/asiapacifico/noticias/a-un-ano-del-tlc-con-china",
+      "final_url": "https://www.bcn.cl/observatorio/asiapacifico/noticias/a-un-ano-del-tlc-con-china",
+      "status": "robots_unavailable_stop",
+      "robots_file": "data/raw/status_cue_salience/chile_2007_2008/runs/20260923T010922Z/robots/www_bcn_cl.txt",
+      "hops": [],
+      "robots_status": "robots_unavailable_stop",
+      "robots_sha256": "12ad7d5bb6d44c41b2c9ae63476d8ca5921ccaf418f15a76909a319341b2e00d",
+      "source_id": "chl_bcn_2007_10_01",
+      "accessed_at": "2026-09-23T01:09:22+00:00"
+    },
+    {
+      "url": "https://www.subrei.gob.cl/sala-de-prensa/noticias/detalle-noticias/2007/01/26/comienzan-negociaciones-para-capitulo-de-inversiones-del-tlc-entre-chile-y-china",
+      "final_url": "https://www.subrei.gob.cl/sala-de-prensa/noticias/detalle-noticias/2007/01/26/comienzan-negociaciones-para-capitulo-de-inversiones-del-tlc-entre-chile-y-china",
+      "status": "robots_unavailable_stop",
+      "robots_file": "data/raw/status_cue_salience/chile_2007_2008/runs/20260923T010922Z/robots/www_subrei_gob_cl.txt",
+      "hops": [],
+      "robots_status": "robots_unavailable_stop",
+      "robots_sha256": "12ad7d5bb6d44c41b2c9ae63476d8ca5921ccaf418f15a76909a319341b2e00d",
+      "source_id": "chl_subrei_2007_01_25_date_anomaly",
+      "accessed_at": "2026-09-23T01:09:22+00:00"
+    },
+    {
+      "url": "https://www.emol.com/noticias/nacional/2008/04/15/300440/chile-impulsa-su-imagen-en-china-con-semana-de-actividades-en-shanghai.html",
+      "final_url": "https://www.emol.com/noticias/nacional/2008/04/15/300440/chile-impulsa-su-imagen-en-china-con-semana-de-actividades-en-shanghai.html",
+      "status": "robots_unavailable_stop",
+      "robots_file": "data/raw/status_cue_salience/chile_2007_2008/runs/20260923T010922Z/robots/www_emol_com.txt",
+      "hops": [],
+      "robots_status": "robots_unavailable_stop",
+      "robots_sha256": "12ad7d5bb6d44c41b2c9ae63476d8ca5921ccaf418f15a76909a319341b2e00d",
+      "source_id": "chl_emol_efe_2008_04_15",
+      "accessed_at": "2026-09-23T01:09:22+00:00"
+    },
+    {
+      "url": "https://live.mundomaritimo.cl/noticias/japon-es-el-segundo-destino-de-las-exportaciones-chilenas-desplazando-a-estados-unidos",
+      "final_url": "https://live.mundomaritimo.cl/noticias/japon-es-el-segundo-destino-de-las-exportaciones-chilenas-desplazando-a-estados-unidos",
+      "status": "robots_unavailable_stop",
+      "robots_file": "data/raw/status_cue_salience/chile_2007_2008/runs/20260923T010922Z/robots/live_mundomaritimo_cl.txt",
+      "hops": [],
+      "robots_status": "robots_unavailable_stop",
+      "robots_sha256": "12ad7d5bb6d44c41b2c9ae63476d8ca5921ccaf418f15a76909a319341b2e00d",
+      "source_id": "chl_mundomaritimo_2008_05_19",
+      "accessed_at": "2026-09-23T01:09:22+00:00"
+    },
+    {
+      "url": "https://www.subrei.gob.cl/sala-de-prensa/noticias/detalle-noticias/2008/12/16/el-comercio-entre-chile-y-estados-unidos-crecio-155-",
+      "final_url": "https://www.subrei.gob.cl/sala-de-prensa/noticias/detalle-noticias/2008/12/16/el-comercio-entre-chile-y-estados-unidos-crecio-155-",
+      "status": "robots_unavailable_stop",
+      "robots_file": "data/raw/status_cue_salience/chile_2007_2008/runs/20260923T010922Z/robots/www_subrei_gob_cl.txt",
+      "hops": [],
+      "robots_status": "robots_unavailable_stop",
+      "robots_sha256": "12ad7d5bb6d44c41b2c9ae63476d8ca5921ccaf418f15a76909a319341b2e00d",
+      "source_id": "chl_subrei_2008_12_15_twoyway",
+      "accessed_at": "2026-09-23T01:09:22+00:00"
+    }
+  ],
+  "context": [
+    {
+      "url": "https://sice.oas.org/TPD/CHL_CHN/CHL_CHN_e.ASP",
+      "final_url": "https://sice.oas.org/TPD/CHL_CHN/CHL_CHN_e.ASP",
+      "status": "robots_unavailable_stop",
+      "robots_file": "data/raw/status_cue_salience/chile_2007_2008/runs/20260923T010922Z/robots/sice_oas_org.txt",
+      "hops": [],
+      "robots_status": "robots_unavailable_stop",
+      "robots_sha256": "12ad7d5bb6d44c41b2c9ae63476d8ca5921ccaf418f15a76909a319341b2e00d",
+      "source_id": "sice_chile_china_chronology",
+      "accessed_at": "2026-09-23T01:09:22+00:00"
+    },
+    {
+      "url": "https://www.subrei.gob.cl/acuerdos-comerciales/acuerdos-comerciales-vigentes/china",
+      "final_url": "https://www.subrei.gob.cl/acuerdos-comerciales/acuerdos-comerciales-vigentes/china",
+      "status": "robots_unavailable_stop",
+      "robots_file": "data/raw/status_cue_salience/chile_2007_2008/runs/20260923T010922Z/robots/www_subrei_gob_cl.txt",
+      "hops": [],
+      "robots_status": "robots_unavailable_stop",
+      "robots_sha256": "12ad7d5bb6d44c41b2c9ae63476d8ca5921ccaf418f15a76909a319341b2e00d",
+      "source_id": "subrei_china_agreement",
+      "accessed_at": "2026-09-23T01:09:22+00:00"
+    }
+  ],
+  "gdelt": {
+    "status": "pre_2017_not_covered",
+    "reason": "GDELT DOC 2.0 article discovery has documented useful coverage from 2017; no 2007-2008 request was made."
+  }
+}

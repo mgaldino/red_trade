@@ -17,8 +17,8 @@
 #   gate_4case          AUS 2007, BRA 2009, CHL 2008, URY 2013; must reproduce
 #                       data/processed/diagnostics/public_cue_pooled_ife_aus2007/
 #                       fect_results_aus2007.csv before anything else is used.
-#   four_case_chl2009   AUS 2007, BRA 2009, CHL 2009, URY 2013.
-#   seven_case          four_case_chl2009 plus KOR 2003, ZAF 2010, NZL 2013.
+#   four_case_chl2007   AUS 2007, BRA 2009, CHL 2007, URY 2013.
+#   seven_case          four_case_chl2007 plus KOR 2003, ZAF 2010, NZL 2013.
 #
 # South Africa's first counted cue is dated 11 December 2009, after most of that
 # session's votes, so its treatment starts in 2010.
@@ -55,19 +55,19 @@ specs <- list(
     ~iso3c, ~public_cue_year,
     "AUS", 2007L, "BRA", 2009L, "CHL", 2008L, "URY", 2013L
   ),
-  four_case_chl2009 = tibble::tribble(
+  four_case_chl2007 = tibble::tribble(
     ~iso3c, ~public_cue_year,
-    "AUS", 2007L, "BRA", 2009L, "CHL", 2009L, "URY", 2013L
+    "AUS", 2007L, "BRA", 2009L, "CHL", 2007L, "URY", 2013L
   ),
   seven_case = tibble::tribble(
     ~iso3c, ~public_cue_year,
-    "AUS", 2007L, "BRA", 2009L, "CHL", 2009L, "URY", 2013L,
+    "AUS", 2007L, "BRA", 2009L, "CHL", 2007L, "URY", 2013L,
     "KOR", 2003L, "ZAF", 2010L, "NZL", 2013L
   )
 )
 dropped_cue_cases <- list(
   gate_4case = c("GAB", "QAT"),
-  four_case_chl2009 = c("GAB", "QAT"),
+  four_case_chl2007 = c("GAB", "QAT"),
   seven_case = c("GAB", "QAT", "UKR")
 )
 

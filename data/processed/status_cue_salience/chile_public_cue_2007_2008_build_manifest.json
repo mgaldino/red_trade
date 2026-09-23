@@ -1,0 +1,49 @@
+{
+  "built_at": "2026-09-23T01:25:23+00:00",
+  "script": {
+    "path": "scripts/diagnostics/collect_chile_public_cue_2007_2008.py",
+    "sha256": "cafa3f37c9643962e95bf4b5cc8f4acb0c15e72663465d42811de6a381257875"
+  },
+  "inventory": {
+    "path": "quality_reports/status_cue_salience/search_inventory_goods_rank_one_2026-09-22.csv",
+    "sha256": "a00e2df5dfadf6b892d05d10d4f3609884452f72945f4e27fa0d9cc54eeb7b32"
+  },
+  "candidate_config": {
+    "path": "scripts/diagnostics/chile_public_cue_2007_2008_candidates.json",
+    "sha256": "55b1c9e808693158e633eaa2b5334990fa504cf3a66a587d44f05a8c40c95ffb"
+  },
+  "query_log": {
+    "path": "data/raw/status_cue_salience/chile_2007_2008/web_discovery_queries.json",
+    "sha256": "0cdbbfdf61764801e0a7b85254592b2e7b4c25369e12e892858c06a4d34189a1"
+  },
+  "raw_manifest": {
+    "path": "data/raw/status_cue_salience/chile_2007_2008/runs/20260923T012522Z/manifest.json",
+    "sha256": "06770ca5608b7650fc56cf466dede8eeef9e469f1f45f7a0398e9243a83e1644"
+  },
+  "outputs": [
+    {
+      "path": "data/processed/status_cue_salience/chile_public_cue_2007_2008_source_evidence.csv",
+      "sha256": "dbd5636ff6451c7b137af185ed676b2caabdf3beeb88972026449eeb3cfe40b1"
+    },
+    {
+      "path": "data/processed/status_cue_salience/chile_public_cue_2007_2008_country_code.csv",
+      "sha256": "570c224619be96f3583a523986d7e0d0f1bff6e7ddba3298b3eb5e099246a244"
+    },
+    {
+      "path": "data/processed/status_cue_salience/chile_public_cue_2007_2008_SOURCES.yaml",
+      "sha256": "cb3d90d371ee12c6e853606c54863e4d0443f50bf7cba640b4c205e4a73ee152"
+    },
+    {
+      "path": "data/processed/status_cue_salience/chile_public_cue_2007_2008_DATA_DICTIONARY.md",
+      "sha256": "c6896d2127212946ad8e6444292a830d6621890ee6fa825f53710df7a53a2366"
+    },
+    {
+      "path": "quality_reports/status_cue_salience/chile_public_cue_2007_2008_collection_log.md",
+      "sha256": "712ff502ade2cbd0b8ddb409da01181b8dcd3524ca2fe99259cf736c0224881f"
+    },
+    {
+      "path": "quality_reports/status_cue_salience/chile_public_cue_2007_2008.md",
+      "sha256": "2bbe14873bea40fd8790a9a5156d0091d9fbad12065c5e7fd48fbb3a9ed93085"
+    }
+  ]
+}

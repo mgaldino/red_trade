@@ -1,0 +1,94 @@
+# Chile 2007–2008 source manifest
+# Local/official publisher documents; no redistribution license asserted.
+sources:
+  - id: chl_mundomaritimo_2007_02_19
+    name: "MundoMarítimo (republicação de El Mercurio)"
+    url: "https://live.mundomaritimo.cl/noticias/china-parte-2007-como-principal-destino-de-exportaciones-chilenas"
+    access_method: robots_checked_https
+    requires_credentials: false
+    license: original publisher terms
+    publication_date_claimed: "2007-02-19"
+    publication_date_precision: day
+    date_accessed: "2026-09-23T01:21:04+00:00"
+    metric_in_source: goods_exports
+    raw_file: "data/raw/status_cue_salience/chile_2007_2008/CHL/2007/chl_mundomaritimo_2007_02_19/20260923T012104Z.html"
+    sha256: "498ebd485e348ed871b111a9f2736ace3e872aec7716c3a9121c230b854ef218"
+    counted: true
+  - id: chl_direcon_2007_05_q1_report
+    name: "DIRECON, Departamento de Estudios e Informaciones (cópia OEA/SICE)"
+    url: "https://sice.oas.org/ctyindex/chl/DIRECON20071_s.pdf"
+    access_method: robots_checked_https
+    requires_credentials: false
+    license: original publisher terms
+    publication_date_claimed: "2007-05"
+    publication_date_precision: month
+    date_accessed: "2026-09-23T01:21:04+00:00"
+    metric_in_source: goods_exports
+    raw_file: "data/raw/status_cue_salience/chile_2007_2008/CHL/2007/chl_direcon_2007_05_q1_report/20260923T012104Z.pdf"
+    sha256: "86af5403f2108044ffc086bf44c4ab34b4e69cc41e629c56ce43f42f3ea6d968"
+    counted: true
+  - id: chl_bcn_2007_10_01
+    name: "Biblioteca del Congreso Nacional de Chile"
+    url: "https://www.bcn.cl/observatorio/asiapacifico/noticias/a-un-ano-del-tlc-con-china"
+    access_method: user_supplied_safari_print_pdf
+    requires_credentials: false
+    license: original publisher terms
+    publication_date_claimed: "2007-10-01"
+    publication_date_precision: day
+    date_accessed: "2026-09-23T01:21:04+00:00"
+    metric_in_source: goods_exports
+    raw_file: "data/raw/status_cue_salience/chile_2007_2008/CHL/2007/chl_bcn_2007_10_01/20260923T012104Z.pdf"
+    sha256: "feba676bd468bdf658369fd6df1756e9805f88f880c56a4c9fc5919869d477de"
+    counted: true
+  - id: chl_subrei_2007_01_25_date_anomaly
+    name: "SUBREI / DIRECON"
+    url: "https://www.subrei.gob.cl/sala-de-prensa/noticias/detalle-noticias/2007/01/26/comienzan-negociaciones-para-capitulo-de-inversiones-del-tlc-entre-chile-y-china"
+    access_method: robots_checked_https
+    requires_credentials: false
+    license: original publisher terms
+    publication_date_claimed: "2007-01-25"
+    publication_date_precision: day
+    date_accessed: "2026-09-23T01:21:05+00:00"
+    metric_in_source: goods_exports
+    raw_file: "data/raw/status_cue_salience/chile_2007_2008/CHL/2007/chl_subrei_2007_01_25_date_anomaly/20260923T012105Z.html"
+    sha256: "79fc4b8c58993f6544b21805956f7cd95ce98edaab607bb91b59aeedd750668d"
+    counted: false
+  - id: chl_emol_efe_2008_04_15
+    name: "Emol (EFE)"
+    url: "https://www.emol.com/noticias/nacional/2008/04/15/300440/chile-impulsa-su-imagen-en-china-con-semana-de-actividades-en-shanghai.html"
+    access_method: robots_checked_https
+    requires_credentials: false
+    license: original publisher terms
+    publication_date_claimed: "2008-04-15"
+    publication_date_precision: day
+    date_accessed: "2026-09-23T01:21:08+00:00"
+    metric_in_source: goods_exports
+    raw_file: "data/raw/status_cue_salience/chile_2007_2008/CHL/2008/chl_emol_efe_2008_04_15/20260923T012108Z.html"
+    sha256: "f33c9d75174c5538340f00b5843f91a8c39b3d192a1ed88925550555778ea577"
+    counted: true
+  - id: chl_mundomaritimo_2008_05_19
+    name: "MundoMarítimo (republicação de El Mercurio)"
+    url: "https://live.mundomaritimo.cl/noticias/japon-es-el-segundo-destino-de-las-exportaciones-chilenas-desplazando-a-estados-unidos"
+    access_method: robots_checked_https
+    requires_credentials: false
+    license: original publisher terms
+    publication_date_claimed: "2008-05-19"
+    publication_date_precision: day
+    date_accessed: "2026-09-23T01:21:08+00:00"
+    metric_in_source: goods_exports
+    raw_file: "data/raw/status_cue_salience/chile_2007_2008/CHL/2008/chl_mundomaritimo_2008_05_19/20260923T012108Z.html"
+    sha256: "04516870ed7eac92de46eedffd13561bcb3ad851dabb2182541a010c4a136c17"
+    counted: true
+  - id: chl_subrei_2008_12_15_twoyway
+    name: "SUBREI / DIRECON"
+    url: "https://www.subrei.gob.cl/sala-de-prensa/noticias/detalle-noticias/2008/12/16/el-comercio-entre-chile-y-estados-unidos-crecio-155-"
+    access_method: robots_checked_https
+    requires_credentials: false
+    license: original publisher terms
+    publication_date_claimed: "2008-12-15"
+    publication_date_precision: day
+    date_accessed: "2026-09-23T01:21:09+00:00"
+    metric_in_source: two_way_trade
+    raw_file: "data/raw/status_cue_salience/chile_2007_2008/CHL/2008/chl_subrei_2008_12_15_twoyway/20260923T012109Z.html"
+    sha256: "bb8368815c3bbbdbbed90d826c6aa8cddfb67fdf149f8410dc7405db32fcf826"
+    counted: false

@@ -1,0 +1,4 @@
+statistic,value,placebo_sd,p_placebo_two_sided
+"slope of average coefficient on event time, -6 to -1",0.015701707022390654,0.02114990597062256,0.4455108978204359
+"sum of squared average coefficients, -6 to -2",0.016975556800912856,0.04232613512464634,0.6774645070985803
+"DiD ATT, post mean minus pre mean, averaged over countries",-0.0910909610374227,0.06907132049873657,0.1893621275744851
