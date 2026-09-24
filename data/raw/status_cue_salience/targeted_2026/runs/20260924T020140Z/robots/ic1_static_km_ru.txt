@@ -1,0 +1,108 @@
+# VM100_SEO_BOTS_ROBOTS_BEGIN 2026-05-20
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: SemrushBot-BA
+Disallow: /
+
+User-agent: SemrushBot-SI
+Disallow: /
+
+User-agent: SemrushBot-SWA
+Disallow: /
+
+User-agent: SiteAuditBot
+Disallow: /
+
+User-agent: SplitSignalBot
+Disallow: /
+
+User-agent: SemrushBot-OCOB
+Disallow: /
+
+User-agent: SemrushBot-FT
+Disallow: /
+
+User-agent: SemrushBot-ESI
+Disallow: /
+
+User-agent: RyteBot
+Disallow: /
+
+User-agent: Arquivo-web-crawler
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+# VM100_SEO_BOTS_ROBOTS_END
+
+# VM100_CLAUDEBOT_ROBOTS_BEGIN 2026-05-20
+User-agent: ClaudeBot
+Disallow: /
+# VM100_CLAUDEBOT_ROBOTS_END
+
+User-agent: Yandex
+Clean-param: __cf_chl_jschl_tk__&__cf_chl_captcha_tk__&__cf_chl_managed_tk__&__cf_chl_tk&__cf_chl_f_tk&__cf_chl_rt_tk&wvstest&__cf_chl_tk&t&f&topic&nw&go&__cf_chl_jschl_tk__&wvstes&uid&p2_articleid&search&cod&ntvk1_source&url&name&id&utm_compaign&member_id&fp&L&l&a&inviteid&n&pr&subiect&id&inviteid&pager2&pager&keepThis&TB_iframe&height&width&caption&Subject&subject&author&in&ins&inviteguid&m&w&o&ID&s1&s2&s3&song&categoryid&p2_articleid&subaction&user&f5tp&PID&acid&board&pg&query
+Clean-param: page */persony/*
+Clean-param: page /referats/category/*
+Clean-param: page /joke_day/*
+Clean-param: page /news/list
+
+
+Disallow: /kmsearch/
+Disallow: /musearch
+Disallow: /poll?
+Disallow: /Poll/
+Disallow: /print/
+Disallow: /node?page=
+Disallow: /news/poll/
+Disallow: /sites/
+Disallow: /cdn-cgi/
+Disallow: /km_content/
+Disallow: /modules/
+Disallow: /glavnoe/*/arkhiv/*
+Disallow: /comments/
+
+Allow: /sites/*.jpg
+Allow: /sites/*.png
+
+Host: https://www.km.ru
+
+User-agent: GoogleBot
+Disallow: /kmsearch/
+Disallow: /musearch
+Disallow: /print/
+Disallow: /poll?
+Disallow: /Poll/
+Disallow: /node?page=
+Disallow: /news/poll/
+
+User-agent: *
+Disallow: /kmsearch/
+Disallow: /musearch
+Disallow: /print/
+Disallow: /poll?
+Disallow: /Poll/
+Disallow: /node?page=
+Disallow: /news/poll/
+
+# VM100_KMTV_MEDIA_ROBOTS_BEGIN 2026-07-21
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: CCBot
+User-agent: Bytespider
+User-agent: meta-externalagent
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+Disallow: /media/tv/objects/
+# VM100_KMTV_MEDIA_ROBOTS_END
+
+Sitemap: https://www.km.ru/sitemap.xml

@@ -1,0 +1,102 @@
+[
+  {
+    "iso3c": "KOR",
+    "source_id": "kor_first",
+    "query": "Reauditoria da fonte registrada em status_cue_source_evidence_extension.csv para KOR 2003-10-24"
+  },
+  {
+    "iso3c": "KOR",
+    "source_id": "kor_annual_2003",
+    "query": "site:kiep.kr Korea exports China USA 2003 35110 34369"
+  },
+  {
+    "iso3c": "AUS",
+    "source_id": "aus_first",
+    "query": "Reauditoria da fonte registrada em australia_public_cue_media_2006_2009.csv para AUS 2007-05-04"
+  },
+  {
+    "iso3c": "AUS",
+    "source_id": "aus_rolling",
+    "query": "Reauditoria da fonte registrada em australia_public_cue_media_2006_2009.csv para AUS 2007-09-01"
+  },
+  {
+    "iso3c": "AUS",
+    "source_id": "aus_dfat_2007",
+    "query": "site:dfat.gov.au composition of trade 2007 China largest trading partner"
+  },
+  {
+    "iso3c": "CHL",
+    "source_id": "chl_first",
+    "query": "Reauditoria da fonte registrada em chile_public_cue_2007_2008_source_evidence.csv para CHL 2007-02-19"
+  },
+  {
+    "iso3c": "CHL",
+    "source_id": "chl_annual_2007",
+    "query": "site:bcentral.cl indicadores comercio exterior cuarto trimestre 2007 China Estados Unidos exportaciones"
+  },
+  {
+    "iso3c": "BRA",
+    "source_id": "bra_first",
+    "query": "Reauditoria da fonte registrada em status_cue_source_evidence.csv para BRA 2009-05-04"
+  },
+  {
+    "iso3c": "BRA",
+    "source_id": "bra_annual_2009",
+    "query": "site:prefeitura.sp.gov.br 2010 China 2009 maior parceiro comercial 36.1 35.9"
+  },
+  {
+    "iso3c": "ZAF",
+    "source_id": "zaf_first",
+    "query": "Reauditoria da fonte registrada em status_cue_source_evidence_extension.csv para ZAF 2009-12-11"
+  },
+  {
+    "iso3c": "ZAF",
+    "source_id": "zaf_official",
+    "query": "Reauditoria da fonte registrada em status_cue_source_evidence_extension.csv para ZAF 2010-03-31"
+  },
+  {
+    "iso3c": "URY",
+    "source_id": "ury_old_first",
+    "query": "Reauditoria da fonte registrada em status_cue_source_evidence.csv para URY 2013-09-27"
+  },
+  {
+    "iso3c": "URY",
+    "source_id": "ury_annual_2013",
+    "query": "Reauditoria da fonte registrada em status_cue_source_evidence.csv para URY 2014-02-04"
+  },
+  {
+    "iso3c": "URY",
+    "source_id": "ury_earlier_2013_05_23",
+    "query": "site:gub.uy 2013 China principal socio comercial Uruguay mayo gira"
+  },
+  {
+    "iso3c": "URY",
+    "source_id": "ury_earlier_2013_07_24",
+    "query": "site:gub.uy 2013 China principal socio comercial Uruguay julio revista políticas"
+  },
+  {
+    "iso3c": "NZL",
+    "source_id": "nzl_first",
+    "query": "Reauditoria da fonte registrada em status_cue_source_evidence_extension.csv para NZL 2013-04-26"
+  },
+  {
+    "iso3c": "NZL",
+    "source_id": "nzl_annual_2013",
+    "query": "site:treasury.govt.nz 2014 China largest export market 2013 calendar year 22%"
+  },
+  {
+    "iso3c": "KOR",
+    "source_id": "kor_annual_2003_joongang",
+    "query": "site:koreajoongangdaily.joins.com 2004 China biggest export market Korea last year 2003"
+  },
+  {
+    "iso3c": "CHL",
+    "source_id": "chl_annual_2007_direcon",
+    "query": "site:sice.oas.org DIRECON20074_s.pdf comercio exterior Chile cuarto trimestre 2007 China"
+  },
+  {
+    "iso3c": "NZL",
+    "source_id": "nzl_annual_2013_statsnz",
+    "query": "site:scoop.co.nz 2014 China became our top annual export destination in 2013"
+  }
+]

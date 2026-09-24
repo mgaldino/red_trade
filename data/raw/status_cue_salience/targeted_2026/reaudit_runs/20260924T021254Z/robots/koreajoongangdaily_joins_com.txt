@@ -1,0 +1,12 @@
+User-agent: AhrefsBot
+User-agent: GPTBot
+User-agent: Bytespider
+User-agent: Amazonbot
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.koreajoongangdaily.com/sitemapindex.xml
+Sitemap: https://www.koreajoongangdaily.com/tag/korea/business/lifestyle/entertainment/sports/opinion/world/?lab_viewport=newssitemap

@@ -1,0 +1,15 @@
+User-agent: Googlebot, Bingbot
+Disallow: /path/to/directory
+Disallow: /wp-admin/
+Allow: /path/to/page
+Allow: /wp-admin/admin-ajax.php
+
+Sitemap: http://english.dvb.no/sitemap.xml
+
+# Comments
+# This is a comment.
+# Comments are ignored by web crawlers.
+
+
+
+

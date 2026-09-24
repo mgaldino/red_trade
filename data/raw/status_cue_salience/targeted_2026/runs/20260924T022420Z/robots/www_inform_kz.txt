@@ -1,0 +1,10 @@
+
+User-agent: *
+Allow: /
+Disallow: /*{{ link }}*
+Disallow: /search/
+Disallow: /*?page=
+Sitemap: https://www.inform.kz/sitemaps/sitemap_index_ru.xml
+Sitemap: https://www.inform.kz/sitemaps/google-news_ru.xml
+Sitemap: https://www.inform.kz/sitemaps/sitemap-last-news-300_ru.xml
+Clean-param: ref /amp/

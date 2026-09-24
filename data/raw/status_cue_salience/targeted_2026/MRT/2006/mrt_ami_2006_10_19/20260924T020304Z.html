@@ -1,0 +1,1064 @@
+	<!DOCTYPE html>
+		<!--[if IE 8]>
+	<html class="ie ie8" dir="rtl" lang="ar"> <![endif]-->
+	<!--[if IE 9]>
+	<html class="ie ie9" dir="rtl" lang="ar"> <![endif]-->
+	<!--[if gt IE 9]><!-->
+<html dir="rtl" lang="ar"> <!--<![endif]-->
+	<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",(e=>{this.persisted=e.persisted})),window.addEventListener("DOMContentLoaded",(()=>{this._preconnect3rdParties()})),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){document.hidden?e._triggerListener():(this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler))}_removeUserInteractionListener(){this.triggerEvents.forEach((e=>window.removeEventListener(e,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"))}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick")}_onTouchEnd(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))}))}_renameDOMAttribute(e,t,n){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(n,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{if(t.hasAttribute("src")){const n=new URL(t.src).origin;n!==location.origin&&e.push({src:n,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}})),e=[...new Map(e.map((e=>[JSON.stringify(e),e]))).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(e){}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._replayClicks()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._littleBreath(),new Promise((t=>{const n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t());try{e.parentNode.replaceChild(n,e)}catch(e){t()}}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var n=document.createDocumentFragment();e.forEach((e=>{if(e.src){const i=document.createElement("link");i.href=e.src,i.rel=t,"preconnect"!==t&&(i.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(i.crossOrigin=!0),e.crossOrigin&&(i.crossOrigin=e.crossOrigin),n.appendChild(i)}})),document.head.appendChild(n)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),await this._littleBreath();const e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),r=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const s=document.createDocumentFragment();i.setStart(s,0),s.appendChild(i.createContextualFragment(t)),r.insertBefore(s,o)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise((e=>setTimeout(e))):new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+				
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="pingback" href="https://www.ami.mr/xmlrpc.php"/>
+
+		
+			<style>
+			.fuse_social_icons_links {
+			    display: block;
+			}
+			.facebook-awesome-social::before {
+			    content: "\f09a" !important;
+			}
+			
+			.awesome-social-img img {
+			    position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    transform: translate(-50%,-50%);
+			}
+
+			.awesome-social-img {
+			    position: relative;
+			}			
+			.icon_wrapper .awesome-social {
+			    font-family: 'FontAwesome' !important;
+			}
+			#icon_wrapper .fuse_social_icons_links .awesome-social {
+			    font-family: "FontAwesome" !important;
+			    ext-rendering: auto !important;
+			    -webkit-font-smoothing: antialiased !important;
+			    -moz-osx-font-smoothing: grayscale !important;
+			}
+									
+			
+			#icon_wrapper{
+				position: fixed;
+				top: 50%;
+				left: 0px;
+				z-index: 99999;
+			}
+			
+			.awesome-social
+
+			{
+
+            margin-top:2px;
+
+			color: #fff !important;
+
+			text-align: center !important;
+
+			display: block;
+
+			
+			line-height: 51px !important;
+
+			width: 48px !important;
+
+			height: 48px !important;
+
+			font-size: 28px !important;
+
+			
+				border-radius:50% !important;
+
+				
+
+
+			}
+
+			
+			.fuse_social_icons_links
+
+			{
+
+			outline:0 !important;
+
+
+
+			}
+
+			.fuse_social_icons_links:hover{
+
+			text-decoration:none !important;
+
+			}
+
+			
+			.fb-awesome-social
+
+			{
+
+			background: #3b5998;
+			border-color: #3b5998;
+			
+			}
+			.facebook-awesome-social
+
+			{
+
+			background: #3b5998;
+			border-color: #3b5998;
+						}
+
+
+			.tw-awesome-social
+
+			{
+
+			background:#00aced;
+			border-color: #00aced;
+			
+			}
+			.twitter-awesome-social
+
+			{
+
+			background:#00aced;
+			border-color: #00aced;
+			
+			}
+			.rss-awesome-social
+
+			{
+
+			background:#FA9B39;
+			border-color: #FA9B39;
+			
+			}
+
+			.linkedin-awesome-social
+
+			{
+
+			background:#007bb6;
+			border-color: #007bb6;
+						}
+
+			.youtube-awesome-social
+
+			{
+
+			background:#bb0000;
+			border-color: #bb0000;
+						}
+
+			.flickr-awesome-social
+
+			{
+
+			background: #ff0084;
+			border-color: #ff0084;
+						}
+
+			.pinterest-awesome-social
+
+			{
+
+			background:#cb2027;
+			border-color: #cb2027;
+						}
+
+			.stumbleupon-awesome-social
+
+			{
+
+			background:#f74425 ;
+			border-color: #f74425;
+						}
+
+			.google-plus-awesome-social
+
+			{
+
+			background:#f74425 ;
+			border-color: #f74425;
+						}
+
+			.instagram-awesome-social
+
+			{
+
+			    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+			    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+			    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+			    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+			    border-color: #f09433;
+					    
+
+			}
+
+			.tumblr-awesome-social
+
+			{
+
+			background: #32506d ;
+			border-color: #32506d;
+						}
+
+			.vine-awesome-social
+
+			{
+
+			background: #00bf8f ;
+			border-color: #00bf8f;
+						}
+
+            .vk-awesome-social {
+
+
+
+            background: #45668e ;
+            border-color: #45668e;
+            
+            }
+
+            .soundcloud-awesome-social
+
+                {
+
+            background: #ff3300 ;
+            border-color: #ff3300;
+            
+                }
+
+                .reddit-awesome-social{
+
+
+
+            background: #ff4500 ;
+            border-color: #ff4500;
+
+                            }
+
+                .stack-awesome-social{
+
+
+
+            background: #fe7a15 ;
+            border-color: #fe7a15;
+            
+                }
+
+                .behance-awesome-social{
+
+            background: #1769ff ;
+            border-color: #1769ff;
+            
+                }
+
+                .github-awesome-social{
+
+            background: #999999 ;
+            border-color: #999999;
+            
+
+
+                }
+
+                .envelope-awesome-social{
+
+                  background: #ccc ;
+ 				  border-color: #ccc;                 
+ 				                  }
+
+/*  Mobile */
+
+
+
+
+
+
+
+
+
+             
+
+
+
+
+			</style>
+
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v19.11 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>توقيع ابوروتوكول تعاون بين موريتانيا والصين - الوكالة الموريتانية للأنباء</title>
+	<link rel="canonical" href="https://www.ami.mr/archives/860" />
+	<meta property="og:locale" content="ar_AR" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="توقيع ابوروتوكول تعاون بين موريتانيا والصين - الوكالة الموريتانية للأنباء" />
+	<meta property="og:description" content="وقع وزير الشؤون الاقتصادية والتنمية السيد محمد ولد عابد و رئيس بنك التصدير والايرادالصيني(أكسيم بنك)السيد لي اريوكو اليوم الخميس بمقر الوزارة فى انواكشوط، محضر اتفاقية تعاون بين موريتانيا وهذه المؤسسة" />
+	<meta property="og:url" content="https://www.ami.mr/archives/860" />
+	<meta property="og:site_name" content="الوكالة الموريتانية للأنباء" />
+	<meta property="article:publisher" content="https://www.facebook.com/agenceami.mr/" />
+	<meta property="article:published_time" content="2006-10-19T10:31:35+00:00" />
+	<meta property="article:modified_time" content="2022-06-08T08:57:44+00:00" />
+	<meta name="author" content="ami" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@Ami1975a" />
+	<meta name="twitter:site" content="@Ami1975a" />
+	<meta name="twitter:label1" content="كُتب بواسطة" />
+	<meta name="twitter:data1" content="ami" />
+	<meta name="twitter:label2" content="وقت القراءة المُقدّر" />
+	<meta name="twitter:data2" content="3 دقائق" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://www.ami.mr/archives/860#article","isPartOf":{"@id":"https://www.ami.mr/archives/860"},"author":{"name":"ami","@id":"https://www.ami.mr/#/schema/person/98b8d9c8d803ba3e7fbc5c2bedf31089"},"headline":"توقيع ابوروتوكول تعاون بين موريتانيا والصين","datePublished":"2006-10-19T10:31:35+00:00","dateModified":"2022-06-08T08:57:44+00:00","mainEntityOfPage":{"@id":"https://www.ami.mr/archives/860"},"wordCount":631,"commentCount":0,"publisher":{"@id":"https://www.ami.mr/#organization"},"keywords":["med salem","نواكشوط"],"articleSection":["اقتصاد"],"inLanguage":"ar","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://www.ami.mr/archives/860#respond"]}]},{"@type":"WebPage","@id":"https://www.ami.mr/archives/860","url":"https://www.ami.mr/archives/860","name":"توقيع ابوروتوكول تعاون بين موريتانيا والصين - الوكالة الموريتانية للأنباء","isPartOf":{"@id":"https://www.ami.mr/#website"},"datePublished":"2006-10-19T10:31:35+00:00","dateModified":"2022-06-08T08:57:44+00:00","breadcrumb":{"@id":"https://www.ami.mr/archives/860#breadcrumb"},"inLanguage":"ar","potentialAction":[{"@type":"ReadAction","target":["https://www.ami.mr/archives/860"]}]},{"@type":"BreadcrumbList","@id":"https://www.ami.mr/archives/860#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://www.ami.mr/"},{"@type":"ListItem","position":2,"name":"توقيع ابوروتوكول تعاون بين موريتانيا والصين"}]},{"@type":"WebSite","@id":"https://www.ami.mr/#website","url":"https://www.ami.mr/","name":"الوكالة الموريتانية للأنباء","description":"AMI","publisher":{"@id":"https://www.ami.mr/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.ami.mr/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"ar"},{"@type":"Organization","@id":"https://www.ami.mr/#organization","name":"الوكالة الموريتانية للأنباء","url":"https://www.ami.mr/","logo":{"@type":"ImageObject","inLanguage":"ar","@id":"https://www.ami.mr/#/schema/logo/image/","url":"https://ami.mr/wp-content/uploads/2022/08/logo-s.png","contentUrl":"https://ami.mr/wp-content/uploads/2022/08/logo-s.png","width":151,"height":120,"caption":"الوكالة الموريتانية للأنباء"},"image":{"@id":"https://www.ami.mr/#/schema/logo/image/"},"sameAs":["https://www.youtube.com/channel/UC2atdVCveZ5bQvfqE8AoupA/","https://www.instagram.com/ami_1975_a/","https://www.facebook.com/agenceami.mr/","https://twitter.com/Ami1975a"]},{"@type":"Person","@id":"https://www.ami.mr/#/schema/person/98b8d9c8d803ba3e7fbc5c2bedf31089","name":"ami","image":{"@type":"ImageObject","inLanguage":"ar","@id":"https://www.ami.mr/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/d866bdad46baa31460d3c5380b7bf2a6f130db7cf7b604d2547cc673a4756db8?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/d866bdad46baa31460d3c5380b7bf2a6f130db7cf7b604d2547cc673a4756db8?s=96&d=mm&r=g","caption":"ami"},"sameAs":["http://ami.mr"],"url":"https://www.ami.mr/archives/author/ami"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+
+<link rel="alternate" type="application/rss+xml" title="الوكالة الموريتانية للأنباء &laquo; الخلاصة" href="https://www.ami.mr/feed" />
+<link rel="alternate" type="application/rss+xml" title="الوكالة الموريتانية للأنباء &laquo; خلاصة التعليقات" href="https://www.ami.mr/comments/feed" />
+<link rel="alternate" type="application/rss+xml" title="الوكالة الموريتانية للأنباء &laquo; توقيع ابوروتوكول تعاون بين موريتانيا والصين خلاصة التعليقات" href="https://www.ami.mr/archives/860/feed" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.ami.mr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ami.mr%2Farchives%2F860" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.ami.mr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ami.mr%2Farchives%2F860&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='mp-theme-css' href='https://www.ami.mr/wp-content/plugins/memberpress/css/ui/theme.css?ver=1.9.37' media='all' />
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="wp-block-table-inline-css">
+.wp-block-table{overflow-x:auto}.wp-block-table table{border-collapse:collapse;width:100%}.wp-block-table thead{border-bottom:3px solid}.wp-block-table tfoot{border-top:3px solid}.wp-block-table td,.wp-block-table th{border:1px solid;padding:.5em}.wp-block-table .has-fixed-layout{table-layout:fixed;width:100%}.wp-block-table .has-fixed-layout td,.wp-block-table .has-fixed-layout th{word-break:break-word}.wp-block-table.aligncenter,.wp-block-table.alignleft,.wp-block-table.alignright{display:table;width:auto}.wp-block-table.aligncenter td,.wp-block-table.aligncenter th,.wp-block-table.alignleft td,.wp-block-table.alignleft th,.wp-block-table.alignright td,.wp-block-table.alignright th{word-break:break-word}.wp-block-table .has-subtle-light-gray-background-color{background-color:#f3f4f5}.wp-block-table .has-subtle-pale-green-background-color{background-color:#e9fbe5}.wp-block-table .has-subtle-pale-blue-background-color{background-color:#e7f5fe}.wp-block-table .has-subtle-pale-pink-background-color{background-color:#fcf0ef}.wp-block-table.is-style-stripes{background-color:initial;border-collapse:inherit;border-spacing:0}.wp-block-table.is-style-stripes tbody tr:nth-child(odd){background-color:#f0f0f0}.wp-block-table.is-style-stripes.has-subtle-light-gray-background-color tbody tr:nth-child(odd){background-color:#f3f4f5}.wp-block-table.is-style-stripes.has-subtle-pale-green-background-color tbody tr:nth-child(odd){background-color:#e9fbe5}.wp-block-table.is-style-stripes.has-subtle-pale-blue-background-color tbody tr:nth-child(odd){background-color:#e7f5fe}.wp-block-table.is-style-stripes.has-subtle-pale-pink-background-color tbody tr:nth-child(odd){background-color:#fcf0ef}.wp-block-table.is-style-stripes td,.wp-block-table.is-style-stripes th{border-color:#0000}.wp-block-table.is-style-stripes{border-bottom:1px solid #f0f0f0}.wp-block-table .has-border-color td,.wp-block-table .has-border-color th,.wp-block-table .has-border-color tr,.wp-block-table .has-border-color>*{border-color:inherit}.wp-block-table table[style*=border-top-color] tr:first-child,.wp-block-table table[style*=border-top-color] tr:first-child td,.wp-block-table table[style*=border-top-color] tr:first-child th,.wp-block-table table[style*=border-top-color]>*,.wp-block-table table[style*=border-top-color]>* td,.wp-block-table table[style*=border-top-color]>* th{border-top-color:inherit}.wp-block-table table[style*=border-top-color] tr:not(:first-child){border-top-color:initial}.wp-block-table table[style*=border-right-color] td:last-child,.wp-block-table table[style*=border-right-color] th,.wp-block-table table[style*=border-right-color] tr,.wp-block-table table[style*=border-right-color]>*{border-left-color:inherit}.wp-block-table table[style*=border-bottom-color] tr:last-child,.wp-block-table table[style*=border-bottom-color] tr:last-child td,.wp-block-table table[style*=border-bottom-color] tr:last-child th,.wp-block-table table[style*=border-bottom-color]>*,.wp-block-table table[style*=border-bottom-color]>* td,.wp-block-table table[style*=border-bottom-color]>* th{border-bottom-color:inherit}.wp-block-table table[style*=border-bottom-color] tr:not(:last-child){border-bottom-color:initial}.wp-block-table table[style*=border-left-color] td:first-child,.wp-block-table table[style*=border-left-color] th,.wp-block-table table[style*=border-left-color] tr,.wp-block-table table[style*=border-left-color]>*{border-right-color:inherit}.wp-block-table table[style*=border-style] td,.wp-block-table table[style*=border-style] th,.wp-block-table table[style*=border-style] tr,.wp-block-table table[style*=border-style]>*{border-style:inherit}.wp-block-table table[style*=border-width] td,.wp-block-table table[style*=border-width] th,.wp-block-table table[style*=border-width] tr,.wp-block-table table[style*=border-width]>*{border-style:inherit;border-width:inherit}
+/*# sourceURL=https://www.ami.mr/wp-includes/blocks/table/style.min.css */
+</style>
+<style id="wp-block-library-inline-css-extra">
+.has-text-align-justify{text-align:justify;}
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='fontawesome-css' href='https://www.ami.mr/wp-content/plugins/fuse-social-floating-sidebar/inc/font-awesome/css/font-awesome.min.css?ver=7.0.2' media='all' />
+<link rel='stylesheet' id='searchandfilter-css' href='https://www.ami.mr/wp-content/plugins/search-filter/style.css?ver=1' media='all' />
+<link rel='stylesheet' id='social-logos-css' href='https://www.ami.mr/wp-content/plugins/jetpack/_inc/social-logos/social-logos.min.css?ver=11.5.3' media='all' />
+<link rel='stylesheet' id='jetpack_css-rtl-css' href='https://www.ami.mr/wp-content/plugins/jetpack/css/jetpack-rtl.css?ver=11.5.3' media='all' />
+<script type="rocketlazyloadscript" id="jquery-core-js" src="https://www.ami.mr/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" defer></script>
+<script type="rocketlazyloadscript" id="jquery-migrate-js" src="https://www.ami.mr/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" defer></script>
+<script id="fuse-social-script-js-extra">
+var fuse_social = {"ajax_url":"https://www.ami.mr/wp-admin/admin-ajax.php"};
+//# sourceURL=fuse-social-script-js-extra
+</script>
+<script type="rocketlazyloadscript" data-minify="1" id="fuse-social-script-js" src="https://www.ami.mr/wp-content/cache/min/1/wp-content/plugins/fuse-social-floating-sidebar/inc/js/fuse_script.js?ver=1665670020" defer></script>
+<link rel="https://api.w.org/" href="https://www.ami.mr/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.ami.mr/wp-json/wp/v2/posts/860" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.ami.mr/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.0.2" />
+<link rel='shortlink' href='https://www.ami.mr/?p=860' />
+<meta name="framework" content="Redux 4.1.29" />	<style>img#wpstats{display:none}</style>
+				<script>
+			document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );
+		</script>
+				<style>
+			.no-js img.lazyload { display: none; }
+			figure.wp-block-image img.lazyloading { min-width: 150px; }
+							.lazyload, .lazyloading { opacity: 0; }
+				.lazyloaded {
+					opacity: 1;
+					transition: opacity 400ms;
+					transition-delay: 0ms;
+				}
+					</style>
+		<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<script type="application/ld+json">{
+    "@context": "http://schema.org/",
+    "@type": "Organization",
+    "@id": "#organization",
+    "logo": {
+        "@type": "ImageObject",
+        "url": "/wp-content/uploads/2022/07/logo-ar.png"
+    },
+    "url": "https://www.ami.mr/",
+    "name": "\u0627\u0644\u0648\u0643\u0627\u0644\u0629 \u0627\u0644\u0645\u0648\u0631\u064a\u062a\u0627\u0646\u064a\u0629 \u0644\u0644\u0623\u0646\u0628\u0627\u0621",
+    "description": "AMI"
+}</script>
+<script type="application/ld+json">{
+    "@context": "http://schema.org/",
+    "@type": "WebSite",
+    "name": "\u0627\u0644\u0648\u0643\u0627\u0644\u0629 \u0627\u0644\u0645\u0648\u0631\u064a\u062a\u0627\u0646\u064a\u0629 \u0644\u0644\u0623\u0646\u0628\u0627\u0621",
+    "alternateName": "AMI",
+    "url": "https://www.ami.mr/"
+}</script>
+<script type="application/ld+json">{
+    "@context": "http://schema.org/",
+    "@type": "BlogPosting",
+    "headline": "\u062a\u0648\u0642\u064a\u0639 \u0627\u0628\u0648\u0631\u0648\u062a\u0648\u0643\u0648\u0644 \u062a\u0639\u0627\u0648\u0646 \u0628\u064a\u0646 \u0645\u0648\u0631\u064a\u062a\u0627\u0646\u064a\u0627 \u0648\u0627\u0644\u0635\u064a\u0646",
+    "description": "\u0648\u0642\u0639 \u0648\u0632\u064a\u0631 \u0627\u0644\u0634\u0624\u0648\u0646 \u0627\u0644\u0627\u0642\u062a\u0635\u0627\u062f\u064a\u0629 \u0648\u0627\u0644\u062a\u0646\u0645\u064a\u0629 \u0627\u0644\u0633\u064a\u062f \u0645\u062d\u0645\u062f \u0648\u0644\u062f \u0639\u0627\u0628\u062f \u0648 \u0631\u0626\u064a\u0633 \u0628\u0646\u0643 \u0627\u0644\u062a\u0635\u062f\u064a\u0631 \u0648\u0627\u0644\u0627\u064a\u0631\u0627\u062f\u0627\u0644\u0635\u064a\u0646\u064a(\u0623\u0643\u0633\u064a\u0645 \u0628\u0646\u0643)\u0627\u0644\u0633\u064a\u062f \u0644\u064a \u0627\u0631\u064a\u0648\u0643\u0648 \u0627\u0644\u064a\u0648\u0645 \u0627\u0644\u062e\u0645\u064a\u0633 \u0628\u0645\u0642\u0631 \u0627\u0644\u0648\u0632\u0627\u0631\u0629 \u0641\u0649 \u0627\u0646\u0648\u0627\u0643\u0634\u0648\u0637\u060c \u0645\u062d\u0636\u0631 \u0627\u062a\u0641\u0627\u0642\u064a\u0629 \u062a\u0639\u0627\u0648\u0646 \u0628\u064a\u0646 \u0645\u0648\u0631\u064a\u062a\u0627\u0646\u064a\u0627 \u0648\u0647\u0630\u0647 \u0627\u0644\u0645\u0624\u0633\u0633\u0629",
+    "datePublished": "2006-10-19",
+    "dateModified": "2022-06-08",
+    "author": {
+        "@type": "Person",
+        "@id": "#person-ami",
+        "name": "ami"
+    },
+    "interactionStatistic": [
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/CommentAction",
+            "userInteractionCount": "0"
+        }
+    ],
+    "publisher": {
+        "@id": "#organization"
+    },
+    "mainEntityOfPage": "https://www.ami.mr/archives/860"
+}</script>
+<link rel='stylesheet' id='bf-slick' href='https://www.ami.mr/wp-content/themes/publisher/includes/libs/better-framework/assets/css/slick.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='pretty-photo' href='https://www.ami.mr/wp-content/themes/publisher/includes/libs/better-framework/assets/css/pretty-photo.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bs-icons' href='https://www.ami.mr/wp-content/themes/publisher/includes/libs/better-framework/assets/css/bs-icons.css' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-libs' href='https://www.ami.mr/wp-content/themes/publisher/css/theme-libs.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontawesome' href='https://www.ami.mr/wp-content/themes/publisher/includes/libs/better-framework/assets/css/font-awesome.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='publisher' href='https://www.ami.mr/wp-content/themes/publisher/style-7.11.0.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='publisher-rtl' href='https://www.ami.mr/wp-content/themes/publisher/rtl.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='vc-rtl-grid' href='https://www.ami.mr/wp-content/themes/publisher//css/vc-rtl-grid.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='publisher-theme-clean-tech' href='https://www.ami.mr/wp-content/themes/publisher/includes/styles/clean-tech/style.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='7.11.0-1790179679' href='https://www.ami.mr/wp-content/bs-booster-cache/ff40d6df0bcc85146f183fe1974c322a.css' type='text/css' media='all' />
+<link rel="icon" href="https://www.ami.mr/wp-content/uploads/2022/07/icon-ami.png" sizes="32x32" />
+<link rel="icon" href="https://www.ami.mr/wp-content/uploads/2022/07/icon-ami.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.ami.mr/wp-content/uploads/2022/07/icon-ami.png" />
+<meta name="msapplication-TileImage" content="https://www.ami.mr/wp-content/uploads/2022/07/icon-ami.png" />
+<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>	</head>
+
+<body class="rtl wp-singular post-template-default single single-post postid-860 single-format-standard wp-theme-publisher bs-theme bs-publisher bs-publisher-clean-tech active-light-box active-top-line bs-vc-rtl-grid close-rh page-layout-2-col page-layout-2-col-right boxed active-sticky-sidebar main-menu-sticky main-menu-full-width active-ajax-search single-prim-cat-9 single-cat-9  wpb-js-composer js-comp-ver-6.6.0 vc_responsive bs-ll-a" dir="rtl">
+<div class="off-canvas-overlay"></div>
+<div class="off-canvas-container left skin-white">
+	<div class="off-canvas-inner">
+		<span class="canvas-close"><i></i></span>
+					<div class="off-canvas-header">
+									<div class="logo">
+
+						<a href="https://www.ami.mr/">
+							<img width="121" height="100" 
+							     alt="الوكالة الموريتانية للأنباء" data-src="http://www.ami.mr/wp-content/uploads/2022/08/logo-03.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="121" height="100" src="http://www.ami.mr/wp-content/uploads/2022/08/logo-03.png"
+							     alt="الوكالة الموريتانية للأنباء"></noscript>
+						</a>
+					</div>
+									<div class="site-description">AMI</div>
+			</div>
+						<div class="off-canvas-search">
+				<form role="search" method="get" action="https://www.ami.mr">
+					<input type="text" name="s" value=""
+					       placeholder="اكتب هنا عبارة البحث">
+					<i class="fa fa-search"></i>
+				</form>
+			</div>
+						<nav class="off-canvas-menu">
+				<ul class="menu bsm-pure clearfix">
+					<li id="menu-item-129401" class="menu-item menu-item-type-custom menu-item-object-custom better-anim-fade menu-item-129401"><a href="https://ami.mr">الرئيسية</a></li>
+<li id="menu-item-264585" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-term-11901 better-anim-fade menu-item-264585"><a href="https://www.ami.mr/archives/category/%d9%85%d9%88%d8%b1%d9%8a%d8%aa%d8%a7%d9%86%d9%8a%d8%a7-2">موريتانيا</a></li>
+<li id="menu-item-264584" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-term-10359 better-anim-fade menu-item-264584"><a href="https://www.ami.mr/archives/category/17">الولايات</a></li>
+<li id="menu-item-129206" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-term-1165 better-anim-fade menu-item-129206"><a href="https://www.ami.mr/archives/category/10">عام</a></li>
+<li id="menu-item-129200" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-term-9 better-anim-fade menu-item-129200"><a href="https://www.ami.mr/archives/category/3">اقتصاد</a></li>
+<li id="menu-item-129199" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-term-51 better-anim-fade menu-item-129199"><a href="https://www.ami.mr/archives/category/4">ثقافة</a></li>
+<li id="menu-item-129201" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-term-54 better-anim-fade menu-item-129201"><a href="https://www.ami.mr/archives/category/6">رياضة</a></li>
+<li id="menu-item-134899" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-term-11845 better-anim-fade menu-item-134899"><a href="https://www.ami.mr/archives/category/%d9%85%d9%84%d8%aa%d9%85%d9%8a%d8%af%d9%8a%d8%a7/%d9%85%d8%b9%d8%b1%d8%b6-%d8%a7%d9%84%d8%b5%d9%88%d8%b1">معرض الصور</a></li>
+<li id="menu-item-134900" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-term-11842 better-anim-fade menu-item-134900"><a href="https://www.ami.mr/archives/category/%d9%85%d9%84%d8%aa%d9%85%d9%8a%d8%af%d9%8a%d8%a7/%d9%81%d9%8a%d8%af%d9%8a%d9%88">فيديو</a></li>
+<li id="menu-item-134901" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-term-11841 better-anim-fade menu-item-134901"><a href="https://www.ami.mr/archives/category/%d9%85%d9%84%d8%aa%d9%85%d9%8a%d8%af%d9%8a%d8%a7/%d8%a7%d9%86%d9%81%d9%88%d8%ac%d8%b1%d8%a7%d9%81%d9%8a%d9%83">انفوجرافيك</a></li>
+<li id="menu-item-129197" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children better-anim-fade menu-item-129197"><a href="#">الوكالة</a>
+<ul class="sub-menu">
+	<li id="menu-item-129247" class="menu-item menu-item-type-post_type menu-item-object-page better-anim-fade menu-item-129247"><a href="https://www.ami.mr/%d8%aa%d8%b9%d8%b1%d9%8a%d9%81-%d8%a8%d8%a7%d9%84%d9%88%d9%83%d8%a7%d9%84%d8%a9">تعريف بالوكالة</a></li>
+	<li id="menu-item-129246" class="menu-item menu-item-type-post_type menu-item-object-page better-anim-fade menu-item-129246"><a href="https://www.ami.mr/%d8%a7%d9%84%d8%ae%d8%af%d9%85%d8%a7%d8%aa">الخدمات</a></li>
+	<li id="menu-item-129245" class="menu-item menu-item-type-post_type menu-item-object-page better-anim-fade menu-item-129245"><a href="https://www.ami.mr/%d8%a7%d9%84%d8%a7%d8%b4%d8%aa%d8%b1%d8%a7%d9%83">الاشتراك</a></li>
+	<li id="menu-item-129244" class="menu-item menu-item-type-post_type menu-item-object-page better-anim-fade menu-item-129244"><a href="https://www.ami.mr/%d9%84%d9%84%d8%a7%d8%aa%d8%b5%d8%a7%d9%84-%d8%a8%d9%86%d8%a7">للاتصال بنا</a></li>
+</ul>
+</li>
+				</ul>
+			</nav>
+						<div class="off_canvas_footer">
+				<div class="off_canvas_footer-info entry-content">
+									</div>
+			</div>
+				</div>
+</div>
+		<div class="main-wrap content-main-wrap">
+			<header id="header" class="site-header header-style-5 full-width" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
+		<section class="topbar topbar-style-1 hidden-xs hidden-xs">
+	<div class="content-wrap">
+		<div class="container">
+			<div class="topbar-inner clearfix">
+
+				
+				<div class="section-menu">
+						<div id="menu-top" class="menu top-menu-wrapper" role="navigation" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+		<nav class="top-menu-container">
+
+			<ul id="top-navigation" class="top-menu menu clearfix bsm-pure">
+									<li id="topbar-date" class="menu-item menu-item-date">
+					<span
+						class="topbar-date">الخميس, 24 سبتمبر 2026</span>
+					</li>
+					<li id="menu-item-129454" class="menu-have-icon menu-icon-type-fontawesome menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children better-anim-fade menu-item-129454"><a href="#"><i class="bf-icon  fa fa-user-circle-o"></i>الوكالة</a>
+<ul class="sub-menu">
+	<li id="menu-item-129453" class="menu-item menu-item-type-post_type menu-item-object-page better-anim-fade menu-item-129453"><a href="https://www.ami.mr/%d8%aa%d8%b9%d8%b1%d9%8a%d9%81-%d8%a8%d8%a7%d9%84%d9%88%d9%83%d8%a7%d9%84%d8%a9">تعريف بالوكالة</a></li>
+	<li id="menu-item-129452" class="menu-item menu-item-type-post_type menu-item-object-page better-anim-fade menu-item-129452"><a href="https://www.ami.mr/%d8%a7%d9%84%d8%ae%d8%af%d9%85%d8%a7%d8%aa">الخدمات</a></li>
+	<li id="menu-item-129450" class="menu-item menu-item-type-post_type menu-item-object-page better-anim-fade menu-item-129450"><a href="https://www.ami.mr/%d9%84%d9%84%d8%a7%d8%aa%d8%b5%d8%a7%d9%84-%d8%a8%d9%86%d8%a7">للاتصال بنا</a></li>
+</ul>
+</li>
+<li id="menu-item-129397" class="menu-have-icon menu-icon-type-fontawesome menu-item menu-item-type-custom menu-item-object-custom better-anim-fade menu-item-129397"><a href="https://ami.mr/fr"><i class="bf-icon  fa fa-language"></i>Français</a></li>
+<li id="menu-item-129398" class="menu-have-icon menu-icon-type-fontawesome menu-item menu-item-type-custom menu-item-object-custom better-anim-fade menu-item-129398"><a href="https://ami.mr/en"><i class="bf-icon  fa fa-language"></i>English</a></li>
+<li id="menu-item-129545" class="menu-have-icon menu-icon-type-custom-icon menu-item menu-item-type-custom menu-item-object-custom hidden-lg hidden-md hidden-sm hidden-xs better-anim-fade menu-item-129545"><a><i class="bf-icon bf-custom-icon "><img style="max-width:25px"  data-src="http://newar.ami.mr/wp-content/uploads/2022/06/icons8-live-video-on.gif" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img style="max-width:25px" src="http://newar.ami.mr/wp-content/uploads/2022/06/icons8-live-video-on.gif"></noscript></i>بث مباشر</a></li>
+			</ul>
+
+		</nav>
+	</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+		<div class="content-wrap">
+			<div class="container">
+				<div class="header-inner clearfix">
+					<div id="site-branding" class="site-branding">
+	<p  id="site-title" class="logo h1 img-logo">
+	<a href="https://www.ami.mr/" itemprop="url" rel="home">
+					<img width="423" height="104" id="site-logo" 
+			     alt="AMI"  data-bsrjs="/wp-content/uploads/2022/07/logo-ar.png" data-src="/wp-content/uploads/2022/07/logo-ar.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="423" height="104" id="site-logo" src="/wp-content/uploads/2022/07/logo-ar.png"
+			     alt="AMI"  data-bsrjs="/wp-content/uploads/2022/07/logo-ar.png"  /></noscript>
+
+			<span class="site-title">AMI - AMI</span>
+				</a>
+</p>
+</div><!-- .site-branding -->
+<nav id="menu-main" class="menu main-menu-container  show-search-item show-off-canvas menu-actions-btn-width-2" role="navigation" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+			<div class="menu-action-buttons width-2">
+							<div class="off-canvas-menu-icon-container off-icon-left">
+					<div class="off-canvas-menu-icon">
+						<div class="off-canvas-menu-icon-el"></div>
+					</div>
+				</div>
+								<div class="search-container close">
+					<span class="search-handler"><i class="fa fa-search"></i></span>
+
+					<div class="search-box clearfix">
+						<form role="search" method="get" class="search-form clearfix" action="https://www.ami.mr">
+	<input type="search" class="search-field"
+	       placeholder="اكتب هنا عبارة البحث"
+	       value="" name="s"
+	       title="البحث عن:"
+	       autocomplete="off">
+	<input type="submit" class="search-submit" value="بحث">
+</form><!-- .search-form -->
+					</div>
+				</div>
+						</div>
+			<ul id="main-navigation" class="main-menu menu bsm-pure clearfix">
+		<li id="menu-item-129476" class="menu-have-icon menu-icon-type-fontawesome menu-item menu-item-type-custom menu-item-object-custom menu-title-hide better-anim-fade menu-item-129476"><a href="https://ami.mr"><i class="bf-icon  fa fa-home"></i><span class="hidden">الرئيسية</span></a></li>
+<li id="menu-item-129471" class="menu-have-icon menu-icon-type-fontawesome menu-item menu-item-type-post_type menu-item-object-page better-anim-fade menu-item-129471"><a href="https://www.ami.mr/%d9%85%d9%88%d8%b1%d9%8a%d8%aa%d8%a7%d9%86%d9%8a%d8%a7">| موريتانيا</a></li>
+<li id="menu-item-129470" class="menu-have-icon menu-icon-type-fontawesome menu-item menu-item-type-post_type menu-item-object-page better-anim-fade menu-item-129470"><a href="https://www.ami.mr/%d8%b9%d8%a7%d9%85">| عام</a></li>
+<li id="menu-item-129652" class="menu-item menu-item-type-post_type menu-item-object-page better-anim-fade menu-item-129652"><a href="https://www.ami.mr/%d8%a7%d9%84%d9%88%d9%84%d8%a7%d9%8a%d8%a7%d8%aa">| الولايات</a></li>
+<li id="menu-item-129653" class="menu-item menu-item-type-post_type menu-item-object-page better-anim-fade menu-item-129653"><a href="https://www.ami.mr/%d8%a7%d9%82%d8%aa%d8%b5%d8%a7%d8%af-2">| اقتصاد</a></li>
+<li id="menu-item-129654" class="menu-item menu-item-type-post_type menu-item-object-page better-anim-fade menu-item-129654"><a href="https://www.ami.mr/%d8%ab%d9%82%d8%a7%d9%81%d8%a9">| ثقافة</a></li>
+<li id="menu-item-129655" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children better-anim-fade menu-item-129655"><a href="https://www.ami.mr/%d8%b1%d9%8a%d8%a7%d8%b6%d8%a9">| رياضة</a>
+<ul class="sub-menu">
+	<li id="menu-item-133208" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children hidden-lg better-anim-fade menu-item-133208"><a href="https://www.ami.mr/%d8%aa%d8%b9%d8%b1%d9%8a%d9%81-%d8%a8%d8%a7%d9%84%d9%88%d9%83%d8%a7%d9%84%d8%a9">الوكالة</a>
+	<ul class="sub-menu">
+		<li id="menu-item-133209" class="menu-item menu-item-type-post_type menu-item-object-page hidden-lg better-anim-fade menu-item-133209"><a href="https://www.ami.mr/%d8%aa%d8%b9%d8%b1%d9%8a%d9%81-%d8%a8%d8%a7%d9%84%d9%88%d9%83%d8%a7%d9%84%d8%a9">تعريف بالوكالة</a></li>
+		<li id="menu-item-133210" class="menu-item menu-item-type-post_type menu-item-object-page hidden-lg better-anim-fade menu-item-133210"><a href="https://www.ami.mr/%d8%a7%d9%84%d8%ae%d8%af%d9%85%d8%a7%d8%aa">الخدمات</a></li>
+		<li id="menu-item-133211" class="menu-item menu-item-type-post_type menu-item-object-page hidden-lg better-anim-fade menu-item-133211"><a href="https://www.ami.mr/%d8%a7%d9%84%d8%a7%d8%b4%d8%aa%d8%b1%d8%a7%d9%83">الاشتراك</a></li>
+		<li id="menu-item-133212" class="menu-item menu-item-type-post_type menu-item-object-page hidden-lg better-anim-fade menu-item-133212"><a href="https://www.ami.mr/%d9%84%d9%84%d8%a7%d8%aa%d8%b5%d8%a7%d9%84-%d8%a8%d9%86%d8%a7">للاتصال بنا</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-133068" class="menu-item menu-item-type-custom menu-item-object-custom hidden-lg better-anim-fade menu-item-133068"><a href="https://ami.mr/fr">Français</a></li>
+<li id="menu-item-133076" class="menu-item menu-item-type-custom menu-item-object-custom hidden-lg better-anim-fade menu-item-133076"><a href="https://ami.mr/en">English</a></li>
+	</ul><!-- #main-navigation -->
+</nav><!-- .main-menu-container -->
+				</div>
+			</div>
+		</div>
+	</header><!-- .header -->
+	<div class="rh-header clearfix light deferred-block-exclude">
+		<div class="rh-container clearfix">
+
+			<div class="menu-container close">
+				<span class="menu-handler"><span class="lines"></span></span>
+			</div><!-- .menu-container -->
+
+			<div class="logo-container rh-img-logo">
+				<a href="https://www.ami.mr/" itemprop="url" rel="home">
+											<img width="121" height="100" 
+						     alt="الوكالة الموريتانية للأنباء"  data-bsrjs="http://www.ami.mr/wp-content/uploads/2022/08/logo-03.png" data-src="http://www.ami.mr/wp-content/uploads/2022/08/logo-03.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="121" height="100" src="http://www.ami.mr/wp-content/uploads/2022/08/logo-03.png"
+						     alt="الوكالة الموريتانية للأنباء"  data-bsrjs="http://www.ami.mr/wp-content/uploads/2022/08/logo-03.png"  /></noscript>				</a>
+			</div><!-- .logo-container -->
+		</div><!-- .rh-container -->
+	</div><!-- .rh-header -->
+<div class="content-wrap">
+		<main id="content" class="content-container">
+
+		<div class="container layout-2-col layout-2-col-1 layout-right-sidebar post-template-1">
+			<div class="row main-section">
+										<div class="col-sm-8 content-column">
+								<div class="single-container">
+		<article id="post-860" class="post-860 post type-post status-publish format-standard  category-9 tag-med-salem tag-15 single-post-content has-thumbnail">
+						<div class="post-header post-tp-1-header">
+									<h1 class="single-post-title">
+						<span class="post-title" itemprop="headline">توقيع ابوروتوكول تعاون بين موريتانيا والصين</span></h1>
+										<div class="post-meta-wrap clearfix">
+						<div class="post-meta single-post-meta">
+				<span class="time"><time class="post-published updated"
+			                         datetime="2006-10-19T10:31:35+00:00"> <b>10:31 صباحًا | 19 أكتوبر 2006</b></time></span>
+			</div>
+					</div>
+									<div class="single-featured">
+					<a class="post-thumbnail open-lightbox"><img  width="750" height="430" alt="" data-src="https://www.ami.mr/wp-content/themes/publisher/images/default-thumb/publisher-lg.png">						</a>
+										</div>
+			</div>
+						<div class="entry-content clearfix single-post-content">
+				<p>وقع وزير الشؤون الاقتصادية والتنمية السيد محمد ولد عابد و رئيس بنك التصدير والايرادالصيني(أكسيم بنك)السيد لي اريوكو اليوم الخميس بمقر الوزارة فى انواكشوط، محضر اتفاقية تعاون بين موريتانيا وهذه المؤسسة المالية الصينية.<br />
+وتتعلق هذه الاتفاقية بامكانية تمويلالبنك وتنفيذه مشاريع اقتصادية بموريتانيا<br />
+في مختلف المجالات التي يشملها التعاون معها، خاصة ميادين الصناعة والبناء والصرف الصحي.<br />
+ويذكرأن المسؤول الصيني يقوم بزيارة لموريتانيامنذ يوم أمس رفقة وفد هام يضم العديد من رجال الأعمال ومديري شركات صينية مختلفة التخصصات.<br />
+وحضرحفل التوقيع وزير التجهيز والنقل السيد با ابراهيما صمبا،وكاتبة الدولة لدى الوزير الأول المكلف بالتقنيات الجديدةالسيدةميانامحمد صو دينا ومديرقطاع افريقياوآسيا بوزارة الشؤون الخارجية والتعاون،ومدير التعاون الاقتصادي بوزارة الشؤون الاتصادية والتنمية السيد يحي ولد عبد الدائم ومدير القطاع الخاص بنفس الوزارةالسيد محمد سالم ولد عبد السلام.</p>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><h3 class="sd-title">مشاركة:</h3><div class="sd-content"><ul><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-860" class="share-facebook sd-button share-icon no-text" href="https://www.ami.mr/archives/860?share=facebook" target="_blank" title="انقر للمشاركة على فيسبوك" ><span></span><span class="sharing-screen-reader-text">انقر للمشاركة على فيسبوك (فتح في نافذة جديدة)</span></a></li><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-860" class="share-twitter sd-button share-icon no-text" href="https://www.ami.mr/archives/860?share=twitter" target="_blank" title="اضغط للمشاركة على تويتر" ><span></span><span class="sharing-screen-reader-text">اضغط للمشاركة على تويتر (فتح في نافذة جديدة)</span></a></li><li class="share-jetpack-whatsapp"><a rel="nofollow noopener noreferrer" data-shared="" class="share-jetpack-whatsapp sd-button share-icon no-text" href="https://www.ami.mr/archives/860?share=jetpack-whatsapp" target="_blank" title="انقر للمشاركة على WhatsApp" ><span></span><span class="sharing-screen-reader-text">انقر للمشاركة على WhatsApp (فتح في نافذة جديدة)</span></a></li><li class="share-telegram"><a rel="nofollow noopener noreferrer" data-shared="" class="share-telegram sd-button share-icon no-text" href="https://www.ami.mr/archives/860?share=telegram" target="_blank" title="انقر للمشاركة على Telegram" ><span></span><span class="sharing-screen-reader-text">انقر للمشاركة على Telegram (فتح في نافذة جديدة)</span></a></li><li class="share-print"><a rel="nofollow noopener noreferrer" data-shared="" class="share-print sd-button share-icon no-text" href="https://www.ami.mr/archives/860#print" target="_blank" title="اضغط للطباعة" ><span></span><span class="sharing-screen-reader-text">اضغط للطباعة (فتح في نافذة جديدة)</span></a></li><li class="share-email"><a rel="nofollow noopener noreferrer" data-shared="" class="share-email sd-button share-icon no-text" href="mailto:?subject=%5B%D9%85%D9%88%D8%B6%D9%88%D8%B9%20%D9%85%D8%B4%D8%A7%D8%B1%D9%83%5D%20%D8%AA%D9%88%D9%82%D9%8A%D8%B9%20%D8%A7%D8%A8%D9%88%D8%B1%D9%88%D8%AA%D9%88%D9%83%D9%88%D9%84%20%D8%AA%D8%B9%D8%A7%D9%88%D9%86%20%D8%A8%D9%8A%D9%86%20%D9%85%D9%88%D8%B1%D9%8A%D8%AA%D8%A7%D9%86%D9%8A%D8%A7%20%D9%88%D8%A7%D9%84%D8%B5%D9%8A%D9%86&body=https%3A%2F%2Fwww.ami.mr%2Farchives%2F860&share=email" target="_blank" title="النقر لإرسال رابط عبر البريد الإلكتروني إلى صديق" data-email-share-error-title="هل لديك بريد إلكتروني قمت بإعداده؟" data-email-share-error-text="إذا كنت تواجه مشكلات في أثناء المشاركة عبر البريد الإلكتروني، فربما لم تقم بإعداد البريد الإلكتروني لمتصفحك. قد تحتاج إلى إنشاء بريد إلكتروني جديد بنفسك." data-email-share-nonce="efd0cbfd1f" data-email-share-track-url="https://www.ami.mr/archives/860?share=email"><span></span><span class="sharing-screen-reader-text">النقر لإرسال رابط عبر البريد الإلكتروني إلى صديق (فتح في نافذة جديدة)</span></a></li><li class="share-end"></li></ul></div></div></div>			</div>
+
+						</article>
+			<section class="next-prev-post clearfix">
+
+					<div class="prev-post">
+				<p class="pre-title heading-typo"><i
+							class="fa fa-arrow-right"></i> الموضوع السابق				</p>
+				<p class="title heading-typo"><a href="https://www.ami.mr/archives/857" rel="prev">وزيرالطاقة والنفط يعود من النرويج</a></p>
+			</div>
+		
+					<div class="next-post">
+				<p class="pre-title heading-typo">الموضوع الموالي <i
+							class="fa fa-arrow-left"></i></p>
+				<p class="title heading-typo"><a href="https://www.ami.mr/archives/862" rel="next">مدير العمليات بالبنك الدولي يجتمع بأرباب العمل الموريتانيين</a></p>
+			</div>
+		
+	</section>
+	</div>
+<div class="post-related">
+
+	<div class="section-heading sh-t6 sh-s10 multi-tab">
+
+					<a href="#relatedposts_1101680566_1" class="main-link active"
+			   data-toggle="tab">
+				<span
+						class="h-text related-posts-heading">مواضيع مشابهة</span>
+			</a>
+			<a href="#relatedposts_1101680566_2" class="other-link" data-toggle="tab"
+			   data-deferred-event="shown.bs.tab"
+			   data-deferred-init="relatedposts_1101680566_2">
+				<span
+						class="h-text related-posts-heading">المزيد..</span>
+			</a>
+		
+	</div>
+
+		<div class="tab-content">
+		<div class="tab-pane bs-tab-anim bs-tab-animated active"
+		     id="relatedposts_1101680566_1">
+			
+					<div class="bs-pagination-wrapper main-term-none next_prev ">
+			<div class="listing listing-thumbnail listing-tb-2 clearfix  scolumns-3 simple-grid include-last-mobile">
+	<div  class="post-267547 type-post format-standard has-post-thumbnail   listing-item listing-item-thumbnail listing-item-tb-2 main-term-11900">
+<div class="item-inner clearfix">
+			<div class="featured featured-type-featured-image">
+						<a  title="الوزير الأول يترأس اجتماعا لبحث ومعالجة ارتفاع أسعار اللحوم" data-src="https://www.ami.mr/wp-content/uploads/2026/09/02-09-2026-53-210x136.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/www.ami.mr\/wp-content\/uploads\/2026\/09\/&quot;,&quot;sizes&quot;:{&quot;86&quot;:&quot;02-09-2026-53-86x64.jpg&quot;,&quot;210&quot;:&quot;02-09-2026-53-210x136.jpg&quot;,&quot;279&quot;:&quot;02-09-2026-53-279x220.jpg&quot;,&quot;357&quot;:&quot;02-09-2026-53-357x210.jpg&quot;,&quot;750&quot;:&quot;02-09-2026-53-750x430.jpg&quot;,&quot;1400&quot;:&quot;02-09-2026-53.jpg&quot;}}"					class="img-holder" href="https://www.ami.mr/archives/267547"></a>
+					</div>
+	<p class="title">	<a class="post-url" href="https://www.ami.mr/archives/267547" title="الوزير الأول يترأس اجتماعا لبحث ومعالجة ارتفاع أسعار اللحوم">
+			<span class="post-title">
+				الوزير الأول يترأس اجتماعا لبحث ومعالجة ارتفاع أسعار اللحوم			</span>
+	</a>
+	</p></div>
+</div >
+<div  class="post-267503 type-post format-standard has-post-thumbnail   listing-item listing-item-thumbnail listing-item-tb-2 main-term-11900">
+<div class="item-inner clearfix">
+			<div class="featured featured-type-featured-image">
+						<a  title="وزير الزراعة يبحث مع بعثة إيطالية إنشاء مشروع مشترك لزراعة القمح واستصلاح آلاف الهكتارات" data-src="https://www.ami.mr/wp-content/uploads/2026/09/01-09-2026-51-210x136.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/www.ami.mr\/wp-content\/uploads\/2026\/09\/&quot;,&quot;sizes&quot;:{&quot;86&quot;:&quot;01-09-2026-51-86x64.jpg&quot;,&quot;210&quot;:&quot;01-09-2026-51-210x136.jpg&quot;,&quot;279&quot;:&quot;01-09-2026-51-279x220.jpg&quot;,&quot;357&quot;:&quot;01-09-2026-51-357x210.jpg&quot;,&quot;750&quot;:&quot;01-09-2026-51-750x430.jpg&quot;,&quot;1400&quot;:&quot;01-09-2026-51.jpg&quot;}}"					class="img-holder" href="https://www.ami.mr/archives/267503"></a>
+					</div>
+	<p class="title">	<a class="post-url" href="https://www.ami.mr/archives/267503" title="وزير الزراعة يبحث مع بعثة إيطالية إنشاء مشروع مشترك لزراعة القمح واستصلاح آلاف الهكتارات">
+			<span class="post-title">
+				وزير الزراعة يبحث مع بعثة إيطالية إنشاء مشروع مشترك لزراعة القمح واستصلاح آلاف&hellip;			</span>
+	</a>
+	</p></div>
+</div >
+<div  class="post-267179 type-post format-standard has-post-thumbnail   listing-item listing-item-thumbnail listing-item-tb-2 main-term-11900">
+<div class="item-inner clearfix">
+			<div class="featured featured-type-featured-image">
+						<a  title="رئيس الجمهورية يأمر بالتحقيق في حرائق محطتي التحويل وتعزيز جاهزية شبكة الكهرباء" data-src="https://www.ami.mr/wp-content/uploads/2026/08/25-08-2026-003-210x136.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/www.ami.mr\/wp-content\/uploads\/2026\/08\/&quot;,&quot;sizes&quot;:{&quot;86&quot;:&quot;25-08-2026-003-86x64.jpg&quot;,&quot;210&quot;:&quot;25-08-2026-003-210x136.jpg&quot;,&quot;279&quot;:&quot;25-08-2026-003-279x220.jpg&quot;,&quot;357&quot;:&quot;25-08-2026-003-357x210.jpg&quot;,&quot;750&quot;:&quot;25-08-2026-003-750x430.jpg&quot;,&quot;1400&quot;:&quot;25-08-2026-003.jpg&quot;}}"					class="img-holder" href="https://www.ami.mr/archives/267179"></a>
+					</div>
+	<p class="title">	<a class="post-url" href="https://www.ami.mr/archives/267179" title="رئيس الجمهورية يأمر بالتحقيق في حرائق محطتي التحويل وتعزيز جاهزية شبكة الكهرباء">
+			<span class="post-title">
+				رئيس الجمهورية يأمر بالتحقيق في حرائق محطتي التحويل وتعزيز جاهزية شبكة الكهرباء			</span>
+	</a>
+	</p></div>
+</div >
+<div  class="post-267119 type-post format-standard has-post-thumbnail   listing-item listing-item-thumbnail listing-item-tb-2 main-term-11900">
+<div class="item-inner clearfix">
+			<div class="featured featured-type-featured-image">
+						<a  title="موريتانيا وألمانيا توقعان اتفاقية تعاون مالي بقيمة 35 مليون يورو" data-src="https://www.ami.mr/wp-content/uploads/2026/08/24-08-2026-56-210x136.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/www.ami.mr\/wp-content\/uploads\/2026\/08\/&quot;,&quot;sizes&quot;:{&quot;86&quot;:&quot;24-08-2026-56-86x64.jpg&quot;,&quot;210&quot;:&quot;24-08-2026-56-210x136.jpg&quot;,&quot;279&quot;:&quot;24-08-2026-56-279x220.jpg&quot;,&quot;357&quot;:&quot;24-08-2026-56-357x210.jpg&quot;,&quot;750&quot;:&quot;24-08-2026-56-750x430.jpg&quot;,&quot;1400&quot;:&quot;24-08-2026-56.jpg&quot;}}"					class="img-holder" href="https://www.ami.mr/archives/267119"></a>
+					</div>
+	<p class="title">	<a class="post-url" href="https://www.ami.mr/archives/267119" title="موريتانيا وألمانيا توقعان اتفاقية تعاون مالي بقيمة 35 مليون يورو">
+			<span class="post-title">
+				موريتانيا وألمانيا توقعان اتفاقية تعاون مالي بقيمة 35 مليون يورو			</span>
+	</a>
+	</p></div>
+</div >
+	</div>
+	
+	</div><div class="bs-pagination bs-ajax-pagination next_prev main-term-none clearfix">
+			<script type="rocketlazyloadscript">var bs_ajax_paginate_741295299 = '{"query":{"paginate":"next_prev","count":4,"post_type":"post","posts_per_page":4,"post__not_in":[860],"ignore_sticky_posts":1,"post_status":["publish","private"],"category__in":[9],"_layout":{"state":"1|1|0","page":"2-col-right"}},"type":"wp_query","view":"Publisher::fetch_related_posts","current_page":1,"ajax_url":"\/wp-admin\/admin-ajax.php","remove_duplicates":"0","paginate":"next_prev","_layout":{"state":"1|1|0","page":"2-col-right"},"_bs_pagin_token":"03d1e38"}';</script>				<a class="btn-bs-pagination prev disabled" rel="prev" data-id="741295299"
+				   title="السابق">
+					<i class="fa fa-angle-right"
+					   aria-hidden="true"></i> السابق				</a>
+				<a  rel="next" class="btn-bs-pagination next"
+				   data-id="741295299" title="التالي">
+					التالي <i
+							class="fa fa-angle-left" aria-hidden="true"></i>
+				</a>
+				</div>
+		</div>
+
+		<div class="tab-pane bs-tab-anim bs-tab-animated bs-deferred-container"
+		     id="relatedposts_1101680566_2">
+					<div class="bs-pagination-wrapper main-term-none next_prev ">
+				<div class="bs-deferred-load-wrapper" id="bsd_relatedposts_1101680566_2">
+			<script type="rocketlazyloadscript">var bs_deferred_loading_bsd_relatedposts_1101680566_2 = '{"query":{"paginate":"next_prev","count":4,"author":1,"post_type":"post","_layout":{"state":"1|1|0","page":"2-col-right"}},"type":"wp_query","view":"Publisher::fetch_other_related_posts","current_page":1,"ajax_url":"\/wp-admin\/admin-ajax.php","remove_duplicates":"0","paginate":"next_prev","_layout":{"state":"1|1|0","page":"2-col-right"},"_bs_pagin_token":"c40cfd4"}';</script>
+		</div>
+		
+	</div>		</div>
+	</div>
+</div>
+						</div><!-- .content-column -->
+												<div class="col-sm-4 sidebar-column sidebar-column-primary">
+							<aside id="sidebar-primary-sidebar" class="sidebar" role="complementary" aria-label="Primary Sidebar Sidebar" itemscope="itemscope" itemtype="https://schema.org/WPSideBar">
+	</aside>
+						</div><!-- .primary-sidebar-column -->
+									</div><!-- .main-section -->
+		</div><!-- .container -->
+
+	</main><!-- main -->
+	</div><!-- .content-wrap -->
+		</div><!-- .main-wrap -->
+			<footer id="site-footer" class="site-footer full-width stretched">
+		<div class="footer-widgets dark-text">
+	<div class="content-wrap">
+		<div class="container">
+			<div class="row">
+										<div class="col-sm-4">
+							<aside id="sidebar-footer-1" class="sidebar" role="complementary" aria-label="Footer - Column 1 Sidebar" itemscope="itemscope" itemtype="https://schema.org/WPSideBar">
+								<div id="bs-about-2" class=" h-ni w-nt footer-widget footer-column-1 widget widget_bs-about"><div  class="bs-shortcode bs-about ">
+		<h4 class="about-title">
+						<img width="121" height="100"  
+				     alt="" data-src="http://www.ami.mr/wp-content/uploads/2022/08/logo-03-1.png" class="logo-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="121" height="100" class="logo-image" src="http://www.ami.mr/wp-content/uploads/2022/08/logo-03-1.png"
+				     alt=""></noscript>
+				</h4>
+	<div class="about-text">
+		<p>أنشئت الوكالة الموريتانية للأنباء في فاتح يوليو 1975 باسم "الوكالة الموريتانية للصحافة" وبثت أول برقية على شريطها الإخباري في نفس اليوم و بالتزامن مع صدور أول عدد من جريدة الشعب بطبعتيها العربية والفرنسية.</p>
+	</div>
+	<ul class="about-icons-list"><li class="about-icon-item facebook"><a href="https://www.facebook.com/agenceami.mr/" target="_blank"><i class="fa fa-facebook"></i></a><li class="about-icon-item twitter"><a href="https://twitter.com/Ami1975a" target="_blank"><i class="fa fa-twitter"></i></a><li class="about-icon-item instagram"><a href="https://www.instagram.com/ami_1975_a/" target="_blank"><i class="fa fa-instagram"></i></a><li class="about-icon-item youtube"><a href="https://youtube.com/@a.m.i" target="_blank"><i class="item-icon bsfi bsfi-youtube"></i></a></ul></div>
+</div>							</aside>
+						</div>
+						<div class="col-sm-4">
+							<aside id="sidebar-footer-2" class="sidebar" role="complementary" aria-label="Footer - Column 2 Sidebar" itemscope="itemscope" itemtype="https://schema.org/WPSideBar">
+								<div id="block-3" class=" h-ni w-nt footer-widget footer-column-2 widget widget_block">
+<figure class="wp-block-table"><table><tbody><tr><td>أسعار العملات</td><td>شراء</td><td>بيع</td></tr><tr><td>Euro</td><td>45,72</td><td>غير محدد</td></tr><tr><td>Dollar US</td><td>40,05</td><td>غير محدد</td></tr></tbody></table></figure>
+</div><div id="block-11" class=" h-ni w-nt footer-widget footer-column-2 widget widget_block"><table>
+<tbody>
+<tr>
+<td width="319"><strong>الأرشيف</strong><strong>:</strong><br />
+
+				<form action="" method="post" class="searchandfilter">
+					<div>
+						<ul><li><input class="postform" type="date" name="ofpost_date[]" value="" /></li><li><input type="hidden" name="ofsubmitted" value="1">
+							<input type="submit" value="عرض">
+						</li></ul></div>
+				</form></td>
+<td width="319"><strong>البحث</strong><strong>:</strong><br />
+
+				<form action="" method="post" class="searchandfilter">
+					<div>
+						<ul><li><input type="text" name="ofsearch" placeholder="Search &hellip;" value=""></li><li><input type="hidden" name="ofsubmitted" value="1">
+							<input type="submit" value="عرض">
+						</li></ul></div>
+				</form></td>
+</tr>
+</tbody>
+</table>
+</div>							</aside>
+						</div>
+						<div class="col-sm-4">
+							<aside id="sidebar-footer-3" class="sidebar" role="complementary" aria-label="Footer - Column 3 Sidebar" itemscope="itemscope" itemtype="https://schema.org/WPSideBar">
+								<div id="block-2" class=" h-ni w-nt footer-widget footer-column-3 widget widget_block"><table>
+<tbody>
+<tr>
+<td width="213"><strong>الأقسام الرئيسية</strong></td>
+<td width="213"><strong>تصنيفات رئيسية</strong></td>
+<td width="213"><strong>موريتانيا</strong></td>
+</tr>
+<tr>
+<td width="213">
+<ul>
+ 	<li><a href="https://ami.mr/%d9%85%d9%88%d8%b1%d9%8a%d8%aa%d8%a7%d9%86%d9%8a%d8%a7">موريتانيا</a></li>
+ 	<li><a href="https://ami.mr/%d8%b9%d8%a7%d9%85">عام</a></li>
+ 	<li><a href="https://ami.mr/%d8%a7%d9%84%d9%88%d9%84%d8%a7%d9%8a%d8%a7%d8%aa">ولايات</a></li>
+ 	<li><a href="https://www.ami.mr/%d8%a7%d9%82%d8%aa%d8%b5%d8%a7%d8%af-2">اقتصاد</a></li>
+ 	<li><a href="https://ami.mr/%d8%a7%d9%82%d8%aa%d8%b5%d8%a7%d8%af-2">ثقافة</a></li>
+ 	<li><a href="https://ami.mr/%d8%ab%d9%82%d8%a7%d9%81%d8%a9">رياضة</a></li>
+</ul>
+</td>
+<td width="213">
+<ul>
+ 	<li><a href="https://ami.mr/archives/category/1">سياسة</a></li>
+ 	<li><a href="https://ami.mr/archives/category/%d9%8a%d8%a4%d8%b1%d8%b4%d9%81/16">ملفات</a></li>
+ 	<li><a href="https://ami.mr/archives/category/9">صحافة</a></li>
+ 	<li><a href="https://ami.mr/archives/category/7">مجتمع</a></li>
+ 	<li><a href="https://ami.mr/archives/category/5">صحة</a></li>
+ 	<li><a href="https://ami.mr/archives/category/8">بيئة</a></li>
+</ul>
+</td>
+<td width="213">
+<ul>
+ 	<li><a href="https://ami.mr/%d8%aa%d8%a7%d8%b1%d9%8a%d8%ae/">تاريخ</a></li>
+ 	<li><a href="https://ami.mr/%d8%ac%d8%ba%d8%b1%d8%a7%d9%81%d9%8a%d8%a7/">جغرافيا</a></li>
+ 	<li><a href="https://ami.mr/%d8%a7%d9%82%d8%aa%d8%b5%d8%a7%d8%af/">اقتصاد</a></li>
+ 	<li><a href="https://ami.mr/%d8%af%d8%b3%d8%aa%d9%88%d8%b1/">دستور</a></li>
+<li><a href="https://www.ami.mr/archives/tag/%d8%b1%d8%a6%d9%80%d8%a7%d8%b3%d9%8a%d9%80%d8%a7%d8%aa-2024">رئـاسيـات 2024</a></li>
+    </ul>
+</td>
+</tr>
+</tbody>
+</table></div>							</aside>
+						</div>
+									</div>
+		</div>
+	</div>
+</div>
+		<div class="copy-footer">
+			<div class="content-wrap">
+				<div class="container">
+										<div class="row footer-copy-row">
+						<div class="copy-1 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<p style="text-align: left;"><span style="color: #1c538e;">جميــــع</span> جميع الحقوق محفوظة © 2026 - الوكالة الموريتانية للأنباء</p>						</div>
+						<div class="copy-2 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+													</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer><!-- .footer -->
+		<div class="bs-wrap-gdpr-law bs-wrap-gdpr-law-close">
+			<div class="bs-gdpr-law">
+				<p>
+					يستخدم هذا الموقع ملفات تعريف الارتباط لتحسين تجربتك. سنفترض أنك موافق على ذلك ، ولكن يمكنك إلغاء الاشتراك إذا كنت ترغب في ذلك.
+					<a class="bs-gdpr-accept" href="#"
+					   data-cookie="show">قبول</a>
+
+											<a class="bs-gdpr-more"
+						   href="#">قراءة المزيد</a>
+									</p>
+			</div>
+
+					</div>
+			<span class="back-top"><i class="fa fa-arrow-up"></i></span>
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/publisher/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="publisher-theme-pagination-js-extra">
+var bs_pagination_loc = {"loading":"\u003Cdiv class=\"bs-loading\"\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003C/div\u003E"};
+//# sourceURL=publisher-theme-pagination-js-extra
+</script>
+<script id="publisher-js-extra">
+var publisher_theme_global_loc = {"page":{"boxed":"boxed"},"header":{"style":"style-5","boxed":"full-width"},"ajax_url":"https://www.ami.mr/wp-admin/admin-ajax.php","loading":"\u003Cdiv class=\"bs-loading\"\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003C/div\u003E","translations":{"tabs_all":"\u0627\u0644\u0643\u0644","tabs_more":"\u0627\u0644\u0645\u0632\u064a\u062f","lightbox_expand":"\u0645\u0634\u0627\u0647\u062f\u0629 \u0627\u0644\u0635\u0648\u0631\u0629","lightbox_close":"\u0627\u063a\u0644\u0627\u0642"},"lightbox":{"not_classes":""},"main_menu":{"more_menu":"enable"},"top_menu":{"more_menu":"enable"},"skyscraper":{"sticky_gap":30,"sticky":true,"position":""},"share":{"more":true},"refresh_googletagads":"1","get_locale":"ar","notification":{"subscribe_msg":"\u0645\u0646 \u062e\u0644\u0627\u0644 \u0627\u0644\u0646\u0642\u0631 \u0639\u0644\u0649 \u0632\u0631 \u0627\u0644\u0627\u0634\u062a\u0631\u0627\u0643 \u060c \u0644\u0646 \u062a\u0641\u0648\u062a\u0643 \u0627\u0644\u0645\u0648\u0627\u062f \u0627\u0644\u062c\u062f\u064a\u062f\u0629!","subscribed_msg":"\u0623\u0646\u062a \u0645\u0634\u062a\u0631\u0643 \u0641\u064a \u0627\u0644\u0625\u062e\u0637\u0627\u0631\u0627\u062a","subscribe_btn":"\u0627\u0644\u0627\u0634\u062a\u0631\u0627\u0643","subscribed_btn":"\u0625\u0644\u063a\u0627\u0621 \u0627\u0644\u0627\u0634\u062a\u0631\u0627\u0643"}};
+var publisher_theme_ajax_search_loc = {"ajax_url":"https://www.ami.mr/wp-admin/admin-ajax.php","previewMarkup":"\u003Cdiv class=\"ajax-search-results-wrapper ajax-search-no-product\"\u003E\n\t\u003Cdiv class=\"ajax-search-results\"\u003E\n\t\t\u003Cdiv class=\"ajax-ajax-posts-list\"\u003E\n\t\t\t\u003Cdiv class=\"ajax-posts-column\"\u003E\n\t\t\t\t\u003Cdiv class=\"clean-title heading-typo\"\u003E\n\t\t\t\t\t\u003Cspan\u003E\u0627\u0644\u0645\u0648\u0627\u0636\u064a\u0639\u003C/span\u003E\n\t\t\t\t\u003C/div\u003E\n\t\t\t\t\u003Cdiv class=\"posts-lists\" data-section-name=\"posts\"\u003E\u003C/div\u003E\n\t\t\t\u003C/div\u003E\n\t\t\u003C/div\u003E\n\t\t\u003Cdiv class=\"ajax-taxonomy-list\"\u003E\n\t\t\t\u003Cdiv class=\"ajax-categories-columns\"\u003E\n\t\t\t\t\u003Cdiv class=\"clean-title heading-typo\"\u003E\n\t\t\t\t\t\u003Cspan\u003E\u0627\u0644\u062a\u0635\u0646\u064a\u0641\u0627\u062a\u003C/span\u003E\n\t\t\t\t\u003C/div\u003E\n\t\t\t\t\u003Cdiv class=\"posts-lists\" data-section-name=\"categories\"\u003E\u003C/div\u003E\n\t\t\t\u003C/div\u003E\n\t\t\t\u003Cdiv class=\"ajax-tags-columns\"\u003E\n\t\t\t\t\u003Cdiv class=\"clean-title heading-typo\"\u003E\n\t\t\t\t\t\u003Cspan\u003E\u0627\u0644\u0648\u0633\u0648\u0645\u003C/span\u003E\n\t\t\t\t\u003C/div\u003E\n\t\t\t\t\u003Cdiv class=\"posts-lists\" data-section-name=\"tags\"\u003E\u003C/div\u003E\n\t\t\t\u003C/div\u003E\n\t\t\u003C/div\u003E\n\t\u003C/div\u003E\n\u003C/div\u003E\n","full_width":"0"};
+//# sourceURL=publisher-js-extra
+</script>
+		<div class="rh-cover noscroll gr-5 no-login-icon no-social-icon no-top-nav" >
+			<span class="rh-close"></span>
+			<div class="rh-panel rh-pm">
+				<div class="rh-p-h">
+									</div>
+
+				<div class="rh-p-b">
+										<div class="rh-c-m clearfix"></div>
+
+									</div>
+			</div>
+					</div>
+		
+	<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/www.ami.mr\/archives\/860":860};
+	</script>
+				<script type="rocketlazyloadscript" id="ami-content-scripts-js-after">window.addEventListener('DOMContentLoaded', function() {
+(function( $ ) { if(amiDepeche != undefined) { $(".single-container .single-featured .post-thumbnail img").on({"load":function() {  if($(".single-container .single-featured .post-thumbnail img").attr("alt") == "") {  $(".single-container .single-featured .post-thumbnail img").attr("src", ""); $(".single-container .single-featured .post-thumbnail img").attr("alt", "ami-depeche"); } }}) } })(jQuery);
+//# sourceURL=ami-content-scripts-js-after
+});</script>
+<script type="rocketlazyloadscript" id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+</script>
+<script id="rocket-preload-links-js-extra">
+var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index\\.php/)?wp\\-json(/.*|$)|/wp-admin|/logout|/login|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://www.ami.mr","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+</script>
+<script type="rocketlazyloadscript" id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+</script>
+<script type="rocketlazyloadscript" async data-wp-strategy="async" fetchpriority="low" id="comment-reply-js" src="https://www.ami.mr/wp-includes/js/comment-reply.min.js?ver=7.0.2"></script>
+<script id="smush-lazy-load-js" src="https://www.ami.mr/wp-content/plugins/wp-smush-pro/app/assets/js/smush-lazy-load.min.js?ver=3.10.3" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" id="bs-booster-js" async="async" src="https://www.ami.mr/wp-content/cache/min/1/wp-content/bs-booster-cache/37809f7a8d6989106c05238a4a1de1c4.js?ver=1770114351"></script>
+<script id="sharing-js-js-extra">
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+//# sourceURL=sharing-js-js-extra
+</script>
+<script type="rocketlazyloadscript" id="sharing-js-js" src="https://www.ami.mr/wp-content/plugins/jetpack/_inc/build/sharedaddy/sharing.min.js?ver=11.5.3" defer></script>
+<script type="rocketlazyloadscript" id="sharing-js-js-after">
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-facebook' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-facebook' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+						return false;
+					}
+				} );
+			} )();
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-twitter' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-twitter' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+						return false;
+					}
+				} );
+			} )();
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-telegram' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-telegram' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomtelegram', 'menubar=1,resizable=1,width=450,height=450' );
+						return false;
+					}
+				} );
+			} )();
+//# sourceURL=sharing-js-js-after
+</script>
+
+<script type="rocketlazyloadscript">window.addEventListener('DOMContentLoaded', function() {
+var isyng=function(t){"use strict";return{init:function(){0==isyng.ads_state()&&isyng.blocked_ads_fallback()},ads_state:function(){return void 0!==window.better_ads_adblock},blocked_ads_fallback:function(){var a=[];t(".isyng-container").each(function(){if("image"==t(this).data("type"))return 0;a.push({element_id:t(this).attr("id"),ad_id:t(this).data("adid")})}),a.length<1||jQuery.ajax({url:'https://www.ami.mr/wp-admin/admin-ajax.php',type:"POST",data:{action:"better_ads_manager_blocked_fallback",ads:a},success:function(a){var e=JSON.parse(a);t.each(e.ads,function(a,e){t("#"+e.element_id).html(e.code)})}})}}}(jQuery);jQuery(document).ready(function(){isyng.init()});
+
+});</script>
+<div id='icon_wrapper'><a target="_blank" class='fuse_social_icons_links' data-nonce='991dd79ada' data-title='facebook' href='https://www.facebook.com/agenceami.mr/' ><i class='fa fa-facebook facebook-awesome-social awesome-social'></i></a><a target="_blank" class='fuse_social_icons_links' data-nonce='991dd79ada' data-title='twitter' href='https://twitter.com/Ami1975a' ><i class='fa fa-twitter twitter-awesome-social awesome-social'></i></a><a target="_blank" class='fuse_social_icons_links' data-nonce='991dd79ada' data-title='youtube' href='https://youtube.com/@a.m.i' ><i class='fa fa-youtube youtube-awesome-social awesome-social'></i></a><a target="_blank" class='fuse_social_icons_links' data-nonce='991dd79ada' data-title='instagram' href='https://www.instagram.com/ami_1975_a/' ><i class='fa fa-instagram instagram-awesome-social awesome-social'></i></a></div>	<script src='https://stats.wp.com/e-202639.js' defer></script>
+	<script>
+		_stq = window._stq || [];
+		_stq.push([ 'view', {v:'ext',blog:'235358644',post:'860',tz:'0',srv:'www.ami.mr',j:'1:11.5.3'} ]);
+		_stq.push([ 'clickTrackerInit', '235358644', '860' ]);
+	</script>
+</body>
+</html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->

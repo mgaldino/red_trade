@@ -1,0 +1,17 @@
+User-Agent: *
+Sitemap:  https://www.alwatan.com.sa/sitemaps/sitemap_0.xml
+
+Crawl-delay: 5
+Disallow:/*.pdf
+Disallow:/*.php
+Disallow:/archive/*
+Disallow:/search/*
+Disallow:/ajax/*
+Disallow:/epaper/*
+Disallow:/digital*
+Disallow:/admin*
+Disallow:/js/*
+Disallow:/themes/*
+Disallow:/new/Issues/*
+Disallow:/New/Issues/*
+Disallow: /*page=

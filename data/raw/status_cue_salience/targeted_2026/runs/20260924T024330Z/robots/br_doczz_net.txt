@@ -1,0 +1,21 @@
+User-agent: *
+Disallow: /viewer_next/
+Disallow: /theme/
+Allow: /theme/*/static
+Disallow: /store/
+Disallow: /upload
+Disallow: /download/
+Disallow: /docinfo.xml
+Disallow: /sendmail.html
+Disallow: /ask/searchAjax
+Disallow: /cdn-cgi/
+Disallow: /search/
+Disallow: /documents/
+Allow: /
+
+User-agent: Applebot-Extended
+Disallow: /doc/
+
+Host: https://doczz.com.br
+
+Sitemap: https://doczz.com.br/sitemap.xml

@@ -1,0 +1,302 @@
+[
+  {
+    "iso3c": "JPN",
+    "source_id": "jpn_jcast_2007_04_26",
+    "query": "site:j-cast.com 2007 中国 香港を除く 最大 貿易相手 国",
+    "window": "2005-2011"
+  },
+  {
+    "iso3c": "JPN",
+    "source_id": "jpn_japantimes_2007_05_13",
+    "query": "site:japantimes.co.jp 2007 Japan China excluding Hong Kong top trading partner fiscal 2006",
+    "window": "2005-2011"
+  },
+  {
+    "iso3c": "JPN",
+    "source_id": "jpn_mofa_2006_hk",
+    "query": "site:mofa.go.jp 2006 中国 香港を含む 最大 貿易相手国",
+    "window": "2005-2011"
+  },
+  {
+    "iso3c": "MYS",
+    "source_id": "mys_miti_2010_02_22",
+    "query": "site:miti.gov.my 22 February 2010 China largest trading partner Malaysia",
+    "window": "2006-2012"
+  },
+  {
+    "iso3c": "MYS",
+    "source_id": "mys_miti_2009_report",
+    "query": "site:miti.gov.my Malaysia trade 2009 China largest trading partner annual report",
+    "window": "2006-2012"
+  },
+  {
+    "iso3c": "MYS",
+    "source_id": "mys_bnm_2010_04_28",
+    "query": "site:bnm.gov.my 2010 China now becoming Malaysia largest trading partner",
+    "window": "2006-2012"
+  },
+  {
+    "iso3c": "MYS",
+    "source_id": "mys_miti_hk_2010_02_05",
+    "query": "site:miti.gov.my 2010 China Hong Kong export destination Malaysia",
+    "window": "2006-2012"
+  },
+  {
+    "iso3c": "PER",
+    "source_id": "per_andina_2011_05_16",
+    "query": "site:andina.pe 2011 mayo China principal destino exportaciones peruanas",
+    "window": "2007-2013"
+  },
+  {
+    "iso3c": "PER",
+    "source_id": "per_andina_2012_02_07",
+    "query": "site:andina.pe 2012 exportaciones peruanas 2011 China primer destino",
+    "window": "2007-2013"
+  },
+  {
+    "iso3c": "PER",
+    "source_id": "per_andina_2011_10_03",
+    "query": "site:andina.pe 2011 China desplazaria Estados Unidos principal socio comercial",
+    "window": "2007-2013"
+  },
+  {
+    "iso3c": "PER",
+    "source_id": "per_andina_2011_10_22",
+    "query": "site:andina.pe 2011 China desplazó Estados Unidos principal socio comercial Perú",
+    "window": "2007-2013"
+  },
+  {
+    "iso3c": "SAU",
+    "source_id": "sau_almadina_2012_12_04",
+    "query": "site:al-madina.com 2012 الصين أكبر شريك تجاري للمملكة",
+    "window": "2010-2016"
+  },
+  {
+    "iso3c": "SAU",
+    "source_id": "sau_alriyadh_2013_01_01",
+    "query": "site:alriyadh.com 2013 الصين أكبر شريك تجاري للمملكة 2012",
+    "window": "2010-2016"
+  },
+  {
+    "iso3c": "SAU",
+    "source_id": "sau_alriyadh_2013_02_12",
+    "query": "site:alriyadh.com 2013 فبراير الصين أكبر شريك تجاري للمملكة",
+    "window": "2010-2016"
+  },
+  {
+    "iso3c": "SAU",
+    "source_id": "sau_alwatan_2013_02_27",
+    "query": "site:alwatan.com.sa 2013 الصين الشريك الأول للمملكة",
+    "window": "2010-2016"
+  },
+  {
+    "iso3c": "PHL",
+    "source_id": "phl_psa_2006_09",
+    "query": "site:psa.gov.ph 2006 China third merchandise exports September Philippines",
+    "window": "2002-2008"
+  },
+  {
+    "iso3c": "PHL",
+    "source_id": "phl_psa_2007_12",
+    "query": "site:psa.gov.ph 2007 December China exports top destination Hong Kong",
+    "window": "2002-2008"
+  },
+  {
+    "iso3c": "RUS",
+    "source_id": "rus_km_2011_06_16",
+    "query": "site:km.ru 2011 Путин Китай обогнал Германию главный торговый партнер",
+    "window": "2009-2015"
+  },
+  {
+    "iso3c": "RUS",
+    "source_id": "rus_vedomosti_2011_02_08",
+    "query": "site:vedomosti.ru 2011 февраль Китай крупнейший торговый партнер России 2010",
+    "window": "2009-2015"
+  },
+  {
+    "iso3c": "RUS",
+    "source_id": "rus_vedomosti_2014_02_12",
+    "query": "site:vedomosti.ru 2014 Китай крупнейшим торговым партнером России 2013",
+    "window": "2009-2015"
+  },
+  {
+    "iso3c": "KAZ",
+    "source_id": "kaz_stats_2007_report",
+    "query": "site:stat.gov.kz 2007 Китай Россия торговые партнеры Казахстан",
+    "window": "2004-2010"
+  },
+  {
+    "iso3c": "AGO",
+    "source_id": "ago_bni_2008_report",
+    "query": "site:bni.ao 2008 China principal destino exportações minerais Angola",
+    "window": "2004-2010"
+  },
+  {
+    "iso3c": "COD",
+    "source_id": "cod_bcc_2009_report",
+    "query": "site:bcc.cd rapport annuel 2009 Chine premier rang destinations exportations",
+    "window": "2005-2011"
+  },
+  {
+    "iso3c": "MRT",
+    "source_id": "mrt_ami_2006_10_19",
+    "query": "site:ami.mr 2006 Chine Mauritanie premier partenaire commercial",
+    "window": "2003-2009"
+  },
+  {
+    "iso3c": "MRT",
+    "source_id": "mrt_ami_2007_08_07",
+    "query": "site:ami.mr 2007 Chine Mauritanie premier partenaire commercial",
+    "window": "2003-2009"
+  },
+  {
+    "iso3c": "MMR",
+    "source_id": "mmr_irrawaddy_2012_04_04",
+    "query": "site:irrawaddy.com 2012 Burma China largest trading partner",
+    "window": "2011-2017"
+  },
+  {
+    "iso3c": "MMR",
+    "source_id": "mmr_irrawaddy_2012_11_20",
+    "query": "site:irrawaddy.com 2012 China Burma biggest trading partner",
+    "window": "2011-2017"
+  },
+  {
+    "iso3c": "MMR",
+    "source_id": "mmr_dvb_2014_05_09",
+    "query": "site:english.dvb.no 2014 China Burma top trading partner ministry",
+    "window": "2011-2017"
+  },
+  {
+    "iso3c": "SLE",
+    "source_id": "sle_telegraph_2013",
+    "query": "site:thesierraleonetelegraph.com 2013 China Africa largest trading partner",
+    "window": "2009-2015"
+  },
+  {
+    "iso3c": "ERI",
+    "source_id": "eri_shabait_2015_11_27",
+    "query": "site:shabait.com 2015 Eritrea China largest trading partner",
+    "window": "2011-2017"
+  },
+  {
+    "iso3c": "TKM",
+    "source_id": "tkm_gov_2011_11_23",
+    "query": "site:turkmenistan.gov.tm 2011 Китай крупнейший внешнеторговый партнер Туркменистана",
+    "window": "2007-2013"
+  },
+  {
+    "iso3c": "TKM",
+    "source_id": "tkm_gov_2011_11_24",
+    "query": "site:turkmenistan.gov.tm 2011 Китай 2010 четвертое девять месяцев первое торговых партнеров",
+    "window": "2007-2013"
+  },
+  {
+    "iso3c": "TKM",
+    "source_id": "tkm_gov_2012_06_07",
+    "query": "site:turkmenistan.gov.tm 2012 China largest trading partner Turkmenistan president",
+    "window": "2007-2013"
+  },
+  {
+    "iso3c": "TKM",
+    "source_id": "tkm_gov_2013_09_03",
+    "query": "site:turkmenistan.gov.tm 2013 Китай крупнейший торговый партнер 2012 Туркменистан",
+    "window": "2007-2013"
+  },
+  {
+    "iso3c": "RUS",
+    "source_id": "rus_bfm_2011_01_14",
+    "query": "site:bfm.ru 2011 Китай крупнейшим торговым партнером России 11 месяцев 2010",
+    "window": "2009-2015"
+  },
+  {
+    "iso3c": "MYS",
+    "source_id": "old_evidence_10",
+    "query": "Malaysia China largest trading partner 2009 2010 official Bernama \"largest trading partner\"",
+    "window": "2006-2012"
+  },
+  {
+    "iso3c": "PHL",
+    "source_id": "old_evidence_11",
+    "query": "Philippines 2005 China largest export market number one export destination local newspaper official 2006",
+    "window": "2002-2008"
+  },
+  {
+    "iso3c": "PHL",
+    "source_id": "old_evidence_12",
+    "query": "site:psa.gov.ph Philippines 2005 China top export market largest export destination exports 2005 China",
+    "window": "2002-2008"
+  },
+  {
+    "iso3c": "MMR",
+    "source_id": "old_evidence_16",
+    "query": "Myanmar 2014 China largest trading partner official local newspaper",
+    "window": "2011-2017"
+  },
+  {
+    "iso3c": "SAU",
+    "source_id": "old_evidence_17",
+    "query": "site:arabnews.com Saudi China largest trading partner 2015",
+    "window": "2010-2016"
+  },
+  {
+    "iso3c": "SAU",
+    "source_id": "old_evidence_18",
+    "query": "\"السعودية\" \"الصين أول شريك تجاري\" \"2015\"",
+    "window": "2010-2016"
+  },
+  {
+    "iso3c": "SAU",
+    "source_id": "old_evidence_19",
+    "query": "site:stats.gov.sa China main destination Saudi exports 2015 2016 top exports official",
+    "window": "2010-2016"
+  },
+  {
+    "iso3c": "SAU",
+    "source_id": "old_evidence_25",
+    "query": "site.alriyadh.com \"2013\" \"الصين\" \"الصادرات\" \"الأولى\"",
+    "window": "2010-2016"
+  },
+  {
+    "iso3c": "SAU",
+    "source_id": "old_evidence_26",
+    "query": "site.spa.gov.sa الصين 2014 الصادرات أكبر شريك تجاري",
+    "window": "2010-2016"
+  },
+  {
+    "iso3c": "SAU",
+    "source_id": "old_evidence_27",
+    "query": "site.arabnews.com \"China\" \"largest trading partner\" \"2014\"",
+    "window": "2010-2016"
+  },
+  {
+    "iso3c": "JPN",
+    "source_id": "old_evidence_extension_4",
+    "query": "Japan China largest export destination 2008 2009 United States Japanese government newspaper",
+    "window": "2005-2011"
+  },
+  {
+    "iso3c": "JPN",
+    "source_id": "old_evidence_extension_5",
+    "query": "Japan China largest export destination 2008 2009 United States Japanese government newspaper",
+    "window": "2005-2011"
+  },
+  {
+    "iso3c": "PER",
+    "source_id": "old_evidence_extension_8",
+    "query": "site:andina.pe 2011 China principal destino exportaciones peruanas Estados Unidos",
+    "window": "2007-2013"
+  },
+  {
+    "iso3c": "PER",
+    "source_id": "old_evidence_extension_9",
+    "query": "site:mef.gob.pe 2011 China principal socio comercial Perú",
+    "window": "2007-2013"
+  },
+  {
+    "iso3c": "JPN",
+    "source_id": "old_evidence_extension_24",
+    "query": "site:customs.go.jp 2008年 輸出 米国 １位 中国 ２位 2009",
+    "window": "2005-2011"
+  }
+]

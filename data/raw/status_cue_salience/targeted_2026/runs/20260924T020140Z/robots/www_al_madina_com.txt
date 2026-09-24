@@ -1,0 +1,15 @@
+User-Agent: *
+Allow: /
+Disallow: /api
+Disallow: /preview
+Disallow: /article_count/
+Disallow: /print
+Disallow: /ajax/
+Disallow: /_next
+Disallow: /archive
+Disallow: /search
+Disallow: /*.pdf
+Disallow: /*page
+
+Sitemap: https://www.al-madina.com/sitemaps/sitemap_0.xml
+Sitemap: https://www.al-madina.com/sitemaps/newsSitemap.xml
