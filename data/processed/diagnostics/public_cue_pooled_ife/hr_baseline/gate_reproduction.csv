@@ -1,0 +1,3 @@
+spec_id,comparison_rule,sample_id,covariate,estimate,se_bootstrap,ci_95_low,ci_95_high,p_normal_two_sided,selected_factors,n_units,n_treated_units,n_never_treated_units,bootstrap_replications,bootstrap_seed,fect_version,stored_estimate,stored_se,diff_estimate,diff_se
+four_case_chl2007,clean_controls,full,FALSE,-0.08366614901084916,0.08098622703814094,-0.2423962372493893,0.07506393922769099,0.3015612758335003,0,109,4,105,1000,42,2.4.5,-0.08366614901084916,0.08098622703814094,0,0
+seven_case,clean_controls,full,FALSE,-0.045605449890077136,0.06352306390001278,-0.17010836732173862,0.07889746754158433,0.47279718148586947,0,112,7,105,1000,42,2.4.5,-0.04560544989007713,0.06352306390001278,6.938893903907228e-18,0
