@@ -27,9 +27,24 @@
 # are dropped from it rather than used as controls, as in the original script
 # (Gabon and Qatar in every specification; Ukraine in the seven-case one).
 #
+# Round of 2026-09-24 (PUBLIC_CUE_ROUND=fourteen; plan:
+# quality_reports/plans/2026-09-24_public_cue_fourteen_case_round.md). Cases from
+# public_cue_specs.R; outputs in public_cue_pooled_ife/fourteen_round/. Runs, in order:
+#   gate_4case     as above, with the original drop list (must reproduce).
+#   seven_case     abs outcome, new drop list (GAB, QAT, UKR, CMR, GHA and the
+#                  round's cases not treated in the specification).
+#   fourteen_case  abs and signed outcomes; cross-validated r.
+#   us_side_ten    abs and signed; cross-validated r (recorded) and r fixed at
+#                  the fourteen_case value for the same rule and outcome.
+#   fourteen_case, treatment one year before the cue, r fixed as above.
+# Besides att.avg (country-year weights, treated through 2022), each run reports
+# the average effect over event times 0 to 6 from the cue, with equal weight per
+# country (the staggered SDiD estimand), and its bootstrap SE from att.boot.
+#
 # Outside the targets graph; listed for migration in TARGETS_MIGRATION.md.
 # Run as the original models were run (fect 2.4.5, outside renv):
 #   Rscript --vanilla scripts/diagnostics/estimate_public_cue_pooled_ife.R
+#   PUBLIC_CUE_ROUND=fourteen Rscript --vanilla scripts/diagnostics/estimate_public_cue_pooled_ife.R
 
 options(scipen = 999)
 
@@ -45,10 +60,13 @@ expected_years <- seq.int(year_start, year_end)
 expected_n_years <- length(expected_years)
 fect_bootstraps <- 1000L
 
+round_id <- Sys.getenv("PUBLIC_CUE_ROUND", "")
 output_dir <- file.path(
-  "data", "processed", "diagnostics", "public_cue_pooled_ife"
+  "data", "processed", "diagnostics", "public_cue_pooled_ife",
+  if (round_id == "fourteen") "fourteen_round" else ""
 )
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+source(file.path("scripts", "diagnostics", "public_cue_specs.R"))
 
 specs <- list(
   gate_4case = tibble::tribble(
@@ -80,7 +98,8 @@ panel <- targets::tar_read(china_top_m2_goods_panel) |>
     abs_distance_china = as.numeric(abs_distance_china),
     china_is_top = as.logical(china_is_top)
   ) |>
-  dplyr::arrange(iso3c, year)
+  dplyr::arrange(iso3c, year) |>
+  public_cue_add_signed()
 
 unit_audit <- panel |>
   dplyr::group_by(iso3c) |>
@@ -101,7 +120,8 @@ clean_donors <- sort(
   unit_audit$iso3c[unit_audit$complete_common_panel & !unit_audit$ever_china_top]
 )
 
-build_panel <- function(focal_cues, rule, dropped) {
+build_panel <- function(focal_cues, rule, dropped, outcome = "abs_distance_china",
+                        shift = 0L) {
   stopifnot(all(focal_cues$iso3c %in% complete_units))
   base <- if (rule == "clean_controls") {
     dplyr::filter(panel, iso3c %in% c(clean_donors, focal_cues$iso3c))
@@ -116,14 +136,14 @@ build_panel <- function(focal_cues, rule, dropped) {
     dplyr::mutate(
       focal_country = !is.na(public_cue_year),
       treatment = as.integer(
-        focal_country & year >= public_cue_year &
+        focal_country & year >= public_cue_year - shift &
           (china_is_top %in% TRUE | year < goods_entry_year)
       ),
       model_outcome = if (rule == "clean_controls") {
-        abs_distance_china
+        .data[[outcome]]
       } else {
         dplyr::if_else(
-          !focal_country & china_is_top %in% TRUE, NA_real_, abs_distance_china
+          !focal_country & china_is_top %in% TRUE, NA_real_, .data[[outcome]]
         )
       },
       country_id = as.integer(factor(iso3c))
@@ -139,8 +159,39 @@ extract_selected_factors <- function(fit) {
   }
 }
 
-run_fect <- function(panel_data, spec_id, rule) {
-  message("Estimating `", spec_id, "` / `", rule, "`.")
+# Average effect over event times 0 to 6 from the cue, equal weight per country.
+# fect labels the first treated period 1, so with treatment starting `shift`
+# years before the cue the cue year is period 1 + shift. The average of fect's
+# per-period ATTs over those periods must equal the direct average of the
+# individual effects (every focal country is treated in all seven years).
+event_att <- function(fit, panel_data, shift) {
+  ids <- dplyr::distinct(panel_data, country_id, iso3c, public_cue_year)
+  label <- function(m) {
+    dimnames(m) <- list(as.character(fit$rawtime), as.character(fit$id))
+    m
+  }
+  eff <- as.data.frame(as.table(label(fit$eff))) |>
+    stats::setNames(c("time", "unit", "eff")) |>
+    dplyr::mutate(year = as.integer(as.character(time)),
+                  country_id = as.integer(as.character(unit))) |>
+    dplyr::inner_join(ids, by = "country_id") |>
+    dplyr::filter(!is.na(public_cue_year), year >= public_cue_year,
+                  year <= public_cue_year + 6L)
+  stopifnot(all(dplyr::count(eff, iso3c)$n == 7L))
+  direct <- mean(tapply(eff$eff, eff$iso3c, mean))
+  periods <- match(seq.int(1L + shift, 7L + shift), as.numeric(fit$time))
+  stopifnot(!anyNA(periods),
+            abs(mean(as.numeric(fit$att)[periods]) - direct) < 1e-8)
+  se <- if (is.null(fit$att.boot)) NA_real_ else
+    stats::sd(colMeans(fit$att.boot[periods, , drop = FALSE]), na.rm = TRUE)
+  list(att = direct, se = se)
+}
+
+run_fect <- function(panel_data, spec_id, rule, r_fixed = NULL, shift = 0L,
+                     outcome = "abs_distance_china") {
+  message("Estimating `", spec_id, "` / `", rule, "` / ", outcome,
+          if (shift > 0L) paste0(" / treatment ", shift, " year(s) early") else "",
+          if (!is.null(r_fixed)) paste0(" / r fixed at ", r_fixed) else "", ".")
   set.seed(42L)
   timing <- system.time({
     fit <- fect::fect(
@@ -154,8 +205,8 @@ run_fect <- function(panel_data, spec_id, rule) {
       se = TRUE,
       nboots = fect_bootstraps,
       parallel = FALSE,
-      CV = TRUE,
-      r = c(0, 3),
+      CV = is.null(r_fixed),
+      r = if (is.null(r_fixed)) c(0, 3) else r_fixed,
       min.T0 = 1L,
       max.missing = expected_n_years,
       seed = 42L
@@ -163,11 +214,16 @@ run_fect <- function(panel_data, spec_id, rule) {
   })
   overall_se <- stats::sd(as.numeric(fit$att.avg.boot), na.rm = TRUE)
   overall_z <- as.numeric(fit$att.avg) / overall_se
+  event <- if (round_id == "fourteen") event_att(fit, panel_data, shift) else
+    list(att = NA_real_, se = NA_real_)
   list(
     fit = fit,
     result = tibble::tibble(
       spec_id = spec_id,
       comparison_rule = rule,
+      outcome = outcome,
+      treatment_shift = shift,
+      r_mode = if (is.null(r_fixed)) "cv" else "fixed",
       focal_cases = paste(
         sort(unique(panel_data$iso3c[panel_data$focal_country])), collapse = ";"
       ),
@@ -176,7 +232,11 @@ run_fect <- function(panel_data, spec_id, rule) {
       ci_95_low = as.numeric(fit$att.avg) - stats::qnorm(0.975) * overall_se,
       ci_95_high = as.numeric(fit$att.avg) + stats::qnorm(0.975) * overall_se,
       p_normal_two_sided = 2 * stats::pnorm(-abs(overall_z)),
-      selected_factors = extract_selected_factors(fit),
+      att_event_0_6 = event$att,
+      se_event_0_6 = event$se,
+      p_event_0_6 = 2 * stats::pnorm(-abs(event$att / event$se)),
+      selected_factors = if (is.null(r_fixed)) extract_selected_factors(fit) else
+        as.integer(r_fixed),
       n_treated_units = as.integer(fit$Ntr),
       n_never_treated_units = as.integer(fit$Nco),
       n_treated_country_years = sum(panel_data$treatment == 1L &
@@ -191,10 +251,11 @@ run_fect <- function(panel_data, spec_id, rule) {
 
 country_att <- function(fit, panel_data, spec_id, rule) {
   # Average treated-period effect by focal country, from fect's individual
-  # treatment effects (observed minus counterfactual).
+  # treatment effects (observed minus counterfactual), over all treated years and
+  # over the seven years from the cue.
   if (is.null(fit$eff) || is.null(fit$D.dat)) return(NULL)
   ids <- panel_data |>
-    dplyr::distinct(country_id, iso3c)
+    dplyr::distinct(country_id, iso3c, public_cue_year)
   label <- function(m) {
     dimnames(m) <- list(as.character(fit$rawtime), as.character(fit$id))
     m
@@ -205,17 +266,35 @@ country_att <- function(fit, panel_data, spec_id, rule) {
     stats::setNames(c("time", "unit", "D"))
   dplyr::inner_join(eff, d, by = c("time", "unit")) |>
     dplyr::filter(D == 1) |>
-    dplyr::mutate(country_id = as.integer(as.character(unit))) |>
+    dplyr::mutate(country_id = as.integer(as.character(unit)),
+                  year = as.integer(as.character(time))) |>
     dplyr::left_join(ids, by = "country_id") |>
     dplyr::group_by(iso3c) |>
-    dplyr::summarise(att_country = mean(eff), n_treated_years = dplyr::n(),
-                     .groups = "drop") |>
+    dplyr::summarise(
+      att_country = mean(eff), n_treated_years = dplyr::n(),
+      att_country_event_0_6 = mean(eff[year >= public_cue_year &
+                                         year <= public_cue_year + 6L]),
+      .groups = "drop"
+    ) |>
     dplyr::mutate(spec_id = spec_id, comparison_rule = rule, .before = 1L)
 }
 
 rules <- c("clean_controls", "full_switching")
 results <- list()
 country_effects <- list()
+
+run_one <- function(spec_id, focal_cues, dropped, rule, outcome = "abs_distance_china",
+                    r_fixed = NULL, shift = 0L) {
+  panel_data <- build_panel(focal_cues, rule, dropped, outcome = outcome, shift = shift)
+  run <- run_fect(panel_data, spec_id, rule, r_fixed = r_fixed, shift = shift,
+                  outcome = outcome)
+  key <- paste(spec_id, rule, outcome, shift, run$result$r_mode)
+  results[[key]] <<- run$result
+  country_effects[[key]] <<- country_att(run$fit, panel_data, spec_id, rule) |>
+    dplyr::mutate(outcome = outcome, treatment_shift = shift,
+                  r_mode = run$result$r_mode, .after = comparison_rule)
+  run$result
+}
 
 # Gate first: stop before any new specification if the rebuild does not match.
 reference <- readr::read_csv(
@@ -227,23 +306,50 @@ reference <- readr::read_csv(
   dplyr::mutate(comparison_rule = sub("_without_gab_qat", "", model_id)) |>
   dplyr::select(comparison_rule, ref_estimate = estimate, ref_se = se_bootstrap)
 
-for (spec_id in names(specs)) {
-  for (rule in rules) {
-    panel_data <- build_panel(specs[[spec_id]], rule, dropped_cue_cases[[spec_id]])
-    run <- run_fect(panel_data, spec_id, rule)
-    results[[paste(spec_id, rule)]] <- run$result
-    country_effects[[paste(spec_id, rule)]] <-
-      country_att(run$fit, panel_data, spec_id, rule)
+check_gate <- function() {
+  gate <- dplyr::bind_rows(results) |>
+    dplyr::filter(spec_id == "gate_4case") |>
+    dplyr::left_join(reference, by = "comparison_rule") |>
+    dplyr::mutate(diff_estimate = abs(estimate - ref_estimate),
+                  diff_se = abs(se_bootstrap - ref_se))
+  readr::write_csv(gate, file.path(output_dir, "gate_reproduction.csv"))
+  print(as.data.frame(dplyr::select(gate, comparison_rule, estimate,
+                                    ref_estimate, diff_estimate, diff_se)))
+  stopifnot(nrow(gate) == 2L, all(gate$diff_estimate < 1e-8), all(gate$diff_se < 1e-8))
+}
+
+if (round_id == "fourteen") {
+  round_cues <- function(spec) {
+    dplyr::rename(public_cue_spec(spec), public_cue_year = cue_year)
   }
-  if (spec_id == "gate_4case") {
-    gate <- dplyr::bind_rows(results) |>
-      dplyr::left_join(reference, by = "comparison_rule") |>
-      dplyr::mutate(diff_estimate = abs(estimate - ref_estimate),
-                    diff_se = abs(se_bootstrap - ref_se))
-    readr::write_csv(gate, file.path(output_dir, "gate_reproduction.csv"))
-    print(as.data.frame(dplyr::select(gate, comparison_rule, estimate,
-                                      ref_estimate, diff_estimate, diff_se)))
-    stopifnot(all(gate$diff_estimate < 1e-8), all(gate$diff_se < 1e-8))
+  for (rule in rules) {
+    run_one("gate_4case", specs$gate_4case, dropped_cue_cases$gate_4case, rule)
+  }
+  check_gate()
+  for (rule in rules) {
+    run_one("seven_case", round_cues("seven_case"), public_cue_dropped("seven_case"), rule)
+  }
+  for (outcome in public_cue_outcomes) {
+    for (rule in rules) {
+      main <- run_one("fourteen_case", round_cues("fourteen_case"),
+                      public_cue_dropped("fourteen_case"), rule, outcome)
+      r_main <- main$selected_factors
+      stopifnot(!is.na(r_main))
+      run_one("us_side_ten", round_cues("us_side_ten"),
+              public_cue_dropped("us_side_ten"), rule, outcome)
+      run_one("us_side_ten", round_cues("us_side_ten"),
+              public_cue_dropped("us_side_ten"), rule, outcome, r_fixed = r_main)
+      run_one("fourteen_case", round_cues("fourteen_case"),
+              public_cue_dropped("fourteen_case"), rule, outcome,
+              r_fixed = r_main, shift = 1L)
+    }
+  }
+} else {
+  for (spec_id in names(specs)) {
+    for (rule in rules) {
+      run_one(spec_id, specs[[spec_id]], dropped_cue_cases[[spec_id]], rule)
+    }
+    if (spec_id == "gate_4case") check_gate()
   }
 }
 
@@ -254,7 +360,8 @@ readr::write_csv(country_effects, file.path(output_dir, "fect_country_effects.cs
 writeLines(capture.output(sessionInfo()), file.path(output_dir, "session_info.txt"))
 
 print(as.data.frame(dplyr::select(
-  results, spec_id, comparison_rule, estimate, se_bootstrap,
-  p_normal_two_sided, selected_factors, n_treated_units, n_never_treated_units
+  results, spec_id, comparison_rule, outcome, treatment_shift, r_mode, estimate,
+  se_bootstrap, p_normal_two_sided, att_event_0_6, se_event_0_6, selected_factors,
+  n_treated_units, n_never_treated_units
 )))
 print(as.data.frame(country_effects))

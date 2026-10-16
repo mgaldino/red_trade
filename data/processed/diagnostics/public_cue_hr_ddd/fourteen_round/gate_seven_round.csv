@@ -1,0 +1,6 @@
+check,rows,max_abs_diff
+case estimates,14,1.3877787807814457e-17
+placebo estimates,1456,1.1102230246251565e-16
+aggregate mean,2,3.469446951953614e-18
+aggregate placebo SE,2,0
+aggregate directional p,2,0

@@ -22,8 +22,19 @@
 # public-cue SDiDs (Chile 2008 and Australia 2007, window 1997-2022, including the
 # Chile placebo SE).
 #
+# Round of 2026-09-24 (plan: quality_reports/plans/2026-09-24_public_cue_fourteen_case_round.md):
+# cases, specifications and outcomes come from public_cue_specs.R, chosen by
+#   PUBLIC_CUE_SPEC    seven_case (default), fourteen_case or us_side_ten
+#   PUBLIC_CUE_OUTCOME abs (default; the paper's absolute distance) or signed
+# Outputs go to public_cue_staggered_sdid/fourteen_round/<spec>_<outcome>/; the
+# seven_case / abs run must reproduce the stored aggregate (-0.052, SE 0.057).
+# Every run adds the lambda mass on the last two pre-cue years of each cohort and
+# the side table (years beyond China); fourteen_case adds leave-one-out point
+# estimates and a one-year shift of treatment (ATT over years >= cue only).
+#
 # Exploratory and outside the targets graph; move to targets once settled.
-#   Rscript scripts/diagnostics/estimate_public_cue_staggered_sdid.R
+#   PUBLIC_CUE_SPEC=fourteen_case PUBLIC_CUE_OUTCOME=signed \
+#     Rscript scripts/diagnostics/estimate_public_cue_staggered_sdid.R
 
 options(scipen = 999)
 
@@ -34,6 +45,7 @@ suppressPackageStartupMessages({
 })
 
 source(file.path("scripts", "diagnostics", "sdid_placebo_helpers.R"))
+source(file.path("scripts", "diagnostics", "public_cue_specs.R"))
 sdid_limit_blas_threads()
 
 placebo_replications <- as.integer(Sys.getenv("STAGGERED_SDID_REPS", "5000"))
@@ -42,26 +54,25 @@ window_start <- 1997L
 horizon <- 7L
 last_year <- 2022L
 
-output_dir <- file.path(
+spec_id <- Sys.getenv("PUBLIC_CUE_SPEC", "seven_case")
+outcome_key <- Sys.getenv("PUBLIC_CUE_OUTCOME", "abs")
+stopifnot(outcome_key %in% names(public_cue_outcomes))
+outcome_col <- public_cue_outcomes[[outcome_key]]
+
+stored_dir <- file.path(
   "data", "processed", "diagnostics", "public_cue_staggered_sdid"
 )
+output_dir <- file.path(stored_dir, "fourteen_round",
+                        paste(spec_id, outcome_key, sep = "_"))
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 
-cues <- tibble::tribble(
-  ~iso3c, ~cue_year,
-  "KOR", 2003L,
-  "AUS", 2007L,
-  "BRA", 2009L,
-  "CHL", 2007L,
-  "ZAF", 2010L,
-  "URY", 2013L,
-  "NZL", 2013L
-)
+cues <- public_cue_spec(spec_id)
 
 panel_all <- targets::tar_read(china_top_m2_goods_panel) |>
   dplyr::select(iso3c, country_name, year, abs_distance_china, china_is_top) |>
   dplyr::mutate(year = as.integer(year), iso3c = as.character(iso3c),
-                china_is_top = as.logical(china_is_top))
+                china_is_top = as.logical(china_is_top)) |>
+  public_cue_add_signed()
 
 clean_units <- function(start, end) {
   panel_all |>
@@ -81,7 +92,8 @@ clean_units <- function(start, end) {
 # SDiD with one or more treated units sharing a treatment year. Mirrors
 # sdid_fit_spec() in sdid_placebo_helpers.R (row order: controls by iso3c, then
 # treated units by iso3c).
-fit_sdid <- function(treated, treat_year, start, end, controls) {
+fit_sdid <- function(treated, treat_year, start, end, controls,
+                     outcome = outcome_col) {
   d <- panel_all |>
     dplyr::filter(year >= start, year <= end, iso3c %in% c(controls, treated)) |>
     dplyr::mutate(
@@ -89,11 +101,11 @@ fit_sdid <- function(treated, treat_year, start, end, controls) {
       .unit_treated = as.integer(iso3c %in% treated)
     ) |>
     dplyr::arrange(.unit_treated, iso3c, year)
-  stopifnot(!anyNA(d$abs_distance_china))
+  stopifnot(!anyNA(d[[outcome]]))
   stopifnot(dplyr::n_distinct(dplyr::count(d, iso3c)$n) == 1L)
   panel_data <- d |>
     dplyr::mutate(iso3c = factor(iso3c, levels = unique(iso3c)),
-                  Y = abs_distance_china) |>
+                  Y = .data[[outcome]]) |>
     dplyr::select(iso3c, year, Y, treatment) |>
     as.data.frame()
   setup <- synthdid::panel.matrices(panel_data)
@@ -112,8 +124,10 @@ stored_aus <- readr::read_csv(
   show_col_types = FALSE
 )
 controls_1997 <- clean_units(1997L, 2022L)
-gate_chl <- fit_sdid("CHL", 2008L, 1997L, 2022L, controls_1997)
-gate_aus <- fit_sdid("AUS", 2007L, 1997L, 2022L, controls_1997)
+gate_chl <- fit_sdid("CHL", 2008L, 1997L, 2022L, controls_1997,
+                     outcome = "abs_distance_china")
+gate_aus <- fit_sdid("AUS", 2007L, 1997L, 2022L, controls_1997,
+                     outcome = "abs_distance_china")
 gate_chl_se <- as.numeric(sdid_placebo_se(gate_chl, placebo_replications,
                                           cores = cores, label = "gate_chl_2008"))
 gate <- tibble::tibble(
@@ -146,12 +160,20 @@ cohort_fits <- lapply(seq_len(nrow(cohorts)), function(i) {
   fit_sdid(cohorts$treated[[i]], cohorts$cue_year[i], window_start,
            cohorts$window_end[i], controls)
 })
+# Lambda mass on the last two pre-cue years: under a one-year anticipation effect
+# the SDiD keeps (1 - lambda_last_pre) of it (quality_reports/2026-09-24_anticipation_sdid_ife.md).
+lambda_at <- function(fit, back) {
+  lambda <- attr(fit, "weights")$lambda
+  lambda[length(lambda) - back]
+}
 cohorts <- cohorts |>
   dplyr::mutate(
     att = vapply(cohort_fits, as.numeric, numeric(1)),
     weight = n_treated * horizon / sum(n_treated * horizon),
     n_pre_years = cue_year - window_start,
-    treated_label = vapply(treated, paste, character(1), collapse = "+")
+    treated_label = vapply(treated, paste, character(1), collapse = "+"),
+    lambda_last_pre = vapply(cohort_fits, lambda_at, numeric(1), back = 0L),
+    lambda_second_last_pre = vapply(cohort_fits, lambda_at, numeric(1), back = 1L)
   )
 att_aggregate <- sum(cohorts$weight * cohorts$att)
 
@@ -196,7 +218,10 @@ se_aggregate <- sqrt((placebo_replications - 1) / placebo_replications) *
   stats::sd(placebo)
 
 aggregate <- tibble::tibble(
-  estimand = "Aggregate ATT, seven public-cue cases, seven post-cue years",
+  estimand = sprintf("Aggregate ATT, %d public-cue cases, seven post-cue years",
+                     nrow(cues)),
+  spec_id = spec_id,
+  outcome = outcome_col,
   att = att_aggregate,
   se_placebo = se_aggregate,
   ci_95_low = att_aggregate - stats::qnorm(0.975) * se_aggregate,
@@ -223,9 +248,68 @@ single <- cues |>
   ) |>
   dplyr::ungroup()
 
+# Round gate: the seven-case run on the paper's outcome reproduces the stored
+# aggregate and its placebo SE.
+if (spec_id == "seven_case" && outcome_key == "abs") {
+  stored_aggregate <- readr::read_csv(
+    file.path(stored_dir, "aggregate_estimate.csv"), show_col_types = FALSE
+  )
+  round_gate <- tibble::tibble(
+    check = c("seven-case aggregate ATT", "seven-case placebo SE"),
+    rebuilt = c(att_aggregate, se_aggregate),
+    stored = c(stored_aggregate$att, stored_aggregate$se_placebo)
+  ) |>
+    dplyr::mutate(abs_diff = abs(rebuilt - stored))
+  readr::write_csv(round_gate, file.path(output_dir, "round_gate_reproduction.csv"))
+  print(as.data.frame(round_gate))
+  stopifnot(all(round_gate$abs_diff < 1e-8))
+}
+
+# ---- Sides, leave-one-out and one-year shift -------------------------------
+readr::write_csv(
+  public_cue_side_table(dplyr::filter(panel_all, year <= last_year), cues),
+  file.path(output_dir, "side_table.csv")
+)
+
+if (spec_id == "fourteen_case") {
+  aggregate_point <- function(case_rows, treat_shift = 0L) {
+    co <- case_rows |>
+      dplyr::group_by(cue_year) |>
+      dplyr::summarise(treated = list(sort(iso3c)), n_treated = dplyr::n(),
+                       .groups = "drop")
+    atts <- vapply(seq_len(nrow(co)), function(i) {
+      fit <- fit_sdid(co$treated[[i]], co$cue_year[i] - treat_shift, window_start,
+                      co$cue_year[i] + horizon - 1L, controls)
+      if (treat_shift == 0L) return(as.numeric(fit))
+      # Shifted treatment: average the per-year effects from the cue year on.
+      curve <- as.numeric(synthdid::synthdid_effect_curve(fit))
+      stopifnot(length(curve) == horizon + treat_shift,
+                abs(mean(curve) - as.numeric(fit)) < 1e-10)
+      mean(curve[-seq_len(treat_shift)])
+    }, numeric(1))
+    sum(co$n_treated * atts) / sum(co$n_treated)
+  }
+  leave_one_out <- tibble::tibble(
+    left_out = cues$iso3c,
+    att = vapply(cues$iso3c, function(u) {
+      aggregate_point(dplyr::filter(cues, iso3c != u))
+    }, numeric(1))
+  ) |>
+    dplyr::mutate(change = att - att_aggregate)
+  stopifnot(abs(aggregate_point(cues) - att_aggregate) < 1e-10)
+  shift <- tibble::tibble(
+    treatment_start = c("cue year", "one year before the cue"),
+    att_years_from_cue = c(att_aggregate, aggregate_point(cues, treat_shift = 1L))
+  )
+  readr::write_csv(leave_one_out, file.path(output_dir, "leave_one_out.csv"))
+  readr::write_csv(shift, file.path(output_dir, "anticipation_shift.csv"))
+  print(as.data.frame(leave_one_out))
+  print(as.data.frame(shift))
+}
+
 readr::write_csv(
   dplyr::select(cohorts, cue_year, treated_label, n_treated, window_end,
-                n_pre_years, att, weight),
+                n_pre_years, att, weight, lambda_last_pre, lambda_second_last_pre),
   file.path(output_dir, "cohort_estimates.csv")
 )
 readr::write_csv(aggregate, file.path(output_dir, "aggregate_estimate.csv"))

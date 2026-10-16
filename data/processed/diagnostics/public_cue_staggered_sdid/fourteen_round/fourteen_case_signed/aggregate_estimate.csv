@@ -1,0 +1,2 @@
+estimand,spec_id,outcome,att,se_placebo,ci_95_low,ci_95_high,p_normal_two_sided,p_placebo_two_sided,n_controls,window_start,horizon_years,placebo_replications,placebo_seed,synthdid_version
+"Aggregate ATT, 14 public-cue cases, seven post-cue years",fourteen_case,signed_distance_china,0.01240034023389238,0.050697219023880004,-0.08696438316925129,0.11176506363703603,0.8067692119046711,0.8020395920815837,105,1997,7,5000,20260520,0.0.9

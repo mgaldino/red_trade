@@ -1,0 +1,19 @@
+check,variant,phase,detail,tau_neg,tau_pos,delta,max_abs_diff,pass
+ife_placebo_em_cap,r1,placebo_c4,max.iteration = 5000; EM iterations 5001,0.24711571867760726,0.1800269730515016,0.06708874562610567,NA,NA
+ife_placebo_em_cap,r1,placebo_c4,max.iteration = 50000; EM iterations 40771,0.39729625211426467,0.3024761911216815,0.09482006099258317,NA,NA
+ife_placebo_em_cap,r1,placebo_c3,max.iteration = 5000; EM iterations 5001,0.07049985541702704,0.11179198549440991,-0.041292130077382874,NA,NA
+ife_placebo_em_cap,r1,placebo_c3,max.iteration = 50000; EM iterations 12750,0.06914200557941104,0.11246717771287632,-0.043325172133465276,NA,NA
+ife_placebo_em_cap,r2,placebo_c4,max.iteration = 5000; EM iterations 5001,0.1443236347166079,0.1611371982533967,-0.01681356353678881,NA,NA
+ife_placebo_em_cap,r2,placebo_c4,max.iteration = 50000; EM iterations 23528,0.17149590908923806,0.24501247858210987,-0.0735165694928718,NA,NA
+ife_placebo_em_cap,r2,placebo_c3,max.iteration = 5000; EM iterations 5001,0.062322811349730764,0.10828556064153505,-0.045962749291804286,NA,NA
+ife_placebo_em_cap,r2,placebo_c3,max.iteration = 50000; EM iterations 40381,-0.11101266519797641,0.10579610166994159,-0.216808766867918,NA,NA
+direct_engine_fe_only_vs_fect_r0,cv,post,"max abs diff over tau_neg, tau_pos, Delta; point and all replicates",NA,NA,NA,2.4148225086229047e-10,TRUE
+direct_engine_fe_only_vs_fect_r0,cv,placebo_c4,"max abs diff over tau_neg, tau_pos, Delta; point and all replicates",NA,NA,NA,1.2609833455190511e-9,TRUE
+direct_engine_fe_only_vs_fect_r0,cv,placebo_c3,"max abs diff over tau_neg, tau_pos, Delta; point and all replicates",NA,NA,NA,8.385321742521157e-10,TRUE
+direct_engine_vs_fect_cfe_centred_tol1e-9,cfe_trend,post,fect EM iterations 2745,-0.22535517908196323,-0.010088351893020856,-0.21526682718894238,7.757692438437047e-8,TRUE
+fect_cfe_as_specified_unconverged,cfe_trend,post,"Q.type = linear, max.iteration 5000; EM iterations 5001; non-convergence warnings 3",0.042009227361708604,-0.1507359336429206,0.19274516100462918,0.40801206542721774,NA
+direct_engine_vs_fect_cfe_centred_tol1e-9,cfe_trend,placebo_c4,fect EM iterations 108807,-0.018611671931297168,-0.05877899416640331,0.04016732223510614,2.3788032591579023e-06,TRUE
+fect_cfe_as_specified_unconverged,cfe_trend,placebo_c4,"Q.type = linear, max.iteration 5000; EM iterations 5001; non-convergence warnings 3",0.1726729047071684,-0.11376971871760692,0.28644262342477533,0.2462776786506582,NA
+direct_engine_vs_fect_cfe_centred_tol1e-9,cfe_trend,placebo_c3,fect EM iterations 24868,0.07149373729249532,-0.022803830984803455,0.09429756827729878,4.3805834033794344e-7,TRUE
+fect_cfe_as_specified_unconverged,cfe_trend,placebo_c3,"Q.type = linear, max.iteration 5000; EM iterations 5001; non-convergence warnings 3",0.1791441011545476,-0.1034836662699816,0.2826277674245292,0.18833063650531384,NA
+fect_cfe_bootstrap_draws_equal_direct_engine_draws,cfe_trend,post,first 20 replicates,NA,NA,NA,NA,TRUE

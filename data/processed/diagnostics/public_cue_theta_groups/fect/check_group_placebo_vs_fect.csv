@@ -1,0 +1,13 @@
+variant,phase,same_bootstrap_draws_as_main,group,diff_estimate,diff_se_same_replicates
+cv,placebo_c4,FALSE,neg_us,0,0
+cv,placebo_c4,FALSE,pos_us,1.3877787807814457e-17,1.3877787807814457e-17
+cv,placebo_c3,FALSE,neg_us,0,0
+cv,placebo_c3,FALSE,pos_us,0,6.938893903907228e-18
+r1,placebo_c4,TRUE,neg_us,0,2.7755575615628914e-17
+r1,placebo_c4,TRUE,pos_us,0,0
+r1,placebo_c3,TRUE,neg_us,0,2.7755575615628914e-17
+r1,placebo_c3,TRUE,pos_us,1.3877787807814457e-17,2.7755575615628914e-17
+r2,placebo_c4,TRUE,neg_us,0,0
+r2,placebo_c4,TRUE,pos_us,0,0
+r2,placebo_c3,TRUE,neg_us,6.938893903907228e-18,2.7755575615628914e-17
+r2,placebo_c3,TRUE,pos_us,0,0

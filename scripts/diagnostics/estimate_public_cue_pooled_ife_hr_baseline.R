@@ -22,8 +22,13 @@
 # Gate: without the covariate and on the full sample, the code reproduces the
 # stored seven-case and four-case estimates in public_cue_pooled_ife/fect_results.csv.
 #
+# Round of 2026-09-24 (PUBLIC_CUE_ROUND=fourteen): after the same gate, only the
+# fourteen-case specification of public_cue_specs.R, on the abs and signed outcomes,
+# with the round's drop list; outputs in hr_baseline/fourteen_round/.
+#
 # Outside the targets graph; listed in TARGETS_MIGRATION.md.
 #   Rscript --vanilla scripts/diagnostics/estimate_public_cue_pooled_ife_hr_baseline.R
+#   PUBLIC_CUE_ROUND=fourteen Rscript --vanilla scripts/diagnostics/estimate_public_cue_pooled_ife_hr_baseline.R
 
 options(scipen = 999)
 
@@ -40,8 +45,11 @@ expected_n_years <- length(expected_years)
 fect_bootstraps <- 1000L
 baseline_sessions <- 49:51
 
-output_dir <- file.path("data", "processed", "diagnostics", "public_cue_pooled_ife", "hr_baseline")
+round_id <- Sys.getenv("PUBLIC_CUE_ROUND", "")
+output_dir <- file.path("data", "processed", "diagnostics", "public_cue_pooled_ife", "hr_baseline",
+                        if (round_id == "fourteen") "fourteen_round" else "")
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+source(file.path("scripts", "diagnostics", "public_cue_specs.R"))
 
 specs <- list(
   four_case_chl2007 = tibble::tribble(
@@ -98,7 +106,8 @@ panel <- tar_read(china_top_m2_goods_panel) |>
   dplyr::mutate(year = as.integer(year), iso3c = as.character(iso3c),
                 abs_distance_china = as.numeric(abs_distance_china),
                 china_is_top = as.logical(china_is_top)) |>
-  dplyr::arrange(iso3c, year)
+  dplyr::arrange(iso3c, year) |>
+  public_cue_add_signed()
 
 unit_audit <- panel |>
   dplyr::group_by(iso3c) |>
@@ -125,7 +134,7 @@ message("Complete units without baseline votes: ",
 z_years <- setdiff(expected_years, year_start)
 z_terms <- paste0("z_", z_years)
 
-build_panel <- function(focal_cues, rule, dropped, keep_units) {
+build_panel <- function(focal_cues, rule, dropped, keep_units, outcome = "abs_distance_china") {
   base <- if (rule == "clean_controls") {
     dplyr::filter(panel, iso3c %in% c(clean_donors, focal_cues$iso3c))
   } else {
@@ -143,9 +152,9 @@ build_panel <- function(focal_cues, rule, dropped, keep_units) {
           (china_is_top %in% TRUE | year < goods_entry_year)
       ),
       model_outcome = if (rule == "clean_controls") {
-        abs_distance_china
+        .data[[outcome]]
       } else {
-        dplyr::if_else(!focal_country & china_is_top %in% TRUE, NA_real_, abs_distance_china)
+        dplyr::if_else(!focal_country & china_is_top %in% TRUE, NA_real_, .data[[outcome]])
       },
       country_id = as.integer(factor(iso3c))
     ) |>
@@ -156,7 +165,8 @@ build_panel <- function(focal_cues, rule, dropped, keep_units) {
   out
 }
 
-run_fect <- function(panel_data, spec_id, rule, sample_id, covariate) {
+run_fect <- function(panel_data, spec_id, rule, sample_id, covariate,
+                     outcome = "abs_distance_china") {
   rhs <- if (covariate) paste(c("treatment", z_terms), collapse = " + ") else "treatment"
   message("Estimating `", spec_id, "` / `", rule, "` / ", sample_id,
           if (covariate) " / with Z x year" else " / no covariate", ".")
@@ -179,7 +189,7 @@ run_fect <- function(panel_data, spec_id, rule, sample_id, covariate) {
     seed = 42L
   )
   overall_se <- stats::sd(as.numeric(fit$att.avg.boot), na.rm = TRUE)
-  ids <- dplyr::distinct(panel_data, country_id, iso3c)
+  ids <- dplyr::distinct(panel_data, country_id, iso3c, public_cue_year)
   label <- function(m) {
     dimnames(m) <- list(as.character(fit$rawtime), as.character(fit$id))
     m
@@ -188,15 +198,20 @@ run_fect <- function(panel_data, spec_id, rule, sample_id, covariate) {
   d <- as.data.frame(as.table(label(fit$D.dat))) |> stats::setNames(c("time", "unit", "D"))
   country <- dplyr::inner_join(eff, d, by = c("time", "unit")) |>
     dplyr::filter(D == 1) |>
-    dplyr::mutate(country_id = as.integer(as.character(unit))) |>
+    dplyr::mutate(country_id = as.integer(as.character(unit)),
+                  year = as.integer(as.character(time))) |>
     dplyr::left_join(ids, by = "country_id") |>
     dplyr::group_by(iso3c) |>
-    dplyr::summarise(att_country = mean(eff), n_treated_years = dplyr::n(), .groups = "drop") |>
+    dplyr::summarise(att_country = mean(eff), n_treated_years = dplyr::n(),
+                     att_country_event_0_6 = mean(eff[year >= public_cue_year &
+                                                        year <= public_cue_year + 6L]),
+                     .groups = "drop") |>
     dplyr::mutate(spec_id = spec_id, comparison_rule = rule, sample_id = sample_id,
-                  covariate = covariate, .before = 1L)
+                  covariate = covariate, outcome = outcome, .before = 1L)
   list(
     result = tibble::tibble(
       spec_id = spec_id, comparison_rule = rule, sample_id = sample_id, covariate = covariate,
+      outcome = outcome,
       estimate = as.numeric(fit$att.avg), se_bootstrap = overall_se,
       ci_95_low = as.numeric(fit$att.avg) - stats::qnorm(0.975) * overall_se,
       ci_95_high = as.numeric(fit$att.avg) + stats::qnorm(0.975) * overall_se,
@@ -228,14 +243,25 @@ stopifnot(all(gate$diff_estimate < 1e-8), all(gate$diff_se < 1e-8))
 
 # ---- Estimates -------------------------------------------------------------
 z_units <- intersect(complete_units, hr_baseline$iso3c)
+if (round_id == "fourteen") {
+  specs <- list(fourteen_case = dplyr::rename(public_cue_spec("fourteen_case"),
+                                              public_cue_year = cue_year))
+  dropped_cue_cases <- list(fourteen_case = public_cue_dropped("fourteen_case"))
+  outcomes <- unname(public_cue_outcomes)
+} else {
+  outcomes <- "abs_distance_china"
+}
 runs <- list()
 for (s in names(specs)) {
   stopifnot(all(specs[[s]]$iso3c %in% z_units))
-  for (rule in c("clean_controls", "full_switching")) {
-    pd <- build_panel(specs[[s]], rule, dropped_cue_cases[[s]], z_units)
-    stopifnot(!anyNA(pd$hr_agree_china_1994_96))
-    for (cov in c(FALSE, TRUE)) {
-      runs[[paste(s, rule, cov)]] <- run_fect(pd, s, rule, "units_with_z", cov)
+  for (outcome in outcomes) {
+    for (rule in c("clean_controls", "full_switching")) {
+      pd <- build_panel(specs[[s]], rule, dropped_cue_cases[[s]], z_units, outcome)
+      stopifnot(!anyNA(pd$hr_agree_china_1994_96))
+      for (cov in c(FALSE, TRUE)) {
+        runs[[paste(s, outcome, rule, cov)]] <-
+          run_fect(pd, s, rule, "units_with_z", cov, outcome)
+      }
     }
   }
 }
@@ -248,7 +274,7 @@ readr::write_csv(results, file.path(output_dir, "fect_results.csv"))
 readr::write_csv(country, file.path(output_dir, "fect_country_effects.csv"))
 writeLines(capture.output(sessionInfo()), file.path(output_dir, "session_info.txt"))
 
-print(as.data.frame(dplyr::select(results, spec_id, comparison_rule, covariate, estimate,
+print(as.data.frame(dplyr::select(results, spec_id, outcome, comparison_rule, covariate, estimate,
                                   se_bootstrap, p_normal_two_sided, selected_factors,
                                   n_units, n_treated_units)))
-print(as.data.frame(dplyr::filter(country, spec_id == "seven_case")))
+print(as.data.frame(dplyr::filter(country, spec_id == names(specs)[length(specs)])))

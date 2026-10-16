@@ -7,9 +7,9 @@
 #
 #   * DiD event study with uniform weights: for each treated country, the gap to
 #     the control mean in each year, relative to the year before the cue; the
-#     curve is the simple average over the seven countries at each event time
-#     (-6 to 6, the event times all seven share).
-#     Placebo bands: 5,000 draws of seven controls given the observed cue years,
+#     curve is the simple average over the treated countries at each event time
+#     (-6 to 6, the event times all of them share).
+#     Placebo bands: 5,000 draws of as many controls, given the observed cue years,
 #     with the drawn units removed from the control mean (seed 20260520).
 #     Pre-trend tests against the placebo distribution: slope of the average
 #     curve on event time over -6 to -1, and the sum of squared coefficients
@@ -19,8 +19,13 @@
 #     average of the post-cue values is the cohort ATT. Pre-cue values are
 #     descriptive: the weights are chosen to make them small.
 #
+# Round of 2026-09-24: cases and outcome from public_cue_specs.R, chosen by
+# PUBLIC_CUE_SPEC (default seven_case) and PUBLIC_CUE_OUTCOME (abs or signed);
+# outputs in public_cue_staggered_sdid/fourteen_round/<spec>_<outcome>/pretrends/.
+#
 # Exploratory and outside the targets graph.
-#   Rscript scripts/diagnostics/public_cue_staggered_pretrends.R
+#   PUBLIC_CUE_SPEC=fourteen_case PUBLIC_CUE_OUTCOME=signed \
+#     Rscript scripts/diagnostics/public_cue_staggered_pretrends.R
 
 options(scipen = 999)
 
@@ -31,6 +36,7 @@ suppressPackageStartupMessages({
 })
 
 source(file.path("scripts", "diagnostics", "sdid_placebo_helpers.R"))
+source(file.path("scripts", "diagnostics", "public_cue_specs.R"))
 
 window_start <- 1997L
 horizon <- 7L
@@ -38,26 +44,25 @@ last_year <- 2022L
 event_min <- -6L
 placebo_draws <- 5000L
 
+spec_id <- Sys.getenv("PUBLIC_CUE_SPEC", "seven_case")
+outcome_key <- Sys.getenv("PUBLIC_CUE_OUTCOME", "abs")
+stopifnot(outcome_key %in% names(public_cue_outcomes))
+outcome_col <- public_cue_outcomes[[outcome_key]]
+
 output_dir <- file.path(
-  "data", "processed", "diagnostics", "public_cue_staggered_sdid", "pretrends"
+  "data", "processed", "diagnostics", "public_cue_staggered_sdid", "fourteen_round",
+  paste(spec_id, outcome_key, sep = "_"), "pretrends"
 )
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 
-cues <- tibble::tribble(
-  ~iso3c, ~cue_year,
-  "KOR", 2003L,
-  "AUS", 2007L,
-  "BRA", 2009L,
-  "CHL", 2007L,
-  "ZAF", 2010L,
-  "URY", 2013L,
-  "NZL", 2013L
-)
+cues <- public_cue_spec(spec_id)
+n_cases <- nrow(cues)
 
 panel_all <- targets::tar_read(china_top_m2_goods_panel) |>
   dplyr::select(iso3c, year, abs_distance_china, china_is_top) |>
   dplyr::mutate(year = as.integer(year), iso3c = as.character(iso3c),
-                china_is_top = as.logical(china_is_top))
+                china_is_top = as.logical(china_is_top)) |>
+  public_cue_add_signed()
 
 controls <- panel_all |>
   dplyr::filter(year >= window_start, year <= last_year) |>
@@ -76,8 +81,8 @@ stopifnot(length(controls) == 105L, !any(cues$iso3c %in% controls))
 years <- seq.int(window_start, last_year)
 Y <- panel_all |>
   dplyr::filter(iso3c %in% c(controls, cues$iso3c), year %in% years) |>
-  dplyr::select(iso3c, year, abs_distance_china) |>
-  tidyr::pivot_wider(names_from = year, values_from = abs_distance_china) |>
+  dplyr::select(iso3c, year, value = dplyr::all_of(outcome_col)) |>
+  tidyr::pivot_wider(names_from = year, values_from = value) |>
   tibble::column_to_rownames("iso3c") |>
   as.matrix()
 Y <- Y[, as.character(years)]
@@ -217,10 +222,11 @@ g <- ggplot() +
   geom_line(data = plot_avg, aes(event_time, value), linewidth = 1.1) +
   geom_point(data = plot_avg, aes(event_time, value), size = 1.6) +
   facet_wrap(~panel, ncol = 1) +
-  labs(x = "Years relative to public cue", y = "Distance to China (gap)",
+  labs(x = "Years relative to public cue",
+       y = paste0("Distance to China (gap), ", outcome_key),
        colour = NULL,
-       caption = paste0("Thick line: average of the seven cases. Grey band (DiD): ",
-                        "2.5-97.5% of 5,000 placebo draws of seven controls.")) +
+       caption = paste0("Thick line: average of the ", n_cases, " cases. Grey band (DiD): ",
+                        "2.5-97.5% of 5,000 placebo draws of ", n_cases, " controls.")) +
   theme_minimal(base_size = 10) +
   theme(legend.position = "bottom")
 ggsave(file.path(output_dir, "pretrends_did_sdid.png"), g, width = 7.5, height = 8,

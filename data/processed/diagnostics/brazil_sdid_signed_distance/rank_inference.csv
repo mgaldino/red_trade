@@ -1,0 +1,5 @@
+outcome,comparison_set,excluded_units,rank_one_sided_negative,rank_two_sided_absolute,denominator,p_rank_one_sided_negative,p_rank_two_sided_absolute
+abs,All valid assignments,,3,7,96,0.03125,0.07291666666666667
+abs,Pre-fit RMSPE no larger than twice Brazil,ALB;BHR;BLR;CIV;DOM;DZA;EGY;FJI;GEO;HTI;IND;JOR;LBN;LBY;MWI;NGA;NIC;PNG;QAT;RWA;SWZ;TCD;TUN;UGA;UKR;VEN,2,4,70,0.02857142857142857,0.05714285714285714
+signed,All valid assignments,,4,6,96,0.041666666666666664,0.0625
+signed,Pre-fit RMSPE no larger than twice Brazil,ALB;ARE;BHR;BLR;BTN;CIV;COL;COM;DOM;DZA;EGY;FJI;GAB;GIN;HTI;IND;JOR;KWT;LBN;LBY;MAR;MDG;MWI;NGA;NIC;PAK;PNG;RWA;SUR;SWZ;TCD;TGO;TUN;UGA;UKR;VEN,3,3,60,0.05,0.05
